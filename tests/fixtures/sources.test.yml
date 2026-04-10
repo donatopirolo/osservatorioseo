@@ -1,0 +1,29 @@
+sources:
+  - id: google_search_central
+    name: "Google Search Central Blog"
+    authority: 10
+    type: official
+    fetcher: rss
+    feed_url: https://developers.google.com/search/blog/rss
+    category_hint: google_updates
+    enabled: true
+
+  - id: some_scraper_site
+    name: "Some Scraper Site"
+    authority: 7
+    type: media
+    fetcher: scraper
+    target_url: https://example.com/news
+    selectors:
+      article: "article.post"
+      title: "h2"
+      link: "a"
+    enabled: true
+
+  - id: disabled_source
+    name: "Disabled"
+    authority: 5
+    type: media
+    fetcher: rss
+    feed_url: https://example.com/rss
+    enabled: false
