@@ -27,7 +27,7 @@ class DocWatcherPage(BaseModel):
 
 class Settings(BaseModel):
     openrouter_api_key: str
-    summarizer_model: str = "google/gemini-2.0-flash"
+    summarizer_model: str = "google/gemini-2.0-flash-001"
     fallback_models: list[str] = Field(
         default_factory=lambda: [
             "anthropic/claude-haiku-4.5",

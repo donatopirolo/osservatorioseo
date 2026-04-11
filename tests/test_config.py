@@ -35,4 +35,4 @@ def test_load_settings_ok(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("OPENROUTER_API_KEY", "sk-test")
     s = load_settings()
     assert s.openrouter_api_key == "sk-test"
-    assert s.summarizer_model == "google/gemini-2.0-flash"
+    assert s.summarizer_model == "google/gemini-2.0-flash-001"

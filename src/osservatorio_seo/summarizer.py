@@ -92,7 +92,8 @@ class SummarizerError(Exception):
 
 # Rough pricing per milione di token (input / output) in USD
 MODEL_PRICING: dict[str, tuple[float, float]] = {
-    "google/gemini-2.0-flash": (0.075, 0.30),
+    "google/gemini-2.0-flash-001": (0.10, 0.40),
+    "google/gemini-2.0-flash-lite-001": (0.075, 0.30),
     "anthropic/claude-haiku-4.5": (1.0, 5.0),
     "openai/gpt-5-mini": (0.25, 2.0),
 }
@@ -168,10 +169,12 @@ class Summarizer:
             "X-Title": "OsservatorioSEO",
             "Content-Type": "application/json",
         }
+        # Nota: response_format=json_object non è supportato da tutti i modelli
+        # su OpenRouter (Gemini 2.0 Flash ritorna 400). Ci affidiamo al prompt
+        # + _parse_json_loose per estrarre JSON anche con testo di contorno.
         body = {
             "model": model,
             "messages": [{"role": "user", "content": prompt}],
-            "response_format": {"type": "json_object"},
             "temperature": 0.2,
         }
         async with httpx.AsyncClient(timeout=30) as client:
