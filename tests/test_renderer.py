@@ -94,3 +94,70 @@ def test_render_snapshot_has_date_in_titles() -> None:
     assert "TOP 10 DEL GIORNO 11 04 2026" in html
     assert "TUTTE PER CATEGORIA 11 04 2026" in html
     assert "SNAPSHOT 2026-04-11" in html
+
+
+def test_render_article_has_jsonld_and_breadcrumb() -> None:
+    renderer = HtmlRenderer(templates_dir=Path("templates"))
+    item = {
+        "id": "item_2026-04-11_001",
+        "title_it": "Google rilascia il core update",
+        "summary_it": "Google ha annunciato oggi il rilascio.",
+        "url": "https://example.com/a",
+        "source": {"name": "SEJ"},
+        "tags": ["core_update"],
+        "published_at": "2026-04-11T07:00:00+00:00",
+        "summarizer_model": "google/gemini-2.0-flash-001",
+    }
+    html = renderer.render_article(
+        {
+            "page_title": "Google rilascia il core update — Osservatorio SEO",
+            "page_description": "Google ha annunciato oggi il rilascio.",
+            "canonical_url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/google-rilascia-core-update/",
+            "active_nav": "archive",
+            "noindex": True,
+            "og_type": "article",
+            "item": item,
+            "stars": "★★★★★",
+            "absolute_date": "sabato 11 aprile 2026",
+            "day_label": "sabato 11 aprile 2026",
+            "day_path": "/archivio/2026/04/11/",
+            "category_path": "/categoria/google-updates/",
+            "category_label": "Google Updates",
+            "published_iso": "2026-04-11T07:00:00+00:00",
+            "article_url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/google-rilascia-core-update/",
+            "breadcrumbs": [
+                {
+                    "name": "Home",
+                    "url": "https://osservatorioseo.pages.dev/",
+                    "site_path": "/",
+                },
+                {
+                    "name": "Archivio",
+                    "url": "https://osservatorioseo.pages.dev/archivio/",
+                    "site_path": "/archivio/",
+                },
+                {
+                    "name": "2026",
+                    "url": "https://osservatorioseo.pages.dev/archivio/2026/",
+                    "site_path": "/archivio/2026/",
+                },
+                {
+                    "name": "11 aprile",
+                    "url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/",
+                    "site_path": "/archivio/2026/04/11/",
+                },
+                {
+                    "name": "Google rilascia il core update",
+                    "url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/google-rilascia-core-update/",
+                    "site_path": "",
+                },
+            ],
+        }
+    )
+    assert "<h1" in html
+    assert "Google rilascia il core update" in html
+    assert '"@type": "NewsArticle"' in html
+    assert '"@type": "BreadcrumbList"' in html
+    assert "LEGGI L&#39;ORIGINALE" in html or "LEGGI L'ORIGINALE" in html
+    assert "/categoria/google-updates/" in html
+    assert "/tag/core-update/" in html

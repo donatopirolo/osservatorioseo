@@ -1,0 +1,63 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_newsarticle.html.jinja" %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  {% for crumb in breadcrumbs %}
+    {% if not loop.last %}
+    <a href="{{ crumb.site_path }}" class="hover:text-primary-container">{{ crumb.name }}</a>
+    <span class="text-outline-variant">/</span>
+    {% else %}
+    <span class="text-primary-container">{{ crumb.name }}</span>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-8">
+    <p class="text-[10px] text-outline uppercase font-mono mb-2">
+      <a href="{{ category_path }}" class="text-primary-container hover:underline">{{ category_label }}</a>
+      · <span class="text-[#f5a623]">{{ stars }}</span>
+      · <time datetime="{{ item.published_at }}">{{ absolute_date }}</time>
+    </p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">{{ item.title_it }}</h1>
+    <p class="text-sm text-outline font-mono uppercase">Fonte: <a class="text-primary-container hover:underline" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.source.name }}</a></p>
+  </header>
+
+  <section class="prose prose-invert mb-8">
+    <p class="text-lg leading-relaxed text-on-surface">{{ item.summary_it }}</p>
+  </section>
+
+  {% if item.tags %}
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; TAGS</h2>
+    <div class="flex flex-wrap gap-2">
+      {% for t in item.tags %}
+      <a href="/tag/{{ t | replace('_', '-') }}/" class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">#{{ t }}</a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="mb-8 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Questo è un <strong class="text-white">riassunto generato da AI</strong> a partire dall'articolo originale pubblicato su
+      <a class="text-primary-container hover:underline" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.source.name }}</a>.
+      Il riassunto è creato da <code class="text-primary-container">{{ item.summarizer_model }}</code>.
+      Per il testo completo e l'attribuzione, consulta la fonte originale.
+    </p>
+    <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="{{ item.url }}" target="_blank" rel="noopener">LEGGI L'ORIGINALE →</a>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; ALTRI DAL GIORNO</h2>
+    <p class="text-xs text-outline font-mono uppercase">
+      <a href="{{ day_path }}" class="text-primary-container hover:underline">Vedi tutti gli articoli del {{ day_label }}</a>
+    </p>
+  </section>
+</article>
+{% endblock %}

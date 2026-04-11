@@ -28,3 +28,6 @@ class HtmlRenderer:
 
     def render_snapshot(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/snapshot.html.jinja", context)
+
+    def render_article(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/article.html.jinja", context)
