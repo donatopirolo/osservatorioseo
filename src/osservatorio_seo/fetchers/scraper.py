@@ -1,4 +1,5 @@
 """Generic HTML scraper basato su CSS selector configurati."""
+
 from __future__ import annotations
 
 from datetime import UTC, datetime

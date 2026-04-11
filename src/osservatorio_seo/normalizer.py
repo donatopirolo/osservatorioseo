@@ -1,4 +1,5 @@
 """Normalizzazione URL/titoli + dedup."""
+
 from __future__ import annotations
 
 import re
@@ -10,8 +11,18 @@ from rapidfuzz import fuzz
 from osservatorio_seo.models import RawItem, Source
 
 TRACKING_PARAMS = {
-    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
-    "fbclid", "gclid", "mc_cid", "mc_eid", "ref", "ref_src", "igshid",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "fbclid",
+    "gclid",
+    "mc_cid",
+    "mc_eid",
+    "ref",
+    "ref_src",
+    "igshid",
 }
 
 
@@ -26,9 +37,7 @@ class Normalizer:
         self._min_content_chars = min_content_chars
         self._title_threshold = title_similarity_threshold
 
-    def normalize(
-        self, raw_items: list[RawItem], sources: dict[str, Source]
-    ) -> list[RawItem]:
+    def normalize(self, raw_items: list[RawItem], sources: dict[str, Source]) -> list[RawItem]:
         cleaned: list[RawItem] = []
         now = datetime.now(UTC)
         for item in raw_items:
@@ -64,9 +73,7 @@ class Normalizer:
         title = re.sub(r"\s+", " ", title).strip()
         return title
 
-    def _dedup_by_url(
-        self, items: list[RawItem], sources: dict[str, Source]
-    ) -> list[RawItem]:
+    def _dedup_by_url(self, items: list[RawItem], sources: dict[str, Source]) -> list[RawItem]:
         best: dict[str, RawItem] = {}
         for item in items:
             existing = best.get(item.url)
@@ -77,9 +84,7 @@ class Normalizer:
                 best[item.url] = item
         return list(best.values())
 
-    def _dedup_by_title(
-        self, items: list[RawItem], sources: dict[str, Source]
-    ) -> list[RawItem]:
+    def _dedup_by_title(self, items: list[RawItem], sources: dict[str, Source]) -> list[RawItem]:
         kept: list[RawItem] = []
         for item in items:
             duplicate_idx: int | None = None

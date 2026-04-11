@@ -23,7 +23,10 @@ def social_source() -> Source:
 
 async def test_playwright_no_target_url() -> None:
     source = Source(
-        id="x", name="x", authority=5, type="social",
+        id="x",
+        name="x",
+        authority=5,
+        type="social",
         fetcher="playwright",
     )
     fetcher = PlaywrightFetcher()

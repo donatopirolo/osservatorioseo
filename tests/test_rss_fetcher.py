@@ -37,8 +37,12 @@ async def test_rss_empty_feed(httpx_mock: HTTPXMock) -> None:
         text="<?xml version='1.0'?><rss><channel></channel></rss>",
     )
     source = Source(
-        id="x", name="x", authority=5, type="media",
-        fetcher="rss", feed_url="https://example.com/feed.xml",
+        id="x",
+        name="x",
+        authority=5,
+        type="media",
+        fetcher="rss",
+        feed_url="https://example.com/feed.xml",
     )
     async with HttpClient() as client:
         fetcher = RSSFetcher(client)

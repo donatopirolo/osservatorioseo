@@ -1,4 +1,5 @@
 """HTTP client async con UA rotation, rate limiting, retry."""
+
 from __future__ import annotations
 
 import asyncio
@@ -81,9 +82,7 @@ class HttpClient:
                 await asyncio.sleep(wait)
             self._host_last_request[host] = asyncio.get_event_loop().time()
 
-    async def _get_with_retry(
-        self, url: str, headers: dict, **kwargs
-    ) -> httpx.Response:
+    async def _get_with_retry(self, url: str, headers: dict, **kwargs) -> httpx.Response:
         last_exc: Exception | None = None
         for attempt in range(self.max_retries):
             try:

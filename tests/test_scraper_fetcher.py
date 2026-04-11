@@ -40,8 +40,12 @@ async def test_scraper_fetch(fixtures_dir: Path, httpx_mock: HTTPXMock) -> None:
 
 async def test_scraper_no_selectors() -> None:
     source = Source(
-        id="x", name="x", authority=5, type="media",
-        fetcher="scraper", target_url="https://x.com",
+        id="x",
+        name="x",
+        authority=5,
+        type="media",
+        fetcher="scraper",
+        target_url="https://x.com",
     )
     async with HttpClient() as client:
         fetcher = ScraperFetcher(client)

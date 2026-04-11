@@ -1,4 +1,5 @@
 """Publisher: scrive feed.json, archivi, e copia verso site/."""
+
 from __future__ import annotations
 
 import shutil

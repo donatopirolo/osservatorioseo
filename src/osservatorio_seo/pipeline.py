@@ -1,4 +1,5 @@
 """Orchestratore: chiama fetcher → normalizer → summarizer → ranker → publisher."""
+
 from __future__ import annotations
 
 import asyncio
@@ -87,9 +88,7 @@ class Pipeline:
         )
         items, ai_cost = await self._summarize_all(normalized, sources_by_id, summarizer)
 
-        doc_items, doc_cost = await self._summarize_doc_changes(
-            doc_results, doc_pages, summarizer
-        )
+        doc_items, doc_cost = await self._summarize_doc_changes(doc_results, doc_pages, summarizer)
         items.extend(doc_items)
         ai_cost += doc_cost
 
@@ -159,9 +158,7 @@ class Pipeline:
                 r = await watcher.check(page)
                 results.append(r)
                 statuses.append(
-                    DocWatcherStatus(
-                        page_id=page.id, last_checked=r.checked_at, changed=r.changed
-                    )
+                    DocWatcherStatus(page_id=page.id, last_checked=r.checked_at, changed=r.changed)
                 )
             except Exception as e:  # noqa: BLE001
                 logger.warning("doc page %s failed: %s", page.id, e)

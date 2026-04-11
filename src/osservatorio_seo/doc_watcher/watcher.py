@@ -1,4 +1,5 @@
 """Doc Watcher: rileva modifiche a pagine di documentazione ufficiale."""
+
 from __future__ import annotations
 
 import difflib
@@ -112,7 +113,9 @@ class DocWatcher:
         if len(diff) > MAX_DIFF_CHARS:
             diff = diff[:MAX_DIFF_CHARS] + "\n... [diff truncated]"
         added = sum(1 for line in diff_lines if line.startswith("+") and not line.startswith("+++"))
-        removed = sum(1 for line in diff_lines if line.startswith("-") and not line.startswith("---"))
+        removed = sum(
+            1 for line in diff_lines if line.startswith("-") and not line.startswith("---")
+        )
 
         date_str = now.strftime("%Y-%m-%d")
         self._state.save_diff(page.id, date_str, diff)

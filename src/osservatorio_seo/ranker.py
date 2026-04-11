@@ -1,4 +1,5 @@
 """Ranker: scoring e top-10."""
+
 from __future__ import annotations
 
 from collections import defaultdict
@@ -39,10 +40,4 @@ class Ranker:
         freshness = 5 if age_hours < 6 else (2 if age_hours < 24 else 0)
         doc_bonus = 20 if item.is_doc_change else 0
         cat_bonus = CATEGORY_BONUS.get(item.category, 0)
-        return (
-            item.importance * 10
-            + item.source.authority
-            + freshness
-            + doc_bonus
-            + cat_bonus
-        )
+        return item.importance * 10 + item.source.authority + freshness + doc_bonus + cat_bonus

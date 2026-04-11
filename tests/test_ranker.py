@@ -19,8 +19,12 @@ def mk_item(
         summary_it="summary",
         url=f"https://example.com/{item_id}",
         source=Source(
-            id=f"src-{item_id}", name="src", authority=authority,
-            type="official", fetcher="rss", feed_url="https://x.com",
+            id=f"src-{item_id}",
+            name="src",
+            authority=authority,
+            type="official",
+            fetcher="rss",
+            feed_url="https://x.com",
         ),
         category=category,  # type: ignore[arg-type]
         tags=[],
@@ -47,7 +51,9 @@ def test_higher_importance_ranks_first() -> None:
 def test_doc_change_bonus() -> None:
     items = [
         mk_item("normal", importance=5, authority=10, category="google_updates"),
-        mk_item("doc", importance=5, authority=10, category="google_docs_change", is_doc_change=True),
+        mk_item(
+            "doc", importance=5, authority=10, category="google_docs_change", is_doc_change=True
+        ),
     ]
     top10, _ = Ranker().rank(items)
     assert top10[0] == "doc"

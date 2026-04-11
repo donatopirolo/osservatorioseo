@@ -1,4 +1,5 @@
 """AI summarizer via OpenRouter con fallback chain."""
+
 from __future__ import annotations
 
 import json
@@ -140,9 +141,7 @@ class Summarizer:
     async def summarize_doc_change(
         self, page_name: str, page_url: str, diff: str
     ) -> DocChangeSummary:
-        prompt = DOC_CHANGE_PROMPT.format(
-            page_name=page_name, page_url=page_url, diff=diff
-        )
+        prompt = DOC_CHANGE_PROMPT.format(page_name=page_name, page_url=page_url, diff=diff)
         result = await self._call_with_fallback(prompt)
         return DocChangeSummary(
             model_used=result.model,
@@ -203,7 +202,5 @@ class Summarizer:
     @staticmethod
     def _compute_cost(model: str, prompt_tokens: int, completion_tokens: int) -> float:
         in_price, out_price = MODEL_PRICING.get(model, (0.0, 0.0))
-        usd = (prompt_tokens / 1_000_000) * in_price + (
-            completion_tokens / 1_000_000
-        ) * out_price
+        usd = (prompt_tokens / 1_000_000) * in_price + (completion_tokens / 1_000_000) * out_price
         return usd * USD_TO_EUR

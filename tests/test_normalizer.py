@@ -6,16 +6,24 @@ from osservatorio_seo.normalizer import Normalizer
 
 def mk_source(authority: int = 5) -> Source:
     return Source(
-        id=f"src{authority}", name=f"src{authority}",
-        authority=authority, type="media", fetcher="rss",
+        id=f"src{authority}",
+        name=f"src{authority}",
+        authority=authority,
+        type="media",
+        fetcher="rss",
         feed_url="https://example.com/feed",
     )
 
 
-def mk_raw(url: str, title: str, source_id: str, content: str = "enough content here for normalization") -> RawItem:
+def mk_raw(
+    url: str, title: str, source_id: str, content: str = "enough content here for normalization"
+) -> RawItem:
     return RawItem(
-        title=title, url=url, source_id=source_id,
-        published_at=datetime.now(UTC), content=content,
+        title=title,
+        url=url,
+        source_id=source_id,
+        published_at=datetime.now(UTC),
+        content=content,
     )
 
 
@@ -59,7 +67,9 @@ def test_dedup_by_fuzzy_title() -> None:
 def test_filter_too_old() -> None:
     norm = Normalizer(max_age_hours=48)
     old_item = RawItem(
-        title="Old", url="https://a.com/old", source_id="s1",
+        title="Old",
+        url="https://a.com/old",
+        source_id="s1",
         published_at=datetime.now(UTC) - timedelta(hours=72),
         content="some content",
     )

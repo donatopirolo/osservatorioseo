@@ -1,4 +1,5 @@
 """Pydantic models per OsservatorioSEO."""
+
 from __future__ import annotations
 
 from datetime import datetime
@@ -37,6 +38,7 @@ class Source(BaseModel):
 
 class RawItem(BaseModel):
     """Output di un Fetcher, prima di normalizzazione e AI."""
+
     model_config = ConfigDict(extra="forbid")
 
     title: str

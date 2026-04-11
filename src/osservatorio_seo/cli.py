@@ -1,4 +1,5 @@
 """CLI entrypoint."""
+
 from __future__ import annotations
 
 import argparse
@@ -36,5 +37,7 @@ def main() -> None:
             site_data_dir=args.site_data,
         )
         feed = asyncio.run(pipeline.run())
-        print(f"OK — {len(feed.items)} items, top10={len(feed.top10)}, cost={feed.stats.ai_cost_eur}€")
+        print(
+            f"OK — {len(feed.items)} items, top10={len(feed.top10)}, cost={feed.stats.ai_cost_eur}€"
+        )
         sys.exit(0)

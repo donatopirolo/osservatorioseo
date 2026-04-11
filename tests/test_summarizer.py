@@ -36,9 +36,7 @@ def mk_source() -> Source:
 
 def mock_response(payload: dict) -> dict:
     return {
-        "choices": [
-            {"message": {"content": json.dumps(payload)}}
-        ],
+        "choices": [{"message": {"content": json.dumps(payload)}}],
         "usage": {"prompt_tokens": 500, "completion_tokens": 80},
         "model": "google/gemini-2.0-flash",
     }
@@ -47,13 +45,15 @@ def mock_response(payload: dict) -> dict:
 async def test_summarize_item_success(httpx_mock: HTTPXMock) -> None:
     httpx_mock.add_response(
         url=OPENROUTER_URL,
-        json=mock_response({
-            "title_it": "Core update marzo 2026 completato",
-            "summary_it": "Google ha completato il rollout del core update di marzo 2026.",
-            "category": "google_updates",
-            "tags": ["core_update", "ranking"],
-            "importance": 5,
-        }),
+        json=mock_response(
+            {
+                "title_it": "Core update marzo 2026 completato",
+                "summary_it": "Google ha completato il rollout del core update di marzo 2026.",
+                "category": "google_updates",
+                "tags": ["core_update", "ranking"],
+                "importance": 5,
+            }
+        ),
     )
     summarizer = Summarizer(api_key="sk-test")
     result = await summarizer.summarize_item(mk_raw(), mk_source())
@@ -71,13 +71,15 @@ async def test_summarize_item_retries_on_malformed_json(httpx_mock: HTTPXMock) -
     # retry: JSON corretto
     httpx_mock.add_response(
         url=OPENROUTER_URL,
-        json=mock_response({
-            "title_it": "Test",
-            "summary_it": "Test summary.",
-            "category": "google_updates",
-            "tags": [],
-            "importance": 3,
-        }),
+        json=mock_response(
+            {
+                "title_it": "Test",
+                "summary_it": "Test summary.",
+                "category": "google_updates",
+                "tags": [],
+                "importance": 3,
+            }
+        ),
     )
     summarizer = Summarizer(api_key="sk-test")
     result = await summarizer.summarize_item(mk_raw(), mk_source())
@@ -91,13 +93,15 @@ async def test_summarize_falls_back_to_next_model(httpx_mock: HTTPXMock) -> None
     # fallback model risponde ok
     httpx_mock.add_response(
         url=OPENROUTER_URL,
-        json=mock_response({
-            "title_it": "Fallback ok",
-            "summary_it": "Riassunto dal fallback model.",
-            "category": "ai_models",
-            "tags": [],
-            "importance": 2,
-        }),
+        json=mock_response(
+            {
+                "title_it": "Fallback ok",
+                "summary_it": "Riassunto dal fallback model.",
+                "category": "ai_models",
+                "tags": [],
+                "importance": 2,
+            }
+        ),
     )
     summarizer = Summarizer(
         api_key="sk-test",
@@ -111,12 +115,14 @@ async def test_summarize_falls_back_to_next_model(httpx_mock: HTTPXMock) -> None
 async def test_summarize_doc_change(httpx_mock: HTTPXMock) -> None:
     httpx_mock.add_response(
         url=OPENROUTER_URL,
-        json=mock_response({
-            "title_it": "⚠️ Google ha aggiornato Spam Policies",
-            "summary_it": "Aggiunta nuova sezione sul scaled content abuse.",
-            "tags": ["spam_policies"],
-            "importance": 5,
-        }),
+        json=mock_response(
+            {
+                "title_it": "⚠️ Google ha aggiornato Spam Policies",
+                "summary_it": "Aggiunta nuova sezione sul scaled content abuse.",
+                "tags": ["spam_policies"],
+                "importance": 5,
+            }
+        ),
     )
     summarizer = Summarizer(api_key="sk-test")
     result = await summarizer.summarize_doc_change(

@@ -1,4 +1,5 @@
 """Playwright-based fetcher per siti con anti-bot (X, LinkedIn)."""
+
 from __future__ import annotations
 
 import random

@@ -1,4 +1,5 @@
 """Persistenza stato del Doc Watcher (hash, testi, diff)."""
+
 from __future__ import annotations
 
 from pathlib import Path
