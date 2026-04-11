@@ -22,9 +22,17 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
+from datetime import UTC, datetime
+
 import httpx
 
-from osservatorio_seo.models import DeepAnalysis, FAQEntry, Item
+from osservatorio_seo.models import (
+    DeepAnalysis,
+    FAQEntry,
+    Item,
+    Pillar,
+    PillarTakeaway,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -137,6 +145,89 @@ Contenuto originale (primi {content_chars} caratteri):
 """
 
 
+PILLAR_PROMPT = """Sei un SEO senior italiano che scrive il dossier editoriale \
+pillar di Osservatorio SEO sul tema "{tag_display}". Il lettore è un \
+professionista SEO (agency, in-house, consultant) che cerca una vista \
+d'insieme autorevole e operativa sul tema. NON è un principiante.
+
+Devi produrre un dossier pillar strutturato in JSON. Usa TUTTI i fatti e le \
+notizie incluse sotto come riferimenti cronologici per costruire una narrazione \
+coerente. Il dossier NON è un riassunto degli item — è una visione editoriale \
+che li contestualizza.
+
+REGOLE DI TONO (VIETATISSIMO):
+- VIETATO prima persona plurale: "noi di", "noi pensiamo", "il nostro consiglio", \
+"la nostra opinione", "crediamo", "ci aspettiamo", firme "la redazione".
+- Scrivi sempre in forma IMPERSONALE (terza persona) o SECONDA PERSONA diretta \
+al lettore ("se gestisci un sito…", "chi lavora su…").
+- Niente hype, niente clickbait, niente "scopri", "incredibile".
+- Tono autorevole, analitico, operativo. Quando serve, opinion forte.
+
+REGOLE DI LEGGIBILITÀ:
+- intro_long, context_section, timeline_narrative, outlook: PARAGRAFI BREVI \
+(2-4 frasi, max ~60 parole), separati da \\n\\n. No muri di testo.
+- No heading markdown dentro questi campi. No bullet. Testo continuo strutturato \
+in paragrafi.
+
+SCHEMA JSON OBBLIGATORIO (nessun campo extra, nessun campo mancante):
+
+{{
+  "title_it": "Titolo H1 del dossier, 5-9 parole, no marketing, es. \
+'Core Update: il dossier di Osservatorio SEO'. Non mettere punti finali.",
+  "subtitle_it": "Sottotitolo 1 frase (~120 caratteri) che cattura il valore \
+editoriale del dossier. Es: 'Cosa sono, come evolvono e cosa fare prima, durante \
+e dopo un core update di Google.'",
+  "intro_long": "800-1200 parole in paragrafi brevi separati da \\n\\n. \
+È il lead del dossier: definisce il tema, spiega perché è critico per un SEO, \
+posiziona il dossier rispetto alla letteratura esistente. Primo paragrafo = \
+hook forte con un fatto specifico. NO 'in questo articolo vedremo'. Inizia \
+con l'INSIGHT.",
+  "context_section": "400-600 parole in paragrafi brevi. Contesto storico e \
+tecnico: cosa è successo in passato, perché l'argomento è diventato rilevante, \
+quali framework/pattern esistono per interpretarlo. Se applicabile, cita date \
+e riferimenti specifici.",
+  "timeline_narrative": "400-600 parole in paragrafi brevi. Narrazione \
+cronologica basata SUGLI ITEM forniti sotto. Non elencarli: costruisci una \
+storia. Cita i titoli degli item come riferimenti naturali nel testo quando \
+rilevanti. Evidenzia pattern o discontinuità.",
+  "takeaways": [
+    {{
+      "title": "Takeaway 1 (max 8 parole, imperativo o dichiarativo)",
+      "body": "Corpo del takeaway, 40-80 parole, concreto e operativo. \
+Impersonale o seconda persona."
+    }}
+  ],
+  "outlook": "200-400 parole in paragrafi brevi. Prospettive future: cosa \
+aspettarsi nei prossimi mesi, quali segnali monitorare, quali scenari sono \
+plausibili. Tono analitico con eventuale opinion forte. Niente predizioni hype."
+}}
+
+La lista "takeaways" deve contenere ESATTAMENTE 5 takeaway. Il JSON deve essere \
+valido, parsabile, senza codefence markdown, senza testo extra prima/dopo.
+
+--- ITEM DI RIFERIMENTO (ordinati per data) ---
+
+{items_block}
+"""
+
+
+class _TagDisplay:
+    """Mapping tag → display italiano per prompt. Fallback: title case del tag."""
+
+    _MAP = {
+        "core_update": "Core Update di Google",
+        "e_e_a_t": "E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)",
+        "googlebot": "Googlebot e crawling",
+        "ai_overviews": "AI Overviews di Google",
+        "llm_seo": "SEO per LLM e AI Search",
+        "technical_seo": "SEO tecnico",
+    }
+
+    @classmethod
+    def render(cls, tag: str) -> str:
+        return cls._MAP.get(tag, tag.replace("_", " ").title())
+
+
 class PremiumWriterError(Exception):
     pass
 
@@ -196,6 +287,56 @@ class PremiumWriter:
             faqs=faqs[:8],
             editorial_commentary=parsed["editorial_commentary"],
             premium_model_used=result.model,
+            cost_eur=result.cost_eur,
+        )
+
+    async def write_pillar(self, tag: str, items: list[Item]) -> Pillar:
+        """Genera un :class:`Pillar` dato un tag e la lista di item che lo riguardano.
+
+        ``items`` va passato già filtrato e ordinato cronologicamente. Lo script
+        chiamante è responsabile del filtro per tag.
+        """
+        if not items:
+            raise PremiumWriterError("write_pillar requires at least 1 item")
+
+        items_sorted = sorted(items, key=lambda i: i.published_at)
+        items_block_lines = []
+        for i, it in enumerate(items_sorted, start=1):
+            published = it.published_at.strftime("%Y-%m-%d")
+            items_block_lines.append(
+                f"[{i}] {published} · {it.source.name} · importance={it.importance}\n"
+                f"    Titolo: {it.title_it}\n"
+                f"    URL: {it.url}\n"
+                f"    Summary: {it.summary_it}\n"
+            )
+        items_block = "\n".join(items_block_lines)
+
+        prompt = PILLAR_PROMPT.format(
+            tag_display=_TagDisplay.render(tag),
+            items_block=items_block,
+        )
+        result = await self._call_with_fallback(prompt)
+        parsed = result.parsed
+
+        takeaways = [
+            PillarTakeaway(title=t["title"], body=t["body"])
+            for t in parsed.get("takeaways", [])
+        ]
+
+        slug = tag.replace("_", "-")
+        return Pillar(
+            tag=tag,
+            slug=slug,
+            title_it=parsed["title_it"],
+            subtitle_it=parsed["subtitle_it"],
+            intro_long=parsed["intro_long"],
+            context_section=parsed["context_section"],
+            timeline_narrative=parsed["timeline_narrative"],
+            takeaways=takeaways[:8],
+            outlook=parsed["outlook"],
+            item_refs=[i.id for i in items_sorted],
+            generated_at=datetime.now(UTC),
+            model_used=result.model,
             cost_eur=result.cost_eur,
         )
 

@@ -33,9 +33,10 @@ from osservatorio_seo.models import (
     Source,
 )
 from osservatorio_seo.normalizer import Normalizer
+from osservatorio_seo.premium_writer import PremiumWriter
 from osservatorio_seo.publisher import Publisher
 from osservatorio_seo.ranker import Ranker
-from osservatorio_seo.sources import override_importance
+from osservatorio_seo.sources import is_event_item, override_importance
 from osservatorio_seo.summarizer import Summarizer
 
 logger = logging.getLogger(__name__)
@@ -92,6 +93,12 @@ class Pipeline:
         doc_items, doc_cost = await self._summarize_doc_changes(doc_results, doc_pages, summarizer)
         items.extend(doc_items)
         ai_cost += doc_cost
+
+        # Deep analysis enrichment: solo per item 5-stelle non-event non-doc_change
+        premium_writer = PremiumWriter(api_key=self._settings.openrouter_api_key)
+        raw_by_url = {r.url: r for r in normalized}
+        deep_cost = await self._enrich_critical_items(items, raw_by_url, premium_writer)
+        ai_cost += deep_cost
 
         ranker = Ranker()
         ranked = ranker.rank(items)
@@ -216,6 +223,58 @@ class Pipeline:
             )
             total_cost += summary.cost_eur
         return items, total_cost
+
+    async def _enrich_critical_items(
+        self,
+        items: list[Item],
+        raw_by_url: dict[str, RawItem],
+        writer: PremiumWriter,
+    ) -> float:
+        """Aggiunge DeepAnalysis agli item 5-stelle che la meritano.
+
+        Filtri:
+        - importance == 5
+        - non è un item "evento" (Search Central Live, conferenze)
+        - non è un doc_change (i diff hanno logica loro)
+        - non ha già una deep_analysis attaccata (idempotenza)
+
+        Falliamo gracefully: se PremiumWriter fa errore su un item, logghiamo
+        warning e proseguiamo. Il resto della pipeline non deve bloccarsi.
+        """
+        total_cost = 0.0
+        enriched = 0
+        for item in items:
+            if item.importance != 5:
+                continue
+            if item.is_doc_change:
+                continue
+            if is_event_item(item.tags):
+                continue
+            if item.deep_analysis is not None:
+                continue
+            raw = raw_by_url.get(item.url)
+            raw_content = raw.content if raw else None
+            try:
+                analysis = await writer.analyze(item, raw_content=raw_content)
+            except Exception as e:  # noqa: BLE001
+                logger.warning("deep analysis failed for %s: %s", item.url, e)
+                continue
+            item.deep_analysis = analysis
+            total_cost += analysis.cost_eur
+            enriched += 1
+            logger.info(
+                "deep analysis: %s (%.4f€, %d words)",
+                item.title_it[:60],
+                analysis.cost_eur,
+                len(analysis.detailed_description.split()),
+            )
+        if enriched:
+            logger.info(
+                "enriched %d critical items, deep analysis cost €%.4f",
+                enriched,
+                total_cost,
+            )
+        return total_cost
 
     async def _summarize_doc_changes(
         self,

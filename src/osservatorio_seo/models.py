@@ -129,6 +129,41 @@ class FailedSource(BaseModel):
     last_success: datetime | None = None
 
 
+class PillarTakeaway(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    title: str
+    body: str
+
+
+class Pillar(BaseModel):
+    """Pillar page / dossier editoriale su un tag trasversale.
+
+    Contiene contenuto premium generato via Claude Sonnet 4.5 che non è
+    riconducibile a un singolo item ma sintetizza una posizione editoriale
+    su un tema (es. core_update, e_e_a_t, googlebot). Gli item a cui la
+    pillar si riferisce sono linkati via ``item_refs`` con dati minimi
+    per rendering (no duplicazione del contenuto).
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    schema_version: str = "1.0"
+    tag: str  # slug tag originale, es. "core_update"
+    slug: str  # slug URL, es. "core-update"
+    title_it: str  # es. "Core Update: il dossier di Osservatorio SEO"
+    subtitle_it: str  # hook breve 1 frase
+    intro_long: str  # 800-1200 parole, paragrafi brevi
+    context_section: str  # 400-600 parole, contesto storico / perché importa
+    timeline_narrative: str  # 400-600 parole, narrazione cronologica
+    takeaways: list[PillarTakeaway] = Field(default_factory=list, max_length=8)
+    outlook: str  # 200-400 parole, prospettive future
+    item_refs: list[str] = Field(default_factory=list)  # item.id linkati
+    generated_at: datetime
+    model_used: str
+    cost_eur: float = 0.0
+
+
 class Feed(BaseModel):
     model_config = ConfigDict(extra="forbid")
 

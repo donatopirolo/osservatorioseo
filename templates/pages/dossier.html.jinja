@@ -1,0 +1,107 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% include "partials/_jsonld_article.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-outline">DOSSIER</span>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">{{ pillar.slug | upper }}</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOSSIER EDITORIALE</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">{{ pillar.title_it }}</h1>
+    <p class="text-lg text-on-surface-variant leading-relaxed">{{ pillar.subtitle_it }}</p>
+    <div class="mt-6 flex items-center gap-4 text-[10px] text-outline uppercase font-mono">
+      <span>Aggiornato: {{ updated_label }}</span>
+      <span class="text-outline-variant">·</span>
+      <span>{{ pillar.item_refs | length }} articoli correlati</span>
+    </div>
+  </header>
+
+  {# ---- INTRO LUNGA ---- #}
+  <section class="mb-12">
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in pillar.intro_long.split('\n\n') %}
+      <p class="text-lg">{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# ---- CONTEXT ---- #}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; CONTESTO E BACKGROUND</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in pillar.context_section.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# ---- TIMELINE NARRATIVE ---- #}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA È SUCCESSO FINORA</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in pillar.timeline_narrative.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# ---- ARTICOLI CORRELATI ---- #}
+  {% if related_articles %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ARTICOLI DI RIFERIMENTO</h2>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      {% for ra in related_articles %}
+      <a href="{{ ra.site_path }}" class="py-4 flex items-start gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <div class="text-[10px] text-outline font-mono uppercase shrink-0 w-24">{{ ra.date }}</div>
+        <div class="flex-1">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container">{{ ra.title }}</h3>
+          <p class="text-xs text-outline mt-1 font-mono uppercase">{{ ra.source }} · <span class="text-[#f5a623]">{{ ra.stars }}</span></p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# ---- TAKEAWAYS ---- #}
+  {% if pillar.takeaways %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; 5 TAKEAWAYS STRATEGICI</h2>
+    <ol class="space-y-5 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold">
+      {% for t in pillar.takeaways %}
+      <li class="pl-2">
+        <h3 class="text-base font-bold text-white mb-1">{{ t.title }}</h3>
+        <p class="text-on-surface-variant leading-relaxed">{{ t.body }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {# ---- OUTLOOK ---- #}
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; PROSPETTIVE</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-3">
+      {% for para in pillar.outlook.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Questo è un <strong class="text-white">dossier editoriale</strong> di Osservatorio SEO. Il contenuto è una sintesi analitica prodotta da <code class="text-primary-container">{{ pillar.model_used }}</code> a partire dagli articoli di riferimento elencati sopra. Le opinioni espresse sono editoriali e possono contenere posizioni forti sul tema.
+    </p>
+  </section>
+</article>
+{% endblock %}

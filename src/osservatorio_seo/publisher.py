@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any
 from urllib.parse import urlparse
 
-from osservatorio_seo.models import Feed, Item, Source
+from osservatorio_seo.models import Feed, Item, Pillar, Source
 from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.renderer import HtmlRenderer
 from osservatorio_seo.seo import (
@@ -271,6 +271,7 @@ class Publisher:
         self._ssg_archive_hubs(renderer, site_dir, allow_indexing)
         self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
+        self._ssg_dossiers(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
 
@@ -813,6 +814,114 @@ class Publisher:
             renderer.render_about(about_ctx), encoding="utf-8"
         )
 
+    # --- Dossier pillar pages ---
+
+    def _load_pillars(self) -> list[Pillar]:
+        """Carica tutti i Pillar da ``data/pillars/*.json``."""
+        pillars_dir = self._data_dir / "pillars"
+        if not pillars_dir.exists():
+            return []
+        pillars: list[Pillar] = []
+        for path in sorted(pillars_dir.glob("*.json")):
+            try:
+                pillar = Pillar.model_validate(
+                    json.loads(path.read_text(encoding="utf-8"))
+                )
+                pillars.append(pillar)
+            except Exception:  # noqa: BLE001
+                continue
+        return pillars
+
+    def _build_item_index(self) -> dict[str, dict[str, Any]]:
+        """Scansione una tantum di tutti gli archive per id → metadata dell'item.
+
+        Ritorna mapping ``item.id → {date, title, source, importance, slug,
+        site_path}`` per risolvere i ``Pillar.item_refs`` nel template.
+        """
+        idx: dict[str, dict[str, Any]] = {}
+        for arc in self._archive_dir.glob("*.json"):
+            if arc.stem == "index":
+                continue
+            try:
+                feed = Feed.model_validate(json.loads(arc.read_text(encoding="utf-8")))
+            except Exception:  # noqa: BLE001
+                continue
+            day = arc.stem  # YYYY-MM-DD
+            y, m, d = day.split("-")
+            existing_slugs: set[str] = set()
+            for item in feed.items:
+                if item.importance < 4:
+                    continue
+                slug = make_unique_slug(item.title_it, existing_slugs)
+                existing_slugs.add(slug)
+                site_path = f"/archivio/{y}/{m}/{d}/{slug}/"
+                idx[item.id] = {
+                    "date": day,
+                    "title": item.title_it,
+                    "source": item.source.name,
+                    "importance": item.importance,
+                    "stars": _stars(item.importance),
+                    "site_path": site_path,
+                }
+        return idx
+
+    def _ssg_dossiers(
+        self,
+        renderer: HtmlRenderer,
+        site_dir: Path,
+        allow_indexing: bool,
+    ) -> None:
+        pillars = self._load_pillars()
+        if not pillars:
+            return
+        item_idx = self._build_item_index()
+        for pillar in pillars:
+            slug_dir = pillar.slug
+            target = site_dir / "dossier" / slug_dir
+            target.mkdir(parents=True, exist_ok=True)
+
+            related: list[dict[str, Any]] = []
+            for iid in pillar.item_refs:
+                meta = item_idx.get(iid)
+                if meta is None:
+                    continue
+                related.append(meta)
+            # Ordine cronologico discendente (più recenti prima) per UX
+            related.sort(key=lambda r: r["date"], reverse=True)
+
+            updated_iso = pillar.generated_at.isoformat()
+            updated_label = pillar.generated_at.strftime("%d %B %Y")
+            article_url = canonical(f"/dossier/{slug_dir}/")
+
+            ctx = {
+                "page_title": f"{pillar.title_it} — Dossier Osservatorio SEO",
+                "page_description": pillar.subtitle_it,
+                "canonical_url": article_url,
+                "active_nav": "archive",
+                "noindex": not allow_indexing,
+                "og_type": "article",
+                "pillar": pillar.model_dump(mode="json"),
+                "related_articles": related,
+                "updated_iso": updated_iso,
+                "updated_label": updated_label,
+                "article_url": article_url,
+                "breadcrumbs": [
+                    {"name": "Home", "url": canonical("/"), "site_path": "/"},
+                    {
+                        "name": "Dossier",
+                        "url": canonical("/dossier/"),
+                        "site_path": "/dossier/",
+                    },
+                    {
+                        "name": pillar.title_it,
+                        "url": article_url,
+                        "site_path": "",
+                    },
+                ],
+            }
+            html = renderer.render_dossier(ctx)
+            (target / "index.html").write_text(html, encoding="utf-8")
+
     def _ssg_seo_assets(
         self,
         renderer: HtmlRenderer,
@@ -877,6 +986,17 @@ class Publisher:
                     "loc": canonical(f"/archivio/{y}/{m}/{d}/{slug}/"),
                     "lastmod": today,
                     "priority": "0.7",
+                }
+            )
+
+        # Dossier pillar pages: priorità alta perché sono contenuto evergreen
+        for pillar in self._load_pillars():
+            urls.append(
+                {
+                    "loc": canonical(f"/dossier/{pillar.slug}/"),
+                    "lastmod": pillar.generated_at.strftime("%Y-%m-%d"),
+                    "priority": "0.9",
+                    "changefreq": "weekly",
                 }
             )
 

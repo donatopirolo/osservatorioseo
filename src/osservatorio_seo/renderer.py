@@ -70,3 +70,6 @@ class HtmlRenderer:
 
     def render_sitemap_news(self, context: dict[str, Any]) -> str:
         return self.render_raw("sitemap_news.xml.jinja", context)
+
+    def render_dossier(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/dossier.html.jinja", context)

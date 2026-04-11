@@ -1,0 +1,31 @@
+{# Context: pillar, article_url (absolute), updated_iso — per pillar page #}
+{%- set _body = pillar.intro_long ~ '\n\n' ~ pillar.context_section ~ '\n\n' ~ pillar.timeline_narrative ~ '\n\n' ~ pillar.outlook -%}
+{%- set _word_count = _body.split() | length -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ pillar.title_it | tojson }},
+  "description": {{ pillar.subtitle_it | tojson }},
+  "articleBody": {{ _body | tojson }},
+  "wordCount": {{ _word_count }},
+  "datePublished": "{{ updated_iso }}",
+  "dateModified": "{{ updated_iso }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ article_url }}"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Dossier"
+}
+</script>
