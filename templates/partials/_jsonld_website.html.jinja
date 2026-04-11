@@ -1,0 +1,39 @@
+{# WebSite schema with SearchAction enables Google sitelinks search box #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Osservatorio SEO",
+  "alternateName": "OsservatorioSEO",
+  "url": "https://osservatorioseo.pages.dev/",
+  "description": "Hub giornaliero di notizie SEO e AI aggiornato alle 07:00 Europe/Rome. Fonti autorevoli, riassunti in italiano, monitoring policy Google.",
+  "inLanguage": "it-IT",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://osservatorioseo.pages.dev/tailwind.css",
+      "width": "512",
+      "height": "512"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Donato Pirolo",
+      "url": "https://donatopirolo.dev",
+      "sameAs": [
+        "https://github.com/donatopirolo"
+      ]
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://osservatorioseo.pages.dev/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
