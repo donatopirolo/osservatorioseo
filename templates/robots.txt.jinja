@@ -1,0 +1,6 @@
+User-agent: *
+{% if allow_indexing %}Allow: /
+{% else %}Disallow: /
+{% endif %}
+
+Sitemap: {{ site_url }}/sitemap.xml

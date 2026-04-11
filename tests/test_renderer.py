@@ -232,3 +232,47 @@ def test_render_docs_and_about() -> None:
     )
     assert "Chi siamo" in about_html
     assert "donatopirolo" in about_html
+
+
+def test_render_sitemap_robots_feed() -> None:
+    renderer = HtmlRenderer(templates_dir=Path("templates"))
+    sitemap = renderer.render_sitemap(
+        {
+            "urls": [
+                {"loc": "https://x.com/", "lastmod": "2026-04-11", "priority": "1.0"},
+                {"loc": "https://x.com/archivio/", "lastmod": "2026-04-11", "priority": "0.8"},
+            ]
+        }
+    )
+    assert "<loc>https://x.com/</loc>" in sitemap
+    assert "<lastmod>2026-04-11</lastmod>" in sitemap
+
+    robots_noindex = renderer.render_robots_txt(
+        {"allow_indexing": False, "site_url": "https://x.com"}
+    )
+    assert "Disallow: /" in robots_noindex
+    assert "Sitemap: https://x.com/sitemap.xml" in robots_noindex
+
+    robots_allow = renderer.render_robots_txt(
+        {"allow_indexing": True, "site_url": "https://x.com"}
+    )
+    assert "Allow: /" in robots_allow
+
+    feed = renderer.render_feed_xml(
+        {
+            "site_url": "https://x.com",
+            "updated": "2026-04-11T07:00:00Z",
+            "entries": [
+                {
+                    "title": "Test",
+                    "url": "https://x.com/a/",
+                    "updated": "2026-04-11T07:00:00Z",
+                    "published": "2026-04-11T07:00:00Z",
+                    "summary": "summary",
+                    "tags": ["seo"],
+                }
+            ],
+        }
+    )
+    assert "<title>Test</title>" in feed
+    assert '<category term="seo"' in feed

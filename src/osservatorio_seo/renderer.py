@@ -55,3 +55,12 @@ class HtmlRenderer:
 
     def render_about(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/about.html.jinja", context)
+
+    def render_sitemap(self, context: dict[str, Any]) -> str:
+        return self.render_raw("sitemap.xml.jinja", context)
+
+    def render_feed_xml(self, context: dict[str, Any]) -> str:
+        return self.render_raw("feed.xml.jinja", context)
+
+    def render_robots_txt(self, context: dict[str, Any]) -> str:
+        return self.render_raw("robots.txt.jinja", context)
