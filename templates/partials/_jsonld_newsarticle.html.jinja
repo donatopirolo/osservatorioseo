@@ -1,12 +1,14 @@
 {# Context: item, article_url (absolute), published_iso, category_label, word_count #}
+{%- set _body = item.deep_analysis.detailed_description if item.deep_analysis else item.summary_it -%}
+{%- set _word_count = (_body.split() | length) if _body else (word_count | default(0)) -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
   "headline": {{ item.title_it | tojson }},
   "description": {{ item.summary_it | tojson }},
-  "articleBody": {{ item.summary_it | tojson }},
-  "wordCount": {{ word_count | default(0) }},
+  "articleBody": {{ _body | tojson }},
+  "wordCount": {{ _word_count }},
   "datePublished": "{{ published_iso }}",
   "dateModified": "{{ published_iso }}",
   "author": {

@@ -3,6 +3,7 @@
 {% block extra_head %}
 {% include "partials/_jsonld_newsarticle.html.jinja" %}
 {% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% include "partials/_jsonld_faqpage.html.jinja" %}
 {% endblock %}
 
 {% block content %}
@@ -28,9 +29,80 @@
     <p class="text-sm text-outline font-mono uppercase">Fonte: <a class="text-primary-container hover:underline" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.source.name }}</a></p>
   </header>
 
-  <section class="prose prose-invert mb-8">
+  <section class="prose prose-invert mb-10">
     <p class="text-lg leading-relaxed text-on-surface">{{ item.summary_it }}</p>
   </section>
+
+  {% if item.deep_analysis %}
+  {# ---- DEEP ANALYSIS (5-star items only) ---- #}
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI APPROFONDITA</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in item.deep_analysis.detailed_description.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if item.deep_analysis.implications %}
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA CAMBIA PER TE</h2>
+    <ul class="space-y-3">
+      {% for imp in item.deep_analysis.implications %}
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>{{ imp }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if item.deep_analysis.examples %}
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ESEMPI CONCRETI</h2>
+    <div class="space-y-4">
+      {% for ex in item.deep_analysis.examples %}
+      <div class="p-4 border-l-2 border-outline-variant bg-surface-container-lowest">
+        <p class="text-on-surface leading-relaxed">{{ ex }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if item.deep_analysis.testing_steps %}
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COME TESTARE L'IMPATTO</h2>
+    <ol class="space-y-2 list-decimal list-inside text-on-surface leading-relaxed marker:text-primary-container marker:font-mono">
+      {% for step in item.deep_analysis.testing_steps %}
+      <li class="pl-2">{{ step }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {% if item.deep_analysis.faqs %}
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; DOMANDE FREQUENTI</h2>
+    <div class="space-y-5">
+      {% for f in item.deep_analysis.faqs %}
+      <div>
+        <h3 class="text-base font-bold text-white mb-2">{{ f.question }}</h3>
+        <p class="text-on-surface-variant leading-relaxed">{{ f.answer }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if item.deep_analysis.editorial_commentary %}
+  <section class="mb-10 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IL PUNTO DELLA REDAZIONE</h2>
+    <p class="text-on-surface leading-relaxed italic">{{ item.deep_analysis.editorial_commentary }}</p>
+  </section>
+  {% endif %}
+  {% endif %}
 
   {% if item.tags %}
   <section class="mb-8">
@@ -43,12 +115,11 @@
   </section>
   {% endif %}
 
-  <section class="mb-8 p-6 bg-surface-container-low border-l-2 border-primary-container">
+  <section class="mb-8 p-6 bg-surface-container-low border-l-2 border-outline-variant">
     <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
-      Questo è un <strong class="text-white">riassunto generato da AI</strong> a partire dall'articolo originale pubblicato su
-      <a class="text-primary-container hover:underline" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.source.name }}</a>.
-      Il riassunto è creato da <code class="text-primary-container">{{ item.summarizer_model }}</code>.
-      Per il testo completo e l'attribuzione, consulta la fonte originale.
+      Questo articolo include un <strong class="text-white">riassunto</strong> della notizia originale e, per gli item critici (5/5), una <strong class="text-white">analisi editoriale</strong> prodotta da Osservatorio SEO.
+      Il riassunto è generato da <code class="text-primary-container">{{ item.summarizer_model }}</code>{% if item.deep_analysis %}, l'analisi approfondita da <code class="text-primary-container">{{ item.deep_analysis.premium_model_used }}</code>{% endif %}.
+      Per il testo completo e l'attribuzione della notizia, consulta la fonte originale.
     </p>
     <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="{{ item.url }}" target="_blank" rel="noopener">LEGGI L'ORIGINALE →</a>
   </section>

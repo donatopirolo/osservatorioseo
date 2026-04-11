@@ -1,0 +1,21 @@
+{# Context: item (deve avere item.deep_analysis.faqs non vuoto) #}
+{% if item.deep_analysis and item.deep_analysis.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for f in item.deep_analysis.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ f.question | tojson }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ f.answer | tojson }}
+      }
+    }{%- if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endif %}

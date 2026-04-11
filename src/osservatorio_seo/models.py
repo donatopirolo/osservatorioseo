@@ -60,6 +60,32 @@ class DocChange(BaseModel):
     lines_removed: int
 
 
+class FAQEntry(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    question: str
+    answer: str
+
+
+class DeepAnalysis(BaseModel):
+    """Analisi editoriale estesa generata da un modello premium per item 5-stelle.
+
+    Tutti i campi sono stringhe/liste già pronte per essere renderizzate nel
+    template. Non contiene logica di business: solo contenuto.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    detailed_description: str  # 500-700 parole, articleBody SEO
+    implications: list[str] = Field(default_factory=list, max_length=6)
+    examples: list[str] = Field(default_factory=list, max_length=4)
+    testing_steps: list[str] = Field(default_factory=list, max_length=8)
+    faqs: list[FAQEntry] = Field(default_factory=list, max_length=8)
+    editorial_commentary: str  # commento editoriale "mix tone"
+    premium_model_used: str
+    cost_eur: float = 0.0
+
+
 class Item(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -79,6 +105,7 @@ class Item(BaseModel):
     language_original: str = "en"
     summarizer_model: str
     raw_hash: str
+    deep_analysis: DeepAnalysis | None = None
 
 
 class FeedStats(BaseModel):
