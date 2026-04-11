@@ -875,6 +875,46 @@ class Publisher:
         if not pillars:
             return
         item_idx = self._build_item_index()
+
+        # Index page /dossier/
+        index_entries = []
+        for p in pillars:
+            word_count = (
+                len((p.intro_long + " " + p.context_section + " " + p.timeline_narrative).split())
+            )
+            index_entries.append(
+                {
+                    "tag": p.tag,
+                    "slug": p.slug,
+                    "title_it": p.title_it,
+                    "subtitle_it": p.subtitle_it,
+                    "refs_count": len(p.item_refs),
+                    "updated_label": p.generated_at.strftime("%d %B %Y"),
+                    "word_count": word_count,
+                }
+            )
+        index_target = site_dir / "dossier"
+        index_target.mkdir(parents=True, exist_ok=True)
+        index_ctx = {
+            "page_title": "Dossier SEO — Osservatorio SEO",
+            "page_description": (
+                "Approfondimenti editoriali su core update, E-E-A-T, Googlebot e "
+                "altri temi SEO critici. Sintesi analitiche con articoli di riferimento, "
+                "takeaways operativi e prospettive future."
+            ),
+            "canonical_url": canonical("/dossier/"),
+            "active_nav": "dossier",
+            "noindex": not allow_indexing,
+            "pillars": index_entries,
+            "breadcrumbs": [
+                {"name": "Home", "url": canonical("/")},
+                {"name": "Dossier", "url": canonical("/dossier/")},
+            ],
+        }
+        (index_target / "index.html").write_text(
+            renderer.render_dossier_index(index_ctx), encoding="utf-8"
+        )
+
         for pillar in pillars:
             slug_dir = pillar.slug
             target = site_dir / "dossier" / slug_dir
@@ -897,7 +937,7 @@ class Publisher:
                 "page_title": f"{pillar.title_it} — Dossier Osservatorio SEO",
                 "page_description": pillar.subtitle_it,
                 "canonical_url": article_url,
-                "active_nav": "archive",
+                "active_nav": "dossier",
                 "noindex": not allow_indexing,
                 "og_type": "article",
                 "pillar": pillar.model_dump(mode="json"),

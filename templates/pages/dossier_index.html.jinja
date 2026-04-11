@@ -1,0 +1,46 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant"> / </span>
+  <span class="text-primary-container">DOSSIER</span>
+</nav>
+
+<section class="mb-12 max-w-3xl">
+  <div class="flex items-center gap-4 mb-4">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; DOSSIER</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-on-surface-variant leading-relaxed mb-2">
+    I dossier sono approfondimenti editoriali su temi SEO strategici. Ogni dossier sintetizza la letteratura esistente, gli articoli di riferimento pubblicati nell'archivio e una visione editoriale sul tema, con takeaways operativi e prospettive future.
+  </p>
+  <p class="text-[10px] text-outline uppercase font-mono">
+    {{ pillars | length }} DOSSIER ATTIVI // AGGIORNAMENTO PERIODICO
+  </p>
+</section>
+
+<section class="max-w-3xl">
+  {% if pillars %}
+  <div class="grid grid-cols-1 gap-6">
+    {% for p in pillars %}
+    <a href="/dossier/{{ p.slug }}/" class="block p-6 border border-outline-variant hover:border-primary-container transition-colors bg-surface-container-lowest group">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-[10px] text-outline font-mono uppercase tracking-widest">&gt; DOSSIER · #{{ p.tag }}</span>
+        <span class="text-[10px] text-outline font-mono">{{ p.refs_count }} ARTICOLI</span>
+      </div>
+      <h2 class="text-2xl font-bold text-white group-hover:text-primary-container mb-3 leading-tight">{{ p.title_it }}</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-4">{{ p.subtitle_it }}</p>
+      <p class="text-[10px] text-outline font-mono uppercase">Aggiornato: {{ p.updated_label }} · {{ p.word_count }} parole</p>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="text-outline font-mono text-sm uppercase">Nessun dossier ancora pubblicato.</p>
+  {% endif %}
+</section>
+{% endblock %}
