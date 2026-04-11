@@ -1,17 +1,16 @@
+const CATEGORY_LABELS = {
+  google_updates: "Google Updates",
+  google_docs_change: "Google Docs Change ⚠️",
+  ai_models: "AI Models",
+  ai_overviews_llm_seo: "AI Overviews & LLM SEO",
+  technical_seo: "Technical SEO",
+  content_eeat: "Content & E-E-A-T",
+  tools_platforms: "Tools & Platforms",
+  industry_news: "Industry News",
+};
+
 (async function () {
   const FEED_URL = "data/feed.json";
-
-  const CATEGORY_LABELS = {
-    google_updates: "Google Updates",
-    google_docs_change: "Google Docs Change ⚠️",
-    ai_models: "AI Models",
-    ai_overviews_llm_seo: "AI Overviews & LLM SEO",
-    technical_seo: "Technical SEO",
-    content_eeat: "Content & E-E-A-T",
-    tools_platforms: "Tools & Platforms",
-    industry_news: "Industry News",
-  };
-
   let feed = null;
 
   try {
