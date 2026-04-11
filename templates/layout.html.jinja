@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+{% include "partials/_head_meta.html.jinja" %}
+{% block extra_head %}{% endblock %}
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+{% include "partials/_header.html.jinja" %}
+
+<main class="{{ main_class | default('flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full') }}">
+{% block content %}
+{{ content | default('') | safe }}
+{% endblock %}
+</main>
+
+{% include "partials/_footer.html.jinja" %}
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

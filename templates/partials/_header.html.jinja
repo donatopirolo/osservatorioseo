@@ -1,0 +1,23 @@
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      {% set active = active_nav | default('') %}
+      <a class="{% if active == 'today' %}text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1{% else %}text-[#919191] hover:text-white transition-colors duration-150{% endif %}" href="/">TODAY</a>
+      <a class="{% if active == 'top-week' %}text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1{% else %}text-[#919191] hover:text-white transition-colors duration-150{% endif %}" href="/top-settimana/">TOP_WEEK</a>
+      <a class="{% if active == 'archive' %}text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1{% else %}text-[#919191] hover:text-white transition-colors duration-150{% endif %}" href="/archivio/">ARCHIVIO</a>
+      <a class="{% if active == 'docs' %}text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1{% else %}text-[#919191] hover:text-white transition-colors duration-150{% endif %}" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
