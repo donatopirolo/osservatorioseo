@@ -61,12 +61,24 @@ jobs:
         run: |
           git config user.name "osservatorioseo-bot"
           git config user.email "bot@osservatorioseo.local"
-          git add data/ site/data/
+          # Stage sia data/ che tutto site/ (include HTML SSG generati in site/archivio/,
+          # site/docs/, site/categoria/, site/tag/, site/top-settimana/, ecc.)
+          git add data/ site/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "chore(feed): refresh $(TZ=Europe/Rome date +%Y-%m-%d)"
-            git push
+            # Retry on conflict con rebase (race condition con push manuali)
+            for i in 1 2 3; do
+              if git push 2>&1; then
+                echo "push success on attempt $i"
+                exit 0
+              fi
+              echo "push failed on attempt $i, rebasing…"
+              git pull --rebase origin main || exit 1
+            done
+            echo "push failed after 3 attempts"
+            exit 1
           fi
 
       - name: Deploy to Cloudflare Pages
