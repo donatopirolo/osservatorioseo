@@ -1,0 +1,75 @@
+# Pagine sorvegliate dal Doc Watcher.
+# Quando il contenuto cambia (ignoring whitespace cosmetico), genera un item
+# nel feed con badge "⚠️ Google ha aggiornato ..." e summary del diff.
+
+pages:
+  - id: google_spam_policies
+    name: "Google Spam Policies"
+    url: https://developers.google.com/search/docs/essentials/spam-policies
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_helpful_content
+    name: "Google Helpful Content"
+    url: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_quality_rater_guidelines
+    name: "Google Quality Rater Guidelines (PDF)"
+    url: https://services.google.com/fh/files/misc/hsw-sqevaluatorguidelines.pdf
+    type: pdf
+    category: google_docs_change
+    importance: 5
+
+  - id: google_ai_features_guidance
+    name: "Google AI Features SEO Guidance"
+    url: https://developers.google.com/search/docs/appearance/ai-features
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: googlebot_docs
+    name: "Googlebot Documentation"
+    url: https://developers.google.com/search/docs/crawling-indexing/googlebot
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_crawlers_overview
+    name: "Overview of Google Crawlers"
+    url: https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: structured_data_docs
+    name: "Google Structured Data Supported"
+    url: https://developers.google.com/search/docs/appearance/structured-data
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: openai_usage_policies
+    name: "OpenAI Usage Policies"
+    url: https://openai.com/policies/usage-policies/
+    selector: "main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: anthropic_usage_policies
+    name: "Anthropic Usage Policy"
+    url: https://www.anthropic.com/legal/aup
+    selector: "main"
+    type: html
+    category: google_docs_change
+    importance: 3

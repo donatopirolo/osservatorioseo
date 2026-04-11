@@ -1,0 +1,234 @@
+# Fonti v1 di OsservatorioSEO.
+# authority: 1-10 (10 = fonte ufficiale, 9 = media di riferimento, etc.)
+# fetcher: rss | scraper | playwright
+
+sources:
+  # === UFFICIALI ===
+  - id: google_search_central_blog
+    name: "Google Search Central Blog"
+    authority: 10
+    type: official
+    fetcher: rss
+    feed_url: https://developers.google.com/search/blog/rss
+    category_hint: google_updates
+    enabled: true
+
+  - id: google_search_status_dashboard
+    name: "Google Search Status Dashboard"
+    authority: 10
+    type: official
+    fetcher: rss
+    feed_url: https://status.search.google.com/incidents.rss
+    category_hint: google_updates
+    enabled: true
+
+  - id: openai_blog
+    name: "OpenAI Blog"
+    authority: 10
+    type: official
+    fetcher: rss
+    feed_url: https://openai.com/blog/rss.xml
+    category_hint: ai_models
+    enabled: true
+
+  - id: anthropic_news
+    name: "Anthropic News"
+    authority: 10
+    type: official
+    fetcher: scraper
+    target_url: https://www.anthropic.com/news
+    selectors:
+      article: "a[href*='/news/']"
+      title: "h3, h2"
+      link: ""
+    category_hint: ai_models
+    enabled: true
+
+  - id: google_deepmind_blog
+    name: "Google DeepMind Blog"
+    authority: 10
+    type: official
+    fetcher: rss
+    feed_url: https://deepmind.google/blog/rss.xml
+    category_hint: ai_models
+    enabled: true
+
+  - id: bing_webmaster_blog
+    name: "Bing Webmaster Blog"
+    authority: 9
+    type: official
+    fetcher: rss
+    feed_url: https://blogs.bing.com/webmaster/feed
+    category_hint: technical_seo
+    enabled: true
+
+  # === MEDIA DI SETTORE ===
+  - id: search_engine_land
+    name: "Search Engine Land"
+    authority: 9
+    type: media
+    fetcher: rss
+    feed_url: https://searchengineland.com/feed
+    category_hint: industry_news
+    enabled: true
+
+  - id: search_engine_journal
+    name: "Search Engine Journal"
+    authority: 8
+    type: media
+    fetcher: rss
+    feed_url: https://www.searchenginejournal.com/feed/
+    category_hint: industry_news
+    enabled: true
+
+  - id: search_engine_roundtable
+    name: "Search Engine Roundtable"
+    authority: 9
+    type: media
+    fetcher: rss
+    feed_url: https://www.seroundtable.com/feed.xml
+    category_hint: google_updates
+    enabled: true
+
+  # === VOCI INDIPENDENTI ===
+  - id: growth_memo_kevin_indig
+    name: "Growth Memo (Kevin Indig)"
+    authority: 9
+    type: independent
+    fetcher: rss
+    feed_url: https://www.growth-memo.com/feed
+    category_hint: ai_overviews_llm_seo
+    enabled: true
+
+  - id: glenn_gabe_hifpm
+    name: "Glenn Gabe — HIFPM"
+    authority: 9
+    type: independent
+    fetcher: rss
+    feed_url: https://www.gsqi.com/marketing-blog/feed/
+    category_hint: google_updates
+    enabled: true
+
+  - id: ipullrank_blog
+    name: "iPullRank Blog (Mike King)"
+    authority: 8
+    type: independent
+    fetcher: rss
+    feed_url: https://ipullrank.com/feed
+    category_hint: ai_overviews_llm_seo
+    enabled: true
+
+  # === TOOL VENDOR ===
+  - id: ahrefs_blog
+    name: "Ahrefs Blog"
+    authority: 8
+    type: tool_vendor
+    fetcher: rss
+    feed_url: https://ahrefs.com/blog/feed/
+    category_hint: tools_platforms
+    enabled: true
+
+  - id: semrush_blog
+    name: "Semrush Blog"
+    authority: 7
+    type: tool_vendor
+    fetcher: rss
+    feed_url: https://www.semrush.com/blog/feed/
+    category_hint: tools_platforms
+    enabled: true
+
+  - id: sistrix_blog
+    name: "Sistrix Blog"
+    authority: 9
+    type: tool_vendor
+    fetcher: rss
+    feed_url: https://www.sistrix.com/blog/feed/
+    category_hint: google_updates
+    enabled: true
+
+  - id: moz_blog
+    name: "Moz Blog"
+    authority: 8
+    type: tool_vendor
+    fetcher: rss
+    feed_url: https://moz.com/posts/rss/blog
+    category_hint: technical_seo
+    enabled: true
+
+  # === AI LABS ===
+  - id: meta_ai_blog
+    name: "Meta AI Blog"
+    authority: 9
+    type: official
+    fetcher: rss
+    feed_url: https://ai.meta.com/blog/rss
+    category_hint: ai_models
+    enabled: true
+
+  - id: mistral_ai_blog
+    name: "Mistral AI News"
+    authority: 8
+    type: official
+    fetcher: scraper
+    target_url: https://mistral.ai/news
+    selectors:
+      article: "article, a[href*='/news/']"
+      title: "h2, h3"
+      link: ""
+    category_hint: ai_models
+    enabled: true
+
+  - id: perplexity_blog
+    name: "Perplexity Blog"
+    authority: 8
+    type: official
+    fetcher: scraper
+    target_url: https://www.perplexity.ai/hub
+    selectors:
+      article: "a[href*='/hub/']"
+      title: "h2, h3"
+      link: ""
+    category_hint: ai_overviews_llm_seo
+    enabled: true
+
+  - id: huggingface_blog
+    name: "Hugging Face Blog"
+    authority: 8
+    type: official
+    fetcher: rss
+    feed_url: https://huggingface.co/blog/feed.xml
+    category_hint: ai_models
+    enabled: true
+
+  # === WEB / PLATFORM ===
+  - id: web_dev
+    name: "web.dev"
+    authority: 10
+    type: official
+    fetcher: rss
+    feed_url: https://web.dev/feed.xml
+    category_hint: technical_seo
+    enabled: true
+
+  - id: chrome_developers_blog
+    name: "Chrome Developers Blog"
+    authority: 10
+    type: official
+    fetcher: rss
+    feed_url: https://developer.chrome.com/feeds/blog.xml
+    category_hint: technical_seo
+    enabled: true
+
+  # === SOCIAL (playwright) ===
+  - id: searchliaison_x
+    name: "Danny Sullivan (SearchLiaison) on X"
+    authority: 10
+    type: social
+    fetcher: playwright
+    target_url: https://x.com/searchliaison
+    selectors:
+      post: "article[data-testid='tweet']"
+      text: "div[data-testid='tweetText']"
+      link: "a[href*='/status/']"
+    category_hint: google_updates
+    enabled: true
