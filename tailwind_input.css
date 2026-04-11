@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-@source "../templates/**/*.jinja";
-@source "../site/app.js";
+@source "templates/**/*.jinja";
+@source "site/app.js";
 
 @theme {
   --color-on-surface: #e2e2e2;
@@ -23,5 +23,8 @@
   --radius-xl: 0px;
 
   --font-sans: "Space Grotesk", sans-serif;
-  --font-mono: "Space Grotesk", monospace;
+  /* --font-mono intentionally not overridden: Tailwind's default monospace
+     stack (ui-monospace, SFMono-Regular, Menlo, …) is required for the
+     ASCII logo and any font-mono usage — Space Grotesk is not monospace
+     and collapses block characters. */
 }

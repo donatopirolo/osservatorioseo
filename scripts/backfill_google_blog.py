@@ -178,7 +178,7 @@ async def summarize_all(
             source=SOURCE,
             category=summary.category,
             tags=summary.tags,
-            importance=override_importance(SOURCE.id, summary.importance),
+            importance=override_importance(SOURCE.id, summary.importance, summary.tags),
             published_at=raw.published_at,
             fetched_at=raw.published_at,  # coincide con la data reale
             is_doc_change=False,
