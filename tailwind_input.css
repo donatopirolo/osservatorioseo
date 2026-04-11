@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@source "../templates/**/*.jinja";
+@source "../site/app.js";
+
+@theme {
+  --color-on-surface: #e2e2e2;
+  --color-primary-container: #00f63e;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1b1b1b;
+  --color-surface-container: #1f1f1f;
+  --color-outline: #919191;
+  --color-outline-variant: #474747;
+  --color-surface: #131313;
+  --color-background: #131313;
+  --color-on-surface-variant: #c6c6c6;
+  --color-primary: #ffffff;
+  --color-error: #ffb4ab;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-mono: "Space Grotesk", monospace;
+}

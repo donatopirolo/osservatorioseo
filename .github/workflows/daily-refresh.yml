@@ -42,12 +42,24 @@ jobs:
           python-version: "3.12"
           cache: pip
 
+      - name: Setup Node
+        if: steps.time_check.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
       - name: Install dependencies
         if: steps.time_check.outputs.skip != 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -e .
           python -m playwright install --with-deps chromium
+          npm install
+
+      - name: Build Tailwind CSS
+        if: steps.time_check.outputs.skip != 'true'
+        run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
 
       - name: Run refresh
         if: steps.time_check.outputs.skip != 'true'

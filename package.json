@@ -1,0 +1,14 @@
+{
+  "name": "osservatorioseo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tailwind build for SSG (Jinja2 templates)",
+  "scripts": {
+    "build:css": "tailwindcss -i ./tailwind_input.css -o ./site/tailwind.css --minify",
+    "dev:css": "tailwindcss -i ./tailwind_input.css -o ./site/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/cli": "^4.0.0"
+  }
+}
