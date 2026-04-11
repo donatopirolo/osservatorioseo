@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>OSSERVATORIO SEO // DOCS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface": "#e2e2e2",
+          "primary-container": "#00f63e",
+          "surface-container-lowest": "#0e0e0e",
+          "surface-container-low": "#1b1b1b",
+          "surface-container": "#1f1f1f",
+          "outline": "#919191",
+          "outline-variant": "#474747",
+          "surface": "#131313",
+          "background": "#131313",
+          "on-surface-variant": "#c6c6c6",
+          "primary": "#ffffff",
+          "error": "#ffb4ab"
+        },
+        borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+        fontFamily: {
+          headline: ["Space Grotesk"],
+          body: ["Space Grotesk"],
+          label: ["Space Grotesk"]
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center gap-6">
+    <div class="text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</div>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="./">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="archive.html">ARCHIVIO</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="docs.html">DOCS</a>
+    </nav>
+  </div>
+</header>
+
+<main class="flex-grow pt-24 pb-12 px-6 max-w-5xl mx-auto w-full">
+
+  <section class="mb-16">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; DOCS // COME FUNZIONA</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <div class="space-y-6 font-mono text-sm text-on-surface-variant leading-relaxed">
+      <p>
+        <span class="text-primary-container">OSSERVATORIO_SEO</span> è un hub giornaliero di news <em>SEO</em> e <em>AI</em>
+        aggiornato automaticamente ogni mattina alle <span class="text-white">07:00 Europe/Rome</span>. Una pipeline
+        Python legge un insieme di fonti autorevoli, filtra le notizie fresche, le riassume in italiano tramite un
+        modello AI (Gemini 2.0 Flash) e pubblica il risultato come pagina statica e come file <code class="text-primary-container">feed.json</code> pubblico.
+      </p>
+      <p>Il flusso di ogni run è:</p>
+      <ol class="list-none space-y-2 pl-4 border-l border-outline-variant">
+        <li><span class="text-primary-container">[1]</span> FETCH &middot; scarica in parallelo ~21 fonti (RSS, scraper HTML, Playwright per siti anti-bot)</li>
+        <li><span class="text-primary-container">[2]</span> DOC_WATCH &middot; controlla 9 pagine di documentazione ufficiale e genera un diff se qualcosa cambia</li>
+        <li><span class="text-primary-container">[3]</span> NORMALIZE &middot; pulisce URL, dedup per URL e per fuzzy title, filtra news &gt; 72h</li>
+        <li><span class="text-primary-container">[4]</span> SUMMARIZE &middot; per ogni item l'AI genera titolo italiano, riassunto, categoria, tag, importance 1-5</li>
+        <li><span class="text-primary-container">[5]</span> RANK &middot; score per <em>top10</em> e raggruppamento in 8 categorie</li>
+        <li><span class="text-primary-container">[6]</span> PUBLISH &middot; scrive feed.json, archivio giornaliero, push su GitHub, deploy Cloudflare Pages</li>
+      </ol>
+      <p class="text-xs text-outline">
+        Costo AI tipico per run: <span class="text-primary-container">€0.005</span>. Tutto gira gratis su GitHub Actions + Cloudflare Pages. Zero database.
+      </p>
+    </div>
+  </section>
+
+  <section class="mb-16">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; LE PAGINE</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-sm">
+
+      <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+        <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ TODAY ] <code>/</code></div>
+        <p class="text-on-surface-variant">La home. Mostra il feed del giorno: <span class="text-white">Top 10</span> numerato e tutte le notizie raggruppate in <span class="text-white">categorie</span>. Include una search bar con possibilità di estendere la ricerca agli ultimi 7 giorni.</p>
+      </div>
+
+      <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+        <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ ARCHIVIO ] <code>/archive.html</code></div>
+        <p class="text-on-surface-variant">Indice cronologico di tutte le giornate archiviate. Ogni run genera un file <code class="text-primary-container">YYYY-MM-DD.json</code> conservato nel repo. Click su una voce per aprire lo snapshot.</p>
+      </div>
+
+      <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+        <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ SNAPSHOT ] <code>/?date=YYYY-MM-DD</code></div>
+        <p class="text-on-surface-variant">Versione della home per una giornata passata. Mostra banner <em>SNAPSHOT</em>, stessa search e categorie, titoli con la data del giorno. Comodo per condividere lo stato del feed in una data specifica.</p>
+      </div>
+
+      <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+        <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ FEED JSON ] <code>/data/feed.json</code></div>
+        <p class="text-on-surface-variant">Feed pubblico consumabile da altri tool: include titolo originale, titolo italiano, riassunto, categoria, tag, importanza, URL originale, fonte, hash doc change. Pensato per essere letto anche da agent AI.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="mb-16">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; FONTI MONITORATE</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <p class="text-[10px] text-outline uppercase font-mono mb-6" id="sources-meta">Loading sources…</p>
+    <div id="sources-list" class="flex flex-col gap-2"></div>
+  </section>
+
+  <section class="mb-16">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; DOC WATCHER // PAGINE SORVEGLIATE</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <p class="text-sm text-on-surface-variant font-mono mb-6">
+      Queste pagine vengono scaricate ad ogni run e confrontate con la versione precedente. Se il testo cambia in modo
+      significativo (soglia di similarità <span class="text-primary-container">&gt;0.3%</span>, whitespace cosmetico ignorato), viene generato un item
+      speciale nel feed con badge <span class="text-primary-container">⚠️</span> e un diff leggibile dall'AI.
+    </p>
+    <p class="text-[10px] text-outline uppercase font-mono mb-6" id="docwatcher-meta">Loading pages…</p>
+    <div id="docwatcher-list" class="flex flex-col gap-2"></div>
+  </section>
+
+  <section class="mb-16">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; RANKING &amp; CATEGORIE</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <div class="space-y-6 font-mono text-sm text-on-surface-variant leading-relaxed">
+      <p>Ogni item riceve uno score calcolato così:</p>
+      <pre class="bg-surface-container-lowest border border-outline-variant p-4 text-xs text-primary-container overflow-x-auto">score = importance * 10       # decisione AI, 1..5
+      + source.authority      # config/sources.yml, 1..10
+      + freshness_bonus       # 5 se &lt;6h, 2 se &lt;24h, 0 altrimenti
+      + doc_change_bonus      # 20 se è un cambio Doc Watcher
+      + category_bonus        # 10 google_docs_change, 5 google_updates, 3 ai_models</pre>
+      <p>Le 8 categorie sono: <span class="text-primary-container">google_updates</span>, <span class="text-primary-container">google_docs_change</span>, <span class="text-primary-container">ai_models</span>, <span class="text-primary-container">ai_overviews_llm_seo</span>, <span class="text-primary-container">technical_seo</span>, <span class="text-primary-container">content_eeat</span>, <span class="text-primary-container">tools_platforms</span>, <span class="text-primary-container">industry_news</span>. Le etichette Italiane vengono mostrate nel frontend.</p>
+    </div>
+  </section>
+
+  <section class="mb-16">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; STACK TECNICO</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <ul class="font-mono text-sm text-on-surface-variant space-y-2">
+      <li><span class="text-primary-container">PYTHON 3.12</span> &middot; httpx async, feedparser, selectolax, playwright, pydantic v2, rapidfuzz</li>
+      <li><span class="text-primary-container">AI</span> &middot; OpenRouter → google/gemini-2.0-flash-001 (fallback claude-haiku-4.5 e gpt-5-mini)</li>
+      <li><span class="text-primary-container">CI/CD</span> &middot; GitHub Actions cron 07:00 Europe/Rome, canary settimanale sulle fonti</li>
+      <li><span class="text-primary-container">HOSTING</span> &middot; Cloudflare Pages (statico, noindex)</li>
+      <li><span class="text-primary-container">FRONTEND</span> &middot; HTML + Tailwind CDN + vanilla JS, zero build step</li>
+      <li><span class="text-primary-container">STORAGE</span> &middot; zero database: tutto committato nel repo git (feed + archivio + stato doc watcher)</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">
+    (C) 2026 OSSERVATORIO_SEO // AUTORE:
+    <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+  </div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="data/feed.json">FEED.JSON</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+  </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="docs.js"></script>
+</body>
+</html>

@@ -5,8 +5,12 @@ from __future__ import annotations
 import json
 import shutil
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-from osservatorio_seo.models import Feed
+from osservatorio_seo.models import Feed, Source
+
+if TYPE_CHECKING:
+    from osservatorio_seo.config import DocWatcherPage
 
 
 class Publisher:
@@ -59,3 +63,48 @@ class Publisher:
             entries.append({"date": path.stem, "file": path.name})
         entries.sort(key=lambda e: e["date"], reverse=True)
         return entries
+
+    def publish_config_snapshot(
+        self,
+        sources: list[Source],
+        doc_pages: list[DocWatcherPage],
+    ) -> Path:
+        """Scrive uno snapshot leggibile del config (fonti + doc watcher pages).
+
+        Il file è pensato per essere consumato dalla pagina /docs.html del
+        frontend, che lo legge per mostrare l'elenco aggiornato delle fonti
+        e delle pagine sorvegliate senza dover parsare YAML lato client.
+        """
+        self._data_dir.mkdir(parents=True, exist_ok=True)
+        snapshot = {
+            "sources": [
+                {
+                    "id": s.id,
+                    "name": s.name,
+                    "type": s.type,
+                    "authority": s.authority,
+                    "fetcher": s.fetcher,
+                    "url": s.feed_url or s.target_url or "",
+                    "category_hint": s.category_hint,
+                    "enabled": s.enabled,
+                }
+                for s in sources
+            ],
+            "doc_watcher_pages": [
+                {
+                    "id": p.id,
+                    "name": p.name,
+                    "url": p.url,
+                    "type": p.type,
+                    "importance": p.importance,
+                    "category": p.category,
+                }
+                for p in doc_pages
+            ],
+        }
+        target = self._data_dir / "config_snapshot.json"
+        target.write_text(json.dumps(snapshot, indent=2), encoding="utf-8")
+        if self._site_data_dir:
+            self._site_data_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(target, self._site_data_dir / "config_snapshot.json")
+        return target

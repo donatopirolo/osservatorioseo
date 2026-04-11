@@ -122,6 +122,9 @@ class Pipeline:
             site_data_dir=self._site_data_dir,
         )
         publisher.publish(feed)
+        # Snapshot di sources + doc_watcher pages per la pagina /docs.html del
+        # frontend (si auto-aggiorna ad ogni run).
+        publisher.publish_config_snapshot(sources, doc_pages)
         return feed
 
     async def _fetch_all(

@@ -100,6 +100,63 @@ def test_publish_copies_to_site_data(tmp_path: Path) -> None:
     assert (site_dir / "feed.json").exists()
 
 
+def test_publish_config_snapshot(tmp_path: Path) -> None:
+    from osservatorio_seo.config import DocWatcherPage
+
+    site_dir = tmp_path / "site" / "data"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir,
+    )
+    sources = [
+        Source(
+            id="s1",
+            name="Source One",
+            authority=9,
+            type="official",
+            fetcher="rss",
+            feed_url="https://example.com/rss",
+            category_hint="google_updates",
+        ),
+        Source(
+            id="s2",
+            name="Source Two",
+            authority=7,
+            type="media",
+            fetcher="scraper",
+            target_url="https://example2.com/news",
+        ),
+    ]
+    pages = [
+        DocWatcherPage(
+            id="p1",
+            name="Page One",
+            url="https://docs.example.com/p1",
+            type="html",
+            importance=5,
+            category="google_docs_change",
+        ),
+    ]
+    pub.publish_config_snapshot(sources, pages)
+
+    target = tmp_path / "data" / "config_snapshot.json"
+    assert target.exists()
+    data = json.loads(target.read_text())
+    ids = [s["id"] for s in data["sources"]]
+    assert ids == ["s1", "s2"]
+    assert data["sources"][0]["name"] == "Source One"
+    assert data["sources"][0]["url"] == "https://example.com/rss"
+    assert data["sources"][1]["url"] == "https://example2.com/news"
+    assert len(data["doc_watcher_pages"]) == 1
+    assert data["doc_watcher_pages"][0]["id"] == "p1"
+    assert data["doc_watcher_pages"][0]["importance"] == 5
+    # Site copy
+    site_copy = site_dir / "config_snapshot.json"
+    assert site_copy.exists()
+    assert site_copy.read_text() == target.read_text()
+
+
 def test_publish_copies_archive_directory_to_site(tmp_path: Path) -> None:
     site_dir = tmp_path / "site" / "data"
     archive_dir = tmp_path / "data" / "archive"

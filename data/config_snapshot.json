@@ -1,0 +1,288 @@
+{
+  "sources": [
+    {
+      "id": "google_search_central_blog",
+      "name": "Google Search Central Blog",
+      "type": "official",
+      "authority": 10,
+      "fetcher": "rss",
+      "url": "https://developers.google.com/search/blog/feed.xml",
+      "category_hint": "google_updates",
+      "enabled": true
+    },
+    {
+      "id": "google_search_status_dashboard",
+      "name": "Google Search Status Dashboard",
+      "type": "official",
+      "authority": 10,
+      "fetcher": "rss",
+      "url": "https://status.search.google.com/incidents.rss",
+      "category_hint": "google_updates",
+      "enabled": true
+    },
+    {
+      "id": "openai_blog",
+      "name": "OpenAI Blog",
+      "type": "official",
+      "authority": 10,
+      "fetcher": "rss",
+      "url": "https://openai.com/blog/rss.xml",
+      "category_hint": "ai_models",
+      "enabled": true
+    },
+    {
+      "id": "anthropic_news",
+      "name": "Anthropic News",
+      "type": "official",
+      "authority": 10,
+      "fetcher": "scraper",
+      "url": "https://www.anthropic.com/news",
+      "category_hint": "ai_models",
+      "enabled": true
+    },
+    {
+      "id": "google_deepmind_blog",
+      "name": "Google DeepMind Blog",
+      "type": "official",
+      "authority": 10,
+      "fetcher": "rss",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "category_hint": "ai_models",
+      "enabled": true
+    },
+    {
+      "id": "bing_webmaster_blog",
+      "name": "Bing Webmaster Blog",
+      "type": "official",
+      "authority": 9,
+      "fetcher": "rss",
+      "url": "https://blogs.bing.com/webmaster/feed",
+      "category_hint": "technical_seo",
+      "enabled": true
+    },
+    {
+      "id": "search_engine_land",
+      "name": "Search Engine Land",
+      "type": "media",
+      "authority": 9,
+      "fetcher": "rss",
+      "url": "https://searchengineland.com/feed",
+      "category_hint": "industry_news",
+      "enabled": true
+    },
+    {
+      "id": "search_engine_journal",
+      "name": "Search Engine Journal",
+      "type": "media",
+      "authority": 8,
+      "fetcher": "rss",
+      "url": "https://www.searchenginejournal.com/feed/",
+      "category_hint": "industry_news",
+      "enabled": true
+    },
+    {
+      "id": "search_engine_roundtable",
+      "name": "Search Engine Roundtable",
+      "type": "media",
+      "authority": 9,
+      "fetcher": "rss",
+      "url": "https://feeds.feedburner.com/seroundtable",
+      "category_hint": "google_updates",
+      "enabled": true
+    },
+    {
+      "id": "growth_memo_kevin_indig",
+      "name": "Growth Memo (Kevin Indig)",
+      "type": "independent",
+      "authority": 9,
+      "fetcher": "rss",
+      "url": "https://www.growth-memo.com/feed",
+      "category_hint": "ai_overviews_llm_seo",
+      "enabled": true
+    },
+    {
+      "id": "glenn_gabe_hifpm",
+      "name": "Glenn Gabe \u2014 HIFPM",
+      "type": "independent",
+      "authority": 9,
+      "fetcher": "rss",
+      "url": "https://www.gsqi.com/marketing-blog/feed/",
+      "category_hint": "google_updates",
+      "enabled": true
+    },
+    {
+      "id": "ipullrank_blog",
+      "name": "iPullRank Blog (Mike King)",
+      "type": "independent",
+      "authority": 8,
+      "fetcher": "rss",
+      "url": "https://ipullrank.com/feed",
+      "category_hint": "ai_overviews_llm_seo",
+      "enabled": true
+    },
+    {
+      "id": "ahrefs_blog",
+      "name": "Ahrefs Blog",
+      "type": "tool_vendor",
+      "authority": 8,
+      "fetcher": "rss",
+      "url": "https://ahrefs.com/blog/feed/",
+      "category_hint": "tools_platforms",
+      "enabled": true
+    },
+    {
+      "id": "semrush_blog",
+      "name": "Semrush Blog",
+      "type": "tool_vendor",
+      "authority": 7,
+      "fetcher": "rss",
+      "url": "https://www.semrush.com/blog/feed/",
+      "category_hint": "tools_platforms",
+      "enabled": true
+    },
+    {
+      "id": "moz_blog",
+      "name": "Moz Blog",
+      "type": "tool_vendor",
+      "authority": 8,
+      "fetcher": "rss",
+      "url": "https://moz.com/posts/rss/blog",
+      "category_hint": "technical_seo",
+      "enabled": true
+    },
+    {
+      "id": "mistral_ai_blog",
+      "name": "Mistral AI News",
+      "type": "official",
+      "authority": 8,
+      "fetcher": "scraper",
+      "url": "https://mistral.ai/news",
+      "category_hint": "ai_models",
+      "enabled": true
+    },
+    {
+      "id": "perplexity_blog",
+      "name": "Perplexity Blog",
+      "type": "official",
+      "authority": 8,
+      "fetcher": "scraper",
+      "url": "https://www.perplexity.ai/hub",
+      "category_hint": "ai_overviews_llm_seo",
+      "enabled": true
+    },
+    {
+      "id": "huggingface_blog",
+      "name": "Hugging Face Blog",
+      "type": "official",
+      "authority": 8,
+      "fetcher": "rss",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "category_hint": "ai_models",
+      "enabled": true
+    },
+    {
+      "id": "web_dev",
+      "name": "web.dev",
+      "type": "official",
+      "authority": 10,
+      "fetcher": "rss",
+      "url": "https://web.dev/feed.xml",
+      "category_hint": "technical_seo",
+      "enabled": true
+    },
+    {
+      "id": "chrome_developers_blog",
+      "name": "Chrome Developers Blog",
+      "type": "official",
+      "authority": 10,
+      "fetcher": "rss",
+      "url": "https://developer.chrome.com/blog/feed.xml",
+      "category_hint": "technical_seo",
+      "enabled": true
+    },
+    {
+      "id": "searchliaison_x",
+      "name": "Danny Sullivan (SearchLiaison) on X",
+      "type": "social",
+      "authority": 10,
+      "fetcher": "playwright",
+      "url": "https://x.com/searchliaison",
+      "category_hint": "google_updates",
+      "enabled": true
+    }
+  ],
+  "doc_watcher_pages": [
+    {
+      "id": "google_spam_policies",
+      "name": "Google Spam Policies",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_helpful_content",
+      "name": "Google Helpful Content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_quality_rater_guidelines",
+      "name": "Google Quality Rater Guidelines (PDF)",
+      "url": "https://services.google.com/fh/files/misc/hsw-sqevaluatorguidelines.pdf",
+      "type": "pdf",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_ai_features_guidance",
+      "name": "Google AI Features SEO Guidance",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "googlebot_docs",
+      "name": "Googlebot Documentation",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/googlebot",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_crawlers_overview",
+      "name": "Overview of Google Crawlers",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "structured_data_docs",
+      "name": "Google Structured Data Supported",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "openai_usage_policies",
+      "name": "OpenAI Usage Policies",
+      "url": "https://openai.com/policies/usage-policies/",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "anthropic_usage_policies",
+      "name": "Anthropic Usage Policy",
+      "url": "https://www.anthropic.com/legal/aup",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    }
+  ]
+}
