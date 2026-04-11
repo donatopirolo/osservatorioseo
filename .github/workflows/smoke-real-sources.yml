@@ -1,0 +1,54 @@
+name: Smoke Real Sources
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"  # Monday 08:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e .
+      - name: Probe 3 real RSS sources
+        run: |
+          python <<'PY'
+          import asyncio
+          from pathlib import Path
+          from osservatorio_seo.config import load_sources
+          from osservatorio_seo.fetchers.rss import RSSFetcher
+          from osservatorio_seo.http_client import HttpClient
+
+          CANARY_IDS = {"google_search_central_blog", "search_engine_roundtable", "web_dev"}
+
+          async def main():
+              sources = [s for s in load_sources(Path("config/sources.yml")) if s.id in CANARY_IDS]
+              assert sources, "no canary sources found"
+              async with HttpClient() as client:
+                  fetcher = RSSFetcher(client)
+                  for src in sources:
+                      items = await fetcher.fetch(src)
+                      print(f"{src.id}: {len(items)} items")
+                      assert len(items) > 0, f"{src.id} returned 0 items!"
+
+          asyncio.run(main())
+          PY
+      - name: Open issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[osservatorioseo] Canary smoke test failed ${date}`,
+              body: `Weekly smoke test against real sources failed. One or more parsers may have broken due to upstream HTML changes.\n\nSee run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['bug', 'parser', 'automated']
+            });
