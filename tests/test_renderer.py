@@ -204,3 +204,31 @@ def test_all_hub_templates_render() -> None:
     assert "#core_update" in renderer.render_tag_hub(
         {**base_ctx, "tag_label": "core_update", "teaser_cards": []}
     )
+
+
+def test_render_docs_and_about() -> None:
+    renderer = HtmlRenderer(templates_dir=Path("templates"))
+    base_ctx = {
+        "page_title": "Docs",
+        "page_description": "d",
+        "canonical_url": "https://example.com/docs/",
+        "active_nav": "docs",
+        "noindex": True,
+        "breadcrumbs": [],
+    }
+    docs_html = renderer.render_docs(
+        {
+            **base_ctx,
+            "sources": [],
+            "sources_by_type": {"UFFICIALE": []},
+            "doc_watcher_pages": [],
+        }
+    )
+    assert "DOCS" in docs_html
+    assert "UFFICIALE" in docs_html
+
+    about_html = renderer.render_about(
+        {**base_ctx, "page_title": "Chi siamo", "source_count": 21}
+    )
+    assert "Chi siamo" in about_html
+    assert "donatopirolo" in about_html

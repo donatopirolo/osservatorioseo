@@ -1,0 +1,31 @@
+{% extends "layout.html.jinja" %}
+
+{% block content %}
+<article class="max-w-3xl mx-auto">
+  <h1 class="text-3xl sm:text-4xl font-bold mb-6">Chi siamo</h1>
+
+  <p class="font-mono text-sm text-on-surface-variant mb-4">
+    <strong class="text-white">Osservatorio SEO</strong> è un hub giornaliero di notizie SEO e AI che riassume in italiano articoli da fonti autorevoli internazionali. Il sito è costruito da <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">Donato Pirolo</a>, consulente SEO e sviluppatore.
+  </p>
+
+  <h2 class="text-xl font-bold mt-8 mb-3">Come sono generati i contenuti</h2>
+  <p class="font-mono text-sm text-on-surface-variant mb-4">
+    Ogni mattina alle 07:00 Europe/Rome, una pipeline Python scarica gli ultimi articoli da {{ source_count }} fonti (blog ufficiali Google/OpenAI/Anthropic, media come Search Engine Land/Journal/Roundtable, voci indipendenti come Kevin Indig e Glenn Gabe). Per ogni articolo, un modello AI (<code class="text-primary-container">google/gemini-2.0-flash-001</code>) genera un riassunto in italiano, una categoria, tag, e un punteggio di importanza 1-5.
+  </p>
+
+  <h2 class="text-xl font-bold mt-8 mb-3">Trasparenza AI</h2>
+  <p class="font-mono text-sm text-on-surface-variant mb-4">
+    I riassunti sono <strong class="text-white">generati da AI, non rivisti editorialmente</strong>. Ogni articolo linka sempre alla fonte originale e il modello usato è dichiarato in ogni pagina. I riassunti possono contenere imprecisioni — per decisioni operative, consulta sempre la fonte originale.
+  </p>
+
+  <h2 class="text-xl font-bold mt-8 mb-3">Policy contenuti</h2>
+  <p class="font-mono text-sm text-on-surface-variant mb-4">
+    Pubblichiamo solo <strong class="text-white">titoli nostri + riassunti nostri + link alle fonti</strong>. Nessun testo integrale viene riprodotto. Se sei titolare di una fonte e vuoi essere rimosso, apri una issue su <a class="text-primary-container hover:underline" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GitHub</a> — rispondiamo entro 24h.
+  </p>
+
+  <h2 class="text-xl font-bold mt-8 mb-3">Stack tecnico</h2>
+  <p class="font-mono text-sm text-on-surface-variant mb-4">
+    Open source, zero server, zero database. Python 3.12 + Jinja2 SSG + GitHub Actions + Cloudflare Pages. Codice su <a class="text-primary-container hover:underline" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">github.com/donatopirolo/osservatorioseo</a>.
+  </p>
+</article>
+{% endblock %}

@@ -49,3 +49,9 @@ class HtmlRenderer:
 
     def render_tag_hub(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/tag_hub.html.jinja", context)
+
+    def render_docs(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/docs.html.jinja", context)
+
+    def render_about(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/about.html.jinja", context)

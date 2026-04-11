@@ -1,0 +1,148 @@
+{% extends "layout.html.jinja" %}
+
+{% block content %}
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; DOCS // COME FUNZIONA</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div class="space-y-6 font-mono text-sm text-on-surface-variant leading-relaxed">
+    <p>
+      <span class="text-primary-container">OSSERVATORIO_SEO</span> è un hub giornaliero di news <em>SEO</em> e <em>AI</em>
+      aggiornato automaticamente ogni mattina alle <span class="text-white">07:00 Europe/Rome</span>. Una pipeline
+      Python legge un insieme di fonti autorevoli, filtra le notizie fresche (ultime 24h), le riassume in italiano
+      tramite un modello AI (Gemini 2.0 Flash) e pubblica il risultato come pagina statica pre-renderizzata (SSG) e
+      come file <code class="text-primary-container">feed.json</code> pubblico.
+    </p>
+    <p>Il flusso di ogni run è:</p>
+    <ol class="list-none space-y-2 pl-4 border-l border-outline-variant">
+      <li><span class="text-primary-container">[1]</span> FETCH &middot; scarica in parallelo ~21 fonti (RSS, scraper HTML, Playwright per siti anti-bot)</li>
+      <li><span class="text-primary-container">[2]</span> DOC_WATCH &middot; controlla 9 pagine di documentazione ufficiale e genera un diff se qualcosa cambia</li>
+      <li><span class="text-primary-container">[3]</span> NORMALIZE &middot; pulisce URL, dedup per URL e per fuzzy title, filtra news &gt; 24h</li>
+      <li><span class="text-primary-container">[4]</span> SUMMARIZE &middot; per ogni item l'AI genera titolo italiano, riassunto, categoria, tag, importance 1-5</li>
+      <li><span class="text-primary-container">[5]</span> RANK &middot; score per <em>top10</em> e raggruppamento in 8 categorie</li>
+      <li><span class="text-primary-container">[6]</span> PUBLISH &middot; rende HTML statici (SSG), scrive feed.json, archivio giornaliero, push su GitHub, deploy Cloudflare Pages</li>
+    </ol>
+    <p class="text-xs text-outline">
+      Costo AI tipico per run: <span class="text-primary-container">€0.005</span>. Tutto gira gratis su GitHub Actions + Cloudflare Pages. Zero database.
+    </p>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; LE PAGINE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-sm">
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ TODAY ] <code>/</code></div>
+      <p class="text-on-surface-variant">La home. Mostra il feed del giorno: <span class="text-white">Top 10</span> numerato e tutte le notizie raggruppate in <span class="text-white">categorie</span>.</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ TOP WEEK ] <code>/top-settimana/</code></div>
+      <p class="text-on-surface-variant">Le 10 notizie più importanti degli ultimi 7 giorni, finestra scorrevole aggiornata ogni giorno.</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ ARCHIVIO ] <code>/archivio/</code></div>
+      <p class="text-on-surface-variant">Indice cronologico per anno/mese/giorno. Ogni snapshot è un set disgiunto di notizie (solo 24h → zero duplicati).</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ ARTICOLO ] <code>/archivio/AAAA/MM/GG/slug/</code></div>
+      <p class="text-on-surface-variant">Pagina dedicata per le notizie con importanza ≥ 4. Include JSON-LD NewsArticle per Google Discover.</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ FEED JSON ] <code>/data/feed.json</code></div>
+      <p class="text-on-surface-variant">API pubblica consumabile da altri tool e agent AI (contiene titolo, summary, categoria, tag, URL fonte).</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ RSS ] <code>/feed.xml</code></div>
+      <p class="text-on-surface-variant">Feed Atom per reader tradizionali come Feedly o Inoreader.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; FONTI MONITORATE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">{{ sources | length }} FONTI ATTIVE</p>
+  {% for type_label, type_sources in sources_by_type.items() %}
+  <div class="mb-6">
+    <h3 class="text-primary-container font-bold uppercase tracking-widest text-xs mb-3 pb-1 border-b border-outline-variant">[ {{ type_label }} // {{ type_sources | length }} ]</h3>
+    <div class="flex flex-col gap-1">
+    {% for s in type_sources %}
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">{{ '★' * s.authority }}</span>
+        <span class="text-white">{{ s.name }}</span>
+        <span class="text-outline text-[10px] uppercase">{{ s.id }}</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">{{ s.fetcher }}</span>
+        <a href="{{ s.url }}" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">{{ s.hostname }} →</a>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; DOC WATCHER // PAGINE SORVEGLIATE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-sm text-on-surface-variant font-mono mb-6">
+    Queste pagine vengono scaricate ad ogni run e confrontate con la versione precedente. Se il testo cambia in modo
+    significativo (soglia &gt;0.3%, whitespace cosmetico ignorato), viene generato un item speciale nel feed con
+    badge ⚠️ e un diff leggibile dall'AI.
+  </p>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">{{ doc_watcher_pages | length }} PAGINE SORVEGLIATE</p>
+  <div class="flex flex-col gap-1">
+  {% for p in doc_watcher_pages %}
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">{{ '★' * p.importance }}</span>
+      <span class="text-white">{{ p.name }}</span>
+      <span class="text-outline text-[10px] uppercase">[{{ p.type }}]</span>
+    </div>
+    <a href="{{ p.url }}" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">{{ p.hostname }} →</a>
+  </div>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; RANKING &amp; CATEGORIE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div class="space-y-6 font-mono text-sm text-on-surface-variant leading-relaxed">
+    <p>Ogni item riceve uno score calcolato così:</p>
+    <pre class="bg-surface-container-lowest border border-outline-variant p-4 text-xs text-primary-container overflow-x-auto">score = importance * 10       # decisione AI, 1..5
+      + source.authority      # config/sources.yml, 1..10
+      + freshness_bonus       # 5 se &lt;6h, 2 se &lt;24h, 0 altrimenti
+      + doc_change_bonus      # 20 se è un cambio Doc Watcher
+      + category_bonus        # 10 google_docs_change, 5 google_updates, 3 ai_models</pre>
+    <p>Le 8 categorie sono: <span class="text-primary-container">google_updates</span>, <span class="text-primary-container">google_docs_change</span>, <span class="text-primary-container">ai_models</span>, <span class="text-primary-container">ai_overviews_llm_seo</span>, <span class="text-primary-container">technical_seo</span>, <span class="text-primary-container">content_eeat</span>, <span class="text-primary-container">tools_platforms</span>, <span class="text-primary-container">industry_news</span>.</p>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; STACK TECNICO</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <ul class="font-mono text-sm text-on-surface-variant space-y-2">
+    <li><span class="text-primary-container">PYTHON 3.12</span> &middot; httpx async, feedparser, selectolax, playwright, pydantic v2, rapidfuzz, jinja2</li>
+    <li><span class="text-primary-container">AI</span> &middot; OpenRouter → google/gemini-2.0-flash-001 (fallback claude-haiku-4.5 e gpt-5-mini)</li>
+    <li><span class="text-primary-container">CI/CD</span> &middot; GitHub Actions cron 07:00 Europe/Rome, canary settimanale sulle fonti</li>
+    <li><span class="text-primary-container">HOSTING</span> &middot; Cloudflare Pages (statico)</li>
+    <li><span class="text-primary-container">FRONTEND</span> &middot; SSG con Jinja2 + Tailwind CDN, JS solo hydration (search, toggle, collapse)</li>
+    <li><span class="text-primary-container">STORAGE</span> &middot; zero database: tutto committato nel repo git (feed + archivio + stato doc watcher)</li>
+  </ul>
+</section>
+{% endblock %}
