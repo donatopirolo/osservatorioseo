@@ -1,0 +1,30 @@
+{# Context: item (dict), order (int), search_blob (str), short_id (str), relative_date (str), absolute_date (str), stars (str), tags (list), article_url (str) #}
+<article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="{{ item.id }}"
+  data-tags="{{ tags | join(',') }}"
+  data-search-blob="{{ search_blob }}">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">{{ "%02d" | format(order) }}.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="{{ article_url }}" class="hover:underline">{{ item.title_it }}</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        {{ item.source.name }} · <span class="text-[#f5a623] whitespace-nowrap">{{ stars }}</span> · <time class="whitespace-nowrap" datetime="{{ item.published_at }}" title="{{ absolute_date }}">{{ relative_date }}</time> <span class="whitespace-nowrap">// ID: {{ short_id }}</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">{{ item.summary_it }}</p>
+        {% if tags %}
+        <div class="mt-2">
+          {% for t in tags %}
+          <a href="/tag/{{ t | replace('_', '-') }}/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">{{ t }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="{{ article_url }}">READ_LOG</a>
+  </div>
+</article>
