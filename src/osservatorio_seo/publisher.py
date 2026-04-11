@@ -282,8 +282,10 @@ class Publisher:
         y, m, d = day_iso.split("-")
         if item.importance >= 4 and item.id in item_slugs:
             article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
+            is_internal = True
         else:
             article_url = item.url
+            is_internal = False
         return {
             "item": item.model_dump(mode="json"),
             "search_blob": _build_search_blob(item),
@@ -293,6 +295,7 @@ class Publisher:
             "stars": _stars(item.importance),
             "tags": item.tags,
             "article_url": article_url,
+            "is_internal_link": is_internal,
         }
 
     def _build_homepage_context(
@@ -418,8 +421,10 @@ class Publisher:
         for item in feed.items:
             if item.importance >= 4 and item.id in item_slugs:
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
+                is_internal = True
             else:
                 article_url = item.url
+                is_internal = False
             teaser_cards.append(
                 renderer.render_raw(
                     "partials/_card_article_teaser.html.jinja",
@@ -429,6 +434,7 @@ class Publisher:
                         "relative_date": _relative_date(item.published_at),
                         "stars": _stars(item.importance),
                         "article_url": article_url,
+                        "is_internal_link": is_internal,
                     },
                 )
             )
@@ -657,8 +663,10 @@ class Publisher:
         def build_teaser(item: Item) -> str:
             if item.importance >= 4 and item.id in item_slugs:
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
+                is_internal = True
             else:
                 article_url = item.url
+                is_internal = False
             return renderer.render_raw(
                 "partials/_card_article_teaser.html.jinja",
                 {
@@ -667,6 +675,7 @@ class Publisher:
                     "relative_date": _relative_date(item.published_at),
                     "stars": _stars(item.importance),
                     "article_url": article_url,
+                    "is_internal_link": is_internal,
                 },
             )
 
@@ -960,8 +969,10 @@ class Publisher:
             if is_today and item.importance >= 4 and item.id in item_slugs:
                 y, m, d = day_iso.split("-")
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
+                is_internal = True
             else:
                 article_url = item.url
+                is_internal = False
 
             ctx = {
                 "item": item.model_dump(mode="json"),
@@ -972,6 +983,7 @@ class Publisher:
                 "stars": _stars(item.importance),
                 "tags": item.tags,
                 "article_url": article_url,
+                "is_internal_link": is_internal,
                 "order": idx,
             }
             top10_cards.append(renderer.render_raw("partials/_card_top10.html.jinja", ctx))

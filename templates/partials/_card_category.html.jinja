@@ -6,7 +6,11 @@
   data-search-blob="{{ search_blob }}">
   <div class="max-w-4xl min-w-0 flex-1">
     <h4 class="text-base sm:text-lg font-bold mb-1 group-hover:text-primary-container transition-colors">
+      {% if is_internal_link %}
       <a href="{{ article_url }}" class="hover:underline">{{ item.title_it }}</a>
+      {% else %}
+      {{ item.title_it }}
+      {% endif %}
     </h4>
     <p class="text-[10px] sm:text-[11px] text-outline mb-2 font-mono uppercase break-words">
       {{ item.source.name }} · <span class="text-[#f5a623] whitespace-nowrap">{{ stars }}</span> · <time class="whitespace-nowrap" datetime="{{ item.published_at }}" title="{{ absolute_date }}">{{ relative_date }}</time> <span class="whitespace-nowrap">// ID: {{ short_id }}</span>
