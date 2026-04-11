@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Top della Settimana — Osservatorio SEO</title>
+<meta name="description" content="Le 10 notizie SEO e AI più rilevanti degli ultimi 7 giorni, aggiornate ogni mattina." />
+<link rel="canonical" href="https://osservatorioseo.pages.dev/top-settimana/" />
+<meta property="og:title" content="Top della Settimana — Osservatorio SEO" />
+<meta property="og:description" content="Le 10 notizie SEO e AI più rilevanti degli ultimi 7 giorni, aggiornate ogni mattina." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://osservatorioseo.pages.dev/top-settimana/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta name="twitter:card" content="summary_large_image" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface": "#e2e2e2",
+          "primary-container": "#00f63e",
+          "surface-container-lowest": "#0e0e0e",
+          "surface-container-low": "#1b1b1b",
+          "surface-container": "#1f1f1f",
+          "outline": "#919191",
+          "outline-variant": "#474747",
+          "surface": "#131313",
+          "background": "#131313",
+          "on-surface-variant": "#c6c6c6",
+          "primary": "#ffffff",
+          "error": "#ffb4ab"
+        },
+        borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+        fontFamily: {
+          headline: ["Space Grotesk"],
+          body: ["Space Grotesk"],
+          label: ["Space Grotesk"]
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://osservatorioseo.pages.dev/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Top Settimana",
+      "item": "https://osservatorioseo.pages.dev/top-settimana/"
+    }  ]
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<section class="mb-10">
+  <div class="md:hidden text-primary-container font-bold text-2xl tracking-tight uppercase terminal-glow mb-4">TOP SETTIMANA</div>
+  <div class="flex items-center gap-2 text-outline">
+    <span class="text-primary-container">●</span>
+    <span class="text-[10px] tracking-widest uppercase break-words">SYSTEM STATUS: OPTIMAL // ROLLING 7D // 56 ARTICOLI ANALIZZATI // TOP 10</span>
+  </div>
+</section>
+
+<section class="mb-16" id="top10-section">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; TOP 10 DELLA SETTIMANA</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">ROLLING WINDOW // ULTIMI 7 GIORNI // RANKED BY IMPORTANCE + AUTHORITY</p>
+  <div id="top10" class="grid grid-cols-1 gap-px bg-outline-variant border border-outline-variant">
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_006"
+  data-tags="core_update,google_algorithm,search_engine_optimization"
+  data-search-blob="google conferma il completamento del core update di marzo 2026 google confirms march 2026 core update is complete via @sejournal, @mattgsouthern google ha annunciato il completamento del rilascio del core update di marzo 2026. i professionisti seo dovrebbero ora analizzare i dati per valutare l&#39;impatto dell&#39;aggiornamento sui propri siti web. core update google algorithm search engine optimization search engine journal search engine journal google updates https: www.searchenginejournal.com google confirms march 2026 core update is complete 571459">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">01.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="/archivio/2026/04/11/google-conferma-completamento-core-update-marzo-2026/" class="hover:underline">Google conferma il completamento del Core Update di marzo 2026</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        Search Engine Journal · <span class="text-[#f5a623] whitespace-nowrap">★★★★★</span> · <time class="whitespace-nowrap" datetime="2026-04-08T12:33:15Z" title="Wednesday 8 April 2026, 12:33">2 giorni fa</time> <span class="whitespace-nowrap">// ID: C0AA</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">Google ha annunciato il completamento del rilascio del Core Update di marzo 2026. I professionisti SEO dovrebbero ora analizzare i dati per valutare l&#39;impatto dell&#39;aggiornamento sui propri siti web.</p>
+        <div class="mt-2">
+          <a href="/tag/core-update/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">core_update</a>
+          <a href="/tag/google-algorithm/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_algorithm</a>
+          <a href="/tag/search-engine-optimization/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">search_engine_optimization</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/archivio/2026/04/11/google-conferma-completamento-core-update-marzo-2026/">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_052"
+  data-tags="core_update,google_search_console,john_mueller,bug_fix"
+  data-search-blob="completato il core update di marzo, risolto un bug in google search console e john mueller sui guru seo core update done, gsc bug fixed, mueller on gurus – seo pulse via @sejournal, @mattgsouthern google ha annunciato il completamento del rilascio del core update di marzo. è stato inoltre risolto un bug in google search console che ha gonfiato le impression per quasi un anno. pichai avverte che l&#39;ai potrebbe compromettere la sicurezza dei software. core update google search console john mueller bug fix search engine journal search engine journal google updates https: www.searchenginejournal.com seo pulse core update done gsc bug fixed mueller on gurus 571626">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">02.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="/archivio/2026/04/11/completato-core-update-marzo-risolto-bug-google-search/" class="hover:underline">Completato il Core Update di Marzo, risolto un bug in Google Search Console e John Mueller sui guru SEO</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        Search Engine Journal · <span class="text-[#f5a623] whitespace-nowrap">★★★★☆</span> · <time class="whitespace-nowrap" datetime="2026-04-10T11:30:00Z" title="Friday 10 April 2026, 11:30">23 h fa</time> <span class="whitespace-nowrap">// ID: 9179</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">Google ha annunciato il completamento del rilascio del Core Update di Marzo. È stato inoltre risolto un bug in Google Search Console che ha gonfiato le impression per quasi un anno. Pichai avverte che l&#39;AI potrebbe compromettere la sicurezza dei software.</p>
+        <div class="mt-2">
+          <a href="/tag/core-update/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">core_update</a>
+          <a href="/tag/google-search-console/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_search_console</a>
+          <a href="/tag/john-mueller/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">john_mueller</a>
+          <a href="/tag/bug-fix/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">bug_fix</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/archivio/2026/04/11/completato-core-update-marzo-risolto-bug-google-search/">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_009"
+  data-tags="google_core_update,algorithm_update,search_ranking"
+  data-search-blob="completato il rilascio del broad core update di google di marzo 2026 google&#39;s march 2026 broad core update has completed rolling out google ha annunciato il completamento del rilascio del broad core update di marzo 2026, iniziato circa due settimane prima. l&#39;update sembra aver avuto un impatto meno significativo rispetto ad altri core update recenti, come quello di dicembre 2025. l&#39;annuncio è stato dato tramite x e la dashboard di search status è stata aggiornata. google core update algorithm update search ranking search engine roundtable search engine roundtable google updates https: www.seroundtable.com google march 2026 core update complete 41145.html">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">03.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="/archivio/2026/04/11/completato-rilascio-broad-core-update-google-marzo-2026/" class="hover:underline">Completato il rilascio del Broad Core Update di Google di marzo 2026</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        Search Engine Roundtable · <span class="text-[#f5a623] whitespace-nowrap">★★★★☆</span> · <time class="whitespace-nowrap" datetime="2026-04-08T18:25:00Z" title="Wednesday 8 April 2026, 18:25">2 giorni fa</time> <span class="whitespace-nowrap">// ID: 64E9</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">Google ha annunciato il completamento del rilascio del broad core update di marzo 2026, iniziato circa due settimane prima. L&#39;update sembra aver avuto un impatto meno significativo rispetto ad altri core update recenti, come quello di dicembre 2025. L&#39;annuncio è stato dato tramite X e la dashboard di Search Status è stata aggiornata.</p>
+        <div class="mt-2">
+          <a href="/tag/google-core-update/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_core_update</a>
+          <a href="/tag/algorithm-update/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">algorithm_update</a>
+          <a href="/tag/search-ranking/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">search_ranking</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/archivio/2026/04/11/completato-rilascio-broad-core-update-google-marzo-2026/">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_029"
+  data-tags="chatgpt,personalization,openai,ai_customization"
+  data-search-blob="personalizzazione di chatgpt tramite istruzioni personalizzate e memoria personalizing chatgpt openai ha rilasciato nuove funzionalità per personalizzare chatgpt. gli utenti possono ora fornire istruzioni personalizzate e sfruttare la memoria del modello per ottenere risposte più pertinenti e coerenti. questa personalizzazione mira a rendere le interazioni più adatte alle esigenze individuali. chatgpt personalization openai ai customization openai blog openai blog ai models https: openai.com academy personalization">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">04.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="/archivio/2026/04/11/personalizzazione-chatgpt-tramite-istruzioni-personalizzate/" class="hover:underline">Personalizzazione di ChatGPT tramite istruzioni personalizzate e memoria</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        OpenAI Blog · <span class="text-[#f5a623] whitespace-nowrap">★★★★☆</span> · <time class="whitespace-nowrap" datetime="2026-04-09T23:00:00Z" title="Thursday 9 April 2026, 23:00">ieri</time> <span class="whitespace-nowrap">// ID: C0D9</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">OpenAI ha rilasciato nuove funzionalità per personalizzare ChatGPT. Gli utenti possono ora fornire istruzioni personalizzate e sfruttare la memoria del modello per ottenere risposte più pertinenti e coerenti. Questa personalizzazione mira a rendere le interazioni più adatte alle esigenze individuali.</p>
+        <div class="mt-2">
+          <a href="/tag/chatgpt/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">chatgpt</a>
+          <a href="/tag/personalization/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">personalization</a>
+          <a href="/tag/openai/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">openai</a>
+          <a href="/tag/ai-customization/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">ai_customization</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/archivio/2026/04/11/personalizzazione-chatgpt-tramite-istruzioni-personalizzate/">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_032"
+  data-tags="chatgpt,file_upload,data_analysis,content_generation"
+  data-search-blob="gestione dei file in chatgpt working with files in chatgpt openai ha introdotto la possibilità di caricare e lavorare con file direttamente in chatgpt. questa funzionalità permette di analizzare dati, riassumere documenti e generare contenuti a partire da pdf, fogli di calcolo e altri formati. l&#39;integrazione mira a migliorare l&#39;efficienza nell&#39;elaborazione delle informazioni. chatgpt file upload data analysis content generation openai blog openai blog ai models https: openai.com academy working with files">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">05.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="/archivio/2026/04/11/gestione-file-chatgpt/" class="hover:underline">Gestione dei file in ChatGPT</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        OpenAI Blog · <span class="text-[#f5a623] whitespace-nowrap">★★★★☆</span> · <time class="whitespace-nowrap" datetime="2026-04-09T23:00:00Z" title="Thursday 9 April 2026, 23:00">ieri</time> <span class="whitespace-nowrap">// ID: D251</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">OpenAI ha introdotto la possibilità di caricare e lavorare con file direttamente in ChatGPT. Questa funzionalità permette di analizzare dati, riassumere documenti e generare contenuti a partire da PDF, fogli di calcolo e altri formati. L&#39;integrazione mira a migliorare l&#39;efficienza nell&#39;elaborazione delle informazioni.</p>
+        <div class="mt-2">
+          <a href="/tag/chatgpt/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">chatgpt</a>
+          <a href="/tag/file-upload/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">file_upload</a>
+          <a href="/tag/data-analysis/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">data_analysis</a>
+          <a href="/tag/content-generation/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">content_generation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/archivio/2026/04/11/gestione-file-chatgpt/">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_045"
+  data-tags="core_update,google_algorithm,sistrix,germany"
+  data-search-blob="aggiornamento core di marzo: in germania, 4 siti hanno perso visibilità per ogni sito che l&#39;ha guadagnata google march core update left 4 losers for every winner in germany via @sejournal, @mattgsouthern sistrix ha analizzato i risultati di ricerca tedeschi a seguito del core update di marzo. l&#39;analisi ha rilevato variazioni di visibilità disomogenee tra diverse categorie di siti web, con alcune tipologie di siti che hanno subito un impatto maggiore rispetto ad altre. i dati suggeriscono un impatto significativo dell&#39;aggiornamento sull&#39;ecosistema seo tedesco. core update google algorithm sistrix germany search engine journal search engine journal google updates https: www.searchenginejournal.com google march core update left 4 losers for every winner in germany 571639">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">06.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="/archivio/2026/04/11/aggiornamento-core-marzo-germania-4-siti-hanno-perso/" class="hover:underline">Aggiornamento Core di Marzo: in Germania, 4 siti hanno perso visibilità per ogni sito che l&#39;ha guadagnata</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        Search Engine Journal · <span class="text-[#f5a623] whitespace-nowrap">★★★★☆</span> · <time class="whitespace-nowrap" datetime="2026-04-10T04:15:41Z" title="Friday 10 April 2026, 04:15">ieri</time> <span class="whitespace-nowrap">// ID: E9EB</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">SISTRIX ha analizzato i risultati di ricerca tedeschi a seguito del core update di marzo. L&#39;analisi ha rilevato variazioni di visibilità disomogenee tra diverse categorie di siti web, con alcune tipologie di siti che hanno subito un impatto maggiore rispetto ad altre. I dati suggeriscono un impatto significativo dell&#39;aggiornamento sull&#39;ecosistema SEO tedesco.</p>
+        <div class="mt-2">
+          <a href="/tag/core-update/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">core_update</a>
+          <a href="/tag/google-algorithm/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_algorithm</a>
+          <a href="/tag/sistrix/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">sistrix</a>
+          <a href="/tag/germany/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">germany</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/archivio/2026/04/11/aggiornamento-core-marzo-germania-4-siti-hanno-perso/">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_002"
+  data-tags="google,sundar_pichai,ai_agents,future_of_search"
+  data-search-blob="sundar pichai di google anticipa un futuro di ricerca &#34;agentica&#34; e multi thread âjarvis approachingâ: google&#39;s sundar pichai signals an agentic, multi threaded future for search durante un podcast, sundar pichai ha delineato una visione del futuro della ricerca google in cui gli utenti potranno completare task complessi e gestire molteplici attività contemporaneamente. pichai ha suggerito che la ricerca evolverà verso un sistema di gestione di agenti, simile a un assistente personale avanzato. google sundar pichai ai agents future of search search engine roundtable search engine roundtable industry news https: www.seroundtable.com sundar pichai future search agents 41143.html">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">07.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="/archivio/2026/04/11/sundar-pichai-google-anticipa-futuro-ricerca-agentica-multi/" class="hover:underline">Sundar Pichai di Google anticipa un futuro di ricerca &#34;agentica&#34; e multi-thread</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        Search Engine Roundtable · <span class="text-[#f5a623] whitespace-nowrap">★★★★☆</span> · <time class="whitespace-nowrap" datetime="2026-04-08T10:15:00Z" title="Wednesday 8 April 2026, 10:15">3 giorni fa</time> <span class="whitespace-nowrap">// ID: D098</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">Durante un podcast, Sundar Pichai ha delineato una visione del futuro della Ricerca Google in cui gli utenti potranno completare task complessi e gestire molteplici attività contemporaneamente. Pichai ha suggerito che la ricerca evolverà verso un sistema di gestione di agenti, simile a un assistente personale avanzato.</p>
+        <div class="mt-2">
+          <a href="/tag/google/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google</a>
+          <a href="/tag/sundar-pichai/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">sundar_pichai</a>
+          <a href="/tag/ai-agents/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">ai_agents</a>
+          <a href="/tag/future-of-search/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">future_of_search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/archivio/2026/04/11/sundar-pichai-google-anticipa-futuro-ricerca-agentica-multi/">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_008"
+  data-tags="openai,enterprise_ai,chatgpt_enterprise,frontier"
+  data-search-blob="la prossima fase dell&#39;ai aziendale secondo openai the next phase of enterprise ai openai delinea la successiva evoluzione dell&#39;intelligenza artificiale per le imprese, evidenziando una crescente adozione in vari settori tramite frontier, chatgpt enterprise, codex e agenti ai a livello aziendale. l&#39;articolo si concentra sull&#39;integrazione e l&#39;espansione delle soluzioni ai esistenti nel contesto business. openai enterprise ai chatgpt enterprise frontier openai blog openai blog ai models https: openai.com index next phase of enterprise ai">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">08.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="https://openai.com/index/next-phase-of-enterprise-ai" class="hover:underline">La prossima fase dell&#39;AI aziendale secondo OpenAI</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        OpenAI Blog · <span class="text-[#f5a623] whitespace-nowrap">★★★☆☆</span> · <time class="whitespace-nowrap" datetime="2026-04-08T13:00:00Z" title="Wednesday 8 April 2026, 13:00">2 giorni fa</time> <span class="whitespace-nowrap">// ID: 3300</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">OpenAI delinea la successiva evoluzione dell&#39;intelligenza artificiale per le imprese, evidenziando una crescente adozione in vari settori tramite Frontier, ChatGPT Enterprise, Codex e agenti AI a livello aziendale. L&#39;articolo si concentra sull&#39;integrazione e l&#39;espansione delle soluzioni AI esistenti nel contesto business.</p>
+        <div class="mt-2">
+          <a href="/tag/openai/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">openai</a>
+          <a href="/tag/enterprise-ai/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">enterprise_ai</a>
+          <a href="/tag/chatgpt-enterprise/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">chatgpt_enterprise</a>
+          <a href="/tag/frontier/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">frontier</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="https://openai.com/index/next-phase-of-enterprise-ai">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_019"
+  data-tags="custom_gpts,openai,automation,ai_assistants"
+  data-search-blob="utilizzo dei gpt personalizzati using custom gpts openai spiega come creare e utilizzare gpt personalizzati per automatizzare flussi di lavoro, mantenere output consistenti e sviluppare assistenti ai specifici. la guida si concentra sull&#39;applicazione pratica dei gpt customizzati. l&#39;articolo è pubblicato sul blog ufficiale di openai. custom gpts openai automation ai assistants openai blog openai blog ai models https: openai.com academy custom gpts">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">09.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="https://openai.com/academy/custom-gpts" class="hover:underline">Utilizzo dei GPT personalizzati</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        OpenAI Blog · <span class="text-[#f5a623] whitespace-nowrap">★★★☆☆</span> · <time class="whitespace-nowrap" datetime="2026-04-09T23:00:00Z" title="Thursday 9 April 2026, 23:00">ieri</time> <span class="whitespace-nowrap">// ID: 101A</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">OpenAI spiega come creare e utilizzare GPT personalizzati per automatizzare flussi di lavoro, mantenere output consistenti e sviluppare assistenti AI specifici. La guida si concentra sull&#39;applicazione pratica dei GPT customizzati. L&#39;articolo è pubblicato sul blog ufficiale di OpenAI.</p>
+        <div class="mt-2">
+          <a href="/tag/custom-gpts/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">custom_gpts</a>
+          <a href="/tag/openai/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">openai</a>
+          <a href="/tag/automation/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">automation</a>
+          <a href="/tag/ai-assistants/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">ai_assistants</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="https://openai.com/academy/custom-gpts">READ_LOG</a>
+  </div>
+</article>
+
+  <article class="card bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
+  data-item-id="item_2026-04-11_021"
+  data-tags="openai,chatgpt,codex,ai_applications"
+  data-search-blob="applicazioni pratiche dell&#39;intelligenza artificiale in openai applications of ai at openai openai illustra come i suoi prodotti, tra cui chatgpt e codex, e le sue api vengono impiegati in contesti reali per attività lavorative, sviluppo software e applicazioni quotidiane. l&#39;articolo fornisce una panoramica sull&#39;integrazione dell&#39;ai in diversi settori, mostrando esempi concreti di utilizzo delle tecnologie openai. openai chatgpt codex ai applications openai blog openai blog ai models https: openai.com academy applications of ai">
+  <div class="flex items-start gap-4 flex-grow min-w-0">
+    <span class="text-primary-container font-bold text-lg shrink-0">10.</span>
+    <div class="max-w-3xl min-w-0 flex-1">
+      <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">
+        <a href="https://openai.com/academy/applications-of-ai" class="hover:underline">Applicazioni pratiche dell&#39;Intelligenza Artificiale in OpenAI</a>
+      </h3>
+      <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+        OpenAI Blog · <span class="text-[#f5a623] whitespace-nowrap">★★★☆☆</span> · <time class="whitespace-nowrap" datetime="2026-04-09T23:00:00Z" title="Thursday 9 April 2026, 23:00">ieri</time> <span class="whitespace-nowrap">// ID: 2D50</span>
+      </p>
+      <div class="card-body">
+        <p class="text-sm text-on-surface-variant font-mono leading-relaxed">OpenAI illustra come i suoi prodotti, tra cui ChatGPT e Codex, e le sue API vengono impiegati in contesti reali per attività lavorative, sviluppo software e applicazioni quotidiane. L&#39;articolo fornisce una panoramica sull&#39;integrazione dell&#39;AI in diversi settori, mostrando esempi concreti di utilizzo delle tecnologie OpenAI.</p>
+        <div class="mt-2">
+          <a href="/tag/openai/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">openai</a>
+          <a href="/tag/chatgpt/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">chatgpt</a>
+          <a href="/tag/codex/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">codex</a>
+          <a href="/tag/ai-applications/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">ai_applications</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+    <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="https://openai.com/academy/applications-of-ai">READ_LOG</a>
+  </div>
+</article>
+
+  </div>
+</section>
+
+<section class="mb-12">
+  <p class="text-xs text-outline font-mono uppercase">
+    Vedi anche:
+    <a href="/" class="text-primary-container hover:underline">oggi</a> ·
+    <a href="/archivio/" class="text-primary-container hover:underline">archivio completo</a>
+  </p>
+</section>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">
+    (C) 2026 OSSERVATORIO_SEO // AUTORE:
+    <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+  </div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+  </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

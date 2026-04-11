@@ -47,6 +47,19 @@ input[type="checkbox"]#search-archive-toggle:focus {
   display: none !important;
 }
 
+/* Screen reader only: accessibile ma non visibile. Usato per h1 semantici. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Card mobile: collapsible body.
    Su mobile il body è nascosto; un tap sulla card toggla .expanded.
    Su desktop (>=768px) il body è sempre visibile. */

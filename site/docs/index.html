@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Docs — Osservatorio SEO</title>
+<meta name="description" content="Come funziona Osservatorio SEO: fonti, pipeline, stack." />
+<link rel="canonical" href="https://osservatorioseo.pages.dev/docs/" />
+<meta property="og:title" content="Docs — Osservatorio SEO" />
+<meta property="og:description" content="Come funziona Osservatorio SEO: fonti, pipeline, stack." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://osservatorioseo.pages.dev/docs/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta name="twitter:card" content="summary_large_image" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface": "#e2e2e2",
+          "primary-container": "#00f63e",
+          "surface-container-lowest": "#0e0e0e",
+          "surface-container-low": "#1b1b1b",
+          "surface-container": "#1f1f1f",
+          "outline": "#919191",
+          "outline-variant": "#474747",
+          "surface": "#131313",
+          "background": "#131313",
+          "on-surface-variant": "#c6c6c6",
+          "primary": "#ffffff",
+          "error": "#ffb4ab"
+        },
+        borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+        fontFamily: {
+          headline: ["Space Grotesk"],
+          body: ["Space Grotesk"],
+          label: ["Space Grotesk"]
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; DOCS // COME FUNZIONA</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div class="space-y-6 font-mono text-sm text-on-surface-variant leading-relaxed">
+    <p>
+      <span class="text-primary-container">OSSERVATORIO_SEO</span> è un hub giornaliero di news <em>SEO</em> e <em>AI</em>
+      aggiornato automaticamente ogni mattina alle <span class="text-white">07:00 Europe/Rome</span>. Una pipeline
+      Python legge un insieme di fonti autorevoli, filtra le notizie fresche (ultime 24h), le riassume in italiano
+      tramite un modello AI (Gemini 2.0 Flash) e pubblica il risultato come pagina statica pre-renderizzata (SSG) e
+      come file <code class="text-primary-container">feed.json</code> pubblico.
+    </p>
+    <p>Il flusso di ogni run è:</p>
+    <ol class="list-none space-y-2 pl-4 border-l border-outline-variant">
+      <li><span class="text-primary-container">[1]</span> FETCH &middot; scarica in parallelo ~21 fonti (RSS, scraper HTML, Playwright per siti anti-bot)</li>
+      <li><span class="text-primary-container">[2]</span> DOC_WATCH &middot; controlla 9 pagine di documentazione ufficiale e genera un diff se qualcosa cambia</li>
+      <li><span class="text-primary-container">[3]</span> NORMALIZE &middot; pulisce URL, dedup per URL e per fuzzy title, filtra news &gt; 24h</li>
+      <li><span class="text-primary-container">[4]</span> SUMMARIZE &middot; per ogni item l'AI genera titolo italiano, riassunto, categoria, tag, importance 1-5</li>
+      <li><span class="text-primary-container">[5]</span> RANK &middot; score per <em>top10</em> e raggruppamento in 8 categorie</li>
+      <li><span class="text-primary-container">[6]</span> PUBLISH &middot; rende HTML statici (SSG), scrive feed.json, archivio giornaliero, push su GitHub, deploy Cloudflare Pages</li>
+    </ol>
+    <p class="text-xs text-outline">
+      Costo AI tipico per run: <span class="text-primary-container">€0.005</span>. Tutto gira gratis su GitHub Actions + Cloudflare Pages. Zero database.
+    </p>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; LE PAGINE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-sm">
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ TODAY ] <code>/</code></div>
+      <p class="text-on-surface-variant">La home. Mostra il feed del giorno: <span class="text-white">Top 10</span> numerato e tutte le notizie raggruppate in <span class="text-white">categorie</span>.</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ TOP WEEK ] <code>/top-settimana/</code></div>
+      <p class="text-on-surface-variant">Le 10 notizie più importanti degli ultimi 7 giorni, finestra scorrevole aggiornata ogni giorno.</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ ARCHIVIO ] <code>/archivio/</code></div>
+      <p class="text-on-surface-variant">Indice cronologico per anno/mese/giorno. Ogni snapshot è un set disgiunto di notizie (solo 24h → zero duplicati).</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ ARTICOLO ] <code>/archivio/AAAA/MM/GG/slug/</code></div>
+      <p class="text-on-surface-variant">Pagina dedicata per le notizie con importanza ≥ 4. Include JSON-LD NewsArticle per Google Discover.</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ FEED JSON ] <code>/data/feed.json</code></div>
+      <p class="text-on-surface-variant">API pubblica consumabile da altri tool e agent AI (contiene titolo, summary, categoria, tag, URL fonte).</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ RSS ] <code>/feed.xml</code></div>
+      <p class="text-on-surface-variant">Feed Atom per reader tradizionali come Feedly o Inoreader.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; FONTI MONITORATE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">21 FONTI ATTIVE</p>
+  <div class="mb-6">
+    <h3 class="text-primary-container font-bold uppercase tracking-widest text-xs mb-3 pb-1 border-b border-outline-variant">[ UFFICIALE // 11 ]</h3>
+    <div class="flex flex-col gap-1">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">Google Search Central Blog</span>
+        <span class="text-outline text-[10px] uppercase">google_search_central_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://developers.google.com/search/blog/feed.xml" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">developers.google.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">Google Search Status Dashboard</span>
+        <span class="text-outline text-[10px] uppercase">google_search_status_dashboard</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://status.search.google.com/incidents.rss" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">status.search.google.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">OpenAI Blog</span>
+        <span class="text-outline text-[10px] uppercase">openai_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://openai.com/blog/rss.xml" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">openai.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">Anthropic News</span>
+        <span class="text-outline text-[10px] uppercase">anthropic_news</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">scraper</span>
+        <a href="https://www.anthropic.com/news" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">www.anthropic.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">Google DeepMind Blog</span>
+        <span class="text-outline text-[10px] uppercase">google_deepmind_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://deepmind.google/blog/rss.xml" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">deepmind.google →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">web.dev</span>
+        <span class="text-outline text-[10px] uppercase">web_dev</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://web.dev/feed.xml" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">web.dev →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">Chrome Developers Blog</span>
+        <span class="text-outline text-[10px] uppercase">chrome_developers_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://developer.chrome.com/blog/feed.xml" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">developer.chrome.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★</span>
+        <span class="text-white">Bing Webmaster Blog</span>
+        <span class="text-outline text-[10px] uppercase">bing_webmaster_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://blogs.bing.com/webmaster/feed" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">blogs.bing.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★</span>
+        <span class="text-white">Mistral AI News</span>
+        <span class="text-outline text-[10px] uppercase">mistral_ai_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">scraper</span>
+        <a href="https://mistral.ai/news" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">mistral.ai →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★</span>
+        <span class="text-white">Perplexity Blog</span>
+        <span class="text-outline text-[10px] uppercase">perplexity_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">scraper</span>
+        <a href="https://www.perplexity.ai/hub" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">www.perplexity.ai →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★</span>
+        <span class="text-white">Hugging Face Blog</span>
+        <span class="text-outline text-[10px] uppercase">huggingface_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://huggingface.co/blog/feed.xml" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">huggingface.co →</a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="mb-6">
+    <h3 class="text-primary-container font-bold uppercase tracking-widest text-xs mb-3 pb-1 border-b border-outline-variant">[ SOCIAL // 1 ]</h3>
+    <div class="flex flex-col gap-1">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★★</span>
+        <span class="text-white">Danny Sullivan (SearchLiaison) on X</span>
+        <span class="text-outline text-[10px] uppercase">searchliaison_x</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">playwright</span>
+        <a href="https://x.com/searchliaison" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">x.com →</a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="mb-6">
+    <h3 class="text-primary-container font-bold uppercase tracking-widest text-xs mb-3 pb-1 border-b border-outline-variant">[ MEDIA // 3 ]</h3>
+    <div class="flex flex-col gap-1">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★</span>
+        <span class="text-white">Search Engine Land</span>
+        <span class="text-outline text-[10px] uppercase">search_engine_land</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://searchengineland.com/feed" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">searchengineland.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★</span>
+        <span class="text-white">Search Engine Roundtable</span>
+        <span class="text-outline text-[10px] uppercase">search_engine_roundtable</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://feeds.feedburner.com/seroundtable" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">feeds.feedburner.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★</span>
+        <span class="text-white">Search Engine Journal</span>
+        <span class="text-outline text-[10px] uppercase">search_engine_journal</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://www.searchenginejournal.com/feed/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">www.searchenginejournal.com →</a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="mb-6">
+    <h3 class="text-primary-container font-bold uppercase tracking-widest text-xs mb-3 pb-1 border-b border-outline-variant">[ INDIPENDENTE // 3 ]</h3>
+    <div class="flex flex-col gap-1">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★</span>
+        <span class="text-white">Growth Memo (Kevin Indig)</span>
+        <span class="text-outline text-[10px] uppercase">growth_memo_kevin_indig</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://www.growth-memo.com/feed" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">www.growth-memo.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★★</span>
+        <span class="text-white">Glenn Gabe — HIFPM</span>
+        <span class="text-outline text-[10px] uppercase">glenn_gabe_hifpm</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://www.gsqi.com/marketing-blog/feed/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">www.gsqi.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★</span>
+        <span class="text-white">iPullRank Blog (Mike King)</span>
+        <span class="text-outline text-[10px] uppercase">ipullrank_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://ipullrank.com/feed" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">ipullrank.com →</a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="mb-6">
+    <h3 class="text-primary-container font-bold uppercase tracking-widest text-xs mb-3 pb-1 border-b border-outline-variant">[ TOOL VENDOR // 3 ]</h3>
+    <div class="flex flex-col gap-1">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★</span>
+        <span class="text-white">Ahrefs Blog</span>
+        <span class="text-outline text-[10px] uppercase">ahrefs_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://ahrefs.com/blog/feed/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">ahrefs.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★★</span>
+        <span class="text-white">Moz Blog</span>
+        <span class="text-outline text-[10px] uppercase">moz_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://moz.com/posts/rss/blog" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">moz.com →</a>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-[#f5a623]">★★★★★★★</span>
+        <span class="text-white">Semrush Blog</span>
+        <span class="text-outline text-[10px] uppercase">semrush_blog</span>
+      </div>
+      <div class="flex items-center gap-3 text-[10px] uppercase">
+        <span class="text-outline">rss</span>
+        <a href="https://www.semrush.com/blog/feed/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container">www.semrush.com →</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; DOC WATCHER // PAGINE SORVEGLIATE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-sm text-on-surface-variant font-mono mb-6">
+    Queste pagine vengono scaricate ad ogni run e confrontate con la versione precedente. Se il testo cambia in modo
+    significativo (soglia &gt;0.3%, whitespace cosmetico ignorato), viene generato un item speciale nel feed con
+    badge ⚠️ e un diff leggibile dall'AI.
+  </p>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">9 PAGINE SORVEGLIATE</p>
+  <div class="flex flex-col gap-1">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Spam Policies</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Helpful Content</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Quality Rater Guidelines (PDF)</span>
+      <span class="text-outline text-[10px] uppercase">[pdf]</span>
+    </div>
+    <a href="https://services.google.com/fh/files/misc/hsw-sqevaluatorguidelines.pdf" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">services.google.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google AI Features SEO Guidance</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Overview of Google Crawlers</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Googlebot Documentation</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/googlebot" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Structured Data Supported</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">OpenAI Usage Policies</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://openai.com/policies/usage-policies/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">openai.com →</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Anthropic Usage Policy</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://www.anthropic.com/legal/aup" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">www.anthropic.com →</a>
+  </div>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; RANKING &amp; CATEGORIE</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div class="space-y-6 font-mono text-sm text-on-surface-variant leading-relaxed">
+    <p>Ogni item riceve uno score calcolato così:</p>
+    <pre class="bg-surface-container-lowest border border-outline-variant p-4 text-xs text-primary-container overflow-x-auto">score = importance * 10       # decisione AI, 1..5
+      + source.authority      # config/sources.yml, 1..10
+      + freshness_bonus       # 5 se &lt;6h, 2 se &lt;24h, 0 altrimenti
+      + doc_change_bonus      # 20 se è un cambio Doc Watcher
+      + category_bonus        # 10 google_docs_change, 5 google_updates, 3 ai_models</pre>
+    <p>Le 8 categorie sono: <span class="text-primary-container">google_updates</span>, <span class="text-primary-container">google_docs_change</span>, <span class="text-primary-container">ai_models</span>, <span class="text-primary-container">ai_overviews_llm_seo</span>, <span class="text-primary-container">technical_seo</span>, <span class="text-primary-container">content_eeat</span>, <span class="text-primary-container">tools_platforms</span>, <span class="text-primary-container">industry_news</span>.</p>
+  </div>
+</section>
+
+<section class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; STACK TECNICO</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <ul class="font-mono text-sm text-on-surface-variant space-y-2">
+    <li><span class="text-primary-container">PYTHON 3.12</span> &middot; httpx async, feedparser, selectolax, playwright, pydantic v2, rapidfuzz, jinja2</li>
+    <li><span class="text-primary-container">AI</span> &middot; OpenRouter → google/gemini-2.0-flash-001 (fallback claude-haiku-4.5 e gpt-5-mini)</li>
+    <li><span class="text-primary-container">CI/CD</span> &middot; GitHub Actions cron 07:00 Europe/Rome, canary settimanale sulle fonti</li>
+    <li><span class="text-primary-container">HOSTING</span> &middot; Cloudflare Pages (statico)</li>
+    <li><span class="text-primary-container">FRONTEND</span> &middot; SSG con Jinja2 + Tailwind CDN, JS solo hydration (search, toggle, collapse)</li>
+    <li><span class="text-primary-container">STORAGE</span> &middot; zero database: tutto committato nel repo git (feed + archivio + stato doc watcher)</li>
+  </ul>
+</section>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">
+    (C) 2026 OSSERVATORIO_SEO // AUTORE:
+    <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+  </div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+  </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
