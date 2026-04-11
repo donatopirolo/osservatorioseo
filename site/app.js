@@ -74,6 +74,23 @@ function buildSearchBlob(item) {
   setupSearch(feed);
   setupCardCollapse();
 
+  // Precompila la search se l'utente è arrivato da archive.html o docs.html
+  // via header globale (?q=…&cross=1).
+  const initialQuery = params.get("q");
+  const initialCross = params.get("cross");
+  if (initialQuery) {
+    const input = document.getElementById("search");
+    if (input) {
+      input.value = initialQuery;
+      if (initialCross) {
+        const toggle = document.getElementById("search-archive-toggle");
+        if (toggle) toggle.checked = true;
+      }
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.focus();
+    }
+  }
+
   const tag = params.get("tag");
   if (tag) applyTagFilter(feed, tag);
 })();
