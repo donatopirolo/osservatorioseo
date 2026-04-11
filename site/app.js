@@ -67,6 +67,7 @@ function buildSearchBlob(item) {
   }
 
   renderMeta(feed, date);
+  renderSectionTitles(date);
   renderTop10(feed);
   renderCategories(feed);
   renderFailed(feed);
@@ -75,6 +76,22 @@ function buildSearchBlob(item) {
   const tag = params.get("tag");
   if (tag) applyTagFilter(feed, tag);
 })();
+
+/**
+ * Se siamo in modalità snapshot (?date=YYYY-MM-DD) appende la data
+ * formattata "DD MM YYYY" ai titoli delle sezioni TOP 10 e CATEGORIE.
+ * In modalità normale non tocca nulla.
+ */
+function renderSectionTitles(archiveDate) {
+  if (!archiveDate) return;
+  const m = String(archiveDate).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!m) return;
+  const suffix = `${m[3]} ${m[2]} ${m[1]}`;
+  const top = document.getElementById("top10-title");
+  const cat = document.getElementById("categories-title");
+  if (top) top.textContent = `> TOP 10 DEL GIORNO ${suffix}`;
+  if (cat) cat.textContent = `> TUTTE PER CATEGORIA ${suffix}`;
+}
 
 function renderMeta(feed, archiveDate) {
   const local = new Date(feed.generated_at_local);
