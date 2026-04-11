@@ -60,24 +60,34 @@ input[type="checkbox"]#search-archive-toggle:focus {
   border: 0;
 }
 
-/* FAQ accordion: rimuove il disclosure triangle nativo e switcha + ↔ − */
-.faq-item > summary {
+/* FAQ accordion + Category accordion homepage: rimuove il disclosure
+   triangle nativo e switcha + ↔ − via pseudo-element. */
+.faq-item > summary,
+.cat-accordion > summary {
   list-style: none;
 }
-.faq-item > summary::-webkit-details-marker {
+.faq-item > summary::-webkit-details-marker,
+.cat-accordion > summary::-webkit-details-marker {
   display: none;
 }
-.faq-item[open] .faq-marker::before {
+.faq-item[open] .faq-marker::before,
+.cat-accordion[open] .cat-marker::before {
   content: "−";
 }
-.faq-item:not([open]) .faq-marker::before {
+.faq-item:not([open]) .faq-marker::before,
+.cat-accordion:not([open]) .cat-marker::before {
   content: "+";
 }
-.faq-item .faq-marker {
+.faq-item .faq-marker,
+.cat-accordion .cat-marker {
   font-size: 0;
 }
 .faq-item .faq-marker::before {
   font-size: 1.5rem;
+  line-height: 1;
+}
+.cat-accordion .cat-marker::before {
+  font-size: 1rem;
   line-height: 1;
 }
 

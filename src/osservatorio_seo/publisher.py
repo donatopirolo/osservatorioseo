@@ -717,28 +717,17 @@ class Publisher:
             target.mkdir(parents=True, exist_ok=True)
             (target / "index.html").write_text(renderer.render_category_hub(ctx), encoding="utf-8")
 
-        # Tag hubs: solo tag con >= 2 items
-        for tag, items in items_by_tag.items():
-            if len(items) < 2:
-                continue
-            cards = [build_teaser(i) for i in items]
-            ctx = {
-                "page_title": f"#{tag} — Osservatorio SEO",
-                "page_description": f"Articoli taggati {tag}",
-                "canonical_url": canonical(make_tag_path(tag)),
-                "active_nav": "today",
-                "noindex": not allow_indexing,
-                "tag_label": tag,
-                "meta_line": f"{len(items)} ARTICOLI",
-                "teaser_cards": cards,
-                "breadcrumbs": [
-                    {"name": "Home", "url": canonical("/")},
-                    {"name": f"#{tag}", "url": canonical(make_tag_path(tag))},
-                ],
-            }
-            target = site_dir / "tag" / tag.replace("_", "-")
-            target.mkdir(parents=True, exist_ok=True)
-            (target / "index.html").write_text(renderer.render_tag_hub(ctx), encoding="utf-8")
+        # NOTE: le pagine /tag/<slug>/ sono intenzionalmente disabilitate.
+        # I tag al momento non hanno una strategia SEO dedicata: la
+        # generazione automatica produceva pagine thin-content duplicate
+        # dei category hub e inquinava la sitemap. I tag restano come
+        # metadata sugli item (card + article header) per raccogliere dati,
+        # e nei template sono rese come <span> non cliccabili. Quando
+        # avremo un vocabolario controllato (vedi tags.py) e abbastanza
+        # data per costruire hub significativi, la generazione tag può
+        # essere riattivata qui. `items_by_tag` resta calcolato sopra
+        # per eventuale debug / stat, ma non è più usato per rendering.
+        _ = items_by_tag  # silenzia linter, conservato per raccolta dati futura
 
     # --- Docs / About / SEO assets ---
 
@@ -1007,12 +996,7 @@ class Publisher:
             urls.append(
                 {"loc": canonical(make_category_path(cat)), "lastmod": today, "priority": "0.6"}
             )
-        tags_seen = set()
-        for item in feed.items:
-            for t in item.tags:
-                tags_seen.add(t)
-        for t in tags_seen:
-            urls.append({"loc": canonical(make_tag_path(t)), "lastmod": today, "priority": "0.4"})
+        # Tag pages intentionally NOT in sitemap — no SEO strategy on tags yet.
 
         urls.append(
             {"loc": canonical(f"/archivio/{y}/{m}/{d}/"), "lastmod": today, "priority": "0.8"}

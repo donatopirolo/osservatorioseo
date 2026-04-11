@@ -38,6 +38,7 @@ from osservatorio_seo.publisher import Publisher
 from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.sources import is_event_item, override_importance
 from osservatorio_seo.summarizer import Summarizer
+from osservatorio_seo.tags import normalize_tags
 
 logger = logging.getLogger(__name__)
 ROME_TZ = ZoneInfo("Europe/Rome")
@@ -202,6 +203,7 @@ class Pipeline:
                 logger.warning("summarize failed for %s: %s", raw.url, e)
                 continue
             date_str = datetime.now(ROME_TZ).strftime("%Y-%m-%d")
+            normalized_tags = normalize_tags(summary.tags)
             items.append(
                 Item(
                     id=f"item_{date_str}_{idx:03d}",
@@ -211,8 +213,8 @@ class Pipeline:
                     url=raw.url,
                     source=source,
                     category=summary.category,
-                    tags=summary.tags,
-                    importance=override_importance(source.id, summary.importance, summary.tags),
+                    tags=normalized_tags,
+                    importance=override_importance(source.id, summary.importance, normalized_tags),
                     published_at=raw.published_at,
                     fetched_at=datetime.now(UTC),
                     is_doc_change=False,
@@ -313,7 +315,7 @@ class Pipeline:
                         fetcher="rss",
                     ),
                     category=page.category,
-                    tags=summary.tags,
+                    tags=normalize_tags(summary.tags),
                     importance=summary.importance,
                     published_at=r.checked_at,
                     fetched_at=r.checked_at,

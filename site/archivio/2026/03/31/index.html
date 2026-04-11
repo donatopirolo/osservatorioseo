@@ -176,10 +176,10 @@
       <div class="card-body">
         <p class="text-sm text-on-surface-variant font-mono leading-relaxed">Google ha pubblicato un articolo che fa chiarezza sul funzionamento interno di Googlebot, sfatando il mito di un singolo crawler onnipotente. L&#39;articolo evidenzia come Googlebot sia in realtà un client di una piattaforma di crawling centralizzata e spiega i limiti di dimensione dei file, con un focus sul limite di 2MB per le pagine HTML. Viene inoltre chiarito come Googlebot gestisce i file che superano tale limite.</p>
         <div class="mt-2">
-          <a href="/tag/googlebot/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">googlebot</a>
-          <a href="/tag/crawling/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">crawling</a>
-          <a href="/tag/fetching/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">fetching</a>
-          <a href="/tag/file-size-limit/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">file_size_limit</a>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">googlebot</span>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">crawling</span>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">fetching</span>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">file_size_limit</span>
         </div>
       </div>
     </div>
@@ -205,10 +205,10 @@
       <div class="card-body">
         <p class="text-sm text-on-surface-variant font-mono leading-relaxed">Google ha annunciato lo spostamento dei file JSON contenenti gli intervalli IP dei suoi crawler. La nuova posizione è developers.google.com/crawling/ipranges/, più generica rispetto alla precedente. I file rimarranno disponibili nella vecchia directory (/search/apis/ipranges/) per un periodo transitorio di sei mesi, durante il quale è consigliabile aggiornare i sistemi.</p>
         <div class="mt-2">
-          <a href="/tag/google-crawler/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_crawler</a>
-          <a href="/tag/ip-address/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">ip_address</a>
-          <a href="/tag/technical-update/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">technical_update</a>
-          <a href="/tag/google-search-central/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_search_central</a>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">google_crawler</span>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">ip_address</span>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">technical_update</span>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">google_search_central</span>
         </div>
       </div>
     </div>
@@ -226,15 +226,17 @@
     <h2 class="text-2xl font-bold tracking-tight uppercase" id="categories-title">&gt; TUTTE PER CATEGORIA 31 03 2026</h2>
     <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
   </div>
-  <div id="categories" class="flex flex-col gap-16">
-    <section class="flex flex-col gap-6">
-      <div class="flex items-center justify-between border-b border-primary-container pb-2">
-        <h3 class="text-primary-container font-bold uppercase tracking-widest text-sm">
-          [ <a href="/categoria/technical-seo/" class="hover:underline">Technical SEO</a> ]
+  <div id="categories" class="flex flex-col gap-6">
+    <details class="cat-accordion group" open>
+      <summary class="flex items-center justify-between border-b border-primary-container pb-2 cursor-pointer list-none hover:bg-surface-container-lowest transition-colors">
+        <h3 class="text-primary-container font-bold uppercase tracking-widest text-sm flex items-center gap-3">
+          <span class="cat-marker text-primary-container font-mono shrink-0 w-4 inline-block text-center"></span>
+          [ <a href="/categoria/technical-seo/" class="hover:underline" onclick="event.stopPropagation()">Technical SEO</a> ]
+          <span class="text-outline text-[10px] font-normal normal-case tracking-normal">(2)</span>
         </h3>
         <span class="material-symbols-outlined text-primary-container text-sm">build</span>
-      </div>
-      <div class="flex flex-col gap-4">
+      </summary>
+      <div class="flex flex-col gap-4 pt-6">
       <article class="card border-l-2 border-primary-container bg-surface-container-low p-4 sm:p-6 flex flex-col md:flex-row md:justify-between md:items-start group hover:bg-surface-container transition-colors"
   data-item-id="item_2026-03-31_gsc_5E92B0"
   data-tags="googlebot,crawling,fetching,file_size_limit"
@@ -249,10 +251,10 @@
     <div class="card-body">
       <p class="text-sm text-on-surface-variant font-mono">Google ha pubblicato un articolo che fa chiarezza sul funzionamento interno di Googlebot, sfatando il mito di un singolo crawler onnipotente. L&#39;articolo evidenzia come Googlebot sia in realtà un client di una piattaforma di crawling centralizzata e spiega i limiti di dimensione dei file, con un focus sul limite di 2MB per le pagine HTML. Viene inoltre chiarito come Googlebot gestisce i file che superano tale limite.</p>
       <div class="mt-2">
-        <a href="/tag/googlebot/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">googlebot</a>
-        <a href="/tag/crawling/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">crawling</a>
-        <a href="/tag/fetching/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">fetching</a>
-        <a href="/tag/file-size-limit/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">file_size_limit</a>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">googlebot</span>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">crawling</span>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">fetching</span>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">file_size_limit</span>
       </div>
     </div>
   </div>
@@ -273,10 +275,10 @@
     <div class="card-body">
       <p class="text-sm text-on-surface-variant font-mono">Google ha annunciato lo spostamento dei file JSON contenenti gli intervalli IP dei suoi crawler. La nuova posizione è developers.google.com/crawling/ipranges/, più generica rispetto alla precedente. I file rimarranno disponibili nella vecchia directory (/search/apis/ipranges/) per un periodo transitorio di sei mesi, durante il quale è consigliabile aggiornare i sistemi.</p>
       <div class="mt-2">
-        <a href="/tag/google-crawler/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_crawler</a>
-        <a href="/tag/ip-address/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">ip_address</a>
-        <a href="/tag/technical-update/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">technical_update</a>
-        <a href="/tag/google-search-central/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">google_search_central</a>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">google_crawler</span>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">ip_address</span>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">technical_update</span>
+        <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">google_search_central</span>
       </div>
     </div>
   </div>
@@ -284,7 +286,7 @@
 </article>
 
       </div>
-    </section>
+    </details>
   </div>
 </section>
 

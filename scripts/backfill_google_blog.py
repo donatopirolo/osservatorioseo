@@ -40,6 +40,7 @@ from osservatorio_seo.models import (
 from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.sources import override_importance
 from osservatorio_seo.summarizer import Summarizer
+from osservatorio_seo.tags import normalize_tags
 
 INDEX_URL = "https://developers.google.com/search/blog"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
@@ -169,6 +170,7 @@ async def summarize_all(
             continue
         day_str = raw.published_at.astimezone(ROME).strftime("%Y-%m-%d")
         short_id = hashlib.sha256(raw.url.encode()).hexdigest()[:6].upper()
+        normalized_tags = normalize_tags(summary.tags)
         item = Item(
             id=f"item_{day_str}_gsc_{short_id}",
             title_original=raw.title,
@@ -177,8 +179,8 @@ async def summarize_all(
             url=raw.url,
             source=SOURCE,
             category=summary.category,
-            tags=summary.tags,
-            importance=override_importance(SOURCE.id, summary.importance, summary.tags),
+            tags=normalized_tags,
+            importance=override_importance(SOURCE.id, summary.importance, normalized_tags),
             published_at=raw.published_at,
             fetched_at=raw.published_at,  # coincide con la data reale
             is_doc_change=False,

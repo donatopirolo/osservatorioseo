@@ -21,7 +21,7 @@
         {% if tags %}
         <div class="mt-2">
           {% for t in tags %}
-          <a href="/tag/{{ t | replace('_', '-') }}/" class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline hover:text-primary-container hover:border-primary-container font-mono">{{ t }}</a>
+          <span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">{{ t }}</span>
           {% endfor %}
         </div>
         {% endif %}
