@@ -64,3 +64,6 @@ class HtmlRenderer:
 
     def render_robots_txt(self, context: dict[str, Any]) -> str:
         return self.render_raw("robots.txt.jinja", context)
+
+    def render_top_week(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/top_week.html.jinja", context)

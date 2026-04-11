@@ -1,0 +1,36 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<section class="mb-10">
+  <div class="md:hidden text-primary-container font-bold text-2xl tracking-tight uppercase terminal-glow mb-4">TOP SETTIMANA</div>
+  <div class="flex items-center gap-2 text-outline">
+    <span class="text-primary-container">●</span>
+    <span class="text-[10px] tracking-widest uppercase break-words">{{ meta_line }}</span>
+  </div>
+</section>
+
+<section class="mb-16" id="top10-section">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; TOP 10 DELLA SETTIMANA</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">ROLLING WINDOW // ULTIMI 7 GIORNI // RANKED BY IMPORTANCE + AUTHORITY</p>
+  <div id="top10" class="grid grid-cols-1 gap-px bg-outline-variant border border-outline-variant">
+  {% for card in top10_cards %}
+  {{ card | safe }}
+  {% endfor %}
+  </div>
+</section>
+
+<section class="mb-12">
+  <p class="text-xs text-outline font-mono uppercase">
+    Vedi anche:
+    <a href="/" class="text-primary-container hover:underline">oggi</a> ·
+    <a href="/archivio/" class="text-primary-container hover:underline">archivio completo</a>
+  </p>
+</section>
+{% endblock %}

@@ -227,9 +227,7 @@ def test_render_docs_and_about() -> None:
     assert "DOCS" in docs_html
     assert "UFFICIALE" in docs_html
 
-    about_html = renderer.render_about(
-        {**base_ctx, "page_title": "Chi siamo", "source_count": 21}
-    )
+    about_html = renderer.render_about({**base_ctx, "page_title": "Chi siamo", "source_count": 21})
     assert "Chi siamo" in about_html
     assert "donatopirolo" in about_html
 
@@ -253,9 +251,7 @@ def test_render_sitemap_robots_feed() -> None:
     assert "Disallow: /" in robots_noindex
     assert "Sitemap: https://x.com/sitemap.xml" in robots_noindex
 
-    robots_allow = renderer.render_robots_txt(
-        {"allow_indexing": True, "site_url": "https://x.com"}
-    )
+    robots_allow = renderer.render_robots_txt({"allow_indexing": True, "site_url": "https://x.com"})
     assert "Allow: /" in robots_allow
 
     feed = renderer.render_feed_xml(

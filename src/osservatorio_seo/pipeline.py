@@ -122,9 +122,19 @@ class Pipeline:
             site_data_dir=self._site_data_dir,
         )
         publisher.publish(feed)
-        # Snapshot di sources + doc_watcher pages per la pagina /docs.html del
-        # frontend (si auto-aggiorna ad ogni run).
+        # Snapshot di sources + doc_watcher pages per /docs/ SSG
         publisher.publish_config_snapshot(sources, doc_pages)
+        # SSG: genera tutti gli HTML statici (homepage, archivio, articoli,
+        # hub, docs, about, sitemap, feed.xml, robots.txt, top-settimana)
+        site_dir = self._site_data_dir.parent if self._site_data_dir else Path("site")
+        publisher.publish_ssg(
+            feed,
+            sources,
+            doc_pages,
+            templates_dir=Path("templates"),
+            site_dir=site_dir,
+            allow_indexing=False,
+        )
         return feed
 
     async def _fetch_all(
