@@ -35,6 +35,7 @@ from osservatorio_seo.models import (
 from osservatorio_seo.normalizer import Normalizer
 from osservatorio_seo.publisher import Publisher
 from osservatorio_seo.ranker import Ranker
+from osservatorio_seo.sources import override_importance
 from osservatorio_seo.summarizer import Summarizer
 
 logger = logging.getLogger(__name__)
@@ -204,7 +205,7 @@ class Pipeline:
                     source=source,
                     category=summary.category,
                     tags=summary.tags,
-                    importance=summary.importance,
+                    importance=override_importance(source.id, summary.importance),
                     published_at=raw.published_at,
                     fetched_at=datetime.now(UTC),
                     is_doc_change=False,

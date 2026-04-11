@@ -38,6 +38,7 @@ from osservatorio_seo.models import (
     Source,
 )
 from osservatorio_seo.ranker import Ranker
+from osservatorio_seo.sources import override_importance
 from osservatorio_seo.summarizer import Summarizer
 
 INDEX_URL = "https://developers.google.com/search/blog"
@@ -177,7 +178,7 @@ async def summarize_all(
             source=SOURCE,
             category=summary.category,
             tags=summary.tags,
-            importance=summary.importance,
+            importance=override_importance(SOURCE.id, summary.importance),
             published_at=raw.published_at,
             fetched_at=raw.published_at,  # coincide con la data reale
             is_doc_change=False,
