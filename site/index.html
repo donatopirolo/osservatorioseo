@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OsservatorioSEO — News giornaliere su SEO e AI</title>
+<meta name="description" content="Hub giornaliero di notizie SEO e AI aggiornato alle 07:00. Raccoglie fonti autorevoli, riassume in italiano, e rileva modifiche alle policy Google." />
+<link rel="canonical" href="/" />
+<meta property="og:title" content="OsservatorioSEO" />
+<meta property="og:description" content="News giornaliere SEO e AI, riassunte dall'AI." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>OsservatorioSEO</h1>
+    <p class="tagline">News giornaliere SEO e AI · aggiornato ogni mattina alle 07:00</p>
+    <p class="meta" id="meta"></p>
+  </div>
+</header>
+
+<main class="container">
+  <input type="search" id="search" placeholder="Cerca nei titoli o nei riassunti..." />
+
+  <section id="top10-section">
+    <h2>🔥 Top 10 del giorno</h2>
+    <div id="top10"></div>
+  </section>
+
+  <section id="categories-section">
+    <h2>📚 Tutto per categoria</h2>
+    <div id="categories"></div>
+  </section>
+
+  <section id="failed" hidden>
+    <h2>⚠️ Fonti con problemi</h2>
+    <ul id="failed-list"></ul>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Dati: <a href="data/feed.json">feed.json</a> · <a href="https://github.com/">GitHub</a></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+:root {
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --card-bg: #fff;
+  --card-border: #e0e0e0;
+  --accent: #0066cc;
+  --warn-bg: #fff8e1;
+  --warn-border: #ffc107;
+  --star: #f5a623;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f0f;
+    --fg: #e0e0e0;
+    --muted: #888;
+    --card-bg: #1a1a1a;
+    --card-border: #333;
+    --accent: #66b3ff;
+    --warn-bg: #2a1f00;
+    --warn-border: #ffc107;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem; }
+header { border-bottom: 1px solid var(--card-border); }
+header h1 { margin: 0 0 0.25rem 0; font-size: 1.8rem; }
+.tagline { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.meta { margin: 0.5rem 0 0 0; color: var(--muted); font-size: 0.85rem; }
+#search {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--fg);
+  margin: 1rem 0;
+}
+h2 { margin: 2rem 0 1rem 0; font-size: 1.4rem; }
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.card.doc-change {
+  background: var(--warn-bg);
+  border-color: var(--warn-border);
+}
+.card h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+.card .source-line { color: var(--muted); font-size: 0.85rem; margin: 0 0 0.75rem 0; }
+.card .stars { color: var(--star); }
+.card .summary { margin: 0 0 0.75rem 0; }
+.card a.readmore {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.card a.readmore:hover { text-decoration: underline; }
+details {
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background: var(--card-bg);
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+details[open] summary { margin-bottom: 0.75rem; }
+footer {
+  border-top: 1px solid var(--card-border);
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+footer a { color: var(--accent); }
+.tag {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.25rem;
+  background: var(--card-border);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
