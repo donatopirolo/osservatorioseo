@@ -59,11 +59,19 @@
   {% endif %}
 
   {% if item.deep_analysis.examples %}
+  {# 3 esempi → 3 background + 3 border color differenti per distinguerli a colpo d'occhio #}
+  {%- set _ex_styles = [
+    ('bg-[#0e0e0e]', 'border-primary-container', 'COSA FARE'),
+    ('bg-[#1b1b1b]', 'border-[#f5a623]', 'COSA EVITARE'),
+    ('bg-[#1f1f1f]', 'border-[#919191]', 'SCENARIO'),
+  ] -%}
   <section class="mb-10">
     <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ESEMPI CONCRETI</h2>
     <div class="space-y-4">
       {% for ex in item.deep_analysis.examples %}
-      <div class="p-4 border-l-2 border-outline-variant bg-surface-container-lowest">
+      {%- set _s = _ex_styles[loop.index0 % 3] -%}
+      <div class="p-5 border-l-4 {{ _s[0] }} {{ _s[1] }}">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">{{ _s[2] }}</p>
         <p class="text-on-surface leading-relaxed">{{ ex }}</p>
       </div>
       {% endfor %}
@@ -83,14 +91,21 @@
   {% endif %}
 
   {% if item.deep_analysis.faqs %}
+  {# Accordion FAQ native HTML (<details>): nessun JS, stato persistente,
+     accessibile. Il JSON-LD FAQPage è emesso a parte per Google rich results. #}
   <section class="mb-10">
     <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; DOMANDE FREQUENTI</h2>
-    <div class="space-y-5">
+    <div class="divide-y divide-outline-variant border-t border-b border-outline-variant">
       {% for f in item.deep_analysis.faqs %}
-      <div>
-        <h3 class="text-base font-bold text-white mb-2">{{ f.question }}</h3>
-        <p class="text-on-surface-variant leading-relaxed">{{ f.answer }}</p>
-      </div>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">{{ f.question }}</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">{{ f.answer }}</p>
+        </div>
+      </details>
       {% endfor %}
     </div>
   </section>

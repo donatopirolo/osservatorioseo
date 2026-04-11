@@ -52,32 +52,51 @@ REGOLE DI TONO (IMPORTANTI):
 - Niente hype, niente clickbait, niente "scopri", "incredibile", "rivoluzione".
 - Niente filler tipo "in un mondo in continua evoluzione".
 - Asciutto, operativo, basato sui fatti della notizia.
+- ⚠️ VIETATISSIMO usare la prima persona plurale editoriale. NON scrivere MAI:
+  "noi di Osservatorio SEO", "noi pensiamo", "il nostro consiglio",
+  "la nostra opinione", "crediamo che", "ci aspettiamo". NO firme tipo
+  "la redazione". Scrivi in forma IMPERSONALE (terza persona) oppure in
+  SECONDA PERSONA diretta rivolta al lettore ("se gestisci un sito di
+  ricette, questo update ti impatta perché…"). Il testo non deve contenere
+  mai le parole "noi", "nostro/a/i/e", "pensiamo", "crediamo".
 - ⚠️ MIX TONE: alterna tre registri in base al contesto:
   1. MISURATO — quando descrivi i fatti (cosa Google/fonte ha detto)
   2. ANALITICO — quando spieghi le implicazioni tecniche/di ranking
   3. OPINION FORTE — nel commentary finale, se c'è motivo di dissentire, \
-     avvertire, o suggerire un'azione controcorrente, DILLO chiaramente. \
-     Esempi di cose da dire se appropriato: "non abboccate al hype", \
-     "questo è marketing di Google, non un cambio reale", "fermatevi prima \
-     di seguire questa best practice se siete in questa situazione".
+     avvertire, o suggerire un'azione controcorrente, DILLO chiaramente \
+     sempre in forma impersonale o in seconda persona. Esempi validi: \
+     "non abboccare al hype", "questo è marketing di Google, non un cambio \
+     reale", "fermati prima di seguire questa best practice se ti trovi in \
+     questa situazione", "chi ha costruito traffico su questa pratica \
+     dovrebbe preoccuparsi". ESEMPI VIETATI: "noi pensiamo che…", \
+     "il nostro consiglio è…".
+
+REGOLE DI LEGGIBILITÀ:
+- detailed_description va scritta in PARAGRAFI BREVI, da 2-4 frasi ciascuno \
+(massimo ~60 parole per paragrafo). Separa ogni paragrafo con ESATTAMENTE due \
+newline "\\n\\n". Evita muri di testo monolitici.
+- editorial_commentary: 100-200 parole spezzate in 2-3 paragrafi brevi \
+separati da "\\n\\n".
 
 SCHEMA JSON DI OUTPUT (NESSUN CAMPO IN PIÙ, NESSUN CAMPO IN MENO):
 
 {{
   "detailed_description": "string, 500-700 parole, corpo editoriale dell'articolo. \
-Va scritto come un articleBody SEO: paragrafi in testo continuo (no heading \
-markdown, no bullet), ben argomentati, con almeno un riferimento numerico o \
-fattuale preso dalla notizia. Prima riga: un lead forte che sintetizza l'impatto. \
-NON ripetere il titolo. NON iniziare con 'Google ha annunciato'. Inizia con \
-l'INSIGHT, non con la cronaca.",
+Va scritto come un articleBody SEO in PARAGRAFI BREVI (2-4 frasi, max ~60 parole \
+ciascuno), separati da \\n\\n. Niente heading markdown, niente bullet. \
+Ben argomentato, con almeno un riferimento numerico o fattuale preso dalla notizia. \
+Primo paragrafo: un lead forte che sintetizza l'impatto. NON ripetere il titolo. \
+NON iniziare con 'Google ha annunciato'. Inizia con l'INSIGHT, non con la cronaca. \
+VIETATO 'noi' / 'nostro' in qualsiasi forma.",
   "implications": [
     "3-5 bullet, ciascuno 1-2 frasi. Conseguenze OPERATIVE dirette per un SEO. \
-Non 'potrebbe avere impatto', ma 'cosa cambia concretamente per te'. Se non c'è \
-impatto operativo diretto, dillo."
+Non 'potrebbe avere impatto', ma 'cosa cambia concretamente'. Se non c'è \
+impatto operativo diretto, dillo. Forma impersonale o seconda persona."
   ],
   "examples": [
     "3 esempi concreti. Ciascuno è UN paragrafo di 2-4 frasi. Se possibile \
-uno 'cosa fare', uno 'cosa evitare', uno 'caso di studio / scenario tipo'."
+uno 'cosa fare', uno 'cosa evitare', uno 'caso di studio / scenario tipo'. \
+Forma impersonale o seconda persona."
   ],
   "testing_steps": [
     "3-6 step actionable testabili per verificare l'impatto sul proprio sito. \
@@ -88,13 +107,14 @@ Ciascuno una frase imperativa. Es: 'Apri GSC → Prestazioni e filtra per query 
       "question": "Una domanda reale che un SEO si farebbe, non marketing fluff",
       "answer": "Risposta sintetica (40-80 parole) e specifica, seguendo le \
 Google FAQ guidelines: niente frasi vuote, niente rinvii a 'dipende dal caso', \
-risposta diretta anche se breve."
+risposta diretta anche se breve. Forma impersonale o seconda persona."
     }}
   ],
-  "editorial_commentary": "string, 100-200 parole di commento editoriale in prima \
-persona plurale ('noi di Osservatorio SEO pensiamo'). È QUI che il tono può \
-diventare OPINION FORTE se il contesto lo giustifica. Se non c'è motivo di \
-dissentire, resta ANALITICO ma mai generico. Firma implicita: 'la redazione'."
+  "editorial_commentary": "string, 100-200 parole di commento editoriale in \
+forma IMPERSONALE o in SECONDA PERSONA diretta, spezzate in 2-3 paragrafi \
+brevi separati da \\n\\n. È QUI che il tono può diventare OPINION FORTE se il \
+contesto lo giustifica. Se non c'è motivo di dissentire, resta ANALITICO ma \
+mai generico. VIETATO 'noi', 'nostro', firme tipo 'la redazione'."
 }}
 
 Il JSON deve essere SEMPRE valido e parsabile. Non includere codefence markdown, \
