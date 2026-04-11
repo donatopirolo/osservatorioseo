@@ -46,3 +46,28 @@ input[type="checkbox"]#search-archive-toggle:focus {
 [hidden] {
   display: none !important;
 }
+
+/* Card mobile: collapsible body.
+   Su mobile il body è nascosto; un tap sulla card toggla .expanded.
+   Su desktop (>=768px) il body è sempre visibile. */
+@media (max-width: 767px) {
+  .card {
+    cursor: pointer;
+  }
+  .card .card-body {
+    display: none;
+  }
+  .card.expanded .card-body {
+    display: block;
+  }
+  /* Il link READ_LOG/LOG_OPEN è un `<a class="card-body">`, fallback
+     a inline-block quando espanso */
+  .card.expanded a.card-body {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .card .card-body {
+    display: block;
+  }
+}

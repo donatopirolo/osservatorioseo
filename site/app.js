@@ -72,6 +72,7 @@ function buildSearchBlob(item) {
   renderCategories(feed);
   renderFailed(feed);
   setupSearch(feed);
+  setupCardCollapse();
 
   const tag = params.get("tag");
   if (tag) applyTagFilter(feed, tag);
@@ -118,7 +119,9 @@ function renderMeta(feed, archiveDate) {
 
 /**
  * Card in stile Top-10: include numero d'ordine 01..NN e bottone READ_LOG.
- * N.B. renderCategoryCard() è un rendering alternativo per le categorie.
+ * Su mobile solo la sezione "head" (titolo + source line) è visibile; il body
+ * (summary + tags + READ_LOG) appare cliccando la card. Su desktop è sempre
+ * espanso.
  */
 function renderTop10Card(item, order) {
   const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
@@ -128,23 +131,23 @@ function renderTop10Card(item, order) {
   const num = String(order).padStart(2, "0");
   const doc = item.is_doc_change ? "doc-change" : "";
   return `
-    <article class="card ${doc} bg-surface p-6 flex flex-col md:flex-row md:items-start justify-between group hover:bg-surface-container transition-colors"
+    <article class="card ${doc} bg-surface p-4 sm:p-6 flex flex-col md:flex-row md:items-start md:justify-between group hover:bg-surface-container transition-colors"
       data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}" data-search-blob="${escape(searchBlob)}">
-      <div class="flex items-start gap-4 flex-grow">
+      <div class="flex items-start gap-4 flex-grow min-w-0">
         <span class="text-primary-container font-bold text-lg shrink-0">${num}.</span>
-        <div class="max-w-3xl">
-          <h3 class="text-xl font-medium group-hover:text-primary-container transition-colors">${escape(item.title_it)}</h3>
-          <p class="text-[11px] text-outline mt-1 mb-2 uppercase font-mono">
-            ${escape(item.source.name)} · <span class="text-[#f5a623]">${stars}</span> ·
-            <time datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time>
-            // ID: ${escape(idSuffix)}
+        <div class="max-w-3xl min-w-0 flex-1">
+          <h3 class="text-base sm:text-xl font-medium group-hover:text-primary-container transition-colors">${escape(item.title_it)}</h3>
+          <p class="text-[10px] sm:text-[11px] text-outline mt-1 mb-2 uppercase font-mono break-words">
+            ${escape(item.source.name)} · <span class="text-[#f5a623] whitespace-nowrap">${stars}</span> · <time class="whitespace-nowrap" datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time> <span class="whitespace-nowrap">// ID: ${escape(idSuffix)}</span>
           </p>
-          <p class="text-sm text-on-surface-variant font-mono leading-relaxed">${escape(item.summary_it)}</p>
-          ${renderTagsHtml(item.tags)}
+          <div class="card-body">
+            <p class="text-sm text-on-surface-variant font-mono leading-relaxed">${escape(item.summary_it)}</p>
+            ${renderTagsHtml(item.tags)}
+          </div>
         </div>
       </div>
-      <div class="mt-4 md:mt-0 md:ml-6 shrink-0">
-        <a class="text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider"
+      <div class="card-body mt-4 md:mt-0 md:ml-6 shrink-0">
+        <a class="inline-block text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider"
            href="${escape(item.url)}" target="_blank" rel="noopener">READ_LOG</a>
       </div>
     </article>
@@ -153,7 +156,7 @@ function renderTop10Card(item, order) {
 
 /**
  * Card compatta per la sezione categorie. Bordo sinistro verde per items con
- * importance=5, grigio per il resto.
+ * importance=5, grigio per il resto. Stesso comportamento mobile collapsible.
  */
 function renderCategoryCard(item, extraClass = "") {
   const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
@@ -166,19 +169,19 @@ function renderCategoryCard(item, extraClass = "") {
       : "border-l-2 border-outline-variant bg-surface-container-lowest";
   const doc = item.is_doc_change ? "doc-change" : "";
   return `
-    <article class="card ${doc} ${extraClass} ${borderClass} p-6 flex flex-col md:flex-row justify-between items-start group hover:bg-surface-container transition-colors"
+    <article class="card ${doc} ${extraClass} ${borderClass} p-4 sm:p-6 flex flex-col md:flex-row md:justify-between md:items-start group hover:bg-surface-container transition-colors"
       data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}" data-search-blob="${escape(searchBlob)}">
-      <div class="max-w-4xl">
-        <h4 class="text-lg font-bold mb-1 group-hover:text-primary-container transition-colors">${escape(item.title_it)}</h4>
-        <p class="text-[11px] text-outline mb-2 font-mono uppercase">
-          ${escape(item.source.name)} · <span class="text-[#f5a623]">${stars}</span> ·
-          <time datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time>
-          // ID: ${escape(idSuffix)}
+      <div class="max-w-4xl min-w-0 flex-1">
+        <h4 class="text-base sm:text-lg font-bold mb-1 group-hover:text-primary-container transition-colors">${escape(item.title_it)}</h4>
+        <p class="text-[10px] sm:text-[11px] text-outline mb-2 font-mono uppercase break-words">
+          ${escape(item.source.name)} · <span class="text-[#f5a623] whitespace-nowrap">${stars}</span> · <time class="whitespace-nowrap" datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time> <span class="whitespace-nowrap">// ID: ${escape(idSuffix)}</span>
         </p>
-        <p class="text-sm text-on-surface-variant font-mono">${escape(item.summary_it)}</p>
-        ${renderTagsHtml(item.tags)}
+        <div class="card-body">
+          <p class="text-sm text-on-surface-variant font-mono">${escape(item.summary_it)}</p>
+          ${renderTagsHtml(item.tags)}
+        </div>
       </div>
-      <a class="text-outline text-xs font-mono mt-4 md:mt-0 md:ml-6 shrink-0 hover:text-primary-container transition-colors uppercase tracking-wider"
+      <a class="card-body text-outline text-xs font-mono mt-4 md:mt-0 md:ml-6 shrink-0 hover:text-primary-container transition-colors uppercase tracking-wider"
          href="${escape(item.url)}" target="_blank" rel="noopener">LOG_OPEN →</a>
     </article>
   `;
@@ -283,6 +286,24 @@ function renderFailed(feed) {
         </li>`,
     )
     .join("");
+}
+
+/**
+ * Su mobile (< md breakpoint), le card hanno il body nascosto via CSS. Un
+ * click sulla card lo espande. Click sui link interni non intercettati.
+ * Su desktop il CSS forza il body visibile, quindi questo handler diventa
+ * no-op.
+ */
+function setupCardCollapse() {
+  const mobileMql = window.matchMedia("(max-width: 767px)");
+  document.addEventListener("click", (e) => {
+    if (!mobileMql.matches) return;
+    const link = e.target.closest("a");
+    if (link) return; // lascia andare i click sui link
+    const card = e.target.closest(".card");
+    if (!card) return;
+    card.classList.toggle("expanded");
+  });
 }
 
 function setupSearch(feed) {
