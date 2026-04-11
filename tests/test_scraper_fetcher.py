@@ -51,3 +51,38 @@ async def test_scraper_no_selectors() -> None:
         fetcher = ScraperFetcher(client)
         items = await fetcher.fetch(source)
     assert items == []
+
+
+async def test_scraper_empty_link_selector_uses_article_node(
+    httpx_mock: HTTPXMock,
+) -> None:
+    """When link='' the article node itself is treated as the anchor."""
+    html = """
+    <html><body>
+      <a class="card" href="/news/alpha"><h3>Alpha news</h3></a>
+      <a class="card" href="/news/beta"><h3>Beta news</h3></a>
+    </body></html>
+    """
+    httpx_mock.add_response(url="https://example.com/news", text=html)
+
+    source = Source(
+        id="self_link_site",
+        name="Self link site",
+        authority=8,
+        type="media",
+        fetcher="scraper",
+        target_url="https://example.com/news",
+        selectors={
+            "article": "a.card",
+            "title": "h3",
+            "link": "",
+        },
+    )
+    async with HttpClient() as client:
+        fetcher = ScraperFetcher(client)
+        items = await fetcher.fetch(source)
+
+    assert len(items) == 2
+    assert items[0].title == "Alpha news"
+    assert items[0].url == "https://example.com/news/alpha"
+    assert items[1].url == "https://example.com/news/beta"

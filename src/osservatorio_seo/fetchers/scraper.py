@@ -26,10 +26,16 @@ class ScraperFetcher:
         articles = tree.css(sel.get("article", "article"))
         items: list[RawItem] = []
         for node in articles:
-            title_node = node.css_first(sel.get("title", "h2"))
-            link_node = node.css_first(sel.get("link", "a"))
-            content_node = node.css_first(sel.get("content", ""))
-            date_node = node.css_first(sel.get("date", "time"))
+            title_sel = sel.get("title") or "h2"
+            link_sel = sel.get("link")
+            content_sel = sel.get("content") or None
+            date_sel = sel.get("date") or "time"
+
+            title_node = node.css_first(title_sel)
+            # Empty string or missing link selector = the article node itself carries href
+            link_node = node.css_first(link_sel) if link_sel else node
+            content_node = node.css_first(content_sel) if content_sel else None
+            date_node = node.css_first(date_sel)
 
             title = title_node.text(strip=True) if title_node else ""
             raw_link = ""
