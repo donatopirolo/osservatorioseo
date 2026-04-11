@@ -14,6 +14,26 @@ const ARCHIVE_SEARCH_DAYS = 7; // quanti giorni carichiamo nel cross-archive sea
 // Cache globale per gli items caricati dall'archivio (lazy, solo quando serve)
 let archiveItemsCache = null;
 
+/**
+ * Costruisce il blob di ricerca per un item: titolo italiano + titolo originale
+ * (inglese) + summary + tag + source name + source id + category + URL. Gli
+ * underscore nei tag/id/category diventano spazi, così le query "gpt-5" e
+ * "gpt 5" matchano contro il tag "gpt_5_mini". Tutto lowercase.
+ */
+function buildSearchBlob(item) {
+  const parts = [
+    item.title_it || "",
+    item.title_original || "",
+    item.summary_it || "",
+    (item.tags || []).join(" "),
+    item.source?.name || "",
+    item.source?.id || "",
+    item.category || "",
+    item.url || "",
+  ];
+  return parts.join(" ").replace(/[_\-/]+/g, " ").toLowerCase();
+}
+
 (async function () {
   const params = new URLSearchParams(window.location.search);
   const date = params.get("date"); // se presente → modalità archivio singolo giorno
@@ -76,8 +96,9 @@ function renderCard(item, extraClass = "") {
   const tags = (item.tags || []).map((t) => `<span class="tag">${escape(t)}</span>`).join("");
   const date = formatPublishedAt(item.published_at);
   const classes = ["card", typeClass, extraClass].filter(Boolean).join(" ");
+  const searchBlob = buildSearchBlob(item);
   return `
-    <div class="${classes}" data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}">
+    <div class="${classes}" data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}" data-search-blob="${escape(searchBlob)}">
       <h3>${escape(item.title_it)}</h3>
       <p class="source-line">
         ${escape(item.source.name)} · <span class="stars">${stars}</span> ·
@@ -163,12 +184,14 @@ function setupSearch(feed) {
   const toggle = document.getElementById("search-archive-toggle");
 
   const runSearch = async () => {
-    const q = input.value.toLowerCase().trim();
+    const rawQ = input.value.trim().toLowerCase();
+    // Normalizza la query allo stesso modo del blob: trattini/underscore → spazi
+    const q = rawQ.replace(/[_\-/]+/g, " ");
 
-    // Filtra le card del feed corrente (top10 + categorie)
+    // Filtra le card del feed corrente (top10 + categorie) usando data-search-blob
     document.querySelectorAll("#top10-section .card, #categories-section .card").forEach((card) => {
-      const text = card.textContent.toLowerCase();
-      card.style.display = !q || text.includes(q) ? "" : "none";
+      const blob = card.dataset.searchBlob || "";
+      card.style.display = !q || blob.includes(q) ? "" : "none";
     });
 
     // Se il toggle archive è attivo e c'è una query non vuota, mostra risultati archivio
@@ -203,16 +226,7 @@ async function showArchiveResults(query) {
   }
 
   const matches = archiveItemsCache.filter((entry) => {
-    const blob = (
-      entry.item.title_it +
-      " " +
-      entry.item.summary_it +
-      " " +
-      (entry.item.tags || []).join(" ") +
-      " " +
-      entry.item.source.name
-    ).toLowerCase();
-    return blob.includes(query);
+    return buildSearchBlob(entry.item).includes(query);
   });
 
   if (matches.length === 0) {
