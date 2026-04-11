@@ -9,7 +9,7 @@ sources:
     authority: 10
     type: official
     fetcher: rss
-    feed_url: https://developers.google.com/search/blog/rss
+    feed_url: https://developers.google.com/search/blog/feed.xml
     category_hint: google_updates
     enabled: true
 
@@ -86,7 +86,7 @@ sources:
     authority: 9
     type: media
     fetcher: rss
-    feed_url: https://www.seroundtable.com/feed.xml
+    feed_url: https://feeds.feedburner.com/seroundtable
     category_hint: google_updates
     enabled: true
 
@@ -144,7 +144,7 @@ sources:
     fetcher: rss
     feed_url: https://www.sistrix.com/blog/feed/
     category_hint: google_updates
-    enabled: true
+    enabled: false  # feed restituisce 200 ma body vuoto; blog forse rimosso
 
   - id: moz_blog
     name: "Moz Blog"
@@ -163,7 +163,7 @@ sources:
     fetcher: rss
     feed_url: https://ai.meta.com/blog/rss
     category_hint: ai_models
-    enabled: true
+    enabled: false  # Meta ha rimosso il feed RSS pubblico (tutti gli URL rispondono 404)
 
   - id: mistral_ai_blog
     name: "Mistral AI News"
@@ -215,7 +215,7 @@ sources:
     authority: 10
     type: official
     fetcher: rss
-    feed_url: https://developer.chrome.com/feeds/blog.xml
+    feed_url: https://developer.chrome.com/blog/feed.xml
     category_hint: technical_seo
     enabled: true
 
