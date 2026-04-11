@@ -161,3 +161,46 @@ def test_render_article_has_jsonld_and_breadcrumb() -> None:
     assert "LEGGI L&#39;ORIGINALE" in html or "LEGGI L'ORIGINALE" in html
     assert "/categoria/google-updates/" in html
     assert "/tag/core-update/" in html
+
+
+def test_all_hub_templates_render() -> None:
+    renderer = HtmlRenderer(templates_dir=Path("templates"))
+    base_ctx = {
+        "page_title": "Hub",
+        "page_description": "d",
+        "canonical_url": "https://example.com/",
+        "active_nav": "archive",
+        "noindex": True,
+        "breadcrumbs": [],
+        "meta_line": "X",
+    }
+    assert "ARCHIVE_INDEX" in renderer.render_archive_index({**base_ctx, "years": []})
+    assert "2026" in renderer.render_year_hub({**base_ctx, "year": 2026, "months": []})
+    assert "Aprile" in renderer.render_month_hub(
+        {
+            **base_ctx,
+            "year": 2026,
+            "year_path": "/archivio/2026/",
+            "month_label": "Aprile",
+            "days": [],
+        }
+    )
+    assert "sabato 11 aprile 2026" in renderer.render_day_hub(
+        {
+            **base_ctx,
+            "year": 2026,
+            "year_path": "/archivio/2026/",
+            "month_label": "Aprile",
+            "month_path": "/archivio/2026/04/",
+            "day": 11,
+            "day_label": "sabato 11 aprile 2026",
+            "teaser_cards": [],
+            "snapshot_path": "/archivio/2026/04/11/",
+        }
+    )
+    assert "Google Updates" in renderer.render_category_hub(
+        {**base_ctx, "category_label": "Google Updates", "teaser_cards": []}
+    )
+    assert "#core_update" in renderer.render_tag_hub(
+        {**base_ctx, "tag_label": "core_update", "teaser_cards": []}
+    )

@@ -1,0 +1,38 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant"> / </span>
+  <a href="/archivio/" class="hover:text-primary-container">ARCHIVIO</a>
+  <span class="text-outline-variant"> / </span>
+  <a href="{{ year_path }}" class="hover:text-primary-container">{{ year }}</a>
+  <span class="text-outline-variant"> / </span>
+  <a href="{{ month_path }}" class="hover:text-primary-container">{{ month_label }}</a>
+  <span class="text-outline-variant"> / </span>
+  <span class="text-primary-container">{{ day }}</span>
+</nav>
+
+<section class="mb-12">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; {{ day_label }}</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">{{ meta_line }}</p>
+
+  <div class="flex flex-col gap-2">
+  {% for card in teaser_cards %}
+  {{ card | safe }}
+  {% endfor %}
+  </div>
+
+  <div class="mt-8 text-[10px] text-outline uppercase font-mono">
+    Vedi anche:
+    <a class="text-primary-container hover:underline" href="{{ snapshot_path }}">vista completa di questo giorno</a>
+  </div>
+</section>
+{% endblock %}

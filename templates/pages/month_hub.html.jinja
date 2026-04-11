@@ -1,0 +1,38 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant"> / </span>
+  <a href="/archivio/" class="hover:text-primary-container">ARCHIVIO</a>
+  <span class="text-outline-variant"> / </span>
+  <a href="{{ year_path }}" class="hover:text-primary-container">{{ year }}</a>
+  <span class="text-outline-variant"> / </span>
+  <span class="text-primary-container">{{ month_label }}</span>
+</nav>
+
+<section class="mb-12">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; {{ month_label }} {{ year }}</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+
+  <ul class="flex flex-col gap-2">
+  {% for day_entry in days %}
+    <li>
+      <a class="group flex items-center justify-between px-4 py-3 border border-outline-variant bg-surface-container-low hover:border-primary-container hover:bg-surface-container transition-colors" href="{{ day_entry.path }}">
+        <div class="flex items-center gap-4">
+          <span class="text-primary-container font-bold font-mono text-sm">{{ day_entry.date }}</span>
+          <span class="font-mono text-xs text-outline uppercase hidden md:inline">{{ day_entry.label }}</span>
+        </div>
+        <span class="text-xs text-outline uppercase tracking-widest group-hover:text-primary-container transition-colors">{{ day_entry.count }} LOGS →</span>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}

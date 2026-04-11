@@ -1,0 +1,31 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant"> / </span>
+  <a href="/archivio/" class="hover:text-primary-container">ARCHIVIO</a>
+  <span class="text-outline-variant"> / </span>
+  <span class="text-primary-container">{{ year }}</span>
+</nav>
+
+<section class="mb-12">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; ARCHIVIO {{ year }}</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+  {% for month_entry in months %}
+    <a href="{{ month_entry.path }}" class="px-4 py-3 border border-outline-variant bg-surface-container-low hover:border-primary-container hover:bg-surface-container transition-colors">
+      <div class="font-mono text-sm text-white uppercase">{{ month_entry.label }}</div>
+      <div class="text-[10px] text-outline uppercase font-mono">{{ month_entry.count }} giorni</div>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% endblock %}

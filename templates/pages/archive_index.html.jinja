@@ -1,0 +1,29 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<section class="mb-12">
+  <div class="flex items-center gap-4 mb-8">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; ARCHIVE_INDEX</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">{{ meta_line }}</p>
+
+  <ul class="flex flex-col gap-2">
+  {% for year_entry in years %}
+    <li>
+      <a class="group flex items-center justify-between px-4 py-3 border border-outline-variant bg-surface-container-low hover:border-primary-container hover:bg-surface-container transition-colors" href="{{ year_entry.path }}">
+        <div class="flex items-center gap-4">
+          <span class="text-primary-container font-bold font-mono text-sm">{{ "%04d" | format(year_entry.year) }}</span>
+          <span class="font-mono text-sm text-white">{{ year_entry.count }} LOG FILES</span>
+        </div>
+        <span class="text-xs text-outline uppercase tracking-widest group-hover:text-primary-container transition-colors">OPEN_YEAR →</span>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}
