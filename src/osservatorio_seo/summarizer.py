@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from dataclasses import dataclass
 from typing import Any
 
@@ -184,8 +185,8 @@ class Summarizer:
                 data = resp.json()
                 try:
                     content = data["choices"][0]["message"]["content"]
-                    parsed = json.loads(content)
-                except (KeyError, json.JSONDecodeError) as e:
+                    parsed = _parse_json_loose(content)
+                except (KeyError, json.JSONDecodeError, ValueError) as e:
                     if attempt < self._max_retries - 1:
                         logger.warning("malformed JSON from %s, retrying: %s", model, e)
                         continue
@@ -204,3 +205,36 @@ class Summarizer:
         in_price, out_price = MODEL_PRICING.get(model, (0.0, 0.0))
         usd = (prompt_tokens / 1_000_000) * in_price + (completion_tokens / 1_000_000) * out_price
         return usd * USD_TO_EUR
+
+
+def _parse_json_loose(content: str) -> dict[str, Any]:
+    """Parse JSON tollerando testo extra intorno al blocco JSON.
+
+    Alcuni modelli ignorano `response_format: json_object` e restituiscono
+    testo commentario + codefence + JSON. Estraiamo il primo blocco `{...}`
+    bilanciato e lo proviamo come JSON.
+    """
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        pass
+    # Rimuovi code fences markdown se presenti
+    stripped = re.sub(r"```(?:json)?\s*", "", content)
+    stripped = stripped.replace("```", "")
+    try:
+        return json.loads(stripped.strip())
+    except json.JSONDecodeError:
+        pass
+    # Estrai primo blocco {...} bilanciato
+    start = stripped.find("{")
+    if start == -1:
+        raise ValueError("no JSON object found in response")
+    depth = 0
+    for i, ch in enumerate(stripped[start:], start=start):
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                return json.loads(stripped[start : i + 1])
+    raise ValueError("unbalanced JSON object in response")

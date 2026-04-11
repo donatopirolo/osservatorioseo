@@ -8,6 +8,7 @@ from osservatorio_seo.summarizer import (
     AISummary,
     DocChangeSummary,
     Summarizer,
+    _parse_json_loose,
 )
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -132,3 +133,24 @@ async def test_summarize_doc_change(httpx_mock: HTTPXMock) -> None:
     )
     assert isinstance(result, DocChangeSummary)
     assert result.title_it.startswith("⚠️")
+
+
+def test_parse_json_loose_plain() -> None:
+    assert _parse_json_loose('{"a": 1}') == {"a": 1}
+
+
+def test_parse_json_loose_with_markdown_fence() -> None:
+    content = 'Here is the JSON:\n```json\n{"a": 1, "b": [2, 3]}\n```\nHope this helps!'
+    assert _parse_json_loose(content) == {"a": 1, "b": [2, 3]}
+
+
+def test_parse_json_loose_with_prefix_text() -> None:
+    content = 'Certo, ecco:\n{"importance": 3, "tags": ["x"]}\nFine.'
+    assert _parse_json_loose(content) == {"importance": 3, "tags": ["x"]}
+
+
+def test_parse_json_loose_raises_on_no_json() -> None:
+    import pytest
+
+    with pytest.raises(ValueError, match="no JSON"):
+        _parse_json_loose("just plain text no braces at all")
