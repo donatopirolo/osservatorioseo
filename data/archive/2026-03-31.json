@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-03-31T05:00:00Z",
+  "generated_at_local": "2026-03-31T07:00:00+02:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-03-31-0700",
+  "stats": {
+    "sources_checked": 1,
+    "sources_failed": 0,
+    "items_collected": 2,
+    "items_after_dedup": 2,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.00026
+  },
+  "top10": [
+    "item_2026-03-31_gsc_5E92B0",
+    "item_2026-03-31_gsc_9992B8"
+  ],
+  "categories": {
+    "technical_seo": [
+      "item_2026-03-31_gsc_5E92B0",
+      "item_2026-03-31_gsc_9992B8"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-03-31_gsc_5E92B0",
+      "title_original": "Inside Googlebot: demystifying crawling, fetching, and the bytes we process",
+      "title_it": "Googlebot: approfondimento sul crawling, il fetching e i limiti di dimensione dei file",
+      "summary_it": "Google ha pubblicato un articolo che fa chiarezza sul funzionamento interno di Googlebot, sfatando il mito di un singolo crawler onnipotente. L'articolo evidenzia come Googlebot sia in realtà un client di una piattaforma di crawling centralizzata e spiega i limiti di dimensione dei file, con un focus sul limite di 2MB per le pagine HTML. Viene inoltre chiarito come Googlebot gestisce i file che superano tale limite.",
+      "url": "https://developers.google.com/search/blog/2026/03/crawler-blog-post",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "googlebot",
+        "crawling",
+        "fetching",
+        "file_size_limit"
+      ],
+      "importance": 4,
+      "published_at": "2026-03-31T05:00:00Z",
+      "fetched_at": "2026-03-31T05:00:00Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:39abe7f313ec3657"
+    },
+    {
+      "id": "item_2026-03-31_gsc_9992B8",
+      "title_original": "New Location for the Google Crawlers' IP Range Files",
+      "title_it": "Nuova posizione per i file degli intervalli IP dei crawler di Google",
+      "summary_it": "Google ha annunciato lo spostamento dei file JSON contenenti gli intervalli IP dei suoi crawler. La nuova posizione è developers.google.com/crawling/ipranges/, più generica rispetto alla precedente. I file rimarranno disponibili nella vecchia directory (/search/apis/ipranges/) per un periodo transitorio di sei mesi, durante il quale è consigliabile aggiornare i sistemi.",
+      "url": "https://developers.google.com/search/blog/2026/03/crawler-ip-ranges",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "google_crawler",
+        "ip_address",
+        "technical_update",
+        "google_search_central"
+      ],
+      "importance": 3,
+      "published_at": "2026-03-31T05:00:00Z",
+      "fetched_at": "2026-03-31T05:00:00Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:30b0977bfcd8bd74"
+    }
+  ],
+  "doc_watcher_status": [],
+  "failed_sources": []
+}

@@ -1028,13 +1028,9 @@ class Publisher:
             # ItemList schema: solo URL interne (evita di "annunciare" URL
             # esterne come se fossero nostre)
             if is_internal:
-                top10_itemlist.append(
-                    {"url": canonical(article_url), "name": item.title_it}
-                )
+                top10_itemlist.append({"url": canonical(article_url), "name": item.title_it})
             else:
-                top10_itemlist.append(
-                    {"url": canonical("/top-settimana/"), "name": item.title_it}
-                )
+                top10_itemlist.append({"url": canonical("/top-settimana/"), "name": item.title_it})
 
         meta_line = (
             f"SYSTEM STATUS: OPTIMAL // ROLLING 7D // "
