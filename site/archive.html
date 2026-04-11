@@ -1,37 +1,80 @@
 <!DOCTYPE html>
-<html lang="it">
+<html class="dark" lang="it">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
 <meta name="googlebot" content="noindex, nofollow" />
-<title>Archivio — OsservatorioSEO</title>
+<title>OSSERVATORIO SEO // ARCHIVE_INDEX</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface": "#e2e2e2",
+          "primary-container": "#00f63e",
+          "surface-container-lowest": "#0e0e0e",
+          "surface-container-low": "#1b1b1b",
+          "surface-container": "#1f1f1f",
+          "outline": "#919191",
+          "outline-variant": "#474747",
+          "surface": "#131313",
+          "background": "#131313",
+          "on-surface-variant": "#c6c6c6",
+          "primary": "#ffffff",
+          "error": "#ffb4ab"
+        },
+        borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+        fontFamily: {
+          headline: ["Space Grotesk"],
+          body: ["Space Grotesk"],
+          label: ["Space Grotesk"]
+        }
+      }
+    }
+  };
+</script>
 <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<header>
-  <div class="container">
-    <h1>OsservatorioSEO</h1>
-    <p class="tagline">Archivio storico</p>
-    <nav class="main-nav">
-      <a href="./">← Torna a oggi</a>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center gap-6">
+    <div class="text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</div>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="./">TODAY</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="archive.html">ARCHIVIO</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
-  <section>
-    <h2>📅 Giornate archiviate</h2>
-    <p class="meta" id="archive-meta">Caricamento…</p>
-    <ul id="archive-list" class="archive-list"></ul>
+<main class="flex-grow pt-24 pb-12 px-6 max-w-5xl mx-auto w-full">
+
+  <section class="mb-12">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; ARCHIVE_INDEX</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <p class="text-[10px] text-outline uppercase font-mono mb-6" id="archive-meta">Caricamento indice…</p>
+    <ul id="archive-list" class="flex flex-col gap-2"></ul>
   </section>
+
 </main>
 
-<footer>
-  <div class="container">
-    <p>Ogni giornata è un feed JSON completo conservato nel repo. Clicca per vedere lo snapshot di quel giorno.</p>
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">(C) 2026 OSSERVATORIO_SEO // ALL LOGS RESERVED</div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="./">TODAY</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
   </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
 </footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
 
 <script src="archive.js"></script>
 </body>

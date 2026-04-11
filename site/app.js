@@ -9,6 +9,17 @@ const CATEGORY_LABELS = {
   industry_news: "Industry News",
 };
 
+const CATEGORY_ICONS = {
+  google_updates: "history",
+  google_docs_change: "warning",
+  ai_models: "smart_toy",
+  ai_overviews_llm_seo: "auto_awesome",
+  technical_seo: "build",
+  content_eeat: "article",
+  tools_platforms: "settings",
+  industry_news: "public",
+};
+
 const ARCHIVE_SEARCH_DAYS = 7; // quanti giorni carichiamo nel cross-archive search
 
 // Cache globale per gli items caricati dall'archivio (lazy, solo quando serve)
@@ -79,36 +90,99 @@ function renderMeta(feed, archiveDate) {
   });
   const s = feed.stats;
   const metaEl = document.getElementById("meta");
-  const base = `${dateStr}, ${timeStr} · ${s.sources_checked} fonti · ${s.items_after_dedup} notizie · €${s.ai_cost_eur.toFixed(3)} costo AI`;
-  if (archiveDate) {
-    metaEl.innerHTML =
-      `<strong>📜 Stai vedendo lo snapshot del ${escape(archiveDate)}.</strong> ` +
-      escape(base) +
-      ` · <a href="./">Torna a oggi</a>`;
-  } else {
-    metaEl.textContent = base;
-  }
+  const status = archiveDate
+    ? `SNAPSHOT ${archiveDate} // ${dateStr}, ${timeStr}`
+    : `SYSTEM STATUS: OPTIMAL // LAST REFRESH ${dateStr}, ${timeStr}`;
+  const statline = `${s.sources_checked} SOURCES // ${s.items_after_dedup} LOGS // ${s.doc_changes_detected} DOC CHANGES // €${s.ai_cost_eur.toFixed(3)} AI COST`;
+  metaEl.innerHTML = archiveDate
+    ? `${escape(status)} &nbsp;//&nbsp; ${escape(statline)} &nbsp;//&nbsp; <a class="text-primary-container hover:underline" href="./">RETURN_TO_TODAY</a>`
+    : `${escape(status)} &nbsp;//&nbsp; ${escape(statline)}`;
 }
 
-function renderCard(item, extraClass = "") {
+/**
+ * Card in stile Top-10: include numero d'ordine 01..NN e bottone READ_LOG.
+ * N.B. renderCategoryCard() è un rendering alternativo per le categorie.
+ */
+function renderTop10Card(item, order) {
   const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
-  const typeClass = item.is_doc_change ? "doc-change" : "";
-  const tags = (item.tags || []).map((t) => `<span class="tag">${escape(t)}</span>`).join("");
   const date = formatPublishedAt(item.published_at);
-  const classes = ["card", typeClass, extraClass].filter(Boolean).join(" ");
   const searchBlob = buildSearchBlob(item);
+  const idSuffix = shortId(item);
+  const num = String(order).padStart(2, "0");
+  const doc = item.is_doc_change ? "doc-change" : "";
   return `
-    <div class="${classes}" data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}" data-search-blob="${escape(searchBlob)}">
-      <h3>${escape(item.title_it)}</h3>
-      <p class="source-line">
-        ${escape(item.source.name)} · <span class="stars">${stars}</span> ·
-        <time datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time>
-      </p>
-      <p class="summary">${escape(item.summary_it)}</p>
-      <p>${tags}</p>
-      <a class="readmore" href="${escape(item.url)}" target="_blank" rel="noopener">→ ${hostname(item.url)}</a>
-    </div>
+    <article class="card ${doc} bg-surface p-6 flex flex-col md:flex-row md:items-start justify-between group hover:bg-surface-container transition-colors"
+      data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}" data-search-blob="${escape(searchBlob)}">
+      <div class="flex items-start gap-4 flex-grow">
+        <span class="text-primary-container font-bold text-lg shrink-0">${num}.</span>
+        <div class="max-w-3xl">
+          <h3 class="text-xl font-medium group-hover:text-primary-container transition-colors">${escape(item.title_it)}</h3>
+          <p class="text-[11px] text-outline mt-1 mb-2 uppercase font-mono">
+            ${escape(item.source.name)} · <span class="text-[#f5a623]">${stars}</span> ·
+            <time datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time>
+            // ID: ${escape(idSuffix)}
+          </p>
+          <p class="text-sm text-on-surface-variant font-mono leading-relaxed">${escape(item.summary_it)}</p>
+          ${renderTagsHtml(item.tags)}
+        </div>
+      </div>
+      <div class="mt-4 md:mt-0 md:ml-6 shrink-0">
+        <a class="text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider"
+           href="${escape(item.url)}" target="_blank" rel="noopener">READ_LOG</a>
+      </div>
+    </article>
   `;
+}
+
+/**
+ * Card compatta per la sezione categorie. Bordo sinistro verde per items con
+ * importance=5, grigio per il resto.
+ */
+function renderCategoryCard(item, extraClass = "") {
+  const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
+  const date = formatPublishedAt(item.published_at);
+  const searchBlob = buildSearchBlob(item);
+  const idSuffix = shortId(item);
+  const borderClass =
+    item.importance >= 5 || item.is_doc_change
+      ? "border-l-2 border-primary-container bg-surface-container-low"
+      : "border-l-2 border-outline-variant bg-surface-container-lowest";
+  const doc = item.is_doc_change ? "doc-change" : "";
+  return `
+    <article class="card ${doc} ${extraClass} ${borderClass} p-6 flex flex-col md:flex-row justify-between items-start group hover:bg-surface-container transition-colors"
+      data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}" data-search-blob="${escape(searchBlob)}">
+      <div class="max-w-4xl">
+        <h4 class="text-lg font-bold mb-1 group-hover:text-primary-container transition-colors">${escape(item.title_it)}</h4>
+        <p class="text-[11px] text-outline mb-2 font-mono uppercase">
+          ${escape(item.source.name)} · <span class="text-[#f5a623]">${stars}</span> ·
+          <time datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time>
+          // ID: ${escape(idSuffix)}
+        </p>
+        <p class="text-sm text-on-surface-variant font-mono">${escape(item.summary_it)}</p>
+        ${renderTagsHtml(item.tags)}
+      </div>
+      <a class="text-outline text-xs font-mono mt-4 md:mt-0 md:ml-6 shrink-0 hover:text-primary-container transition-colors uppercase tracking-wider"
+         href="${escape(item.url)}" target="_blank" rel="noopener">LOG_OPEN →</a>
+    </article>
+  `;
+}
+
+function renderTagsHtml(tags) {
+  if (!tags || tags.length === 0) return "";
+  const chips = tags
+    .map(
+      (t) =>
+        `<span class="inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 mr-1 mt-2 border border-outline-variant text-outline font-mono">${escape(t)}</span>`,
+    )
+    .join("");
+  return `<div class="mt-2">${chips}</div>`;
+}
+
+function shortId(item) {
+  // Prendiamo gli ultimi 4 char del raw_hash (o item.id) in maiuscolo
+  const src = item.raw_hash || item.id || "";
+  const m = String(src).replace(/[^a-zA-Z0-9]/g, "");
+  return (m.slice(-4) || "0000").toUpperCase();
 }
 
 function formatPublishedAt(iso) {
@@ -144,29 +218,37 @@ function formatPublishedAt(iso) {
 function renderTop10(feed) {
   const container = document.getElementById("top10");
   const byId = Object.fromEntries(feed.items.map((i) => [i.id, i]));
-  container.innerHTML = feed.top10
-    .map((id) => renderCard(byId[id]))
-    .filter(Boolean)
-    .join("");
+  const cards = [];
+  feed.top10.forEach((id, idx) => {
+    const item = byId[id];
+    if (item) cards.push(renderTop10Card(item, idx + 1));
+  });
+  container.innerHTML = cards.join("");
 }
 
 function renderCategories(feed) {
   const container = document.getElementById("categories");
   const byId = Object.fromEntries(feed.items.map((i) => [i.id, i]));
-  const catContainers = Object.entries(feed.categories).map(([catId, ids]) => {
-    const label = CATEGORY_LABELS[catId] || catId;
-    const cards = ids
-      .map((id) => renderCard(byId[id]))
-      .filter(Boolean)
-      .join("");
-    return `
-      <details open>
-        <summary>${label} (${ids.length})</summary>
-        ${cards}
-      </details>
-    `;
-  });
-  container.innerHTML = catContainers.join("");
+  const sections = Object.entries(feed.categories)
+    .filter(([, ids]) => ids.length > 0)
+    .map(([catId, ids]) => {
+      const label = CATEGORY_LABELS[catId] || catId;
+      const icon = CATEGORY_ICONS[catId] || "folder";
+      const cards = ids
+        .map((id) => (byId[id] ? renderCategoryCard(byId[id]) : null))
+        .filter(Boolean)
+        .join("");
+      return `
+        <section class="flex flex-col gap-6">
+          <div class="flex items-center justify-between border-b border-primary-container pb-2">
+            <h3 class="text-primary-container font-bold uppercase tracking-widest text-sm">[ ${escape(label)} ]</h3>
+            <span class="material-symbols-outlined text-primary-container text-sm">${escape(icon)}</span>
+          </div>
+          <div class="flex flex-col gap-4">${cards}</div>
+        </section>
+      `;
+    });
+  container.innerHTML = sections.join("");
 }
 
 function renderFailed(feed) {
@@ -175,7 +257,14 @@ function renderFailed(feed) {
   section.hidden = false;
   const list = document.getElementById("failed-list");
   list.innerHTML = feed.failed_sources
-    .map((f) => `<li><code>${escape(f.id)}</code>: ${escape(f.error)}</li>`)
+    .map(
+      (f) =>
+        `<li class="border-l-2 border-error px-3 py-2 bg-surface-container-lowest">
+          <span class="text-error uppercase">[ERR]</span>
+          <code class="text-white">${escape(f.id)}</code>:
+          <span class="text-on-surface-variant">${escape(f.error)}</span>
+        </li>`,
+    )
     .join("");
 }
 
@@ -235,7 +324,7 @@ async function showArchiveResults(query) {
     return;
   }
 
-  meta.textContent = `${matches.length} risultati negli ultimi ${ARCHIVE_SEARCH_DAYS} giorni (su ${archiveItemsCache.length} items indicizzati).`;
+  meta.textContent = `${matches.length} RESULTS IN LAST ${ARCHIVE_SEARCH_DAYS} DAYS // INDEXED ${archiveItemsCache.length} LOGS`;
   // Raggruppa per data
   const byDate = {};
   for (const { date, item } of matches) {
@@ -244,12 +333,15 @@ async function showArchiveResults(query) {
   list.innerHTML = Object.entries(byDate)
     .sort(([a], [b]) => (a < b ? 1 : -1))
     .map(([date, items]) => {
-      const cards = items.map((i) => renderCard(i, "from-archive")).join("");
+      const cards = items.map((i) => renderCategoryCard(i, "from-archive")).join("");
       return `
-        <details open>
-          <summary>📅 ${escape(date)} (${items.length})</summary>
-          ${cards}
-        </details>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+            <h3 class="text-outline font-bold uppercase tracking-widest text-xs">[ ARCHIVE // ${escape(date)} ]</h3>
+            <span class="text-outline text-[10px] font-mono">${items.length} HITS</span>
+          </div>
+          <div class="flex flex-col gap-4">${cards}</div>
+        </div>
       `;
     })
     .join("");

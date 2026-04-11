@@ -1,65 +1,146 @@
 <!DOCTYPE html>
-<html lang="it">
+<html class="dark" lang="it">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
 <meta name="googlebot" content="noindex, nofollow" />
-<title>OsservatorioSEO — News giornaliere su SEO e AI</title>
-<meta name="description" content="Hub giornaliero di notizie SEO e AI aggiornato alle 07:00. Raccoglie fonti autorevoli, riassume in italiano, e rileva modifiche alle policy Google." />
-<meta property="og:title" content="OsservatorioSEO" />
-<meta property="og:description" content="News giornaliere SEO e AI, riassunte dall'AI." />
-<meta property="og:type" content="website" />
+<title>OSSERVATORIO SEO // TERMINAL_MODE</title>
+<meta name="description" content="Hub giornaliero di notizie SEO e AI aggiornato alle 07:00 — terminal edition." />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface": "#e2e2e2",
+          "error": "#ffb4ab",
+          "on-error-container": "#ffdad6",
+          "surface-container-highest": "#353535",
+          "surface-container-lowest": "#0e0e0e",
+          "primary-container": "#00f63e",
+          "error-container": "#93000a",
+          "surface-container": "#1f1f1f",
+          "on-background": "#e2e2e2",
+          "primary": "#ffffff",
+          "surface-container-low": "#1b1b1b",
+          "outline": "#919191",
+          "surface-variant": "#353535",
+          "surface-container-high": "#2a2a2a",
+          "on-surface-variant": "#c6c6c6",
+          "surface-bright": "#393939",
+          "surface": "#131313",
+          "background": "#131313",
+          "outline-variant": "#474747",
+          "surface-dim": "#131313"
+        },
+        borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+        fontFamily: {
+          headline: ["Space Grotesk"],
+          body: ["Space Grotesk"],
+          label: ["Space Grotesk"]
+        }
+      }
+    }
+  };
+</script>
 <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<header>
-  <div class="container">
-    <h1>OsservatorioSEO</h1>
-    <p class="tagline">News giornaliere SEO e AI · aggiornato ogni mattina alle 07:00</p>
-    <p class="meta" id="meta"></p>
-    <nav class="main-nav">
-      <a href="archive.html">📅 Archivio</a>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+
+<!-- TOP NAV -->
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 px-6 py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center gap-6">
+    <div class="text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</div>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="./">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="archive.html">ARCHIVIO</a>
     </nav>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container md:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
   </div>
 </header>
 
-<main class="container">
-  <div class="search-wrapper">
-    <input type="search" id="search" placeholder="Cerca nei titoli o nei riassunti..." />
-    <label class="search-toggle">
-      <input type="checkbox" id="search-archive-toggle" />
-      <span>Cerca anche negli ultimi 7 giorni di archivio</span>
-    </label>
-  </div>
+<main class="flex-grow pt-36 md:pt-24 pb-12 px-6 max-w-7xl mx-auto w-full">
 
-  <section id="top10-section">
-    <h2>🔥 Top 10 del giorno</h2>
-    <div id="top10"></div>
+  <!-- LOGO / META -->
+  <section class="mb-12">
+    <pre class="text-primary-container font-mono text-[8px] sm:text-[9px] leading-[1] mb-4 overflow-hidden terminal-glow">
+ ██████╗ ███████╗███████╗███████╗██████╗ ██╗   ██╗ █████╗ ████████╗ ██████╗ ██████╗ ██╗ ██████╗    ███████╗███████╗ ██████╗
+██╔═══██╗██╔════╝██╔════╝██╔════╝██╔══██╗██║   ██║██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██║██╔═══██╗   ██╔════╝██╔════╝██╔═══██╗
+██║   ██║███████╗███████╗█████╗  ██████╔╝██║   ██║███████║   ██║   ██║   ██║██████╔╝██║██║   ██║   ███████╗█████╗  ██║   ██║
+██║   ██║╚════██║╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══██║   ██║   ██║   ██║██╔══██╗██║██║   ██║   ╚════██║██╔══╝  ██║   ██║
+╚██████╔╝███████║███████║███████╗██║  ██║ ╚████╔╝ ██║  ██║   ██║   ╚██████╔╝██║  ██║██║╚██████╔╝██╗███████║███████╗╚██████╔╝
+ ╚═════╝ ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝╚══════╝╚══════╝ ╚═════╝
+    </pre>
+    <div class="flex items-center gap-2 text-outline">
+      <span class="text-primary-container">●</span>
+      <span class="text-[10px] tracking-widest uppercase" id="meta">Booting archive…</span>
+    </div>
   </section>
 
-  <section id="categories-section">
-    <h2>📚 Tutto per categoria</h2>
-    <div id="categories"></div>
+  <!-- TOP 10 -->
+  <section class="mb-16" id="top10-section">
+    <div class="flex items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; TOP 10 DEL GIORNO</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <div id="top10" class="grid grid-cols-1 gap-px bg-outline-variant border border-outline-variant"></div>
   </section>
 
-  <section id="failed" hidden>
-    <h2>⚠️ Fonti con problemi</h2>
-    <ul id="failed-list"></ul>
+  <!-- CATEGORIES -->
+  <section class="mb-12" id="categories-section">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; TUTTE PER CATEGORIA</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <div id="categories" class="flex flex-col gap-16"></div>
   </section>
 
-  <section id="archive-results" hidden>
-    <h2>🕑 Risultati dall'archivio</h2>
-    <p class="meta" id="archive-results-meta"></p>
-    <div id="archive-results-list"></div>
+  <!-- FAILED SOURCES -->
+  <section class="mb-12" id="failed" hidden>
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-lg font-bold tracking-tight uppercase text-error">&gt; FONTI CON ERRORI</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <ul id="failed-list" class="flex flex-col gap-2 font-mono text-xs text-on-surface-variant"></ul>
   </section>
+
+  <!-- ARCHIVE RESULTS -->
+  <section class="mb-12" id="archive-results" hidden>
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; RISULTATI DALL'ARCHIVIO</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <p class="text-[10px] text-outline uppercase font-mono mb-4" id="archive-results-meta"></p>
+    <div id="archive-results-list" class="flex flex-col gap-10"></div>
+  </section>
+
 </main>
 
-<footer>
-  <div class="container">
-    <p>Dati: <a href="data/feed.json">feed.json</a> · <a href="https://github.com/">GitHub</a></p>
+<!-- FOOTER -->
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">(C) 2026 OSSERVATORIO_SEO // ALL LOGS RESERVED</div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="data/feed.json">FEED.JSON</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
   </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
 </footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
 
 <script src="app.js"></script>
 </body>
