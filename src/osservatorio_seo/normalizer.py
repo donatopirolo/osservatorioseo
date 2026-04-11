@@ -29,7 +29,7 @@ TRACKING_PARAMS = {
 class Normalizer:
     def __init__(
         self,
-        max_age_hours: int = 72,
+        max_age_hours: int = 24,
         min_content_chars: int = 20,
         title_similarity_threshold: int = 85,
     ) -> None:
