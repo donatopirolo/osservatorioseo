@@ -41,3 +41,33 @@ def test_renderer_no_noindex_when_false() -> None:
         },
     )
     assert "noindex" not in html
+
+
+def test_render_homepage_includes_top10_and_categories() -> None:
+    renderer = HtmlRenderer(templates_dir=Path("templates"))
+    html = renderer.render_homepage(
+        {
+            "page_title": "Home",
+            "page_description": "Daily SEO/AI news",
+            "canonical_url": "https://osservatorioseo.pages.dev/",
+            "active_nav": "today",
+            "noindex": True,
+            "meta_line": "SYSTEM STATUS: OPTIMAL",
+            "top10_cards": ["<article class='card'>FakeTop</article>"],
+            "categories": [
+                {
+                    "label": "Google Updates",
+                    "icon": "history",
+                    "path": "/categoria/google-updates/",
+                    "cards": ["<article class='card'>FakeCat</article>"],
+                }
+            ],
+            "failed_sources": [],
+            "breadcrumbs": [{"name": "Home", "url": "https://osservatorioseo.pages.dev/"}],
+        }
+    )
+    assert "TOP 10 DEL GIORNO" in html
+    assert "FakeTop" in html
+    assert "Google Updates" in html
+    assert "FakeCat" in html
+    assert 'id="archive-results"' in html

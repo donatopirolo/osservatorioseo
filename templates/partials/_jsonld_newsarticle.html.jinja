@@ -1,0 +1,28 @@
+{# Context: item, article_url (absolute), published_iso, category_label #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": {{ item.title_it | tojson }},
+  "description": {{ item.summary_it | tojson }},
+  "datePublished": "{{ published_iso }}",
+  "dateModified": "{{ published_iso }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ article_url }}"
+  },
+  "articleSection": {{ category_label | tojson }},
+  "inLanguage": "it-IT",
+  "isBasedOn": {{ item.url | tojson }}
+}
+</script>

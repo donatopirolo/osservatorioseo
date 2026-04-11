@@ -1,0 +1,86 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<section class="mb-10">
+  <pre class="hidden md:block text-primary-container font-mono text-[8px] lg:text-[9px] leading-[1] mb-4 overflow-hidden terminal-glow">
+ ██████╗ ███████╗███████╗███████╗██████╗ ██╗   ██╗ █████╗ ████████╗ ██████╗ ██████╗ ██╗ ██████╗    ███████╗███████╗ ██████╗
+██╔═══██╗██╔════╝██╔════╝██╔════╝██╔══██╗██║   ██║██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██║██╔═══██╗   ██╔════╝██╔════╝██╔═══██╗
+██║   ██║███████╗███████╗█████╗  ██████╔╝██║   ██║███████║   ██║   ██║   ██║██████╔╝██║██║   ██║   ███████╗█████╗  ██║   ██║
+██║   ██║╚════██║╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══██║   ██║   ██║   ██║██╔══██╗██║██║   ██║   ╚════██║██╔══╝  ██║   ██║
+╚██████╔╝███████║███████║███████╗██║  ██║ ╚████╔╝ ██║  ██║   ██║   ╚██████╔╝██║  ██║██║╚██████╔╝██╗███████║███████╗╚██████╔╝
+ ╚═════╝ ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝╚══════╝╚══════╝ ╚═════╝
+  </pre>
+  <div class="md:hidden text-primary-container font-bold text-2xl tracking-tight uppercase terminal-glow mb-4">OSSERVATORIO SEO</div>
+  <div class="flex items-center gap-2 text-outline">
+    <span class="text-primary-container">●</span>
+    <span class="text-[10px] tracking-widest uppercase break-words" id="meta">{{ meta_line }}</span>
+  </div>
+</section>
+
+<section class="mb-16" id="top10-section">
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight uppercase" id="top10-title">{{ top10_title | default("> TOP 10 DEL GIORNO") }}</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div id="top10" class="grid grid-cols-1 gap-px bg-outline-variant border border-outline-variant">
+  {% for card in top10_cards %}
+  {{ card | safe }}
+  {% endfor %}
+  </div>
+</section>
+
+<section class="mb-12" id="categories-section">
+  <div class="flex items-center gap-4 mb-12">
+    <h2 class="text-2xl font-bold tracking-tight uppercase" id="categories-title">{{ categories_title | default("> TUTTE PER CATEGORIA") }}</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <div id="categories" class="flex flex-col gap-16">
+  {% for cat in categories %}
+    <section class="flex flex-col gap-6">
+      <div class="flex items-center justify-between border-b border-primary-container pb-2">
+        <h3 class="text-primary-container font-bold uppercase tracking-widest text-sm">
+          [ <a href="{{ cat.path }}" class="hover:underline">{{ cat.label }}</a> ]
+        </h3>
+        <span class="material-symbols-outlined text-primary-container text-sm">{{ cat.icon }}</span>
+      </div>
+      <div class="flex flex-col gap-4">
+      {% for card in cat.cards %}
+      {{ card | safe }}
+      {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+  </div>
+</section>
+
+{% if failed_sources %}
+<section class="mb-12" id="failed">
+  <div class="flex items-center gap-4 mb-6">
+    <h2 class="text-lg font-bold tracking-tight uppercase text-error">&gt; FONTI CON ERRORI</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <ul id="failed-list" class="flex flex-col gap-2 font-mono text-xs text-on-surface-variant">
+  {% for fs in failed_sources %}
+  <li class="border-l-2 border-error px-3 py-2 bg-surface-container-lowest">
+    <span class="text-error uppercase">[ERR]</span>
+    <code class="text-white">{{ fs.id }}</code>:
+    <span class="text-on-surface-variant">{{ fs.error }}</span>
+  </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="mb-12" id="archive-results" hidden>
+  <div class="flex items-center gap-4 mb-6">
+    <h2 class="text-2xl font-bold tracking-tight uppercase">&gt; RISULTATI DALL'ARCHIVIO</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-[10px] text-outline uppercase font-mono mb-4" id="archive-results-meta"></p>
+  <div id="archive-results-list" class="flex flex-col gap-10"></div>
+</section>
+{% endblock %}

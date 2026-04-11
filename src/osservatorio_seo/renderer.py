@@ -22,3 +22,6 @@ class HtmlRenderer:
         """Render a template file to a string."""
         template = self._env.get_template(template_name)
         return template.render(**context)
+
+    def render_homepage(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/homepage.html.jinja", context)
