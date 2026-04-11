@@ -63,8 +63,30 @@ def test_publish_writes_feed_and_archive(tmp_path: Path) -> None:
     assert feed_file.exists()
     data = json.loads(feed_file.read_text())
     assert data["run_id"] == "2026-04-11-0700"
-    archive_files = list((tmp_path / "archive").glob("*.json"))
-    assert len(archive_files) == 1
+    # Il dated file archive è scritto
+    archive_dated = list((tmp_path / "archive").glob("20*.json"))
+    assert len(archive_dated) == 1
+    # L'index.json dell'archivio è scritto
+    assert (tmp_path / "archive" / "index.json").exists()
+
+
+def test_publish_creates_archive_index(tmp_path: Path) -> None:
+    pub = Publisher(data_dir=tmp_path, archive_dir=tmp_path / "archive")
+    # Simula 2 run precedenti creando direttamente i file
+    (tmp_path / "archive").mkdir(parents=True, exist_ok=True)
+    (tmp_path / "archive" / "2026-04-09.json").write_text("{}", encoding="utf-8")
+    (tmp_path / "archive" / "2026-04-10.json").write_text("{}", encoding="utf-8")
+    pub.publish(mk_feed())  # genera il 3° file dated per oggi
+    index_path = tmp_path / "archive" / "index.json"
+    index = json.loads(index_path.read_text())
+    assert isinstance(index, list)
+    dates = [e["date"] for e in index]
+    assert "2026-04-09" in dates
+    assert "2026-04-10" in dates
+    # Ordine discendente: la più recente per prima
+    assert dates == sorted(dates, reverse=True)
+    # L'index non include sé stesso
+    assert "index" not in dates
 
 
 def test_publish_copies_to_site_data(tmp_path: Path) -> None:
@@ -76,3 +98,30 @@ def test_publish_copies_to_site_data(tmp_path: Path) -> None:
     )
     pub.publish(mk_feed())
     assert (site_dir / "feed.json").exists()
+
+
+def test_publish_copies_archive_directory_to_site(tmp_path: Path) -> None:
+    site_dir = tmp_path / "site" / "data"
+    archive_dir = tmp_path / "data" / "archive"
+    # Pre-popolo archivio con 2 file da un "ieri"
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    (archive_dir / "2026-04-09.json").write_text('{"old": 1}', encoding="utf-8")
+    (archive_dir / "2026-04-10.json").write_text('{"old": 2}', encoding="utf-8")
+
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=archive_dir,
+        site_data_dir=site_dir,
+    )
+    pub.publish(mk_feed())
+
+    # L'archivio viene copiato sotto site/data/archive/
+    site_archive = site_dir / "archive"
+    assert site_archive.exists()
+    copied_dated = sorted(f.name for f in site_archive.glob("20*.json"))
+    # 2 file pre-esistenti + 1 di oggi dal feed
+    assert len(copied_dated) == 3
+    assert "2026-04-09.json" in copied_dated
+    assert "2026-04-10.json" in copied_dated
+    # L'index è copiato anche lui
+    assert (site_archive / "index.json").exists()

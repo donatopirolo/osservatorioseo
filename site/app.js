@@ -9,32 +9,43 @@ const CATEGORY_LABELS = {
   industry_news: "Industry News",
 };
 
+const ARCHIVE_SEARCH_DAYS = 7; // quanti giorni carichiamo nel cross-archive search
+
+// Cache globale per gli items caricati dall'archivio (lazy, solo quando serve)
+let archiveItemsCache = null;
+
 (async function () {
-  const FEED_URL = "data/feed.json";
+  const params = new URLSearchParams(window.location.search);
+  const date = params.get("date"); // se presente → modalità archivio singolo giorno
+
+  const feedUrl = date ? `data/archive/${encodeURIComponent(date)}.json` : "data/feed.json";
   let feed = null;
 
   try {
-    const resp = await fetch(FEED_URL, { cache: "no-cache" });
-    if (!resp.ok) throw new Error("feed fetch failed: " + resp.status);
+    const resp = await fetch(feedUrl, { cache: "no-cache" });
+    if (!resp.ok) throw new Error("feed fetch failed: HTTP " + resp.status);
     feed = await resp.json();
   } catch (e) {
     document.querySelector("main").innerHTML =
-      '<p style="color: #cc0000;">Impossibile caricare il feed: ' + e.message + "</p>";
+      '<p style="color: #cc0000;">Impossibile caricare il feed (' +
+      escape(feedUrl) +
+      "): " +
+      escape(e.message) +
+      "</p>";
     return;
   }
 
-  renderMeta(feed);
+  renderMeta(feed, date);
   renderTop10(feed);
   renderCategories(feed);
   renderFailed(feed);
   setupSearch(feed);
 
-  const params = new URLSearchParams(window.location.search);
   const tag = params.get("tag");
   if (tag) applyTagFilter(feed, tag);
 })();
 
-function renderMeta(feed) {
+function renderMeta(feed, archiveDate) {
   const local = new Date(feed.generated_at_local);
   const dateStr = local.toLocaleDateString("it-IT", {
     weekday: "long",
@@ -47,17 +58,26 @@ function renderMeta(feed) {
     minute: "2-digit",
   });
   const s = feed.stats;
-  document.getElementById("meta").textContent =
-    `${dateStr}, ${timeStr} · ${s.sources_checked} fonti · ${s.items_after_dedup} notizie · €${s.ai_cost_eur.toFixed(3)} costo AI`;
+  const metaEl = document.getElementById("meta");
+  const base = `${dateStr}, ${timeStr} · ${s.sources_checked} fonti · ${s.items_after_dedup} notizie · €${s.ai_cost_eur.toFixed(3)} costo AI`;
+  if (archiveDate) {
+    metaEl.innerHTML =
+      `<strong>📜 Stai vedendo lo snapshot del ${escape(archiveDate)}.</strong> ` +
+      escape(base) +
+      ` · <a href="./">Torna a oggi</a>`;
+  } else {
+    metaEl.textContent = base;
+  }
 }
 
-function renderCard(item) {
+function renderCard(item, extraClass = "") {
   const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
-  const srcType = item.is_doc_change ? "doc-change" : "";
+  const typeClass = item.is_doc_change ? "doc-change" : "";
   const tags = (item.tags || []).map((t) => `<span class="tag">${escape(t)}</span>`).join("");
   const date = formatPublishedAt(item.published_at);
+  const classes = ["card", typeClass, extraClass].filter(Boolean).join(" ");
   return `
-    <div class="card ${srcType}" data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}">
+    <div class="${classes}" data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}">
       <h3>${escape(item.title_it)}</h3>
       <p class="source-line">
         ${escape(item.source.name)} · <span class="stars">${stars}</span> ·
@@ -103,7 +123,10 @@ function formatPublishedAt(iso) {
 function renderTop10(feed) {
   const container = document.getElementById("top10");
   const byId = Object.fromEntries(feed.items.map((i) => [i.id, i]));
-  container.innerHTML = feed.top10.map((id) => renderCard(byId[id])).filter(Boolean).join("");
+  container.innerHTML = feed.top10
+    .map((id) => renderCard(byId[id]))
+    .filter(Boolean)
+    .join("");
 }
 
 function renderCategories(feed) {
@@ -111,7 +134,10 @@ function renderCategories(feed) {
   const byId = Object.fromEntries(feed.items.map((i) => [i.id, i]));
   const catContainers = Object.entries(feed.categories).map(([catId, ids]) => {
     const label = CATEGORY_LABELS[catId] || catId;
-    const cards = ids.map((id) => renderCard(byId[id])).filter(Boolean).join("");
+    const cards = ids
+      .map((id) => renderCard(byId[id]))
+      .filter(Boolean)
+      .join("");
     return `
       <details open>
         <summary>${label} (${ids.length})</summary>
@@ -134,13 +160,121 @@ function renderFailed(feed) {
 
 function setupSearch(feed) {
   const input = document.getElementById("search");
-  input.addEventListener("input", () => {
+  const toggle = document.getElementById("search-archive-toggle");
+
+  const runSearch = async () => {
     const q = input.value.toLowerCase().trim();
-    document.querySelectorAll(".card").forEach((card) => {
+
+    // Filtra le card del feed corrente (top10 + categorie)
+    document.querySelectorAll("#top10-section .card, #categories-section .card").forEach((card) => {
       const text = card.textContent.toLowerCase();
       card.style.display = !q || text.includes(q) ? "" : "none";
     });
+
+    // Se il toggle archive è attivo e c'è una query non vuota, mostra risultati archivio
+    if (toggle && toggle.checked && q) {
+      await showArchiveResults(q);
+    } else {
+      hideArchiveResults();
+    }
+  };
+
+  input.addEventListener("input", runSearch);
+  if (toggle) {
+    toggle.addEventListener("change", runSearch);
+  }
+}
+
+async function showArchiveResults(query) {
+  const section = document.getElementById("archive-results");
+  const meta = document.getElementById("archive-results-meta");
+  const list = document.getElementById("archive-results-list");
+  section.hidden = false;
+  meta.textContent = "Caricamento archivio…";
+
+  try {
+    if (archiveItemsCache === null) {
+      archiveItemsCache = await loadArchiveItems(ARCHIVE_SEARCH_DAYS);
+    }
+  } catch (e) {
+    meta.textContent = "Errore caricamento archivio: " + e.message;
+    list.innerHTML = "";
+    return;
+  }
+
+  const matches = archiveItemsCache.filter((entry) => {
+    const blob = (
+      entry.item.title_it +
+      " " +
+      entry.item.summary_it +
+      " " +
+      (entry.item.tags || []).join(" ") +
+      " " +
+      entry.item.source.name
+    ).toLowerCase();
+    return blob.includes(query);
   });
+
+  if (matches.length === 0) {
+    meta.textContent = `Nessun risultato negli ultimi ${ARCHIVE_SEARCH_DAYS} giorni di archivio (${archiveItemsCache.length} items indicizzati).`;
+    list.innerHTML = "";
+    return;
+  }
+
+  meta.textContent = `${matches.length} risultati negli ultimi ${ARCHIVE_SEARCH_DAYS} giorni (su ${archiveItemsCache.length} items indicizzati).`;
+  // Raggruppa per data
+  const byDate = {};
+  for (const { date, item } of matches) {
+    (byDate[date] = byDate[date] || []).push(item);
+  }
+  list.innerHTML = Object.entries(byDate)
+    .sort(([a], [b]) => (a < b ? 1 : -1))
+    .map(([date, items]) => {
+      const cards = items.map((i) => renderCard(i, "from-archive")).join("");
+      return `
+        <details open>
+          <summary>📅 ${escape(date)} (${items.length})</summary>
+          ${cards}
+        </details>
+      `;
+    })
+    .join("");
+}
+
+function hideArchiveResults() {
+  const section = document.getElementById("archive-results");
+  section.hidden = true;
+  const list = document.getElementById("archive-results-list");
+  list.innerHTML = "";
+}
+
+async function loadArchiveItems(days) {
+  // Carica l'indice, prendi le ultime `days` date, fetch in parallelo, estrai tutti gli items
+  const idxResp = await fetch("data/archive/index.json", { cache: "no-cache" });
+  if (!idxResp.ok) throw new Error("index.json HTTP " + idxResp.status);
+  const entries = await idxResp.json();
+  const slice = entries.slice(0, days);
+
+  const feeds = await Promise.all(
+    slice.map(async (e) => {
+      try {
+        const r = await fetch(`data/archive/${encodeURIComponent(e.file)}`, { cache: "no-cache" });
+        if (!r.ok) return null;
+        return { date: e.date, feed: await r.json() };
+      } catch {
+        return null;
+      }
+    }),
+  );
+
+  const items = [];
+  for (const f of feeds) {
+    if (!f || !f.feed || !Array.isArray(f.feed.items)) continue;
+    for (const item of f.feed.items) {
+      items.push({ date: f.date, item });
+    }
+  }
+  return items;
 }
 
 function applyTagFilter(feed, tag) {

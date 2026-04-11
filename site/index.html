@@ -18,11 +18,20 @@
     <h1>OsservatorioSEO</h1>
     <p class="tagline">News giornaliere SEO e AI · aggiornato ogni mattina alle 07:00</p>
     <p class="meta" id="meta"></p>
+    <nav class="main-nav">
+      <a href="archive.html">📅 Archivio</a>
+    </nav>
   </div>
 </header>
 
 <main class="container">
-  <input type="search" id="search" placeholder="Cerca nei titoli o nei riassunti..." />
+  <div class="search-wrapper">
+    <input type="search" id="search" placeholder="Cerca nei titoli o nei riassunti..." />
+    <label class="search-toggle">
+      <input type="checkbox" id="search-archive-toggle" />
+      <span>Cerca anche negli ultimi 7 giorni di archivio</span>
+    </label>
+  </div>
 
   <section id="top10-section">
     <h2>🔥 Top 10 del giorno</h2>
@@ -37,6 +46,12 @@
   <section id="failed" hidden>
     <h2>⚠️ Fonti con problemi</h2>
     <ul id="failed-list"></ul>
+  </section>
+
+  <section id="archive-results" hidden>
+    <h2>🕑 Risultati dall'archivio</h2>
+    <p class="meta" id="archive-results-meta"></p>
+    <div id="archive-results-list"></div>
   </section>
 </main>
 
