@@ -870,6 +870,28 @@ class Publisher:
             renderer.render_sitemap({"urls": urls}), encoding="utf-8"
         )
 
+        # sitemap-news.xml: solo articoli con pagina SSG dedicata E pubblicati
+        # nelle ultime 48h (requisito Google News)
+        now = datetime.now(UTC)
+        news_cutoff = now - timedelta(hours=48)
+        news_entries: list[dict[str, str]] = []
+        for item in feed.items:
+            if item.importance < 4 or item.id not in item_slugs:
+                continue
+            if item.published_at < news_cutoff:
+                continue
+            slug = item_slugs[item.id]
+            news_entries.append(
+                {
+                    "loc": canonical(f"/archivio/{y}/{m}/{d}/{slug}/"),
+                    "publication_date": item.published_at.isoformat(),
+                    "title": item.title_it,
+                }
+            )
+        (site_dir / "sitemap-news.xml").write_text(
+            renderer.render_sitemap_news({"entries": news_entries}), encoding="utf-8"
+        )
+
         entries = [
             {
                 "title": item.title_it,

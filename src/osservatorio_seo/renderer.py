@@ -67,3 +67,6 @@ class HtmlRenderer:
 
     def render_top_week(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/top_week.html.jinja", context)
+
+    def render_sitemap_news(self, context: dict[str, Any]) -> str:
+        return self.render_raw("sitemap_news.xml.jinja", context)
