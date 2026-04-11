@@ -24,8 +24,8 @@
   "@type": "NewsArticle",
   "headline": "Nuova posizione per i file degli intervalli IP dei crawler di Google",
   "description": "Google ha annunciato lo spostamento dei file JSON contenenti gli intervalli IP dei suoi crawler. La nuova posizione \u00e8 developers.google.com/crawling/ipranges/, pi\u00f9 generica rispetto alla precedente. I file rimarranno disponibili nella vecchia directory (/search/apis/ipranges/) per un periodo transitorio di sei mesi, durante il quale \u00e8 consigliabile aggiornare i sistemi.",
-  "articleBody": "Google ha annunciato lo spostamento dei file JSON contenenti gli intervalli IP dei suoi crawler. La nuova posizione \u00e8 developers.google.com/crawling/ipranges/, pi\u00f9 generica rispetto alla precedente. I file rimarranno disponibili nella vecchia directory (/search/apis/ipranges/) per un periodo transitorio di sei mesi, durante il quale \u00e8 consigliabile aggiornare i sistemi.",
-  "wordCount": 48,
+  "articleBody": "Google ha spostato la posizione dei file JSON che contengono gli intervalli IP dei suoi crawler. La nuova directory \u00e8 developers.google.com/crawling/ipranges/, una collocazione pi\u00f9 generica rispetto alla precedente (/search/apis/ipranges/). Il cambiamento riflette una riorganizzazione della documentazione tecnica di Google, con un periodo di transizione di sei mesi durante il quale entrambe le posizioni rimarranno attive.\n\nChi utilizza questi file per configurare firewall, sistemi di log analysis, o whitelist di accesso deve aggiornare i riferimenti nei propri script e configurazioni. Gli intervalli IP sono utilizzati per verificare che le richieste provengano effettivamente dai bot di Google e non da user agent falsificati. Questo \u00e8 particolarmente rilevante per chi gestisce infrastrutture complesse, CDN personalizzate, o sistemi di rate limiting basati su IP.\n\nLa nuova posizione suggerisce che Google sta consolidando la documentazione sui crawler sotto un ombrello pi\u00f9 ampio, non limitato alla Search. Questo potrebbe indicare una futura unificazione della gestione degli IP per crawler di diversi servizi Google (Search, News, AdsBot, ecc.), anche se al momento non ci sono conferme ufficiali in tal senso.\n\nIl periodo di sei mesi \u00e8 una finestra ragionevole per l\u0027aggiornamento, ma chi gestisce ambienti enterprise con processi di change management complessi dovrebbe pianificare l\u0027intervento subito. Dopo la scadenza, i file nella vecchia posizione potrebbero non essere pi\u00f9 aggiornati, causando potenziali blocchi dei crawler legittimi o, peggio, l\u0027accettazione di richieste da IP non verificati.\n\nL\u0027impatto operativo \u00e8 limitato a chi ha implementato verifiche IP-based. Chi si affida esclusivamente alla reverse DNS lookup (il metodo raccomandato da Google per verificare Googlebot) non \u00e8 toccato da questo cambiamento. Tuttavia, molte configurazioni enterprise utilizzano gli intervalli IP per ottimizzazioni di caching o bypass di WAF, rendendo l\u0027aggiornamento necessario.\n\nLa comunicazione \u00e8 arrivata tramite il Search Central Blog, ma la natura del cambiamento \u00e8 infrastrutturale e non impatta direttamente il crawling o l\u0027indicizzazione. Si tratta di manutenzione tecnica, non di un update algoritmico o di policy. Chi non utilizza questi file pu\u00f2 ignorare completamente la notizia.",
+  "wordCount": 325,
   "datePublished": "2026-03-31T05:00:00+00:00",
   "dateModified": "2026-03-31T05:00:00+00:00",
   "author": {
@@ -95,6 +95,41 @@
     }  ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [    {
+      "@type": "Question",
+      "name": "Devo aggiornare subito o posso aspettare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hai sei mesi di tempo, ma se gestisci infrastrutture enterprise con processi di approvazione lunghi, conviene pianificare l\u0027intervento subito. Per configurazioni semplici o script personali, puoi aspettare, ma non oltre il quinto mese per avere margine di sicurezza. Chi non usa questi file pu\u00f2 ignorare completamente l\u0027aggiornamento."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Cosa succede se non aggiorno entro sei mesi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I file nella vecchia posizione potrebbero non essere pi\u00f9 aggiornati o rimossi del tutto. Se i tuoi sistemi si affidano a quegli URL, potresti bloccare crawler legittimi di Google (impattando crawl budget e indicizzazione) oppure continuare ad accettare richieste da IP obsoleti, vanificando le tue verifiche di sicurezza."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Gli intervalli IP cambiano spesso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google aggiorna periodicamente gli intervalli IP dei suoi crawler per espandere l\u0027infrastruttura o modificare i data center. Per questo motivo, chi usa questi file dovrebbe scaricarli automaticamente con una certa frequenza (settimanale o mensile), non fare affidamento su una copia statica scaricata una volta sola."
+      }
+    },    {
+      "@type": "Question",
+      "name": "\u00c8 meglio usare gli IP o la reverse DNS lookup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google raccomanda la reverse DNS lookup come metodo primario di verifica: \u00e8 pi\u00f9 sicuro e non richiede aggiornamenti manuali. Gli intervalli IP sono utili per ottimizzazioni (bypass di rate limiting, caching differenziato), ma non dovrebbero essere l\u0027unico meccanismo di autenticazione dei crawler."
+      }
+    }  ]
+}
+</script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
 <header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
@@ -150,6 +185,124 @@
     <p class="text-lg leading-relaxed text-on-surface">Google ha annunciato lo spostamento dei file JSON contenenti gli intervalli IP dei suoi crawler. La nuova posizione è developers.google.com/crawling/ipranges/, più generica rispetto alla precedente. I file rimarranno disponibili nella vecchia directory (/search/apis/ipranges/) per un periodo transitorio di sei mesi, durante il quale è consigliabile aggiornare i sistemi.</p>
   </section>
 
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI APPROFONDITA</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      <p>Google ha spostato la posizione dei file JSON che contengono gli intervalli IP dei suoi crawler. La nuova directory è developers.google.com/crawling/ipranges/, una collocazione più generica rispetto alla precedente (/search/apis/ipranges/). Il cambiamento riflette una riorganizzazione della documentazione tecnica di Google, con un periodo di transizione di sei mesi durante il quale entrambe le posizioni rimarranno attive.</p>
+      <p>Chi utilizza questi file per configurare firewall, sistemi di log analysis, o whitelist di accesso deve aggiornare i riferimenti nei propri script e configurazioni. Gli intervalli IP sono utilizzati per verificare che le richieste provengano effettivamente dai bot di Google e non da user agent falsificati. Questo è particolarmente rilevante per chi gestisce infrastrutture complesse, CDN personalizzate, o sistemi di rate limiting basati su IP.</p>
+      <p>La nuova posizione suggerisce che Google sta consolidando la documentazione sui crawler sotto un ombrello più ampio, non limitato alla Search. Questo potrebbe indicare una futura unificazione della gestione degli IP per crawler di diversi servizi Google (Search, News, AdsBot, ecc.), anche se al momento non ci sono conferme ufficiali in tal senso.</p>
+      <p>Il periodo di sei mesi è una finestra ragionevole per l&#39;aggiornamento, ma chi gestisce ambienti enterprise con processi di change management complessi dovrebbe pianificare l&#39;intervento subito. Dopo la scadenza, i file nella vecchia posizione potrebbero non essere più aggiornati, causando potenziali blocchi dei crawler legittimi o, peggio, l&#39;accettazione di richieste da IP non verificati.</p>
+      <p>L&#39;impatto operativo è limitato a chi ha implementato verifiche IP-based. Chi si affida esclusivamente alla reverse DNS lookup (il metodo raccomandato da Google per verificare Googlebot) non è toccato da questo cambiamento. Tuttavia, molte configurazioni enterprise utilizzano gli intervalli IP per ottimizzazioni di caching o bypass di WAF, rendendo l&#39;aggiornamento necessario.</p>
+      <p>La comunicazione è arrivata tramite il Search Central Blog, ma la natura del cambiamento è infrastrutturale e non impatta direttamente il crawling o l&#39;indicizzazione. Si tratta di manutenzione tecnica, non di un update algoritmico o di policy. Chi non utilizza questi file può ignorare completamente la notizia.</p>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA CAMBIA PER TE</h2>
+    <ul class="space-y-3">
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Se hai script automatizzati che scaricano periodicamente i file JSON degli IP di Googlebot, devi aggiornare l&#39;URL di riferimento entro sei mesi per evitare interruzioni.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Le configurazioni di firewall, WAF o CDN che usano whitelist basate sugli intervalli IP di Google devono essere modificate per puntare alla nuova posizione, altrimenti rischiano di bloccare i crawler dopo la scadenza del periodo transitorio.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Chi utilizza il metodo reverse DNS per verificare Googlebot non è impattato: questo resta il metodo raccomandato e non richiede alcun aggiornamento.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>La nuova posizione generica (crawling invece di search/apis) potrebbe preludere a una futura unificazione degli intervalli IP per tutti i crawler Google, semplificando la gestione per chi lavora con più servizi (Search, News, AdsBot).</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Ambienti enterprise con processi di change management lunghi devono pianificare l&#39;aggiornamento immediatamente, anche se la deadline è a sei mesi: i tempi di approvazione e deploy potrebbero essere stretti.</span>
+      </li>
+    </ul>
+  </section>
+
+<section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ESEMPI CONCRETI</h2>
+    <div class="space-y-4">
+<div class="p-5 border-l-4 bg-[#0e0e0e] border-primary-container">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA FARE</p>
+        <p class="text-on-surface leading-relaxed">Un e-commerce con CDN personalizzata utilizza gli intervalli IP di Googlebot per bypassare il rate limiting e servire contenuti non cachati ai crawler. L&#39;amministratore di sistema deve aggiornare la configurazione Nginx o Cloudflare Workers per scaricare i file dalla nuova posizione, testare in staging che i crawler vengano ancora riconosciuti correttamente, e deployare in produzione entro il periodo transitorio.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1b1b1b] border-[#f5a623]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA EVITARE</p>
+        <p class="text-on-surface leading-relaxed">Evitare di fare affidamento esclusivo sugli intervalli IP per verificare Googlebot: un attaccante può comunque falsificare richieste da IP pubblici. Il metodo corretto resta la reverse DNS lookup (verificare che l&#39;hostname termini con .google.com o .googlebot.com), come documentato da Google. Gli intervalli IP sono utili per ottimizzazioni, non per sicurezza primaria.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1f1f1f] border-[#919191]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">SCENARIO</p>
+        <p class="text-on-surface leading-relaxed">Un&#39;agenzia che gestisce decine di siti per clienti diversi ha uno script centralizzato che aggiorna automaticamente le whitelist IP su tutti i server. Modificare una sola volta l&#39;URL nello script centrale permette di propagare il cambiamento a tutti i siti gestiti, evitando interventi manuali ripetuti e riducendo il rischio di dimenticanze.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COME TESTARE L'IMPATTO</h2>
+    <ol class="space-y-2 list-decimal list-inside text-on-surface leading-relaxed marker:text-primary-container marker:font-mono">
+      <li class="pl-2">Identifica tutti i sistemi che utilizzano i file JSON degli intervalli IP di Google: firewall, WAF, CDN, script di log analysis, configurazioni Nginx/Apache.</li>
+      <li class="pl-2">Verifica l&#39;URL attuale utilizzato nei tuoi script o configurazioni: se contiene &#39;/search/apis/ipranges/&#39;, annotalo per l&#39;aggiornamento.</li>
+      <li class="pl-2">Scarica manualmente i file dalla nuova posizione (developers.google.com/crawling/ipranges/) e confronta il contenuto con la vecchia posizione per verificare che siano identici durante il periodo transitorio.</li>
+      <li class="pl-2">Aggiorna gli URL nei tuoi script e configurazioni puntando alla nuova directory, testa in ambiente di staging che i crawler vengano ancora riconosciuti correttamente.</li>
+      <li class="pl-2">Monitora i log di accesso per verificare che nessuna richiesta legittima di Googlebot venga bloccata dopo l&#39;aggiornamento.</li>
+      <li class="pl-2">Imposta un reminder a 5 mesi dalla data di annuncio (31 marzo 2026) per verificare che tutti i sistemi siano stati aggiornati prima della scadenza del periodo transitorio.</li>
+    </ol>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; DOMANDE FREQUENTI</h2>
+    <div class="divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Devo aggiornare subito o posso aspettare?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Hai sei mesi di tempo, ma se gestisci infrastrutture enterprise con processi di approvazione lunghi, conviene pianificare l&#39;intervento subito. Per configurazioni semplici o script personali, puoi aspettare, ma non oltre il quinto mese per avere margine di sicurezza. Chi non usa questi file può ignorare completamente l&#39;aggiornamento.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Cosa succede se non aggiorno entro sei mesi?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">I file nella vecchia posizione potrebbero non essere più aggiornati o rimossi del tutto. Se i tuoi sistemi si affidano a quegli URL, potresti bloccare crawler legittimi di Google (impattando crawl budget e indicizzazione) oppure continuare ad accettare richieste da IP obsoleti, vanificando le tue verifiche di sicurezza.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Gli intervalli IP cambiano spesso?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Google aggiorna periodicamente gli intervalli IP dei suoi crawler per espandere l&#39;infrastruttura o modificare i data center. Per questo motivo, chi usa questi file dovrebbe scaricarli automaticamente con una certa frequenza (settimanale o mensile), non fare affidamento su una copia statica scaricata una volta sola.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">È meglio usare gli IP o la reverse DNS lookup?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Google raccomanda la reverse DNS lookup come metodo primario di verifica: è più sicuro e non richiede aggiornamenti manuali. Gli intervalli IP sono utili per ottimizzazioni (bypass di rate limiting, caching differenziato), ma non dovrebbero essere l&#39;unico meccanismo di autenticazione dei crawler.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="mb-10 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IL PUNTO DELLA REDAZIONE</h2>
+    <p class="text-on-surface leading-relaxed italic">Questa è manutenzione infrastrutturale pura, non un cambio di strategia di crawling. L&#39;impatto è limitato a chi ha implementato verifiche o ottimizzazioni basate su IP, una minoranza dei SEO. Chi lavora su siti enterprise o gestisce infrastrutture complesse deve agire, gli altri possono tranquillamente ignorare la notizia.
+
+La scelta di una posizione più generica (/crawling/ invece di /search/apis/) è interessante: potrebbe segnalare una futura unificazione della gestione IP per tutti i crawler Google, semplificando la vita a chi deve gestire AdsBot, News crawler e altri bot contemporaneamente. Per ora è speculazione, ma vale la pena tenere d&#39;occhio eventuali annunci successivi.
+
+Se hai configurazioni che dipendono da questi file, non procrastinare: sei mesi sembrano tanti, ma tra ferie, priorità concorrenti e processi di approvazione, il tempo vola. Meglio chiudere la pratica nei prossimi due mesi e dimenticarsene, piuttosto che ritrovarsi a fine estate con un&#39;emergenza evitabile.</p>
+  </section>
 
   <section class="mb-8">
     <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; TAGS</h2>
@@ -164,7 +317,7 @@
   <section class="mb-8 p-6 bg-surface-container-low border-l-2 border-outline-variant">
     <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
       Questo articolo include un <strong class="text-white">riassunto</strong> della notizia originale e, per gli item critici (5/5), una <strong class="text-white">analisi editoriale</strong> prodotta da Osservatorio SEO.
-      Il riassunto è generato da <code class="text-primary-container">google/gemini-2.0-flash-001</code>.
+      Il riassunto è generato da <code class="text-primary-container">google/gemini-2.0-flash-001</code>, l'analisi approfondita da <code class="text-primary-container">anthropic/claude-sonnet-4-5</code>.
       Per il testo completo e l'attribuzione della notizia, consulta la fonte originale.
     </p>
     <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="https://developers.google.com/search/blog/2026/03/crawler-ip-ranges" target="_blank" rel="noopener">LEGGI L'ORIGINALE →</a>
