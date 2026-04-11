@@ -71,3 +71,26 @@ def test_render_homepage_includes_top10_and_categories() -> None:
     assert "Google Updates" in html
     assert "FakeCat" in html
     assert 'id="archive-results"' in html
+
+
+def test_render_snapshot_has_date_in_titles() -> None:
+    renderer = HtmlRenderer(templates_dir=Path("templates"))
+    html = renderer.render_snapshot(
+        {
+            "page_title": "Snapshot",
+            "page_description": "d",
+            "canonical_url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/",
+            "active_nav": "archive",
+            "noindex": True,
+            "meta_line": "SNAPSHOT 2026-04-11",
+            "top10_title": "> TOP 10 DEL GIORNO 11 04 2026",
+            "categories_title": "> TUTTE PER CATEGORIA 11 04 2026",
+            "top10_cards": [],
+            "categories": [],
+            "failed_sources": [],
+            "breadcrumbs": [],
+        }
+    )
+    assert "TOP 10 DEL GIORNO 11 04 2026" in html
+    assert "TUTTE PER CATEGORIA 11 04 2026" in html
+    assert "SNAPSHOT 2026-04-11" in html
