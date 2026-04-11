@@ -3,6 +3,11 @@
 {% block extra_head %}
 {% include "partials/_jsonld_breadcrumb.html.jinja" %}
 {% include "partials/_jsonld_website.html.jinja" %}
+{% if top10_itemlist %}
+{% set list_name = top10_itemlist_name %}
+{% set items = top10_itemlist %}
+{% include "partials/_jsonld_itemlist.html.jinja" %}
+{% endif %}
 {% endblock %}
 
 {% block content %}

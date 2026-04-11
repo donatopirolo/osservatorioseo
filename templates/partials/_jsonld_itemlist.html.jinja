@@ -1,0 +1,20 @@
+{# Context: list_name, items (list of {url, name}) #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ list_name | tojson }},
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "numberOfItems": {{ items | length }},
+  "itemListElement": [
+    {% for i in items %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ i.url }}",
+      "name": {{ i.name | tojson }}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

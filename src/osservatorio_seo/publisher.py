@@ -307,14 +307,25 @@ class Publisher:
         day_iso: str,
     ) -> dict[str, Any]:
         items_by_id = {i.id: i for i in feed.items}
+        y, m, d = day_iso.split("-")
 
         top10_cards: list[str] = []
+        top10_itemlist: list[dict[str, str]] = []
         for idx, item_id in enumerate(feed.top10, start=1):
             item = items_by_id.get(item_id)
             if not item:
                 continue
-            ctx = {**self._build_card_ctx(item, day_iso, item_slugs), "order": idx}
+            card_ctx = self._build_card_ctx(item, day_iso, item_slugs)
+            ctx = {**card_ctx, "order": idx}
             top10_cards.append(renderer.render_raw("partials/_card_top10.html.jinja", ctx))
+            # ItemList schema: URL assoluta se articolo interno, altrimenti
+            # puntiamo al snapshot del giorno (no URL esterne per non
+            # inquinare il segnale di Google sui nostri URL)
+            if card_ctx.get("is_internal_link"):
+                item_url = canonical(card_ctx["article_url"])
+            else:
+                item_url = canonical(f"/archivio/{y}/{m}/{d}/")
+            top10_itemlist.append({"url": item_url, "name": item.title_it})
 
         categories = []
         for cat_id, ids in feed.categories.items():
@@ -357,6 +368,8 @@ class Publisher:
             "noindex": not allow_indexing,
             "meta_line": meta_line,
             "top10_cards": top10_cards,
+            "top10_itemlist": top10_itemlist,
+            "top10_itemlist_name": "Top 10 del giorno — Osservatorio SEO",
             "categories": categories,
             "failed_sources": [fs.model_dump() for fs in feed.failed_sources],
             "breadcrumbs": [{"name": "Home", "url": canonical("/")}],
@@ -499,6 +512,7 @@ class Publisher:
                 "category_label": _CATEGORY_LABELS.get(item.category, item.category),
                 "published_iso": item.published_at.isoformat(),
                 "article_url": article_url,
+                "word_count": len((item.summary_it or "").split()),
                 "breadcrumbs": [
                     {"name": "Home", "url": canonical("/"), "site_path": "/"},
                     {"name": "Archivio", "url": canonical("/archivio/"), "site_path": "/archivio/"},
@@ -980,6 +994,7 @@ class Publisher:
         items_by_id = {i.id: i for i in combined_items}
 
         top10_cards: list[str] = []
+        top10_itemlist: list[dict[str, str]] = []
         for idx, item_id in enumerate(ranked.top10, start=1):
             item = items_by_id.get(item_id)
             if not item:
@@ -1010,6 +1025,17 @@ class Publisher:
             }
             top10_cards.append(renderer.render_raw("partials/_card_top10.html.jinja", ctx))
 
+            # ItemList schema: solo URL interne (evita di "annunciare" URL
+            # esterne come se fossero nostre)
+            if is_internal:
+                top10_itemlist.append(
+                    {"url": canonical(article_url), "name": item.title_it}
+                )
+            else:
+                top10_itemlist.append(
+                    {"url": canonical("/top-settimana/"), "name": item.title_it}
+                )
+
         meta_line = (
             f"SYSTEM STATUS: OPTIMAL // ROLLING 7D // "
             f"{len(combined_items)} ARTICOLI ANALIZZATI // TOP 10"
@@ -1026,6 +1052,8 @@ class Publisher:
             "noindex": not allow_indexing,
             "meta_line": meta_line,
             "top10_cards": top10_cards,
+            "top10_itemlist": top10_itemlist,
+            "top10_itemlist_name": "Top 10 della settimana — Osservatorio SEO",
             "breadcrumbs": [
                 {"name": "Home", "url": canonical("/")},
                 {"name": "Top Settimana", "url": canonical("/top-settimana/")},

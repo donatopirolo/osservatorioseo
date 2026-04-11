@@ -1,10 +1,12 @@
-{# Context: item, article_url (absolute), published_iso, category_label #}
+{# Context: item, article_url (absolute), published_iso, category_label, word_count #}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
   "headline": {{ item.title_it | tojson }},
   "description": {{ item.summary_it | tojson }},
+  "articleBody": {{ item.summary_it | tojson }},
+  "wordCount": {{ word_count | default(0) }},
   "datePublished": "{{ published_iso }}",
   "dateModified": "{{ published_iso }}",
   "author": {
@@ -15,7 +17,13 @@
   "publisher": {
     "@type": "Organization",
     "name": "Osservatorio SEO",
-    "url": "https://osservatorioseo.pages.dev/"
+    "url": "https://osservatorioseo.pages.dev/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://osservatorioseo.pages.dev/tailwind.css",
+      "width": "512",
+      "height": "512"
+    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -23,6 +31,10 @@
   },
   "articleSection": {{ category_label | tojson }},
   "inLanguage": "it-IT",
-  "isBasedOn": {{ item.url | tojson }}
+  "isBasedOn": {{ item.url | tojson }},
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "article > section.prose p"]
+  }
 }
 </script>
