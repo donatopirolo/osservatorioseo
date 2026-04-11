@@ -56,15 +56,49 @@ function renderCard(item) {
   const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
   const srcType = item.is_doc_change ? "doc-change" : "";
   const tags = (item.tags || []).map((t) => `<span class="tag">${escape(t)}</span>`).join("");
+  const date = formatPublishedAt(item.published_at);
   return `
     <div class="card ${srcType}" data-item-id="${escape(item.id)}" data-tags="${(item.tags || []).join(",")}">
       <h3>${escape(item.title_it)}</h3>
-      <p class="source-line">${escape(item.source.name)} · <span class="stars">${stars}</span></p>
+      <p class="source-line">
+        ${escape(item.source.name)} · <span class="stars">${stars}</span> ·
+        <time datetime="${escape(item.published_at)}" title="${escape(date.absolute)}">${escape(date.relative)}</time>
+      </p>
       <p class="summary">${escape(item.summary_it)}</p>
       <p>${tags}</p>
       <a class="readmore" href="${escape(item.url)}" target="_blank" rel="noopener">→ ${hostname(item.url)}</a>
     </div>
   `;
+}
+
+function formatPublishedAt(iso) {
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return { relative: "", absolute: "" };
+  const now = new Date();
+  const diffMs = now - d;
+  const diffMin = Math.floor(diffMs / 60000);
+  const diffH = Math.floor(diffMs / 3600000);
+  const diffDays = Math.floor(diffMs / 86400000);
+
+  let relative;
+  if (diffMs < 0) relative = d.toLocaleDateString("it-IT", { day: "numeric", month: "short" });
+  else if (diffMin < 1) relative = "adesso";
+  else if (diffMin < 60) relative = `${diffMin} min fa`;
+  else if (diffH < 24) relative = `${diffH} h fa`;
+  else if (diffDays < 2) relative = "ieri";
+  else if (diffDays < 7) relative = `${diffDays} giorni fa`;
+  else relative = d.toLocaleDateString("it-IT", { day: "numeric", month: "short", year: "numeric" });
+
+  const absolute = d.toLocaleString("it-IT", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  return { relative, absolute };
 }
 
 function renderTop10(feed) {
@@ -80,7 +114,7 @@ function renderCategories(feed) {
     const label = CATEGORY_LABELS[catId] || catId;
     const cards = ids.map((id) => renderCard(byId[id])).filter(Boolean).join("");
     return `
-      <details>
+      <details open>
         <summary>${label} (${ids.length})</summary>
         ${cards}
       </details>
