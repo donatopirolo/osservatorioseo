@@ -32,6 +32,11 @@ from osservatorio_seo.models import (
     Pillar,
     PillarTakeaway,
 )
+from osservatorio_seo.tracker.models import (
+    ReportTakeaway,
+    TrackerMonthlyReport,
+    TrackerSnapshot,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -227,6 +232,66 @@ class _TagDisplay:
         return cls._MAP.get(tag, tag.replace("_", " ").title())
 
 
+TRACKER_REPORT_PROMPT = """Sei un SEO senior italiano che scrive il report mensile \
+editoriale di Osservatorio SEO sul tracker "Stato della ricerca in Italia". \
+Il lettore è un professionista SEO italiano (agency, in-house, freelance) che \
+ogni mese vuole capire cosa è cambiato e cosa fare.
+
+Ti forniamo 4 snapshot settimanali consecutivi (mese {month_name} {year}) \
+con: top 10 AI Italia, top 5 search engines, biggest movers, e dati di trend. \
+Devi produrre un report editoriale mensile strutturato in JSON.
+
+REGOLE DI TONO (VIETATISSIMO):
+- VIETATO prima persona plurale: "noi di", "noi pensiamo", "il nostro consiglio", \
+"la nostra opinione", "crediamo", "ci aspettiamo", firme "la redazione".
+- Scrivi sempre in forma IMPERSONALE (terza persona) o SECONDA PERSONA diretta \
+al lettore ("se gestisci un sito…", "chi lavora su…").
+- Niente hype, niente clickbait, niente "scopri", "incredibile".
+- Tono autorevole, analitico, operativo. Quando serve, opinion forte.
+- Mix tone: MISURATO nei fatti, ANALITICO nell'interpretazione, OPINION FORTE quando il dato lo giustifica.
+
+REGOLE DI LEGGIBILITÀ:
+- narrative in paragrafi brevi (2-4 frasi, max ~60 parole ciascuno), separati da \\n\\n
+- outlook in 2-3 paragrafi brevi separati da \\n\\n
+
+SCHEMA JSON OBBLIGATORIO:
+
+{{
+  "title_it": "Titolo H1 del report, 5-10 parole, basato sul mover del mese. \
+Es: 'Claude +42% a marzo 2026: il mover del mese'",
+  "subtitle_it": "Sottotitolo 1 frase che cattura il tema centrale del mese",
+  "executive_summary": [
+    "3-5 bullet strategici, ciascuno 1-2 frasi impersonali"
+  ],
+  "narrative": "800-1200 parole in paragrafi brevi separati da \\n\\n. Cronaca \
+analitica del mese: cosa è successo, cosa significa, cosa fare. Inizia con \
+l'INSIGHT forte, non con la cronaca.",
+  "takeaways": [
+    {{
+      "title": "Titolo takeaway, max 8 parole",
+      "body": "40-80 parole concrete e operative, impersonale o seconda persona"
+    }}
+  ],
+  "outlook": "200-400 parole in 2-3 paragrafi brevi separati da \\n\\n. \
+Prospettive per il prossimo mese basate sui trend osservati."
+}}
+
+La lista "takeaways" deve contenere ESATTAMENTE 5 takeaway. Il JSON deve \
+essere valido, parsabile, senza codefence markdown, senza testo extra.
+
+--- SNAPSHOT DEL MESE ({month_name} {year}) ---
+
+{snapshots_block}
+"""
+
+
+_MONTH_NAMES_IT = {
+    1: "gennaio", 2: "febbraio", 3: "marzo", 4: "aprile",
+    5: "maggio", 6: "giugno", 7: "luglio", 8: "agosto",
+    9: "settembre", 10: "ottobre", 11: "novembre", 12: "dicembre",
+}
+
+
 class PremiumWriterError(Exception):
     pass
 
@@ -339,6 +404,75 @@ class PremiumWriter:
             model_used=result.model,
             cost_eur=result.cost_eur,
         )
+
+    async def write_tracker_report(
+        self,
+        year: int,
+        month: int,
+        snapshots: list[TrackerSnapshot],
+    ) -> TrackerMonthlyReport:
+        """Generate the monthly tracker report from weekly snapshots."""
+        if not snapshots:
+            raise PremiumWriterError("write_tracker_report requires at least 1 snapshot")
+
+        snapshots_block = self._format_snapshots_for_prompt(snapshots)
+        prompt = TRACKER_REPORT_PROMPT.format(
+            year=year,
+            month_name=_MONTH_NAMES_IT.get(month, str(month)),
+            snapshots_block=snapshots_block,
+        )
+        result = await self._call_with_fallback(prompt)
+        parsed = result.parsed
+
+        takeaways = [
+            ReportTakeaway(title=t["title"], body=t["body"])
+            for t in parsed.get("takeaways", [])
+        ]
+
+        hero_mover = self._extract_hero_mover(snapshots)
+
+        return TrackerMonthlyReport(
+            year=year,
+            month=month,
+            title_it=parsed["title_it"],
+            subtitle_it=parsed["subtitle_it"],
+            hero_mover=hero_mover,
+            executive_summary=list(parsed.get("executive_summary", []))[:6],
+            narrative=parsed["narrative"],
+            takeaways=takeaways[:8],
+            outlook=parsed["outlook"],
+            snapshot_week_refs=[f"{s.year}-W{s.week:02d}" for s in snapshots],
+            generated_at=datetime.now(UTC),
+            model_used=result.model,
+            cost_eur=result.cost_eur,
+        )
+
+    @staticmethod
+    def _format_snapshots_for_prompt(snapshots: list[TrackerSnapshot]) -> str:
+        blocks = []
+        for s in snapshots:
+            ai_top = ", ".join(f"{d.domain} (#{d.rank})" for d in s.ai_top10_current[:5])
+            movers_up = ", ".join(f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.up[:3])
+            movers_down = ", ".join(f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.down[:3])
+            block = (
+                f"Settimana {s.year}-W{s.week:02d} ({s.generated_at.date()}):\n"
+                f"  Top 5 AI: {ai_top or '\u2014'}\n"
+                f"  Movers saliti: {movers_up or '\u2014'}\n"
+                f"  Movers scesi: {movers_down or '\u2014'}\n"
+            )
+            blocks.append(block)
+        return "\n".join(blocks)
+
+    @staticmethod
+    def _extract_hero_mover(snapshots: list[TrackerSnapshot]) -> str:
+        best_domain = ""
+        best_abs = 0.0
+        for s in snapshots:
+            for m in (*s.top_movers_30d.up, *s.top_movers_30d.down):
+                if abs(m.delta_pct) > best_abs:
+                    best_abs = abs(m.delta_pct)
+                    best_domain = m.domain
+        return best_domain
 
     async def _call_with_fallback(self, prompt: str) -> _RawResult:
         models = [self._primary, *self._fallbacks]

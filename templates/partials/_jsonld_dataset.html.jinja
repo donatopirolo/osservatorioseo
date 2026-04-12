@@ -1,0 +1,29 @@
+{# Context: dataset_name, dataset_description, dataset_url, updated_iso #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": {{ dataset_name | tojson }},
+  "description": {{ dataset_description | tojson }},
+  "url": "{{ dataset_url }}",
+  "creator": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO"
+  },
+  "datePublished": "{{ updated_iso }}",
+  "dateModified": "{{ updated_iso }}",
+  "inLanguage": "it-IT",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "spatialCoverage": {
+    "@type": "Country",
+    "name": "Italia"
+  },
+  "keywords": "SEO, AI, Google, ChatGPT, Claude, Gemini, Perplexity, tracker, Italia"
+}
+</script>

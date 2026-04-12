@@ -40,6 +40,33 @@
   </div>
 </section>
 
+{% if tracker_teaser %}
+<section class="mb-12 max-w-4xl" id="tracker-teaser">
+  <div class="flex items-center gap-4 mb-4">
+    <h2 class="text-lg font-bold tracking-tight uppercase text-white">&gt; TRACKER — STATO DELLA RICERCA</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    <a href="/tracker/" class="text-xs text-primary-container hover:underline uppercase font-mono tracking-wider">VEDI TUTTO &rarr;</a>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="p-4 border border-outline-variant bg-surface-container-lowest">
+      <p class="text-[10px] text-outline font-mono uppercase tracking-widest mb-2">TOP 3 AI IN ITALIA</p>
+      <ol class="space-y-1 text-sm text-on-surface">
+        {% for d in tracker_teaser.ai_top3 %}
+        <li><span class="text-primary-container">#{{ loop.index }}</span> {{ d.domain }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div class="p-4 border border-outline-variant bg-surface-container-lowest">
+      <p class="text-[10px] text-outline font-mono uppercase tracking-widest mb-2">MOVER DEL MESE</p>
+      <p class="text-lg text-white font-bold">{{ tracker_teaser.hero_mover or '—' }}</p>
+      <p class="text-sm text-primary-container font-mono">
+        {{ '{:+.1f}'.format(tracker_teaser.hero_delta_pct or 0) }}% traffic MoM
+      </p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="mb-12" id="categories-section">
   <div class="flex items-center gap-4 mb-12">
     <h2 class="text-2xl font-bold tracking-tight uppercase" id="categories-title">{{ categories_title | default("> TUTTE PER CATEGORIA") }}</h2>

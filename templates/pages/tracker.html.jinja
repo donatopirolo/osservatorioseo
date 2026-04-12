@@ -1,0 +1,110 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% include "partials/_jsonld_dataset.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant"> / </span>
+  <span class="text-primary-container">TRACKER</span>
+</nav>
+
+<section class="max-w-4xl mx-auto mb-10">
+  <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; TRACKER SETTIMANALE</p>
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-white">{{ page_headline }}</h1>
+  <p class="text-sm text-outline font-mono">
+    Ultimo aggiornamento: <span class="text-primary-container">{{ updated_label }}</span> · Fonte primaria: Cloudflare Radar
+  </p>
+</section>
+
+{# Chart 1: headline #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; AI VS INTERNET IN ITALIA — 24 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_1_caption }}</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    {{ chart_1_svg | safe }}
+  </div>
+</section>
+
+{# Chart 2: market composition #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; A CHI CEDE GOOGLE — 12 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_2_caption }}</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    {{ chart_2_svg | safe }}
+  </div>
+</section>
+
+{# Chart 3: bump #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; CHI HA SCAVALCATO CHI — TOP 10 AI, 6 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_3_caption }}</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    {{ chart_3_svg | safe }}
+  </div>
+</section>
+
+{# Chart 4: heatmap #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; QUALE SETTORE È GIÀ COLPITO</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_4_caption }}</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant overflow-x-auto">
+    {{ chart_4_svg | safe }}
+  </div>
+</section>
+
+{# Chart 5: movers #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; BIGGEST MOVERS — 30 GIORNI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_5_caption }}</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    {{ chart_5_svg | safe }}
+  </div>
+  {% if latest_monthly_report_path %}
+  <p class="text-xs text-outline font-mono mt-3 uppercase">
+    <a href="{{ latest_monthly_report_path }}" class="text-primary-container hover:underline">&rarr; Report editoriale mensile di approfondimento</a>
+  </p>
+  {% endif %}
+</section>
+
+{# Chart 6: big 4 #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; I 4 BIG AI — TREND 6 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_6_caption }}</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    {{ chart_6_svg | safe }}
+  </div>
+</section>
+
+{# Chart 7: transparency #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; TRASPARENZA: DA DOVE ARRIVIAMO NOI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
+    <strong class="text-white">1 sito solo, NON rappresentativo del mercato italiano.</strong> Questi sono i referrer di OsservatorioSEO stesso, inclusi per trasparenza editoriale.
+  </p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    {{ chart_7_svg | safe }}
+  </div>
+</section>
+
+{# Methodology accordion — aperto di default #}
+<section class="max-w-4xl mx-auto mb-12">
+  <details open class="methodology-accordion group">
+    <summary class="flex items-center justify-between border-b border-primary-container pb-2 cursor-pointer list-none">
+      <h2 class="text-xs text-outline uppercase font-mono tracking-widest">&gt; METODOLOGIA</h2>
+      <span class="text-primary-container font-mono">&minus;</span>
+    </summary>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed mt-4 space-y-3 text-sm">
+      <p><strong class="text-white">Fonti dati:</strong> <a class="text-primary-container hover:underline" href="https://radar.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Radar API</a> + Cloudflare Pages Analytics (per il solo Grafico 7).</p>
+      <p><strong class="text-white">Cosa misura e cosa no:</strong> Cloudflare Radar misura la popolarità dei domini come destinazione (quanti italiani visitano chat.openai.com), non il traffico referral (quanti siti italiani ricevono visite da chat.openai.com). Queste due metriche sono correlate ma non identiche.</p>
+      <p><strong class="text-white">Campione:</strong> Cloudflare osserva circa il 17% del traffico internet globale. I dati sono proiezioni basate su questo campione, non misurazioni totali del mercato italiano.</p>
+      <p><strong class="text-white">Aggiornamento:</strong> Dati aggiornati ogni settimana. Prossima update prevista: {{ next_update_label }}.</p>
+      <p><strong class="text-white">Perché non vedete "market share %":</strong> Lo share di mercato richiederebbe dati di panel a pagamento (SimilarWeb, Datos.live). Questo tracker usa solo fonti gratuite e pubblica indici normalizzati 0-100 dove 100 = dominio più popolare in categoria.</p>
+      <p><strong class="text-white">Limiti dichiarati:</strong> nessun dato di query SERP, nessun dato di referral traffic, nessun forecasting. Se vedi qualcosa che ti sembra strano, <a class="text-primary-container hover:underline" href="/about/">segnalalo alla redazione</a>.</p>
+    </div>
+  </details>
+</section>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  {% for crumb in breadcrumbs %}
+    {% if not loop.last %}
+    <a href="{{ crumb.site_path | default(crumb.url) }}" class="hover:text-primary-container">{{ crumb.name }}</a>
+    <span class="text-outline-variant">/</span>
+    {% else %}
+    <span class="text-primary-container">{{ crumb.name }}</span>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; REPORT TRACKER · {{ month_label }}</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-white">{{ report.title_it }}</h1>
+    <p class="text-lg text-on-surface-variant leading-relaxed">{{ report.subtitle_it }}</p>
+  </header>
+
+  {% if report.executive_summary %}
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; EXECUTIVE SUMMARY</h2>
+    <ul class="space-y-3">
+      {% for point in report.executive_summary %}
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">&#9656;</span>
+        <span>{{ point }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI DEL MESE</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in report.narrative.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if report.takeaways %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; 5 TAKEAWAYS STRATEGICI</h2>
+    <ol class="space-y-5 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold">
+      {% for t in report.takeaways %}
+      <li class="pl-2">
+        <h3 class="text-base font-bold text-white mb-1">{{ t.title }}</h3>
+        <p class="text-on-surface-variant leading-relaxed">{{ t.body }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; PROSPETTIVE</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-3">
+      {% for para in report.outlook.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Questo è un <strong class="text-white">report editoriale mensile</strong> basato sugli snapshot settimanali del tracker (<code class="text-primary-container">{{ report.snapshot_week_refs | join(', ') }}</code>).
+      Il contenuto è prodotto da <code class="text-primary-container">{{ report.model_used }}</code> a partire dai dati di Cloudflare Radar.
+    </p>
+    <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/tracker/">&larr; DASHBOARD LIVE</a>
+  </section>
+</article>
+{% endblock %}

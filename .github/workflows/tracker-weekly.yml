@@ -1,0 +1,94 @@
+name: Tracker weekly update
+
+on:
+  schedule:
+    # Every Monday at 08:00 Europe/Rome (cron runs in UTC)
+    # Winter (CET, UTC+1): 07:00 UTC. Summer (CEST, UTC+2): 06:00 UTC.
+    # Use 07:00 UTC as a compromise.
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-tracker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup Node (for Tailwind CLI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Python deps
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --upgrade pip
+          .venv/bin/pip install -e ".[dev]"
+
+      - name: Install Node deps (Tailwind CLI)
+        run: npm install
+
+      - name: Determine if monthly report run
+        id: month
+        run: |
+          # First Monday of the month: run with --monthly-report
+          day_of_month=$(date -u +%d)
+          if [ "$day_of_month" -le "07" ]; then
+            echo "flag=--monthly-report" >> "$GITHUB_OUTPUT"
+          else
+            echo "flag=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run tracker update
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          .venv/bin/python scripts/update_tracker.py ${{ steps.month.outputs.flag }}
+
+      - name: Rebuild Tailwind CSS
+        run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
+
+      - name: Rebuild SSG HTML
+        run: .venv/bin/python scripts/rebuild_seo_html.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tracker site/tracker site/sitemap.xml site/tailwind.css
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            WEEK=$(date -u +'%Y-W%V')
+            git commit -m "chore(tracker): weekly update $WEEK"
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase origin main
+            done
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler pages deploy ./site \
+            --project-name=osservatorioseo \
+            --branch=main \
+            --commit-hash="$(git rev-parse HEAD)" \
+            --commit-message="tracker weekly update" \
+            --commit-dirty=true

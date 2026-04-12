@@ -269,6 +269,8 @@ class Publisher:
         self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
+        self._ssg_tracker(renderer, site_dir, allow_indexing)
+        self._ssg_tracker_reports(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
 
@@ -370,6 +372,7 @@ class Publisher:
             "top10_itemlist_name": "Top 10 del giorno — Osservatorio SEO",
             "categories": categories,
             "failed_sources": [fs.model_dump() for fs in feed.failed_sources],
+            "tracker_teaser": self._build_tracker_teaser(),
             "breadcrumbs": [{"name": "Home", "url": canonical("/")}],
         }
 
@@ -946,6 +949,200 @@ class Publisher:
             html = renderer.render_dossier(ctx)
             (target / "index.html").write_text(html, encoding="utf-8")
 
+    # --- Tracker dashboard ---
+
+    def _ssg_tracker(
+        self,
+        renderer: HtmlRenderer,
+        site_dir: Path,
+        allow_indexing: bool,
+    ) -> None:
+        """Render the /tracker/ dashboard using the latest snapshot."""
+        from osservatorio_seo.tracker import charts as tracker_charts
+        from osservatorio_seo.tracker.models import TrackerSnapshot
+
+        snapshots_dir = self._data_dir / "tracker" / "snapshots"
+        if not snapshots_dir.exists():
+            return
+
+        latest = self._find_latest_snapshot(snapshots_dir)
+        if latest is None:
+            return
+
+        snapshot = TrackerSnapshot.model_validate_json(latest.read_text(encoding="utf-8"))
+
+        chart_1 = tracker_charts.render_ai_vs_internet_chart(
+            ai=snapshot.ai_index_24mo, internet=snapshot.internet_index_24mo,
+        )
+        chart_2 = tracker_charts.render_market_composition_chart(snapshot.market_composition_12mo)
+        chart_3 = tracker_charts.render_bump_chart(snapshot.bump_chart_6mo)
+        chart_4 = tracker_charts.render_category_heatmap(snapshot.category_heatmap_6mo)
+        chart_5 = tracker_charts.render_movers_chart(snapshot.top_movers_30d)
+        chart_6 = tracker_charts.render_big4_small_multiples(snapshot.big4_6mo)
+        chart_7 = tracker_charts.render_own_referrers_chart(snapshot.own_referrers_30d)
+
+        updated_label = snapshot.generated_at.strftime("%d %B %Y")
+        nxt = snapshot.generated_at + timedelta(days=7)
+        next_update = nxt.strftime("%d %B %Y")
+
+        reports_dir = self._data_dir / "tracker" / "reports"
+        latest_report_path: str | None = None
+        if reports_dir.exists():
+            report_files = sorted(reports_dir.glob("????-??.json"))
+            if report_files:
+                year_m, month_m = report_files[-1].stem.split("-")
+                latest_report_path = f"/tracker/report/{year_m}-{month_m}/"
+
+        ctx = {
+            "page_title": "Tracker — Stato della ricerca in Italia — Osservatorio SEO",
+            "page_description": (
+                "Dashboard settimanale sull'adozione di AI e Search Engines in "
+                "Italia. 7 grafici interpretano i trend e aiutano a prendere "
+                "decisioni operative di SEO."
+            ),
+            "canonical_url": canonical("/tracker/"),
+            "active_nav": "tracker",
+            "noindex": not allow_indexing,
+            "og_type": "website",
+            "page_headline": f"Stato della ricerca in Italia — Settimana {snapshot.week}, {snapshot.year}",
+            "updated_label": updated_label,
+            "updated_iso": snapshot.generated_at.isoformat(),
+            "next_update_label": next_update,
+            "dataset_name": "Tracker Osservatorio SEO — Adozione AI & Search in Italia",
+            "dataset_description": (
+                "Dati settimanali sul rank di popolarità delle AI services "
+                "(ChatGPT, Claude, Gemini, Perplexity) e dei search engines "
+                "in Italia, da Cloudflare Radar."
+            ),
+            "dataset_url": canonical("/tracker/"),
+            "chart_1_svg": chart_1,
+            "chart_1_caption": (
+                "La linea verde è l'indice di popolarità dei servizi AI in "
+                "Italia, la grigia è il traffico internet totale. Entrambe "
+                "normalizzate a 100 all'inizio del periodo."
+            ),
+            "chart_2_svg": chart_2,
+            "chart_2_caption": (
+                "Come si compone il mercato di ricerca in Italia. "
+                "Se Google cede share ad altri search engine, serve SEO "
+                "multi-engine. Se cede ad AI, serve investimento in LLM optimization."
+            ),
+            "chart_3_svg": chart_3,
+            "chart_3_caption": (
+                "Il rank dei top 10 domini AI in Italia nelle ultime 26 "
+                "settimane. Le linee si incrociano quando un dominio scavalca un altro."
+            ),
+            "chart_4_svg": chart_4,
+            "chart_4_caption": (
+                "Traffico mensile per categoria di destinazione in Italia. "
+                "Verde = crescita, rosso = calo. Se il tuo settore è colpito, "
+                "vedrai una riga rossa."
+            ),
+            "chart_5_svg": chart_5,
+            "chart_5_caption": (
+                "Chi è salito e chi è sceso di più in termini di traffico negli "
+                "ultimi 30 giorni. Questo è il grafico che genera il titolo del "
+                "report mensile."
+            ),
+            "chart_6_svg": chart_6,
+            "chart_6_caption": (
+                "Trend di traffico dei 4 big AI service negli ultimi 6 mesi, "
+                "ciascuno con asse Y indipendente. Il rank corrente è in alto a destra."
+            ),
+            "chart_7_svg": chart_7,
+            "latest_monthly_report_path": latest_report_path,
+            "breadcrumbs": [
+                {"name": "Home", "url": canonical("/")},
+                {"name": "Tracker", "url": canonical("/tracker/")},
+            ],
+        }
+
+        target_dir = site_dir / "tracker"
+        target_dir.mkdir(parents=True, exist_ok=True)
+        (target_dir / "index.html").write_text(
+            renderer.render_tracker(ctx), encoding="utf-8"
+        )
+
+    def _ssg_tracker_reports(
+        self,
+        renderer: HtmlRenderer,
+        site_dir: Path,
+        allow_indexing: bool,
+    ) -> None:
+        """Render monthly tracker reports from data/tracker/reports/*.json."""
+        reports_dir = self._data_dir / "tracker" / "reports"
+        if not reports_dir.exists():
+            return
+
+        from osservatorio_seo.tracker.models import TrackerMonthlyReport
+
+        for report_path in sorted(reports_dir.glob("????-??.json")):
+            report = TrackerMonthlyReport.model_validate_json(
+                report_path.read_text(encoding="utf-8")
+            )
+            year_str, month_str = report_path.stem.split("-")
+            month_label = datetime(report.year, report.month, 1).strftime("%B %Y")
+            canonical_url = canonical(f"/tracker/report/{year_str}-{month_str}/")
+
+            ctx = {
+                "page_title": f"{report.title_it} — Tracker — Osservatorio SEO",
+                "page_description": report.subtitle_it,
+                "canonical_url": canonical_url,
+                "active_nav": "tracker",
+                "noindex": not allow_indexing,
+                "og_type": "article",
+                "report": report.model_dump(mode="json"),
+                "article_url": canonical_url,
+                "updated_iso": report.generated_at.isoformat(),
+                "month_label": month_label,
+                "breadcrumbs": [
+                    {"name": "Home", "url": canonical("/"), "site_path": "/"},
+                    {"name": "Tracker", "url": canonical("/tracker/"), "site_path": "/tracker/"},
+                    {"name": month_label, "url": canonical_url, "site_path": ""},
+                ],
+            }
+
+            target_dir = site_dir / "tracker" / "report" / f"{year_str}-{month_str}"
+            target_dir.mkdir(parents=True, exist_ok=True)
+            (target_dir / "index.html").write_text(
+                renderer.render_tracker_report(ctx), encoding="utf-8"
+            )
+
+    @staticmethod
+    def _find_latest_snapshot(snapshots_dir: Path) -> Path | None:
+        candidates = sorted(snapshots_dir.glob("*-W*.json"))
+        return candidates[-1] if candidates else None
+
+    def _build_tracker_teaser(self) -> dict[str, Any] | None:
+        """Produce a small dict for homepage tracker teaser, or None if no snapshot."""
+        from osservatorio_seo.tracker.models import TrackerSnapshot
+
+        snapshots_dir = self._data_dir / "tracker" / "snapshots"
+        if not snapshots_dir.exists():
+            return None
+        latest = self._find_latest_snapshot(snapshots_dir)
+        if latest is None:
+            return None
+        try:
+            snapshot = TrackerSnapshot.model_validate_json(latest.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            return None
+
+        ai_top3 = [d.model_dump(mode="json") for d in snapshot.ai_top10_current[:3]]
+        candidates = [*snapshot.top_movers_30d.up, *snapshot.top_movers_30d.down]
+        hero_mover = None
+        hero_delta = 0.0
+        for m in candidates:
+            if abs(m.delta_pct) > abs(hero_delta):
+                hero_mover = m.domain
+                hero_delta = m.delta_pct
+
+        return {
+            "ai_top3": ai_top3,
+            "hero_mover": hero_mover,
+            "hero_delta_pct": hero_delta,
+        }
+
     def _ssg_seo_assets(
         self,
         renderer: HtmlRenderer,
@@ -985,6 +1182,18 @@ class Publisher:
                 "changefreq": "monthly",
             },
         ]
+
+        # Tracker: add if snapshots exist
+        tracker_snapshots = self._data_dir / "tracker" / "snapshots"
+        if tracker_snapshots.exists() and self._find_latest_snapshot(tracker_snapshots):
+            urls.append(
+                {
+                    "loc": canonical("/tracker/"),
+                    "lastmod": today,
+                    "priority": "0.9",
+                    "changefreq": "weekly",
+                }
+            )
 
         categories_seen = {i.category for i in feed.items}
         for cat in categories_seen:
