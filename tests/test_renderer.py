@@ -160,7 +160,8 @@ def test_render_article_has_jsonld_and_breadcrumb() -> None:
     assert '"@type": "BreadcrumbList"' in html
     assert "LEGGI L&#39;ORIGINALE" in html or "LEGGI L'ORIGINALE" in html
     assert "/categoria/google-updates/" in html
-    assert "/tag/core-update/" in html
+    # Tags are rendered as non-clickable <span>, not <a href="/tag/...">
+    assert "core_update" in html
 
 
 def test_all_hub_templates_render() -> None:

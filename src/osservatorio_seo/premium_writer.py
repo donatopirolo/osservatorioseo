@@ -20,9 +20,8 @@ import json
 import logging
 import re
 from dataclasses import dataclass
-from typing import Any
-
 from datetime import UTC, datetime
+from typing import Any
 
 import httpx
 
@@ -278,7 +277,9 @@ class PremiumWriter:
         )
         result = await self._call_with_fallback(prompt)
         parsed = result.parsed
-        faqs = [FAQEntry(question=f["question"], answer=f["answer"]) for f in parsed.get("faqs", [])]
+        faqs = [
+            FAQEntry(question=f["question"], answer=f["answer"]) for f in parsed.get("faqs", [])
+        ]
         return DeepAnalysis(
             detailed_description=parsed["detailed_description"],
             implications=list(parsed.get("implications", []))[:6],
@@ -319,8 +320,7 @@ class PremiumWriter:
         parsed = result.parsed
 
         takeaways = [
-            PillarTakeaway(title=t["title"], body=t["body"])
-            for t in parsed.get("takeaways", [])
+            PillarTakeaway(title=t["title"], body=t["body"]) for t in parsed.get("takeaways", [])
         ]
 
         slug = tag.replace("_", "-")

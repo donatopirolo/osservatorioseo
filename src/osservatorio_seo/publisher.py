@@ -20,9 +20,6 @@ from osservatorio_seo.seo import (
 from osservatorio_seo.seo import (
     category_path as make_category_path,
 )
-from osservatorio_seo.seo import (
-    tag_path as make_tag_path,
-)
 from osservatorio_seo.slug import make_unique_slug
 
 if TYPE_CHECKING:
@@ -813,9 +810,7 @@ class Publisher:
         pillars: list[Pillar] = []
         for path in sorted(pillars_dir.glob("*.json")):
             try:
-                pillar = Pillar.model_validate(
-                    json.loads(path.read_text(encoding="utf-8"))
-                )
+                pillar = Pillar.model_validate(json.loads(path.read_text(encoding="utf-8")))
                 pillars.append(pillar)
             except Exception:  # noqa: BLE001
                 continue
@@ -868,8 +863,8 @@ class Publisher:
         # Index page /dossier/
         index_entries = []
         for p in pillars:
-            word_count = (
-                len((p.intro_long + " " + p.context_section + " " + p.timeline_narrative).split())
+            word_count = len(
+                (p.intro_long + " " + p.context_section + " " + p.timeline_narrative).split()
             )
             index_entries.append(
                 {

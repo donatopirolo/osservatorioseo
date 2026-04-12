@@ -70,9 +70,15 @@ async def test_pipeline_end_to_end(
         site_data_dir=tmp_path / "site" / "data",
     )
 
-    with patch(
-        "osservatorio_seo.summarizer.Summarizer.summarize_item",
-        new=AsyncMock(return_value=fake_summary),
+    with (
+        patch(
+            "osservatorio_seo.summarizer.Summarizer.summarize_item",
+            new=AsyncMock(return_value=fake_summary),
+        ),
+        patch(
+            "osservatorio_seo.premium_writer.PremiumWriter.analyze",
+            new=AsyncMock(side_effect=Exception("skip in smoke test")),
+        ),
     ):
         feed = await pipeline.run()
 

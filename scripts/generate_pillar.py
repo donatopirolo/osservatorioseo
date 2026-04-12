@@ -43,10 +43,11 @@ def collect_items_by_tag(archive_dir: Path, tag: str, min_importance: int = 3) -
         for it in feed.items:
             if it.id in seen_ids:
                 continue
-            if tag not in [t.lower() for t in it.tags]:
-                # fallback: match anche nel titolo (es. "core update" senza tag)
-                if tag.replace("_", " ") not in it.title_it.lower():
-                    continue
+            if (
+                tag not in [t.lower() for t in it.tags]
+                and tag.replace("_", " ") not in it.title_it.lower()
+            ):
+                continue
             if it.importance < min_importance:
                 continue
             items.append(it)
@@ -69,7 +70,9 @@ async def main() -> None:
     items = collect_items_by_tag(archive_dir, tag)
     print(f"  found {len(items)} items with tag '{tag}' (importance>=3)")
     for it in items:
-        print(f"    - {it.published_at.strftime('%Y-%m-%d')} · imp={it.importance} · {it.title_it[:70]}")
+        print(
+            f"    - {it.published_at.strftime('%Y-%m-%d')} · imp={it.importance} · {it.title_it[:70]}"
+        )
     if not items:
         print("No items to build a pillar on. Aborting.")
         sys.exit(1)

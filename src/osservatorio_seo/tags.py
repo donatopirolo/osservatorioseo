@@ -83,12 +83,16 @@ def normalize_tag(raw: str) -> str | None:
     if not t:
         return None
     # Plurali semplici → singolare (evitare casi noti come "news")
-    if t not in {"news", "analytics"} and t.endswith("s") and len(t) > 3:
-        # Mantieni plurali irregolari intatti, collassa solo quelli ovvi
-        if not t.endswith("ss") and not t.endswith("us"):
-            singular = t[:-1]
-            if singular in _REVERSE_ALIAS or len(singular) >= 3:
-                t = singular
+    if (
+        t not in {"news", "analytics"}
+        and t.endswith("s")
+        and len(t) > 3
+        and not t.endswith("ss")
+        and not t.endswith("us")
+    ):
+        singular = t[:-1]
+        if singular in _REVERSE_ALIAS or len(singular) >= 3:
+            t = singular
     # Applica alias map
     return _REVERSE_ALIAS.get(t, t)
 

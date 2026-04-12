@@ -65,9 +65,7 @@ def main() -> None:
                     tag_changes += 1
                     changed = True
             if changed:
-                current.write_text(
-                    feed.model_dump_json(indent=2) + "\n", encoding="utf-8"
-                )
+                current.write_text(feed.model_dump_json(indent=2) + "\n", encoding="utf-8")
                 print("  updated data/feed.json")
                 touched += 1
         except Exception as e:
