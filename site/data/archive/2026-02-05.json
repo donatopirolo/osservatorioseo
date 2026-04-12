@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-02-05T06:00:00Z",
+  "generated_at_local": "2026-02-05T07:00:00+01:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-02-05-0700",
+  "stats": {
+    "sources_checked": 1,
+    "sources_failed": 0,
+    "items_collected": 1,
+    "items_after_dedup": 1,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.00012
+  },
+  "top10": [
+    "item_2026-02-05_gsc_A14D1F"
+  ],
+  "categories": {
+    "google_updates": [
+      "item_2026-02-05_gsc_A14D1F"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-02-05_gsc_A14D1F",
+      "title_original": "Google's February 2026 Discover Core Update",
+      "title_it": "Google rilascia il Core Update di Febbraio 2026 per Discover",
+      "summary_it": "Google ha rilasciato un aggiornamento principale per Discover, mirato a migliorare l'esperienza utente mostrando contenuti più rilevanti a livello locale, riducendo il clickbait e privilegiando contenuti originali e approfonditi. L'update, inizialmente disponibile per gli utenti in lingua inglese negli Stati Uniti, potrebbe causare fluttuazioni nel traffico Discover.",
+      "url": "https://developers.google.com/search/blog/2026/02/discover-core-update",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "discover",
+        "core_update",
+        "google",
+        "content_quality"
+      ],
+      "importance": 5,
+      "published_at": "2026-02-05T06:00:00Z",
+      "fetched_at": "2026-02-05T06:00:00Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b664b7c4ed057497",
+      "deep_analysis": {
+        "detailed_description": "L'aggiornamento principale di Discover annunciato da Google il 5 febbraio 2026 introduce tre direttrici di ranking specifiche per il feed: priorità ai contenuti localmente rilevanti, penalizzazione del clickbait e valorizzazione di contenuti originali e approfonditi. Il rollout parte dagli utenti in lingua inglese negli Stati Uniti, con espansione graduale ad altre lingue e mercati.\n\nLa componente locale rappresenta il cambio più significativo. Discover inizia a pesare la geolocalizzazione dell'utente e la pertinenza territoriale del contenuto, favorendo fonti e notizie che hanno rilevanza per il contesto geografico di chi scorre il feed. Questo significa che un articolo su un evento locale o una normativa regionale avrà maggiori probabilità di apparire agli utenti di quella zona, anche se la fonte non è tra le più autorevoli a livello nazionale.\n\nLa stretta sul clickbait si traduce in una valutazione più severa del rapporto tra titolo e contenuto effettivo della pagina. Google dichiara di voler ridurre la visibilità di articoli che promettono informazioni non mantenute o che forzano il click con titoli sensazionalistici. Non è chiaro se l'algoritmo utilizzi segnali comportamentali (bounce rate, tempo di permanenza) o analisi semantica del mismatch titolo-body, ma l'intento è esplicito.\n\nLa valorizzazione di contenuti originali e approfonditi richiama i criteri E-E-A-T applicati alla Search, ma con un focus specifico su Discover. Google privilegia articoli che offrono angolazioni uniche, dati proprietari, analisi di prima mano o approfondimenti che vanno oltre la sintesi di fonti esistenti. Questo penalizza aggregatori e siti che riscrivono notizie altrui senza valore aggiunto.\n\nL'update è classificato come \"core\" per Discover, il che implica un ricalcolo sostanziale dei fattori di ranking del feed, non un semplice tweak. Google avverte esplicitamente che i publisher potrebbero osservare fluttuazioni nel traffico proveniente da Discover nei giorni successivi al rollout. La finestra temporale di stabilizzazione non è specificata, ma i precedenti core update per la Search hanno richiesto tra i 7 e i 14 giorni per completarsi.\n\nNon è chiaro se questo aggiornamento influenzi anche la Search tradizionale o resti confinato a Discover. La documentazione ufficiale non menziona impatti su altri prodotti Google, ma alcuni segnali di ranking (originalità, profondità) sono trasversali. Chi dipende da Discover per una quota significativa del traffico deve monitorare attentamente le metriche nei prossimi giorni e valutare se i cali sono temporanei o strutturali.",
+        "implications": [
+          "I siti che generano oltre il 20% del traffico da Discover devono segmentare immediatamente le analitiche per fonte e monitorare le variazioni giornaliere, distinguendo tra fluttuazioni temporanee da rollout e perdite strutturali di posizionamento.",
+          "Le testate locali e i siti con focus geografico specifico potrebbero vedere un incremento di traffico da Discover, a patto che i contenuti siano chiaramente geolocalizzati (markup LocalBusiness, menzioni di città/regioni, copertura di eventi territoriali).",
+          "I siti che aggregano notizie o riscrivono contenuti altrui senza aggiungere analisi originali rischiano un calo netto di visibilità su Discover, indipendentemente dall'autorevolezza del dominio.",
+          "I titoli ottimizzati per il click (\"Non crederai a cosa…\", \"Il segreto che…\") diventano un fattore di penalizzazione esplicito, richiedendo una revisione delle linee editoriali per chi produce contenuti destinati a Discover.",
+          "L'assenza di indicazioni su tempistiche di espansione ad altre lingue rende impossibile pianificare per mercati non anglofoni: chi opera fuori dagli USA deve attendere comunicazioni successive prima di investire risorse in ottimizzazioni specifiche."
+        ],
+        "examples": [
+          "Un sito di cronaca locale che pubblica articoli su eventi cittadini, con markup LocalBusiness e menzioni esplicite della città nel titolo e nei primi paragrafi, dovrebbe vedere un aumento di impression su Discover tra gli utenti geolocalizzati in quella zona. Se il traffico non cresce entro 10 giorni dal rollout completo, il problema è probabilmente nella qualità percepita del contenuto o nella mancanza di segnali di originalità.",
+          "Un blog di tecnologia che riscrive comunicati stampa di aziende senza aggiungere test, dati proprietari o analisi critiche rischia un crollo di traffico da Discover. Se il 40% delle visite arriva da quel canale, il calo può tradursi in una perdita secca del 15-20% del traffico totale in pochi giorni. La soluzione non è modificare i titoli, ma investire in contenuti originali (test prodotti, interviste, dataset proprietari).",
+          "Un sito di news generaliste che usa titoli come \"Cosa è successo davvero a [evento]\" o \"Il motivo scioccante dietro [fatto]\" deve aspettarsi una riduzione di CTR su Discover anche se il contenuto è di qualità. Google sta penalizzando la forma, non solo la sostanza. Riscrivere i titoli in chiave descrittiva (\"[Evento]: cause, conseguenze e reazioni\") può recuperare visibilità, ma solo se il contenuto mantiene le promesse del nuovo titolo."
+        ],
+        "testing_steps": [
+          "Accedi a Google Search Console, sezione Discover, e confronta le impression degli ultimi 7 giorni con i 7 giorni precedenti al 5 febbraio 2026.",
+          "Segmenta i dati per Paese e verifica se il calo/incremento è concentrato sugli USA o distribuito: se è solo USA, l'impatto è diretto; se è globale, potrebbero esserci fattori esterni.",
+          "Estrai le top 20 pagine per traffico Discover del mese precedente e analizza i titoli: conta quanti usano pattern clickbait (domande retoriche, superlativi, promesse vaghe) e confronta il loro andamento con pagine a titolo descrittivo.",
+          "Verifica se le pagine con calo di traffico hanno contenuti aggregati o riscritti da altre fonti: usa Copyscape o ricerca manuale per controllare l'originalità effettiva.",
+          "Controlla se le pagine con contenuti locali (eventi, normative regionali, cronaca cittadina) hanno avuto un incremento di impression da utenti geolocalizzati nella stessa area: usa Google Analytics 4 con dimensione personalizzata per fonte Discover + città.",
+          "Monitora il tempo di permanenza medio e il bounce rate delle pagine che ricevono traffico da Discover: se peggiorano, Google potrebbe usare questi segnali per confermare la penalizzazione del clickbait."
+        ],
+        "faqs": [
+          {
+            "question": "L'update di Discover impatta anche il ranking nella Search tradizionale?",
+            "answer": "Google non ha dichiarato impatti diretti sulla Search. Tuttavia, i criteri di originalità e profondità dei contenuti sono trasversali: se un sito perde traffico su Discover per mancanza di contenuti originali, è probabile che anche il posizionamento organico ne risenta nel medio termine, soprattutto se Google rileva pattern di bassa qualità su larga scala."
+          },
+          {
+            "question": "Quanto tempo serve per recuperare traffico perso su Discover dopo questo update?",
+            "answer": "Non esiste una finestra temporale garantita. Se il calo è dovuto a clickbait o contenuti aggregati, serve una revisione editoriale strutturale: pubblicare 10-15 articoli originali e approfonditi, attendere l'indicizzazione e monitorare per almeno 3-4 settimane. Se il calo è dovuto a fluttuazioni temporanee da rollout, il recupero può avvenire entro 7-14 giorni senza interventi."
+          },
+          {
+            "question": "Come si definisce un contenuto 'localmente rilevante' per Discover?",
+            "answer": "Google non ha fornito una definizione tecnica. In base ai pattern osservati su altri prodotti, un contenuto è localmente rilevante se tratta eventi, normative, persone o fenomeni specifici di un'area geografica delimitata, con menzioni esplicite di città/regioni nel testo e, idealmente, markup strutturato LocalBusiness o Event con coordinate geografiche."
+          },
+          {
+            "question": "I siti in lingue diverse dall'inglese devono fare qualcosa ora?",
+            "answer": "No. L'update è attivo solo per utenti in lingua inglese negli USA. Intervenire su contenuti in altre lingue prima del rollout locale è prematuro e rischia di ottimizzare per criteri che potrebbero essere adattati ai mercati specifici. Meglio monitorare gli annunci ufficiali e prepararsi a testare rapidamente quando Google estenderà l'update."
+          }
+        ],
+        "editorial_commentary": "Questo update conferma che Discover non è un canale passivo di distribuzione, ma un prodotto con logiche di ranking sempre più autonome rispetto alla Search. Chi ha costruito strategie editoriali su titoli acchiappa-click e aggregazione veloce di notizie altrui deve aspettarsi un ridimensionamento strutturale, non temporaneo.\n\nLa componente locale è l'elemento più interessante: Google sta segmentando Discover per geolocalizzazione, il che apre opportunità per testate regionali e siti di nicchia territoriale che finora faticavano a competere con i grandi editori nazionali. Se gestisci un sito locale, questo è il momento di investire su contenuti iperlocali con markup strutturato e geotag precisi.\n\nL'assenza di dettagli su metriche comportamentali (bounce, dwell time) lascia aperta la domanda: Google sta usando segnali utente per confermare il clickbait o si basa solo su analisi semantica? La risposta arriverà nei prossimi mesi, ma intanto conviene assumere che entrambi i fattori contino e ottimizzare di conseguenza.",
+        "premium_model_used": "anthropic/claude-sonnet-4-5",
+        "cost_eur": 0.04209
+      }
+    }
+  ],
+  "doc_watcher_status": [],
+  "failed_sources": []
+}

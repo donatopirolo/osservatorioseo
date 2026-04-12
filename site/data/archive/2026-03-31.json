@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-03-31T05:00:00Z",
+  "generated_at_local": "2026-03-31T07:00:00+02:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-03-31-0700",
+  "stats": {
+    "sources_checked": 1,
+    "sources_failed": 0,
+    "items_collected": 2,
+    "items_after_dedup": 2,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.00026
+  },
+  "top10": [
+    "item_2026-03-31_gsc_5E92B0",
+    "item_2026-03-31_gsc_9992B8"
+  ],
+  "categories": {
+    "technical_seo": [
+      "item_2026-03-31_gsc_5E92B0",
+      "item_2026-03-31_gsc_9992B8"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-03-31_gsc_5E92B0",
+      "title_original": "Inside Googlebot: demystifying crawling, fetching, and the bytes we process",
+      "title_it": "Googlebot: approfondimento sul crawling, il fetching e i limiti di dimensione dei file",
+      "summary_it": "Google ha pubblicato un articolo che fa chiarezza sul funzionamento interno di Googlebot, sfatando il mito di un singolo crawler onnipotente. L'articolo evidenzia come Googlebot sia in realtà un client di una piattaforma di crawling centralizzata e spiega i limiti di dimensione dei file, con un focus sul limite di 2MB per le pagine HTML. Viene inoltre chiarito come Googlebot gestisce i file che superano tale limite.",
+      "url": "https://developers.google.com/search/blog/2026/03/crawler-blog-post",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "googlebot",
+        "crawling",
+        "fetching",
+        "file_size_limit"
+      ],
+      "importance": 5,
+      "published_at": "2026-03-31T05:00:00Z",
+      "fetched_at": "2026-03-31T05:00:00Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:39abe7f313ec3657",
+      "deep_analysis": {
+        "detailed_description": "Google ha pubblicato un documento tecnico che ridefinisce la comprensione operativa di Googlebot, smontando l'idea diffusa di un crawler monolitico. La realtà è che Googlebot funziona come client di una piattaforma di crawling centralizzata, un'architettura che spiega comportamenti finora poco documentati e che ha implicazioni dirette su come ottimizzare per il crawl budget e gestire file di grandi dimensioni.\n\nIl punto centrale riguarda i limiti di dimensione dei file. Google conferma ufficialmente che il limite per le pagine HTML è fissato a 2MB. Questo non è un valore indicativo: superata questa soglia, Googlebot interrompe il fetch e indicizza solo la porzione scaricata fino a quel momento. Il resto della pagina viene ignorato, con conseguenze dirette su contenuti, link interni e segnali di ranking presenti oltre il cut-off.\n\nLa distinzione tra crawling e fetching diventa operativa. Il crawling è la fase di scoperta degli URL, il fetching è il download effettivo delle risorse. Googlebot può scoprire un URL senza mai scaricarlo completamente, o scaricare solo una parte se il file eccede i limiti. Questo spiega perché alcune pagine risultano indicizzate ma con contenuti incompleti o link interni non seguiti.\n\nL'architettura centralizzata significa che Googlebot non è un'entità autonoma ma un componente che interroga una piattaforma condivisa. Questo modello giustifica variazioni nel comportamento di crawl tra diverse sezioni di un sito o tra crawl consecutivi: le priorità vengono gestite a livello di piattaforma, non dal singolo user-agent. La conseguenza pratica è che ottimizzare per Googlebot significa ottimizzare per un sistema distribuito, non per un bot prevedibile.\n\nGoogle chiarisce anche come gestisce i file che superano il limite. Per l'HTML, il taglio è netto a 2MB: tutto ciò che segue viene scartato. Per altri tipi di file, come PDF o immagini, esistono limiti diversi ma meno documentati. L'articolo non fornisce una tabella completa, ma conferma che ogni tipo di risorsa ha una soglia specifica oltre la quale il fetch viene interrotto.\n\nLa gestione dei redirect e delle catene di reindirizzamento rientra in questo framework. Ogni hop in una catena di redirect consuma risorse di crawl e può contribuire al raggiungimento dei limiti di fetch. Catene lunghe o redirect verso risorse pesanti aumentano il rischio di fetch incompleti, con impatti su indicizzazione e passaggio di PageRank.\n\nL'articolo non introduce nuovi limiti, ma formalizza comportamenti già attivi. Il limite di 2MB per l'HTML è operativo da tempo, ma la conferma ufficiale elimina ambiguità e rende misurabile un parametro finora gestito per approssimazione. Per siti con pagine dinamiche, infinite scroll o contenuti caricati via JavaScript dopo il rendering iniziale, questo limite diventa un vincolo di progettazione, non solo un'indicazione di best practice.",
+        "implications": [
+          "Pagine HTML superiori a 2MB vengono troncate: contenuti, link interni e markup strutturato oltre questa soglia non vengono indicizzati. Siti con pagine lunghe o con infinite scroll server-side devono verificare la dimensione effettiva delle risposte HTML.",
+          "Il crawl budget va ottimizzato considerando l'architettura distribuita di Googlebot, non un comportamento lineare. Priorità di crawl e fetch possono variare tra sezioni dello stesso sito in base a logiche di piattaforma centralizzata.",
+          "Catene di redirect lunghe o redirect verso risorse pesanti aumentano il rischio di fetch incompleti. Ogni hop consuma risorse e può portare al superamento dei limiti, con perdita di segnali di ranking.",
+          "La distinzione tra crawling e fetching diventa operativa: un URL può essere scoperto ma non completamente scaricato. Log di server e GSC vanno analizzati incrociando richieste di crawl e dimensioni effettive delle risposte.",
+          "Siti con contenuti caricati dinamicamente via JavaScript dopo il rendering iniziale devono assicurarsi che l'HTML iniziale resti sotto i 2MB, altrimenti parte del DOM renderizzato potrebbe non essere mai visto da Googlebot."
+        ],
+        "examples": [
+          "Un e-commerce con pagine categoria che caricano centinaia di prodotti via server-side rendering genera HTML da 3-4MB. Googlebot tronca a 2MB, perdendo gli ultimi prodotti e i relativi link interni. Soluzione: implementare paginazione lato server o lazy load con URL separati per blocchi di prodotti, mantenendo l'HTML iniziale sotto soglia.",
+          "Un blog con infinite scroll implementato lato server concatena decine di post in un'unica risposta HTML. Se la pagina supera 2MB, i post in fondo non vengono indicizzati e i link interni verso articoli correlati vengono ignorati. Evitare: concatenare contenuti illimitati in un'unica risposta. Preferire paginazione canonica o infinite scroll client-side con API separate.",
+          "Un sito di news con catene di redirect da URL brevi a URL canonici lunghi, passando per redirect geografici e A/B test, accumula 4-5 hop. Se l'HTML finale è vicino a 2MB, il fetch può essere interrotto prima del completamento. Caso reale: ridurre la catena a massimo 2 hop e monitorare i log per verificare che Googlebot completi il fetch dell'HTML finale."
+        ],
+        "testing_steps": [
+          "Apri Chrome DevTools → Network, carica le pagine principali del sito e ordina per dimensione. Identifica risposte HTML superiori a 2MB.",
+          "Esporta i log di server degli ultimi 30 giorni, filtra per user-agent Googlebot e incrocia URL richiesti con dimensioni delle risposte inviate. Cerca pattern di fetch incompleti o timeout.",
+          "Usa uno script per calcolare la dimensione dell'HTML grezzo (prima del rendering JavaScript) delle pagine strategiche. Confronta con il limite di 2MB e verifica se contenuti critici cadono oltre la soglia.",
+          "In Google Search Console → Copertura, filtra per pagine indicizzate e confronta con la sitemap. Identifica URL scoperti ma non completamente indicizzati, poi verifica la dimensione dell'HTML di quelle pagine.",
+          "Testa le catene di redirect con curl -I -L [URL] e conta gli hop. Se superiori a 2, riduci la catena e verifica che l'HTML finale sia sotto 2MB.",
+          "Configura un alert su log di server per risposte HTML > 1.8MB inviate a Googlebot. Questo margine di sicurezza permette di intervenire prima che il limite venga superato."
+        ],
+        "faqs": [
+          {
+            "question": "Il limite di 2MB si applica all'HTML grezzo o all'HTML dopo il rendering JavaScript?",
+            "answer": "Il limite si applica all'HTML grezzo restituito dal server nella risposta HTTP iniziale. Il rendering JavaScript avviene dopo il fetch: se l'HTML iniziale supera 2MB, Googlebot tronca prima di avviare il rendering. Contenuti iniettati via JS dopo il fetch non contribuiscono al calcolo del limite, ma se l'HTML base è già troncato, il rendering parte da una base incompleta."
+          },
+          {
+            "question": "Se una pagina supera 2MB, Google indicizza almeno i primi 2MB o scarta l'intera pagina?",
+            "answer": "Google indicizza i primi 2MB scaricati. Il fetch viene interrotto alla soglia, ma la porzione ricevuta viene processata normalmente. Contenuti, link interni e markup strutturato presenti nei primi 2MB vengono considerati; tutto ciò che segue viene ignorato. Non c'è penalizzazione, ma perdita di segnali."
+          },
+          {
+            "question": "I limiti di dimensione si applicano anche a Googlebot per smartphone o solo alla versione desktop?",
+            "answer": "I limiti si applicano a tutti i client Googlebot, inclusa la versione mobile-first. Con l'indicizzazione mobile-first attiva per la maggior parte dei siti, il limite di 2MB va verificato sull'HTML servito alla versione mobile di Googlebot, che è quella usata per l'indicizzazione primaria."
+          },
+          {
+            "question": "Catene di redirect contribuiscono al calcolo dei 2MB o il limite si applica solo alla risorsa finale?",
+            "answer": "Il limite di 2MB si applica alla risorsa finale dopo tutti i redirect. Ogni redirect consuma però risorse di crawl e tempo di fetch: catene lunghe aumentano il rischio di timeout o interruzioni prima di raggiungere la risorsa finale. Il limite non è cumulativo tra gli hop, ma l'efficienza del crawl peggiora."
+          },
+          {
+            "question": "Esistono limiti documentati per altri tipi di file come PDF, immagini o CSS?",
+            "answer": "Google conferma che ogni tipo di risorsa ha limiti specifici, ma non pubblica una tabella completa. Per i PDF, il limite è noto essere intorno ai 100MB, ma il fetch può interrompersi prima per timeout. Per CSS e JavaScript, i limiti sono meno stringenti dell'HTML, ma file superiori a 5-10MB rischiano fetch incompleti."
+          }
+        ],
+        "editorial_commentary": "La formalizzazione del limite di 2MB per l'HTML non è una novità tecnica, ma un cambio di paradigma comunicativo. Google ha sempre evitato di pubblicare soglie precise per non incentivare ottimizzazioni al limite; ora le rende esplicite perché l'architettura distribuita del crawling rende impossibile nascondere questi vincoli. Chi ha costruito pagine infinite o concatenato contenuti illimitati lato server deve intervenire subito: il rischio non è una penalizzazione, ma la perdita silenziosa di segnali di ranking e link interni.\n\nL'architettura centralizzata di Googlebot spiega comportamenti finora attribuiti a bug o inconsistenze. Variazioni di crawl tra sezioni di un sito, fetch incompleti su pagine strategiche, link interni ignorati: sono conseguenze di un sistema distribuito che ottimizza risorse a livello di piattaforma, non di singolo URL. Ottimizzare per Googlebot significa ora progettare per un sistema che priorizza, tronca e distribuisce il carico in modo non lineare.\n\nSe gestisci siti con pagine dinamiche pesanti, infinite scroll server-side o catene di redirect complesse, questo non è il momento di aspettare segnali di calo in GSC. Il limite è attivo, il comportamento è documentato: misura, testa, intervieni. Chi ignora questi vincoli perde visibilità senza accorgersene, perché il troncamento è silenzioso e i log di server non mostrano errori.",
+        "premium_model_used": "anthropic/claude-sonnet-4-5",
+        "cost_eur": 0.04416552
+      }
+    },
+    {
+      "id": "item_2026-03-31_gsc_9992B8",
+      "title_original": "New Location for the Google Crawlers' IP Range Files",
+      "title_it": "Nuova posizione per i file degli intervalli IP dei crawler di Google",
+      "summary_it": "Google ha annunciato lo spostamento dei file JSON contenenti gli intervalli IP dei suoi crawler. La nuova posizione è developers.google.com/crawling/ipranges/, più generica rispetto alla precedente. I file rimarranno disponibili nella vecchia directory (/search/apis/ipranges/) per un periodo transitorio di sei mesi, durante il quale è consigliabile aggiornare i sistemi.",
+      "url": "https://developers.google.com/search/blog/2026/03/crawler-ip-ranges",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "google_crawler",
+        "ip_address",
+        "technical_update",
+        "google_search_central"
+      ],
+      "importance": 5,
+      "published_at": "2026-03-31T05:00:00Z",
+      "fetched_at": "2026-03-31T05:00:00Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:30b0977bfcd8bd74",
+      "deep_analysis": {
+        "detailed_description": "Google ha spostato la posizione dei file JSON che contengono gli intervalli IP dei suoi crawler. La nuova directory è developers.google.com/crawling/ipranges/, una collocazione più generica rispetto alla precedente (/search/apis/ipranges/). Il cambiamento riflette una riorganizzazione della documentazione tecnica di Google, con un periodo di transizione di sei mesi durante il quale entrambe le posizioni rimarranno attive.\n\nChi utilizza questi file per configurare firewall, sistemi di log analysis, o whitelist di accesso deve aggiornare i riferimenti nei propri script e configurazioni. Gli intervalli IP sono utilizzati per verificare che le richieste provengano effettivamente dai bot di Google e non da user agent falsificati. Questo è particolarmente rilevante per chi gestisce infrastrutture complesse, CDN personalizzate, o sistemi di rate limiting basati su IP.\n\nLa nuova posizione suggerisce che Google sta consolidando la documentazione sui crawler sotto un ombrello più ampio, non limitato alla Search. Questo potrebbe indicare una futura unificazione della gestione degli IP per crawler di diversi servizi Google (Search, News, AdsBot, ecc.), anche se al momento non ci sono conferme ufficiali in tal senso.\n\nIl periodo di sei mesi è una finestra ragionevole per l'aggiornamento, ma chi gestisce ambienti enterprise con processi di change management complessi dovrebbe pianificare l'intervento subito. Dopo la scadenza, i file nella vecchia posizione potrebbero non essere più aggiornati, causando potenziali blocchi dei crawler legittimi o, peggio, l'accettazione di richieste da IP non verificati.\n\nL'impatto operativo è limitato a chi ha implementato verifiche IP-based. Chi si affida esclusivamente alla reverse DNS lookup (il metodo raccomandato da Google per verificare Googlebot) non è toccato da questo cambiamento. Tuttavia, molte configurazioni enterprise utilizzano gli intervalli IP per ottimizzazioni di caching o bypass di WAF, rendendo l'aggiornamento necessario.\n\nLa comunicazione è arrivata tramite il Search Central Blog, ma la natura del cambiamento è infrastrutturale e non impatta direttamente il crawling o l'indicizzazione. Si tratta di manutenzione tecnica, non di un update algoritmico o di policy. Chi non utilizza questi file può ignorare completamente la notizia.",
+        "implications": [
+          "Se hai script automatizzati che scaricano periodicamente i file JSON degli IP di Googlebot, devi aggiornare l'URL di riferimento entro sei mesi per evitare interruzioni.",
+          "Le configurazioni di firewall, WAF o CDN che usano whitelist basate sugli intervalli IP di Google devono essere modificate per puntare alla nuova posizione, altrimenti rischiano di bloccare i crawler dopo la scadenza del periodo transitorio.",
+          "Chi utilizza il metodo reverse DNS per verificare Googlebot non è impattato: questo resta il metodo raccomandato e non richiede alcun aggiornamento.",
+          "La nuova posizione generica (crawling invece di search/apis) potrebbe preludere a una futura unificazione degli intervalli IP per tutti i crawler Google, semplificando la gestione per chi lavora con più servizi (Search, News, AdsBot).",
+          "Ambienti enterprise con processi di change management lunghi devono pianificare l'aggiornamento immediatamente, anche se la deadline è a sei mesi: i tempi di approvazione e deploy potrebbero essere stretti."
+        ],
+        "examples": [
+          "Un e-commerce con CDN personalizzata utilizza gli intervalli IP di Googlebot per bypassare il rate limiting e servire contenuti non cachati ai crawler. L'amministratore di sistema deve aggiornare la configurazione Nginx o Cloudflare Workers per scaricare i file dalla nuova posizione, testare in staging che i crawler vengano ancora riconosciuti correttamente, e deployare in produzione entro il periodo transitorio.",
+          "Evitare di fare affidamento esclusivo sugli intervalli IP per verificare Googlebot: un attaccante può comunque falsificare richieste da IP pubblici. Il metodo corretto resta la reverse DNS lookup (verificare che l'hostname termini con .google.com o .googlebot.com), come documentato da Google. Gli intervalli IP sono utili per ottimizzazioni, non per sicurezza primaria.",
+          "Un'agenzia che gestisce decine di siti per clienti diversi ha uno script centralizzato che aggiorna automaticamente le whitelist IP su tutti i server. Modificare una sola volta l'URL nello script centrale permette di propagare il cambiamento a tutti i siti gestiti, evitando interventi manuali ripetuti e riducendo il rischio di dimenticanze."
+        ],
+        "testing_steps": [
+          "Identifica tutti i sistemi che utilizzano i file JSON degli intervalli IP di Google: firewall, WAF, CDN, script di log analysis, configurazioni Nginx/Apache.",
+          "Verifica l'URL attuale utilizzato nei tuoi script o configurazioni: se contiene '/search/apis/ipranges/', annotalo per l'aggiornamento.",
+          "Scarica manualmente i file dalla nuova posizione (developers.google.com/crawling/ipranges/) e confronta il contenuto con la vecchia posizione per verificare che siano identici durante il periodo transitorio.",
+          "Aggiorna gli URL nei tuoi script e configurazioni puntando alla nuova directory, testa in ambiente di staging che i crawler vengano ancora riconosciuti correttamente.",
+          "Monitora i log di accesso per verificare che nessuna richiesta legittima di Googlebot venga bloccata dopo l'aggiornamento.",
+          "Imposta un reminder a 5 mesi dalla data di annuncio (31 marzo 2026) per verificare che tutti i sistemi siano stati aggiornati prima della scadenza del periodo transitorio."
+        ],
+        "faqs": [
+          {
+            "question": "Devo aggiornare subito o posso aspettare?",
+            "answer": "Hai sei mesi di tempo, ma se gestisci infrastrutture enterprise con processi di approvazione lunghi, conviene pianificare l'intervento subito. Per configurazioni semplici o script personali, puoi aspettare, ma non oltre il quinto mese per avere margine di sicurezza. Chi non usa questi file può ignorare completamente l'aggiornamento."
+          },
+          {
+            "question": "Cosa succede se non aggiorno entro sei mesi?",
+            "answer": "I file nella vecchia posizione potrebbero non essere più aggiornati o rimossi del tutto. Se i tuoi sistemi si affidano a quegli URL, potresti bloccare crawler legittimi di Google (impattando crawl budget e indicizzazione) oppure continuare ad accettare richieste da IP obsoleti, vanificando le tue verifiche di sicurezza."
+          },
+          {
+            "question": "Gli intervalli IP cambiano spesso?",
+            "answer": "Google aggiorna periodicamente gli intervalli IP dei suoi crawler per espandere l'infrastruttura o modificare i data center. Per questo motivo, chi usa questi file dovrebbe scaricarli automaticamente con una certa frequenza (settimanale o mensile), non fare affidamento su una copia statica scaricata una volta sola."
+          },
+          {
+            "question": "È meglio usare gli IP o la reverse DNS lookup?",
+            "answer": "Google raccomanda la reverse DNS lookup come metodo primario di verifica: è più sicuro e non richiede aggiornamenti manuali. Gli intervalli IP sono utili per ottimizzazioni (bypass di rate limiting, caching differenziato), ma non dovrebbero essere l'unico meccanismo di autenticazione dei crawler."
+          }
+        ],
+        "editorial_commentary": "Questa è manutenzione infrastrutturale pura, non un cambio di strategia di crawling. L'impatto è limitato a chi ha implementato verifiche o ottimizzazioni basate su IP, una minoranza dei SEO. Chi lavora su siti enterprise o gestisce infrastrutture complesse deve agire, gli altri possono tranquillamente ignorare la notizia.\n\nLa scelta di una posizione più generica (/crawling/ invece di /search/apis/) è interessante: potrebbe segnalare una futura unificazione della gestione IP per tutti i crawler Google, semplificando la vita a chi deve gestire AdsBot, News crawler e altri bot contemporaneamente. Per ora è speculazione, ma vale la pena tenere d'occhio eventuali annunci successivi.\n\nSe hai configurazioni che dipendono da questi file, non procrastinare: sei mesi sembrano tanti, ma tra ferie, priorità concorrenti e processi di approvazione, il tempo vola. Meglio chiudere la pratica nei prossimi due mesi e dimenticarsene, piuttosto che ritrovarsi a fine estate con un'emergenza evitabile.",
+        "premium_model_used": "anthropic/claude-sonnet-4-5",
+        "cost_eur": 0.03667212
+      }
+    }
+  ],
+  "doc_watcher_status": [],
+  "failed_sources": []
+}
