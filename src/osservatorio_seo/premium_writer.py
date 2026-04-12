@@ -286,9 +286,18 @@ essere valido, parsabile, senza codefence markdown, senza testo extra.
 
 
 _MONTH_NAMES_IT = {
-    1: "gennaio", 2: "febbraio", 3: "marzo", 4: "aprile",
-    5: "maggio", 6: "giugno", 7: "luglio", 8: "agosto",
-    9: "settembre", 10: "ottobre", 11: "novembre", 12: "dicembre",
+    1: "gennaio",
+    2: "febbraio",
+    3: "marzo",
+    4: "aprile",
+    5: "maggio",
+    6: "giugno",
+    7: "luglio",
+    8: "agosto",
+    9: "settembre",
+    10: "ottobre",
+    11: "novembre",
+    12: "dicembre",
 }
 
 
@@ -425,8 +434,7 @@ class PremiumWriter:
         parsed = result.parsed
 
         takeaways = [
-            ReportTakeaway(title=t["title"], body=t["body"])
-            for t in parsed.get("takeaways", [])
+            ReportTakeaway(title=t["title"], body=t["body"]) for t in parsed.get("takeaways", [])
         ]
 
         hero_mover = self._extract_hero_mover(snapshots)
@@ -452,8 +460,12 @@ class PremiumWriter:
         blocks = []
         for s in snapshots:
             ai_top = ", ".join(f"{d.domain} (#{d.rank})" for d in s.ai_top10_current[:5])
-            movers_up = ", ".join(f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.up[:3])
-            movers_down = ", ".join(f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.down[:3])
+            movers_up = ", ".join(
+                f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.up[:3]
+            )
+            movers_down = ", ".join(
+                f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.down[:3]
+            )
             block = (
                 f"Settimana {s.year}-W{s.week:02d} ({s.generated_at.date()}):\n"
                 f"  Top 5 AI: {ai_top or '\u2014'}\n"

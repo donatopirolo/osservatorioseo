@@ -972,7 +972,8 @@ class Publisher:
         snapshot = TrackerSnapshot.model_validate_json(latest.read_text(encoding="utf-8"))
 
         chart_1 = tracker_charts.render_ai_vs_internet_chart(
-            ai=snapshot.ai_index_24mo, internet=snapshot.internet_index_24mo,
+            ai=snapshot.ai_index_24mo,
+            internet=snapshot.internet_index_24mo,
         )
         chart_2 = tracker_charts.render_market_composition_chart(snapshot.market_composition_12mo)
         chart_3 = tracker_charts.render_bump_chart(snapshot.bump_chart_6mo)
@@ -1059,9 +1060,7 @@ class Publisher:
 
         target_dir = site_dir / "tracker"
         target_dir.mkdir(parents=True, exist_ok=True)
-        (target_dir / "index.html").write_text(
-            renderer.render_tracker(ctx), encoding="utf-8"
-        )
+        (target_dir / "index.html").write_text(renderer.render_tracker(ctx), encoding="utf-8")
 
     def _ssg_tracker_reports(
         self,
