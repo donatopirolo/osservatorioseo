@@ -1,0 +1,9 @@
+name = "osservatorioseo-cron"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[triggers]
+# 05:00 UTC = 07:00 Europe/Rome (CEST, ora legale)
+# 06:00 UTC = 07:00 Europe/Rome (CET, ora solare)
+# Lo step "Check local time" nel workflow GitHub skippa il run sbagliato.
+crons = ["0 5 * * *", "0 6 * * *"]
