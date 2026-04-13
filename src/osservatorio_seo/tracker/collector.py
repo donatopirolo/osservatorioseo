@@ -342,10 +342,7 @@ class TrackerCollector:
             if not keywords:
                 self._warnings.append(f"{label}: no data returned")
                 return TrendsTimeseries()
-            points = [
-                TrendsPoint(date=p["date"], values=p["values"])
-                for p in raw_points
-            ]
+            points = [TrendsPoint(date=p["date"], values=p["values"]) for p in raw_points]
             return TrendsTimeseries(keywords=keywords, points=points, averages=averages)
         except Exception as exc:  # noqa: BLE001
             msg = f"{label}: {exc}"

@@ -77,12 +77,20 @@ class TrendsClient:
         # Rescale points: for each date, scale extra values by (anchor_b1 / anchor_b2)
         pts2_by_date: dict[str, dict[str, int]] = {}
         for p in pts2:
-            key = p["date"].strftime("%Y-%m-%d") if isinstance(p["date"], datetime) else str(p["date"])
+            key = (
+                p["date"].strftime("%Y-%m-%d")
+                if isinstance(p["date"], datetime)
+                else str(p["date"])
+            )
             pts2_by_date[key] = p["values"]
 
         merged_pts: list[dict[str, Any]] = []
         for p in pts1:
-            key = p["date"].strftime("%Y-%m-%d") if isinstance(p["date"], datetime) else str(p["date"])
+            key = (
+                p["date"].strftime("%Y-%m-%d")
+                if isinstance(p["date"], datetime)
+                else str(p["date"])
+            )
             merged_values = dict(p["values"])
             b2_vals = pts2_by_date.get(key, {})
             anchor_b1 = merged_values.get(anchor, 0)

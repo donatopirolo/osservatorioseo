@@ -1075,9 +1075,7 @@ class Publisher:
         # AI top 3 from Google Trends averages (IT)
         ai_top3: list[dict[str, Any]] = []
         if snapshot.trends_it.averages:
-            ranked = sorted(
-                snapshot.trends_it.averages.items(), key=lambda x: x[1], reverse=True
-            )
+            ranked = sorted(snapshot.trends_it.averages.items(), key=lambda x: x[1], reverse=True)
             for name, avg in ranked[:3]:
                 ai_top3.append({"name": name, "avg": avg})
 

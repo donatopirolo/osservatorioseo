@@ -9,9 +9,7 @@ from osservatorio_seo.tracker.trends_client import TrendsClient
 def _make_response(items, status_code=20000):
     mock = MagicMock()
     mock.raise_for_status = MagicMock()
-    mock.json.return_value = {
-        "tasks": [{"status_code": status_code, "result": [{"items": items}]}]
-    }
+    mock.json.return_value = {"tasks": [{"status_code": status_code, "result": [{"items": items}]}]}
     return mock
 
 
@@ -32,7 +30,8 @@ class TestTrendsClient:
         with patch("osservatorio_seo.tracker.trends_client.httpx.post", return_value=resp):
             client = TrendsClient(api_key="dGVzdDp0ZXN0")
             keywords, points, averages = client.fetch_interest(
-                keywords=["ChatGPT", "Claude AI"], geo="IT",
+                keywords=["ChatGPT", "Claude AI"],
+                geo="IT",
             )
 
         assert keywords == ["ChatGPT", "Claude AI"]
@@ -74,13 +73,19 @@ class TestTrendsClient:
         assert "Grok" in TrendsClient.DEFAULT_KEYWORDS
 
     def test_global_fetch_has_no_location(self):
-        resp = _make_response([{
-            "type": "google_trends_graph",
-            "data": [{"date_from": "2026-04-06", "values": [80]}],
-            "averages": [80],
-        }])
+        resp = _make_response(
+            [
+                {
+                    "type": "google_trends_graph",
+                    "data": [{"date_from": "2026-04-06", "values": [80]}],
+                    "averages": [80],
+                }
+            ]
+        )
 
-        with patch("osservatorio_seo.tracker.trends_client.httpx.post", return_value=resp) as mock_post:
+        with patch(
+            "osservatorio_seo.tracker.trends_client.httpx.post", return_value=resp
+        ) as mock_post:
             client = TrendsClient(api_key="dGVzdDp0ZXN0")
             client.fetch_interest(keywords=["ChatGPT"], geo="")
 
