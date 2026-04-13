@@ -49,7 +49,7 @@ def test_render_homepage_includes_top10_and_categories() -> None:
         {
             "page_title": "Home",
             "page_description": "Daily SEO/AI news",
-            "canonical_url": "https://osservatorioseo.pages.dev/",
+            "canonical_url": "https://www.osservatorioseo.com/",
             "active_nav": "today",
             "noindex": True,
             "meta_line": "SYSTEM STATUS: OPTIMAL",
@@ -63,7 +63,7 @@ def test_render_homepage_includes_top10_and_categories() -> None:
                 }
             ],
             "failed_sources": [],
-            "breadcrumbs": [{"name": "Home", "url": "https://osservatorioseo.pages.dev/"}],
+            "breadcrumbs": [{"name": "Home", "url": "https://www.osservatorioseo.com/"}],
         }
     )
     assert "TOP 10 DEL GIORNO" in html
@@ -79,7 +79,7 @@ def test_render_snapshot_has_date_in_titles() -> None:
         {
             "page_title": "Snapshot",
             "page_description": "d",
-            "canonical_url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/",
+            "canonical_url": "https://www.osservatorioseo.com/archivio/2026/04/11/",
             "active_nav": "archive",
             "noindex": True,
             "meta_line": "SNAPSHOT 2026-04-11",
@@ -112,7 +112,7 @@ def test_render_article_has_jsonld_and_breadcrumb() -> None:
         {
             "page_title": "Google rilascia il core update — Osservatorio SEO",
             "page_description": "Google ha annunciato oggi il rilascio.",
-            "canonical_url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/google-rilascia-core-update/",
+            "canonical_url": "https://www.osservatorioseo.com/archivio/2026/04/11/google-rilascia-core-update/",
             "active_nav": "archive",
             "noindex": True,
             "og_type": "article",
@@ -124,31 +124,31 @@ def test_render_article_has_jsonld_and_breadcrumb() -> None:
             "category_path": "/categoria/google-updates/",
             "category_label": "Google Updates",
             "published_iso": "2026-04-11T07:00:00+00:00",
-            "article_url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/google-rilascia-core-update/",
+            "article_url": "https://www.osservatorioseo.com/archivio/2026/04/11/google-rilascia-core-update/",
             "breadcrumbs": [
                 {
                     "name": "Home",
-                    "url": "https://osservatorioseo.pages.dev/",
+                    "url": "https://www.osservatorioseo.com/",
                     "site_path": "/",
                 },
                 {
                     "name": "Archivio",
-                    "url": "https://osservatorioseo.pages.dev/archivio/",
+                    "url": "https://www.osservatorioseo.com/archivio/",
                     "site_path": "/archivio/",
                 },
                 {
                     "name": "2026",
-                    "url": "https://osservatorioseo.pages.dev/archivio/2026/",
+                    "url": "https://www.osservatorioseo.com/archivio/2026/",
                     "site_path": "/archivio/2026/",
                 },
                 {
                     "name": "11 aprile",
-                    "url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/",
+                    "url": "https://www.osservatorioseo.com/archivio/2026/04/11/",
                     "site_path": "/archivio/2026/04/11/",
                 },
                 {
                     "name": "Google rilascia il core update",
-                    "url": "https://osservatorioseo.pages.dev/archivio/2026/04/11/google-rilascia-core-update/",
+                    "url": "https://www.osservatorioseo.com/archivio/2026/04/11/google-rilascia-core-update/",
                     "site_path": "",
                 },
             ],

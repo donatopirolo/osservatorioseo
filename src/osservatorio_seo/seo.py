@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from osservatorio_seo.models import Item
 
-SITE_URL = "https://osservatorioseo.pages.dev"
+SITE_URL = "https://www.osservatorioseo.com"
 
 
 def year_path(year: int) -> str:

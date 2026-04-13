@@ -1228,7 +1228,7 @@ class Publisher:
         (site_dir / "feed.xml").write_text(
             renderer.render_feed_xml(
                 {
-                    "site_url": "https://osservatorioseo.pages.dev",
+                    "site_url": "https://www.osservatorioseo.com",
                     "updated": feed.generated_at.isoformat(),
                     "entries": entries,
                 }
@@ -1240,7 +1240,7 @@ class Publisher:
             renderer.render_robots_txt(
                 {
                     "allow_indexing": allow_indexing,
-                    "site_url": "https://osservatorioseo.pages.dev",
+                    "site_url": "https://www.osservatorioseo.com",
                 }
             ),
             encoding="utf-8",

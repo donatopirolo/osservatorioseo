@@ -50,7 +50,7 @@ def main() -> None:
             doc_pages,
             templates_dir=templates_dir,
             site_dir=site_dir,
-            allow_indexing=False,
+            allow_indexing=True,
         )
 
     # Render finale con il feed corrente (sovrascrive homepage + sitemap con
@@ -66,7 +66,7 @@ def main() -> None:
             doc_pages,
             templates_dir=templates_dir,
             site_dir=site_dir,
-            allow_indexing=False,
+            allow_indexing=True,
         )
 
     print("Done.")
