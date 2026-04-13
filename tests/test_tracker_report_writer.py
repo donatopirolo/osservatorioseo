@@ -11,12 +11,9 @@ import pytest
 
 from osservatorio_seo.premium_writer import PremiumWriter, _RawResult
 from osservatorio_seo.tracker.models import (
-    BumpChartData,
-    DomainMovement,
-    DomainRank,
-    IndexTimeseries,
+    AIPlatformEntry,
     SnapshotMetadata,
-    TopMovers,
+    TopDomainEntry,
     TrackerMonthlyReport,
     TrackerSnapshot,
 )
@@ -27,16 +24,30 @@ def _stub_snapshot(week: int) -> TrackerSnapshot:
         year=2026,
         week=week,
         generated_at=datetime(2026, 4, 1 + week, tzinfo=UTC),
-        ai_index_24mo=IndexTimeseries(label="ai"),
-        internet_index_24mo=IndexTimeseries(label="internet"),
-        bump_chart_6mo=BumpChartData(),
-        top_movers_30d=TopMovers(
-            up=[DomainMovement(domain="claude.ai", delta_pct=42.5)],
-            down=[DomainMovement(domain="perplexity.ai", delta_pct=-8.1)],
-        ),
-        ai_top10_current=[DomainRank(domain="chat.openai.com", rank=1)],
-        search_top5_current=[DomainRank(domain="google.com", rank=1)],
-        metadata=SnapshotMetadata(radar_calls=5, pages_analytics_calls=1),
+        top10_it=[
+            TopDomainEntry(rank=1, domain="google.com"),
+            TopDomainEntry(rank=2, domain="youtube.com"),
+        ],
+        top10_global=[
+            TopDomainEntry(rank=1, domain="google.com"),
+        ],
+        ai_platforms_it=[
+            AIPlatformEntry(
+                domain="claude.ai",
+                label="Claude",
+                type="chatbot",
+                rank=1,
+                bucket="top",
+            ),
+            AIPlatformEntry(
+                domain="chat.openai.com",
+                label="ChatGPT",
+                type="chatbot",
+                rank=2,
+                bucket="top",
+            ),
+        ],
+        metadata=SnapshotMetadata(radar_calls=5),
     )
 
 
@@ -46,8 +57,8 @@ async def test_write_tracker_report_returns_parsed_model():
     writer = PremiumWriter(api_key="test")
 
     fake_response = {
-        "title_it": "Claude +42% a marzo 2026",
-        "subtitle_it": "Il mover del mese",
+        "title_it": "Claude al vertice a marzo 2026",
+        "subtitle_it": "Piattaforma AI più rilevante in Italia",
         "executive_summary": ["Punto 1", "Punto 2", "Punto 3"],
         "narrative": "Paragrafo 1.\n\nParagrafo 2.",
         "takeaways": [{"title": f"T{i}", "body": "body"} for i in range(5)],

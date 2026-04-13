@@ -459,32 +459,29 @@ class PremiumWriter:
     def _format_snapshots_for_prompt(snapshots: list[TrackerSnapshot]) -> str:
         blocks = []
         for s in snapshots:
-            ai_top = ", ".join(f"{d.domain} (#{d.rank})" for d in s.ai_top10_current[:5])
-            movers_up = ", ".join(
-                f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.up[:3]
-            )
-            movers_down = ", ".join(
-                f"{m.domain} {m.delta_pct:+.1f}%" for m in s.top_movers_30d.down[:3]
-            )
+            # v2: use top10_it for top domains, ai_platforms_it for AI players
+            top_it = ", ".join(f"{d.domain} (#{d.rank})" for d in s.top10_it[:5])
+            ai_it = ", ".join(f"{p.domain}" for p in s.ai_platforms_it[:5])
             block = (
                 f"Settimana {s.year}-W{s.week:02d} ({s.generated_at.date()}):\n"
-                f"  Top 5 AI: {ai_top or '\u2014'}\n"
-                f"  Movers saliti: {movers_up or '\u2014'}\n"
-                f"  Movers scesi: {movers_down or '\u2014'}\n"
+                f"  Top 5 IT: {top_it or '\u2014'}\n"
+                f"  AI platforms IT: {ai_it or '\u2014'}\n"
             )
             blocks.append(block)
         return "\n".join(blocks)
 
     @staticmethod
     def _extract_hero_mover(snapshots: list[TrackerSnapshot]) -> str:
-        best_domain = ""
-        best_abs = 0.0
+        # v2: return the top-ranked AI platform domain as the hero
         for s in snapshots:
-            for m in (*s.top_movers_30d.up, *s.top_movers_30d.down):
-                if abs(m.delta_pct) > best_abs:
-                    best_abs = abs(m.delta_pct)
-                    best_domain = m.domain
-        return best_domain
+            if s.ai_platforms_it:
+                ranked = sorted(
+                    (p for p in s.ai_platforms_it if p.rank is not None),
+                    key=lambda p: p.rank,  # type: ignore[arg-type]
+                )
+                if ranked:
+                    return ranked[0].domain
+        return ""
 
     async def _call_with_fallback(self, prompt: str) -> _RawResult:
         models = [self._primary, *self._fallbacks]
