@@ -13,6 +13,18 @@ class TimeseriesPoint(BaseModel):
     value: float
 
 
+class TrendsPoint(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    date: datetime
+    values: dict[str, int]
+
+
+class TrendsTimeseries(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    keywords: list[str] = Field(default_factory=list)
+    points: list[TrendsPoint] = Field(default_factory=list)
+
+
 class TopDomainEntry(BaseModel):
     model_config = ConfigDict(extra="forbid")
     rank: int = Field(ge=1)
@@ -108,6 +120,8 @@ class TrackerSnapshot(BaseModel):
     top10_global: list[TopDomainEntry] = Field(default_factory=list)
     ai_platforms_it: list[AIPlatformEntry] = Field(default_factory=list)
     ai_platforms_global: list[AIPlatformEntry] = Field(default_factory=list)
+    trends_it: TrendsTimeseries = Field(default_factory=TrendsTimeseries)
+    trends_global: TrendsTimeseries = Field(default_factory=TrendsTimeseries)
     bot_human_it: BotHumanTimeseries = Field(default_factory=BotHumanTimeseries)
     bot_human_global: BotHumanTimeseries = Field(default_factory=BotHumanTimeseries)
     ai_bots_ua_it: AIBotsTimeseries = Field(default_factory=AIBotsTimeseries)

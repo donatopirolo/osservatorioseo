@@ -22,6 +22,8 @@ from osservatorio_seo.tracker.models import (
     TopDomainEntry,
     TrackerMonthlyReport,
     TrackerSnapshot,
+    TrendsPoint,
+    TrendsTimeseries,
 )
 
 NOW = datetime(2026, 4, 13, 12, 0, tzinfo=UTC)
@@ -360,3 +362,70 @@ def test_tracker_snapshot_v3_with_device_type_and_os():
     assert restored.os_it[0].os == "ANDROID"
     assert restored.os_global[-1].os == "other"
     assert restored.metadata.radar_calls == 12
+
+
+# ---------------------------------------------------------------------------
+# TrendsPoint / TrendsTimeseries
+# ---------------------------------------------------------------------------
+
+
+class TestTrendsModels:
+    def test_trends_point_roundtrip(self):
+        p = TrendsPoint(
+            date=datetime(2026, 4, 6, tzinfo=UTC),
+            values={"ChatGPT": 100, "Claude AI": 12, "Perplexity": 8},
+        )
+        restored = TrendsPoint.model_validate_json(p.model_dump_json())
+        assert restored.values["ChatGPT"] == 100
+        assert restored.values["Claude AI"] == 12
+
+    def test_trends_timeseries_defaults_empty(self):
+        ts = TrendsTimeseries()
+        assert ts.keywords == []
+        assert ts.points == []
+
+    def test_trends_timeseries_roundtrip(self):
+        ts = TrendsTimeseries(
+            keywords=["ChatGPT", "Claude AI"],
+            points=[
+                TrendsPoint(
+                    date=datetime(2026, 4, 6, tzinfo=UTC),
+                    values={"ChatGPT": 100, "Claude AI": 12},
+                ),
+            ],
+        )
+        restored = TrendsTimeseries.model_validate_json(ts.model_dump_json())
+        assert restored.keywords == ["ChatGPT", "Claude AI"]
+        assert len(restored.points) == 1
+        assert restored.points[0].values["ChatGPT"] == 100
+
+    def test_snapshot_has_trends_fields_with_defaults(self):
+        snap = TrackerSnapshot(
+            year=2026,
+            week=16,
+            generated_at=datetime(2026, 4, 13, tzinfo=UTC),
+            metadata=SnapshotMetadata(),
+        )
+        assert isinstance(snap.trends_it, TrendsTimeseries)
+        assert snap.trends_it.keywords == []
+        assert isinstance(snap.trends_global, TrendsTimeseries)
+
+    def test_snapshot_with_trends_roundtrip(self):
+        snap = TrackerSnapshot(
+            year=2026,
+            week=16,
+            generated_at=datetime(2026, 4, 13, tzinfo=UTC),
+            metadata=SnapshotMetadata(),
+            trends_it=TrendsTimeseries(
+                keywords=["ChatGPT"],
+                points=[
+                    TrendsPoint(
+                        date=datetime(2026, 4, 6, tzinfo=UTC),
+                        values={"ChatGPT": 100},
+                    ),
+                ],
+            ),
+        )
+        restored = TrackerSnapshot.model_validate_json(snap.model_dump_json())
+        assert restored.trends_it.keywords == ["ChatGPT"]
+        assert restored.trends_it.points[0].values["ChatGPT"] == 100
