@@ -14,125 +14,373 @@
 {# ── Header ── #}
 <section class="max-w-4xl mx-auto mb-8">
   <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; STATO DELLA RICERCA</p>
-  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-white">{{ page_headline }}</h1>
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-white">Stato della ricerca in Italia</h1>
   <p class="text-sm text-outline font-mono">
     Ultimo aggiornamento: <span class="text-primary-container">{{ updated_label }}</span> · Fonte: Cloudflare Radar
   </p>
 </section>
 
-{# ── Toggle Italia / Mondo ── #}
-<section class="max-w-4xl mx-auto mb-10">
-  <div class="flex gap-3 font-mono text-sm" id="view-toggle">
-    <button data-view-toggle="it"
-            class="active px-4 py-1.5 border border-primary-container text-primary-container uppercase tracking-wider transition-colors">
-      Italia
-    </button>
-    <button data-view-toggle="global"
-            class="px-4 py-1.5 border border-outline-variant text-outline uppercase tracking-wider transition-colors">
-      Mondo
-    </button>
-  </div>
+{# ── Hero ── #}
+<div id="hero" class="max-w-4xl mx-auto mb-8 text-center"></div>
+
+{# ── KPI Cards ── #}
+<div id="kpi-cards" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12"></div>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 1 — Quali AI usano gli italiani?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 1</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Quali AI usano gli italiani?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>Per fare SEO nell'era dell'AI, serve sapere dove vanno gli utenti. Per 25 anni la risposta &egrave; stata "Google". Se gli utenti si spostano verso piattaforme AI per cercare informazioni, un SEO deve saperlo per studiare come apparire su quelle piattaforme. Inoltre, confrontando Italia e Mondo si possono anticipare i trend: i mercati anglofoni adottano prima, l'Italia segue di qualche mese.</p>
+    </div>
+  </details>
+
+  <div id="chart-s1" class="bg-surface-container-lowest p-4 border border-outline-variant mb-4"></div>
+  <div id="table-s1" class="bg-surface-container-lowest p-4 border border-outline-variant mb-4 overflow-x-auto"></div>
+
+  <div id="text-s1" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>La posizione &egrave; basata sulla popolarit&agrave; del dominio misurata da Cloudflare Radar. Per i domini fuori dalla top 100, la posizione &egrave; una fascia approssimativa.</p>
+    </div>
+  </details>
 </section>
 
-{# ── Section 1: Top 10 ── #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; I 10 SITI PIU VISITATI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
-    Classifica settimanale dei 10 domini con il traffico piu alto, secondo Cloudflare Radar.
-    Il grafico mostra l'andamento della posizione nelle ultime 52 settimane.
-  </p>
-  <div id="chart-top10" class="bg-surface-container-lowest p-4 border border-outline-variant mb-4"></div>
-  <div id="table-top10" class="bg-surface-container-lowest p-4 border border-outline-variant overflow-x-auto"></div>
-</section>
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 2 — Cosa fanno i bot AI con i tuoi contenuti?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 2</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Cosa fanno i bot AI con i tuoi contenuti?</h3>
 
-{# ── Section 2: AI Platforms ── #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; LE PIATTAFORME AI — EARLY WARNING</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
-    Posizione attuale delle piattaforme AI nella classifica di popolarita. Il "bucket" indica
-    la fascia di ranking: piu basso il numero, piu traffico riceve il dominio.
-  </p>
-  <div id="chart-platforms" class="bg-surface-container-lowest p-4 border border-outline-variant overflow-x-auto"></div>
-</section>
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>Questa &egrave; la domanda pi&ugrave; importante per un SEO. Sapere CHE i bot AI scansionano i siti non basta — serve sapere PERCH&Eacute;. La differenza &egrave; strategica: se scansionano per servire gli utenti, il contenuto viene distribuito (e si tratta di un'opportunit&agrave;). Se scansionano per addestrare i modelli, il contenuto viene assorbito nel training (e poi il modello risponde senza citare la fonte). La risposta cambia completamente la strategia: nel primo caso &egrave; un'opportunit&agrave; di visibilit&agrave;, nel secondo si potrebbe voler proteggere il contenuto.</p>
+    </div>
+  </details>
 
-{# ── Section 3: Bot vs Human ── #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; BOT VS UMANI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
-    Quota percentuale del traffico generato da bot rispetto al traffico umano, nelle ultime 12 settimane.
-  </p>
-  <div id="chart-bot-human" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
-  <div class="mt-4 text-sm text-on-surface-variant leading-relaxed space-y-2">
-    <p>
-      La percentuale di traffico bot e un indicatore diretto di quanto i crawler —
-      inclusi quelli legati all'AI — stiano consumando risorse dei siti web.
-      Un aumento costante della quota bot puo significare costi di hosting piu alti,
-      dati di analytics meno affidabili e maggiore esposizione allo scraping.
-    </p>
-    <p>
-      Per chi gestisce un sito, e importante monitorare questo rapporto:
-      se il traffico bot supera il 25-30%, vale la pena verificare il proprio
-      <code class="text-primary-container">robots.txt</code> e valutare strategie di rate-limiting.
-    </p>
-  </div>
-</section>
-
-{# ── Section 4: AI Bots + Crawl Purpose ── #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; CHI CRAWLA I SITI E PERCHE</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
-    A sinistra, i bot AI piu attivi per user-agent. A destra, la suddivisione del crawling per scopo dichiarato.
-  </p>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
     <div>
-      <h3 class="text-[10px] text-outline uppercase font-mono mb-2 tracking-widest">&gt; BOT AI PER USER-AGENT</h3>
-      <div id="chart-ai-bots" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Italia</p>
+      <div id="chart-s2-it" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
     </div>
     <div>
-      <h3 class="text-[10px] text-outline uppercase font-mono mb-2 tracking-widest">&gt; SCOPO DEL CRAWLING</h3>
-      <div id="chart-crawl-purpose" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Mondo</p>
+      <div id="chart-s2-global" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
     </div>
   </div>
-  <div class="mt-4 text-sm text-on-surface-variant leading-relaxed space-y-2">
-    <p>
-      La distinzione tra "User Action" e "Training" e cruciale.
-      Il crawling di tipo <strong class="text-primary-container">User Action</strong> avviene quando un utente
-      chiede a un chatbot di visitare un URL — e il segnale che l'AI sta diventando
-      un intermediario nella navigazione web.
-    </p>
-    <p>
-      Il crawling di tipo <strong class="text-white">Training</strong> indica invece la raccolta massiva di dati
-      per addestrare modelli. Se il tuo sito opera in un settore con alta quota Training,
-      il contenuto pubblicato potrebbe finire nei dataset di addestramento.
-      Controllare la direttiva <code class="text-primary-container">User-agent</code> nel robots.txt
-      diventa quindi una decisione editoriale, non solo tecnica.
-    </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm mb-4">
+    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#00f63e]"></span><span><strong class="text-white">Per gli utenti</strong> — L'AI recupera la tua pagina per rispondere a un utente in tempo reale</span></div>
+    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#e24c4c]"></span><span><strong class="text-white">Addestramento</strong> — Il bot raccoglie contenuti per addestrare modelli AI</span></div>
+    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#f5a623]"></span><span><strong class="text-white">Scopo misto</strong> — Serve sia gli utenti che l'addestramento</span></div>
+    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#4ca6e2]"></span><span><strong class="text-white">Ricerca</strong> — Costruisce un indice per la search dell'AI</span></div>
+    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#919191]"></span><span><strong class="text-white">Non dichiarato</strong> — Scopo non comunicato dall'operatore</span></div>
+  </div>
+
+  <div id="text-s2" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>La classificazione dello scopo si basa sulle dichiarazioni degli operatori dei bot e sull'analisi di Cloudflare.</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 3 — Quali aziende AI scansionano di piu i siti italiani?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 3</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Quali aziende AI scansionano di pi&ugrave; i siti italiani?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>Ogni azienda AI ha un bot diverso con uno scopo diverso. Sapere chi scansiona i siti italiani e quanto aiuta a capire quale azienda sta investendo di pi&ugrave; nel mercato italiano e per quale motivo. Se il bot di OpenAI domina, il focus &egrave; su ChatGPT. Se il bot di Anthropic cresce, Claude sta arrivando. Se Meta sale, il contenuto finisce nei modelli Llama che alimentano prodotti usati da miliardi di persone.</p>
+    </div>
+  </details>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Italia</p>
+      <div id="chart-s3-it" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Mondo</p>
+      <div id="chart-s3-global" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+  </div>
+
+  <div class="overflow-x-auto mb-4">
+    <table class="w-full text-sm">
+      <thead><tr class="text-left border-b border-outline-variant text-outline"><th class="py-2">Bot</th><th>Azienda</th><th>Cosa fa con i tuoi contenuti</th></tr></thead>
+      <tbody class="text-on-surface-variant">
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">ChatGPT-User</td><td>OpenAI</td><td>Li mostra agli utenti che fanno domande a ChatGPT</td></tr>
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">GPTBot</td><td>OpenAI</td><td>Li usa per addestrare i prossimi modelli GPT</td></tr>
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">OAI-SearchBot</td><td>OpenAI</td><td>Li indicizza per ChatGPT Search</td></tr>
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">ClaudeBot</td><td>Anthropic</td><td>Li usa per addestrare Claude</td></tr>
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">Googlebot</td><td>Google</td><td>Indicizza per Google Search e addestra Gemini</td></tr>
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">Meta-ExternalAgent</td><td>Meta</td><td>Addestra Meta AI e i modelli Llama</td></tr>
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">Bytespider</td><td>ByteDance</td><td>Addestra i modelli AI di TikTok</td></tr>
+        <tr class="border-b border-outline-variant/30"><td class="py-1.5 font-mono text-primary-container">Bingbot</td><td>Microsoft</td><td>Indicizza per Bing (alimenta anche ChatGPT)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="text-s3" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>I bot sono identificati tramite lo user-agent dichiarato nelle richieste HTTP. Cloudflare aggrega il traffico per user-agent e ne calcola la quota sul totale delle richieste automatizzate.</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 4 — L'Italia e in anticipo o in ritardo rispetto al mondo?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 4</h2>
+  <h3 class="text-xl font-bold text-white mb-4">L'Italia &egrave; in anticipo o in ritardo rispetto al mondo?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>I mercati anglofoni (USA, UK) tendono ad adottare le nuove tecnologie prima dell'Italia. Confrontando i dati italiani con quelli mondiali si possono anticipare i trend: se qualcosa sta crescendo nel dato mondiale ma &egrave; ancora piccolo in Italia, &egrave; probabile che arrivi nei prossimi mesi. Chi lo vede prima ha un vantaggio competitivo.</p>
+    </div>
+  </details>
+
+  <div id="chart-s4" class="bg-surface-container-lowest p-4 border border-outline-variant mb-4"></div>
+
+  <div id="text-s4" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>Il confronto Italia vs Mondo si basa sulle stesse metriche Cloudflare Radar filtrate per geolocalizzazione (location=IT per l'Italia, nessun filtro per il dato mondiale).</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 5 — Chi sta raccogliendo contenuti italiani per l'addestramento?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 5</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Chi sta raccogliendo contenuti italiani per l'addestramento?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>I modelli AI vengono addestrati su enormi quantit&agrave; di testo. Se i bot di training aumentano la scansione dei siti italiani, significa che le AI company stanno preparando modelli migliori per la lingua italiana. Il contenuto pubblicato oggi finir&agrave; nel training di domani — e influenzer&agrave; le risposte che l'AI dar&agrave; ai potenziali clienti.</p>
+    </div>
+  </details>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Italia</p>
+      <div id="chart-s5-it" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Mondo</p>
+      <div id="chart-s5-global" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+  </div>
+
+  <div id="text-s5" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>I bot di training sono identificati in base allo scopo dichiarato dall'operatore. Il dato include solo il traffico classificato come "training" o "scopo misto" da Cloudflare.</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 6 — Come sta cambiando l'equilibrio tra i crawler?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 6</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Come sta cambiando l'equilibrio tra i crawler?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>Per 20 anni il crawl budget &egrave; stato una questione legata quasi esclusivamente a Googlebot. Oggi i siti vengono scansionati da decine di bot diversi — ognuno con regole e scopi diversi. Se Googlebot perde quota relativa non &egrave; perch&eacute; Google scansiona meno, ma perch&eacute; gli altri crescono. Questo cambia il modo in cui un SEO gestisce il proprio sito.</p>
+    </div>
+  </details>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Italia</p>
+      <div id="chart-s6-it" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Mondo</p>
+      <div id="chart-s6-global" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+  </div>
+
+  <div id="text-s6" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>La quota di ciascun bot &egrave; calcolata sul totale delle richieste automatizzate rilevate da Cloudflare, non sul traffico complessivo.</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 7 — Il tuo settore e nel mirino dell'AI?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 7</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Il tuo settore &egrave; nel mirino dell'AI?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>I bot AI non scansionano tutti i settori allo stesso modo. Per chi lavora nel retail, nel turismo o nel software, il volume di scansione AI sul proprio settore &egrave; molto pi&ugrave; alto della media. Sapere quanto il proprio settore &egrave; esposto aiuta a capire l'urgenza di avere una strategia AI.</p>
+    </div>
+  </details>
+
+  <div id="chart-s7" class="bg-surface-container-lowest p-4 border border-outline-variant mb-4"></div>
+
+  <div id="text-s7" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>La classificazione per settore si basa sulla categorizzazione dei domini operata da Cloudflare Radar. La categoria "Other" &egrave; esclusa dal grafico.</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 8 — La pressione dei bot AI sta crescendo?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 8</h2>
+  <h3 class="text-xl font-bold text-white mb-4">La pressione dei bot AI sta crescendo?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>Se la quota di traffico automatizzato cresce, cambia tutto per un SEO: le metriche di analytics diventano meno affidabili, il server deve gestire pi&ugrave; richieste, e il crawl budget diventa una risorsa contesa. Sapere quanto traffico bot ricevono i siti italiani — e se il trend &egrave; in crescita — aiuta a dimensionare il problema.</p>
+    </div>
+  </details>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Italia</p>
+      <div id="chart-s8-it" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Mondo</p>
+      <div id="chart-s8-global" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+  </div>
+
+  <div id="text-s8" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>Il dato include tutto il traffico HTTP che transita dalla rete Cloudflare, classificato tramite algoritmi euristici.</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 9 — Come navigano gli italiani?
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 9</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Come navigano gli italiani?</h3>
+
+  <details class="mb-4">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Perch&eacute; lo monitoriamo</summary>
+    <div class="mt-2 text-sm text-on-surface-variant leading-relaxed">
+      <p>Il dispositivo con cui gli utenti navigano determina l'esperienza da ottimizzare. Se il mobile cala in Italia, il desktop torna rilevante per Core Web Vitals, layout e conversioni. Se Android domina, le feature PWA e Chrome-specific funzionano su una fetta pi&ugrave; ampia del pubblico. Il trend conta pi&ugrave; del dato assoluto.</p>
+    </div>
+  </details>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Italia</p>
+      <div id="chart-s9-it" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+    <div>
+      <p class="text-[10px] text-outline uppercase font-mono mb-2">Mondo</p>
+      <div id="chart-s9-global" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+  </div>
+
+  <div id="chart-s9-os" class="bg-surface-container-lowest p-4 border border-outline-variant mb-4"></div>
+
+  <div id="text-s9" class="text-sm text-on-surface-variant leading-relaxed"></div>
+
+  <details class="mt-3">
+    <summary class="text-xs text-outline uppercase font-mono cursor-pointer hover:text-primary-container">Nota metodologica</summary>
+    <div class="mt-2 text-sm text-on-surface-variant/70 leading-relaxed">
+      <p>Il tipo di dispositivo e il sistema operativo sono rilevati tramite lo user-agent delle richieste HTTP che transitano dalla rete Cloudflare.</p>
+    </div>
+  </details>
+</section>
+
+{# ══════════════════════════════════════════════════════════════════════════════
+   SEZIONE 10 — Cosa misurano questi dati — e cosa no
+   ══════════════════════════════════════════════════════════════════════════════ #}
+<section class="max-w-4xl mx-auto mb-14">
+  <h2 class="text-xs text-outline uppercase font-mono mb-1 tracking-widest">&gt; SEZIONE 10</h2>
+  <h3 class="text-xl font-bold text-white mb-4">Cosa misurano questi dati — e cosa no</h3>
+
+  <div class="space-y-6 text-sm text-on-surface-variant leading-relaxed">
+    <div>
+      <h4 class="text-white font-bold mb-2">Risposte affidabili</h4>
+      <ul class="space-y-1.5 list-none">
+        <li><span class="text-primary-container font-mono mr-2">+</span>"Le piattaforme AI stanno diventando pi&ugrave; popolari in Italia?" — S&igrave;, il trend &egrave; inequivocabile</li>
+        <li><span class="text-primary-container font-mono mr-2">+</span>"Quali bot AI sono pi&ugrave; attivi sui siti italiani?" — S&igrave;, la distribuzione per user-agent &egrave; un dato solido</li>
+        <li><span class="text-primary-container font-mono mr-2">+</span>"Il crawling AI &egrave; in crescita?" — S&igrave;, il trend bot vs umani lo conferma</li>
+        <li><span class="text-primary-container font-mono mr-2">+</span>"I bot AI recuperano contenuti per rispondere ai propri utenti?" — S&igrave;, il tipo "per gli utenti" &egrave; specifico per questo scopo</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-[#f5a623] font-bold mb-2">Da interpretare con cautela</h4>
+      <ul class="space-y-1.5 list-none">
+        <li><span class="text-[#f5a623] font-mono mr-2">~</span>"Questa piattaforma AI &egrave; il N&deg; sito pi&ugrave; visitato in Italia?" — Non esattamente: &egrave; il N&deg; dominio pi&ugrave; popolare nel traffico che transita da Cloudflare (circa il 17% dell'internet globale). La classifica include anche domini infrastrutturali che non sono siti visitati dagli utenti</li>
+        <li><span class="text-[#f5a623] font-mono mr-2">~</span>"Il X% del crawling AI &egrave; per gli utenti?" — Probabilmente s&igrave;, ma la classificazione si basa sulle dichiarazioni degli operatori dei bot</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-[#e24c4c] font-bold mb-2">Non rispondibile con questi dati</h4>
+      <ul class="space-y-1.5 list-none">
+        <li><span class="text-[#e24c4c] font-mono mr-2">-</span>"Quanti utenti italiani usano una specifica AI?" — Il dato indica popolarit&agrave; relativa, non conteggi di utenti</li>
+        <li><span class="text-[#e24c4c] font-mono mr-2">-</span>"Il mio sito appare nelle risposte dell'AI?" — Cloudflare Radar monitora il traffico aggregato, non i singoli siti</li>
+        <li><span class="text-[#e24c4c] font-mono mr-2">-</span>"L'AI sta togliendo traffico a Google?" — google.com &egrave; stabilmente al primo posto; le piattaforme AI si aggiungono, non sostituiscono (per ora)</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-{# ── Section 5: Industry ── #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; QUALI SETTORI SONO NEL MIRINO DELL'AI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
-    Distribuzione percentuale del crawling AI per settore industriale. Solo i primi 10 settori, escludendo la categoria "Other".
-  </p>
-  <div id="chart-industry" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
-  <div class="mt-4 text-sm text-on-surface-variant leading-relaxed space-y-2">
-    <p>
-      Se il tuo settore compare in cima alla classifica, significa che i crawler AI
-      stanno gia analizzando i siti dei tuoi competitor in modo significativo.
-      Questo puo tradursi in risposte AI che citano (o non citano) il tuo brand,
-      oppure in modelli addestrati sui contenuti del tuo mercato.
-    </p>
-    <p>
-      Per i settori ad alta esposizione, monitorare il ranking delle piattaforme AI
-      nella sezione "Early Warning" diventa particolarmente rilevante: la crescita
-      di traffico verso chatbot e search AI anticipa spesso uno shift nel comportamento degli utenti.
-    </p>
-  </div>
-</section>
-
-{# ── Methodology ── #}
+{# ══════════════════════════════════════════════════════════════════════════════
+   METODOLOGIA
+   ══════════════════════════════════════════════════════════════════════════════ #}
 <section class="max-w-4xl mx-auto mb-12">
   <details open class="methodology-accordion group">
     <summary class="flex items-center justify-between border-b border-primary-container pb-2 cursor-pointer list-none">
@@ -146,8 +394,13 @@
         Tutti i dati provengono da endpoint pubblici e gratuiti.
       </p>
       <p>
+        <strong class="text-white">Architettura v3:</strong>
+        Il tracker esegue 68 chiamate API a settimana, organizzate in 10 sezioni tematiche.
+        Ogni sezione risponde a una domanda strategica per chi si occupa di SEO.
+      </p>
+      <p>
         <strong class="text-white">Cosa misura il ranking:</strong>
-        Cloudflare Radar classifica i domini per popolarita come destinazione — quante persone visitano quel sito.
+        Cloudflare Radar classifica i domini per popolarit&agrave; come destinazione — quante persone visitano quel sito.
         Non si tratta di traffico referral (quante visite un sito invia ad altri), ma di traffico diretto e indiretto verso il dominio.
       </p>
       <p>
