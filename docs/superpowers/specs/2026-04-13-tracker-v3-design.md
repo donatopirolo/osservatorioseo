@@ -25,7 +25,7 @@ Il tracker è un **report di intelligence strategica** che risponde a 9 domande 
 ├─────────────────────────────────────────────────┤
 │  4 KPI cards (dinamiche, non legate a un player)│
 ├─────────────────────────────────────────────────┤
-│  9 SEZIONI (una per domanda)                    │
+│  10 SEZIONI (una per domanda)                   │
 ├─────────────────────────────────────────────────┤
 │  TRASPARENZA: cosa misurano questi dati         │
 ├─────────────────────────────────────────────────┤
@@ -257,7 +257,43 @@ Se la quota di traffico automatizzato cresce, cambia tutto per un SEO: le metric
 
 ---
 
-## Sezione 9: "Cosa misurano questi dati — e cosa no"
+### Sezione 9: "Come navigano gli italiani?"
+
+**Perché lo monitoriamo:**
+Il dispositivo con cui gli utenti navigano determina l'esperienza da ottimizzare. Se il mobile cala in Italia, il desktop torna rilevante per Core Web Vitals, layout e conversioni. Se Android domina, le feature PWA e Chrome-specific funzionano su una fetta più ampia del pubblico. Il trend conta più del dato assoluto — un cambiamento di 5 punti percentuali in pochi mesi può spostare le priorità di ottimizzazione. Il confronto con il mondo rivela se l'Italia ha abitudini diverse che richiedono strategie specifiche.
+
+**Grafico A:** Due grafici a area affiancati — Italia e Mondo (12 settimane).
+- Area verde: mobile
+- Area grigia: desktop
+- Annotazione: percentuali attuali a destra
+
+**Grafico B (sotto):** Barre orizzontali affiancate IT vs Mondo per sistema operativo (top 5).
+- Android, Windows, iOS, macOS, Linux
+- Verde per Italia, grigio per Mondo
+
+**Come leggere questo dato:**
+"L'Italia è storicamente un mercato più mobile del mondo ({mobile_it}% mobile vs {mobile_global}% globale). Il sistema operativo più diffuso in Italia è Android ({android_it}%), che offre pieno supporto a PWA, notifiche push e feature Chrome. iOS è al {ios_it}%, inferiore alla media mondiale. Se il trend mobile è in calo, potrebbe indicare un ritorno al desktop per attività più complesse — o un effetto stagionale. Per un SEO: se il tuo pubblico è italiano, quasi 4 utenti su 10 navigano da Android, e l'esperienza mobile resta prioritaria."
+
+**Nota metodologica (collapsible):**
+"Il dato device type e sistema operativo è basato sulle richieste HTTP che transitano dalla rete Cloudflare. Lo user-agent può essere manipolato, ma su scala aggregata è un indicatore affidabile delle tendenze. Il dato 'altro' (smart TV, console, e-reader) è trascurabile (<0.1%)."
+
+**Dati necessari:** Nuovi endpoint da aggiungere al collector:
+- `GET /http/timeseries_groups/device_type` con `dateRange=12w` (IT e globale)
+- `GET /http/summary/os` con `dateRange=28d` (IT e globale)
+
+**Nuovi campi nel modello TrackerSnapshot:**
+```
+device_type_it: DeviceTypeTimeseries     # {points: [{date, mobile_pct, desktop_pct}]}
+device_type_global: DeviceTypeTimeseries
+os_it: list[OSEntry]                     # [{os: "Android", pct: 38.5}, ...]
+os_global: list[OSEntry]
+```
+
+**Nuove chiamate API:** +4 (2 device_type + 2 os) → totale da 64 a 68 chiamate/settimana.
+
+---
+
+## Sezione 10: "Cosa misurano questi dati — e cosa no"
 
 **Perché questa sezione:**
 Un osservatorio credibile dichiara i limiti dei propri dati. Troppi tool SEO presentano numeri senza spiegare cosa significano. OsservatorioSEO fa il contrario: ogni dato è accompagnato dal suo contesto. Questa sezione è fissa e visibile a tutti.
@@ -295,13 +331,13 @@ Un osservatorio credibile dichiara i limiti dei propri dati. Troppi tool SEO pre
 
 ## Dati raccolti (invariati rispetto a v2)
 
-Il modello dati `TrackerSnapshot` resta identico a v2. Le 64 chiamate API settimanali (32 IT + 32 globale) non cambiano. Cambia solo la presentazione: template Jinja + JS.
+Il modello dati `TrackerSnapshot` viene esteso con 4 nuovi campi (device_type e os per IT e globale). Le chiamate API salgono da 64 a 68 settimanali (+2 device_type + 2 os). Il resto cambia solo nella presentazione: template Jinja + JS.
 
 ## Cosa cambia rispetto a v2
 
 | Aspetto | v2 | v3 |
 |---------|-----|-----|
-| Struttura | 5 sezioni per tipo di dato | 9 sezioni per domanda strategica |
+| Struttura | 5 sezioni per tipo di dato | 10 sezioni per domanda strategica |
 | IT vs Mondo | Toggle (una vista alla volta) | Affiancati dove serve il confronto |
 | Top 10 generico | Mostrava CDN e infrastruttura | Eliminato — focus solo sulle piattaforme AI |
 | Perché monitoriamo | Assente | Ogni sezione spiega la teoria e il perché |
