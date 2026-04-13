@@ -616,71 +616,101 @@
       var tableEl = clearAndGet("table-s1");
       var textEl = clearAndGet("text-s1");
 
-      /* Chart: AI platforms with timeseries from top10 */
+      /* Chart: Google Trends interest over time */
       if (chartEl) {
-        var top10 = DATA.top10_it || [];
-        var aiPlatforms = DATA.ai_platforms_it || [];
-        var aiDomains = {};
-        for (var i = 0; i < aiPlatforms.length; i++) {
-          aiDomains[aiPlatforms[i].domain] = true;
-        }
+        var trends = DATA.trends_it || {};
+        var keywords = trends.keywords || [];
+        var points = trends.points || [];
 
-        var series = [];
-        for (i = 0; i < top10.length; i++) {
-          if (aiDomains[top10[i].domain] && top10[i].timeseries && top10[i].timeseries.length > 0) {
-            series.push({
-              label: top10[i].domain,
-              data: top10[i].timeseries.map(function (p) { return { x: p.date, y: p.value }; }),
-              color: PALETTE[series.length % PALETTE.length]
-            });
-          }
-        }
-
-        if (series.length === 0) {
+        if (keywords.length === 0 || points.length === 0) {
           noData(chartEl);
         } else {
-          var chart = renderLineChart("chart-s1", series, { yInverted: true });
+          var series = [];
+          for (var ki = 0; ki < keywords.length; ki++) {
+            var kw = keywords[ki];
+            var data = [];
+            for (var pi = 0; pi < points.length; pi++) {
+              data.push({ x: points[pi].date, y: points[pi].values[kw] || 0 });
+            }
+            series.push({
+              label: kw,
+              data: data,
+              color: PALETTE[ki % PALETTE.length]
+            });
+          }
+          var chart = renderLineChart("chart-s1", series, { yLabel: "%" });
           chartEl.appendChild(chart.svg);
           chartEl.appendChild(chart.legendContainer);
         }
       }
 
-      /* Table */
+      /* Table: current snapshot — IT vs Global from Trends */
       if (tableEl) {
-        var platsIT = DATA.ai_platforms_it || [];
-        var platsGL = DATA.ai_platforms_global || [];
-        if (platsIT.length === 0) {
-          noData(tableEl);
-        } else {
-          var glMap = {};
-          for (i = 0; i < platsGL.length; i++) {
-            glMap[platsGL[i].domain] = platsGL[i];
+        var trendsIT = DATA.trends_it || {};
+        var trendsGL = DATA.trends_global || {};
+        var kwIT = trendsIT.keywords || [];
+        var ptsIT = trendsIT.points || [];
+        var ptsGL = (trendsGL.points || []);
+
+        if (kwIT.length === 0) {
+          /* Fallback to old Radar bucket table if no trends data */
+          var platsIT = DATA.ai_platforms_it || [];
+          var platsGL = DATA.ai_platforms_global || [];
+          if (platsIT.length === 0) {
+            noData(tableEl);
+          } else {
+            var glMap = {};
+            for (var i = 0; i < platsGL.length; i++) {
+              glMap[platsGL[i].domain] = platsGL[i];
+            }
+            var thtml = '<table class="w-full text-sm font-mono">';
+            thtml += '<thead><tr class="text-outline text-[10px] uppercase tracking-widest">' +
+              '<th class="text-left py-1 pr-4">Piattaforma</th>' +
+              '<th class="text-left py-1 pr-4">Tipo</th>' +
+              '<th class="text-right py-1 pr-4">Italia</th>' +
+              '<th class="text-right py-1">Mondo</th></tr></thead><tbody>';
+            for (i = 0; i < platsIT.length; i++) {
+              var p = platsIT[i];
+              var g = glMap[p.domain] || {};
+              thtml += '<tr class="border-t border-outline-variant">' +
+                '<td class="py-1.5 pr-4 text-white">' + escHtml(p.label || p.domain) + '</td>' +
+                '<td class="py-1.5 pr-4 text-outline">' + escHtml(p.type || "") + '</td>' +
+                '<td class="py-1.5 pr-4 text-right text-primary-container">' + escHtml(formatBucket(p.rank, p.bucket)) + '</td>' +
+                '<td class="py-1.5 text-right text-outline">' + escHtml(formatBucket(g.rank, g.bucket)) + '</td></tr>';
+            }
+            thtml += '</tbody></table>';
+            tableEl.innerHTML = thtml;
           }
+        } else {
+          /* Trends-based table: last data point, sorted by IT interest */
+          var lastIT = ptsIT[ptsIT.length - 1] || {};
+          var lastGL = ptsGL.length > 0 ? ptsGL[ptsGL.length - 1] : {};
+          var valuesIT = lastIT.values || {};
+          var valuesGL = lastGL.values || {};
+
+          var sorted = kwIT.slice().sort(function (a, b) {
+            return (valuesIT[b] || 0) - (valuesIT[a] || 0);
+          });
 
           var thtml = '<table class="w-full text-sm font-mono">';
           thtml += '<thead><tr class="text-outline text-[10px] uppercase tracking-widest">' +
             '<th class="text-left py-1 pr-4">Piattaforma</th>' +
-            '<th class="text-left py-1 pr-4">Tipo</th>' +
             '<th class="text-right py-1 pr-4">Italia</th>' +
             '<th class="text-right py-1 pr-4">Mondo</th>' +
             '<th class="text-center py-1">Segnale</th></tr></thead><tbody>';
 
-          for (i = 0; i < platsIT.length; i++) {
-            var p = platsIT[i];
-            var g = glMap[p.domain] || {};
-            var itBucket = formatBucket(p.rank, p.bucket);
-            var glBucket = formatBucket(g.rank, g.bucket);
+          for (var si = 0; si < sorted.length; si++) {
+            var kw = sorted[si];
+            var itVal = valuesIT[kw] || 0;
+            var glVal = valuesGL[kw] || 0;
             var signal = "";
-            /* If global bucket is numerically better (lower) than IT */
-            var itNum = p.rank || bucketNum(p.bucket);
-            var glNum = g.rank || bucketNum(g.bucket);
-            if (glNum < itNum) signal = '<span class="text-[#f5a623]" title="Il mondo è più avanti">&#x26A0;</span>';
-
+            if (glVal > itVal + 5) {
+              signal = '<span class="text-[#f5a623]" title="Interesse maggiore nel mondo">&#x26A0;</span>';
+            }
             thtml += '<tr class="border-t border-outline-variant">' +
-              '<td class="py-1.5 pr-4 text-white">' + escHtml(p.label || p.domain) + '</td>' +
-              '<td class="py-1.5 pr-4 text-outline">' + escHtml(p.type || "") + '</td>' +
-              '<td class="py-1.5 pr-4 text-right text-primary-container">' + escHtml(itBucket) + '</td>' +
-              '<td class="py-1.5 pr-4 text-right text-outline">' + escHtml(glBucket) + '</td>' +
+              '<td class="py-1.5 pr-4 text-white">' + escHtml(kw) + '</td>' +
+              '<td class="py-1.5 pr-4 text-right text-primary-container">' + itVal + '</td>' +
+              '<td class="py-1.5 pr-4 text-right text-outline">' + glVal + '</td>' +
               '<td class="py-1.5 text-center">' + signal + '</td></tr>';
           }
           thtml += '</tbody></table>';
@@ -690,18 +720,40 @@
 
       /* Text */
       if (textEl) {
-        var best = null;
-        var plats = DATA.ai_platforms_it || [];
-        for (i = 0; i < plats.length; i++) {
-          if (typeof plats[i].rank === "number") {
-            if (!best || plats[i].rank < best.rank) best = plats[i];
+        var tIT = DATA.trends_it || {};
+        var tKw = tIT.keywords || [];
+        var tPts = tIT.points || [];
+
+        if (tKw.length > 0 && tPts.length > 0) {
+          var lastPt = tPts[tPts.length - 1];
+          var vals = lastPt.values || {};
+          var bestKw = tKw[0];
+          var bestVal = vals[tKw[0]] || 0;
+          for (var ti = 1; ti < tKw.length; ti++) {
+            if ((vals[tKw[ti]] || 0) > bestVal) {
+              bestKw = tKw[ti];
+              bestVal = vals[tKw[ti]] || 0;
+            }
           }
-        }
-        if (best) {
           textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
-            'La piattaforma AI più popolare in Italia è <strong class="text-white">' + escHtml(best.label || best.domain) +
-            '</strong> (posizione #' + best.rank + '). ' +
-            'Il ranking misura la popolarità come sito di destinazione, non il traffico referral verso altri siti.</p>';
+            'In Italia la piattaforma AI con più interesse di ricerca è <strong class="text-white">' + escHtml(bestKw) +
+            '</strong> (indice ' + bestVal + '/100). ' +
+            'I valori rappresentano l\'interesse relativo di ricerca su Google (100 = picco massimo nel periodo).</p>';
+        } else {
+          /* Fallback to Radar-based text */
+          var best = null;
+          var plats = DATA.ai_platforms_it || [];
+          for (var i = 0; i < plats.length; i++) {
+            if (typeof plats[i].rank === "number") {
+              if (!best || plats[i].rank < best.rank) best = plats[i];
+            }
+          }
+          if (best) {
+            textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
+              'La piattaforma AI più popolare in Italia è <strong class="text-white">' + escHtml(best.label || best.domain) +
+              '</strong> (posizione #' + best.rank + '). ' +
+              'Il ranking misura la popolarità come sito di destinazione, non il traffico referral verso altri siti.</p>';
+          }
         }
       }
     }
