@@ -27,7 +27,10 @@ from osservatorio_seo.tracker.models import (
     BotHumanTimeseries,
     CrawlPurposePoint,
     CrawlPurposeTimeseries,
+    DeviceTypePoint,
+    DeviceTypeTimeseries,
     IndustryEntry,
+    OSEntry,
     SnapshotMetadata,
     TimeseriesPoint,
     TopDomainEntry,
@@ -78,6 +81,8 @@ class TrackerCollector:
         ai_bots_it, ai_bots_global = await self._fetch_ai_bots_both()
         crawl_it, crawl_global = await self._fetch_crawl_purpose_both()
         industry_it, industry_global = await self._fetch_industry_both()
+        device_it, device_global = await self._fetch_device_type_both()
+        os_it, os_global = await self._fetch_os_both()
 
         metadata = SnapshotMetadata(warnings=list(self._warnings))
 
@@ -97,6 +102,10 @@ class TrackerCollector:
             crawl_purpose_global=crawl_global,
             industry_it=industry_it,
             industry_global=industry_global,
+            device_type_it=device_it,
+            device_type_global=device_global,
+            os_it=os_it,
+            os_global=os_global,
             metadata=metadata,
         )
 
@@ -266,6 +275,29 @@ class TrackerCollector:
     async def _fetch_industry(self, location: str | None) -> list[IndustryEntry]:
         raw = await self._radar.industry_summary(location=location)
         return [IndustryEntry(industry=r["industry"], pct=r["pct"]) for r in raw]
+
+    # ------------------------------------------------------------------
+    # Section 9: device type + OS
+    # ------------------------------------------------------------------
+
+    async def _fetch_device_type_both(self):
+        it = await self._safe(self._fetch_device_type, "device_type(IT)", location="IT", default=DeviceTypeTimeseries())
+        glb = await self._safe(self._fetch_device_type, "device_type(global)", location=None, default=DeviceTypeTimeseries())
+        return it, glb
+
+    async def _fetch_device_type(self, location):
+        raw = await self._radar.device_type_timeseries(location=location)
+        points = [DeviceTypePoint(date=_parse_dt(p["date"]), mobile_pct=p["mobile_pct"], desktop_pct=p["desktop_pct"]) for p in raw]
+        return DeviceTypeTimeseries(points=points)
+
+    async def _fetch_os_both(self):
+        it = await self._safe(self._fetch_os, "os_summary(IT)", location="IT", default=[])
+        glb = await self._safe(self._fetch_os, "os_summary(global)", location=None, default=[])
+        return it, glb
+
+    async def _fetch_os(self, location):
+        raw = await self._radar.os_summary(location=location)
+        return [OSEntry(os=r["os"], pct=r["pct"]) for r in raw]
 
     # ------------------------------------------------------------------
     # Helpers

@@ -52,16 +52,23 @@ def mock_radar() -> AsyncMock:
     radar.industry_summary.return_value = [
         {"industry": "Retail", "pct": 28.7},
     ]
+    radar.device_type_timeseries.return_value = [
+        {"date": "2026-04-06T00:00:00Z", "mobile_pct": 51.0, "desktop_pct": 49.0},
+    ]
+    radar.os_summary.return_value = [
+        {"os": "ANDROID", "pct": 38.5},
+        {"os": "WINDOWS", "pct": 31.0},
+    ]
     return radar
 
 
 @pytest.mark.asyncio
-async def test_collect_builds_v2_snapshot(mock_radar, platforms_config):
+async def test_collect_builds_v3_snapshot(mock_radar, platforms_config):
     collector = TrackerCollector(radar=mock_radar, platforms_config=platforms_config)
     snapshot = await collector.collect(year=2026, week=16)
 
     assert isinstance(snapshot, TrackerSnapshot)
-    assert snapshot.schema_version == "2.0"
+    assert snapshot.schema_version == "3.0"
     # Section 1: top 10 for IT and global
     assert len(snapshot.top10_it) == 2
     assert len(snapshot.top10_global) == 2
@@ -80,6 +87,9 @@ async def test_collect_builds_v2_snapshot(mock_radar, platforms_config):
     # Section 5
     assert len(snapshot.industry_it) == 1
     assert len(snapshot.industry_global) == 1
+    # Section 9: device type + OS
+    assert len(snapshot.device_type_it.points) == 1
+    assert len(snapshot.os_it) == 2
 
 
 @pytest.mark.asyncio
@@ -103,5 +113,5 @@ async def test_persist_writes_json(mock_radar, platforms_config, tmp_path):
     assert target.exists()
     assert target.name == "2026-W16.json"
     restored = TrackerSnapshot.model_validate_json(target.read_text())
-    assert restored.schema_version == "2.0"
+    assert restored.schema_version == "3.0"
     assert len(restored.top10_it) == 2
