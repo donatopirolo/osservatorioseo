@@ -1,4 +1,4 @@
-"""Async client for Cloudflare Radar API.
+"""Async client for Cloudflare Radar API (v2 endpoints).
 
 Docs: https://developers.cloudflare.com/api/operations/radar-get-ranking-top
 
@@ -8,16 +8,9 @@ Free tier, requires API token with `Zone.Radar Read` permission.
 from __future__ import annotations
 
 import logging
-from datetime import datetime
 from typing import Any
 
 import httpx
-
-from osservatorio_seo.tracker.models import (
-    DomainRank,
-    IndexTimeseries,
-    TimeseriesPoint,
-)
 
 logger = logging.getLogger(__name__)
 
@@ -41,76 +34,172 @@ class RadarClient:
         self._timeout = timeout_s
         self._base_url = base_url.rstrip("/")
 
-    async def top_domains(
+    async def ranking_top(
         self,
         *,
-        category: str,
-        location: str = "IT",
+        location: str | None = None,
         limit: int = 10,
-        date_range: str = "1w",
-    ) -> list[DomainRank]:
-        """Fetch top N domains in a category for a location."""
-        params = {
-            "limit": limit,
-            "location": location,
-            "name": category,
-            "dateRange": date_range,
-        }
-        data = await self._get("/ranking/top", params)
-        series = data.get("result", {}).get("top_0", [])
-        return [DomainRank(domain=row["domain"], rank=row["rank"]) for row in series]
+        ranking_type: str = "POPULAR",
+    ) -> list[dict]:
+        """Fetch top N domains globally or for a location.
 
-    async def category_timeseries(
+        Returns list of {rank, domain, categories}.
+        """
+        params: dict[str, Any] = {"limit": limit, "rankingType": ranking_type}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/ranking/top", params)
+        rows = data["result"].get("top_0", [])
+        return [
+            {"rank": row["rank"], "domain": row["domain"], "categories": row.get("categories", [])}
+            for row in rows
+        ]
+
+    async def domain_detail(
         self,
         *,
-        category: str,
-        location: str = "IT",
-        date_range: str = "2y",
-    ) -> IndexTimeseries:
-        """Fetch traffic/rank timeseries for a category."""
-        params = {
-            "location": location,
-            "name": category,
-            "dateRange": date_range,
+        domain: str,
+        location: str | None = None,
+    ) -> dict:
+        """Fetch rank and bucket for a single domain.
+
+        Returns {rank, bucket} where bucket is always a str (e.g. "200" or ">200000").
+        rank may be None when the domain is outside the ranked set.
+        """
+        params: dict[str, Any] = {}
+        if location is not None:
+            params["location"] = location
+        data = await self._get(f"/ranking/domain/{domain}", params)
+        detail = data["result"].get("details_0", {})
+        return {
+            "rank": detail.get("rank"),
+            "bucket": str(detail["bucket"]),
         }
-        data = await self._get("/ranking/timeseries_groups", params)
-        serie = data.get("result", {}).get("serie_0", {})
-        timestamps = serie.get("timestamps", [])
-        values = serie.get("values", [])
-        points = [
-            TimeseriesPoint(
-                date=datetime.fromisoformat(ts.replace("Z", "+00:00")),
-                value=float(v),
-            )
-            for ts, v in zip(timestamps, values, strict=False)
-        ]
-        return IndexTimeseries(label=category, points=points)
 
     async def domain_timeseries(
         self,
         *,
         domain: str,
-        location: str = "IT",
-        date_range: str = "6m",
-    ) -> IndexTimeseries:
-        """Fetch traffic timeseries for a specific domain."""
-        params = {
-            "domain": domain,
-            "location": location,
-            "dateRange": date_range,
-        }
-        data = await self._get(f"/ranking/domain/{domain}", params)
-        serie = data.get("result", {}).get("serie_0", {})
+        location: str | None = None,
+        date_range: str = "52w",
+    ) -> list[dict]:
+        """Fetch weekly rank timeseries for a single domain.
+
+        Returns list of {date, rank} sorted chronologically.
+        """
+        params: dict[str, Any] = {"domains": domain, "dateRange": date_range}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/ranking/timeseries_groups", params)
+        serie = data["result"].get("serie_0", {})
         timestamps = serie.get("timestamps", [])
-        values = serie.get("values", [])
-        points = [
-            TimeseriesPoint(
-                date=datetime.fromisoformat(ts.replace("Z", "+00:00")),
-                value=float(v),
-            )
-            for ts, v in zip(timestamps, values, strict=False)
+        ranks = serie.get(domain, [])
+        return [{"date": ts, "rank": rank} for ts, rank in zip(timestamps, ranks, strict=False)]
+
+    async def bot_human_timeseries(
+        self,
+        *,
+        location: str | None = None,
+        date_range: str = "12w",
+    ) -> list[dict]:
+        """Fetch human vs bot traffic percentage timeseries.
+
+        Returns list of {date, human_pct, bot_pct}.
+        """
+        params: dict[str, Any] = {"dateRange": date_range}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/http/timeseries_groups/bot_class", params)
+        serie = data["result"].get("serie_0", {})
+        timestamps = serie.get("timestamps", [])
+        human = serie.get("human", [])
+        bot = serie.get("bot", [])
+        return [
+            {"date": ts, "human_pct": h, "bot_pct": b}
+            for ts, h, b in zip(timestamps, human, bot, strict=False)
         ]
-        return IndexTimeseries(label=domain, points=points)
+
+    async def ai_bots_user_agent(
+        self,
+        *,
+        location: str | None = None,
+        date_range: str = "12w",
+        agg_interval: str = "1w",
+    ) -> tuple[list[str], list[dict]]:
+        """Fetch AI bot traffic breakdown by user-agent.
+
+        Returns (agents_list, points_list) where each point is
+        {date, <agent>: pct_str, ...}.
+        """
+        params: dict[str, Any] = {"dateRange": date_range, "aggInterval": agg_interval}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/ai/bots/timeseries_groups/user_agent", params)
+        serie = data["result"].get("serie_0", {})
+        return self._unpack_named_timeseries(serie)
+
+    async def crawl_purpose(
+        self,
+        *,
+        location: str | None = None,
+        date_range: str = "12w",
+        agg_interval: str = "1w",
+    ) -> tuple[list[str], list[dict]]:
+        """Fetch AI bot traffic breakdown by crawl purpose.
+
+        Returns (purposes_list, points_list) where each point is
+        {date, <purpose>: pct_str, ...}.
+        """
+        params: dict[str, Any] = {"dateRange": date_range, "aggInterval": agg_interval}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/ai/bots/timeseries_groups/crawl_purpose", params)
+        serie = data["result"].get("serie_0", {})
+        return self._unpack_named_timeseries(serie)
+
+    async def industry_summary(
+        self,
+        *,
+        location: str | None = None,
+        date_range: str = "28d",
+    ) -> list[dict]:
+        """Fetch AI bot traffic breakdown by industry.
+
+        Returns list of {industry, pct} sorted descending by pct,
+        with "other" always last.
+        """
+        params: dict[str, Any] = {"dateRange": date_range}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/ai/bots/summary/industry", params)
+        summary = data["result"].get("summary_0", {})
+        other_pct = summary.pop("other", None)
+        rows = sorted(
+            [{"industry": k, "pct": float(v)} for k, v in summary.items()],
+            key=lambda r: r["pct"],
+            reverse=True,
+        )
+        if other_pct is not None:
+            rows.append({"industry": "other", "pct": float(other_pct)})
+        return rows
+
+    # ------------------------------------------------------------------
+    # Internal helpers
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _unpack_named_timeseries(serie: dict) -> tuple[list[str], list[dict]]:
+        """Convert a serie_0 dict into (keys, points) without mutating the original."""
+        timestamps = serie.get("timestamps", [])
+        keys = [k for k in serie if k != "timestamps"]
+        points = []
+        for i, ts in enumerate(timestamps):
+            point: dict[str, Any] = {"date": ts}
+            for key in keys:
+                values = serie[key]
+                point[key] = values[i] if i < len(values) else None
+            points.append(point)
+        return keys, points
 
     async def _get(self, path: str, params: dict[str, Any]) -> dict:
         url = f"{self._base_url}{path}"
