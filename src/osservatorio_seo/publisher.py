@@ -1072,22 +1072,29 @@ class Publisher:
         if snapshot.schema_version not in ("2.0", "3.0"):
             return None
 
-        # Find the AI platform with the best rank in Italy
-        best_ai_domain = None
-        best_ai_rank = None
-        for entry in snapshot.ai_platforms_it:
-            if entry.rank is not None and (best_ai_rank is None or entry.rank < best_ai_rank):
-                best_ai_rank = entry.rank
-                best_ai_domain = entry.domain
+        # AI top 3 from Google Trends averages (IT)
+        ai_top3: list[dict[str, Any]] = []
+        if snapshot.trends_it.averages:
+            ranked = sorted(
+                snapshot.trends_it.averages.items(), key=lambda x: x[1], reverse=True
+            )
+            for name, avg in ranked[:3]:
+                ai_top3.append({"name": name, "avg": avg})
 
+        # Bot percentage
         bot_pct = None
         if snapshot.bot_human_it.points:
             bot_pct = snapshot.bot_human_it.points[-1].bot_pct
 
+        # Latest trends values
+        trends_latest: dict[str, int] = {}
+        if snapshot.trends_it.points:
+            trends_latest = snapshot.trends_it.points[-1].values
+
         return {
-            "top_ai_domain": best_ai_domain,
-            "top_ai_rank": best_ai_rank,
+            "ai_top3": ai_top3,
             "bot_pct_it": bot_pct,
+            "trends_latest": trends_latest,
             "week": snapshot.week,
             "year": snapshot.year,
         }

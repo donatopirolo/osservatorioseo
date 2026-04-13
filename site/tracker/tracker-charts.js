@@ -537,73 +537,33 @@
       if (!el) return;
 
       var cards = [];
-
-      /* Card 1: Top AI by Google Trends average (IT) */
       var trendsAvg = (DATA.trends_it || {}).averages || {};
       var trendsKw = (DATA.trends_it || {}).keywords || [];
-      var topKw = ""; var topAvg = -1;
-      for (var i = 0; i < trendsKw.length; i++) {
-        var av = trendsAvg[trendsKw[i]] || 0;
-        if (av > topAvg) { topAvg = av; topKw = trendsKw[i]; }
-      }
-      if (topKw) {
-        cards.push({ value: topKw, label: "AI più cercata in Italia (media " + topAvg + ")" });
-      } else {
-        /* Fallback to Radar rank */
-        var platforms = DATA.ai_platforms_it || [];
-        var bestP = null;
-        for (i = 0; i < platforms.length; i++) {
-          if (typeof platforms[i].rank === "number") {
-            if (!bestP || platforms[i].rank < bestP.rank) bestP = platforms[i];
-          }
-        }
-        if (bestP) {
-          cards.push({ value: "#" + bestP.rank, label: bestP.domain });
-        } else {
-          cards.push({ value: "—", label: "AI" });
-        }
+
+      /* Cards 1-3: Top 3 AI by Google Trends average (IT) */
+      var ranked = trendsKw.slice().sort(function (a, b) {
+        return (trendsAvg[b] || 0) - (trendsAvg[a] || 0);
+      });
+      for (var i = 0; i < Math.min(3, ranked.length); i++) {
+        var kw = ranked[i];
+        cards.push({ value: String(trendsAvg[kw] || 0), label: kw, sub: "#" + (i + 1) + " in Italia" });
       }
 
-      /* Card 2: User Action % IT */
-      var cp = DATA.crawl_purpose_it;
-      if (cp && cp.points && cp.points.length > 0) {
-        var lastCP = cp.points[cp.points.length - 1];
-        var uaPct = (lastCP.values && lastCP.values["User Action"]) || 0;
-        cards.push({ value: fmtPct(uaPct), label: "crawling per gli utenti (IT)" });
-      } else {
-        cards.push({ value: "—", label: "crawling per gli utenti (IT)" });
-      }
-
-      /* Card 3: Bot % IT */
+      /* Card 4: Bot % IT */
       var bh = DATA.bot_human_it;
       if (bh && bh.points && bh.points.length > 0) {
         var lastBH = bh.points[bh.points.length - 1];
-        cards.push({ value: fmtPct(lastBH.bot_pct), label: "traffico bot (IT)" });
+        cards.push({ value: fmtPct(lastBH.bot_pct), label: "Traffico bot", sub: "Italia" });
       } else {
-        cards.push({ value: "—", label: "traffico bot (IT)" });
-      }
-
-      /* Card 4: Top agent IT */
-      var ab = DATA.ai_bots_ua_it;
-      if (ab && ab.points && ab.points.length > 0) {
-        var lastAB = ab.points[ab.points.length - 1];
-        var topAgent = "";
-        var topVal = -1;
-        var agents = ab.agents || [];
-        for (i = 0; i < agents.length; i++) {
-          var av = (lastAB.values && lastAB.values[agents[i]]) || 0;
-          if (av > topVal) { topVal = av; topAgent = agents[i]; }
-        }
-        cards.push({ value: topAgent, label: "bot AI più attivo (IT)" });
-      } else {
-        cards.push({ value: "—", label: "bot AI più attivo (IT)" });
+        cards.push({ value: "—", label: "Traffico bot", sub: "Italia" });
       }
 
       var html = "";
       for (i = 0; i < cards.length; i++) {
         html += '<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center">' +
           '<p class="text-2xl font-bold text-primary-container font-mono">' + escHtml(cards[i].value) + '</p>' +
-          '<p class="text-xs text-outline uppercase tracking-wider mt-1">' + escHtml(cards[i].label) + '</p>' +
+          '<p class="text-xs text-white mt-1">' + escHtml(cards[i].label) + '</p>' +
+          '<p class="text-[10px] text-outline uppercase tracking-wider mt-0.5">' + escHtml(cards[i].sub) + '</p>' +
           '</div>';
       }
       el.innerHTML = html;
@@ -716,6 +676,7 @@
               '<td class="py-1.5 text-center">' + signal + '</td></tr>';
           }
           thtml += '</tbody></table>';
+          thtml += '<p class="text-[10px] text-outline mt-2">Valori = interesse di ricerca relativo su Google (0-100). 100 = picco massimo nel periodo. Fonte: Google Trends via DataForSEO.</p>';
           tableEl.innerHTML = thtml;
         }
       }

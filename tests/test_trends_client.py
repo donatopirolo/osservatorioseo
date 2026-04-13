@@ -69,8 +69,9 @@ class TestTrendsClient:
         assert averages == {}
 
     def test_default_keywords(self):
-        assert len(TrendsClient.DEFAULT_KEYWORDS) == 5
+        assert len(TrendsClient.DEFAULT_KEYWORDS) == 6
         assert "ChatGPT" in TrendsClient.DEFAULT_KEYWORDS
+        assert "Grok" in TrendsClient.DEFAULT_KEYWORDS
 
     def test_global_fetch_has_no_location(self):
         resp = _make_response([{
