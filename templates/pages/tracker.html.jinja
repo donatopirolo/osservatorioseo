@@ -2,7 +2,6 @@
 
 {% block extra_head %}
 {% include "partials/_jsonld_breadcrumb.html.jinja" %}
-{% include "partials/_jsonld_dataset.html.jinja" %}
 {% endblock %}
 
 {% block content %}
@@ -12,85 +11,128 @@
   <span class="text-primary-container">TRACKER</span>
 </nav>
 
-<section class="max-w-4xl mx-auto mb-10">
-  <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; TRACKER SETTIMANALE</p>
+{# ── Header ── #}
+<section class="max-w-4xl mx-auto mb-8">
+  <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; STATO DELLA RICERCA</p>
   <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-white">{{ page_headline }}</h1>
   <p class="text-sm text-outline font-mono">
-    Ultimo aggiornamento: <span class="text-primary-container">{{ updated_label }}</span> · Fonte primaria: Cloudflare Radar
+    Ultimo aggiornamento: <span class="text-primary-container">{{ updated_label }}</span> · Fonte: Cloudflare Radar
   </p>
 </section>
 
-{# Chart 1: headline #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; AI VS INTERNET IN ITALIA — 24 MESI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_1_caption }}</p>
-  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
-    {{ chart_1_svg | safe }}
+{# ── Toggle Italia / Mondo ── #}
+<section class="max-w-4xl mx-auto mb-10">
+  <div class="flex gap-3 font-mono text-sm" id="view-toggle">
+    <button data-view-toggle="it"
+            class="active px-4 py-1.5 border border-primary-container text-primary-container uppercase tracking-wider transition-colors">
+      Italia
+    </button>
+    <button data-view-toggle="global"
+            class="px-4 py-1.5 border border-outline-variant text-outline uppercase tracking-wider transition-colors">
+      Mondo
+    </button>
   </div>
 </section>
 
-{# Chart 2: market composition #}
+{# ── Section 1: Top 10 ── #}
 <section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; A CHI CEDE GOOGLE — 12 MESI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_2_caption }}</p>
-  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
-    {{ chart_2_svg | safe }}
-  </div>
-</section>
-
-{# Chart 3: bump #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; CHI HA SCAVALCATO CHI — TOP 10 AI, 6 MESI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_3_caption }}</p>
-  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
-    {{ chart_3_svg | safe }}
-  </div>
-</section>
-
-{# Chart 4: heatmap #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; QUALE SETTORE È GIÀ COLPITO</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_4_caption }}</p>
-  <div class="bg-surface-container-lowest p-4 border border-outline-variant overflow-x-auto">
-    {{ chart_4_svg | safe }}
-  </div>
-</section>
-
-{# Chart 5: movers #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; BIGGEST MOVERS — 30 GIORNI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_5_caption }}</p>
-  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
-    {{ chart_5_svg | safe }}
-  </div>
-  {% if latest_monthly_report_path %}
-  <p class="text-xs text-outline font-mono mt-3 uppercase">
-    <a href="{{ latest_monthly_report_path }}" class="text-primary-container hover:underline">&rarr; Report editoriale mensile di approfondimento</a>
-  </p>
-  {% endif %}
-</section>
-
-{# Chart 6: big 4 #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; I 4 BIG AI — TREND 6 MESI</h2>
-  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{{ chart_6_caption }}</p>
-  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
-    {{ chart_6_svg | safe }}
-  </div>
-</section>
-
-{# Chart 7: transparency #}
-<section class="max-w-4xl mx-auto mb-12">
-  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; TRASPARENZA: DA DOVE ARRIVIAMO NOI</h2>
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; I 10 SITI PIU VISITATI</h2>
   <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
-    <strong class="text-white">1 sito solo, NON rappresentativo del mercato italiano.</strong> Questi sono i referrer di OsservatorioSEO stesso, inclusi per trasparenza editoriale.
+    Classifica settimanale dei 10 domini con il traffico piu alto, secondo Cloudflare Radar.
+    Il grafico mostra l'andamento della posizione nelle ultime 52 settimane.
   </p>
-  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
-    {{ chart_7_svg | safe }}
+  <div id="chart-top10" class="bg-surface-container-lowest p-4 border border-outline-variant mb-4"></div>
+  <div id="table-top10" class="bg-surface-container-lowest p-4 border border-outline-variant overflow-x-auto"></div>
+</section>
+
+{# ── Section 2: AI Platforms ── #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; LE PIATTAFORME AI — EARLY WARNING</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
+    Posizione attuale delle piattaforme AI nella classifica di popolarita. Il "bucket" indica
+    la fascia di ranking: piu basso il numero, piu traffico riceve il dominio.
+  </p>
+  <div id="chart-platforms" class="bg-surface-container-lowest p-4 border border-outline-variant overflow-x-auto"></div>
+</section>
+
+{# ── Section 3: Bot vs Human ── #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; BOT VS UMANI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
+    Quota percentuale del traffico generato da bot rispetto al traffico umano, nelle ultime 12 settimane.
+  </p>
+  <div id="chart-bot-human" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+  <div class="mt-4 text-sm text-on-surface-variant leading-relaxed space-y-2">
+    <p>
+      La percentuale di traffico bot e un indicatore diretto di quanto i crawler —
+      inclusi quelli legati all'AI — stiano consumando risorse dei siti web.
+      Un aumento costante della quota bot puo significare costi di hosting piu alti,
+      dati di analytics meno affidabili e maggiore esposizione allo scraping.
+    </p>
+    <p>
+      Per chi gestisce un sito, e importante monitorare questo rapporto:
+      se il traffico bot supera il 25-30%, vale la pena verificare il proprio
+      <code class="text-primary-container">robots.txt</code> e valutare strategie di rate-limiting.
+    </p>
   </div>
 </section>
 
-{# Methodology accordion — aperto di default #}
+{# ── Section 4: AI Bots + Crawl Purpose ── #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; CHI CRAWLA I SITI E PERCHE</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
+    A sinistra, i bot AI piu attivi per user-agent. A destra, la suddivisione del crawling per scopo dichiarato.
+  </p>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
+    <div>
+      <h3 class="text-[10px] text-outline uppercase font-mono mb-2 tracking-widest">&gt; BOT AI PER USER-AGENT</h3>
+      <div id="chart-ai-bots" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+    <div>
+      <h3 class="text-[10px] text-outline uppercase font-mono mb-2 tracking-widest">&gt; SCOPO DEL CRAWLING</h3>
+      <div id="chart-crawl-purpose" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+    </div>
+  </div>
+  <div class="mt-4 text-sm text-on-surface-variant leading-relaxed space-y-2">
+    <p>
+      La distinzione tra "User Action" e "Training" e cruciale.
+      Il crawling di tipo <strong class="text-primary-container">User Action</strong> avviene quando un utente
+      chiede a un chatbot di visitare un URL — e il segnale che l'AI sta diventando
+      un intermediario nella navigazione web.
+    </p>
+    <p>
+      Il crawling di tipo <strong class="text-white">Training</strong> indica invece la raccolta massiva di dati
+      per addestrare modelli. Se il tuo sito opera in un settore con alta quota Training,
+      il contenuto pubblicato potrebbe finire nei dataset di addestramento.
+      Controllare la direttiva <code class="text-primary-container">User-agent</code> nel robots.txt
+      diventa quindi una decisione editoriale, non solo tecnica.
+    </p>
+  </div>
+</section>
+
+{# ── Section 5: Industry ── #}
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; QUALI SETTORI SONO NEL MIRINO DELL'AI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
+    Distribuzione percentuale del crawling AI per settore industriale. Solo i primi 10 settori, escludendo la categoria "Other".
+  </p>
+  <div id="chart-industry" class="bg-surface-container-lowest p-4 border border-outline-variant"></div>
+  <div class="mt-4 text-sm text-on-surface-variant leading-relaxed space-y-2">
+    <p>
+      Se il tuo settore compare in cima alla classifica, significa che i crawler AI
+      stanno gia analizzando i siti dei tuoi competitor in modo significativo.
+      Questo puo tradursi in risposte AI che citano (o non citano) il tuo brand,
+      oppure in modelli addestrati sui contenuti del tuo mercato.
+    </p>
+    <p>
+      Per i settori ad alta esposizione, monitorare il ranking delle piattaforme AI
+      nella sezione "Early Warning" diventa particolarmente rilevante: la crescita
+      di traffico verso chatbot e search AI anticipa spesso uno shift nel comportamento degli utenti.
+    </p>
+  </div>
+</section>
+
+{# ── Methodology ── #}
 <section class="max-w-4xl mx-auto mb-12">
   <details open class="methodology-accordion group">
     <summary class="flex items-center justify-between border-b border-primary-container pb-2 cursor-pointer list-none">
@@ -98,13 +140,41 @@
       <span class="text-primary-container font-mono">&minus;</span>
     </summary>
     <div class="prose prose-invert max-w-none text-on-surface leading-relaxed mt-4 space-y-3 text-sm">
-      <p><strong class="text-white">Fonti dati:</strong> <a class="text-primary-container hover:underline" href="https://radar.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Radar API</a> + Cloudflare Pages Analytics (per il solo Grafico 7).</p>
-      <p><strong class="text-white">Cosa misura e cosa no:</strong> Cloudflare Radar misura la popolarità dei domini come destinazione (quanti italiani visitano chat.openai.com), non il traffico referral (quanti siti italiani ricevono visite da chat.openai.com). Queste due metriche sono correlate ma non identiche.</p>
-      <p><strong class="text-white">Campione:</strong> Cloudflare osserva circa il 17% del traffico internet globale. I dati sono proiezioni basate su questo campione, non misurazioni totali del mercato italiano.</p>
-      <p><strong class="text-white">Aggiornamento:</strong> Dati aggiornati ogni settimana. Prossima update prevista: {{ next_update_label }}.</p>
-      <p><strong class="text-white">Perché non vedete "market share %":</strong> Lo share di mercato richiederebbe dati di panel a pagamento (SimilarWeb, Datos.live). Questo tracker usa solo fonti gratuite e pubblica indici normalizzati 0-100 dove 100 = dominio più popolare in categoria.</p>
-      <p><strong class="text-white">Limiti dichiarati:</strong> nessun dato di query SERP, nessun dato di referral traffic, nessun forecasting. Se vedi qualcosa che ti sembra strano, <a class="text-primary-container hover:underline" href="/about/">segnalalo alla redazione</a>.</p>
+      <p>
+        <strong class="text-white">Fonte dati:</strong>
+        <a class="text-primary-container hover:underline" href="https://radar.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Radar API</a>.
+        Tutti i dati provengono da endpoint pubblici e gratuiti.
+      </p>
+      <p>
+        <strong class="text-white">Cosa misura il ranking:</strong>
+        Cloudflare Radar classifica i domini per popolarita come destinazione — quante persone visitano quel sito.
+        Non si tratta di traffico referral (quante visite un sito invia ad altri), ma di traffico diretto e indiretto verso il dominio.
+      </p>
+      <p>
+        <strong class="text-white">Campione:</strong>
+        Cloudflare osserva circa il 17-20% del traffico internet globale tramite la propria rete.
+        I dati sono proiezioni basate su questo campione, non misurazioni esaustive.
+      </p>
+      <p>
+        <strong class="text-white">Vista Italia vs Mondo:</strong>
+        La vista "Italia" filtra il traffico per geolocalizzazione italiana (parametro <code class="text-primary-container">location=IT</code>).
+        La vista "Mondo" mostra i dati globali senza filtro geografico.
+      </p>
+      <p>
+        <strong class="text-white">Aggiornamento:</strong>
+        I dati vengono aggiornati settimanalmente tramite GitHub Actions.
+      </p>
+      <p>
+        <strong class="text-white">Limiti dichiarati:</strong>
+        Nessun dato di query SERP, nessun dato di referral traffic, nessun forecasting.
+        I bucket di ranking sono fasce (top 200, top 500, ecc.), non posizioni esatte per i domini fuori dalla top 100.
+      </p>
     </div>
   </details>
 </section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>window.__TRACKER_DATA__ = {{ tracker_json|safe }};</script>
+<script src="/tracker/tracker-charts.js"></script>
 {% endblock %}
