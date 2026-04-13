@@ -980,16 +980,16 @@ class Publisher:
         tracker_json = snapshot.model_dump_json()
 
         ctx = {
-            "page_title": "Tracker — Stato della ricerca — Osservatorio SEO",
+            "page_title": "AI Tracker — Adozione e tendenze — Osservatorio SEO",
             "page_description": (
-                "Dashboard settimanale: ranking dei top 10 siti in Italia e nel mondo, "
-                "piattaforme AI, bot vs umani, crawling AI per settore. Dati Cloudflare Radar."
+                "Dashboard settimanale: quali AI usano gli italiani (Google Trends), "
+                "traffico bot AI, crawler per settore, confronto Italia vs Mondo."
             ),
             "canonical_url": canonical("/tracker/"),
             "active_nav": "tracker",
             "noindex": not allow_indexing,
             "og_type": "website",
-            "page_headline": (f"Stato della ricerca — Settimana {snapshot.week}, {snapshot.year}"),
+            "page_headline": (f"AI Tracker — Settimana {snapshot.week}, {snapshot.year}"),
             "updated_label": updated_label,
             "updated_iso": snapshot.generated_at.isoformat(),
             "next_update_label": next_update,

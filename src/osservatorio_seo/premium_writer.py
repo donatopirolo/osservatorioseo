@@ -233,7 +233,7 @@ class _TagDisplay:
 
 
 TRACKER_REPORT_PROMPT = """Sei un SEO senior italiano che scrive il report mensile \
-editoriale di Osservatorio SEO sul tracker "Stato della ricerca in Italia". \
+editoriale di Osservatorio SEO sul tracker "AI Tracker — Adozione e tendenze". \
 Il lettore è un professionista SEO italiano (agency, in-house, freelance) che \
 ogni mese vuole capire cosa è cambiato e cosa fare.
 
