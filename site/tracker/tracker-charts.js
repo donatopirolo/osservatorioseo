@@ -711,22 +711,19 @@
        ══════════════════════════════════════════ */
 
     function renderSection2() {
-      renderStackedAreaPair(
-        "chart-s2-it", DATA.crawl_purpose_it,
-        "chart-s2-global", DATA.crawl_purpose_global,
-        PURPOSE_COLORS
-      );
+      renderPurposeCards("chart-s2-it", DATA.crawl_purpose_it, "Italia");
+      renderPurposeCards("chart-s2-global", DATA.crawl_purpose_global, "Mondo");
 
       var textEl = clearAndGet("text-s2");
       if (textEl) {
+        var parts = [];
         var itRaw = DATA.crawl_purpose_it;
         var glRaw = DATA.crawl_purpose_global;
-        var parts = [];
         if (itRaw && itRaw.points && itRaw.points.length > 0) {
           var lp = itRaw.points[itRaw.points.length - 1];
           var ua = (lp.values && lp.values["User Action"]) || 0;
           var tr = (lp.values && lp.values["Training"]) || 0;
-          parts.push("In Italia, il " + fmtPct(ua) + " del crawling serve gli utenti e il " + fmtPct(tr) + " è destinato all'addestramento AI.");
+          parts.push("In Italia, secondo le dichiarazioni degli operatori dei bot, il " + fmtPct(ua) + " del crawling AI è classificato come 'per gli utenti' e il " + fmtPct(tr) + " come 'addestramento modelli'.");
         }
         if (glRaw && glRaw.points && glRaw.points.length > 0) {
           var lp2 = glRaw.points[glRaw.points.length - 1];
@@ -734,9 +731,85 @@
           var tr2 = (lp2.values && lp2.values["Training"]) || 0;
           parts.push("A livello globale: " + fmtPct(ua2) + " per gli utenti, " + fmtPct(tr2) + " per l'addestramento.");
         }
-        if (parts.length > 0) {
-          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + parts.join(" ") + '</p>';
+        parts.push("Nota: i dati di Cloudflare mostrano un forte 'crawl-to-click gap' — per ogni visita che l'AI rimanda a un sito, vengono scansionate centinaia o migliaia di pagine.");
+        textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + parts.join(" ") + '</p>';
+      }
+    }
+
+    function renderPurposeCards(containerId, raw, label) {
+      var el = clearAndGet(containerId);
+      if (!el || !raw || !raw.points || raw.points.length === 0) {
+        if (el) noData(el);
+        return;
+      }
+      var lp = raw.points[raw.points.length - 1];
+      var purposes = [
+        { key: "User Action", label: "Per gli utenti", color: GREEN, desc: "L'AI recupera pagine per rispondere a domande degli utenti" },
+        { key: "Training", label: "Addestramento", color: "#e24c4c", desc: "Raccolta contenuti per addestrare modelli AI" },
+        { key: "Mixed Purpose", label: "Scopo misto", color: "#f5a623", desc: "Sia utenti che addestramento" },
+        { key: "Search", label: "Ricerca", color: "#4ca6e2", desc: "Indicizzazione per la search dell'AI" },
+        { key: "Undeclared", label: "Non dichiarato", color: GREY, desc: "Scopo non comunicato dall'operatore" }
+      ];
+
+      var grid = document.createElement("div");
+      grid.className = "grid grid-cols-2 sm:grid-cols-3 gap-3";
+
+      for (var i = 0; i < purposes.length; i++) {
+        var p = purposes[i];
+        var val = (lp.values && lp.values[p.key]) || 0;
+        if (val < 0.1) continue;
+
+        var card = document.createElement("div");
+        card.className = "bg-surface-container-lowest border border-outline-variant/50 p-3 rounded";
+        card.innerHTML =
+          '<div class="text-2xl font-bold font-mono" style="color:' + p.color + '">' + fmtPct(val) + '</div>' +
+          '<div class="text-xs text-white font-bold mt-1">' + p.label + '</div>' +
+          '<div class="text-[10px] text-outline mt-0.5">' + p.desc + '</div>';
+        grid.appendChild(card);
+      }
+
+      el.appendChild(grid);
+
+      // Add trend sparkline if enough data points
+      if (raw.points.length >= 4) {
+        var sparkDiv = document.createElement("div");
+        sparkDiv.className = "mt-3";
+        var W = 340, H = 60, PAD = { l: 5, r: 5, t: 5, b: 5 };
+        var svg = svgEl("svg", { viewBox: "0 0 " + W + " " + H, class: "w-full" });
+        var n = raw.points.length;
+        var xScale = function(idx) { return PAD.l + (idx / Math.max(n - 1, 1)) * (W - PAD.l - PAD.r); };
+        var yScale = function(v) { return PAD.t + ((100 - v) / 100) * (H - PAD.t - PAD.b); };
+
+        // Draw lines for top 2 purposes
+        var topKeys = ["User Action", "Training"];
+        var topColors = [GREEN, "#e24c4c"];
+        for (var k = 0; k < topKeys.length; k++) {
+          var pts = [];
+          for (var j = 0; j < raw.points.length; j++) {
+            var v = (raw.points[j].values && raw.points[j].values[topKeys[k]]) || 0;
+            pts.push(xScale(j) + "," + yScale(v));
+          }
+          if (pts.length >= 2) {
+            svg.appendChild(svgEl("polyline", {
+              points: pts.join(" "),
+              fill: "none",
+              stroke: topColors[k],
+              "stroke-width": "1.5",
+              "stroke-opacity": "0.7"
+            }));
+          }
         }
+        sparkDiv.appendChild(svg);
+
+        var sparkLabel = document.createElement("div");
+        sparkLabel.className = "flex gap-4 text-[10px] text-outline mt-1";
+        sparkLabel.innerHTML =
+          '<span><span style="color:' + GREEN + '">—</span> Per gli utenti</span>' +
+          '<span><span style="color:#e24c4c">—</span> Addestramento</span>' +
+          '<span class="text-outline/50">Trend ultime ' + n + ' settimane</span>';
+        sparkDiv.appendChild(sparkLabel);
+
+        el.appendChild(sparkDiv);
       }
     }
 
@@ -870,56 +943,45 @@
 
       var barData = [];
 
-      /* 1. AI più popolare (rank comparison) */
-      var bestIT = getBestRank(DATA.ai_platforms_it);
-      var bestGL = getBestRank(DATA.ai_platforms_global);
-      if (bestIT || bestGL) {
-        barData.push({
-          label: "AI più popolare",
-          valueIT: bestIT ? bestIT.rank || bucketNum(bestIT.bucket) : 0,
-          valueGlobal: bestGL ? bestGL.rank || bucketNum(bestGL.bucket) : 0
-        });
-      }
-
-      /* 2. Traffico bot */
+      /* 1. Traffico bot */
       var bhIT = DATA.bot_human_it;
       var bhGL = DATA.bot_human_global;
       if (bhIT && bhIT.points && bhIT.points.length > 0 && bhGL && bhGL.points && bhGL.points.length > 0) {
         barData.push({
-          label: "Traffico bot",
+          label: "Traffico bot (% del totale)",
           valueIT: bhIT.points[bhIT.points.length - 1].bot_pct,
           valueGlobal: bhGL.points[bhGL.points.length - 1].bot_pct
         });
       }
 
-      /* 3. Crawling per utenti */
+      /* 2. Crawling per utenti */
       var cpIT = DATA.crawl_purpose_it;
       var cpGL = DATA.crawl_purpose_global;
       if (cpIT && cpIT.points && cpIT.points.length > 0 && cpGL && cpGL.points && cpGL.points.length > 0) {
         var lpIT = cpIT.points[cpIT.points.length - 1];
         var lpGL = cpGL.points[cpGL.points.length - 1];
         barData.push({
-          label: "Crawling utenti",
+          label: "Crawling per gli utenti (% AI bot)",
           valueIT: (lpIT.values && lpIT.values["User Action"]) || 0,
           valueGlobal: (lpGL.values && lpGL.values["User Action"]) || 0
         });
       }
 
-      /* 4. Crawling per addestramento */
+      /* 3. Crawling per addestramento */
       if (cpIT && cpIT.points && cpIT.points.length > 0 && cpGL && cpGL.points && cpGL.points.length > 0) {
         barData.push({
-          label: "Crawling training",
+          label: "Crawling per addestramento (% AI bot)",
           valueIT: (lpIT.values && lpIT.values["Training"]) || 0,
           valueGlobal: (lpGL.values && lpGL.values["Training"]) || 0
         });
       }
 
-      /* 5. Second most active bot */
+      /* 4. Second most active bot */
       var sec = getSecondAgent(DATA.ai_bots_ua_it);
       var secGL = getSecondAgent(DATA.ai_bots_ua_global);
       if (sec || secGL) {
         barData.push({
-          label: sec ? sec.agent : (secGL ? secGL.agent : "Bot #2"),
+          label: (sec ? sec.agent : (secGL ? secGL.agent : "Bot #2")) + " (% AI bot)",
           valueIT: sec ? sec.pct : 0,
           valueGlobal: secGL ? secGL.pct : 0
         });
@@ -1012,48 +1074,25 @@
        ══════════════════════════════════════════ */
 
     function renderSection6() {
-      var itRaw = DATA.ai_bots_ua_it;
-      var glRaw = DATA.ai_bots_ua_global;
-
-      /* Convert ai_bots_ua to stacked area format */
-      function toStackedData(raw) {
-        if (!raw || !raw.points || raw.points.length === 0) return null;
-        var colors = {};
-        for (var i = 0; i < (raw.agents || []).length; i++) {
-          colors[raw.agents[i]] = PALETTE[i % PALETTE.length];
-        }
-        return { keys: raw.agents || [], points: raw.points, colors: colors };
-      }
-
-      var elIT = clearAndGet("chart-s6-it");
-      if (elIT) {
-        var dIT = toStackedData(itRaw);
-        if (!dIT) { noData(elIT); }
-        else {
-          var c = renderStackedArea("chart-s6-it", dIT, { width: 340 });
-          elIT.appendChild(c.svg);
-          elIT.appendChild(c.legendContainer);
-        }
-      }
-
-      var elGL = clearAndGet("chart-s6-global");
-      if (elGL) {
-        var dGL = toStackedData(glRaw);
-        if (!dGL) { noData(elGL); }
-        else {
-          var c2 = renderStackedArea("chart-s6-global", dGL, { width: 340 });
-          elGL.appendChild(c2.svg);
-          elGL.appendChild(c2.legendContainer);
-        }
-      }
+      /* Reuse the same multi-line approach as Section 3 */
+      renderBotsLineChartPair(
+        "chart-s6-it", DATA.ai_bots_ua_it,
+        "chart-s6-global", DATA.ai_bots_ua_global
+      );
 
       var textEl = clearAndGet("text-s6");
-      if (textEl && itRaw && itRaw.points && itRaw.points.length > 0) {
-        var lp = itRaw.points[itRaw.points.length - 1];
-        var gb = (lp.values && lp.values["Googlebot"]) || 0;
+      if (textEl && DATA.ai_bots_ua_it && DATA.ai_bots_ua_it.points && DATA.ai_bots_ua_it.points.length >= 2) {
+        var pts = DATA.ai_bots_ua_it.points;
+        var first = pts[0];
+        var last = pts[pts.length - 1];
+        var gbFirst = (first.values && first.values["Googlebot"]) || 0;
+        var gbLast = (last.values && last.values["Googlebot"]) || 0;
+        var delta = gbLast - gbFirst;
+        var trend = delta > 1 ? "in crescita" : delta < -1 ? "in calo" : "stabile";
         textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
-          'Googlebot rappresenta il ' + fmtPct(gb) + ' del traffico bot AI in Italia. ' +
-          'La composizione è in costante evoluzione con l\'arrivo di nuovi crawler.</p>';
+          'Googlebot rappresenta il ' + fmtPct(gbLast) + ' del crawling AI in Italia (' + trend +
+          ' rispetto a ' + fmtPct(gbFirst) + ' di ' + (pts.length) + ' settimane fa). ' +
+          'La composizione complessiva mostra come le quote relative dei diversi crawler si stiano ridistribuendo.</p>';
       }
     }
 
