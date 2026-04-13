@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Weekly tracker update — fetches Radar data, saves snapshot.
+"""Weekly tracker update — fetches Radar + Google Trends data, saves snapshot.
 
 Usage:
     python scripts/update_tracker.py
@@ -7,6 +7,7 @@ Usage:
 Environment variables:
     CLOUDFLARE_RADAR_TOKEN     Required, token with Account Analytics Read
     CLOUDFLARE_API_TOKEN       Fallback if CLOUDFLARE_RADAR_TOKEN not set
+    DATAFORSEO_API_KEY         Base64-encoded DataForSEO credentials (optional)
 """
 
 from __future__ import annotations
@@ -31,7 +32,9 @@ async def main() -> None:
 
     repo_root = Path(__file__).resolve().parent.parent
     radar = RadarClient(api_token=token)
-    trends = TrendsClient(request_delay=5.0)
+
+    dataforseo_key = os.environ.get("DATAFORSEO_API_KEY")
+    trends = TrendsClient(api_key=dataforseo_key) if dataforseo_key else None
     collector = TrackerCollector(radar=radar, trends_client=trends)
 
     today = date.today()
