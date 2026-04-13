@@ -1,32 +1,32 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-12T06:13:07.363316Z",
-  "generated_at_local": "2026-04-12T08:13:07.363316+02:00",
+  "generated_at": "2026-04-13T06:58:36.723283Z",
+  "generated_at_local": "2026-04-13T08:58:36.723283+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-04-12-0813",
+  "run_id": "2026-04-13-0858",
   "stats": {
     "sources_checked": 21,
-    "sources_failed": 0,
-    "items_collected": 1954,
+    "sources_failed": 1,
+    "items_collected": 1944,
     "items_after_dedup": 1,
     "doc_changes_detected": 0,
     "ai_cost_eur": 0.0001
   },
   "top10": [
-    "item_2026-04-12_001"
+    "item_2026-04-13_001"
   ],
   "categories": {
-    "industry_news": [
-      "item_2026-04-12_001"
+    "technical_seo": [
+      "item_2026-04-13_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-04-12_001",
-      "title_original": "What Pichai’s Interview Reveals About Google’s Search Direction via @sejournal, @MattGSouthern",
-      "title_it": "L'intervista di Pichai rivela la nuova direzione di ricerca di Google",
-      "summary_it": "Sundar Pichai descrive la ricerca come un \"agent manager\", indicando un passaggio dai risultati basati sui link al completamento di attività e ai flussi di lavoro multi-step. Questo suggerisce un'evoluzione verso un motore di ricerca più orientato all'azione e all'assistenza diretta all'utente. Implicazioni SEO da valutare in termini di ottimizzazione per intenti complessi.",
-      "url": "https://www.searchenginejournal.com/what-pichais-interview-reveals-about-googles-search-direction/571574",
+      "id": "item_2026-04-13_001",
+      "title_original": "How AI Agents See Your Website (And How To Build For Them) via @sejournal, @slobodanmanic",
+      "title_it": "Come gli agenti AI vedono il tuo sito web e come ottimizzarlo",
+      "summary_it": "L'articolo di Search Engine Journal evidenzia come i siti web costruiti con HTML semantico, pattern accessibili e contenuti renderizzati lato server siano più adatti al \"web agentico\". Si suggerisce di ottimizzare i siti web tenendo conto di come gli agenti AI interpretano e utilizzano le informazioni.",
+      "url": "https://www.searchenginejournal.com/how-ai-agents-see-your-website-and-how-to-build-for-them/570443",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -39,70 +39,76 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "technical_seo",
       "tags": [
-        "google_search",
-        "sundar_pichai",
-        "search_direction",
-        "ai_search"
+        "ai_agent",
+        "semantic_html",
+        "accessibility",
+        "server_side_rendering"
       ],
       "importance": 3,
-      "published_at": "2026-04-11T11:00:21Z",
-      "fetched_at": "2026-04-12T06:13:53.963584Z",
+      "published_at": "2026-04-12T11:00:14Z",
+      "fetched_at": "2026-04-13T07:00:07.436300Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:d8cc7c34b9f9a193",
+      "raw_hash": "sha256:c903d8faaa3e1fbd",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-04-12T06:13:12.729222Z",
+      "last_checked": "2026-04-13T06:59:25.771335Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-04-12T06:13:12.962102Z",
+      "last_checked": "2026-04-13T06:59:26.630668Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-04-12T06:13:14.888201Z",
+      "last_checked": "2026-04-13T06:59:27.447932Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-04-12T06:13:43.024503Z",
+      "last_checked": "2026-04-13T06:59:57.142430Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-04-12T06:13:43.608715Z",
+      "last_checked": "2026-04-13T06:59:57.572735Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-04-12T06:13:44.740014Z",
+      "last_checked": "2026-04-13T06:59:58.761233Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-04-12T06:13:46.404156Z",
+      "last_checked": "2026-04-13T07:00:00.327890Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-04-12T06:13:47.800978Z",
+      "last_checked": "2026-04-13T07:00:01.782805Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-04-12T06:13:47.844230Z",
+      "last_checked": "2026-04-13T07:00:01.822777Z",
       "changed": false
     }
   ],
-  "failed_sources": []
+  "failed_sources": [
+    {
+      "id": "bing_webmaster_blog",
+      "error": "RuntimeError: max retries exceeded for https://blogs.bing.com/webmaster/feed: ",
+      "last_success": null
+    }
+  ]
 }
