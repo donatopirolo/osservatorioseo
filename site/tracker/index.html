@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Tracker — Stato della ricerca in Italia — Osservatorio SEO</title>
+<meta name="description" content="Dashboard settimanale sull&#39;adozione di AI e Search Engines in Italia. 7 grafici interpretano i trend e aiutano a prendere decisioni operative di SEO." />
+<link rel="canonical" href="https://osservatorioseo.pages.dev/tracker/" />
+<meta property="og:title" content="Tracker — Stato della ricerca in Italia — Osservatorio SEO" />
+<meta property="og:description" content="Dashboard settimanale sull&#39;adozione di AI e Search Engines in Italia. 7 grafici interpretano i trend e aiutano a prendere decisioni operative di SEO." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://osservatorioseo.pages.dev/tracker/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta name="twitter:card" content="summary_large_image" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://osservatorioseo.pages.dev/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tracker",
+      "item": "https://osservatorioseo.pages.dev/tracker/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Tracker Osservatorio SEO \u2014 Adozione AI \u0026 Search in Italia",
+  "description": "Dati settimanali sul rank di popolarit\u00e0 delle AI services (ChatGPT, Claude, Gemini, Perplexity) e dei search engines in Italia, da Cloudflare Radar.",
+  "url": "https://osservatorioseo.pages.dev/tracker/",
+  "creator": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO"
+  },
+  "datePublished": "2026-04-13T07:54:58.373972+00:00",
+  "dateModified": "2026-04-13T07:54:58.373972+00:00",
+  "inLanguage": "it-IT",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "spatialCoverage": {
+    "@type": "Country",
+    "name": "Italia"
+  },
+  "keywords": "SEO, AI, Google, ChatGPT, Claude, Gemini, Perplexity, tracker, Italia"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/tracker/">TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant"> / </span>
+  <span class="text-primary-container">TRACKER</span>
+</nav>
+
+<section class="max-w-4xl mx-auto mb-10">
+  <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; TRACKER SETTIMANALE</p>
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-white">Stato della ricerca in Italia — Settimana 16, 2026</h1>
+  <p class="text-sm text-outline font-mono">
+    Ultimo aggiornamento: <span class="text-primary-container">13 April 2026</span> · Fonte primaria: Cloudflare Radar
+  </p>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; AI VS INTERNET IN ITALIA — 24 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">La linea verde è l&#39;indice di popolarità dei servizi AI in Italia, la grigia è il traffico internet totale. Entrambe normalizzate a 100 all&#39;inizio del periodo.</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" role="img" aria-label="chart placeholder"><rect width="700" height="60" fill="#0e0e0e"/><text x="350" y="35" text-anchor="middle" fill="#919191" font-size="12" font-family="monospace">Nessun dato disponibile — AI vs Internet</text></svg>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; A CHI CEDE GOOGLE — 12 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Come si compone il mercato di ricerca in Italia. Se Google cede share ad altri search engine, serve SEO multi-engine. Se cede ad AI, serve investimento in LLM optimization.</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" role="img" aria-label="chart placeholder"><rect width="700" height="60" fill="#0e0e0e"/><text x="350" y="35" text-anchor="middle" fill="#919191" font-size="12" font-family="monospace">Nessun dato disponibile — composizione mercato</text></svg>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; CHI HA SCAVALCATO CHI — TOP 10 AI, 6 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Il rank dei top 10 domini AI in Italia nelle ultime 26 settimane. Le linee si incrociano quando un dominio scavalca un altro.</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" role="img" aria-label="chart placeholder"><rect width="700" height="60" fill="#0e0e0e"/><text x="350" y="35" text-anchor="middle" fill="#919191" font-size="12" font-family="monospace">Nessun dato disponibile — bump chart AI</text></svg>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; QUALE SETTORE È GIÀ COLPITO</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Traffico mensile per categoria di destinazione in Italia. Verde = crescita, rosso = calo. Se il tuo settore è colpito, vedrai una riga rossa.</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant overflow-x-auto">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" role="img" aria-label="chart placeholder"><rect width="700" height="60" fill="#0e0e0e"/><text x="350" y="35" text-anchor="middle" fill="#919191" font-size="12" font-family="monospace">Nessun dato disponibile — heatmap categorie</text></svg>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; BIGGEST MOVERS — 30 GIORNI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Chi è salito e chi è sceso di più in termini di traffico negli ultimi 30 giorni. Questo è il grafico che genera il titolo del report mensile.</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" role="img" aria-label="chart placeholder"><rect width="700" height="60" fill="#0e0e0e"/><text x="350" y="35" text-anchor="middle" fill="#919191" font-size="12" font-family="monospace">Nessun mover significativo questa settimana</text></svg>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; I 4 BIG AI — TREND 6 MESI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Trend di traffico dei 4 big AI service negli ultimi 6 mesi, ciascuno con asse Y indipendente. Il rank corrente è in alto a destra.</p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" role="img" aria-label="chart placeholder"><rect width="700" height="60" fill="#0e0e0e"/><text x="350" y="35" text-anchor="middle" fill="#919191" font-size="12" font-family="monospace">Nessun dato disponibile — big 4 AI</text></svg>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; TRASPARENZA: DA DOVE ARRIVIAMO NOI</h2>
+  <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">
+    <strong class="text-white">1 sito solo, NON rappresentativo del mercato italiano.</strong> Questi sono i referrer di OsservatorioSEO stesso, inclusi per trasparenza editoriale.
+  </p>
+  <div class="bg-surface-container-lowest p-4 border border-outline-variant">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" role="img" aria-label="chart placeholder"><rect width="700" height="60" fill="#0e0e0e"/><text x="350" y="35" text-anchor="middle" fill="#919191" font-size="12" font-family="monospace">Nessun dato — referrer OsservatorioSEO</text></svg>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto mb-12">
+  <details open class="methodology-accordion group">
+    <summary class="flex items-center justify-between border-b border-primary-container pb-2 cursor-pointer list-none">
+      <h2 class="text-xs text-outline uppercase font-mono tracking-widest">&gt; METODOLOGIA</h2>
+      <span class="text-primary-container font-mono">&minus;</span>
+    </summary>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed mt-4 space-y-3 text-sm">
+      <p><strong class="text-white">Fonti dati:</strong> <a class="text-primary-container hover:underline" href="https://radar.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Radar API</a> + Cloudflare Pages Analytics (per il solo Grafico 7).</p>
+      <p><strong class="text-white">Cosa misura e cosa no:</strong> Cloudflare Radar misura la popolarità dei domini come destinazione (quanti italiani visitano chat.openai.com), non il traffico referral (quanti siti italiani ricevono visite da chat.openai.com). Queste due metriche sono correlate ma non identiche.</p>
+      <p><strong class="text-white">Campione:</strong> Cloudflare osserva circa il 17% del traffico internet globale. I dati sono proiezioni basate su questo campione, non misurazioni totali del mercato italiano.</p>
+      <p><strong class="text-white">Aggiornamento:</strong> Dati aggiornati ogni settimana. Prossima update prevista: 20 April 2026.</p>
+      <p><strong class="text-white">Perché non vedete "market share %":</strong> Lo share di mercato richiederebbe dati di panel a pagamento (SimilarWeb, Datos.live). Questo tracker usa solo fonti gratuite e pubblica indici normalizzati 0-100 dove 100 = dominio più popolare in categoria.</p>
+      <p><strong class="text-white">Limiti dichiarati:</strong> nessun dato di query SERP, nessun dato di referral traffic, nessun forecasting. Se vedi qualcosa che ti sembra strano, <a class="text-primary-container hover:underline" href="/about/">segnalalo alla redazione</a>.</p>
+    </div>
+  </details>
+</section>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">
+    (C) 2026 OSSERVATORIO_SEO // AUTORE:
+    <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+  </div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+  </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
