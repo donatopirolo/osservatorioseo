@@ -39,25 +39,11 @@ jobs:
       - name: Install Node deps (Tailwind CLI)
         run: npm install
 
-      - name: Determine if monthly report run
-        id: month
-        run: |
-          # First Monday of the month: run with --monthly-report
-          day_of_month=$(date -u +%d)
-          if [ "$day_of_month" -le "07" ]; then
-            echo "flag=--monthly-report" >> "$GITHUB_OUTPUT"
-          else
-            echo "flag=" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Run tracker update
         env:
           CLOUDFLARE_RADAR_TOKEN: ${{ secrets.CLOUDFLARE_RADAR_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          .venv/bin/python scripts/update_tracker.py ${{ steps.month.outputs.flag }}
+          .venv/bin/python scripts/update_tracker.py
 
       - name: Rebuild Tailwind CSS
         run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
