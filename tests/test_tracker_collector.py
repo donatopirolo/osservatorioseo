@@ -1,123 +1,103 @@
-"""Tests for tracker collector orchestration.
+"""Tests for tracker v2 collector."""
 
-Uses AsyncMock to stub RadarClient and PagesAnalyticsClient so we don't
-need real HTTP.
-"""
-
-from __future__ import annotations
-
-from datetime import UTC, datetime
+from pathlib import Path
 from unittest.mock import AsyncMock
 
 import pytest
+import yaml
 
 from osservatorio_seo.tracker.collector import TrackerCollector
-from osservatorio_seo.tracker.models import (
-    AnalyticsReferrer,
-    DomainRank,
-    IndexTimeseries,
-    TimeseriesPoint,
-    TrackerSnapshot,
-)
+from osservatorio_seo.tracker.models import TrackerSnapshot
 
 
 @pytest.fixture
-def fake_radar():
-    client = AsyncMock()
-
-    client.top_domains.side_effect = lambda category, location, limit=10, **kw: {
-        ("ai", "IT"): [
-            DomainRank(domain="chat.openai.com", rank=1),
-            DomainRank(domain="gemini.google.com", rank=2),
-            DomainRank(domain="claude.ai", rank=3),
-            DomainRank(domain="perplexity.ai", rank=4),
-            DomainRank(domain="character.ai", rank=5),
-        ],
-        ("search_engines", "IT"): [
-            DomainRank(domain="google.com", rank=1),
-            DomainRank(domain="bing.com", rank=2),
-            DomainRank(domain="duckduckgo.com", rank=3),
-        ],
-    }[(category, location)]
-
-    # Simple timeseries stubs
-    base_points = [
-        TimeseriesPoint(
-            date=datetime(2024 + i // 12, (i % 12) + 1, 1, tzinfo=UTC), value=100 + i * 2
-        )
-        for i in range(24)
-    ]
-    client.category_timeseries.return_value = IndexTimeseries(label="ai", points=base_points)
-    client.domain_timeseries.return_value = IndexTimeseries(
-        label="domain", points=base_points[-24:]
+def platforms_config(tmp_path: Path) -> Path:
+    cfg = tmp_path / "tracker_platforms.yaml"
+    cfg.write_text(
+        yaml.dump({"platforms": [
+            {"domain": "chatgpt.com", "label": "ChatGPT", "type": "chatbot"},
+            {"domain": "claude.ai", "label": "Claude", "type": "chatbot"},
+        ]})
     )
-
-    return client
+    return cfg
 
 
 @pytest.fixture
-def fake_pages_analytics():
-    client = AsyncMock()
-    client.referrer_share.return_value = [
-        AnalyticsReferrer(source="Google", share_pct=79.7),
-        AnalyticsReferrer(source="Direct", share_pct=17.3),
-        AnalyticsReferrer(source="ChatGPT", share_pct=0.6),
-        AnalyticsReferrer(source="Claude", share_pct=0.2),
+def mock_radar() -> AsyncMock:
+    radar = AsyncMock()
+    radar.ranking_top.return_value = [
+        {"rank": 1, "domain": "google.com", "categories": ["Search Engines"]},
+        {"rank": 2, "domain": "chatgpt.com", "categories": ["Artificial Intelligence"]},
     ]
-    return client
+    radar.domain_timeseries.return_value = [
+        {"date": "2026-04-06T00:00:00Z", "rank": 1},
+        {"date": "2026-04-13T00:00:00Z", "rank": 1},
+    ]
+    radar.domain_detail.return_value = {"rank": 10, "bucket": "200"}
+    radar.bot_human_timeseries.return_value = [
+        {"date": "2026-04-06T00:00:00Z", "human_pct": 83.0, "bot_pct": 17.0},
+    ]
+    radar.ai_bots_user_agent.return_value = (
+        ["Googlebot", "GPTBot"],
+        [{"date": "2026-04-06T00:00:00Z", "values": {"Googlebot": 60.0, "GPTBot": 40.0}}],
+    )
+    radar.crawl_purpose.return_value = (
+        ["Training", "User Action"],
+        [{"date": "2026-04-06T00:00:00Z", "values": {"Training": 50.0, "User Action": 50.0}}],
+    )
+    radar.industry_summary.return_value = [
+        {"industry": "Retail", "pct": 28.7},
+    ]
+    return radar
 
 
 @pytest.mark.asyncio
-async def test_collect_builds_complete_snapshot(fake_radar, fake_pages_analytics):
-    collector = TrackerCollector(
-        radar=fake_radar,
-        pages_analytics=fake_pages_analytics,
-        location="IT",
-    )
-    snapshot = await collector.collect(year=2026, week=15)
+async def test_collect_builds_v2_snapshot(mock_radar, platforms_config):
+    collector = TrackerCollector(radar=mock_radar, platforms_config=platforms_config)
+    snapshot = await collector.collect(year=2026, week=16)
 
     assert isinstance(snapshot, TrackerSnapshot)
-    assert snapshot.year == 2026
-    assert snapshot.week == 15
-    assert len(snapshot.ai_top10_current) == 5
-    assert snapshot.ai_top10_current[0].domain == "chat.openai.com"
-    assert len(snapshot.search_top5_current) == 3
-    assert snapshot.own_referrers_30d[0].source == "Google"
-    # Metadata tracks calls
-    assert snapshot.metadata.radar_calls > 0
-    assert snapshot.metadata.pages_analytics_calls == 1
+    assert snapshot.schema_version == "2.0"
+    # Section 1: top 10 for IT and global
+    assert len(snapshot.top10_it) == 2
+    assert len(snapshot.top10_global) == 2
+    assert snapshot.top10_it[0].domain == "google.com"
+    assert len(snapshot.top10_it[0].timeseries) == 2
+    # Section 2: AI platforms
+    assert len(snapshot.ai_platforms_it) == 2
+    assert len(snapshot.ai_platforms_global) == 2
+    assert snapshot.ai_platforms_it[0].label == "ChatGPT"
+    # Section 3: bot/human
+    assert len(snapshot.bot_human_it.points) == 1
+    assert len(snapshot.bot_human_global.points) == 1
+    # Section 4
+    assert len(snapshot.ai_bots_ua_it.agents) == 2
+    assert len(snapshot.crawl_purpose_it.purposes) == 2
+    # Section 5
+    assert len(snapshot.industry_it) == 1
+    assert len(snapshot.industry_global) == 1
 
 
 @pytest.mark.asyncio
-async def test_collect_is_robust_to_partial_failures(fake_radar, fake_pages_analytics):
-    """If pages analytics fails, snapshot is still built with a warning."""
-    fake_pages_analytics.referrer_share.side_effect = Exception("boom")
+async def test_collect_handles_partial_failures(mock_radar, platforms_config):
+    mock_radar.bot_human_timeseries.side_effect = Exception("API down")
+    collector = TrackerCollector(radar=mock_radar, platforms_config=platforms_config)
+    snapshot = await collector.collect(year=2026, week=16)
 
-    collector = TrackerCollector(
-        radar=fake_radar,
-        pages_analytics=fake_pages_analytics,
-        location="IT",
-    )
-    snapshot = await collector.collect(year=2026, week=15)
-    assert snapshot.own_referrers_30d == []
-    assert any("pages_analytics" in w.lower() for w in snapshot.metadata.warnings)
+    # Should still have data for other sections
+    assert len(snapshot.top10_it) == 2
+    # But bot_human should be empty
+    assert len(snapshot.bot_human_it.points) == 0
+    assert any("API down" in w for w in snapshot.metadata.warnings)
 
 
-def test_persist_writes_json_to_snapshots_dir(tmp_path):
-    """persist() writes snapshot to data/tracker/snapshots/<YYYY-WNN>.json."""
-    snapshot = TrackerSnapshot(
-        year=2026,
-        week=15,
-        generated_at=datetime(2026, 4, 14, 8, 0, tzinfo=UTC),
-        ai_index_24mo=IndexTimeseries(label="ai"),
-        internet_index_24mo=IndexTimeseries(label="internet"),
-        bump_chart_6mo={"domains": [], "weeks": []},
-        top_movers_30d={"up": [], "down": []},
-        metadata={"radar_calls": 5, "pages_analytics_calls": 1},
-    )
-    TrackerCollector.persist(snapshot, base_dir=tmp_path)
-
-    target = tmp_path / "snapshots" / "2026-W15.json"
+@pytest.mark.asyncio
+async def test_persist_writes_json(mock_radar, platforms_config, tmp_path):
+    collector = TrackerCollector(radar=mock_radar, platforms_config=platforms_config)
+    snapshot = await collector.collect(year=2026, week=16)
+    target = TrackerCollector.persist(snapshot, base_dir=tmp_path)
     assert target.exists()
-    content = target.read_text()
-    assert '"week": 15' in content
+    assert target.name == "2026-W16.json"
+    restored = TrackerSnapshot.model_validate_json(target.read_text())
+    assert restored.schema_version == "2.0"
+    assert len(restored.top10_it) == 2
