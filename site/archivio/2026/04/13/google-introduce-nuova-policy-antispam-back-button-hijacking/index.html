@@ -6,12 +6,12 @@
 <meta name="robots" content="noindex, nofollow" />
 <meta name="googlebot" content="noindex, nofollow" />
 <title>Google introduce una nuova policy antispam per il &#34;back button hijacking&#34; — Osservatorio SEO</title>
-<meta name="description" content="Google ha annunciato una nuova policy antispam che contrasta la pratica ingannevole del &#34;back button hijacking&#34;. Questa tecnica, che manipola il comportame" />
-<link rel="canonical" href="https://osservatorioseo.pages.dev/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/" />
+<meta name="description" content="Google ha annunciato una nuova policy antispam che contrasta il &#34;back button hijacking&#34;, una pratica ingannevole che manipola il comportamento del pulsante" />
+<link rel="canonical" href="https://www.osservatorioseo.com/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/" />
 <meta property="og:title" content="Google introduce una nuova policy antispam per il &#34;back button hijacking&#34; — Osservatorio SEO" />
-<meta property="og:description" content="Google ha annunciato una nuova policy antispam che contrasta la pratica ingannevole del &#34;back button hijacking&#34;. Questa tecnica, che manipola il comportame" />
+<meta property="og:description" content="Google ha annunciato una nuova policy antispam che contrasta il &#34;back button hijacking&#34;, una pratica ingannevole che manipola il comportamento del pulsante" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://osservatorioseo.pages.dev/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/" />
+<meta property="og:url" content="https://www.osservatorioseo.com/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/" />
 <meta property="og:site_name" content="Osservatorio SEO" />
 <meta name="twitter:card" content="summary_large_image" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -23,9 +23,9 @@
   "@context": "https://schema.org",
   "@type": "NewsArticle",
   "headline": "Google introduce una nuova policy antispam per il \"back button hijacking\"",
-  "description": "Google ha annunciato una nuova policy antispam che contrasta la pratica ingannevole del \"back button hijacking\". Questa tecnica, che manipola il comportamento del pulsante indietro del browser, sar\u00e0 ora considerata una violazione esplicita delle policy antispam di Google. La violazione comporter\u00e0 potenziali azioni punitive.",
-  "articleBody": "Google ha formalizzato il divieto di back button hijacking, inserendolo esplicitamente tra le pratiche malevole che violano le spam policy. La tecnica consiste nel manipolare la cronologia di navigazione del browser per impedire all\u0027utente di tornare alla pagina precedente quando preme il tasto indietro, intrappolandolo su una pagina indesiderata o reindirizzandolo verso destinazioni diverse da quella attesa.\n\nLa policy si inserisce nella categoria \"malicious practices\" delle spam policy di Google, la stessa che include cloaking, sneaky redirect e altre tecniche ingannevole. Questo significa che la violazione non comporta solo una penalizzazione algoritmica, ma pu\u00f2 portare a manual action con conseguente rimozione parziale o totale dall\u0027indice.\n\nIl back button hijacking viene tipicamente implementato tramite JavaScript che manipola l\u0027oggetto history del browser, inserendo URL multipli nello stack di navigazione o sostituendo l\u0027URL di riferimento. Varianti comuni includono l\u0027uso di history.pushState() per aggiungere entry fittizie, redirect immediati attivati da eventi popstate, o la sostituzione della location precedente prima che l\u0027utente possa tornare indietro.\n\nLa pratica \u00e8 diffusa in particolare su siti di affiliazione aggressivi, landing page di lead generation a basso valore, e network pubblicitari poco trasparenti che cercano di massimizzare le impression o forzare conversioni. Alcuni CMS e plugin per WordPress implementano varianti \"soft\" di questa tecnica per trattenere gli utenti, spesso senza che il proprietario del sito ne sia consapevole.\n\nGoogle non ha fornito dettagli tecnici specifici su come rileva questa violazione, ma \u00e8 ragionevole ipotizzare che Chrome User Experience data e segnalazioni manuali giochino un ruolo chiave. Il comportamento anomalo del pulsante indietro \u00e8 misurabile attraverso metriche di navigazione e pattern di interazione utente che deviano significativamente dalla norma.\n\nLa tempistica dell\u0027annuncio suggerisce che Google ha gi\u00e0 raccolto dati sufficienti per identificare pattern ricorrenti e che l\u0027enforcement potrebbe essere gi\u00e0 attivo in forma algoritmica prima della formalizzazione della policy. L\u0027esplicitazione serve principalmente a rendere actionable le manual action e a fornire base legale per rimozioni dall\u0027indice contestabili.\n\nPer i SEO, questo update non introduce rischi nuovi se il sito \u00e8 gestito in modo pulito, ma richiede un audit immediato di tutti gli script di terze parti, plugin di exit intent, e implementazioni custom che toccano l\u0027history API. Anche soluzioni apparentemente innocue come alcuni modal di retention potrebbero violare la policy se implementate in modo aggressivo.",
-  "wordCount": 375,
+  "description": "Google ha annunciato una nuova policy antispam che contrasta il \"back button hijacking\", una pratica ingannevole che manipola il comportamento del pulsante \"indietro\" del browser. Questa violazione rientra ora nelle \"pratiche dannose\" delle policy antispam e potr\u00e0 comportare penalizzazioni.",
+  "articleBody": "Google ha formalizzato il divieto di back button hijacking nelle spam policy, inserendolo esplicitamente tra le pratiche dannose (malicious practices). La tecnica consiste nel manipolare la cronologia del browser per impedire all\u0027utente di tornare alla pagina precedente tramite il pulsante indietro, forzandolo a rimanere sul sito o reindirizzandolo verso destinazioni non volute. Fino ad oggi questa pratica era implicitamente vietata, ma l\u0027assenza di una menzione esplicita lasciava margini interpretativi.\n\nLa nuova policy colma questa lacuna e introduce la possibilit\u00e0 di spam action manuali o algoritmiche contro i siti che implementano questa tecnica. Il back button hijacking viene tipicamente realizzato tramite JavaScript che inserisce entry fittizie nella history API del browser, oppure attraverso redirect immediati che sovrascrivono la pagina di provenienza nella cronologia. L\u0027obiettivo \u00e8 sempre lo stesso: intrappolare l\u0027utente e massimizzare pageview, tempo di permanenza artificiale o conversioni forzate.\n\nGoogle non ha fornito dettagli su come l\u0027algoritmo identificher\u00e0 questa pratica, ma \u00e8 ragionevole ipotizzare che i segnali comportamentali degli utenti (bounce rate anomali, interazioni con il pulsante indietro, pattern di navigazione innaturali) giochino un ruolo chiave. La formalizzazione della policy suggerisce che il volume di segnalazioni manuali e di casi rilevati sia cresciuto abbastanza da giustificare un intervento normativo esplicito.\n\nLa tempistica dell\u0027annuncio coincide con una fase in cui Google sta intensificando la lotta contro le pratiche che degradano l\u0027esperienza utente, dopo gli update sui contenuti di bassa qualit\u00e0 e le strette sugli annunci interstiziali. Il back button hijacking \u00e8 particolarmente diffuso in verticali ad alta competizione pubblicitaria (finanza, salute, gambling) e su siti che monetizzano tramite arbitraggio pubblicitario, dove ogni pageview in pi\u00f9 si traduce direttamente in revenue.\n\nLa policy si applica a tutte le implementazioni che alterano il comportamento atteso del pulsante indietro, indipendentemente dall\u0027intento dichiarato. Non esistono eccezioni per \"miglioramenti UX\" o \"funzionalit\u00e0 avanzate\": se l\u0027utente preme indietro e non torna dove si aspettava, \u00e8 violazione. Questo include anche implementazioni apparentemente innocue come le Single Page Application mal configurate che non gestiscono correttamente la history API.\n\nGoogle non ha specificato se la penalizzazione sar\u00e0 a livello di singola pagina, sezione o intero dominio, ma la categorizzazione come \"malicious practice\" suggerisce che l\u0027impatto potrebbe essere site-wide nei casi pi\u00f9 gravi. La distinzione tra errore tecnico e manipolazione intenzionale sar\u00e0 probabilmente valutata caso per caso nelle azioni manuali, mentre l\u0027algoritmo potrebbe applicare filtri pi\u00f9 indiscriminati.",
+  "wordCount": 386,
   "datePublished": "2026-04-12T23:00:00+00:00",
   "dateModified": "2026-04-12T23:00:00+00:00",
   "author": {
@@ -46,7 +46,7 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://osservatorioseo.pages.dev/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/"
+    "@id": "https://www.osservatorioseo.com/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/"
   },
   "articleSection": "Google Updates",
   "inLanguage": "it-IT",
@@ -66,32 +66,32 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://osservatorioseo.pages.dev/"
+      "item": "https://www.osservatorioseo.com/"
     },    {
       "@type": "ListItem",
       "position": 2,
       "name": "Archivio",
-      "item": "https://osservatorioseo.pages.dev/archivio/"
+      "item": "https://www.osservatorioseo.com/archivio/"
     },    {
       "@type": "ListItem",
       "position": 3,
       "name": "2026",
-      "item": "https://osservatorioseo.pages.dev/archivio/2026/"
+      "item": "https://www.osservatorioseo.com/archivio/2026/"
     },    {
       "@type": "ListItem",
       "position": 4,
       "name": "04",
-      "item": "https://osservatorioseo.pages.dev/archivio/2026/04/"
+      "item": "https://www.osservatorioseo.com/archivio/2026/04/"
     },    {
       "@type": "ListItem",
       "position": 5,
       "name": "13",
-      "item": "https://osservatorioseo.pages.dev/archivio/2026/04/13/"
+      "item": "https://www.osservatorioseo.com/archivio/2026/04/13/"
     },    {
       "@type": "ListItem",
       "position": 6,
       "name": "Google introduce una nuova policy antispam per il \"back button hijacking\"",
-      "item": "https://osservatorioseo.pages.dev/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/"
+      "item": "https://www.osservatorioseo.com/archivio/2026/04/13/google-introduce-nuova-policy-antispam-back-button-hijacking/"
     }  ]
 }
 </script>
@@ -101,31 +101,31 @@
   "@type": "FAQPage",
   "mainEntity": [    {
       "@type": "Question",
-      "name": "I modal di exit intent che si aprono quando l\u0027utente sta per lasciare la pagina violano questa policy?",
+      "name": "Le Single Page Application sono automaticamente a rischio di penalizzazione?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, se il modal non manipola la cronologia del browser. Un modal che si sovrappone al contenuto quando il cursore si muove verso la barra degli indirizzi \u00e8 accettabile, purch\u00e9 l\u0027utente possa chiuderlo e il pulsante indietro funzioni normalmente. Viola la policy solo se il modal viene attivato dall\u0027evento popstate o se aggiunge entry alla cronologia per intercettare il pulsante indietro."
+        "text": "No, se la history API \u00e8 implementata correttamente. Il problema sorge quando il pulsante indietro non riporta l\u0027utente alla pagina di provenienza attesa. Una SPA ben configurata che sincronizza stati client-side con la cronologia browser non viola la policy. Il test pratico \u00e8 semplice: se l\u0027utente arriva da Google e preme indietro, deve tornare a Google."
       }
     },    {
       "@type": "Question",
-      "name": "Se uno script di terze parti implementa back button hijacking a mia insaputa, il mio sito viene penalizzato?",
+      "name": "La penalizzazione \u00e8 a livello di pagina o di dominio?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "S\u00ec. Google considera il proprietario del sito responsabile di tutti gli script caricati, indipendentemente dalla provenienza. La manual action colpisce il dominio, non lo script. \u00c8 necessario rimuovere immediatamente lo script violante e inviare reconsideration request. Per questo \u00e8 fondamentale auditare regolarmente tutte le dipendenze JavaScript, inclusi tag manager, network pubblicitari e plugin."
+        "text": "Google non lo specifica, ma la categorizzazione come \"malicious practice\" suggerisce che nei casi gravi l\u0027impatto possa essere site-wide. Se il back button hijacking \u00e8 implementato tramite script globale presente su tutte le pagine, \u00e8 ragionevole aspettarsi una penalizzazione a livello di dominio. Implementazioni isolate su singole pagine potrebbero ricevere azioni pi\u00f9 circoscritte."
       }
     },    {
       "@type": "Question",
-      "name": "L\u0027uso di history.pushState() per implementare navigazione AJAX single-page \u00e8 considerato back button hijacking?",
+      "name": "Come distinguere tra bug tecnico e manipolazione intenzionale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, se implementato correttamente. L\u0027uso di history.pushState() per sincronizzare l\u0027URL con lo stato dell\u0027applicazione in una SPA \u00e8 legittimo, purch\u00e9 ogni entry nella cronologia corrisponda a uno stato reale e il pulsante indietro riporti l\u0027utente allo stato precedente dell\u0027applicazione. Viola la policy solo se aggiungi entry fittizie senza corrispondente cambio di stato o se intercetti popstate per impedire la navigazione."
+        "text": "Nelle azioni manuali Google valuta il contesto: un bug isolato su una SPA complessa viene trattato diversamente da uno script dedicato a intrappolare utenti. Tuttavia, l\u0027algoritmo potrebbe non fare questa distinzione. La responsabilit\u00e0 di garantire il corretto funzionamento del pulsante indietro ricade sempre sul proprietario del sito, indipendentemente dall\u0027intenzionalit\u00e0. Fix rapido e richiesta di riconsiderazione sono la strada da seguire in caso di errore tecnico."
       }
     },    {
       "@type": "Question",
-      "name": "Come faccio a sapere se il mio sito \u00e8 gi\u00e0 stato colpito da questa policy prima dell\u0027annuncio ufficiale?",
+      "name": "Gli script di terze parti mi espongono a rischio anche se non controllo il codice?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Controlla Search Console \u2192 Azioni manuali per notifiche esplicite. Se non ci sono manual action ma noti cali di traffico improvvisi o deindicizzazione parziale da met\u00e0 marzo 2026, potrebbe essere enforcement algoritmico anticipato. Verifica anche il report Copertura per pagine escluse con motivazione \"Spam rilevato\" e confronta i pattern di crawling in Statistiche di scansione per anomalie temporali coincidenti con l\u0027implementazione di script sospetti."
+        "text": "S\u00ec. Google considera il proprietario del sito responsabile di tutto il codice eseguito sulle sue pagine, inclusi script di vendor esterni. Se un tool di analytics o A/B testing manipola la history API causando back button hijacking, la penalizzazione colpisce il sito. \u00c8 necessario auditare tutti gli script di terze parti e rimuovere quelli che alterano il comportamento del pulsante indietro."
       }
     }  ]
 }
@@ -184,19 +184,18 @@
   </header>
 
   <section class="prose prose-invert mb-10">
-    <p class="text-lg leading-relaxed text-on-surface">Google ha annunciato una nuova policy antispam che contrasta la pratica ingannevole del &#34;back button hijacking&#34;. Questa tecnica, che manipola il comportamento del pulsante indietro del browser, sarà ora considerata una violazione esplicita delle policy antispam di Google. La violazione comporterà potenziali azioni punitive.</p>
+    <p class="text-lg leading-relaxed text-on-surface">Google ha annunciato una nuova policy antispam che contrasta il &#34;back button hijacking&#34;, una pratica ingannevole che manipola il comportamento del pulsante &#34;indietro&#34; del browser. Questa violazione rientra ora nelle &#34;pratiche dannose&#34; delle policy antispam e potrà comportare penalizzazioni.</p>
   </section>
 
   <section class="mb-10">
     <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI APPROFONDITA</h2>
     <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
-      <p>Google ha formalizzato il divieto di back button hijacking, inserendolo esplicitamente tra le pratiche malevole che violano le spam policy. La tecnica consiste nel manipolare la cronologia di navigazione del browser per impedire all&#39;utente di tornare alla pagina precedente quando preme il tasto indietro, intrappolandolo su una pagina indesiderata o reindirizzandolo verso destinazioni diverse da quella attesa.</p>
-      <p>La policy si inserisce nella categoria &#34;malicious practices&#34; delle spam policy di Google, la stessa che include cloaking, sneaky redirect e altre tecniche ingannevole. Questo significa che la violazione non comporta solo una penalizzazione algoritmica, ma può portare a manual action con conseguente rimozione parziale o totale dall&#39;indice.</p>
-      <p>Il back button hijacking viene tipicamente implementato tramite JavaScript che manipola l&#39;oggetto history del browser, inserendo URL multipli nello stack di navigazione o sostituendo l&#39;URL di riferimento. Varianti comuni includono l&#39;uso di history.pushState() per aggiungere entry fittizie, redirect immediati attivati da eventi popstate, o la sostituzione della location precedente prima che l&#39;utente possa tornare indietro.</p>
-      <p>La pratica è diffusa in particolare su siti di affiliazione aggressivi, landing page di lead generation a basso valore, e network pubblicitari poco trasparenti che cercano di massimizzare le impression o forzare conversioni. Alcuni CMS e plugin per WordPress implementano varianti &#34;soft&#34; di questa tecnica per trattenere gli utenti, spesso senza che il proprietario del sito ne sia consapevole.</p>
-      <p>Google non ha fornito dettagli tecnici specifici su come rileva questa violazione, ma è ragionevole ipotizzare che Chrome User Experience data e segnalazioni manuali giochino un ruolo chiave. Il comportamento anomalo del pulsante indietro è misurabile attraverso metriche di navigazione e pattern di interazione utente che deviano significativamente dalla norma.</p>
-      <p>La tempistica dell&#39;annuncio suggerisce che Google ha già raccolto dati sufficienti per identificare pattern ricorrenti e che l&#39;enforcement potrebbe essere già attivo in forma algoritmica prima della formalizzazione della policy. L&#39;esplicitazione serve principalmente a rendere actionable le manual action e a fornire base legale per rimozioni dall&#39;indice contestabili.</p>
-      <p>Per i SEO, questo update non introduce rischi nuovi se il sito è gestito in modo pulito, ma richiede un audit immediato di tutti gli script di terze parti, plugin di exit intent, e implementazioni custom che toccano l&#39;history API. Anche soluzioni apparentemente innocue come alcuni modal di retention potrebbero violare la policy se implementate in modo aggressivo.</p>
+      <p>Google ha formalizzato il divieto di back button hijacking nelle spam policy, inserendolo esplicitamente tra le pratiche dannose (malicious practices). La tecnica consiste nel manipolare la cronologia del browser per impedire all&#39;utente di tornare alla pagina precedente tramite il pulsante indietro, forzandolo a rimanere sul sito o reindirizzandolo verso destinazioni non volute. Fino ad oggi questa pratica era implicitamente vietata, ma l&#39;assenza di una menzione esplicita lasciava margini interpretativi.</p>
+      <p>La nuova policy colma questa lacuna e introduce la possibilità di spam action manuali o algoritmiche contro i siti che implementano questa tecnica. Il back button hijacking viene tipicamente realizzato tramite JavaScript che inserisce entry fittizie nella history API del browser, oppure attraverso redirect immediati che sovrascrivono la pagina di provenienza nella cronologia. L&#39;obiettivo è sempre lo stesso: intrappolare l&#39;utente e massimizzare pageview, tempo di permanenza artificiale o conversioni forzate.</p>
+      <p>Google non ha fornito dettagli su come l&#39;algoritmo identificherà questa pratica, ma è ragionevole ipotizzare che i segnali comportamentali degli utenti (bounce rate anomali, interazioni con il pulsante indietro, pattern di navigazione innaturali) giochino un ruolo chiave. La formalizzazione della policy suggerisce che il volume di segnalazioni manuali e di casi rilevati sia cresciuto abbastanza da giustificare un intervento normativo esplicito.</p>
+      <p>La tempistica dell&#39;annuncio coincide con una fase in cui Google sta intensificando la lotta contro le pratiche che degradano l&#39;esperienza utente, dopo gli update sui contenuti di bassa qualità e le strette sugli annunci interstiziali. Il back button hijacking è particolarmente diffuso in verticali ad alta competizione pubblicitaria (finanza, salute, gambling) e su siti che monetizzano tramite arbitraggio pubblicitario, dove ogni pageview in più si traduce direttamente in revenue.</p>
+      <p>La policy si applica a tutte le implementazioni che alterano il comportamento atteso del pulsante indietro, indipendentemente dall&#39;intento dichiarato. Non esistono eccezioni per &#34;miglioramenti UX&#34; o &#34;funzionalità avanzate&#34;: se l&#39;utente preme indietro e non torna dove si aspettava, è violazione. Questo include anche implementazioni apparentemente innocue come le Single Page Application mal configurate che non gestiscono correttamente la history API.</p>
+      <p>Google non ha specificato se la penalizzazione sarà a livello di singola pagina, sezione o intero dominio, ma la categorizzazione come &#34;malicious practice&#34; suggerisce che l&#39;impatto potrebbe essere site-wide nei casi più gravi. La distinzione tra errore tecnico e manipolazione intenzionale sarà probabilmente valutata caso per caso nelle azioni manuali, mentre l&#39;algoritmo potrebbe applicare filtri più indiscriminati.</p>
     </div>
   </section>
 
@@ -205,23 +204,23 @@
     <ul class="space-y-3">
       <li class="flex gap-3 text-on-surface leading-relaxed">
         <span class="text-primary-container font-mono shrink-0">▸</span>
-        <span>Qualsiasi implementazione che manipola history.pushState(), history.replaceState() o intercetta eventi popstate per alterare il comportamento del pulsante indietro è ora a rischio manual action con potenziale deindicizzazione.</span>
+        <span>Siti che utilizzano SPA framework (React, Vue, Angular) devono verificare che la gestione della history API non crei comportamenti anomali del pulsante indietro, anche se non intenzionali. Un bug tecnico può essere interpretato come violazione.</span>
       </li>
       <li class="flex gap-3 text-on-surface leading-relaxed">
         <span class="text-primary-container font-mono shrink-0">▸</span>
-        <span>Plugin di exit intent, modal di retention, e script di affiliazione che aggiungono step intermedi alla navigazione devono essere verificati immediatamente, anche se installati da tempo e considerati &#34;standard&#34;.</span>
+        <span>Verticali ad alto rischio (finanza, salute, lead generation) che hanno implementato script di terze parti per tracking o A/B testing devono auditare il codice JavaScript per identificare manipolazioni della cronologia browser, anche se inserite da vendor esterni.</span>
       </li>
       <li class="flex gap-3 text-on-surface leading-relaxed">
         <span class="text-primary-container font-mono shrink-0">▸</span>
-        <span>Siti che monetizzano tramite network pubblicitari di terze parti potrebbero essere penalizzati per comportamenti implementati da script esterni su cui non hanno controllo diretto, rendendo necessario un audit completo delle dipendenze JavaScript.</span>
+        <span>La policy elimina definitivamente qualsiasi giustificazione per tecniche di &#34;session retention&#34; basate sulla manipolazione della history, anche quando presentate come ottimizzazioni UX. Il rischio di spam action supera qualsiasi beneficio di engagement.</span>
       </li>
       <li class="flex gap-3 text-on-surface leading-relaxed">
         <span class="text-primary-container font-mono shrink-0">▸</span>
-        <span>La policy colpisce principalmente siti di affiliazione e lead generation, ma anche e-commerce con funnel aggressivi o publisher con strategie di retention invasive potrebbero rientrare nel perimetro se le implementazioni sono troppo aggressive.</span>
+        <span>Chi gestisce network di siti o programmi di affiliazione deve estendere il controllo qualità anche a questo aspetto, perché un singolo dominio penalizzato per back button hijacking può compromettere la reputazione dell&#39;intero network agli occhi di Google.</span>
       </li>
       <li class="flex gap-3 text-on-surface leading-relaxed">
         <span class="text-primary-container font-mono shrink-0">▸</span>
-        <span>A differenza di violazioni algoritmiche, questa è una spam policy esplicita: significa che il recupero richiede reconsideration request formale dopo aver rimosso completamente la pratica, con tempi di ripristino potenzialmente lunghi.</span>
+        <span>La formalizzazione della policy rende più semplice per i concorrenti segnalare violazioni tramite spam report, aumentando il rischio di azioni manuali anche su implementazioni borderline.</span>
       </li>
     </ul>
   </section>
@@ -231,15 +230,15 @@
     <div class="space-y-4">
 <div class="p-5 border-l-4 bg-[#0e0e0e] border-primary-container">
         <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA FARE</p>
-        <p class="text-on-surface leading-relaxed">Un sito di comparazione prezzi implementa uno script che, quando l&#39;utente clicca su un&#39;offerta affiliata, aggiunge tre entry fittizie alla cronologia usando history.pushState(). Quando l&#39;utente preme indietro, viene reindirizzato a una landing page intermedia invece di tornare alla SERP. Questo è back button hijacking esplicito e comporta manual action immediata.</p>
+        <p class="text-on-surface leading-relaxed">Un sito di comparazione prezzi inserisce tramite JavaScript una entry fittizia nella history ogni volta che l&#39;utente clicca su un risultato. Quando l&#39;utente preme indietro, invece di tornare alla SERP di Google viene riportato alla pagina di comparazione. Questo è back button hijacking esplicito e comporta spam action site-wide.</p>
       </div>
 <div class="p-5 border-l-4 bg-[#1b1b1b] border-[#f5a623]">
         <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA EVITARE</p>
-        <p class="text-on-surface leading-relaxed">Un plugin WordPress di exit intent mostra un modal quando l&#39;utente muove il cursore verso la barra degli indirizzi, ma non manipola la cronologia di navigazione né impedisce la chiusura del modal con ESC o click fuori. Questo non viola la policy perché non altera il comportamento del pulsante indietro, anche se è una tecnica di retention.</p>
+        <p class="text-on-surface leading-relaxed">Una SPA di e-commerce gestisce male il routing client-side: quando l&#39;utente naviga tra categorie prodotto, il pulsante indietro non funziona come atteso perché la history API non è sincronizzata con i cambi di stato. Anche se non intenzionale, questa implementazione può essere interpretata come violazione e richiede fix immediato.</p>
       </div>
 <div class="p-5 border-l-4 bg-[#1f1f1f] border-[#919191]">
         <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">SCENARIO</p>
-        <p class="text-on-surface leading-relaxed">Un network pubblicitario inietta uno script che intercetta l&#39;evento popstate e, invece di permettere la navigazione indietro, apre un popup pubblicitario e mantiene l&#39;utente sulla pagina corrente. Il proprietario del sito non è consapevole del comportamento perché lo script è caricato da un tag manager di terze parti. Il sito riceve comunque manual action perché Google considera il proprietario responsabile di tutti gli script caricati.</p>
+        <p class="text-on-surface leading-relaxed">Un blog monetizzato con arbitraggio pubblicitario usa uno script di terze parti per analytics che, come side effect, modifica la history inserendo parametri UTM. Il comportamento del pulsante indietro risulta alterato. Il proprietario del sito è responsabile anche se il codice proviene da un vendor esterno, e deve rimuovere lo script o richiedere una versione corretta.</p>
       </div>
     </div>
   </section>
@@ -247,12 +246,12 @@
   <section class="mb-10">
     <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COME TESTARE L'IMPATTO</h2>
     <ol class="space-y-2 list-decimal list-inside text-on-surface leading-relaxed marker:text-primary-container marker:font-mono">
-      <li class="pl-2">Apri il sito in Chrome in modalità incognito, naviga su 3-4 pagine diverse, poi premi il pulsante indietro ripetutamente e verifica che ogni pressione riporti esattamente alla pagina precedente senza redirect o step intermedi.</li>
-      <li class="pl-2">Ispeziona tutti gli script caricati tramite DevTools → Sources, cerca riferimenti a &#39;history.pushState&#39;, &#39;history.replaceState&#39;, &#39;popstate&#39;, e &#39;onpopstate&#39; nel codice JavaScript e verifica cosa fanno esattamente.</li>
-      <li class="pl-2">Disattiva temporaneamente tutti i plugin di exit intent, modal di retention, e script di affiliazione, poi ripeti il test del pulsante indietro per identificare quale componente causa il problema.</li>
-      <li class="pl-2">Usa Chrome DevTools → Network → Preserve log, naviga sul sito e premi indietro: verifica che non ci siano redirect (codici 301/302/307) innescati dall&#39;azione di tornare indietro.</li>
-      <li class="pl-2">Controlla Search Console → Azioni manuali per verificare se è già presente una penalizzazione, e monitora il report Copertura per cali improvvisi di pagine indicizzate che potrebbero segnalare enforcement algoritmico.</li>
-      <li class="pl-2">Se usi tag manager o script di terze parti, caricali in un ambiente di test isolato e monitora il comportamento del pulsante indietro prima di deployarli in produzione.</li>
+      <li class="pl-2">Apri Chrome DevTools → scheda Console e monitora le chiamate a history.pushState() e history.replaceState() durante la navigazione sul sito.</li>
+      <li class="pl-2">Naviga su una pagina interna del sito partendo da una SERP di Google, poi premi il pulsante indietro: verifica che torni effettivamente alla SERP e non a una pagina intermedia o alla stessa pagina.</li>
+      <li class="pl-2">Usa l&#39;estensione Chrome &#34;History API Monitor&#34; per tracciare tutte le manipolazioni della cronologia browser durante una sessione di navigazione tipica sul sito.</li>
+      <li class="pl-2">Testa il comportamento su mobile (Chrome Android e Safari iOS) perché alcune implementazioni di back button hijacking si attivano solo su dispositivi mobili dove l&#39;utente è meno propenso a notare anomalie.</li>
+      <li class="pl-2">Esegui un audit completo di tutti gli script JavaScript di terze parti (analytics, A/B testing, heatmap, advertising) per identificare manipolazioni della history non documentate.</li>
+      <li class="pl-2">Controlla Google Search Console → Azioni manuali per verificare se è già presente una penalizzazione per &#34;malicious practices&#34; e, in caso positivo, prioritizza il fix del back button hijacking nella richiesta di riconsiderazione.</li>
     </ol>
   </section>
 
@@ -261,38 +260,38 @@
     <div class="divide-y divide-outline-variant border-t border-b border-outline-variant">
       <details class="group faq-item">
         <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
-          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">I modal di exit intent che si aprono quando l&#39;utente sta per lasciare la pagina violano questa policy?</h3>
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Le Single Page Application sono automaticamente a rischio di penalizzazione?</h3>
           <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
         </summary>
         <div class="pb-5 pr-8">
-          <p class="text-on-surface-variant leading-relaxed">No, se il modal non manipola la cronologia del browser. Un modal che si sovrappone al contenuto quando il cursore si muove verso la barra degli indirizzi è accettabile, purché l&#39;utente possa chiuderlo e il pulsante indietro funzioni normalmente. Viola la policy solo se il modal viene attivato dall&#39;evento popstate o se aggiunge entry alla cronologia per intercettare il pulsante indietro.</p>
+          <p class="text-on-surface-variant leading-relaxed">No, se la history API è implementata correttamente. Il problema sorge quando il pulsante indietro non riporta l&#39;utente alla pagina di provenienza attesa. Una SPA ben configurata che sincronizza stati client-side con la cronologia browser non viola la policy. Il test pratico è semplice: se l&#39;utente arriva da Google e preme indietro, deve tornare a Google.</p>
         </div>
       </details>
       <details class="group faq-item">
         <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
-          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Se uno script di terze parti implementa back button hijacking a mia insaputa, il mio sito viene penalizzato?</h3>
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">La penalizzazione è a livello di pagina o di dominio?</h3>
           <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
         </summary>
         <div class="pb-5 pr-8">
-          <p class="text-on-surface-variant leading-relaxed">Sì. Google considera il proprietario del sito responsabile di tutti gli script caricati, indipendentemente dalla provenienza. La manual action colpisce il dominio, non lo script. È necessario rimuovere immediatamente lo script violante e inviare reconsideration request. Per questo è fondamentale auditare regolarmente tutte le dipendenze JavaScript, inclusi tag manager, network pubblicitari e plugin.</p>
+          <p class="text-on-surface-variant leading-relaxed">Google non lo specifica, ma la categorizzazione come &#34;malicious practice&#34; suggerisce che nei casi gravi l&#39;impatto possa essere site-wide. Se il back button hijacking è implementato tramite script globale presente su tutte le pagine, è ragionevole aspettarsi una penalizzazione a livello di dominio. Implementazioni isolate su singole pagine potrebbero ricevere azioni più circoscritte.</p>
         </div>
       </details>
       <details class="group faq-item">
         <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
-          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">L&#39;uso di history.pushState() per implementare navigazione AJAX single-page è considerato back button hijacking?</h3>
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Come distinguere tra bug tecnico e manipolazione intenzionale?</h3>
           <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
         </summary>
         <div class="pb-5 pr-8">
-          <p class="text-on-surface-variant leading-relaxed">No, se implementato correttamente. L&#39;uso di history.pushState() per sincronizzare l&#39;URL con lo stato dell&#39;applicazione in una SPA è legittimo, purché ogni entry nella cronologia corrisponda a uno stato reale e il pulsante indietro riporti l&#39;utente allo stato precedente dell&#39;applicazione. Viola la policy solo se aggiungi entry fittizie senza corrispondente cambio di stato o se intercetti popstate per impedire la navigazione.</p>
+          <p class="text-on-surface-variant leading-relaxed">Nelle azioni manuali Google valuta il contesto: un bug isolato su una SPA complessa viene trattato diversamente da uno script dedicato a intrappolare utenti. Tuttavia, l&#39;algoritmo potrebbe non fare questa distinzione. La responsabilità di garantire il corretto funzionamento del pulsante indietro ricade sempre sul proprietario del sito, indipendentemente dall&#39;intenzionalità. Fix rapido e richiesta di riconsiderazione sono la strada da seguire in caso di errore tecnico.</p>
         </div>
       </details>
       <details class="group faq-item">
         <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
-          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Come faccio a sapere se il mio sito è già stato colpito da questa policy prima dell&#39;annuncio ufficiale?</h3>
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Gli script di terze parti mi espongono a rischio anche se non controllo il codice?</h3>
           <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
         </summary>
         <div class="pb-5 pr-8">
-          <p class="text-on-surface-variant leading-relaxed">Controlla Search Console → Azioni manuali per notifiche esplicite. Se non ci sono manual action ma noti cali di traffico improvvisi o deindicizzazione parziale da metà marzo 2026, potrebbe essere enforcement algoritmico anticipato. Verifica anche il report Copertura per pagine escluse con motivazione &#34;Spam rilevato&#34; e confronta i pattern di crawling in Statistiche di scansione per anomalie temporali coincidenti con l&#39;implementazione di script sospetti.</p>
+          <p class="text-on-surface-variant leading-relaxed">Sì. Google considera il proprietario del sito responsabile di tutto il codice eseguito sulle sue pagine, inclusi script di vendor esterni. Se un tool di analytics o A/B testing manipola la history API causando back button hijacking, la penalizzazione colpisce il sito. È necessario auditare tutti gli script di terze parti e rimuovere quelli che alterano il comportamento del pulsante indietro.</p>
         </div>
       </details>
     </div>
@@ -300,11 +299,11 @@
 
   <section class="mb-10 p-6 bg-surface-container-low border-l-2 border-primary-container">
     <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IL PUNTO DELLA REDAZIONE</h2>
-    <p class="text-on-surface leading-relaxed italic">Questa policy formalizza qualcosa che avrebbe dovuto essere ovvio da anni: manipolare il comportamento base del browser per intrappolare utenti è spam, punto. Il fatto che Google abbia dovuto esplicitarlo nel 2026 dice molto su quanto sia ancora diffusa la pratica, soprattutto in certi verticali di affiliazione e lead gen dove la disperazione per le conversioni supera il buonsenso.
+    <p class="text-on-surface leading-relaxed italic">Questa policy formalizza ciò che avrebbe dovuto essere ovvio da sempre: manipolare la navigazione dell&#39;utente è spam, punto. Il fatto che Google abbia sentito il bisogno di esplicitarlo nel 2026 dice molto sulla diffusione della pratica, soprattutto in verticali dove il valore per pageview giustifica tattiche aggressive.
 
-L&#39;aspetto critico è la responsabilità per script di terze parti. Se monetizzi tramite network pubblicitari poco trasparenti o usi plugin WordPress di provenienza dubbia, sei esposto anche se tecnicamente non hai scritto tu il codice violante. Non basta più installare e dimenticare: ogni dipendenza JavaScript è un potenziale vettore di penalizzazione.
+Chi ha costruito strategie di retention o monetizzazione su queste tecniche deve smantellare tutto immediatamente. Il rischio non è teorico: la categorizzazione come &#34;malicious practice&#34; mette il back button hijacking allo stesso livello di cloaking e malware, con penalizzazioni potenzialmente devastanti. Non esistono zone grigie o interpretazioni creative.
 
-Chi gestisce siti di affiliazione o lead generation dovrebbe fare audit immediato, non domani. L&#39;enforcement potrebbe essere già attivo in forma algoritmica, e aspettare la manual action significa perdere settimane o mesi di traffico prima del recupero. Rimuovi tutto ciò che tocca l&#39;history API senza motivo tecnico legittimo, anche se &#34;ha sempre funzionato&#34; o &#34;tutti lo usano&#34;.</p>
+L&#39;aspetto più insidioso riguarda le SPA e gli script di terze parti. Molti siti violano la policy senza saperlo, per bug tecnici o side effect di tool esterni. La responsabilità resta sempre del proprietario del sito. Un audit JavaScript completo non è più opzionale, è difesa preventiva contro spam action che potrebbero arrivare senza preavviso algoritmico.</p>
   </section>
 
   <section class="mb-8">
