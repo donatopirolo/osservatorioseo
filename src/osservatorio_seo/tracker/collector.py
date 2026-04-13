@@ -35,6 +35,8 @@ from osservatorio_seo.tracker.models import (
     TimeseriesPoint,
     TopDomainEntry,
     TrackerSnapshot,
+    TrendsPoint,
+    TrendsTimeseries,
 )
 
 logger = logging.getLogger(__name__)
@@ -53,11 +55,13 @@ class TrackerCollector:
         self,
         radar: Any,
         platforms_config: Path | None = None,
+        trends_client: Any | None = None,
     ) -> None:
         self._radar = radar
         self._cfg_path = platforms_config or _DEFAULT_PLATFORMS
         self._platforms: list[dict[str, str]] = self._load_platforms()
         self._warnings: list[str] = []
+        self._trends = trends_client
 
     def _load_platforms(self) -> list[dict[str, str]]:
         if not self._cfg_path.exists():
@@ -83,6 +87,7 @@ class TrackerCollector:
         industry_it, industry_global = await self._fetch_industry_both()
         device_it, device_global = await self._fetch_device_type_both()
         os_it, os_global = await self._fetch_os_both()
+        trends_it, trends_global = self._fetch_trends_both()
 
         metadata = SnapshotMetadata(warnings=list(self._warnings))
 
@@ -106,6 +111,8 @@ class TrackerCollector:
             device_type_global=device_global,
             os_it=os_it,
             os_global=os_global,
+            trends_it=trends_it,
+            trends_global=trends_global,
             metadata=metadata,
         )
 
@@ -313,6 +320,38 @@ class TrackerCollector:
     async def _fetch_os(self, location):
         raw = await self._radar.os_summary(location=location)
         return [OSEntry(os=r["os"], pct=r["pct"]) for r in raw]
+
+    # ------------------------------------------------------------------
+    # Section 1b: Google Trends interest data
+    # ------------------------------------------------------------------
+
+    def _fetch_trends_both(
+        self,
+    ) -> tuple[TrendsTimeseries, TrendsTimeseries]:
+        if self._trends is None:
+            return TrendsTimeseries(), TrendsTimeseries()
+
+        it = self._fetch_trends(geo="IT")
+        glb = self._fetch_trends(geo="")
+        return it, glb
+
+    def _fetch_trends(self, geo: str) -> TrendsTimeseries:
+        label = f"google_trends(geo={geo or 'global'})"
+        try:
+            keywords, raw_points = self._trends.fetch_interest(geo=geo)
+            if not keywords:
+                self._warnings.append(f"{label}: no data returned")
+                return TrendsTimeseries()
+            points = [
+                TrendsPoint(date=p["date"], values=p["values"])
+                for p in raw_points
+            ]
+            return TrendsTimeseries(keywords=keywords, points=points)
+        except Exception as exc:  # noqa: BLE001
+            msg = f"{label}: {exc}"
+            self._warnings.append(msg)
+            logger.warning("tracker collector %s", msg)
+            return TrendsTimeseries()
 
     # ------------------------------------------------------------------
     # Helpers

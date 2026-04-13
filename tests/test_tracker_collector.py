@@ -1,7 +1,8 @@
 """Tests for tracker v2 collector."""
 
+from datetime import UTC, datetime
 from pathlib import Path
-from unittest.mock import AsyncMock
+from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 import yaml
@@ -115,3 +116,38 @@ async def test_persist_writes_json(mock_radar, platforms_config, tmp_path):
     restored = TrackerSnapshot.model_validate_json(target.read_text())
     assert restored.schema_version == "3.0"
     assert len(restored.top10_it) == 2
+
+
+@pytest.mark.asyncio
+async def test_collect_includes_trends_data(mock_radar, platforms_config):
+    mock_trends = MagicMock()
+    mock_trends.fetch_interest.return_value = (
+        ["ChatGPT", "Claude AI"],
+        [
+            {
+                "date": datetime(2026, 4, 6, tzinfo=UTC),
+                "values": {"ChatGPT": 100, "Claude AI": 12},
+            },
+        ],
+    )
+
+    collector = TrackerCollector(
+        radar=mock_radar,
+        platforms_config=platforms_config,
+        trends_client=mock_trends,
+    )
+    snapshot = await collector.collect(year=2026, week=16)
+
+    assert snapshot.trends_it.keywords == ["ChatGPT", "Claude AI"]
+    assert len(snapshot.trends_it.points) == 1
+    assert snapshot.trends_it.points[0].values["ChatGPT"] == 100
+    assert mock_trends.fetch_interest.call_count == 2
+
+
+@pytest.mark.asyncio
+async def test_collect_works_without_trends_client(mock_radar, platforms_config):
+    collector = TrackerCollector(radar=mock_radar, platforms_config=platforms_config)
+    snapshot = await collector.collect(year=2026, week=16)
+
+    assert snapshot.trends_it.keywords == []
+    assert snapshot.trends_global.keywords == []
