@@ -10,7 +10,8 @@ Flags:
                       on the first Monday of a month).
 
 Environment variables:
-    CLOUDFLARE_API_TOKEN       Required, token with Radar + Analytics read
+    CLOUDFLARE_RADAR_TOKEN     Required, token with Account Analytics Read
+    CLOUDFLARE_API_TOKEN       Fallback if CLOUDFLARE_RADAR_TOKEN not set
     CLOUDFLARE_ACCOUNT_ID      Required for Pages Analytics
     CLOUDFLARE_ZONE_ID         Required for Pages Analytics
     OPENROUTER_API_KEY         Required if --monthly-report is set
@@ -41,9 +42,9 @@ def _iso_year_week(d: date) -> tuple[int, int]:
 
 async def run_weekly_collection(repo_root: Path) -> Path:
     """Fetch snapshot, persist, return path."""
-    token = os.environ.get("CLOUDFLARE_API_TOKEN")
+    token = os.environ.get("CLOUDFLARE_RADAR_TOKEN") or os.environ.get("CLOUDFLARE_API_TOKEN")
     if not token:
-        raise SystemExit("CLOUDFLARE_API_TOKEN not set")
+        raise SystemExit("CLOUDFLARE_RADAR_TOKEN (or CLOUDFLARE_API_TOKEN) not set")
 
     acct = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
     zone = os.environ.get("CLOUDFLARE_ZONE_ID")
