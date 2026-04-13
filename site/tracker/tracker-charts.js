@@ -1,548 +1,1241 @@
-/* tracker-charts.js — vanilla JS chart engine for OsservatorioSEO Tracker v2 */
+/* tracker-charts.js — vanilla JS chart engine for OsservatorioSEO Tracker v3 */
 (function () {
   "use strict";
 
-  const DATA = window.__TRACKER_DATA__;
-  if (!DATA) return;
+  document.addEventListener("DOMContentLoaded", init);
 
-  const COLORS = [
-    "#00f63e", "#f5a623", "#e24c4c", "#4ca6e2", "#e24ce2",
-    "#4ce2c4", "#e2e24c", "#a64cf5", "#f54c8a", "#8af54c"
-  ];
-  const PURPOSE_COLORS = {
-    "User Action": "#00f63e",
-    "Training": "#e24c4c",
-    "Mixed": "#f5a623",
-    "Search": "#4ca6e2",
-    "Undeclared": "#919191"
-  };
-  const GRID_COLOR = "#333";
-  const LABEL_COLOR = "#919191";
-  const NS = "http://www.w3.org/2000/svg";
+  function init() {
+    var DATA = window.__TRACKER_DATA__;
+    if (!DATA) return;
 
-  /* ── State ── */
-  let view = localStorage.getItem("tracker_view") || "it";
+    /* ── Constants ── */
+    var PALETTE = [
+      "#00f63e","#f5a623","#e24c4c","#4ca6e2","#e24ce2",
+      "#4ce2c4","#e2e24c","#a64cf5","#f54c8a","#8af54c"
+    ];
+    var GREEN = "#00f63e";
+    var GREY = "#919191";
+    var DARK_GREY = "#333";
+    var NS = "http://www.w3.org/2000/svg";
+    var PURPOSE_COLORS = {
+      "User Action": GREEN,
+      "Training": "#e24c4c",
+      "Mixed Purpose": "#f5a623",
+      "Search": "#4ca6e2",
+      "Undeclared": GREY
+    };
+    var TRAINING_BOTS = ["GPTBot","ClaudeBot","Meta-ExternalAgent","Bytespider"];
 
-  function suffix() { return view === "it" ? "_it" : "_global"; }
-  function otherSuffix() { return view === "it" ? "_global" : "_it"; }
+    /* ── Shared utilities ── */
 
-  /* ── SVG helpers ── */
-  function svgEl(tag, attrs) {
-    const el = document.createElementNS(NS, tag);
-    if (attrs) Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
-    return el;
-  }
+    function svgEl(tag, attrs) {
+      var el = document.createElementNS(NS, tag);
+      if (attrs) {
+        var keys = Object.keys(attrs);
+        for (var i = 0; i < keys.length; i++) {
+          el.setAttribute(keys[i], attrs[keys[i]]);
+        }
+      }
+      return el;
+    }
 
-  function makeSvg(w, h) {
-    const svg = svgEl("svg", {
-      viewBox: "0 0 " + w + " " + h,
-      preserveAspectRatio: "xMidYMid meet"
-    });
-    svg.classList.add("w-full");
-    return svg;
-  }
+    function clearAndGet(id) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = "";
+      return el || null;
+    }
 
-  function drawGrid(svg, x0, y0, x1, y1, hLines, labels, invert) {
-    const g = svgEl("g");
-    for (let i = 0; i <= hLines; i++) {
-      const y = y0 + (y1 - y0) * i / hLines;
-      g.appendChild(svgEl("line", {
-        x1: x0, y1: y, x2: x1, y2: y, stroke: GRID_COLOR, "stroke-width": "0.5"
-      }));
-      if (labels) {
-        const val = invert
-          ? Math.round(labels.min + (labels.max - labels.min) * i / hLines)
-          : Math.round(labels.max - (labels.max - labels.min) * i / hLines);
-        const txt = svgEl("text", {
-          x: x0 - 6, y: y + 3, fill: LABEL_COLOR, "font-size": "10",
+    function formatBucket(rank, bucket) {
+      if (typeof rank === "number" && rank !== null) return "#" + rank;
+      if (!bucket) return "—";
+      if (bucket.charAt(0) === ">") {
+        return "oltre " + bucket.slice(1).replace(/(\d)(?=(\d{3})+$)/g, "$1.");
+      }
+      return "tra i primi " + Number(bucket).toLocaleString("it-IT");
+    }
+
+    function fmtDate(isoStr) {
+      if (!isoStr || isoStr.length < 10) return "";
+      return isoStr.slice(8, 10) + "/" + isoStr.slice(5, 7);
+    }
+
+    function fmtPct(n) {
+      return n.toFixed(1) + "%";
+    }
+
+    function noData(el) {
+      if (el) el.innerHTML = '<p class="text-outline text-sm">Dati non disponibili</p>';
+    }
+
+    function escHtml(s) {
+      var d = document.createElement("div");
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function makeSvg(w, h) {
+      var svg = svgEl("svg", {
+        viewBox: "0 0 " + w + " " + h,
+        preserveAspectRatio: "xMidYMid meet"
+      });
+      svg.classList.add("w-full");
+      return svg;
+    }
+
+    function last(arr) {
+      return arr && arr.length > 0 ? arr[arr.length - 1] : null;
+    }
+
+    function bucketNum(b) {
+      if (!b) return Infinity;
+      if (b.charAt(0) === ">") return Number(b.slice(1));
+      return Number(b);
+    }
+
+    /* ── Reusable chart: Line chart ── */
+
+    function renderLineChart(containerId, series, opts) {
+      opts = opts || {};
+      var W = opts.width || 700;
+      var H = opts.height || 300;
+      var yInv = opts.yInverted || false;
+      var pad = { t: 20, r: 20, b: 40, l: 50 };
+      var x0 = pad.l, x1 = W - pad.r, y0 = pad.t, y1 = H - pad.b;
+
+      /* Determine X range from all series */
+      var allDates = [];
+      for (var si = 0; si < series.length; si++) {
+        for (var di = 0; di < series[si].data.length; di++) {
+          var dx = series[si].data[di].x;
+          if (allDates.indexOf(dx) === -1) allDates.push(dx);
+        }
+      }
+      allDates.sort();
+      var n = allDates.length || 1;
+
+      /* Determine Y range */
+      var yMin = Infinity, yMax = -Infinity;
+      for (si = 0; si < series.length; si++) {
+        for (di = 0; di < series[si].data.length; di++) {
+          var v = series[si].data[di].y;
+          if (v < yMin) yMin = v;
+          if (v > yMax) yMax = v;
+        }
+      }
+      if (yMin === Infinity) { yMin = 0; yMax = 100; }
+      if (yMin === yMax) { yMin -= 1; yMax += 1; }
+      /* Add a bit of padding */
+      var yRange = yMax - yMin;
+      yMin = Math.max(0, yMin - yRange * 0.05);
+      yMax = yMax + yRange * 0.05;
+      if (yInv && yMin > 1) yMin = 1;
+
+      var svg = makeSvg(W, H);
+
+      /* Grid lines */
+      var gridLines = 3;
+      for (var gi = 0; gi <= gridLines; gi++) {
+        var gy = y0 + (y1 - y0) * gi / gridLines;
+        svg.appendChild(svgEl("line", {
+          x1: x0, y1: gy, x2: x1, y2: gy, stroke: DARK_GREY, "stroke-width": "0.5"
+        }));
+        var labelVal;
+        if (yInv) {
+          labelVal = Math.round(yMin + (yMax - yMin) * gi / gridLines);
+        } else {
+          labelVal = Math.round(yMax - (yMax - yMin) * gi / gridLines);
+        }
+        var lbl = svgEl("text", {
+          x: x0 - 6, y: gy + 3, fill: GREY, "font-size": "10",
           "text-anchor": "end", "font-family": "monospace"
         });
-        txt.textContent = val;
-        g.appendChild(txt);
+        lbl.textContent = opts.yLabel === "%" ? fmtPct(labelVal) : labelVal;
+        svg.appendChild(lbl);
       }
-    }
-    return g;
-  }
 
-  function drawXLabels(svg, x0, x1, y, dates, maxLabels) {
-    const g = svgEl("g");
-    const n = dates.length;
-    if (n === 0) return g;
-    const step = Math.max(1, Math.floor(n / (maxLabels || 6)));
-    for (let i = 0; i < n; i += step) {
-      const x = x0 + (x1 - x0) * i / (n - 1 || 1);
-      const txt = svgEl("text", {
-        x: x, y: y, fill: LABEL_COLOR, "font-size": "10",
-        "text-anchor": "middle", "font-family": "monospace"
-      });
-      const d = dates[i];
-      txt.textContent = d ? d.slice(5, 10) : "";
-      g.appendChild(txt);
-    }
-    return g;
-  }
+      /* X labels: first and last */
+      if (opts.xLabels !== false && allDates.length > 0) {
+        var xFirst = svgEl("text", {
+          x: x0, y: y1 + 20, fill: GREY, "font-size": "10",
+          "text-anchor": "start", "font-family": "monospace"
+        });
+        xFirst.textContent = fmtDate(allDates[0]);
+        svg.appendChild(xFirst);
 
-  function buildLegend(items, toggleCb) {
-    const div = document.createElement("div");
-    div.className = "flex flex-wrap gap-3 mt-3 text-sm font-mono";
-    items.forEach((item, idx) => {
-      const btn = document.createElement("button");
-      btn.className = "flex items-center gap-1.5 opacity-100 transition-opacity";
-      btn.dataset.idx = idx;
-      const dot = document.createElement("span");
-      dot.style.cssText = "display:inline-block;width:10px;height:10px;border-radius:2px;background:" + item.color;
-      btn.appendChild(dot);
-      const label = document.createElement("span");
-      label.style.color = item.color;
-      label.textContent = item.label;
-      btn.appendChild(label);
-      btn.addEventListener("click", function () {
-        item.visible = !item.visible;
-        btn.style.opacity = item.visible ? "1" : "0.3";
-        toggleCb(idx, item.visible);
-      });
-      div.appendChild(btn);
-    });
-    return div;
-  }
-
-  /* ── Toggle buttons ── */
-  function initToggle() {
-    const btns = document.querySelectorAll("[data-view-toggle]");
-    btns.forEach(function (btn) {
-      const v = btn.dataset.viewToggle;
-      if (v === view) {
-        btn.classList.add("active");
-        btn.classList.remove("border-outline-variant", "text-outline");
-        btn.classList.add("border-primary-container", "text-primary-container");
-      } else {
-        btn.classList.remove("active", "border-primary-container", "text-primary-container");
-        btn.classList.add("border-outline-variant", "text-outline");
+        if (allDates.length > 1) {
+          var xLast = svgEl("text", {
+            x: x1, y: y1 + 20, fill: GREY, "font-size": "10",
+            "text-anchor": "end", "font-family": "monospace"
+          });
+          xLast.textContent = fmtDate(allDates[allDates.length - 1]);
+          svg.appendChild(xLast);
+        }
       }
-      btn.addEventListener("click", function () {
-        if (v === view) return;
-        view = v;
-        localStorage.setItem("tracker_view", view);
-        initToggle();
-        renderAll();
-      });
-    });
-  }
 
-  /* ══════════════════════════════════════════
-     Section 1: Top 10 line chart + table
-     ══════════════════════════════════════════ */
-  function renderTop10() {
-    const container = document.getElementById("chart-top10");
-    const tableContainer = document.getElementById("table-top10");
-    if (!container) return;
-
-    const data = DATA["top10" + suffix()];
-    if (!data || data.length === 0) {
-      container.innerHTML = '<p class="text-outline font-mono text-sm">Dati non disponibili.</p>';
-      if (tableContainer) tableContainer.innerHTML = "";
-      return;
-    }
-
-    container.innerHTML = "";
-    if (tableContainer) tableContainer.innerHTML = "";
-
-    const W = 700, H = 320, pad = { t: 20, r: 20, b: 40, l: 50 };
-    const x0 = pad.l, x1 = W - pad.r, y0 = pad.t, y1 = H - pad.b;
-
-    /* Determine date axis from first domain with timeseries */
-    let dates = [];
-    for (const d of data) {
-      if (d.timeseries && d.timeseries.length > 0) {
-        dates = d.timeseries.map(function (p) { return p.date; });
-        break;
+      /* Draw lines */
+      var lineEls = [];
+      for (si = 0; si < series.length; si++) {
+        var s = series[si];
+        var pts = "";
+        for (di = 0; di < s.data.length; di++) {
+          var xIdx = allDates.indexOf(s.data[di].x);
+          var px = x0 + (x1 - x0) * xIdx / (n - 1 || 1);
+          var val = s.data[di].y;
+          var py;
+          if (yInv) {
+            py = y0 + (y1 - y0) * (val - yMin) / (yMax - yMin || 1);
+          } else {
+            py = y0 + (y1 - y0) * (1 - (val - yMin) / (yMax - yMin || 1));
+          }
+          pts += (di === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
+        }
+        var path = svgEl("path", {
+          d: pts, fill: "none", stroke: s.color, "stroke-width": "2", "stroke-linejoin": "round"
+        });
+        svg.appendChild(path);
+        lineEls.push({ label: s.label, color: s.color, visible: true, el: path });
       }
-    }
-    const n = dates.length || 1;
 
-    /* Y range: rank 1 at top, max at bottom */
-    let maxRank = 10;
-    data.forEach(function (d) {
-      if (d.timeseries) d.timeseries.forEach(function (p) {
-        if (p.value > maxRank) maxRank = Math.ceil(p.value);
-      });
-    });
-
-    const svg = makeSvg(W, H);
-    svg.appendChild(drawGrid(svg, x0, y0, x1, y1, 5, { min: 1, max: maxRank }, true));
-    svg.appendChild(drawXLabels(svg, x0, x1, y1 + 20, dates, 6));
-
-    /* Lines */
-    const lines = [];
-    data.forEach(function (d, idx) {
-      if (!d.timeseries || d.timeseries.length === 0) return;
-      const color = COLORS[idx % COLORS.length];
-      let pts = "";
-      d.timeseries.forEach(function (p, i) {
-        const px = x0 + (x1 - x0) * i / (n - 1 || 1);
-        const py = y0 + (y1 - y0) * (p.value - 1) / (maxRank - 1 || 1);
-        pts += (i === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
-      });
-      const path = svgEl("path", {
-        d: pts, fill: "none", stroke: color, "stroke-width": "2", "stroke-linejoin": "round"
-      });
-      path.dataset.idx = idx;
-      svg.appendChild(path);
-      lines.push({ label: d.domain, color: color, visible: true, el: path });
-    });
-
-    container.appendChild(svg);
-
-    /* Legend */
-    const legend = buildLegend(lines, function (idx, vis) {
-      lines[idx].el.style.display = vis ? "" : "none";
-    });
-    container.appendChild(legend);
-
-    /* Table */
-    if (tableContainer) {
-      const table = document.createElement("table");
-      table.className = "w-full text-sm font-mono";
-      const thead = document.createElement("thead");
-      thead.innerHTML = '<tr class="text-outline text-[10px] uppercase tracking-widest">' +
-        '<th class="text-left py-1 pr-4">#</th>' +
-        '<th class="text-left py-1 pr-4">Dominio</th>' +
-        '<th class="text-left py-1">Categorie</th></tr>';
-      table.appendChild(thead);
-      const tbody = document.createElement("tbody");
-      data.forEach(function (d) {
-        const tr = document.createElement("tr");
-        tr.className = "border-t border-outline-variant";
-        tr.innerHTML =
-          '<td class="py-1.5 pr-4 text-primary-container">' + d.rank + '</td>' +
-          '<td class="py-1.5 pr-4 text-white">' + escHtml(d.domain) + '</td>' +
-          '<td class="py-1.5 text-outline">' + escHtml((d.categories || []).join(", ")) + '</td>';
-        tbody.appendChild(tr);
-      });
-      table.appendChild(tbody);
-      tableContainer.appendChild(table);
-    }
-  }
-
-  /* ══════════════════════════════════════════
-     Section 2: AI Platforms table
-     ══════════════════════════════════════════ */
-  function renderPlatforms() {
-    const container = document.getElementById("chart-platforms");
-    if (!container) return;
-
-    const data = DATA["ai_platforms" + suffix()];
-    const other = DATA["ai_platforms" + otherSuffix()];
-    if (!data || data.length === 0) {
-      container.innerHTML = '<p class="text-outline font-mono text-sm">Dati non disponibili.</p>';
-      return;
-    }
-
-    container.innerHTML = "";
-
-    /* Build lookup for other view */
-    const otherMap = {};
-    if (other) other.forEach(function (p) { otherMap[p.domain] = p; });
-
-    const otherLabel = view === "it" ? "Mondo" : "Italia";
-
-    const table = document.createElement("table");
-    table.className = "w-full text-sm font-mono";
-    const thead = document.createElement("thead");
-    thead.innerHTML = '<tr class="text-outline text-[10px] uppercase tracking-widest">' +
-      '<th class="text-left py-1 pr-4">Piattaforma</th>' +
-      '<th class="text-left py-1 pr-4">Tipo</th>' +
-      '<th class="text-right py-1 pr-4">Rank</th>' +
-      '<th class="text-right py-1 pr-4">Bucket</th>' +
-      '<th class="text-right py-1">Bucket ' + escHtml(otherLabel) + '</th></tr>';
-    table.appendChild(thead);
-    const tbody = document.createElement("tbody");
-    data.forEach(function (p) {
-      const o = otherMap[p.domain];
-      const tr = document.createElement("tr");
-      tr.className = "border-t border-outline-variant";
-      tr.innerHTML =
-        '<td class="py-1.5 pr-4 text-white">' + escHtml(p.label || p.domain) + '</td>' +
-        '<td class="py-1.5 pr-4 text-outline">' + escHtml(p.type || "") + '</td>' +
-        '<td class="py-1.5 pr-4 text-right text-primary-container">' + (p.rank != null ? p.rank : "—") + '</td>' +
-        '<td class="py-1.5 pr-4 text-right text-outline">' + escHtml(p.bucket || "—") + '</td>' +
-        '<td class="py-1.5 text-right text-outline-variant">' + escHtml(o ? (o.bucket || "—") : "—") + '</td>';
-      tbody.appendChild(tr);
-    });
-    table.appendChild(tbody);
-    container.appendChild(table);
-  }
-
-  /* ══════════════════════════════════════════
-     Section 3: Bot vs Human area chart
-     ══════════════════════════════════════════ */
-  function renderBotHuman() {
-    const container = document.getElementById("chart-bot-human");
-    if (!container) return;
-
-    const raw = DATA["bot_human" + suffix()];
-    if (!raw || !raw.points || raw.points.length === 0) {
-      container.innerHTML = '<p class="text-outline font-mono text-sm">Dati non disponibili.</p>';
-      return;
-    }
-
-    container.innerHTML = "";
-
-    const points = raw.points;
-    const W = 700, H = 280, pad = { t: 20, r: 20, b: 40, l: 50 };
-    const x0 = pad.l, x1 = W - pad.r, y0 = pad.t, y1 = H - pad.b;
-    const n = points.length;
-
-    const svg = makeSvg(W, H);
-    svg.appendChild(drawGrid(svg, x0, y0, x1, y1, 5, { min: 0, max: 100 }, false));
-    svg.appendChild(drawXLabels(svg, x0, x1, y1 + 20, points.map(function (p) { return p.date; }), 6));
-
-    /* Bot area (orange) */
-    let areaPath = "";
-    let linePath = "";
-    points.forEach(function (p, i) {
-      const px = x0 + (x1 - x0) * i / (n - 1 || 1);
-      const py = y0 + (y1 - y0) * (1 - p.bot_pct / 100);
-      linePath += (i === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
-      areaPath += (i === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
-    });
-    /* Close area down to baseline */
-    areaPath += "L" + x1.toFixed(1) + "," + y1 + "L" + x0.toFixed(1) + "," + y1 + "Z";
-
-    svg.appendChild(svgEl("path", {
-      d: areaPath, fill: "#f5a623", "fill-opacity": "0.25", stroke: "none"
-    }));
-    svg.appendChild(svgEl("path", {
-      d: linePath, fill: "none", stroke: "#f5a623", "stroke-width": "2"
-    }));
-
-    /* Label */
-    const lastPt = points[n - 1];
-    const labelY = y0 + (y1 - y0) * (1 - lastPt.bot_pct / 100);
-    const lbl = svgEl("text", {
-      x: x1 - 4, y: labelY - 8, fill: "#f5a623", "font-size": "11",
-      "text-anchor": "end", "font-family": "monospace"
-    });
-    lbl.textContent = "Bot " + lastPt.bot_pct.toFixed(1) + "%";
-    svg.appendChild(lbl);
-
-    container.appendChild(svg);
-  }
-
-  /* ══════════════════════════════════════════
-     Section 4a: AI Bots by user-agent
-     ══════════════════════════════════════════ */
-  function renderAiBots() {
-    const container = document.getElementById("chart-ai-bots");
-    if (!container) return;
-
-    const raw = DATA["ai_bots_ua" + suffix()];
-    if (!raw || !raw.points || raw.points.length === 0) {
-      container.innerHTML = '<p class="text-outline font-mono text-sm">Dati non disponibili.</p>';
-      return;
-    }
-
-    container.innerHTML = "";
-
-    const agents = raw.agents || [];
-    const points = raw.points;
-    const W = 450, H = 280, pad = { t: 20, r: 20, b: 40, l: 50 };
-    const x0 = pad.l, x1 = W - pad.r, y0 = pad.t, y1 = H - pad.b;
-    const n = points.length;
-
-    /* Determine max Y */
-    let maxY = 1;
-    points.forEach(function (p) {
-      agents.forEach(function (a) {
-        const v = (p.values && p.values[a]) || 0;
-        if (v > maxY) maxY = v;
-      });
-    });
-    maxY = Math.ceil(maxY / 10) * 10 || 10;
-
-    const svg = makeSvg(W, H);
-    svg.appendChild(drawGrid(svg, x0, y0, x1, y1, 5, { min: 0, max: maxY }, false));
-    svg.appendChild(drawXLabels(svg, x0, x1, y1 + 20, points.map(function (p) { return p.date; }), 4));
-
-    const lineEls = [];
-    agents.forEach(function (agent, idx) {
-      const color = COLORS[idx % COLORS.length];
-      let pts = "";
-      points.forEach(function (p, i) {
-        const v = (p.values && p.values[agent]) || 0;
-        const px = x0 + (x1 - x0) * i / (n - 1 || 1);
-        const py = y0 + (y1 - y0) * (1 - v / maxY);
-        pts += (i === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
-      });
-      const path = svgEl("path", {
-        d: pts, fill: "none", stroke: color, "stroke-width": "2", "stroke-linejoin": "round"
-      });
-      svg.appendChild(path);
-      lineEls.push({ label: agent, color: color, visible: true, el: path });
-    });
-
-    container.appendChild(svg);
-    container.appendChild(buildLegend(lineEls, function (idx, vis) {
-      lineEls[idx].el.style.display = vis ? "" : "none";
-    }));
-  }
-
-  /* ══════════════════════════════════════════
-     Section 4b: Crawl purpose stacked area
-     ══════════════════════════════════════════ */
-  function renderCrawlPurpose() {
-    const container = document.getElementById("chart-crawl-purpose");
-    if (!container) return;
-
-    const raw = DATA["crawl_purpose" + suffix()];
-    if (!raw || !raw.points || raw.points.length === 0) {
-      container.innerHTML = '<p class="text-outline font-mono text-sm">Dati non disponibili.</p>';
-      return;
-    }
-
-    container.innerHTML = "";
-
-    const purposes = raw.purposes || [];
-    const points = raw.points;
-    const W = 450, H = 280, pad = { t: 20, r: 20, b: 40, l: 50 };
-    const x0 = pad.l, x1 = W - pad.r, y0 = pad.t, y1 = H - pad.b;
-    const n = points.length;
-
-    const svg = makeSvg(W, H);
-    svg.appendChild(drawGrid(svg, x0, y0, x1, y1, 5, { min: 0, max: 100 }, false));
-    svg.appendChild(drawXLabels(svg, x0, x1, y1 + 20, points.map(function (p) { return p.date; }), 4));
-
-    /* Compute cumulative stacks */
-    const stacks = []; // stacks[purposeIdx][pointIdx] = {base, top}
-    purposes.forEach(function (purpose, pIdx) {
-      const stack = [];
-      points.forEach(function (pt, i) {
-        const v = (pt.values && pt.values[purpose]) || 0;
-        const base = pIdx === 0 ? 0 : stacks[pIdx - 1][i].top;
-        stack.push({ base: base, top: base + v });
-      });
-      stacks.push(stack);
-    });
-
-    /* Draw areas bottom-to-top, render in reverse so first purpose is on top visually */
-    for (let pIdx = purposes.length - 1; pIdx >= 0; pIdx--) {
-      const purpose = purposes[pIdx];
-      const color = PURPOSE_COLORS[purpose] || COLORS[pIdx % COLORS.length];
-      const stack = stacks[pIdx];
-
-      let d = "";
-      /* Top edge left to right */
-      stack.forEach(function (s, i) {
-        const px = x0 + (x1 - x0) * i / (n - 1 || 1);
-        const py = y0 + (y1 - y0) * (1 - s.top / 100);
-        d += (i === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
-      });
-      /* Bottom edge right to left */
-      for (let i = n - 1; i >= 0; i--) {
-        const px = x0 + (x1 - x0) * i / (n - 1 || 1);
-        const py = y0 + (y1 - y0) * (1 - stack[i].base / 100);
-        d += "L" + px.toFixed(1) + "," + py.toFixed(1);
+      /* Legend */
+      var legendDiv = document.createElement("div");
+      legendDiv.className = "flex flex-wrap gap-3 mt-3 text-sm font-mono";
+      for (var li = 0; li < lineEls.length; li++) {
+        (function (idx) {
+          var item = lineEls[idx];
+          var btn = document.createElement("button");
+          btn.className = "flex items-center gap-1.5 opacity-100 transition-opacity";
+          var dot = document.createElement("span");
+          dot.style.cssText = "display:inline-block;width:10px;height:10px;border-radius:2px;background:" + item.color;
+          btn.appendChild(dot);
+          var lbl = document.createElement("span");
+          lbl.style.color = item.color;
+          lbl.textContent = item.label;
+          btn.appendChild(lbl);
+          btn.addEventListener("click", function () {
+            item.visible = !item.visible;
+            item.el.style.display = item.visible ? "" : "none";
+            btn.style.opacity = item.visible ? "1" : "0.3";
+          });
+          legendDiv.appendChild(btn);
+        })(li);
       }
-      d += "Z";
+
+      return { svg: svg, legendContainer: legendDiv };
+    }
+
+    /* ── Reusable chart: Stacked area ── */
+
+    function renderStackedArea(containerId, data, opts) {
+      opts = opts || {};
+      var W = opts.width || 700;
+      var H = opts.height || 300;
+      var pad = { t: 20, r: 20, b: 40, l: 50 };
+      var x0 = pad.l, x1 = W - pad.r, y0 = pad.t, y1 = H - pad.b;
+
+      var keys = data.keys;
+      var points = data.points;
+      var colors = data.colors || {};
+      var n = points.length || 1;
+
+      var svg = makeSvg(W, H);
+
+      /* Y grid: 0%, 50%, 100% */
+      var yLabels = [0, 50, 100];
+      for (var yi = 0; yi < yLabels.length; yi++) {
+        var gy = y0 + (y1 - y0) * (1 - yLabels[yi] / 100);
+        svg.appendChild(svgEl("line", {
+          x1: x0, y1: gy, x2: x1, y2: gy, stroke: DARK_GREY, "stroke-width": "0.5"
+        }));
+        var lbl = svgEl("text", {
+          x: x0 - 6, y: gy + 3, fill: GREY, "font-size": "10",
+          "text-anchor": "end", "font-family": "monospace"
+        });
+        lbl.textContent = yLabels[yi] + "%";
+        svg.appendChild(lbl);
+      }
+
+      /* X labels: first and last */
+      if (points.length > 0) {
+        var xF = svgEl("text", {
+          x: x0, y: y1 + 20, fill: GREY, "font-size": "10",
+          "text-anchor": "start", "font-family": "monospace"
+        });
+        xF.textContent = fmtDate(points[0].date);
+        svg.appendChild(xF);
+        if (points.length > 1) {
+          var xL = svgEl("text", {
+            x: x1, y: y1 + 20, fill: GREY, "font-size": "10",
+            "text-anchor": "end", "font-family": "monospace"
+          });
+          xL.textContent = fmtDate(points[points.length - 1].date);
+          svg.appendChild(xL);
+        }
+      }
+
+      /* Compute stacks */
+      var stacks = [];
+      for (var ki = 0; ki < keys.length; ki++) {
+        var stack = [];
+        for (var pi = 0; pi < points.length; pi++) {
+          var val = (points[pi].values && points[pi].values[keys[ki]]) || 0;
+          var base = ki === 0 ? 0 : stacks[ki - 1][pi].top;
+          stack.push({ base: base, top: base + val });
+        }
+        stacks.push(stack);
+      }
+
+      /* Draw areas top to bottom (so first key renders on top) */
+      for (ki = keys.length - 1; ki >= 0; ki--) {
+        var color = colors[keys[ki]] || PALETTE[ki % PALETTE.length];
+        var stack2 = stacks[ki];
+        var d = "";
+        for (pi = 0; pi < points.length; pi++) {
+          var px = x0 + (x1 - x0) * pi / (n - 1 || 1);
+          var py = y0 + (y1 - y0) * (1 - stack2[pi].top / 100);
+          d += (pi === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
+        }
+        for (pi = points.length - 1; pi >= 0; pi--) {
+          var px2 = x0 + (x1 - x0) * pi / (n - 1 || 1);
+          var py2 = y0 + (y1 - y0) * (1 - stack2[pi].base / 100);
+          d += "L" + px2.toFixed(1) + "," + py2.toFixed(1);
+        }
+        d += "Z";
+        svg.appendChild(svgEl("path", {
+          d: d, fill: color, "fill-opacity": "0.5", stroke: color, "stroke-width": "1"
+        }));
+      }
+
+      /* Legend */
+      var legendDiv = document.createElement("div");
+      legendDiv.className = "flex flex-wrap gap-3 mt-3 text-sm font-mono";
+      for (ki = 0; ki < keys.length; ki++) {
+        var c = colors[keys[ki]] || PALETTE[ki % PALETTE.length];
+        var span = document.createElement("span");
+        span.className = "flex items-center gap-1.5";
+        span.innerHTML = '<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:' + c + '"></span>' +
+          '<span style="color:' + c + '">' + escHtml(keys[ki]) + '</span>';
+        legendDiv.appendChild(span);
+      }
+
+      return { svg: svg, legendContainer: legendDiv };
+    }
+
+    /* ── Reusable chart: Area chart (single series) ── */
+
+    function renderAreaChart(containerId, points, opts) {
+      opts = opts || {};
+      var W = opts.width || 700;
+      var H = opts.height || 280;
+      var color = opts.color || GREEN;
+      var yMaxOpt = opts.yMax;
+      var pad = { t: 20, r: 20, b: 40, l: 50 };
+      var x0 = pad.l, x1 = W - pad.r, y0 = pad.t, y1 = H - pad.b;
+      var n = points.length || 1;
+
+      var maxVal = 0;
+      for (var i = 0; i < points.length; i++) {
+        if (points[i].value > maxVal) maxVal = points[i].value;
+      }
+      var yMax = yMaxOpt || Math.ceil(maxVal / 10) * 10 || 100;
+
+      var svg = makeSvg(W, H);
+
+      /* Grid */
+      var gridN = 3;
+      for (var gi = 0; gi <= gridN; gi++) {
+        var gy = y0 + (y1 - y0) * gi / gridN;
+        svg.appendChild(svgEl("line", {
+          x1: x0, y1: gy, x2: x1, y2: gy, stroke: DARK_GREY, "stroke-width": "0.5"
+        }));
+        var lv = Math.round(yMax - yMax * gi / gridN);
+        var lbl = svgEl("text", {
+          x: x0 - 6, y: gy + 3, fill: GREY, "font-size": "10",
+          "text-anchor": "end", "font-family": "monospace"
+        });
+        lbl.textContent = fmtPct(lv);
+        svg.appendChild(lbl);
+      }
+
+      /* X labels */
+      if (points.length > 0) {
+        var xF = svgEl("text", {
+          x: x0, y: y1 + 20, fill: GREY, "font-size": "10",
+          "text-anchor": "start", "font-family": "monospace"
+        });
+        xF.textContent = fmtDate(points[0].date);
+        svg.appendChild(xF);
+        if (points.length > 1) {
+          var xL = svgEl("text", {
+            x: x1, y: y1 + 20, fill: GREY, "font-size": "10",
+            "text-anchor": "end", "font-family": "monospace"
+          });
+          xL.textContent = fmtDate(points[points.length - 1].date);
+          svg.appendChild(xL);
+        }
+      }
+
+      /* Area + line */
+      var linePath = "";
+      var areaPath = "";
+      for (i = 0; i < points.length; i++) {
+        var px = x0 + (x1 - x0) * i / (n - 1 || 1);
+        var py = y0 + (y1 - y0) * (1 - points[i].value / yMax);
+        linePath += (i === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
+        areaPath += (i === 0 ? "M" : "L") + px.toFixed(1) + "," + py.toFixed(1);
+      }
+      areaPath += "L" + x1.toFixed(1) + "," + y1 + "L" + x0.toFixed(1) + "," + y1 + "Z";
 
       svg.appendChild(svgEl("path", {
-        d: d, fill: color, "fill-opacity": "0.5", stroke: color, "stroke-width": "1"
+        d: areaPath, fill: color, "fill-opacity": "0.25", stroke: "none"
       }));
-    }
-
-    container.appendChild(svg);
-
-    /* Legend (non-interactive for stacked area) */
-    const legendDiv = document.createElement("div");
-    legendDiv.className = "flex flex-wrap gap-3 mt-3 text-sm font-mono";
-    purposes.forEach(function (p, idx) {
-      const color = PURPOSE_COLORS[p] || COLORS[idx % COLORS.length];
-      const span = document.createElement("span");
-      span.className = "flex items-center gap-1.5";
-      span.innerHTML = '<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:' + color + '"></span>' +
-        '<span style="color:' + color + '">' + escHtml(p) + '</span>';
-      legendDiv.appendChild(span);
-    });
-    container.appendChild(legendDiv);
-  }
-
-  /* ══════════════════════════════════════════
-     Section 5: Industry horizontal bars
-     ══════════════════════════════════════════ */
-  function renderIndustry() {
-    const container = document.getElementById("chart-industry");
-    if (!container) return;
-
-    let data = DATA["industry" + suffix()];
-    if (!data || data.length === 0) {
-      container.innerHTML = '<p class="text-outline font-mono text-sm">Dati non disponibili.</p>';
-      return;
-    }
-
-    container.innerHTML = "";
-
-    /* Filter out "other"/"Other" and take top 10 */
-    data = data.filter(function (d) {
-      return d.industry.toLowerCase() !== "other";
-    }).slice(0, 10);
-
-    const maxPct = Math.max.apply(null, data.map(function (d) { return d.pct; })) || 1;
-
-    const barH = 28, gap = 6, labelW = 140, barMaxW = 420;
-    const W = labelW + barMaxW + 80;
-    const H = data.length * (barH + gap) + 10;
-
-    const svg = makeSvg(W, H);
-
-    data.forEach(function (d, i) {
-      const y = i * (barH + gap) + 5;
-      const bw = (d.pct / maxPct) * barMaxW;
-      const color = COLORS[i % COLORS.length];
-
-      /* Label */
-      const txt = svgEl("text", {
-        x: labelW - 8, y: y + barH / 2 + 4, fill: LABEL_COLOR, "font-size": "11",
-        "text-anchor": "end", "font-family": "monospace"
-      });
-      txt.textContent = d.industry;
-      svg.appendChild(txt);
-
-      /* Bar */
-      svg.appendChild(svgEl("rect", {
-        x: labelW, y: y, width: Math.max(2, bw).toFixed(1), height: barH,
-        fill: color, "fill-opacity": "0.7", rx: "2"
+      svg.appendChild(svgEl("path", {
+        d: linePath, fill: "none", stroke: color, "stroke-width": "2"
       }));
 
-      /* Value */
-      const val = svgEl("text", {
-        x: labelW + bw + 6, y: y + barH / 2 + 4, fill: color, "font-size": "11",
-        "text-anchor": "start", "font-family": "monospace"
-      });
-      val.textContent = d.pct.toFixed(1) + "%";
-      svg.appendChild(val);
-    });
+      /* Annotate last value */
+      if (points.length > 0) {
+        var lastPt = points[points.length - 1];
+        var labelY = y0 + (y1 - y0) * (1 - lastPt.value / yMax);
+        var ann = svgEl("text", {
+          x: x1 - 4, y: labelY - 8, fill: color, "font-size": "11",
+          "text-anchor": "end", "font-family": "monospace"
+        });
+        ann.textContent = (opts.label ? opts.label + " " : "") + fmtPct(lastPt.value);
+        svg.appendChild(ann);
+      }
 
-    container.appendChild(svg);
+      return { svg: svg };
+    }
+
+    /* ── Reusable chart: Horizontal bars ── */
+
+    function renderHBars(containerId, data) {
+      if (!data || data.length === 0) return null;
+
+      /* Sort by IT value desc */
+      data = data.slice().sort(function (a, b) { return b.valueIT - a.valueIT; });
+
+      var barH = 24, gap = 6, labelW = 160, barMaxW = 340, rightLabelW = 80;
+      var W = labelW + barMaxW + rightLabelW + 20;
+      var H = data.length * (barH + gap) * 2 + gap * data.length + 20;
+
+      /* Determine max */
+      var maxVal = 1;
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].valueIT > maxVal) maxVal = data[i].valueIT;
+        if (data[i].valueGlobal > maxVal) maxVal = data[i].valueGlobal;
+      }
+
+      var svg = makeSvg(W, H);
+      var yOff = 10;
+
+      for (i = 0; i < data.length; i++) {
+        var d = data[i];
+
+        /* Label */
+        var txt = svgEl("text", {
+          x: labelW - 8, y: yOff + barH / 2 + 4, fill: GREY, "font-size": "11",
+          "text-anchor": "end", "font-family": "monospace"
+        });
+        txt.textContent = d.label;
+        svg.appendChild(txt);
+
+        /* IT bar (green) */
+        var bwIT = Math.max(2, (d.valueIT / maxVal) * barMaxW);
+        svg.appendChild(svgEl("rect", {
+          x: labelW, y: yOff, width: bwIT.toFixed(1), height: barH,
+          fill: GREEN, "fill-opacity": "0.7", rx: "2"
+        }));
+        var vIT = svgEl("text", {
+          x: labelW + bwIT + 6, y: yOff + barH / 2 + 4, fill: GREEN, "font-size": "10",
+          "text-anchor": "start", "font-family": "monospace"
+        });
+        vIT.textContent = typeof d.valueIT === "number" ? fmtPct(d.valueIT) : d.valueIT;
+        svg.appendChild(vIT);
+
+        yOff += barH + 2;
+
+        /* Global bar (grey) */
+        var bwGL = Math.max(2, (d.valueGlobal / maxVal) * barMaxW);
+        svg.appendChild(svgEl("rect", {
+          x: labelW, y: yOff, width: bwGL.toFixed(1), height: barH,
+          fill: GREY, "fill-opacity": "0.5", rx: "2"
+        }));
+        var vGL = svgEl("text", {
+          x: labelW + bwGL + 6, y: yOff + barH / 2 + 4, fill: GREY, "font-size": "10",
+          "text-anchor": "start", "font-family": "monospace"
+        });
+        vGL.textContent = typeof d.valueGlobal === "number" ? fmtPct(d.valueGlobal) : d.valueGlobal;
+        svg.appendChild(vGL);
+
+        yOff += barH + gap + 8;
+      }
+
+      /* Adjust SVG height */
+      svg.setAttribute("viewBox", "0 0 " + W + " " + yOff);
+
+      /* Small legend */
+      var legendDiv = document.createElement("div");
+      legendDiv.className = "flex gap-4 mt-3 text-xs font-mono";
+      legendDiv.innerHTML =
+        '<span class="flex items-center gap-1"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:' + GREEN + '"></span><span style="color:' + GREEN + '">Italia</span></span>' +
+        '<span class="flex items-center gap-1"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:' + GREY + '"></span><span style="color:' + GREY + '">Mondo</span></span>';
+
+      return { svg: svg, legendContainer: legendDiv };
+    }
+
+    /* ══════════════════════════════════════════
+       Hero section
+       ══════════════════════════════════════════ */
+
+    function renderHero() {
+      var el = clearAndGet("hero");
+      if (!el) return;
+
+      var platforms = DATA.ai_platforms_it;
+      if (!platforms || platforms.length === 0) { noData(el); return; }
+
+      /* Find best rank (lowest non-null) */
+      var best = null;
+      for (var i = 0; i < platforms.length; i++) {
+        if (typeof platforms[i].rank === "number") {
+          if (!best || platforms[i].rank < best.rank) best = platforms[i];
+        }
+      }
+
+      var domain, rankText;
+      if (best && best.rank <= 100) {
+        domain = best.domain;
+        rankText = "primi " + best.rank + " siti";
+      } else {
+        /* Find best bucket */
+        var bestBucket = null;
+        for (i = 0; i < platforms.length; i++) {
+          var bn = bucketNum(platforms[i].bucket);
+          if (!bestBucket || bn < bucketNum(bestBucket.bucket)) bestBucket = platforms[i];
+        }
+        if (bestBucket) {
+          domain = bestBucket.domain;
+          rankText = formatBucket(null, bestBucket.bucket) + " siti";
+        } else {
+          noData(el);
+          return;
+        }
+      }
+
+      el.innerHTML =
+        '<p class="text-3xl sm:text-5xl font-bold text-primary-container mb-2">' + escHtml(domain) + '</p>' +
+        '<p class="text-lg text-on-surface-variant">è tra i <span class="text-white font-bold">' + escHtml(rankText) + '</span> più popolari in Italia</p>';
+    }
+
+    /* ══════════════════════════════════════════
+       KPI Cards
+       ══════════════════════════════════════════ */
+
+    function renderKPICards() {
+      var el = clearAndGet("kpi-cards");
+      if (!el) return;
+
+      var cards = [];
+
+      /* Card 1: Best AI rank */
+      var platforms = DATA.ai_platforms_it || [];
+      var bestP = null;
+      for (var i = 0; i < platforms.length; i++) {
+        if (typeof platforms[i].rank === "number") {
+          if (!bestP || platforms[i].rank < bestP.rank) bestP = platforms[i];
+        }
+      }
+      if (bestP) {
+        cards.push({ value: "#" + bestP.rank, label: bestP.domain });
+      } else {
+        var bestB = null;
+        for (i = 0; i < platforms.length; i++) {
+          if (platforms[i].bucket && (!bestB || bucketNum(platforms[i].bucket) < bucketNum(bestB.bucket))) {
+            bestB = platforms[i];
+          }
+        }
+        if (bestB) {
+          cards.push({ value: formatBucket(null, bestB.bucket), label: bestB.domain });
+        } else {
+          cards.push({ value: "—", label: "AI" });
+        }
+      }
+
+      /* Card 2: User Action % IT */
+      var cp = DATA.crawl_purpose_it;
+      if (cp && cp.points && cp.points.length > 0) {
+        var lastCP = cp.points[cp.points.length - 1];
+        var uaPct = (lastCP.values && lastCP.values["User Action"]) || 0;
+        cards.push({ value: fmtPct(uaPct), label: "crawling per gli utenti (IT)" });
+      } else {
+        cards.push({ value: "—", label: "crawling per gli utenti (IT)" });
+      }
+
+      /* Card 3: Bot % IT */
+      var bh = DATA.bot_human_it;
+      if (bh && bh.points && bh.points.length > 0) {
+        var lastBH = bh.points[bh.points.length - 1];
+        cards.push({ value: fmtPct(lastBH.bot_pct), label: "traffico bot (IT)" });
+      } else {
+        cards.push({ value: "—", label: "traffico bot (IT)" });
+      }
+
+      /* Card 4: Top agent IT */
+      var ab = DATA.ai_bots_ua_it;
+      if (ab && ab.points && ab.points.length > 0) {
+        var lastAB = ab.points[ab.points.length - 1];
+        var topAgent = "";
+        var topVal = -1;
+        var agents = ab.agents || [];
+        for (i = 0; i < agents.length; i++) {
+          var av = (lastAB.values && lastAB.values[agents[i]]) || 0;
+          if (av > topVal) { topVal = av; topAgent = agents[i]; }
+        }
+        cards.push({ value: topAgent, label: "bot AI più attivo (IT)" });
+      } else {
+        cards.push({ value: "—", label: "bot AI più attivo (IT)" });
+      }
+
+      var html = "";
+      for (i = 0; i < cards.length; i++) {
+        html += '<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center">' +
+          '<p class="text-2xl font-bold text-primary-container font-mono">' + escHtml(cards[i].value) + '</p>' +
+          '<p class="text-xs text-outline uppercase tracking-wider mt-1">' + escHtml(cards[i].label) + '</p>' +
+          '</div>';
+      }
+      el.innerHTML = html;
+    }
+
+    /* ══════════════════════════════════════════
+       S1 — AI Platform Rankings
+       ══════════════════════════════════════════ */
+
+    function renderSection1() {
+      var chartEl = clearAndGet("chart-s1");
+      var tableEl = clearAndGet("table-s1");
+      var textEl = clearAndGet("text-s1");
+
+      /* Chart: AI platforms with timeseries from top10 */
+      if (chartEl) {
+        var top10 = DATA.top10_it || [];
+        var aiPlatforms = DATA.ai_platforms_it || [];
+        var aiDomains = {};
+        for (var i = 0; i < aiPlatforms.length; i++) {
+          aiDomains[aiPlatforms[i].domain] = true;
+        }
+
+        var series = [];
+        for (i = 0; i < top10.length; i++) {
+          if (aiDomains[top10[i].domain] && top10[i].timeseries && top10[i].timeseries.length > 0) {
+            series.push({
+              label: top10[i].domain,
+              data: top10[i].timeseries.map(function (p) { return { x: p.date, y: p.value }; }),
+              color: PALETTE[series.length % PALETTE.length]
+            });
+          }
+        }
+
+        if (series.length === 0) {
+          noData(chartEl);
+        } else {
+          var chart = renderLineChart("chart-s1", series, { yInverted: true });
+          chartEl.appendChild(chart.svg);
+          chartEl.appendChild(chart.legendContainer);
+        }
+      }
+
+      /* Table */
+      if (tableEl) {
+        var platsIT = DATA.ai_platforms_it || [];
+        var platsGL = DATA.ai_platforms_global || [];
+        if (platsIT.length === 0) {
+          noData(tableEl);
+        } else {
+          var glMap = {};
+          for (i = 0; i < platsGL.length; i++) {
+            glMap[platsGL[i].domain] = platsGL[i];
+          }
+
+          var thtml = '<table class="w-full text-sm font-mono">';
+          thtml += '<thead><tr class="text-outline text-[10px] uppercase tracking-widest">' +
+            '<th class="text-left py-1 pr-4">Piattaforma</th>' +
+            '<th class="text-left py-1 pr-4">Tipo</th>' +
+            '<th class="text-right py-1 pr-4">Italia</th>' +
+            '<th class="text-right py-1 pr-4">Mondo</th>' +
+            '<th class="text-center py-1">Segnale</th></tr></thead><tbody>';
+
+          for (i = 0; i < platsIT.length; i++) {
+            var p = platsIT[i];
+            var g = glMap[p.domain] || {};
+            var itBucket = formatBucket(p.rank, p.bucket);
+            var glBucket = formatBucket(g.rank, g.bucket);
+            var signal = "";
+            /* If global bucket is numerically better (lower) than IT */
+            var itNum = p.rank || bucketNum(p.bucket);
+            var glNum = g.rank || bucketNum(g.bucket);
+            if (glNum < itNum) signal = '<span class="text-[#f5a623]" title="Il mondo è più avanti">&#x26A0;</span>';
+
+            thtml += '<tr class="border-t border-outline-variant">' +
+              '<td class="py-1.5 pr-4 text-white">' + escHtml(p.label || p.domain) + '</td>' +
+              '<td class="py-1.5 pr-4 text-outline">' + escHtml(p.type || "") + '</td>' +
+              '<td class="py-1.5 pr-4 text-right text-primary-container">' + escHtml(itBucket) + '</td>' +
+              '<td class="py-1.5 pr-4 text-right text-outline">' + escHtml(glBucket) + '</td>' +
+              '<td class="py-1.5 text-center">' + signal + '</td></tr>';
+          }
+          thtml += '</tbody></table>';
+          tableEl.innerHTML = thtml;
+        }
+      }
+
+      /* Text */
+      if (textEl) {
+        var best = null;
+        var plats = DATA.ai_platforms_it || [];
+        for (i = 0; i < plats.length; i++) {
+          if (typeof plats[i].rank === "number") {
+            if (!best || plats[i].rank < best.rank) best = plats[i];
+          }
+        }
+        if (best) {
+          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
+            'La piattaforma AI più popolare in Italia è <strong class="text-white">' + escHtml(best.label || best.domain) +
+            '</strong> (posizione #' + best.rank + '). ' +
+            'Il ranking misura la popolarità come sito di destinazione, non il traffico referral verso altri siti.</p>';
+        }
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       S2 — Crawl Purpose stacked area
+       ══════════════════════════════════════════ */
+
+    function renderSection2() {
+      renderStackedAreaPair(
+        "chart-s2-it", DATA.crawl_purpose_it,
+        "chart-s2-global", DATA.crawl_purpose_global,
+        PURPOSE_COLORS
+      );
+
+      var textEl = clearAndGet("text-s2");
+      if (textEl) {
+        var itRaw = DATA.crawl_purpose_it;
+        var glRaw = DATA.crawl_purpose_global;
+        var parts = [];
+        if (itRaw && itRaw.points && itRaw.points.length > 0) {
+          var lp = itRaw.points[itRaw.points.length - 1];
+          var ua = (lp.values && lp.values["User Action"]) || 0;
+          var tr = (lp.values && lp.values["Training"]) || 0;
+          parts.push("In Italia, il " + fmtPct(ua) + " del crawling serve gli utenti e il " + fmtPct(tr) + " è destinato all'addestramento AI.");
+        }
+        if (glRaw && glRaw.points && glRaw.points.length > 0) {
+          var lp2 = glRaw.points[glRaw.points.length - 1];
+          var ua2 = (lp2.values && lp2.values["User Action"]) || 0;
+          var tr2 = (lp2.values && lp2.values["Training"]) || 0;
+          parts.push("A livello globale: " + fmtPct(ua2) + " per gli utenti, " + fmtPct(tr2) + " per l'addestramento.");
+        }
+        if (parts.length > 0) {
+          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + parts.join(" ") + '</p>';
+        }
+      }
+    }
+
+    function renderStackedAreaPair(idIT, rawIT, idGL, rawGL, colorMap) {
+      var elIT = clearAndGet(idIT);
+      var elGL = clearAndGet(idGL);
+      var smallW = 340;
+
+      if (elIT) {
+        if (!rawIT || !rawIT.points || rawIT.points.length === 0) {
+          noData(elIT);
+        } else {
+          var chartIT = renderStackedArea(idIT, {
+            keys: rawIT.purposes || rawIT.agents || [],
+            points: rawIT.points,
+            colors: colorMap || {}
+          }, { width: smallW });
+          elIT.appendChild(chartIT.svg);
+          elIT.appendChild(chartIT.legendContainer);
+        }
+      }
+
+      if (elGL) {
+        if (!rawGL || !rawGL.points || rawGL.points.length === 0) {
+          noData(elGL);
+        } else {
+          var chartGL = renderStackedArea(idGL, {
+            keys: rawGL.purposes || rawGL.agents || [],
+            points: rawGL.points,
+            colors: colorMap || {}
+          }, { width: smallW });
+          elGL.appendChild(chartGL.svg);
+          elGL.appendChild(chartGL.legendContainer);
+        }
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       S3 — AI Bots multi-line
+       ══════════════════════════════════════════ */
+
+    function renderSection3() {
+      renderBotsLineChartPair(
+        "chart-s3-it", DATA.ai_bots_ua_it,
+        "chart-s3-global", DATA.ai_bots_ua_global,
+        null /* all agents */
+      );
+
+      var textEl = clearAndGet("text-s3");
+      if (textEl) {
+        var parts = [];
+        var topIT = getTopAgent(DATA.ai_bots_ua_it);
+        var topGL = getTopAgent(DATA.ai_bots_ua_global);
+        if (topIT) parts.push("Il bot AI più attivo in Italia è " + topIT.agent + " (" + fmtPct(topIT.pct) + ").");
+        if (topGL) parts.push("A livello globale è " + topGL.agent + " (" + fmtPct(topGL.pct) + ").");
+        if (parts.length > 0) {
+          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + parts.join(" ") + '</p>';
+        }
+      }
+    }
+
+    function getTopAgent(raw) {
+      if (!raw || !raw.points || raw.points.length === 0 || !raw.agents) return null;
+      var lp = raw.points[raw.points.length - 1];
+      var topA = "", topV = -1;
+      for (var i = 0; i < raw.agents.length; i++) {
+        var v = (lp.values && lp.values[raw.agents[i]]) || 0;
+        if (v > topV) { topV = v; topA = raw.agents[i]; }
+      }
+      return { agent: topA, pct: topV };
+    }
+
+    function renderBotsLineChartPair(idIT, rawIT, idGL, rawGL, filterAgents) {
+      var smallW = 340;
+
+      function buildSeries(raw) {
+        if (!raw || !raw.points || raw.points.length === 0 || !raw.agents) return null;
+        var agents = filterAgents || raw.agents;
+        var series = [];
+        for (var ai = 0; ai < agents.length; ai++) {
+          var agent = agents[ai];
+          /* Check agent exists in data */
+          if (raw.agents.indexOf(agent) === -1) continue;
+          var dataArr = [];
+          for (var pi = 0; pi < raw.points.length; pi++) {
+            dataArr.push({
+              x: raw.points[pi].date,
+              y: (raw.points[pi].values && raw.points[pi].values[agent]) || 0
+            });
+          }
+          series.push({
+            label: agent,
+            data: dataArr,
+            color: PALETTE[series.length % PALETTE.length]
+          });
+        }
+        return series.length > 0 ? series : null;
+      }
+
+      var elIT = clearAndGet(idIT);
+      if (elIT) {
+        var seriesIT = buildSeries(rawIT);
+        if (!seriesIT) { noData(elIT); }
+        else {
+          var c = renderLineChart(idIT, seriesIT, { width: smallW, yLabel: "%" });
+          elIT.appendChild(c.svg);
+          elIT.appendChild(c.legendContainer);
+        }
+      }
+
+      var elGL = clearAndGet(idGL);
+      if (elGL) {
+        var seriesGL = buildSeries(rawGL);
+        if (!seriesGL) { noData(elGL); }
+        else {
+          var c2 = renderLineChart(idGL, seriesGL, { width: smallW, yLabel: "%" });
+          elGL.appendChild(c2.svg);
+          elGL.appendChild(c2.legendContainer);
+        }
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       S4 — IT vs World horizontal bars
+       ══════════════════════════════════════════ */
+
+    function renderSection4() {
+      var el = clearAndGet("chart-s4");
+      var textEl = clearAndGet("text-s4");
+      if (!el) return;
+
+      var barData = [];
+
+      /* 1. AI più popolare (rank comparison) */
+      var bestIT = getBestRank(DATA.ai_platforms_it);
+      var bestGL = getBestRank(DATA.ai_platforms_global);
+      if (bestIT || bestGL) {
+        barData.push({
+          label: "AI più popolare",
+          valueIT: bestIT ? bestIT.rank || bucketNum(bestIT.bucket) : 0,
+          valueGlobal: bestGL ? bestGL.rank || bucketNum(bestGL.bucket) : 0
+        });
+      }
+
+      /* 2. Traffico bot */
+      var bhIT = DATA.bot_human_it;
+      var bhGL = DATA.bot_human_global;
+      if (bhIT && bhIT.points && bhIT.points.length > 0 && bhGL && bhGL.points && bhGL.points.length > 0) {
+        barData.push({
+          label: "Traffico bot",
+          valueIT: bhIT.points[bhIT.points.length - 1].bot_pct,
+          valueGlobal: bhGL.points[bhGL.points.length - 1].bot_pct
+        });
+      }
+
+      /* 3. Crawling per utenti */
+      var cpIT = DATA.crawl_purpose_it;
+      var cpGL = DATA.crawl_purpose_global;
+      if (cpIT && cpIT.points && cpIT.points.length > 0 && cpGL && cpGL.points && cpGL.points.length > 0) {
+        var lpIT = cpIT.points[cpIT.points.length - 1];
+        var lpGL = cpGL.points[cpGL.points.length - 1];
+        barData.push({
+          label: "Crawling utenti",
+          valueIT: (lpIT.values && lpIT.values["User Action"]) || 0,
+          valueGlobal: (lpGL.values && lpGL.values["User Action"]) || 0
+        });
+      }
+
+      /* 4. Crawling per addestramento */
+      if (cpIT && cpIT.points && cpIT.points.length > 0 && cpGL && cpGL.points && cpGL.points.length > 0) {
+        barData.push({
+          label: "Crawling training",
+          valueIT: (lpIT.values && lpIT.values["Training"]) || 0,
+          valueGlobal: (lpGL.values && lpGL.values["Training"]) || 0
+        });
+      }
+
+      /* 5. Second most active bot */
+      var sec = getSecondAgent(DATA.ai_bots_ua_it);
+      var secGL = getSecondAgent(DATA.ai_bots_ua_global);
+      if (sec || secGL) {
+        barData.push({
+          label: sec ? sec.agent : (secGL ? secGL.agent : "Bot #2"),
+          valueIT: sec ? sec.pct : 0,
+          valueGlobal: secGL ? secGL.pct : 0
+        });
+      }
+
+      if (barData.length === 0) { noData(el); return; }
+
+      var chart = renderHBars("chart-s4", barData);
+      if (chart) {
+        el.appendChild(chart.svg);
+        el.appendChild(chart.legendContainer);
+      }
+
+      /* Text */
+      if (textEl) {
+        var ahead = 0, behind = 0;
+        for (var i = 0; i < barData.length; i++) {
+          if (barData[i].valueIT > barData[i].valueGlobal) ahead++;
+          else if (barData[i].valueIT < barData[i].valueGlobal) behind++;
+        }
+        var msg = "L'Italia ";
+        if (ahead > behind) msg += "è in vantaggio sulla media mondiale in " + ahead + " metriche su " + barData.length + ".";
+        else if (behind > ahead) msg += "è in ritardo sulla media mondiale in " + behind + " metriche su " + barData.length + ".";
+        else msg += "è allineata alla media mondiale.";
+        textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + msg + '</p>';
+      }
+    }
+
+    function getBestRank(platforms) {
+      if (!platforms || platforms.length === 0) return null;
+      var best = null;
+      for (var i = 0; i < platforms.length; i++) {
+        if (typeof platforms[i].rank === "number") {
+          if (!best || platforms[i].rank < best.rank) best = platforms[i];
+        }
+      }
+      if (best) return best;
+      /* Fallback: best bucket */
+      for (i = 0; i < platforms.length; i++) {
+        if (platforms[i].bucket && (!best || bucketNum(platforms[i].bucket) < bucketNum(best.bucket))) {
+          best = platforms[i];
+        }
+      }
+      return best;
+    }
+
+    function getSecondAgent(raw) {
+      if (!raw || !raw.points || raw.points.length === 0 || !raw.agents) return null;
+      var lp = raw.points[raw.points.length - 1];
+      var sorted = raw.agents.map(function (a) {
+        return { agent: a, pct: (lp.values && lp.values[a]) || 0 };
+      }).sort(function (a, b) { return b.pct - a.pct; });
+      return sorted.length >= 2 ? sorted[1] : null;
+    }
+
+    /* ══════════════════════════════════════════
+       S5 — Training bots lines
+       ══════════════════════════════════════════ */
+
+    function renderSection5() {
+      renderBotsLineChartPair(
+        "chart-s5-it", DATA.ai_bots_ua_it,
+        "chart-s5-global", DATA.ai_bots_ua_global,
+        TRAINING_BOTS
+      );
+
+      var textEl = clearAndGet("text-s5");
+      if (textEl) {
+        var parts = [];
+        var itRaw = DATA.ai_bots_ua_it;
+        var glRaw = DATA.ai_bots_ua_global;
+        if (itRaw && itRaw.points && itRaw.points.length > 0) {
+          var lp = itRaw.points[itRaw.points.length - 1];
+          var gptIT = (lp.values && lp.values["GPTBot"]) || 0;
+          parts.push("GPTBot rappresenta il " + fmtPct(gptIT) + " del traffico bot AI in Italia.");
+        }
+        if (glRaw && glRaw.points && glRaw.points.length > 0) {
+          var lp2 = glRaw.points[glRaw.points.length - 1];
+          var gptGL = (lp2.values && lp2.values["GPTBot"]) || 0;
+          parts.push("A livello globale GPTBot è al " + fmtPct(gptGL) + ".");
+        }
+        if (parts.length > 0) {
+          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + parts.join(" ") + '</p>';
+        }
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       S6 — All bots stacked area
+       ══════════════════════════════════════════ */
+
+    function renderSection6() {
+      var itRaw = DATA.ai_bots_ua_it;
+      var glRaw = DATA.ai_bots_ua_global;
+
+      /* Convert ai_bots_ua to stacked area format */
+      function toStackedData(raw) {
+        if (!raw || !raw.points || raw.points.length === 0) return null;
+        var colors = {};
+        for (var i = 0; i < (raw.agents || []).length; i++) {
+          colors[raw.agents[i]] = PALETTE[i % PALETTE.length];
+        }
+        return { keys: raw.agents || [], points: raw.points, colors: colors };
+      }
+
+      var elIT = clearAndGet("chart-s6-it");
+      if (elIT) {
+        var dIT = toStackedData(itRaw);
+        if (!dIT) { noData(elIT); }
+        else {
+          var c = renderStackedArea("chart-s6-it", dIT, { width: 340 });
+          elIT.appendChild(c.svg);
+          elIT.appendChild(c.legendContainer);
+        }
+      }
+
+      var elGL = clearAndGet("chart-s6-global");
+      if (elGL) {
+        var dGL = toStackedData(glRaw);
+        if (!dGL) { noData(elGL); }
+        else {
+          var c2 = renderStackedArea("chart-s6-global", dGL, { width: 340 });
+          elGL.appendChild(c2.svg);
+          elGL.appendChild(c2.legendContainer);
+        }
+      }
+
+      var textEl = clearAndGet("text-s6");
+      if (textEl && itRaw && itRaw.points && itRaw.points.length > 0) {
+        var lp = itRaw.points[itRaw.points.length - 1];
+        var gb = (lp.values && lp.values["Googlebot"]) || 0;
+        textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
+          'Googlebot rappresenta il ' + fmtPct(gb) + ' del traffico bot AI in Italia. ' +
+          'La composizione è in costante evoluzione con l\'arrivo di nuovi crawler.</p>';
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       S7 — Industry horizontal bars
+       ══════════════════════════════════════════ */
+
+    function renderSection7() {
+      var el = clearAndGet("chart-s7");
+      var textEl = clearAndGet("text-s7");
+      if (!el) return;
+
+      var indIT = DATA.industry_it || [];
+      var indGL = DATA.industry_global || [];
+
+      /* Filter "other" and take top 10 by IT */
+      indIT = indIT.filter(function (d) { return d.industry.toLowerCase() !== "other"; });
+      indIT.sort(function (a, b) { return b.pct - a.pct; });
+      indIT = indIT.slice(0, 10);
+
+      if (indIT.length === 0) { noData(el); return; }
+
+      /* Build global lookup */
+      var glMap = {};
+      for (var i = 0; i < indGL.length; i++) {
+        glMap[indGL[i].industry] = indGL[i].pct;
+      }
+
+      var barData = [];
+      for (i = 0; i < indIT.length; i++) {
+        barData.push({
+          label: indIT[i].industry,
+          valueIT: indIT[i].pct,
+          valueGlobal: glMap[indIT[i].industry] || 0
+        });
+      }
+
+      var chart = renderHBars("chart-s7", barData);
+      if (chart) {
+        el.appendChild(chart.svg);
+        el.appendChild(chart.legendContainer);
+      }
+
+      if (textEl && barData.length > 0) {
+        var topIT2 = barData[0];
+        var glVal = topIT2.valueGlobal;
+        textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
+          'Il settore più colpito dal crawling AI in Italia è <strong class="text-white">' + escHtml(topIT2.label) + '</strong> (' + fmtPct(topIT2.valueIT) + ')' +
+          (glVal > 0 ? ', contro il ' + fmtPct(glVal) + ' a livello globale.' : '.') + '</p>';
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       S8 — Bot vs Human area
+       ══════════════════════════════════════════ */
+
+    function renderSection8() {
+      var ORANGE = "#f5a623";
+
+      function renderBH(elId, raw) {
+        var el = clearAndGet(elId);
+        if (!el) return;
+        if (!raw || !raw.points || raw.points.length === 0) { noData(el); return; }
+
+        var points = raw.points.map(function (p) { return { date: p.date, value: p.bot_pct }; });
+        var maxY = 100;
+        var chart = renderAreaChart(elId, points, { color: ORANGE, yMax: maxY, label: "Bot", width: 340 });
+        el.appendChild(chart.svg);
+      }
+
+      renderBH("chart-s8-it", DATA.bot_human_it);
+      renderBH("chart-s8-global", DATA.bot_human_global);
+
+      var textEl = clearAndGet("text-s8");
+      if (textEl) {
+        var parts = [];
+        var bhIT = DATA.bot_human_it;
+        var bhGL = DATA.bot_human_global;
+        if (bhIT && bhIT.points && bhIT.points.length > 0) {
+          var lpIT = bhIT.points[bhIT.points.length - 1];
+          parts.push("Il traffico bot in Italia è al " + fmtPct(lpIT.bot_pct) + ".");
+          if (bhIT.points.length >= 2) {
+            var prev = bhIT.points[bhIT.points.length - 2];
+            if (lpIT.bot_pct > prev.bot_pct) parts.push("Il trend è in crescita.");
+            else if (lpIT.bot_pct < prev.bot_pct) parts.push("Il trend è in calo.");
+            else parts.push("Il trend è stabile.");
+          }
+        }
+        if (bhGL && bhGL.points && bhGL.points.length > 0) {
+          var lpGL = bhGL.points[bhGL.points.length - 1];
+          parts.push("A livello globale è al " + fmtPct(lpGL.bot_pct) + ".");
+        }
+        if (parts.length > 0) {
+          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + parts.join(" ") + '</p>';
+        }
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       S9 — Device type + OS
+       ══════════════════════════════════════════ */
+
+    function renderSection9() {
+      function renderDevice(elId, raw) {
+        var el = clearAndGet(elId);
+        if (!el) return;
+        if (!raw || !raw.points || raw.points.length === 0) { noData(el); return; }
+
+        var points = raw.points.map(function (p) { return { date: p.date, value: p.mobile_pct }; });
+        var chart = renderAreaChart(elId, points, { color: GREEN, yMax: 100, label: "Mobile", width: 340 });
+        el.appendChild(chart.svg);
+      }
+
+      renderDevice("chart-s9-it", DATA.device_type_it);
+      renderDevice("chart-s9-global", DATA.device_type_global);
+
+      /* OS bars */
+      var osEl = clearAndGet("chart-s9-os");
+      if (osEl) {
+        var osIT = DATA.os_it || [];
+        var osGL = DATA.os_global || [];
+        if (osIT.length === 0) { noData(osEl); }
+        else {
+          var glMap = {};
+          for (var i = 0; i < osGL.length; i++) {
+            glMap[osGL[i].os] = osGL[i].pct;
+          }
+          var barData = [];
+          for (i = 0; i < osIT.length; i++) {
+            barData.push({
+              label: osIT[i].os,
+              valueIT: osIT[i].pct,
+              valueGlobal: glMap[osIT[i].os] || 0
+            });
+          }
+          var chart = renderHBars("chart-s9-os", barData);
+          if (chart) {
+            osEl.appendChild(chart.svg);
+            osEl.appendChild(chart.legendContainer);
+          }
+        }
+      }
+
+      /* Text */
+      var textEl = clearAndGet("text-s9");
+      if (textEl) {
+        var parts = [];
+        var dtIT = DATA.device_type_it;
+        var dtGL = DATA.device_type_global;
+        if (dtIT && dtIT.points && dtIT.points.length > 0) {
+          var lpIT = dtIT.points[dtIT.points.length - 1];
+          parts.push("Il mobile rappresenta il " + fmtPct(lpIT.mobile_pct) + " del traffico in Italia.");
+        }
+        if (dtGL && dtGL.points && dtGL.points.length > 0) {
+          var lpGL = dtGL.points[dtGL.points.length - 1];
+          parts.push("A livello globale è il " + fmtPct(lpGL.mobile_pct) + ".");
+        }
+        var osIT2 = DATA.os_it || [];
+        if (osIT2.length > 0) {
+          var topOS = osIT2.slice().sort(function (a, b) { return b.pct - a.pct; })[0];
+          parts.push("Il sistema operativo più diffuso in Italia è " + topOS.os + " (" + fmtPct(topOS.pct) + ").");
+        }
+        if (parts.length > 0) {
+          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' + parts.join(" ") + '</p>';
+        }
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       Render all
+       ══════════════════════════════════════════ */
+
+    renderHero();
+    renderKPICards();
+    renderSection1();
+    renderSection2();
+    renderSection3();
+    renderSection4();
+    renderSection5();
+    renderSection6();
+    renderSection7();
+    renderSection8();
+    renderSection9();
   }
-
-  /* ── Utilities ── */
-  function escHtml(s) {
-    var d = document.createElement("div");
-    d.textContent = s;
-    return d.innerHTML;
-  }
-
-  /* ── Render all ── */
-  function renderAll() {
-    renderTop10();
-    renderPlatforms();
-    renderBotHuman();
-    renderAiBots();
-    renderCrawlPurpose();
-    renderIndustry();
-  }
-
-  /* ── Init ── */
-  initToggle();
-  renderAll();
 })();
