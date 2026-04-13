@@ -970,7 +970,7 @@ class Publisher:
 
         snapshot = TrackerSnapshot.model_validate_json(latest.read_text(encoding="utf-8"))
 
-        if snapshot.schema_version != "2.0":
+        if snapshot.schema_version not in ("2.0", "3.0"):
             return
 
         updated_label = snapshot.generated_at.strftime("%d %B %Y")
@@ -1069,21 +1069,24 @@ class Publisher:
         except Exception:  # noqa: BLE001
             return None
 
-        if snapshot.schema_version != "2.0":
+        if snapshot.schema_version not in ("2.0", "3.0"):
             return None
 
-        chatgpt_rank = None
-        for entry in snapshot.top10_it:
-            if entry.domain == "chatgpt.com":
-                chatgpt_rank = entry.rank
-                break
+        # Find the AI platform with the best rank in Italy
+        best_ai_domain = None
+        best_ai_rank = None
+        for entry in snapshot.ai_platforms_it:
+            if entry.rank is not None and (best_ai_rank is None or entry.rank < best_ai_rank):
+                best_ai_rank = entry.rank
+                best_ai_domain = entry.domain
 
         bot_pct = None
         if snapshot.bot_human_it.points:
             bot_pct = snapshot.bot_human_it.points[-1].bot_pct
 
         return {
-            "chatgpt_rank_it": chatgpt_rank,
+            "top_ai_domain": best_ai_domain,
+            "top_ai_rank": best_ai_rank,
             "bot_pct_it": bot_pct,
             "week": snapshot.week,
             "year": snapshot.year,
