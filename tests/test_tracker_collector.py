@@ -129,6 +129,7 @@ async def test_collect_includes_trends_data(mock_radar, platforms_config):
                 "values": {"ChatGPT": 100, "Claude AI": 12},
             },
         ],
+        {"ChatGPT": 78, "Claude AI": 4},
     )
 
     collector = TrackerCollector(
@@ -141,6 +142,7 @@ async def test_collect_includes_trends_data(mock_radar, platforms_config):
     assert snapshot.trends_it.keywords == ["ChatGPT", "Claude AI"]
     assert len(snapshot.trends_it.points) == 1
     assert snapshot.trends_it.points[0].values["ChatGPT"] == 100
+    assert snapshot.trends_it.averages == {"ChatGPT": 78, "Claude AI": 4}
     assert mock_trends.fetch_interest.call_count == 2
 
 

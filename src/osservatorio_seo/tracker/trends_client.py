@@ -36,17 +36,18 @@ class TrendsClient:
         *,
         keywords: list[str] | None = None,
         geo: str = "",
-    ) -> tuple[list[str], list[dict[str, Any]]]:
+    ) -> tuple[list[str], list[dict[str, Any]], dict[str, int]]:
         """Fetch interest-over-time for keywords.
 
         Args:
             keywords: Up to 5 keywords to compare. Defaults to DEFAULT_KEYWORDS.
             geo: "IT" for Italy, "" for worldwide.
 
-        Returns (keywords_list, points_list) where each point is
-        {date: datetime, values: {keyword: int}}.
+        Returns (keywords_list, points_list, averages_dict) where each point is
+        {date: datetime, values: {keyword: int}} and averages maps keyword to
+        its yearly average interest.
 
-        On any error returns ([], []).
+        On any error returns ([], [], {}).
         """
         kws = keywords or self.DEFAULT_KEYWORDS
 
@@ -74,21 +75,22 @@ class TrendsClient:
             data = resp.json()
         except Exception:
             logger.warning("DataForSEO Trends fetch failed for geo=%s", geo, exc_info=True)
-            return [], []
+            return [], [], {}
 
         # Parse response
         try:
             task = data["tasks"][0]
             if task["status_code"] != 20000:
                 logger.warning("DataForSEO task error: %s", task.get("status_message"))
-                return [], []
+                return [], [], {}
 
             items = task["result"][0]["items"]
             graph_item = next(i for i in items if i["type"] == "google_trends_graph")
             raw_points = graph_item["data"]
+            raw_averages = graph_item.get("averages", [])
         except (KeyError, IndexError, StopIteration):
             logger.warning("DataForSEO unexpected response structure for geo=%s", geo)
-            return [], []
+            return [], [], {}
 
         points: list[dict[str, Any]] = []
         for dp in raw_points:
@@ -96,4 +98,6 @@ class TrendsClient:
             values = {kw: int(v) for kw, v in zip(kws, dp["values"], strict=False)}
             points.append({"date": dt, "values": values})
 
-        return list(kws), points
+        averages = {kw: int(v) for kw, v in zip(kws, raw_averages, strict=False)}
+
+        return list(kws), points, averages

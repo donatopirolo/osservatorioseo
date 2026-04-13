@@ -338,7 +338,7 @@ class TrackerCollector:
     def _fetch_trends(self, geo: str) -> TrendsTimeseries:
         label = f"google_trends(geo={geo or 'global'})"
         try:
-            keywords, raw_points = self._trends.fetch_interest(geo=geo)
+            keywords, raw_points, averages = self._trends.fetch_interest(geo=geo)
             if not keywords:
                 self._warnings.append(f"{label}: no data returned")
                 return TrendsTimeseries()
@@ -346,7 +346,7 @@ class TrackerCollector:
                 TrendsPoint(date=p["date"], values=p["values"])
                 for p in raw_points
             ]
-            return TrendsTimeseries(keywords=keywords, points=points)
+            return TrendsTimeseries(keywords=keywords, points=points, averages=averages)
         except Exception as exc:  # noqa: BLE001
             msg = f"{label}: {exc}"
             self._warnings.append(msg)

@@ -23,6 +23,7 @@ class TrendsTimeseries(BaseModel):
     model_config = ConfigDict(extra="forbid")
     keywords: list[str] = Field(default_factory=list)
     points: list[TrendsPoint] = Field(default_factory=list)
+    averages: dict[str, int] = Field(default_factory=dict)
 
 
 class TopDomainEntry(BaseModel):

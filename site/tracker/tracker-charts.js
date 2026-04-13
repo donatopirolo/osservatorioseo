@@ -538,25 +538,27 @@
 
       var cards = [];
 
-      /* Card 1: Best AI rank */
-      var platforms = DATA.ai_platforms_it || [];
-      var bestP = null;
-      for (var i = 0; i < platforms.length; i++) {
-        if (typeof platforms[i].rank === "number") {
-          if (!bestP || platforms[i].rank < bestP.rank) bestP = platforms[i];
-        }
+      /* Card 1: Top AI by Google Trends average (IT) */
+      var trendsAvg = (DATA.trends_it || {}).averages || {};
+      var trendsKw = (DATA.trends_it || {}).keywords || [];
+      var topKw = ""; var topAvg = -1;
+      for (var i = 0; i < trendsKw.length; i++) {
+        var av = trendsAvg[trendsKw[i]] || 0;
+        if (av > topAvg) { topAvg = av; topKw = trendsKw[i]; }
       }
-      if (bestP) {
-        cards.push({ value: "#" + bestP.rank, label: bestP.domain });
+      if (topKw) {
+        cards.push({ value: topKw, label: "AI più cercata in Italia (media " + topAvg + ")" });
       } else {
-        var bestB = null;
+        /* Fallback to Radar rank */
+        var platforms = DATA.ai_platforms_it || [];
+        var bestP = null;
         for (i = 0; i < platforms.length; i++) {
-          if (platforms[i].bucket && (!bestB || bucketNum(platforms[i].bucket) < bucketNum(bestB.bucket))) {
-            bestB = platforms[i];
+          if (typeof platforms[i].rank === "number") {
+            if (!bestP || platforms[i].rank < bestP.rank) bestP = platforms[i];
           }
         }
-        if (bestB) {
-          cards.push({ value: formatBucket(null, bestB.bucket), label: bestB.domain });
+        if (bestP) {
+          cards.push({ value: "#" + bestP.rank, label: bestP.domain });
         } else {
           cards.push({ value: "—", label: "AI" });
         }
