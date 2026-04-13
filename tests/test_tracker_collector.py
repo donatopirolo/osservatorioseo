@@ -14,10 +14,14 @@ from osservatorio_seo.tracker.models import TrackerSnapshot
 def platforms_config(tmp_path: Path) -> Path:
     cfg = tmp_path / "tracker_platforms.yaml"
     cfg.write_text(
-        yaml.dump({"platforms": [
-            {"domain": "chatgpt.com", "label": "ChatGPT", "type": "chatbot"},
-            {"domain": "claude.ai", "label": "Claude", "type": "chatbot"},
-        ]})
+        yaml.dump(
+            {
+                "platforms": [
+                    {"domain": "chatgpt.com", "label": "ChatGPT", "type": "chatbot"},
+                    {"domain": "claude.ai", "label": "Claude", "type": "chatbot"},
+                ]
+            }
+        )
     )
     return cfg
 

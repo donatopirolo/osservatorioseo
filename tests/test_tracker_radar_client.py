@@ -74,7 +74,7 @@ async def test_ranking_top_returns_list(httpx_mock, client, radar_ranking_top):
     assert result[2]["domain"] == "chatgpt.com"
     # categories list preserved
     assert isinstance(result[0]["categories"], list)
-    assert result[0]["categories"][0]["name"] == "Search Engines"
+    assert result[0]["categories"][0] == "Search Engines"
 
 
 @pytest.mark.asyncio
@@ -164,10 +164,10 @@ async def test_bot_human_timeseries(httpx_mock, client, radar_bot_class):
 
     assert len(result) == 2
     assert result[0]["date"] == "2026-03-30T00:00:00Z"
-    assert result[0]["human_pct"] == "83.3"
-    assert result[0]["bot_pct"] == "16.7"
-    assert result[1]["human_pct"] == "82.8"
-    assert result[1]["bot_pct"] == "17.2"
+    assert result[0]["human_pct"] == pytest.approx(83.3)
+    assert result[0]["bot_pct"] == pytest.approx(16.7)
+    assert result[1]["human_pct"] == pytest.approx(82.8)
+    assert result[1]["bot_pct"] == pytest.approx(17.2)
 
 
 # ---------------------------------------------------------------------------
@@ -187,10 +187,10 @@ async def test_ai_bots_user_agent(httpx_mock, client, radar_ai_bots_ua):
     assert set(agents) == {"Googlebot", "GPTBot", "ClaudeBot"}
     assert len(points) == 2
     assert points[0]["date"] == "2026-03-30T00:00:00Z"
-    assert points[0]["Googlebot"] == "32.0"
-    assert points[0]["GPTBot"] == "8.9"
-    assert points[0]["ClaudeBot"] == "11.9"
-    assert points[1]["Googlebot"] == "33.3"
+    assert points[0]["values"]["Googlebot"] == pytest.approx(32.0)
+    assert points[0]["values"]["GPTBot"] == pytest.approx(8.9)
+    assert points[0]["values"]["ClaudeBot"] == pytest.approx(11.9)
+    assert points[1]["values"]["Googlebot"] == pytest.approx(33.3)
 
 
 # ---------------------------------------------------------------------------
@@ -210,8 +210,8 @@ async def test_crawl_purpose(httpx_mock, client, radar_crawl_purpose):
     assert set(purposes) == {"Training", "Mixed Purpose", "Search", "User Action", "Undeclared"}
     assert len(points) == 2
     assert points[0]["date"] == "2026-03-30T00:00:00Z"
-    assert points[0]["Training"] == "50.7"
-    assert points[1]["Training"] == "48.2"
+    assert points[0]["values"]["Training"] == pytest.approx(50.7)
+    assert points[1]["values"]["Training"] == pytest.approx(48.2)
 
 
 # ---------------------------------------------------------------------------

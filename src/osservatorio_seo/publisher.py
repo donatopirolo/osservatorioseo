@@ -989,9 +989,7 @@ class Publisher:
             "active_nav": "tracker",
             "noindex": not allow_indexing,
             "og_type": "website",
-            "page_headline": (
-                f"Stato della ricerca — Settimana {snapshot.week}, {snapshot.year}"
-            ),
+            "page_headline": (f"Stato della ricerca — Settimana {snapshot.week}, {snapshot.year}"),
             "updated_label": updated_label,
             "updated_iso": snapshot.generated_at.isoformat(),
             "next_update_label": next_update,
@@ -1004,9 +1002,7 @@ class Publisher:
 
         target_dir = site_dir / "tracker"
         target_dir.mkdir(parents=True, exist_ok=True)
-        (target_dir / "index.html").write_text(
-            renderer.render_tracker(ctx), encoding="utf-8"
-        )
+        (target_dir / "index.html").write_text(renderer.render_tracker(ctx), encoding="utf-8")
 
     def _ssg_tracker_reports(
         self,
@@ -1069,9 +1065,7 @@ class Publisher:
         if latest is None:
             return None
         try:
-            snapshot = TrackerSnapshot.model_validate_json(
-                latest.read_text(encoding="utf-8")
-            )
+            snapshot = TrackerSnapshot.model_validate_json(latest.read_text(encoding="utf-8"))
         except Exception:  # noqa: BLE001
             return None
 

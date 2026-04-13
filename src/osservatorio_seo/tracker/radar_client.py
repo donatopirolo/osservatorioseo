@@ -51,7 +51,11 @@ class RadarClient:
         data = await self._get("/ranking/top", params)
         rows = data["result"].get("top_0", [])
         return [
-            {"rank": row["rank"], "domain": row["domain"], "categories": row.get("categories", [])}
+            {
+                "rank": row["rank"],
+                "domain": row["domain"],
+                "categories": [c["name"] for c in row.get("categories", []) if isinstance(c, dict)],
+            }
             for row in rows
         ]
 
@@ -115,7 +119,7 @@ class RadarClient:
         human = serie.get("human", [])
         bot = serie.get("bot", [])
         return [
-            {"date": ts, "human_pct": h, "bot_pct": b}
+            {"date": ts, "human_pct": float(h), "bot_pct": float(b)}
             for ts, h, b in zip(timestamps, human, bot, strict=False)
         ]
 
@@ -189,16 +193,16 @@ class RadarClient:
 
     @staticmethod
     def _unpack_named_timeseries(serie: dict) -> tuple[list[str], list[dict]]:
-        """Convert a serie_0 dict into (keys, points) without mutating the original."""
+        """Convert a serie_0 dict into (keys, [{date, values: {key: float}}])."""
         timestamps = serie.get("timestamps", [])
         keys = [k for k in serie if k != "timestamps"]
         points = []
         for i, ts in enumerate(timestamps):
-            point: dict[str, Any] = {"date": ts}
+            values = {}
             for key in keys:
-                values = serie[key]
-                point[key] = values[i] if i < len(values) else None
-            points.append(point)
+                raw = serie[key]
+                values[key] = float(raw[i]) if i < len(raw) else 0.0
+            points.append({"date": ts, "values": values})
         return keys, points
 
     async def _get(self, path: str, params: dict[str, Any]) -> dict:

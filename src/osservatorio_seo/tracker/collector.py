@@ -36,9 +36,7 @@ from osservatorio_seo.tracker.models import (
 
 logger = logging.getLogger(__name__)
 
-_DEFAULT_PLATFORMS = (
-    Path(__file__).resolve().parents[3] / "config" / "tracker_platforms.yaml"
-)
+_DEFAULT_PLATFORMS = Path(__file__).resolve().parents[3] / "config" / "tracker_platforms.yaml"
 
 
 def _parse_dt(date_str: str) -> datetime:
@@ -109,9 +107,7 @@ class TrackerCollector:
     async def _fetch_top10_both(
         self,
     ) -> tuple[list[TopDomainEntry], list[TopDomainEntry]]:
-        top10_it = await self._safe(
-            self._fetch_top10, "ranking_top(IT)", location="IT", default=[]
-        )
+        top10_it = await self._safe(self._fetch_top10, "ranking_top(IT)", location="IT", default=[])
         top10_global = await self._safe(
             self._fetch_top10, "ranking_top(global)", location=None, default=[]
         )
@@ -126,8 +122,7 @@ class TrackerCollector:
                 domain=domain, location=location, date_range="52w"
             )
             timeseries = [
-                TimeseriesPoint(date=_parse_dt(p["date"]), value=float(p["rank"]))
-                for p in ts_raw
+                TimeseriesPoint(date=_parse_dt(p["date"]), value=float(p["rank"])) for p in ts_raw
             ]
             entries.append(
                 TopDomainEntry(
@@ -181,12 +176,16 @@ class TrackerCollector:
         self,
     ) -> tuple[BotHumanTimeseries, BotHumanTimeseries]:
         it = await self._safe(
-            self._fetch_bot_human, "bot_human_timeseries(IT)", location="IT",
-            default=BotHumanTimeseries()
+            self._fetch_bot_human,
+            "bot_human_timeseries(IT)",
+            location="IT",
+            default=BotHumanTimeseries(),
         )
         glb = await self._safe(
-            self._fetch_bot_human, "bot_human_timeseries(global)", location=None,
-            default=BotHumanTimeseries()
+            self._fetch_bot_human,
+            "bot_human_timeseries(global)",
+            location=None,
+            default=BotHumanTimeseries(),
         )
         return it, glb
 
@@ -210,41 +209,42 @@ class TrackerCollector:
         self,
     ) -> tuple[AIBotsTimeseries, AIBotsTimeseries]:
         it = await self._safe(
-            self._fetch_ai_bots, "ai_bots_user_agent(IT)", location="IT",
-            default=AIBotsTimeseries()
+            self._fetch_ai_bots, "ai_bots_user_agent(IT)", location="IT", default=AIBotsTimeseries()
         )
         glb = await self._safe(
-            self._fetch_ai_bots, "ai_bots_user_agent(global)", location=None,
-            default=AIBotsTimeseries()
+            self._fetch_ai_bots,
+            "ai_bots_user_agent(global)",
+            location=None,
+            default=AIBotsTimeseries(),
         )
         return it, glb
 
     async def _fetch_ai_bots(self, location: str | None) -> AIBotsTimeseries:
         agents, raw_points = await self._radar.ai_bots_user_agent(location=location)
-        points = [
-            AIBotPoint(date=_parse_dt(p["date"]), values=p["values"])
-            for p in raw_points
-        ]
+        points = [AIBotPoint(date=_parse_dt(p["date"]), values=p["values"]) for p in raw_points]
         return AIBotsTimeseries(agents=agents, points=points)
 
     async def _fetch_crawl_purpose_both(
         self,
     ) -> tuple[CrawlPurposeTimeseries, CrawlPurposeTimeseries]:
         it = await self._safe(
-            self._fetch_crawl_purpose, "crawl_purpose(IT)", location="IT",
-            default=CrawlPurposeTimeseries()
+            self._fetch_crawl_purpose,
+            "crawl_purpose(IT)",
+            location="IT",
+            default=CrawlPurposeTimeseries(),
         )
         glb = await self._safe(
-            self._fetch_crawl_purpose, "crawl_purpose(global)", location=None,
-            default=CrawlPurposeTimeseries()
+            self._fetch_crawl_purpose,
+            "crawl_purpose(global)",
+            location=None,
+            default=CrawlPurposeTimeseries(),
         )
         return it, glb
 
     async def _fetch_crawl_purpose(self, location: str | None) -> CrawlPurposeTimeseries:
         purposes, raw_points = await self._radar.crawl_purpose(location=location)
         points = [
-            CrawlPurposePoint(date=_parse_dt(p["date"]), values=p["values"])
-            for p in raw_points
+            CrawlPurposePoint(date=_parse_dt(p["date"]), values=p["values"]) for p in raw_points
         ]
         return CrawlPurposeTimeseries(purposes=purposes, points=points)
 
