@@ -1,62 +1,143 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-13T14:22:54.096243Z",
-  "generated_at_local": "2026-04-13T16:22:54.096243+02:00",
+  "generated_at": "2026-04-13T16:09:38.217908Z",
+  "generated_at_local": "2026-04-13T18:09:38.217908+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-04-13-1622",
+  "run_id": "2026-04-13-1809",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1953,
-    "items_after_dedup": 11,
-    "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0014
+    "items_collected": 1950,
+    "items_after_dedup": 12,
+    "doc_changes_detected": 1,
+    "ai_cost_eur": 0.043
   },
   "top10": [
-    "item_2026-04-13_009",
-    "item_2026-04-13_002",
+    "doc_2026-04-13_001",
     "item_2026-04-13_001",
-    "item_2026-04-13_004",
+    "item_2026-04-13_002",
+    "item_2026-04-13_010",
+    "item_2026-04-13_003",
     "item_2026-04-13_005",
     "item_2026-04-13_006",
-    "item_2026-04-13_008",
     "item_2026-04-13_007",
-    "item_2026-04-13_010",
-    "item_2026-04-13_011"
+    "item_2026-04-13_009",
+    "item_2026-04-13_008"
   ],
   "categories": {
-    "ai_overviews_llm_seo": [
-      "item_2026-04-13_009",
-      "item_2026-04-13_006",
-      "item_2026-04-13_008",
-      "item_2026-04-13_007",
-      "item_2026-04-13_010"
+    "google_docs_change": [
+      "doc_2026-04-13_001"
     ],
     "google_updates": [
-      "item_2026-04-13_002"
+      "item_2026-04-13_001",
+      "item_2026-04-13_003"
     ],
     "ai_models": [
-      "item_2026-04-13_001"
+      "item_2026-04-13_002"
     ],
-    "tools_platforms": [
-      "item_2026-04-13_004"
-    ],
-    "industry_news": [
-      "item_2026-04-13_005"
-    ],
-    "content_eeat": [
+    "ai_overviews_llm_seo": [
+      "item_2026-04-13_010",
+      "item_2026-04-13_007",
+      "item_2026-04-13_009",
+      "item_2026-04-13_008",
       "item_2026-04-13_011"
     ],
+    "tools_platforms": [
+      "item_2026-04-13_005"
+    ],
+    "industry_news": [
+      "item_2026-04-13_006"
+    ],
+    "content_eeat": [
+      "item_2026-04-13_012"
+    ],
     "technical_seo": [
-      "item_2026-04-13_003"
+      "item_2026-04-13_004"
     ]
   },
   "items": [
     {
       "id": "item_2026-04-13_001",
+      "title_original": "Introducing a new spam policy for \"back button hijacking\"",
+      "title_it": "Google introduce una nuova policy antispam per il \"back button hijacking\"",
+      "summary_it": "Google ha annunciato una nuova policy antispam che contrasta la pratica ingannevole del \"back button hijacking\". Questa tecnica, che manipola il comportamento del pulsante indietro del browser, sarà ora considerata una violazione esplicita delle policy antispam di Google. La violazione comporterà potenziali azioni punitive.",
+      "url": "https://developers.google.com/search/blog/2026/04/back-button-hijacking",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "spam_policy",
+        "back_button_hijacking",
+        "malicious_practice"
+      ],
+      "importance": 5,
+      "published_at": "2026-04-12T23:00:00Z",
+      "fetched_at": "2026-04-13T16:10:23.351299Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:45420a0ff27cc140",
+      "deep_analysis": {
+        "detailed_description": "Google ha formalizzato il divieto di back button hijacking, inserendolo esplicitamente tra le pratiche malevole che violano le spam policy. La tecnica consiste nel manipolare la cronologia di navigazione del browser per impedire all'utente di tornare alla pagina precedente quando preme il tasto indietro, intrappolandolo su una pagina indesiderata o reindirizzandolo verso destinazioni diverse da quella attesa.\n\nLa policy si inserisce nella categoria \"malicious practices\" delle spam policy di Google, la stessa che include cloaking, sneaky redirect e altre tecniche ingannevole. Questo significa che la violazione non comporta solo una penalizzazione algoritmica, ma può portare a manual action con conseguente rimozione parziale o totale dall'indice.\n\nIl back button hijacking viene tipicamente implementato tramite JavaScript che manipola l'oggetto history del browser, inserendo URL multipli nello stack di navigazione o sostituendo l'URL di riferimento. Varianti comuni includono l'uso di history.pushState() per aggiungere entry fittizie, redirect immediati attivati da eventi popstate, o la sostituzione della location precedente prima che l'utente possa tornare indietro.\n\nLa pratica è diffusa in particolare su siti di affiliazione aggressivi, landing page di lead generation a basso valore, e network pubblicitari poco trasparenti che cercano di massimizzare le impression o forzare conversioni. Alcuni CMS e plugin per WordPress implementano varianti \"soft\" di questa tecnica per trattenere gli utenti, spesso senza che il proprietario del sito ne sia consapevole.\n\nGoogle non ha fornito dettagli tecnici specifici su come rileva questa violazione, ma è ragionevole ipotizzare che Chrome User Experience data e segnalazioni manuali giochino un ruolo chiave. Il comportamento anomalo del pulsante indietro è misurabile attraverso metriche di navigazione e pattern di interazione utente che deviano significativamente dalla norma.\n\nLa tempistica dell'annuncio suggerisce che Google ha già raccolto dati sufficienti per identificare pattern ricorrenti e che l'enforcement potrebbe essere già attivo in forma algoritmica prima della formalizzazione della policy. L'esplicitazione serve principalmente a rendere actionable le manual action e a fornire base legale per rimozioni dall'indice contestabili.\n\nPer i SEO, questo update non introduce rischi nuovi se il sito è gestito in modo pulito, ma richiede un audit immediato di tutti gli script di terze parti, plugin di exit intent, e implementazioni custom che toccano l'history API. Anche soluzioni apparentemente innocue come alcuni modal di retention potrebbero violare la policy se implementate in modo aggressivo.",
+        "implications": [
+          "Qualsiasi implementazione che manipola history.pushState(), history.replaceState() o intercetta eventi popstate per alterare il comportamento del pulsante indietro è ora a rischio manual action con potenziale deindicizzazione.",
+          "Plugin di exit intent, modal di retention, e script di affiliazione che aggiungono step intermedi alla navigazione devono essere verificati immediatamente, anche se installati da tempo e considerati \"standard\".",
+          "Siti che monetizzano tramite network pubblicitari di terze parti potrebbero essere penalizzati per comportamenti implementati da script esterni su cui non hanno controllo diretto, rendendo necessario un audit completo delle dipendenze JavaScript.",
+          "La policy colpisce principalmente siti di affiliazione e lead generation, ma anche e-commerce con funnel aggressivi o publisher con strategie di retention invasive potrebbero rientrare nel perimetro se le implementazioni sono troppo aggressive.",
+          "A differenza di violazioni algoritmiche, questa è una spam policy esplicita: significa che il recupero richiede reconsideration request formale dopo aver rimosso completamente la pratica, con tempi di ripristino potenzialmente lunghi."
+        ],
+        "examples": [
+          "Un sito di comparazione prezzi implementa uno script che, quando l'utente clicca su un'offerta affiliata, aggiunge tre entry fittizie alla cronologia usando history.pushState(). Quando l'utente preme indietro, viene reindirizzato a una landing page intermedia invece di tornare alla SERP. Questo è back button hijacking esplicito e comporta manual action immediata.",
+          "Un plugin WordPress di exit intent mostra un modal quando l'utente muove il cursore verso la barra degli indirizzi, ma non manipola la cronologia di navigazione né impedisce la chiusura del modal con ESC o click fuori. Questo non viola la policy perché non altera il comportamento del pulsante indietro, anche se è una tecnica di retention.",
+          "Un network pubblicitario inietta uno script che intercetta l'evento popstate e, invece di permettere la navigazione indietro, apre un popup pubblicitario e mantiene l'utente sulla pagina corrente. Il proprietario del sito non è consapevole del comportamento perché lo script è caricato da un tag manager di terze parti. Il sito riceve comunque manual action perché Google considera il proprietario responsabile di tutti gli script caricati."
+        ],
+        "testing_steps": [
+          "Apri il sito in Chrome in modalità incognito, naviga su 3-4 pagine diverse, poi premi il pulsante indietro ripetutamente e verifica che ogni pressione riporti esattamente alla pagina precedente senza redirect o step intermedi.",
+          "Ispeziona tutti gli script caricati tramite DevTools → Sources, cerca riferimenti a 'history.pushState', 'history.replaceState', 'popstate', e 'onpopstate' nel codice JavaScript e verifica cosa fanno esattamente.",
+          "Disattiva temporaneamente tutti i plugin di exit intent, modal di retention, e script di affiliazione, poi ripeti il test del pulsante indietro per identificare quale componente causa il problema.",
+          "Usa Chrome DevTools → Network → Preserve log, naviga sul sito e premi indietro: verifica che non ci siano redirect (codici 301/302/307) innescati dall'azione di tornare indietro.",
+          "Controlla Search Console → Azioni manuali per verificare se è già presente una penalizzazione, e monitora il report Copertura per cali improvvisi di pagine indicizzate che potrebbero segnalare enforcement algoritmico.",
+          "Se usi tag manager o script di terze parti, caricali in un ambiente di test isolato e monitora il comportamento del pulsante indietro prima di deployarli in produzione."
+        ],
+        "faqs": [
+          {
+            "question": "I modal di exit intent che si aprono quando l'utente sta per lasciare la pagina violano questa policy?",
+            "answer": "No, se il modal non manipola la cronologia del browser. Un modal che si sovrappone al contenuto quando il cursore si muove verso la barra degli indirizzi è accettabile, purché l'utente possa chiuderlo e il pulsante indietro funzioni normalmente. Viola la policy solo se il modal viene attivato dall'evento popstate o se aggiunge entry alla cronologia per intercettare il pulsante indietro."
+          },
+          {
+            "question": "Se uno script di terze parti implementa back button hijacking a mia insaputa, il mio sito viene penalizzato?",
+            "answer": "Sì. Google considera il proprietario del sito responsabile di tutti gli script caricati, indipendentemente dalla provenienza. La manual action colpisce il dominio, non lo script. È necessario rimuovere immediatamente lo script violante e inviare reconsideration request. Per questo è fondamentale auditare regolarmente tutte le dipendenze JavaScript, inclusi tag manager, network pubblicitari e plugin."
+          },
+          {
+            "question": "L'uso di history.pushState() per implementare navigazione AJAX single-page è considerato back button hijacking?",
+            "answer": "No, se implementato correttamente. L'uso di history.pushState() per sincronizzare l'URL con lo stato dell'applicazione in una SPA è legittimo, purché ogni entry nella cronologia corrisponda a uno stato reale e il pulsante indietro riporti l'utente allo stato precedente dell'applicazione. Viola la policy solo se aggiungi entry fittizie senza corrispondente cambio di stato o se intercetti popstate per impedire la navigazione."
+          },
+          {
+            "question": "Come faccio a sapere se il mio sito è già stato colpito da questa policy prima dell'annuncio ufficiale?",
+            "answer": "Controlla Search Console → Azioni manuali per notifiche esplicite. Se non ci sono manual action ma noti cali di traffico improvvisi o deindicizzazione parziale da metà marzo 2026, potrebbe essere enforcement algoritmico anticipato. Verifica anche il report Copertura per pagine escluse con motivazione \"Spam rilevato\" e confronta i pattern di crawling in Statistiche di scansione per anomalie temporali coincidenti con l'implementazione di script sospetti."
+          }
+        ],
+        "editorial_commentary": "Questa policy formalizza qualcosa che avrebbe dovuto essere ovvio da anni: manipolare il comportamento base del browser per intrappolare utenti è spam, punto. Il fatto che Google abbia dovuto esplicitarlo nel 2026 dice molto su quanto sia ancora diffusa la pratica, soprattutto in certi verticali di affiliazione e lead gen dove la disperazione per le conversioni supera il buonsenso.\n\nL'aspetto critico è la responsabilità per script di terze parti. Se monetizzi tramite network pubblicitari poco trasparenti o usi plugin WordPress di provenienza dubbia, sei esposto anche se tecnicamente non hai scritto tu il codice violante. Non basta più installare e dimenticare: ogni dipendenza JavaScript è un potenziale vettore di penalizzazione.\n\nChi gestisce siti di affiliazione o lead generation dovrebbe fare audit immediato, non domani. L'enforcement potrebbe essere già attivo in forma algoritmica, e aspettare la manual action significa perdere settimane o mesi di traffico prima del recupero. Rimuovi tutto ciò che tocca l'history API senza motivo tecnico legittimo, anche se \"ha sempre funzionato\" o \"tutti lo usano\".",
+        "premium_model_used": "anthropic/claude-sonnet-4-5",
+        "cost_eur": 0.041433120000000004
+      }
+    },
+    {
+      "id": "item_2026-04-13_002",
       "title_original": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
-      "title_it": "Cloudflare integra OpenAI per potenziare i workflow degli agenti AI",
-      "summary_it": "Cloudflare ha integrato i modelli GPT-5.4 e Codex di OpenAI nella sua Agent Cloud. Questa integrazione permette alle aziende di sviluppare, implementare e scalare agenti AI per attività reali, con un focus su velocità e sicurezza. L'obiettivo è fornire strumenti avanzati per l'automazione dei processi aziendali tramite l'intelligenza artificiale.",
+      "title_it": "Integrazione di OpenAI in Cloudflare Agent Cloud per workflow automatizzati aziendali",
+      "summary_it": "Cloudflare ha integrato i modelli GPT-5.4 e Codex di OpenAI nella sua piattaforma Agent Cloud. Questa integrazione permette alle aziende di sviluppare, implementare e scalare agenti AI per automatizzare task reali, con particolare attenzione a velocità e sicurezza. L'obiettivo è fornire strumenti avanzati per la creazione di workflow basati sull'intelligenza artificiale.",
       "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
       "source": {
         "id": "openai_blog",
@@ -72,14 +153,14 @@
       },
       "category": "ai_models",
       "tags": [
-        "openai",
         "cloudflare",
-        "ai_agent",
-        "automation"
+        "openai",
+        "agent_cloud",
+        "ai_agent"
       ],
-      "importance": 3,
+      "importance": 4,
       "published_at": "2026-04-13T05:00:00Z",
-      "fetched_at": "2026-04-13T14:23:42.642530Z",
+      "fetched_at": "2026-04-13T16:10:24.757787Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -88,10 +169,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_002",
+      "id": "item_2026-04-13_003",
       "title_original": "Google May Ignore Links From Sites That Spam & Violate Policies",
       "title_it": "Google potrebbe ignorare i link da siti che fanno spam e violano le policy",
-      "summary_it": "John Mueller ha ribadito che Google potrebbe ignorare i link in uscita da siti che violano le sue policy anti-spam. Questo comportamento, già implementato manualmente e tramite algoritmi, implica che Google potrebbe non considerare il valore dei link provenienti da siti considerati poco utili o non allineati alle sue linee guida.",
+      "summary_it": "John Mueller ha ribadito che Google potrebbe ignorare i link in uscita da siti che violano le sue policy anti-spam. Questo comportamento, già implementato manualmente e tramite algoritmi, implica che Google potrebbe non considerare il valore dei link provenienti da siti considerati poco utili o non allineati alle sue linee guida. La discussione è avvenuta su Bluesky.",
       "url": "https://www.seroundtable.com/google-may-ignore-links-from-sites-that-spam-41148.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -110,11 +191,11 @@
         "link_building",
         "spam",
         "google_search",
-        "link_penalty"
+        "john_mueller"
       ],
       "importance": 3,
       "published_at": "2026-04-13T10:11:00Z",
-      "fetched_at": "2026-04-13T14:23:44.275130Z",
+      "fetched_at": "2026-04-13T16:10:26.092974Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -123,10 +204,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_003",
+      "id": "item_2026-04-13_004",
       "title_original": "Google Still Processing Status To XML Sitemaps - Nothing To Announce",
       "title_it": "Google sta valutando un nuovo status \"in elaborazione\" per le Sitemap XML, ma al momento non ci sono annunci ufficiali",
-      "summary_it": "John Mueller ha confermato di aver discusso internamente la possibilità di aggiungere uno status \"in elaborazione\" per le sitemap XML in Google Search Console, per indicare che la sitemap è stata scansionata ma non ancora completamente processata. Nonostante la consapevolezza del problema, al momento non ci sono novità o annunci da condividere in merito all'implementazione di questa modifica.",
+      "summary_it": "John Mueller ha confermato di aver discusso internamente la possibilità di aggiungere uno status \"in elaborazione\" per le Sitemap XML in Google Search Console, per indicare che la sitemap è stata scansionata ma non ancora completamente processata. Al momento, tuttavia, non ci sono novità o annunci in merito a questa implementazione. La richiesta nasce dalla necessità di distinguere questo stato dagli errori di recupero, che possono indurre i webmaster a pensare erroneamente a problemi di accesso.",
       "url": "https://www.seroundtable.com/google-processing-status-xml-sitemaps-41149.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -149,7 +230,7 @@
       ],
       "importance": 2,
       "published_at": "2026-04-13T10:21:00Z",
-      "fetched_at": "2026-04-13T14:23:46.023938Z",
+      "fetched_at": "2026-04-13T16:10:28.023128Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -158,10 +239,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_004",
+      "id": "item_2026-04-13_005",
       "title_original": "Google Search Console Testing AI Contribution Report",
-      "title_it": "Google Search Console testa il report \"Contributo AI\"",
-      "summary_it": "Google Search Console sta testando un nuovo report denominato \"Contributo AI\". Si ipotizza che il report mostri metriche simili a quelle presenti negli strumenti per webmaster di Bing, come citazioni e pagine citate, ma senza dati sui clic. Al momento, il test sembra essere limitato a un numero ristretto di utenti.",
+      "title_it": "Google Search Console testa un report sui contributi dell'AI",
+      "summary_it": "Google Search Console sta testando un nuovo report denominato \"AI contribution\". Si ipotizza che il report mostri metriche simili a quelle presenti nei report di Bing Webmaster Tools sull'AI, come citazioni e pagine citate. Al momento non sono disponibili screenshot o dettagli specifici sul contenuto del report.",
       "url": "https://www.seroundtable.com/google-search-console-ai-contribution-41153.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -180,11 +261,11 @@
         "google_search_console",
         "ai",
         "reporting",
-        "search_engine_roundtable"
+        "bing_webmaster_tool"
       ],
       "importance": 3,
       "published_at": "2026-04-13T10:31:00Z",
-      "fetched_at": "2026-04-13T14:23:47.558182Z",
+      "fetched_at": "2026-04-13T16:10:29.398267Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -193,10 +274,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_005",
+      "id": "item_2026-04-13_006",
       "title_original": "Google AdSense Will Experiment With New Ad Technology Partners",
       "title_it": "Google AdSense testerà nuovi partner tecnologici per gli annunci",
-      "summary_it": "Google AdSense avvierà un esperimento il 20 aprile 2026 con un set aggiornato di partner tecnologici pubblicitari. Se l'esperimento avrà successo, la lista dei partner verrà aggiornata a partire dal 5 giugno 2026. Gli editori AdSense potranno gestire le proprie preferenze relative ai partner pubblicitari e scegliere di non partecipare all'esperimento.",
+      "summary_it": "Google AdSense avvierà un esperimento il 20 aprile 2026 con un set aggiornato di partner tecnologici pubblicitari. Se l'esperimento avrà successo, la lista dei partner verrà aggiornata a partire dal 5 giugno 2026. Gli editori AdSense potranno gestire le proprie preferenze relative ai partner pubblicitari e disattivare gli aggiornamenti automatici.",
       "url": "https://www.seroundtable.com/google-adsense-new-ad-technology-partners-41151.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -218,7 +299,7 @@
       ],
       "importance": 3,
       "published_at": "2026-04-13T10:41:00Z",
-      "fetched_at": "2026-04-13T14:23:49.216569Z",
+      "fetched_at": "2026-04-13T16:10:30.916491Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -227,10 +308,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_006",
+      "id": "item_2026-04-13_007",
       "title_original": "New Study Points to Holes In AI Overviews",
-      "title_it": "Studio evidenzia imprecisioni nelle AI Overview di Google",
-      "summary_it": "Un nuovo studio riportato dal New York Times solleva dubbi sull'accuratezza delle AI Overview di Google, rivelando che una percentuale significativa di risposte contiene imprecisioni o manca di fondamento. L'analisi indica che oltre la metà delle risposte \"accurate\" non sono supportate completamente dai siti web citati, rendendo difficile la verifica. Google ha contestato la validità dello studio.",
+      "title_it": "Un nuovo studio evidenzia delle lacune nelle AI Overview di Google",
+      "summary_it": "Un recente studio riportato dal New York Times e condotto da Oumi, afferma che le AI Overview di Google possono contenere imprecisioni. L'analisi indica che l'85% delle risposte generate con Gemini 2 erano accurate, salendo al 91% con Gemini 3, ma oltre il 50% delle risposte accurate mancavano di grounding, collegandosi a siti web che non supportavano completamente le informazioni fornite.",
       "url": "https://www.seroundtable.com/times-reports-ai-overviews-are-inaccurate-41152.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -249,11 +330,11 @@
         "ai_overviews",
         "google",
         "accuracy",
-        "gemini"
+        "grounding"
       ],
       "importance": 3,
       "published_at": "2026-04-13T10:51:00Z",
-      "fetched_at": "2026-04-13T14:23:50.834525Z",
+      "fetched_at": "2026-04-13T16:10:33.481246Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -262,10 +343,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_007",
+      "id": "item_2026-04-13_008",
       "title_original": "How AI Chooses Which Brands To Recommend: From Relational Knowledge To Topical Presence via @sejournal, @Dixon_Jones",
       "title_it": "Come l'AI seleziona i brand da raccomandare: dalla conoscenza relazionale alla presenza tematica",
-      "summary_it": "Una ricerca sui modelli linguistici analizza i fattori che influenzano le raccomandazioni di brand generate dall'AI, focalizzandosi sulla forza dell'associazione tra brand e topic. Lo studio evidenzia come la conoscenza relazionale e la presenza tematica impattino sulla scelta dei brand da parte dei modelli di intelligenza artificiale.",
+      "summary_it": "Una ricerca sui modelli linguistici analizza i fattori che influenzano le raccomandazioni di brand generate dall'AI, focalizzandosi sulla forza dell'associazione tra brand e topic. Lo studio evidenzia come la conoscenza relazionale e la presenza tematica impattino sulla scelta dei brand da parte dei modelli AI.",
       "url": "https://www.searchenginejournal.com/relational-knowledge-topical-presence-how-ai-chooses-which-brands-to-recommend/570482",
       "source": {
         "id": "search_engine_journal",
@@ -288,7 +369,7 @@
       ],
       "importance": 3,
       "published_at": "2026-04-13T11:00:20Z",
-      "fetched_at": "2026-04-13T14:23:52.478727Z",
+      "fetched_at": "2026-04-13T16:10:34.958558Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -297,10 +378,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_008",
+      "id": "item_2026-04-13_009",
       "title_original": "Shorter, Focused Content Wins in ChatGPT",
       "title_it": "Contenuti più brevi e focalizzati performano meglio in ChatGPT",
-      "summary_it": "Un'analisi di Growth Memo suggerisce che i contenuti più brevi e focalizzati hanno maggiori probabilità di emergere nelle risposte generate dall'AI. Contrariamente alla credenza comune SEO di creare guide \"ultimate\" esaustive, la copertura estesa sembra essere meno efficace in ChatGPT.",
+      "summary_it": "Un'analisi di Growth Memo suggerisce che, contrariamente alle pratiche SEO tradizionali, contenuti più brevi e focalizzati hanno maggiori probabilità di emergere nelle risposte generate dall'AI di ChatGPT. Lo studio ha analizzato un vasto insieme di dati di query e pagine, evidenziando come la copertura estesa di argomenti non sia necessariamente vantaggiosa in questo contesto.",
       "url": "https://www.growth-memo.com/p/shorter-focused-content-wins-in-chatgpt",
       "source": {
         "id": "growth_memo_kevin_indig",
@@ -317,13 +398,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "chatgpt",
-        "llm",
+        "ai_content",
         "content_strategy",
-        "ai_content"
+        "llm"
       ],
       "importance": 3,
       "published_at": "2026-04-13T11:03:23Z",
-      "fetched_at": "2026-04-13T14:23:54.106110Z",
+      "fetched_at": "2026-04-13T16:10:36.790241Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -332,10 +413,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_009",
+      "id": "item_2026-04-13_010",
       "title_original": "Google’s Task-Based Agentic Search Is Disrupting SEO Today, Not Tomorrow via @sejournal, @martinibuster",
-      "title_it": "La Ricerca Agentica Basata su Task di Google Sta Rivoluzionando la SEO Oggi, Non Domani",
-      "summary_it": "Google ha annunciato un cambiamento significativo nel funzionamento della ricerca online, introducendo un approccio agentico basato su task. Questo cambiamento implica una potenziale trasformazione delle strategie SEO tradizionali. L'articolo suggerisce che l'impatto di questa evoluzione si farà sentire in tempi brevi.",
+      "title_it": "La ricerca agentica task-based di Google sta rivoluzionando la SEO oggi, non domani",
+      "summary_it": "Google ha annunciato un cambiamento significativo nel funzionamento della ricerca online. Questo sviluppo implica una trasformazione nel modo in cui gli utenti interagiscono con i motori di ricerca e potrebbe avere un impatto rilevante sulle strategie SEO.",
       "url": "https://www.searchenginejournal.com/googles-task-based-search/571800",
       "source": {
         "id": "search_engine_journal",
@@ -351,14 +432,14 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
+        "google_search",
         "agentic_search",
         "task_based_search",
-        "google_search",
-        "seo_strategy"
+        "seo"
       ],
       "importance": 4,
       "published_at": "2026-04-13T11:13:11Z",
-      "fetched_at": "2026-04-13T14:23:55.748233Z",
+      "fetched_at": "2026-04-13T16:10:38.037548Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -367,10 +448,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_010",
+      "id": "item_2026-04-13_011",
       "title_original": "How To Measure PPC Performance When AI Controls The Auction via @sejournal, @brookeosmundson",
       "title_it": "Misurare le performance PPC in un contesto di aste controllate dall'AI",
-      "summary_it": "L'articolo esplora come misurare l'efficacia delle campagne PPC nel 2026, considerando l'automazione delle aste guidata dall'intelligenza artificiale. Vengono suggeriti approcci basati su metriche di profitto, modelli di attribuzione avanzati e framework di reporting adatti all'AI di Google Ads e alla ricerca basata su AI.",
+      "summary_it": "L'articolo esplora come misurare l'efficacia delle campagne PPC nel 2026, considerando l'automazione delle aste guidata dall'intelligenza artificiale. Vengono suggerite metriche basate sul profitto e framework di reporting adatti all'automazione di Google Ads e alla ricerca AI.",
       "url": "https://www.searchenginejournal.com/how-to-measure-ppc-performance-when-ai-controls-the-auction/570184",
       "source": {
         "id": "search_engine_journal",
@@ -387,13 +468,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "ppc",
-        "ai",
+        "artificial_intelligence",
         "google_ad",
         "automation"
       ],
       "importance": 3,
       "published_at": "2026-04-13T12:00:22Z",
-      "fetched_at": "2026-04-13T14:23:57.425071Z",
+      "fetched_at": "2026-04-13T16:10:39.628609Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -402,10 +483,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-13_011",
+      "id": "item_2026-04-13_012",
       "title_original": "The Dangerous Seduction Of Click-Chasing",
-      "title_it": "Il pericolo dell'ossessione per i click",
-      "summary_it": "Gli editori di notizie che inseguono i click tramite la SEO spesso sacrificano la fiducia del pubblico. Questa strategia può portare a un crollo del posizionamento nel lungo periodo. L'articolo evidenzia i rischi di concentrarsi esclusivamente sull'aumento del traffico a discapito della qualità e dell'affidabilità dei contenuti.",
+      "title_it": "L'insidiosa tentazione della caccia al click",
+      "summary_it": "Gli editori di notizie che inseguono i click tramite la SEO spesso compromettono la fiducia del pubblico. Questa strategia può portare a un calo nel ranking dei contenuti nel lungo periodo. L'articolo evidenzia i rischi di privilegiare metriche di breve termine a discapito della qualità e della credibilità.",
       "url": "https://www.searchenginejournal.com/the-dangerous-seduction-of-click-chasing/571533",
       "source": {
         "id": "search_engine_journal",
@@ -423,64 +504,106 @@
       "tags": [
         "clickbait",
         "content_quality",
-        "e_e_a_t",
-        "audience_trust"
+        "user_trust",
+        "long_term_seo"
       ],
       "importance": 3,
       "published_at": "2026-04-13T12:30:13Z",
-      "fetched_at": "2026-04-13T14:23:59.220935Z",
+      "fetched_at": "2026-04-13T16:10:41.113955Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
       "raw_hash": "sha256:690e5bd1d348ad78",
       "deep_analysis": null
+    },
+    {
+      "id": "doc_2026-04-13_001",
+      "title_original": "Google Spam Policies",
+      "title_it": "⚠️Politiche Spam: Riformulazione sezione 'Malware and malicious practices'",
+      "summary_it": "La sezione 'Malware and malicious practices' è stata rinominata in 'Malicious practices' e riformulata. È stata aggiunta una frase introduttiva che definisce le pratiche dannose e un elenco puntato per malware e software indesiderato. È stato aggiunto un punto sulle pratiche dannose: 'Back button hijacking'.",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "source": {
+        "id": "doc_watcher",
+        "name": "OsservatorioSEO Doc Watcher",
+        "authority": 10,
+        "type": "doc_change",
+        "fetcher": "rss",
+        "feed_url": null,
+        "target_url": null,
+        "selectors": null,
+        "category_hint": null,
+        "enabled": true
+      },
+      "category": "google_docs_change",
+      "tags": [
+        "spam_policie",
+        "malware",
+        "unwanted_software",
+        "back_button_hijacking"
+      ],
+      "importance": 4,
+      "published_at": "2026-04-13T16:09:44.817814Z",
+      "fetched_at": "2026-04-13T16:09:44.817814Z",
+      "is_doc_change": true,
+      "doc_change": {
+        "page_id": "google_spam_policies",
+        "previous_hash": "sha256:66956c2e5fee1c00f5323f7b88d21043c172cb887c69df36291883943750ab6f",
+        "current_hash": "sha256:7ebeb59da66f1dd92760990b5f1470205e4948b736740843aaa4fd0ae46c8dc0",
+        "diff_url": null,
+        "lines_added": 9,
+        "lines_removed": 9
+      },
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:7ebeb59da66f1dd92760990b5f1470205e4948b736740843aaa4fd0ae46c8dc0",
+      "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-04-13T14:23:00.926635Z",
-      "changed": false
+      "last_checked": "2026-04-13T16:09:44.817814Z",
+      "changed": true
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-04-13T14:23:01.338006Z",
+      "last_checked": "2026-04-13T16:09:45.301866Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-04-13T14:23:03.300720Z",
+      "last_checked": "2026-04-13T16:09:47.103079Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-04-13T14:23:35.059403Z",
+      "last_checked": "2026-04-13T16:10:15.262151Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-04-13T14:23:35.386336Z",
+      "last_checked": "2026-04-13T16:10:16.492315Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-04-13T14:23:36.398366Z",
+      "last_checked": "2026-04-13T16:10:17.091969Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-04-13T14:23:38.435241Z",
+      "last_checked": "2026-04-13T16:10:19.077114Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-04-13T14:23:39.877205Z",
+      "last_checked": "2026-04-13T16:10:20.640607Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-04-13T14:23:39.954589Z",
+      "last_checked": "2026-04-13T16:10:20.724037Z",
       "changed": false
     }
   ],
