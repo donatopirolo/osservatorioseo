@@ -33,7 +33,7 @@ class TrendsClient:
 
     DEFAULT_KEYWORDS = DEFAULT_KEYWORDS
 
-    def __init__(self, api_key: str, timeout_s: int = 30) -> None:
+    def __init__(self, api_key: str, timeout_s: int = 60) -> None:
         self._api_key = api_key
         self._timeout = timeout_s
 
