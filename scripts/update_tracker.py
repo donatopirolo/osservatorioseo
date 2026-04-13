@@ -21,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from osservatorio_seo.tracker.collector import TrackerCollector
 from osservatorio_seo.tracker.radar_client import RadarClient
+from osservatorio_seo.tracker.trends_client import TrendsClient
 
 
 async def main() -> None:
@@ -30,7 +31,8 @@ async def main() -> None:
 
     repo_root = Path(__file__).resolve().parent.parent
     radar = RadarClient(api_token=token)
-    collector = TrackerCollector(radar=radar)
+    trends = TrendsClient(request_delay=5.0)
+    collector = TrackerCollector(radar=radar, trends_client=trends)
 
     today = date.today()
     year, week, _ = today.isocalendar()
