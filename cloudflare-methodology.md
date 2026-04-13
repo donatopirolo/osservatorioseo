@@ -1,0 +1,589 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e6]:
+        - link "Get Started Free" [ref=e8] [cursor=pointer]:
+          - /url: https://dash.cloudflare.com/sign-up
+        - generic [ref=e9]: "|"
+        - link "Contact Sales" [ref=e11] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/plans/enterprise/contact/
+      - generic [ref=e12]:
+        - link "The Cloudflare Blog" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - img "The Cloudflare Blog" [ref=e14]
+        - heading "The Cloudflare Blog" [level=2] [ref=e15]:
+          - link "The Cloudflare Blog" [ref=e16] [cursor=pointer]:
+            - /url: /
+      - generic [ref=e17]:
+        - paragraph [ref=e19]: "Subscribe to receive notifications of new posts:"
+        - generic [ref=e23]:
+          - textbox "Must be valid email." [ref=e25]:
+            - /placeholder: Email Address
+          - button "Subscribe" [ref=e26] [cursor=pointer]
+    - navigation [ref=e27]:
+      - generic [ref=e28]:
+        - link "AI" [ref=e30] [cursor=pointer]:
+          - /url: /tag/ai/
+        - link "Developers" [ref=e32] [cursor=pointer]:
+          - /url: /tag/developers/
+        - link "Radar" [ref=e34] [cursor=pointer]:
+          - /url: /tag/cloudflare-radar/
+        - link "Product News" [ref=e36] [cursor=pointer]:
+          - /url: /tag/product-news/
+        - link "Security" [ref=e38] [cursor=pointer]:
+          - /url: /tag/security/
+        - link "Policy & Legal" [ref=e40] [cursor=pointer]:
+          - /url: /tag/policy/
+        - link "Zero Trust" [ref=e42] [cursor=pointer]:
+          - /url: /tag/zero-trust/
+        - link "Speed & Reliability" [ref=e44] [cursor=pointer]:
+          - /url: /tag/speed-and-reliability/
+        - link "Life at Cloudflare" [ref=e46] [cursor=pointer]:
+          - /url: /tag/life-at-cloudflare/
+        - link "Partners" [ref=e48] [cursor=pointer]:
+          - /url: /tag/partners/
+        - link "magnifier icon" [ref=e50] [cursor=pointer]:
+          - /url: /search/
+          - img "magnifier icon" [ref=e51]
+  - progressbar "Reading progress" [ref=e52]
+  - generic [ref=e53]:
+    - main [ref=e54]:
+      - article [ref=e55]:
+        - 'heading "A deeper look at AI crawlers: breaking down traffic by purpose and industry" [level=1] [ref=e56]'
+        - paragraph [ref=e57]: 2025-08-28
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - link "David Belson" [ref=e60] [cursor=pointer]:
+              - /url: /author/david-belson/
+              - img "David Belson" [ref=e61]
+            - link "David Belson" [ref=e63] [cursor=pointer]:
+              - /url: /author/david-belson/
+        - generic [ref=e64]:
+          - generic [ref=e65]: 7 min read
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: Search platforms historically crawled web sites with the implicit promise that, as the sites showed up in the results for relevant searches, they would send traffic on to those sites — in turn leading to ad revenue for the publisher. This model worked fairly well for several decades, with a whole industry emerging around optimizing content for optimal placement in search results. It led to higher click-through rates, more eyeballs for publishers, and, ideally, more ad revenue. However, the emergence of AI platforms over the last several years, and the incorporation of AI "overviews" into classic search platforms, has turned the model on its head. When users turn to these AI platforms with queries that used to go to search engines, they often won't click through to the original source site once an answer is provided — and that assumes that a link to the source is provided at all! No clickthrough, no eyeballs, and no ad revenue.
+            - paragraph [ref=e68]:
+              - text: To provide a perspective on the scope of this problem, Radar
+              - link "launched" [ref=e69] [cursor=pointer]:
+                - /url: https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/
+              - link "crawl/refer ratios" [ref=e70] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights#crawl-to-refer-ratio
+              - text: on July 1, based on traffic seen across our whole customer base. These ratios effectively compare the number of crawling requests for HTML pages from the
+              - link "crawler" [ref=e71] [cursor=pointer]:
+                - /url: https://www.cloudflare.com/learning/bots/what-is-a-web-crawler/
+              - text: associated with a given platform, to the number of HTML page requests referred by that platform (measuring human traffic). This data complements insights into
+              - link "AI bot & crawler traffic trends" [ref=e72] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights#ai-bot-crawler-traffic
+              - text: that were
+              - link "launched" [ref=e73] [cursor=pointer]:
+                - /url: https://blog.cloudflare.com/bringing-ai-to-cloudflare/#ai-bot-traffic-insights-on-cloudflare-radar
+              - text: during Birthday Week 2024.
+            - paragraph [ref=e74]:
+              - text: Today, we're adding two new capabilities to the
+              - link "AI Insights" [ref=e75] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights
+                - generic [ref=e76]: AI Insights
+              - text: "page on Cloudflare Radar to give you more insight into this activity: industry-focused AI bot traffic data, and a new breakdown of AI bot traffic by its purpose."
+            - generic [ref=e77]:
+              - heading "Traffic by type" [level=2] [ref=e78]
+              - link [ref=e79] [cursor=pointer]:
+                - /url: "#traffic-by-type"
+                - img [ref=e80]
+            - paragraph [ref=e82]:
+              - text: Since the launch of
+              - link "LLMs" [ref=e83] [cursor=pointer]:
+                - /url: https://www.cloudflare.com/learning/ai/what-is-large-language-model/
+              - text: into the public consciousness in November 2022, much of the crawling traffic seen from user agents associated with AI platforms has been to collect content used to train AI models. This crawling activity can be aggressive at times, often ignoring
+              - link "directives found in robots.txt files" [ref=e84] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights#ai-user-agents-found-in-robotstxt
+              - text: . In addition to offering chatbots trained on this
+              - link "scraped content" [ref=e85] [cursor=pointer]:
+                - /url: https://www.cloudflare.com/learning/bots/what-is-content-scraping/
+              - text: ", AI platforms have emerged that aim to replace classic search tools, while those tools have themselves integrated AI-powered summaries as part of their results. These platforms may crawl your site to build indexes for their search engines. And some AI platforms may crawl your site in response to a specific user prompt, such as looking for flights to plan a vacation."
+            - paragraph [ref=e86]: The new Crawl purpose selector within the AI bot & crawler traffic card allows users to select between Training, Search, User action, and Undeclared. (The latter is for crawlers where no information is available from the operator or other industry sources regarding its purpose.)
+            - figure [ref=e87]
+            - paragraph [ref=e88]:
+              - text: Once a purpose is selected, the
+              - link "HTTP traffic by bot" [ref=e89] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights#http-traffic-by-bot
+                - generic [ref=e90]: HTTP traffic by bot
+              - text: graph updates to show traffic trends over the selected time period for the top five most active AI bots that crawl for the selected purpose.
+            - paragraph [ref=e91]:
+              - text: As an example, selecting User action results in a
+              - link "graph" [ref=e92] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights?dateStart=2025-07-01&dateEnd=2025-07-28#http-traffic-by-bot
+              - text: like the one below, which covers the first 28 days of July 2025. OpenAI’s ChatGPT-User bot is responsible for nearly three quarters of the request traffic from this cohort of crawlers. A daily cycle is clearly evident, suggesting regular usage of ChatGPT in that fashion, with such usage gradually increasing throughout the month. If ChatGPT-User is removed from the chart, Perplexity-User also exhibits a similar pattern.
+            - figure [ref=e93]
+            - paragraph [ref=e94]:
+              - text: A new
+              - link "Crawl purpose" [ref=e95] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights#crawl-purpose
+                - generic [ref=e96]: Crawl purpose
+              - text: graph has also been added to Radar, breaking out traffic trends by purpose. Training traffic, responsible for nearly 80% of the crawling from AI bots, is somewhat erratic in nature, with no clear cyclical pattern. However, such patterns are visible for the User action and Undeclared purposes, as shown in the
+              - link "graph" [ref=e97] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights?dateStart=2025-07-01&dateEnd=2025-07-28#crawl-purpose
+              - text: below, although they account for less than 5% of AI bot traffic across this time period.
+            - figure [ref=e98]
+            - paragraph [ref=e99]:
+              - text: Within the
+              - link "Data Explorer" [ref=e100] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/explorer?dataSet=ai.bots
+              - text: view for the AI Bots & Crawlers dataset, you can now
+              - link "break the data down by Crawl purpose" [ref=e101] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/explorer?dataSet=ai.bots&dt=28d&groupBy=crawl_purpose
+                - text: break the data down by
+                - generic [ref=e102]: Crawl purpose
+              - text: to explore how the activity has changed over time. Alternatively, you can
+              - link "break the data down by User agent, and filter by Crawl purpose" [ref=e103] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/explorer?dataSet=ai.bots&dt=28d&groupBy=user_agent&filters=crawlPurpose%253DTraining
+                - text: break the data down by
+                - generic [ref=e104]: User agent
+                - text: ", and filter by"
+                - generic [ref=e105]: Crawl purpose
+              - text: ", to explore traffic trends across a larger set of bots (beyond the top five)."
+              - link "Comparisons with previous time periods" [ref=e106] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/explorer?dataSet=ai.bots&dt=28d&groupBy=user_agent&filters=crawlPurpose%253DTraining&timeCompare=1
+              - text: are available here as well.
+            - figure [ref=e107]
+            - generic [ref=e108]:
+              - heading "Visibility by industry" [level=2] [ref=e109]
+              - link [ref=e110] [cursor=pointer]:
+                - /url: "#visibility-by-industry"
+                - img [ref=e111]
+            - paragraph [ref=e113]:
+              - text: You can use your own traffic data to see how aggressively crawlers
+              - link "scrape" [ref=e114] [cursor=pointer]:
+                - /url: https://www.cloudflare.com/learning/ai/how-to-prevent-web-scraping/
+              - text: your content. You can also see how frequently they refer traffic back to you. However, you may also want to understand how those measurements compare with your peer group — are you being crawled more or less frequently, and are the platforms referring more or less traffic back to your sites? The new industry set filtering available for the
+              - link "HTTP traffic by bot graph" [ref=e115] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights#http-traffic-by-bot
+                - generic [ref=e116]: HTTP traffic by bot
+                - text: graph
+              - text: and the
+              - link "Crawl-to-refer ratio table" [ref=e117] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights#crawl-to-refer-ratio
+                - generic [ref=e118]: Crawl-to-refer ratio
+                - text: table
+              - text: in the
+              - link "AI Insights" [ref=e119] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights
+                - generic [ref=e120]: AI Insights
+              - text: section of Radar can provide you with this perspective.
+            - paragraph [ref=e121]: Within the AI bot & crawler traffic card on the AI Insights page, select an industry set from the drop-down list at the top right of the card. The graphs in the HTTP traffic by bot and Crawl purpose sections of the card update to reflect the selection, as does the Crawl-to-refer ratio table. (Selecting a Crawl purpose from that drop-down menu will further update the HTTP traffic by bot graph.)
+            - figure [ref=e122]
+            - paragraph [ref=e123]:
+              - text: It is interesting to observe how the crawling patterns change between industry sets, along with the mix of most active bots and crawl-to-refer ratios. For example, across the first week of August, with
+              - link "no vertical or crawl purpose selected" [ref=e124] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights?dateStart=2025-08-01&dateEnd=2025-08-07#http-traffic-by-bot
+              - text: ", ClaudeBot and GPTBot account for nearly half of the observed crawling activity, with Meta-ExternalAgent the only one among the top five exhibiting activity that remotely resembles a pattern. For the default view, Anthropic had the highest crawl-to-refer ratio at nearly 50,000:1, followed by OpenAI at 887:1 and Perplexity at 118:1."
+            - figure [ref=e125]
+            - paragraph [ref=e126]:
+              - text: However, when the
+              - link "News and Publications industry set is selected" [ref=e127] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights?industrySet=News+%26+Publications&dateStart=2025-08-01&dateEnd=2025-08-07
+                - generic [ref=e128]: News and Publications industry set is selected
+              - text: ", we see a much tighter distribution of traffic among the top five, ranging from ChatGPT-User’s 14.9% share of traffic to GPTBot’s 17.4% share. ChatGPT-User’s presence among the top five suggests that a significant number of users may have been asking questions about current events during that period of time. For these News and Publications sites, the crawl-to-refer ratios are lower than the default view, with Anthropic at 2,500:1, OpenAI at 152:1, and Perplexity at 32.7:1."
+            - figure [ref=e129]
+            - paragraph [ref=e130]:
+              - text: As a third example, we find that the mix again shifts for the
+              - link "Computer and Electronics industry set" [ref=e131] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights?industrySet=Computer+%26+Electronics&dateStart=2025-08-01&dateEnd=2025-08-07#http-traffic-by-bot
+                - generic [ref=e132]: Computer and Electronics industry set
+              - text: . While GPTBot was again the most active AI bot, Amazonbot moved up into second place; together these bots now account for over 40% of crawling traffic. ClaudeBot and Meta-ExternalAgent both had a 13.9% share of the crawling traffic, with ByteDance’s ByteSpider rounding out the top five. The crawl-to-refer ratios for this vertical are again lower than for the unfiltered view, with Anthropic down to 8,800:1, OpenAI at 401.7:1, and Perplexity at 88:1.
+            - figure [ref=e133]
+            - paragraph [ref=e134]:
+              - text: Within Data Explorer, you can now break down AI Bots & Crawler data by Vertical and Industry. (A vertical is a pre-defined collection of multiple related industries), and you can also filter Crawl purpose and User agent breakdowns by Vertical and Industry. For example, the graphs below illustrate the
+              - link "traffic trends by AI crawler" [ref=e135] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/explorer?dataSet=ai.bots&groupBy=user_agent&dt=2025-08-01_2025-08-07&filters=vertical%253DFinance%252Cindustry%253DCryptocurrency#result
+              - text: for sites within the Cryptocurrency industry under the Finance vertical, as well as the
+              - link "traffic trends by crawl purpose" [ref=e136] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/explorer?dataSet=ai.bots&groupBy=crawl_purpose&dt=2025-08-01_2025-08-07&filters=vertical%253DFinance%252Cindustry%253DCryptocurrency#result
+              - text: for that industry/vertical pair. While these sites see crawling traffic from quite a few bots, three-quarters of that traffic during the first week of August was concentrated in just four bots, and 80% of it was for gathering information to train models.
+            - figure [ref=e137]
+            - figure [ref=e138]
+            - paragraph [ref=e139]:
+              - text: Because the Industry sets shown on the main AI Insights page are manually curated collections of related industries, clicking through to the Data Explorer view from one of those graphs will pre-populate the Industry selector with the relevant entries. For example, clicking through from the
+              - link "HTTP traffic by bot graph for the Gaming & Gambling industry set" [ref=e140] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/ai-insights?industrySet=Gaming+%26+Gambling#http-traffic-by-bot
+                - generic [ref=e141]: HTTP traffic by bot
+                - text: graph for the
+                - generic [ref=e142]: Gaming & Gambling
+                - text: industry set
+              - text: results in the following
+              - link "Data Explorer view" [ref=e143] [cursor=pointer]:
+                - /url: https://radar.cloudflare.com/explorer?dataSet=ai.bots&groupBy=user_agent&filters=industry%253DComputer%25252520Games%25252CGambling%25252520%25252526%25252520Casinos%25252CGambling%25252520and%25252520Casinos%2525253B%25252520Recreation%25252CGaming&dt=2025-08-01_2025-08-07
+              - text: ", which lists the component industries."
+            - figure [ref=e144]
+            - generic [ref=e145]:
+              - heading "Conclusion" [level=2] [ref=e146]
+              - link [ref=e147] [cursor=pointer]:
+                - /url: "#conclusion"
+                - img [ref=e148]
+            - paragraph [ref=e150]:
+              - text: AI crawler traffic has become a fact of life for content owners, and the complexity of dealing with it has increased as bots are used for purposes beyond LLM training.
+              - link "Work is underway" [ref=e151] [cursor=pointer]:
+                - /url: https://contentsignals.org/
+              - text: to allow website publishers to declare how automated systems should use their content. However, it will take some time for these proposed solutions to be standardized, and for both publishers and crawlers to adopt them. As the space evolves, we’ll continue to expand Cloudflare Radar’s insights into AI crawler activity.
+            - paragraph [ref=e152]:
+              - text: "If you share our AI-related graphs on social media, be sure to tag us:"
+              - link "@CloudflareRadar" [ref=e153] [cursor=pointer]:
+                - /url: https://x.com/CloudflareRadar
+              - text: (X),
+              - link "noc.social/@cloudflareradar" [ref=e154] [cursor=pointer]:
+                - /url: https://noc.social/@cloudflareradar
+              - text: (Mastodon), and
+              - link "radar.cloudflare.com" [ref=e155] [cursor=pointer]:
+                - /url: https://bsky.app/profile/radar.cloudflare.com
+              - text: (Bluesky). If you have questions or comments, you can reach out to us on social media, or contact us via
+              - link "email" [ref=e156] [cursor=pointer]:
+                - /url: mailto:radar@cloudflare.com
+              - text: .
+            - iframe [ref=e158]
+            - paragraph
+        - generic [ref=e160]:
+          - text: Cloudflare's connectivity cloud protects
+          - link "entire corporate networks" [ref=e161] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/network-services/
+          - text: ", helps customers build"
+          - link "Internet-scale applications efficiently" [ref=e162] [cursor=pointer]:
+            - /url: https://workers.cloudflare.com/
+          - text: ", accelerates any"
+          - link "website or Internet application" [ref=e163] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/performance/accelerate-internet-applications/
+          - text: ","
+          - link "wards off DDoS attacks" [ref=e164] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/ddos/
+          - text: ", keeps"
+          - link "hackers at bay" [ref=e165] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/application-security/
+          - text: ", and can help you on"
+          - link "your journey to Zero Trust" [ref=e166] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/products/zero-trust/
+          - text: .
+          - text: Visit
+          - link "1.1.1.1" [ref=e167] [cursor=pointer]:
+            - /url: https://one.one.one.one/
+          - text: from any device to get started with our free app that makes your Internet faster and safer.
+          - text: To learn more about our mission to help build a better Internet,
+          - link "start here" [ref=e168] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/learning/what-is-cloudflare/
+          - text: . If you're looking for a new career direction, check out
+          - link "our open positions" [ref=e169] [cursor=pointer]:
+            - /url: http://www.cloudflare.com/careers
+          - text: .
+        - iframe [ref=e170]
+        - link "AI Week" [ref=e171] [cursor=pointer]:
+          - /url: /tag/ai-week/
+        - link "AI" [ref=e172] [cursor=pointer]:
+          - /url: /tag/ai/
+        - link "Radar" [ref=e173] [cursor=pointer]:
+          - /url: /tag/cloudflare-radar/
+        - link "Traffic" [ref=e174] [cursor=pointer]:
+          - /url: /tag/traffic/
+        - link "Bots" [ref=e175] [cursor=pointer]:
+          - /url: /tag/bots/
+    - generic [ref=e177]:
+      - paragraph [ref=e179]: Follow on X
+      - generic [ref=e180]:
+        - text: David Belson|
+        - link "@dbelson" [ref=e181] [cursor=pointer]:
+          - /url: https://x.com/@dbelson
+      - generic [ref=e182]:
+        - text: Cloudflare|
+        - link "@cloudflare" [ref=e183] [cursor=pointer]:
+          - /url: https://x.com/@cloudflare
+    - generic [ref=e184]:
+      - paragraph [ref=e186]: Related posts
+      - article [ref=e187]:
+        - paragraph [ref=e188]: April 12, 2026 7:01 PM
+        - link "Welcome to Agents Week" [ref=e189] [cursor=pointer]:
+          - /url: /welcome-to-agents-week/
+          - heading "Welcome to Agents Week" [level=2] [ref=e190]
+        - paragraph [ref=e191]: Cloudflare's mission has always been to help build a better Internet. Sometimes that means building for the Internet as it exists. Sometimes it means building for the Internet as it's about to become. This week, we're kicking off Agents Week, dedicated to what comes next. ...
+        - list [ref=e192]:
+          - generic [ref=e193]: By
+          - listitem [ref=e194]:
+            - generic [ref=e195]:
+              - link "Rita Kozlov" [ref=e196] [cursor=pointer]:
+                - /url: /author/rita/
+              - text: ","
+          - listitem [ref=e197]:
+            - link "Dane Knecht" [ref=e199] [cursor=pointer]:
+              - /url: /author/dane-knecht/
+        - generic [ref=e200]:
+          - link "Agents Week," [ref=e202] [cursor=pointer]:
+            - /url: /tag/agents-week/
+          - link "Agents," [ref=e204] [cursor=pointer]:
+            - /url: /tag/agents/
+          - link "Cloudflare Workers," [ref=e206] [cursor=pointer]:
+            - /url: /tag/workers/
+          - link "Workers AI," [ref=e208] [cursor=pointer]:
+            - /url: /tag/workers-ai/
+          - link "AI," [ref=e210] [cursor=pointer]:
+            - /url: /tag/ai/
+          - link "Developer Platform," [ref=e212] [cursor=pointer]:
+            - /url: /tag/developer-platform/
+          - link "Developers," [ref=e214] [cursor=pointer]:
+            - /url: /tag/developers/
+          - link "Serverless" [ref=e216] [cursor=pointer]:
+            - /url: /tag/serverless/
+      - article [ref=e217]:
+        - paragraph [ref=e218]: April 10, 2026 8:00 PM
+        - 'link "500 Tbps of capacity: 16 years of scaling our global network" [ref=e219] [cursor=pointer]':
+          - /url: /500-tbps-of-capacity/
+          - 'heading "500 Tbps of capacity: 16 years of scaling our global network" [level=2] [ref=e220]'
+        - paragraph [ref=e221]: Cloudflare’s global network has officially crossed 500 Tbps of external capacity, enough to route more than 20% of the web and absorb the largest DDoS attacks ever recorded....
+        - list [ref=e222]:
+          - generic [ref=e223]: By
+          - listitem [ref=e224]:
+            - link "Tanner Ryan" [ref=e226] [cursor=pointer]:
+              - /url: /author/tanner/
+        - generic [ref=e227]:
+          - link "Network Services," [ref=e229] [cursor=pointer]:
+            - /url: /tag/network-services/
+          - link "Cloudflare Network," [ref=e231] [cursor=pointer]:
+            - /url: /tag/cloudflare-network/
+          - link "Peering," [ref=e233] [cursor=pointer]:
+            - /url: /tag/peering/
+          - link "DDoS," [ref=e235] [cursor=pointer]:
+            - /url: /tag/ddos/
+          - link "BGP," [ref=e237] [cursor=pointer]:
+            - /url: /tag/bgp/
+          - link "RPKI," [ref=e239] [cursor=pointer]:
+            - /url: /tag/rpki/
+          - link "Workers AI," [ref=e241] [cursor=pointer]:
+            - /url: /tag/workers-ai/
+          - link "Cloudflare Workers," [ref=e243] [cursor=pointer]:
+            - /url: /tag/workers/
+          - link "AI" [ref=e245] [cursor=pointer]:
+            - /url: /tag/ai/
+      - article [ref=e246]:
+        - paragraph [ref=e247]: March 30, 2026 8:00 AM
+        - 'link "Cloudflare Client-Side Security: smarter detection, now open to everyone" [ref=e248] [cursor=pointer]':
+          - /url: /client-side-security-open-to-everyone/
+          - 'heading "Cloudflare Client-Side Security: smarter detection, now open to everyone" [level=2] [ref=e249]'
+        - paragraph [ref=e250]: We are opening our advanced Client-Side Security tools to all users, featuring a new cascading AI detection system. By combining graph neural networks and LLMs, we've reduced false positives by up to 200x while catching sophisticated zero-day exploits....
+        - list [ref=e251]:
+          - generic [ref=e252]: By
+          - listitem [ref=e253]:
+            - generic [ref=e254]:
+              - link "Zhiyuan Zheng" [ref=e255] [cursor=pointer]:
+                - /url: /author/xmflsct/
+              - text: ","
+          - listitem [ref=e256]:
+            - link "Juan Miguel Cejuela" [ref=e258] [cursor=pointer]:
+              - /url: /author/juan-miguel-cejuela/
+        - generic [ref=e259]:
+          - link "Security," [ref=e261] [cursor=pointer]:
+            - /url: /tag/security/
+          - link "Machine Learning," [ref=e263] [cursor=pointer]:
+            - /url: /tag/machine-learning/
+          - link "JavaScript," [ref=e265] [cursor=pointer]:
+            - /url: /tag/javascript/
+          - link "AI," [ref=e267] [cursor=pointer]:
+            - /url: /tag/ai/
+          - link "Product News" [ref=e269] [cursor=pointer]:
+            - /url: /tag/product-news/
+      - article [ref=e270]:
+        - paragraph [ref=e271]: March 24, 2026 2:00 PM
+        - link "Sandboxing AI agents, 100x faster" [ref=e272] [cursor=pointer]:
+          - /url: /dynamic-workers/
+          - heading "Sandboxing AI agents, 100x faster" [level=2] [ref=e273]
+        - paragraph [ref=e274]: We’re introducing Dynamic Workers, which allow you to execute AI-generated code in secure, lightweight isolates. This approach is 100 times faster than traditional containers, enabling millisecond startup times for AI agent sandboxing....
+        - list [ref=e275]:
+          - generic [ref=e276]: By
+          - listitem [ref=e277]:
+            - generic [ref=e278]:
+              - link "Kenton Varda" [ref=e279] [cursor=pointer]:
+                - /url: /author/kenton-varda/
+              - text: ","
+          - listitem [ref=e280]:
+            - generic [ref=e281]:
+              - link "Sunil Pai" [ref=e282] [cursor=pointer]:
+                - /url: /author/sunil/
+              - text: ","
+          - listitem [ref=e283]:
+            - link "Ketan Gupta" [ref=e285] [cursor=pointer]:
+              - /url: /author/ketan-gupta/
+        - generic [ref=e286]:
+          - link "MCP," [ref=e288] [cursor=pointer]:
+            - /url: /tag/mcp/
+          - link "Workers AI," [ref=e290] [cursor=pointer]:
+            - /url: /tag/workers-ai/
+          - link "AI," [ref=e292] [cursor=pointer]:
+            - /url: /tag/ai/
+          - link "Agents," [ref=e294] [cursor=pointer]:
+            - /url: /tag/agents/
+          - link "Developer Platform," [ref=e296] [cursor=pointer]:
+            - /url: /tag/developer-platform/
+          - link "Developers" [ref=e298] [cursor=pointer]:
+            - /url: /tag/developers/
+  - contentinfo [ref=e299]:
+    - generic [ref=e301]:
+      - list [ref=e303]:
+        - listitem [ref=e304]: Getting Started
+        - listitem [ref=e305]:
+          - link "Free plans" [ref=e306] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/plans/free/
+        - listitem [ref=e307]:
+          - link "For enterprises" [ref=e308] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/enterprise/
+        - listitem [ref=e309]:
+          - link "Compare plans" [ref=e310] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/plans/
+        - listitem [ref=e311]:
+          - link "Get a recommendation" [ref=e312] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/about-your-website/
+        - listitem [ref=e313]:
+          - link "Request a demo" [ref=e314] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/plans/enterprise/demo/
+        - listitem [ref=e315]:
+          - link "Contact Sales" [ref=e316] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/plans/enterprise/contact/
+      - list [ref=e318]:
+        - listitem [ref=e319]: Resources
+        - listitem [ref=e320]:
+          - link "Learning Center" [ref=e321] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/learning/
+        - listitem [ref=e322]:
+          - link "Analyst reports" [ref=e323] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/analysts/
+        - listitem [ref=e324]:
+          - link "Cloudflare Radar" [ref=e325] [cursor=pointer]:
+            - /url: https://radar.cloudflare.com/
+        - listitem [ref=e326]:
+          - link "Cloudflare TV" [ref=e327] [cursor=pointer]:
+            - /url: https://cloudflare.tv/
+        - listitem [ref=e328]:
+          - link "Case Studies" [ref=e329] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/case-studies/
+        - listitem [ref=e330]:
+          - link "Webinars" [ref=e331] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/resource-hub/?resourcetype=Webinar
+        - listitem [ref=e332]:
+          - link "White Papers" [ref=e333] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/resource-hub/?resourcetype=Whitepaper
+        - listitem [ref=e334]:
+          - link "Developer docs" [ref=e335] [cursor=pointer]:
+            - /url: https://developers.cloudflare.com
+        - listitem [ref=e336]:
+          - link "theNet" [ref=e337] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/the-net/
+      - list [ref=e339]:
+        - listitem [ref=e340]: Solutions
+        - listitem [ref=e341]:
+          - link "Connectivity cloud" [ref=e342] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/connectivity-cloud/
+        - listitem [ref=e343]:
+          - link "SSE and SASE services" [ref=e344] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/zero-trust/
+        - listitem [ref=e345]:
+          - link "Application services" [ref=e346] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/application-services/
+        - listitem [ref=e347]:
+          - link "Network services" [ref=e348] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/network-services/
+        - listitem [ref=e349]:
+          - link "Developer services" [ref=e350] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/developer-platform/
+      - list [ref=e352]:
+        - listitem [ref=e353]: Community
+        - listitem [ref=e354]:
+          - link "Community Hub" [ref=e355] [cursor=pointer]:
+            - /url: https://community.cloudflare.com
+        - listitem [ref=e356]:
+          - link "Project Galileo" [ref=e357] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/galileo/
+        - listitem [ref=e358]:
+          - link "Athenian Project" [ref=e359] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/athenian/
+        - listitem [ref=e360]:
+          - link "Cloudflare for Campaigns" [ref=e361] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/campaigns/
+        - listitem [ref=e362]:
+          - link "Connect 2024" [ref=e363] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/connect2024/
+      - list [ref=e365]:
+        - listitem [ref=e366]: Support
+        - listitem [ref=e367]:
+          - link "Help center" [ref=e368] [cursor=pointer]:
+            - /url: https://support.cloudflare.com
+        - listitem [ref=e369]:
+          - link "Cloudflare Status" [ref=e370] [cursor=pointer]:
+            - /url: https://www.cloudflarestatus.com
+        - listitem [ref=e371]:
+          - link "Compliance" [ref=e372] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/compliance/
+        - listitem [ref=e373]:
+          - link "GDPR" [ref=e374] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/gdpr/introduction/
+        - listitem [ref=e375]:
+          - link "Trust & Safety" [ref=e376] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/trust-hub/abuse-approach/
+      - list [ref=e378]:
+        - listitem [ref=e379]: Company
+        - listitem [ref=e380]:
+          - link "About Cloudflare" [ref=e381] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/about-overview/
+        - listitem [ref=e382]:
+          - link "Our team" [ref=e383] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/people/
+        - listitem [ref=e384]:
+          - link "Investor relations" [ref=e385] [cursor=pointer]:
+            - /url: https://cloudflare.net/
+        - listitem [ref=e386]:
+          - link "Press" [ref=e387] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/press/
+        - listitem [ref=e388]:
+          - link "Careers" [ref=e389] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/careers/
+        - listitem [ref=e390]:
+          - link "Diversity, equity & inclusion" [ref=e391] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/diversity-equity-and-inclusion/
+        - listitem [ref=e392]:
+          - link "Impact/ESG" [ref=e393] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/impact/
+        - listitem [ref=e394]:
+          - link "Network Map" [ref=e395] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/network/
+        - listitem [ref=e396]:
+          - link "Logos & press kit" [ref=e397] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/press-kit/
+        - listitem [ref=e398]:
+          - link "Become a partner" [ref=e399] [cursor=pointer]:
+            - /url: https://www.cloudflare.com/partners/
+    - generic [ref=e401]:
+      - generic [ref=e402]:
+        - link "facebook" [ref=e403] [cursor=pointer]:
+          - /url: https://www.facebook.com/Cloudflare/
+          - img "facebook" [ref=e404]
+        - link "X" [ref=e405] [cursor=pointer]:
+          - /url: https://x.com/Cloudflare
+          - img "X" [ref=e406]
+        - link "linkedin" [ref=e407] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cloudflare
+          - img "linkedin" [ref=e408]
+        - link "youtube" [ref=e409] [cursor=pointer]:
+          - /url: https://www.youtube.com/cloudflare
+          - img "youtube" [ref=e410]
+        - link "instagram" [ref=e411] [cursor=pointer]:
+          - /url: https://www.instagram.com/cloudflare
+          - img "instagram" [ref=e412]
+      - generic [ref=e414]:
+        - generic [ref=e415]: © 2026 Cloudflare, Inc.
+        - text: "|"
+        - link "Privacy Policy" [ref=e416] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/privacypolicy/
+        - text: "|"
+        - link "Terms of Use" [ref=e417] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/website-terms/
+        - text: "|"
+        - link "Report Security Issues" [ref=e418] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/disclosure/
+        - text: "|"
+        - img "Privacy Options" [ref=e419]
+        - link "Cookie Preferences" [ref=e420] [cursor=pointer]:
+          - /url: "#cookie-settings"
+        - text: "|"
+        - link "Trademark" [ref=e421] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/trademark/
