@@ -287,7 +287,9 @@ def test_device_type_timeseries_with_points():
     ts = DeviceTypeTimeseries(
         points=[
             DeviceTypePoint(date=NOW, mobile_pct=51.2, desktop_pct=48.8),
-            DeviceTypePoint(date=datetime(2026, 4, 6, tzinfo=UTC), mobile_pct=50.1, desktop_pct=49.9),
+            DeviceTypePoint(
+                date=datetime(2026, 4, 6, tzinfo=UTC), mobile_pct=50.1, desktop_pct=49.9
+            ),
         ]
     )
     assert len(ts.points) == 2

@@ -210,7 +210,8 @@ class RadarClient:
         other_pct = summary.pop("other", None)
         rows = sorted(
             [{"os": k, "pct": float(v)} for k, v in summary.items()],
-            key=lambda r: r["pct"], reverse=True,
+            key=lambda r: r["pct"],
+            reverse=True,
         )
         if other_pct is not None:
             rows.append({"os": "other", "pct": float(other_pct)})

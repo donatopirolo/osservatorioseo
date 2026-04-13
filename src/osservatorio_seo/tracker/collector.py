@@ -281,13 +281,28 @@ class TrackerCollector:
     # ------------------------------------------------------------------
 
     async def _fetch_device_type_both(self):
-        it = await self._safe(self._fetch_device_type, "device_type(IT)", location="IT", default=DeviceTypeTimeseries())
-        glb = await self._safe(self._fetch_device_type, "device_type(global)", location=None, default=DeviceTypeTimeseries())
+        it = await self._safe(
+            self._fetch_device_type,
+            "device_type(IT)",
+            location="IT",
+            default=DeviceTypeTimeseries(),
+        )
+        glb = await self._safe(
+            self._fetch_device_type,
+            "device_type(global)",
+            location=None,
+            default=DeviceTypeTimeseries(),
+        )
         return it, glb
 
     async def _fetch_device_type(self, location):
         raw = await self._radar.device_type_timeseries(location=location)
-        points = [DeviceTypePoint(date=_parse_dt(p["date"]), mobile_pct=p["mobile_pct"], desktop_pct=p["desktop_pct"]) for p in raw]
+        points = [
+            DeviceTypePoint(
+                date=_parse_dt(p["date"]), mobile_pct=p["mobile_pct"], desktop_pct=p["desktop_pct"]
+            )
+            for p in raw
+        ]
         return DeviceTypeTimeseries(points=points)
 
     async def _fetch_os_both(self):
