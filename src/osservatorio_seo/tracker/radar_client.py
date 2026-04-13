@@ -187,6 +187,35 @@ class RadarClient:
             rows.append({"industry": "other", "pct": float(other_pct)})
         return rows
 
+    async def device_type_timeseries(self, *, location=None, date_range="12w"):
+        params = {"dateRange": date_range}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/http/timeseries_groups/device_type", params)
+        serie = data["result"].get("serie_0", {})
+        timestamps = serie.get("timestamps", [])
+        mobile = serie.get("mobile", [])
+        desktop = serie.get("desktop", [])
+        return [
+            {"date": ts, "mobile_pct": float(m), "desktop_pct": float(d)}
+            for ts, m, d in zip(timestamps, mobile, desktop, strict=False)
+        ]
+
+    async def os_summary(self, *, location=None, date_range="28d"):
+        params = {"dateRange": date_range}
+        if location is not None:
+            params["location"] = location
+        data = await self._get("/http/summary/os", params)
+        summary = data["result"].get("summary_0", {})
+        other_pct = summary.pop("other", None)
+        rows = sorted(
+            [{"os": k, "pct": float(v)} for k, v in summary.items()],
+            key=lambda r: r["pct"], reverse=True,
+        )
+        if other_pct is not None:
+            rows.append({"os": "other", "pct": float(other_pct)})
+        return rows
+
     # ------------------------------------------------------------------
     # Internal helpers
     # ------------------------------------------------------------------

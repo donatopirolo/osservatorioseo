@@ -54,6 +54,16 @@ def radar_industry(fixtures_dir: Path) -> dict:
     return json.loads((fixtures_dir / "radar_v2_industry.json").read_text())
 
 
+@pytest.fixture
+def radar_device_type(fixtures_dir: Path) -> dict:
+    return json.loads((fixtures_dir / "radar_v3_device_type.json").read_text())
+
+
+@pytest.fixture
+def radar_os(fixtures_dir: Path) -> dict:
+    return json.loads((fixtures_dir / "radar_v3_os.json").read_text())
+
+
 # ---------------------------------------------------------------------------
 # ranking_top
 # ---------------------------------------------------------------------------
@@ -267,3 +277,73 @@ async def test_error_on_success_false(httpx_mock, client):
     with pytest.raises(RadarClientError) as exc_info:
         await client.ranking_top()
     assert "bad token" in str(exc_info.value)
+
+
+# ---------------------------------------------------------------------------
+# device_type_timeseries
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.asyncio
+async def test_device_type_timeseries(httpx_mock, client, radar_device_type):
+    httpx_mock.add_response(
+        url=re.compile(r".*radar/http/timeseries_groups/device_type.*"),
+        json=radar_device_type,
+    )
+
+    result = await client.device_type_timeseries(location="IT")
+
+    assert len(result) == 2
+    assert result[0]["date"] == "2026-03-30T00:00:00Z"
+    assert result[0]["mobile_pct"] == pytest.approx(51.2)
+    assert result[0]["desktop_pct"] == pytest.approx(48.8)
+    assert result[1]["mobile_pct"] == pytest.approx(50.1)
+    assert result[1]["desktop_pct"] == pytest.approx(49.9)
+
+
+@pytest.mark.asyncio
+async def test_device_type_timeseries_no_location(httpx_mock, client, radar_device_type):
+    httpx_mock.add_response(
+        url=re.compile(r".*radar/http/timeseries_groups/device_type.*"),
+        json=radar_device_type,
+    )
+
+    result = await client.device_type_timeseries()
+    assert len(result) == 2
+
+
+# ---------------------------------------------------------------------------
+# os_summary
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.asyncio
+async def test_os_summary_sorted_desc_other_last(httpx_mock, client, radar_os):
+    httpx_mock.add_response(
+        url=re.compile(r".*radar/http/summary/os.*"),
+        json=radar_os,
+    )
+
+    result = await client.os_summary(location="IT")
+
+    # "other" must be last
+    assert result[-1]["os"] == "other"
+    assert result[-1]["pct"] == pytest.approx(0.4)
+    # remaining entries sorted descending by pct
+    non_other = [r for r in result if r["os"] != "other"]
+    pcts = [r["pct"] for r in non_other]
+    assert pcts == sorted(pcts, reverse=True)
+    # top entry is ANDROID
+    assert non_other[0]["os"] == "ANDROID"
+    assert non_other[0]["pct"] == pytest.approx(38.5)
+
+
+@pytest.mark.asyncio
+async def test_os_summary_no_location(httpx_mock, client, radar_os):
+    httpx_mock.add_response(
+        url=re.compile(r".*radar/http/summary/os.*"),
+        json=radar_os,
+    )
+
+    result = await client.os_summary()
+    assert len(result) == 6  # 5 named OSes + "other"

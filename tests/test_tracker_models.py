@@ -1,4 +1,4 @@
-"""Tests for tracker v2 pydantic models."""
+"""Tests for tracker v3 pydantic models."""
 
 from datetime import UTC, datetime
 
@@ -13,6 +13,9 @@ from osservatorio_seo.tracker.models import (
     BotHumanTimeseries,
     CrawlPurposePoint,
     CrawlPurposeTimeseries,
+    DeviceTypePoint,
+    DeviceTypeTimeseries,
+    OSEntry,
     ReportTakeaway,
     SnapshotMetadata,
     TimeseriesPoint,
@@ -160,7 +163,7 @@ def test_crawl_purpose_timeseries_defaults():
 
 
 # ---------------------------------------------------------------------------
-# TrackerSnapshot v2
+# TrackerSnapshot v3
 # ---------------------------------------------------------------------------
 
 
@@ -171,7 +174,7 @@ def test_tracker_snapshot_minimal_creation():
         generated_at=NOW,
         metadata=SnapshotMetadata(),
     )
-    assert snap.schema_version == "2.0"
+    assert snap.schema_version == "3.0"
     assert snap.year == 2026
     assert snap.week == 15
     assert snap.top10_it == []
@@ -208,7 +211,7 @@ def test_tracker_snapshot_json_roundtrip():
     )
     dumped = snap.model_dump_json()
     restored = TrackerSnapshot.model_validate_json(dumped)
-    assert restored.schema_version == "2.0"
+    assert restored.schema_version == "3.0"
     assert restored.year == 2026
     assert restored.week == 15
     assert restored.top10_it[0].domain == "google.com"
@@ -259,6 +262,99 @@ def test_tracker_monthly_report_structure():
         model_used="anthropic/claude-sonnet-4-5",
         cost_eur=0.07,
     )
-    assert report.schema_version == "2.0"
+    assert report.schema_version == "2.0"  # TrackerMonthlyReport keeps its own versioning
     assert len(report.takeaways) == 5
     assert report.hero_mover == "claude.ai"
+
+
+# ---------------------------------------------------------------------------
+# DeviceTypeTimeseries
+# ---------------------------------------------------------------------------
+
+
+def test_device_type_point_creation():
+    pt = DeviceTypePoint(date=NOW, mobile_pct=51.2, desktop_pct=48.8)
+    assert pt.mobile_pct == 51.2
+    assert pt.desktop_pct == 48.8
+
+
+def test_device_type_timeseries_default_empty():
+    ts = DeviceTypeTimeseries()
+    assert ts.points == []
+
+
+def test_device_type_timeseries_with_points():
+    ts = DeviceTypeTimeseries(
+        points=[
+            DeviceTypePoint(date=NOW, mobile_pct=51.2, desktop_pct=48.8),
+            DeviceTypePoint(date=datetime(2026, 4, 6, tzinfo=UTC), mobile_pct=50.1, desktop_pct=49.9),
+        ]
+    )
+    assert len(ts.points) == 2
+    assert ts.points[0].mobile_pct == 51.2
+    assert ts.points[1].desktop_pct == 49.9
+
+
+def test_device_type_point_extra_field_rejected():
+    with pytest.raises(ValidationError):
+        DeviceTypePoint(date=NOW, mobile_pct=51.2, desktop_pct=48.8, other_pct=0.0)
+
+
+# ---------------------------------------------------------------------------
+# OSEntry
+# ---------------------------------------------------------------------------
+
+
+def test_os_entry_creation():
+    entry = OSEntry(os="ANDROID", pct=38.5)
+    assert entry.os == "ANDROID"
+    assert entry.pct == 38.5
+
+
+def test_os_entry_extra_field_rejected():
+    with pytest.raises(ValidationError):
+        OSEntry(os="WINDOWS", pct=31.0, unknown="oops")
+
+
+# ---------------------------------------------------------------------------
+# TrackerSnapshot v3 — new device_type + os fields
+# ---------------------------------------------------------------------------
+
+
+def test_tracker_snapshot_v3_device_type_os_defaults():
+    snap = TrackerSnapshot(
+        year=2026,
+        week=15,
+        generated_at=NOW,
+        metadata=SnapshotMetadata(),
+    )
+    assert snap.schema_version == "3.0"
+    assert snap.device_type_it.points == []
+    assert snap.device_type_global.points == []
+    assert snap.os_it == []
+    assert snap.os_global == []
+
+
+def test_tracker_snapshot_v3_with_device_type_and_os():
+    snap = TrackerSnapshot(
+        year=2026,
+        week=15,
+        generated_at=NOW,
+        device_type_it=DeviceTypeTimeseries(
+            points=[DeviceTypePoint(date=NOW, mobile_pct=55.0, desktop_pct=45.0)]
+        ),
+        device_type_global=DeviceTypeTimeseries(
+            points=[DeviceTypePoint(date=NOW, mobile_pct=51.2, desktop_pct=48.8)]
+        ),
+        os_it=[OSEntry(os="ANDROID", pct=40.0), OSEntry(os="WINDOWS", pct=30.0)],
+        os_global=[OSEntry(os="ANDROID", pct=38.5), OSEntry(os="other", pct=0.4)],
+        metadata=SnapshotMetadata(radar_calls=12),
+    )
+    dumped = snap.model_dump_json()
+    restored = TrackerSnapshot.model_validate_json(dumped)
+    assert restored.schema_version == "3.0"
+    assert restored.device_type_it.points[0].mobile_pct == 55.0
+    assert restored.device_type_global.points[0].desktop_pct == 48.8
+    assert restored.os_it[0].os == "ANDROID"
+    assert restored.os_global[-1].os == "other"
+    assert restored.metadata.radar_calls == 12

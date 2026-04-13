@@ -1,4 +1,4 @@
-"""Pydantic models for the tracker v2 subsystem."""
+"""Pydantic models for the tracker v3 subsystem."""
 
 from __future__ import annotations
 
@@ -66,6 +66,24 @@ class CrawlPurposeTimeseries(BaseModel):
     points: list[CrawlPurposePoint] = Field(default_factory=list)
 
 
+class DeviceTypePoint(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    date: datetime
+    mobile_pct: float
+    desktop_pct: float
+
+
+class DeviceTypeTimeseries(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    points: list[DeviceTypePoint] = Field(default_factory=list)
+
+
+class OSEntry(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    os: str
+    pct: float
+
+
 class IndustryEntry(BaseModel):
     model_config = ConfigDict(extra="forbid")
     industry: str
@@ -81,7 +99,7 @@ class SnapshotMetadata(BaseModel):
 class TrackerSnapshot(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: str = "2.0"
+    schema_version: str = "3.0"
     year: int
     week: int = Field(ge=1, le=53)
     generated_at: datetime
@@ -98,6 +116,10 @@ class TrackerSnapshot(BaseModel):
     crawl_purpose_global: CrawlPurposeTimeseries = Field(default_factory=CrawlPurposeTimeseries)
     industry_it: list[IndustryEntry] = Field(default_factory=list)
     industry_global: list[IndustryEntry] = Field(default_factory=list)
+    device_type_it: DeviceTypeTimeseries = Field(default_factory=DeviceTypeTimeseries)
+    device_type_global: DeviceTypeTimeseries = Field(default_factory=DeviceTypeTimeseries)
+    os_it: list[OSEntry] = Field(default_factory=list)
+    os_global: list[OSEntry] = Field(default_factory=list)
     metadata: SnapshotMetadata
 
 
