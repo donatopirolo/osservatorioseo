@@ -32,6 +32,12 @@ from osservatorio_seo.models import (
     Pillar,
     PillarTakeaway,
 )
+from osservatorio_seo.google_financials.models import (
+    FinancialTakeaway,
+    QuarterlyAnalysis,
+    QuarterlySnapshot as FinancialsSnapshot,
+    SEOImplication,
+)
 from osservatorio_seo.tracker.models import (
     ReportTakeaway,
     TrackerMonthlyReport,
@@ -285,6 +291,97 @@ essere valido, parsabile, senza codefence markdown, senza testo extra.
 """
 
 
+FINANCIALS_ANALYSIS_PROMPT = """Sei un analista SEO senior italiano con 15 anni di esperienza \
+e solida competenza finanziaria. Scrivi per Osservatorio SEO l'analisi trimestrale dei \
+dati finanziari di {company_name} e delle loro implicazioni per la SEO.
+
+Il lettore è un professionista SEO (agency, in-house, freelance) che vuole capire \
+come i risultati finanziari di Google influenzano la direzione della Search, degli \
+algoritmi e dell'ecosistema SEO.
+
+Ti fornisco i dati finanziari del trimestre Q{quarter} {year} con variazioni QoQ e YoY, \
+più contesto storico dei trimestri precedenti. Devi produrre un'analisi editoriale \
+strutturata in JSON.
+
+REGOLE DI TONO (VIETATISSIMO):
+- VIETATO prima persona plurale: "noi di", "noi pensiamo", "il nostro consiglio", \
+"la nostra opinione", "crediamo", "ci aspettiamo", firme "la redazione".
+- Scrivi sempre in forma IMPERSONALE (terza persona) o SECONDA PERSONA diretta \
+al lettore ("se gestisci un sito…", "chi lavora su…").
+- Niente hype, niente clickbait, niente "scopri", "incredibile".
+- Tono autorevole, analitico, operativo. Quando serve, opinion forte.
+- Mix tone: MISURATO nei fatti finanziari, ANALITICO nell'interpretazione SEO, \
+OPINION FORTE quando il dato lo giustifica.
+
+REGOLE DI LEGGIBILITÀ:
+- narrative, ai_search_impact, correlation_timeline, outlook: PARAGRAFI BREVI \
+(2-4 frasi, max ~60 parole ciascuno), separati da \\n\\n. No muri di testo.
+- No heading markdown dentro questi campi. No bullet. Testo continuo strutturato \
+in paragrafi.
+
+CHIAVI DI LETTURA SEO DA APPLICARE:
+- Revenue Search in crescita → Google investe di più in Search → più cambiamenti algoritmici
+- TAC in aumento → pressione competitiva → possibili cambiamenti equilibrio organico/paid
+- YouTube in crescita → video sempre più presente nelle SERP
+- Cloud/AI investment in crescita → AI Overviews, Gemini integrato in Search
+- CapEx elevato → infrastruttura AI massiccio → Search sempre più AI-driven
+- Operating margin alto → Google può permettersi esperimenti aggressivi sulla Search
+- Other Bets in perdita → risorse dirottate verso il core Search
+
+SCHEMA JSON OBBLIGATORIO (nessun campo extra, nessun campo mancante):
+
+{{
+  "title_it": "Titolo H1, 5-10 parole, basato sul dato più significativo del trimestre. \
+Es: 'Search revenue +17%: Google accelera sull\\'AI in Q4 2025'. No punti finali.",
+  "subtitle_it": "Sottotitolo 1 frase (~120 caratteri) che cattura l'implicazione SEO \
+principale del trimestre.",
+  "executive_summary": [
+    "4-6 bullet strategici, ciascuno 1-2 frasi impersonali. Ogni bullet collega un \
+dato finanziario a un'implicazione SEO concreta."
+  ],
+  "narrative": "800-1200 parole in paragrafi brevi separati da \\n\\n. Analisi \
+editoriale completa: parte dai numeri, spiega cosa significano per la SEO, collega \
+i trend finanziari ai cambiamenti osservati nell'ecosistema Search. Primo paragrafo = \
+insight forte basato sul dato più rilevante. NO cronaca piatta dei numeri.",
+  "seo_implications": [
+    {{
+      "title": "Titolo implicazione, max 10 parole",
+      "body": "60-120 parole: cosa cambia concretamente per un SEO. Collegamento \
+diretto tra dato finanziario e impatto operativo. Impersonale o seconda persona.",
+      "severity": "high | medium | low"
+    }}
+  ],
+  "ai_search_impact": "300-500 parole in paragrafi brevi. Sezione dedicata all'impatto \
+degli investimenti AI sulla Search organica: AI Overviews, Gemini, costi per query, \
+monetizzazione AI vs tradizionale. Basata sui dati Cloud/CapEx/AI del trimestre.",
+  "correlation_timeline": "200-400 parole in paragrafi brevi. Correlazioni tra i dati \
+finanziari e gli eventi SEO del trimestre (core updates, rollout AI Overviews, \
+cambiamenti policy, ecc.). Se non ci sono correlazioni chiare, dillo esplicitamente.",
+  "takeaways": [
+    {{
+      "title": "Takeaway operativo, max 8 parole",
+      "body": "40-80 parole concrete e operative per un SEO. Impersonale o seconda persona."
+    }}
+  ],
+  "outlook": "200-400 parole in 2-3 paragrafi brevi separati da \\n\\n. Prospettive \
+per il prossimo trimestre basate sui trend finanziari osservati. Cosa aspettarsi \
+dall'algoritmo, dagli investimenti AI, dall'equilibrio organico/paid."
+}}
+
+La lista "seo_implications" deve contenere 4-6 elementi. \
+La lista "takeaways" deve contenere ESATTAMENTE 5 takeaway. \
+Il JSON deve essere valido, parsabile, senza codefence markdown, senza testo extra.
+
+--- DATI FINANZIARI {company_name} Q{quarter} {year} ---
+
+{financials_block}
+
+--- CONTESTO STORICO (trimestri precedenti) ---
+
+{history_block}
+"""
+
+
 _MONTH_NAMES_IT = {
     1: "gennaio",
     2: "febbraio",
@@ -482,6 +579,107 @@ class PremiumWriter:
                 if ranked:
                     return ranked[0].domain
         return ""
+
+    async def write_financials_analysis(
+        self,
+        snapshot: FinancialsSnapshot,
+        company_name: str,
+        previous_snapshots: list[FinancialsSnapshot] | None = None,
+    ) -> QuarterlyAnalysis:
+        """Generate quarterly SEO analysis from financial data."""
+        financials_block = self._format_financials_for_prompt(snapshot)
+        history_block = self._format_financials_history(previous_snapshots or [])
+
+        prompt = FINANCIALS_ANALYSIS_PROMPT.format(
+            company_name=company_name,
+            year=snapshot.fiscal_year,
+            quarter=snapshot.fiscal_quarter,
+            financials_block=financials_block,
+            history_block=history_block,
+        )
+        result = await self._call_with_fallback(prompt)
+        parsed = result.parsed
+
+        implications = [
+            SEOImplication(
+                title=imp["title"],
+                body=imp["body"],
+                severity=imp.get("severity", "medium"),
+            )
+            for imp in parsed.get("seo_implications", [])
+        ]
+        takeaways = [
+            FinancialTakeaway(title=t["title"], body=t["body"])
+            for t in parsed.get("takeaways", [])
+        ]
+
+        return QuarterlyAnalysis(
+            company_id=snapshot.company_id,
+            fiscal_year=snapshot.fiscal_year,
+            fiscal_quarter=snapshot.fiscal_quarter,
+            title_it=parsed["title_it"],
+            subtitle_it=parsed["subtitle_it"],
+            executive_summary=list(parsed.get("executive_summary", []))[:6],
+            narrative=parsed["narrative"],
+            seo_implications=implications[:8],
+            ai_search_impact=parsed.get("ai_search_impact", ""),
+            correlation_timeline=parsed.get("correlation_timeline", ""),
+            takeaways=takeaways[:8],
+            outlook=parsed["outlook"],
+            generated_at=datetime.now(UTC),
+            model_used=result.model,
+            cost_eur=result.cost_eur,
+        )
+
+    @staticmethod
+    def _format_financials_for_prompt(snapshot: FinancialsSnapshot) -> str:
+        """Format a quarterly snapshot into a readable text block for the AI prompt."""
+        lines = [
+            f"Trimestre: Q{snapshot.fiscal_quarter} {snapshot.fiscal_year}",
+            f"Periodo: fino al {snapshot.period_end}",
+            f"Filing: {snapshot.filing_type}",
+            "",
+            "METRICHE (in milioni USD):",
+        ]
+        for metric_id, metric in snapshot.metrics.items():
+            line = f"  {metric.label}: ${metric.value_usd_millions:,.1f}M"
+            deltas = []
+            if metric.qoq_change_pct is not None:
+                deltas.append(f"QoQ {metric.qoq_change_pct:+.1f}%")
+            if metric.yoy_change_pct is not None:
+                deltas.append(f"YoY {metric.yoy_change_pct:+.1f}%")
+            if deltas:
+                line += f" ({', '.join(deltas)})"
+            lines.append(line)
+
+        lines.append("")
+        lines.append("RAPPORTI DERIVATI:")
+        if snapshot.tac_as_pct_of_search_revenue is not None:
+            lines.append(f"  TAC come % di Search Revenue: {snapshot.tac_as_pct_of_search_revenue:.1f}%")
+        if snapshot.search_as_pct_of_total_revenue is not None:
+            lines.append(f"  Search come % del fatturato totale: {snapshot.search_as_pct_of_total_revenue:.1f}%")
+        if snapshot.operating_margin_pct is not None:
+            lines.append(f"  Margine operativo: {snapshot.operating_margin_pct:.1f}%")
+
+        return "\n".join(lines)
+
+    @staticmethod
+    def _format_financials_history(snapshots: list[FinancialsSnapshot]) -> str:
+        """Format previous quarters as a compact history block."""
+        if not snapshots:
+            return "Nessun dato storico disponibile."
+        lines = []
+        for s in snapshots[-8:]:  # last 8 quarters max
+            key_metrics = []
+            for mid in ("total_revenue", "google_search_revenue", "traffic_acquisition_costs", "capital_expenditures"):
+                m = s.metrics.get(mid)
+                if m:
+                    yoy = f" YoY {m.yoy_change_pct:+.1f}%" if m.yoy_change_pct is not None else ""
+                    key_metrics.append(f"{m.label}: ${m.value_usd_millions:,.1f}M{yoy}")
+            lines.append(
+                f"Q{s.fiscal_quarter} {s.fiscal_year}: " + " | ".join(key_metrics)
+            )
+        return "\n".join(lines)
 
     async def _call_with_fallback(self, prompt: str) -> _RawResult:
         models = [self._primary, *self._fallbacks]

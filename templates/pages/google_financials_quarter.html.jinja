@@ -1,0 +1,160 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  {% for crumb in breadcrumbs %}
+    {% if not loop.last %}
+    <a href="{{ crumb.url }}" class="hover:text-primary-container">{{ crumb.name }}</a>
+    <span class="text-outline-variant">/</span>
+    {% else %}
+    <span class="text-primary-container">{{ crumb.name }}</span>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; GOOGLE FINANCIALS &middot; Q{{ analysis.fiscal_quarter }} {{ analysis.fiscal_year }}</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-white">{{ analysis.title_it }}</h1>
+    <p class="text-lg text-on-surface-variant leading-relaxed">{{ analysis.subtitle_it }}</p>
+  </header>
+
+  {# ── KPI Cards (if snapshot available) ── #}
+  {% if snapshot %}
+  <section class="mb-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      {% for key in kpi_keys %}
+        {% set m = snapshot.metrics[key] if key in snapshot.metrics else none %}
+        {% if m %}
+        <div class="bg-surface-container-lowest border border-outline-variant p-3">
+          <p class="text-[10px] text-outline uppercase font-mono mb-1">{{ m.label }}</p>
+          <p class="text-lg font-bold text-white">${{ "{:,.0f}".format(m.value_usd_millions) }}M</p>
+          {% if m.yoy_change_pct is not none %}
+          <p class="text-[10px] font-mono {{ 'text-green-400' if m.yoy_change_pct >= 0 else 'text-red-400' }}">
+            YoY {{ "{:+.1f}".format(m.yoy_change_pct) }}%
+          </p>
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# ── Executive Summary ── #}
+  {% if analysis.executive_summary %}
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; EXECUTIVE SUMMARY</h2>
+    <ul class="space-y-3">
+      {% for point in analysis.executive_summary %}
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">&#9656;</span>
+        <span>{{ point }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {# ── Narrative ── #}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI TRIMESTRALE</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in analysis.narrative.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# ── SEO Implications ── #}
+  {% if analysis.seo_implications %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IMPLICAZIONI SEO</h2>
+    <div class="space-y-4">
+      {% for imp in analysis.seo_implications %}
+      <div class="p-4 bg-surface-container-lowest border border-outline-variant">
+        <div class="flex items-center gap-2 mb-2">
+          {% if imp.severity == 'high' %}
+          <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30">HIGH</span>
+          {% elif imp.severity == 'medium' %}
+          <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">MEDIUM</span>
+          {% else %}
+          <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-blue-500/20 text-blue-400 border border-blue-500/30">LOW</span>
+          {% endif %}
+          <h3 class="text-sm font-bold text-white">{{ imp.title }}</h3>
+        </div>
+        <p class="text-sm text-on-surface-variant leading-relaxed">{{ imp.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# ── AI Search Impact ── #}
+  {% if analysis.ai_search_impact %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IMPATTO AI SULLA SEARCH</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in analysis.ai_search_impact.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# ── Correlations ── #}
+  {% if analysis.correlation_timeline %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; CORRELAZIONI CON EVENTI SEO</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      {% for para in analysis.correlation_timeline.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# ── Takeaways ── #}
+  {% if analysis.takeaways %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; 5 TAKEAWAY OPERATIVI</h2>
+    <ol class="space-y-5 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold">
+      {% for t in analysis.takeaways %}
+      <li class="pl-2">
+        <h3 class="text-base font-bold text-white mb-1">{{ t.title }}</h3>
+        <p class="text-on-surface-variant leading-relaxed">{{ t.body }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {# ── Outlook ── #}
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; PROSPETTIVE</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-3">
+      {% for para in analysis.outlook.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# ── Footer ── #}
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Questo &egrave; un <strong class="text-white">report editoriale trimestrale</strong> basato sui dati finanziari SEC EDGAR di {{ company_name }}.
+      Il contenuto &egrave; prodotto da <code class="text-primary-container">{{ analysis.model_used }}</code>.
+    </p>
+    {% if sec_url %}
+    <p class="text-xs text-outline font-mono mt-2">
+      Fonte dati: <a href="{{ sec_url }}" class="text-primary-container hover:underline" target="_blank" rel="noopener">SEC EDGAR</a>
+    </p>
+    {% endif %}
+    <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="/google-financials/">&larr; DASHBOARD</a>
+  </section>
+</article>
+{% endblock %}
