@@ -5,6 +5,16 @@ on:
     # Every Monday at 10:00 UTC (after tracker update at 07:00)
     - cron: "0 10 * * 1"
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode: 'auto' (backfill if no data, else update), 'backfill' (force full history from 2021), or 'update' (only new filings)"
+        required: false
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - backfill
+          - update
 
 permissions:
   contents: write
@@ -12,7 +22,7 @@ permissions:
 jobs:
   update-financials:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,7 +48,32 @@ jobs:
       - name: Install Node deps (Tailwind CLI)
         run: npm install
 
+      - name: Determine run mode
+        id: mode
+        run: |
+          MODE="${{ github.event.inputs.mode || 'auto' }}"
+          if [ "$MODE" = "auto" ]; then
+            if [ -d "data/google_financials" ] && [ -n "$(ls -A data/google_financials 2>/dev/null)" ]; then
+              echo "resolved=update" >> "$GITHUB_OUTPUT"
+              echo "Auto-detected: existing data found, running update"
+            else
+              echo "resolved=backfill" >> "$GITHUB_OUTPUT"
+              echo "Auto-detected: no existing data, running full backfill"
+            fi
+          else
+            echo "resolved=$MODE" >> "$GITHUB_OUTPUT"
+            echo "Forced mode: $MODE"
+          fi
+
+      - name: Run backfill (initial or forced)
+        if: steps.mode.outputs.resolved == 'backfill'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          .venv/bin/python scripts/backfill_google_financials.py
+
       - name: Check for new filings and update
+        if: steps.mode.outputs.resolved == 'update'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
@@ -56,9 +91,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/google_financials site/google-financials site/sitemap.xml site/tailwind.css site/index.html
           if git diff --staged --quiet; then
-            echo "No new filings found — nothing to commit"
+            echo "No changes to commit"
           else
-            git commit -m "chore(financials): weekly SEC EDGAR check"
+            if [ "${{ steps.mode.outputs.resolved }}" = "backfill" ]; then
+              git commit -m "chore(financials): initial SEC EDGAR backfill"
+            else
+              git commit -m "chore(financials): weekly SEC EDGAR check"
+            fi
             for i in 1 2 3; do
               git push && break
               git pull --rebase origin main
