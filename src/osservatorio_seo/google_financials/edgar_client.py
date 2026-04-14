@@ -11,6 +11,7 @@ Mandatory: User-Agent header with contact info.
 from __future__ import annotations
 
 import logging
+from datetime import date as _date
 from typing import Any
 
 import httpx
@@ -23,6 +24,29 @@ USER_AGENT = "OsservatorioSEO/1.0 (contact@osservatorioseo.it)"
 # Fiscal period codes used in XBRL data
 _FP_QUARTERLY = {"Q1", "Q2", "Q3", "Q4"}
 _FP_ANNUAL = "FY"
+
+# XBRL entries for flow metrics (revenues, income, cash flows) expose
+# both standalone quarterly values (3-month period) and year-to-date
+# cumulative values (6/9 months). We must filter by period duration to
+# get the right one. Ranges include ~10-day tolerance for fiscal variations.
+_DAYS_3M = (80, 100)   # three-month standalone (a single quarter)
+_DAYS_6M = (170, 195)  # six-month YTD (through end of Q2)
+_DAYS_9M = (260, 285)  # nine-month YTD (through end of Q3)
+_DAYS_FY = (350, 380)  # twelve-month (full fiscal year)
+
+
+def _period_days(entry: dict[str, Any]) -> int | None:
+    """Return the duration in days of an XBRL entry, or None if missing/invalid."""
+    start = entry.get("start")
+    end = entry.get("end")
+    if not start or not end:
+        return None
+    try:
+        s = _date.fromisoformat(start)
+        e = _date.fromisoformat(end)
+    except (TypeError, ValueError):
+        return None
+    return (e - s).days + 1
 
 
 class EdgarClientError(Exception):
@@ -102,12 +126,18 @@ class EdgarClient:
         fiscal_year: int,
         fiscal_period: str,
         form_type: str | None = None,
+        duration_range: tuple[int, int] | None = None,
     ) -> float | None:
         """Extract a single metric value from XBRL data.
 
         Works with both ``companyfacts`` and ``companyconcept`` response
         formats.  Tries each tag in order; returns value in raw USD
         (not millions) or None if not found.
+
+        ``duration_range`` optionally restricts entries by period length
+        in days (``end - start + 1``), e.g. ``(80, 100)`` for 3-month
+        standalone quarterly values. Without this filter, YTD cumulative
+        entries (6/9 months) may accidentally match a single-quarter query.
 
         For ``companyfacts`` format:
             ``facts.facts.<namespace>.<tag>.units.USD``
@@ -127,6 +157,7 @@ class EdgarClient:
                 fiscal_year=fiscal_year,
                 fiscal_period=fiscal_period,
                 form_type=form_type,
+                duration_range=duration_range,
             )
             if match is not None:
                 return float(match["val"])
@@ -139,6 +170,7 @@ class EdgarClient:
                 fiscal_year=fiscal_year,
                 fiscal_period=fiscal_period,
                 form_type=form_type,
+                duration_range=duration_range,
             )
             if match is not None:
                 return float(match["val"])
@@ -154,25 +186,48 @@ class EdgarClient:
         fiscal_year: int,
         fiscal_quarter: int,
     ) -> float | None:
-        """Extract a quarterly metric, deriving Q4 from annual - Q1-Q3 if needed.
+        """Extract a quarter's standalone value (single-quarter flow, not YTD).
 
-        10-K filings report full-year (FY) figures, not Q4 standalone.
-        For Q4 we compute: ``Q4 = FY - Q1 - Q2 - Q3``.
+        XBRL 10-Q filings expose both 3-month standalone entries and
+        cumulative YTD entries for the same ``fp=Q2/Q3`` period. A naive
+        lookup can grab the YTD one and produce wildly wrong numbers
+        (e.g. negative revenue when computing ``Q4 = FY - Q2_YTD - Q3_YTD``).
+
+        Strategy:
+        1. Prefer the 3-month standalone entry (``end - start ≈ 90 days``).
+        2. For Q4 (only FY is reported), compute ``FY - Q3_YTD`` where
+           ``Q3_YTD`` is the 9-month cumulative. Fallback to
+           ``FY - 3*mean(Q1,Q2,Q3)`` is NOT safe, so if Q3_YTD missing,
+           give up.
+        3. For Q2/Q3 if 3-month standalone is missing, derive from
+           YTD deltas: ``Q2 = Q2_YTD(6mo) - Q1`` etc.
         """
         fp = f"Q{fiscal_quarter}"
 
-        # Try direct quarterly value first (works for Q1-Q3 from 10-Q)
+        # Step 1: try 3-month standalone entry (the clean case)
         value = self.extract_metric(
             facts,
             tags=tags,
             namespace=namespace,
             fiscal_year=fiscal_year,
             fiscal_period=fp,
+            duration_range=_DAYS_3M,
         )
         if value is not None:
             return value
 
-        # For Q4: derive from FY - Q1 - Q2 - Q3
+        # Step 2: derive from YTD entries via subtraction
+        if fiscal_quarter == 1:
+            # Q1 YTD equals Q1 standalone; if 3-month wasn't found,
+            # try without duration filter (should still be 3 months).
+            return self.extract_metric(
+                facts,
+                tags=tags,
+                namespace=namespace,
+                fiscal_year=fiscal_year,
+                fiscal_period=fp,
+            )
+
         if fiscal_quarter == 4:
             fy_value = self.extract_metric(
                 facts,
@@ -180,31 +235,50 @@ class EdgarClient:
                 namespace=namespace,
                 fiscal_year=fiscal_year,
                 fiscal_period=_FP_ANNUAL,
+                duration_range=_DAYS_FY,
             )
-            if fy_value is None:
-                return None
+            q3_ytd = self.extract_metric(
+                facts,
+                tags=tags,
+                namespace=namespace,
+                fiscal_year=fiscal_year,
+                fiscal_period="Q3",
+                duration_range=_DAYS_9M,
+            )
+            if fy_value is not None and q3_ytd is not None:
+                return fy_value - q3_ytd
+            logger.warning(
+                "Cannot derive Q4 %d standalone: FY=%s, Q3_YTD=%s for tags %s",
+                fiscal_year,
+                fy_value,
+                q3_ytd,
+                tags,
+            )
+            return None
 
-            q_sum = 0.0
-            for q in range(1, 4):
-                q_val = self.extract_metric(
-                    facts,
-                    tags=tags,
-                    namespace=namespace,
-                    fiscal_year=fiscal_year,
-                    fiscal_period=f"Q{q}",
-                )
-                if q_val is None:
-                    logger.warning(
-                        "Cannot derive Q4 %d: Q%d missing for tags %s",
-                        fiscal_year,
-                        q,
-                        tags,
-                    )
-                    return None
-                q_sum += q_val
+        # Q2 or Q3: derive as <current YTD> - <previous YTD>
+        prev_q = fiscal_quarter - 1
+        cur_duration = _DAYS_6M if fiscal_quarter == 2 else _DAYS_9M
+        prev_duration = _DAYS_3M if prev_q == 1 else _DAYS_6M
 
-            return fy_value - q_sum
-
+        cur_ytd = self.extract_metric(
+            facts,
+            tags=tags,
+            namespace=namespace,
+            fiscal_year=fiscal_year,
+            fiscal_period=fp,
+            duration_range=cur_duration,
+        )
+        prev_ytd = self.extract_metric(
+            facts,
+            tags=tags,
+            namespace=namespace,
+            fiscal_year=fiscal_year,
+            fiscal_period=f"Q{prev_q}",
+            duration_range=prev_duration,
+        )
+        if cur_ytd is not None and prev_ytd is not None:
+            return cur_ytd - prev_ytd
         return None
 
     def find_new_filings(
@@ -251,6 +325,8 @@ class EdgarClient:
         """List all (year, quarter) pairs with data available for a given metric.
 
         Useful for backfill — discovers which quarters have XBRL data.
+        Considers any fiscal period tagged Q1-Q3 (regardless of duration,
+        since we can derive standalone from YTD) and FY (needed to derive Q4).
         """
         ns_facts = facts.get("facts", {}).get(namespace, {})
         quarters: set[tuple[int, int]] = set()
@@ -283,10 +359,12 @@ class EdgarClient:
         fiscal_year: int,
         fiscal_period: str,
         form_type: str | None = None,
+        duration_range: tuple[int, int] | None = None,
     ) -> dict[str, Any] | None:
         """Find the best matching entry for a fiscal period.
 
         When multiple entries match, prefer the most recent filing date.
+        ``duration_range`` optionally filters by ``end - start + 1`` days.
         """
         candidates = []
         for entry in entries:
@@ -296,6 +374,10 @@ class EdgarClient:
                 continue
             if form_type and entry.get("form") != form_type:
                 continue
+            if duration_range is not None:
+                days = _period_days(entry)
+                if days is None or not (duration_range[0] <= days <= duration_range[1]):
+                    continue
             candidates.append(entry)
 
         if not candidates:

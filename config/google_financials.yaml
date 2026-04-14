@@ -19,7 +19,7 @@ companies:
       - "10-Q"
       - "8-K"
     metrics:
-      # ── Revenue breakdown ────────────────────────────────────────
+      # ── Revenue ──────────────────────────────────────────────────
       total_revenue:
         tags:
           - Revenues
@@ -27,58 +27,18 @@ companies:
         namespace: us-gaap
         label_it: "Fatturato totale"
 
-      google_search_revenue:
-        tags:
-          - GoogleSearchAndOtherRevenue
-        namespace: goog
-        label_it: "Ricavi Google Search & Other"
-
-      youtube_revenue:
-        tags:
-          - YouTubeAdsRevenue
-        namespace: goog
-        label_it: "Ricavi YouTube Ads"
-
-      google_cloud_revenue:
-        tags:
-          - GoogleCloudRevenue
-        namespace: goog
-        label_it: "Ricavi Google Cloud"
-
-      google_network_revenue:
-        tags:
-          - GoogleNetworkRevenue
-        namespace: goog
-        label_it: "Ricavi Google Network"
-
-      google_subscriptions_revenue:
-        tags:
-          - GoogleSubscriptionsPlatformsAndDevicesRevenue
-        namespace: goog
-        label_it: "Ricavi abbonamenti e dispositivi Google"
-
-      google_services_revenue:
-        tags:
-          - GoogleServicesRevenue
-        namespace: goog
-        label_it: "Ricavi Google Services (totale)"
-
-      other_bets_revenue:
-        tags:
-          - OtherBetsRevenue
-        namespace: goog
-        label_it: "Ricavi Other Bets"
+      # ── Note: Google-specific segment breakdowns (Search, YouTube,
+      # Cloud, Other Bets, TAC) require extension tags in the `goog:`
+      # namespace whose exact names change across filings and are not
+      # reliably exposed via the companyconcept API. They are omitted
+      # from v1; segment analysis will be re-added via dimensional
+      # XBRL axes on `us-gaap:Revenues` in a future iteration.
 
       # ── Costs ────────────────────────────────────────────────────
-      traffic_acquisition_costs:
-        tags:
-          - TrafficAcquisitionCosts
-        namespace: goog
-        label_it: "Costi di acquisizione traffico (TAC)"
-
       cost_of_revenue:
         tags:
           - CostOfRevenue
+          - CostOfGoodsAndServicesSold
         namespace: us-gaap
         label_it: "Costo del venduto"
 

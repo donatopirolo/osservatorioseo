@@ -86,6 +86,15 @@ async def main() -> None:
 
             # Generate AI analysis
             if not args.dry_run:
+                # Skip if analysis already exists (resumability)
+                analysis_file = (
+                    data_dir / company.id / "analyses"
+                    / f"{snapshot.fiscal_year}-Q{snapshot.fiscal_quarter}.json"
+                )
+                if analysis_file.exists():
+                    print(f"    Analysis already exists, skipping: {analysis_file}")
+                    continue
+
                 print(f"    Generating AI analysis...")
                 try:
                     writer = PremiumWriter(api_key=api_key)
@@ -108,6 +117,8 @@ async def main() -> None:
                     await asyncio.sleep(2)
                 except Exception as exc:
                     print(f"    ERROR generating analysis: {exc}")
+                    # Continue with next quarter — the script is resumable
+                    # and a future run will retry just the missing analyses.
 
         print(f"\n{'='*60}")
         print(f"Backfill complete: {len(snapshots)} quarters")
