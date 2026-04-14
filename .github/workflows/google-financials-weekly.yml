@@ -22,7 +22,9 @@ permissions:
 jobs:
   update-financials:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 60 min covers a full backfill (~20 quarters × AI analysis).
+    # Script is resumable: re-running skips already-generated analyses.
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4

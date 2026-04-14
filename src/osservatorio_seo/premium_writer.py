@@ -703,9 +703,15 @@ class PremiumWriter:
             "model": model,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.4,
-            "max_tokens": 4000,
+            # 8000 tokens fits the longest prompts (financials analysis
+            # with narrative 800-1200 words + ai_search_impact + outlook
+            # ≈ 3500 words ≈ 6000 tokens). 4000 was truncating mid-JSON.
+            "max_tokens": 8000,
+            # Hint to the model to return a JSON object; OpenRouter
+            # forwards this to providers that support structured outputs.
+            "response_format": {"type": "json_object"},
         }
-        async with httpx.AsyncClient(timeout=120) as client:
+        async with httpx.AsyncClient(timeout=180) as client:
             for attempt in range(self._max_retries):
                 resp = await client.post(OPENROUTER_URL, headers=headers, json=body)
                 if resp.status_code >= 500:
