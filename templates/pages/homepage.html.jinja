@@ -67,6 +67,40 @@
 </section>
 {% endif %}
 
+{% if financials_teaser and financials_teaser.search_revenue %}
+<section class="mb-12 max-w-4xl" id="financials-teaser">
+  <div class="flex items-center gap-4 mb-4">
+    <h2 class="text-lg font-bold tracking-tight uppercase text-white">&gt; GOOGLE FINANCIALS &mdash; IMPLICAZIONI SEO</h2>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    <a href="/google-financials/" class="text-xs text-primary-container hover:underline uppercase font-mono tracking-wider">VEDI TUTTO &rarr;</a>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="p-4 border border-outline-variant bg-surface-container-lowest text-center">
+      <p class="text-2xl font-bold text-primary-container font-mono">${{ '{:,.0f}'.format(financials_teaser.search_revenue) }}M</p>
+      <p class="text-xs text-white mt-1">Search Revenue</p>
+      {% if financials_teaser.search_yoy is not none %}
+      <p class="text-[10px] {{ 'text-green-400' if financials_teaser.search_yoy >= 0 else 'text-red-400' }} uppercase tracking-wider mt-0.5">YoY {{ '{:+.1f}'.format(financials_teaser.search_yoy) }}%</p>
+      {% endif %}
+    </div>
+    {% if financials_teaser.cloud_revenue %}
+    <div class="p-4 border border-outline-variant bg-surface-container-lowest text-center">
+      <p class="text-2xl font-bold text-primary-container font-mono">${{ '{:,.0f}'.format(financials_teaser.cloud_revenue) }}M</p>
+      <p class="text-xs text-white mt-1">Cloud Revenue</p>
+      <p class="text-[10px] text-outline uppercase tracking-wider mt-0.5">AI infrastructure</p>
+    </div>
+    {% endif %}
+    {% if financials_teaser.capex %}
+    <div class="p-4 border border-outline-variant bg-surface-container-lowest text-center">
+      <p class="text-2xl font-bold text-primary-container font-mono">${{ '{:,.0f}'.format(financials_teaser.capex) }}M</p>
+      <p class="text-xs text-white mt-1">CapEx</p>
+      <p class="text-[10px] text-outline uppercase tracking-wider mt-0.5">AI investment</p>
+    </div>
+    {% endif %}
+  </div>
+  <p class="text-[10px] text-outline mt-2">Dati SEC EDGAR &mdash; {{ financials_teaser.quarter }}</p>
+</section>
+{% endif %}
+
 <section class="mb-12" id="categories-section">
   <div class="flex items-center gap-4 mb-12">
     <h2 class="text-2xl font-bold tracking-tight uppercase" id="categories-title">{{ categories_title | default("> TUTTE PER CATEGORIA") }}</h2>

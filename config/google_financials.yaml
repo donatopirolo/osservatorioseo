@@ -1,0 +1,130 @@
+# Google Financials SEO Analyzer — company configurations.
+#
+# Architecture: multi-company ready.  Each company has its own CIK,
+# XBRL namespace, and metric tag mapping.  Only enabled companies
+# are polled by the weekly workflow.
+#
+# XBRL data sources:
+#   us-gaap tags  → fetched via /api/xbrl/companyfacts (single request)
+#   custom tags   → fetched via /api/xbrl/companyconcept (one per tag)
+
+companies:
+  - id: alphabet
+    name: "Alphabet Inc."
+    cik: "0001652044"
+    enabled: true
+    xbrl_namespace: goog
+    filing_types:
+      - "10-K"
+      - "10-Q"
+      - "8-K"
+    metrics:
+      # ── Revenue breakdown ────────────────────────────────────────
+      total_revenue:
+        tags:
+          - Revenues
+          - RevenueFromContractWithCustomerExcludingAssessedTax
+        namespace: us-gaap
+        label_it: "Fatturato totale"
+
+      google_search_revenue:
+        tags:
+          - GoogleSearchAndOtherRevenue
+        namespace: goog
+        label_it: "Ricavi Google Search & Other"
+
+      youtube_revenue:
+        tags:
+          - YouTubeAdsRevenue
+        namespace: goog
+        label_it: "Ricavi YouTube Ads"
+
+      google_cloud_revenue:
+        tags:
+          - GoogleCloudRevenue
+        namespace: goog
+        label_it: "Ricavi Google Cloud"
+
+      google_network_revenue:
+        tags:
+          - GoogleNetworkRevenue
+        namespace: goog
+        label_it: "Ricavi Google Network"
+
+      google_subscriptions_revenue:
+        tags:
+          - GoogleSubscriptionsPlatformsAndDevicesRevenue
+        namespace: goog
+        label_it: "Ricavi abbonamenti e dispositivi Google"
+
+      google_services_revenue:
+        tags:
+          - GoogleServicesRevenue
+        namespace: goog
+        label_it: "Ricavi Google Services (totale)"
+
+      other_bets_revenue:
+        tags:
+          - OtherBetsRevenue
+        namespace: goog
+        label_it: "Ricavi Other Bets"
+
+      # ── Costs ────────────────────────────────────────────────────
+      traffic_acquisition_costs:
+        tags:
+          - TrafficAcquisitionCosts
+        namespace: goog
+        label_it: "Costi di acquisizione traffico (TAC)"
+
+      cost_of_revenue:
+        tags:
+          - CostOfRevenue
+        namespace: us-gaap
+        label_it: "Costo del venduto"
+
+      # ── Profitability ────────────────────────────────────────────
+      operating_income:
+        tags:
+          - OperatingIncomeLoss
+        namespace: us-gaap
+        label_it: "Reddito operativo"
+
+      net_income:
+        tags:
+          - NetIncomeLoss
+        namespace: us-gaap
+        label_it: "Utile netto"
+
+      # ── Investment ───────────────────────────────────────────────
+      capital_expenditures:
+        tags:
+          - PaymentsToAcquirePropertyPlantAndEquipment
+        namespace: us-gaap
+        label_it: "Investimenti (CapEx)"
+
+      research_and_development:
+        tags:
+          - ResearchAndDevelopmentExpense
+        namespace: us-gaap
+        label_it: "Spese R&D"
+
+  # ── Predisposte per il futuro (disabilitate) ──────────────────
+  - id: meta
+    name: "Meta Platforms Inc."
+    cik: "0001326801"
+    enabled: false
+    xbrl_namespace: meta
+    filing_types:
+      - "10-K"
+      - "10-Q"
+    metrics: {}
+
+  - id: microsoft
+    name: "Microsoft Corp."
+    cik: "0000789019"
+    enabled: false
+    xbrl_namespace: msft
+    filing_types:
+      - "10-K"
+      - "10-Q"
+    metrics: {}
