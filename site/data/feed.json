@@ -1,167 +1,137 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-14T06:01:02.098200Z",
-  "generated_at_local": "2026-04-14T08:01:02.098200+02:00",
+  "generated_at": "2026-04-15T06:30:10.040067Z",
+  "generated_at_local": "2026-04-15T08:30:10.040067+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-04-14-0801",
+  "run_id": "2026-04-15-0830",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1953,
-    "items_after_dedup": 12,
+    "items_collected": 1954,
+    "items_after_dedup": 15,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0016
+    "ai_cost_eur": 0.0019
   },
   "top10": [
-    "item_2026-04-14_012",
-    "item_2026-04-14_008",
-    "item_2026-04-14_001",
-    "item_2026-04-14_003",
-    "item_2026-04-14_004",
-    "item_2026-04-14_005",
-    "item_2026-04-14_007",
-    "item_2026-04-14_011",
-    "item_2026-04-14_006",
-    "item_2026-04-14_009"
+    "item_2026-04-15_005",
+    "item_2026-04-15_009",
+    "item_2026-04-15_010",
+    "item_2026-04-15_007",
+    "item_2026-04-15_012",
+    "item_2026-04-15_014",
+    "item_2026-04-15_003",
+    "item_2026-04-15_008",
+    "item_2026-04-15_004",
+    "item_2026-04-15_006"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-04-14_012",
-      "item_2026-04-14_001"
+      "item_2026-04-15_005",
+      "item_2026-04-15_009",
+      "item_2026-04-15_010",
+      "item_2026-04-15_007",
+      "item_2026-04-15_012"
     ],
-    "ai_overviews_llm_seo": [
-      "item_2026-04-14_008",
-      "item_2026-04-14_005",
-      "item_2026-04-14_007",
-      "item_2026-04-14_006",
-      "item_2026-04-14_009"
-    ],
-    "tools_platforms": [
-      "item_2026-04-14_003"
+    "ai_models": [
+      "item_2026-04-15_014"
     ],
     "industry_news": [
-      "item_2026-04-14_004",
-      "item_2026-04-14_011"
-    ],
-    "content_eeat": [
-      "item_2026-04-14_010"
+      "item_2026-04-15_003",
+      "item_2026-04-15_013"
     ],
     "technical_seo": [
-      "item_2026-04-14_002"
+      "item_2026-04-15_008",
+      "item_2026-04-15_004",
+      "item_2026-04-15_001"
+    ],
+    "content_eeat": [
+      "item_2026-04-15_006",
+      "item_2026-04-15_002"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-04-15_011"
+    ],
+    "tools_platforms": [
+      "item_2026-04-15_015"
     ]
   },
   "items": [
     {
-      "id": "item_2026-04-14_001",
-      "title_original": "Google May Ignore Links From Sites That Spam & Violate Policies",
-      "title_it": "Google potrebbe ignorare i link da siti che fanno spam e violano le policy",
-      "summary_it": "John Mueller ha ribadito che Google potrebbe ignorare i link in uscita da siti che violano le sue policy anti-spam. Questo comportamento, già implementato manualmente e tramite algoritmi, implica che Google potrebbe non considerare il valore dei link provenienti da siti considerati poco utili o non allineati alle sue linee guida.",
-      "url": "https://www.seroundtable.com/google-may-ignore-links-from-sites-that-spam-41148.html",
+      "id": "item_2026-04-15_001",
+      "title_original": "Local Keyword Research for SEO: What It Is & How to Do It",
+      "title_it": "Ricerca di parole chiave locali per la SEO: cos'è e come farla",
+      "summary_it": "L'articolo di Semrush illustra come effettuare la ricerca di keyword locali per identificare termini ad alto intento di ricerca e migliorare la visibilità nella ricerca locale e su Maps. Vengono fornite indicazioni operative sull'utilizzo di strumenti e tecniche specifiche per questo tipo di analisi.",
+      "url": "https://www.semrush.com/blog/local-keyword-research",
       "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
         "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "feed_url": "https://www.semrush.com/blog/feed/",
         "target_url": null,
         "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "link_building",
-        "spam",
-        "google_search",
-        "link_penalty"
-      ],
-      "importance": 3,
-      "published_at": "2026-04-13T10:11:00Z",
-      "fetched_at": "2026-04-14T06:01:47.700972Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:a5d8900587083864",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-04-14_002",
-      "title_original": "Google Still Processing Status To XML Sitemaps - Nothing To Announce",
-      "title_it": "Google sta valutando un nuovo status \"in elaborazione\" per le Sitemap XML, ma al momento non ci sono annunci ufficiali",
-      "summary_it": "John Mueller ha confermato di aver discusso internamente la possibilità di aggiungere uno status \"in elaborazione\" per le Sitemap XML in Google Search Console, per indicare che la sitemap è stata scansionata ma non ancora completamente processata. Al momento, non ci sono novità o annunci ufficiali in merito all'implementazione di questa modifica. L'obiettivo sarebbe evitare confusione con l'attuale status \"Impossibile recuperare\".",
-      "url": "https://www.seroundtable.com/google-processing-status-xml-sitemaps-41149.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
+        "category_hint": "tools_platforms",
         "enabled": true
       },
       "category": "technical_seo",
       "tags": [
-        "xml_sitemap",
-        "google_search_console",
-        "john_mueller",
-        "crawlability"
-      ],
-      "importance": 2,
-      "published_at": "2026-04-13T10:21:00Z",
-      "fetched_at": "2026-04-14T06:01:49.320319Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:825544ec1e5fb879",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-04-14_003",
-      "title_original": "Google Search Console Testing AI Contribution Report",
-      "title_it": "Google Search Console testa un report sui contributi dell'AI",
-      "summary_it": "Google Search Console sta testando un nuovo report chiamato \"AI contribution\". Si ipotizza che il report mostri metriche simili a quelle di Bing Webmaster Tools relative alle performance dell'AI, come citazioni e pagine citate. Al momento non ci sono screenshot o dettagli pubblici sul contenuto del report.",
-      "url": "https://www.seroundtable.com/google-search-console-ai-contribution-41153.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_search_console",
-        "ai",
-        "reporting",
-        "ai_contribution"
+        "local_seo",
+        "keyword_research",
+        "semrush",
+        "local_keyword_research"
       ],
       "importance": 3,
-      "published_at": "2026-04-13T10:31:00Z",
-      "fetched_at": "2026-04-14T06:01:50.545076Z",
+      "published_at": "2026-04-14T07:19:00Z",
+      "fetched_at": "2026-04-15T06:31:00.683598Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:fea1c6152b9d9009",
+      "raw_hash": "sha256:72fc87e7b61834f6",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-14_004",
-      "title_original": "Google AdSense Will Experiment With New Ad Technology Partners",
-      "title_it": "Google AdSense testerà nuovi partner tecnologici per gli annunci",
-      "summary_it": "Google AdSense ha annunciato che a partire dal 20 aprile 2026 testerà un insieme aggiornato di partner tecnologici pubblicitari. Se l'esperimento avrà successo, la nuova lista sarà implementata a partire dal 5 giugno 2026. L'aggiornamento rifletterà i partner che lavorano più a stretto contatto con gli editori a livello globale e che soddisfano gli standard di privacy di Google.",
-      "url": "https://www.seroundtable.com/google-adsense-new-ad-technology-partners-41151.html",
+      "id": "item_2026-04-15_002",
+      "title_original": "5 Ways to Increase Your Website Authority in 2026",
+      "title_it": "Cinque strategie per aumentare l'autorevolezza di un sito web nel 2026",
+      "summary_it": "Semrush propone cinque tattiche per migliorare l'autorevolezza di un sito, tra cui la creazione di backlink di qualità e l'ottimizzazione per parole chiave pertinenti. L'articolo fornisce consigli pratici per incrementare il Domain Authority (DA) di un sito web. Si tratta di consigli generici, validi nel tempo.",
+      "url": "https://www.semrush.com/blog/how-to-build-website-authority",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "domain_authority",
+        "backlink",
+        "keyword_research",
+        "website_authority"
+      ],
+      "importance": 2,
+      "published_at": "2026-04-14T07:56:00Z",
+      "fetched_at": "2026-04-15T06:31:03.293563Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:630c5f92790cc9be",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_003",
+      "title_original": "Google Ads & Google Analytics Data Controls Update",
+      "title_it": "Aggiornamento dei controlli sui dati di Google Ads e Google Analytics",
+      "summary_it": "Google sta semplificando i controlli sui dati tra Google Ads e Google Analytics per eliminare impostazioni ridondanti. A partire dal 15 giugno 2026, Google Analytics utilizzerà Consent Mode (in Google Ads) come unico controllo per i dati. Successivamente nel 2026, verrà aggiornata anche la gestione dei dati di Google Analytics per la personalizzazione degli annunci.",
+      "url": "https://www.seroundtable.com/google-ads-google-analytics-data-controls-update-41159.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -176,27 +146,61 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_adsense",
-        "ad_technology",
-        "advertising",
-        "ad_partner"
+        "google_ad",
+        "google_analytic",
+        "data_privacy",
+        "consent_mode"
       ],
       "importance": 3,
-      "published_at": "2026-04-13T10:41:00Z",
-      "fetched_at": "2026-04-14T06:01:51.961870Z",
+      "published_at": "2026-04-14T10:11:00Z",
+      "fetched_at": "2026-04-15T06:31:04.650416Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:04bce0e56f6214e0",
+      "raw_hash": "sha256:940038758b93ae50",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-14_005",
-      "title_original": "New Study Points to Holes In AI Overviews",
-      "title_it": "Un nuovo studio evidenzia delle lacune nelle AI Overview di Google",
-      "summary_it": "Un recente studio riportato dal New York Times e condotto da Oumi, afferma che le AI Overview di Google possono contenere imprecisioni. L'analisi indica che l'85% delle risposte generate con Gemini 2 erano accurate, salendo al 91% con Gemini 3, ma oltre il 50% delle risposte accurate mancavano di fondamento, collegandosi a siti web che non supportavano completamente le informazioni fornite.",
-      "url": "https://www.seroundtable.com/times-reports-ai-overviews-are-inaccurate-41152.html",
+      "id": "item_2026-04-15_004",
+      "title_original": "Google Lists 9 Scenarios That Explain How It Picks Canonical URLs via @sejournal, @martinibuster",
+      "title_it": "Google elenca 9 scenari che spiegano come seleziona gli URL canonici",
+      "summary_it": "John Mueller di Google ha elencato nove scenari che influenzano la scelta di un URL canonico da parte del motore di ricerca. La guida fornisce indicazioni utili per i SEO che desiderano comprendere meglio come Google gestisce la canonicalizzazione e come ottimizzare i propri siti web di conseguenza.",
+      "url": "https://www.searchenginejournal.com/how-google-picks-canonical-urls/571914",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "canonicalization",
+        "url_structure",
+        "google_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-14T10:11:38Z",
+      "fetched_at": "2026-04-15T06:31:06.050988Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:373e435aa1ffbe38",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_005",
+      "title_original": "Google Is Aware Of And Warns Against Self-Serving Listicles",
+      "title_it": "Google mette in guardia contro i listicle auto-promozionali",
+      "summary_it": "Google è consapevole dell'utilizzo di listicle auto-promozionali come tattica per influenzare i modelli linguistici di grandi dimensioni (LLM) e sta implementando protezioni contro questa forma di manipolazione. Un portavoce di Google ha dichiarato che l'azienda contrasta attivamente questo tipo di abuso, che viene considerato contenuto di bassa qualità. Si raccomanda di evitare tali pratiche.",
+      "url": "https://www.seroundtable.com/google-warns-against-trying-to-manipulate-llms-41156.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -209,169 +213,29 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "google_updates",
       "tags": [
-        "ai_overviews",
-        "google",
-        "accuracy",
-        "gemini"
-      ],
-      "importance": 3,
-      "published_at": "2026-04-13T10:51:00Z",
-      "fetched_at": "2026-04-14T06:01:53.359813Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:35bbf0ae54fb86e9",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-04-14_006",
-      "title_original": "How AI Chooses Which Brands To Recommend: From Relational Knowledge To Topical Presence via @sejournal, @Dixon_Jones",
-      "title_it": "Come l'AI seleziona i brand da raccomandare: dalla conoscenza relazionale alla presenza tematica",
-      "summary_it": "Una ricerca sui modelli linguistici analizza i fattori che influenzano le raccomandazioni di brand generate dall'AI, focalizzandosi sulla forza dell'associazione tra brand e topic. Lo studio evidenzia come la conoscenza relazionale e la presenza tematica impattino sulla scelta dei brand da parte dei modelli di intelligenza artificiale.",
-      "url": "https://www.searchenginejournal.com/relational-knowledge-topical-presence-how-ai-chooses-which-brands-to-recommend/570482",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai",
-        "brand_recommendation",
-        "relational_knowledge",
-        "topical_presence"
-      ],
-      "importance": 3,
-      "published_at": "2026-04-13T11:00:20Z",
-      "fetched_at": "2026-04-14T06:01:54.579986Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:1f14f2e9fce67cc6",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-04-14_007",
-      "title_original": "Shorter, Focused Content Wins in ChatGPT",
-      "title_it": "Contenuti più brevi e focalizzati performano meglio in ChatGPT",
-      "summary_it": "Un'analisi di Growth Memo suggerisce che i contenuti più brevi e focalizzati hanno maggiori probabilità di emergere nelle risposte generate dall'AI. Contrariamente alla credenza comune SEO di creare guide \"ultimate\" che coprano ogni aspetto, la ricerca indica che la copertura estesa non è sempre vantaggiosa in contesti di AI.",
-      "url": "https://www.growth-memo.com/p/shorter-focused-content-wins-in-chatgpt",
-      "source": {
-        "id": "growth_memo_kevin_indig",
-        "name": "Growth Memo (Kevin Indig)",
-        "authority": 9,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://www.growth-memo.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "chatgpt",
-        "ai_content",
-        "content_strategy",
-        "llm"
-      ],
-      "importance": 3,
-      "published_at": "2026-04-13T11:03:23Z",
-      "fetched_at": "2026-04-14T06:01:56.147575Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:7499430349136fb1",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-04-14_008",
-      "title_original": "Google’s Task-Based Agentic Search Is Disrupting SEO Today, Not Tomorrow via @sejournal, @martinibuster",
-      "title_it": "La Ricerca Agentica Basata su Task di Google Sta Rivoluzionando la SEO Oggi, Non Domani",
-      "summary_it": "Google ha annunciato un cambiamento significativo nel funzionamento della ricerca online. Questo aggiornamento introduce un approccio \"agentico\" basato su task, implicando una potenziale trasformazione delle strategie SEO tradizionali. L'articolo suggerisce che l'impatto di questo cambiamento si farà sentire immediatamente.",
-      "url": "https://www.searchenginejournal.com/googles-task-based-search/571800",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_search",
-        "agentic_search",
-        "task_based_search",
-        "seo_strategy"
+        "llm",
+        "listicle",
+        "manipulation",
+        "google_search"
       ],
       "importance": 4,
-      "published_at": "2026-04-13T11:13:11Z",
-      "fetched_at": "2026-04-14T06:01:57.913707Z",
+      "published_at": "2026-04-14T10:21:00Z",
+      "fetched_at": "2026-04-15T06:31:07.441367Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:f1fed096778941ef",
+      "raw_hash": "sha256:6a579c6e4f7afea8",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-14_009",
-      "title_original": "How To Measure PPC Performance When AI Controls The Auction via @sejournal, @brookeosmundson",
-      "title_it": "Misurare le performance PPC in un contesto di aste controllate dall'AI",
-      "summary_it": "L'articolo esplora come misurare l'efficacia delle campagne PPC nel 2026, considerando l'automazione delle aste guidata dall'intelligenza artificiale. Vengono suggerite metriche basate sul profitto e framework di reporting adatti all'AI search e all'automazione di Google Ads, oltre a strategie di attribuzione più sofisticate.",
-      "url": "https://www.searchenginejournal.com/how-to-measure-ppc-performance-when-ai-controls-the-auction/570184",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ppc",
-        "artificial_intelligence",
-        "google_ad",
-        "automation"
-      ],
-      "importance": 3,
-      "published_at": "2026-04-13T12:00:22Z",
-      "fetched_at": "2026-04-14T06:01:59.468631Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:fe05c8de7b7a6b02",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-04-14_010",
-      "title_original": "The Dangerous Seduction Of Click-Chasing",
-      "title_it": "L'insidiosa tentazione della caccia al click",
-      "summary_it": "Gli editori di notizie che inseguono i click tramite la SEO spesso compromettono la fiducia del pubblico, pagando un prezzo quando i ranking crollano. L'articolo evidenzia come questa strategia a breve termine possa danneggiare la reputazione e la visibilità a lungo termine di un sito.",
-      "url": "https://www.searchenginejournal.com/the-dangerous-seduction-of-click-chasing/571533",
+      "id": "item_2026-04-15_006",
+      "title_original": "How To Break Through An Affiliate Site Plateau & Find New Growth – Ask An SEO via @sejournal, @rollerblader",
+      "title_it": "Superare la fase di stallo di un sito di affiliazione e trovare nuova crescita: Chiedi a un SEO",
+      "summary_it": "L'articolo offre strategie pratiche per superare la fase di stallo di un sito di affiliazione, concentrandosi sull'analisi dei dati, la ricerca del pubblico e l'utilizzo di nuovi canali di distribuzione dei contenuti. Vengono forniti consigli per identificare opportunità di crescita e diversificare le strategie di marketing.",
+      "url": "https://www.searchenginejournal.com/ask-an-seo-how-to-break-through-an-affiliate-site-plateau/566270",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -386,27 +250,27 @@
       },
       "category": "content_eeat",
       "tags": [
-        "clickbait",
-        "e_e_a_t",
+        "affiliate_marketing",
         "content_strategy",
-        "user_trust"
+        "audience_research",
+        "seo_strategy"
       ],
       "importance": 3,
-      "published_at": "2026-04-13T12:30:13Z",
-      "fetched_at": "2026-04-14T06:02:00.802622Z",
+      "published_at": "2026-04-14T10:30:15Z",
+      "fetched_at": "2026-04-15T06:31:09.034349Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:690e5bd1d348ad78",
+      "raw_hash": "sha256:05a4bfaae36ba49e",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-14_011",
-      "title_original": "Daily Search Forum Recap: April 13, 2026",
-      "title_it": "Riassunto Quotidiano dei Forum di Ricerca: 13 Aprile 2026",
-      "summary_it": "Il riassunto include test di Google Search Console per report sull'AI, uno studio del NY Times che evidenzia imprecisioni nelle AI Overviews e la conferma che Google potrebbe ignorare link da siti spam. Inoltre, Google sta valutando l'aggiunta di uno status \"in elaborazione\" per le sitemap XML e sperimenterà con nuovi partner tecnologici per AdSense.",
-      "url": "https://www.seroundtable.com/recap-04-13-2026-41154.html",
+      "id": "item_2026-04-15_007",
+      "title_original": "Google Business Profile Updates Identity Change Policy Language",
+      "title_it": "Aggiornamento delle policy di Google Business Profile sulla modifica dell'identità",
+      "summary_it": "Google ha aggiornato la sezione relativa alle modifiche dell'identità nelle policy di Google Business Profile, fornendo indicazioni più dettagliate. L'aggiornamento mira a prevenire modifiche significative che alterino la natura di un'attività, spesso associate a pratiche fraudolente o alla necessità di rimozione della scheda. L'obiettivo principale sembra essere evitare che le aziende sfruttino recensioni e valutazioni positive di attività completamente diverse.",
+      "url": "https://www.seroundtable.com/google-business-profile-updates-identity-change-language-41150.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -419,30 +283,134 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "google_updates",
       "tags": [
-        "google_search_console",
-        "ai_overviews",
-        "xml_sitemap",
-        "spam_link",
-        "google_adsense"
+        "google_business_profile",
+        "local_seo",
+        "identity_change",
+        "policy_update"
       ],
       "importance": 3,
-      "published_at": "2026-04-13T13:00:00Z",
-      "fetched_at": "2026-04-14T06:02:02.400523Z",
+      "published_at": "2026-04-14T10:31:00Z",
+      "fetched_at": "2026-04-15T06:31:10.502375Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:65c89dd5e0b93ee8",
+      "raw_hash": "sha256:37f0544750a34108",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-14_012",
-      "title_original": "New Google Spam Policy Targets Back Button Hijacking via @sejournal, @MattGSouthern",
-      "title_it": "Google aggiorna la politica antispam per contrastare il dirottamento del pulsante \"Indietro\"",
-      "summary_it": "Google ha incluso il \"back button hijacking\" nella sua politica antispam relativa a pratiche dannose. L'applicazione della nuova norma inizierà il 15 giugno 2026, concedendo ai siti web due mesi per rimuovere il codice incriminato.",
-      "url": "https://www.searchenginejournal.com/new-google-spam-policy-targets-back-button-hijacking/571859",
+      "id": "item_2026-04-15_008",
+      "title_original": "Google Can Handle Multiple URLs To A Page But Why Make It Harder",
+      "title_it": "Gestire più URL per una singola pagina: Google può farlo, ma è sconsigliato",
+      "summary_it": "John Mueller ha ribadito su Reddit che Google è in grado di gestire più URL che puntano alla stessa pagina, ma non è una pratica raccomandabile. Avere URL duplicati complica il lavoro di Google, che alla fine ne sceglierà uno come canonico. Non ci sono penalizzazioni dirette, ma è preferibile indicare chiaramente l'URL canonico desiderato.",
+      "url": "https://www.seroundtable.com/google-search-multiple-urls-to-a-page-41158.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "duplicate_content",
+        "canonicalization",
+        "john_mueller",
+        "url_structure"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-14T10:41:00Z",
+      "fetched_at": "2026-04-15T06:31:12.309784Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:592699465730328a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_009",
+      "title_original": "Google Search Goes After Back Button Hijacking With New Spam Penalty",
+      "title_it": "Google penalizzerà l'hijacking del pulsante \"Indietro\" con un nuovo aggiornamento antispam",
+      "summary_it": "Google ha annunciato una nuova policy antispam riguardante l'hijacking del pulsante \"Indietro\" del browser. I siti che utilizzano questa pratica, che consiste nell'interferire con la navigazione dell'utente reindirizzandolo a pagine inattese, dovranno rimuoverla entro il 15 giugno 2026 per evitare penalizzazioni manuali o algoritmiche.",
+      "url": "https://www.seroundtable.com/google-back-button-hijacking-policy-41155.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "spam_policy",
+        "back_button_hijacking",
+        "google_search",
+        "penalty"
+      ],
+      "importance": 4,
+      "published_at": "2026-04-14T10:51:00Z",
+      "fetched_at": "2026-04-15T06:31:13.791654Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:caa230687d7d28e1",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_010",
+      "title_original": "Deindexed, Delayed, and Down: Investigating A Site’s Removal From Google Before A Delayed Manual Action Arrived [Case Study]",
+      "title_it": "Deindicizzazione, ritardi e cali: analisi della rimozione di un sito da Google prima dell'arrivo di una penalità manuale posticipata (Case Study)",
+      "summary_it": "Glenn Gabe riporta un caso studio relativo a un sito deindicizzato da Google, analizzando le possibili cause e le azioni intraprese per risolvere il problema. L'analisi si concentra su un sito YMYL con contenuti generati tramite AI, evidenziando come la deindicizzazione sia avvenuta prima dell'arrivo di una notifica di penalità manuale.",
+      "url": "https://www.gsqi.com/marketing-blog/deindexed-and-delayed-manual-action-case-study",
+      "source": {
+        "id": "glenn_gabe_hifpm",
+        "name": "Glenn Gabe — HIFPM",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.gsqi.com/marketing-blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "deindexing",
+        "manual_action",
+        "ai_generated_content",
+        "ymyl"
+      ],
+      "importance": 4,
+      "published_at": "2026-04-14T11:40:49Z",
+      "fetched_at": "2026-04-15T06:31:15.274454Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b2ad9c1ce730576f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_011",
+      "title_original": "Shorter, Focused Content Wins In ChatGPT via @sejournal, @Kevin_Indig",
+      "title_it": "Contenuti più brevi e focalizzati performano meglio in ChatGPT",
+      "summary_it": "Un'analisi di Search Engine Journal suggerisce che, contrariamente a quanto si potrebbe pensare, guide più brevi e focalizzate su un numero limitato di sotto-argomenti tendono ad essere citate più frequentemente da ChatGPT rispetto a guide esaustive. Questo dato è supportato da un'analisi su larga scala. L'implicazione è che la sintesi e la pertinenza potrebbero essere fattori chiave per la visibilità nei risultati generati dall'AI.",
+      "url": "https://www.searchenginejournal.com/shorter-focused-content-wins-in-chatgpt/571857",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -455,67 +423,208 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "spam_policy",
-        "back_button_hijacking",
-        "google_search"
+        "chatgpt",
+        "content_strategy",
+        "llm",
+        "content_length"
       ],
-      "importance": 4,
-      "published_at": "2026-04-13T15:43:40Z",
-      "fetched_at": "2026-04-14T06:02:03.551273Z",
+      "importance": 3,
+      "published_at": "2026-04-14T12:30:08Z",
+      "fetched_at": "2026-04-15T06:31:16.944464Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:97e5c8cfa3859267",
+      "raw_hash": "sha256:1599421b336b5270",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_012",
+      "title_original": "Daily Search Forum Recap: April 14, 2026",
+      "title_it": "Riassunto giornaliero dei forum di ricerca: 14 aprile 2026",
+      "summary_it": "Google ha introdotto una nuova penalità per lo spam legata al \"back button hijacking\". Inoltre, Google ha aggiornato la policy relativa alle modifiche di identità per i profili delle attività commerciali e avverte contro i tentativi di manipolazione dei modelli linguistici di grandi dimensioni (LLM). Infine, sono stati apportati aggiornamenti ai controlli dei dati di Google Ads e Google Analytics.",
+      "url": "https://www.seroundtable.com/recap-04-14-2026-41160.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "spam_penalty",
+        "google_business_profile",
+        "llm_manipulation",
+        "google_ad",
+        "google_analytic"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-14T13:00:00Z",
+      "fetched_at": "2026-04-15T06:31:18.307592Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:ae0163fd45a0b640",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_013",
+      "title_original": "Your Webinar Program Isn’t Working? (So, Copy Ours) via @sejournal, @hethr_campbell",
+      "title_it": "Il tuo programma di webinar non funziona? Copia il nostro (Search Engine Journal)",
+      "summary_it": "Search Engine Journal condivide la propria esperienza nella gestione di webinar di successo, offrendo spunti e consigli per i marketer che faticano a ottenere risultati con i propri programmi. L'articolo si concentra sulle strategie interne utilizzate da SEJ per migliorare l'engagement e il ROI dei webinar.",
+      "url": "https://www.searchenginejournal.com/why-your-webinar-program-isnt-working-so-copy-ours/571950",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "webinar",
+        "marketing",
+        "search_engine_journal",
+        "content_marketing"
+      ],
+      "importance": 2,
+      "published_at": "2026-04-14T15:48:05Z",
+      "fetched_at": "2026-04-15T06:31:19.612095Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:bb1661d21df39e2d",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_014",
+      "title_original": "Google Chrome Skills Turn Gemini Prompts Into Reusable Workflows via @sejournal, @MattGSouthern",
+      "title_it": "Google Chrome introduce le 'Skills' per Gemini, trasformando i prompt in workflow riutilizzabili",
+      "summary_it": "Google sta implementando le \"Skills\" in Gemini per Chrome desktop, consentendo agli utenti di salvare i prompt come strumenti riutilizzabili con un solo clic. Queste skills possono essere eseguite su schede selezionate, automatizzando task ripetitivi. La funzionalità mira a semplificare l'utilizzo di Gemini integrato nel browser.",
+      "url": "https://www.searchenginejournal.com/google-chrome-skills-turn-gemini-prompts-into-reusable-workflows/571994",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_gemini",
+        "chrome_skill",
+        "ai_workflow",
+        "prompt_engineering"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-14T18:10:44Z",
+      "fetched_at": "2026-04-15T06:31:20.909805Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:daab84f7417b9424",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-15_015",
+      "title_original": "New Google Search Console Message Glitch Gives SEOs A Scare via @sejournal, @martinibuster",
+      "title_it": "Un Glitch in Google Search Console Spaventa i SEO con Falsi Avvisi",
+      "summary_it": "Un recente problema tecnico in Google Search Console ha generato notifiche errate agli utenti, suggerendo che i dati sulle impressioni fossero stati attivati solo di recente. Il glitch non sembra aver influito sull'accuratezza dei dati riportati, ma ha causato confusione tra i professionisti SEO.",
+      "url": "https://www.searchenginejournal.com/new-google-search-console-message-glitch-gives-seos-a-scare/572072",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_search_console",
+        "glitch",
+        "technical_issue"
+      ],
+      "importance": 2,
+      "published_at": "2026-04-14T21:22:03Z",
+      "fetched_at": "2026-04-15T06:31:22.167717Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:1b3abed9b0850b4e",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-04-14T06:01:07.700081Z",
+      "last_checked": "2026-04-15T06:30:19.284122Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-04-14T06:01:08.005989Z",
+      "last_checked": "2026-04-15T06:30:19.889935Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-04-14T06:01:09.280984Z",
+      "last_checked": "2026-04-15T06:30:21.301862Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-04-14T06:01:39.769101Z",
+      "last_checked": "2026-04-15T06:30:50.926783Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-04-14T06:01:40.186323Z",
+      "last_checked": "2026-04-15T06:30:51.409131Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-04-14T06:01:41.351454Z",
+      "last_checked": "2026-04-15T06:30:53.117650Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-04-14T06:01:42.944231Z",
+      "last_checked": "2026-04-15T06:30:54.387748Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-04-14T06:01:43.552740Z",
+      "last_checked": "2026-04-15T06:30:55.407965Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-04-14T06:01:43.581760Z",
+      "last_checked": "2026-04-15T06:30:55.467100Z",
       "changed": false
     }
   ],
