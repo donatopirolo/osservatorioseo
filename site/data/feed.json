@@ -1,32 +1,451 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-20T06:01:18.251133Z",
-  "generated_at_local": "2026-04-20T08:01:18.251133+02:00",
+  "generated_at": "2026-04-21T05:01:15.385854Z",
+  "generated_at_local": "2026-04-21T07:01:15.385854+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-04-20-0801",
+  "run_id": "2026-04-21-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1963,
-    "items_after_dedup": 1,
+    "items_collected": 1964,
+    "items_after_dedup": 16,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0001
+    "ai_cost_eur": 0.002
   },
   "top10": [
-    "item_2026-04-20_001"
+    "item_2026-04-21_009",
+    "item_2026-04-21_013",
+    "item_2026-04-21_007",
+    "item_2026-04-21_003",
+    "item_2026-04-21_004",
+    "item_2026-04-21_006",
+    "item_2026-04-21_011",
+    "item_2026-04-21_002",
+    "item_2026-04-21_008",
+    "item_2026-04-21_010"
   ],
   "categories": {
+    "ai_overviews_llm_seo": [
+      "item_2026-04-21_009",
+      "item_2026-04-21_004",
+      "item_2026-04-21_011",
+      "item_2026-04-21_002",
+      "item_2026-04-21_016"
+    ],
     "industry_news": [
-      "item_2026-04-20_001"
+      "item_2026-04-21_013",
+      "item_2026-04-21_003",
+      "item_2026-04-21_006",
+      "item_2026-04-21_012",
+      "item_2026-04-21_014"
+    ],
+    "google_updates": [
+      "item_2026-04-21_007"
+    ],
+    "content_eeat": [
+      "item_2026-04-21_008"
+    ],
+    "technical_seo": [
+      "item_2026-04-21_010",
+      "item_2026-04-21_001",
+      "item_2026-04-21_005"
+    ],
+    "tools_platforms": [
+      "item_2026-04-21_015"
     ]
   },
   "items": [
     {
-      "id": "item_2026-04-20_001",
-      "title_original": "Selling To AI: The Complete Guide To Agentic Commerce via @sejournal, @slobodanmanic",
-      "title_it": "Guida completa al commercio agentico: vendere all'IA",
-      "summary_it": "L'articolo esplora l'evoluzione dell'e-commerce guidata dagli agenti IA, dai protocolli di commercio aperto e dai sistemi di pagamento automatizzati. Si concentra sull'impatto di queste tecnologie sulle transazioni che non richiedono l'intervento umano al momento del pagamento. L'articolo è pubblicato su Search Engine Journal.",
-      "url": "https://www.searchenginejournal.com/selling-to-ai-the-complete-guide-to-agentic-commerce/570452",
+      "id": "item_2026-04-21_001",
+      "title_original": "SEO checklist: 43 tips to optimize your website",
+      "title_it": "Checklist SEO: 43 consigli per ottimizzare il tuo sito web",
+      "summary_it": "Semrush ha pubblicato una checklist con 43 suggerimenti per l'ottimizzazione SEO, mirata sia ai motori di ricerca tradizionali che a quelli basati sull'intelligenza artificiale. La guida copre diverse aree dell'SEO, fornendo un'ampia panoramica delle best practice attuali. Si tratta di un riepilogo di tattiche SEO consolidate.",
+      "url": "https://www.semrush.com/blog/seo-checklist",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "seo_checklist",
+        "website_optimization",
+        "semrush",
+        "technical_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T07:35:00Z",
+      "fetched_at": "2026-04-21T05:02:00.326389Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:c6f6f534aca9438b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_002",
+      "title_original": "68 Million AI Crawler Visits Show What Drives AI Search Visibility via @sejournal, @martinibuster",
+      "title_it": "Analisi di 68 milioni di visite di crawler AI rivela i fattori di visibilità nella ricerca AI",
+      "summary_it": "Una ricerca ha analizzato 68 milioni di visite di crawler AI per identificare le strategie SEO che migliorano la performance nella ricerca basata su intelligenza artificiale. Lo studio mira a fornire indicazioni pratiche per ottimizzare la visibilità dei contenuti in questo contesto emergente.",
+      "url": "https://www.searchenginejournal.com/68-million-ai-crawler-visits-show-what-drives-ai-search-visibility/572386",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_crawler",
+        "search_visibility",
+        "ai_seo",
+        "crawler_analysi"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T09:15:26Z",
+      "fetched_at": "2026-04-21T05:02:01.689033Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:37ba68298dc1cb4d",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_003",
+      "title_original": "Microsoft Bing Offers IndexNow Support To The Internet Archive",
+      "title_it": "Bing offre supporto IndexNow all'Internet Archive",
+      "summary_it": "Microsoft Bing ha offerto supporto all'Internet Archive per l'implementazione di IndexNow. L'obiettivo è aiutare l'Internet Archive a indicizzare più facilmente i nuovi contenuti web, migliorando l'efficienza della scansione e supportando la loro missione di preservare la storia digitale. Fabrice Canel di Microsoft ha espresso il suo sostegno all'iniziativa tramite X.",
+      "url": "https://www.seroundtable.com/microsoft-indexnow-support-internet-archive-41180.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "bing",
+        "indexnow",
+        "internet_archive",
+        "crawling"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T10:11:00Z",
+      "fetched_at": "2026-04-21T05:02:03.454327Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:5bcf08948462f13c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_004",
+      "title_original": "Better Competitor Targeting In ChatGPT Ads?",
+      "title_it": "Targeting dei competitor più preciso nelle pubblicità di ChatGPT?",
+      "summary_it": "Glenn Gabe ha notato un annuncio di Sonic visualizzato in risposta a una query relativa al suo concorrente, In-n-Out, all'interno di ChatGPT. Si ipotizza un possibile targeting diretto dei competitor nelle ads di ChatGPT, oppure una semplice associazione tematica da parte della piattaforma. Se il targeting fosse intenzionale, il valore delle impressioni pubblicitarie potrebbe aumentare.",
+      "url": "https://www.seroundtable.com/example-of-possible-competitor-targeting-in-chatgpt-ads-41181.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "chatgpt",
+        "ads",
+        "competitor_analysi",
+        "llm"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T10:21:00Z",
+      "fetched_at": "2026-04-21T05:02:04.997993Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:83f1e9ee15dadda5",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_005",
+      "title_original": "Can Google Handle Domains With One Letter Difference? Usually",
+      "title_it": "Google gestisce correttamente domini che differiscono per una sola lettera?",
+      "summary_it": "John Mueller ha risposto su Reddit a un quesito riguardante domini simili, differenti per una sola lettera. Secondo Mueller, generalmente non ci sono problemi lato SEO. Tuttavia, potrebbe verificarsi confusione iniziale con la funzione \"Forse cercavi...\" di Google, che col tempo dovrebbe risolversi.",
+      "url": "https://www.seroundtable.com/one-letter-domain-difference-google-41182.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "domain_name",
+        "typo",
+        "john_mueller"
+      ],
+      "importance": 2,
+      "published_at": "2026-04-20T10:31:00Z",
+      "fetched_at": "2026-04-21T05:02:06.451077Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:9ae488fae7972070",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_006",
+      "title_original": "Google Local Search Ads With Videos Ads",
+      "title_it": "Google testa annunci video nei risultati di ricerca locali",
+      "summary_it": "Google sta testando l'integrazione di annunci video all'interno dei risultati di ricerca locali (local pack). Questi annunci, individuati da Anthony Higman, sembrano essere configurabili tramite il Location Manager. L'obiettivo è offrire un'esperienza più immersiva agli utenti.",
+      "url": "https://www.seroundtable.com/google-local-video-ads-41183.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_local",
+        "video_ad",
+        "local_seo",
+        "google_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T10:41:00Z",
+      "fetched_at": "2026-04-21T05:02:07.813095Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:f894918c14ec786f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_007",
+      "title_original": "Google Search Tests Opening Search Results In New Window",
+      "title_it": "Google testa l'apertura dei risultati di ricerca in una nuova finestra",
+      "summary_it": "Google sta testando l'apertura dei risultati di ricerca in una nuova finestra del browser, anche quando l'impostazione predefinita prevede l'apertura nella stessa scheda. Alcuni utenti hanno segnalato questo comportamento su X, mostrando come i link si aprano automaticamente in una nuova finestra.",
+      "url": "https://www.seroundtable.com/google-opening-search-results-in-new-window-41184.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "search_result",
+        "user_experience",
+        "google_search",
+        "a_b_testing"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T10:51:00Z",
+      "fetched_at": "2026-04-21T05:02:09.048719Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:228f3a37dc875c36",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_008",
+      "title_original": "What Search Engines Trust Now: Authority, Freshness & First-Party Signals via @sejournal, @cshel",
+      "title_it": "Cosa influenza la fiducia dei motori di ricerca: autorevolezza, freschezza e dati di prima parte",
+      "summary_it": "I motori di ricerca valutano dinamicamente l'affidabilità dei contenuti, richiedendo un costante rafforzamento dell'autorevolezza, manutenzione dei contenuti e una presentazione strutturata per mantenere la visibilità. L'articolo evidenzia l'importanza di segnali di prima parte, freschezza e autorevolezza nel posizionamento.",
+      "url": "https://www.searchenginejournal.com/what-search-engines-trust-now-authority-freshness-first-party-signals/570553",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "authority",
+        "freshness",
+        "first_party_data",
+        "ranking_factor"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T11:00:07Z",
+      "fetched_at": "2026-04-21T05:02:10.724115Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b08ea058c9a5e202",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_009",
+      "title_original": "When “Mt. AI” crumbles, ChatGPT can follow [Case Study]",
+      "title_it": "Caso studio: crollo di un sito \"Mt. AI\" e conseguenze su ChatGPT",
+      "summary_it": "Un sito web che utilizzava contenuti generati tramite AI per scalare rapidamente è stato penalizzato con una manual action di Google per \"Scaled content abuse\". La penalizzazione ha portato alla rimozione di una sezione del sito dall'indice di Google, con conseguenti cali di visibilità anche nelle AI Overview e in AI Mode. L'articolo evidenzia come anche le citazioni su ChatGPT possano diminuire in seguito a tali penalizzazioni.",
+      "url": "https://www.gsqi.com/marketing-blog/when-mt-ai-crumbles-chatgpt-follows",
+      "source": {
+        "id": "glenn_gabe_hifpm",
+        "name": "Glenn Gabe — HIFPM",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.gsqi.com/marketing-blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_generated_content",
+        "manual_action",
+        "google_search",
+        "chatgpt",
+        "content_abuse"
+      ],
+      "importance": 4,
+      "published_at": "2026-04-20T11:02:21Z",
+      "fetched_at": "2026-04-21T05:02:12.763833Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:24ddc0f76c260def",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_010",
+      "title_original": "Google Lists Best Practices For Read More Deep Links via @sejournal, @MattGSouthern",
+      "title_it": "Google elenca le best practice per i deep link \"Leggi di più\"",
+      "summary_it": "Google ha fornito indicazioni sulle best practice per aumentare la probabilità che vengano visualizzati i deep link \"Leggi di più\" nei risultati di ricerca. L'articolo originale di Search Engine Journal approfondisce le raccomandazioni specifiche fornite da Google per l'implementazione di questi link. L'implementazione corretta può migliorare la navigazione e l'esperienza utente.",
+      "url": "https://www.searchenginejournal.com/google-lists-best-practices-for-read-more-deep-links/572423",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "deep_linking",
+        "google_search",
+        "technical_seo",
+        "user_experience"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T11:15:05Z",
+      "fetched_at": "2026-04-21T05:02:13.977078Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:02d7745c9ac78db1",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_011",
+      "title_original": "The ghost citation problem",
+      "title_it": "Il problema delle citazioni fantasma nell'AI",
+      "summary_it": "L'articolo evidenzia come i modelli AI spesso citino le fonti tramite link, ma omettano di menzionare esplicitamente il brand nel testo della risposta. Questa \"citazione fantasma\" richiede strategie diverse rispetto alla semplice acquisizione di link. L'analisi confronta diversi LLM e identifica formati di query e tipi di contenuto che generano più menzioni di brand.",
+      "url": "https://www.growth-memo.com/p/the-ghost-citation-problem",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai",
+        "llm",
+        "brand_mention",
+        "citation"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T11:27:08Z",
+      "fetched_at": "2026-04-21T05:02:15.500292Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:1dfef68989e1f909",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_012",
+      "title_original": "Winning Google Ads Campaign Structures For DTC Ecommerce via @sejournal, @MenachemAni",
+      "title_it": "Strutture di campagne Google Ads vincenti per l'e-commerce DTC",
+      "summary_it": "L'articolo evidenzia come molte aziende e-commerce applichino erroneamente strategie di Meta a Google Ads, causando sprechi di budget e performance insoddisfacenti. Viene suggerito un approccio strutturale specifico per migliorare i risultati delle campagne pubblicitarie su Google per il direct-to-consumer.",
+      "url": "https://www.searchenginejournal.com/winning-google-ads-campaign-structures-for-dtc-ecommerce/571400",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -41,66 +460,207 @@
       },
       "category": "industry_news",
       "tags": [
-        "ai_agent",
+        "google_ad",
         "ecommerce",
-        "agentic_commerce",
-        "future_of_commerce"
+        "dtc",
+        "campaign_structure"
       ],
       "importance": 3,
-      "published_at": "2026-04-19T11:00:04Z",
-      "fetched_at": "2026-04-20T06:02:08.189366Z",
+      "published_at": "2026-04-20T11:30:09Z",
+      "fetched_at": "2026-04-21T05:02:16.973293Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:0095f8bcfb794a18",
+      "raw_hash": "sha256:73918e2e9cb6eda0",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_013",
+      "title_original": "Google May Have To Share Search Data With Rivals via @sejournal, @MattGSouthern",
+      "title_it": "La Commissione Europea potrebbe obbligare Google a condividere i dati di ricerca con i concorrenti",
+      "summary_it": "La Commissione Europea ha proposto che Google condivida i dati di ricerca con motori di ricerca rivali e chatbot AI qualificati all'interno dell'UE/SEE. Questa misura mira a promuovere una maggiore concorrenza nel mercato dei motori di ricerca e dell'intelligenza artificiale. L'impatto potenziale sulle strategie SEO è significativo, richiedendo un'analisi approfondita.",
+      "url": "https://www.searchenginejournal.com/google-may-have-to-share-search-data-with-rivals/572434",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "european_commission",
+        "search_data",
+        "competition",
+        "ai_chatbot"
+      ],
+      "importance": 4,
+      "published_at": "2026-04-20T11:41:36Z",
+      "fetched_at": "2026-04-21T05:02:18.281475Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:18f9befbd2ce2bc0",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_014",
+      "title_original": "Daily Search Forum Recap: April 20, 2026",
+      "title_it": "Riassunto giornaliero dei forum di ricerca: 20 Aprile 2026",
+      "summary_it": "Il riassunto include discussioni su come Google gestisce nomi di dominio con differenze di una sola lettera e test relativi all'apertura dei risultati di ricerca in nuove finestre. Inoltre, vengono segnalati test di Google Local ads con video immersivi e la possibilità di targeting competitivo nelle pubblicità di ChatGPT. Microsoft offre supporto IndexNow all'Internet Archive.",
+      "url": "https://www.seroundtable.com/recap-04-20-2026-41185.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_search",
+        "chatgpt",
+        "indexnow",
+        "google_local",
+        "domain_name"
+      ],
+      "importance": 2,
+      "published_at": "2026-04-20T13:00:00Z",
+      "fetched_at": "2026-04-21T05:02:19.887583Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:3dedbc1f9fca58d4",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_015",
+      "title_original": "Brand Mentions: Complete Guide to Tracking, Measuring & Optimizing",
+      "title_it": "Guida completa al monitoraggio, misurazione e ottimizzazione delle menzioni del brand",
+      "summary_it": "Semrush pubblica una guida completa sulle menzioni del brand, focalizzandosi sulla loro importanza per la SEO tradizionale e per la SEO basata sull'intelligenza artificiale. L'articolo illustra come incrementare le menzioni del brand e come monitorarle efficacemente, presumibilmente tramite i tool Semrush.",
+      "url": "https://www.semrush.com/blog/brand-mentions",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "brand_mention",
+        "seo",
+        "semrush",
+        "brand_monitoring"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T14:06:00Z",
+      "fetched_at": "2026-04-21T05:02:21.282338Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:ae531d0509c919c5",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-04-21_016",
+      "title_original": "How To Build AI Visibility In 90 Days [Webinar] via @sejournal, @hethr_campbell",
+      "title_it": "Webinar: Come costruire visibilità nell'era dell'AI in 90 giorni",
+      "summary_it": "Search Engine Journal propone un webinar focalizzato su strategie per migliorare la visibilità nell'ecosistema guidato dall'intelligenza artificiale. L'obiettivo è fornire framework efficaci per attrarre clienti e adattarsi alle nuove dinamiche di ricerca.",
+      "url": "https://www.searchenginejournal.com/how-to-build-ai-visibility-in-90-days-webinar/572471",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_visibility",
+        "webinar",
+        "search_engine_journal",
+        "ai_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-04-20T17:01:12Z",
+      "fetched_at": "2026-04-21T05:02:22.718364Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:614da9082928374d",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-04-20T06:01:25.145371Z",
+      "last_checked": "2026-04-21T05:01:20.811715Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-04-20T06:01:25.459345Z",
+      "last_checked": "2026-04-21T05:01:21.333854Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-04-20T06:01:26.917343Z",
+      "last_checked": "2026-04-21T05:01:22.488870Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-04-20T06:01:56.722979Z",
+      "last_checked": "2026-04-21T05:01:52.841113Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-04-20T06:01:57.080903Z",
+      "last_checked": "2026-04-21T05:01:53.205782Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-04-20T06:01:58.438469Z",
+      "last_checked": "2026-04-21T05:01:54.684975Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-04-20T06:02:00.555596Z",
+      "last_checked": "2026-04-21T05:01:56.406425Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-04-20T06:02:01.780312Z",
+      "last_checked": "2026-04-21T05:01:57.301429Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-04-20T06:02:01.845919Z",
+      "last_checked": "2026-04-21T05:01:57.331117Z",
       "changed": false
     }
   ],
