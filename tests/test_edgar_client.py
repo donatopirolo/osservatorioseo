@@ -186,9 +186,7 @@ class TestFindNewFilings:
                 }
             }
         }
-        new = client.find_new_filings(
-            index, known_accessions=set(), form_types=["10-Q"]
-        )
+        new = client.find_new_filings(index, known_accessions=set(), form_types=["10-Q"])
         assert len(new) == 1
         assert new[0]["form"] == "10-Q"
 
@@ -203,10 +201,24 @@ class TestCompanyConcept:
             "label": "Google Search and Other Revenue",
             "units": {
                 "USD": [
-                    {"val": 40359000000, "accn": "acc-001", "fy": 2023, "fp": "Q1", "form": "10-Q", "filed": "2023-04-25"},
-                    {"val": 42628000000, "accn": "acc-002", "fy": 2023, "fp": "Q2", "form": "10-Q", "filed": "2023-07-25"},
+                    {
+                        "val": 40359000000,
+                        "accn": "acc-001",
+                        "fy": 2023,
+                        "fp": "Q1",
+                        "form": "10-Q",
+                        "filed": "2023-04-25",
+                    },
+                    {
+                        "val": 42628000000,
+                        "accn": "acc-002",
+                        "fy": 2023,
+                        "fp": "Q2",
+                        "form": "10-Q",
+                        "filed": "2023-07-25",
+                    },
                 ]
-            }
+            },
         }
         value = client.extract_metric(
             concept_data,

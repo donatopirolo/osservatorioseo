@@ -1224,7 +1224,7 @@ class Publisher:
                 "analysis": raw,
                 "snapshot": snapshot.model_dump(mode="json") if snapshot else None,
                 "company_name": "Alphabet Inc.",
-                "sec_url": f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-Q&dateb=&owner=include&count=5",
+                "sec_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-Q&dateb=&owner=include&count=5",
                 "kpi_keys": kpi_keys,
                 "updated_iso": analysis.generated_at.isoformat(),
                 "breadcrumbs": [
@@ -1268,10 +1268,12 @@ class Publisher:
 
             # CapEx chart
             capex = metrics.get("capital_expenditures")
-            capex_data.append({
-                "label": label,
-                "capex": capex.value_usd_millions if capex else 0,
-            })
+            capex_data.append(
+                {
+                    "label": label,
+                    "capex": capex.value_usd_millions if capex else 0,
+                }
+            )
 
         return {
             "revenue": revenue_data,

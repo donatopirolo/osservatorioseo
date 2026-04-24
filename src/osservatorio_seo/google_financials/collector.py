@@ -74,9 +74,7 @@ class FinancialsCollector:
         companies = []
         for raw in data.get("companies", []):
             metrics_raw = raw.pop("metrics", {})
-            metrics = {
-                k: MetricConfig(**v) for k, v in metrics_raw.items()
-            }
+            metrics = {k: MetricConfig(**v) for k, v in metrics_raw.items()}
             companies.append(CompanyConfig(**raw, metrics=metrics))
         return companies
 
@@ -136,15 +134,11 @@ class FinancialsCollector:
 
         facts_by_source, edgar_calls = await self._fetch_all_sources(company)
 
-        metrics = self._extract_all_metrics(
-            facts_by_source, company, fiscal_year, fiscal_quarter
-        )
+        metrics = self._extract_all_metrics(facts_by_source, company, fiscal_year, fiscal_quarter)
 
         # Compute trends if we have previous snapshots
         if previous_snapshots:
-            metrics = self._apply_trends(
-                metrics, fiscal_year, fiscal_quarter, previous_snapshots
-            )
+            metrics = self._apply_trends(metrics, fiscal_year, fiscal_quarter, previous_snapshots)
 
         # Compute derived ratios
         tac_pct = self._compute_tac_pct(metrics)
@@ -208,9 +202,7 @@ class FinancialsCollector:
         snapshots: list[QuarterlySnapshot] = []
         for year, quarter in available:
             self._warnings = []
-            metrics = self._extract_all_metrics(
-                facts_by_source, company, year, quarter
-            )
+            metrics = self._extract_all_metrics(facts_by_source, company, year, quarter)
 
             if not metrics:
                 logger.warning("No metrics found for %s Q%d %d", company.id, quarter, year)
@@ -274,13 +266,13 @@ class FinancialsCollector:
         snapshots_dir.mkdir(parents=True, exist_ok=True)
         filename = f"{snapshot.fiscal_year}-Q{snapshot.fiscal_quarter}.json"
         target = snapshots_dir / filename
-        target.write_text(
-            snapshot.model_dump_json(indent=2) + "\n", encoding="utf-8"
-        )
+        target.write_text(snapshot.model_dump_json(indent=2) + "\n", encoding="utf-8")
         return target
 
     @staticmethod
-    def persist_analysis(analysis_json: str, base_dir: Path, company_id: str, year: int, quarter: int) -> Path:
+    def persist_analysis(
+        analysis_json: str, base_dir: Path, company_id: str, year: int, quarter: int
+    ) -> Path:
         """Write AI analysis JSON to ``<base_dir>/<company_id>/analyses/<YYYY-QN>.json``."""
         analyses_dir = base_dir / company_id / "analyses"
         analyses_dir.mkdir(parents=True, exist_ok=True)
@@ -290,7 +282,9 @@ class FinancialsCollector:
         return target
 
     @staticmethod
-    def persist_event(event_json: str, base_dir: Path, company_id: str, filing_date: str, accn: str) -> Path:
+    def persist_event(
+        event_json: str, base_dir: Path, company_id: str, filing_date: str, accn: str
+    ) -> Path:
         """Write 8-K event filing to ``<base_dir>/<company_id>/events/<date>_8K_<suffix>.json``."""
         events_dir = base_dir / company_id / "events"
         events_dir.mkdir(parents=True, exist_ok=True)
@@ -338,9 +332,7 @@ class FinancialsCollector:
         state_dir = base_dir / state.company_id
         state_dir.mkdir(parents=True, exist_ok=True)
         target = state_dir / "state.json"
-        target.write_text(
-            state.model_dump_json(indent=2) + "\n", encoding="utf-8"
-        )
+        target.write_text(state.model_dump_json(indent=2) + "\n", encoding="utf-8")
         return target
 
     # ------------------------------------------------------------------
@@ -387,9 +379,7 @@ class FinancialsCollector:
                 fiscal_quarter=fiscal_quarter,
             )
             if value is None:
-                self._warnings.append(
-                    f"{metric_id}: no data for {fiscal_year}-Q{fiscal_quarter}"
-                )
+                self._warnings.append(f"{metric_id}: no data for {fiscal_year}-Q{fiscal_quarter}")
                 continue
 
             value_millions = round(value / _MILLIONS, 1)
@@ -422,16 +412,12 @@ class FinancialsCollector:
             if prev_snap and metric_id in prev_snap.metrics:
                 prev_val = prev_snap.metrics[metric_id].value_usd_millions
                 metric.value_prev_quarter_usd_millions = prev_val
-                metric.qoq_change_pct = _pct_change(
-                    metric.value_usd_millions, prev_val
-                )
+                metric.qoq_change_pct = _pct_change(metric.value_usd_millions, prev_val)
 
             if yoy_snap and metric_id in yoy_snap.metrics:
                 yoy_val = yoy_snap.metrics[metric_id].value_usd_millions
                 metric.value_prev_year_usd_millions = yoy_val
-                metric.yoy_change_pct = _pct_change(
-                    metric.value_usd_millions, yoy_val
-                )
+                metric.yoy_change_pct = _pct_change(metric.value_usd_millions, yoy_val)
 
         return metrics
 

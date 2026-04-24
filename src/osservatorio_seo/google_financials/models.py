@@ -3,10 +3,9 @@
 from __future__ import annotations
 
 from datetime import date, datetime
-from typing import Any, Literal
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
-
 
 # ---------------------------------------------------------------------------
 # Configuration models (loaded from google_financials.yaml)
@@ -130,14 +129,10 @@ class QuarterlyAnalysis(BaseModel):
     subtitle_it: str
     executive_summary: list[str] = Field(default_factory=list, max_length=6)
     narrative: str
-    seo_implications: list[SEOImplication] = Field(
-        default_factory=list, max_length=8
-    )
+    seo_implications: list[SEOImplication] = Field(default_factory=list, max_length=8)
     ai_search_impact: str
     correlation_timeline: str
-    takeaways: list[FinancialTakeaway] = Field(
-        default_factory=list, max_length=8
-    )
+    takeaways: list[FinancialTakeaway] = Field(default_factory=list, max_length=8)
     outlook: str
     generated_at: datetime
     model_used: str

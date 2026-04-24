@@ -29,7 +29,7 @@ _FP_ANNUAL = "FY"
 # both standalone quarterly values (3-month period) and year-to-date
 # cumulative values (6/9 months). We must filter by period duration to
 # get the right one. Ranges include ~10-day tolerance for fiscal variations.
-_DAYS_3M = (80, 100)   # three-month standalone (a single quarter)
+_DAYS_3M = (80, 100)  # three-month standalone (a single quarter)
 _DAYS_6M = (170, 195)  # six-month YTD (through end of Q2)
 _DAYS_9M = (260, 285)  # nine-month YTD (through end of Q3)
 _DAYS_FY = (350, 380)  # twelve-month (full fiscal year)
@@ -305,12 +305,14 @@ class EdgarClient:
             form = forms[i] if i < len(forms) else ""
             if form_types and form not in form_types:
                 continue
-            new_filings.append({
-                "accessionNumber": accn,
-                "form": form,
-                "filingDate": dates[i] if i < len(dates) else "",
-                "primaryDocument": docs[i] if i < len(docs) else "",
-            })
+            new_filings.append(
+                {
+                    "accessionNumber": accn,
+                    "form": form,
+                    "filingDate": dates[i] if i < len(dates) else "",
+                    "primaryDocument": docs[i] if i < len(docs) else "",
+                }
+            )
 
         return new_filings
 

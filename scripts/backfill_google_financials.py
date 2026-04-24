@@ -45,14 +45,12 @@ async def main() -> None:
     collector = FinancialsCollector(edgar=edgar)
 
     for company in collector.enabled_companies:
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"Backfilling {company.name} (CIK {company.cik}) since {args.since}")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
 
         print("\nFetching all available data from SEC EDGAR...")
-        snapshots = await collector.collect_all_available(
-            company, since_year=args.since
-        )
+        snapshots = await collector.collect_all_available(company, since_year=args.since)
 
         if not snapshots:
             print("  No data found.")
@@ -71,7 +69,12 @@ async def main() -> None:
             print(f"\n  [{q_label}] {n_metrics} metrics → {target}")
 
             # Show key metrics
-            for mid in ("total_revenue", "google_search_revenue", "traffic_acquisition_costs", "capital_expenditures"):
+            for mid in (
+                "total_revenue",
+                "google_search_revenue",
+                "traffic_acquisition_costs",
+                "capital_expenditures",
+            ):
                 m = snapshot.metrics.get(mid)
                 if m:
                     yoy = f" (YoY {m.yoy_change_pct:+.1f}%)" if m.yoy_change_pct is not None else ""
@@ -88,14 +91,16 @@ async def main() -> None:
             if not args.dry_run:
                 # Skip if analysis already exists (resumability)
                 analysis_file = (
-                    data_dir / company.id / "analyses"
+                    data_dir
+                    / company.id
+                    / "analyses"
                     / f"{snapshot.fiscal_year}-Q{snapshot.fiscal_quarter}.json"
                 )
                 if analysis_file.exists():
                     print(f"    Analysis already exists, skipping: {analysis_file}")
                     continue
 
-                print(f"    Generating AI analysis...")
+                print("    Generating AI analysis...")
                 try:
                     writer = PremiumWriter(api_key=api_key)
                     idx = snapshots.index(snapshot)
@@ -107,8 +112,11 @@ async def main() -> None:
                     )
                     analysis_json = analysis.model_dump_json(indent=2)
                     analysis_target = collector.persist_analysis(
-                        analysis_json, data_dir, company.id,
-                        snapshot.fiscal_year, snapshot.fiscal_quarter,
+                        analysis_json,
+                        data_dir,
+                        company.id,
+                        snapshot.fiscal_year,
+                        snapshot.fiscal_quarter,
                     )
                     print(f"    Analysis: {analysis_target} (€{analysis.cost_eur:.4f})")
                     total_cost += analysis.cost_eur
@@ -120,7 +128,7 @@ async def main() -> None:
                     # Continue with next quarter — the script is resumable
                     # and a future run will retry just the missing analyses.
 
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"Backfill complete: {len(snapshots)} quarters")
         if not args.dry_run:
             print(f"Total AI cost: €{total_cost:.4f}")

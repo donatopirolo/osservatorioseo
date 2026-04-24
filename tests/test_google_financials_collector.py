@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 from datetime import UTC, date, datetime
 from pathlib import Path
 
@@ -33,10 +32,7 @@ class TestPctChange:
 
 class TestDerivedRatios:
     def _make_metrics(self, **kwargs) -> dict[str, QuarterlyMetric]:
-        return {
-            k: QuarterlyMetric(label=k, value_usd_millions=v)
-            for k, v in kwargs.items()
-        }
+        return {k: QuarterlyMetric(label=k, value_usd_millions=v) for k, v in kwargs.items()}
 
     def test_tac_pct(self):
         metrics = self._make_metrics(
@@ -76,9 +72,7 @@ class TestPersistence:
             period_end=date(2024, 6, 30),
             filing_type="10-Q",
             metrics={
-                "total_revenue": QuarterlyMetric(
-                    label="Revenue", value_usd_millions=84742.0
-                ),
+                "total_revenue": QuarterlyMetric(label="Revenue", value_usd_millions=84742.0),
             },
             generated_at=datetime.now(UTC),
             metadata=SnapshotMetadata(edgar_calls=1),
@@ -119,9 +113,7 @@ class TestTrendComputation:
             period_end=date(2024, 3, 31),
             filing_type="10-Q",
             metrics={
-                "total_revenue": QuarterlyMetric(
-                    label="Revenue", value_usd_millions=80000.0
-                ),
+                "total_revenue": QuarterlyMetric(label="Revenue", value_usd_millions=80000.0),
             },
             generated_at=datetime.now(UTC),
             metadata=SnapshotMetadata(),
@@ -129,9 +121,7 @@ class TestTrendComputation:
 
         # Q2 metrics (10% growth)
         metrics = {
-            "total_revenue": QuarterlyMetric(
-                label="Revenue", value_usd_millions=88000.0
-            ),
+            "total_revenue": QuarterlyMetric(label="Revenue", value_usd_millions=88000.0),
         }
 
         collector = FinancialsCollector.__new__(FinancialsCollector)

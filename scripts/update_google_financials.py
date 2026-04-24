@@ -79,19 +79,16 @@ async def main() -> None:
                     since_year=2021,
                 )
 
-                existing_keys = {
-                    (s.fiscal_year, s.fiscal_quarter)
-                    for s in existing_snapshots
-                }
+                existing_keys = {(s.fiscal_year, s.fiscal_quarter) for s in existing_snapshots}
 
-                new_quarters = [
-                    (y, q) for y, q in available if (y, q) not in existing_keys
-                ]
+                new_quarters = [(y, q) for y, q in available if (y, q) not in existing_keys]
 
                 for year, quarter in new_quarters:
                     print(f"    Building snapshot for Q{quarter} {year}...")
                     snapshot = await collector.collect(
-                        company, year, quarter,
+                        company,
+                        year,
+                        quarter,
                         previous_snapshots=existing_snapshots,
                     )
                     target = collector.persist(snapshot, data_dir)
@@ -100,7 +97,7 @@ async def main() -> None:
 
                     # Generate AI analysis
                     if api_key:
-                        print(f"    Generating AI analysis...")
+                        print("    Generating AI analysis...")
                         writer = PremiumWriter(api_key=api_key)
                         analysis = await writer.write_financials_analysis(
                             snapshot,
@@ -120,6 +117,7 @@ async def main() -> None:
             except Exception as exc:
                 print(f"  ERROR processing quarterly filing: {exc}")
                 import traceback
+
                 traceback.print_exc()
 
             # Mark filing as processed
@@ -128,7 +126,9 @@ async def main() -> None:
         # Process 8-K filings (just track them for now)
         for filing in event_filings:
             state.processed_accessions.add(filing["accessionNumber"])
-            print(f"  Tracked 8-K: {filing['filingDate']} (accn: {filing['accessionNumber'][:20]}...)")
+            print(
+                f"  Tracked 8-K: {filing['filingDate']} (accn: {filing['accessionNumber'][:20]}...)"
+            )
             any_new = True
 
         # Save state

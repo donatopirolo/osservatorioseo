@@ -25,18 +25,20 @@ from typing import Any
 
 import httpx
 
+from osservatorio_seo.google_financials.models import (
+    FinancialTakeaway,
+    QuarterlyAnalysis,
+    SEOImplication,
+)
+from osservatorio_seo.google_financials.models import (
+    QuarterlySnapshot as FinancialsSnapshot,
+)
 from osservatorio_seo.models import (
     DeepAnalysis,
     FAQEntry,
     Item,
     Pillar,
     PillarTakeaway,
-)
-from osservatorio_seo.google_financials.models import (
-    FinancialTakeaway,
-    QuarterlyAnalysis,
-    QuarterlySnapshot as FinancialsSnapshot,
-    SEOImplication,
 )
 from osservatorio_seo.tracker.models import (
     ReportTakeaway,
@@ -609,8 +611,7 @@ class PremiumWriter:
             for imp in parsed.get("seo_implications", [])
         ]
         takeaways = [
-            FinancialTakeaway(title=t["title"], body=t["body"])
-            for t in parsed.get("takeaways", [])
+            FinancialTakeaway(title=t["title"], body=t["body"]) for t in parsed.get("takeaways", [])
         ]
 
         return QuarterlyAnalysis(
@@ -641,7 +642,7 @@ class PremiumWriter:
             "",
             "METRICHE (in milioni USD):",
         ]
-        for metric_id, metric in snapshot.metrics.items():
+        for _metric_id, metric in snapshot.metrics.items():
             line = f"  {metric.label}: ${metric.value_usd_millions:,.1f}M"
             deltas = []
             if metric.qoq_change_pct is not None:
@@ -655,9 +656,13 @@ class PremiumWriter:
         lines.append("")
         lines.append("RAPPORTI DERIVATI:")
         if snapshot.tac_as_pct_of_search_revenue is not None:
-            lines.append(f"  TAC come % di Search Revenue: {snapshot.tac_as_pct_of_search_revenue:.1f}%")
+            lines.append(
+                f"  TAC come % di Search Revenue: {snapshot.tac_as_pct_of_search_revenue:.1f}%"
+            )
         if snapshot.search_as_pct_of_total_revenue is not None:
-            lines.append(f"  Search come % del fatturato totale: {snapshot.search_as_pct_of_total_revenue:.1f}%")
+            lines.append(
+                f"  Search come % del fatturato totale: {snapshot.search_as_pct_of_total_revenue:.1f}%"
+            )
         if snapshot.operating_margin_pct is not None:
             lines.append(f"  Margine operativo: {snapshot.operating_margin_pct:.1f}%")
 
@@ -671,14 +676,17 @@ class PremiumWriter:
         lines = []
         for s in snapshots[-8:]:  # last 8 quarters max
             key_metrics = []
-            for mid in ("total_revenue", "google_search_revenue", "traffic_acquisition_costs", "capital_expenditures"):
+            for mid in (
+                "total_revenue",
+                "google_search_revenue",
+                "traffic_acquisition_costs",
+                "capital_expenditures",
+            ):
                 m = s.metrics.get(mid)
                 if m:
                     yoy = f" YoY {m.yoy_change_pct:+.1f}%" if m.yoy_change_pct is not None else ""
                     key_metrics.append(f"{m.label}: ${m.value_usd_millions:,.1f}M{yoy}")
-            lines.append(
-                f"Q{s.fiscal_quarter} {s.fiscal_year}: " + " | ".join(key_metrics)
-            )
+            lines.append(f"Q{s.fiscal_quarter} {s.fiscal_year}: " + " | ".join(key_metrics))
         return "\n".join(lines)
 
     async def _call_with_fallback(self, prompt: str) -> _RawResult:
