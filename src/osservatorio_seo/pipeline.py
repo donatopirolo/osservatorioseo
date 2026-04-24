@@ -142,7 +142,7 @@ class Pipeline:
             doc_pages,
             templates_dir=Path("templates"),
             site_dir=site_dir,
-            allow_indexing=False,
+            allow_indexing=True,
         )
         return feed
 
