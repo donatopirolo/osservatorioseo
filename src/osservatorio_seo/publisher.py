@@ -1361,7 +1361,7 @@ class Publisher:
                     "loc": canonical("/google-financials/"),
                     "lastmod": today,
                     "priority": "0.8",
-                    "changefreq": "quarterly",
+                    "changefreq": "monthly",
                 }
             )
             # Individual quarter reports
