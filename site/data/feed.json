@@ -1,38 +1,34 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-26T06:02:06.800107Z",
-  "generated_at_local": "2026-04-26T08:02:06.800107+02:00",
+  "generated_at": "2026-04-27T05:01:44.078411Z",
+  "generated_at_local": "2026-04-27T07:01:44.078411+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-04-26-0802",
+  "run_id": "2026-04-27-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1945,
-    "items_after_dedup": 3,
+    "items_collected": 1946,
+    "items_after_dedup": 2,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0003
+    "ai_cost_eur": 0.0002
   },
   "top10": [
-    "item_2026-04-26_001",
-    "item_2026-04-26_003",
-    "item_2026-04-26_002"
+    "item_2026-04-27_002",
+    "item_2026-04-27_001"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-04-26_001"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-04-26_003",
-      "item_2026-04-26_002"
+    "industry_news": [
+      "item_2026-04-27_002",
+      "item_2026-04-27_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-04-26_001",
-      "title_original": "Google’s Updates Push Search Further Into Task Completion via @sejournal, @MattGSouthern",
-      "title_it": "Gli aggiornamenti di Google spingono la ricerca verso il completamento delle attività",
-      "summary_it": "Google sta implementando aggiornamenti che mirano a far evolvere la ricerca verso il completamento diretto di task. Questo cambiamento evidenzia come gli strumenti di reporting attuali potrebbero non essere sufficienti per monitorare adeguatamente le performance delle aziende in questo nuovo scenario. L'articolo sottolinea la necessità di adattare le strategie di misurazione per tenere il passo con l'evoluzione della SERP.",
-      "url": "https://www.searchenginejournal.com/googles-updates-push-search-further-into-task-completion/572888",
+      "id": "item_2026-04-27_001",
+      "title_original": "The Fully Non-Human Web: No One Builds The Page, No One Visits It via @sejournal, @slobodanmanic",
+      "title_it": "Il Web Completamente Non-Umano: Nessuno Costruisce la Pagina, Nessuno la Visita",
+      "summary_it": "L'articolo ipotizza una divisione del web in sistemi transazionali gestiti da AI e spazi esperienziali per gli umani. Questo scenario costringe i brand a ripensare visibilità, fiducia e misurazione. L'impatto potenziale sul SEO è significativo, richiedendo un adattamento alle nuove dinamiche di interazione e scoperta.",
+      "url": "https://www.searchenginejournal.com/the-fully-non-human-web-no-one-builds-the-page-no-one-visits-it/571406",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -45,138 +41,103 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "industry_news",
       "tags": [
-        "task_completion",
-        "search_evolution",
-        "serp_feature",
-        "reporting"
+        "ai",
+        "future_of_search",
+        "automation",
+        "web_evolution"
       ],
       "importance": 3,
-      "published_at": "2026-04-25T11:00:14Z",
-      "fetched_at": "2026-04-26T06:02:48.579046Z",
+      "published_at": "2026-04-26T11:00:08Z",
+      "fetched_at": "2026-04-27T05:02:31.381531Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:e494200c825c3c11",
+      "raw_hash": "sha256:9245ce9f00b395f2",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-04-26_002",
-      "title_original": "Google Pushes “Bounce Clicks” Explanation For AI Overview Traffic Loss via @sejournal, @MattGSouthern",
-      "title_it": "Google attribuisce la perdita di traffico da AI Overview ai \"bounce click\"",
-      "summary_it": "Liz Reid di Google ha dichiarato a Bloomberg che le AI Overview riducono i \"bounce click\" piuttosto che le visite più approfondite. Tuttavia, Google non ha ancora fornito dati a supporto di questa affermazione. La spiegazione arriva in un momento in cui molti siti lamentano una diminuzione del traffico organico a seguito dell'introduzione delle AI Overview.",
-      "url": "https://www.searchenginejournal.com/google-pushes-bounce-clicks-explanation-for-ai-overview-traffic-loss/572986",
+      "id": "item_2026-04-27_002",
+      "title_original": "Our principles",
+      "title_it": "I nostri principi guida secondo OpenAI",
+      "summary_it": "Sam Altman condivide cinque principi che guidano il lavoro di OpenAI, con l'obiettivo di garantire che l'AGI (Artificial General Intelligence) porti benefici a tutta l'umanità. L'articolo delinea le linee guida che l'azienda segue nello sviluppo e nell'implementazione delle sue tecnologie.",
+      "url": "https://openai.com/index/our-principles",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://openai.com/blog/rss.xml",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "ai_models",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "industry_news",
       "tags": [
-        "ai_overviews",
-        "traffic_loss",
-        "bounce_rate",
-        "google"
+        "openai",
+        "agi",
+        "ethic",
+        "artificial_intelligence"
       ],
       "importance": 3,
-      "published_at": "2026-04-25T12:00:57Z",
-      "fetched_at": "2026-04-26T06:02:50.218183Z",
+      "published_at": "2026-04-26T15:00:00Z",
+      "fetched_at": "2026-04-27T05:02:32.471808Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:621f21ea7c3887dd",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-04-26_003",
-      "title_original": "AI Overview CTR Fell 61%, But Clicks Didn’t Collapse via @sejournal, @MattGSouthern",
-      "title_it": "Calo del 61% nel CTR delle AI Overview, ma i clic non sono crollati",
-      "summary_it": "Secondo Seer Interactive, il CTR delle AI Overview che citano brand è diminuito del 61%. Questo calo è dovuto a una crescita delle impressioni più rapida rispetto ai clic sulle pagine citate. Nonostante la diminuzione del CTR, i clic complessivi non hanno subito un crollo significativo.",
-      "url": "https://www.searchenginejournal.com/ai-overview-ctr-fell-61-but-clicks-didnt-collapse/572993",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_overviews",
-        "ctr",
-        "search_engine_journal",
-        "seer_interactive"
-      ],
-      "importance": 3,
-      "published_at": "2026-04-26T04:00:17Z",
-      "fetched_at": "2026-04-26T06:02:51.542341Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:82c759174c6093e0",
+      "raw_hash": "sha256:87e0aa1b84c8d500",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-04-26T06:02:12.453002Z",
+      "last_checked": "2026-04-27T05:01:51.396994Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-04-26T06:02:13.150136Z",
+      "last_checked": "2026-04-27T05:01:51.777558Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-04-26T06:02:14.092697Z",
+      "last_checked": "2026-04-27T05:01:53.355938Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-04-26T06:02:41.840994Z",
+      "last_checked": "2026-04-27T05:02:23.146289Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-04-26T06:02:42.249055Z",
+      "last_checked": "2026-04-27T05:02:23.808619Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-04-26T06:02:43.668924Z",
+      "last_checked": "2026-04-27T05:02:25.567264Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-04-26T06:02:45.411913Z",
+      "last_checked": "2026-04-27T05:02:26.825906Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-04-26T06:02:46.654769Z",
+      "last_checked": "2026-04-27T05:02:28.081346Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-04-26T06:02:46.720951Z",
+      "last_checked": "2026-04-27T05:02:28.114736Z",
       "changed": false
     }
   ],
