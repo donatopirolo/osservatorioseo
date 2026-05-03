@@ -1,594 +1,106 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-02T06:01:55.436973Z",
-  "generated_at_local": "2026-05-02T08:01:55.436973+02:00",
+  "generated_at": "2026-05-03T05:02:07.677025Z",
+  "generated_at_local": "2026-05-03T07:02:07.677025+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-02-0801",
+  "run_id": "2026-05-03-0702",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1960,
-    "items_after_dedup": 14,
+    "items_collected": 1962,
+    "items_after_dedup": 1,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0018
+    "ai_cost_eur": 0.0001
   },
   "top10": [
-    "item_2026-05-02_001",
-    "item_2026-05-02_003",
-    "item_2026-05-02_005",
-    "item_2026-05-02_009",
-    "item_2026-05-02_014",
-    "item_2026-05-02_004",
-    "item_2026-05-02_006",
-    "item_2026-05-02_007",
-    "item_2026-05-02_008",
-    "item_2026-05-02_012"
+    "item_2026-05-03_001"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-05-02_001",
-      "item_2026-05-02_003",
-      "item_2026-05-02_005",
-      "item_2026-05-02_009",
-      "item_2026-05-02_014",
-      "item_2026-05-02_002"
-    ],
-    "ai_models": [
-      "item_2026-05-02_004"
-    ],
     "industry_news": [
-      "item_2026-05-02_006"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-05-02_007",
-      "item_2026-05-02_008",
-      "item_2026-05-02_012"
-    ],
-    "technical_seo": [
-      "item_2026-05-02_013"
-    ],
-    "tools_platforms": [
-      "item_2026-05-02_010",
-      "item_2026-05-02_011"
+      "item_2026-05-03_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-02_001",
-      "title_original": "April & May 2026 Google Webmaster Report",
-      "title_it": "Report Google Webmaster di Aprile e Maggio 2026",
-      "summary_it": "Il report combina le attività di Google di Aprile e Maggio 2026. Tra gli aggiornamenti, si segnala il completamento del core update di Marzo e dell'update antispam, una nuova penalità per l'hijacking del back button, e avvisi contro i listicle auto-promozionali. Google sta lavorando a un report sui contributi dell'AI in Search Console e ha rilasciato filtri per le query brandizzate.",
-      "url": "https://www.seroundtable.com/april-may-2026-google-webmaster-report-41251.html",
+      "id": "item_2026-05-03_001",
+      "title_original": "What Google & Microsoft Earnings Say About Search via @sejournal, @MattGSouthern",
+      "title_it": "Analisi dei risultati finanziari di Google e Microsoft e implicazioni per la ricerca",
+      "summary_it": "I report finanziari di Alphabet e Microsoft evidenziano una crescita dei ricavi pubblicitari legati alla ricerca. Contestualmente, si registra un calo continuativo dei ricavi del Google Network, attestandosi a 6,97 miliardi di dollari. Questo dato suggerisce un cambiamento nel panorama della pubblicità online e nelle strategie di monetizzazione.",
+      "url": "https://www.searchenginejournal.com/what-google-microsoft-earnings-say-about-search/573499",
       "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
         "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
         "target_url": null,
         "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "core_update",
-        "spam_update",
-        "search_console",
-        "back_button_hijacking"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-01T10:11:00Z",
-      "fetched_at": "2026-05-02T06:02:42.606174Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:f14d1a748d619ff5",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_002",
-      "title_original": "Google Discover With New You Asked To See Label",
-      "title_it": "Google Discover mostra l'etichetta \"Hai chiesto di vedere\"",
-      "summary_it": "Google Discover sta testando una nuova etichetta, \"Hai chiesto di vedere\", per i contenuti personalizzati tramite la funzione \"Personalizza il tuo feed\". L'etichetta indica che l'articolo è stato suggerito in base alle preferenze espresse dall'utente.",
-      "url": "https://www.seroundtable.com/google-discover-you-asked-to-see-label-41215.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_discover",
-        "personalization",
-        "user_interface",
-        "tailor_your_feed"
-      ],
-      "importance": 2,
-      "published_at": "2026-05-01T10:21:00Z",
-      "fetched_at": "2026-05-02T06:02:43.807745Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:8c2ecded8f2a3e8b",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_003",
-      "title_original": "Google Preferred Sources Now Available For All Languages Globally",
-      "title_it": "Google Preferred Sources ora disponibile in tutte le lingue a livello globale",
-      "summary_it": "Google ha esteso la funzionalità \"Preferred Sources\" a tutte le lingue supportate a livello globale. Questa funzione permette agli utenti di personalizzare le fonti di notizie che appaiono più frequentemente nella sezione Top Stories di Google Search. Gli utenti possono selezionare le loro fonti preferite tramite l'icona a forma di stella accanto a Top Stories.",
-      "url": "https://www.seroundtable.com/google-preferred-sources-all-languages-globally-41253.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "preferred_source",
-        "google_search",
-        "top_storie",
-        "news"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T10:31:00Z",
-      "fetched_at": "2026-05-02T06:02:45.053152Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:4c01f6d38da63edc",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_004",
-      "title_original": "Google Ads AI Max: AI Brief, Text Disclaimers & Shopping & Travel Expansion",
-      "title_it": "Novità per AI Max in Google Ads: AI Brief, disclaimer testuali ed espansione a Shopping e Travel",
-      "summary_it": "Google Ads introduce nuove funzionalità per AI Max, tra cui AI Brief per un controllo più granulare tramite linguaggio naturale, disclaimer testuali obbligatori e l'espansione a campagne Shopping e Search per il settore travel. AI Brief è attualmente disponibile in inglese per Search, con Performance Max e Shopping in arrivo.",
-      "url": "https://www.seroundtable.com/google-ads-ai-max-ai-brief-text-disclaimers-more-41240.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "google_ad",
-        "ai_max",
-        "ai_brief",
-        "shopping_ad",
-        "travel_ad"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T10:31:00Z",
-      "fetched_at": "2026-05-02T06:02:46.322781Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:ee0252131fbddea5",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_005",
-      "title_original": "Google Search May Be Deindexing URLs At Higher Rates",
-      "title_it": "Google potrebbe deindicizzare URL a un ritmo più elevato",
-      "summary_it": "Diversi SEO stanno segnalando un aumento della deindicizzazione di URL da parte di Google a partire da aprile. John Mueller di Google ha dichiarato di non vedere nulla di eccezionale, ma alcuni SEO hanno condiviso screenshot di Google Search Console a supporto delle loro affermazioni.",
-      "url": "https://www.seroundtable.com/google-search-deindexing-urls-41252.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "indexing",
-        "deindexing",
-        "google_search_console"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T10:51:00Z",
-      "fetched_at": "2026-05-02T06:02:47.724606Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:d5229d5083038a44",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_006",
-      "title_original": "Search News Buzz Video Recap: Google Ranking Volatility, Back Button Hijacking Notices & AdSense Triggers, Bing Webmaster Tools Teases AI Reporting & More",
-      "title_it": "Riepilogo Video di Notizie SEO: Volatilità nel Ranking di Google, Avvisi di Hijacking del Pulsante Indietro, Novità su AdSense, Anticipazioni sugli Strumenti per Webmaster di Bing con AI e Altro",
-      "summary_it": "Questa settimana si segnala ulteriore volatilità nel ranking di Google. Google ha inviato notifiche relative a penalizzazioni per l'hijacking del pulsante indietro. Bing Webmaster Tools ha anticipato nuove funzionalità di reporting basate sull'AI. Inoltre, si discute di un possibile aumento della deindicizzazione di pagine da parte di Google, smentito da John Mueller.",
-      "url": "https://www.seroundtable.com/video-04-01-2026-41254.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
+        "category_hint": "industry_news",
         "enabled": true
       },
       "category": "industry_news",
       "tags": [
-        "google_ranking",
-        "bing_webmaster_tool",
-        "ai_reporting",
-        "back_button_hijacking"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T11:01:00Z",
-      "fetched_at": "2026-05-02T06:02:49.513567Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:be6cc38efd50ec18",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_007",
-      "title_original": "AI Overviews Clicks Get Tested, Earnings Tell Two Stories – SEO Pulse via @sejournal, @MattGSouthern",
-      "title_it": "Test sui click nelle AI Overview e risultati finanziari contrastanti per Alphabet e Microsoft",
-      "summary_it": "Google continua a sostenere che i click di rimbalzo sono un problema. I report finanziari di Alphabet e Microsoft mostrano risultati diversi. L'articolo riassume le implicazioni SEO di questi sviluppi.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-ai-overviews-clicks-get-tested-earnings-tell-two-stories/573505",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_overviews",
         "google",
-        "alphabet",
         "microsoft",
-        "earning"
+        "search_advertising",
+        "financial_result"
       ],
       "importance": 3,
-      "published_at": "2026-05-01T11:30:34Z",
-      "fetched_at": "2026-05-02T06:02:50.893838Z",
+      "published_at": "2026-05-02T11:00:53Z",
+      "fetched_at": "2026-05-03T05:02:53.011021Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:c17919f4950c1409",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_008",
-      "title_original": "Google AI Mode In Chrome Isn’t Killing SEO; It’s Exposing Weak SEO via @sejournal, @gregjarboe",
-      "title_it": "La Modalità AI di Google in Chrome non sta uccidendo la SEO, ma rivelando le strategie SEO deboli",
-      "summary_it": "Un recente articolo su Search Engine Journal suggerisce che la nuova modalità AI di Google in Chrome non danneggia la SEO, ma evidenzia le carenze delle strategie SEO inefficaci. L'articolo sottolinea come contenuti originali, ben strutturati e credibili siano premiati, mentre le tattiche SEO superficiali vengono esposte.",
-      "url": "https://www.searchenginejournal.com/google-ai-mode-in-chrome-isnt-killing-seo-its-exposing-weak-seo/573366",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ai",
-        "chrome",
-        "seo_strategy",
-        "content_quality"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T12:15:37Z",
-      "fetched_at": "2026-05-02T06:02:52.478145Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:d59731d68e8be71d",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_009",
-      "title_original": "Daily Search Forum Recap: May 1, 2026",
-      "title_it": "Riepilogo giornaliero dei forum di ricerca: 1 maggio 2026",
-      "summary_it": "Il riepilogo include l'estensione delle preferred sources di Google a tutte le lingue, possibili cambiamenti nella velocità di deindicizzazione delle URL e aggiornamenti per Google Ads AI Max. Inoltre, Google Discover sta testando un'etichetta \"you asked to see\". Infine, è stato pubblicato il report webmaster di Google relativo ai mesi di aprile e maggio.",
-      "url": "https://www.seroundtable.com/recap-05-01-2026-41257.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_search",
-        "google_ad",
-        "google_discover",
-        "indexing"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T13:00:00Z",
-      "fetched_at": "2026-05-02T06:02:53.933851Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:c20792d6945fdc07",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_010",
-      "title_original": "How to optimize for agentic search with Semrush",
-      "title_it": "Ottimizzazione per la ricerca agentica con Semrush",
-      "summary_it": "Semrush ha pubblicato una guida su come utilizzare i propri strumenti per preparare i siti web alla \"ricerca agentica\". L'articolo esplora come adattare le strategie SEO in vista di un futuro in cui gli agenti AI svolgeranno un ruolo maggiore nella ricerca e nell'interazione con i contenuti online. La guida si concentra sull'utilizzo delle funzionalità di Semrush per l'analisi della concorrenza, la ricerca di parole chiave e il monitoraggio del posizionamento.",
-      "url": "https://www.semrush.com/blog/agentic-search-optimization-with-semrush",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "semrush",
-        "agentic_search",
-        "ai_search",
-        "seo_tool"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T13:03:00Z",
-      "fetched_at": "2026-05-02T06:02:55.449675Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:07cf80465a186690",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_011",
-      "title_original": "Use Semrush's keyword clustering tool to build your strategy",
-      "title_it": "Utilizzare lo strumento di clustering di parole chiave di Semrush per costruire la tua strategia",
-      "summary_it": "Semrush promuove il suo strumento di clustering di keyword all'interno del Keyword Strategy Builder. Lo strumento mira a facilitare il targeting di più parole chiave simultaneamente, con l'obiettivo di incrementare il traffico organico. L'articolo descrive brevemente le funzionalità dello strumento.",
-      "url": "https://www.semrush.com/blog/keyword-manager-clustering-tool",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "keyword_clustering",
-        "semrush",
-        "keyword_research",
-        "seo_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T15:19:00Z",
-      "fetched_at": "2026-05-02T06:02:56.525259Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:5cedd8d2cdbba94a",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_012",
-      "title_original": "500M AI Searches Later: How To Actually Improve AI Search Visibility & Citations via @sejournal, @hethr_campbell",
-      "title_it": "Strategie per migliorare la visibilità e le citazioni nella ricerca AI",
-      "summary_it": "L'articolo esplora come i segnali della ricerca basata su intelligenza artificiale influenzino la visibilità online. Vengono presentate strategie SEO per ottimizzare la presenza nei risultati di ricerca AI e migliorare le citazioni. L'analisi si basa su un volume significativo di ricerche AI, pari a 500 milioni.",
-      "url": "https://www.searchenginejournal.com/500m-ai-searches-later-how-to-actually-improve-ai-search-visibility-citations/573564",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "seo",
-        "visibility",
-        "citation"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T15:39:12Z",
-      "fetched_at": "2026-05-02T06:02:57.773443Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:37b29bc78fcd6267",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_013",
-      "title_original": "Google Tells Developers To Build For AI Agents, Not Just Humans via @sejournal, @MattGSouthern",
-      "title_it": "Google invita gli sviluppatori a ottimizzare per gli agenti AI, non solo per gli utenti umani",
-      "summary_it": "Google, tramite web.dev, suggerisce agli sviluppatori di considerare gli agenti AI come una tipologia di visitatore distinta. Vengono raccomandate pratiche simili a quelle utilizzate per l'accessibilità web, al fine di garantire una corretta interpretazione dei contenuti da parte degli agenti.",
-      "url": "https://www.searchenginejournal.com/google-tells-developers-to-build-for-ai-agents-not-just-humans/573587",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "ai_agent",
-        "accessibility",
-        "google_guideline",
-        "web_dev"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T20:42:23Z",
-      "fetched_at": "2026-05-02T06:02:59.239176Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:8ea970e6e38951e8",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-02_014",
-      "title_original": "Google’s Preferred Sources Is Now A Global SEO Signal via @sejournal, @martinibuster",
-      "title_it": "Le Sorgenti Preferite di Google diventano un segnale SEO globale",
-      "summary_it": "La funzionalità \"Sorgenti Preferite\" di Google è ora un segnale globale che può influenzare la SEO per le sezioni Top Stories e Google Discover. Questa espansione offre nuove opportunità per ottimizzare la visibilità dei contenuti su scala internazionale.",
-      "url": "https://www.searchenginejournal.com/googles-preferred-sources-feature-is-now-a-global-seo-signal/573591",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_discover",
-        "top_storie",
-        "preferred_source",
-        "global_seo"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-01T22:15:53Z",
-      "fetched_at": "2026-05-02T06:03:00.389682Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:09a13ff8b8be187e",
+      "raw_hash": "sha256:9bfbb01fd6a29ad8",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-02T06:02:01.338501Z",
+      "last_checked": "2026-05-03T05:02:12.772877Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-02T06:02:01.667187Z",
+      "last_checked": "2026-05-03T05:02:13.051830Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-02T06:02:02.681373Z",
+      "last_checked": "2026-05-03T05:02:14.953688Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-02T06:02:32.208085Z",
+      "last_checked": "2026-05-03T05:02:45.039529Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-02T06:02:32.439978Z",
+      "last_checked": "2026-05-03T05:02:45.328732Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-02T06:02:34.406536Z",
+      "last_checked": "2026-05-03T05:02:47.193428Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-02T06:02:36.682833Z",
+      "last_checked": "2026-05-03T05:02:49.117638Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-02T06:02:37.517756Z",
+      "last_checked": "2026-05-03T05:02:50.220270Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-02T06:02:37.544864Z",
+      "last_checked": "2026-05-03T05:02:50.242958Z",
       "changed": false
     }
   ],
