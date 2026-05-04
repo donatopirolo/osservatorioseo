@@ -1,32 +1,79 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-03T06:02:31.164628Z",
-  "generated_at_local": "2026-05-03T08:02:31.164628+02:00",
+  "generated_at": "2026-05-04T05:01:52.662288Z",
+  "generated_at_local": "2026-05-04T07:01:52.662288+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-03-0802",
+  "run_id": "2026-05-04-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1960,
-    "items_after_dedup": 1,
+    "items_collected": 1957,
+    "items_after_dedup": 4,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0001
+    "ai_cost_eur": 0.0004
   },
   "top10": [
-    "item_2026-05-03_001"
+    "item_2026-05-04_003",
+    "item_2026-05-04_004",
+    "item_2026-05-04_001",
+    "item_2026-05-04_002"
   ],
   "categories": {
+    "google_updates": [
+      "item_2026-05-04_003"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-05-04_004"
+    ],
+    "content_eeat": [
+      "item_2026-05-04_001"
+    ],
     "industry_news": [
-      "item_2026-05-03_001"
+      "item_2026-05-04_002"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-03_001",
-      "title_original": "What Google & Microsoft Earnings Say About Search via @sejournal, @MattGSouthern",
-      "title_it": "Analisi dei guadagni di Google e Microsoft e implicazioni per la ricerca",
-      "summary_it": "I risultati finanziari di Alphabet e Microsoft evidenziano una crescita dei ricavi pubblicitari legati alla ricerca. Contestualmente, si registra un calo continuativo, da diversi trimestri, dei ricavi di Google Network, attestandosi a 6,97 miliardi di dollari.",
-      "url": "https://www.searchenginejournal.com/what-google-microsoft-earnings-say-about-search/573499",
+      "id": "item_2026-05-04_001",
+      "title_original": "Your Website Is A Source, Not A Megaphone via @sejournal, @slobodanmanic",
+      "title_it": "Il tuo sito web è una fonte, non un megafono",
+      "summary_it": "L'articolo evidenzia come i modelli di consumo guidati dall'AI stiano spingendo i brand a ripensare la struttura, la chiarezza e la portabilità dei contenuti. Si sottolinea la necessità di andare oltre le tradizionali esperienze basate sulle pagine web, considerando il sito come una fonte di dati strutturati.",
+      "url": "https://www.searchenginejournal.com/your-website-is-a-source-not-a-megaphone/571490",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "ai",
+        "content_strategy",
+        "structured_data",
+        "content_portability"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-03T11:00:07Z",
+      "fetched_at": "2026-05-04T05:02:33.348234Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:1bd69a518f0be716",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-04_002",
+      "title_original": "Ask Jeeves Is Gone After Nearly 30 Years Of Search via @sejournal, @MattGSouthern",
+      "title_it": "Ask.com (ex Ask Jeeves) chiude dopo quasi 30 anni",
+      "summary_it": "IAC ha interrotto le attività del motore di ricerca Ask.com, precedentemente noto come Ask Jeeves. La piattaforma era attiva da circa trent'anni. La chiusura segna la fine di un'era per uno dei primi motori di ricerca.",
+      "url": "https://www.searchenginejournal.com/ask-jeeves-is-gone-after-nearly-30-years-of-search/573617",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -41,66 +88,135 @@
       },
       "category": "industry_news",
       "tags": [
-        "search_advertising",
-        "google",
-        "microsoft",
-        "earnings_report"
+        "search_engine",
+        "ask_jeeve",
+        "industry_history"
       ],
-      "importance": 3,
-      "published_at": "2026-05-02T11:00:53Z",
-      "fetched_at": "2026-05-03T06:03:13.671398Z",
+      "importance": 2,
+      "published_at": "2026-05-03T18:49:46Z",
+      "fetched_at": "2026-05-04T05:02:34.532003Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:9bfbb01fd6a29ad8",
+      "raw_hash": "sha256:286c41722f2e10b7",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-04_003",
+      "title_original": "Google’s March Core Update Shifted Visibility Away From Aggregators via @sejournal, @MattGSouthern",
+      "title_it": "L'aggiornamento principale di marzo di Google ha ridotto la visibilità degli aggregatori",
+      "summary_it": "Secondo i dati analizzati, l'aggiornamento principale di marzo di Google ha comportato una diminuzione della visibilità nella ricerca statunitense per piattaforme come YouTube e Reddit, oltre ad altri siti aggregatori di contenuti. Al contrario, siti di brand e governativi hanno visto un incremento nella visibilità. Questo suggerisce un cambiamento nell'algoritmo di Google.",
+      "url": "https://www.searchenginejournal.com/googles-march-core-update-shifted-visibility-away-from-aggregators/573621",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "core_update",
+        "visibility",
+        "aggregator",
+        "brand_site"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-03T19:40:34Z",
+      "fetched_at": "2026-05-04T05:02:35.994528Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:4868ee2ae6b37acf",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-04_004",
+      "title_original": "Google Engineer Explains ‘Black Box’ AI Models In Search via @sejournal, @MattGSouthern",
+      "title_it": "Un ingegnere di Google spiega i modelli AI 'black box' nella Ricerca",
+      "summary_it": "Nikola Todorovic di Google ha descritto come l'AI possa comportarsi come una 'scatola nera', evidenziando le difficoltà nell'implementazione del machine learning nella Ricerca. La complessità dei modelli AI rende difficile comprendere appieno il loro processo decisionale, ponendo sfide nell'ottimizzazione SEO.",
+      "url": "https://www.searchenginejournal.com/google-engineer-explains-black-box-ai-models-in-search/573625",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_search",
+        "artificial_intelligence",
+        "machine_learning",
+        "black_box_ai"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-04T03:15:42Z",
+      "fetched_at": "2026-05-04T05:02:37.230180Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:810b5dcad3c1b88c",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-03T06:02:36.582455Z",
+      "last_checked": "2026-05-04T05:01:57.397754Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-03T06:02:36.976536Z",
+      "last_checked": "2026-05-04T05:01:58.012750Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-03T06:02:38.150598Z",
+      "last_checked": "2026-05-04T05:01:59.477701Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-03T06:03:07.744353Z",
+      "last_checked": "2026-05-04T05:02:26.866692Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-03T06:03:08.482688Z",
+      "last_checked": "2026-05-04T05:02:27.224798Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-03T06:03:10.002917Z",
+      "last_checked": "2026-05-04T05:02:28.237274Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-03T06:03:10.970426Z",
+      "last_checked": "2026-05-04T05:02:29.636129Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-03T06:03:11.908748Z",
+      "last_checked": "2026-05-04T05:02:31.372521Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-03T06:03:11.948089Z",
+      "last_checked": "2026-05-04T05:02:31.448308Z",
       "changed": false
     }
   ],
