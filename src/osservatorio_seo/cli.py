@@ -9,7 +9,10 @@ import sys
 from pathlib import Path
 
 from osservatorio_seo.config import load_settings
+from osservatorio_seo.health import feed_health
 from osservatorio_seo.pipeline import Pipeline
+
+logger = logging.getLogger(__name__)
 
 
 def main() -> None:
@@ -40,4 +43,8 @@ def main() -> None:
         print(
             f"OK — {len(feed.items)} items, top10={len(feed.top10)}, cost={feed.stats.ai_cost_eur}€"
         )
+        healthy, reason = feed_health(feed)
+        if not healthy:
+            logger.error("run unhealthy: %s", reason)
+            sys.exit(1)
         sys.exit(0)

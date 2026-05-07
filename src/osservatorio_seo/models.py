@@ -115,6 +115,8 @@ class FeedStats(BaseModel):
     items_after_dedup: int
     doc_changes_detected: int
     ai_cost_eur: float
+    summarize_attempted: int = 0
+    summarize_failed: int = 0
 
 
 class DocWatcherStatus(BaseModel):

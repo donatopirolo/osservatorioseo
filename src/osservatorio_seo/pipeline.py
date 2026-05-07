@@ -89,11 +89,17 @@ class Pipeline:
             primary_model=self._settings.summarizer_model,
             fallback_models=self._settings.fallback_models,
         )
-        items, ai_cost = await self._summarize_all(normalized, sources_by_id, summarizer)
+        items, ai_cost, sum_attempted, sum_failed = await self._summarize_all(
+            normalized, sources_by_id, summarizer
+        )
 
-        doc_items, doc_cost = await self._summarize_doc_changes(doc_results, doc_pages, summarizer)
+        doc_items, doc_cost, doc_attempted, doc_failed = await self._summarize_doc_changes(
+            doc_results, doc_pages, summarizer
+        )
         items.extend(doc_items)
         ai_cost += doc_cost
+        sum_attempted += doc_attempted
+        sum_failed += doc_failed
 
         # Deep analysis enrichment: solo per item 5-stelle non-event non-doc_change
         premium_writer = PremiumWriter(api_key=self._settings.openrouter_api_key)
@@ -111,6 +117,8 @@ class Pipeline:
             items_after_dedup=len(normalized),
             doc_changes_detected=sum(1 for r in doc_results if r.changed),
             ai_cost_eur=round(ai_cost, 4),
+            summarize_attempted=sum_attempted,
+            summarize_failed=sum_failed,
         )
         feed = Feed(
             generated_at=now_utc,
@@ -191,16 +199,20 @@ class Pipeline:
         normalized: list[RawItem],
         sources_by_id: dict[str, Source],
         summarizer: Summarizer,
-    ) -> tuple[list[Item], float]:
+    ) -> tuple[list[Item], float, int, int]:
         items: list[Item] = []
         total_cost = 0.0
+        attempted = 0
+        failed = 0
 
         for idx, raw in enumerate(sorted(normalized, key=lambda r: r.published_at), start=1):
             source = sources_by_id[raw.source_id]
+            attempted += 1
             try:
                 summary = await summarizer.summarize_item(raw, source)
             except Exception as e:  # noqa: BLE001
                 logger.warning("summarize failed for %s: %s", raw.url, e)
+                failed += 1
                 continue
             date_str = datetime.now(ROME_TZ).strftime("%Y-%m-%d")
             normalized_tags = normalize_tags(summary.tags)
@@ -224,7 +236,7 @@ class Pipeline:
                 )
             )
             total_cost += summary.cost_eur
-        return items, total_cost
+        return items, total_cost, attempted, failed
 
     async def _enrich_critical_items(
         self,
@@ -283,21 +295,25 @@ class Pipeline:
         results: list[DocChangeResult],
         pages: list[DocWatcherPage],
         summarizer: Summarizer,
-    ) -> tuple[list[Item], float]:
+    ) -> tuple[list[Item], float, int, int]:
         items: list[Item] = []
         total_cost = 0.0
+        attempted = 0
+        failed = 0
         pages_by_id = {p.id: p for p in pages}
 
         for idx, r in enumerate(results, start=1):
             if not r.changed:
                 continue
             page = pages_by_id[r.page_id]
+            attempted += 1
             try:
                 summary = await summarizer.summarize_doc_change(
                     page_name=page.name, page_url=page.url, diff=r.diff
                 )
             except Exception as e:  # noqa: BLE001
                 logger.warning("doc change summary failed for %s: %s", page.id, e)
+                failed += 1
                 continue
             date_str = datetime.now(ROME_TZ).strftime("%Y-%m-%d")
             items.append(
@@ -332,4 +348,4 @@ class Pipeline:
                 )
             )
             total_cost += summary.cost_eur
-        return items, total_cost
+        return items, total_cost, attempted, failed
