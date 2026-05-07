@@ -1,64 +1,627 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-07T06:01:57.136858Z",
-  "generated_at_local": "2026-05-07T08:01:57.136858+02:00",
+  "generated_at": "2026-05-07T10:28:11.571144Z",
+  "generated_at_local": "2026-05-07T12:28:11.571144+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-07-0801",
+  "run_id": "2026-05-07-1228",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 1973,
-    "items_after_dedup": 18,
+    "items_after_dedup": 15,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0
+    "ai_cost_eur": 0.0017
   },
-  "top10": [],
-  "categories": {},
-  "items": [],
+  "top10": [
+    "item_2026-05-07_015",
+    "item_2026-05-07_002",
+    "item_2026-05-07_012",
+    "item_2026-05-07_001",
+    "item_2026-05-07_003",
+    "item_2026-05-07_004",
+    "item_2026-05-07_011",
+    "item_2026-05-07_005",
+    "item_2026-05-07_006",
+    "item_2026-05-07_007"
+  ],
+  "categories": {
+    "google_updates": [
+      "item_2026-05-07_015",
+      "item_2026-05-07_002"
+    ],
+    "ai_models": [
+      "item_2026-05-07_012"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-05-07_001",
+      "item_2026-05-07_003",
+      "item_2026-05-07_004",
+      "item_2026-05-07_005",
+      "item_2026-05-07_007",
+      "item_2026-05-07_010",
+      "item_2026-05-07_013",
+      "item_2026-05-07_014"
+    ],
+    "industry_news": [
+      "item_2026-05-07_011",
+      "item_2026-05-07_006",
+      "item_2026-05-07_009"
+    ],
+    "tools_platforms": [
+      "item_2026-05-07_008"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-05-07_001",
+      "title_original": "Google Tests Gemini 3 Model Options In Search Bar",
+      "title_it": "Google testa opzioni per il modello Gemini 3 direttamente nella barra di ricerca",
+      "summary_it": "Google sta sperimentando la possibilità per gli utenti di selezionare direttamente nella barra di ricerca il modello Gemini 3 da utilizzare. Le opzioni includono \"Pro\", \"Fast\" o \"Auto\". Al momento non è chiaro quanto questo test sia diffuso.",
+      "url": "https://www.seroundtable.com/google-gemini-3-model-options-search-41278.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_search",
+        "gemini_3",
+        "ai_model",
+        "search_bar"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T10:31:00Z",
+      "fetched_at": "2026-05-07T10:28:59.438277Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:170e7dd39bfdc2e1",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_002",
+      "title_original": "Google Expands UCP Checkout To Main Search Results",
+      "title_it": "Google estende il checkout UCP ai risultati di ricerca principali",
+      "summary_it": "Google ha esteso il protocollo UCP (Universal Commerce Protocol) al di fuori della modalità AI, rendendolo disponibile nei risultati di ricerca principali per alcuni rivenditori, come Wayfair. Questa integrazione permette agli utenti di completare rapidamente gli acquisti direttamente dalla pagina dei risultati di ricerca, utilizzando i dati di fatturazione e spedizione salvati. L'espansione dovrebbe includere in futuro altri siti come Etsy e Target.",
+      "url": "https://www.seroundtable.com/google-expands-ucp-checkout-to-search-41272.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "ucp",
+        "universal_commerce_protocol",
+        "google_shopping",
+        "ecommerce_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T10:41:00Z",
+      "fetched_at": "2026-05-07T10:29:01.041744Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:72e0cfd34eea196a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_003",
+      "title_original": "Google Tests New Anchor Links & Favicon Experiences In AI Mode",
+      "title_it": "Google testa nuove esperienze per i link di ancoraggio e le favicon nella modalità AI",
+      "summary_it": "Google sta testando una nuova visualizzazione per i link di citazione, i link di ancoraggio e le favicon all'interno dei risultati in modalità AI. L'obiettivo sembra essere rendere i link più cliccabili, con favicon più grandi e una maggiore frequenza di apparizione vicino al testo di riferimento. I test sono stati individuati da Sachin Patel e Brodie Clark.",
+      "url": "https://www.seroundtable.com/google-anchor-links-favicon-ai-mode-41281.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_overviews",
+        "favicon",
+        "anchor_link",
+        "google_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T10:45:00Z",
+      "fetched_at": "2026-05-07T10:29:02.656412Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:0437dfe9c28f8529",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_004",
+      "title_original": "Google AI Overviews With Author Names & Source (Again)",
+      "title_it": "Google AI Overviews mostra nuovamente nomi degli autori e fonti",
+      "summary_it": "Google ha ripreso a mostrare i nomi degli autori e le fonti (come LinkedIn e Medium) nelle AI Overviews. Questa modifica era già stata testata circa un anno fa e sembra essere stata reintrodotta per fornire maggiore contesto e trasparenza, specialmente per contenuti provenienti da piattaforme social.",
+      "url": "https://www.seroundtable.com/google-ai-overviews-with-author-names-source-41261.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_overviews",
+        "google_search",
+        "authorship",
+        "source_attribution"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T10:51:00Z",
+      "fetched_at": "2026-05-07T10:29:04.227882Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:aac410e0abae6f91",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_005",
+      "title_original": "How To Design URL Structures For AI Retrieval, Not Just Rankings",
+      "title_it": "Strutturare gli URL per il recupero tramite AI, non solo per il ranking",
+      "summary_it": "L'articolo suggerisce di applicare principi SEO all'ottimizzazione dei feed di prodotto per migliorare la visibilità e le raccomandazioni tramite intelligenza artificiale. Si concentra sull'importanza di una struttura URL chiara e significativa per facilitare l'interpretazione da parte dei sistemi di AI. Questo approccio mira a rendere i prodotti più facilmente reperibili e consigliabili.",
+      "url": "https://www.searchenginejournal.com/how-to-design-url-structures-for-ai-retrieval-not-just-rankings/571939",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "url_structure",
+        "ai_retrieval",
+        "product_feed_optimization",
+        "semantic_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T11:00:33Z",
+      "fetched_at": "2026-05-07T10:29:05.954372Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:73f3233cfdbfb6f6",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_006",
+      "title_original": "WordPress Loses Marketshare. Is Astro Eroding Their User Base? via @sejournal, @martinibuster",
+      "title_it": "WordPress perde quote di mercato: Astro sta erodendo la sua base utenti?",
+      "summary_it": "WordPress sta registrando una perdita di quote di mercato, con oltre il 10% dei siti abbandonati. Parallelamente, Astro registra 2.5 milioni di download settimanali. L'articolo ipotizza una correlazione tra questi due fenomeni.",
+      "url": "https://www.searchenginejournal.com/wordpress-loses-marketshare-is-astro-eroding-their-user-base/574003",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "wordpress",
+        "astro",
+        "market_share",
+        "cms"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T11:09:21Z",
+      "fetched_at": "2026-05-07T10:29:07.110434Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:3b8d532ce12f1809",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_007",
+      "title_original": "How AI Will Transform PR’s Role In SEO Strategy Over The Next 2 Years via @sejournal, @gregjarboe",
+      "title_it": "Come l'AI trasformerà il ruolo delle PR nella strategia SEO nei prossimi 2 anni",
+      "summary_it": "L'articolo evidenzia come i motori di ricerca basati su AI tendano a favorire gli stessi brand, indipendentemente dalle fonti citate. Si suggerisce una convergenza tra le figure professionali di PR e SEO. L'integrazione tra le due discipline diventa quindi cruciale per una strategia di successo.",
+      "url": "https://www.searchenginejournal.com/ai-just-handed-pr-its-best-opportunity-in-seo-most-teams-are-missing-it/573520",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai",
+        "public_relation",
+        "seo_strategy",
+        "brand_mention"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T11:32:11Z",
+      "fetched_at": "2026-05-07T10:29:08.729534Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:56dcc7c25f9bbabf",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_008",
+      "title_original": "How to track ChatGPT traffic for you and for competitors",
+      "title_it": "Come tracciare il traffico di ChatGPT, proprio e dei competitor",
+      "summary_it": "Semrush ha pubblicato una guida su come monitorare il traffico generato da ChatGPT verso il proprio sito web e quello dei concorrenti. L'articolo illustra metodi per collegare le visite provenienti dall'AI con i segnali di visibilità organica. La guida è utile per valutare l'impatto di ChatGPT sul traffico web.",
+      "url": "https://www.semrush.com/blog/track-chatgpt-traffic-and-competitors",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "chatgpt",
+        "traffic_analysi",
+        "competitive_analysi",
+        "semrush"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T11:50:00Z",
+      "fetched_at": "2026-05-07T10:29:10.156698Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:cc48854adb0b1bb6",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_009",
+      "title_original": "The Whole Point Was The Mess via @sejournal, @pedrodias",
+      "title_it": "I fornitori di GEO vendono lo stesso playbook SEO con un nuovo acronimo",
+      "summary_it": "Alcuni fornitori di servizi SEO incentrati sulla SEO geografica starebbero riproponendo vecchie strategie con nuove etichette. L'articolo accademico citato a supporto di queste strategie in realtà ne evidenzia i limiti. La pratica solleva dubbi sull'effettiva validità di queste nuove tecniche.",
+      "url": "https://www.searchenginejournal.com/the-whole-point-was-the-mess/573977",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "geo_seo",
+        "local_seo",
+        "seo_strategy",
+        "marketing"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T11:55:10Z",
+      "fetched_at": "2026-05-07T10:29:11.975203Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:d177ee0a8349b392",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_010",
+      "title_original": "Google Adds More Links & Link Context To AI Search via @sejournal, @MattGSouthern",
+      "title_it": "Google aggiunge più link e contesto ai link nella Ricerca AI",
+      "summary_it": "Google sta implementando nuove funzionalità nella sua esperienza di Ricerca AI, tra cui etichette di abbonamento, link inline, anteprime di discussioni e anteprime di link desktop. L'obiettivo è fornire agli utenti un contesto più ricco e trasparente sulle fonti utilizzate dall'AI.",
+      "url": "https://www.searchenginejournal.com/google-adds-more-links-link-context-to-ai-search/574008",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_search",
+        "google_search",
+        "link_context",
+        "ai_overviews"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T12:00:18Z",
+      "fetched_at": "2026-05-07T10:29:13.340954Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:bc7b259752bf3d2a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_011",
+      "title_original": "Daily Search Forum Recap: May 6, 2026",
+      "title_it": "Riepilogo giornaliero dei forum di ricerca: 6 maggio 2026",
+      "summary_it": "Google sta testando nuove esperienze per link e citazioni in AI Overviews, mostrando nomi degli autori e favicon più grandi. È in corso un test di Gemini 3 nella barra di ricerca. OpenAI ha lanciato ufficialmente la beta del self-serve ad manager per ChatGPT Ads, mentre alcuni utenti segnalano problemi di accesso agli account Google Local Service Ads.",
+      "url": "https://www.seroundtable.com/recap-05-06-2026-41282.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ai_overview",
+        "openai_chatgpt_ad",
+        "google_local_service_ad",
+        "gemini_3"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T13:00:00Z",
+      "fetched_at": "2026-05-07T10:29:15.016834Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:7534f573235dd8b7",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_012",
+      "title_original": "Agentic AI vs. Generative AI: What’s the Difference, and Why Does It Matter?",
+      "title_it": "AI agentica contro AI generativa: differenze e implicazioni",
+      "summary_it": "Ahrefs spiega la differenza tra AI generativa e AI agentica, evidenziando come quest'ultima possa automatizzare task più complessi come la creazione di contenuti ottimizzati per specifiche keyword. L'articolo esplora le potenzialità dell'AI agentica nel contesto del marketing e della SEO.",
+      "url": "https://ahrefs.com/blog/agentic-ai-vs-generative-ai",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "agentic_ai",
+        "generative_ai",
+        "content_creation",
+        "automation"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T15:47:15Z",
+      "fetched_at": "2026-05-07T10:29:16.445358Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:1c7f9c00aec4d539",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_013",
+      "title_original": "Bing Team Describes How Grounding Differs From Search Indexing via @sejournal, @MattGSouthern",
+      "title_it": "Bing spiega le differenze tra \"grounding\" e indicizzazione tradizionale",
+      "summary_it": "Il team di Bing ha pubblicato un framework che descrive le differenze tra il \"grounding\" utilizzato per le risposte generate dall'AI e l'indicizzazione tradizionale. L'analisi si concentra su cinque aree di misurazione specifiche. Questa distinzione è cruciale per comprendere come Bing gestisce e valuta le informazioni per i suoi risultati di ricerca e le risposte AI.",
+      "url": "https://www.searchenginejournal.com/bing-team-describes-how-grounding-differs-from-search-indexing/574119",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "bing",
+        "grounding",
+        "search_indexing",
+        "artificial_intelligence"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T20:27:06Z",
+      "fetched_at": "2026-05-07T10:29:17.932529Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:2c3340098a534cd8",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_014",
+      "title_original": "Google Says AI Creative Should Help Brands Differentiate, Not Blend In via @sejournal, @brookeosmundson",
+      "title_it": "Google invita a usare l'AI per differenziare i brand, non per uniformarli",
+      "summary_it": "Google ha espresso preoccupazioni riguardo alla crescente uniformità degli annunci generati tramite intelligenza artificiale. L'azienda sottolinea l'importanza per i brand di mantenere la propria identità e differenziarsi, anche nell'utilizzo di strumenti di AI per la creatività pubblicitaria.",
+      "url": "https://www.searchenginejournal.com/google-says-ai-creative-should-help-brands-differentiate-not-blend-in/574118",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_content",
+        "brand_identity",
+        "google",
+        "advertising"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-06T20:42:07Z",
+      "fetched_at": "2026-05-07T10:29:19.678255Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:5e76f6e9a01ef546",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-07_015",
+      "title_original": "Google’s Universal Commerce Protocol capabilities expand to main SERP",
+      "title_it": "Google estende le funzionalità del Protocollo di Commercio Universale (UCP) alla SERP principale",
+      "summary_it": "Google ha iniziato a implementare il checkout basato su UCP direttamente nei risultati di ricerca per i prodotti. Questa novità permette agli utenti di effettuare acquisti direttamente dalla SERP, senza dover visitare il sito web del venditore. L'implementazione è in corso.",
+      "url": "https://www.semrush.com/blog/google-ucp-checkout-in-main-serp",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "ucp",
+        "universal_commerce_protocol",
+        "serp",
+        "ecommerce"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-07T07:36:00Z",
+      "fetched_at": "2026-05-07T10:29:21.188778Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:4ce0aa5e2e983d4d",
+      "deep_analysis": null
+    }
+  ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-07T06:02:01.770309Z",
+      "last_checked": "2026-05-07T10:28:17.117431Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-07T06:02:02.382752Z",
+      "last_checked": "2026-05-07T10:28:17.452086Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-07T06:02:03.787881Z",
+      "last_checked": "2026-05-07T10:28:19.297728Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-07T06:02:30.869975Z",
+      "last_checked": "2026-05-07T10:28:48.636224Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-07T06:02:31.354319Z",
+      "last_checked": "2026-05-07T10:28:48.967196Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-07T06:02:32.953369Z",
+      "last_checked": "2026-05-07T10:28:50.176606Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-07T06:02:35.285379Z",
+      "last_checked": "2026-05-07T10:28:51.898740Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-07T06:02:36.668421Z",
+      "last_checked": "2026-05-07T10:28:53.073137Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-07T06:02:36.703869Z",
+      "last_checked": "2026-05-07T10:28:53.132114Z",
       "changed": false
     }
   ],
