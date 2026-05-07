@@ -74,6 +74,40 @@ async def test_second_run_changed_content_detected(
     assert "+" in result.diff
 
 
+async def test_significant_change_does_not_commit_state(
+    page: DocWatcherPage, tmp_path: Path, httpx_mock: HTTPXMock
+) -> None:
+    """Su significant change il watcher non aggiorna lo state.
+
+    Il commit deve avvenire solo dopo che il summarizer ha avuto successo,
+    per evitare di "consumare" il diff se il summarizer fallisce. Senza
+    questa garanzia, un fail del summarizer farebbe perdere il diff per
+    sempre (la run successiva confronterebbe la nuova versione con se
+    stessa).
+    """
+    html_old = "<html><body><main><article>Old text here.</article></main></body></html>"
+    html_new = (
+        "<html><body><main><article>Old text here. "
+        "Added a new sentence about AI overviews.</article></main></body></html>"
+    )
+    httpx_mock.add_response(url="https://developers.google.com/spam", text=html_old)
+    httpx_mock.add_response(url="https://developers.google.com/spam", text=html_new)
+
+    state = StateStore(tmp_path)
+    async with HttpClient() as client:
+        watcher = DocWatcher(http=client, state=state)
+        await watcher.check(page)
+        bootstrap_hash = state.load_hash(page.id)
+
+        result = await watcher.check(page)
+
+    assert result.changed is True
+    assert result.current_hash != bootstrap_hash
+    # Lo state deve essere ancora il vecchio: il watcher non lo aggiorna
+    # piu in autonomia su significant change.
+    assert state.load_hash(page.id) == bootstrap_hash
+
+
 def test_similarity_threshold_ignores_tiny_change() -> None:
     watcher = DocWatcher(http=None, state=None, similarity_threshold=0.003)  # type: ignore[arg-type]
     old = "a" * 10000

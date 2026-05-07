@@ -94,7 +94,7 @@ class Pipeline:
         )
 
         doc_items, doc_cost, doc_attempted, doc_failed = await self._summarize_doc_changes(
-            doc_results, doc_pages, summarizer
+            doc_results, doc_pages, summarizer, state
         )
         items.extend(doc_items)
         ai_cost += doc_cost
@@ -295,6 +295,7 @@ class Pipeline:
         results: list[DocChangeResult],
         pages: list[DocWatcherPage],
         summarizer: Summarizer,
+        state: StateStore,
     ) -> tuple[list[Item], float, int, int]:
         items: list[Item] = []
         total_cost = 0.0
@@ -314,7 +315,14 @@ class Pipeline:
             except Exception as e:  # noqa: BLE001
                 logger.warning("doc change summary failed for %s: %s", page.id, e)
                 failed += 1
+                # Lo state non viene aggiornato: la prossima run rivedra'
+                # la stessa modifica e potra' ritentare il summary.
                 continue
+            # Summary OK: ora possiamo committare lo state in modo che la
+            # modifica risulti "consumata" solo se l'item e' davvero stato pubblicato.
+            date_str = r.checked_at.strftime("%Y-%m-%d")
+            state.save_diff(page.id, date_str, r.diff)
+            state.save(page.id, r.current_hash, r.new_text)
             date_str = datetime.now(ROME_TZ).strftime("%Y-%m-%d")
             items.append(
                 Item(

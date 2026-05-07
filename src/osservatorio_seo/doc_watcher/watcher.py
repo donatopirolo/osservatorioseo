@@ -117,9 +117,9 @@ class DocWatcher:
             1 for line in diff_lines if line.startswith("-") and not line.startswith("---")
         )
 
-        date_str = now.strftime("%Y-%m-%d")
-        self._state.save_diff(page.id, date_str, diff)
-        self._state.save(page.id, current_hash, new_text)
+        # NB: su significant change NON salviamo lo state qui. Il commit
+        # avviene in pipeline.py solo dopo che il summarizer ha avuto
+        # successo, per evitare di "consumare" il diff in caso di fail.
 
         return DocChangeResult(
             page_id=page.id,
