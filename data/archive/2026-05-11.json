@@ -1,37 +1,45 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-11T05:01:53.103676Z",
-  "generated_at_local": "2026-05-11T07:01:53.103676+02:00",
+  "generated_at": "2026-05-11T06:01:58.716645Z",
+  "generated_at_local": "2026-05-11T08:01:58.716645+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-11-0701",
+  "run_id": "2026-05-11-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1982,
-    "items_after_dedup": 2,
+    "items_collected": 1984,
+    "items_after_dedup": 4,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0002,
-    "summarize_attempted": 2,
+    "ai_cost_eur": 0.0004,
+    "summarize_attempted": 4,
     "summarize_failed": 0
   },
   "top10": [
     "item_2026-05-11_001",
-    "item_2026-05-11_002"
+    "item_2026-05-11_003",
+    "item_2026-05-11_002",
+    "item_2026-05-11_004"
   ],
   "categories": {
     "google_updates": [
       "item_2026-05-11_001"
     ],
+    "ai_models": [
+      "item_2026-05-11_003"
+    ],
     "ai_overviews_llm_seo": [
       "item_2026-05-11_002"
+    ],
+    "industry_news": [
+      "item_2026-05-11_004"
     ]
   },
   "items": [
     {
       "id": "item_2026-05-11_001",
       "title_original": "Google Drops FAQ Rich Results From Search via @sejournal, @MattGSouthern",
-      "title_it": "Google rimuove i risultati avanzati FAQ dalla ricerca",
-      "summary_it": "Google ha definitivamente rimosso i rich result FAQ dai risultati di ricerca. La rimozione era iniziata anni fa e, di fatto, la visualizzazione era già limitata alla maggior parte dei siti. Questa modifica impatta la visibilità di contenuti che sfruttavano questo tipo di markup.",
+      "title_it": "Google rimuove i risultati rich FAQ dalla ricerca",
+      "summary_it": "Google ha ufficialmente deprecato i rich result FAQ, completando un processo di rimozione iniziato anni fa. La visualizzazione dei risultati rich FAQ era già stata limitata per la maggior parte dei siti web. Questa modifica impatta la visibilità di contenuti che sfruttavano questo tipo di markup.",
       "url": "https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429",
       "source": {
         "id": "search_engine_journal",
@@ -47,13 +55,13 @@
       },
       "category": "google_updates",
       "tags": [
-        "faq_schema",
         "rich_result",
+        "faq",
         "structured_data"
       ],
       "importance": 4,
       "published_at": "2026-05-10T07:54:15Z",
-      "fetched_at": "2026-05-11T05:03:13.782127Z",
+      "fetched_at": "2026-05-11T06:03:21.369292Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -65,7 +73,7 @@
       "id": "item_2026-05-11_002",
       "title_original": "Google’s UCP Update: Carts, Catalogs, And Loyalty In AI Shopping via @sejournal, @slobodanmanic",
       "title_it": "Aggiornamento UCP di Google: carrelli, cataloghi e loyalty nell'AI shopping",
-      "summary_it": "Google sta integrando funzionalità di carrello, catalogo e loyalty nei suoi sistemi di AI shopping tramite l'aggiornamento UCP (Unified Commerce Platform). Questo indica un passaggio dalla fase di sperimentazione all'integrazione dell'infrastruttura di commercio guidata dall'AI nei sistemi retail esistenti. L'obiettivo è migliorare l'esperienza di acquisto tramite intelligenza artificiale.",
+      "summary_it": "Google sta integrando funzionalità di carrello, catalogo e programmi fedeltà all'interno della sua infrastruttura di AI shopping (UCP). Questo aggiornamento indica un passaggio dalla fase di sperimentazione all'integrazione di sistemi di commercio basati su AI nei sistemi di vendita al dettaglio esistenti. L'obiettivo è migliorare l'esperienza di acquisto tramite intelligenza artificiale.",
       "url": "https://www.searchenginejournal.com/googles-ucp-update-carts-catalogs-and-loyalty-in-ai-shopping/571496",
       "source": {
         "id": "search_engine_journal",
@@ -82,105 +90,175 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "google_shopping",
-        "unified_commerce_platform",
-        "ai_commerce",
+        "ai_shopping",
+        "ucp",
         "e_commerce"
       ],
       "importance": 3,
       "published_at": "2026-05-10T11:00:07Z",
-      "fetched_at": "2026-05-11T05:03:15.135452Z",
+      "fetched_at": "2026-05-11T06:03:22.939414Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
       "raw_hash": "sha256:de0ffe9793b2604b",
       "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-11_003",
+      "title_original": "How enterprises are scaling AI",
+      "title_it": "Come le aziende stanno scalando l'Intelligenza Artificiale",
+      "summary_it": "OpenAI ha pubblicato una guida su come le aziende possono scalare l'implementazione dell'AI, passando dagli esperimenti iniziali a un impatto significativo. La guida si concentra su fiducia, governance, design del flusso di lavoro e qualità su larga scala. L'articolo mira a fornire risorse per le imprese che cercano di integrare l'AI in modo efficace.",
+      "url": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "enterprise_ai",
+        "ai_implementation",
+        "openai",
+        "ai_governance"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T09:00:00Z",
+      "fetched_at": "2026-05-11T06:03:24.190492Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:82caf9fddf3383bf",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-11_004",
+      "title_original": "OpenAI Campus Network: Student club interest form",
+      "title_it": "OpenAI lancia un network di club studenteschi universitari sull'AI",
+      "summary_it": "OpenAI ha annunciato la creazione di un network di club studenteschi universitari focalizzati sull'intelligenza artificiale. L'iniziativa mira a connettere studenti a livello globale, fornire accesso a strumenti AI e supportare l'organizzazione di eventi a tema. È disponibile un form per manifestare interesse nell'adesione.",
+      "url": "https://openai.com/index/openai-campus-network-student-club-interest-form",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "openai",
+        "ai",
+        "education",
+        "student_club"
+      ],
+      "importance": 2,
+      "published_at": "2026-05-11T09:00:00Z",
+      "fetched_at": "2026-05-11T06:03:25.453320Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:34752f28b493d0c0",
+      "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-11T05:01:58.640913Z",
+      "last_checked": "2026-05-11T06:02:04.756796Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-11T05:01:58.908265Z",
+      "last_checked": "2026-05-11T06:02:05.568918Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-11T05:02:01.146751Z",
+      "last_checked": "2026-05-11T06:02:06.348232Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-11T05:02:29.359066Z",
+      "last_checked": "2026-05-11T06:02:36.199387Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-11T05:02:29.623638Z",
+      "last_checked": "2026-05-11T06:02:36.550694Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-11T05:02:30.818723Z",
+      "last_checked": "2026-05-11T06:02:37.907031Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-11T05:02:31.833271Z",
+      "last_checked": "2026-05-11T06:02:39.400304Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-11T05:02:33.832568Z",
+      "last_checked": "2026-05-11T06:02:40.564776Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-11T05:02:33.872699Z",
+      "last_checked": "2026-05-11T06:02:40.597125Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-11T05:02:36.893685Z",
+      "last_checked": "2026-05-11T06:02:40.847492Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-11T05:02:37.254311Z",
+      "last_checked": "2026-05-11T06:02:41.735615Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-11T05:02:38.449887Z",
+      "last_checked": "2026-05-11T06:02:43.372191Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-11T05:02:39.957108Z",
+      "last_checked": "2026-05-11T06:02:45.019945Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-11T05:02:41.495965Z",
+      "last_checked": "2026-05-11T06:02:46.788330Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-11T05:02:43.276065Z",
+      "last_checked": "2026-05-11T06:02:48.165656Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-11T05:02:44.495875Z",
+      "last_checked": "2026-05-11T06:02:50.036290Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-11T05:03:12.051984Z",
+      "last_checked": "2026-05-11T06:03:19.666219Z",
       "changed": false
     }
   ],
