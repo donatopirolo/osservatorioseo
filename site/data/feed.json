@@ -1,114 +1,140 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-11T06:01:58.716645Z",
-  "generated_at_local": "2026-05-11T08:01:58.716645+02:00",
+  "generated_at": "2026-05-12T05:01:53.418608Z",
+  "generated_at_local": "2026-05-12T07:01:53.418608+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-11-0801",
+  "run_id": "2026-05-12-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1984,
-    "items_after_dedup": 4,
+    "items_collected": 1985,
+    "items_after_dedup": 19,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0004,
-    "summarize_attempted": 4,
+    "ai_cost_eur": 0.0022,
+    "summarize_attempted": 19,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-11_001",
-    "item_2026-05-11_003",
-    "item_2026-05-11_002",
-    "item_2026-05-11_004"
+    "item_2026-05-12_006",
+    "item_2026-05-12_008",
+    "item_2026-05-12_010",
+    "item_2026-05-12_015",
+    "item_2026-05-12_003",
+    "item_2026-05-12_012",
+    "item_2026-05-12_019",
+    "item_2026-05-12_016",
+    "item_2026-05-12_005",
+    "item_2026-05-12_011"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-05-11_001"
+      "item_2026-05-12_006",
+      "item_2026-05-12_008",
+      "item_2026-05-12_010",
+      "item_2026-05-12_015"
     ],
     "ai_models": [
-      "item_2026-05-11_003"
+      "item_2026-05-12_003",
+      "item_2026-05-12_012"
     ],
-    "ai_overviews_llm_seo": [
-      "item_2026-05-11_002"
+    "technical_seo": [
+      "item_2026-05-12_019",
+      "item_2026-05-12_013",
+      "item_2026-05-12_017",
+      "item_2026-05-12_018"
     ],
     "industry_news": [
-      "item_2026-05-11_004"
+      "item_2026-05-12_016",
+      "item_2026-05-12_002",
+      "item_2026-05-12_007",
+      "item_2026-05-12_014",
+      "item_2026-05-12_004",
+      "item_2026-05-12_009"
+    ],
+    "tools_platforms": [
+      "item_2026-05-12_005"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-05-12_011",
+      "item_2026-05-12_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-11_001",
-      "title_original": "Google Drops FAQ Rich Results From Search via @sejournal, @MattGSouthern",
-      "title_it": "Google rimuove i risultati rich FAQ dalla ricerca",
-      "summary_it": "Google ha ufficialmente deprecato i rich result FAQ, completando un processo di rimozione iniziato anni fa. La visualizzazione dei risultati rich FAQ era già stata limitata per la maggior parte dei siti web. Questa modifica impatta la visibilità di contenuti che sfruttavano questo tipo di markup.",
-      "url": "https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429",
+      "id": "item_2026-05-12_001",
+      "title_original": "11 ways to use AI for SEO (+best practices & challenges)",
+      "title_it": "11 modi per utilizzare l'AI per la SEO: best practice e sfide",
+      "summary_it": "Semrush ha pubblicato un articolo che esplora undici applicazioni pratiche dell'intelligenza artificiale per l'ottimizzazione SEO. L'articolo include esempi concreti, prompt pronti all'uso e best practice operative. Vengono inoltre discusse le sfide associate all'implementazione dell'AI in ambito SEO.",
+      "url": "https://www.semrush.com/blog/ai-seo",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://www.semrush.com/blog/feed/",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "rich_result",
-        "faq",
-        "structured_data"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-10T07:54:15Z",
-      "fetched_at": "2026-05-11T06:03:21.369292Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:55cca21388dd7fab",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-11_002",
-      "title_original": "Google’s UCP Update: Carts, Catalogs, And Loyalty In AI Shopping via @sejournal, @slobodanmanic",
-      "title_it": "Aggiornamento UCP di Google: carrelli, cataloghi e loyalty nell'AI shopping",
-      "summary_it": "Google sta integrando funzionalità di carrello, catalogo e programmi fedeltà all'interno della sua infrastruttura di AI shopping (UCP). Questo aggiornamento indica un passaggio dalla fase di sperimentazione all'integrazione di sistemi di commercio basati su AI nei sistemi di vendita al dettaglio esistenti. L'obiettivo è migliorare l'esperienza di acquisto tramite intelligenza artificiale.",
-      "url": "https://www.searchenginejournal.com/googles-ucp-update-carts-catalogs-and-loyalty-in-ai-shopping/571496",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "tools_platforms",
         "enabled": true
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "google_shopping",
-        "ai_shopping",
-        "ucp",
-        "e_commerce"
+        "ai",
+        "seo",
+        "semrush",
+        "best_practice"
       ],
       "importance": 3,
-      "published_at": "2026-05-10T11:00:07Z",
-      "fetched_at": "2026-05-11T06:03:22.939414Z",
+      "published_at": "2026-05-11T06:50:00Z",
+      "fetched_at": "2026-05-12T05:03:14.090083Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:de0ffe9793b2604b",
+      "raw_hash": "sha256:ba3ee83df00ea591",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-11_003",
+      "id": "item_2026-05-12_002",
+      "title_original": "Google Ads Will Limit Access To Older Reporting Data via @sejournal, @martinibuster",
+      "title_it": "Google Ads limiterà l'accesso ai dati di reporting meno recenti",
+      "summary_it": "Google Ads introdurrà nuove limitazioni all'accesso ai dati di reporting storici, sia tramite l'interfaccia utente che le API. Questa modifica impatterà la capacità degli inserzionisti di analizzare dati meno recenti direttamente dalla piattaforma.",
+      "url": "https://www.searchenginejournal.com/google-ads-will-limit-access-to-older-reporting-data/574467",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "reporting",
+        "data_access",
+        "api"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T08:39:41Z",
+      "fetched_at": "2026-05-12T05:03:15.249941Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:27d3f5fae3b399d2",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_003",
       "title_original": "How enterprises are scaling AI",
       "title_it": "Come le aziende stanno scalando l'Intelligenza Artificiale",
-      "summary_it": "OpenAI ha pubblicato una guida su come le aziende possono scalare l'implementazione dell'AI, passando dagli esperimenti iniziali a un impatto significativo. La guida si concentra su fiducia, governance, design del flusso di lavoro e qualità su larga scala. L'articolo mira a fornire risorse per le imprese che cercano di integrare l'AI in modo efficace.",
+      "summary_it": "OpenAI ha pubblicato una guida su come le aziende possono scalare l'implementazione dell'AI, passando dagli esperimenti iniziali a un impatto significativo. La guida si concentra su fiducia, governance, design del flusso di lavoro e qualità su larga scala. L'obiettivo è aiutare le imprese a massimizzare il valore dell'AI.",
       "url": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
       "source": {
         "id": "openai_blog",
@@ -124,14 +150,14 @@
       },
       "category": "ai_models",
       "tags": [
+        "ai_adoption",
         "enterprise_ai",
-        "ai_implementation",
         "openai",
-        "ai_governance"
+        "workflow_automation"
       ],
       "importance": 3,
       "published_at": "2026-05-11T09:00:00Z",
-      "fetched_at": "2026-05-11T06:03:24.190492Z",
+      "fetched_at": "2026-05-12T05:03:16.634271Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -140,7 +166,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-11_004",
+      "id": "item_2026-05-12_004",
       "title_original": "OpenAI Campus Network: Student club interest form",
       "title_it": "OpenAI lancia un network di club studenteschi universitari sull'AI",
       "summary_it": "OpenAI ha annunciato la creazione di un network di club studenteschi universitari focalizzati sull'intelligenza artificiale. L'iniziativa mira a connettere studenti a livello globale, fornire accesso a strumenti AI e supportare l'organizzazione di eventi a tema. È disponibile un form per manifestare interesse nell'adesione.",
@@ -166,99 +192,622 @@
       ],
       "importance": 2,
       "published_at": "2026-05-11T09:00:00Z",
-      "fetched_at": "2026-05-11T06:03:25.453320Z",
+      "fetched_at": "2026-05-12T05:03:18.022365Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
       "raw_hash": "sha256:34752f28b493d0c0",
       "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_005",
+      "title_original": "Google Tag Manager May Be Coming To Google Ads Interface",
+      "title_it": "Google Tag Manager potrebbe integrarsi nell'interfaccia di Google Ads",
+      "summary_it": "Google sta potenzialmente integrando Google Tag Manager direttamente nell'interfaccia di Google Ads. Questa integrazione potrebbe semplificare la configurazione e la gestione dei tag senza dover uscire dalla piattaforma pubblicitaria. L'integrazione include una nuova interfaccia utente.",
+      "url": "https://www.seroundtable.com/google-tag-manager-to-google-ads-41296.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_tag_manager",
+        "google_ad",
+        "tag_management",
+        "marketing_automation"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T10:11:00Z",
+      "fetched_at": "2026-05-12T05:03:19.068491Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:83bece083a4c6244",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_006",
+      "title_original": "Google Merchant Center Gains More Out-of-Stock Options",
+      "title_it": "Google Merchant Center: nuove opzioni per la gestione dei prodotti esauriti",
+      "summary_it": "Google ha aggiornato la documentazione di Merchant Center relativa ai requisiti delle landing page, offrendo più flessibilità nella gestione dei prodotti non disponibili. Ora è possibile utilizzare testo esplicito come \"sold out\" o disabilitare opzioni specifiche nelle griglie di selezione, oltre al tradizionale pulsante oscurato.",
+      "url": "https://www.seroundtable.com/google-merchant-center-more-out-of-stock-41295.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_merchant_center",
+        "out_of_stock",
+        "ecommerce",
+        "product_feed"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T10:21:00Z",
+      "fetched_at": "2026-05-12T05:03:20.535281Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:074c81d5a681fa2f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_007",
+      "title_original": "I Helped Build Google’s Keyword System. Here’s Why It’s Becoming Obsolete via @sejournal, @siliconvallaeys",
+      "title_it": "Un creatore del sistema di keyword di Google spiega perché sta diventando obsoleto",
+      "summary_it": "Secondo un ex membro del team di Google, i sistemi basati sull'intelligenza artificiale stanno ridefinendo il targeting nel PPC, spostando l'attenzione dalle parole chiave all'intento dell'utente, alla qualità dei dati e alle performance post-click. Questo cambiamento implica una necessità di adattamento per i professionisti del marketing.",
+      "url": "https://www.searchenginejournal.com/i-helped-build-googles-keyword-system-heres-why-its-becoming-obsolete/572362",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ppc",
+        "keyword",
+        "artificial_intelligence",
+        "google_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T10:30:56Z",
+      "fetched_at": "2026-05-12T05:03:21.854149Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:dc4d18a783834de0",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_008",
+      "title_original": "Google Vehicle Ads Now In Standard Shopping Campaigns",
+      "title_it": "Google integra gli annunci di veicoli nelle campagne Shopping standard",
+      "summary_it": "Google ha esteso la possibilità di utilizzare gli annunci di veicoli alle campagne Shopping standard. In precedenza, questa funzionalità era disponibile solo tramite Performance Max per gli annunci di veicoli. È stata pubblicata una guida per configurare questa opzione.",
+      "url": "https://www.seroundtable.com/google-vehicle-ads-standard-shopping-campaigns-41263.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "shopping_campaign",
+        "vehicle_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T10:31:00Z",
+      "fetched_at": "2026-05-12T05:03:23.055598Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:fdf2c123e233941a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_009",
+      "title_original": "Google Ads Posts Site Visits Assets Documentation",
+      "title_it": "Google Ads: Documentazione ufficiale per gli asset \"Visite al sito\"",
+      "summary_it": "Google Ads ha rilasciato la documentazione ufficiale per gli asset \"Visite al sito\", una funzionalità che mostra il numero di visite ricevute da un sito web direttamente negli annunci. Per essere idonei, i domini devono aver accumulato almeno 10.000 clic negli ultimi 30 giorni e rispettare le policy di Google Ads.",
+      "url": "https://www.seroundtable.com/google-ads-site-visits-assets-docs-41297.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "site_visit",
+        "ads_asset"
+      ],
+      "importance": 2,
+      "published_at": "2026-05-11T10:41:00Z",
+      "fetched_at": "2026-05-12T05:03:24.225936Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b43419260609effa",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_010",
+      "title_original": "Google Search Drops FAQ Rich Results In Search & Search Console",
+      "title_it": "Google rimuove i risultati rich FAQ dalla Ricerca e da Search Console",
+      "summary_it": "Google ha interrotto la visualizzazione dei risultati rich FAQ nella Ricerca a partire dal 7 maggio 2026. Inoltre, Google rimuoverà i report relativi alle FAQ da Search Console e dalle relative API nei prossimi mesi. John Mueller ha specificato che l'impatto sarà limitato, dato che erano usati solo per una piccola parte di siti.",
+      "url": "https://www.seroundtable.com/google-drops-faq-rich-results-41298.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "faq_rich_result",
+        "structured_data",
+        "google_search_console",
+        "search_appearance"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T10:51:00Z",
+      "fetched_at": "2026-05-12T05:03:25.791485Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:858950f83f8ad514",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_011",
+      "title_original": "The Consensus Gap",
+      "title_it": "Il divario di consenso nell'AI Search",
+      "summary_it": "Kevin Indig evidenzia come le citazioni e le menzioni non appaiano uniformemente nei diversi motori di ricerca basati su LLM. L'articolo esplora le implicazioni di questa discrepanza per la SEO e la visibilità online. Viene sottolineata l'importanza di considerare la diversità delle fonti e la loro ponderazione nei vari sistemi di AI Search.",
+      "url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_search",
+        "llm",
+        "search_engine",
+        "citation"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T11:00:09Z",
+      "fetched_at": "2026-05-12T05:03:27.305508Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b1511f07cfa54c8e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_012",
+      "title_original": "How We Use AI To Run A 90-Day Growth Audit",
+      "title_it": "Come utilizzare l'AI per condurre un audit di crescita di 90 giorni",
+      "summary_it": "L'articolo esplora come l'intelligenza artificiale possa accelerare gli audit di crescita, trasformando analisi manuali complesse in roadmap operative trimestrali. L'approccio mira a privilegiare l'esecuzione rispetto alla documentazione estensiva. Non vengono forniti dettagli tecnici specifici sull'implementazione.",
+      "url": "https://www.searchenginejournal.com/how-we-use-ai-to-run-a-90-day-growth-audit/572458",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "ai",
+        "growth_hacking",
+        "audit",
+        "automation"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T11:00:30Z",
+      "fetched_at": "2026-05-12T05:03:28.547652Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:477f0e65f7f4626a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_013",
+      "title_original": "Schema Markup: What It Is & How to Implement It",
+      "title_it": "Schema Markup: cos'è e come implementarlo",
+      "summary_it": "Ahrefs pubblica una guida completa sullo schema markup, spiegando cos'è, perché è importante per la SEO e come implementarlo correttamente. L'articolo fornisce esempi di codice e best practice per aiutare i professionisti SEO a sfruttare al meglio i dati strutturati.",
+      "url": "https://ahrefs.com/blog/schema-markup",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "structured_data",
+        "technical_seo",
+        "ahref"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T12:00:07Z",
+      "fetched_at": "2026-05-12T05:03:29.922884Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:89071f61eff1c338",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_014",
+      "title_original": "Google’s AI Announcements Are Events, The New Search User Is The Trend via @sejournal, @gregjarboe",
+      "title_it": "Le comunicazioni sull'AI di Google sono eventi, il nuovo utente della ricerca è il trend",
+      "summary_it": "L'articolo sottolinea l'importanza di monitorare i cambiamenti nel comportamento degli utenti di ricerca, piuttosto che concentrarsi esclusivamente sugli annunci di Google relativi all'intelligenza artificiale. Comprendere come gli utenti interagiscono con la ricerca è fondamentale per adattare le strategie SEO.",
+      "url": "https://www.searchenginejournal.com/googles-ai-announcements-are-events-the-new-search-user-is-the-trend/573922",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ai",
+        "user_behavior",
+        "search_trend",
+        "google"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T12:00:11Z",
+      "fetched_at": "2026-05-12T05:03:31.000268Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:8d220af3abbcf8b8",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_015",
+      "title_original": "Daily Search Forum Recap: May 11, 2026",
+      "title_it": "Riepilogo giornaliero dei forum di ricerca: 11 maggio 2026",
+      "summary_it": "Google ha interrotto il supporto per i rich result FAQ. Sono stati documentati ufficialmente gli asset \"visite al sito\" di Google Ads. Google Merchant Center ha aggiunto più opzioni per i prodotti fuori stock e Google Tag Manager potrebbe essere integrato nell'interfaccia di Google Ads. Gli annunci di veicoli di Google ora supportano le campagne Shopping standard.",
+      "url": "https://www.seroundtable.com/recap-05-11-2026-41300.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "faq_rich_result",
+        "google_ad",
+        "google_merchant_center",
+        "google_tag_manager",
+        "vehicle_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T13:00:00Z",
+      "fetched_at": "2026-05-12T05:03:32.355724Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:d7990e05a2685def",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_016",
+      "title_original": "How ChatGPT adoption broadened in early 2026",
+      "title_it": "Aumento dell'adozione di ChatGPT all'inizio del 2026",
+      "summary_it": "Nel primo trimestre del 2026 si è registrato un incremento nell'utilizzo di ChatGPT. La crescita più significativa si è osservata tra gli utenti con più di 35 anni, con una distribuzione di genere più equilibrata. Questi dati suggeriscono una maggiore diffusione dell'intelligenza artificiale nel mercato di massa.",
+      "url": "https://openai.com/signals/research/2026q1-update",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "chatgpt",
+        "ai_adoption",
+        "market_trend",
+        "openai"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T14:00:00Z",
+      "fetched_at": "2026-05-12T05:03:33.505077Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:8edef1e5dcc7451c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_017",
+      "title_original": "We Tracked 1,885 Pages Adding Schema. AI Citations Barely Moved.",
+      "title_it": "Ahrefs analizza l'impatto dello schema markup sulle citazioni AI: risultati preliminari",
+      "summary_it": "Ahrefs ha monitorato quasi 1900 pagine che hanno implementato schema markup, riscontrando che le pagine citate dall'AI hanno quasi tre volte più probabilità di utilizzare JSON-LD rispetto a quelle non citate. L'analisi suggerisce una correlazione tra l'uso di schema e la visibilità nelle citazioni generate dall'intelligenza artificiale, sebbene la causalità non sia dimostrata. Ulteriori approfondimenti sono necessari per comprendere appieno la relazione.",
+      "url": "https://ahrefs.com/blog/schema-ai-citations",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "structured_data",
+        "json_ld",
+        "ai_citation",
+        "ahref"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T15:36:19Z",
+      "fetched_at": "2026-05-12T05:03:35.166484Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:c776b32ed44b7e58",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_018",
+      "title_original": "Schema Markup Didn’t Move AI Citations In Ahrefs Test via @sejournal, @MattGSouthern",
+      "title_it": "Test di Ahrefs: l'aggiunta di markup Schema non ha influenzato le citazioni AI",
+      "summary_it": "Un report di Ahrefs ha valutato se l'aggiunta di markup schema a pagine già citate da sistemi di intelligenza artificiale ne aumentasse il tasso di citazione. I risultati indicano che il markup schema non ha avuto un impatto significativo sulle citazioni AI nel contesto del test.",
+      "url": "https://www.searchenginejournal.com/schema-markup-didnt-move-ai-citations-in-ahrefs-test/574568",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "structured_data",
+        "ai_citation",
+        "ahref",
+        "technical_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-11T20:06:10Z",
+      "fetched_at": "2026-05-12T05:03:36.345296Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:c81c488283ea9808",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-12_019",
+      "title_original": "The Tech SEO Audit for the AI Search Era: How to Maximize Your AI Visibility via @sejournal, @JetOctopus",
+      "title_it": "Audit SEO tecnico per l'era della ricerca AI: come massimizzare la visibilità AI",
+      "summary_it": "Search Engine Journal pubblica una guida sull'audit SEO tecnico focalizzato sull'ottimizzazione per la visibilità nell'era della ricerca basata sull'intelligenza artificiale. L'articolo mira a fornire strategie per adattare i siti web alle future tendenze di ricerca e migliorare le pratiche SEO tecniche esistenti. L'articolo è sponsorizzato da JetOctopus.",
+      "url": "https://www.searchenginejournal.com/technical-ai-seo-audit-jetoctopus-spa/572262",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "technical_seo",
+        "ai_seo",
+        "jetoctopus",
+        "site_audit"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-12T04:00:15Z",
+      "fetched_at": "2026-05-12T05:03:37.746739Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:c842074742fe2443",
+      "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-11T06:02:04.756796Z",
+      "last_checked": "2026-05-12T05:01:58.035840Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-11T06:02:05.568918Z",
+      "last_checked": "2026-05-12T05:01:58.386437Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-11T06:02:06.348232Z",
+      "last_checked": "2026-05-12T05:01:59.576809Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-11T06:02:36.199387Z",
+      "last_checked": "2026-05-12T05:02:29.186355Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-11T06:02:36.550694Z",
+      "last_checked": "2026-05-12T05:02:29.443238Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-11T06:02:37.907031Z",
+      "last_checked": "2026-05-12T05:02:31.469604Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-11T06:02:39.400304Z",
+      "last_checked": "2026-05-12T05:02:33.382829Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-11T06:02:40.564776Z",
+      "last_checked": "2026-05-12T05:02:34.095160Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-11T06:02:40.597125Z",
+      "last_checked": "2026-05-12T05:02:34.138482Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-11T06:02:40.847492Z",
+      "last_checked": "2026-05-12T05:02:34.853269Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-11T06:02:41.735615Z",
+      "last_checked": "2026-05-12T05:02:35.789748Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-11T06:02:43.372191Z",
+      "last_checked": "2026-05-12T05:02:37.720555Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-11T06:02:45.019945Z",
+      "last_checked": "2026-05-12T05:02:39.456702Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-11T06:02:46.788330Z",
+      "last_checked": "2026-05-12T05:02:40.889187Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-11T06:02:48.165656Z",
+      "last_checked": "2026-05-12T05:02:41.766228Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-11T06:02:50.036290Z",
+      "last_checked": "2026-05-12T05:02:42.965263Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-11T06:03:19.666219Z",
+      "last_checked": "2026-05-12T05:03:12.020149Z",
       "changed": false
     }
   ],
