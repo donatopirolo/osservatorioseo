@@ -1,145 +1,64 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-13T05:01:54.002752Z",
-  "generated_at_local": "2026-05-13T07:01:54.002752+02:00",
+  "generated_at": "2026-05-13T06:04:23.332931Z",
+  "generated_at_local": "2026-05-13T08:04:23.332931+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-13-0701",
+  "run_id": "2026-05-13-0804",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 1989,
-    "items_after_dedup": 14,
+    "items_after_dedup": 13,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0393,
-    "summarize_attempted": 14,
+    "ai_cost_eur": 0.0015,
+    "summarize_attempted": 13,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-13_001",
-    "item_2026-05-13_009",
-    "item_2026-05-13_013",
-    "item_2026-05-13_004",
-    "item_2026-05-13_005",
     "item_2026-05-13_008",
-    "item_2026-05-13_011",
-    "item_2026-05-13_002",
+    "item_2026-05-13_012",
     "item_2026-05-13_003",
-    "item_2026-05-13_006"
+    "item_2026-05-13_004",
+    "item_2026-05-13_007",
+    "item_2026-05-13_010",
+    "item_2026-05-13_002",
+    "item_2026-05-13_005",
+    "item_2026-05-13_009",
+    "item_2026-05-13_013"
   ],
   "categories": {
-    "technical_seo": [
-      "item_2026-05-13_001"
-    ],
     "google_updates": [
-      "item_2026-05-13_009",
-      "item_2026-05-13_007"
-    ],
-    "ai_models": [
-      "item_2026-05-13_013"
-    ],
-    "industry_news": [
-      "item_2026-05-13_004",
       "item_2026-05-13_008",
-      "item_2026-05-13_011",
-      "item_2026-05-13_003",
       "item_2026-05-13_006"
     ],
-    "tools_platforms": [
+    "ai_models": [
+      "item_2026-05-13_012"
+    ],
+    "industry_news": [
+      "item_2026-05-13_003",
+      "item_2026-05-13_007",
+      "item_2026-05-13_010",
+      "item_2026-05-13_002",
       "item_2026-05-13_005"
     ],
-    "ai_overviews_llm_seo": [
-      "item_2026-05-13_002",
-      "item_2026-05-13_014"
+    "tools_platforms": [
+      "item_2026-05-13_004"
     ],
     "content_eeat": [
-      "item_2026-05-13_010",
-      "item_2026-05-13_012"
+      "item_2026-05-13_009",
+      "item_2026-05-13_011"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-05-13_013",
+      "item_2026-05-13_001"
     ]
   },
   "items": [
     {
       "id": "item_2026-05-13_001",
-      "title_original": "Streamlined sign-in: Immediate UI mode is now available",
-      "title_it": "Accesso semplificato: disponibile la modalità UI immediata",
-      "summary_it": "Chrome 148 introduce la modalità UI immediata per le passkey e le password, con l'obiettivo di semplificare il processo di autenticazione degli utenti. Questa nuova modalità offre un'esperienza di richiesta delle credenziali più fluida e immediata. La modifica mira a migliorare l'usabilità e ridurre l'attrito nel processo di login.",
-      "url": "https://developer.chrome.com/blog/webauthn-immediate-ui?hl=en",
-      "source": {
-        "id": "chrome_developers_blog",
-        "name": "Chrome Developers Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://developer.chrome.com/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "chrome",
-        "webauthn",
-        "passkey",
-        "user_experience"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-12T06:00:00Z",
-      "fetched_at": "2026-05-13T05:03:15.539764Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:3b69e23444ad6ae9",
-      "deep_analysis": {
-        "detailed_description": "Chrome 148 introduce la modalità Immediate UI per passkey e password, modificando il flusso di autenticazione WebAuthn. La novità consente di mostrare il prompt di selezione delle credenziali senza richiedere un'interazione utente preliminare, riducendo il numero di clic necessari per completare il login.\n\nLa modalità tradizionale richiede che l'utente clicchi su un pulsante o un elemento della pagina prima che il browser mostri il selettore di credenziali. Con Immediate UI, il prompt appare automaticamente al caricamento della pagina o in momenti predefiniti dal sito, eliminando uno step intermedio. L'implementazione richiede l'aggiunta del parametro `mediation: 'conditional'` o l'utilizzo della nuova opzione `mediation: 'immediate'` nella chiamata `navigator.credentials.get()`.\n\nL'impatto principale riguarda i siti che gestiscono flussi di login con passkey o password salvate nel browser. Per chi ha già implementato autofill condizionale delle passkey, la transizione è minima: la nuova modalità estende il comportamento esistente rendendolo disponibile anche fuori dai campi input. I siti che non hanno ancora adottato WebAuthn possono sfruttare questa funzionalità per ridurre l'attrito nel processo di autenticazione, migliorando potenzialmente i tassi di conversione nelle pagine di login.\n\nLa modifica ha implicazioni dirette per l'esperienza utente su pagine critiche come checkout, aree riservate e form di registrazione. Un login più rapido può ridurre il bounce rate su pagine protette e aumentare il completamento di azioni che richiedono autenticazione. Per i siti e-commerce, ogni secondo risparmiato nel processo di login si traduce in una probabilità maggiore di completamento dell'acquisto.\n\nLa compatibilità è limitata a Chrome 148+ su desktop e Android. Safari e Firefox non supportano ancora questa modalità, quindi l'implementazione deve prevedere un fallback per browser non compatibili. La feature detection tramite `PublicKeyCredential.isConditionalMediationAvailable()` permette di verificare il supporto prima di attivare la modalità immediata.\n\nDal punto di vista SEO tecnico, la riduzione dell'attrito nel login impatta metriche comportamentali che Google considera segnali di qualità dell'esperienza: tempo di permanenza su pagine protette, profondità di navigazione post-login, e tasso di ritorno degli utenti autenticati. Un'implementazione corretta può migliorare i Core Web Vitals riducendo il Cumulative Layout Shift causato da popup di login tardivi o mal posizionati.",
-        "implications": [
-          "I siti con aree riservate o contenuti protetti possono ridurre il bounce rate sulle pagine di login eliminando uno step di interazione, con impatto diretto su metriche comportamentali tracciate da Google.",
-          "L'implementazione richiede verifica della compatibilità browser e fallback: Chrome 148+ supporta la feature, ma Safari e Firefox richiedono ancora il flusso tradizionale.",
-          "I siti e-commerce con checkout autenticato possono vedere un aumento del conversion rate riducendo l'attrito nel processo di login, con effetti indiretti su revenue per sessione e valore medio ordine.",
-          "La modalità Immediate UI può ridurre il CLS se implementata correttamente, evitando popup di login che appaiono dopo il caricamento iniziale della pagina e causano spostamenti di layout.",
-          "Per siti con contenuti premium o paywall, un login più fluido può aumentare il tempo di permanenza e la profondità di navigazione degli utenti autenticati, segnali positivi per il ranking."
-        ],
-        "examples": [
-          "Un sito di news con paywall implementa Immediate UI sulla pagina articolo: l'utente che clicca da SERP vede immediatamente il prompt di login con passkey salvata, completa l'autenticazione in un clic e accede al contenuto senza bounce. Il tempo medio sulla pagina passa da 8 secondi (bounce pre-login) a 2 minuti e 30 secondi (lettura completa).",
-          "Evitare di attivare Immediate UI su pagine pubbliche senza contenuti protetti: mostrare un prompt di login non richiesto su una landing page informativa aumenta il bounce rate e peggiora l'esperienza utente. Limitare l'implementazione a pagine dove l'autenticazione è necessaria o fortemente consigliata.",
-          "Un e-commerce B2B con catalogo riservato implementa la modalità su tutte le pagine prodotto: gli utenti registrati vedono il prompt al primo accesso della sessione, completano il login in automatico e navigano il catalogo senza interruzioni. Il tasso di abbandono carrello scende del 12% in tre mesi."
-        ],
-        "testing_steps": [
-          "Verifica il supporto browser aprendo Chrome DevTools → Console ed eseguendo `PublicKeyCredential.isConditionalMediationAvailable()` su una pagina di login del tuo sito.",
-          "Implementa la modalità Immediate UI su una pagina di login di staging aggiungendo `mediation: 'conditional'` alla chiamata `navigator.credentials.get()` e testa il comportamento con passkey salvate.",
-          "Monitora Google Analytics 4 → Eventi → Engagement per confrontare bounce rate e tempo medio sulla pagina tra utenti che vedono Immediate UI (Chrome 148+) e utenti con browser non compatibili.",
-          "Apri PageSpeed Insights e confronta il CLS della pagina di login prima e dopo l'implementazione, verificando che il prompt non causi layout shift tardivi.",
-          "Configura un A/B test in Google Optimize o piattaforma equivalente per misurare l'impatto su conversion rate del checkout tra gruppo con Immediate UI attivo e gruppo con flusso tradizionale.",
-          "Controlla Search Console → Esperienza → Core Web Vitals filtrando per URL di login e aree riservate, verificando miglioramenti in CLS e FID dopo il deploy."
-        ],
-        "faqs": [
-          {
-            "question": "L'implementazione di Immediate UI migliora direttamente il ranking su Google?",
-            "answer": "No, non esiste un fattore di ranking diretto legato a WebAuthn o Immediate UI. L'impatto è indiretto: un login più fluido riduce bounce rate e migliora metriche comportamentali (tempo sulla pagina, profondità di navigazione) che Google considera segnali di qualità dell'esperienza utente. L'effetto è misurabile su siti con contenuti protetti o checkout autenticato."
-          },
-          {
-            "question": "Devo implementare Immediate UI su tutte le pagine del sito?",
-            "answer": "No. Attiva la modalità solo su pagine dove l'autenticazione è necessaria o fortemente consigliata: login, checkout, aree riservate, contenuti premium. Mostrare un prompt di login su pagine pubbliche informative peggiora l'esperienza utente e aumenta il bounce rate, con effetti negativi su engagement e ranking."
-          },
-          {
-            "question": "Come gestisco i browser che non supportano Immediate UI?",
-            "answer": "Usa feature detection con `PublicKeyCredential.isConditionalMediationAvailable()` per verificare il supporto prima di attivare la modalità. Per browser non compatibili (Safari, Firefox, Chrome <148), mantieni il flusso di login tradizionale con pulsante esplicito. L'implementazione deve degradare gracefully senza rompere l'esperienza su browser legacy."
-          },
-          {
-            "question": "Immediate UI può causare problemi di CLS se implementato male?",
-            "answer": "Sì. Se il prompt appare dopo il rendering iniziale della pagina e sposta contenuti già visibili, causa Cumulative Layout Shift. Per evitarlo, riserva spazio per il prompt nel layout iniziale o attivalo prima del First Contentful Paint. Testa sempre con PageSpeed Insights e Chrome DevTools per verificare l'impatto su Core Web Vitals."
-          }
-        ],
-        "editorial_commentary": "Questa feature ha un impatto SEO misurabile solo su una categoria ristretta di siti: e-commerce con checkout autenticato, publisher con paywall, piattaforme SaaS con contenuti protetti. Se gestisci un sito informativo senza aree riservate, ignorala completamente. L'implementazione ha senso solo dove l'autenticazione è un passaggio obbligato nel funnel di conversione.\n\nL'aspetto interessante è l'impatto indiretto su metriche comportamentali. Un login che richiede un clic in meno può sembrare marginale, ma su volumi alti la differenza tra 15% e 12% di bounce rate su pagine di checkout si traduce in migliaia di conversioni recuperate. Google non premierà direttamente WebAuthn, ma premierà i segnali di engagement che ne derivano.\n\nAttenzione al rischio di sovra-implementazione: attivare prompt di login non richiesti su pagine pubbliche è un errore che peggiora l'esperienza utente più di quanto la migliori. Testa sempre l'impatto su bounce rate e CLS prima di estendere la feature oltre le pagine strettamente necessarie.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.037743
-      }
-    },
-    {
-      "id": "item_2026-05-13_002",
       "title_original": "The 90-Day AI Search Sprint: How To Rebuild Your Marketing For 2026 Visibility via @sejournal, @hethr_campbell",
-      "title_it": "Sprint di 90 giorni per la ricerca AI: come ricostruire il marketing per la visibilità nel 2026",
-      "summary_it": "Search Engine Journal propone un piano di 90 giorni per migliorare la visibilità del brand nelle ricerche basate sull'intelligenza artificiale. L'articolo suggerisce strategie per adattare il marketing alle nuove modalità di ricerca emergenti.",
+      "title_it": "Sprint AI di 90 giorni: come riorganizzare il marketing per la visibilità nel 2026",
+      "summary_it": "Search Engine Journal propone un piano di 90 giorni per adattare le strategie di marketing alla ricerca potenziata dall'intelligenza artificiale, con l'obiettivo di migliorare la visibilità del brand nel 2026. L'articolo fornisce una panoramica di alto livello, senza dettagli tecnici specifici.",
       "url": "https://www.searchenginejournal.com/the-90-day-ai-search-sprint-how-to-rebuild-your-marketing-for-2026-visibility-recap/574396",
       "source": {
         "id": "search_engine_journal",
@@ -155,13 +74,13 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "ai_search",
-        "marketing_strategy",
-        "search_engine_journal"
+        "ai_marketing",
+        "search_visibility",
+        "future_of_seo"
       ],
-      "importance": 3,
+      "importance": 2,
       "published_at": "2026-05-12T06:45:49Z",
-      "fetched_at": "2026-05-13T05:03:16.890576Z",
+      "fetched_at": "2026-05-13T06:05:50.066108Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -170,10 +89,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_003",
+      "id": "item_2026-05-13_002",
       "title_original": "The Consensus Gap via @sejournal, @Kevin_Indig",
       "title_it": "Il divario di consenso tra i motori di ricerca e le dashboard AI",
-      "summary_it": "Un brand può apparire dominante in una dashboard AI aggregata ma risultare invisibile in due motori di ricerca su tre. L'articolo presenta dati a supporto di questa discrepanza, evidenziando la necessità di valutare la visibilità su diverse piattaforme e non solo su aggregatori.",
+      "summary_it": "Un brand può apparire dominante in una dashboard AI aggregata, ma risultare invisibile in due motori di ricerca su tre. L'articolo presenta dati a supporto di questa discrepanza, evidenziando la necessità di valutare la visibilità su diverse piattaforme.",
       "url": "https://www.searchenginejournal.com/the-consensus-gap/574534",
       "source": {
         "id": "search_engine_journal",
@@ -196,7 +115,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T08:30:46Z",
-      "fetched_at": "2026-05-13T05:03:18.674406Z",
+      "fetched_at": "2026-05-13T06:05:51.825962Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -205,10 +124,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_004",
+      "id": "item_2026-05-13_003",
       "title_original": "Google Ads Certification Process Updated For Crypto",
       "title_it": "Aggiornamento del processo di certificazione Google Ads per le criptovalute",
-      "summary_it": "Google ha aggiornato il processo di certificazione di Google Ads per diverse criptovalute e prodotti finanziari speculativi complessi. A partire da maggio 2026, tutti gli inserzionisti potranno richiedere le certificazioni direttamente nel loro account Google Ads, eliminando la necessità di richiederle tramite il Centro assistenza di Google Ads.",
+      "summary_it": "Google ha aggiornato il processo di certificazione di Google Ads per diverse criptovalute e prodotti finanziari speculativi complessi. A partire da maggio 2026, tutti gli inserzionisti potranno richiedere le certificazioni direttamente nel loro account Google Ads, eliminando la necessità di fare domanda tramite il Centro assistenza di Google Ads.",
       "url": "https://www.seroundtable.com/google-ads-certification-cryptocurrency-41256.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -231,7 +150,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T10:11:00Z",
-      "fetched_at": "2026-05-13T05:03:20.145071Z",
+      "fetched_at": "2026-05-13T06:05:53.197266Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -240,7 +159,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_005",
+      "id": "item_2026-05-13_004",
       "title_original": "PSA: Bing Webmaster Tools Does Not Distinguish Between http and https",
       "title_it": "Bing Webmaster Tools non distingue tra HTTP e HTTPS",
       "summary_it": "Bing Webmaster Tools considera le versioni HTTP e HTTPS di un sito web come la stessa proprietà. A differenza di Google Search Console, non è possibile configurare proprietà separate per ciascuna variante. Questa informazione è stata ribadita da Krishna Madhavan del team di Bing Webmaster Tools su LinkedIn.",
@@ -260,11 +179,12 @@
       "category": "tools_platforms",
       "tags": [
         "bing_webmaster_tool",
-        "http"
+        "http",
+        "technical_seo"
       ],
       "importance": 3,
       "published_at": "2026-05-12T10:21:00Z",
-      "fetched_at": "2026-05-13T05:03:21.505106Z",
+      "fetched_at": "2026-05-13T06:05:54.985383Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -273,10 +193,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_006",
+      "id": "item_2026-05-13_005",
       "title_original": "3 Actionable Ways Affiliate Managers & SEOs Can Keep Relevant – Ask An SEO via @sejournal, @rollerblader",
-      "title_it": "Tre strategie pratiche per affiliate manager e SEO per rimanere rilevanti nell'era dell'AI",
-      "summary_it": "L'articolo esplora come i professionisti SEO e gli affiliate marketer possono adattare i modelli di pagamento, il posizionamento del brand e le partnership per affrontare le sfide poste dalla scoperta basata sull'intelligenza artificiale. Vengono presentate tre strategie pratiche per mantenere la rilevanza nel settore. L'articolo è pubblicato su Search Engine Journal.",
+      "title_it": "Tre strategie pratiche per mantenere rilevanza nel marketing di affiliazione e SEO",
+      "summary_it": "L'articolo esplora come i professionisti SEO e i manager di affiliazione possono adattare i modelli di pagamento, il posizionamento del marchio e le partnership per affrontare le sfide poste dalla scoperta basata sull'intelligenza artificiale. Vengono presentate tre strategie attuabili per rimanere rilevanti in questo contesto in evoluzione. L'articolo è pubblicato su Search Engine Journal.",
       "url": "https://www.searchenginejournal.com/ask-an-seo-3-actionable-ways-affiliate-managers-seos-can-keep-relevant/573607",
       "source": {
         "id": "search_engine_journal",
@@ -299,7 +219,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T10:30:05Z",
-      "fetched_at": "2026-05-13T05:03:22.877374Z",
+      "fetched_at": "2026-05-13T06:05:56.662028Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -308,10 +228,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_007",
+      "id": "item_2026-05-13_006",
       "title_original": "Google Tests Dark & Light URLs In Search Results (For The Same URL)",
       "title_it": "Google testa URL in grigio chiaro e scuro nei risultati di ricerca",
-      "summary_it": "Google sta sperimentando una visualizzazione alternativa degli URL nei risultati di ricerca, differenziando il protocollo HTTPS (grigio scuro) dal nome di dominio (grigio chiaro). L'obiettivo del test sembra essere quello di semplificare la lettura degli URL, ma il feedback iniziale è misto. Al momento non è chiaro se questa modifica verrà implementata su larga scala.",
+      "summary_it": "Google sta testando una visualizzazione degli URL nei risultati di ricerca in cui il protocollo \"https\" appare in grigio scuro e il nome di dominio in grigio chiaro. L'obiettivo del test, segnalato da Brodie Clark, non è chiaro. Non sembra esserci un impatto diretto sulla SEO.",
       "url": "https://www.seroundtable.com/google-dark-light-urls-41301.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -328,13 +248,13 @@
       "category": "google_updates",
       "tags": [
         "search_result",
-        "url_display",
-        "google_testing",
+        "url",
+        "user_interface",
         "serp"
       ],
       "importance": 2,
       "published_at": "2026-05-12T10:31:00Z",
-      "fetched_at": "2026-05-13T05:03:24.598709Z",
+      "fetched_at": "2026-05-13T06:05:58.056744Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -343,10 +263,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_008",
+      "id": "item_2026-05-13_007",
       "title_original": "Google Merchant Center For Agencies Now Available Globally",
-      "title_it": "Google Merchant Center per Agenzie è ora disponibile a livello globale",
-      "summary_it": "Google ha esteso la disponibilità di Google Merchant Center per Agenzie a livello globale. Questa piattaforma centralizzata offre un'interfaccia unificata per la gestione di account multipli e include funzionalità per team con più utenti, facilitando il monitoraggio della salute degli account e l'ottimizzazione dei dati di prodotto.",
+      "title_it": "Google Merchant Center per Agenzie ora disponibile a livello globale",
+      "summary_it": "Google ha esteso la disponibilità di Google Merchant Center per Agenzie a livello globale. Questa piattaforma centralizzata offre un'interfaccia unificata per la gestione di più account Google Merchant Center, con funzionalità pensate per team con diversi utenti, tra cui una dashboard di overview e diagnostiche a livello di portfolio.",
       "url": "https://www.seroundtable.com/google-merchant-center-for-agencies-global-41302.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -369,7 +289,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T10:41:00Z",
-      "fetched_at": "2026-05-13T05:03:26.699583Z",
+      "fetched_at": "2026-05-13T06:05:59.268433Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -378,10 +298,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_009",
+      "id": "item_2026-05-13_008",
       "title_original": "Google Discover Publisher Pages To Get Links & Featured Posts",
       "title_it": "Google Discover: in arrivo link personalizzati e post in evidenza per le pagine degli editori",
-      "summary_it": "Google sta testando un aggiornamento delle pagine degli editori su Discover, introducendo link personalizzati, la possibilità di evidenziare post e miglioramenti grafici come immagini di intestazione più grandi e loghi più nitidi. Gli editori potranno scegliere l'ordine dei link ai social media e al sito web. In precedenza, l'ordine era basato sul numero di follower sui social media.",
+      "summary_it": "Google sta testando un aggiornamento delle pagine degli editori su Discover, introducendo link personalizzati, la possibilità di evidenziare post, immagini di intestazione più grandi e loghi più nitidi. Gli editori avranno la possibilità di scegliere l'ordine dei link ai social media e al sito web. L'aggiornamento era stato anticipato da screenshot su X.",
       "url": "https://www.seroundtable.com/google-discover-publisher-pages-links-featured-41304.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -404,7 +324,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T10:51:00Z",
-      "fetched_at": "2026-05-13T05:03:28.276076Z",
+      "fetched_at": "2026-05-13T06:06:00.731344Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -413,10 +333,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_010",
+      "id": "item_2026-05-13_009",
       "title_original": "Scaling AI Content Is The #1 Enterprise Priority: How Do You Scale Without Penalty? via @sejournal, @theshelleywalsh",
       "title_it": "Scalare i contenuti AI è la priorità numero uno per le aziende: come farlo senza penalizzazioni?",
-      "summary_it": "Le aziende stanno aumentando la produzione di contenuti tramite AI, ma faticano a farlo in modo efficace. Le organizzazioni più mature comprendono già le motivazioni di queste difficoltà. L'articolo esplora le strategie per scalare i contenuti AI evitando penalizzazioni.",
+      "summary_it": "Le aziende stanno aumentando la produzione di contenuti tramite AI, ma faticano a farlo in modo efficace. Le organizzazioni più mature comprendono già le ragioni di questa difficoltà. L'articolo esplora le strategie per scalare i contenuti AI evitando penalizzazioni.",
       "url": "https://www.searchenginejournal.com/scaling-ai-content-is-the-1-enterprise-priority-how-do-you-scale-without-penalty/574518",
       "source": {
         "id": "search_engine_journal",
@@ -439,7 +359,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T12:30:30Z",
-      "fetched_at": "2026-05-13T05:03:29.877234Z",
+      "fetched_at": "2026-05-13T06:06:02.315720Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -448,10 +368,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_011",
+      "id": "item_2026-05-13_010",
       "title_original": "Daily Search Forum Recap: May 12, 2026",
-      "title_it": "Aggiornamenti Quotidiani dai Forum di Ricerca: 12 Maggio 2026",
-      "summary_it": "Il Google Merchant Center per agenzie è ora disponibile a livello globale. Google Discover sta testando l'aggiunta di link e post in evidenza alle pagine degli editori. Bing Webmaster Tools non distingue tra protocolli http e https, a differenza di Google Search Console.",
+      "title_it": "Riepilogo giornaliero dei forum di ricerca: 12 maggio 2026",
+      "summary_it": "Il Google Merchant Center per agenzie è ora disponibile a livello globale. Google Discover sta testando l'aggiunta di link e post in evidenza alle pagine degli editori. Bing Webmaster Tools non distingue tra protocolli HTTP e HTTPS. Il processo di certificazione di Google Ads è stato aggiornato per le criptovalute.",
       "url": "https://www.seroundtable.com/recap-05-12-2026-41305.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -474,7 +394,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T13:00:00Z",
-      "fetched_at": "2026-05-13T05:03:31.340028Z",
+      "fetched_at": "2026-05-13T06:06:03.880636Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -483,7 +403,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_012",
+      "id": "item_2026-05-13_011",
       "title_original": "What are keywords? Definition, types, & how to use them",
       "title_it": "Cosa sono le keyword: definizione, tipologie e come utilizzarle",
       "summary_it": "Semrush pubblica una guida introduttiva sulle keyword, definendole come parole o frasi che rappresentano l'argomento di una query di ricerca, un contenuto o una conversazione. L'articolo esplora le diverse tipologie di keyword e fornisce indicazioni sul loro utilizzo.",
@@ -508,7 +428,7 @@
       ],
       "importance": 2,
       "published_at": "2026-05-12T13:48:00Z",
-      "fetched_at": "2026-05-13T05:03:32.418326Z",
+      "fetched_at": "2026-05-13T06:06:05.200766Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -517,10 +437,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_013",
+      "id": "item_2026-05-13_012",
       "title_original": "How finance teams use Codex",
       "title_it": "Come i team finanziari utilizzano Codex",
-      "summary_it": "OpenAI illustra come i team finanziari possono sfruttare Codex per automatizzare processi come la creazione di report, analisi di varianza e scenari di pianificazione. L'articolo presenta esempi concreti di applicazione a partire da input reali.",
+      "summary_it": "OpenAI illustra come i team finanziari possono sfruttare Codex per automatizzare processi come la creazione di reportistica, analisi di varianza, controlli di modelli e scenari di pianificazione. L'articolo si concentra sull'applicazione pratica di Codex in ambito finanziario, partendo da input reali.",
       "url": "https://openai.com/academy/how-finance-teams-use-codex",
       "source": {
         "id": "openai_blog",
@@ -543,7 +463,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T14:00:00Z",
-      "fetched_at": "2026-05-13T05:03:33.929030Z",
+      "fetched_at": "2026-05-13T06:06:11.147893Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -552,10 +472,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-13_014",
+      "id": "item_2026-05-13_013",
       "title_original": "How To Build Local Pages That Win In AI-Powered Search via @sejournal, @lorenbaker",
-      "title_it": "Creare pagine locali efficaci per la ricerca potenziata dall'AI",
-      "summary_it": "L'articolo di Search Engine Journal esplora le strategie per ottimizzare le pagine locali al fine di migliorare la visibilità nei risultati di ricerca basati sull'intelligenza artificiale. Si concentra sulla costruzione di pagine autorevoli per il SEO locale. Non vengono forniti dettagli specifici sulle tattiche o tecniche da implementare.",
+      "title_it": "Creare pagine locali ottimizzate per la ricerca potenziata dall'AI",
+      "summary_it": "Search Engine Journal discute come strutturare pagine locali per ottenere maggiore visibilità nei risultati di ricerca influenzati dall'intelligenza artificiale. L'articolo fornisce indicazioni sulla creazione di contenuti autorevoli e pertinenti a livello locale. Non vengono forniti dettagli specifici sulle tattiche suggerite.",
       "url": "https://www.searchenginejournal.com/how-to-build-local-pages-that-win-in-ai-powered-search/574668",
       "source": {
         "id": "search_engine_journal",
@@ -578,7 +498,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-12T20:39:18Z",
-      "fetched_at": "2026-05-13T05:03:35.438105Z",
+      "fetched_at": "2026-05-13T06:06:12.659577Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -590,87 +510,87 @@
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-13T05:02:00.385886Z",
+      "last_checked": "2026-05-13T06:04:29.293780Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-13T05:02:00.671642Z",
+      "last_checked": "2026-05-13T06:04:29.906719Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-13T05:02:02.341148Z",
+      "last_checked": "2026-05-13T06:04:31.229981Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-13T05:02:28.972908Z",
+      "last_checked": "2026-05-13T06:05:01.193622Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-13T05:02:29.500837Z",
+      "last_checked": "2026-05-13T06:05:01.503887Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-13T05:02:30.618427Z",
+      "last_checked": "2026-05-13T06:05:02.515996Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-13T05:02:32.363092Z",
+      "last_checked": "2026-05-13T06:05:04.260846Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-13T05:02:33.405094Z",
+      "last_checked": "2026-05-13T06:05:06.183033Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-13T05:02:33.465636Z",
+      "last_checked": "2026-05-13T06:05:06.205610Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-13T05:02:38.822735Z",
+      "last_checked": "2026-05-13T06:05:09.203860Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-13T05:02:39.347215Z",
+      "last_checked": "2026-05-13T06:05:09.594580Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-13T05:02:40.732642Z",
+      "last_checked": "2026-05-13T06:05:11.366340Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-13T05:02:42.666681Z",
+      "last_checked": "2026-05-13T06:05:13.678717Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-13T05:02:44.494979Z",
+      "last_checked": "2026-05-13T06:05:14.612899Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-13T05:02:46.035331Z",
+      "last_checked": "2026-05-13T06:05:16.226080Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-13T05:02:47.696078Z",
+      "last_checked": "2026-05-13T06:05:17.874433Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-13T05:03:13.812346Z",
+      "last_checked": "2026-05-13T06:05:47.623218Z",
       "changed": false
     }
   ],
