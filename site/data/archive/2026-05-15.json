@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-15T05:01:40.936371Z",
-  "generated_at_local": "2026-05-15T07:01:40.936371+02:00",
+  "generated_at": "2026-05-15T06:01:50.397226Z",
+  "generated_at_local": "2026-05-15T08:01:50.397226+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-15-0701",
+  "run_id": "2026-05-15-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1998,
+    "items_collected": 1997,
     "items_after_dedup": 14,
     "doc_changes_detected": 0,
     "ai_cost_eur": 0.0018,
@@ -19,11 +19,11 @@
     "item_2026-05-15_011",
     "item_2026-05-15_009",
     "item_2026-05-15_014",
-    "item_2026-05-15_002",
     "item_2026-05-15_004",
     "item_2026-05-15_006",
     "item_2026-05-15_007",
     "item_2026-05-15_001",
+    "item_2026-05-15_002",
     "item_2026-05-15_005"
   ],
   "categories": {
@@ -33,8 +33,7 @@
     ],
     "ai_models": [
       "item_2026-05-15_009",
-      "item_2026-05-15_014",
-      "item_2026-05-15_002"
+      "item_2026-05-15_014"
     ],
     "industry_news": [
       "item_2026-05-15_004",
@@ -47,6 +46,7 @@
     ],
     "ai_overviews_llm_seo": [
       "item_2026-05-15_001",
+      "item_2026-05-15_002",
       "item_2026-05-15_010"
     ],
     "technical_seo": [
@@ -58,8 +58,8 @@
     {
       "id": "item_2026-05-15_001",
       "title_original": "How To Measure AI Search: Current KPIs You Need To Know [Webinar] via @sejournal, @hethr_campbell",
-      "title_it": "Misurazione della Ricerca AI: KPI Attuali da Monitorare (Webinar)",
-      "summary_it": "Search Engine Journal propone un webinar sull'utilizzo di KPI efficaci per misurare le performance nel marketing, con un focus sull'evoluzione del panorama digitale e l'impatto della ricerca basata su intelligenza artificiale. Il webinar si concentra sulle strategie di misurazione in un contesto di cambiamento.",
+      "title_it": "Misurazione della ricerca AI: KPI attuali da conoscere (Webinar)",
+      "summary_it": "Search Engine Journal propone un webinar sull'utilizzo di KPI efficaci per misurare le performance delle strategie di marketing nell'ambito della ricerca basata su intelligenza artificiale. Il webinar si concentra sull'adattamento delle metriche in un panorama digitale in evoluzione.",
       "url": "https://www.searchenginejournal.com/how-to-measure-ai-search-current-kpis-you-need-to-know/573477",
       "source": {
         "id": "search_engine_journal",
@@ -82,7 +82,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-14T06:45:54Z",
-      "fetched_at": "2026-05-15T05:03:01.382792Z",
+      "fetched_at": "2026-05-15T06:03:17.104136Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -94,7 +94,7 @@
       "id": "item_2026-05-15_002",
       "title_original": "Quick Tip: The Case for Cloaking for Large Language Models",
       "title_it": "Un consiglio rapido: l'utilità del cloaking per i modelli linguistici di grandi dimensioni",
-      "summary_it": "L'articolo esplora l'utilizzo del cloaking, pratica generalmente sconsigliata per Google, per proteggere i contenuti dai crawler di modelli linguistici come ChatGPT. Questi crawler spesso non eseguono JavaScript, offrendo l'opportunità di presentare loro una versione diversa del contenuto rispetto a quella mostrata agli utenti e a Googlebot. L'autore suggerisce che questa tecnica potrebbe ostacolare la rapida ripubblicazione dei contenuti da parte dei competitor.",
+      "summary_it": "L'articolo esplora l'uso del cloaking, pratica generalmente sconsigliata per Google, per proteggere i contenuti dai crawler di modelli linguistici come ChatGPT. Poiché questi crawler spesso non eseguono JavaScript, si suggerisce di sfruttare questa limitazione per impedire la facile riproduzione dei contenuti da parte della concorrenza. L'autore sottolinea che questa strategia non è applicabile a Googlebot e Bingbot, che eseguono il rendering di JavaScript.",
       "url": "https://ipullrank.com/cloaking-for-llms",
       "source": {
         "id": "ipullrank_blog",
@@ -108,16 +108,17 @@
         "category_hint": "ai_overviews_llm_seo",
         "enabled": true
       },
-      "category": "ai_models",
+      "category": "ai_overviews_llm_seo",
       "tags": [
         "cloaking",
         "llm",
         "chatgpt",
-        "content_protection"
+        "content_protection",
+        "ai_crawler"
       ],
       "importance": 3,
       "published_at": "2026-05-14T10:00:00Z",
-      "fetched_at": "2026-05-15T05:03:03.130727Z",
+      "fetched_at": "2026-05-15T06:03:19.005625Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -129,7 +130,7 @@
       "id": "item_2026-05-15_003",
       "title_original": "Google Ads API Version 24.1 Now Available",
       "title_it": "Disponibile la versione 24.1 dell'API di Google Ads",
-      "summary_it": "È stata rilasciata la versione 24.1 dell'API di Google Ads. L'aggiornamento include nuove funzionalità come il segmento della piattaforma per dispositivi mobili, immagini classiche in DemandGen, supporto per passkey e un rinnovato supporto per gli esperimenti, oltre al supporto per la nuova policy di conservazione dei dati.",
+      "summary_it": "Google ha rilasciato la versione 24.1 dell'API di Google Ads, un aggiornamento minore che include nuove funzionalità come il segmento della piattaforma per dispositivi mobili, immagini classiche in DemandGen e supporto per le passkey. È stato rinnovato il supporto per gli esperimenti ed è stato aggiunto il supporto per la nuova policy di conservazione dei dati.",
       "url": "https://www.seroundtable.com/google-ads-api-version-24-1-41323.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -145,13 +146,13 @@
       },
       "category": "tools_platforms",
       "tags": [
-        "google_ad",
-        "api",
-        "google_ads_api"
+        "google_ads_api",
+        "api_update",
+        "google_ad"
       ],
       "importance": 2,
       "published_at": "2026-05-14T10:11:00Z",
-      "fetched_at": "2026-05-15T05:03:04.661869Z",
+      "fetched_at": "2026-05-15T06:03:20.373246Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -163,7 +164,7 @@
       "id": "item_2026-05-15_004",
       "title_original": "Google Ads To Automatically Link YouTube Channels",
       "title_it": "Google Ads collegherà automaticamente i canali YouTube",
-      "summary_it": "Google Ads ha annunciato che, a partire dal 10 giugno 2026, collegherà automaticamente gli account Google Ads ai canali YouTube. Questo collegamento fornirà a Google Ads dati sul canale YouTube, inclusi metriche di visualizzazione organiche e la possibilità di creare segmenti di pubblico basati sulle interazioni degli utenti. Gli inserzionisti possono disattivare il collegamento automatico tramite un'opzione specifica.",
+      "summary_it": "Google Ads ha annunciato che, a partire dal 10 giugno 2026, collegherà automaticamente gli account Google Ads ai canali YouTube. Questa integrazione permetterà di accedere a metriche organiche, creare segmenti di pubblico basati sulle interazioni degli utenti e monitorare le conversioni derivanti dagli annunci video. Gli utenti potranno disattivare il collegamento automatico tramite un'opzione specifica.",
       "url": "https://www.seroundtable.com/google-ads-auto-link-youtube-channel-41303.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -181,12 +182,12 @@
       "tags": [
         "google_ad",
         "youtube",
-        "data_linking",
-        "advertising"
+        "integration",
+        "data_segment"
       ],
       "importance": 3,
       "published_at": "2026-05-14T10:21:00Z",
-      "fetched_at": "2026-05-15T05:03:06.248083Z",
+      "fetched_at": "2026-05-15T06:03:21.783017Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -197,8 +198,8 @@
     {
       "id": "item_2026-05-15_005",
       "title_original": "Direct Traffic & Popularity – Correlation, Not Causation via @sejournal, @TaylorDanRW",
-      "title_it": "Traffico diretto e popolarità: correlazione, non causalità",
-      "summary_it": "Un recente studio sull'AI ha riacceso il dibattito SEO riguardo la distinzione tra fattori di ranking e sintomi di successo nel posizionamento. L'articolo discute come il traffico diretto sia spesso una conseguenza della popolarità di un sito, piuttosto che una causa del suo buon ranking.",
+      "title_it": "Traffico diretto e popolarità: correlazione, non causa",
+      "summary_it": "Un recente studio sull'AI ha riacceso il dibattito SEO sulla distinzione tra fattori di ranking e sintomi del successo di ranking. L'articolo discute come il traffico diretto sia più probabilmente una conseguenza della popolarità e della riconoscibilità di un sito, piuttosto che un fattore che influenza direttamente il posizionamento.",
       "url": "https://www.searchenginejournal.com/direct-traffic-popularity-correlation-not-causation/574507",
       "source": {
         "id": "search_engine_journal",
@@ -217,11 +218,11 @@
         "direct_traffic",
         "ranking_factor",
         "correlation_vs_causation",
-        "ai_citation_study"
+        "seo_debate"
       ],
       "importance": 3,
       "published_at": "2026-05-14T10:30:10Z",
-      "fetched_at": "2026-05-15T05:03:07.504957Z",
+      "fetched_at": "2026-05-15T06:03:23.508565Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -256,7 +257,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-14T10:31:00Z",
-      "fetched_at": "2026-05-15T05:03:08.747337Z",
+      "fetched_at": "2026-05-15T06:03:25.196489Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -267,8 +268,8 @@
     {
       "id": "item_2026-05-15_007",
       "title_original": "Google Analytics AI Assistant Traffic: Tracks ChatGPT, Gemini & Claude Traffic",
-      "title_it": "Google Analytics 4 traccia il traffico proveniente da chatbot AI come ChatGPT e Gemini",
-      "summary_it": "Google Analytics 4 ha introdotto una nuova funzionalità per tracciare il traffico proveniente da chatbot AI come ChatGPT, Gemini e Claude. Questo avviene tramite un nuovo canale \"AI Assistant\" nei report dei Default Channel Group. La funzione permette di monitorare l'impatto dell'AI generativa sul business, tracciando click e sorgenti di traffico AI.",
+      "title_it": "Google Analytics 4 traccia il traffico proveniente da ChatGPT, Gemini e Claude tramite un nuovo assistente AI",
+      "summary_it": "Google Analytics 4 ha introdotto una nuova funzionalità per tracciare il traffico proveniente da chatbot AI come ChatGPT, Gemini e Claude. Questo avviene tramite un nuovo canale \"AI Assistant\" nei report dei Default Channel Group. La funzione permette di monitorare l'impatto dell'AI generativa sul business, tracciando click e sorgenti di traffico.",
       "url": "https://www.seroundtable.com/google-analytics-ai-assistant-traffic-41327.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -285,13 +286,14 @@
       "category": "tools_platforms",
       "tags": [
         "google_analytics_4",
-        "ai_traffic",
-        "chatbot_traffic",
-        "ga4"
+        "ai_assistant",
+        "chatgpt",
+        "gemini",
+        "claude"
       ],
       "importance": 3,
       "published_at": "2026-05-14T10:41:00Z",
-      "fetched_at": "2026-05-15T05:03:10.349369Z",
+      "fetched_at": "2026-05-15T06:03:26.695957Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -303,7 +305,7 @@
       "id": "item_2026-05-15_008",
       "title_original": "Google Search Ranking Volatility Heated May 13th & 14th",
       "title_it": "Picco di volatilità nelle classifiche di ricerca Google il 13 e 14 maggio",
-      "summary_it": "Il 13 e 14 maggio si è registrato un aumento della volatilità nelle SERP di Google, segnalato sia dalla community SEO che da diversi strumenti di monitoraggio. Non si tratta di un aggiornamento confermato da Google, ma di fluttuazioni non annunciate. Si ricorda che il core update di marzo 2026 è terminato l'8 aprile e che persistono problemi di deindicizzazione.",
+      "summary_it": "Il 13 e 14 maggio si è registrato un aumento della volatilità nelle SERP di Google, segnalato sia dalla community SEO che da diversi strumenti di monitoraggio. Non si tratta di un aggiornamento confermato da Google, ma segue un trend di deindicizzazione segnalato nelle scorse settimane.",
       "url": "https://www.seroundtable.com/google-search-ranking-volatility-heated-41324.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -319,14 +321,14 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_algorithm_update",
-        "search_ranking_volatility",
-        "serp",
-        "deindexing"
+        "google_search",
+        "ranking_volatility",
+        "search_engine_roundtable",
+        "unconfirmed_update"
       ],
       "importance": 3,
       "published_at": "2026-05-14T10:51:00Z",
-      "fetched_at": "2026-05-15T05:03:11.758517Z",
+      "fetched_at": "2026-05-15T06:03:28.141624Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -337,8 +339,8 @@
     {
       "id": "item_2026-05-15_009",
       "title_original": "Work with Codex from anywhere",
-      "title_it": "Accedi a Codex ovunque con la app mobile di ChatGPT",
-      "summary_it": "OpenAI annuncia la disponibilità di Codex tramite l'app mobile di ChatGPT. Questa integrazione permette di monitorare e gestire task di coding in tempo reale da dispositivi mobili e ambienti remoti, facilitando la collaborazione e l'approvazione di progetti.",
+      "title_it": "Accesso a Codex tramite l'app mobile ChatGPT",
+      "summary_it": "OpenAI ha esteso l'accesso a Codex tramite l'app mobile ChatGPT. Questa funzionalità permette di monitorare e gestire task di coding in tempo reale da remoto e su diversi dispositivi. L'aggiornamento mira a migliorare la flessibilità e l'accessibilità per gli sviluppatori che utilizzano Codex.",
       "url": "https://openai.com/index/work-with-codex-from-anywhere",
       "source": {
         "id": "openai_blog",
@@ -361,7 +363,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-14T12:00:00Z",
-      "fetched_at": "2026-05-15T05:03:12.817452Z",
+      "fetched_at": "2026-05-15T06:03:29.785922Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -373,7 +375,7 @@
       "id": "item_2026-05-15_010",
       "title_original": "Stop Treating AI Visibility As One Problem. It’s Actually Three, On Three Different Layers via @sejournal, @DuaneForrester",
       "title_it": "Visibilità nell'AI: non è un problema unico, ma tre livelli distinti",
-      "summary_it": "Duane Forrester su Search Engine Journal evidenzia come la visibilità in contesti AI (ChatGPT, Perplexity, ecc.) sia frammentata in tre livelli distinti che richiedono diagnosi e soluzioni specifiche. L'articolo suggerisce che la scomparsa di un brand da queste piattaforme non si risolve semplicemente con la creazione di più contenuti, ma con un'analisi approfondita del livello problematico.",
+      "summary_it": "Duane Forrester su Search Engine Journal evidenzia come la visibilità nell'AI si articola su tre livelli differenti, suggerendo che la scomparsa di un brand da piattaforme come ChatGPT o Perplexity non si risolve semplicemente con più contenuti. È necessario diagnosticare quale livello specifico ha subito un'interruzione per implementare la soluzione corretta.",
       "url": "https://www.searchenginejournal.com/stop-treating-ai-visibility-as-one-problem-its-actually-three-on-three-different-layers/574445",
       "source": {
         "id": "search_engine_journal",
@@ -390,13 +392,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "ai_visibility",
-        "llm_seo",
-        "generative_ai",
-        "brand_visibility"
+        "chatgpt",
+        "perplexity",
+        "llm_seo"
       ],
       "importance": 3,
       "published_at": "2026-05-14T12:00:19Z",
-      "fetched_at": "2026-05-15T05:03:14.043541Z",
+      "fetched_at": "2026-05-15T06:03:31.730032Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -407,8 +409,8 @@
     {
       "id": "item_2026-05-15_011",
       "title_original": "Daily Search Forum Recap: May 14, 2026",
-      "title_it": "Riassunto giornaliero dei forum di ricerca: 14 maggio 2026",
-      "summary_it": "Si segnala un picco di volatilità nelle classifiche di ricerca di Google. Google Analytics ora traccia il traffico proveniente da assistenti AI come ChatGPT e Gemini. Gli annunci di veicoli di Google supportano ora anche ATV e altri veicoli non motorizzati.",
+      "title_it": "Riassunto Quotidiano dei Forum di Ricerca: 14 Maggio 2026",
+      "summary_it": "Si segnala un aumento della volatilità nelle classifiche di ricerca di Google. Google Analytics ora traccia il traffico proveniente da assistenti AI come ChatGPT e Gemini. Gli annunci di veicoli di Google supportano ora anche ATV e altri veicoli non motorizzati.",
       "url": "https://www.seroundtable.com/recap-05-14-2026-41326.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -431,7 +433,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-14T13:00:00Z",
-      "fetched_at": "2026-05-15T05:03:15.264762Z",
+      "fetched_at": "2026-05-15T06:03:33.226328Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -443,7 +445,7 @@
       "id": "item_2026-05-15_012",
       "title_original": "Google’s Knowledge Graph Explained: How It Influences SEO & AI Search",
       "title_it": "Spiegazione del Knowledge Graph di Google: influenza su SEO e ricerca AI",
-      "summary_it": "L'articolo di Ahrefs spiega cos'è il Knowledge Graph di Google, come funziona e come può essere sfruttato per aumentare la visibilità del brand e migliorare la SEO. Vengono analizzati i vantaggi e le implicazioni per i professionisti SEO.",
+      "summary_it": "L'articolo di Ahrefs analizza il Knowledge Graph di Google, spiegandone il funzionamento e il suo impatto sulla SEO. Vengono esplorate le modalità per sfruttare il Knowledge Graph al fine di migliorare la visibilità del brand e ottimizzare le strategie SEO. L'articolo mira a fornire una comprensione approfondita di come questa tecnologia influenzi i risultati di ricerca.",
       "url": "https://ahrefs.com/blog/google-knowledge-graph",
       "source": {
         "id": "ahrefs_blog",
@@ -466,7 +468,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-14T13:00:20Z",
-      "fetched_at": "2026-05-15T05:03:16.317647Z",
+      "fetched_at": "2026-05-15T06:03:36.527903Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -478,7 +480,7 @@
       "id": "item_2026-05-15_013",
       "title_original": "Google Analytics Adds AI Assistant As Default Channel Group via @sejournal, @MattGSouthern",
       "title_it": "Google Analytics introduce un gruppo di canali predefinito per il traffico proveniente da AI Assistant",
-      "summary_it": "Google Analytics ha introdotto un nuovo gruppo di canali predefinito per distinguere il traffico proveniente da AI Assistant come ChatGPT e Gemini dal traffico di referral. Questa modifica permette una migliore analisi del traffico generato da chatbot e assistenti virtuali. Il nuovo raggruppamento è attivo di default.",
+      "summary_it": "Google Analytics ha introdotto un nuovo gruppo di canali predefinito per distinguere il traffico proveniente dagli AI assistant come ChatGPT e Gemini dal traffico referral. Questa modifica mira a fornire una visione più chiara delle fonti di traffico nel report di Google Analytics. Il nuovo raggruppamento identifica automaticamente i referrer chatbot riconosciuti.",
       "url": "https://www.searchenginejournal.com/google-analytics-adds-ai-assistant-as-default-channel-group/574974",
       "source": {
         "id": "search_engine_journal",
@@ -496,12 +498,12 @@
       "tags": [
         "google_analytic",
         "ai_assistant",
-        "channel_grouping",
-        "traffic_analysi"
+        "traffic_analysi",
+        "channel_grouping"
       ],
       "importance": 3,
       "published_at": "2026-05-14T14:50:42Z",
-      "fetched_at": "2026-05-15T05:03:17.609365Z",
+      "fetched_at": "2026-05-15T06:03:38.072820Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -513,7 +515,7 @@
       "id": "item_2026-05-15_014",
       "title_original": "Sea's View on the Future of Agentic Software Development with Codex",
       "title_it": "Sea Limited adotta Codex per lo sviluppo di software basato su AI in Asia",
-      "summary_it": "Il CPO di Sea Limited spiega l'implementazione di Codex nei team di ingegneria per accelerare lo sviluppo di software nativo per l'intelligenza artificiale in Asia. L'obiettivo è migliorare l'efficienza e l'innovazione nello sviluppo di applicazioni AI. L'iniziativa mira a sfruttare le capacità di Codex per ottimizzare i processi di sviluppo software.",
+      "summary_it": "Il CPO di Sea Limited spiega l'implementazione di Codex nei team di ingegneria per accelerare lo sviluppo di software nativo per l'intelligenza artificiale nel mercato asiatico. L'obiettivo è migliorare l'efficienza e l'innovazione nello sviluppo di applicazioni AI. L'articolo descrive i vantaggi specifici che Sea si aspetta da questa integrazione.",
       "url": "https://openai.com/index/sea-david-chen",
       "source": {
         "id": "openai_blog",
@@ -529,14 +531,14 @@
       },
       "category": "ai_models",
       "tags": [
+        "openai",
         "codex",
-        "ai_software_development",
-        "sea_limited",
-        "asia"
+        "agentic_software_development",
+        "sea_limited"
       ],
       "importance": 3,
       "published_at": "2026-05-14T19:30:00Z",
-      "fetched_at": "2026-05-15T05:03:19.079737Z",
+      "fetched_at": "2026-05-15T06:03:39.569398Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -548,87 +550,87 @@
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-15T05:01:48.943184Z",
+      "last_checked": "2026-05-15T06:01:55.707427Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-15T05:01:49.358855Z",
+      "last_checked": "2026-05-15T06:01:56.074617Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-15T05:01:51.207028Z",
+      "last_checked": "2026-05-15T06:01:57.584295Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-15T05:02:17.221952Z",
+      "last_checked": "2026-05-15T06:02:27.449082Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-15T05:02:17.716547Z",
+      "last_checked": "2026-05-15T06:02:27.717952Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-15T05:02:19.223842Z",
+      "last_checked": "2026-05-15T06:02:29.139444Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-15T05:02:20.864719Z",
+      "last_checked": "2026-05-15T06:02:31.491560Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-15T05:02:22.172971Z",
+      "last_checked": "2026-05-15T06:02:32.822921Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-15T05:02:22.258831Z",
+      "last_checked": "2026-05-15T06:02:32.849988Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-15T05:02:25.539104Z",
+      "last_checked": "2026-05-15T06:02:37.658557Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-15T05:02:26.447088Z",
+      "last_checked": "2026-05-15T06:02:38.030428Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-15T05:02:26.942377Z",
+      "last_checked": "2026-05-15T06:02:39.769376Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-15T05:02:28.523881Z",
+      "last_checked": "2026-05-15T06:02:41.412112Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-15T05:02:29.900047Z",
+      "last_checked": "2026-05-15T06:02:43.590834Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-15T05:02:32.061438Z",
+      "last_checked": "2026-05-15T06:02:44.842186Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-15T05:02:33.361525Z",
+      "last_checked": "2026-05-15T06:02:45.876663Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-15T05:02:59.414955Z",
+      "last_checked": "2026-05-15T06:03:15.493587Z",
       "changed": false
     }
   ],
