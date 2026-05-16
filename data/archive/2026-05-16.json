@@ -1,152 +1,68 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-16T05:01:45.358681Z",
-  "generated_at_local": "2026-05-16T07:01:45.358681+02:00",
+  "generated_at": "2026-05-16T06:01:48.722202Z",
+  "generated_at_local": "2026-05-16T08:01:48.722202+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-16-0701",
+  "run_id": "2026-05-16-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 1998,
-    "items_after_dedup": 18,
-    "doc_changes_detected": 1,
-    "ai_cost_eur": 0.0407,
-    "summarize_attempted": 19,
+    "items_after_dedup": 17,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.0021,
+    "summarize_attempted": 17,
     "summarize_failed": 0
   },
   "top10": [
-    "doc_2026-05-16_001",
-    "item_2026-05-16_001",
-    "item_2026-05-16_009",
-    "item_2026-05-16_013",
-    "item_2026-05-16_011",
-    "item_2026-05-16_012",
-    "item_2026-05-16_015",
+    "item_2026-05-16_008",
+    "item_2026-05-16_017",
+    "item_2026-05-16_010",
     "item_2026-05-16_014",
+    "item_2026-05-16_013",
+    "item_2026-05-16_004",
     "item_2026-05-16_005",
-    "item_2026-05-16_007"
+    "item_2026-05-16_006",
+    "item_2026-05-16_007",
+    "item_2026-05-16_009"
   ],
   "categories": {
-    "google_docs_change": [
-      "doc_2026-05-16_001"
-    ],
-    "technical_seo": [
-      "item_2026-05-16_001"
-    ],
     "ai_overviews_llm_seo": [
-      "item_2026-05-16_009",
-      "item_2026-05-16_013",
-      "item_2026-05-16_007",
-      "item_2026-05-16_010",
+      "item_2026-05-16_008",
       "item_2026-05-16_017",
-      "item_2026-05-16_018",
-      "item_2026-05-16_006"
+      "item_2026-05-16_006",
+      "item_2026-05-16_009",
+      "item_2026-05-16_012",
+      "item_2026-05-16_016"
     ],
     "google_updates": [
-      "item_2026-05-16_011",
-      "item_2026-05-16_012",
-      "item_2026-05-16_015",
-      "item_2026-05-16_014"
+      "item_2026-05-16_010",
+      "item_2026-05-16_014",
+      "item_2026-05-16_013"
     ],
     "ai_models": [
+      "item_2026-05-16_004",
       "item_2026-05-16_005"
     ],
     "tools_platforms": [
-      "item_2026-05-16_008",
-      "item_2026-05-16_003"
+      "item_2026-05-16_007",
+      "item_2026-05-16_002"
     ],
     "industry_news": [
-      "item_2026-05-16_002",
-      "item_2026-05-16_016"
+      "item_2026-05-16_011",
+      "item_2026-05-16_001",
+      "item_2026-05-16_015"
     ],
     "content_eeat": [
-      "item_2026-05-16_004"
+      "item_2026-05-16_003"
     ]
   },
   "items": [
     {
       "id": "item_2026-05-16_001",
-      "title_original": "Gap decorations: Now available in Chromium",
-      "title_it": "Decorazioni per spazi vuoti: ora disponibili in Chromium",
-      "summary_it": "Chromium e Edge 149 introducono una nuova modalità per stilizzare gli spazi vuoti in CSS. Questa funzionalità offre maggiore controllo sull'aspetto visivo degli elementi con spaziature, consentendo personalizzazioni più precise. L'implementazione mira a migliorare la flessibilità del design web.",
-      "url": "https://developer.chrome.com/blog/gap-decorations-stable?hl=en",
-      "source": {
-        "id": "chrome_developers_blog",
-        "name": "Chrome Developers Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://developer.chrome.com/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "css",
-        "chromium",
-        "edge",
-        "web_design"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-15T06:00:00Z",
-      "fetched_at": "2026-05-16T05:03:23.826482Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:7e93356066eaaba6",
-      "deep_analysis": {
-        "detailed_description": "Chromium 149 e Edge 149 introducono le gap decorations, una nuova proprietà CSS che consente di applicare stili visivi direttamente agli spazi vuoti (gap) tra elementi in layout Flexbox e Grid. Fino ad oggi, gli spazi definiti tramite `gap` o `column-gap` / `row-gap` erano invisibili e non stilizzabili: questa limitazione obbligava a workaround con pseudo-elementi, bordi o elementi wrapper aggiuntivi per ottenere separatori visivi.\n\nLa nuova specifica introduce proprietà come `column-rule` e `row-rule` (analoghe a `column-rule` già esistente per i layout multicolonna) che permettono di definire colore, spessore e stile di linee di separazione direttamente nello spazio del gap. Il risultato è un markup più pulito, meno dipendente da hack CSS e una maggiore coerenza tra codice e rappresentazione visiva.\n\nDal punto di vista SEO tecnico, l'impatto diretto è limitato ma non trascurabile. La riduzione di elementi DOM superflui migliora la leggibilità del codice sorgente per i crawler e riduce il peso della pagina. Un DOM più snello può tradursi in tempi di rendering più rapidi, un segnale positivo per Core Web Vitals, in particolare Largest Contentful Paint (LCP) e Cumulative Layout Shift (CLS) se gli elementi decorativi causavano reflow.\n\nLa compatibilità è attualmente limitata a Chromium 149+ (Chrome, Edge, Opera) e non è ancora supportata da Safari o Firefox. Questo implica che l'adozione in produzione richiede fallback CSS o progressive enhancement. L'uso di `@supports` è raccomandato per evitare layout rotti su browser non compatibili.\n\nPer siti ad alto traffico da mobile, dove Chrome domina con oltre il 60% di quota globale, l'adozione progressiva può essere giustificata. Per progetti enterprise o con audience diversificate (es. utenti Apple), è necessario mantenere soluzioni alternative fino a quando Safari non implementerà la specifica.\n\nLa funzionalità non modifica il comportamento di indicizzazione o ranking, ma rientra in una strategia più ampia di ottimizzazione del rendering e pulizia del codice. Se il tuo stack di sviluppo front-end include già CSS moderno (container queries, cascade layers), questa è un'aggiunta coerente che riduce la dipendenza da JavaScript o librerie esterne per effetti visivi semplici.\n\nL'adozione immediata ha senso solo se il tuo sito ha già una strategia di progressive enhancement consolidata e se il team front-end può gestire fallback senza aumentare la complessità del CSS. In caso contrario, è più prudente attendere un supporto cross-browser più ampio, previsto nei prossimi 12-18 mesi se la specifica viene adottata da altri vendor.",
-        "implications": [
-          "Riduzione di elementi DOM superflui: meno `<div>` o pseudo-elementi usati solo per separatori visivi, con benefici marginali su parsing e rendering per crawler e browser.",
-          "Potenziale miglioramento di LCP e CLS: un DOM più snello riduce il rischio di reflow causati da elementi decorativi caricati in modo asincrono o tramite JavaScript.",
-          "Necessità di fallback CSS: la funzionalità è disponibile solo su Chromium 149+, quindi richiede `@supports` e soluzioni alternative per Safari e Firefox, aumentando temporaneamente la complessità del codice.",
-          "Nessun impatto diretto su crawling o ranking: si tratta di una miglioria estetica e di pulizia del codice, non di un fattore di ranking o di indicizzazione.",
-          "Vantaggio competitivo minimo ma reale per siti mobile-first: con Chrome dominante su mobile, l'adozione progressiva può ridurre il peso della pagina e migliorare la manutenibilità del CSS."
-        ],
-        "examples": [
-          "Un e-commerce con griglie di prodotti può sostituire bordi CSS applicati a ogni card con `column-rule` e `row-rule` sul container Grid, eliminando 4-6 dichiarazioni CSS per elemento e riducendo la specificità. Il risultato è un CSS più leggero e un DOM senza classi utility aggiuntive.",
-          "Evitare di rimuovere immediatamente i fallback esistenti: se il tuo sito usa pseudo-elementi `::before` o `::after` per separatori, mantienili come fallback dentro un blocco `@supports not (column-rule: 1px solid black)` fino a quando Safari non supporta la funzionalità. Rimuovere troppo presto causa layout rotti su ~30% del traffico mobile in mercati come USA o UK.",
-          "Un blog editoriale con layout multicolonna può unificare la gestione dei separatori tra colonne di testo e griglie di card correlate, usando la stessa sintassi `column-rule` per entrambi i contesti. Questo riduce la frammentazione del CSS e facilita il refactoring futuro."
-        ],
-        "testing_steps": [
-          "Verifica la versione di Chrome/Edge in uso sul tuo ambiente di sviluppo: deve essere 149 o superiore per testare la funzionalità.",
-          "Apri DevTools → Elements e ispeziona un layout Grid o Flexbox con `gap` applicato: aggiungi `column-rule: 2px solid red;` inline per verificare il rendering immediato.",
-          "Controlla il supporto cross-browser su BrowserStack o simili: testa Safari 17+ e Firefox 115+ per confermare che i fallback CSS funzionano correttamente.",
-          "Misura il peso del CSS prima e dopo la sostituzione di pseudo-elementi con gap decorations: usa Coverage in DevTools per quantificare la riduzione di byte inutilizzati.",
-          "Esegui un Lighthouse audit su una pagina di test con la nuova implementazione: confronta LCP e CLS con la versione precedente per verificare eventuali miglioramenti marginali.",
-          "Monitora GSC → Core Web Vitals per 2-4 settimane dopo il deploy: se il sito ha traffico significativo da Chromium, eventuali miglioramenti di rendering dovrebbero emergere nei percentili P75."
-        ],
-        "faqs": [
-          {
-            "question": "Devo adottare subito le gap decorations o aspettare il supporto Safari?",
-            "answer": "Dipende dalla tua audience e dalla complessità del CSS attuale. Se oltre il 70% del traffico arriva da Chrome/Edge e hai già una strategia di progressive enhancement, puoi adottarle ora con fallback. Se Safari rappresenta oltre il 25% del traffico o il team non ha esperienza con `@supports`, è più sicuro attendere 12-18 mesi per un supporto cross-browser stabile."
-          },
-          {
-            "question": "Le gap decorations migliorano direttamente i Core Web Vitals?",
-            "answer": "Non in modo diretto o garantito. La riduzione di elementi DOM e CSS può portare a miglioramenti marginali di LCP e CLS, ma l'impatto reale dipende da quanto il tuo layout attuale è appesantito da workaround per separatori visivi. In scenari tipici, il guadagno è nell'ordine di pochi millisecondi, non di centinaia."
-          },
-          {
-            "question": "Questa funzionalità influisce sul crawling di Googlebot?",
-            "answer": "No, Googlebot non interpreta gli stili visivi come fattore di ranking. L'unico beneficio indiretto è un HTML più pulito e un CSS più leggero, che possono ridurre il tempo di parsing, ma l'impatto su crawling e indicizzazione è trascurabile. Non è una priorità per SEO puro."
-          },
-          {
-            "question": "Posso usare gap decorations per sostituire bordi su elementi Grid senza rompere il layout?",
-            "answer": "Sì, ma solo se i bordi attuali sono applicati al container o usano pseudo-elementi. Se ogni elemento figlio ha un bordo proprio, la sostituzione richiede un refactoring più profondo del CSS. Testa sempre con `@supports` per evitare layout rotti su browser non compatibili."
-          }
-        ],
-        "editorial_commentary": "Questa è una miglioria CSS utile per sviluppatori front-end, ma per un SEO tecnico l'impatto operativo è marginale e differito. Non c'è motivo di correre ad adottarla se il tuo sito non ha già una strategia di progressive enhancement consolidata o se il team front-end non ha esperienza con fallback CSS complessi.\n\nIl vero valore emerge solo in contesti specifici: e-commerce con migliaia di card prodotto, siti editoriali con layout complessi, o progetti dove la pulizia del DOM è già un obiettivo dichiarato per migliorare la manutenibilità. In tutti gli altri casi, è più saggio attendere che Safari e Firefox implementino la specifica, evitando di aumentare la superficie di test e la complessità del CSS per un guadagno estetico.\n\nSe il tuo focus è Core Web Vitals, ci sono interventi con ROI molto più alto: ottimizzazione di immagini, lazy loading, riduzione di JavaScript bloccante. Le gap decorations sono un nice-to-have, non un must-have, e trattarle come priorità è un errore di allocazione delle risorse.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.038416439999999996
-      }
-    },
-    {
-      "id": "item_2026-05-16_002",
       "title_original": "AI Chatbot Traffic: What It Is, and How to Get More",
-      "title_it": "Traffico dai Chatbot AI: Cos'è e Come Ottenerne di Più",
-      "summary_it": "L'articolo di Ahrefs esplora il concetto di \"traffico da chatbot AI\", ovvero le visite al sito web derivanti da citazioni generate da chatbot come ChatGPT e Perplexity. Viene suggerito che questo tipo di traffico potrebbe avere un tasso di conversione superiore rispetto ad altri canali. L'articolo fornisce indicazioni su come incrementare questo tipo di traffico.",
+      "title_it": "Traffico dai Chatbot AI: cos'è e come aumentarlo",
+      "summary_it": "L'articolo di Ahrefs analizza il traffico proveniente dai chatbot AI come ChatGPT, Perplexity e Claude, quando questi citano un contenuto e gli utenti cliccano sul link. Viene suggerito che questo tipo di traffico potrebbe avere un tasso di conversione superiore rispetto ad altri canali. L'articolo esplora come ottenere maggiore traffico da queste fonti.",
       "url": "https://ahrefs.com/blog/ai-chatbot-traffic",
       "source": {
         "id": "ahrefs_blog",
@@ -163,13 +79,13 @@
       "category": "industry_news",
       "tags": [
         "ai_chatbot",
-        "traffic",
+        "traffic_generation",
         "referral_traffic",
         "ahref"
       ],
       "importance": 3,
       "published_at": "2026-05-15T07:43:56Z",
-      "fetched_at": "2026-05-16T05:03:25.146979Z",
+      "fetched_at": "2026-05-16T06:03:15.803400Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -178,10 +94,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_003",
+      "id": "item_2026-05-16_002",
       "title_original": "How to do YouTube keyword research: A complete 2026 guide",
       "title_it": "Guida completa alla ricerca di parole chiave su YouTube nel 2026",
-      "summary_it": "Semrush pubblica una guida dettagliata sulla ricerca di keyword specifiche per YouTube, utile per validare argomenti video sia per la piattaforma che per le funzionalità video di Google. L'articolo esplora diverse tecniche e strumenti per identificare le parole chiave più pertinenti e performanti per i contenuti video. La guida è pensata per il 2026.",
+      "summary_it": "Semrush pubblica una guida dettagliata sulla ricerca di keyword specifiche per YouTube, utile per validare argomenti sia per la piattaforma video che per le funzionalità video di Google. L'articolo esplora diverse tecniche e strumenti per identificare le parole chiave più pertinenti e performanti su YouTube. La guida è pensata per il 2026.",
       "url": "https://www.semrush.com/blog/youtube-keyword-research",
       "source": {
         "id": "semrush_blog",
@@ -204,7 +120,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T07:45:00Z",
-      "fetched_at": "2026-05-16T05:03:26.489950Z",
+      "fetched_at": "2026-05-16T06:03:17.129762Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -213,10 +129,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_004",
+      "id": "item_2026-05-16_003",
       "title_original": "How to find buyer intent keywords for organic & AI search",
       "title_it": "Come identificare le keyword con intento d'acquisto per la ricerca organica e l'AI",
-      "summary_it": "Semrush pubblica una guida su come identificare e monitorare le keyword utilizzate dagli utenti con intento d'acquisto, sia su Google che su modelli linguistici come ChatGPT. L'articolo esplora diverse tecniche per individuare queste keyword e suggerisce come integrarle nella strategia SEO. L'obiettivo è migliorare il targeting e l'efficacia delle campagne.",
+      "summary_it": "Semrush pubblica una guida su come identificare e monitorare le keyword utilizzate dagli utenti con intento d'acquisto, sia su Google che su modelli linguistici come ChatGPT. L'articolo esplora diverse tecniche per individuare queste keyword e suggerisce come integrarle nella strategia SEO. L'obiettivo è migliorare il targeting e l'efficacia delle campagne di marketing.",
       "url": "https://www.semrush.com/blog/buyer-keywords",
       "source": {
         "id": "semrush_blog",
@@ -239,7 +155,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T07:57:00Z",
-      "fetched_at": "2026-05-16T05:03:27.944686Z",
+      "fetched_at": "2026-05-16T06:03:18.606167Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -248,10 +164,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_005",
+      "id": "item_2026-05-16_004",
       "title_original": "Why Your AI Ad Strategy Is Only As Good As Your Data via @sejournal, @gregjarboe",
-      "title_it": "L'efficacia delle strategie pubblicitarie basate sull'AI dipende dalla qualità dei dati",
-      "summary_it": "L'articolo evidenzia come l'efficacia delle campagne pubblicitarie basate sull'intelligenza artificiale sia direttamente proporzionale alla qualità dei dati forniti. Input di scarsa qualità portano a inefficienze amplificate. Vengono esaminate le strategie per migliorare i segnali forniti all'AI nel contesto del 2026.",
+      "title_it": "L'efficacia delle strategie pubblicitarie basate sull'intelligenza artificiale dipende dalla qualità dei dati",
+      "summary_it": "L'articolo evidenzia come l'IA amplifichi la qualità dei dati in input, portando a risultati inefficienti se i dati sono di scarsa qualità. Viene sottolineata l'importanza di fornire segnali di alta qualità per ottimizzare le campagne pubblicitarie basate sull'AI.",
       "url": "https://www.searchenginejournal.com/why-your-ai-ad-strategy-is-only-as-good-as-your-data/574661",
       "source": {
         "id": "search_engine_journal",
@@ -274,7 +190,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T08:00:23Z",
-      "fetched_at": "2026-05-16T05:03:29.338921Z",
+      "fetched_at": "2026-05-16T06:03:23.185693Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -283,10 +199,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_006",
+      "id": "item_2026-05-16_005",
       "title_original": "What is prompt tracking? (+ 4 prompt types to track)",
-      "title_it": "Cos'è il monitoraggio dei prompt? (+ 4 tipi di prompt da tracciare)",
-      "summary_it": "L'articolo di Semrush definisce il monitoraggio dei prompt come l'analisi delle domande poste dagli utenti ai sistemi di intelligenza artificiale e delle relative risposte. Vengono identificati quattro tipi di prompt che ogni brand dovrebbe monitorare per ottimizzare le interazioni con l'AI e migliorare la propria strategia di contenuti. L'articolo si concentra sull'importanza di comprendere come gli utenti interagiscono con l'AI per affinare le risposte e migliorare l'esperienza utente.",
+      "title_it": "Cos'è il tracciamento dei prompt? (+ 4 tipologie di prompt da monitorare)",
+      "summary_it": "Semrush introduce il concetto di tracciamento dei prompt, ovvero il monitoraggio delle domande poste dagli utenti ai sistemi di intelligenza artificiale e delle relative risposte. L'articolo identifica quattro tipologie di prompt che ogni brand dovrebbe monitorare per ottimizzare l'interazione con l'AI. Il tracciamento dei prompt permette di comprendere meglio le esigenze degli utenti e migliorare le risposte fornite dall'AI.",
       "url": "https://www.semrush.com/blog/prompt-tracking",
       "source": {
         "id": "semrush_blog",
@@ -300,16 +216,16 @@
         "category_hint": "tools_platforms",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "ai_models",
       "tags": [
         "prompt_engineering",
-        "ai_content",
+        "ai_tracking",
         "user_intent",
         "semrush"
       ],
       "importance": 3,
       "published_at": "2026-05-15T08:28:00Z",
-      "fetched_at": "2026-05-16T05:03:31.061728Z",
+      "fetched_at": "2026-05-16T06:03:25.004804Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -318,10 +234,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_007",
+      "id": "item_2026-05-16_006",
       "title_original": "Google AI Mode With Direct Hotel Booking Links Inside Responses",
       "title_it": "Google AI: link diretti per prenotazioni hotel nelle risposte AI",
-      "summary_it": "Google sta testando l'inserimento di link diretti per la prenotazione di hotel all'interno delle risposte generate dall'AI. Questa modifica, se implementata, potrebbe incrementare il traffico diretto verso i siti web degli hotel. Al momento non è replicabile e potrebbe trattarsi di un test limitato.",
+      "summary_it": "Google sta testando l'inserimento di link diretti per la prenotazione di hotel all'interno delle risposte generate dall'AI. Questa modifica, se implementata, potrebbe indirizzare traffico direttamente ai siti web degli hotel. Al momento non è replicabile e potrebbe trattarsi solo di un test.",
       "url": "https://www.seroundtable.com/google-ai-mode-direct-hotel-booking-links-41317.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -339,12 +255,12 @@
       "tags": [
         "google_ai",
         "hotel_booking",
-        "direct_traffic",
-        "ai_search"
+        "ai_search",
+        "travel_seo"
       ],
       "importance": 3,
       "published_at": "2026-05-15T10:11:00Z",
-      "fetched_at": "2026-05-16T05:03:32.531278Z",
+      "fetched_at": "2026-05-16T06:03:26.346633Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -353,10 +269,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_008",
+      "id": "item_2026-05-16_007",
       "title_original": "Google Ads Create Video With AI Beta",
       "title_it": "Google Ads testa la creazione di video tramite AI (beta)",
-      "summary_it": "Google Ads sta testando una nuova funzionalità beta denominata \"Crea video\" per le campagne Demand Gen, integrata con Gemini AI. Questa funzione permette di generare automaticamente video creativi, probabilmente tramite VEO 3 Video AI Gen.",
+      "summary_it": "Google Ads sta testando una nuova funzionalità beta denominata \"Crea video\" per le campagne Demand Gen, integrata con Gemini AI. Questa funzione permette di generare automaticamente video creativi, probabilmente sfruttando VEO 3 Video AI Gen.",
       "url": "https://www.seroundtable.com/google-ads-create-video-41321.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -379,7 +295,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T10:21:00Z",
-      "fetched_at": "2026-05-16T05:03:33.678064Z",
+      "fetched_at": "2026-05-16T06:03:27.534761Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -388,10 +304,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_009",
+      "id": "item_2026-05-16_008",
       "title_original": "Google: Spam Policies Apply To AI Responses (AI Overviews & AI Mode)",
       "title_it": "Google: le norme antispam si applicano anche alle risposte generate dall'AI (AI Overviews e AI Mode)",
-      "summary_it": "Google ha aggiornato le sue norme antispam per chiarire che si applicano anche alle risposte generate dall'intelligenza artificiale nella Ricerca, come AI Overviews e AI Mode. L'obiettivo è prevenire tecniche ingannevoli volte a manipolare i sistemi di ranking o le risposte AI. La modifica è stata apportata per ribadire che le policy antispam valgono per tutte le aree di Google Search.",
+      "summary_it": "Google ha aggiornato le sue norme antispam per chiarire che si applicano anche alle risposte generate dall'intelligenza artificiale in Google Search, come AI Overviews e AI Mode. L'obiettivo è prevenire tecniche ingannevoli volte a manipolare i sistemi di ranking o le risposte AI. Questa modifica esplicita l'estensione delle policy a tutte le componenti di Google Search, comprese quelle basate su AI.",
       "url": "https://www.seroundtable.com/google-spam-policies-apply-ai-responses-41331.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -414,7 +330,7 @@
       ],
       "importance": 4,
       "published_at": "2026-05-15T10:31:00Z",
-      "fetched_at": "2026-05-16T05:03:35.332098Z",
+      "fetched_at": "2026-05-16T06:03:29.163508Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -423,10 +339,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_010",
+      "id": "item_2026-05-16_009",
       "title_original": "Google Search Autocomplete With AI Overview Search Icon",
-      "title_it": "Google testa l'autocomplete con icona AI Overview",
-      "summary_it": "Google sta testando una nuova icona nell'autocomplete di ricerca, un simbolo che combina una lente d'ingrandimento con il logo Gemini. Cliccando sull'icona, l'utente viene indirizzato a una pagina di ricerca con l'AI Overview già espansa. Questo test segue precedenti implementazioni di \"AI Mode\" nei suggerimenti di ricerca.",
+      "title_it": "Google testa un'icona per le AI Overview nei suggerimenti di autocompletamento",
+      "summary_it": "Google sta testando una nuova icona nei suggerimenti di autocompletamento che include una lente d'ingrandimento con il logo Gemini. Cliccando sull'icona, l'utente viene indirizzato a una pagina di ricerca con l'AI Overview già espansa. Questo test differisce dai precedenti esperimenti con \"AI Mode\" nei suggerimenti.",
       "url": "https://www.seroundtable.com/google-autocomplete-ai-overview-icon-41330.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -449,7 +365,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T10:41:00Z",
-      "fetched_at": "2026-05-16T05:03:36.677368Z",
+      "fetched_at": "2026-05-16T06:03:30.713637Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -458,10 +374,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_011",
+      "id": "item_2026-05-16_010",
       "title_original": "Google Indexing API Is Inundated By Bloggers",
       "title_it": "L'API di indicizzazione di Google è sovraccarica di richieste da parte di blogger",
-      "summary_it": "John Mueller ha dichiarato che l'API di indicizzazione di Google è attualmente sovraccarica a causa dell'eccessivo utilizzo da parte di blogger che cercano di simulare siti legittimi. Questo sta portando Google a essere più cauto riguardo a chi e cosa viene accettato tramite l'API. L'API dovrebbe essere utilizzata solo per offerte di lavoro e contenuti in live streaming.",
+      "summary_it": "John Mueller ha segnalato un sovraccarico dell'API di indicizzazione di Google dovuto all'uso improprio da parte di blogger che cercano di simulare siti legittimi. Questo sta portando Google a essere più cauto riguardo alle richieste accettate tramite l'API. L'API di indicizzazione dovrebbe essere utilizzata solo per offerte di lavoro e contenuti in live streaming.",
       "url": "https://www.seroundtable.com/google-indexing-api-inundated-by-bloggers-41329.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -484,7 +400,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T10:51:00Z",
-      "fetched_at": "2026-05-16T05:03:38.063548Z",
+      "fetched_at": "2026-05-16T06:03:32.199838Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -493,10 +409,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_012",
+      "id": "item_2026-05-16_011",
       "title_original": "Search News Buzz Video Recap: Google Ranking Volatility Heated, Discover Data Goes Missing, FAQ Rich Results Totally Gone & Google Ads AI Dashboards",
       "title_it": "Riassunto Video di Notizie SEO: Volatilità delle Classifiche Google, Dati Discover Mancanti, FAQ Rich Results Rimossi e Dashboard AI di Google Ads",
-      "summary_it": "Il video riepiloga la recente volatilità nelle classifiche di ricerca Google, la scomparsa dei dati di Google Discover dal 7 e 8 maggio e la rimozione dei rich result FAQ. Inoltre, le policy antispam di Google si applicano ora anche alle risposte generate dall'AI. Infine, sono state presentate le nuove dashboard AI di Google Ads.",
+      "summary_it": "Il video riepiloga la recente volatilità nelle classifiche di ricerca Google, l'estensione delle policy antispam alle risposte AI, la mancanza di dati nel report di Google Discover e la rimozione dei rich result FAQ. Inoltre, vengono segnalate novità su Bing Webmaster Tools, studi sullo schema markup e aggiornamenti su Google Ads e Merchant Center.",
       "url": "https://www.seroundtable.com/video-05-15-2026-41328.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -510,17 +426,17 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "industry_news",
       "tags": [
         "google_search",
         "google_discover",
-        "faq_rich_result",
         "google_ad",
-        "ai"
+        "faq_rich_result",
+        "ranking_volatility"
       ],
       "importance": 3,
       "published_at": "2026-05-15T11:01:00Z",
-      "fetched_at": "2026-05-16T05:03:39.821330Z",
+      "fetched_at": "2026-05-16T06:03:40.030413Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -529,10 +445,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_013",
+      "id": "item_2026-05-16_012",
       "title_original": "Growth Intelligence Brief #18",
-      "title_it": "Growth Intelligence Brief #18: Microsoft ridefinisce l'indice di ricerca, A/B test di Ramp e knowledge graph di Amazon",
-      "summary_it": "L'ultima Growth Intelligence Brief di Kevin Indig analizza come Microsoft stia ridefinendo l'indice di ricerca nell'era dell'AI, un A/B test di Ramp che ha invalidato l'approccio schema-first per gli agenti AI e un knowledge graph di Amazon basato su LLM che ha generato milioni di entrate. Il brief esplora le implicazioni di questi sviluppi per i professionisti del marketing.",
+      "title_it": "Aggiornamenti di Growth Intelligence: Microsoft ridefinisce l'indice di ricerca, A/B test di Ramp e il knowledge graph di Amazon basato su LLM",
+      "summary_it": "L'ultima Growth Intelligence Brief di Kevin Indig analizza come Microsoft sta evolvendo la definizione dell'indice di ricerca nell'era delle risposte AI. Viene discusso anche un A/B test di Ramp che mette in discussione l'approccio schema-first per gli agenti AI, e l'impatto del knowledge graph di Amazon basato su LLM sull'aumento dei ricavi.",
       "url": "https://www.growth-memo.com/p/growth-intelligence-brief-18",
       "source": {
         "id": "growth_memo_kevin_indig",
@@ -551,13 +467,11 @@
         "search_index",
         "a_b_testing",
         "knowledge_graph",
-        "llm",
-        "microsoft",
-        "amazon"
+        "llm"
       ],
-      "importance": 4,
+      "importance": 3,
       "published_at": "2026-05-15T11:22:17Z",
-      "fetched_at": "2026-05-16T05:03:41.663302Z",
+      "fetched_at": "2026-05-16T06:03:41.728512Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -566,10 +480,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_014",
+      "id": "item_2026-05-16_013",
       "title_original": "GA4 Tracks AI Assistant Traffic, FAQ Results Gone – SEO Pulse via @sejournal, @MattGSouthern",
       "title_it": "GA4 traccia il traffico degli assistenti AI, spariscono i risultati FAQ: SEO Pulse",
-      "summary_it": "Google Analytics 4 ora include il tracciamento del traffico proveniente dagli assistenti AI. Parallelamente, si registra la scomparsa dei rich result relativi alle FAQ. Ahrefs sta testando nuovi schemi e Condé Nast si prepara a scenari futuri con traffico da ricerca quasi nullo.",
+      "summary_it": "Google Analytics 4 ora include il tracciamento del traffico proveniente dagli assistenti AI. Contestualmente, si registra la scomparsa dei rich result per le FAQ. Ahrefs sta testando nuovi schemi di markup.",
       "url": "https://www.searchenginejournal.com/seo-pulse-ga4-tracks-ai-assistant-traffic-faq-results-gone/575010",
       "source": {
         "id": "search_engine_journal",
@@ -592,7 +506,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T11:30:12Z",
-      "fetched_at": "2026-05-16T05:03:43.047102Z",
+      "fetched_at": "2026-05-16T06:03:42.984004Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -601,10 +515,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_015",
+      "id": "item_2026-05-16_014",
       "title_original": "Daily Search Forum Recap: May 15, 2026",
-      "title_it": "Riassunto giornaliero dei forum di ricerca: 15 maggio 2026",
-      "summary_it": "Google ha aggiornato la sua politica antispam per includere le risposte generate dall'AI nella Ricerca. L'API di indicizzazione di Google è sovraccarica di richieste da parte di blogger. Inoltre, Google sta testando icone AI Overview in Autocomplete e nuove funzionalità AI per la creazione di video in Google Ads.",
+      "title_it": "Aggiornamenti Quotidiani dai Forum di Ricerca: 15 Maggio 2026",
+      "summary_it": "Google ha aggiornato la sua politica antispam per includere le risposte generate dall'AI nella Ricerca. L'Indexing API di Google è sovraccarica di richieste da parte di blogger. Inoltre, Google sta testando icone AI Overview in Autocomplete e nuove funzionalità AI per la creazione di video in Google Ads.",
       "url": "https://www.seroundtable.com/recap-05-15-2026-41332.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -622,12 +536,13 @@
       "tags": [
         "google_search",
         "ai_overviews",
+        "spam_policy",
         "indexing_api",
         "google_ad"
       ],
       "importance": 3,
       "published_at": "2026-05-15T13:00:00Z",
-      "fetched_at": "2026-05-16T05:03:44.386555Z",
+      "fetched_at": "2026-05-16T06:03:44.496019Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -636,10 +551,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_016",
+      "id": "item_2026-05-16_015",
       "title_original": "What is a lead generation funnel? And how to build one",
       "title_it": "Cos'è un funnel di lead generation e come costruirlo",
-      "summary_it": "L'articolo di Semrush spiega il concetto di funnel di lead generation e fornisce indicazioni su come implementarne uno efficace. Vengono descritte le varie fasi del funnel e le strategie per attrarre e convertire lead qualificati. L'articolo è rivolto a chi si occupa di marketing e vendite.",
+      "summary_it": "L'articolo di Semrush spiega il concetto di funnel di lead generation e fornisce indicazioni su come implementarne uno efficace. Vengono descritte le diverse fasi del funnel e le strategie per attrarre e convertire lead qualificati. L'articolo è rivolto a chi si occupa di marketing e vendite.",
       "url": "https://www.semrush.com/blog/lead-generation-funnel",
       "source": {
         "id": "semrush_blog",
@@ -657,12 +572,12 @@
       "tags": [
         "lead_generation",
         "marketing_funnel",
-        "sale",
+        "sales_funnel",
         "semrush"
       ],
-      "importance": 3,
+      "importance": 2,
       "published_at": "2026-05-15T13:13:00Z",
-      "fetched_at": "2026-05-16T05:03:45.694954Z",
+      "fetched_at": "2026-05-16T06:03:45.737159Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -671,10 +586,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_017",
+      "id": "item_2026-05-16_016",
       "title_original": "AI Agents for SEO: What They Are, How They Work, and How to Build One",
       "title_it": "Agenti AI per la SEO: cosa sono, come funzionano e come crearne uno",
-      "summary_it": "L'articolo di Ahrefs esplora l'utilizzo di agenti AI per attività SEO, analizzando strumenti utili e fornendo indicazioni sulla creazione di agenti personalizzati. Vengono condivise anche le esperienze di chi ha già sviluppato queste soluzioni, evidenziando le sfide incontrate.",
+      "summary_it": "L'articolo di Ahrefs esplora gli agenti AI per la SEO, definendone le funzioni pratiche e gli strumenti utili. Vengono fornite indicazioni su come sviluppare un agente AI personalizzato, condividendo le esperienze di chi li ha già creati. L'articolo si concentra sull'applicazione pratica dell'AI nel campo SEO.",
       "url": "https://ahrefs.com/blog/ai-agents-for-seo",
       "source": {
         "id": "ahrefs_blog",
@@ -697,7 +612,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-15T14:57:30Z",
-      "fetched_at": "2026-05-16T05:03:47.042629Z",
+      "fetched_at": "2026-05-16T06:03:47.126521Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -706,10 +621,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_018",
+      "id": "item_2026-05-16_017",
       "title_original": "Google’s New AI Search Guide Calls AEO And GEO ‘Still SEO’ via @sejournal, @MattGSouthern",
       "title_it": "La nuova guida di Google sull'AI Search ribadisce l'importanza di AEO e GEO per la SEO",
-      "summary_it": "Google ha pubblicato una nuova guida sull'AI Search, sottolineando che l'ottimizzazione AEO (Author Experience Optimization) e GEO (Generative Experience Optimization) rimangono rilevanti per la SEO. La guida identifica anche tattiche che i proprietari di siti possono ignorare, come llms.txt e schemi specifici.",
+      "summary_it": "Google ha pubblicato una nuova guida sull'AI Search, sottolineando che l'ottimizzazione AEO (AI Engine Optimization) e GEO (Generative Engine Optimization) rimangono parte integrante della SEO. La guida identifica anche tattiche che i proprietari di siti possono ignorare, come llms.txt e schemi specifici.",
       "url": "https://www.searchenginejournal.com/googles-new-ai-search-guide-calls-aeo-and-geo-still-seo/575026",
       "source": {
         "id": "search_engine_journal",
@@ -727,147 +642,104 @@
       "tags": [
         "aeo",
         "geo",
-        "google_ai_search",
-        "generative_ai"
+        "ai_search",
+        "google_guideline"
       ],
-      "importance": 3,
+      "importance": 4,
       "published_at": "2026-05-15T15:14:25Z",
-      "fetched_at": "2026-05-16T05:03:48.443607Z",
+      "fetched_at": "2026-05-16T06:03:48.524965Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
       "raw_hash": "sha256:0d173762b660c348",
       "deep_analysis": null
-    },
-    {
-      "id": "doc_2026-05-16_001",
-      "title_original": "Google Spam Policies",
-      "title_it": "⚠️ Aggiornamento definizione di Spam nelle Google Spam Policies",
-      "summary_it": "La definizione di spam è stata ampliata per includere non solo la manipolazione del ranking, ma anche la manipolazione delle risposte generate dall'AI in Google Search. Questo significa che le tecniche per influenzare le risposte dell'AI sono ora considerate spam. La frase 'content' è stata spostata per migliorare la leggibilità.",
-      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
-      "source": {
-        "id": "doc_watcher",
-        "name": "OsservatorioSEO Doc Watcher",
-        "authority": 10,
-        "type": "doc_change",
-        "fetcher": "rss",
-        "feed_url": null,
-        "target_url": null,
-        "selectors": null,
-        "category_hint": null,
-        "enabled": true
-      },
-      "category": "google_docs_change",
-      "tags": [
-        "spam",
-        "google_search",
-        "ai",
-        "ranking",
-        "policie"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-16T05:01:52.371513Z",
-      "fetched_at": "2026-05-16T05:01:52.371513Z",
-      "is_doc_change": true,
-      "doc_change": {
-        "page_id": "google_spam_policies",
-        "previous_hash": "sha256:7ebeb59da66f1dd92760990b5f1470205e4948b736740843aaa4fd0ae46c8dc0",
-        "current_hash": "sha256:baa24e73145da6456d831cfadb5769c8d4da01557defaa44c3f530472214a216",
-        "diff_url": null,
-        "lines_added": 1,
-        "lines_removed": 1
-      },
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:baa24e73145da6456d831cfadb5769c8d4da01557defaa44c3f530472214a216",
-      "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-16T05:01:52.371513Z",
-      "changed": true
+      "last_checked": "2026-05-16T06:01:55.153468Z",
+      "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-16T05:01:52.731695Z",
+      "last_checked": "2026-05-16T06:01:55.524569Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-16T05:01:54.699195Z",
+      "last_checked": "2026-05-16T06:01:56.846627Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-16T05:02:21.577611Z",
+      "last_checked": "2026-05-16T06:02:27.081587Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-16T05:02:21.818885Z",
+      "last_checked": "2026-05-16T06:02:27.381902Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-16T05:02:23.437510Z",
+      "last_checked": "2026-05-16T06:02:28.797616Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-16T05:02:25.567593Z",
+      "last_checked": "2026-05-16T06:02:30.395157Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-16T05:02:26.551558Z",
+      "last_checked": "2026-05-16T06:02:31.226024Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-16T05:02:26.594076Z",
+      "last_checked": "2026-05-16T06:02:31.274572Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-16T05:02:47.703070Z",
+      "last_checked": "2026-05-16T06:02:35.652571Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-16T05:02:48.330556Z",
+      "last_checked": "2026-05-16T06:02:35.973133Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-16T05:02:49.851241Z",
+      "last_checked": "2026-05-16T06:02:37.082698Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-16T05:02:51.195363Z",
+      "last_checked": "2026-05-16T06:02:38.745220Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-16T05:02:52.957041Z",
+      "last_checked": "2026-05-16T06:02:40.777595Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-16T05:02:54.676664Z",
+      "last_checked": "2026-05-16T06:02:42.231981Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-16T05:02:56.194183Z",
+      "last_checked": "2026-05-16T06:02:44.230770Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-16T05:03:22.073067Z",
+      "last_checked": "2026-05-16T06:03:13.886468Z",
       "changed": false
     }
   ],
