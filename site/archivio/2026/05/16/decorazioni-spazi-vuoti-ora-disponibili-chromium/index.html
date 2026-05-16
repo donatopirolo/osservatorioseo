@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>Decorazioni per spazi vuoti: ora disponibili in Chromium — Osservatorio SEO</title>
+<meta name="description" content="Chromium e Edge 149 introducono una nuova modalità per stilizzare gli spazi vuoti in CSS. Questa funzionalità offre maggiore controllo sull&#39;aspetto visivo " />
+<link rel="canonical" href="https://www.osservatorioseo.com/archivio/2026/05/16/decorazioni-spazi-vuoti-ora-disponibili-chromium/" />
+<meta property="og:title" content="Decorazioni per spazi vuoti: ora disponibili in Chromium — Osservatorio SEO" />
+<meta property="og:description" content="Chromium e Edge 149 introducono una nuova modalità per stilizzare gli spazi vuoti in CSS. Questa funzionalità offre maggiore controllo sull&#39;aspetto visivo " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/archivio/2026/05/16/decorazioni-spazi-vuoti-ora-disponibili-chromium/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta name="twitter:card" content="summary_large_image" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Decorazioni per spazi vuoti: ora disponibili in Chromium",
+  "description": "Chromium e Edge 149 introducono una nuova modalit\u00e0 per stilizzare gli spazi vuoti in CSS. Questa funzionalit\u00e0 offre maggiore controllo sull\u0027aspetto visivo degli elementi con spaziature, consentendo personalizzazioni pi\u00f9 precise. L\u0027implementazione mira a migliorare la flessibilit\u00e0 del design web.",
+  "articleBody": "Chromium 149 e Edge 149 introducono le gap decorations, una nuova propriet\u00e0 CSS che consente di applicare stili visivi direttamente agli spazi vuoti (gap) tra elementi in layout Flexbox e Grid. Fino ad oggi, gli spazi definiti tramite `gap` o `column-gap` / `row-gap` erano invisibili e non stilizzabili: questa limitazione obbligava a workaround con pseudo-elementi, bordi o elementi wrapper aggiuntivi per ottenere separatori visivi.\n\nLa nuova specifica introduce propriet\u00e0 come `column-rule` e `row-rule` (analoghe a `column-rule` gi\u00e0 esistente per i layout multicolonna) che permettono di definire colore, spessore e stile di linee di separazione direttamente nello spazio del gap. Il risultato \u00e8 un markup pi\u00f9 pulito, meno dipendente da hack CSS e una maggiore coerenza tra codice e rappresentazione visiva.\n\nDal punto di vista SEO tecnico, l\u0027impatto diretto \u00e8 limitato ma non trascurabile. La riduzione di elementi DOM superflui migliora la leggibilit\u00e0 del codice sorgente per i crawler e riduce il peso della pagina. Un DOM pi\u00f9 snello pu\u00f2 tradursi in tempi di rendering pi\u00f9 rapidi, un segnale positivo per Core Web Vitals, in particolare Largest Contentful Paint (LCP) e Cumulative Layout Shift (CLS) se gli elementi decorativi causavano reflow.\n\nLa compatibilit\u00e0 \u00e8 attualmente limitata a Chromium 149+ (Chrome, Edge, Opera) e non \u00e8 ancora supportata da Safari o Firefox. Questo implica che l\u0027adozione in produzione richiede fallback CSS o progressive enhancement. L\u0027uso di `@supports` \u00e8 raccomandato per evitare layout rotti su browser non compatibili.\n\nPer siti ad alto traffico da mobile, dove Chrome domina con oltre il 60% di quota globale, l\u0027adozione progressiva pu\u00f2 essere giustificata. Per progetti enterprise o con audience diversificate (es. utenti Apple), \u00e8 necessario mantenere soluzioni alternative fino a quando Safari non implementer\u00e0 la specifica.\n\nLa funzionalit\u00e0 non modifica il comportamento di indicizzazione o ranking, ma rientra in una strategia pi\u00f9 ampia di ottimizzazione del rendering e pulizia del codice. Se il tuo stack di sviluppo front-end include gi\u00e0 CSS moderno (container queries, cascade layers), questa \u00e8 un\u0027aggiunta coerente che riduce la dipendenza da JavaScript o librerie esterne per effetti visivi semplici.\n\nL\u0027adozione immediata ha senso solo se il tuo sito ha gi\u00e0 una strategia di progressive enhancement consolidata e se il team front-end pu\u00f2 gestire fallback senza aumentare la complessit\u00e0 del CSS. In caso contrario, \u00e8 pi\u00f9 prudente attendere un supporto cross-browser pi\u00f9 ampio, previsto nei prossimi 12-18 mesi se la specifica viene adottata da altri vendor.",
+  "wordCount": 393,
+  "datePublished": "2026-05-15T06:00:00+00:00",
+  "dateModified": "2026-05-15T06:00:00+00:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://osservatorioseo.pages.dev/tailwind.css",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/archivio/2026/05/16/decorazioni-spazi-vuoti-ora-disponibili-chromium/"
+  },
+  "articleSection": "Technical SEO",
+  "inLanguage": "it-IT",
+  "isBasedOn": "https://developer.chrome.com/blog/gap-decorations-stable?hl=en",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "article > section.prose p"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Archivio",
+      "item": "https://www.osservatorioseo.com/archivio/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "2026",
+      "item": "https://www.osservatorioseo.com/archivio/2026/"
+    },    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "05",
+      "item": "https://www.osservatorioseo.com/archivio/2026/05/"
+    },    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "16",
+      "item": "https://www.osservatorioseo.com/archivio/2026/05/16/"
+    },    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Decorazioni per spazi vuoti: ora disponibili in Chromium",
+      "item": "https://www.osservatorioseo.com/archivio/2026/05/16/decorazioni-spazi-vuoti-ora-disponibili-chromium/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [    {
+      "@type": "Question",
+      "name": "Devo adottare subito le gap decorations o aspettare il supporto Safari?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dipende dalla tua audience e dalla complessit\u00e0 del CSS attuale. Se oltre il 70% del traffico arriva da Chrome/Edge e hai gi\u00e0 una strategia di progressive enhancement, puoi adottarle ora con fallback. Se Safari rappresenta oltre il 25% del traffico o il team non ha esperienza con `@supports`, \u00e8 pi\u00f9 sicuro attendere 12-18 mesi per un supporto cross-browser stabile."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Le gap decorations migliorano direttamente i Core Web Vitals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non in modo diretto o garantito. La riduzione di elementi DOM e CSS pu\u00f2 portare a miglioramenti marginali di LCP e CLS, ma l\u0027impatto reale dipende da quanto il tuo layout attuale \u00e8 appesantito da workaround per separatori visivi. In scenari tipici, il guadagno \u00e8 nell\u0027ordine di pochi millisecondi, non di centinaia."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Questa funzionalit\u00e0 influisce sul crawling di Googlebot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Googlebot non interpreta gli stili visivi come fattore di ranking. L\u0027unico beneficio indiretto \u00e8 un HTML pi\u00f9 pulito e un CSS pi\u00f9 leggero, che possono ridurre il tempo di parsing, ma l\u0027impatto su crawling e indicizzazione \u00e8 trascurabile. Non \u00e8 una priorit\u00e0 per SEO puro."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Posso usare gap decorations per sostituire bordi su elementi Grid senza rompere il layout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "S\u00ec, ma solo se i bordi attuali sono applicati al container o usano pseudo-elementi. Se ogni elemento figlio ha un bordo proprio, la sostituzione richiede un refactoring pi\u00f9 profondo del CSS. Testa sempre con `@supports` per evitare layout rotti su browser non compatibili."
+      }
+    }  ]
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/google-financials/">GOOGLE_FIN</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+    <a href="/" class="hover:text-primary-container">Home</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/" class="hover:text-primary-container">Archivio</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/" class="hover:text-primary-container">2026</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/05/" class="hover:text-primary-container">05</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/05/16/" class="hover:text-primary-container">16</a>
+    <span class="text-outline-variant">/</span>
+    <span class="text-primary-container">Decorazioni per spazi vuoti: ora disponibili in Chromium</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-8">
+    <p class="text-[10px] text-outline uppercase font-mono mb-2">
+      <a href="/categoria/technical-seo/" class="text-primary-container hover:underline">Technical SEO</a>
+      · <span class="text-[#f5a623]">★★★★★</span>
+      · <time datetime="2026-05-15T06:00:00Z">Friday 15 May 2026, 06:00</time>
+    </p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Decorazioni per spazi vuoti: ora disponibili in Chromium</h1>
+    <p class="text-sm text-outline font-mono uppercase">Fonte: <a class="text-primary-container hover:underline" href="https://developer.chrome.com/blog/gap-decorations-stable?hl=en" target="_blank" rel="noopener">Chrome Developers Blog</a></p>
+  </header>
+
+  <section class="prose prose-invert mb-10">
+    <p class="text-lg leading-relaxed text-on-surface">Chromium e Edge 149 introducono una nuova modalità per stilizzare gli spazi vuoti in CSS. Questa funzionalità offre maggiore controllo sull&#39;aspetto visivo degli elementi con spaziature, consentendo personalizzazioni più precise. L&#39;implementazione mira a migliorare la flessibilità del design web.</p>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI APPROFONDITA</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      <p>Chromium 149 e Edge 149 introducono le gap decorations, una nuova proprietà CSS che consente di applicare stili visivi direttamente agli spazi vuoti (gap) tra elementi in layout Flexbox e Grid. Fino ad oggi, gli spazi definiti tramite `gap` o `column-gap` / `row-gap` erano invisibili e non stilizzabili: questa limitazione obbligava a workaround con pseudo-elementi, bordi o elementi wrapper aggiuntivi per ottenere separatori visivi.</p>
+      <p>La nuova specifica introduce proprietà come `column-rule` e `row-rule` (analoghe a `column-rule` già esistente per i layout multicolonna) che permettono di definire colore, spessore e stile di linee di separazione direttamente nello spazio del gap. Il risultato è un markup più pulito, meno dipendente da hack CSS e una maggiore coerenza tra codice e rappresentazione visiva.</p>
+      <p>Dal punto di vista SEO tecnico, l&#39;impatto diretto è limitato ma non trascurabile. La riduzione di elementi DOM superflui migliora la leggibilità del codice sorgente per i crawler e riduce il peso della pagina. Un DOM più snello può tradursi in tempi di rendering più rapidi, un segnale positivo per Core Web Vitals, in particolare Largest Contentful Paint (LCP) e Cumulative Layout Shift (CLS) se gli elementi decorativi causavano reflow.</p>
+      <p>La compatibilità è attualmente limitata a Chromium 149+ (Chrome, Edge, Opera) e non è ancora supportata da Safari o Firefox. Questo implica che l&#39;adozione in produzione richiede fallback CSS o progressive enhancement. L&#39;uso di `@supports` è raccomandato per evitare layout rotti su browser non compatibili.</p>
+      <p>Per siti ad alto traffico da mobile, dove Chrome domina con oltre il 60% di quota globale, l&#39;adozione progressiva può essere giustificata. Per progetti enterprise o con audience diversificate (es. utenti Apple), è necessario mantenere soluzioni alternative fino a quando Safari non implementerà la specifica.</p>
+      <p>La funzionalità non modifica il comportamento di indicizzazione o ranking, ma rientra in una strategia più ampia di ottimizzazione del rendering e pulizia del codice. Se il tuo stack di sviluppo front-end include già CSS moderno (container queries, cascade layers), questa è un&#39;aggiunta coerente che riduce la dipendenza da JavaScript o librerie esterne per effetti visivi semplici.</p>
+      <p>L&#39;adozione immediata ha senso solo se il tuo sito ha già una strategia di progressive enhancement consolidata e se il team front-end può gestire fallback senza aumentare la complessità del CSS. In caso contrario, è più prudente attendere un supporto cross-browser più ampio, previsto nei prossimi 12-18 mesi se la specifica viene adottata da altri vendor.</p>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA CAMBIA PER TE</h2>
+    <ul class="space-y-3">
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Riduzione di elementi DOM superflui: meno `&lt;div&gt;` o pseudo-elementi usati solo per separatori visivi, con benefici marginali su parsing e rendering per crawler e browser.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Potenziale miglioramento di LCP e CLS: un DOM più snello riduce il rischio di reflow causati da elementi decorativi caricati in modo asincrono o tramite JavaScript.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Necessità di fallback CSS: la funzionalità è disponibile solo su Chromium 149+, quindi richiede `@supports` e soluzioni alternative per Safari e Firefox, aumentando temporaneamente la complessità del codice.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Nessun impatto diretto su crawling o ranking: si tratta di una miglioria estetica e di pulizia del codice, non di un fattore di ranking o di indicizzazione.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Vantaggio competitivo minimo ma reale per siti mobile-first: con Chrome dominante su mobile, l&#39;adozione progressiva può ridurre il peso della pagina e migliorare la manutenibilità del CSS.</span>
+      </li>
+    </ul>
+  </section>
+
+<section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ESEMPI CONCRETI</h2>
+    <div class="space-y-4">
+<div class="p-5 border-l-4 bg-[#0e0e0e] border-primary-container">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA FARE</p>
+        <p class="text-on-surface leading-relaxed">Un e-commerce con griglie di prodotti può sostituire bordi CSS applicati a ogni card con `column-rule` e `row-rule` sul container Grid, eliminando 4-6 dichiarazioni CSS per elemento e riducendo la specificità. Il risultato è un CSS più leggero e un DOM senza classi utility aggiuntive.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1b1b1b] border-[#f5a623]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA EVITARE</p>
+        <p class="text-on-surface leading-relaxed">Evitare di rimuovere immediatamente i fallback esistenti: se il tuo sito usa pseudo-elementi `::before` o `::after` per separatori, mantienili come fallback dentro un blocco `@supports not (column-rule: 1px solid black)` fino a quando Safari non supporta la funzionalità. Rimuovere troppo presto causa layout rotti su ~30% del traffico mobile in mercati come USA o UK.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1f1f1f] border-[#919191]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">SCENARIO</p>
+        <p class="text-on-surface leading-relaxed">Un blog editoriale con layout multicolonna può unificare la gestione dei separatori tra colonne di testo e griglie di card correlate, usando la stessa sintassi `column-rule` per entrambi i contesti. Questo riduce la frammentazione del CSS e facilita il refactoring futuro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COME TESTARE L'IMPATTO</h2>
+    <ol class="space-y-2 list-decimal list-inside text-on-surface leading-relaxed marker:text-primary-container marker:font-mono">
+      <li class="pl-2">Verifica la versione di Chrome/Edge in uso sul tuo ambiente di sviluppo: deve essere 149 o superiore per testare la funzionalità.</li>
+      <li class="pl-2">Apri DevTools → Elements e ispeziona un layout Grid o Flexbox con `gap` applicato: aggiungi `column-rule: 2px solid red;` inline per verificare il rendering immediato.</li>
+      <li class="pl-2">Controlla il supporto cross-browser su BrowserStack o simili: testa Safari 17+ e Firefox 115+ per confermare che i fallback CSS funzionano correttamente.</li>
+      <li class="pl-2">Misura il peso del CSS prima e dopo la sostituzione di pseudo-elementi con gap decorations: usa Coverage in DevTools per quantificare la riduzione di byte inutilizzati.</li>
+      <li class="pl-2">Esegui un Lighthouse audit su una pagina di test con la nuova implementazione: confronta LCP e CLS con la versione precedente per verificare eventuali miglioramenti marginali.</li>
+      <li class="pl-2">Monitora GSC → Core Web Vitals per 2-4 settimane dopo il deploy: se il sito ha traffico significativo da Chromium, eventuali miglioramenti di rendering dovrebbero emergere nei percentili P75.</li>
+    </ol>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; DOMANDE FREQUENTI</h2>
+    <div class="divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Devo adottare subito le gap decorations o aspettare il supporto Safari?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Dipende dalla tua audience e dalla complessità del CSS attuale. Se oltre il 70% del traffico arriva da Chrome/Edge e hai già una strategia di progressive enhancement, puoi adottarle ora con fallback. Se Safari rappresenta oltre il 25% del traffico o il team non ha esperienza con `@supports`, è più sicuro attendere 12-18 mesi per un supporto cross-browser stabile.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Le gap decorations migliorano direttamente i Core Web Vitals?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Non in modo diretto o garantito. La riduzione di elementi DOM e CSS può portare a miglioramenti marginali di LCP e CLS, ma l&#39;impatto reale dipende da quanto il tuo layout attuale è appesantito da workaround per separatori visivi. In scenari tipici, il guadagno è nell&#39;ordine di pochi millisecondi, non di centinaia.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Questa funzionalità influisce sul crawling di Googlebot?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">No, Googlebot non interpreta gli stili visivi come fattore di ranking. L&#39;unico beneficio indiretto è un HTML più pulito e un CSS più leggero, che possono ridurre il tempo di parsing, ma l&#39;impatto su crawling e indicizzazione è trascurabile. Non è una priorità per SEO puro.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Posso usare gap decorations per sostituire bordi su elementi Grid senza rompere il layout?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Sì, ma solo se i bordi attuali sono applicati al container o usano pseudo-elementi. Se ogni elemento figlio ha un bordo proprio, la sostituzione richiede un refactoring più profondo del CSS. Testa sempre con `@supports` per evitare layout rotti su browser non compatibili.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="mb-10 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IL PUNTO DELLA REDAZIONE</h2>
+    <p class="text-on-surface leading-relaxed italic">Questa è una miglioria CSS utile per sviluppatori front-end, ma per un SEO tecnico l&#39;impatto operativo è marginale e differito. Non c&#39;è motivo di correre ad adottarla se il tuo sito non ha già una strategia di progressive enhancement consolidata o se il team front-end non ha esperienza con fallback CSS complessi.
+
+Il vero valore emerge solo in contesti specifici: e-commerce con migliaia di card prodotto, siti editoriali con layout complessi, o progetti dove la pulizia del DOM è già un obiettivo dichiarato per migliorare la manutenibilità. In tutti gli altri casi, è più saggio attendere che Safari e Firefox implementino la specifica, evitando di aumentare la superficie di test e la complessità del CSS per un guadagno estetico.
+
+Se il tuo focus è Core Web Vitals, ci sono interventi con ROI molto più alto: ottimizzazione di immagini, lazy loading, riduzione di JavaScript bloccante. Le gap decorations sono un nice-to-have, non un must-have, e trattarle come priorità è un errore di allocazione delle risorse.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; TAGS</h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#css</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#chromium</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#edge</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#web_design</span>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-low border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Questo articolo include un <strong class="text-white">riassunto</strong> della notizia originale e, per gli item critici (5/5), una <strong class="text-white">analisi editoriale</strong> prodotta da Osservatorio SEO.
+      Il riassunto è generato da <code class="text-primary-container">google/gemini-2.0-flash-001</code>, l'analisi approfondita da <code class="text-primary-container">anthropic/claude-sonnet-4-5</code>.
+      Per il testo completo e l'attribuzione della notizia, consulta la fonte originale.
+    </p>
+    <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="https://developer.chrome.com/blog/gap-decorations-stable?hl=en" target="_blank" rel="noopener">LEGGI L'ORIGINALE →</a>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; ALTRI DAL GIORNO</h2>
+    <p class="text-xs text-outline font-mono uppercase">
+      <a href="/archivio/2026/05/16/" class="text-primary-container hover:underline">Vedi tutti gli articoli del Saturday 16 May 2026</a>
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">
+    (C) 2026 OSSERVATORIO_SEO // AUTORE:
+    <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+  </div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+  </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
