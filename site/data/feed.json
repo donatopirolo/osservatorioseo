@@ -1,490 +1,38 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-16T06:01:48.722202Z",
-  "generated_at_local": "2026-05-16T08:01:48.722202+02:00",
+  "generated_at": "2026-05-17T05:01:46.356276Z",
+  "generated_at_local": "2026-05-17T07:01:46.356276+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-16-0801",
+  "run_id": "2026-05-17-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 1998,
-    "items_after_dedup": 17,
+    "items_collected": 2004,
+    "items_after_dedup": 2,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0021,
-    "summarize_attempted": 17,
+    "ai_cost_eur": 0.0002,
+    "summarize_attempted": 2,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-16_008",
-    "item_2026-05-16_017",
-    "item_2026-05-16_010",
-    "item_2026-05-16_014",
-    "item_2026-05-16_013",
-    "item_2026-05-16_004",
-    "item_2026-05-16_005",
-    "item_2026-05-16_006",
-    "item_2026-05-16_007",
-    "item_2026-05-16_009"
+    "item_2026-05-17_001",
+    "item_2026-05-17_002"
   ],
   "categories": {
-    "ai_overviews_llm_seo": [
-      "item_2026-05-16_008",
-      "item_2026-05-16_017",
-      "item_2026-05-16_006",
-      "item_2026-05-16_009",
-      "item_2026-05-16_012",
-      "item_2026-05-16_016"
-    ],
     "google_updates": [
-      "item_2026-05-16_010",
-      "item_2026-05-16_014",
-      "item_2026-05-16_013"
-    ],
-    "ai_models": [
-      "item_2026-05-16_004",
-      "item_2026-05-16_005"
-    ],
-    "tools_platforms": [
-      "item_2026-05-16_007",
-      "item_2026-05-16_002"
+      "item_2026-05-17_001"
     ],
     "industry_news": [
-      "item_2026-05-16_011",
-      "item_2026-05-16_001",
-      "item_2026-05-16_015"
-    ],
-    "content_eeat": [
-      "item_2026-05-16_003"
+      "item_2026-05-17_002"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-16_001",
-      "title_original": "AI Chatbot Traffic: What It Is, and How to Get More",
-      "title_it": "Traffico dai Chatbot AI: cos'è e come aumentarlo",
-      "summary_it": "L'articolo di Ahrefs analizza il traffico proveniente dai chatbot AI come ChatGPT, Perplexity e Claude, quando questi citano un contenuto e gli utenti cliccano sul link. Viene suggerito che questo tipo di traffico potrebbe avere un tasso di conversione superiore rispetto ad altri canali. L'articolo esplora come ottenere maggiore traffico da queste fonti.",
-      "url": "https://ahrefs.com/blog/ai-chatbot-traffic",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "ai_chatbot",
-        "traffic_generation",
-        "referral_traffic",
-        "ahref"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T07:43:56Z",
-      "fetched_at": "2026-05-16T06:03:15.803400Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:b416366447b3a5d8",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_002",
-      "title_original": "How to do YouTube keyword research: A complete 2026 guide",
-      "title_it": "Guida completa alla ricerca di parole chiave su YouTube nel 2026",
-      "summary_it": "Semrush pubblica una guida dettagliata sulla ricerca di keyword specifiche per YouTube, utile per validare argomenti sia per la piattaforma video che per le funzionalità video di Google. L'articolo esplora diverse tecniche e strumenti per identificare le parole chiave più pertinenti e performanti su YouTube. La guida è pensata per il 2026.",
-      "url": "https://www.semrush.com/blog/youtube-keyword-research",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "youtube_seo",
-        "keyword_research",
-        "video_seo",
-        "semrush"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T07:45:00Z",
-      "fetched_at": "2026-05-16T06:03:17.129762Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:021cbedce4219aaa",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_003",
-      "title_original": "How to find buyer intent keywords for organic & AI search",
-      "title_it": "Come identificare le keyword con intento d'acquisto per la ricerca organica e l'AI",
-      "summary_it": "Semrush pubblica una guida su come identificare e monitorare le keyword utilizzate dagli utenti con intento d'acquisto, sia su Google che su modelli linguistici come ChatGPT. L'articolo esplora diverse tecniche per individuare queste keyword e suggerisce come integrarle nella strategia SEO. L'obiettivo è migliorare il targeting e l'efficacia delle campagne di marketing.",
-      "url": "https://www.semrush.com/blog/buyer-keywords",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "keyword_research",
-        "buyer_intent",
-        "ai_search",
-        "semrush"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T07:57:00Z",
-      "fetched_at": "2026-05-16T06:03:18.606167Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:1ad77240c05aeee7",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_004",
-      "title_original": "Why Your AI Ad Strategy Is Only As Good As Your Data via @sejournal, @gregjarboe",
-      "title_it": "L'efficacia delle strategie pubblicitarie basate sull'intelligenza artificiale dipende dalla qualità dei dati",
-      "summary_it": "L'articolo evidenzia come l'IA amplifichi la qualità dei dati in input, portando a risultati inefficienti se i dati sono di scarsa qualità. Viene sottolineata l'importanza di fornire segnali di alta qualità per ottimizzare le campagne pubblicitarie basate sull'AI.",
-      "url": "https://www.searchenginejournal.com/why-your-ai-ad-strategy-is-only-as-good-as-your-data/574661",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_advertising",
-        "data_quality",
-        "machine_learning",
-        "advertising_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T08:00:23Z",
-      "fetched_at": "2026-05-16T06:03:23.185693Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:fcc5ecdff531808c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_005",
-      "title_original": "What is prompt tracking? (+ 4 prompt types to track)",
-      "title_it": "Cos'è il tracciamento dei prompt? (+ 4 tipologie di prompt da monitorare)",
-      "summary_it": "Semrush introduce il concetto di tracciamento dei prompt, ovvero il monitoraggio delle domande poste dagli utenti ai sistemi di intelligenza artificiale e delle relative risposte. L'articolo identifica quattro tipologie di prompt che ogni brand dovrebbe monitorare per ottimizzare l'interazione con l'AI. Il tracciamento dei prompt permette di comprendere meglio le esigenze degli utenti e migliorare le risposte fornite dall'AI.",
-      "url": "https://www.semrush.com/blog/prompt-tracking",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "prompt_engineering",
-        "ai_tracking",
-        "user_intent",
-        "semrush"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T08:28:00Z",
-      "fetched_at": "2026-05-16T06:03:25.004804Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:be55a6768e512b88",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_006",
-      "title_original": "Google AI Mode With Direct Hotel Booking Links Inside Responses",
-      "title_it": "Google AI: link diretti per prenotazioni hotel nelle risposte AI",
-      "summary_it": "Google sta testando l'inserimento di link diretti per la prenotazione di hotel all'interno delle risposte generate dall'AI. Questa modifica, se implementata, potrebbe indirizzare traffico direttamente ai siti web degli hotel. Al momento non è replicabile e potrebbe trattarsi solo di un test.",
-      "url": "https://www.seroundtable.com/google-ai-mode-direct-hotel-booking-links-41317.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ai",
-        "hotel_booking",
-        "ai_search",
-        "travel_seo"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T10:11:00Z",
-      "fetched_at": "2026-05-16T06:03:26.346633Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:961e27dfcd0019eb",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_007",
-      "title_original": "Google Ads Create Video With AI Beta",
-      "title_it": "Google Ads testa la creazione di video tramite AI (beta)",
-      "summary_it": "Google Ads sta testando una nuova funzionalità beta denominata \"Crea video\" per le campagne Demand Gen, integrata con Gemini AI. Questa funzione permette di generare automaticamente video creativi, probabilmente sfruttando VEO 3 Video AI Gen.",
-      "url": "https://www.seroundtable.com/google-ads-create-video-41321.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "ai",
-        "video_marketing",
-        "gemini_ai"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T10:21:00Z",
-      "fetched_at": "2026-05-16T06:03:27.534761Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:172b9cdb084712c4",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_008",
-      "title_original": "Google: Spam Policies Apply To AI Responses (AI Overviews & AI Mode)",
-      "title_it": "Google: le norme antispam si applicano anche alle risposte generate dall'AI (AI Overviews e AI Mode)",
-      "summary_it": "Google ha aggiornato le sue norme antispam per chiarire che si applicano anche alle risposte generate dall'intelligenza artificiale in Google Search, come AI Overviews e AI Mode. L'obiettivo è prevenire tecniche ingannevoli volte a manipolare i sistemi di ranking o le risposte AI. Questa modifica esplicita l'estensione delle policy a tutte le componenti di Google Search, comprese quelle basate su AI.",
-      "url": "https://www.seroundtable.com/google-spam-policies-apply-ai-responses-41331.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_search",
-        "spam_policie",
-        "ai_overviews",
-        "ai_mode"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-15T10:31:00Z",
-      "fetched_at": "2026-05-16T06:03:29.163508Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:678810102cc166c1",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_009",
-      "title_original": "Google Search Autocomplete With AI Overview Search Icon",
-      "title_it": "Google testa un'icona per le AI Overview nei suggerimenti di autocompletamento",
-      "summary_it": "Google sta testando una nuova icona nei suggerimenti di autocompletamento che include una lente d'ingrandimento con il logo Gemini. Cliccando sull'icona, l'utente viene indirizzato a una pagina di ricerca con l'AI Overview già espansa. Questo test differisce dai precedenti esperimenti con \"AI Mode\" nei suggerimenti.",
-      "url": "https://www.seroundtable.com/google-autocomplete-ai-overview-icon-41330.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_search",
-        "ai_overviews",
-        "autocomplete",
-        "gemini"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T10:41:00Z",
-      "fetched_at": "2026-05-16T06:03:30.713637Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:cb467948db4ca341",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_010",
-      "title_original": "Google Indexing API Is Inundated By Bloggers",
-      "title_it": "L'API di indicizzazione di Google è sovraccarica di richieste da parte di blogger",
-      "summary_it": "John Mueller ha segnalato un sovraccarico dell'API di indicizzazione di Google dovuto all'uso improprio da parte di blogger che cercano di simulare siti legittimi. Questo sta portando Google a essere più cauto riguardo alle richieste accettate tramite l'API. L'API di indicizzazione dovrebbe essere utilizzata solo per offerte di lavoro e contenuti in live streaming.",
-      "url": "https://www.seroundtable.com/google-indexing-api-inundated-by-bloggers-41329.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_indexing_api",
-        "indexing",
-        "john_mueller",
-        "spam"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T10:51:00Z",
-      "fetched_at": "2026-05-16T06:03:32.199838Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:9745691fd681e578",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_011",
-      "title_original": "Search News Buzz Video Recap: Google Ranking Volatility Heated, Discover Data Goes Missing, FAQ Rich Results Totally Gone & Google Ads AI Dashboards",
-      "title_it": "Riassunto Video di Notizie SEO: Volatilità delle Classifiche Google, Dati Discover Mancanti, FAQ Rich Results Rimossi e Dashboard AI di Google Ads",
-      "summary_it": "Il video riepiloga la recente volatilità nelle classifiche di ricerca Google, l'estensione delle policy antispam alle risposte AI, la mancanza di dati nel report di Google Discover e la rimozione dei rich result FAQ. Inoltre, vengono segnalate novità su Bing Webmaster Tools, studi sullo schema markup e aggiornamenti su Google Ads e Merchant Center.",
-      "url": "https://www.seroundtable.com/video-05-15-2026-41328.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_search",
-        "google_discover",
-        "google_ad",
-        "faq_rich_result",
-        "ranking_volatility"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T11:01:00Z",
-      "fetched_at": "2026-05-16T06:03:40.030413Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:a3112c6532335b80",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_012",
-      "title_original": "Growth Intelligence Brief #18",
-      "title_it": "Aggiornamenti di Growth Intelligence: Microsoft ridefinisce l'indice di ricerca, A/B test di Ramp e il knowledge graph di Amazon basato su LLM",
-      "summary_it": "L'ultima Growth Intelligence Brief di Kevin Indig analizza come Microsoft sta evolvendo la definizione dell'indice di ricerca nell'era delle risposte AI. Viene discusso anche un A/B test di Ramp che mette in discussione l'approccio schema-first per gli agenti AI, e l'impatto del knowledge graph di Amazon basato su LLM sull'aumento dei ricavi.",
-      "url": "https://www.growth-memo.com/p/growth-intelligence-brief-18",
-      "source": {
-        "id": "growth_memo_kevin_indig",
-        "name": "Growth Memo (Kevin Indig)",
-        "authority": 9,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://www.growth-memo.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "search_index",
-        "a_b_testing",
-        "knowledge_graph",
-        "llm"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T11:22:17Z",
-      "fetched_at": "2026-05-16T06:03:41.728512Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:5276ccee4d7dd825",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_013",
-      "title_original": "GA4 Tracks AI Assistant Traffic, FAQ Results Gone – SEO Pulse via @sejournal, @MattGSouthern",
-      "title_it": "GA4 traccia il traffico degli assistenti AI, spariscono i risultati FAQ: SEO Pulse",
-      "summary_it": "Google Analytics 4 ora include il tracciamento del traffico proveniente dagli assistenti AI. Contestualmente, si registra la scomparsa dei rich result per le FAQ. Ahrefs sta testando nuovi schemi di markup.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-ga4-tracks-ai-assistant-traffic-faq-results-gone/575010",
+      "id": "item_2026-05-17_001",
+      "title_original": "SERP FAQ Removal & New Data Challenge Schema’s AI Search Value via @sejournal, @MattGSouthern",
+      "title_it": "Rimozione delle FAQ dalle SERP e nuovi dati mettono in discussione il valore degli schema per la ricerca AI",
+      "summary_it": "Google ha rimosso le FAQ dalle SERP. Una nuova ricerca di Ahrefs mette in discussione il valore degli schema markup per la visibilità nelle SERP e le citazioni nell'AI. Questo cambiamento potrebbe impattare le strategie SEO che si basano sull'ottenimento di featured snippet tramite FAQ schema.",
+      "url": "https://www.searchenginejournal.com/serp-faq-removal-new-data-challenge-schemas-ai-search-value/574993",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -499,133 +47,27 @@
       },
       "category": "google_updates",
       "tags": [
-        "ga4",
-        "ai_assistant",
-        "faq_rich_result",
-        "structured_data"
+        "faq_schema",
+        "structured_data",
+        "serp_visibility",
+        "ai_search"
       ],
       "importance": 3,
-      "published_at": "2026-05-15T11:30:12Z",
-      "fetched_at": "2026-05-16T06:03:42.984004Z",
+      "published_at": "2026-05-16T11:00:54Z",
+      "fetched_at": "2026-05-17T05:03:17.889516Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:50d81607d5da0051",
+      "raw_hash": "sha256:5b7815a95c4f20cd",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-16_014",
-      "title_original": "Daily Search Forum Recap: May 15, 2026",
-      "title_it": "Aggiornamenti Quotidiani dai Forum di Ricerca: 15 Maggio 2026",
-      "summary_it": "Google ha aggiornato la sua politica antispam per includere le risposte generate dall'AI nella Ricerca. L'Indexing API di Google è sovraccarica di richieste da parte di blogger. Inoltre, Google sta testando icone AI Overview in Autocomplete e nuove funzionalità AI per la creazione di video in Google Ads.",
-      "url": "https://www.seroundtable.com/recap-05-15-2026-41332.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_search",
-        "ai_overviews",
-        "spam_policy",
-        "indexing_api",
-        "google_ad"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T13:00:00Z",
-      "fetched_at": "2026-05-16T06:03:44.496019Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:ee23765a09f0cb27",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_015",
-      "title_original": "What is a lead generation funnel? And how to build one",
-      "title_it": "Cos'è un funnel di lead generation e come costruirlo",
-      "summary_it": "L'articolo di Semrush spiega il concetto di funnel di lead generation e fornisce indicazioni su come implementarne uno efficace. Vengono descritte le diverse fasi del funnel e le strategie per attrarre e convertire lead qualificati. L'articolo è rivolto a chi si occupa di marketing e vendite.",
-      "url": "https://www.semrush.com/blog/lead-generation-funnel",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "lead_generation",
-        "marketing_funnel",
-        "sales_funnel",
-        "semrush"
-      ],
-      "importance": 2,
-      "published_at": "2026-05-15T13:13:00Z",
-      "fetched_at": "2026-05-16T06:03:45.737159Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:382d2a4bef6871b8",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_016",
-      "title_original": "AI Agents for SEO: What They Are, How They Work, and How to Build One",
-      "title_it": "Agenti AI per la SEO: cosa sono, come funzionano e come crearne uno",
-      "summary_it": "L'articolo di Ahrefs esplora gli agenti AI per la SEO, definendone le funzioni pratiche e gli strumenti utili. Vengono fornite indicazioni su come sviluppare un agente AI personalizzato, condividendo le esperienze di chi li ha già creati. L'articolo si concentra sull'applicazione pratica dell'AI nel campo SEO.",
-      "url": "https://ahrefs.com/blog/ai-agents-for-seo",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_agent",
-        "seo_automation",
-        "llm",
-        "ahref"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-15T14:57:30Z",
-      "fetched_at": "2026-05-16T06:03:47.126521Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:cdf2038c9871535f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-16_017",
-      "title_original": "Google’s New AI Search Guide Calls AEO And GEO ‘Still SEO’ via @sejournal, @MattGSouthern",
-      "title_it": "La nuova guida di Google sull'AI Search ribadisce l'importanza di AEO e GEO per la SEO",
-      "summary_it": "Google ha pubblicato una nuova guida sull'AI Search, sottolineando che l'ottimizzazione AEO (AI Engine Optimization) e GEO (Generative Engine Optimization) rimangono parte integrante della SEO. La guida identifica anche tattiche che i proprietari di siti possono ignorare, come llms.txt e schemi specifici.",
-      "url": "https://www.searchenginejournal.com/googles-new-ai-search-guide-calls-aeo-and-geo-still-seo/575026",
+      "id": "item_2026-05-17_002",
+      "title_original": "Meta Doesn’t Know What Business It’s In & The Traffic Data Shows It via @sejournal, @gregjarboe",
+      "title_it": "Meta non ha chiara la sua mission e i dati di traffico lo dimostrano",
+      "summary_it": "Un articolo di Search Engine Journal evidenzia come il traffico di Google (111 miliardi di visite mensili) superi di gran lunga quello di Facebook (10 miliardi). L'analisi suggerisce una mancanza di focus strategico da parte di Meta, basata su principi di miopia di marketing.",
+      "url": "https://www.searchenginejournal.com/meta-doesnt-know-what-business-its-in-the-traffic-data-shows-it/574375",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -638,108 +80,108 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "industry_news",
       "tags": [
-        "aeo",
-        "geo",
-        "ai_search",
-        "google_guideline"
+        "meta",
+        "facebook",
+        "google",
+        "traffic_analysi"
       ],
-      "importance": 4,
-      "published_at": "2026-05-15T15:14:25Z",
-      "fetched_at": "2026-05-16T06:03:48.524965Z",
+      "importance": 3,
+      "published_at": "2026-05-16T14:00:16Z",
+      "fetched_at": "2026-05-17T05:03:19.312427Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:0d173762b660c348",
+      "raw_hash": "sha256:a175a8cba1e1787e",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-16T06:01:55.153468Z",
+      "last_checked": "2026-05-17T05:01:52.973098Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-16T06:01:55.524569Z",
+      "last_checked": "2026-05-17T05:01:53.297287Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-16T06:01:56.846627Z",
+      "last_checked": "2026-05-17T05:01:55.162549Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-16T06:02:27.081587Z",
+      "last_checked": "2026-05-17T05:02:26.050141Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-16T06:02:27.381902Z",
+      "last_checked": "2026-05-17T05:02:26.289776Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-16T06:02:28.797616Z",
+      "last_checked": "2026-05-17T05:02:27.777812Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-16T06:02:30.395157Z",
+      "last_checked": "2026-05-17T05:02:29.972188Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-16T06:02:31.226024Z",
+      "last_checked": "2026-05-17T05:02:30.977851Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-16T06:02:31.274572Z",
+      "last_checked": "2026-05-17T05:02:31.013678Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-16T06:02:35.652571Z",
+      "last_checked": "2026-05-17T05:02:37.107385Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-16T06:02:35.973133Z",
+      "last_checked": "2026-05-17T05:02:37.459246Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-16T06:02:37.082698Z",
+      "last_checked": "2026-05-17T05:02:38.467200Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-16T06:02:38.745220Z",
+      "last_checked": "2026-05-17T05:02:40.071493Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-16T06:02:40.777595Z",
+      "last_checked": "2026-05-17T05:02:41.410675Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-16T06:02:42.231981Z",
+      "last_checked": "2026-05-17T05:02:43.341374Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-16T06:02:44.230770Z",
+      "last_checked": "2026-05-17T05:02:45.376125Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-16T06:03:13.886468Z",
+      "last_checked": "2026-05-17T05:03:16.199185Z",
       "changed": false
     }
   ],
