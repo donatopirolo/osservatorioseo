@@ -1,34 +1,62 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-18T06:01:32.242227Z",
-  "generated_at_local": "2026-05-18T08:01:32.242227+02:00",
+  "generated_at": "2026-05-19T05:01:56.739013Z",
+  "generated_at_local": "2026-05-19T07:01:56.739013+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-18-0801",
+  "run_id": "2026-05-19-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2002,
-    "items_after_dedup": 1,
+    "items_collected": 1984,
+    "items_after_dedup": 12,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0001,
-    "summarize_attempted": 1,
+    "ai_cost_eur": 0.0017,
+    "summarize_attempted": 12,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-18_001"
+    "item_2026-05-19_009",
+    "item_2026-05-19_007",
+    "item_2026-05-19_011",
+    "item_2026-05-19_002",
+    "item_2026-05-19_003",
+    "item_2026-05-19_004",
+    "item_2026-05-19_006",
+    "item_2026-05-19_001",
+    "item_2026-05-19_005",
+    "item_2026-05-19_010"
   ],
   "categories": {
     "ai_overviews_llm_seo": [
-      "item_2026-05-18_001"
+      "item_2026-05-19_009",
+      "item_2026-05-19_003",
+      "item_2026-05-19_004",
+      "item_2026-05-19_012"
+    ],
+    "google_updates": [
+      "item_2026-05-19_007",
+      "item_2026-05-19_011"
+    ],
+    "ai_models": [
+      "item_2026-05-19_002"
+    ],
+    "industry_news": [
+      "item_2026-05-19_006",
+      "item_2026-05-19_001",
+      "item_2026-05-19_005",
+      "item_2026-05-19_008"
+    ],
+    "content_eeat": [
+      "item_2026-05-19_010"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-18_001",
-      "title_original": "Google-Agent: The Web’s New Visitor Just Got An Identity via @sejournal, @slobodanmanic",
-      "title_it": "Google-Agent: il nuovo visitatore del web ha un'identità",
-      "summary_it": "Google ha introdotto Google-Agent, una nuova tipologia di visitatore web: agenti AI che agiscono per conto degli utenti, distinti dai crawler che indicizzano i contenuti. Questo cambiamento potrebbe influenzare il modo in cui i siti web interagiscono con le richieste automatizzate e l'analisi del traffico.",
-      "url": "https://www.searchenginejournal.com/google-agent-the-webs-new-visitor-just-got-an-identity/571508",
+      "id": "item_2026-05-19_001",
+      "title_original": "Anthropic’s Infrastructure Crisis – What It Means for Marketers & SEO Pros via @sejournal, @gregjarboe",
+      "title_it": "La crisi infrastrutturale di Anthropic e le implicazioni per SEO e marketing",
+      "summary_it": "L'articolo evidenzia come la rapida crescita di Anthropic stia causando problemi infrastrutturali, paragonabili a quelli affrontati da Google nel 1999. Le decisioni prese per risolvere questa crisi potrebbero influenzare gli strumenti utilizzati dai professionisti SEO e del marketing. Si prevede un impatto sulle strategie di ottimizzazione e sull'utilizzo di modelli linguistici.",
+      "url": "https://www.searchenginejournal.com/anthropics-infrastructure-crisis-what-it-means-for-marketers-seo-pros/574258",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -41,108 +69,492 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "industry_news",
       "tags": [
-        "google_agent",
-        "ai_agent",
-        "web_crawling",
-        "user_agent"
+        "anthropic",
+        "infrastructure",
+        "ai_model",
+        "seo"
       ],
       "importance": 3,
-      "published_at": "2026-05-17T11:00:45Z",
-      "fetched_at": "2026-05-18T06:03:11.814796Z",
+      "published_at": "2026-05-18T08:30:13Z",
+      "fetched_at": "2026-05-19T05:03:24.705526Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:43a4e91649e4fe24",
+      "raw_hash": "sha256:7140130712f7ad65",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_002",
+      "title_original": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+      "title_it": "OpenAI e Dell collaborano per portare Codex in ambienti aziendali ibridi e on-premise",
+      "summary_it": "OpenAI e Dell hanno annunciato una partnership per integrare Codex in ambienti aziendali ibridi e on-premise. L'obiettivo è consentire alle aziende di implementare agenti di codifica AI in modo sicuro, gestendo dati e flussi di lavoro. Questa collaborazione mira a fornire soluzioni AI più accessibili e controllabili per le imprese.",
+      "url": "https://openai.com/index/dell-codex-enterprise-partnership",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "dell",
+        "codex",
+        "enterprise_ai"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T09:00:00Z",
+      "fetched_at": "2026-05-19T05:03:25.988106Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:8f305e351b9f5a18",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_003",
+      "title_original": "Reasoning lift: What happens to AI visibility when AI thinks harder",
+      "title_it": "L'impatto del ragionamento sull'AI: come cambia la visibilità quando l'AI \"pensa\" di più",
+      "summary_it": "Kevin Indig analizza come le capacità di ragionamento influenzano la visibilità dei contenuti generati dall'AI. L'articolo esplora come il ragionamento avanzato negli LLM può alterare significativamente la pertinenza e la qualità dei risultati, con implicazioni dirette per la SEO e la content strategy.",
+      "url": "https://www.growth-memo.com/p/reasoning-lift-what-happens-to-ai",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "llm",
+        "artificial_intelligence",
+        "reasoning",
+        "content_strategy"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T10:02:26Z",
+      "fetched_at": "2026-05-19T05:03:27.601168Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:8020125b611ef572",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_004",
+      "title_original": "Google AI Mode Animated Invisible Edit & Copy Buttons",
+      "title_it": "Google AI Mode: Test di pulsanti animati \"Modifica\" e \"Copia\" a scomparsa",
+      "summary_it": "Google sta testando una nuova funzionalità in \"AI Mode\" che mostra pulsanti animati per \"Modifica\" e \"Copia\" quando il cursore si avvicina al prompt di ricerca. I pulsanti sono nascosti di default e appaiono solo al passaggio del mouse. La funzionalità sembra essere in fase di test limitato.",
+      "url": "https://www.seroundtable.com/google-ai-mode-edit-copy-buttons-41333.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai",
+        "ai_mode",
+        "user_interface",
+        "testing"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T10:11:00Z",
+      "fetched_at": "2026-05-19T05:03:29.194046Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:3bd025e3aab88f71",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_005",
+      "title_original": "Rethinking Audience Targeting In A Signal-Loss Era (With The R.E.M. Framework) via @sejournal, @SequinsNsearch",
+      "title_it": "Ripensare il targeting del pubblico in un'era di perdita di segnale (con il framework R.E.M.)",
+      "summary_it": "L'articolo introduce il framework R.E.M. per migliorare il targeting del pubblico in un contesto di crescente perdita di segnale. Il framework mira a fornire un approccio più efficace per raggiungere il pubblico desiderato in un panorama digitale in evoluzione.",
+      "url": "https://www.searchenginejournal.com/rethinking-audience-targeting-signal-loss-era-rem-framework/572422",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "audience_targeting",
+        "signal_loss",
+        "rem_framework",
+        "digital_marketing"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T10:15:22Z",
+      "fetched_at": "2026-05-19T05:03:30.328544Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:6a2ec9b6f97e0ffc",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_006",
+      "title_original": "Google Ads Primary Conversion Actions May Be Used For Enhance Predictions",
+      "title_it": "Google Ads potrebbe usare le conversioni primarie non ottimizzate per migliorare le predizioni",
+      "summary_it": "Google ha aggiornato la documentazione di Google Ads, indicando che le conversioni primarie non utilizzate per l'ottimizzazione potrebbero essere usate per migliorare le predizioni. Non è chiaro se si tratti di una modifica effettiva o solo di una precisazione della documentazione. La raccolta di dati da eventi significativi aggiuntivi può supportare le performance dello Smart Bidding.",
+      "url": "https://www.seroundtable.com/google-ads-primary-conversion-actions-enhance-predictions-41334.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "conversion_tracking",
+        "smart_bidding"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T10:21:00Z",
+      "fetched_at": "2026-05-19T05:03:31.950730Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:2dbea463ae0550da",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_007",
+      "title_original": "Google Search Live Results Updated By AI X Minutes Ago Label",
+      "title_it": "Google Search mostra l'etichetta \"Aggiornato tramite AI\" nei risultati live",
+      "summary_it": "Google sta testando una nuova etichetta nei risultati di ricerca live che indica quando i contenuti sono stati aggiornati tramite intelligenza artificiale. L'etichetta, del tipo \"Aggiornato tramite AI X minuti fa\", è stata avvistata per la prima volta in relazione al Festival di Cannes e agli Oscar. Sembra che Google stia quindi esplicitamente segnalando l'intervento dell'AI nella curatela di alcuni risultati.",
+      "url": "https://www.seroundtable.com/google-search-live-results-updated-by-ai-1-41338.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "ai",
+        "search_result",
+        "live_result",
+        "google_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T10:31:00Z",
+      "fetched_at": "2026-05-19T05:03:33.795728Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:d1053d8ae73e2535",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_008",
+      "title_original": "66% Of SEOs Say AI Mode Won't Replace Google Search",
+      "title_it": "La maggioranza dei SEO non crede che la Modalità AI sostituirà la Ricerca Google",
+      "summary_it": "Un sondaggio condotto da Search Engine Roundtable rivela che il 66% dei SEO non ritiene che la nuova Modalità AI di Google sostituirà completamente la ricerca tradizionale. I risultati provengono da sondaggi su LinkedIn e X (Twitter), mostrando una certa fiducia nella permanenza del motore di ricerca attuale.",
+      "url": "https://www.seroundtable.com/ai-mode-replace-google-search-poll-41337.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ai_mode",
+        "google_search",
+        "seo_opinion",
+        "industry_poll"
+      ],
+      "importance": 2,
+      "published_at": "2026-05-18T10:41:00Z",
+      "fetched_at": "2026-05-19T05:03:35.177519Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:4d990c9c2a477ba9",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_009",
+      "title_original": "Google Search On How To Optimize For Generative AI With Myth-Busting",
+      "title_it": "Google pubblica una guida all'ottimizzazione per l'AI generativa e sfata alcuni miti",
+      "summary_it": "Google ha rilasciato una nuova guida sull'ottimizzazione dei siti web per le funzionalità di AI generativa nella Ricerca. Il documento ribadisce l'importanza delle best practice SEO esistenti e della creazione di contenuti di valore, sfatando alcune credenze comuni come la necessità di file LLMS.txt o tecniche di \"chunking\". L'azienda sottolinea che non è necessario riscrivere i contenuti per i sistemi di AI.",
+      "url": "https://www.seroundtable.com/google-optimize-generative-ai-mythbusting-41335.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "generative_ai",
+        "google_search",
+        "seo_best_practice",
+        "ai_optimization"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-18T10:51:00Z",
+      "fetched_at": "2026-05-19T05:03:36.772147Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:069a07e2917e3ee3",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_010",
+      "title_original": "It Works Until It Doesn’t: AI Content Strategies That Backfire via @sejournal, @lilyraynyc",
+      "title_it": "Strategie di Contenuti AI che Falliscono: Un'Analisi",
+      "summary_it": "Un'analisi di Search Engine Journal evidenzia come la scalabilità dei contenuti tramite AI possa inizialmente sembrare vantaggiosa per la SEO, ma spesso porta a risultati negativi. I dati provenienti da oltre 220 siti mostrano un modello di crescita e declino che Google ha già osservato in passato. L'articolo mette in guardia sull'adozione acritica di strategie di contenuti basate sull'intelligenza artificiale.",
+      "url": "https://www.searchenginejournal.com/it-works-until-it-doesnt-ai-content-strategies-that-backfire/574820",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "ai_content",
+        "content_strategy",
+        "google_algorithm",
+        "search_engine_journal"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T12:00:17Z",
+      "fetched_at": "2026-05-19T05:03:38.148571Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b4153154c4da564e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_011",
+      "title_original": "Daily Search Forum Recap: May 18, 2026",
+      "title_it": "Riassunto Quotidiano dei Forum di Ricerca: 18 Maggio 2026",
+      "summary_it": "Google ha pubblicato una nuova guida sull'ottimizzazione per l'AI generativa, suscitando reazioni nella comunità SEO. Un sondaggio indica che la maggior parte dei SEO non crede che la modalità AI sostituirà la Ricerca Google. Inoltre, Google sta testando risultati live aggiornati tramite AI e modifiche alle conversioni in Google Ads.",
+      "url": "https://www.seroundtable.com/recap-05-18-2026-41339.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "generative_ai",
+        "ai_mode",
+        "google_ad",
+        "live_result"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T13:00:00Z",
+      "fetched_at": "2026-05-19T05:03:39.496940Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:5c2bb36a373a7292",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-19_012",
+      "title_original": "Google’s Guidance on AI Search is Naive and Self-Serving",
+      "title_it": "Le linee guida di Google sull'AI nella ricerca sono considerate semplicistiche e auto-referenziali",
+      "summary_it": "Un articolo di iPullRank critica le recenti linee guida di Google sull'ottimizzazione per l'AI nella ricerca, suggerendo che queste favoriscono principalmente gli interessi di Google piuttosto che quelli del web aperto. L'autore ricorda come in passato documenti interni di Google abbiano rivelato discrepanze tra le dichiarazioni pubbliche e le pratiche interne relative ai fattori di ranking. Si invita quindi a interpretare le indicazioni di Google con cautela.",
+      "url": "https://ipullrank.com/google-ai-search-guidance",
+      "source": {
+        "id": "ipullrank_blog",
+        "name": "iPullRank Blog (Mike King)",
+        "authority": 8,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://ipullrank.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai",
+        "ai_optimization",
+        "search_guidance",
+        "ipullrank"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-18T17:12:07Z",
+      "fetched_at": "2026-05-19T05:03:41.172600Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:2b2dfdd9b8e96d5c",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-18T06:01:38.341227Z",
+      "last_checked": "2026-05-19T05:02:02.227634Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-18T06:01:38.579510Z",
+      "last_checked": "2026-05-19T05:02:02.880514Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-18T06:01:40.249494Z",
+      "last_checked": "2026-05-19T05:02:04.482020Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-18T06:02:09.636292Z",
+      "last_checked": "2026-05-19T05:02:33.837873Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-18T06:02:09.913758Z",
+      "last_checked": "2026-05-19T05:02:35.443605Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-18T06:02:12.078532Z",
+      "last_checked": "2026-05-19T05:02:36.175506Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-18T06:02:13.480952Z",
+      "last_checked": "2026-05-19T05:02:39.554861Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-18T06:02:14.596549Z",
+      "last_checked": "2026-05-19T05:02:39.902002Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-18T06:02:14.621267Z",
+      "last_checked": "2026-05-19T05:02:39.928942Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-18T06:02:35.043613Z",
+      "last_checked": "2026-05-19T05:02:44.553444Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-18T06:02:35.510367Z",
+      "last_checked": "2026-05-19T05:02:45.324320Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-18T06:02:36.643117Z",
+      "last_checked": "2026-05-19T05:02:46.041417Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-18T06:02:38.789798Z",
+      "last_checked": "2026-05-19T05:02:49.793202Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-18T06:02:39.626167Z",
+      "last_checked": "2026-05-19T05:02:50.094513Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-18T06:02:40.882169Z",
+      "last_checked": "2026-05-19T05:02:51.780015Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-18T06:02:42.798974Z",
+      "last_checked": "2026-05-19T05:02:53.420367Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-18T06:03:10.100582Z",
+      "last_checked": "2026-05-19T05:03:22.960820Z",
       "changed": false
     }
   ],
