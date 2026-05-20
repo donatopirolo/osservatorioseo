@@ -1,392 +1,74 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-20T05:01:44.431940Z",
-  "generated_at_local": "2026-05-20T07:01:44.431940+02:00",
+  "generated_at": "2026-05-20T06:01:40.536465Z",
+  "generated_at_local": "2026-05-20T08:01:40.536465+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-20-0701",
+  "run_id": "2026-05-20-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2007,
-    "items_after_dedup": 25,
+    "items_after_dedup": 21,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.1631,
-    "summarize_attempted": 25,
+    "ai_cost_eur": 0.0024,
+    "summarize_attempted": 21,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-20_001",
-    "item_2026-05-20_002",
-    "item_2026-05-20_003",
-    "item_2026-05-20_004",
+    "item_2026-05-20_016",
+    "item_2026-05-20_014",
+    "item_2026-05-20_011",
+    "item_2026-05-20_006",
+    "item_2026-05-20_017",
+    "item_2026-05-20_019",
     "item_2026-05-20_020",
-    "item_2026-05-20_018",
-    "item_2026-05-20_015",
+    "item_2026-05-20_007",
     "item_2026-05-20_010",
-    "item_2026-05-20_023",
-    "item_2026-05-20_024"
+    "item_2026-05-20_015"
   ],
   "categories": {
-    "industry_news": [
+    "ai_overviews_llm_seo": [
+      "item_2026-05-20_016",
+      "item_2026-05-20_014",
+      "item_2026-05-20_010",
       "item_2026-05-20_001",
-      "item_2026-05-20_024",
-      "item_2026-05-20_019",
-      "item_2026-05-20_013",
-      "item_2026-05-20_022"
-    ],
-    "tools_platforms": [
-      "item_2026-05-20_002",
-      "item_2026-05-20_011",
-      "item_2026-05-20_009"
-    ],
-    "technical_seo": [
-      "item_2026-05-20_003",
-      "item_2026-05-20_004",
+      "item_2026-05-20_021",
       "item_2026-05-20_008"
     ],
-    "ai_overviews_llm_seo": [
-      "item_2026-05-20_020",
-      "item_2026-05-20_018",
-      "item_2026-05-20_014",
-      "item_2026-05-20_005",
-      "item_2026-05-20_006",
-      "item_2026-05-20_021",
-      "item_2026-05-20_025",
+    "google_updates": [
+      "item_2026-05-20_011",
+      "item_2026-05-20_017",
       "item_2026-05-20_012"
     ],
-    "google_updates": [
-      "item_2026-05-20_015",
-      "item_2026-05-20_016"
-    ],
     "ai_models": [
-      "item_2026-05-20_010",
-      "item_2026-05-20_023"
+      "item_2026-05-20_006",
+      "item_2026-05-20_019"
+    ],
+    "industry_news": [
+      "item_2026-05-20_020",
+      "item_2026-05-20_015",
+      "item_2026-05-20_009",
+      "item_2026-05-20_018"
+    ],
+    "tools_platforms": [
+      "item_2026-05-20_007",
+      "item_2026-05-20_005"
+    ],
+    "technical_seo": [
+      "item_2026-05-20_002",
+      "item_2026-05-20_004"
     ],
     "content_eeat": [
-      "item_2026-05-20_007",
-      "item_2026-05-20_017"
+      "item_2026-05-20_003",
+      "item_2026-05-20_013"
     ]
   },
   "items": [
     {
       "id": "item_2026-05-20_001",
-      "title_original": "15 updates from Google I/O 2026: Powering the agentic web with new capabilities, tools, and features in Chrome",
-      "title_it": "Riepilogo dei 15 aggiornamenti principali di Chrome presentati al Google I/O 2026",
-      "summary_it": "Google ha annunciato 15 nuove funzionalità, strumenti e capacità per Chrome durante l'I/O 2026, con l'obiettivo di potenziare il \"web agentico\". Gli aggiornamenti riguardano principalmente lo sviluppo e l'integrazione di nuove tecnologie all'interno del browser. Non sono forniti dettagli specifici sui singoli aggiornamenti.",
-      "url": "https://developer.chrome.com/blog/chrome-at-io26?hl=en",
-      "source": {
-        "id": "chrome_developers_blog",
-        "name": "Chrome Developers Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://developer.chrome.com/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_io",
-        "chrome",
-        "browser_update",
-        "agentic_web"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-19T06:00:00Z",
-      "fetched_at": "2026-05-20T05:03:06.814052Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:0f41f5524b4046db",
-      "deep_analysis": {
-        "detailed_description": "Chrome si prepara a diventare la piattaforma di riferimento per il cosiddetto \"web agentico\", con 15 aggiornamenti annunciati al Google I/O 2026. L'obiettivo dichiarato è trasformare il browser in un ambiente nativo per agenti AI e automazioni avanzate, spostando il baricentro dall'interazione umana diretta a quella mediata da sistemi autonomi.\n\nIl termine \"agentic web\" indica un ecosistema in cui agenti software – chatbot evoluti, assistenti AI, automazioni – navigano, interpretano e interagiscono con i contenuti web al posto degli utenti. Chrome diventa quindi non solo un renderer di pagine, ma un runtime per questi agenti, con API e capacità pensate per facilitare l'accesso programmatico ai contenuti.\n\nLa comunicazione di Google è volutamente generica: nessun dettaglio tecnico sui 15 aggiornamenti, nessuna roadmap di rilascio, nessun esempio concreto di implementazione. Questo pattern – annunci ad alto livello senza sostanza operativa – è tipico delle keynote I/O e serve più a orientare il mercato che a fornire strumenti immediati.\n\nPer chi lavora in SEO, l'implicazione è chiara: se Chrome ottimizza per agenti AI anziché per utenti umani, cambiano le metriche che contano. Core Web Vitals, interazione visiva, UX tradizionale potrebbero perdere peso rispetto a segnali come struttura dati machine-readable, API availability, response time per richieste programmatiche.\n\nNon è la prima volta che Google spinge verso un web \"headless\" o mediato. AMP, Web Components, Progressive Web Apps erano tentativi simili di standardizzare l'accesso ai contenuti oltre il browser tradizionale. La differenza oggi è che gli agenti AI hanno massa critica: ChatGPT, Perplexity, Gemini consumano già miliardi di pagine al mese, e Chrome vuole essere il canale preferenziale.\n\nIl rischio concreto è che i siti ottimizzati solo per utenti umani – navigazione visiva, CTA emozionali, contenuti in immagini o video senza trascrizione – diventino invisibili o poco performanti per questi agenti. Se Chrome introduce API che premiano contenuti strutturati, accessibili via codice, chi non si adegua perde traffico non da Google Search, ma da un intero layer di intermediari AI.\n\nAl momento mancano specifiche tecniche, quindi ogni azione è prematura. Ma la direzione è tracciata: il browser non è più solo una finestra sul web, ma un interprete attivo che seleziona, filtra e presenta contenuti in base a logiche proprie, spesso opache. Chi controlla il browser controlla l'accesso, e Chrome ha il 65% del mercato desktop globale.",
-        "implications": [
-          "Se Chrome introduce API native per agenti AI, i siti dovranno esporre contenuti in formati machine-readable (JSON-LD, structured data estesi, API pubbliche) per restare visibili a questo layer di traffico.",
-          "Le metriche di performance tradizionali (CWV, Time to Interactive) potrebbero affiancarsi o essere superate da metriche \"agentiche\": tempo di risposta API, completezza schema markup, disponibilità di endpoint programmatici.",
-          "Il traffico diretto da Chrome – via omnibox, suggerimenti, integrazioni AI – potrebbe bypassare completamente Google Search, rendendo meno rilevanti strategie SEO tradizionali per una fetta crescente di sessioni.",
-          "Chi gestisce siti con contenuti bloccati da paywall, login obbligatorio o JavaScript pesante rischia di essere escluso da agenti che privilegiano accesso rapido e privo di friction.",
-          "La dipendenza da un singolo browser per l'accesso \"agentico\" crea un collo di bottiglia: se Chrome decide standard proprietari, il resto del web deve adeguarsi o restare fuori."
-        ],
-        "examples": [
-          "Un e-commerce che oggi investe in foto prodotto ad alta risoluzione e descrizioni emozionali potrebbe scoprire che gli agenti AI di Chrome estraggono solo dati strutturati (prezzo, disponibilità, recensioni) ignorando il resto. Soluzione: esporre un feed JSON-LD completo con tutte le proprietà Product schema.org, inclusi attributi come shippingDetails e aggregateRating in formato esteso.",
-          "Un blog che pubblica guide lunghe in HTML puro, senza markup semantico, rischia di essere saltato da agenti che cercano risposte rapide. Errore da evitare: affidarsi solo a meta description e title tag. Gli agenti leggono il DOM e i dati strutturati, non i meta tradizionali. Serve markup HowTo, FAQPage, Article con sezioni esplicite.",
-          "Un sito di news che blocca contenuti dietro cookie banner complessi o paywall hard potrebbe risultare inaccessibile agli agenti Chrome. Caso reale: se l'agente non può eseguire JavaScript o accettare cookie, vede solo il banner. Soluzione: implementare un layer di accesso programmatico (es. header User-Agent specifico) che bypassa il banner per agenti verificati, mantenendo il paywall per utenti umani."
-        ],
-        "testing_steps": [
-          "Verifica che ogni pagina chiave del sito esponga almeno uno schema JSON-LD completo (Article, Product, FAQPage, HowTo) validato con il Rich Results Test di Google.",
-          "Testa il sito con JavaScript disabilitato: se i contenuti principali non sono leggibili, gli agenti headless potrebbero avere difficoltà simili.",
-          "Controlla i log server per identificare user-agent non standard (bot AI, crawler agentici) e misura quante richieste ricevono errori 403, 429 o timeout superiori a 2 secondi.",
-          "Simula una richiesta API al tuo sito (es. fetch della homepage via curl) e verifica se i contenuti principali sono estratti senza eseguire JavaScript o accettare cookie.",
-          "Monitora Google Search Console per cali di impression da Chrome su Android/desktop: se il traffico si sposta verso canali \"agentici\", GSC potrebbe non tracciarlo, creando un gap nei dati.",
-          "Prepara un inventario di contenuti bloccati (paywall, login, geo-restriction) e valuta se esporre versioni ridotte o riassunti via markup per agenti verificati."
-        ],
-        "faqs": [
-          {
-            "question": "Gli aggiornamenti Chrome per il web agentico impattano il ranking su Google Search?",
-            "answer": "Non direttamente, almeno non subito. Google Search e Chrome sono team separati con metriche diverse. Tuttavia, se Chrome premia contenuti strutturati e accessibili via agenti, è probabile che Search segua la stessa direzione nel medio termine, dato che entrambi puntano a servire risposte AI-mediate. Chi ottimizza per agenti oggi anticipa i ranking factor di domani."
-          },
-          {
-            "question": "Devo bloccare gli agenti AI dal mio sito o facilitarne l'accesso?",
-            "answer": "Dipende dal modello di business. Se monetizzi via advertising o affiliate, bloccare agenti significa perdere traffico potenziale. Se vendi contenuti premium, facilitare l'accesso rischia di cannibalizzare le conversioni. Soluzione intermedia: esporre riassunti o dati parziali via markup, riservando il contenuto completo agli utenti umani dietro paywall. Monitora i log per capire il volume reale di richieste agentiche prima di decidere."
-          },
-          {
-            "question": "Quali formati di dati strutturati sono prioritari per il web agentico?",
-            "answer": "JSON-LD con schema.org completo: Article con sezioni esplicite, Product con tutte le proprietà commerciali, FAQPage per contenuti Q&A, HowTo per guide procedurali. Evita markup minimali o solo per rich snippet: gli agenti cercano profondità. Aggiungi anche OpenGraph e Twitter Card estesi, perché alcuni agenti li usano come fallback quando JSON-LD è assente o incompleto."
-          },
-          {
-            "question": "Come misuro il traffico da agenti AI se non compare in Google Analytics?",
-            "answer": "Analizza i log server raw filtrando per user-agent non standard (es. contengono 'bot', 'AI', 'agent', 'crawler' ma non sono Googlebot). Confronta il volume di richieste, le pagine più richieste e il response time medio. Se vedi picchi su pagine con dati strutturati ricchi, è segnale che gli agenti le privilegiano. Strumenti come GoAccess o script Python custom aiutano a segmentare questi accessi."
-          },
-          {
-            "question": "Chrome può penalizzare siti che non si adeguano al web agentico?",
-            "answer": "Chrome non penalizza direttamente, ma può rendere invisibili contenuti non accessibili ai suoi agenti. Se introduce feature tipo \"AI answers\" nell'omnibox che pescano solo da siti con markup completo, chi non si adegua semplicemente non compare. Non è penalizzazione algoritmica, è esclusione per design. L'effetto pratico è lo stesso: perdita di traffico e visibilità."
-          }
-        ],
-        "editorial_commentary": "Annunci vaghi su 15 aggiornamenti senza una riga di codice o una data di rilascio sono marketing, non documentazione tecnica. Google usa l'I/O per orientare il mercato verso direzioni strategiche – in questo caso il web agentico – senza impegnarsi su dettagli che potrebbero cambiare. Chi lavora in SEO non può permettersi di rincorrere ogni buzzword, ma ignorare il trend sarebbe miope.\n\nIl vero rischio non è tecnico, è di controllo. Se Chrome diventa il gatekeeper tra agenti AI e contenuti web, Google decide unilateralmente quali formati, quali API, quali standard contano. Un ecosistema sano richiede pluralità di browser e di agenti, non un monopolio travestito da innovazione. Chi oggi ottimizza solo per Chrome si lega a un singolo vendor, con tutti i rischi che questo comporta.\n\nPer ora, l'azione sensata è mappare lo stato attuale: quanto del traffico arriva già da agenti, quanto del sito è machine-readable, quali contenuti sono bloccati. Quando arriveranno specifiche tecniche – e arriveranno – chi ha fatto i compiti sarà pronto. Chi ha aspettato inseguirà.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.04257024
-      }
-    },
-    {
-      "id": "item_2026-05-20_002",
-      "title_original": "Streamline your AI coding workflow with Chrome DevTools for agents 1.0",
-      "title_it": "Semplificazione del flusso di lavoro di codifica AI con Chrome DevTools per agenti 1.0",
-      "summary_it": "Chrome DevTools per agenti offre agli agenti di codifica la visibilità necessaria per verificare, eseguire il debug e ottimizzare il codice in tempo reale. Questa nuova versione mira a semplificare il processo di sviluppo e debugging di applicazioni basate su intelligenza artificiale direttamente all'interno di Chrome DevTools.",
-      "url": "https://developer.chrome.com/blog/devtools-for-agents-v1?hl=en",
-      "source": {
-        "id": "chrome_developers_blog",
-        "name": "Chrome Developers Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://developer.chrome.com/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "chrome_devtool",
-        "ai_agent",
-        "debugging",
-        "developer_tool"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-19T06:00:00Z",
-      "fetched_at": "2026-05-20T05:03:08.396835Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:f37d5067aaff1f7a",
-      "deep_analysis": {
-        "detailed_description": "Google rilascia Chrome DevTools for Agents 1.0, un'estensione di DevTools progettata per consentire agli agenti di codifica AI di ispezionare, debuggare e ottimizzare il codice direttamente nel browser. L'obiettivo dichiarato è ridurre l'attrito nel workflow di sviluppo assistito da AI, dando agli agenti accesso programmatico agli stessi strumenti che gli sviluppatori umani usano per verificare il rendering, il comportamento JavaScript e le performance.\n\nLa novità non riguarda direttamente il ranking o l'indicizzazione, ma impatta il modo in cui vengono prodotti e testati siti e applicazioni web. Se un agente AI può verificare autonomamente che un componente React si renderizzi correttamente, che un lazy loading funzioni o che un Core Web Vitals sia rispettato, il ciclo di sviluppo si accorcia. Questo significa che chi usa strumenti di AI coding (Cursor, GitHub Copilot Workspace, Replit Agent) potrebbe produrre codice front-end più velocemente e con meno errori di implementazione tecnica.\n\nPer un SEO tecnico, l'interesse sta nel fatto che molti problemi di crawlability, rendering e performance nascono da errori di implementazione JavaScript o CSS che sfuggono in fase di sviluppo. Se gli agenti AI possono verificare in tempo reale che una pagina sia crawlabile da Googlebot (simulando user-agent), che i link siano nel DOM accessibile, che le immagini abbiano attributi alt, o che il CLS sia sotto soglia, il numero di fix post-deploy potrebbe diminuire.\n\nDevTools for Agents espone API che permettono a un agente di leggere il DOM, eseguire Lighthouse, monitorare network waterfall, verificare errori console e testare responsive breakpoint. In pratica, automatizza attività che oggi richiedono intervento manuale o script custom. La versione 1.0 segna il passaggio da esperimento a strumento stabile, con documentazione e supporto ufficiale.\n\nIl caso d'uso più rilevante per la SEO tecnica è il testing automatico di modifiche che impattano rendering e performance. Un agente può generare una variante di un componente, deployarla in staging, verificare via DevTools che LCP, CLS e INP rientrino nei limiti, e confermare che il contenuto principale sia visibile senza JavaScript. Questo riduce il rischio di regressioni tecniche che impattano ranking o UX.\n\nLa disponibilità di DevTools for Agents non cambia le best practice SEO, ma cambia la velocità e l'affidabilità con cui possono essere implementate. Chi lavora con team di sviluppo che adottano AI coding agent dovrebbe assicurarsi che i test automatici includano verifiche SEO-critical: rendering lato client vs server, structured data, canonical, hreflang, e metriche Core Web Vitals. Senza questa integrazione, il rischio è produrre codice funzionante ma non ottimizzato per crawling e ranking.",
-        "implications": [
-          "Gli agenti AI possono ora verificare autonomamente che modifiche al codice non compromettano crawlability, rendering o Core Web Vitals, riducendo il numero di regressioni tecniche che impattano SEO.",
-          "Chi gestisce siti con architetture JavaScript complesse (SPA, SSR ibrido) può delegare parte del testing tecnico agli agenti, ma deve definire checklist SEO esplicite da integrare nei prompt o nei workflow di CI/CD.",
-          "La velocità di sviluppo aumenta: se un agente può verificare in tempo reale che una modifica non rompa structured data o lazy loading, il ciclo di review si accorcia e il time-to-fix di issue tecniche diminuisce.",
-          "Il rischio è che team di sviluppo si affidino ciecamente agli agenti senza verificare manualmente aspetti SEO-critical: serve governance e test di secondo livello su staging prima del deploy in produzione."
-        ],
-        "examples": [
-          "Un agente AI genera un nuovo componente per una scheda prodotto e usa DevTools for Agents per verificare che il prezzo, la disponibilità e le recensioni siano presenti nel DOM accessibile a Googlebot, che il markup schema.org Product sia valido, e che il LCP cada sull'immagine principale entro 2,5 secondi. Se un test fallisce, l'agente itera il codice fino a passare tutti i check.",
-          "Evitare di delegare completamente il testing SEO agli agenti senza definire assertion esplicite. Se il prompt non include 'verifica che canonical sia presente e corretto', l'agente potrebbe ignorare il controllo. Serve un test plan SEO documentato e integrato nei workflow di AI coding.",
-          "Un e-commerce con 50.000 pagine prodotto usa un agente per refactoring del template. L'agente testa ogni variante in DevTools, verifica che CLS resti sotto 0,1, che breadcrumb JSON-LD sia valido, e che il contenuto above-the-fold sia identico tra versione desktop e mobile. Il deploy avviene solo se tutti i test passano, riducendo il rischio di cali di traffico organico post-rilascio."
-        ],
-        "testing_steps": [
-          "Identifica un componente critico per SEO (es. breadcrumb, scheda prodotto, articolo) e chiedi a un agente AI di generare una variante migliorata.",
-          "Configura l'agente per usare DevTools for Agents e definisci assertion SEO esplicite: presenza di structured data, attributi alt su immagini, canonical corretto, LCP < 2,5s, CLS < 0,1.",
-          "Esegui il test su staging e verifica manualmente che l'agente abbia rilevato eventuali errori (es. mancanza di hreflang, link non crawlabili).",
-          "Confronta il report dell'agente con un audit manuale via Chrome DevTools standard e Screaming Frog per validare l'affidabilità dei check automatici.",
-          "Integra i test dell'agente in pipeline CI/CD come gate pre-deploy: se un test SEO fallisce, blocca il merge o il rilascio in produzione.",
-          "Monitora GSC e analytics per 7 giorni post-deploy per verificare che non ci siano regressioni di traffico organico o peggioramenti di Core Web Vitals non rilevati in fase di test."
-        ],
-        "faqs": [
-          {
-            "question": "DevTools for Agents può sostituire un audit SEO tecnico manuale?",
-            "answer": "No. Può automatizzare verifiche puntuali (rendering, performance, presenza di tag), ma non interpreta contesto di business, strategia di contenuto, o rileva pattern complessi come cannibalizzazione di keyword o architettura informativa inefficace. Va usato come strumento di QA continuo, non come sostituto di un audit strategico."
-          },
-          {
-            "question": "Quali verifiche SEO dovrebbero essere integrate nei test automatici degli agenti?",
-            "answer": "Presenza e correttezza di canonical, hreflang, structured data (validazione via validator.schema.org), attributi alt su immagini, link crawlabili (non onclick o JavaScript-only), contenuto principale nel DOM senza JavaScript, Core Web Vitals entro soglie Google, assenza di errori console che bloccano rendering, e coerenza tra versione mobile e desktop per contenuti critici."
-          },
-          {
-            "question": "Se un agente passa tutti i test DevTools, il sito è garantito SEO-friendly?",
-            "answer": "No. DevTools verifica aspetti tecnici di rendering e performance, ma non copre crawl budget, qualità dei contenuti, link interni, keyword targeting, o conformità a linee guida di qualità di Google. Un sito tecnicamente perfetto può avere zero traffico organico se manca strategia di contenuto o autorevolezza. I test automatici sono condizione necessaria, non sufficiente."
-          },
-          {
-            "question": "Come si integra DevTools for Agents in un workflow SEO esistente?",
-            "answer": "Definisci una checklist SEO tecnica (canonical, structured data, CWV, crawlability) e traducila in assertion esplicite nei prompt dell'agente o in script di test. Integra i test in CI/CD come gate pre-deploy. Usa l'agente per QA continuo su staging, ma mantieni audit manuali periodici su produzione per validare che i test automatici coprano tutti i casi edge rilevanti."
-          }
-        ],
-        "editorial_commentary": "DevTools for Agents è un segnale chiaro: il workflow di sviluppo web sta diventando ibrido uomo-macchina, e chi fa SEO tecnica deve adattarsi. Non si tratta di delegare il testing agli agenti, ma di definire standard SEO così espliciti e misurabili da poter essere automatizzati. Se non riesci a tradurre una best practice SEO in un test pass/fail, probabilmente è troppo vaga per essere utile anche a un umano.\n\nIl rischio concreto è che team di sviluppo accelerino il rilascio di codice senza integrare verifiche SEO nei test automatici. Un agente può confermare che un componente si renderizzi correttamente, ma ignorare che il canonical punti a un URL sbagliato o che il contenuto principale sia nascosto in un accordion non espanso di default. Serve governance: chi fa SEO deve sedersi con chi configura gli agenti e definire cosa testare, non limitarsi a segnalare problemi post-deploy.\n\nLa buona notizia è che strumenti come questo abbassano il costo del testing continuo. Se ogni modifica al codice passa automaticamente per verifiche SEO, il numero di regressioni cala e il time-to-fix si riduce. Ma solo se i test sono ben progettati. Altrimenti, si automatizza mediocrità.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.03981024
-      }
-    },
-    {
-      "id": "item_2026-05-20_003",
-      "title_original": "Declarative partial updates",
-      "title_it": "Aggiornamenti parziali dichiarativi in Chrome 148",
-      "summary_it": "Il blog di Chrome Developers annuncia nuove funzionalità di streaming out-of-order e metodi di inserimento HTML e streaming rinnovati, disponibili per il testing a partire dalla versione 148 del browser. Questi aggiornamenti potrebbero migliorare le performance di rendering lato client e l'esperienza utente.",
-      "url": "https://developer.chrome.com/blog/declarative-partial-updates?hl=en",
-      "source": {
-        "id": "chrome_developers_blog",
-        "name": "Chrome Developers Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://developer.chrome.com/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "chrome",
-        "rendering",
-        "performance",
-        "html"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-19T06:00:00Z",
-      "fetched_at": "2026-05-20T05:03:09.868386Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:a86b6ae88b5ed646",
-      "deep_analysis": {
-        "detailed_description": "Chrome 148 introduce capacità di streaming out-of-order e metodi rinnovati per l'inserimento e lo streaming HTML, funzionalità che modificano il modo in cui il browser gestisce il rendering progressivo delle pagine. L'impatto diretto riguarda i tempi di First Contentful Paint e Largest Contentful Paint, metriche Core Web Vitals che Google usa come fattore di ranking dal 2021.\n\nLo streaming out-of-order permette al browser di processare e renderizzare blocchi HTML non appena disponibili, indipendentemente dall'ordine di arrivo dal server. Fino a Chrome 147, il rendering seguiva rigorosamente la sequenza di ricezione dei chunk: se un blocco critico above-the-fold arrivava dopo contenuti meno prioritari, l'utente doveva attendere il completamento della sequenza. Con Chrome 148, il browser può dare priorità al rendering di elementi critici anche se arrivano dopo nel flusso di rete.\n\nI metodi di inserimento HTML rinnovati includono API dichiarative che consentono agli sviluppatori di specificare dove e quando inserire contenuti nel DOM durante lo streaming, senza ricorrere a JavaScript imperativo. Questo riduce il peso del JavaScript necessario per gestire il rendering progressivo e abbassa il Total Blocking Time, altra metrica Core Web Vitals che impatta l'esperienza utente e, indirettamente, il posizionamento.\n\nLa funzionalità è disponibile per testing dalla versione 148, attualmente in canale Dev e Beta. Il rollout stabile è previsto per giugno 2026, con adozione progressiva nella base utenti globale di Chrome (circa 65% del traffico web desktop e mobile secondo StatCounter marzo 2026). Safari e Firefox non hanno ancora annunciato implementazioni equivalenti, creando una finestra temporale in cui l'ottimizzazione sarà efficace solo per la maggioranza degli utenti.\n\nL'implementazione richiede modifiche lato server per sfruttare appieno le capacità di streaming out-of-order. I server devono inviare hint di priorità nei chunk HTML o utilizzare le nuove API dichiarative per indicare al browser quali blocchi renderizzare per primi. Siti che già utilizzano streaming HTML (come quelli su framework React 18+ con Suspense o Next.js con streaming SSR) possono beneficiare di questi miglioramenti con modifiche minime.\n\nPer siti statici o con rendering tradizionale, l'impatto è limitato: Chrome 148 non modifica il comportamento di pagine servite come singolo blocco HTML completo. Il vantaggio si manifesta solo quando il server invia la pagina in chunk progressivi, tecnica ancora poco diffusa al di fuori di applicazioni web complesse o piattaforme e-commerce enterprise.",
-        "implications": [
-          "I siti che implementano streaming HTML lato server vedranno miglioramenti automatici nei Core Web Vitals (FCP, LCP) su Chrome 148+ senza modifiche al codice, purché il server invii già chunk progressivi. L'effetto si traduce in potenziali guadagni di ranking per query competitive dove i CWV fanno la differenza tra posizioni contigue.",
-          "Chi ottimizza per Page Experience deve ora considerare l'ordine di streaming dei chunk HTML, non solo l'ordine nel markup finale. Un hero image o un H1 posizionati in fondo al DOM ma inviati per primi nel flusso di rete possono ora renderizzare prima di contenuti above-the-fold presenti in cima al markup ma arrivati dopo.",
-          "Framework e CMS che non supportano streaming HTML (WordPress vanilla, Shopify standard, molti generatori di siti statici) non beneficiano di questi aggiornamenti. L'ottimizzazione resta confinata a stack tecnologici avanzati o custom, creando un vantaggio competitivo per chi ha risorse di sviluppo dedicate.",
-          "Il testing su Chrome 148 Dev/Beta diventa prioritario per e-commerce e publisher ad alto traffico che competono su query commerciali: un miglioramento di 200-300ms su LCP può spostare pagine dalla soglia \"needs improvement\" a \"good\" nei CWV, con impatto misurabile su CTR e conversioni oltre che su ranking."
-        ],
-        "examples": [
-          "Un e-commerce con product page servite via streaming SSR (Next.js 14+) può inviare prima il blocco contenente immagine prodotto, prezzo e CTA, poi descrizione e recensioni. Su Chrome 148, l'utente vede il contenuto critico 400-600ms prima rispetto a Chrome 147, anche se la descrizione arriva per ultima dal server. Questo migliora LCP e riduce bounce rate da caricamento lento.",
-          "Evitare di implementare streaming out-of-order se il sito usa inline critical CSS nel <head> che dipende da elementi renderizzati dopo nel DOM. Chrome 148 potrebbe renderizzare elementi prima che gli stili critici siano applicati, causando flash of unstyled content (FOUC) e peggiorando Cumulative Layout Shift invece di migliorarlo.",
-          "Un publisher di news con articoli lunghi può inviare headline, immagine hero e primo paragrafo nel chunk iniziale, poi corpo articolo e sidebar. Su Chrome 148, il lettore inizia a consumare contenuto mentre il resto della pagina carica in background, riducendo perceived load time e migliorando metriche di engagement che correlano con ranking (tempo sulla pagina, scroll depth)."
-        ],
-        "testing_steps": [
-          "Verifica se il tuo stack tecnologico supporta streaming HTML: apri DevTools → Network, ricarica una pagina, seleziona il documento HTML e controlla se la colonna \"Time\" mostra ricezione progressiva (waterfall con più segmenti) invece di un singolo blocco.",
-          "Installa Chrome 148 Dev o Beta da chrome://settings/help, poi testa pagine critiche con Lighthouse 12+ e confronta metriche FCP e LCP con Chrome 147 stabile. Ripeti il test 5 volte per pagina per ridurre varianza.",
-          "Usa WebPageTest con Chrome 148 Beta (selezionabile in Advanced Settings → Browser) e confronta filmstrip view con Chrome 147: verifica se elementi above-the-fold appaiono prima nel rendering progressivo.",
-          "Monitora Core Web Vitals in Google Search Console per le prossime 8 settimane (giugno-luglio 2026, post-rollout stabile Chrome 148): filtra per dispositivi mobile e desktop separatamente, cerca miglioramenti su URL che già usano streaming HTML.",
-          "Se implementi streaming lato server, aggiungi logging per tracciare ordine e timing di invio dei chunk HTML, poi correla con metriche RUM (Real User Monitoring) per FCP e LCP su Chrome 148+ vs versioni precedenti.",
-          "Testa FOUC e CLS: su Chrome 148 Dev, disabilita cache e ricarica pagine 10 volte, registra video con DevTools → Performance → Screenshots. Verifica se elementi appaiono senza stili o causano layout shift maggiori rispetto a Chrome 147."
-        ],
-        "faqs": [
-          {
-            "question": "Se il mio sito non usa streaming HTML, Chrome 148 peggiora le performance?",
-            "answer": "No. Chrome 148 mantiene il comportamento tradizionale per pagine servite come singolo blocco HTML. Le nuove capacità di streaming out-of-order si attivano solo quando il server invia chunk progressivi con hint di priorità. Siti statici o con rendering classico non vedono cambiamenti, né miglioramenti né peggioramenti."
-          },
-          {
-            "question": "Quanto impatta sui Core Web Vitals in Search Console?",
-            "answer": "L'impatto dipende dalla percentuale di utenti su Chrome 148+ e dall'implementazione di streaming lato server. Con streaming ottimizzato, miglioramenti di 200-400ms su LCP sono realistici, sufficienti a spostare URL dalla soglia arancione (2.5-4.0s) a verde (<2.5s). Senza streaming, impatto zero. I dati CrUX in GSC rifletteranno i cambiamenti 4-6 settimane dopo il rollout stabile di Chrome 148."
-          },
-          {
-            "question": "Vale la pena implementare streaming HTML solo per questo aggiornamento?",
-            "answer": "Dipende dal ROI. Per e-commerce e publisher ad alto traffico su query competitive, il vantaggio su CWV e UX giustifica l'investimento di sviluppo. Per siti con traffico <50k visite/mese o senza competizione serrata su ranking, il costo di implementazione (refactoring server, testing cross-browser) supera i benefici. Priorità va data se già usi framework che supportano streaming nativamente."
-          },
-          {
-            "question": "Safari e Firefox implementeranno funzionalità simili?",
-            "answer": "Non ci sono annunci ufficiali da Apple o Mozilla al maggio 2026. Storicamente, Safari adotta funzionalità di rendering avanzate con 12-24 mesi di ritardo rispetto a Chrome. Firefox tende ad allinearsi più rapidamente ma richiede standard W3C consolidati. Ottimizzare per Chrome 148 significa beneficiare il 65% del traffico web, ma l'implementazione deve degradare gracefully su altri browser."
-          }
-        ],
-        "editorial_commentary": "Questo aggiornamento separa ulteriormente chi ha risorse di sviluppo avanzate da chi opera con stack standard. WordPress, Shopify, Wix e la maggior parte dei CMS tradizionali non supportano streaming HTML out-of-the-box, rendendo l'ottimizzazione inaccessibile a PMI e piccoli publisher. Il vantaggio competitivo si concentra su enterprise e-commerce e grandi editori con team di sviluppo dedicati.\n\nChi compete su query commerciali ad alto valore dovrebbe testare Chrome 148 Beta entro giugno 2026, prima del rollout stabile. Un miglioramento di 300ms su LCP può tradursi in 2-5% di aumento di conversioni secondo studi Akamai e Google, oltre a potenziali guadagni di ranking. Ignorare questo aggiornamento significa regalare vantaggio a competitor tecnologicamente più avanzati.\n\nAttenzione al rischio di over-engineering: implementare streaming HTML richiede refactoring significativo lato server e testing cross-browser approfondito. Se il sito non ha problemi critici di CWV o non compete su query dove ogni millisecondo conta, l'investimento potrebbe non ripagare. Priorità va data a chi ha già LCP tra 2.0 e 2.5 secondi, dove piccoli miglioramenti spostano nella zona verde.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.042470879999999996
-      }
-    },
-    {
-      "id": "item_2026-05-20_004",
-      "title_original": "Introducing the HTML-in-Canvas API origin trial",
-      "title_it": "Presentazione della Origin Trial dell'API HTML-in-Canvas",
-      "summary_it": "Chrome introduce una origin trial per l'API HTML-in-Canvas, che permette di integrare elementi del DOM all'interno di applicazioni basate su Canvas. Questa funzionalità mira a semplificare lo sviluppo di applicazioni che combinano grafica Canvas con elementi HTML tradizionali. L'origin trial offre agli sviluppatori l'opportunità di testare e fornire feedback sull'API.",
-      "url": "https://developer.chrome.com/blog/html-in-canvas-origin-trial?hl=en",
-      "source": {
-        "id": "chrome_developers_blog",
-        "name": "Chrome Developers Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://developer.chrome.com/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "html_in_canva",
-        "chrome",
-        "api",
-        "origin_trial"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-19T06:00:00Z",
-      "fetched_at": "2026-05-20T05:03:11.382016Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:3dc35b849eb78ed0",
-      "deep_analysis": {
-        "detailed_description": "Chrome avvia una origin trial per l'API HTML-in-Canvas, una funzionalità che consente di integrare elementi DOM nativi all'interno di applicazioni Canvas. Per chi gestisce web app complesse, tool interattivi o dashboard basate su Canvas, questa API risolve un problema tecnico ricorrente: fino ad oggi, riprodurre elementi HTML standard (form, input, select) dentro un Canvas richiedeva workaround costosi in termini di sviluppo e manutenzione.\n\nL'origin trial è il meccanismo con cui Chrome testa API sperimentali in produzione, permettendo agli sviluppatori di attivarle su domini specifici per un periodo limitato. In questo caso, l'API HTML-in-Canvas consente di posizionare elementi del DOM direttamente nel contesto Canvas, mantenendo accessibilità, interattività e comportamenti nativi del browser senza dover ricreare tutto da zero con JavaScript.\n\nDal punto di vista SEO, l'impatto diretto è limitato ma non trascurabile. Le applicazioni Canvas-based sono storicamente opache per i crawler: contenuti renderizzati via Canvas non vengono indicizzati come testo HTML. Se l'API permette di mantenere elementi DOM reali all'interno del Canvas, quei contenuti restano accessibili ai bot, migliorando la crawlability di interfacce complesse che oggi risultano invisibili a Google.\n\nLa distinzione è cruciale: non si tratta di convertire Canvas in HTML, ma di embeddare HTML vero dentro Canvas. Questo significa che form, link, testi e altri elementi mantengono la loro semantica HTML, restano nel DOM e quindi sono leggibili dai crawler. Per siti che offrono configuratori di prodotto, editor visuali, tool SaaS o dashboard interattive costruite su Canvas, questa API può trasformare sezioni oggi non indicizzabili in contenuti crawlabili.\n\nL'origin trial è aperta ora e durerà per un numero limitato di release di Chrome. Chi sviluppa o gestisce applicazioni web complesse dovrebbe valutare se la propria architettura può beneficiare di questa integrazione, soprattutto se oggi si affrontano problemi di accessibilità, SEO o duplicazione di logica UI tra Canvas e DOM.\n\nAttenzione: trattandosi di una origin trial, l'API non è stabile. Può cambiare, essere ritirata o modificata in base al feedback. Non è consigliabile costruire feature critiche per il business su API sperimentali senza un piano di fallback. Tuttavia, per chi ha già architetture Canvas-heavy, partecipare alla trial significa influenzare lo sviluppo di uno standard che potrebbe diventare nativo nei browser.",
-        "implications": [
-          "Applicazioni Canvas-based possono integrare elementi HTML nativi senza riscrivere logica UI, riducendo debito tecnico e migliorando accessibilità e crawlability.",
-          "Contenuti oggi invisibili ai crawler (testi, link, form renderizzati via Canvas) possono diventare indicizzabili se implementati come DOM reale embeddato, con impatto positivo su discoverability e ranking.",
-          "L'API è sperimentale: adottarla in produzione richiede un piano di fallback e monitoraggio costante, poiché può essere modificata o ritirata senza preavviso.",
-          "Per siti SaaS, configuratori, editor visuali o dashboard, questa API può sbloccare ottimizzazioni SEO prima impossibili, rendendo crawlabili interfacce complesse.",
-          "Chi gestisce siti con sezioni Canvas-heavy dovrebbe valutare se partecipare alla trial per testare miglioramenti di accessibilità e indicizzazione prima che l'API diventi standard."
-        ],
-        "examples": [
-          "Un configuratore di prodotto e-commerce costruito su Canvas oggi non espone testi descrittivi o opzioni ai crawler. Integrando elementi DOM reali tramite l'API HTML-in-Canvas, descrizioni, prezzi e varianti restano nel DOM, diventano indicizzabili e migliorano la visibilità organica della pagina prodotto.",
-          "Evitare di migrare interi flussi critici (checkout, form lead generation) su questa API finché non esce dalla fase sperimentale. Un cambio improvviso nell'implementazione o la rimozione dell'API potrebbe rompere funzionalità business-critical senza preavviso.",
-          "Un tool SaaS di data visualization usa Canvas per grafici interattivi ma duplica label e legende in HTML nascosto per SEO. Con HTML-in-Canvas, label e controlli possono essere DOM nativo dentro il Canvas, eliminando duplicazione e migliorando manutenibilità e accessibilità."
-        ],
-        "testing_steps": [
-          "Identifica sezioni Canvas-based del sito che contengono testi, link o form oggi non crawlabili.",
-          "Registrati per l'origin trial su Chrome Origin Trials e attiva l'API HTML-in-Canvas sul dominio di staging.",
-          "Implementa un prototipo integrando elementi DOM (es. <p>, <a>, <input>) dentro il Canvas usando l'API.",
-          "Testa il rendering con Chrome DevTools e verifica che gli elementi DOM siano presenti nell'inspector e accessibili via tastiera.",
-          "Usa 'Visualizza come Google' in Search Console o un crawler headless (Screaming Frog con rendering JS) per verificare che i contenuti DOM siano visibili al bot.",
-          "Monitora metriche Core Web Vitals e accessibilità (Lighthouse) per assicurarti che l'integrazione non degradi performance o UX."
-        ],
-        "faqs": [
-          {
-            "question": "L'API HTML-in-Canvas rende automaticamente indicizzabili i contenuti Canvas esistenti?",
-            "answer": "No. L'API permette di embeddare elementi DOM reali dentro Canvas, ma non converte contenuti già disegnati via Canvas API (drawImage, fillText) in HTML. Solo gli elementi DOM integrati tramite questa API restano crawlabili. Per rendere indicizzabili contenuti Canvas esistenti, devi riscriverli come elementi HTML e integrarli usando la nuova API."
-          },
-          {
-            "question": "Posso usare questa API in produzione per feature SEO-critical?",
-            "answer": "Sconsigliato. Le origin trial sono sperimentali: l'API può cambiare, essere ritirata o richiedere refactoring senza preavviso. Usala in staging o per feature non critiche, con un fallback robusto. Se l'API viene ritirata, rischi di perdere crawlability e funzionalità senza alternative immediate."
-          },
-          {
-            "question": "Quali tipi di siti beneficiano di più da questa API in ottica SEO?",
-            "answer": "Siti con interfacce Canvas-heavy: configuratori e-commerce, editor visuali, tool SaaS, dashboard interattive, applicazioni di design o data visualization. Se oggi duplichi contenuti in HTML nascosto per SEO o hai sezioni non indicizzabili a causa del Canvas, questa API può eliminare workaround e migliorare crawlability mantenendo l'architettura Canvas."
-          },
-          {
-            "question": "L'integrazione di HTML in Canvas impatta le performance o i Core Web Vitals?",
-            "answer": "Dipende dall'implementazione. Embeddare DOM in Canvas può aggiungere overhead di rendering e layout. Testa con Lighthouse e monitora LCP, CLS e INP in staging. Se l'integrazione degrada metriche Core Web Vitals, il beneficio SEO da crawlability potrebbe essere annullato da penalizzazioni legate a performance scadenti."
-          }
-        ],
-        "editorial_commentary": "Questa origin trial è rilevante per una nicchia specifica: chi ha costruito applicazioni complesse su Canvas e si scontra con limiti di accessibilità e SEO. Per la maggior parte dei siti, l'impatto è nullo. Ma per chi gestisce configuratori, tool SaaS o interfacce interattive Canvas-based, l'API può sbloccare ottimizzazioni prima impossibili senza riscrivere interi stack.\n\nIl rischio vero è trattare una origin trial come una soluzione stabile. Chrome può ritirare o modificare l'API in qualsiasi momento. Chi adotta questa tecnologia in produzione senza fallback si espone a rotture improvvise. Partecipare alla trial ha senso per testare e influenzare lo standard, non per deployare feature critiche.\n\nSe gestisci siti con sezioni Canvas opache ai crawler, questa è l'occasione per sperimentare un'alternativa ai workaround attuali (HTML nascosto, duplicazione di contenuti). Ma fallo in staging, misura l'impatto su crawlability e performance, e tieni pronto un piano B.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.035535000000000004
-      }
-    },
-    {
-      "id": "item_2026-05-20_005",
       "title_original": "Inside AI Citation: Proven Strategies To Get Your Brand Cited via @sejournal, @lorenbaker",
-      "title_it": "Strategie per ottenere citazioni del tuo brand dall'AI",
-      "summary_it": "L'articolo esplora l'impatto delle citazioni da parte dell'intelligenza artificiale sulla visibilità del brand. Vengono analizzati i segnali di contenuto che influenzano la selezione delle fonti da parte dell'AI. L'obiettivo è fornire strategie per migliorare la presenza del brand nei risultati generati dall'AI.",
+      "title_it": "Strategie comprovate per ottenere citazioni del tuo brand dall'AI",
+      "summary_it": "L'articolo esplora l'impatto delle citazioni da parte dell'intelligenza artificiale sulla visibilità del marchio. Vengono analizzati i segnali di contenuto che influenzano la selezione delle fonti da parte dell'AI. L'obiettivo è fornire strategie per migliorare la presenza del brand nei risultati generati dall'IA.",
       "url": "https://www.searchenginejournal.com/inside-ai-citation-proven-strategies-to-get-your-brand-cited/574807",
       "source": {
         "id": "search_engine_journal",
@@ -409,7 +91,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T06:45:40Z",
-      "fetched_at": "2026-05-20T05:03:12.488921Z",
+      "fetched_at": "2026-05-20T06:03:02.940855Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -418,10 +100,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_006",
+      "id": "item_2026-05-20_002",
       "title_original": "What Is Agentic SEO? And How to Get Started This Week",
       "title_it": "Cos'è la SEO agentica? E come iniziare questa settimana",
-      "summary_it": "Ahrefs introduce il concetto di \"SEO agentica\", un nuovo approccio che automatizza i workflow SEO tramite agenti AI. Invece di configurare manualmente ogni passaggio, si descrive l'obiettivo desiderato e l'agente si occupa dell'esecuzione. L'articolo esplora come implementare questa metodologia.",
+      "summary_it": "Ahrefs introduce il concetto di \"SEO agentica\", un nuovo approccio che automatizza i workflow SEO descrivendo l'obiettivo desiderato invece di costruire manualmente ogni passaggio. L'articolo esplora come implementare questa metodologia, potenzialmente semplificando e accelerando i processi SEO.",
       "url": "https://ahrefs.com/blog/agentic-seo",
       "source": {
         "id": "ahrefs_blog",
@@ -435,16 +117,16 @@
         "category_hint": "tools_platforms",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "technical_seo",
       "tags": [
-        "agentic_seo",
-        "ai_automation",
+        "automation",
         "seo_workflow",
+        "ai_in_seo",
         "ahref"
       ],
       "importance": 3,
       "published_at": "2026-05-19T07:17:51Z",
-      "fetched_at": "2026-05-20T05:03:13.798986Z",
+      "fetched_at": "2026-05-20T06:03:04.297370Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -453,9 +135,9 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_007",
+      "id": "item_2026-05-20_003",
       "title_original": "What Is Content Engineering, and How Do You Do It?",
-      "title_it": "Cos'è l'Ingegneria dei Contenuti e Come Implementarla",
+      "title_it": "Cos'è l'Ingegneria dei Contenuti e Come Implementarla?",
       "summary_it": "Ahrefs definisce l'ingegneria dei contenuti come la pratica di costruire sistemi per la creazione di contenuti. L'articolo esplora i componenti chiave di questa disciplina e identifica le figure professionali responsabili della sua implementazione. Viene inoltre fornita una guida su come diventare un Content Engineer.",
       "url": "https://ahrefs.com/blog/what-is-content-engineering",
       "source": {
@@ -474,11 +156,12 @@
       "tags": [
         "content_engineering",
         "content_strategy",
-        "content_creation"
+        "content_creation",
+        "ahref"
       ],
       "importance": 3,
       "published_at": "2026-05-19T07:24:24Z",
-      "fetched_at": "2026-05-20T05:03:15.172347Z",
+      "fetched_at": "2026-05-20T06:03:07.032831Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -487,10 +170,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_008",
+      "id": "item_2026-05-20_004",
       "title_original": "What Google’s UCP Tells Us About Agent-Ready Websites via @sejournal, @slobodanmanic",
-      "title_it": "L'architettura UCP di Google come modello per i siti web \"agent-ready\"",
-      "summary_it": "Google ha sviluppato UCP (Unified Commerce Platform) per Shopping, ma la sua architettura potrebbe diventare un modello di riferimento per tutti i siti web, indipendentemente dalla vendita di prodotti. L'articolo suggerisce che l'implementazione di principi simili a UCP potrebbe essere cruciale per l'adattamento ai futuri agenti AI di Google.",
+      "title_it": "L'architettura UCP di Google e il futuro dei siti web \"agent-ready\"",
+      "summary_it": "Google ha sviluppato UCP (Unified Commerce Platform) per Shopping, ma la sua architettura potrebbe diventare un modello di riferimento per tutti i siti web, indipendentemente dalla loro natura commerciale. L'articolo suggerisce che l'implementazione di principi simili a UCP potrebbe essere cruciale per l'adattamento ai futuri agenti AI di ricerca.",
       "url": "https://www.searchenginejournal.com/what-googles-ucp-tells-us-about-agent-ready-websites/574220",
       "source": {
         "id": "search_engine_journal",
@@ -513,7 +196,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T08:00:09Z",
-      "fetched_at": "2026-05-20T05:03:16.874421Z",
+      "fetched_at": "2026-05-20T06:03:08.619573Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -522,10 +205,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_009",
+      "id": "item_2026-05-20_005",
       "title_original": "7 Ways to Automate Content Marketing with Agent A",
       "title_it": "7 Modi per Automatizzare il Content Marketing con Agent A",
-      "summary_it": "Ahrefs presenta Agent A, uno strumento per automatizzare diverse attività di content marketing, tra cui la scrittura di contenuti SEO standardizzati, l'aggiornamento di articoli esistenti e la reportistica sulle performance del blog. L'articolo esplora diversi casi d'uso dello strumento per i content marketer.",
+      "summary_it": "Ahrefs presenta Agent A, uno strumento di automazione per il content marketing. L'articolo esplora diversi casi d'uso, tra cui la scrittura di contenuti SEO standardizzati, l'aggiornamento di articoli esistenti e la reportistica sulle performance del blog.",
       "url": "https://ahrefs.com/blog/agent-a-for-content-marketing",
       "source": {
         "id": "ahrefs_blog",
@@ -548,7 +231,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T09:35:14Z",
-      "fetched_at": "2026-05-20T05:03:18.178912Z",
+      "fetched_at": "2026-05-20T06:03:09.965438Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -557,10 +240,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_010",
+      "id": "item_2026-05-20_006",
       "title_original": "Advancing content provenance for a safer, more transparent AI ecosystem",
       "title_it": "OpenAI migliora la provenienza dei contenuti per un ecosistema AI più sicuro e trasparente",
-      "summary_it": "OpenAI sta implementando Content Credentials e SynthID per migliorare la tracciabilità dei contenuti generati dall'AI. È stato rilasciato anche uno strumento di verifica per aiutare gli utenti a identificare e valutare l'autenticità dei media creati con l'intelligenza artificiale. L'obiettivo è aumentare la fiducia e la trasparenza nell'utilizzo di contenuti generati da AI.",
+      "summary_it": "OpenAI sta implementando Content Credentials e SynthID, insieme a uno strumento di verifica, per facilitare l'identificazione e la verifica dei contenuti generati dall'intelligenza artificiale. L'obiettivo è aumentare la fiducia degli utenti nei media creati tramite AI, fornendo informazioni sulla loro origine e autenticità. Questa iniziativa mira a rendere l'ecosistema AI più trasparente.",
       "url": "https://openai.com/index/advancing-content-provenance",
       "source": {
         "id": "openai_blog",
@@ -576,14 +259,14 @@
       },
       "category": "ai_models",
       "tags": [
-        "openai",
         "content_provenance",
-        "synthid",
-        "content_credential"
+        "ai_generated_content",
+        "openai",
+        "synthid"
       ],
       "importance": 3,
       "published_at": "2026-05-19T09:45:00Z",
-      "fetched_at": "2026-05-20T05:03:19.671164Z",
+      "fetched_at": "2026-05-20T06:03:11.483177Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -592,10 +275,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_011",
+      "id": "item_2026-05-20_007",
       "title_original": "Microsoft Clarity New AI Citations Report",
       "title_it": "Microsoft Clarity introduce un report sulle citazioni AI",
-      "summary_it": "Microsoft Clarity ha aggiunto un report sulle citazioni AI per mostrare come i contenuti di un sito web vengono referenziati nelle risposte generate dall'intelligenza artificiale. Il report include metriche come il numero di citazioni delle pagine, la quota di autorità e il traffico di referral AI. L'obiettivo è aiutare i proprietari di siti a capire meglio come i loro contenuti partecipano alle esperienze generate dall'AI.",
+      "summary_it": "Microsoft Clarity ha aggiunto un report sulle citazioni AI, consentendo agli utenti di monitorare come i loro contenuti vengono referenziati nelle risposte generate dall'intelligenza artificiale. Il report fornisce dati su citazioni di pagine, share of authority, traffico di referral AI e query utilizzate dai sistemi AI. Questo aggiornamento mira a fornire una comprensione più approfondita dell'influenza dei contenuti nel contesto delle esperienze AI.",
       "url": "https://www.seroundtable.com/microsoft-clarity-ai-citations-report-41340.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -613,11 +296,12 @@
       "tags": [
         "microsoft_clarity",
         "ai_citation",
-        "web_analytic"
+        "web_analytic",
+        "ai_visibility"
       ],
       "importance": 3,
       "published_at": "2026-05-19T10:11:00Z",
-      "fetched_at": "2026-05-20T05:03:21.302074Z",
+      "fetched_at": "2026-05-20T06:03:18.883277Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -626,10 +310,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_012",
+      "id": "item_2026-05-20_008",
       "title_original": "Bing Tests New Fonts, Links & Products Within Copilot Answers",
-      "title_it": "Bing sperimenta nuovi font, link e formati per i prodotti nelle risposte di Copilot",
-      "summary_it": "Bing sta testando diverse modifiche all'interno delle risposte di Copilot, tra cui nuovi stili di font, l'aggiunta di ancore testuali cliccabili e un nuovo design per la visualizzazione dei prodotti. I test sono stati individuati tramite segnalazioni su X.",
+      "title_it": "Bing sperimenta nuovi font, link e visualizzazione prodotti nelle risposte di Copilot",
+      "summary_it": "Bing sta testando diverse modifiche all'interno delle risposte di Copilot, tra cui nuovi stili di font, l'aggiunta di ancore testuali cliccabili e un nuovo design per mostrare più prodotti. I test sono stati individuati tramite segnalazioni su X.",
       "url": "https://www.seroundtable.com/bing-fonts-links-products-copilot-tests-41341.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -652,7 +336,7 @@
       ],
       "importance": 2,
       "published_at": "2026-05-19T10:21:00Z",
-      "fetched_at": "2026-05-20T05:03:22.820956Z",
+      "fetched_at": "2026-05-20T06:03:20.460683Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -661,7 +345,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_013",
+      "id": "item_2026-05-20_009",
       "title_original": "Why Incrementality Testing Alone Won’t Fix Your Paid Media Budget – The Missing Metric via @sejournal, @tonyadam",
       "title_it": "Perché i test di incrementalità da soli non risolveranno il tuo budget per i media a pagamento: la metrica mancante",
       "summary_it": "L'articolo discute i limiti dei test di incrementalità nel determinare l'efficacia del budget per i media a pagamento. Sottolinea l'importanza di considerare il Marketing Efficiency Ratio (MER) e l'attribuzione, suggerendo un approccio olistico per valutare le performance delle campagne.",
@@ -687,7 +371,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T10:30:04Z",
-      "fetched_at": "2026-05-20T05:03:24.507991Z",
+      "fetched_at": "2026-05-20T06:03:21.927347Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -696,10 +380,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_014",
+      "id": "item_2026-05-20_010",
       "title_original": "OpenAI / ChatGPT Has A Web Cache",
       "title_it": "ChatGPT di OpenAI utilizza una cache web per la ricerca",
-      "summary_it": "La funzionalità di ricerca web di ChatGPT utilizza una cache web, ovvero una versione offline delle pagine web precedentemente scansionate. Questa cache permette a ChatGPT di accedere a contenuti web indicizzati da OpenAI senza effettuare una ricerca live ad ogni richiesta. L'utilizzo della cache è configurabile nelle impostazioni di ChatGPT Workspace.",
+      "summary_it": "La funzionalità di ricerca web di ChatGPT utilizza una cache web, ovvero una versione offline delle pagine web precedentemente scansionate. Questa cache permette a ChatGPT di accedere a contenuti web indicizzati da OpenAI senza effettuare una ricerca live ad ogni richiesta. La documentazione di OpenAI conferma l'utilizzo di questa cache per migliorare l'efficienza della ricerca.",
       "url": "https://www.seroundtable.com/openai-chatgpt-web-cache-41312.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -722,7 +406,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T10:31:00Z",
-      "fetched_at": "2026-05-20T05:03:25.953680Z",
+      "fetched_at": "2026-05-20T06:03:23.279195Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -731,10 +415,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_015",
+      "id": "item_2026-05-20_011",
       "title_original": "Google I/O 2026 Search Ranking Volatility & Update",
       "title_it": "Picco di volatilità nelle classifiche di ricerca durante Google I/O 2026",
-      "summary_it": "Si segnala un aumento della volatilità nelle SERP in concomitanza con il Google I/O 2026. Nonostante non ci siano annunci ufficiali di aggiornamenti dell'algoritmo, diversi strumenti di monitoraggio mostrano fluttuazioni significative. Si ricorda che il core update di marzo 2026 si è concluso l'8 aprile e che persistono problemi di deindicizzazione.",
+      "summary_it": "Si registra un aumento della volatilità nelle SERP in concomitanza con il Google I/O 2026. Nonostante non ci siano annunci ufficiali di aggiornamenti dell'algoritmo, diversi strumenti di monitoraggio segnalano fluttuazioni significative. Continua anche il trend di deindicizzazione di URL.",
       "url": "https://www.seroundtable.com/google-i-o-search-ranking-volatility-41344.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -757,7 +441,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T10:41:00Z",
-      "fetched_at": "2026-05-20T05:03:27.439695Z",
+      "fetched_at": "2026-05-20T06:03:26.000082Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -766,10 +450,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_016",
+      "id": "item_2026-05-20_012",
       "title_original": "Google Adds Markdown Files To Help Docs But Not Used For Search",
-      "title_it": "Google aggiunge file Markdown alla documentazione di supporto, ma non per la ricerca",
-      "summary_it": "Google ha implementato file Markdown (.md.txt) nella documentazione di supporto di Google Search. John Mueller ha specificato che questi file non vengono utilizzati né per la ricerca tradizionale né per le risposte generate dall'AI. L'iniziativa ricorda l'introduzione (e successiva rimozione) dei file LLMS.txt.",
+      "title_it": "Google aggiunge file Markdown alla documentazione di supporto, ma non per la Ricerca",
+      "summary_it": "Google ha implementato file Markdown (.md.txt) nella documentazione di supporto di Google Search. John Mueller ha specificato che questi file non vengono utilizzati né per la Ricerca tradizionale né per le risposte generate dall'AI. L'iniziativa ricorda l'introduzione (e successiva rimozione) dei file LLMS.txt.",
       "url": "https://www.seroundtable.com/google-adds-markdown-files-to-help-docs-41342.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -792,7 +476,7 @@
       ],
       "importance": 2,
       "published_at": "2026-05-19T10:51:00Z",
-      "fetched_at": "2026-05-20T05:03:28.771338Z",
+      "fetched_at": "2026-05-20T06:03:27.413746Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -801,10 +485,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_017",
+      "id": "item_2026-05-20_013",
       "title_original": "Creating ‘Non-Commodity’ Content That Cuts Through The Noise",
       "title_it": "Creare contenuti 'non di massa' che emergono dal rumore di fondo",
-      "summary_it": "L'articolo di Search Engine Journal sottolinea l'importanza di creare contenuti che offrano un valore aggiunto rispetto ai contenuti standard, facendo riferimento al brevetto di Google sull'\"information gain\". Viene suggerito un framework pratico per la creazione di contenuti di valore per la ricerca.",
+      "summary_it": "L'articolo di Search Engine Journal sottolinea l'importanza di creare contenuti che offrano un valore aggiunto rispetto ai contenuti standard, facendo riferimento al brevetto di Google sull'\"information gain\". Si suggerisce un framework pratico per la creazione di contenuti che si distinguano nella ricerca.",
       "url": "https://www.searchenginejournal.com/creating-non-commodity-content-that-cuts-through-the-noise/575092",
       "source": {
         "id": "search_engine_journal",
@@ -826,7 +510,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T12:30:50Z",
-      "fetched_at": "2026-05-20T05:03:30.148323Z",
+      "fetched_at": "2026-05-20T06:03:28.746920Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -835,10 +519,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_018",
+      "id": "item_2026-05-20_014",
       "title_original": "Google publishes guide to optimizing for generative AI search",
       "title_it": "Google pubblica una guida all'ottimizzazione per la ricerca con AI generativa",
-      "summary_it": "Google ha rilasciato una guida che fornisce indicazioni sull'ottimizzazione per le funzionalità di intelligenza artificiale generativa nei risultati di ricerca. Il documento offre consigli pratici per i professionisti SEO che desiderano adattare le proprie strategie all'evoluzione del panorama della ricerca.",
+      "summary_it": "Google ha rilasciato una guida che fornisce indicazioni sull'ottimizzazione per le funzionalità di intelligenza artificiale generativa nel motore di ricerca. La guida consolida le raccomandazioni di Google sull'adattamento dei contenuti alle nuove modalità di ricerca basate sull'AI.",
       "url": "https://www.semrush.com/blog/google-publishes-generative-ai-search-guide",
       "source": {
         "id": "semrush_blog",
@@ -857,11 +541,11 @@
         "generative_ai",
         "google_search",
         "ai_optimization",
-        "seo_strategy"
+        "search_engine_optimization"
       ],
       "importance": 4,
       "published_at": "2026-05-19T12:52:00Z",
-      "fetched_at": "2026-05-20T05:03:31.386076Z",
+      "fetched_at": "2026-05-20T06:03:30.066954Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -870,10 +554,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_019",
+      "id": "item_2026-05-20_015",
       "title_original": "Daily Search Forum Recap: May 19, 2026",
-      "title_it": "Riassunto giornaliero dei forum di ricerca: 19 Maggio 2026",
-      "summary_it": "Il riassunto odierno include la volatilità del ranking di ricerca in concomitanza con Google I/O, l'aggiunta di file markdown alla documentazione di Google (non utilizzati per la ricerca), e la presenza di una web cache per ChatGPT. Inoltre, Bing sta testando nuovi font e link, e Microsoft Clarity ora mostra le citazioni AI.",
+      "title_it": "Riassunto giornaliero dei forum di ricerca: 19 maggio 2026",
+      "summary_it": "Il riassunto odierno include la volatilità del ranking di ricerca in concomitanza con Google I/O. Google ha aggiunto file markdown alla documentazione di aiuto, ma non li utilizza per la ricerca. OpenAI ha una web cache. Bing sta testando nuovi font, link e prodotti, mentre Microsoft Clarity mostra ora le citazioni AI.",
       "url": "https://www.seroundtable.com/recap-05-19-2026-41345.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -891,13 +575,13 @@
       "tags": [
         "google_i_o",
         "search_ranking_volatility",
-        "chatgpt",
-        "bing",
+        "openai_cache",
+        "bing_test",
         "microsoft_clarity"
       ],
       "importance": 3,
       "published_at": "2026-05-19T13:00:00Z",
-      "fetched_at": "2026-05-20T05:03:33.777901Z",
+      "fetched_at": "2026-05-20T06:03:31.568603Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -906,10 +590,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_020",
+      "id": "item_2026-05-20_016",
       "title_original": "Google Adds AI Agents To Search, Redesigns Search Box At I/O via @sejournal, @MattGSouthern",
-      "title_it": "Google introduce agenti AI nella Ricerca e riprogetta la barra di ricerca durante l'I/O",
-      "summary_it": "Google ha annunciato l'integrazione di agenti basati su intelligenza artificiale all'interno della Ricerca, con rilascio previsto per l'estate. Contestualmente, è stata presentata una nuova versione della barra di ricerca. Gemini 3.5 Flash è ora il modello predefinito in AI Mode.",
+      "title_it": "Google introduce agenti AI nella Ricerca e riprogetta la barra di ricerca al Google I/O",
+      "summary_it": "Google ha annunciato l'integrazione di agenti basati su intelligenza artificiale all'interno della Ricerca, con rilascio previsto per l'estate. Contestualmente, è stata presentata una riprogettazione della barra di ricerca. Gemini 3.5 Flash è ora il modello predefinito in AI Mode.",
       "url": "https://www.searchenginejournal.com/google-adds-ai-agents-to-search-redesigns-search-box-at-i-o/575311",
       "source": {
         "id": "search_engine_journal",
@@ -932,7 +616,7 @@
       ],
       "importance": 4,
       "published_at": "2026-05-19T16:45:17Z",
-      "fetched_at": "2026-05-20T05:03:35.159952Z",
+      "fetched_at": "2026-05-20T06:03:33.027321Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -941,10 +625,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_021",
+      "id": "item_2026-05-20_017",
       "title_original": "Google Brings AI Content Verification To Search via @sejournal, @MattGSouthern",
-      "title_it": "Google introduce la verifica di contenuti AI nella Ricerca",
-      "summary_it": "Google ha esteso SynthID alla Ricerca, permettendo agli utenti di verificare se un contenuto è stato generato tramite intelligenza artificiale. Questa implementazione mira a fornire maggiore trasparenza sull'origine dei contenuti visualizzati nei risultati di ricerca. La funzionalità è progettata per aiutare gli utenti a valutare l'affidabilità e la credibilità delle informazioni.",
+      "title_it": "Google introduce la verifica dei contenuti AI nella Ricerca",
+      "summary_it": "Google ha esteso SynthID alla Ricerca, consentendo agli utenti di verificare se un contenuto è stato generato tramite intelligenza artificiale. Questa implementazione mira a fornire maggiore trasparenza sull'origine dei contenuti visualizzati nei risultati di ricerca.",
       "url": "https://www.searchenginejournal.com/google-brings-ai-content-verification-to-search/575320",
       "source": {
         "id": "search_engine_journal",
@@ -958,16 +642,16 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "google_updates",
       "tags": [
         "ai_content",
         "synthid",
         "content_verification",
-        "google_search"
+        "ai_detection"
       ],
       "importance": 3,
       "published_at": "2026-05-19T16:45:26Z",
-      "fetched_at": "2026-05-20T05:03:36.672229Z",
+      "fetched_at": "2026-05-20T06:03:34.423674Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -976,10 +660,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_022",
+      "id": "item_2026-05-20_018",
       "title_original": "Google Announces New Universal Cart At I/O via @sejournal, @brookeosmundson",
       "title_it": "Google presenta il nuovo carrello universale durante l'I/O",
-      "summary_it": "All'I/O, Google ha annunciato Universal Cart, un nuovo carrello acquisti intelligente e hub agentico per lo shopping su Google. Questa novità mira a centralizzare e semplificare l'esperienza di acquisto per gli utenti all'interno dell'ecosistema Google.",
+      "summary_it": "Durante il Google I/O è stato annunciato Universal Cart, un nuovo carrello intelligente e hub agentico per lo shopping su Google. La funzionalità mira a centralizzare e semplificare l'esperienza di acquisto per gli utenti all'interno dell'ecosistema Google.",
       "url": "https://www.searchenginejournal.com/google-announces-new-universal-cart-at-i-o/575301",
       "source": {
         "id": "search_engine_journal",
@@ -997,12 +681,12 @@
       "tags": [
         "google_io",
         "ecommerce",
-        "shopping",
+        "shopping_cart",
         "google"
       ],
       "importance": 3,
       "published_at": "2026-05-19T16:45:41Z",
-      "fetched_at": "2026-05-20T05:03:37.928763Z",
+      "fetched_at": "2026-05-20T06:03:35.825282Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -1011,10 +695,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_023",
+      "id": "item_2026-05-20_019",
       "title_original": "YouTube Expands AI Creation Tools With Gemini Omni And Conversational Search via @sejournal, @brookeosmundson",
-      "title_it": "YouTube introduce strumenti di creazione AI potenziati con Gemini Omni e ricerca conversazionale",
-      "summary_it": "YouTube ha annunciato l'integrazione di Gemini Omni per il remixing di contenuti e la nuova funzione \"Ask YouTube\" per la ricerca conversazionale. Queste novità sollevano interrogativi sulle strategie di discovery, sugli strumenti a disposizione dei creator e sulle future metriche di misurazione delle performance.",
+      "title_it": "YouTube potenzia gli strumenti di creazione con AI tramite Gemini Omni e ricerca conversazionale",
+      "summary_it": "YouTube ha annunciato l'integrazione di Gemini Omni per il remixing di contenuti e la funzionalità \"Ask YouTube\" per la ricerca conversazionale. Queste novità sollevano interrogativi sulle modalità di discovery, sugli strumenti a disposizione dei creator e sulle future metriche di misurazione delle performance.",
       "url": "https://www.searchenginejournal.com/youtube-expands-ai-creation-tools-with-gemini-omni-and-conversational-search/575310",
       "source": {
         "id": "search_engine_journal",
@@ -1037,7 +721,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T17:00:12Z",
-      "fetched_at": "2026-05-20T05:03:39.251528Z",
+      "fetched_at": "2026-05-20T06:03:37.489794Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -1046,10 +730,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_024",
+      "id": "item_2026-05-20_020",
       "title_original": "Introducing OpenAI for Singapore",
       "title_it": "OpenAI si espande a Singapore con una partnership pluriennale sull'IA",
-      "summary_it": "OpenAI ha annunciato una partnership pluriennale con Singapore focalizzata sull'espansione dell'implementazione dell'IA, sullo sviluppo di talenti locali e sul supporto a imprese e servizi pubblici. L'iniziativa mira a rafforzare l'ecosistema AI di Singapore attraverso collaborazioni strategiche e investimenti mirati.",
+      "summary_it": "OpenAI ha annunciato una partnership pluriennale a Singapore focalizzata sull'espansione dell'implementazione dell'IA, lo sviluppo di talenti locali e il supporto a imprese e servizi pubblici. L'iniziativa mira a rafforzare l'ecosistema dell'intelligenza artificiale nel paese asiatico. Non sono stati forniti dettagli specifici sulle tecnologie o i modelli che verranno implementati.",
       "url": "https://openai.com/index/introducing-openai-for-singapore",
       "source": {
         "id": "openai_blog",
@@ -1072,7 +756,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-19T19:30:00Z",
-      "fetched_at": "2026-05-20T05:03:40.549869Z",
+      "fetched_at": "2026-05-20T06:03:39.107286Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -1081,10 +765,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-20_025",
+      "id": "item_2026-05-20_021",
       "title_original": "90% Of Brands Have Zero AI Search Mentions, New Study Finds 4 Key SEO Insights",
       "title_it": "Studio rivela che il 90% dei brand non viene menzionato nelle risposte AI di ricerca: 4 insight SEO chiave",
-      "summary_it": "Una nuova ricerca evidenzia come la maggior parte dei brand non sia presente nelle menzioni generate dall'AI nei risultati di ricerca. Lo studio identifica quattro aree principali su cui i professionisti SEO dovrebbero concentrarsi per migliorare la visibilità dei propri clienti nelle risposte AI.",
+      "summary_it": "Una nuova ricerca evidenzia come la maggior parte dei brand non sia presente nelle menzioni generate dall'AI nei risultati di ricerca. Lo studio identifica quattro aree principali su cui i professionisti SEO dovrebbero concentrarsi per migliorare la visibilità dei propri clienti in questo nuovo panorama.",
       "url": "https://www.searchenginejournal.com/ai-seo-mentions-study-victorious-spa/575040",
       "source": {
         "id": "search_engine_journal",
@@ -1103,11 +787,11 @@
         "ai_search",
         "brand_mention",
         "seo_strategy",
-        "ai_seo"
+        "llm"
       ],
       "importance": 3,
       "published_at": "2026-05-19T20:27:10Z",
-      "fetched_at": "2026-05-20T05:03:42.056579Z",
+      "fetched_at": "2026-05-20T06:03:40.526444Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -1119,87 +803,87 @@
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-20T05:01:51.378757Z",
+      "last_checked": "2026-05-20T06:01:46.436547Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-20T05:01:51.712620Z",
+      "last_checked": "2026-05-20T06:01:46.934447Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-20T05:01:53.578910Z",
+      "last_checked": "2026-05-20T06:01:48.109931Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-20T05:02:21.888799Z",
+      "last_checked": "2026-05-20T06:02:15.795207Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-20T05:02:22.180122Z",
+      "last_checked": "2026-05-20T06:02:16.009033Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-20T05:02:24.261534Z",
+      "last_checked": "2026-05-20T06:02:18.094125Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-20T05:02:26.089173Z",
+      "last_checked": "2026-05-20T06:02:19.833871Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-20T05:02:26.921485Z",
+      "last_checked": "2026-05-20T06:02:21.498285Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-20T05:02:26.961954Z",
+      "last_checked": "2026-05-20T06:02:21.521718Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-20T05:02:27.353789Z",
+      "last_checked": "2026-05-20T06:02:25.634711Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-20T05:02:29.228437Z",
+      "last_checked": "2026-05-20T06:02:26.138042Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-20T05:02:30.716506Z",
+      "last_checked": "2026-05-20T06:02:26.897782Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-20T05:02:32.153228Z",
+      "last_checked": "2026-05-20T06:02:29.372712Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-20T05:02:33.782819Z",
+      "last_checked": "2026-05-20T06:02:30.173043Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-20T05:02:35.284268Z",
+      "last_checked": "2026-05-20T06:02:32.146905Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-20T05:02:36.569055Z",
+      "last_checked": "2026-05-20T06:02:33.191495Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-20T05:03:04.519284Z",
+      "last_checked": "2026-05-20T06:03:00.957986Z",
       "changed": false
     }
   ],
