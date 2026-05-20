@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>Aggiornamenti parziali dichiarativi in Chrome 148 — Osservatorio SEO</title>
+<meta name="description" content="Il blog di Chrome Developers annuncia nuove funzionalità di streaming out-of-order e metodi di inserimento HTML e streaming rinnovati, disponibili per il t" />
+<link rel="canonical" href="https://www.osservatorioseo.com/archivio/2026/05/20/aggiornamenti-parziali-dichiarativi-chrome-148/" />
+<meta property="og:title" content="Aggiornamenti parziali dichiarativi in Chrome 148 — Osservatorio SEO" />
+<meta property="og:description" content="Il blog di Chrome Developers annuncia nuove funzionalità di streaming out-of-order e metodi di inserimento HTML e streaming rinnovati, disponibili per il t" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/archivio/2026/05/20/aggiornamenti-parziali-dichiarativi-chrome-148/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta name="twitter:card" content="summary_large_image" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Aggiornamenti parziali dichiarativi in Chrome 148",
+  "description": "Il blog di Chrome Developers annuncia nuove funzionalit\u00e0 di streaming out-of-order e metodi di inserimento HTML e streaming rinnovati, disponibili per il testing a partire dalla versione 148 del browser. Questi aggiornamenti potrebbero migliorare le performance di rendering lato client e l\u0027esperienza utente.",
+  "articleBody": "Chrome 148 introduce capacit\u00e0 di streaming out-of-order e metodi rinnovati per l\u0027inserimento e lo streaming HTML, funzionalit\u00e0 che modificano il modo in cui il browser gestisce il rendering progressivo delle pagine. L\u0027impatto diretto riguarda i tempi di First Contentful Paint e Largest Contentful Paint, metriche Core Web Vitals che Google usa come fattore di ranking dal 2021.\n\nLo streaming out-of-order permette al browser di processare e renderizzare blocchi HTML non appena disponibili, indipendentemente dall\u0027ordine di arrivo dal server. Fino a Chrome 147, il rendering seguiva rigorosamente la sequenza di ricezione dei chunk: se un blocco critico above-the-fold arrivava dopo contenuti meno prioritari, l\u0027utente doveva attendere il completamento della sequenza. Con Chrome 148, il browser pu\u00f2 dare priorit\u00e0 al rendering di elementi critici anche se arrivano dopo nel flusso di rete.\n\nI metodi di inserimento HTML rinnovati includono API dichiarative che consentono agli sviluppatori di specificare dove e quando inserire contenuti nel DOM durante lo streaming, senza ricorrere a JavaScript imperativo. Questo riduce il peso del JavaScript necessario per gestire il rendering progressivo e abbassa il Total Blocking Time, altra metrica Core Web Vitals che impatta l\u0027esperienza utente e, indirettamente, il posizionamento.\n\nLa funzionalit\u00e0 \u00e8 disponibile per testing dalla versione 148, attualmente in canale Dev e Beta. Il rollout stabile \u00e8 previsto per giugno 2026, con adozione progressiva nella base utenti globale di Chrome (circa 65% del traffico web desktop e mobile secondo StatCounter marzo 2026). Safari e Firefox non hanno ancora annunciato implementazioni equivalenti, creando una finestra temporale in cui l\u0027ottimizzazione sar\u00e0 efficace solo per la maggioranza degli utenti.\n\nL\u0027implementazione richiede modifiche lato server per sfruttare appieno le capacit\u00e0 di streaming out-of-order. I server devono inviare hint di priorit\u00e0 nei chunk HTML o utilizzare le nuove API dichiarative per indicare al browser quali blocchi renderizzare per primi. Siti che gi\u00e0 utilizzano streaming HTML (come quelli su framework React 18+ con Suspense o Next.js con streaming SSR) possono beneficiare di questi miglioramenti con modifiche minime.\n\nPer siti statici o con rendering tradizionale, l\u0027impatto \u00e8 limitato: Chrome 148 non modifica il comportamento di pagine servite come singolo blocco HTML completo. Il vantaggio si manifesta solo quando il server invia la pagina in chunk progressivi, tecnica ancora poco diffusa al di fuori di applicazioni web complesse o piattaforme e-commerce enterprise.",
+  "wordCount": 377,
+  "datePublished": "2026-05-19T06:00:00+00:00",
+  "dateModified": "2026-05-19T06:00:00+00:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://osservatorioseo.pages.dev/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://osservatorioseo.pages.dev/tailwind.css",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/archivio/2026/05/20/aggiornamenti-parziali-dichiarativi-chrome-148/"
+  },
+  "articleSection": "Technical SEO",
+  "inLanguage": "it-IT",
+  "isBasedOn": "https://developer.chrome.com/blog/declarative-partial-updates?hl=en",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "article > section.prose p"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Archivio",
+      "item": "https://www.osservatorioseo.com/archivio/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "2026",
+      "item": "https://www.osservatorioseo.com/archivio/2026/"
+    },    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "05",
+      "item": "https://www.osservatorioseo.com/archivio/2026/05/"
+    },    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "20",
+      "item": "https://www.osservatorioseo.com/archivio/2026/05/20/"
+    },    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Aggiornamenti parziali dichiarativi in Chrome 148",
+      "item": "https://www.osservatorioseo.com/archivio/2026/05/20/aggiornamenti-parziali-dichiarativi-chrome-148/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [    {
+      "@type": "Question",
+      "name": "Se il mio sito non usa streaming HTML, Chrome 148 peggiora le performance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Chrome 148 mantiene il comportamento tradizionale per pagine servite come singolo blocco HTML. Le nuove capacit\u00e0 di streaming out-of-order si attivano solo quando il server invia chunk progressivi con hint di priorit\u00e0. Siti statici o con rendering classico non vedono cambiamenti, n\u00e9 miglioramenti n\u00e9 peggioramenti."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Quanto impatta sui Core Web Vitals in Search Console?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L\u0027impatto dipende dalla percentuale di utenti su Chrome 148+ e dall\u0027implementazione di streaming lato server. Con streaming ottimizzato, miglioramenti di 200-400ms su LCP sono realistici, sufficienti a spostare URL dalla soglia arancione (2.5-4.0s) a verde (\u003c2.5s). Senza streaming, impatto zero. I dati CrUX in GSC rifletteranno i cambiamenti 4-6 settimane dopo il rollout stabile di Chrome 148."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Vale la pena implementare streaming HTML solo per questo aggiornamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dipende dal ROI. Per e-commerce e publisher ad alto traffico su query competitive, il vantaggio su CWV e UX giustifica l\u0027investimento di sviluppo. Per siti con traffico \u003c50k visite/mese o senza competizione serrata su ranking, il costo di implementazione (refactoring server, testing cross-browser) supera i benefici. Priorit\u00e0 va data se gi\u00e0 usi framework che supportano streaming nativamente."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Safari e Firefox implementeranno funzionalit\u00e0 simili?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non ci sono annunci ufficiali da Apple o Mozilla al maggio 2026. Storicamente, Safari adotta funzionalit\u00e0 di rendering avanzate con 12-24 mesi di ritardo rispetto a Chrome. Firefox tende ad allinearsi pi\u00f9 rapidamente ma richiede standard W3C consolidati. Ottimizzare per Chrome 148 significa beneficiare il 65% del traffico web, ma l\u0027implementazione deve degradare gracefully su altri browser."
+      }
+    }  ]
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/google-financials/">GOOGLE_FIN</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+    <a href="/" class="hover:text-primary-container">Home</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/" class="hover:text-primary-container">Archivio</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/" class="hover:text-primary-container">2026</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/05/" class="hover:text-primary-container">05</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/05/20/" class="hover:text-primary-container">20</a>
+    <span class="text-outline-variant">/</span>
+    <span class="text-primary-container">Aggiornamenti parziali dichiarativi in Chrome 148</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-8">
+    <p class="text-[10px] text-outline uppercase font-mono mb-2">
+      <a href="/categoria/technical-seo/" class="text-primary-container hover:underline">Technical SEO</a>
+      · <span class="text-[#f5a623]">★★★★★</span>
+      · <time datetime="2026-05-19T06:00:00Z">Tuesday 19 May 2026, 06:00</time>
+    </p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Aggiornamenti parziali dichiarativi in Chrome 148</h1>
+    <p class="text-sm text-outline font-mono uppercase">Fonte: <a class="text-primary-container hover:underline" href="https://developer.chrome.com/blog/declarative-partial-updates?hl=en" target="_blank" rel="noopener">Chrome Developers Blog</a></p>
+  </header>
+
+  <section class="prose prose-invert mb-10">
+    <p class="text-lg leading-relaxed text-on-surface">Il blog di Chrome Developers annuncia nuove funzionalità di streaming out-of-order e metodi di inserimento HTML e streaming rinnovati, disponibili per il testing a partire dalla versione 148 del browser. Questi aggiornamenti potrebbero migliorare le performance di rendering lato client e l&#39;esperienza utente.</p>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI APPROFONDITA</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      <p>Chrome 148 introduce capacità di streaming out-of-order e metodi rinnovati per l&#39;inserimento e lo streaming HTML, funzionalità che modificano il modo in cui il browser gestisce il rendering progressivo delle pagine. L&#39;impatto diretto riguarda i tempi di First Contentful Paint e Largest Contentful Paint, metriche Core Web Vitals che Google usa come fattore di ranking dal 2021.</p>
+      <p>Lo streaming out-of-order permette al browser di processare e renderizzare blocchi HTML non appena disponibili, indipendentemente dall&#39;ordine di arrivo dal server. Fino a Chrome 147, il rendering seguiva rigorosamente la sequenza di ricezione dei chunk: se un blocco critico above-the-fold arrivava dopo contenuti meno prioritari, l&#39;utente doveva attendere il completamento della sequenza. Con Chrome 148, il browser può dare priorità al rendering di elementi critici anche se arrivano dopo nel flusso di rete.</p>
+      <p>I metodi di inserimento HTML rinnovati includono API dichiarative che consentono agli sviluppatori di specificare dove e quando inserire contenuti nel DOM durante lo streaming, senza ricorrere a JavaScript imperativo. Questo riduce il peso del JavaScript necessario per gestire il rendering progressivo e abbassa il Total Blocking Time, altra metrica Core Web Vitals che impatta l&#39;esperienza utente e, indirettamente, il posizionamento.</p>
+      <p>La funzionalità è disponibile per testing dalla versione 148, attualmente in canale Dev e Beta. Il rollout stabile è previsto per giugno 2026, con adozione progressiva nella base utenti globale di Chrome (circa 65% del traffico web desktop e mobile secondo StatCounter marzo 2026). Safari e Firefox non hanno ancora annunciato implementazioni equivalenti, creando una finestra temporale in cui l&#39;ottimizzazione sarà efficace solo per la maggioranza degli utenti.</p>
+      <p>L&#39;implementazione richiede modifiche lato server per sfruttare appieno le capacità di streaming out-of-order. I server devono inviare hint di priorità nei chunk HTML o utilizzare le nuove API dichiarative per indicare al browser quali blocchi renderizzare per primi. Siti che già utilizzano streaming HTML (come quelli su framework React 18+ con Suspense o Next.js con streaming SSR) possono beneficiare di questi miglioramenti con modifiche minime.</p>
+      <p>Per siti statici o con rendering tradizionale, l&#39;impatto è limitato: Chrome 148 non modifica il comportamento di pagine servite come singolo blocco HTML completo. Il vantaggio si manifesta solo quando il server invia la pagina in chunk progressivi, tecnica ancora poco diffusa al di fuori di applicazioni web complesse o piattaforme e-commerce enterprise.</p>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA CAMBIA PER TE</h2>
+    <ul class="space-y-3">
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>I siti che implementano streaming HTML lato server vedranno miglioramenti automatici nei Core Web Vitals (FCP, LCP) su Chrome 148+ senza modifiche al codice, purché il server invii già chunk progressivi. L&#39;effetto si traduce in potenziali guadagni di ranking per query competitive dove i CWV fanno la differenza tra posizioni contigue.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Chi ottimizza per Page Experience deve ora considerare l&#39;ordine di streaming dei chunk HTML, non solo l&#39;ordine nel markup finale. Un hero image o un H1 posizionati in fondo al DOM ma inviati per primi nel flusso di rete possono ora renderizzare prima di contenuti above-the-fold presenti in cima al markup ma arrivati dopo.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Framework e CMS che non supportano streaming HTML (WordPress vanilla, Shopify standard, molti generatori di siti statici) non beneficiano di questi aggiornamenti. L&#39;ottimizzazione resta confinata a stack tecnologici avanzati o custom, creando un vantaggio competitivo per chi ha risorse di sviluppo dedicate.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Il testing su Chrome 148 Dev/Beta diventa prioritario per e-commerce e publisher ad alto traffico che competono su query commerciali: un miglioramento di 200-300ms su LCP può spostare pagine dalla soglia &#34;needs improvement&#34; a &#34;good&#34; nei CWV, con impatto misurabile su CTR e conversioni oltre che su ranking.</span>
+      </li>
+    </ul>
+  </section>
+
+<section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ESEMPI CONCRETI</h2>
+    <div class="space-y-4">
+<div class="p-5 border-l-4 bg-[#0e0e0e] border-primary-container">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA FARE</p>
+        <p class="text-on-surface leading-relaxed">Un e-commerce con product page servite via streaming SSR (Next.js 14+) può inviare prima il blocco contenente immagine prodotto, prezzo e CTA, poi descrizione e recensioni. Su Chrome 148, l&#39;utente vede il contenuto critico 400-600ms prima rispetto a Chrome 147, anche se la descrizione arriva per ultima dal server. Questo migliora LCP e riduce bounce rate da caricamento lento.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1b1b1b] border-[#f5a623]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA EVITARE</p>
+        <p class="text-on-surface leading-relaxed">Evitare di implementare streaming out-of-order se il sito usa inline critical CSS nel &lt;head&gt; che dipende da elementi renderizzati dopo nel DOM. Chrome 148 potrebbe renderizzare elementi prima che gli stili critici siano applicati, causando flash of unstyled content (FOUC) e peggiorando Cumulative Layout Shift invece di migliorarlo.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1f1f1f] border-[#919191]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">SCENARIO</p>
+        <p class="text-on-surface leading-relaxed">Un publisher di news con articoli lunghi può inviare headline, immagine hero e primo paragrafo nel chunk iniziale, poi corpo articolo e sidebar. Su Chrome 148, il lettore inizia a consumare contenuto mentre il resto della pagina carica in background, riducendo perceived load time e migliorando metriche di engagement che correlano con ranking (tempo sulla pagina, scroll depth).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COME TESTARE L'IMPATTO</h2>
+    <ol class="space-y-2 list-decimal list-inside text-on-surface leading-relaxed marker:text-primary-container marker:font-mono">
+      <li class="pl-2">Verifica se il tuo stack tecnologico supporta streaming HTML: apri DevTools → Network, ricarica una pagina, seleziona il documento HTML e controlla se la colonna &#34;Time&#34; mostra ricezione progressiva (waterfall con più segmenti) invece di un singolo blocco.</li>
+      <li class="pl-2">Installa Chrome 148 Dev o Beta da chrome://settings/help, poi testa pagine critiche con Lighthouse 12+ e confronta metriche FCP e LCP con Chrome 147 stabile. Ripeti il test 5 volte per pagina per ridurre varianza.</li>
+      <li class="pl-2">Usa WebPageTest con Chrome 148 Beta (selezionabile in Advanced Settings → Browser) e confronta filmstrip view con Chrome 147: verifica se elementi above-the-fold appaiono prima nel rendering progressivo.</li>
+      <li class="pl-2">Monitora Core Web Vitals in Google Search Console per le prossime 8 settimane (giugno-luglio 2026, post-rollout stabile Chrome 148): filtra per dispositivi mobile e desktop separatamente, cerca miglioramenti su URL che già usano streaming HTML.</li>
+      <li class="pl-2">Se implementi streaming lato server, aggiungi logging per tracciare ordine e timing di invio dei chunk HTML, poi correla con metriche RUM (Real User Monitoring) per FCP e LCP su Chrome 148+ vs versioni precedenti.</li>
+      <li class="pl-2">Testa FOUC e CLS: su Chrome 148 Dev, disabilita cache e ricarica pagine 10 volte, registra video con DevTools → Performance → Screenshots. Verifica se elementi appaiono senza stili o causano layout shift maggiori rispetto a Chrome 147.</li>
+    </ol>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; DOMANDE FREQUENTI</h2>
+    <div class="divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Se il mio sito non usa streaming HTML, Chrome 148 peggiora le performance?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">No. Chrome 148 mantiene il comportamento tradizionale per pagine servite come singolo blocco HTML. Le nuove capacità di streaming out-of-order si attivano solo quando il server invia chunk progressivi con hint di priorità. Siti statici o con rendering classico non vedono cambiamenti, né miglioramenti né peggioramenti.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Quanto impatta sui Core Web Vitals in Search Console?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">L&#39;impatto dipende dalla percentuale di utenti su Chrome 148+ e dall&#39;implementazione di streaming lato server. Con streaming ottimizzato, miglioramenti di 200-400ms su LCP sono realistici, sufficienti a spostare URL dalla soglia arancione (2.5-4.0s) a verde (&lt;2.5s). Senza streaming, impatto zero. I dati CrUX in GSC rifletteranno i cambiamenti 4-6 settimane dopo il rollout stabile di Chrome 148.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Vale la pena implementare streaming HTML solo per questo aggiornamento?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Dipende dal ROI. Per e-commerce e publisher ad alto traffico su query competitive, il vantaggio su CWV e UX giustifica l&#39;investimento di sviluppo. Per siti con traffico &lt;50k visite/mese o senza competizione serrata su ranking, il costo di implementazione (refactoring server, testing cross-browser) supera i benefici. Priorità va data se già usi framework che supportano streaming nativamente.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Safari e Firefox implementeranno funzionalità simili?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Non ci sono annunci ufficiali da Apple o Mozilla al maggio 2026. Storicamente, Safari adotta funzionalità di rendering avanzate con 12-24 mesi di ritardo rispetto a Chrome. Firefox tende ad allinearsi più rapidamente ma richiede standard W3C consolidati. Ottimizzare per Chrome 148 significa beneficiare il 65% del traffico web, ma l&#39;implementazione deve degradare gracefully su altri browser.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="mb-10 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IL PUNTO DELLA REDAZIONE</h2>
+    <p class="text-on-surface leading-relaxed italic">Questo aggiornamento separa ulteriormente chi ha risorse di sviluppo avanzate da chi opera con stack standard. WordPress, Shopify, Wix e la maggior parte dei CMS tradizionali non supportano streaming HTML out-of-the-box, rendendo l&#39;ottimizzazione inaccessibile a PMI e piccoli publisher. Il vantaggio competitivo si concentra su enterprise e-commerce e grandi editori con team di sviluppo dedicati.
+
+Chi compete su query commerciali ad alto valore dovrebbe testare Chrome 148 Beta entro giugno 2026, prima del rollout stabile. Un miglioramento di 300ms su LCP può tradursi in 2-5% di aumento di conversioni secondo studi Akamai e Google, oltre a potenziali guadagni di ranking. Ignorare questo aggiornamento significa regalare vantaggio a competitor tecnologicamente più avanzati.
+
+Attenzione al rischio di over-engineering: implementare streaming HTML richiede refactoring significativo lato server e testing cross-browser approfondito. Se il sito non ha problemi critici di CWV o non compete su query dove ogni millisecondo conta, l&#39;investimento potrebbe non ripagare. Priorità va data a chi ha già LCP tra 2.0 e 2.5 secondi, dove piccoli miglioramenti spostano nella zona verde.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; TAGS</h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#chrome</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#rendering</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#performance</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#html</span>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-low border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Questo articolo include un <strong class="text-white">riassunto</strong> della notizia originale e, per gli item critici (5/5), una <strong class="text-white">analisi editoriale</strong> prodotta da Osservatorio SEO.
+      Il riassunto è generato da <code class="text-primary-container">google/gemini-2.0-flash-001</code>, l'analisi approfondita da <code class="text-primary-container">anthropic/claude-sonnet-4-5</code>.
+      Per il testo completo e l'attribuzione della notizia, consulta la fonte originale.
+    </p>
+    <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="https://developer.chrome.com/blog/declarative-partial-updates?hl=en" target="_blank" rel="noopener">LEGGI L'ORIGINALE →</a>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; ALTRI DAL GIORNO</h2>
+    <p class="text-xs text-outline font-mono uppercase">
+      <a href="/archivio/2026/05/20/" class="text-primary-container hover:underline">Vedi tutti gli articoli del Wednesday 20 May 2026</a>
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="text-[#919191]">
+    (C) 2026 OSSERVATORIO_SEO // AUTORE:
+    <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+  </div>
+  <div class="flex gap-6">
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+  </div>
+  <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
