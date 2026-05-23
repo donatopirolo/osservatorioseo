@@ -1,776 +1,67 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-22T06:01:42.995013Z",
-  "generated_at_local": "2026-05-22T08:01:42.995013+02:00",
+  "generated_at": "2026-05-23T05:01:42.596249Z",
+  "generated_at_local": "2026-05-23T07:01:42.596249+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-22-0801",
+  "run_id": "2026-05-23-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2011,
-    "items_after_dedup": 20,
+    "items_collected": 2008,
+    "items_after_dedup": 16,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0841,
-    "summarize_attempted": 20,
+    "ai_cost_eur": 0.037,
+    "summarize_attempted": 16,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-22_016",
-    "item_2026-05-22_020",
-    "item_2026-05-22_017",
-    "item_2026-05-22_011",
-    "item_2026-05-22_019",
-    "item_2026-05-22_008",
-    "item_2026-05-22_015",
-    "item_2026-05-22_001",
-    "item_2026-05-22_014",
-    "item_2026-05-22_007"
+    "item_2026-05-23_001",
+    "item_2026-05-23_015",
+    "item_2026-05-23_014",
+    "item_2026-05-23_007",
+    "item_2026-05-23_013",
+    "item_2026-05-23_012",
+    "item_2026-05-23_010",
+    "item_2026-05-23_011",
+    "item_2026-05-23_002",
+    "item_2026-05-23_004"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-05-22_016",
-      "item_2026-05-22_017",
-      "item_2026-05-22_008",
-      "item_2026-05-22_015",
-      "item_2026-05-22_001"
-    ],
     "technical_seo": [
-      "item_2026-05-22_020",
-      "item_2026-05-22_009"
+      "item_2026-05-23_001",
+      "item_2026-05-23_010",
+      "item_2026-05-23_011"
     ],
-    "ai_overviews_llm_seo": [
-      "item_2026-05-22_011",
-      "item_2026-05-22_012",
-      "item_2026-05-22_006"
-    ],
-    "tools_platforms": [
-      "item_2026-05-22_019",
-      "item_2026-05-22_010",
-      "item_2026-05-22_004",
-      "item_2026-05-22_005",
-      "item_2026-05-22_002"
+    "google_updates": [
+      "item_2026-05-23_015",
+      "item_2026-05-23_014",
+      "item_2026-05-23_007",
+      "item_2026-05-23_013"
     ],
     "ai_models": [
-      "item_2026-05-22_014"
+      "item_2026-05-23_012"
     ],
     "industry_news": [
-      "item_2026-05-22_007",
-      "item_2026-05-22_013",
-      "item_2026-05-22_003",
-      "item_2026-05-22_018"
+      "item_2026-05-23_002",
+      "item_2026-05-23_004",
+      "item_2026-05-23_006",
+      "item_2026-05-23_005",
+      "item_2026-05-23_009"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-05-23_016"
+    ],
+    "tools_platforms": [
+      "item_2026-05-23_003",
+      "item_2026-05-23_008"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-22_001",
-      "title_original": "Google Search expands agentic capabilities with information agents and Universal Cart",
-      "title_it": "Google Search espande le capacità agentiche con Information Agents e Universal Cart",
-      "summary_it": "Google sta implementando nuove funzionalità di ricerca basate su agenti, denominate \"Information Agents\", e un sistema di carrello unificato, \"Universal Cart\". Queste novità mirano a modificare il modo in cui gli utenti scoprono e acquistano prodotti online, automatizzando alcune fasi del processo di acquisto.",
-      "url": "https://www.semrush.com/blog/google-adds-information-agents-and-universal-cart",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_search",
-        "ai_agent",
-        "e_commerce",
-        "universal_cart"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T07:13:00Z",
-      "fetched_at": "2026-05-22T06:03:06.087769Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:2f0b9a3ef5b0b8ac",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_002",
-      "title_original": "What is competitive analysis? How to do one (+ template)",
-      "title_it": "Analisi della concorrenza: guida e template",
-      "summary_it": "Semrush pubblica una guida sull'analisi della concorrenza, focalizzandosi sull'analisi dei prodotti, del marketing e della visibilità AI dei competitor. L'articolo include un template per facilitare il processo di analisi.",
-      "url": "https://www.semrush.com/blog/competitive-analysis",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "competitive_analysi",
-        "semrush",
-        "marketing_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T07:39:00Z",
-      "fetched_at": "2026-05-22T06:03:07.236566Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:059970ed45f52394",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_003",
-      "title_original": "What is PPC? A starter guide to pay-per-click advertising",
-      "title_it": "Cos'è il PPC? Una guida introduttiva alla pubblicità pay-per-click",
-      "summary_it": "Semrush pubblica una guida introduttiva al PPC (pay-per-click), spiegando cos'è, come funziona e come impostare una prima campagna. L'articolo è pensato per i principianti che si avvicinano al mondo della pubblicità a pagamento.",
-      "url": "https://www.semrush.com/blog/what-is-ppc",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "ppc",
-        "pay_per_click",
-        "advertising"
-      ],
-      "importance": 2,
-      "published_at": "2026-05-21T07:59:00Z",
-      "fetched_at": "2026-05-22T06:03:08.557014Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:4bea4de1099f1736",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_004",
-      "title_original": "Microsoft Clarity Now Shows Grounding Queries Behind AI Citations via @sejournal, @TaylorDanRW",
-      "title_it": "Microsoft Clarity mostra le query di \"grounding\" dietro le citazioni AI",
-      "summary_it": "Microsoft Clarity ora espone le query di \"grounding\" utilizzate dai motori AI per scomporre l'intento dell'utente. Questa funzionalità potrebbe rivelare la logica interna dei sistemi AI, potenzialmente utile per comprendere come interpretano le query.",
-      "url": "https://www.searchenginejournal.com/microsoft-clarity-now-shows-grounding-queries-behind-ai-citations/575279",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "microsoft_clarity",
-        "ai",
-        "grounding_querie",
-        "user_intent"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T08:00:49Z",
-      "fetched_at": "2026-05-22T06:03:09.763436Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:ed9efb0c45a21cea",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_005",
-      "title_original": "WordPress 7.0 Is A Winner: Here’s What You Need To Know via @sejournal, @martinibuster",
-      "title_it": "WordPress 7.0: Novità e implicazioni per gli utenti",
-      "summary_it": "La nuova versione di WordPress, la 7.0, introduce modifiche significative che vanno oltre le nuove funzionalità basate sull'intelligenza artificiale. L'aggiornamento potrebbe rappresentare una delle release più importanti del CMS fino ad oggi, con implicazioni per la gestione dei contenuti e l'ottimizzazione SEO.",
-      "url": "https://www.searchenginejournal.com/wordpress-7-0-is-a-winner-heres-what-you-need-to-know/575510",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "wordpress",
-        "cms",
-        "ai",
-        "platform_update"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T09:06:34Z",
-      "fetched_at": "2026-05-22T06:03:11.562426Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:d276963e5f7c138c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_006",
-      "title_original": "Your Inbox Might Be the Next AI Search Signal",
-      "title_it": "La tua casella di posta potrebbe essere il prossimo segnale di ricerca AI",
-      "summary_it": "Un articolo di iPullRank esplora come i dati personali, in particolare quelli provenienti dalle email, potrebbero influenzare i risultati di ricerca personalizzati basati sull'intelligenza artificiale. L'articolo ipotizza che Google potrebbe utilizzare le informazioni contenute nelle email degli utenti per fornire risposte più pertinenti e personalizzate.",
-      "url": "https://ipullrank.com/google-personal-intelligence-experiment",
-      "source": {
-        "id": "ipullrank_blog",
-        "name": "iPullRank Blog (Mike King)",
-        "authority": 8,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://ipullrank.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "personalization",
-        "email_data",
-        "google"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T09:30:00Z",
-      "fetched_at": "2026-05-22T06:03:12.932853Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:0c8e70bb0af50e3e",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_007",
-      "title_original": "Google AdSense Adds Dynamic Anchors Ads",
-      "title_it": "Google AdSense introduce gli annunci anchor dinamici",
-      "summary_it": "Google AdSense ha introdotto un nuovo formato di annunci anchor denominato \"Dynamic anchor ads\", estendendo la funzionalità precedentemente disponibile solo su mobile anche ai desktop. Questa modifica, attiva dal 19 giugno, mira a migliorare la monetizzazione su schermi più grandi e semplificare la gestione di questi formati pubblicitari.",
-      "url": "https://www.seroundtable.com/google-adsense-dynamic-anchors-ads-41361.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_adsense",
-        "anchor_ad",
-        "monetization",
-        "advertising"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T10:11:00Z",
-      "fetched_at": "2026-05-22T06:03:14.711526Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:40787992dd5a823f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_008",
-      "title_original": "Google Search Tests For You Label In Product Grid Results",
-      "title_it": "Google testa l'etichetta \"Per te\" nei risultati a griglia di prodotti",
-      "summary_it": "Google sta testando una nuova etichetta \"Per te\" all'interno dei risultati di ricerca a griglia di prodotti. Questa etichetta sembra personalizzare maggiormente i risultati, ad esempio mostrando codici promozionali. L'etichetta si aggiunge ad altre già esistenti come \"Miglior prezzo\" e \"Nelle vicinanze\".",
-      "url": "https://www.seroundtable.com/google-search-product-grid-for-you-label-41348.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "product_grid",
-        "for_you_label",
-        "shopping_result",
-        "personalization"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T10:21:00Z",
-      "fetched_at": "2026-05-22T06:03:16.159458Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:4aed7d02d3016987",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_009",
-      "title_original": "How To Stress-Test A Staging Environment To Surface Risks Pre-Launch – Ask An SEO via @sejournal, @HelenPollitt1",
-      "title_it": "Come testare a fondo un ambiente di staging per identificare i rischi prima del lancio",
-      "summary_it": "L'articolo di Search Engine Journal fornisce una guida per testare a fondo un ambiente di staging prima del lancio di un redesign o una migrazione di un sito web. L'obiettivo è identificare e risolvere problemi SEO che potrebbero impattare negativamente sul ranking dopo il rilascio. Vengono suggeriti diversi test per individuare potenziali criticità.",
-      "url": "https://www.searchenginejournal.com/ask-an-seo-how-do-you-stress-test-a-staging-environment/573559",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "staging_environment",
-        "technical_seo",
-        "website_migration",
-        "website_redesign"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T10:30:16Z",
-      "fetched_at": "2026-05-22T06:03:17.547829Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:ee74b87b0c2ec6ac",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_010",
-      "title_original": "Google Ask Advisor Brings Together Ads Advisor & Analytics Advisor",
-      "title_it": "Google unifica Ads Advisor e Analytics Advisor in \"Ask Advisor\"",
-      "summary_it": "Google ha annunciato Ask Advisor, un nuovo strumento che integra Google Ads Advisor e Google Analytics Advisor, con l'obiettivo di fornire raccomandazioni personalizzate e automatizzate. Lo strumento, attualmente in beta in inglese, mira a semplificare la creazione di campagne e l'analisi dei dati.",
-      "url": "https://www.seroundtable.com/google-ask-advisor-41354.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "google_analytic",
-        "ai",
-        "marketing_automation"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T10:31:00Z",
-      "fetched_at": "2026-05-22T06:03:19.247708Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:572a9979c2f6cbe2",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_011",
-      "title_original": "Google AI Mode Shopping Ads, Business Agent For Leads & Direct Offers Coming",
-      "title_it": "Google introduce Shopping Ads in AI Mode, Business Agent per Lead e amplia Direct Offers",
-      "summary_it": "Google ha annunciato l'integrazione di Shopping Ads basati su AI, un Business Agent per la generazione di lead e l'espansione del programma pilota Direct Offers all'interno della AI Mode. Queste novità mirano a migliorare l'esperienza di acquisto e la generazione di lead attraverso interazioni più personalizzate e offerte dirette.",
-      "url": "https://www.seroundtable.com/google-ai-mode-shopping-ads-41353.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ad",
-        "ai_mode",
-        "shopping_ad",
-        "lead_generation"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-21T10:41:00Z",
-      "fetched_at": "2026-05-22T06:03:20.663152Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:615c2bb01e334bd3",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_012",
-      "title_original": "Google Tests Conversational Discovery Ads & Highlighted Answers In AI Mode",
-      "title_it": "Google testa annunci Discovery conversazionali e risposte evidenziate nella modalità AI",
-      "summary_it": "Google sta sperimentando nuovi formati pubblicitari per la sua modalità AI, inclusi gli annunci Discovery conversazionali che rispondono a domande specifiche degli utenti e gli annunci \"Risposte Evidenziate\" che si integrano nelle raccomandazioni generate dall'AI. Entrambi i formati saranno chiaramente etichettati come \"Sponsorizzati\". L'obiettivo è monetizzare la modalità AI attraverso nuove soluzioni pubblicitarie.",
-      "url": "https://www.seroundtable.com/google-conversational-discovery-ads-highlighted-answers-41352.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ad",
-        "ai_mode",
-        "conversational_ad",
-        "discovery_ad"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T10:51:00Z",
-      "fetched_at": "2026-05-22T06:03:22.089838Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:05ec868323b35ba4",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_013",
-      "title_original": "AdventHealth advances whole-person care with OpenAI",
-      "title_it": "AdventHealth implementa OpenAI per migliorare l'assistenza sanitaria personalizzata",
-      "summary_it": "AdventHealth sta integrando ChatGPT per ottimizzare i flussi di lavoro, ridurre il carico amministrativo e dedicare più tempo alla cura dei pazienti. L'obiettivo è migliorare l'efficienza operativa e l'esperienza del paziente attraverso l'automazione di compiti ripetitivi e la fornitura di informazioni più rapide.",
-      "url": "https://openai.com/index/adventhealth",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "healthcare",
-        "openai",
-        "chatgpt",
-        "automation"
-      ],
-      "importance": 2,
-      "published_at": "2026-05-21T11:00:00Z",
-      "fetched_at": "2026-05-22T06:03:23.331852Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:c66fb545fea7a177",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_014",
-      "title_original": "LLM Guidance Doesn’t Transfer The Way SEO Guidance Did via @sejournal, @DuaneForrester",
-      "title_it": "Le linee guida per i modelli linguistici di grandi dimensioni (LLM) non sono trasferibili come quelle SEO",
-      "summary_it": "A differenza delle pratiche SEO, le indicazioni fornite per l'ottimizzazione di un LLM non sono facilmente applicabili ad altri modelli. L'assenza di standard condivisi tra i fornitori di LLM rende l'ottimizzazione specifica per ogni piattaforma.",
-      "url": "https://www.searchenginejournal.com/llm-guidance-doesnt-transfer-the-way-seo-guidance-did/575077",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "llm",
-        "optimization",
-        "portability",
-        "ai_seo"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T12:30:17Z",
-      "fetched_at": "2026-05-22T06:03:24.801181Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:3670097b4f718fed",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_015",
-      "title_original": "Daily Search Forum Recap: May 21, 2026",
-      "title_it": "Riassunto giornaliero dei forum di ricerca: 21 maggio 2026",
-      "summary_it": "Il riassunto riporta le novità emerse dal Google Marketing Live, tra cui nuovi formati pubblicitari per la modalità AI, come i conversational discovery ads e gli highlighted answer ads. Inoltre, Google sta testando etichette \"for you\" nei risultati di ricerca dei prodotti e ha introdotto dynamic anchor ads in AdSense.",
-      "url": "https://www.seroundtable.com/recap-05-21-2026-41362.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_marketing_live",
-        "ai_mode",
-        "adsense",
-        "product_grid",
-        "ads_advisor"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-21T13:00:00Z",
-      "fetched_at": "2026-05-22T06:03:26.569604Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:96c881469d1add0e",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_016",
-      "title_original": "Google May 2026 Core Update Is Rolling Out - You Felt It",
-      "title_it": "Google rilascia il Core Update di Maggio 2026",
-      "summary_it": "Google ha annunciato il rilascio del core update di Maggio 2026, previsto per durare circa due settimane. L'update mira a migliorare la visibilità di contenuti rilevanti e soddisfacenti per gli utenti. Si tratta di un aggiornamento globale che impatta tutte le regioni e lingue.",
-      "url": "https://www.seroundtable.com/google-may-2026-core-update-41367.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "core_update",
-        "google_search",
-        "algorithm_update"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-21T15:04:00Z",
-      "fetched_at": "2026-05-22T06:03:27.747971Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:fea5a63bfc1cc394",
-      "deep_analysis": {
-        "detailed_description": "Google ha avviato il rollout del core update di maggio 2026 il 21 maggio alle 11:43 ET, con una durata prevista di circa due settimane. L'annuncio ufficiale è arrivato dopo giorni di volatilità intensa nelle SERP, registrata già durante il Google I/O, ma Mountain View ha confermato che il rilascio effettivo è partito solo giovedì scorso.\n\nL'update è definito da Google come \"regular\", progettato per migliorare la visibilità di contenuti rilevanti e soddisfacenti per gli utenti, indipendentemente dalla tipologia di sito. Si tratta di un aggiornamento globale che impatta tutte le regioni e lingue, e che tocca anche Google Discover, featured snippet e altre feature di ricerca.\n\nLa cadenza degli ultimi core update mostra un pattern sempre più serrato: l'ultimo risale a marzo 2026 (concluso l'8 aprile), il precedente a dicembre 2025. Tra marzo 2024 e maggio 2026 Google ha rilasciato otto core update confermati, con una media di uno ogni 2-3 mesi. Questa frequenza crescente rende più difficile isolare l'impatto di singoli update e complica il recovery per chi subisce cali.\n\nGoogle ribadisce che non si tratta di una penalizzazione ma di un ricalcolo dei sistemi core che può premiare o declassare contenuti. Chi viene colpito negativamente deve rivedere i contenuti seguendo le linee guida ufficiali sui core update, ma il tempo medio di recovery si è allungato: con update così ravvicinati, un sito può trovarsi a inseguire segnali contrastanti prima ancora di completare interventi strutturali.\n\nLa volatilità pre-annuncio solleva dubbi sulla trasparenza della timeline comunicata. Diversi SEO hanno registrato fluttuazioni significative già nei giorni precedenti l'annuncio ufficiale, suggerendo che il rollout potrebbe essere iniziato in anticipo o che Google stia testando componenti dell'algoritmo in modo più aggressivo prima del lancio formale.\n\nL'impatto su Discover è particolarmente rilevante per chi dipende da questo canale: i core update storicamente causano oscillazioni più marcate nel feed rispetto alla ricerca organica tradizionale, con picchi di traffico seguiti da crolli improvvisi che rendono difficile pianificare strategie editoriali a medio termine.",
-        "implications": [
-          "Chi ha subito cali nel core update di marzo 2026 (concluso l'8 aprile) ha avuto solo 6 settimane per intervenire prima di questo nuovo update. Il tempo per implementare modifiche strutturali e vederne gli effetti è insufficiente, rendendo il recovery più complesso.",
-          "La volatilità registrata prima dell'annuncio ufficiale indica che affidarsi esclusivamente alle comunicazioni di Google per timing e analisi può portare a diagnosi tardive. Monitorare i tool di tracking in tempo reale diventa essenziale.",
-          "I siti che dipendono fortemente da Google Discover devono prepararsi a oscillazioni più marcate rispetto alla ricerca organica. L'impatto sui feed è storicamente più volatile e meno prevedibile durante i core update.",
-          "La definizione \"regular update\" segnala che Google considera questa cadenza trimestrale la nuova normalità. Aspettarsi stabilità prolungata tra un update e l'altro non è più realistico.",
-          "I refresh periodici non comunicati (menzionati da Google) rendono impossibile distinguere tra fluttuazioni naturali, test algoritmici e veri update. Questo complica l'attribuzione causale di qualsiasi variazione di ranking."
-        ],
-        "examples": [
-          "Un sito editoriale che ha perso il 30% del traffico a marzo 2026 e ha risposto con un refresh dei contenuti top-performing potrebbe non vedere risultati prima di luglio, dopo che questo update di maggio si sarà stabilizzato. Nel frattempo, ulteriori interventi rischiano di sovrapporsi senza possibilità di isolare cosa funziona.",
-          "Un e-commerce che monitora solo GSC settimanalmente potrebbe accorgersi del calo solo a rollout completato (primi di giugno), perdendo due settimane critiche per analisi e risposta. Chi invece usa tool di tracking real-time come SEMrush o Sistrix ha già dati utilizzabili dal 21 maggio.",
-          "Un sito che riceve il 40% del traffico da Discover e ha visto picchi anomali durante la volatilità pre-annuncio dovrebbe evitare di modificare la strategia editoriale basandosi su quei dati: potrebbero essere artefatti di test algoritmici, non segnali stabili del nuovo update."
-        ],
-        "testing_steps": [
-          "Apri Google Search Console → Prestazioni e confronta il periodo 21 maggio - 4 giugno 2026 con le due settimane precedenti (7-20 maggio). Filtra per pagine, non solo query aggregate.",
-          "Segmenta l'analisi per tipologia di contenuto (informazionale, transazionale, navigazionale) per identificare se l'update colpisce pattern specifici nel tuo sito.",
-          "Verifica l'andamento di Google Discover in GSC separatamente dalla ricerca organica: i core update impattano Discover in modo più volatile e spesso anticipato.",
-          "Confronta le variazioni di ranking delle tue pagine top 10 con quelle posizionate in pagina 2-3: i core update tendono a redistribuire visibilità anche tra posizioni già buone, non solo a penalizzare.",
-          "Monitora le query branded vs non-branded: se cala solo il non-branded, l'update sta riducendo la tua autorevolezza tematica; se cala anche il branded, potrebbe esserci un problema tecnico sovrapposto.",
-          "Attendi almeno fino al 4 giugno (fine rollout dichiarato) prima di implementare modifiche strutturali: intervenire durante il rollout può amplificare l'instabilità invece di correggerla."
-        ],
-        "faqs": [
-          {
-            "question": "Quanto tempo serve per recuperare da un calo causato da questo core update?",
-            "answer": "Non esiste una finestra fissa. Storicamente, i siti che recuperano lo fanno al core update successivo (quindi potenzialmente ad agosto 2026, considerando la cadenza trimestrale). Modifiche ai contenuti implementate ora potrebbero non essere valutate prima del prossimo refresh algoritmico. La sovrapposizione di update ravvicinati allunga i tempi di recovery perché ogni nuovo update può ricalcolare i segnali prima che le modifiche precedenti si stabilizzino."
-          },
-          {
-            "question": "La volatilità pre-annuncio significa che Google ha mentito sulla data di inizio?",
-            "answer": "Google distingue tra test algoritmici, refresh non annunciati e rollout ufficiali. La volatilità registrata dal 15 maggio potrebbe derivare da test preparatori o da refresh dei sistemi core menzionati nelle comunicazioni ufficiali. Non è tecnicamente una bugia, ma rende impossibile per i SEO sapere quando iniziare a monitorare seriamente. La trasparenza sulla timeline resta un problema irrisolto."
-          },
-          {
-            "question": "Devo aspettare la fine del rollout per analizzare l'impatto o posso già intervenire?",
-            "answer": "Analizza subito i dati per capire la direzione del cambiamento, ma evita modifiche strutturali prima del 4 giugno. Durante il rollout, i ranking oscillano e potresti interpretare male segnali temporanei. Usa queste due settimane per preparare un piano di intervento basato sui pattern che emergeranno a rollout completato, non per reagire a fluttuazioni giornaliere."
-          },
-          {
-            "question": "Se il mio sito non è stato toccato da marzo 2026, sono al sicuro anche ora?",
-            "answer": "No. Ogni core update ricalcola i segnali di qualità in modo indipendente, anche se Google usa sistemi core simili. Un sito risparmiato a marzo può essere declassato a maggio se i competitor hanno migliorato i contenuti o se questo update pesa diversamente certi segnali. La stabilità passata non garantisce immunità futura."
-          }
-        ],
-        "editorial_commentary": "La cadenza trimestrale dei core update è diventata la nuova normalità, ma questo ritmo crea un problema strutturale per chi deve fare recovery. Sei settimane tra la fine di un update e l'inizio del successivo non bastano per implementare modifiche sostanziali, testarle e vederne gli effetti stabilizzati. Chi insegue i core update rischia di sovrapporre interventi senza mai isolare cosa funziona davvero.\n\nLa volatilità pre-annuncio e i \"refresh non comunicati\" menzionati da Google rendono impossibile distinguere tra rumore algoritmico e segnali reali. Se non puoi sapere quando un update inizia davvero, come fai a correlare le tue azioni ai risultati? Questo mina la possibilità di fare SEO data-driven.\n\nChi dipende da Discover dovrebbe considerare seriamente la diversificazione. I core update amplificano l'instabilità di quel canale in modo sproporzionato rispetto alla ricerca organica, e la prevedibilità del traffico è ormai un miraggio. Pianificare strategie editoriali su una fonte così volatile è rischioso.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.044115839999999996
-      }
-    },
-    {
-      "id": "item_2026-05-22_017",
-      "title_original": "Google Begins Rolling Out May 2026 Core Update via @sejournal, @MattGSouthern",
-      "title_it": "Google rilascia il Core Update di Maggio 2026",
-      "summary_it": "Google ha iniziato il rilascio del Core Update di Maggio 2026, il secondo aggiornamento principale dell'anno. Il completamento del rollout richiederà fino a due settimane. Questo aggiornamento potrebbe influenzare significativamente il posizionamento dei siti web.",
-      "url": "https://www.searchenginejournal.com/google-begins-rolling-out-may-2026-core-update/575589",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "core_update",
-        "google_algorithm",
-        "search_ranking"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-21T15:11:57Z",
-      "fetched_at": "2026-05-22T06:03:28.979464Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:79e4339cee559076",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_018",
-      "title_original": "Programming Note: Offline For Shavuot On Friday",
-      "title_it": "Avviso: assenza per la festività di Shavuot venerdì",
-      "summary_it": "Il fondatore di Search Engine Roundtable, Barry Schwartz, sarà offline venerdì 22 maggio 2026 per la festività di Shavuot. Qualsiasi contenuto pubblicato sarà programmato in anticipo. Schwartz riprenderà le normali attività domenica/lunedì.",
-      "url": "https://www.seroundtable.com/shavuot-5786-41336.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "seroundtable",
-        "barry_schwartz",
-        "shavuot",
-        "offline"
-      ],
-      "importance": 1,
-      "published_at": "2026-05-21T18:00:00Z",
-      "fetched_at": "2026-05-22T06:03:30.330625Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:66440f2cddf9a09f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_019",
-      "title_original": "Google Search Console Links Report Is Broken",
-      "title_it": "Il report dei link in Google Search Console non funziona",
-      "summary_it": "Il report dei link in Google Search Console sembra avere dei problemi. Molti SEO segnalano di vedere zero link o un calo drastico nel numero di link riportati. Si sospetta un bug nel sistema di reporting.",
-      "url": "https://www.seroundtable.com/google-search-console-links-report-broke-41371.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_search_console",
-        "link",
-        "bug",
-        "reporting"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-21T19:14:00Z",
-      "fetched_at": "2026-05-22T06:03:31.349886Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:9e63da76cea7d5d2",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-22_020",
+      "id": "item_2026-05-23_001",
       "title_original": "What's new in web extensions: I/O 2026 recap",
       "title_it": "Novità sulle estensioni web: riepilogo del Google I/O 2026",
-      "summary_it": "Il blog di Chrome Developers riassume gli aggiornamenti relativi alle estensioni presentati al Google I/O 2026. L'articolo fornisce una panoramica delle nuove funzionalità e API disponibili per gli sviluppatori di estensioni web. Non vengono forniti dettagli specifici nel riassunto.",
+      "summary_it": "Il blog di Chrome Developers riassume gli aggiornamenti relativi alle estensioni presentati al Google I/O 2026. L'articolo fornisce una panoramica delle nuove funzionalità e API disponibili per gli sviluppatori di estensioni web. Non vengono forniti dettagli specifici, ma si tratta di un annuncio riepilogativo.",
       "url": "https://developer.chrome.com/blog/extensions-io-2026?hl=en",
       "source": {
         "id": "chrome_developers_blog",
@@ -787,147 +78,672 @@
       "category": "technical_seo",
       "tags": [
         "chrome_extension",
-        "web_extension",
         "google_io",
+        "web_development",
         "api"
       ],
       "importance": 5,
       "published_at": "2026-05-22T06:00:00Z",
-      "fetched_at": "2026-05-22T06:03:32.631870Z",
+      "fetched_at": "2026-05-23T05:03:10.799491Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
       "raw_hash": "sha256:ee9bfa360ac9c43c",
       "deep_analysis": {
-        "detailed_description": "Il Google I/O 2026 ha portato aggiornamenti significativi per le estensioni Chrome, un tema che impatta direttamente chi lavora con tool SEO browser-based, automazioni di crawling o strumenti di analisi on-page. Le estensioni rappresentano una fetta rilevante dell'ecosistema tecnico SEO: da strumenti di audit a plugin per l'analisi dei Core Web Vitals, passando per automatismi di scraping e monitoraggio SERP.\n\nIl comunicato di Chrome Developers conferma che il ciclo di aggiornamenti API prosegue, ma il contenuto pubblicato resta volutamente generico. Non vengono dettagliati né nuovi endpoint né modifiche a Manifest V3, la versione attuale dello standard che ha già causato frizioni con sviluppatori di estensioni per le limitazioni imposte alle API di rete e background scripting.\n\nPer i SEO che sviluppano o utilizzano estensioni custom, l'assenza di dettagli operativi nel post ufficiale rende difficile valutare impatti immediati. Tuttavia, la menzione esplicita di \"exciting updates\" suggerisce che Google stia cercando di rilanciare un ecosistema che ha subito critiche pesanti dopo il passaggio forzato a Manifest V3, avvenuto tra il 2023 e il 2024.\n\nStoricamente, gli aggiornamenti alle API delle estensioni hanno impattato tool SEO popolari: limitazioni alle chiamate di rete hanno reso meno efficaci estensioni per il monitoraggio real-time dei competitor, mentre restrizioni sui permessi hanno complicato l'accesso a dati di performance e rendering. Chi sviluppa internamente strumenti per l'analisi tecnica o per l'automazione di task ripetitivi deve monitorare questi cambiamenti con attenzione.\n\nL'approccio comunicativo di Google – annunciare novità senza documentazione tecnica immediata – è ricorrente e spesso precede rilasci graduali o beta limitate. Per chi gestisce stack tecnici basati su estensioni Chrome, questo significa dover attendere la pubblicazione della documentazione completa su developer.chrome.com prima di pianificare refactoring o adozioni.\n\nIn assenza di specifiche tecniche, l'unico dato certo è che Google continua a investire su questo canale. Per i SEO, questo si traduce in una necessità: tenere sotto controllo le roadmap ufficiali e testare in ambienti isolati ogni nuovo rilascio API prima di aggiornare tool in produzione, specialmente se utilizzati per attività critiche come il monitoraggio di ranking o l'analisi di log.",
+        "detailed_description": "Il Google I/O 2026 ha portato nuovi aggiornamenti per le estensioni Chrome, ma il post sul blog di Chrome Developers si limita a un annuncio riepilogativo senza dettagli tecnici concreti. Per chi lavora su progetti che dipendono da estensioni browser – tool SEO, crawler personalizzati, automazioni di analisi – l'assenza di specifiche operative rende impossibile valutare l'impatto immediato.\n\nStoricamente, gli aggiornamenti alle API delle estensioni Chrome hanno avuto ricadute dirette su strumenti SEO di terze parti. La transizione da Manifest V2 a V3, ad esempio, ha costretto a riscrivere estensioni che intercettavano richieste di rete o modificavano header HTTP, funzionalità critiche per il debugging di crawl budget e redirect. Senza sapere quali API sono state introdotte o deprecate nel 2026, è prematuro pianificare interventi.\n\nIl riferimento generico a \"exciting updates\" senza documentazione tecnica allegata suggerisce che il materiale dettagliato sarà pubblicato nei giorni successivi all'evento, come da prassi Google. Chi sviluppa internamente estensioni per audit automatizzati o monitoraggio di SERP dovrebbe attendere la release note completa prima di allocare risorse di sviluppo.\n\nL'aspetto rilevante per i SEO non è tanto l'annuncio in sé, quanto il pattern: Google continua a investire sull'ecosistema delle estensioni nonostante le restrizioni crescenti imposte per motivi di privacy e sicurezza. Questo significa che strumenti basati su estensioni – da Screaming Frog a checker di structured data – resteranno supportati, ma probabilmente con vincoli API più stringenti.\n\nLa mancanza di dettagli specifici nel post rende questo annuncio più un placeholder che una notizia operativa. Per un professionista SEO, l'azione concreta è monitorare la documentazione ufficiale di Chrome Extensions nelle prossime settimane, soprattutto se si utilizzano estensioni custom per task ripetitivi come l'estrazione di metadati o l'analisi di performance di pagina.\n\nIn sintesi: nessun dato tecnico utilizzabile al momento. L'unico fatto certo è che ci sono stati aggiornamenti presentati al Google I/O 2026, ma senza accesso ai video delle sessioni o alla documentazione API, qualsiasi analisi resta speculativa. Chi ha workflow critici basati su estensioni Chrome dovrebbe prepararsi a verificare la compatibilità una volta disponibili i changelog completi.",
         "implications": [
-          "Chi utilizza estensioni Chrome per attività SEO critiche (audit tecnici, scraping SERP, analisi on-page automatizzate) deve verificare la compatibilità con eventuali nuove API o deprecazioni non ancora documentate pubblicamente.",
-          "Sviluppatori di tool SEO custom basati su estensioni devono monitorare il changelog ufficiale di Chrome per anticipare breaking changes, soprattutto se le estensioni accedono a dati di rete, storage o DOM in modalità background.",
-          "L'assenza di dettagli operativi nel post ufficiale implica che gli aggiornamenti reali saranno rilasciati in modo graduale: pianifica cicli di test su Chrome Canary o Dev prima di aggiornare estensioni in ambiente di produzione.",
-          "Se gestisci team che dipendono da estensioni di terze parti per workflow SEO (es. plugin per PageSpeed, strumenti di analisi structured data), prepara un piano di contingenza nel caso di deprecazioni API improvvise."
+          "Impossibile valutare impatti operativi concreti senza dettagli tecnici. Se gestisci estensioni custom per audit SEO o scraping, attendi la documentazione completa prima di pianificare refactoring.",
+          "Strumenti SEO di terze parti basati su estensioni Chrome potrebbero richiedere aggiornamenti. Verifica con i fornitori (Screaming Frog, SEOquake, ecc.) se hanno comunicato breaking changes.",
+          "Se utilizzi estensioni per automazioni di monitoraggio SERP o analisi di competitor, testa la compatibilità appena disponibili le note di rilascio ufficiali per evitare interruzioni di servizio.",
+          "La continuità degli investimenti Google sulle estensioni conferma che questo canale resta strategico per tool di sviluppo e SEO, ma con vincoli di privacy sempre più rigidi da considerare in fase di progettazione."
         ],
         "examples": [
-          "Un'agenzia SEO utilizza un'estensione custom per estrarre dati structured data da migliaia di URL competitor. Se Google introduce limitazioni alle API di fetch in background (come già fatto con Manifest V3), l'estensione potrebbe smettere di funzionare o richiedere refactoring completo per passare a service worker con timeout più stringenti.",
-          "Evita di aggiornare automaticamente le estensioni Chrome utilizzate per monitoraggio SERP o analisi tecnica senza prima testarle in un profilo isolato. Un update API può introdurre rate limiting o modifiche ai permessi che bloccano funzionalità critiche senza preavviso.",
-          "Un consulente freelance ha sviluppato un tool per analizzare i Core Web Vitals direttamente nel browser del cliente. Se le nuove API introducono restrizioni sull'accesso ai dati di performance (PerformanceObserver, Navigation Timing), potrebbe essere necessario migrare la logica su uno script esterno o su un proxy server."
+          "Scenario positivo: se Google ha introdotto nuove API per l'accesso a metriche Core Web Vitals direttamente da estensione, potresti automatizzare il monitoraggio di performance su set di URL senza passare per PageSpeed Insights API, riducendo latenza e costi di chiamata.",
+          "Scenario critico: se hanno deprecato API di intercettazione network usate da tool di debugging redirect, estensioni come Redirect Path o Ayima potrebbero smettere di funzionare. Verifica subito la roadmap di deprecazione per evitare di perdere capacità diagnostiche in produzione.",
+          "Caso pratico da evitare: non investire tempo nello sviluppo di nuove funzionalità per estensioni esistenti finché non è chiaro quali API restano supportate. Un cliente aveva costruito un'estensione per audit di hreflang che è diventata inutilizzabile dopo un cambio di permessi in Manifest V3."
         ],
         "testing_steps": [
-          "Accedi a chrome://extensions e abilita la modalità sviluppatore per monitorare eventuali warning di deprecazione sulle estensioni SEO attualmente in uso.",
-          "Installa Chrome Canary o Dev channel e testa le estensioni critiche per il workflow SEO in un profilo separato, verificando log di errore nella console delle estensioni.",
-          "Monitora il changelog ufficiale su developer.chrome.com/docs/extensions/whatsnew e iscriviti agli alert RSS per aggiornamenti API relativi a Manifest V3.",
-          "Se utilizzi estensioni di terze parti, verifica la data dell'ultimo aggiornamento su Chrome Web Store: tool non manutenuti da oltre 6 mesi potrebbero non essere compatibili con nuove API.",
-          "Esegui un audit delle permission richieste dalle estensioni SEO in uso: se richiedono accesso a 'webRequest' o 'background', preparati a migrazioni forzate verso 'declarativeNetRequest'.",
-          "Testa in ambiente isolato eventuali nuove API annunciate al Google I/O non appena disponibili in beta, prima che diventino obbligatorie e causino downtime operativo."
+          "Accedi a chrome://extensions/ e verifica che tutte le estensioni SEO in uso siano aggiornate all'ultima versione disponibile.",
+          "Controlla la sezione 'What's new' della Chrome Web Store per ciascuna estensione critica nei tuoi workflow (es. SEO Minion, META SEO inspector).",
+          "Monitora il changelog ufficiale di Chrome Extensions su developer.chrome.com/docs/extensions/whatsnew nelle prossime 2 settimane.",
+          "Se sviluppi estensioni custom, esegui un test di compatibilità in Chrome Canary per anticipare eventuali breaking changes prima del rollout stabile.",
+          "Verifica nei log di console (F12 → Console) se le estensioni attive generano warning di deprecazione API durante l'uso normale.",
+          "Pianifica un audit delle dipendenze per estensioni interne: elenca quali Chrome API utilizzano e incrocia con la documentazione aggiornata post I/O."
         ],
         "faqs": [
           {
-            "question": "Gli aggiornamenti alle API delle estensioni Chrome possono rompere tool SEO esistenti?",
-            "answer": "Sì, soprattutto se le estensioni utilizzano API deprecate o soggette a limitazioni. Il passaggio a Manifest V3 ha già causato problemi a tool di scraping e monitoraggio che dipendevano da webRequest API. Ogni major update va testato in ambiente isolato prima di aggiornare estensioni in produzione, specialmente se utilizzate per attività critiche come audit tecnici o analisi competitor."
+            "question": "Questo annuncio impatta i tool SEO che uso quotidianamente?",
+            "answer": "Non immediatamente. L'annuncio è un placeholder senza dettagli tecnici. I tool SEO basati su estensioni Chrome (Screaming Frog, SEOquake, Redirect Path) potrebbero richiedere aggiornamenti solo se Google ha modificato API specifiche. Attendi comunicazioni dai fornitori o controlla gli update delle estensioni nella Chrome Web Store nei prossimi 7-10 giorni."
           },
           {
-            "question": "Devo aggiornare subito le estensioni SEO dopo un annuncio al Google I/O?",
-            "answer": "No. Gli annunci al Google I/O precedono spesso rilasci graduali o beta limitate. Aspetta la pubblicazione della documentazione tecnica completa e testa le nuove versioni su Chrome Canary o Dev prima di aggiornare tool in produzione. Un aggiornamento prematuro può introdurre breaking changes non documentati che bloccano workflow operativi."
+            "question": "Devo preoccuparmi se ho sviluppato estensioni custom per audit interni?",
+            "answer": "Solo se utilizzi API di rete, storage o permessi avanzati. La transizione a Manifest V3 ha già imposto restrizioni su intercettazione di richieste e modifiche dinamiche di contenuto. Se la tua estensione è già conforme a Manifest V3, il rischio di breaking changes è minore. Testa in Chrome Canary appena disponibile la build con i nuovi aggiornamenti."
           },
           {
-            "question": "Come verifico se un'estensione SEO è compatibile con le ultime API Chrome?",
-            "answer": "Controlla la versione del Manifest dichiarata nel file manifest.json dell'estensione (accessibile da chrome://extensions in modalità sviluppatore). Se usa Manifest V2, è a rischio deprecazione. Verifica anche la data dell'ultimo aggiornamento su Chrome Web Store: estensioni non manutenute da oltre 6 mesi potrebbero non supportare API recenti o avere problemi di compatibilità con Chrome stabile."
+            "question": "Dove trovo i dettagli tecnici effettivi degli aggiornamenti annunciati?",
+            "answer": "La documentazione completa viene solitamente pubblicata su developer.chrome.com/docs/extensions/whatsnew entro 1-2 settimane dal Google I/O. I video delle sessioni tecniche vengono caricati sul canale YouTube di Chrome Developers. Monitora anche il Chrome Developers Blog per post di approfondimento che seguono l'annuncio iniziale."
           },
           {
-            "question": "Quali API delle estensioni Chrome sono più critiche per attività SEO?",
-            "answer": "Le API più rilevanti sono declarativeNetRequest (per intercettare richieste di rete), storage (per salvare dati di analisi), tabs e scripting (per interagire con pagine web), e webNavigation (per tracciare il caricamento delle pagine). Modifiche a queste API impattano direttamente tool di scraping, audit tecnici, analisi on-page e monitoraggio performance. Monitora con attenzione eventuali deprecazioni o rate limiting introdotti su questi endpoint."
+            "question": "Gli aggiornamenti alle estensioni Chrome possono influenzare il crawling di Googlebot?",
+            "answer": "No, le estensioni Chrome girano solo nel browser dell'utente finale e non hanno alcun impatto su come Googlebot esegue il crawl o il rendering delle pagine. Tuttavia, se usi estensioni per testare come Google vede le tue pagine (es. simulando user-agent), cambiamenti alle API potrebbero alterare l'affidabilità di questi test."
           }
         ],
-        "editorial_commentary": "Un annuncio senza sostanza tecnica è inutile per chi deve prendere decisioni operative. Google continua a comunicare novità sulle estensioni con toni entusiastici ma senza fornire documentazione actionable, una prassi che costringe sviluppatori e SEO tecnici a lavorare al buio fino al rilascio effettivo delle API.\n\nChi gestisce tool SEO basati su estensioni Chrome ha già pagato il prezzo del passaggio forzato a Manifest V3: limitazioni alle API di rete, timeout più stringenti sui service worker, restrizioni sui permessi. Ogni nuovo annuncio va accolto con scetticismo operativo, non con entusiasmo acritico.\n\nSe dipendi da estensioni per attività critiche, costruisci ridondanza: sviluppa alternative basate su script server-side o su API ufficiali (Search Console, PageSpeed Insights) per non trovarti bloccato da un update improvviso. Google ha dimostrato più volte di privilegiare sicurezza e controllo rispetto alla continuità operativa degli sviluppatori terzi.",
+        "editorial_commentary": "Un annuncio senza sostanza tecnica è inutile per chi deve prendere decisioni operative. Questo post ha tutto l'aspetto di un segnaposto pubblicato per mantenere visibilità durante l'evento, ma lascia i professionisti senza strumenti per valutare rischi o opportunità.\n\nChi ha costruito workflow critici su estensioni Chrome – e molti SEO lo fanno, per automazioni di audit, scraping controllato, o monitoraggio di competitor – dovrebbe ignorare questo annuncio e aspettare documentazione concreta. Reagire a un \"exciting updates\" generico significa sprecare tempo di sviluppo su ipotesi.\n\nL'unica azione sensata è impostare un alert sulla documentazione ufficiale di Chrome Extensions e verificare, tra 10-15 giorni, se ci sono deprecazioni API che toccano i tool in uso. Tutto il resto è rumore.",
         "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.03755256
+        "cost_eur": 0.035085120000000004
       }
+    },
+    {
+      "id": "item_2026-05-23_002",
+      "title_original": "When Marketing Leaders Can’t Explain Search Performance via @sejournal, @coreydmorris",
+      "title_it": "Come i leader del marketing possono spiegare le performance di ricerca",
+      "summary_it": "L'articolo affronta la difficoltà per i leader del marketing di tradurre le metriche SEO in risultati di business comprensibili per i dirigenti. Si concentra sull'importanza di un reporting più efficace e di una maggiore chiarezza nell'esposizione dei dati di ricerca. L'obiettivo è aumentare la fiducia dei vertici aziendali nelle strategie SEO.",
+      "url": "https://www.searchenginejournal.com/when-marketing-leaders-cant-explain-search-performance/572464",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "seo_reporting",
+        "marketing_leadership",
+        "business_outcome",
+        "executive_communication"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T08:00:18Z",
+      "fetched_at": "2026-05-23T05:03:12.266677Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:aaea3e1cc8685ebd",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_003",
+      "title_original": "10 best SEO audit tools for 2026 (tested)",
+      "title_it": "I 10 migliori strumenti di audit SEO per il 2026 (testati)",
+      "summary_it": "Semrush ha pubblicato una comparativa di strumenti per l'audit SEO, tra cui Site Audit, Google Search Console e Screaming Frog. L'articolo presenta una panoramica delle funzionalità di ciascun tool e le loro potenzialità per l'analisi di un sito web.",
+      "url": "https://www.semrush.com/blog/seo-audit-tools",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "seo_audit",
+        "tool",
+        "site_audit",
+        "semrush"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T08:59:00Z",
+      "fetched_at": "2026-05-23T05:03:13.653303Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:29117d0be8e8173e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_004",
+      "title_original": "Security Researcher: WordPress 7.0 Could Trigger Rush To Steal AI API Keys via @sejournal, @martinibuster",
+      "title_it": "WordPress 7.0: Rischio furto di chiavi API AI, secondo un ricercatore",
+      "summary_it": "Un ricercatore di sicurezza avverte che il rilascio di WordPress 7.0 potrebbe innescare un'ondata di furti di chiavi API per l'intelligenza artificiale. La vulnerabilità risiederebbe nell'esposizione di queste chiavi, potenzialmente di alto valore economico, rendendole un bersaglio per gli hacker.",
+      "url": "https://www.searchenginejournal.com/wordpress-7-0-faces-security-concerns-over-ai-api-keys/575679",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "wordpress",
+        "security",
+        "ai_api",
+        "vulnerability"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T09:37:43Z",
+      "fetched_at": "2026-05-23T05:03:15.203809Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:678af502bf5f9e9c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_005",
+      "title_original": "Ecommerce marketing: 10 strategies for search and AI in 2026",
+      "title_it": "10 Strategie di Marketing E-commerce per Ricerca e AI nel 2026",
+      "summary_it": "Semrush delinea dieci strategie di marketing per l'e-commerce focalizzate sull'integrazione di SEO e intelligenza artificiale entro il 2026. Le strategie coprono diversi aspetti, dalla SEO tradizionale all'utilizzo di assistenti di shopping basati su AI.",
+      "url": "https://www.semrush.com/blog/ecommerce-marketing",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ecommerce",
+        "marketing",
+        "artificial_intelligence",
+        "future_of_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T09:39:00Z",
+      "fetched_at": "2026-05-23T05:03:16.391497Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:6794858d97e9b48e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_006",
+      "title_original": "SEO Week 2026 in Review | Day 1: The Science",
+      "title_it": "Resoconto della SEO Week 2026 | Giorno 1: La Scienza",
+      "summary_it": "Il primo giorno della SEO Week 2026 si è concentrato sull'infrastruttura alla base della ricerca moderna, con discussioni su vector embeddings, entropy e nuove funzionalità di strumenti AI di Microsoft. L'evento ha trattato sistemi di retrieval, indicizzazione, rerankers, knowledge graph e agentic systems. I partecipanti hanno mostrato grande interesse, testando idee in tempo reale.",
+      "url": "https://ipullrank.com/seo-week-2026-in-review-day-1",
+      "source": {
+        "id": "ipullrank_blog",
+        "name": "iPullRank Blog (Mike King)",
+        "authority": 8,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://ipullrank.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "seo_week",
+        "ai",
+        "search_infrastructure",
+        "vector_embedding"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T10:00:00Z",
+      "fetched_at": "2026-05-23T05:03:17.788376Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:d551495a24547875",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_007",
+      "title_original": "Google Tests Was & Usually Pricing Labels In Product Results",
+      "title_it": "Google testa etichette di prezzo \"era\" e \"solitamente\" nei risultati di prodotto",
+      "summary_it": "Google sta testando nuove etichette di prezzo nei risultati di ricerca per prodotti, indicando se il prezzo visualizzato è quello attuale o il prezzo abituale. Le etichette utilizzate sono \"era\" e \"solitamente\", posizionate vicino al prezzo del prodotto. Questo test è stato segnalato da Khushal Bherwani su X.",
+      "url": "https://www.seroundtable.com/google-pricing-labels-41349.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search",
+        "product_result",
+        "pricing",
+        "shopping"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T10:11:00Z",
+      "fetched_at": "2026-05-23T05:03:18.986183Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:96681892a2cc17de",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_008",
+      "title_original": "8 Ways to Automate Product Marketing with Agent A",
+      "title_it": "8 Modi per Automatizzare il Product Marketing con Agent A",
+      "summary_it": "Ahrefs presenta Agent A, uno strumento per automatizzare diverse attività di product marketing. L'articolo esplora otto modi in cui Agent A può essere utilizzato, spaziando dalla creazione di contenuti alla gestione delle partnership e delle promozioni a pagamento. L'articolo è scritto dal team di product marketing di Ahrefs.",
+      "url": "https://ahrefs.com/blog/agent-a-for-product-marketing",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "automation",
+        "product_marketing",
+        "ahref",
+        "agent_a"
+      ],
+      "importance": 2,
+      "published_at": "2026-05-22T10:17:23Z",
+      "fetched_at": "2026-05-23T05:03:20.158743Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:a709f95e0900776c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_009",
+      "title_original": "Bing Tests Showing Sale Prices In Shopping Ads",
+      "title_it": "Bing testa la visualizzazione dei prezzi scontati negli annunci Shopping",
+      "summary_it": "Microsoft Bing sta sperimentando la visualizzazione dei prezzi in offerta all'interno degli annunci Shopping nei risultati di ricerca. I prezzi scontati sono evidenziati in verde, con il prezzo originale barrato. È presente anche un'ulteriore evidenziazione in blu, la cui funzione non è chiara.",
+      "url": "https://www.seroundtable.com/bing-sale-prices-shopping-ads-41357.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "bing",
+        "shopping_ad",
+        "ecommerce",
+        "search_engine_marketing"
+      ],
+      "importance": 2,
+      "published_at": "2026-05-22T10:21:00Z",
+      "fetched_at": "2026-05-23T05:03:21.638570Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:f24462dbdc1d8cce",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_010",
+      "title_original": "Are Google Search Console Email Alerts Enough?",
+      "title_it": "Le notifiche email di Google Search Console sono sufficienti?",
+      "summary_it": "John Mueller ha commentato su Reddit l'utilità degli avvisi email di Google Search Console, suggerendo che la loro efficacia dipende dalla piattaforma utilizzata, dalla dimensione del sito e dalla quantità di contenuti pubblicati. Per siti più piccoli e ben strutturati, gli avvisi possono essere sufficienti, mentre per siti più grandi è consigliabile un'analisi più approfondita dei dati di Search Console.",
+      "url": "https://www.seroundtable.com/google-search-console-email-alerts-41363.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "google_search_console",
+        "email_alert",
+        "john_mueller",
+        "technical_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T10:31:00Z",
+      "fetched_at": "2026-05-23T05:03:23.134782Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:829421a959e04f8b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_011",
+      "title_original": "Google: Why Split Your XML Sitemap File",
+      "title_it": "Google spiega i vantaggi di suddividere i file Sitemap XML",
+      "summary_it": "John Mueller di Google ha elencato alcuni motivi per cui i SEO suddividono i file Sitemap XML, tra cui il tracciamento di diversi tipi di URL, la suddivisione per \"freschezza\" dei contenuti, la prevenzione del raggiungimento del limite di 50.000 URL e la gestione di sitemap hreflang di grandi dimensioni. La discussione è nata su Reddit.",
+      "url": "https://www.seroundtable.com/why-split-your-xml-sitemap-file-for-google-41202.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "xml_sitemap",
+        "john_mueller",
+        "indexing",
+        "site_structure"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T10:41:00Z",
+      "fetched_at": "2026-05-23T05:03:24.322607Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:4bbe30d507fc022f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_012",
+      "title_original": "OpenAI Releases ChatGPT Ads Manager Updates & Ads Tests",
+      "title_it": "Aggiornamenti all'Ads Manager di ChatGPT e test di nuovi formati pubblicitari",
+      "summary_it": "OpenAI ha rilasciato aggiornamenti all'Ads Manager di ChatGPT, introducendo budget giornalieri, geo-targeting a livello di stato USA, DMA o ZIP code, e totali aggregati nelle viste a tabella. Sono inoltre in fase di test nuove call-to-action dinamiche all'interno dell'interfaccia di ChatGPT, selezionate automaticamente in base alla creatività dell'annuncio.",
+      "url": "https://www.seroundtable.com/chatgpt-ads-manager-updates-ads-tests-41364.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt",
+        "openai",
+        "ads_manager",
+        "advertising"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T10:51:00Z",
+      "fetched_at": "2026-05-23T05:03:25.829457Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:30d9fc6161e0300e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_013",
+      "title_original": "Search News Buzz Video Recap: Google's New Search Box, Gemini 3.5 Flash Powers AI Mode, New Google Ads, Ranking Volatility & More I/O GML News",
+      "title_it": "Novità dal mondo della ricerca: nuovo box di ricerca Google, Gemini 3.5 Flash per la AI Mode, aggiornamenti Google Ads e volatilità nel ranking",
+      "summary_it": "Questa settimana Google ha presentato un nuovo box di ricerca \"intelligente\" e ha integrato Gemini 3.5 Flash nella AI Mode. Sono state inoltre introdotte nuove funzionalità di agentic booking e coding direttamente nella ricerca, oltre a formati pubblicitari inediti. Si segnala anche volatilità nel ranking e aggiornamenti su Microsoft Advertising e OpenAI.",
+      "url": "https://www.seroundtable.com/video-05-22-2026-41366.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search",
+        "gemini_3_5",
+        "google_ad",
+        "ranking_volatility",
+        "ai_mode"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T11:01:00Z",
+      "fetched_at": "2026-05-23T05:03:28.445081Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:25a1c7913a0d2043",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_014",
+      "title_original": "Google Launches Core Update Amid I/O AI Search Overhaul – SEO Pulse via @sejournal, @MattGSouthern",
+      "title_it": "Google rilascia un Core Update contestualmente alle novità AI presentate all'I/O",
+      "summary_it": "Google ha rilasciato il Core Update di maggio. Contestualmente, durante l'I/O, sono state presentate nuove funzionalità di ricerca basate sull'intelligenza artificiale. Sono stati inoltre diffusi i primi dati sull'utilizzo della modalità AI e forniti segnali contrastanti riguardo al file llms.txt.",
+      "url": "https://www.searchenginejournal.com/seo-pulse-google-launches-core-update-amid-i-o-ai-search-overhaul/575676",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "core_update",
+        "google_io",
+        "ai_search",
+        "llms_txt"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-22T11:30:40Z",
+      "fetched_at": "2026-05-23T05:03:29.747629Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b16e86fade96226e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_015",
+      "title_original": "Daily Search Forum Recap: May 22, 2026",
+      "title_it": "Riepilogo Giornaliero dei Forum di Ricerca: 22 Maggio 2026",
+      "summary_it": "Google ha rilasciato il core update di Maggio 2026 e il report dei link in Search Console sembra presentare anomalie. OpenAI ha introdotto nuove funzionalità per ChatGPT Ads Manager, inclusi budget giornalieri e geo-targeting, e sta testando nuove call-to-action. Inoltre, Bing sta testando la visualizzazione dei prezzi scontati negli annunci shopping.",
+      "url": "https://www.seroundtable.com/recap-05-22-2026-41365.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "core_update",
+        "google_search_console",
+        "chatgpt_ad",
+        "bing_shopping_ad"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-22T13:00:00Z",
+      "fetched_at": "2026-05-23T05:03:31.401860Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:2ef2e14ba6eadc4b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-23_016",
+      "title_original": "3 Unrelated Stories About AI & Writing Tell The Same Story via @sejournal, @gregjarboe",
+      "title_it": "Tre storie sull'AI e la scrittura che raccontano la stessa cosa",
+      "summary_it": "Un articolo di Search Engine Journal evidenzia come l'AI generi circa la metà dei contenuti web e come i sistemi di qualità di Google ne siano consapevoli. L'articolo invita a riflettere sulla posizione che si intende assumere rispetto a questa tendenza. Non vengono forniti dati o analisi specifiche.",
+      "url": "https://www.searchenginejournal.com/3-unrelated-stories-about-ai-writing-tell-the-same-story/575070",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_content",
+        "google_quality_system",
+        "content_generation"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-22T13:00:37Z",
+      "fetched_at": "2026-05-23T05:03:32.591564Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:4e1ffcb67c978119",
+      "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-22T06:01:48.775887Z",
+      "last_checked": "2026-05-23T05:01:49.256993Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-22T06:01:49.108142Z",
+      "last_checked": "2026-05-23T05:01:49.668248Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-22T06:01:50.569372Z",
+      "last_checked": "2026-05-23T05:01:51.039480Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-22T06:02:19.986681Z",
+      "last_checked": "2026-05-23T05:02:20.278929Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-22T06:02:20.442036Z",
+      "last_checked": "2026-05-23T05:02:20.642052Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-22T06:02:22.696122Z",
+      "last_checked": "2026-05-23T05:02:22.513624Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-22T06:02:23.934737Z",
+      "last_checked": "2026-05-23T05:02:23.959879Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-22T06:02:25.756941Z",
+      "last_checked": "2026-05-23T05:02:24.858887Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-22T06:02:25.808066Z",
+      "last_checked": "2026-05-23T05:02:24.892753Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-22T06:02:26.154034Z",
+      "last_checked": "2026-05-23T05:02:31.001442Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-22T06:02:27.087568Z",
+      "last_checked": "2026-05-23T05:02:31.482112Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-22T06:02:27.913403Z",
+      "last_checked": "2026-05-23T05:02:32.810594Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-22T06:02:29.315795Z",
+      "last_checked": "2026-05-23T05:02:34.441625Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-22T06:02:31.022371Z",
+      "last_checked": "2026-05-23T05:02:36.190558Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-22T06:02:33.035471Z",
+      "last_checked": "2026-05-23T05:02:37.452510Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-22T06:02:34.418550Z",
+      "last_checked": "2026-05-23T05:02:39.480811Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-22T06:03:04.142652Z",
+      "last_checked": "2026-05-23T05:03:09.294248Z",
       "changed": false
     }
   ],
