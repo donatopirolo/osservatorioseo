@@ -1,34 +1,64 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-25T06:01:37.396655Z",
-  "generated_at_local": "2026-05-25T08:01:37.396655+02:00",
+  "generated_at": "2026-05-26T05:01:50.082322Z",
+  "generated_at_local": "2026-05-26T07:01:50.082322+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-25-0801",
+  "run_id": "2026-05-26-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2008,
-    "items_after_dedup": 1,
+    "items_collected": 2010,
+    "items_after_dedup": 16,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0001,
-    "summarize_attempted": 1,
+    "ai_cost_eur": 0.0021,
+    "summarize_attempted": 16,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-25_001"
+    "item_2026-05-26_013",
+    "item_2026-05-26_016",
+    "item_2026-05-26_009",
+    "item_2026-05-26_012",
+    "item_2026-05-26_010",
+    "item_2026-05-26_005",
+    "item_2026-05-26_011",
+    "item_2026-05-26_002",
+    "item_2026-05-26_007",
+    "item_2026-05-26_001"
   ],
   "categories": {
-    "technical_seo": [
-      "item_2026-05-25_001"
+    "google_updates": [
+      "item_2026-05-26_013",
+      "item_2026-05-26_016"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-05-26_009",
+      "item_2026-05-26_002",
+      "item_2026-05-26_015"
+    ],
+    "industry_news": [
+      "item_2026-05-26_012",
+      "item_2026-05-26_007",
+      "item_2026-05-26_001",
+      "item_2026-05-26_004",
+      "item_2026-05-26_014",
+      "item_2026-05-26_008",
+      "item_2026-05-26_006",
+      "item_2026-05-26_003"
+    ],
+    "ai_models": [
+      "item_2026-05-26_010",
+      "item_2026-05-26_005",
+      "item_2026-05-26_011"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-25_001",
-      "title_original": "All You Need To Know About Cloudflare’s Agent Readiness Score via @sejournal, @slobodanmanic",
-      "title_it": "Cloudflare Agent Readiness Score: cosa sapere",
-      "summary_it": "Search Engine Journal spiega il Cloudflare Agent Readiness Score, chiarendo quali verifiche influenzano il punteggio e la sua rilevanza per diversi tipi di siti web. L'articolo mira a fornire una comprensione più precisa del significato di questo parametro.",
-      "url": "https://www.searchenginejournal.com/all-you-need-to-know-about-cloudflares-agent-readiness-score/574226",
+      "id": "item_2026-05-26_001",
+      "title_original": "Digital PR Hasn’t Changed – AI Search Just Made The Fundamentals More Important via @sejournal, @gregjarboe",
+      "title_it": "L'AI nella Ricerca Rende Più Importanti i Fondamentali delle Digital PR",
+      "summary_it": "Un articolo su Search Engine Journal sottolinea come i principi fondamentali delle digital PR rimangano cruciali, nonostante l'evoluzione della ricerca con l'intelligenza artificiale. L'articolo suggerisce che le basi della disciplina non sono cambiate, ma la loro corretta applicazione è diventata ancora più rilevante nel contesto attuale.",
+      "url": "https://www.searchenginejournal.com/digital-pr-hasnt-changed-ai-search-just-made-the-fundamentals-more-important/575383",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -41,107 +71,628 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "technical_seo",
+      "category": "industry_news",
       "tags": [
-        "cloudflare",
-        "agent_readiness_score",
-        "website_performance"
+        "digital_pr",
+        "ai_search",
+        "seo_fundamental"
       ],
       "importance": 3,
-      "published_at": "2026-05-24T11:00:59Z",
-      "fetched_at": "2026-05-25T06:02:57.844608Z",
+      "published_at": "2026-05-25T08:30:14Z",
+      "fetched_at": "2026-05-26T05:03:09.886654Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:157f45daf013d6bf",
+      "raw_hash": "sha256:514385c9f9d0b36b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_002",
+      "title_original": "Users behave differently in AI Overviews vs. AI Mode",
+      "title_it": "Il comportamento degli utenti differisce tra AI Overviews e AI Mode",
+      "summary_it": "Kevin Indig riporta che gli utenti si comportano diversamente quando interagiscono con le AI Overviews rispetto alla modalità AI di Google. Questo implica che l'esperienza utente e, di conseguenza, le strategie SEO, devono essere adattate a seconda del tipo di interfaccia AI. L'articolo suggerisce un'analisi più approfondita di questi comportamenti per ottimizzare la visibilità.",
+      "url": "https://www.growth-memo.com/p/users-behave-differently-in-ai-overviews",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_overviews",
+        "user_behavior",
+        "ai_mode",
+        "google"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T08:43:09Z",
+      "fetched_at": "2026-05-26T05:03:11.557476Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:8ee7a62fdac585b2",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_003",
+      "title_original": "Google Posts Memorial Day 2026 Doodle",
+      "title_it": "Google pubblica un Doodle per il Memorial Day 2026",
+      "summary_it": "Google ha pubblicato un Doodle speciale per il Memorial Day 2026 negli Stati Uniti, una pratica non comune negli anni precedenti. Il Doodle raffigura una bandiera americana piegata e rimanda a una pagina di ricerca con un tributo ai caduti.",
+      "url": "https://www.seroundtable.com/google-memorial-day-2026-doodle-41378.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google",
+        "doodle",
+        "memorial_day"
+      ],
+      "importance": 1,
+      "published_at": "2026-05-25T09:00:00Z",
+      "fetched_at": "2026-05-26T05:03:12.698917Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:39dd604edf60a374",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_004",
+      "title_original": "Agent-To-Agent Marketing Was Just Born on Moltbook",
+      "title_it": "Marketing Agent-to-Agent: una nuova frontiera con Moltbook",
+      "summary_it": "Con la crescente adozione di assistenti AI per la ricerca di prodotti e raccomandazioni, emerge un nuovo paradigma di marketing. I professionisti dovranno concentrarsi non solo sui consumatori, ma anche sugli agenti AI che mediano l'accesso alle informazioni. Moltbook si propone come piattaforma per questo nuovo approccio.",
+      "url": "https://ahrefs.com/blog/agent-to-agent-marketing-born-on-moltbook",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ai_marketing",
+        "agent_marketing",
+        "future_of_seo",
+        "moltbook"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T09:29:09Z",
+      "fetched_at": "2026-05-26T05:03:13.914877Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:ae354d144541aa77",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_005",
+      "title_original": "We Ran an AI Hackathon for Our Content Team. Here’s What We Built with Agent A",
+      "title_it": "Ahrefs organizza un hackathon AI per il team di contenuti",
+      "summary_it": "Ahrefs ha condotto un hackathon interno focalizzato sull'utilizzo di AI Agent per automatizzare processi di content creation. L'articolo descrive i progetti sviluppati durante l'evento, con un focus sull'automazione del workflow e la creazione di contenuti. L'iniziativa evidenzia l'interesse crescente verso l'integrazione dell'AI nei processi di content marketing.",
+      "url": "https://ahrefs.com/blog/agent-a-hackathon",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "ai_agent",
+        "content_automation",
+        "ahref",
+        "hackathon"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T09:31:55Z",
+      "fetched_at": "2026-05-26T05:03:15.429073Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:56812da6f43a2e37",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_006",
+      "title_original": "Why High-Performing Marketers Get Stuck In Execution Mode via @sejournal, @bngsrc",
+      "title_it": "Perché i marketer ad alte prestazioni si bloccano in modalità esecutiva",
+      "summary_it": "L'articolo analizza come le competenze che hanno portato un marketer a ottenere una promozione possano paradossalmente ostacolare la sua crescita strategica. Si concentra sulla transizione dalla pura esecuzione alla pianificazione strategica nel marketing.",
+      "url": "https://www.searchenginejournal.com/why-high-performing-marketers-get-stuck-in-execution-mode/574437",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "marketing_strategy",
+        "career_development",
+        "leadership"
+      ],
+      "importance": 2,
+      "published_at": "2026-05-25T10:00:49Z",
+      "fetched_at": "2026-05-26T05:03:16.585259Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:ff286a4c46fe1393",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_007",
+      "title_original": "Google Business Profile Detailed Rejection Notices",
+      "title_it": "Google Business Profile: notifiche di rifiuto più dettagliate",
+      "summary_it": "Google sta implementando notifiche di rifiuto più dettagliate per le schede Google Business Profile. Queste notifiche forniscono indicazioni più specifiche sui motivi del rifiuto, aiutando le aziende a risolvere i problemi di conformità in modo più efficiente.",
+      "url": "https://www.seroundtable.com/google-business-profile-rejection-notices-detailed-41369.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_business_profile",
+        "local_seo",
+        "rejection_notice"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T10:11:00Z",
+      "fetched_at": "2026-05-26T05:03:17.682466Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:ee61bbb22dde6147",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_008",
+      "title_original": "Google Home Page Promoting AI Features Out Of I/O",
+      "title_it": "La homepage di Google promuove le novità AI presentate all'I/O",
+      "summary_it": "Google ha aggiunto dei box di contenuto sotto la barra di ricerca nella homepage, promuovendo le novità sull'AI presentate al Google I/O. Questi box includono informazioni su AI Mode, generazione di immagini tramite AI e suggerimenti sull'utilizzo di queste funzionalità. La homepage di Google è considerata uno spazio web molto prezioso.",
+      "url": "https://www.seroundtable.com/google-home-io-ai-news-41373.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_io",
+        "ai",
+        "google_homepage",
+        "ai_mode"
+      ],
+      "importance": 2,
+      "published_at": "2026-05-25T10:21:00Z",
+      "fetched_at": "2026-05-26T05:03:18.836674Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:5fcaadf60b70d409",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_009",
+      "title_original": "Google Removes Lag For AI Overviews & AI Mode Showing Penalized Content",
+      "title_it": "Google risolve il ritardo tra la rimozione dall'indice e l'esclusione dalle AI Overview",
+      "summary_it": "Google ha eliminato il ritardo che si verificava tra la deindicizzazione di una pagina web (anche a seguito di una penalità manuale) e la sua rimozione dalle AI Overview e dalla AI Mode. In precedenza, i siti penalizzati potevano continuare ad apparire nelle risposte generate dall'AI per alcuni giorni.",
+      "url": "https://www.seroundtable.com/google-ai-overview-lag-gone-41368.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_overviews",
+        "indexing",
+        "manual_action",
+        "google_search"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-25T10:31:00Z",
+      "fetched_at": "2026-05-26T05:03:20.411436Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:226d724e5caaa1a0",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_010",
+      "title_original": "Bing Officially Releases AI Guided Image Search Experience",
+      "title_it": "Bing rilascia ufficialmente la ricerca immagini guidata dall'AI",
+      "summary_it": "Microsoft ha rilasciato ufficialmente la nuova versione di Bing Image Search potenziata dall'AI. Questa versione organizza le immagini in categorie chiare e genera brevi riassunti per facilitare la ricerca e la comprensione dei risultati. L'obiettivo è ridurre la sensazione di essere sopraffatti dalla quantità di immagini.",
+      "url": "https://www.seroundtable.com/bing-ai-guides-image-search-41372.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "bing",
+        "image_search",
+        "artificial_intelligence",
+        "search_engine"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T10:41:00Z",
+      "fetched_at": "2026-05-26T05:03:21.790441Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:85001fcdf6d60456",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_011",
+      "title_original": "Pichai Says Google Is ‘A Bit Behind’ On Agentic Coding via @sejournal, @MattGSouthern",
+      "title_it": "Pichai ammette che Google è leggermente indietro nello sviluppo di coding agentico",
+      "summary_it": "Sundar Pichai ha dichiarato che Google è \"un po' indietro\" nello sviluppo di strumenti di coding agentico, menzionando la mancanza di prodotti rivolti agli sviluppatori come una delle ragioni principali. Questa ammissione suggerisce un'area di potenziale crescita e investimento futuro per Google nel campo dell'intelligenza artificiale applicata alla programmazione.",
+      "url": "https://www.searchenginejournal.com/pichai-says-google-is-a-bit-behind-on-agentic-coding/575781",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google",
+        "ai_coding",
+        "agentic_coding",
+        "sundar_pichai"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T10:45:14Z",
+      "fetched_at": "2026-05-26T05:03:23.244184Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:b96923477bb8fd6f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_012",
+      "title_original": "Google Officially Appeals Search Monopoly Ruling",
+      "title_it": "Google presenta ufficialmente appello contro la sentenza di monopolio nella ricerca",
+      "summary_it": "Google ha formalmente presentato appello contro la sentenza che la definisce un monopolio illegale nel mercato della ricerca. L'azienda contesta le misure correttive imposte, sostenendo che la sua posizione dominante è frutto di innovazione e qualità del prodotto, non di pratiche anticoncorrenziali. Google afferma che gli accordi di distribuzione, come quello con Apple, sono stati ottenuti in modo lecito.",
+      "url": "https://www.seroundtable.com/google-officially-appeals-search-monopoly-ruling-41376.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google",
+        "antitrust",
+        "monopoly",
+        "legal"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-25T10:51:00Z",
+      "fetched_at": "2026-05-26T05:03:25.044573Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:bf0c73b83985ccaf",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_013",
+      "title_original": "Google May 2026 Core Update Landed Over The Weekend",
+      "title_it": "Rilasciato nel fine settimana il core update di Google di maggio 2026",
+      "summary_it": "Google ha rilasciato il core update di maggio 2026, con i primi impatti percepiti dalla community SEO durante il fine settimana. Il rollout completo richiederà fino a due settimane. Si segnalano fluttuazioni nel traffico e nel posizionamento, con reazioni contrastanti da parte dei webmaster.",
+      "url": "https://www.seroundtable.com/google-may-2026-core-update-landed-41380.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "core_update",
+        "algorithm_update",
+        "seo",
+        "search_engine_ranking"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-25T11:01:00Z",
+      "fetched_at": "2026-05-26T05:03:26.667063Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:37dfc1a0a039133d",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_014",
+      "title_original": "Reddit CEO: LLMs ‘Would Not Exist’ Without Reddit Data via @sejournal, @MattGSouthern",
+      "title_it": "Il CEO di Reddit afferma che i modelli LLM non esisterebbero senza i dati di Reddit",
+      "summary_it": "Steve Huffman, CEO di Reddit, ha definito i contenuti generati dagli utenti come \"petrolio moderno\" per l'AI. Huffman ha discusso degli accordi di Reddit con Google e OpenAI, accennando anche alle motivazioni dietro le azioni legali intraprese da alcune aziende nel settore.",
+      "url": "https://www.searchenginejournal.com/reddit-ceo-llms-would-not-exist-without-reddit-data/575786",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "llm",
+        "reddit",
+        "data",
+        "ai"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T11:12:14Z",
+      "fetched_at": "2026-05-26T05:03:28.395151Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:3741e8c7ab282909",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_015",
+      "title_original": "Google Says AI Mode Can Now Scale Faster Across Languages via @sejournal, @MattGSouthern",
+      "title_it": "Google afferma che la modalità AI può ora scalare più velocemente tra le lingue",
+      "summary_it": "Liz Reid di Google ha dichiarato che i modelli multilingue della modalità AI hanno semplificato l'espansione in diversi paesi e lingue. Questo suggerisce una potenziale implementazione più rapida delle funzionalità AI di Google in un numero maggiore di mercati.",
+      "url": "https://www.searchenginejournal.com/google-says-ai-mode-can-now-scale-faster-across-languages/575791",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai",
+        "multilingual_seo",
+        "ai_scaling"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-25T11:51:25Z",
+      "fetched_at": "2026-05-26T05:03:29.507342Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:c0af087b628f4b21",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-26_016",
+      "title_original": "Daily Search Forum Recap: May 25, 2026",
+      "title_it": "Riassunto Quotidiano dei Forum di Ricerca: 25 Maggio 2026",
+      "summary_it": "Il core update di Google di maggio 2026 ha avuto un impatto significativo nel fine settimana. Google ha presentato ricorso contro la sentenza sul monopolio della ricerca. Bing sta testando ufficialmente la nuova interfaccia di ricerca immagini con AI. Sembra che Google abbia rimosso il ritardo di indicizzazione per le AI Overview.",
+      "url": "https://www.seroundtable.com/recap-05-25-2026-41379.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "core_update",
+        "search_monopoly",
+        "bing_image_search",
+        "ai_overviews"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-25T13:00:00Z",
+      "fetched_at": "2026-05-26T05:03:31.076208Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:d7774b5c13dd36a4",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-25T06:01:42.026325Z",
+      "last_checked": "2026-05-26T05:01:55.169208Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-25T06:01:42.268088Z",
+      "last_checked": "2026-05-26T05:01:55.505732Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-25T06:01:43.865991Z",
+      "last_checked": "2026-05-26T05:01:56.873957Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-25T06:02:13.740687Z",
+      "last_checked": "2026-05-26T05:02:25.338232Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-25T06:02:14.190171Z",
+      "last_checked": "2026-05-26T05:02:25.581507Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-25T06:02:15.119994Z",
+      "last_checked": "2026-05-26T05:02:26.579274Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-25T06:02:16.683294Z",
+      "last_checked": "2026-05-26T05:02:27.941915Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-25T06:02:18.599753Z",
+      "last_checked": "2026-05-26T05:02:29.547012Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-25T06:02:18.624784Z",
+      "last_checked": "2026-05-26T05:02:29.602986Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-25T06:02:19.683060Z",
+      "last_checked": "2026-05-26T05:02:30.006407Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-25T06:02:20.010166Z",
+      "last_checked": "2026-05-26T05:02:31.425639Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-25T06:02:21.170522Z",
+      "last_checked": "2026-05-26T05:02:33.102878Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-25T06:02:23.206390Z",
+      "last_checked": "2026-05-26T05:02:34.681573Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-25T06:02:24.324499Z",
+      "last_checked": "2026-05-26T05:02:36.359909Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-25T06:02:25.812755Z",
+      "last_checked": "2026-05-26T05:02:38.277519Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-25T06:02:27.018239Z",
+      "last_checked": "2026-05-26T05:02:40.127611Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-25T06:02:56.219204Z",
+      "last_checked": "2026-05-26T05:03:08.106672Z",
       "changed": false
     }
   ],
