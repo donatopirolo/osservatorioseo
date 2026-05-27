@@ -1,143 +1,62 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-27T05:01:39.022057Z",
-  "generated_at_local": "2026-05-27T07:01:39.022057+02:00",
+  "generated_at": "2026-05-27T06:01:39.953817Z",
+  "generated_at_local": "2026-05-27T08:01:39.953817+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-27-0701",
+  "run_id": "2026-05-27-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2010,
-    "items_after_dedup": 16,
+    "items_after_dedup": 15,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0437,
-    "summarize_attempted": 16,
+    "ai_cost_eur": 0.002,
+    "summarize_attempted": 15,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-27_001",
+    "item_2026-05-27_007",
+    "item_2026-05-27_009",
+    "item_2026-05-27_002",
+    "item_2026-05-27_011",
+    "item_2026-05-27_003",
+    "item_2026-05-27_004",
     "item_2026-05-27_008",
     "item_2026-05-27_010",
-    "item_2026-05-27_003",
-    "item_2026-05-27_012",
-    "item_2026-05-27_015",
-    "item_2026-05-27_004",
-    "item_2026-05-27_005",
-    "item_2026-05-27_009",
-    "item_2026-05-27_011"
+    "item_2026-05-27_001",
+    "item_2026-05-27_005"
   ],
   "categories": {
-    "tools_platforms": [
-      "item_2026-05-27_001"
-    ],
     "google_updates": [
-      "item_2026-05-27_008"
-    ],
-    "industry_news": [
-      "item_2026-05-27_010",
-      "item_2026-05-27_012",
-      "item_2026-05-27_004",
-      "item_2026-05-27_011",
-      "item_2026-05-27_014",
       "item_2026-05-27_007"
     ],
-    "ai_overviews_llm_seo": [
-      "item_2026-05-27_003",
-      "item_2026-05-27_015",
-      "item_2026-05-27_005",
+    "industry_news": [
       "item_2026-05-27_009",
-      "item_2026-05-27_002",
+      "item_2026-05-27_011",
+      "item_2026-05-27_003",
+      "item_2026-05-27_010",
       "item_2026-05-27_013",
-      "item_2026-05-27_016"
+      "item_2026-05-27_006"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-05-27_002",
+      "item_2026-05-27_004",
+      "item_2026-05-27_008",
+      "item_2026-05-27_001",
+      "item_2026-05-27_012",
+      "item_2026-05-27_014",
+      "item_2026-05-27_015"
     ],
     "technical_seo": [
-      "item_2026-05-27_006"
+      "item_2026-05-27_005"
     ]
   },
   "items": [
     {
       "id": "item_2026-05-27_001",
-      "title_original": "Build new features using built-in AI in Chrome",
-      "title_it": "Nuove funzionalità basate sull'AI integrata in Chrome",
-      "summary_it": "Chrome introduce nuove funzionalità basate sull'intelligenza artificiale direttamente nel browser. Gli sviluppatori possono sfruttare queste capacità per creare nuove esperienze utente. Maggiori dettagli sono stati presentati al Google I/O 2026.",
-      "url": "https://developer.chrome.com/blog/build-new-features-using-built-in-ai-in-chrome-io2026?hl=en",
-      "source": {
-        "id": "chrome_developers_blog",
-        "name": "Chrome Developers Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://developer.chrome.com/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "chrome",
-        "ai",
-        "browser",
-        "developer"
-      ],
-      "importance": 5,
-      "published_at": "2026-05-26T06:00:00Z",
-      "fetched_at": "2026-05-27T05:02:36.946201Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:85aa8f7393409a8d",
-      "deep_analysis": {
-        "detailed_description": "Chrome sta integrando capacità di intelligenza artificiale direttamente nel browser, accessibili via API agli sviluppatori web. L'annuncio al Google I/O 2026 segna un cambio di paradigma: l'AI non più solo lato server o tramite chiamate a servizi esterni, ma eseguita localmente nel client, con implicazioni dirette per performance, privacy e user experience.\n\nLe API presentate permettono di sfruttare modelli linguistici e di elaborazione dati senza dipendere da infrastrutture cloud. Questo significa tempi di risposta più rapidi, nessun costo per chiamate API esterne, e funzionalità che operano anche offline. Per chi sviluppa interfacce web, si apre la possibilità di implementare assistenti contestuali, riassunti automatici, traduzione in tempo reale e analisi semantica direttamente nel browser.\n\nDal punto di vista SEO, l'impatto è duplice. Primo: i contenuti potrebbero essere elaborati e riassunti lato client prima ancora che l'utente interagisca con la pagina, modificando metriche di engagement e profondità di navigazione. Secondo: se Chrome inizia a offrire riassunti o risposte generate localmente a partire dai contenuti della pagina, il comportamento di click e permanenza potrebbe cambiare radicalmente.\n\nLa presentazione di Thomas Steiner al Google I/O ha mostrato casi d'uso concreti: form intelligenti che suggeriscono completamenti contestuali, chatbot embedded senza backend, analisi sentiment su recensioni utente processate interamente nel browser. Ogni funzionalità riduce la necessità di round-trip server, ma introduce anche nuove variabili nel modo in cui gli utenti consumano i contenuti.\n\nPer i SEO tecnici, la domanda centrale è: come misurare e ottimizzare per interazioni che avvengono senza lasciare traccia in Analytics o GSC? Se un utente ottiene la risposta che cerca tramite un assistente AI locale, senza scorrere la pagina o cliccare link interni, i segnali tradizionali di qualità (tempo sulla pagina, scroll depth, click su CTA) perdono significato.\n\nLa roadmap di Chrome prevede il rilascio graduale di queste API nel corso del 2026, con supporto iniziale per modelli di linguaggio e visione. Gli sviluppatori possono già testare le funzionalità in Chrome Canary. La compatibilità con altri browser Chromium-based (Edge, Opera, Brave) è probabile ma non ancora confermata ufficialmente.\n\nL'integrazione nativa di AI nel browser rappresenta anche una mossa strategica di Google per mantenere il controllo sull'esperienza utente, in un momento in cui assistenti esterni (ChatGPT, Perplexity) stanno intercettando query che prima finivano su Search. Portare l'AI direttamente in Chrome significa poter influenzare come e quando gli utenti accedono alle informazioni, potenzialmente bypassando del tutto la SERP.",
-        "implications": [
-          "I contenuti potrebbero essere elaborati e sintetizzati lato client senza generare segnali di engagement tradizionali (scroll, click, tempo sulla pagina), rendendo più difficile misurare la qualità percepita dagli utenti reali.",
-          "Se Chrome offre riassunti o risposte generate localmente, il traffico organico verso pagine informative potrebbe calare, specialmente per query a risposta rapida già vulnerabili ai featured snippet.",
-          "Le metriche di Core Web Vitals potrebbero essere influenzate dall'esecuzione di modelli AI locali: se il browser dedica risorse computazionali a task AI, INP e LCP potrebbero peggiorare su dispositivi meno potenti.",
-          "Gli sviluppatori che implementano funzionalità AI native potrebbero creare esperienze utente che riducono la necessità di navigazione multi-pagina, impattando la struttura dei siti ottimizzati per funnel tradizionali.",
-          "La capacità di elaborare contenuti offline apre scenari in cui gli utenti consumano informazioni senza connessione attiva, rendendo impossibile il tracking server-side e complicando l'attribuzione delle conversioni."
-        ],
-        "examples": [
-          "Un e-commerce implementa un assistente AI locale che risponde a domande su prodotti direttamente nella pagina. L'utente ottiene informazioni senza visitare pagine di categoria o schede prodotto, riducendo pageviews e aumentando il bounce rate apparente, anche se l'esperienza è migliorata e la conversione resta stabile o cresce.",
-          "Un blog di settore integra riassunti automatici generati nel browser per articoli lunghi. Gli utenti leggono il riassunto AI invece del testo completo, abbassando il tempo medio sulla pagina e lo scroll depth. Google Search potrebbe interpretare questi segnali come calo di qualità, anche se l'utente è soddisfatto.",
-          "Un sito di ricette usa l'AI locale per suggerire sostituzioni di ingredienti in tempo reale. L'interazione avviene senza chiamate server, quindi non genera eventi in GA4. Il team SEO perde visibilità su quali funzionalità generano più valore, rendendo difficile giustificare investimenti futuri in contenuti simili."
-        ],
-        "testing_steps": [
-          "Scarica Chrome Canary e abilita i flag sperimentali per le API AI integrate seguendo la documentazione ufficiale su developer.chrome.com.",
-          "Implementa una funzionalità AI di test (es. riassunto automatico di un articolo) su una pagina non critica e monitora le metriche di engagement in GA4 per 2-4 settimane.",
-          "Confronta tempo sulla pagina, scroll depth e bounce rate tra utenti Chrome Canary (con AI attiva) e utenti su browser standard, segmentando per device e connessione.",
-          "Verifica l'impatto sui Core Web Vitals usando Chrome DevTools e PageSpeed Insights, misurando INP e LCP prima e dopo l'attivazione delle funzionalità AI.",
-          "Testa la funzionalità offline: disconnetti la rete, verifica che l'AI locale funzioni, e valuta se puoi tracciare l'interazione quando la connessione torna attiva.",
-          "Monitora GSC per eventuali cambiamenti nei CTR e nelle posizioni medie delle pagine dove hai implementato AI, confrontando con pagine di controllo simili senza AI."
-        ],
-        "faqs": [
-          {
-            "question": "Le API AI di Chrome funzioneranno anche su Edge e altri browser Chromium?",
-            "answer": "Non è ancora confermato ufficialmente. Chrome è il primo a implementare queste API, ma essendo basate su Chromium, è probabile che Edge, Opera e Brave le adottino nei mesi successivi. Tuttavia, ogni vendor potrebbe scegliere modelli AI diversi o disabilitare alcune funzionalità, quindi è necessario testare caso per caso prima di fare affidamento su queste capacità in produzione."
-          },
-          {
-            "question": "Come si misurano le interazioni utente con funzionalità AI eseguite localmente nel browser?",
-            "answer": "Le interazioni client-side possono essere tracciate con eventi personalizzati in GA4 o altri analytics, ma richiedono implementazione esplicita via JavaScript. Se l'AI elabora contenuti senza che l'utente compia azioni tracciabili (scroll, click), devi creare eventi sintetici basati su trigger come tempo trascorso in viewport o completamento dell'elaborazione AI. Il rischio è perdere visibilità su comportamenti che non generano segnali tradizionali."
-          },
-          {
-            "question": "L'esecuzione di modelli AI locali può peggiorare i Core Web Vitals?",
-            "answer": "Sì, specialmente su dispositivi meno potenti. L'esecuzione di modelli linguistici o di visione consuma CPU e memoria, potenzialmente aumentando INP (Interaction to Next Paint) e rallentando il rendering iniziale (LCP). È fondamentale testare su dispositivi mid-range e low-end, non solo su workstation di sviluppo, e considerare il lazy-loading delle funzionalità AI solo quando necessarie."
-          },
-          {
-            "question": "Se Chrome genera riassunti locali dei miei contenuti, perdo traffico organico?",
-            "answer": "Dipende da come Google implementa la funzionalità. Se i riassunti vengono mostrati prima che l'utente arrivi alla SERP (es. nella barra degli indirizzi o in una sidebar), sì, il traffico potrebbe calare. Se invece l'AI opera solo dopo che l'utente ha già visitato la pagina, l'impatto è su engagement e conversioni, non su traffico. Al momento non ci sono dettagli sufficienti per quantificare il rischio, ma va monitorato attentamente."
-          }
-        ],
-        "editorial_commentary": "L'integrazione di AI direttamente in Chrome è una mossa che sposta il campo di battaglia dall'ecosistema Search al browser stesso. Google sta costruendo un layer di intelligenza che può intercettare e soddisfare bisogni informativi prima ancora che l'utente formuli una query o visiti una pagina. Per chi lavora in SEO, questo significa che ottimizzare per la SERP potrebbe non bastare più: bisogna iniziare a pensare a come i contenuti vengono consumati e processati lato client.\n\nIl rischio concreto è che metriche di engagement tradizionali (tempo sulla pagina, scroll depth, click interni) perdano significato se gli utenti ottengono valore tramite interazioni AI locali che non lasciano traccia. Chi si affida ciecamente a questi segnali per valutare la qualità dei contenuti potrebbe trovarsi a ottimizzare per metriche che non riflettono più la realtà dell'esperienza utente.\n\nLa priorità operativa è duplice: primo, iniziare a testare queste API in ambienti controllati per capire l'impatto reale su performance e comportamento utente. Secondo, rivedere i framework di misurazione del successo, integrando segnali qualitativi (conversioni, feedback diretto) accanto a quelli quantitativi tradizionali. Chi aspetta che queste funzionalità diventino mainstream prima di adattarsi rischia di trovarsi impreparato quando il rollout sarà completo.",
-        "premium_model_used": "anthropic/claude-sonnet-4-5",
-        "cost_eur": 0.041664959999999994
-      }
-    },
-    {
-      "id": "item_2026-05-27_002",
       "title_original": "Modern Local SEO & AI Visibility: How To Get Clients Into AI Results via @sejournal, @hethr_campbell",
-      "title_it": "SEO Locale Moderno e Visibilità AI: Come Inserire i Clienti nei Risultati AI",
-      "summary_it": "L'articolo esplora strategie di SEO locale per migliorare la visibilità delle aziende nei risultati generati dall'intelligenza artificiale. Si concentra sull'importanza della ricerca di parole chiave efficace per ottenere raccomandazioni AI pertinenti. L'articolo è un riepilogo di un intervento di Heather Campbell.",
+      "title_it": "SEO Locale Moderno e Visibilità AI: Come Ottenere Clienti nei Risultati AI",
+      "summary_it": "L'articolo esplora le strategie per migliorare la visibilità delle attività locali nei risultati generati dall'intelligenza artificiale, sottolineando l'importanza della ricerca di parole chiave efficace. Si concentra sull'ottimizzazione SEO locale per sfruttare le raccomandazioni AI. L'articolo è un riepilogo di un intervento di Heather Campbell.",
       "url": "https://www.searchenginejournal.com/modern-local-seo-ai-visibility-how-to-get-clients-into-ai-results-recap/575732",
       "source": {
         "id": "search_engine_journal",
@@ -154,13 +73,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "local_seo",
-        "ai_visibility",
+        "artificial_intelligence",
         "keyword_research",
-        "ai_recommendation"
+        "ai_visibility"
       ],
       "importance": 3,
       "published_at": "2026-05-26T06:45:18Z",
-      "fetched_at": "2026-05-27T05:02:38.330044Z",
+      "fetched_at": "2026-05-27T06:03:03.518182Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -169,10 +88,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_003",
+      "id": "item_2026-05-27_002",
       "title_original": "846,000 Google Searches Reveal How AI Overviews Are Changing User Behavior via @sejournal, @ericvanbuskirk",
       "title_it": "Analisi di 846.000 ricerche Google rivela cambiamenti nel comportamento degli utenti con le AI Overview",
-      "summary_it": "Uno studio di Search Engine Journal analizza quasi un milione di sessioni di ricerca Google, evidenziando come le AI Overview influenzino il comportamento degli utenti. In particolare, si osserva un aumento significativo dello scrolling verso l'alto dopo la visualizzazione delle AI Overview, suggerendo una rivalutazione dei risultati di ricerca da parte degli utenti. Questo dato impatta sulla strategia di ottimizzazione dei risultati organici.",
+      "summary_it": "Uno studio di Search Engine Journal analizza quasi un milione di sessioni di ricerca Google, evidenziando come le AI Overview influenzino il comportamento degli utenti. In particolare, si osserva un aumento significativo dello scrolling verso l'alto dopo la visualizzazione delle AI Overview, suggerendo una rivalutazione dei risultati di ricerca organici. Questo dato impatta sulla strategia di ottimizzazione dei risultati di ricerca.",
       "url": "https://www.searchenginejournal.com/google-search-sessions-show-how-users-pause-scroll-reconsider-before-clicking/575243",
       "source": {
         "id": "search_engine_journal",
@@ -195,7 +114,7 @@
       ],
       "importance": 4,
       "published_at": "2026-05-26T08:00:18Z",
-      "fetched_at": "2026-05-27T05:02:40.658260Z",
+      "fetched_at": "2026-05-27T06:03:04.993561Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -204,7 +123,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_004",
+      "id": "item_2026-05-27_003",
       "title_original": "Google Business Profiles Photos / Videos Add View Counts",
       "title_it": "Google Business Profile mostra il numero di visualizzazioni di foto e video",
       "summary_it": "Google ha iniziato a mostrare il numero di visualizzazioni per foto e video all'interno delle sezioni dedicate nei Google Business Profile. Questa nuova metrica permette ai proprietari delle attività di valutare la popolarità dei contenuti multimediali caricati. La funzionalità sembra essere in fase di rollout e non è ancora visibile a tutti.",
@@ -230,7 +149,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-26T10:11:00Z",
-      "fetched_at": "2026-05-27T05:02:42.380939Z",
+      "fetched_at": "2026-05-27T06:03:06.384339Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -239,10 +158,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_005",
+      "id": "item_2026-05-27_004",
       "title_original": "Google Merchant Center Conversational Attributes For AI-Driven Surfaces",
       "title_it": "Google Merchant Center introduce attributi conversazionali per superfici basate su AI",
-      "summary_it": "Google ha rilasciato gli attributi conversazionali in Merchant Center, progettati per migliorare la comprensione dei prodotti da parte dei sistemi AI e degli agenti conversazionali. Questi attributi opzionali, come domande e risposte, link a documenti e prodotti correlati, mirano a ottimizzare la scoperta dei prodotti tramite AI e la ricerca tradizionale.",
+      "summary_it": "Google ha rilasciato nuovi attributi conversazionali in Merchant Center. Questi attributi opzionali mirano a migliorare la comprensione dei prodotti da parte dei sistemi AI e degli agenti conversazionali, consentendo risposte più pertinenti nelle ricerche e su piattaforme come AI Mode.",
       "url": "https://www.seroundtable.com/google-merchant-center-conversational-attributes-41370.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -259,13 +178,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "google_merchant_center",
-        "conversational_attribute",
-        "ai",
-        "product_feed"
+        "conversational_ai",
+        "product_feed",
+        "ai_search"
       ],
       "importance": 3,
       "published_at": "2026-05-26T10:21:00Z",
-      "fetched_at": "2026-05-27T05:02:43.818457Z",
+      "fetched_at": "2026-05-27T06:03:07.697942Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -274,10 +193,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_006",
+      "id": "item_2026-05-27_005",
       "title_original": "Machine-First Architecture: How To Build Websites Machines Can Identify, Read, Cite & Use via @sejournal, @slobodanmanic",
       "title_it": "Architettura Machine-First: Come costruire siti web che le macchine possono identificare, leggere, citare e utilizzare",
-      "summary_it": "L'articolo esplora il concetto di architettura \"machine-first\", suggerendo di progettare siti web pensando prima alle esigenze delle macchine (crawler, AI). Questo approccio mira a creare una base più solida per tutti i visitatori, inclusi gli utenti umani. L'articolo fornisce una sequenza di costruzione completa.",
+      "summary_it": "L'articolo esplora il concetto di architettura \"machine-first\", suggerendo di progettare siti web pensando prima alle esigenze delle macchine (crawler, AI) per migliorare l'esperienza di tutti gli utenti. Si concentra sulla creazione di una base solida per l'indicizzazione e la comprensione automatica dei contenuti. Non vengono forniti dettagli tecnici specifici.",
       "url": "https://www.searchenginejournal.com/machine-first-architecture-how-to-build-websites-machines-can-identify-read-cite-use/574431",
       "source": {
         "id": "search_engine_journal",
@@ -293,14 +212,14 @@
       },
       "category": "technical_seo",
       "tags": [
-        "machine_first",
-        "technical_architecture",
+        "machine_learning",
         "seo",
-        "crawlability"
+        "technical_architecture",
+        "indexing"
       ],
       "importance": 3,
       "published_at": "2026-05-26T10:30:51Z",
-      "fetched_at": "2026-05-27T05:02:45.252854Z",
+      "fetched_at": "2026-05-27T06:03:09.185826Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -309,7 +228,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_007",
+      "id": "item_2026-05-27_006",
       "title_original": "Google Tests Growing Expanding Shopping Ads",
       "title_it": "Google testa annunci Shopping espandibili al passaggio del mouse",
       "summary_it": "Google sta testando un nuovo formato per gli annunci Shopping che si ingrandiscono quando l'utente passa il cursore sopra l'annuncio. L'obiettivo è rendere gli annunci più visibili e attrattivi. Test simili erano stati effettuati in precedenza su altri formati pubblicitari di Google.",
@@ -335,7 +254,7 @@
       ],
       "importance": 2,
       "published_at": "2026-05-26T10:31:00Z",
-      "fetched_at": "2026-05-27T05:02:46.603633Z",
+      "fetched_at": "2026-05-27T06:03:10.642170Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -344,10 +263,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_008",
+      "id": "item_2026-05-27_007",
       "title_original": "Back Button Hijack Watch – How 25 publishers that were ‘back button hijacking’ responded after Google announced a new spam policy",
-      "title_it": "Monitoraggio dell'hijacking del pulsante indietro: come hanno risposto 25 publisher dopo l'annuncio di Google sulla nuova policy antispam",
-      "summary_it": "Glenn Gabe analizza come 25 publisher hanno modificato le loro pratiche di \"back button hijacking\" dopo l'annuncio di Google di una nuova policy antispam. Google ha dato tempo fino al 15 giugno 2026 per adeguarsi, pena sanzioni manuali o declassamenti algoritmici. L'articolo offre un'analisi delle reazioni e dei cambiamenti implementati dai siti web coinvolti.",
+      "title_it": "Monitoraggio dell'hijacking del pulsante indietro: risposta di 25 publisher dopo l'annuncio della nuova policy antispam di Google",
+      "summary_it": "Glenn Gabe analizza come 25 publisher hanno reagito alla nuova policy antispam di Google riguardante l'hijacking del pulsante \"indietro\". Google ha dato tempo fino al 15 giugno 2026 per adeguarsi, pena sanzioni manuali o declassamenti algoritmici. L'articolo monitora i cambiamenti implementati dai siti web precedentemente identificati come responsabili di questa pratica.",
       "url": "https://www.gsqi.com/marketing-blog/back-button-hijack-watch",
       "source": {
         "id": "glenn_gabe_hifpm",
@@ -370,7 +289,7 @@
       ],
       "importance": 4,
       "published_at": "2026-05-26T10:32:32Z",
-      "fetched_at": "2026-05-27T05:02:48.570333Z",
+      "fetched_at": "2026-05-27T06:03:12.126168Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -379,10 +298,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_009",
+      "id": "item_2026-05-27_008",
       "title_original": "Google Shopping Ads In AI Mode Tries New Styles?",
       "title_it": "Google Shopping Ads in Modalità AI testa nuovi stili?",
-      "summary_it": "Google sta sperimentando nuovi formati per gli annunci Shopping in modalità AI, tra cui card con logo, nome del negozio e prezzo. Inoltre, si segnala la possibile integrazione di annunci in modalità AI direttamente nei risultati organici, una pratica già testata in passato con il dynamic ad placement.",
+      "summary_it": "Google sta sperimentando nuovi formati per gli annunci Shopping in modalità AI, tra cui card con logo, nome del negozio e prezzo. Inoltre, si segnala la possibile integrazione di annunci in modalità AI direttamente nei risultati organici, una pratica già esistente con il dynamic ad placement.",
       "url": "https://www.seroundtable.com/google-shopping-ads-in-ai-mode-styles-41381.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -404,7 +323,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-26T10:41:00Z",
-      "fetched_at": "2026-05-27T05:02:50.275650Z",
+      "fetched_at": "2026-05-27T06:03:13.333135Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -413,10 +332,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_010",
+      "id": "item_2026-05-27_009",
       "title_original": "EU May Fine Google Triple Million Euros Over Favoring Itself In Search Results",
       "title_it": "L'UE potrebbe multare Google per centinaia di milioni di euro per favoritismi nei risultati di ricerca",
-      "summary_it": "L'Unione Europea sta valutando una multa significativa per Google, potenzialmente nell'ordine delle centinaia di milioni di euro, a causa di presunte violazioni del Digital Markets Act (DMA). L'indagine riguarda il presunto favoritismo di Google verso i propri servizi nei risultati di ricerca. La decisione dovrebbe essere annunciata all'inizio dell'estate.",
+      "summary_it": "L'Unione Europea starebbe pianificando una multa di centinaia di milioni di euro per Google, a causa di presunte violazioni del Digital Markets Act (DMA). L'indagine riguarda il presunto favoritismo di Google verso i propri servizi nei risultati di ricerca. La decisione dovrebbe essere annunciata all'inizio dell'estate.",
       "url": "https://www.seroundtable.com/eu-fine-google-triple-million-euros-41382.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -435,11 +354,11 @@
         "european_union",
         "digital_markets_act",
         "antitrust",
-        "google_search"
+        "search_result"
       ],
       "importance": 4,
       "published_at": "2026-05-26T10:51:00Z",
-      "fetched_at": "2026-05-27T05:02:51.926594Z",
+      "fetched_at": "2026-05-27T06:03:14.755754Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -448,10 +367,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_011",
+      "id": "item_2026-05-27_010",
       "title_original": "Daily Search Forum Recap: May 26, 2026",
       "title_it": "Aggiornamenti Quotidiani dai Forum di Ricerca: 26 Maggio 2026",
-      "summary_it": "L'Unione Europea potrebbe infliggere a Google una multa di centinaia di milioni di euro per aver favorito i propri servizi nei risultati di ricerca. Sono stati rilasciati nuovi formati di annunci Shopping in modalità AI e Google sta testando l'espansione delle unità pubblicitarie Shopping. Google Merchant Center introduce attributi conversazionali e Google Business Profile mostra ora il numero di visualizzazioni di foto e video.",
+      "summary_it": "L'UE potrebbe infliggere a Google una multa di centinaia di milioni di euro per aver favorito i propri servizi nei risultati di ricerca. Sono stati rilasciati nuovi formati di annunci Shopping in modalità AI e Google sta testando l'espansione delle unità pubblicitarie Shopping. Google Merchant Center introduce attributi conversazionali e Google Business Profiles mostra il numero di visualizzazioni di foto e video.",
       "url": "https://www.seroundtable.com/recap-05-26-2026-41384.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -468,14 +387,13 @@
       "category": "industry_news",
       "tags": [
         "google",
-        "shopping_ad",
-        "ai",
         "european_union",
+        "shopping_ad",
         "google_business_profile"
       ],
       "importance": 3,
       "published_at": "2026-05-26T13:00:00Z",
-      "fetched_at": "2026-05-27T05:02:53.630928Z",
+      "fetched_at": "2026-05-27T06:03:16.365415Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -484,10 +402,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_012",
+      "id": "item_2026-05-27_011",
       "title_original": "Machine Media: The Death of the Open Web",
-      "title_it": "La fine del web aperto a causa dei \"Machine Media\"",
-      "summary_it": "Secondo un articolo di iPullRank, il traffico dei bot AI sta superando la crescita del traffico umano, suggerendo un cambiamento fondamentale nel modo in cui i contenuti vengono scoperti e consumati. I dati di Cloudflare indicano una crescita esponenziale del traffico bot e una diminuzione del traffico di referral da Google per gli editori. Questo cambiamento potrebbe richiedere una rivalutazione delle strategie SEO tradizionali.",
+      "title_it": "La fine del web aperto e l'avvento dei \"machine media\"",
+      "summary_it": "Secondo un articolo di iPullRank, il traffico dei bot AI sta superando la crescita del traffico umano, indicando un cambiamento fondamentale nel panorama del web. I dati mostrano una crescita significativa del traffico bot e una diminuzione del traffico di referral da Google verso i publisher. L'articolo suggerisce che il modello basato sulla visita umana ai siti web è in declino.",
       "url": "https://ipullrank.com/machine-media",
       "source": {
         "id": "ipullrank_blog",
@@ -505,12 +423,12 @@
       "tags": [
         "ai_bot",
         "traffic_decline",
-        "future_of_seo",
-        "machine_learning"
+        "machine_media",
+        "open_web"
       ],
       "importance": 4,
       "published_at": "2026-05-26T13:49:32Z",
-      "fetched_at": "2026-05-27T05:02:55.272527Z",
+      "fetched_at": "2026-05-27T06:03:17.917897Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -519,10 +437,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_013",
+      "id": "item_2026-05-27_012",
       "title_original": "How To: Optimize Your Small Business For AI-Powered Search via @sejournal, @lorenbaker",
       "title_it": "Ottimizzazione per la ricerca potenziata dall'AI per le piccole imprese: strategie",
-      "summary_it": "Search Engine Journal ha pubblicato una guida sull'ottimizzazione per la ricerca basata sull'intelligenza artificiale, focalizzandosi sulle piccole imprese. L'articolo fornisce strategie per migliorare la visibilità online in questo contesto in evoluzione. Non vengono specificati dettagli tecnici o tattiche avanzate.",
+      "summary_it": "Search Engine Journal offre strategie per ottimizzare la presenza online delle piccole imprese in vista della crescente importanza della ricerca basata sull'intelligenza artificiale. L'articolo fornisce indicazioni pratiche per migliorare la visibilità nei risultati di ricerca AI. Non vengono specificati dettagli tecnici o tattiche particolarmente innovative.",
       "url": "https://www.searchenginejournal.com/how-to-optimize-your-small-business-for-ai-powered-search-recap/575895",
       "source": {
         "id": "search_engine_journal",
@@ -544,7 +462,7 @@
       ],
       "importance": 3,
       "published_at": "2026-05-26T18:19:51Z",
-      "fetched_at": "2026-05-27T05:02:56.744018Z",
+      "fetched_at": "2026-05-27T06:03:19.219717Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -553,10 +471,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_014",
+      "id": "item_2026-05-27_013",
       "title_original": "Google Is Retiring Standalone Display Campaigns In Favor Of Demand Gen via @sejournal, @brookeosmundson",
       "title_it": "Google abbandona le campagne display standalone a favore di Demand Gen",
-      "summary_it": "Google sta integrando le campagne Display in Demand Gen, modificando la gestione dell'inventario GDN, le esclusioni, i report e i controlli delle campagne all'interno di Google Ads. Questa transizione impatterà il modo in cui gli inserzionisti gestiscono le proprie campagne display.",
+      "summary_it": "Google sta integrando le campagne Display in Demand Gen, modificando la gestione dell'inventario GDN, le esclusioni, i report e i controlli delle campagne all'interno di Google Ads. Questa transizione impatterà direttamente sulla gestione delle campagne pubblicitarie display.",
       "url": "https://www.searchenginejournal.com/google-is-retiring-standalone-display-campaigns-in-favor-of-demand-gen/575889",
       "source": {
         "id": "search_engine_journal",
@@ -573,13 +491,13 @@
       "category": "industry_news",
       "tags": [
         "google_ad",
-        "display_ad",
+        "display_advertising",
         "demand_gen",
-        "advertising"
+        "gdn"
       ],
       "importance": 3,
       "published_at": "2026-05-26T18:20:21Z",
-      "fetched_at": "2026-05-27T05:02:57.935502Z",
+      "fetched_at": "2026-05-27T06:03:20.362252Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -588,10 +506,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_015",
+      "id": "item_2026-05-27_014",
       "title_original": "Google CEO On AI Overviews: ‘More Opinionated Than It Should Be’ via @sejournal, @MattGSouthern",
-      "title_it": "Il CEO di Google ammette: le AI Overview sono troppo orientate",
-      "summary_it": "Sundar Pichai ha riconosciuto che le AI Overview di Google mostrano un'eccessiva opinione. Durante una dimostrazione live, ha commentato la necessità di migliorare la neutralità delle risposte generate dall'AI. La discussione ha toccato anche l'impatto sui click di rimbalzo e sul traffico dei publisher.",
+      "title_it": "Il CEO di Google ammette che le AI Overview sono troppo orientate",
+      "summary_it": "Sundar Pichai ha riconosciuto che le AI Overview di Google tendono ad esprimere opinioni in modo eccessivo. Durante una dimostrazione live, ha commentato che i risultati generati dall'AI mostravano un'eccessiva propensione a esprimere giudizi. La discussione ha toccato anche l'impatto sui click di rimbalzo e sul traffico degli editori.",
       "url": "https://www.searchenginejournal.com/google-ceo-on-ai-overviews-more-opinionated-than-it-should-be/575902",
       "source": {
         "id": "search_engine_journal",
@@ -612,9 +530,9 @@
         "sundar_pichai",
         "llm"
       ],
-      "importance": 4,
+      "importance": 3,
       "published_at": "2026-05-26T18:32:30Z",
-      "fetched_at": "2026-05-27T05:02:59.534967Z",
+      "fetched_at": "2026-05-27T06:03:21.924987Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -623,10 +541,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_016",
+      "id": "item_2026-05-27_015",
       "title_original": "Gmail Content Linked To AI Mode Brand Visibility Lift via @sejournal, @MattGSouthern",
-      "title_it": "Contenuti di Gmail collegati a un aumento della visibilità del brand nella modalità AI",
-      "summary_it": "Un test di iPullRank ha analizzato i segnali provenienti da Gmail e Google Foto in account con la modalità AI attiva. I risultati indicano che Gmail ha mostrato l'incremento più significativo nella visibilità del brand. Questo suggerisce un potenziale impatto dei dati di Gmail sull'AI di Google.",
+      "title_it": "Contenuti di Gmail collegati all'aumento della visibilità del brand in AI Mode",
+      "summary_it": "Un test di iPullRank ha valutato l'impatto dei segnali provenienti da Gmail e Google Foto sugli account \"Personal Intelligence\" che hanno attivato la modalità AI. I risultati indicano che Gmail ha mostrato il maggiore incremento nella visibilità del brand. Questo suggerisce una potenziale correlazione tra i contenuti di Gmail e le prestazioni in AI Mode.",
       "url": "https://www.searchenginejournal.com/gmail-content-linked-to-ai-mode-brand-visibility-lift/575917",
       "source": {
         "id": "search_engine_journal",
@@ -642,14 +560,14 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "gmail",
         "ai_mode",
+        "gmail",
         "brand_visibility",
         "personal_intelligence"
       ],
       "importance": 3,
       "published_at": "2026-05-26T22:55:58Z",
-      "fetched_at": "2026-05-27T05:03:01.008416Z",
+      "fetched_at": "2026-05-27T06:03:23.336600Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -661,87 +579,87 @@
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-27T05:01:44.993902Z",
+      "last_checked": "2026-05-27T06:01:46.456828Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-27T05:01:45.683269Z",
+      "last_checked": "2026-05-27T06:01:46.730922Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-27T05:01:46.817994Z",
+      "last_checked": "2026-05-27T06:01:48.577223Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-27T05:02:03.376485Z",
+      "last_checked": "2026-05-27T06:02:16.395000Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-27T05:02:04.040103Z",
+      "last_checked": "2026-05-27T06:02:16.667596Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-27T05:02:05.656845Z",
+      "last_checked": "2026-05-27T06:02:18.109234Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-27T05:02:07.457018Z",
+      "last_checked": "2026-05-27T06:02:19.818905Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-27T05:02:08.646014Z",
+      "last_checked": "2026-05-27T06:02:20.816398Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-27T05:02:08.715868Z",
+      "last_checked": "2026-05-27T06:02:20.843292Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-27T05:02:09.190092Z",
+      "last_checked": "2026-05-27T06:02:24.353301Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-27T05:02:09.848842Z",
+      "last_checked": "2026-05-27T06:02:25.020264Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-27T05:02:11.422407Z",
+      "last_checked": "2026-05-27T06:02:26.612874Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-27T05:02:13.290632Z",
+      "last_checked": "2026-05-27T06:02:28.195151Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-27T05:02:14.299892Z",
+      "last_checked": "2026-05-27T06:02:29.117741Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-27T05:02:16.542819Z",
+      "last_checked": "2026-05-27T06:02:31.302952Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-27T05:02:18.320237Z",
+      "last_checked": "2026-05-27T06:02:33.397896Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-27T05:02:35.048353Z",
+      "last_checked": "2026-05-27T06:03:01.190562Z",
       "changed": false
     }
   ],
