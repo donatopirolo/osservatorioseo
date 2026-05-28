@@ -1,63 +1,101 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-27T06:01:39.953817Z",
-  "generated_at_local": "2026-05-27T08:01:39.953817+02:00",
+  "generated_at": "2026-05-28T05:01:44.464176Z",
+  "generated_at_local": "2026-05-28T07:01:44.464176+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-27-0801",
+  "run_id": "2026-05-28-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2010,
-    "items_after_dedup": 15,
+    "items_collected": 2015,
+    "items_after_dedup": 14,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.002,
-    "summarize_attempted": 15,
+    "ai_cost_eur": 0.0017,
+    "summarize_attempted": 14,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-27_007",
-    "item_2026-05-27_009",
-    "item_2026-05-27_002",
-    "item_2026-05-27_011",
-    "item_2026-05-27_003",
-    "item_2026-05-27_004",
-    "item_2026-05-27_008",
-    "item_2026-05-27_010",
-    "item_2026-05-27_001",
-    "item_2026-05-27_005"
+    "item_2026-05-28_010",
+    "item_2026-05-28_008",
+    "item_2026-05-28_009",
+    "item_2026-05-28_001",
+    "item_2026-05-28_005",
+    "item_2026-05-28_006",
+    "item_2026-05-28_007",
+    "item_2026-05-28_012",
+    "item_2026-05-28_002",
+    "item_2026-05-28_003"
   ],
   "categories": {
+    "ai_overviews_llm_seo": [
+      "item_2026-05-28_010",
+      "item_2026-05-28_006",
+      "item_2026-05-28_002",
+      "item_2026-05-28_014"
+    ],
     "google_updates": [
-      "item_2026-05-27_007"
+      "item_2026-05-28_008",
+      "item_2026-05-28_009"
+    ],
+    "ai_models": [
+      "item_2026-05-28_001",
+      "item_2026-05-28_005"
     ],
     "industry_news": [
-      "item_2026-05-27_009",
-      "item_2026-05-27_011",
-      "item_2026-05-27_003",
-      "item_2026-05-27_010",
-      "item_2026-05-27_013",
-      "item_2026-05-27_006"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-05-27_002",
-      "item_2026-05-27_004",
-      "item_2026-05-27_008",
-      "item_2026-05-27_001",
-      "item_2026-05-27_012",
-      "item_2026-05-27_014",
-      "item_2026-05-27_015"
+      "item_2026-05-28_007",
+      "item_2026-05-28_012",
+      "item_2026-05-28_011",
+      "item_2026-05-28_013"
     ],
     "technical_seo": [
-      "item_2026-05-27_005"
+      "item_2026-05-28_003"
+    ],
+    "content_eeat": [
+      "item_2026-05-28_004"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-27_001",
-      "title_original": "Modern Local SEO & AI Visibility: How To Get Clients Into AI Results via @sejournal, @hethr_campbell",
-      "title_it": "SEO Locale Moderno e Visibilità AI: Come Ottenere Clienti nei Risultati AI",
-      "summary_it": "L'articolo esplora le strategie per migliorare la visibilità delle attività locali nei risultati generati dall'intelligenza artificiale, sottolineando l'importanza della ricerca di parole chiave efficace. Si concentra sull'ottimizzazione SEO locale per sfruttare le raccomandazioni AI. L'articolo è un riepilogo di un intervento di Heather Campbell.",
-      "url": "https://www.searchenginejournal.com/modern-local-seo-ai-visibility-how-to-get-clients-into-ai-results-recap/575732",
+      "id": "item_2026-05-28_001",
+      "title_original": "Building self-improving tax agents with Codex",
+      "title_it": "Sviluppo di agenti fiscali auto-miglioranti con Codex",
+      "summary_it": "OpenAI, Thrive e Crete hanno collaborato per creare un agente fiscale automatizzato basato su Codex. L'obiettivo è automatizzare la compilazione delle dichiarazioni, migliorare la precisione e velocizzare i flussi di lavoro nel settore fiscale. Il sistema è progettato per auto-migliorarsi nel tempo.",
+      "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "codex",
+        "tax_automation",
+        "ai_agent"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-27T06:00:00Z",
+      "fetched_at": "2026-05-28T05:03:07.650371Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:3c966df289aa312c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-28_002",
+      "title_original": "Why LLMs Cite Reddit Instead Of Your Brand: A Practical AI Visibility Audit [Webinar] via @sejournal, @lorenbaker",
+      "title_it": "Webinar: Come migliorare la visibilità del brand nell'AI, evitando che i modelli linguistici citino Reddit",
+      "summary_it": "Search Engine Journal propone un webinar sull'importanza dei segnali provenienti dalle community online, in particolare Reddit, per migliorare la visibilità di un brand nei risultati generati dall'intelligenza artificiale. L'obiettivo è fornire strategie pratiche per ottimizzare la presenza del brand e influenzare le citazioni dei modelli linguistici.",
+      "url": "https://www.searchenginejournal.com/why-llms-cite-reddit-instead-of-your-brand-a-practical-ai-visibility-audit-webinar/575727",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -72,132 +110,27 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "local_seo",
-        "artificial_intelligence",
-        "keyword_research",
-        "ai_visibility"
+        "llm",
+        "ai_visibility",
+        "reddit",
+        "brand_reputation"
       ],
       "importance": 3,
-      "published_at": "2026-05-26T06:45:18Z",
-      "fetched_at": "2026-05-27T06:03:03.518182Z",
+      "published_at": "2026-05-27T06:45:29Z",
+      "fetched_at": "2026-05-28T05:03:09.374399Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:66b4b796ddc1d9cc",
+      "raw_hash": "sha256:2b9317c8de52d649",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_002",
-      "title_original": "846,000 Google Searches Reveal How AI Overviews Are Changing User Behavior via @sejournal, @ericvanbuskirk",
-      "title_it": "Analisi di 846.000 ricerche Google rivela cambiamenti nel comportamento degli utenti con le AI Overview",
-      "summary_it": "Uno studio di Search Engine Journal analizza quasi un milione di sessioni di ricerca Google, evidenziando come le AI Overview influenzino il comportamento degli utenti. In particolare, si osserva un aumento significativo dello scrolling verso l'alto dopo la visualizzazione delle AI Overview, suggerendo una rivalutazione dei risultati di ricerca organici. Questo dato impatta sulla strategia di ottimizzazione dei risultati di ricerca.",
-      "url": "https://www.searchenginejournal.com/google-search-sessions-show-how-users-pause-scroll-reconsider-before-clicking/575243",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_overviews",
-        "user_behavior",
-        "search_session",
-        "google_search"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-26T08:00:18Z",
-      "fetched_at": "2026-05-27T06:03:04.993561Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:890a7fc7e596ecbf",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_003",
-      "title_original": "Google Business Profiles Photos / Videos Add View Counts",
-      "title_it": "Google Business Profile mostra il numero di visualizzazioni di foto e video",
-      "summary_it": "Google ha iniziato a mostrare il numero di visualizzazioni per foto e video all'interno delle sezioni dedicate nei Google Business Profile. Questa nuova metrica permette ai proprietari delle attività di valutare la popolarità dei contenuti multimediali caricati. La funzionalità sembra essere in fase di rollout e non è ancora visibile a tutti.",
-      "url": "https://www.seroundtable.com/google-business-profiles-photos-videos-view-counts-41375.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_business_profile",
-        "local_seo",
-        "google_map",
-        "video_marketing"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-26T10:11:00Z",
-      "fetched_at": "2026-05-27T06:03:06.384339Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:eeb0ddf897cdddfd",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_004",
-      "title_original": "Google Merchant Center Conversational Attributes For AI-Driven Surfaces",
-      "title_it": "Google Merchant Center introduce attributi conversazionali per superfici basate su AI",
-      "summary_it": "Google ha rilasciato nuovi attributi conversazionali in Merchant Center. Questi attributi opzionali mirano a migliorare la comprensione dei prodotti da parte dei sistemi AI e degli agenti conversazionali, consentendo risposte più pertinenti nelle ricerche e su piattaforme come AI Mode.",
-      "url": "https://www.seroundtable.com/google-merchant-center-conversational-attributes-41370.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_merchant_center",
-        "conversational_ai",
-        "product_feed",
-        "ai_search"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-26T10:21:00Z",
-      "fetched_at": "2026-05-27T06:03:07.697942Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:99514d13bbd55ecd",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_005",
-      "title_original": "Machine-First Architecture: How To Build Websites Machines Can Identify, Read, Cite & Use via @sejournal, @slobodanmanic",
-      "title_it": "Architettura Machine-First: Come costruire siti web che le macchine possono identificare, leggere, citare e utilizzare",
-      "summary_it": "L'articolo esplora il concetto di architettura \"machine-first\", suggerendo di progettare siti web pensando prima alle esigenze delle macchine (crawler, AI) per migliorare l'esperienza di tutti gli utenti. Si concentra sulla creazione di una base solida per l'indicizzazione e la comprensione automatica dei contenuti. Non vengono forniti dettagli tecnici specifici.",
-      "url": "https://www.searchenginejournal.com/machine-first-architecture-how-to-build-websites-machines-can-identify-read-cite-use/574431",
+      "id": "item_2026-05-28_003",
+      "title_original": "Core Web Vitals: WordPress And Astro Versus Everyone Else via @sejournal, @martinibuster",
+      "title_it": "Confronto sulle Core Web Vitals: WordPress e Astro contro gli altri",
+      "summary_it": "Un recente confronto sulle performance web evidenzia un contrasto tra WordPress e Astro. WordPress, a causa della sua complessità, si distingue dalle piattaforme più leggere come Astro. L'analisi si concentra sull'impatto di queste piattaforme sulle Core Web Vitals.",
+      "url": "https://www.searchenginejournal.com/core-web-vitals-wordpress-and-astro/575818",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -212,27 +145,132 @@
       },
       "category": "technical_seo",
       "tags": [
-        "machine_learning",
-        "seo",
-        "technical_architecture",
-        "indexing"
+        "core_web_vital",
+        "wordpress",
+        "astro",
+        "website_performance"
       ],
       "importance": 3,
-      "published_at": "2026-05-26T10:30:51Z",
-      "fetched_at": "2026-05-27T06:03:09.185826Z",
+      "published_at": "2026-05-27T08:17:08Z",
+      "fetched_at": "2026-05-28T05:03:10.659304Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:690970b4e2f7cecb",
+      "raw_hash": "sha256:e6fd8e818cf444b6",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_006",
-      "title_original": "Google Tests Growing Expanding Shopping Ads",
-      "title_it": "Google testa annunci Shopping espandibili al passaggio del mouse",
-      "summary_it": "Google sta testando un nuovo formato per gli annunci Shopping che si ingrandiscono quando l'utente passa il cursore sopra l'annuncio. L'obiettivo è rendere gli annunci più visibili e attrattivi. Test simili erano stati effettuati in precedenza su altri formati pubblicitari di Google.",
-      "url": "https://www.seroundtable.com/google-growing-expanding-shopping-ads-41374.html",
+      "id": "item_2026-05-28_004",
+      "title_original": "Google’s Standards Haven’t Changed But AI Is Making That Harder To Ignore via @sejournal, @gregjarboe",
+      "title_it": "Gli standard di Google rimangono invariati, ma l'AI rende più difficile ignorarli",
+      "summary_it": "L'articolo evidenzia come, nonostante l'evoluzione dell'AI, gli standard di Google per la qualità dei contenuti rimangano focalizzati sull'importanza della responsabilità e della supervisione umana. L'automazione non può sostituire completamente l'elemento umano nella creazione di contenuti di valore.",
+      "url": "https://www.searchenginejournal.com/googles-standards-havent-changed-but-ai-is-making-that-harder-to-ignore/575429",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "google_guideline",
+        "ai_content",
+        "content_quality",
+        "human_oversight"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-27T08:30:43Z",
+      "fetched_at": "2026-05-28T05:03:11.924616Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:cea4de7c0df45126",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-28_005",
+      "title_original": "Cisco and OpenAI redefine enterprise engineering with Codex",
+      "title_it": "Cisco e OpenAI ridefiniscono l'ingegneria aziendale con Codex",
+      "summary_it": "Cisco sta collaborando con OpenAI per utilizzare Codex nell'ingegneria aziendale. L'obiettivo è scalare lo sviluppo nativo dell'intelligenza artificiale, accelerare la difesa basata su AI e automatizzare la correzione dei difetti. Questa partnership mira a migliorare l'efficienza e l'innovazione nell'ambito dell'ingegneria di Cisco.",
+      "url": "https://openai.com/index/cisco",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "cisco",
+        "codex",
+        "enterprise_engineering"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-27T10:00:00Z",
+      "fetched_at": "2026-05-28T05:03:13.348829Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:9f3d1265e767053e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-28_006",
+      "title_original": "Similarweb: ChatGPT Shows More Links Leading To 150% Increase In Referrals",
+      "title_it": "Similarweb: ChatGPT mostra più link e aumenta il traffico referral del 150%",
+      "summary_it": "Secondo dati di Similarweb, l'inserimento di link più evidenti da parte di ChatGPT nelle risposte ha portato a un incremento del 150% nel traffico referral verso i siti web. Si registra anche un aumento delle pageviews per visita (+24%) e del tempo speso sul sito (+11%). Circa il 60% di questo traffico atterra ora sulle homepage dei brand.",
+      "url": "https://www.seroundtable.com/chatgpt-links-up-referrals-41383.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "chatgpt",
+        "referral_traffic",
+        "similarweb",
+        "ai_link"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-27T10:11:00Z",
+      "fetched_at": "2026-05-28T05:03:14.782663Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:0bf6c54f47f86691",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-28_007",
+      "title_original": "Google Ads Real-Time Policy Reviews During Ad Creation",
+      "title_it": "Google Ads introduce revisioni delle policy in tempo reale durante la creazione degli annunci",
+      "summary_it": "Google Ads ha introdotto le revisioni delle policy in tempo reale durante la creazione degli annunci, partendo dagli annunci di ricerca adattabili. Questa funzionalità fornisce feedback immediato sui problemi editoriali e di policy, accelerando l'approvazione degli annunci conformi. L'estensione a Performance Max e Demand Gen è prevista per la seconda metà del 2026.",
+      "url": "https://www.seroundtable.com/google-ads-real-time-policy-reviews-41393.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -247,34 +285,34 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_shopping",
-        "advertising",
-        "user_experience",
-        "ad_testing"
+        "google_ad",
+        "policy_review",
+        "real_time",
+        "ads_editor"
       ],
-      "importance": 2,
-      "published_at": "2026-05-26T10:31:00Z",
-      "fetched_at": "2026-05-27T06:03:10.642170Z",
+      "importance": 3,
+      "published_at": "2026-05-27T10:21:00Z",
+      "fetched_at": "2026-05-28T05:03:16.426743Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:ad96ea15c305e50e",
+      "raw_hash": "sha256:fef1ad1b6b6e27be",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_007",
-      "title_original": "Back Button Hijack Watch – How 25 publishers that were ‘back button hijacking’ responded after Google announced a new spam policy",
-      "title_it": "Monitoraggio dell'hijacking del pulsante indietro: risposta di 25 publisher dopo l'annuncio della nuova policy antispam di Google",
-      "summary_it": "Glenn Gabe analizza come 25 publisher hanno reagito alla nuova policy antispam di Google riguardante l'hijacking del pulsante \"indietro\". Google ha dato tempo fino al 15 giugno 2026 per adeguarsi, pena sanzioni manuali o declassamenti algoritmici. L'articolo monitora i cambiamenti implementati dai siti web precedentemente identificati come responsabili di questa pratica.",
-      "url": "https://www.gsqi.com/marketing-blog/back-button-hijack-watch",
+      "id": "item_2026-05-28_008",
+      "title_original": "Google Discover Report Bug Cause Decrease In Clicks/Impressions May 21",
+      "title_it": "Bug nel report Discover di Google: calo di click e impression il 21 maggio",
+      "summary_it": "Google ha confermato un bug nel report delle performance di Discover in Search Console, riscontrato il 21 maggio. Questo errore di registrazione dei dati ha causato una diminuzione dei click e delle impression riportate. Il problema riguarda solo la registrazione dei dati, senza impatto sulle performance reali del sito su Discover.",
+      "url": "https://www.seroundtable.com/google-discover-report-bug-41390.html",
       "source": {
-        "id": "glenn_gabe_hifpm",
-        "name": "Glenn Gabe — HIFPM",
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
         "authority": 9,
-        "type": "independent",
+        "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.gsqi.com/marketing-blog/feed/",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
         "category_hint": "google_updates",
@@ -282,27 +320,62 @@
       },
       "category": "google_updates",
       "tags": [
-        "spam_policy",
-        "back_button_hijacking",
-        "manual_action",
-        "algorithm_update"
+        "google_discover",
+        "search_console",
+        "data_anomaly",
+        "bug"
       ],
-      "importance": 4,
-      "published_at": "2026-05-26T10:32:32Z",
-      "fetched_at": "2026-05-27T06:03:12.126168Z",
+      "importance": 3,
+      "published_at": "2026-05-27T10:31:00Z",
+      "fetched_at": "2026-05-28T05:03:18.036549Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:2d72254cf7fe4ea7",
+      "raw_hash": "sha256:93d90113b8b4fff8",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_008",
-      "title_original": "Google Shopping Ads In AI Mode Tries New Styles?",
-      "title_it": "Google Shopping Ads in Modalità AI testa nuovi stili?",
-      "summary_it": "Google sta sperimentando nuovi formati per gli annunci Shopping in modalità AI, tra cui card con logo, nome del negozio e prezzo. Inoltre, si segnala la possibile integrazione di annunci in modalità AI direttamente nei risultati organici, una pratica già esistente con il dynamic ad placement.",
-      "url": "https://www.seroundtable.com/google-shopping-ads-in-ai-mode-styles-41381.html",
+      "id": "item_2026-05-28_009",
+      "title_original": "Google Local Results Tests Check Real-Time Stock",
+      "title_it": "Google testa la verifica in tempo reale della disponibilità di magazzino nei risultati locali",
+      "summary_it": "Google sta testando una funzionalità che permette agli utenti di verificare la disponibilità in tempo reale dei prodotti direttamente dal local pack nei risultati di ricerca. Un nuovo pulsante \"Verifica disponibilità in tempo reale\" è in fase di test. La funzionalità sembra estendere le opzioni già esistenti per tracciare inventario e prezzi.",
+      "url": "https://www.seroundtable.com/google-local-check-real-time-stock-41392.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "local_seo",
+        "inventory",
+        "google_search",
+        "local_pack"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-27T10:41:00Z",
+      "fetched_at": "2026-05-28T05:03:19.852319Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:bab728a61de01874",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-28_010",
+      "title_original": "Interviews Of Google's Sundar Pichai & Nick Fox",
+      "title_it": "Interviste a Sundar Pichai e Nick Fox di Google: focus sull'AI nella ricerca",
+      "summary_it": "Sono state pubblicate due interviste a figure chiave di Google, Sundar Pichai e Nick Fox, in cui si discute della direzione futura della Ricerca Google. L'enfasi è posta sull'integrazione dell'intelligenza artificiale per fornire risposte dirette, automatizzare task e offrire informazioni personalizzate. Le interviste suggeriscono un'evoluzione verso un motore di ricerca sempre più basato sull'AI.",
+      "url": "https://www.seroundtable.com/sundar-pichai-nick-fox-google-interview-41388.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -317,165 +390,28 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "google_shopping_ad",
-        "ai_mode",
-        "dynamic_ad_placement"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-26T10:41:00Z",
-      "fetched_at": "2026-05-27T06:03:13.333135Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:e20de7774c7b0cad",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_009",
-      "title_original": "EU May Fine Google Triple Million Euros Over Favoring Itself In Search Results",
-      "title_it": "L'UE potrebbe multare Google per centinaia di milioni di euro per favoritismi nei risultati di ricerca",
-      "summary_it": "L'Unione Europea starebbe pianificando una multa di centinaia di milioni di euro per Google, a causa di presunte violazioni del Digital Markets Act (DMA). L'indagine riguarda il presunto favoritismo di Google verso i propri servizi nei risultati di ricerca. La decisione dovrebbe essere annunciata all'inizio dell'estate.",
-      "url": "https://www.seroundtable.com/eu-fine-google-triple-million-euros-41382.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "european_union",
-        "digital_markets_act",
-        "antitrust",
-        "search_result"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-26T10:51:00Z",
-      "fetched_at": "2026-05-27T06:03:14.755754Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:4e7e6213af082008",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_010",
-      "title_original": "Daily Search Forum Recap: May 26, 2026",
-      "title_it": "Aggiornamenti Quotidiani dai Forum di Ricerca: 26 Maggio 2026",
-      "summary_it": "L'UE potrebbe infliggere a Google una multa di centinaia di milioni di euro per aver favorito i propri servizi nei risultati di ricerca. Sono stati rilasciati nuovi formati di annunci Shopping in modalità AI e Google sta testando l'espansione delle unità pubblicitarie Shopping. Google Merchant Center introduce attributi conversazionali e Google Business Profiles mostra il numero di visualizzazioni di foto e video.",
-      "url": "https://www.seroundtable.com/recap-05-26-2026-41384.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google",
-        "european_union",
-        "shopping_ad",
-        "google_business_profile"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-26T13:00:00Z",
-      "fetched_at": "2026-05-27T06:03:16.365415Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:ca3bafad7e48b962",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_011",
-      "title_original": "Machine Media: The Death of the Open Web",
-      "title_it": "La fine del web aperto e l'avvento dei \"machine media\"",
-      "summary_it": "Secondo un articolo di iPullRank, il traffico dei bot AI sta superando la crescita del traffico umano, indicando un cambiamento fondamentale nel panorama del web. I dati mostrano una crescita significativa del traffico bot e una diminuzione del traffico di referral da Google verso i publisher. L'articolo suggerisce che il modello basato sulla visita umana ai siti web è in declino.",
-      "url": "https://ipullrank.com/machine-media",
-      "source": {
-        "id": "ipullrank_blog",
-        "name": "iPullRank Blog (Mike King)",
-        "authority": 8,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://ipullrank.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "ai_bot",
-        "traffic_decline",
-        "machine_media",
-        "open_web"
-      ],
-      "importance": 4,
-      "published_at": "2026-05-26T13:49:32Z",
-      "fetched_at": "2026-05-27T06:03:17.917897Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:f72cf2932dae1191",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_012",
-      "title_original": "How To: Optimize Your Small Business For AI-Powered Search via @sejournal, @lorenbaker",
-      "title_it": "Ottimizzazione per la ricerca potenziata dall'AI per le piccole imprese: strategie",
-      "summary_it": "Search Engine Journal offre strategie per ottimizzare la presenza online delle piccole imprese in vista della crescente importanza della ricerca basata sull'intelligenza artificiale. L'articolo fornisce indicazioni pratiche per migliorare la visibilità nei risultati di ricerca AI. Non vengono specificati dettagli tecnici o tattiche particolarmente innovative.",
-      "url": "https://www.searchenginejournal.com/how-to-optimize-your-small-business-for-ai-powered-search-recap/575895",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
+        "google_search",
+        "artificial_intelligence",
         "ai_search",
-        "small_business",
-        "seo_strategy"
+        "sundar_pichai",
+        "nick_fox"
       ],
-      "importance": 3,
-      "published_at": "2026-05-26T18:19:51Z",
-      "fetched_at": "2026-05-27T06:03:19.219717Z",
+      "importance": 4,
+      "published_at": "2026-05-27T10:51:00Z",
+      "fetched_at": "2026-05-28T05:03:21.234359Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:4013ec13ef366326",
+      "raw_hash": "sha256:8c5468968d7c4bc3",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_013",
-      "title_original": "Google Is Retiring Standalone Display Campaigns In Favor Of Demand Gen via @sejournal, @brookeosmundson",
-      "title_it": "Google abbandona le campagne display standalone a favore di Demand Gen",
-      "summary_it": "Google sta integrando le campagne Display in Demand Gen, modificando la gestione dell'inventario GDN, le esclusioni, i report e i controlli delle campagne all'interno di Google Ads. Questa transizione impatterà direttamente sulla gestione delle campagne pubblicitarie display.",
-      "url": "https://www.searchenginejournal.com/google-is-retiring-standalone-display-campaigns-in-favor-of-demand-gen/575889",
+      "id": "item_2026-05-28_011",
+      "title_original": "Why Enterprise SEO Recommendations Fail – It’s Psychological, Not Technical via @sejournal, @billhunt",
+      "title_it": "Il fallimento delle raccomandazioni SEO Enterprise: una questione psicologica, non tecnica",
+      "summary_it": "Un articolo di Search Engine Journal analizza le ragioni per cui le raccomandazioni SEO in ambito enterprise spesso non vengono implementate. L'articolo suggerisce che il problema principale non è di natura tecnica, ma psicologica, legata alla percezione del cambiamento all'interno delle organizzazioni.",
+      "url": "https://www.searchenginejournal.com/why-enterprise-seo-recommendations-fail-its-psychological-not-technical/574378",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -490,27 +426,97 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_ad",
-        "display_advertising",
-        "demand_gen",
-        "gdn"
+        "enterprise_seo",
+        "seo_strategy",
+        "organizational_psychology",
+        "change_management"
       ],
       "importance": 3,
-      "published_at": "2026-05-26T18:20:21Z",
-      "fetched_at": "2026-05-27T06:03:20.362252Z",
+      "published_at": "2026-05-27T12:00:23Z",
+      "fetched_at": "2026-05-28T05:03:22.411304Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:2ecbbb6b9634e90a",
+      "raw_hash": "sha256:823e1aa9ee298a0a",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-05-27_014",
-      "title_original": "Google CEO On AI Overviews: ‘More Opinionated Than It Should Be’ via @sejournal, @MattGSouthern",
-      "title_it": "Il CEO di Google ammette che le AI Overview sono troppo orientate",
-      "summary_it": "Sundar Pichai ha riconosciuto che le AI Overview di Google tendono ad esprimere opinioni in modo eccessivo. Durante una dimostrazione live, ha commentato che i risultati generati dall'AI mostravano un'eccessiva propensione a esprimere giudizi. La discussione ha toccato anche l'impatto sui click di rimbalzo e sul traffico degli editori.",
-      "url": "https://www.searchenginejournal.com/google-ceo-on-ai-overviews-more-opinionated-than-it-should-be/575902",
+      "id": "item_2026-05-28_012",
+      "title_original": "Daily Search Forum Recap: May 27, 2026",
+      "title_it": "Riassunto Quotidiano dei Forum di Ricerca: 27 Maggio 2026",
+      "summary_it": "Il riassunto include interviste a Sundar Pichai e Nick Fox sul futuro della ricerca Google, un bug nel report Discover di Search Console (dati mancanti del 21 maggio) e test di Google per mostrare la disponibilità in tempo reale dei prodotti nei risultati locali. Google Ads sta implementando revisioni delle policy in tempo reale durante la creazione degli annunci e Similarweb riporta un aumento del 150% dei referral da ChatGPT grazie all'inserimento di più link.",
+      "url": "https://www.seroundtable.com/recap-05-27-2026-41391.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_search_console",
+        "google_ad",
+        "chatgpt",
+        "google_local"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-27T13:00:00Z",
+      "fetched_at": "2026-05-28T05:03:24.000964Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:5360f40978aea19a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-28_013",
+      "title_original": "YouTube Now Auto-Detects AI Content, Labels It For Viewers via @sejournal, @MattGSouthern",
+      "title_it": "YouTube rileva automaticamente i contenuti AI e li etichetta per gli spettatori",
+      "summary_it": "YouTube sta implementando un sistema di rilevamento automatico per identificare contenuti fotorealistici generati tramite intelligenza artificiale che non sono stati dichiarati dai creator. L'etichetta di divulgazione AI sarà resa più visibile agli utenti. Questa novità mira a fornire maggiore trasparenza agli spettatori riguardo l'origine dei contenuti.",
+      "url": "https://www.searchenginejournal.com/youtube-now-auto-detects-ai-content-labels-it-for-viewers/576015",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "youtube",
+        "artificial_intelligence",
+        "ai_content",
+        "content_labeling"
+      ],
+      "importance": 3,
+      "published_at": "2026-05-27T17:08:07Z",
+      "fetched_at": "2026-05-28T05:03:25.452862Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:c3602f9e153eea98",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-05-28_014",
+      "title_original": "Google Preferred Sources Hit 345K, Expand Into AI Search via @sejournal, @MattGSouthern",
+      "title_it": "Google: 345.000 fonti preferite dagli utenti e integrazione nella Ricerca AI",
+      "summary_it": "Google ha annunciato che gli utenti hanno selezionato 345.000 \"Fonti Preferite\", che ora vengono mostrate nelle AI Overviews e nella Modalità AI. Questa espansione include anche nuovi caroselli di link. L'iniziativa mira a dare maggiore controllo agli utenti sulle fonti di informazione.",
+      "url": "https://www.searchenginejournal.com/google-preferred-sources-hit-345k-expand-into-ai-search/576032",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -526,140 +532,105 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "ai_overviews",
-        "google",
-        "sundar_pichai",
-        "llm"
+        "preferred_source",
+        "google_search",
+        "ai_search"
       ],
       "importance": 3,
-      "published_at": "2026-05-26T18:32:30Z",
-      "fetched_at": "2026-05-27T06:03:21.924987Z",
+      "published_at": "2026-05-27T20:40:28Z",
+      "fetched_at": "2026-05-28T05:03:26.878371Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:7b23bbbaf72ebcb6",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-05-27_015",
-      "title_original": "Gmail Content Linked To AI Mode Brand Visibility Lift via @sejournal, @MattGSouthern",
-      "title_it": "Contenuti di Gmail collegati all'aumento della visibilità del brand in AI Mode",
-      "summary_it": "Un test di iPullRank ha valutato l'impatto dei segnali provenienti da Gmail e Google Foto sugli account \"Personal Intelligence\" che hanno attivato la modalità AI. I risultati indicano che Gmail ha mostrato il maggiore incremento nella visibilità del brand. Questo suggerisce una potenziale correlazione tra i contenuti di Gmail e le prestazioni in AI Mode.",
-      "url": "https://www.searchenginejournal.com/gmail-content-linked-to-ai-mode-brand-visibility-lift/575917",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_mode",
-        "gmail",
-        "brand_visibility",
-        "personal_intelligence"
-      ],
-      "importance": 3,
-      "published_at": "2026-05-26T22:55:58Z",
-      "fetched_at": "2026-05-27T06:03:23.336600Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:7751ee61c5b6e703",
+      "raw_hash": "sha256:4e0c64cf9320844c",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-27T06:01:46.456828Z",
+      "last_checked": "2026-05-28T05:01:51.039690Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-27T06:01:46.730922Z",
+      "last_checked": "2026-05-28T05:01:51.450309Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-27T06:01:48.577223Z",
+      "last_checked": "2026-05-28T05:01:52.615289Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-27T06:02:16.395000Z",
+      "last_checked": "2026-05-28T05:02:21.329549Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-27T06:02:16.667596Z",
+      "last_checked": "2026-05-28T05:02:21.930891Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-27T06:02:18.109234Z",
+      "last_checked": "2026-05-28T05:02:23.010756Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-27T06:02:19.818905Z",
+      "last_checked": "2026-05-28T05:02:24.572575Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-27T06:02:20.816398Z",
+      "last_checked": "2026-05-28T05:02:25.796897Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-27T06:02:20.843292Z",
+      "last_checked": "2026-05-28T05:02:25.879841Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-27T06:02:24.353301Z",
+      "last_checked": "2026-05-28T05:02:29.715138Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-27T06:02:25.020264Z",
+      "last_checked": "2026-05-28T05:02:30.071369Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-27T06:02:26.612874Z",
+      "last_checked": "2026-05-28T05:02:31.378996Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-27T06:02:28.195151Z",
+      "last_checked": "2026-05-28T05:02:32.451172Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-27T06:02:29.117741Z",
+      "last_checked": "2026-05-28T05:02:34.626029Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-27T06:02:31.302952Z",
+      "last_checked": "2026-05-28T05:02:35.994996Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-27T06:02:33.397896Z",
+      "last_checked": "2026-05-28T05:02:37.388832Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-27T06:03:01.190562Z",
+      "last_checked": "2026-05-28T05:03:05.843398Z",
       "changed": false
     }
   ],
