@@ -1,34 +1,40 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-05-31T06:01:31.383484Z",
-  "generated_at_local": "2026-05-31T08:01:31.383484+02:00",
+  "generated_at": "2026-06-01T05:01:44.458816Z",
+  "generated_at_local": "2026-06-01T07:01:44.458816+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-05-31-0801",
+  "run_id": "2026-06-01-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2098,
-    "items_after_dedup": 1,
+    "items_after_dedup": 3,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0001,
-    "summarize_attempted": 1,
+    "ai_cost_eur": 0.0004,
+    "summarize_attempted": 3,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-05-31_001"
+    "item_2026-06-01_002",
+    "item_2026-06-01_003",
+    "item_2026-06-01_001"
   ],
   "categories": {
+    "google_updates": [
+      "item_2026-06-01_002"
+    ],
     "industry_news": [
-      "item_2026-05-31_001"
+      "item_2026-06-01_003",
+      "item_2026-06-01_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-05-31_001",
-      "title_original": "Google’s I/O Demos Reveal The New Business Visibility Problem via @sejournal, @MattGSouthern",
-      "title_it": "Le demo di Google I/O evidenziano un nuovo problema di visibilità per le aziende",
-      "summary_it": "Le dimostrazioni di Google I/O si sono spesso concluse con transazioni o prenotazioni, delineando chiaramente il percorso per i consumatori. Tuttavia, l'articolo sottolinea come la visibilità per le aziende non sia altrettanto chiara in questo nuovo scenario. Questo solleva interrogativi su come le aziende possono adattarsi per mantenere la propria visibilità.",
-      "url": "https://www.searchenginejournal.com/googles-i-o-demos-reveal-the-new-business-visibility-problem/576217",
+      "id": "item_2026-06-01_001",
+      "title_original": "White-Collar Will Be Fully Automated In 18 Months – So What Makes You Different? via @sejournal, @gregjarboe",
+      "title_it": "Automazione del lavoro d'ufficio: cosa ti rende diverso?",
+      "summary_it": "L'articolo di Search Engine Journal solleva interrogativi sull'impatto dell'automazione, guidata dall'AI, sui lavori d'ufficio nei prossimi 18 mesi. Si concentra sull'importanza di differenziarsi dalle capacità di un sistema automatizzato, ponendo l'accento su qualità difficili da definire.",
+      "url": "https://www.searchenginejournal.com/white-collar-will-be-fully-automated-in-18-months-so-what-makes-you-different/575072",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -43,106 +49,175 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_io",
-        "business_visibility",
-        "search_visibility",
-        "ai_search"
+        "ai",
+        "automation",
+        "future_of_work",
+        "content_strategy"
       ],
       "importance": 3,
-      "published_at": "2026-05-30T11:00:25Z",
-      "fetched_at": "2026-05-31T06:02:53.829939Z",
+      "published_at": "2026-05-31T08:30:29Z",
+      "fetched_at": "2026-06-01T05:03:09.243316Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.0-flash-001",
-      "raw_hash": "sha256:b7afca7fe54dc820",
+      "raw_hash": "sha256:932db85eb6df3f3a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-01_002",
+      "title_original": "Google May 2026 Core Update Hits Hard Saturday - May 30th",
+      "title_it": "L'aggiornamento principale di Google di maggio 2026 ha avuto un impatto significativo sabato 30 maggio",
+      "summary_it": "L'aggiornamento principale di Google di maggio 2026 sembra aver colpito duramente alcuni siti a partire da sabato 30 maggio. I tool di monitoraggio delle SERP mostrano un'elevata volatilità in quel giorno. Si prevede che il rollout dell'aggiornamento sarà completato a breve.",
+      "url": "https://www.seroundtable.com/google-may-core-update-hits-hard-41421.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "core_update",
+        "ranking_volatility",
+        "search_engine_ranking"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-31T11:18:00Z",
+      "fetched_at": "2026-06-01T05:03:10.670573Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:22459cd2e023c91e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-01_003",
+      "title_original": "Amazon Vs. Perplexity: The CFAA Case That Decides Whether AI Agents Can Visit Your Website via @sejournal, @slobodanmanic",
+      "title_it": "Amazon contro Perplexity: il caso CFAA che decide se gli agenti AI possono visitare il tuo sito web",
+      "summary_it": "Il caso legale tra Amazon e Perplexity solleva questioni cruciali sull'accesso dei crawler AI ai siti web e sulla loro autorizzazione. La decisione potrebbe avere implicazioni significative per il modo in cui i siti web gestiscono il traffico generato da agenti di intelligenza artificiale e per le strategie SEO. Il Computer Fraud and Abuse Act (CFAA) è al centro della disputa.",
+      "url": "https://www.searchenginejournal.com/amazon-vs-perplexity-the-cfaa-case-that-decides-whether-ai-agents-can-visit-your-website/575499",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ai_agent",
+        "crawler_access",
+        "legal_seo",
+        "cfaa"
+      ],
+      "importance": 4,
+      "published_at": "2026-05-31T23:56:10Z",
+      "fetched_at": "2026-06-01T05:03:12.097285Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.0-flash-001",
+      "raw_hash": "sha256:9c4f89ae649c605d",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-05-31T06:01:37.004249Z",
+      "last_checked": "2026-06-01T05:01:50.359376Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-05-31T06:01:37.283355Z",
+      "last_checked": "2026-06-01T05:01:50.658445Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-05-31T06:01:38.929908Z",
+      "last_checked": "2026-06-01T05:01:52.021280Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-05-31T06:02:07.182790Z",
+      "last_checked": "2026-06-01T05:02:22.193403Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-05-31T06:02:07.627780Z",
+      "last_checked": "2026-06-01T05:02:22.837853Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-05-31T06:02:09.088238Z",
+      "last_checked": "2026-06-01T05:02:24.361366Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-05-31T06:02:10.727841Z",
+      "last_checked": "2026-06-01T05:02:25.931860Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-05-31T06:02:11.884255Z",
+      "last_checked": "2026-06-01T05:02:27.094105Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-05-31T06:02:11.940216Z",
+      "last_checked": "2026-06-01T05:02:27.172656Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-05-31T06:02:15.084800Z",
+      "last_checked": "2026-06-01T05:02:27.438178Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-05-31T06:02:15.623297Z",
+      "last_checked": "2026-06-01T05:02:28.862908Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-05-31T06:02:16.859405Z",
+      "last_checked": "2026-06-01T05:02:30.524360Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-05-31T06:02:18.880033Z",
+      "last_checked": "2026-06-01T05:02:31.869971Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-05-31T06:02:20.052505Z",
+      "last_checked": "2026-06-01T05:02:33.808050Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-05-31T06:02:21.734689Z",
+      "last_checked": "2026-06-01T05:02:35.347172Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-05-31T06:02:22.928132Z",
+      "last_checked": "2026-06-01T05:02:37.163644Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-05-31T06:02:51.568707Z",
+      "last_checked": "2026-06-01T05:03:07.532993Z",
       "changed": false
     }
   ],
