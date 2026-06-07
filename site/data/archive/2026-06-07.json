@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-07T05:01:05.314255Z",
-  "generated_at_local": "2026-06-07T07:01:05.314255+02:00",
+  "generated_at": "2026-06-07T06:01:15.564396Z",
+  "generated_at_local": "2026-06-07T08:01:15.564396+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-07-0701",
+  "run_id": "2026-06-07-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2117,
     "items_after_dedup": 3,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0041,
+    "ai_cost_eur": 0.0042,
     "summarize_attempted": 3,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-07_001",
     "item_2026-06-07_002",
-    "item_2026-06-07_003"
+    "item_2026-06-07_003",
+    "item_2026-06-07_001"
   ],
   "categories": {
-    "industry_news": [
-      "item_2026-06-07_001"
-    ],
     "ai_overviews_llm_seo": [
       "item_2026-06-07_002",
       "item_2026-06-07_003"
+    ],
+    "industry_news": [
+      "item_2026-06-07_001"
     ]
   },
   "items": [
     {
       "id": "item_2026-06-07_001",
       "title_original": "Google’s Updated Guidance Urges FTC Complaints Against Shady SEOs via @sejournal, @martinibuster",
-      "title_it": "Google incoraggia reclami FTC contro gli SEO disonesti nella guida aggiornata",
-      "summary_it": "Google ha aggiornato la sua guida per l'assunzione di professionisti SEO, incoraggiando esplicitamente i reclami presso la FTC contro operatori non etici. La guida include avvertimenti specifici riguardanti servizi SEO basati su AI, tool fuorvianti e affermazioni ingannevoli.",
+      "title_it": "Google incoraggia reclami FTC contro gli SEO disonesti nella guida all'assunzione",
+      "summary_it": "Google ha aggiornato la sua guida per l'assunzione di professionisti SEO, includendo raccomandazioni esplicite di segnalare alla FTC i servizi SEO fraudolenti e le pratiche ingannevoli. L'aggiornamento avverte anche sui rischi legati ai servizi SEO basati su AI e agli strumenti che fanno promesse non verificabili.",
       "url": "https://www.searchenginejournal.com/googles-updated-guidance-urges-ftc-complaints-against-shady-seos/578151",
       "source": {
         "id": "search_engine_journal",
@@ -49,14 +49,14 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_guidance",
-        "ftc_complaint",
         "seo_hiring",
-        "shady_practice"
+        "ftc_compliance",
+        "shady_seo_practice",
+        "ai_seo_service"
       ],
-      "importance": 3,
+      "importance": 2,
       "published_at": "2026-06-06T06:18:58Z",
-      "fetched_at": "2026-06-07T05:02:36.842143Z",
+      "fetched_at": "2026-06-07T06:02:38.301458Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -68,7 +68,7 @@
       "id": "item_2026-06-07_002",
       "title_original": "Your Next AI Visitor Will Know Who Sent It via @sejournal, @slobodanmanic",
       "title_it": "Il prossimo visitatore AI saprà chi lo ha mandato",
-      "summary_it": "L'articolo affronta come i sistemi di blended retrieval stanno cambiando il valore del contenuto web per gli agenti AI. La questione centrale è se una pagina offre informazioni che l'AI non può già ricavare dai dati dell'utente, ridefinendo così la rilevanza SEO nel contesto degli agenti intelligenti.",
+      "summary_it": "L'articolo affronta come i sistemi di blended retrieval stanno cambiando il valore del contenuto web per gli agenti AI. La questione centrale è se una pagina offra informazioni che l'AI non può già ricavare dai dati dell'utente, ridefinendo così la rilevanza SEO nel contesto degli agenti intelligenti.",
       "url": "https://www.searchenginejournal.com/your-next-ai-visitor-will-know-who-sent-it/575489",
       "source": {
         "id": "search_engine_journal",
@@ -91,7 +91,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-06T11:00:26Z",
-      "fetched_at": "2026-06-07T05:02:39.181216Z",
+      "fetched_at": "2026-06-07T06:02:40.497221Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -102,8 +102,8 @@
     {
       "id": "item_2026-06-07_003",
       "title_original": "Google Gives Sites AI Search Opt-Out, But Not The Data To Use It via @sejournal, @MattGSouthern",
-      "title_it": "Google consente l'opt-out da AI Search, ma senza i dati per decidere consapevolmente",
-      "summary_it": "Google ha iniziato a permettere ai siti di escludersi da AI Search, ma i dati di click-through necessari per valutare l'impatto non sono ancora disponibili. I webmaster si trovano quindi a dover prendere decisioni senza informazioni concrete sul traffico generato dalle AI Overviews.",
+      "title_it": "Google consente l'esclusione dalle ricerche AI, ma senza i dati per decidere",
+      "summary_it": "Google ha iniziato a permettere ai siti di escludersi dalle ricerche AI, tuttavia i dati di click necessari per valutare l'impatto di questa decisione non sono ancora disponibili. I webmaster si trovano quindi nella posizione di dover scegliere senza informazioni concrete sul traffico generato dalle AI Overviews.",
       "url": "https://www.searchenginejournal.com/google-gives-sites-ai-search-opt-out-but-not-the-data-to-use-it/577978",
       "source": {
         "id": "search_engine_journal",
@@ -121,12 +121,12 @@
       "tags": [
         "ai_search_opt_out",
         "google_ai_overview",
-        "traffic_data",
-        "webmaster_tool"
+        "webmaster_tool",
+        "traffic_data"
       ],
       "importance": 3,
       "published_at": "2026-06-06T12:31:25Z",
-      "fetched_at": "2026-06-07T05:02:41.478189Z",
+      "fetched_at": "2026-06-07T06:02:42.833183Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -138,87 +138,87 @@
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-07T05:01:11.576801Z",
+      "last_checked": "2026-06-07T06:01:22.562905Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-07T05:01:11.819636Z",
+      "last_checked": "2026-06-07T06:01:22.819918Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-07T05:01:13.924407Z",
+      "last_checked": "2026-06-07T06:01:24.874467Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-07T05:01:44.234368Z",
+      "last_checked": "2026-06-07T06:01:52.583971Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-07T05:01:44.506549Z",
+      "last_checked": "2026-06-07T06:01:53.130805Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-07T05:01:46.931023Z",
+      "last_checked": "2026-06-07T06:01:54.332688Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-07T05:01:48.640554Z",
+      "last_checked": "2026-06-07T06:01:55.785257Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-07T05:01:49.582892Z",
+      "last_checked": "2026-06-07T06:01:57.492465Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-07T05:01:49.609781Z",
+      "last_checked": "2026-06-07T06:01:57.558918Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-07T05:01:56.072250Z",
+      "last_checked": "2026-06-07T06:02:00.161194Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-07T05:01:57.545742Z",
+      "last_checked": "2026-06-07T06:02:00.700553Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-07T05:01:58.396114Z",
+      "last_checked": "2026-06-07T06:02:02.498095Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-07T05:01:59.410093Z",
+      "last_checked": "2026-06-07T06:02:03.571865Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-07T05:02:00.532686Z",
+      "last_checked": "2026-06-07T06:02:04.990182Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-07T05:02:02.445703Z",
+      "last_checked": "2026-06-07T06:02:06.235197Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-07T05:02:04.274343Z",
+      "last_checked": "2026-06-07T06:02:07.655889Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-07T05:02:33.956127Z",
+      "last_checked": "2026-06-07T06:02:35.516951Z",
       "changed": false
     }
   ],
