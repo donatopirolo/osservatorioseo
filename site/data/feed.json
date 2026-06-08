@@ -1,40 +1,73 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-07T06:01:15.564396Z",
-  "generated_at_local": "2026-06-07T08:01:15.564396+02:00",
+  "generated_at": "2026-06-08T05:01:10.049153Z",
+  "generated_at_local": "2026-06-08T07:01:10.049153+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-07-0801",
+  "run_id": "2026-06-08-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2117,
-    "items_after_dedup": 3,
+    "items_after_dedup": 2,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0042,
-    "summarize_attempted": 3,
+    "ai_cost_eur": 0.0027,
+    "summarize_attempted": 2,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-07_002",
-    "item_2026-06-07_003",
-    "item_2026-06-07_001"
+    "item_2026-06-08_001",
+    "item_2026-06-08_002"
   ],
   "categories": {
-    "ai_overviews_llm_seo": [
-      "item_2026-06-07_002",
-      "item_2026-06-07_003"
+    "google_updates": [
+      "item_2026-06-08_001"
     ],
     "industry_news": [
-      "item_2026-06-07_001"
+      "item_2026-06-08_002"
     ]
   },
   "items": [
     {
-      "id": "item_2026-06-07_001",
-      "title_original": "Google’s Updated Guidance Urges FTC Complaints Against Shady SEOs via @sejournal, @martinibuster",
-      "title_it": "Google incoraggia reclami FTC contro gli SEO disonesti nella guida all'assunzione",
-      "summary_it": "Google ha aggiornato la sua guida per l'assunzione di professionisti SEO, includendo raccomandazioni esplicite di segnalare alla FTC i servizi SEO fraudolenti e le pratiche ingannevoli. L'aggiornamento avverte anche sui rischi legati ai servizi SEO basati su AI e agli strumenti che fanno promesse non verificabili.",
-      "url": "https://www.searchenginejournal.com/googles-updated-guidance-urges-ftc-complaints-against-shady-seos/578151",
+      "id": "item_2026-06-08_001",
+      "title_original": "Google’s New Guidance Claims Authority Over SEO, Tools, And AEO/GEO via @sejournal, @martinibuster",
+      "title_it": "Google si posiziona come autorità su SEO, strumenti e AEO/GEO",
+      "summary_it": "Google ha pubblicato nuove linee guida in cui si presenta come fonte di verità per consigli SEO e AEO/GEO, mettendo in discussione l'affidabilità di strumenti e servizi SEO di terze parti. La mossa rappresenta un tentativo di Google di consolidare il controllo narrativo sulle pratiche di ottimizzazione.",
+      "url": "https://www.searchenginejournal.com/googles-new-guidance-claims-authority-over-seo-tools-and-aeo-geo/578162",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_authority",
+        "seo_tool",
+        "aeo_geo",
+        "third_party_tool"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-07T08:09:04Z",
+      "fetched_at": "2026-06-08T05:02:36.639809Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:651bdcca9134aab4",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-08_002",
+      "title_original": "What SEOs Should Read Before Labor Day, 5 Books For A Transformative Summer via @sejournal, @gregjarboe",
+      "title_it": "5 libri da leggere prima di ferragosto: una lettura trasformativa per SEO",
+      "summary_it": "Search Engine Journal propone una selezione di 5 libri consigliati per gli SEO durante l'estate, con focus sulla necessità di aggiornarsi rispetto ai cambiamenti strutturali in corso nel panorama della ricerca. La lettura è presentata non come pausa estiva ma come opportunità di formazione continua.",
+      "url": "https://www.searchenginejournal.com/what-seos-should-read-before-labor-day-4-books-for-a-transformative-summer/577681",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -49,176 +82,106 @@
       },
       "category": "industry_news",
       "tags": [
-        "seo_hiring",
-        "ftc_compliance",
-        "shady_seo_practice",
-        "ai_seo_service"
+        "seo_learning",
+        "professional_development",
+        "summer_reading",
+        "industry_trend"
       ],
-      "importance": 2,
-      "published_at": "2026-06-06T06:18:58Z",
-      "fetched_at": "2026-06-07T06:02:38.301458Z",
+      "importance": 1,
+      "published_at": "2026-06-07T11:02:53Z",
+      "fetched_at": "2026-06-08T05:02:38.827457Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:45ed35ff27ad1524",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-07_002",
-      "title_original": "Your Next AI Visitor Will Know Who Sent It via @sejournal, @slobodanmanic",
-      "title_it": "Il prossimo visitatore AI saprà chi lo ha mandato",
-      "summary_it": "L'articolo affronta come i sistemi di blended retrieval stanno cambiando il valore del contenuto web per gli agenti AI. La questione centrale è se una pagina offra informazioni che l'AI non può già ricavare dai dati dell'utente, ridefinendo così la rilevanza SEO nel contesto degli agenti intelligenti.",
-      "url": "https://www.searchenginejournal.com/your-next-ai-visitor-will-know-who-sent-it/575489",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_agent",
-        "blended_retrieval",
-        "content_value",
-        "seo_evolution"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-06T11:00:26Z",
-      "fetched_at": "2026-06-07T06:02:40.497221Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:8119c8b228abcede",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-07_003",
-      "title_original": "Google Gives Sites AI Search Opt-Out, But Not The Data To Use It via @sejournal, @MattGSouthern",
-      "title_it": "Google consente l'esclusione dalle ricerche AI, ma senza i dati per decidere",
-      "summary_it": "Google ha iniziato a permettere ai siti di escludersi dalle ricerche AI, tuttavia i dati di click necessari per valutare l'impatto di questa decisione non sono ancora disponibili. I webmaster si trovano quindi nella posizione di dover scegliere senza informazioni concrete sul traffico generato dalle AI Overviews.",
-      "url": "https://www.searchenginejournal.com/google-gives-sites-ai-search-opt-out-but-not-the-data-to-use-it/577978",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search_opt_out",
-        "google_ai_overview",
-        "webmaster_tool",
-        "traffic_data"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-06T12:31:25Z",
-      "fetched_at": "2026-06-07T06:02:42.833183Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:e10ff05fe4fb3bad",
+      "raw_hash": "sha256:ec9e5489173bdcfd",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-07T06:01:22.562905Z",
+      "last_checked": "2026-06-08T05:01:16.855796Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-07T06:01:22.819918Z",
+      "last_checked": "2026-06-08T05:01:17.380320Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-07T06:01:24.874467Z",
+      "last_checked": "2026-06-08T05:01:18.201553Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-07T06:01:52.583971Z",
+      "last_checked": "2026-06-08T05:01:46.155740Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-07T06:01:53.130805Z",
+      "last_checked": "2026-06-08T05:01:46.375089Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-07T06:01:54.332688Z",
+      "last_checked": "2026-06-08T05:01:47.940582Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-07T06:01:55.785257Z",
+      "last_checked": "2026-06-08T05:01:50.009778Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-07T06:01:57.492465Z",
+      "last_checked": "2026-06-08T05:01:50.484138Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-07T06:01:57.558918Z",
+      "last_checked": "2026-06-08T05:01:50.528472Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-07T06:02:00.161194Z",
+      "last_checked": "2026-06-08T05:01:58.276162Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-07T06:02:00.700553Z",
+      "last_checked": "2026-06-08T05:01:58.682783Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-07T06:02:02.498095Z",
+      "last_checked": "2026-06-08T05:02:00.651735Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-07T06:02:03.571865Z",
+      "last_checked": "2026-06-08T05:02:02.116839Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-07T06:02:04.990182Z",
+      "last_checked": "2026-06-08T05:02:02.783351Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-07T06:02:06.235197Z",
+      "last_checked": "2026-06-08T05:02:04.159435Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-07T06:02:07.655889Z",
+      "last_checked": "2026-06-08T05:02:06.764976Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-07T06:02:35.516951Z",
+      "last_checked": "2026-06-08T05:02:34.435502Z",
       "changed": false
     }
   ],
