@@ -1,55 +1,55 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-12T05:01:19.722943Z",
-  "generated_at_local": "2026-06-12T07:01:19.722943+02:00",
+  "generated_at": "2026-06-12T06:01:31.529738Z",
+  "generated_at_local": "2026-06-12T08:01:31.529738+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-12-0701",
+  "run_id": "2026-06-12-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2125,
     "items_after_dedup": 17,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0273,
+    "ai_cost_eur": 0.0275,
     "summarize_attempted": 17,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-12_007",
     "item_2026-06-12_004",
-    "item_2026-06-12_012",
+    "item_2026-06-12_007",
     "item_2026-06-12_001",
     "item_2026-06-12_013",
     "item_2026-06-12_008",
     "item_2026-06-12_010",
-    "item_2026-06-12_011",
+    "item_2026-06-12_012",
+    "item_2026-06-12_005",
     "item_2026-06-12_017",
     "item_2026-06-12_009"
   ],
   "categories": {
+    "technical_seo": [
+      "item_2026-06-12_004",
+      "item_2026-06-12_010",
+      "item_2026-06-12_011"
+    ],
     "google_updates": [
       "item_2026-06-12_007",
       "item_2026-06-12_009"
     ],
-    "technical_seo": [
-      "item_2026-06-12_004",
-      "item_2026-06-12_010"
-    ],
     "ai_models": [
-      "item_2026-06-12_012",
       "item_2026-06-12_001",
       "item_2026-06-12_013",
       "item_2026-06-12_003"
     ],
     "tools_platforms": [
       "item_2026-06-12_008",
-      "item_2026-06-12_011",
+      "item_2026-06-12_012",
       "item_2026-06-12_006"
     ],
     "industry_news": [
+      "item_2026-06-12_005",
       "item_2026-06-12_017",
       "item_2026-06-12_014",
-      "item_2026-06-12_005",
       "item_2026-06-12_015"
     ],
     "ai_overviews_llm_seo": [
@@ -62,7 +62,7 @@
       "id": "item_2026-06-12_001",
       "title_original": "WebMCP Can Be Used To Hijack AI Agents, Chrome Warns via @sejournal, @martinibuster",
       "title_it": "Chrome avverte: WebMCP può essere usato per dirottare gli agenti AI",
-      "summary_it": "Chrome ha identificato rischi di sicurezza in WebMCP, il protocollo che consente agli agenti AI di operare all'interno delle sessioni autenticate del browser. La vulnerabilità potrebbe permettere il dirottamento di questi agenti sfruttando l'accesso alle credenziali e ai dati dell'utente.",
+      "summary_it": "Chrome ha identificato rischi di hijacking in WebMCP per gli agenti AI che operano all'interno di sessioni browser autenticate dell'utente. La vulnerabilità riguarda la capacità di protocolli come WebMCP di essere sfruttati quando gli agenti AI hanno accesso a contesti di navigazione con credenziali attive.",
       "url": "https://www.searchenginejournal.com/webmcp-can-be-used-to-hijack-ai-agents-chrome-warns/578904",
       "source": {
         "id": "search_engine_journal",
@@ -81,11 +81,11 @@
         "webmcp",
         "ai_security",
         "browser_agent",
-        "chrome"
+        "hijacking_risk"
       ],
       "importance": 3,
       "published_at": "2026-06-11T08:23:25Z",
-      "fetched_at": "2026-06-12T05:02:40.701023Z",
+      "fetched_at": "2026-06-12T06:02:56.403628Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -119,7 +119,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-11T08:52:00Z",
-      "fetched_at": "2026-06-12T05:02:43.258355Z",
+      "fetched_at": "2026-06-12T06:02:59.593660Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -131,7 +131,7 @@
       "id": "item_2026-06-12_003",
       "title_original": "Anthropic Asks The AI Industry To Hit The Brakes – Here’s What It Means For SEO & Search Marketers via @sejournal, @gregjarboe",
       "title_it": "Anthropic chiede una pausa nello sviluppo dell'IA: implicazioni per SEO e search marketing",
-      "summary_it": "Anthropic propone un rallentamento coordinato nello sviluppo dell'IA, evidenziando i rischi della crescita accelerata delle capacità dei modelli. La proposta potrebbe influenzare i segnali di qualità dei contenuti, le pratiche di search marketing e la gestione dei risultati di ricerca nei prossimi mesi.",
+      "summary_it": "Anthropic propone una pausa coordinata nello sviluppo dell'IA, evidenziando i rischi della crescita accelerata delle capacità dei modelli. La proposta ha implicazioni dirette sulla qualità dei contenuti, sui segnali di ranking e sulle strategie di search marketing nei prossimi mesi.",
       "url": "https://www.searchenginejournal.com/anthropic-asks-the-ai-industry-to-hit-the-brakes-heres-what-it-means-for-seo-search-marketers/578156",
       "source": {
         "id": "search_engine_journal",
@@ -147,14 +147,14 @@
       },
       "category": "ai_models",
       "tags": [
-        "ai_governance",
+        "anthropic",
+        "ai_development",
         "search_impact",
-        "content_quality",
-        "industry_trend"
+        "content_quality"
       ],
       "importance": 2,
       "published_at": "2026-06-11T09:00:51Z",
-      "fetched_at": "2026-06-12T05:02:45.359359Z",
+      "fetched_at": "2026-06-12T06:03:02.001462Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -165,8 +165,8 @@
     {
       "id": "item_2026-06-12_004",
       "title_original": "UpdraftPlus WordPress Vulnerability Puts 3 Million Sites At Risk via @sejournal, @martinibuster",
-      "title_it": "Vulnerabilità critica in UpdraftPlus: 3 milioni di siti WordPress a rischio",
-      "summary_it": "Una vulnerabilità in UpdraftPlus, plugin di backup utilizzato da circa 3 milioni di siti WordPress, consente agli attaccanti di assumere il controllo dei siti interessati e installare file malevoli. La falla rappresenta un rischio significativo per la sicurezza dell'infrastruttura WordPress globale.",
+      "title_it": "Vulnerabilità critica in UpdraftPlus mette a rischio 3 milioni di siti WordPress",
+      "summary_it": "Una vulnerabilità in UpdraftPlus, plugin di backup utilizzato da circa 3 milioni di siti WordPress, consente agli attaccanti di assumere il controllo dei siti interessati e installare file malevoli. La falla rappresenta un rischio significativo per la sicurezza dell'infrastruttura WordPress globale e richiede aggiornamento immediato del plugin.",
       "url": "https://www.searchenginejournal.com/updraftplus-wordpress-vulnerability-puts-3-million-sites-at-risk/578912",
       "source": {
         "id": "search_engine_journal",
@@ -184,12 +184,12 @@
       "tags": [
         "wordpress_security",
         "plugin_vulnerability",
-        "site_protection",
-        "backup_tool"
+        "site_security",
+        "backup_plugin"
       ],
       "importance": 4,
       "published_at": "2026-06-11T09:23:42Z",
-      "fetched_at": "2026-06-12T05:02:47.355576Z",
+      "fetched_at": "2026-06-12T06:03:04.247566Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -201,7 +201,7 @@
       "id": "item_2026-06-12_005",
       "title_original": "AI Security and Safety: A Wake-Up Call to Marketers",
       "title_it": "Sicurezza e rischi dell'AI: un avvertimento per i marketer",
-      "summary_it": "L'articolo di iPullRank affronta i rischi di sicurezza legati all'integrazione dell'AI nei workflow di marketing, sottolineando come i modelli attuali presentino minacce concrete quando connessi a dati sensibili come Google Drive e email personali. La discussione si sposta dalla semplice utilità dell'AI a questioni etiche e di sicurezza più profonde, con riferimenti a benchmark tecnici che mostrano progressi preoccupanti nelle capacità dei modelli.",
+      "summary_it": "L'articolo di iPullRank affronta i rischi di sicurezza legati all'integrazione dell'AI nei workflow di marketing, evidenziando come i modelli attuali presentino vulnerabilità significative (accesso a Google Drive, email personali, potenziali breach di sistemi governativi). La discussione si sposta da \"quanto è utile l'AI\" a \"dovremmo averla costruita\", segnalando un cambio di paradigma nella valutazione della tecnologia.",
       "url": "https://ipullrank.com/ai-safety-tips",
       "source": {
         "id": "ipullrank_blog",
@@ -219,12 +219,12 @@
       "tags": [
         "ai_security",
         "risk_management",
-        "marketing_workflow",
+        "marketing_tool",
         "data_privacy"
       ],
-      "importance": 2,
+      "importance": 3,
       "published_at": "2026-06-11T10:00:00Z",
-      "fetched_at": "2026-06-12T05:02:50.421532Z",
+      "fetched_at": "2026-06-12T06:03:07.152094Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -236,7 +236,7 @@
       "id": "item_2026-06-12_006",
       "title_original": "Google Ads Sitelinks With Images",
       "title_it": "Google Ads testa immagini negli annunci sitelink",
-      "summary_it": "Google sta sperimentando l'inserimento di immagini nella sezione sitelink degli annunci sponsorizzati. La novità è stata rilevata da Anthony Higman e rappresenta un'evoluzione rispetto ai precedenti test con carousel e immagini in altre aree dell'ad unit. Al momento la feature non è replicabile su larga scala.",
+      "summary_it": "Google sta sperimentando l'inserimento di immagini nella sezione sitelink degli annunci sponsorizzati. La novità è stata individuata da Anthony Higman e rappresenta un'evoluzione rispetto ai precedenti test con carousel e immagini in altre aree dell'ad unit. Al momento il rollout appare limitato e non replicabile su larga scala.",
       "url": "https://www.seroundtable.com/google-ads-images-sitelinks-41491.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -259,7 +259,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-11T10:11:00Z",
-      "fetched_at": "2026-06-12T05:02:52.645707Z",
+      "fetched_at": "2026-06-12T06:03:09.614130Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -270,8 +270,8 @@
     {
       "id": "item_2026-06-12_007",
       "title_original": "Google Is Building An Audience Loyalty Ecosystem",
-      "title_it": "Google costruisce un ecosistema di fedeltà del pubblico",
-      "summary_it": "Google sta sviluppando nuove funzionalità editoriali orientate a premiare i pubblici fedeli e engaged, piuttosto che a generare traffico generico. Questo rappresenta un cambio di paradigma nella distribuzione dei contenuti attraverso le proprietà Google, con implicazioni significative per la strategia di acquisizione e retention dei publisher.",
+      "title_it": "Google sta costruendo un ecosistema di fedeltà del pubblico",
+      "summary_it": "Google sta sviluppando nuove funzionalità editoriali orientate a premiare i siti con audience fedele e engaged, piuttosto che a generare traffico generico. Questo rappresenta un cambio di paradigma nella strategia di distribuzione dei contenuti, dove la qualità della relazione con i lettori diventa prioritaria rispetto al volume di visite.",
       "url": "https://www.searchenginejournal.com/google-is-building-an-audience-loyalty-ecosystem/578690",
       "source": {
         "id": "search_engine_journal",
@@ -287,14 +287,14 @@
       },
       "category": "google_updates",
       "tags": [
-        "publisher_feature",
         "audience_loyalty",
+        "publisher_feature",
         "traffic_distribution",
-        "engagement_metric"
+        "engagement"
       ],
-      "importance": 4,
+      "importance": 3,
       "published_at": "2026-06-11T10:16:36Z",
-      "fetched_at": "2026-06-12T05:02:54.751032Z",
+      "fetched_at": "2026-06-12T06:03:12.248451Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -305,8 +305,8 @@
     {
       "id": "item_2026-06-12_008",
       "title_original": "ChatGPT Ads Gains Upload Product Feeds For Ad Creation",
-      "title_it": "ChatGPT Ads integra il caricamento di feed di prodotti per la creazione automatica di annunci",
-      "summary_it": "OpenAI ha aggiornato ChatGPT Ads Manager permettendo ai retailer di caricare feed di prodotti per generare automaticamente annunci pubblicitari. Secondo i dati beta, gli annunci da feed hanno raddoppiato il CTR e ridotto il CPC del 50% rispetto agli annunci standard, facilitando la scalabilità delle campagne e il targeting durante conversazioni ad alta intenzione.",
+      "title_it": "ChatGPT Ads integra il caricamento di feed prodotto per la creazione automatica di annunci",
+      "summary_it": "OpenAI ha aggiornato ChatGPT Ads Manager con la possibilità di caricare feed di prodotti per generare automaticamente annunci pubblicitari. La funzionalità, attualmente in beta, consente ai retailer di portare interi cataloghi sulla piattaforma e creare campagne in scala. Secondo i dati di OpenAI, gli annunci generati da feed hanno registrato performance superiori rispetto agli annunci standard, con casi di raddoppio del CTR e riduzione del CPC del 50%.",
       "url": "https://www.seroundtable.com/chatgpt-ads-product-feeds-41488.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -329,7 +329,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-11T10:21:00Z",
-      "fetched_at": "2026-06-12T05:02:58.049510Z",
+      "fetched_at": "2026-06-12T06:03:15.503432Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -341,7 +341,7 @@
       "id": "item_2026-06-12_009",
       "title_original": "Google Tests Dotted Underlined & Shaded URLs In Search Snippet",
       "title_it": "Google testa sottolineature tratteggiate e URL ombreggiati nei risultati di ricerca",
-      "summary_it": "Google sta sperimentando modifiche visive agli URL nei snippet dei risultati organici, testando sia sottolineature tratteggiate che URL con sfondo ombreggiato. I test sono stati rilevati su ricerca mobile e seguono esperimenti simili già avviati per i sitelink negli annunci sponsorizzati. Si tratta di variazioni nell'interfaccia SERP volte a rendere gli URL più visivamente distinguibili.",
+      "summary_it": "Google sta sperimentando modifiche visive agli URL nei snippet dei risultati organici, testando sia sottolineature tratteggiate che URL con sfondo ombreggiato. I test riguardano sia i risultati mobile che desktop, con l'obiettivo di rendere gli URL più visivamente distinti all'interno delle SERP.",
       "url": "https://www.seroundtable.com/google-dotted-underlined-urls-41486.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -364,7 +364,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-11T10:22:00Z",
-      "fetched_at": "2026-06-12T05:03:01.041816Z",
+      "fetched_at": "2026-06-12T06:03:18.480213Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -376,7 +376,7 @@
       "id": "item_2026-06-12_010",
       "title_original": "Google Merchant Center Temporary Delay On Product Submissions",
       "title_it": "Google Merchant Center: ritardo temporaneo negli invii di prodotti per problemi API",
-      "summary_it": "Google ha segnalato un problema tecnico alle API di Merchant Center che sta causando il blocco temporaneo degli aggiornamenti e degli invii di prodotti. Il team di Google sta lavorando per risolvere il disservizio, che dovrebbe riprendere automaticamente una volta risolto. L'issue è stato comunicato ufficialmente nel portale Merchant Center e nella pagina di stato.",
+      "summary_it": "Google ha segnalato un problema tecnico alle API di Merchant Center che sta causando un ritardo temporaneo nell'elaborazione degli invii di prodotti e degli aggiornamenti dei feed. L'azienda sta lavorando per risolvere il problema e gli invii riprenderanno automaticamente una volta ripristinato il servizio. Il disservizio riguarda integrazioni diffuse di Merchant Center.",
       "url": "https://www.seroundtable.com/google-merchant-center-delay-product-submissions-41494.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -399,7 +399,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-11T10:31:00Z",
-      "fetched_at": "2026-06-12T05:03:04.419935Z",
+      "fetched_at": "2026-06-12T06:03:21.739896Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -410,9 +410,44 @@
     {
       "id": "item_2026-06-12_011",
       "title_original": "WhatsApp Numbers Added To Google Business Profiles In Bulk",
-      "title_it": "Google aggiunge numeri WhatsApp ai profili business in massa, ma con errori",
-      "summary_it": "Google ha aggiunto automaticamente numeri WhatsApp a migliaia di Google Business Profile nella scorsa settimana, generando segnalazioni di numeri errati o non raggiungibili. Inizialmente non era possibile eliminare questi numeri dai profili, anche se Google ha confermato il bug e ha iniziato a risolvere il problema. I proprietari di attività devono verificare i loro profili per controllare se sono stati interessati.",
+      "title_it": "Google aggiunge numeri WhatsApp ai profili business in massa: bug in corso di risoluzione",
+      "summary_it": "Google ha aggiunto automaticamente numeri WhatsApp a migliaia di Google Business Profile nella scorsa settimana, generando segnalazioni di numeri errati o non raggiungibili. Inizialmente non era possibile eliminare questi numeri dai profili, ma secondo gli ultimi report la funzione di rimozione è stata ripristinata. Google ha confermato il bug e sta lavorando alla correzione definitiva.",
       "url": "https://www.seroundtable.com/google-business-profiles-adds-whatsapp-numbers-in-bulk-41483.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "google_business_profile",
+        "local_seo",
+        "whatsapp_integration",
+        "bug"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-11T10:41:00Z",
+      "fetched_at": "2026-06-12T06:03:24.753217Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:8464b6705be586b5",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-12_012",
+      "title_original": "Gemini Can Help With Your Google Business Profiles",
+      "title_it": "Gemini si integra con Google Business Profile per gestire recensioni e performance",
+      "summary_it": "Google collegherà Gemini a Google Business Profile, permettendo ai proprietari di attività di interrogare l'IA su recensioni, performance locale e dati di engagement. La feature sarà disponibile nelle prossime settimane e consentirà anche aggiornamenti automatici di orari, menu, foto e attributi aziendali tramite comandi in linguaggio naturale.",
+      "url": "https://www.seroundtable.com/google-business-profile-integrated-gemini-41484.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -428,48 +463,13 @@
       "category": "tools_platforms",
       "tags": [
         "google_business_profile",
-        "whatsapp_integration",
-        "local_seo",
-        "bug"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-11T10:41:00Z",
-      "fetched_at": "2026-06-12T05:03:06.990321Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:8464b6705be586b5",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-12_012",
-      "title_original": "Gemini Can Help With Your Google Business Profiles",
-      "title_it": "Gemini si integra con Google Business Profile per gestire recensioni e performance",
-      "summary_it": "Google collegherà Gemini ai Google Business Profile, permettendo ai proprietari di attività di interrogare l'IA su recensioni, performance locale e dati di Maps e Search. La feature sarà disponibile nelle prossime settimane e consentirà anche aggiornamenti automatici di orari, menu, foto e attributi aziendali tramite comandi in linguaggio naturale.",
-      "url": "https://www.seroundtable.com/google-business-profile-integrated-gemini-41484.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
         "gemini_integration",
-        "google_business_profile",
         "local_seo",
         "ai_assistant"
       ],
       "importance": 3,
       "published_at": "2026-06-11T10:51:00Z",
-      "fetched_at": "2026-06-12T05:03:09.513747Z",
+      "fetched_at": "2026-06-12T06:03:27.536469Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -480,8 +480,8 @@
     {
       "id": "item_2026-06-12_013",
       "title_original": "AI Search Runs On Two Memory Systems. The Platforms Don’t Use Them The Same Way via @sejournal, @DuaneForrester",
-      "title_it": "La ricerca AI funziona su due sistemi di memoria. Le piattaforme non li usano allo stesso modo",
-      "summary_it": "L'articolo analizza come i sistemi di ricerca AI si basano su due tipi di memoria distinti: quella parametrica e quella retrieval-based. Le principali piattaforme implementano questi sistemi in modo differente, e molti team risolvono il problema sbagliato senza rendersene conto.",
+      "title_it": "La ricerca AI funziona su due sistemi di memoria. Le piattaforme non li utilizzano allo stesso modo",
+      "summary_it": "L'articolo analizza come i sistemi di ricerca AI si basano su due distinti meccanismi di memoria: quella parametrica e quella retrieval-based. Le piattaforme di ricerca implementano questi sistemi in modo differente, e molti team risolvono il problema sbagliato senza consapevolezza delle implicazioni tecniche.",
       "url": "https://www.searchenginejournal.com/ai-search-runs-on-two-memory-systems-the-platforms-dont-use-them-the-same-way/578192",
       "source": {
         "id": "search_engine_journal",
@@ -504,7 +504,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-11T12:30:29Z",
-      "fetched_at": "2026-06-12T05:03:11.816521Z",
+      "fetched_at": "2026-06-12T06:03:29.746120Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -516,7 +516,7 @@
       "id": "item_2026-06-12_014",
       "title_original": "Daily Search Forum Recap: June 11, 2026",
       "title_it": "Recap dei forum SEO: 11 giugno 2026",
-      "summary_it": "Google Search non è stato colpito dal down di Gemini. Sono in corso test su URL con sottolineatura punteggiata negli snippet, integrazione di Gemini con Google Business Profiles, aggiunta massiva di numeri WhatsApp nei profili aziendali e problemi API in Merchant Center che causano ritardi nei feed prodotto.",
+      "summary_it": "Google Search non è stato interessato dal down di Gemini. Tra gli aggiornamenti: integrazione di Gemini con Google Business Profiles, aggiunta massiva di numeri WhatsApp nei profili aziendali, test di URL con sottolineatura punteggiata negli snippet, e problemi API temporanei in Google Merchant Center che rallentano l'invio dei feed prodotto.",
       "url": "https://www.seroundtable.com/recap-06-11-2026-41493.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -535,11 +535,11 @@
         "google_business_profile",
         "gemini_integration",
         "merchant_center",
-        "search_testing"
+        "search_feature"
       ],
       "importance": 2,
       "published_at": "2026-06-11T13:00:00Z",
-      "fetched_at": "2026-06-12T05:03:15.515727Z",
+      "fetched_at": "2026-06-12T06:03:32.998411Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -550,8 +550,8 @@
     {
       "id": "item_2026-06-12_015",
       "title_original": "YouTube Brings In-App Sharing & Messaging To The U.S. via @sejournal, @MattGSouthern",
-      "title_it": "YouTube riattiva la condivisione e la messaggistica in-app negli Stati Uniti",
-      "summary_it": "YouTube sta espandendo le funzionalità di condivisione video e messaggistica in-app a utenti adulti idonei in nuovi mercati, ripristinando una versione della feature di messaging che era stata rimossa nel 2019. La novità riguarda principalmente il mercato statunitense.",
+      "title_it": "YouTube reintroduce la condivisione e la messaggistica in-app negli Stati Uniti",
+      "summary_it": "YouTube sta espandendo le funzioni di condivisione video e messaggistica in-app a utenti adulti idonei in più mercati, ripristinando una feature di messaging che era stata rimossa nel 2019. La riapertura di questo canale di distribuzione potrebbe influenzare le strategie di engagement e reach dei creator.",
       "url": "https://www.searchenginejournal.com/youtube-brings-in-app-sharing-messaging-to-the-u-s/578927",
       "source": {
         "id": "search_engine_journal",
@@ -568,12 +568,13 @@
       "category": "industry_news",
       "tags": [
         "youtube_feature",
-        "social_messaging",
+        "social_sharing",
+        "content_distribution",
         "platform_update"
       ],
       "importance": 2,
       "published_at": "2026-06-11T13:45:05Z",
-      "fetched_at": "2026-06-12T05:03:17.877425Z",
+      "fetched_at": "2026-06-12T06:03:35.138758Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -584,8 +585,8 @@
     {
       "id": "item_2026-06-12_016",
       "title_original": "5 AI Search Shifts Marketers Can’t Afford to Miss Before Q3 via @sejournal, @hethr_campbell",
-      "title_it": "5 cambiamenti nella ricerca AI che i marketer devono monitorare prima del Q3",
-      "summary_it": "Search Engine Journal identifica cinque shift significativi nella ricerca alimentata da AI che influenzeranno le strategie di marketing nel prossimo trimestre. L'articolo sottolinea l'importanza di adattare le tattiche SEO e content marketing alle nuove dinamiche della ricerca AI-driven.",
+      "title_it": "5 cambiamenti nella ricerca AI che i marketer devono considerare prima del Q3",
+      "summary_it": "L'articolo di Search Engine Journal identifica cinque shift significativi nella ricerca alimentata da AI che impatteranno le strategie di marketing nel prossimo trimestre. La fonte sottolinea l'importanza di prepararsi anticipatamente ai cambiamenti del panorama search per mantenere la performance dei siti web.",
       "url": "https://www.searchenginejournal.com/5-ai-search-shifts-marketers-cant-afford-to-miss-before-q3/579008",
       "source": {
         "id": "search_engine_journal",
@@ -608,7 +609,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-11T19:25:32Z",
-      "fetched_at": "2026-06-12T05:03:19.936985Z",
+      "fetched_at": "2026-06-12T06:03:37.657214Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -620,7 +621,7 @@
       "id": "item_2026-06-12_017",
       "title_original": "AI Bots Keep Overloading Servers. Should Website Owners Keep Paying? via @sejournal, @martinibuster",
       "title_it": "Bot AI sovraccaricano i server: i proprietari di siti devono continuare a pagare?",
-      "summary_it": "L'80% del traffico AI sta drenando l'infrastruttura dei siti web per l'addestramento dei modelli. L'articolo affronta la questione se i proprietari di siti debbano continuare a sostenere questi costi o se esistono strategie per limitare l'impatto senza compromettere la visibilità nei motori di ricerca.",
+      "summary_it": "L'80% del traffico AI sta drenando l'infrastruttura dei siti web per l'addestramento dei modelli. L'articolo affronta la questione di come i proprietari di siti possono gestire questo problema senza compromettere la visibilità nei motori di ricerca.",
       "url": "https://www.searchenginejournal.com/ai-bots-keep-overloading-servers-should-website-owners-keep-paying/579018",
       "source": {
         "id": "search_engine_journal",
@@ -637,13 +638,13 @@
       "category": "industry_news",
       "tags": [
         "ai_crawling",
-        "server_cost",
-        "infrastructure",
+        "server_infrastructure",
+        "website_cost",
         "bot_management"
       ],
       "importance": 3,
       "published_at": "2026-06-11T22:53:14Z",
-      "fetched_at": "2026-06-12T05:03:22.169905Z",
+      "fetched_at": "2026-06-12T06:03:39.780327Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -655,87 +656,87 @@
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-12T05:01:25.290614Z",
+      "last_checked": "2026-06-12T06:01:38.472707Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-12T05:01:25.530883Z",
+      "last_checked": "2026-06-12T06:01:38.906276Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-12T05:01:27.288229Z",
+      "last_checked": "2026-06-12T06:01:40.325010Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-12T05:01:54.852201Z",
+      "last_checked": "2026-06-12T06:02:10.124267Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-12T05:01:55.098193Z",
+      "last_checked": "2026-06-12T06:02:10.365601Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-12T05:01:56.904935Z",
+      "last_checked": "2026-06-12T06:02:12.157951Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-12T05:01:58.556165Z",
+      "last_checked": "2026-06-12T06:02:13.947803Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-12T05:01:59.841729Z",
+      "last_checked": "2026-06-12T06:02:14.683772Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-12T05:01:59.881342Z",
+      "last_checked": "2026-06-12T06:02:14.735652Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-12T05:02:01.401968Z",
+      "last_checked": "2026-06-12T06:02:15.027284Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-12T05:02:01.899856Z",
+      "last_checked": "2026-06-12T06:02:16.067723Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-12T05:02:03.191750Z",
+      "last_checked": "2026-06-12T06:02:17.126857Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-12T05:02:04.608216Z",
+      "last_checked": "2026-06-12T06:02:19.080269Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-12T05:02:06.450252Z",
+      "last_checked": "2026-06-12T06:02:20.383233Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-12T05:02:07.473517Z",
+      "last_checked": "2026-06-12T06:02:22.633181Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-12T05:02:09.288542Z",
+      "last_checked": "2026-06-12T06:02:23.904016Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-12T05:02:37.147558Z",
+      "last_checked": "2026-06-12T06:02:53.649878Z",
       "changed": false
     }
   ],
