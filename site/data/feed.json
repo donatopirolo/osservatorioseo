@@ -1,141 +1,73 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-13T06:01:10.966889Z",
-  "generated_at_local": "2026-06-13T08:01:10.966889+02:00",
+  "generated_at": "2026-06-14T05:00:59.530171Z",
+  "generated_at_local": "2026-06-14T07:00:59.530171+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-13-0801",
+  "run_id": "2026-06-14-0700",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2128,
-    "items_after_dedup": 19,
+    "items_after_dedup": 2,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0307,
-    "summarize_attempted": 19,
+    "ai_cost_eur": 0.0026,
+    "summarize_attempted": 2,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-13_008",
-    "item_2026-06-13_005",
-    "item_2026-06-13_006",
-    "item_2026-06-13_019",
-    "item_2026-06-13_012",
-    "item_2026-06-13_004",
-    "item_2026-06-13_001",
-    "item_2026-06-13_003",
-    "item_2026-06-13_017",
-    "item_2026-06-13_002"
+    "item_2026-06-14_002",
+    "item_2026-06-14_001"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-06-13_008",
-      "item_2026-06-13_005",
-      "item_2026-06-13_006",
-      "item_2026-06-13_012",
-      "item_2026-06-13_015"
-    ],
-    "ai_models": [
-      "item_2026-06-13_019",
-      "item_2026-06-13_002"
+    "ai_overviews_llm_seo": [
+      "item_2026-06-14_002"
     ],
     "industry_news": [
-      "item_2026-06-13_004",
-      "item_2026-06-13_017",
-      "item_2026-06-13_010",
-      "item_2026-06-13_014",
-      "item_2026-06-13_013",
-      "item_2026-06-13_018"
-    ],
-    "technical_seo": [
-      "item_2026-06-13_001"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-06-13_003",
-      "item_2026-06-13_016"
-    ],
-    "tools_platforms": [
-      "item_2026-06-13_007",
-      "item_2026-06-13_009",
-      "item_2026-06-13_011"
+      "item_2026-06-14_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-06-13_001",
-      "title_original": "Google’s Agent-Friendly Checklist Is The Accessibility Audit Restated via @sejournal, @slobodanmanic",
-      "title_it": "La checklist di Google per gli agent è in realtà un audit di accessibilità",
-      "summary_it": "Google ha pubblicato una checklist per l'agent-readiness che coincide sostanzialmente con gli standard di accessibilità web. Non è necessario eseguire audit separati: le stesse verifiche di accessibilità garantiscono la compatibilità con gli agent AI.",
-      "url": "https://www.searchenginejournal.com/googles-agent-friendly-checklist-is-the-accessibility-audit-restated/575495",
+      "id": "item_2026-06-14_001",
+      "title_original": "Bot traffic now exceeds traffic from human users",
+      "title_it": "Il traffico da bot supera quello degli utenti umani",
+      "summary_it": "Secondo Semrush, per la prima volta il traffico generato da bot ha superato quello proveniente da utenti umani, con gli agenti AI come principale driver della crescita. Questo fenomeno ha implicazioni significative per l'analisi del traffico, la misurazione delle metriche e la validazione dei dati nei report SEO.",
+      "url": "https://www.semrush.com/blog/ai-agent-bot-traffic",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://www.semrush.com/blog/feed/",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "tools_platforms",
         "enabled": true
       },
-      "category": "technical_seo",
+      "category": "industry_news",
       "tags": [
-        "agent_readiness",
-        "accessibility",
-        "google_guideline",
-        "web_standard"
+        "bot_traffic",
+        "ai_agent",
+        "web_analytic",
+        "seo_metric"
       ],
       "importance": 3,
-      "published_at": "2026-06-12T08:00:35Z",
-      "fetched_at": "2026-06-13T06:02:31.495876Z",
+      "published_at": "2026-06-13T07:27:00Z",
+      "fetched_at": "2026-06-14T05:02:25.304023Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:e819601dc7802840",
+      "raw_hash": "sha256:6fe1926208d4eb13",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-13_002",
-      "title_original": "New OpenAI Academy courses for the next era of work",
-      "title_it": "OpenAI Academy: nuovi corsi per l'integrazione dell'AI nel lavoro",
-      "summary_it": "OpenAI ha lanciato tre corsi Academy focalizzati su competenze pratiche di AI, creazione di workflow ripetibili e applicazione di agenti nei processi lavorativi quotidiani. L'iniziativa mira a formare professionisti sull'utilizzo operativo dell'intelligenza artificiale.",
-      "url": "https://openai.com/index/academy-courses-applying-ai-at-work",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai_academy",
-        "ai_skill",
-        "workflow_automation",
-        "agent_ai"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T09:00:00Z",
-      "fetched_at": "2026-06-13T06:02:33.184506Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:3983a0e8c0e3734d",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_003",
-      "title_original": "AI Overview Click Data Reveals Unexpected User Behavior Patterns For Marketers via @sejournal, @gregjarboe",
-      "title_it": "I dati sui clic delle AI Overview rivelano pattern comportamentali inattesi per i marketer",
-      "summary_it": "Una ricerca mostra che gli utenti quotidiani di AI Overview cliccano sulle fonti 3,5 volte più frequentemente rispetto agli utenti occasionali. Lo studio identifica opportunità di ottimizzazione basate su questi pattern di comportamento differenziati.",
-      "url": "https://www.searchenginejournal.com/ai-overview-click-data-reveals-unexpected-user-behavior-patterns-for-marketers/578379",
+      "id": "item_2026-06-14_002",
+      "title_original": "What Apple’s Gemini-Powered Siri Means For Search Visibility via @sejournal, @MattGSouthern",
+      "title_it": "Cosa significa per la visibilità di ricerca il Siri potenziato da Gemini di Apple",
+      "summary_it": "Apple ha annunciato durante la WWDC l'integrazione di Gemini di Google in Siri, trasformando la partnership in un prodotto concreto. La mossa introduce interrogativi significativi sulla visibilità nei risultati di ricerca e sulla distribuzione del traffico organico, poiché Siri diventa intermediario tra utenti e fonti di informazione.",
+      "url": "https://www.searchenginejournal.com/what-apples-gemini-powered-siri-means-for-search-visibility/578931",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -150,664 +82,106 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "ai_overviews",
-        "user_behavior",
-        "click_data",
-        "seo_optimization"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-12T10:02:35Z",
-      "fetched_at": "2026-06-13T06:02:35.259828Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:d8ac205d797344e4",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_004",
-      "title_original": "Growth Intelligence Brief #20",
-      "title_it": "Growth Intelligence Brief #20: Yelp raggiunge il record storico mentre Google ridistribuisce visibilità tra le categorie",
-      "summary_it": "L'analisi di Kevin Indig documenta significativi spostamenti di visibilità organica nel periodo maggio-giugno 2026. Yelp ha raggiunto il massimo storico (646.5) trainando Local Search a +30.5%, mentre Macy's ha perso il 53.8% della visibilità in 4 settimane e Reddit registra il primo calo. Il meccanismo sottostante è una ridistribuzione di spazio nei risultati di ricerca all'interno di categorie con domanda stabile.",
-      "url": "https://www.growth-memo.com/p/growth-intelligence-brief-20",
-      "source": {
-        "id": "growth_memo_kevin_indig",
-        "name": "Growth Memo (Kevin Indig)",
-        "authority": 9,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://www.growth-memo.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "serp_volatility",
-        "local_search",
-        "visibility_shift",
-        "competitive_analysi"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-12T10:10:44Z",
-      "fetched_at": "2026-06-13T06:02:38.248213Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:e6732df66babc2db",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_005",
-      "title_original": "Google Search Personalization Settings Are Changing",
-      "title_it": "Google modifica le impostazioni di personalizzazione e cronologia in Search",
-      "summary_it": "Google sta introducendo nuove impostazioni separate per gestire la cronologia delle ricerche e le raccomandazioni personalizzate, sostituendo il precedente sistema unificato Web & App Activity. Le modifiche includeranno il salvataggio automatico di media (immagini, video, audio) nella cronologia di Search per migliorare esperienze come Lens e Search Live, con opzioni di controllo granulare per gli utenti.",
-      "url": "https://www.seroundtable.com/google-search-personalization-settings-41482.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "search_personalization",
-        "user_privacy",
-        "google_account_setting",
-        "search_history"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-12T10:11:00Z",
-      "fetched_at": "2026-06-13T06:02:41.151957Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:06ff815298187c30",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_006",
-      "title_original": "Google Search Ranking Volatility This Week: June 8-12",
-      "title_it": "Volatilità dei ranking Google nella settimana 8-12 giugno: discrepanza tra segnali e feedback della community",
-      "summary_it": "La settimana ha registrato fluttuazioni significative nei ranking Google, con segnalazioni diffuse nella community SEO superiori rispetto a quanto rilevato dai tool di tracciamento di terze parti. La volatilità prosegue dall'aggiornamento core di maggio (completato il 2 giugno), con segnalazioni di impatti particolari su e-commerce e contenuti branded, specialmente nel mercato EU.",
-      "url": "https://www.seroundtable.com/google-search-ranking-volatility-mid-june-41496.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "ranking_volatility",
-        "core_update_aftermath",
-        "seo_community_signal",
-        "ecommerce_impact"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-12T10:21:00Z",
-      "fetched_at": "2026-06-13T06:02:44.198051Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:737a6936bce2e32b",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_007",
-      "title_original": "New Google Search Console Tool/Report: Platform Property Tooltips",
-      "title_it": "Google Search Console: nuova documentazione su Platform property tooltips",
-      "summary_it": "Google ha pubblicato una nuova pagina di supporto in Search Console dedicata ai \"Platform property tooltips\", suggerendo l'arrivo di un nuovo report o strumento. La pagina è stata successivamente rimossa, e John Mueller di Google ha confermato che si tratta di una funzionalità in fase di sviluppo senza fornire ulteriori dettagli.",
-      "url": "https://www.seroundtable.com/google-search-console-platform-property-tooltips-41495.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "search_console",
-        "google_tool",
-        "platform_propertie"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T10:31:00Z",
-      "fetched_at": "2026-06-13T06:02:46.883221Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:bc548ccb550c9c49",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_008",
-      "title_original": "Google Ads Extends Dynamic Search Ads (DSA) To AI Max Timeline",
-      "title_it": "Google posticipa la migrazione da Dynamic Search Ads ad AI Max a febbraio 2027",
-      "summary_it": "Google ha esteso il termine per la transizione obbligatoria da Dynamic Search Ads (DSA) ad AI Max da settembre 2026 a febbraio 2027, in risposta ai feedback degli advertiser. Nel frattempo, la capacità di creare nuovi DSA viene ripristinata dal 15 giugno 2026 e rimarrà disponibile fino a gennaio 2027, permettendo un periodo di test e migrazione volontaria di 8 mesi.",
-      "url": "https://www.seroundtable.com/google-ads-dsa-ai-max-extended-41497.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "dsa_migration",
-        "ai_max",
-        "google_ad",
-        "campaign_management"
+        "apple_siri",
+        "gemini_integration",
+        "search_visibility",
+        "ai_assistant"
       ],
       "importance": 4,
-      "published_at": "2026-06-12T10:41:00Z",
-      "fetched_at": "2026-06-13T06:02:49.688819Z",
+      "published_at": "2026-06-13T11:00:28Z",
+      "fetched_at": "2026-06-14T05:02:28.119053Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:7899f2ff2c239112",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_009",
-      "title_original": "Home Listings Come To Google Local Services Ads",
-      "title_it": "Google Local Services Ads integra annunci immobiliari in tutti gli Stati Uniti",
-      "summary_it": "Google estende i Local Services Ads per includere annunci immobiliari in tutti i 50 stati USA, in partnership con HouseCanary. Gli annunci mostrano dettagli proprietà (prezzo, immagini, caratteristiche), permettendo ai potenziali acquirenti di contattare agenti direttamente dalla scheda. Gli agenti LSA esistenti sono automaticamente inclusi, mentre nuovi agenti possono iscriversi direttamente.",
-      "url": "https://www.seroundtable.com/google-local-services-ads-home-listings-41490.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "local_services_ad",
-        "real_estate",
-        "google_ad",
-        "lead_generation"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T10:51:00Z",
-      "fetched_at": "2026-06-13T06:02:52.070303Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:afd4d0f91f4e8dee",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_010",
-      "title_original": "Search News Buzz Video Recap: Google Post-Core Update Volatility, Zero Clicks Rising, Appleâs Siri AI & Google SEO Docs",
-      "title_it": "Volatilità post-core update Google, aumento zero-click e novità AI: il recap della settimana",
-      "summary_it": "La settimana è stata caratterizzata da volatilità nei ranking post-core update di Google e da un aumento dei risultati zero-click. Google ha pubblicato nuova documentazione su SEO tools, Applebot e Search profiles, mentre continuano i test su nuovi formati di snippet e sitelink. Bing consente di disabilitare le risposte AI, e Apple Intelligence integra Siri con nuove capacità.",
-      "url": "https://www.seroundtable.com/video-06-12-2026-41487.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "core_update_volatility",
-        "zero_click_traffic",
-        "google_documentation",
-        "ai_integration"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T11:01:00Z",
-      "fetched_at": "2026-06-13T06:02:55.481521Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:282f3fe584f1c992",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_011",
-      "title_original": "Google Search Console Link Report Finally Fixed & Updated",
-      "title_it": "Google Search Console: il rapporto link finalmente riparato e aggiornato",
-      "summary_it": "Google ha risolto il malfunzionamento del rapporto link in Search Console, che era bloccato da diverse settimane. Dopo un intervento temporaneo a marzo che aveva solo ripristinato i dati precedenti, il report ora mostra nuovi dati di link aggiornati e normalizzati.",
-      "url": "https://www.seroundtable.com/google-search-console-link-report-fixed-41499.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_search_console",
-        "link_report",
-        "tool_update"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T11:16:00Z",
-      "fetched_at": "2026-06-13T06:02:58.165748Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:7e5eefce719c819e",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_012",
-      "title_original": "Reddit Climbs, Clicks Drop, GBP Comes To GA4 – SEO Pulse via @sejournal, @MattGSouthern",
-      "title_it": "Reddit guadagna posizioni, clic in calo, Google Business Profile integrato in GA4",
-      "summary_it": "Dopo il core update di maggio, Reddit ha migliorato le proprie posizioni nei risultati di ricerca. I dati zero-click mostrano un calo generale dei clic organici. Google ha aggiornato le sue linee guida SEO e ha integrato i dati di Google Business Profile direttamente in Google Analytics 4.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-reddit-climbs-clicks-drop-gbp-comes-to-ga4/579029",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "core_update",
-        "zero_click_search",
-        "ga4_integration",
-        "gbp"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-12T11:30:23Z",
-      "fetched_at": "2026-06-13T06:03:00.322841Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:a0b50a97989838d1",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_013",
-      "title_original": "SEO Week 2026 in Review | Day 4: The Future",
-      "title_it": "SEO Week 2026 in Review | Giorno 4: Il Futuro della Ricerca",
-      "summary_it": "Il quarto giorno di SEO Week 2026 ha affrontato la direzione futura dei motori di ricerca, con focus su AI agents come intermediari, adattamento organizzativo e competenze rilevanti nel nuovo panorama. Gli speaker hanno discusso meno di tattiche specifiche e più di strategie di posizionamento strategico di fronte ai cambiamenti già visibili nei risultati di ricerca e negli assistenti AI.",
-      "url": "https://ipullrank.com/seo-week-2026-in-review-day-4",
-      "source": {
-        "id": "ipullrank_blog",
-        "name": "iPullRank Blog (Mike King)",
-        "authority": 8,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://ipullrank.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "seo_week_2026",
-        "future_of_search",
-        "ai_agent",
-        "industry_conference"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T12:28:13Z",
-      "fetched_at": "2026-06-13T06:03:03.440093Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:f650e02748444ed2",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_014",
-      "title_original": "Daily Search Forum Recap: June 12, 2026",
-      "title_it": "Recap dei forum SEO: volatilità ranking, estensione DSA e fix Search Console",
-      "summary_it": "La settimana ha registrato volatilità significativa nei ranking di Google, anche se i tool di monitoraggio non la rilevano chiaramente. Google ha posticipato la scadenza per la migrazione da Dynamic Search Ads ad AI Max a febbraio 2027 e ha risolto il report dei link in Search Console. In arrivo nuovi strumenti in Search Console e nuove impostazioni di personalizzazione della ricerca.",
-      "url": "https://www.seroundtable.com/recap-06-12-2026-41498.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "ranking_volatility",
-        "google_search_console",
-        "google_ad",
-        "search_update"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T13:00:00Z",
-      "fetched_at": "2026-06-13T06:03:07.930142Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:4215070a9468193a",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_015",
-      "title_original": "Google Extends Dynamic Search Ads Migration Deadline via @sejournal, @brookeosmundson",
-      "title_it": "Google posticipa la scadenza della migrazione da Dynamic Search Ads ad AI Max",
-      "summary_it": "Google ha esteso il termine per la migrazione da Dynamic Search Ads ad AI Max fino a febbraio 2027. La proroga offre agli inserzionisti più tempo per adattarsi alla nuova piattaforma di gestione delle campagne pubblicitarie.",
-      "url": "https://www.searchenginejournal.com/google-extends-dynamic-search-ads-migration-deadline/579074",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "dynamic_search_ad",
-        "ai_max",
-        "google_ad",
-        "migration"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T18:21:24Z",
-      "fetched_at": "2026-06-13T06:03:11.094726Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:329b9de5f48db971",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_016",
-      "title_original": "Google Rolls Out AI Mode Information Agents To Ultra Subscribers via @sejournal, @MattGSouthern",
-      "title_it": "Google estende gli Information Agents in AI Mode ai sottoscrittori Ultra",
-      "summary_it": "Google ha reso disponibili gli information agents in AI Mode per tutti i linguaggi e mercati supportati, limitatamente agli abbonati Ultra. L'espansione a un numero maggiore di utenti è prevista per l'estate 2026.",
-      "url": "https://www.searchenginejournal.com/google-rolls-out-ai-mode-information-agents-to-ultra-subscribers/579085",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ai_mode",
-        "information_agent",
-        "ultra_subscriber",
-        "ai_expansion"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T18:44:53Z",
-      "fetched_at": "2026-06-13T06:03:12.992119Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:37690852c238a1f3",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_017",
-      "title_original": "MonsterInsights Website Compromised And Sending Phishing Emails via @sejournal, @martinibuster",
-      "title_it": "Il sito di MonsterInsights compromesso e utilizzato per inviare email di phishing",
-      "summary_it": "Il sito ufficiale di MonsterInsights è stato compromesso e utilizzato per campagne di phishing. La piattaforma ha disattivato il sito e avverte gli utenti di prestare attenzione ai tentativi di frode in corso.",
-      "url": "https://www.searchenginejournal.com/monsterinsights-website-compromised-and-sending-phishing-emails/579140",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "security_breach",
-        "wordpress_plugin",
-        "phishing_attack",
-        "monsterinsight"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-12T20:09:18Z",
-      "fetched_at": "2026-06-13T06:03:14.888835Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:1ba40e1b0e27710b",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_018",
-      "title_original": "Google Publishes Tennessee Search “Blacklist” Guidance via @sejournal, @martinibuster",
-      "title_it": "Google pubblica linee guida sulla legge Tennessee per le ricerche locali",
-      "summary_it": "Google ha rilasciato guidance in risposta a una nuova legge del Tennessee che consente alle piccole imprese di contestare la perdita di visibilità nei risultati di ricerca e la rimozione di recensioni. La normativa introduce meccanismi di ricorso per i business penalizzati algoritmicamente o manualmente da Google.",
-      "url": "https://www.searchenginejournal.com/google-publishes-tennessee-search-blacklist-guidance/579161",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_policy",
-        "local_seo",
-        "regulatory_compliance",
-        "small_business"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-12T21:52:58Z",
-      "fetched_at": "2026-06-13T06:03:18.889037Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:e51638b5edc46251",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-13_019",
-      "title_original": "Government Order Shuts Down Fable 5 Despite Anthropic’s Objections via @sejournal, @martinibuster",
-      "title_it": "Ordine governativo blocca Fable 5 nonostante le obiezioni di Anthropic",
-      "summary_it": "Una direttiva americana sui controlli all'esportazione ha costretto Anthropic a interrompere l'accesso a Fable 5. L'azienda contesta le preoccupazioni sulla sicurezza che hanno motivato il provvedimento.",
-      "url": "https://www.searchenginejournal.com/government-order-shuts-down-fable-5-despite-anthropics-objections/579168",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "anthropic",
-        "export_control",
-        "ai_regulation",
-        "fable_5"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-13T03:12:48Z",
-      "fetched_at": "2026-06-13T06:03:20.894317Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:a9b0fb1600b0e054",
+      "raw_hash": "sha256:0045ab64e41cd2f7",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-13T06:01:17.662914Z",
+      "last_checked": "2026-06-14T05:01:04.548662Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-13T06:01:18.188068Z",
+      "last_checked": "2026-06-14T05:01:05.133242Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-13T06:01:19.676016Z",
+      "last_checked": "2026-06-14T05:01:05.976832Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-13T06:01:47.684305Z",
+      "last_checked": "2026-06-14T05:01:35.242002Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-13T06:01:48.338473Z",
+      "last_checked": "2026-06-14T05:01:35.755898Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-13T06:01:49.697919Z",
+      "last_checked": "2026-06-14T05:01:37.015026Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-13T06:01:51.733490Z",
+      "last_checked": "2026-06-14T05:01:38.433220Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-13T06:01:52.595600Z",
+      "last_checked": "2026-06-14T05:01:39.357808Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-13T06:01:52.676125Z",
+      "last_checked": "2026-06-14T05:01:39.412611Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-13T06:01:53.131139Z",
+      "last_checked": "2026-06-14T05:01:43.483566Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-13T06:01:54.869748Z",
+      "last_checked": "2026-06-14T05:01:43.882580Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-13T06:01:56.907470Z",
+      "last_checked": "2026-06-14T05:01:45.408487Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-13T06:01:57.621281Z",
+      "last_checked": "2026-06-14T05:01:47.615729Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-13T06:01:58.649691Z",
+      "last_checked": "2026-06-14T05:01:48.997329Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-13T06:01:59.939149Z",
+      "last_checked": "2026-06-14T05:01:50.875350Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-13T06:02:01.158023Z",
+      "last_checked": "2026-06-14T05:01:52.771229Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-13T06:02:29.107650Z",
+      "last_checked": "2026-06-14T05:02:22.104233Z",
       "changed": false
     }
   ],
