@@ -1,73 +1,36 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-14T06:00:52.390383Z",
-  "generated_at_local": "2026-06-14T08:00:52.390383+02:00",
+  "generated_at": "2026-06-15T05:01:39.871368Z",
+  "generated_at_local": "2026-06-15T07:01:39.871368+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-14-0800",
+  "run_id": "2026-06-15-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2128,
     "items_after_dedup": 2,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0025,
+    "ai_cost_eur": 0.0026,
     "summarize_attempted": 2,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-14_002",
-    "item_2026-06-14_001"
+    "item_2026-06-15_002",
+    "item_2026-06-15_001"
   ],
   "categories": {
-    "ai_overviews_llm_seo": [
-      "item_2026-06-14_002"
-    ],
-    "industry_news": [
-      "item_2026-06-14_001"
+    "ai_models": [
+      "item_2026-06-15_002",
+      "item_2026-06-15_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-06-14_001",
-      "title_original": "Bot traffic now exceeds traffic from human users",
-      "title_it": "Il traffico da bot supera quello degli utenti umani",
-      "summary_it": "Secondo Semrush, per la prima volta il traffico generato da bot ha superato quello proveniente da utenti umani, con gli agenti AI come principale driver della crescita. Questo fenomeno ha implicazioni significative per l'analisi del traffico, la validazione dei dati e le strategie di crawl budget.",
-      "url": "https://www.semrush.com/blog/ai-agent-bot-traffic",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "bot_traffic",
-        "ai_agent",
-        "web_analytic",
-        "crawl_budget"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-13T07:27:00Z",
-      "fetched_at": "2026-06-14T06:02:17.203912Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:6fe1926208d4eb13",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-14_002",
-      "title_original": "What Apple’s Gemini-Powered Siri Means For Search Visibility via @sejournal, @MattGSouthern",
-      "title_it": "Cosa significa per la visibilità di ricerca il Siri potenziato da Gemini di Apple",
-      "summary_it": "Apple ha annunciato durante la WWDC l'integrazione di Gemini di Google in Siri, trasformando la partnership in un prodotto concreto. La mossa apre interrogativi significativi su come questa integrazione influenzerà la visibilità nei risultati di ricerca e il traffico organico verso i siti web.",
-      "url": "https://www.searchenginejournal.com/what-apples-gemini-powered-siri-means-for-search-visibility/578931",
+      "id": "item_2026-06-15_001",
+      "title_original": "Stripe Projects Opens Cloud Infrastructure Buying To AI Agents via @sejournal, @slobodanmanic",
+      "title_it": "Stripe Projects apre l'acquisto di infrastrutture cloud agli agenti AI",
+      "summary_it": "Stripe Projects ha sviluppato soluzioni per permettere agli agenti AI di acquistare infrastrutture cloud in modo autonomo, attraverso cataloghi strutturati, endpoint di signup programmatici e superfici di fatturazione delegate. L'iniziativa riconosce che i sistemi di pricing tradizionali sono progettati per utenti umani e non si adattano alle esigenze degli agenti autonomi.",
+      "url": "https://www.searchenginejournal.com/stripe-projects-opens-cloud-infrastructure-buying-to-ai-agents/575504",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -80,108 +43,143 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "ai_models",
       "tags": [
-        "apple_siri",
-        "gemini_integration",
-        "search_visibility",
-        "ai_assistant"
+        "stripe_project",
+        "ai_agent",
+        "infrastructure_automation",
+        "programmatic_commerce"
       ],
-      "importance": 4,
-      "published_at": "2026-06-13T11:00:28Z",
-      "fetched_at": "2026-06-14T06:02:19.942442Z",
+      "importance": 2,
+      "published_at": "2026-06-14T11:00:16Z",
+      "fetched_at": "2026-06-15T05:02:55.191160Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:0045ab64e41cd2f7",
+      "raw_hash": "sha256:1c0cee8fa27fbdb5",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-15_002",
+      "title_original": "Introducing the OpenAI Partner Network",
+      "title_it": "OpenAI lancia la Partner Network con investimento di 150 milioni di dollari",
+      "summary_it": "OpenAI ha annunciato il lancio della Partner Network, un programma di partnership globale supportato da un investimento di 150 milioni di dollari destinato ad accelerare l'adozione, il deployment e la trasformazione dell'AI nelle aziende. L'iniziativa mira a facilitare l'integrazione delle tecnologie OpenAI nei processi enterprise attraverso una rete di partner certificati.",
+      "url": "https://openai.com/index/introducing-openai-partner-network",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai_partnership",
+        "enterprise_ai",
+        "ai_adoption",
+        "business_transformation"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-14T16:00:00Z",
+      "fetched_at": "2026-06-15T05:02:57.194423Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:b82a67ac2cd3a575",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-14T06:00:57.812116Z",
+      "last_checked": "2026-06-15T05:01:45.344330Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-14T06:00:58.648647Z",
+      "last_checked": "2026-06-15T05:01:45.703074Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-14T06:00:59.791218Z",
+      "last_checked": "2026-06-15T05:01:46.905216Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-14T06:01:29.146249Z",
+      "last_checked": "2026-06-15T05:02:11.233709Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-14T06:01:29.370118Z",
+      "last_checked": "2026-06-15T05:02:11.573455Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-14T06:01:30.656491Z",
+      "last_checked": "2026-06-15T05:02:13.152304Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-14T06:01:32.424175Z",
+      "last_checked": "2026-06-15T05:02:14.555544Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-14T06:01:33.193440Z",
+      "last_checked": "2026-06-15T05:02:15.920553Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-14T06:01:33.219664Z",
+      "last_checked": "2026-06-15T05:02:15.951064Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-14T06:01:38.492864Z",
+      "last_checked": "2026-06-15T05:02:20.860908Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-14T06:01:38.853512Z",
+      "last_checked": "2026-06-15T05:02:21.217437Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-14T06:01:39.771566Z",
+      "last_checked": "2026-06-15T05:02:22.093317Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-14T06:01:40.982608Z",
+      "last_checked": "2026-06-15T05:02:23.802200Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-14T06:01:43.041245Z",
+      "last_checked": "2026-06-15T05:02:25.326363Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-14T06:01:44.166683Z",
+      "last_checked": "2026-06-15T05:02:26.424219Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-14T06:01:45.650839Z",
+      "last_checked": "2026-06-15T05:02:28.031243Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-14T06:02:14.666013Z",
+      "last_checked": "2026-06-15T05:02:52.493536Z",
       "changed": false
     }
   ],
