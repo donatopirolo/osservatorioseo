@@ -1,38 +1,32 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-19T05:01:26.580903Z",
-  "generated_at_local": "2026-06-19T07:01:26.580903+02:00",
+  "generated_at": "2026-06-19T06:01:27.050151Z",
+  "generated_at_local": "2026-06-19T08:01:27.050151+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-19-0701",
+  "run_id": "2026-06-19-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2140,
     "items_after_dedup": 18,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0259,
+    "ai_cost_eur": 0.0258,
     "summarize_attempted": 18,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-19_006",
     "item_2026-06-19_004",
     "item_2026-06-19_017",
     "item_2026-06-19_007",
     "item_2026-06-19_002",
     "item_2026-06-19_003",
+    "item_2026-06-19_006",
     "item_2026-06-19_012",
     "item_2026-06-19_015",
-    "item_2026-06-19_008",
+    "item_2026-06-19_009",
     "item_2026-06-19_001"
   ],
   "categories": {
-    "ai_overviews_llm_seo": [
-      "item_2026-06-19_006",
-      "item_2026-06-19_002",
-      "item_2026-06-19_012",
-      "item_2026-06-19_015"
-    ],
     "ai_models": [
       "item_2026-06-19_004",
       "item_2026-06-19_017",
@@ -43,11 +37,16 @@
     ],
     "technical_seo": [
       "item_2026-06-19_007",
-      "item_2026-06-19_003",
-      "item_2026-06-19_009"
+      "item_2026-06-19_003"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-06-19_002",
+      "item_2026-06-19_006",
+      "item_2026-06-19_012",
+      "item_2026-06-19_015"
     ],
     "google_updates": [
-      "item_2026-06-19_008"
+      "item_2026-06-19_009"
     ],
     "tools_platforms": [
       "item_2026-06-19_016",
@@ -55,6 +54,7 @@
       "item_2026-06-19_011"
     ],
     "industry_news": [
+      "item_2026-06-19_008",
       "item_2026-06-19_014"
     ]
   },
@@ -79,14 +79,14 @@
       },
       "category": "ai_models",
       "tags": [
-        "ai_reasoning",
-        "medical_ai",
-        "openai",
-        "case_study"
+        "ai_healthcare",
+        "openai_reasoning",
+        "medical_diagnosi",
+        "rare_disease"
       ],
       "importance": 2,
       "published_at": "2026-06-18T07:00:00Z",
-      "fetched_at": "2026-06-19T05:02:38.542229Z",
+      "fetched_at": "2026-06-19T06:02:36.688491Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -98,7 +98,7 @@
       "id": "item_2026-06-19_002",
       "title_original": "Why Calling Yourself The Best Could Be Helping Your Competitors Win In AI Search via @sejournal, @lilyraynyc",
       "title_it": "Dichiararsi i migliori potrebbe favorire i competitor nelle ricerche AI",
-      "summary_it": "Secondo nuovi dati, Google cita spesso i contenuti listicle di un sito nelle AI Overviews, ma raccomanda effettivamente i competitor. La distinzione tra citazione e raccomandazione è cruciale: essere citati non garantisce visibilità o traffico se l'algoritmo promuove altre fonti come più rilevanti.",
+      "summary_it": "Secondo nuovi dati, Google cita spesso i contenuti listicle di un sito nelle AI Overviews, ma raccomanda i competitor come fonti primarie. La distinzione tra citazione e raccomandazione è cruciale: essere citati non garantisce posizionamento favorevole negli snippet generati dall'IA.",
       "url": "https://www.searchenginejournal.com/why-calling-yourself-the-best-could-be-helping-your-competitors-win-in-ai-search/579778",
       "source": {
         "id": "search_engine_journal",
@@ -121,7 +121,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-18T08:00:08Z",
-      "fetched_at": "2026-06-19T05:02:41.065209Z",
+      "fetched_at": "2026-06-19T06:02:39.883781Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -133,7 +133,7 @@
       "id": "item_2026-06-19_003",
       "title_original": "Google Tightens Requirements For Domain Migrations via @sejournal, @martinibuster",
       "title_it": "Google irrigidisce i requisiti per le migrazioni di dominio",
-      "summary_it": "Google ha aggiornato la documentazione ufficiale per le migrazioni di dominio, introducendo requisiti di conformità più stringenti per i proprietari di siti. Le nuove linee guida ampliano gli obblighi tecnici e procedurali necessari per eseguire una migrazione senza perdite di ranking.",
+      "summary_it": "Google ha aggiornato la documentazione ufficiale per le migrazioni di dominio, introducendo requisiti di conformità più stringenti per i proprietari di siti. Le nuove linee guida ampliano gli obblighi tecnici e procedurali che devono essere rispettati durante il trasferimento di un sito verso un nuovo dominio.",
       "url": "https://www.searchenginejournal.com/google-tightens-requirements-for-domain-migrations/579781",
       "source": {
         "id": "search_engine_journal",
@@ -150,13 +150,12 @@
       "category": "technical_seo",
       "tags": [
         "domain_migration",
-        "google_requirement",
-        "technical_seo",
-        "site_migration"
+        "google_guideline",
+        "technical_requirement"
       ],
       "importance": 3,
       "published_at": "2026-06-18T08:17:45Z",
-      "fetched_at": "2026-06-19T05:02:43.171725Z",
+      "fetched_at": "2026-06-19T06:02:42.677794Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -168,7 +167,7 @@
       "id": "item_2026-06-19_004",
       "title_original": "Google Exposes The Fundamental Flaw Of LLMs.txt via @sejournal, @martinibuster",
       "title_it": "Google evidenzia il difetto fondamentale di LLMs.txt",
-      "summary_it": "Google ha identificato un conflitto tra l'assunzione principale che guida l'adozione di LLMs.txt e lo scopo originario dei suoi creatori. La dichiarazione di Google mette in discussione l'efficacia del protocollo nel raggiungere gli obiettivi per cui è stato concepito.",
+      "summary_it": "Google ha identificato un conflitto tra l'assunto principale che guida l'adozione di LLMs.txt e lo scopo originario dei suoi creatori. La discrepanza riguarda come i modelli linguistici interpretano e utilizzano il file rispetto alle intenzioni iniziali.",
       "url": "https://www.searchenginejournal.com/google-exposes-llms-txt-flaw/579814",
       "source": {
         "id": "search_engine_journal",
@@ -191,7 +190,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-18T08:56:49Z",
-      "fetched_at": "2026-06-19T05:02:45.078657Z",
+      "fetched_at": "2026-06-19T06:02:44.719132Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -203,7 +202,7 @@
       "id": "item_2026-06-19_005",
       "title_original": "Improving health intelligence in ChatGPT",
       "title_it": "Miglioramenti nell'intelligenza sanitaria di ChatGPT",
-      "summary_it": "OpenAI annuncia miglioramenti nelle risposte sanitarie di ChatGPT tramite GPT-5.5 Instant, con focus su ragionamento più solido, migliore contestualizzazione e valutazioni informate da medici. Le implicazioni per i contenuti health-related riguardano la qualità delle risposte generate e potenziali impatti sulla ricerca di informazioni mediche online.",
+      "summary_it": "OpenAI annuncia potenziamenti nelle risposte sanitarie e wellness di ChatGPT tramite GPT-5.5 Instant, con migliore ragionamento, contestualizzazione e valutazioni validate da medici. Le implicazioni per i contenuti health-related riguardano la qualità delle risposte generate e il potenziale impatto su EEAT e ranking di pagine mediche.",
       "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
       "source": {
         "id": "openai_blog",
@@ -219,14 +218,14 @@
       },
       "category": "ai_models",
       "tags": [
-        "chatgpt",
+        "chatgpt_health",
+        "gpt_5_5",
         "health_content",
-        "ai_reasoning",
         "e_e_a_t"
       ],
       "importance": 2,
       "published_at": "2026-06-18T10:00:00Z",
-      "fetched_at": "2026-06-19T05:02:47.092818Z",
+      "fetched_at": "2026-06-19T06:02:47.293118Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -259,9 +258,9 @@
         "search_behavior",
         "brand_visibility"
       ],
-      "importance": 4,
+      "importance": 3,
       "published_at": "2026-06-18T10:00:31Z",
-      "fetched_at": "2026-06-19T05:02:50.225715Z",
+      "fetched_at": "2026-06-19T06:02:49.461704Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -273,7 +272,7 @@
       "id": "item_2026-06-19_007",
       "title_original": "Google: For Site Moves, Add All Domain Variants To Change Of Address Tool",
       "title_it": "Google: Migrazioni di dominio, sottometti Change of Address per tutte le varianti",
-      "summary_it": "Google ha aggiornato la documentazione ufficiale sulle migrazioni di dominio, specificando che durante un cambio di dominio è necessario sottomettere richieste di Change of Address per tutte le varianti (subdomini, www e non-www), anche se non attive. La chiarificazione sottolinea l'importanza di verificare tutte le varianti in Search Console per garantire una migrazione corretta.",
+      "summary_it": "Google ha aggiornato la documentazione sulle migrazioni di dominio specificando che durante un cambio di dominio è necessario sottomettere richieste di Change of Address per tutte le varianti (subdomini, www e non-www), anche se non attive. La chiarificazione sottolinea l'importanza di verificare tutte le varianti in Search Console per garantire una migrazione corretta.",
       "url": "https://www.seroundtable.com/google-domain-variants-site-moves-41527.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -296,7 +295,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-18T10:11:00Z",
-      "fetched_at": "2026-06-19T05:02:52.747886Z",
+      "fetched_at": "2026-06-19T06:02:51.842731Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -308,8 +307,43 @@
       "id": "item_2026-06-19_008",
       "title_original": "Google Discover Feed With More Google News Showcase Results",
       "title_it": "Google Discover mostra più contenuti da Google News Showcase",
-      "summary_it": "Google sta ampliando la visibilità dei contenuti da Google News Showcase all'interno del feed Discover, con un nuovo badge dedicato che appare sempre più frequentemente. Il rollout sembra essere in corso su larga scala, interessando utenti in diversi paesi dove il programma è attivo. Questa integrazione rappresenta un ulteriore rafforzamento della posizione dei publisher partner nel feed di scoperta di Google.",
+      "summary_it": "Google sta ampliando la visibilità dei contenuti da Google News Showcase all'interno del feed Discover, con un nuovo badge dedicato che appare in modo più diffuso. Il rollout sembra interessare più utenti e account rispetto alle precedenti implementazioni. La feature era già stata testata nel 2023, ma questa nuova fase rappresenta un'espansione significativa della presenza dei publisher partner nel feed.",
       "url": "https://www.seroundtable.com/google-discover-feed-google-news-showcase-41439.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_discover",
+        "news_showcase",
+        "publisher_visibility",
+        "feed_algorithm"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-18T10:21:00Z",
+      "fetched_at": "2026-06-19T06:02:54.838425Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:cfee9c324dae41e5",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-19_009",
+      "title_original": "Google Tests 3D Model From Attribution In Product Results",
+      "title_it": "Google testa l'attribuzione della fonte dei modelli 3D nei risultati di prodotto",
+      "summary_it": "Google sta testando l'attribuzione esplicita della fonte dei modelli 3D visualizzati nelle schede prodotto di Google Search, mostrando \"3D mode from [nome retailer]\" con link al rivenditore. Il test, ancora non replicabile su larga scala, migliora la trasparenza rispetto ai metodi precedenti che non indicavano chiaramente l'origine dei contenuti 3D e 360.",
+      "url": "https://www.seroundtable.com/google-3d-model-from-41515.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -324,41 +358,6 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_discover",
-        "news_showcase",
-        "feed_change",
-        "publisher_visibility"
-      ],
-      "importance": 2,
-      "published_at": "2026-06-18T10:21:00Z",
-      "fetched_at": "2026-06-19T05:02:55.289049Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:cfee9c324dae41e5",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-19_009",
-      "title_original": "Google Tests 3D Model From Attribution In Product Results",
-      "title_it": "Google testa l'attribuzione della fonte dei modelli 3D nei risultati di prodotto",
-      "summary_it": "Google sta sperimentando l'attribuzione esplicita dei modelli 3D mostrati nella scheda prodotto di Google Search, indicando il retailer di provenienza con link diretto. Il test, individuato da Khushal Bherwani, mostra la dicitura \"3D mode from [nome retailer]\" e migliora la trasparenza rispetto ai metodi precedenti che non identificavano chiaramente la fonte.",
-      "url": "https://www.seroundtable.com/google-3d-model-from-41515.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
         "product_result",
         "3d_model",
         "rich_snippet",
@@ -366,7 +365,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-18T10:31:00Z",
-      "fetched_at": "2026-06-19T05:02:57.776727Z",
+      "fetched_at": "2026-06-19T06:02:57.885003Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -378,7 +377,7 @@
       "id": "item_2026-06-19_010",
       "title_original": "Google Business Profiles Dashboard Activities Button",
       "title_it": "Google Business Profiles: pulsante Attività nel dashboard",
-      "summary_it": "Google mostra un pulsante 'Attività' nel dashboard di Google Business Profiles per le strutture che offrono prenotazioni di attività e biglietti. Tramite questa sezione è possibile aggiungere nome attività, descrizione, prezzo e URL di prenotazione. La funzionalità non è nuova ma continua a essere disponibile per i gestori di profili business.",
+      "summary_it": "Google Business Profiles mostra un pulsante 'Attività' nel dashboard per le strutture che offrono prenotazioni di attività e biglietti. Attraverso questa sezione è possibile aggiungere nome attività, descrizione, prezzo e URL di prenotazione. Si tratta di una funzionalità già disponibile da alcuni anni, non di una novità recente.",
       "url": "https://www.seroundtable.com/google-business-profiles-activities-tab-41521.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -396,11 +395,11 @@
       "tags": [
         "google_business_profile",
         "local_seo",
-        "activities_booking"
+        "booking_feature"
       ],
       "importance": 2,
       "published_at": "2026-06-18T10:41:00Z",
-      "fetched_at": "2026-06-19T05:02:59.989445Z",
+      "fetched_at": "2026-06-19T06:03:00.418027Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -412,7 +411,7 @@
       "id": "item_2026-06-19_011",
       "title_original": "Bing Webmaster Tools May Support More Country Reporting",
       "title_it": "Bing Webmaster Tools potrebbe estendere il reporting per più paesi",
-      "summary_it": "Bing Webmaster Tools attualmente mostra dati di performance limitati a 11 paesi nel report di ricerca per paese, mentre i dati degli altri mercati vengono raggruppati in \"Rest of World\". Microsoft ha confermato che sta valutando attivamente l'espansione di questa funzionalità per includere più paesi individuali nel prossimo futuro.",
+      "summary_it": "Bing Webmaster Tools attualmente mostra dati di performance limitati a 11 paesi nel report di ricerca per paese, mentre i dati degli altri mercati vengono raggruppati in \"Rest of World\". Microsoft ha confermato che sta valutando attivamente l'espansione di questo filtro per includere più paesi individuali nel prossimo futuro.",
       "url": "https://www.seroundtable.com/bing-webmaster-tools-country-reporting-41526.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -434,7 +433,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-18T10:51:00Z",
-      "fetched_at": "2026-06-19T05:03:02.347343Z",
+      "fetched_at": "2026-06-19T06:03:02.856464Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -446,7 +445,7 @@
       "id": "item_2026-06-19_012",
       "title_original": "Rank And AI Citation Aren’t The Same Number via @sejournal, @DuaneForrester",
       "title_it": "Ranking e citazioni AI non sono lo stesso numero",
-      "summary_it": "Un'analisi su come i modelli AI scompongono i prompt in più query di recupero prima di interrogare un indice, evidenziando che la lunghezza del prompt non è un indicatore affidabile del comportamento di ricerca. La distinzione tra ranking tradizionale e citazioni generate da AI rappresenta un aspetto critico per comprendere il funzionamento degli AI Overviews.",
+      "summary_it": "Un'analisi sulla differenza tra il ranking nei risultati di ricerca tradizionali e le citazioni generate dai modelli AI. I modelli scompongono i prompt in più query di recupero prima di interrogare un indice, e la lunghezza del prompt non è un indicatore affidabile del comportamento di ricerca.",
       "url": "https://www.searchenginejournal.com/rank-and-ai-citation-arent-the-same-number/579202",
       "source": {
         "id": "search_engine_journal",
@@ -463,13 +462,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "ai_citation",
-        "prompt_optimization",
-        "ai_overviews",
-        "ranking_factor"
+        "ranking_factor",
+        "search_behavior",
+        "llm_retrieval"
       ],
       "importance": 3,
       "published_at": "2026-06-18T12:30:18Z",
-      "fetched_at": "2026-06-19T05:03:04.565621Z",
+      "fetched_at": "2026-06-19T06:03:04.834414Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -481,7 +480,7 @@
       "id": "item_2026-06-19_013",
       "title_original": "What is an AI Agent? A Plain-English Guide",
       "title_it": "Cosa sono gli AI Agent? Una guida in linguaggio semplice",
-      "summary_it": "Ahrefs distingue gli AI agent dai chatbot: mentre questi ultimi rispondono a domande specifiche, gli agent autonomi scompongono obiettivi complessi in step sequenziali, prendono decisioni e utilizzano strumenti per eseguire azioni con minimo intervento umano. La distinzione è rilevante per comprendere come l'automazione AI evolverà negli strumenti SEO e di marketing.",
+      "summary_it": "Ahrefs distingue gli AI agent dai chatbot tradizionali: mentre questi ultimi rispondono a domande specifiche, gli agent autonomi scompongono obiettivi complessi in step sequenziali, prendono decisioni e utilizzano strumenti per eseguire azioni con minimo intervento umano. La guida fornisce una spiegazione accessibile delle capacità e del funzionamento degli agent nel contesto SEO e marketing.",
       "url": "https://ahrefs.com/blog/what-is-an-ai-agent",
       "source": {
         "id": "ahrefs_blog",
@@ -499,12 +498,12 @@
       "tags": [
         "ai_agent",
         "automation",
-        "chatbot_vs_agent",
-        "tool_capabilitie"
+        "chatbots_vs_agent",
+        "tool_guide"
       ],
       "importance": 2,
       "published_at": "2026-06-18T12:39:36Z",
-      "fetched_at": "2026-06-19T05:03:07.007877Z",
+      "fetched_at": "2026-06-19T06:03:07.077571Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -516,7 +515,7 @@
       "id": "item_2026-06-19_014",
       "title_original": "Daily Search Forum Recap: June 18, 2026",
       "title_it": "Recap dei forum SEO: migrazioni di dominio, reporting Bing e nuove funzioni Google",
-      "summary_it": "Google raccomanda di sottomettere tutte le varianti di dominio nello strumento Change of Address durante le migrazioni. Bing sta valutando l'espansione del reporting per paese in Webmaster Tools. Google testa l'attribuzione delle immagini 3D nei risultati di prodotto e mostra più contenuti da News Showcase in Discover.",
+      "summary_it": "Google raccomanda di sottomettere richieste di Change of Address per tutte le varianti di dominio durante le migrazioni. Bing sta valutando l'espansione del reporting per paese in Webmaster Tools. Google testa l'attribuzione delle immagini 3D nei risultati di prodotto e mostra più contenuti da News Showcase in Discover.",
       "url": "https://www.seroundtable.com/recap-06-18-2026-41528.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -539,7 +538,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-18T13:00:00Z",
-      "fetched_at": "2026-06-19T05:03:11.339189Z",
+      "fetched_at": "2026-06-19T06:03:09.913878Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -551,7 +550,7 @@
       "id": "item_2026-06-19_015",
       "title_original": "Why category entry points belong in every AI search strategy",
       "title_it": "Perché i punti di ingresso per categoria devono essere in ogni strategia di ricerca AI",
-      "summary_it": "Semrush presenta uno studio sperimentale sulla performance dei contenuti ancorati a Category Entry Points (CEP) su ChatGPT, Google AI Mode e AI Overviews. La ricerca esamina come strutturare i contenuti per ottenere visibilità nelle risposte generate da sistemi AI, fornendo dati empirici su quale approccio funziona meglio su diverse piattaforme.",
+      "summary_it": "Semrush presenta uno studio sperimentale sulla performance dei contenuti ancorati a Category Entry Points (CEP) su ChatGPT, Google AI Mode e AI Overviews. La ricerca analizza come strutturare i contenuti per ottenere visibilità nelle risposte generate da sistemi AI, evidenziando l'importanza di questa tattica nelle strategie di search moderne.",
       "url": "https://www.semrush.com/blog/category-entry-points-ai-search",
       "source": {
         "id": "semrush_blog",
@@ -574,7 +573,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-18T13:19:00Z",
-      "fetched_at": "2026-06-19T05:03:14.075084Z",
+      "fetched_at": "2026-06-19T06:03:12.325914Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -586,7 +585,7 @@
       "id": "item_2026-06-19_016",
       "title_original": "New usage analytics and updated spend controls for enterprises",
       "title_it": "OpenAI introduce nuovi controlli di spesa e analytics per ChatGPT Enterprise",
-      "summary_it": "OpenAI ha rilasciato strumenti avanzati di gestione dei costi e analytics di utilizzo per ChatGPT Enterprise. Le nuove funzionalità permettono alle organizzazioni di monitorare e controllare la spesa in tempo reale, facilitando l'adozione scalabile di AI in ambito aziendale.",
+      "summary_it": "OpenAI ha rilasciato strumenti avanzati di gestione dei costi e analytics di utilizzo per ChatGPT Enterprise. Le nuove funzionalità permettono alle organizzazioni di monitorare e controllare la spesa in modo granulare, facilitando la scalabilità dell'IA in ambito aziendale.",
       "url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
       "source": {
         "id": "openai_blog",
@@ -602,14 +601,14 @@
       },
       "category": "tools_platforms",
       "tags": [
-        "openai",
-        "enterprise_tool",
+        "chatgpt_enterprise",
         "cost_management",
-        "ai_adoption"
+        "analytics",
+        "enterprise_tool"
       ],
       "importance": 2,
       "published_at": "2026-06-18T16:00:00Z",
-      "fetched_at": "2026-06-19T05:03:16.003710Z",
+      "fetched_at": "2026-06-19T06:03:14.651343Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -620,8 +619,8 @@
     {
       "id": "item_2026-06-19_017",
       "title_original": "Google, Microsoft Back Draft AI Agent Discovery Spec via @sejournal, @MattGSouthern",
-      "title_it": "Google e Microsoft supportano la specifica draft per la scoperta di agenti AI",
-      "summary_it": "Google, Microsoft e GitHub hanno pubblicato Agentic Resource Discovery, una specifica open draft che definisce come gli agenti AI trovano e verificano gli strumenti online. Lo standard rappresenta un tentativo di standardizzazione nel modo in cui gli agenti AI accedono e validano le risorse web.",
+      "title_it": "Google e Microsoft supportano la specifica draft per il discovery degli agenti AI",
+      "summary_it": "Google, Microsoft e GitHub hanno pubblicato Agentic Resource Discovery, una specifica open draft che definisce come gli agenti AI scoprono e verificano gli strumenti online. Lo standard mira a standardizzare l'interazione tra agenti AI e risorse web, con implicazioni potenziali per la visibilità e l'accessibilità dei contenuti nei sistemi agentic.",
       "url": "https://www.searchenginejournal.com/google-microsoft-back-draft-ai-agent-discovery-spec/579894",
       "source": {
         "id": "search_engine_journal",
@@ -644,7 +643,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-18T18:48:40Z",
-      "fetched_at": "2026-06-19T05:03:17.945021Z",
+      "fetched_at": "2026-06-19T06:03:17.332180Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -656,7 +655,7 @@
       "id": "item_2026-06-19_018",
       "title_original": "OpenAI Brings Improved Health Responses To Free ChatGPT via @sejournal, @MattGSouthern",
       "title_it": "OpenAI migliora le risposte su temi sanitari in ChatGPT gratuito",
-      "summary_it": "OpenAI ha potenziato GPT-5.5 Instant, il modello predefinito gratuito di ChatGPT, che ora raggiunge prestazioni comparabili ai modelli frontier nelle valutazioni sanitarie interne dell'azienda. Il miglioramento riguarda l'accuratezza e l'affidabilità delle risposte su argomenti medici e di salute.",
+      "summary_it": "OpenAI ha potenziato GPT-5.5 Instant, il modello predefinito gratuito di ChatGPT, che ora raggiunge prestazioni comparabili ai modelli frontier nelle valutazioni interne sulla qualità delle risposte su argomenti sanitari. Il miglioramento riguarda l'accuratezza e l'affidabilità delle informazioni mediche fornite dall'IA.",
       "url": "https://www.searchenginejournal.com/openai-brings-improved-health-responses-to-free-chatgpt/579919",
       "source": {
         "id": "search_engine_journal",
@@ -673,13 +672,13 @@
       "category": "ai_models",
       "tags": [
         "chatgpt",
-        "health_response",
+        "health_information",
         "gpt_5_5",
-        "model_improvement"
+        "ai_accuracy"
       ],
       "importance": 2,
       "published_at": "2026-06-18T20:29:10Z",
-      "fetched_at": "2026-06-19T05:03:20.065960Z",
+      "fetched_at": "2026-06-19T06:03:20.014118Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -691,87 +690,87 @@
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-19T05:01:32.483973Z",
+      "last_checked": "2026-06-19T06:01:32.439875Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-19T05:01:33.344466Z",
+      "last_checked": "2026-06-19T06:01:32.888244Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-19T05:01:34.509288Z",
+      "last_checked": "2026-06-19T06:01:34.022945Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-19T05:01:57.534546Z",
+      "last_checked": "2026-06-19T06:01:56.681822Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-19T05:01:58.022115Z",
+      "last_checked": "2026-06-19T06:01:56.926077Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-19T05:01:59.463221Z",
+      "last_checked": "2026-06-19T06:01:58.836028Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-19T05:02:01.059421Z",
+      "last_checked": "2026-06-19T06:02:00.621627Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-19T05:02:02.807574Z",
+      "last_checked": "2026-06-19T06:02:02.092565Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-19T05:02:02.834744Z",
+      "last_checked": "2026-06-19T06:02:02.124057Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-19T05:02:04.650608Z",
+      "last_checked": "2026-06-19T06:02:02.620309Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-19T05:02:04.976674Z",
+      "last_checked": "2026-06-19T06:02:03.752343Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-19T05:02:06.142645Z",
+      "last_checked": "2026-06-19T06:02:05.520195Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-19T05:02:08.051292Z",
+      "last_checked": "2026-06-19T06:02:06.892540Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-19T05:02:09.958540Z",
+      "last_checked": "2026-06-19T06:02:09.005270Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-19T05:02:11.393085Z",
+      "last_checked": "2026-06-19T06:02:10.252996Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-19T05:02:13.456958Z",
+      "last_checked": "2026-06-19T06:02:11.456741Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-19T05:02:36.321869Z",
+      "last_checked": "2026-06-19T06:02:34.504664Z",
       "changed": false
     }
   ],
