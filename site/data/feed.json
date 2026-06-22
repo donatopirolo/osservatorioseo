@@ -1,38 +1,40 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-21T06:01:20.574755Z",
-  "generated_at_local": "2026-06-21T08:01:20.574755+02:00",
+  "generated_at": "2026-06-22T05:01:21.471693Z",
+  "generated_at_local": "2026-06-22T07:01:21.471693+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-21-0801",
+  "run_id": "2026-06-22-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2140,
-    "items_after_dedup": 2,
+    "items_collected": 2141,
+    "items_after_dedup": 3,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0026,
-    "summarize_attempted": 2,
+    "ai_cost_eur": 0.0046,
+    "summarize_attempted": 3,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-21_002",
-    "item_2026-06-21_001"
+    "item_2026-06-22_002",
+    "item_2026-06-22_001",
+    "item_2026-06-22_003"
   ],
   "categories": {
-    "content_eeat": [
-      "item_2026-06-21_002"
-    ],
     "google_updates": [
-      "item_2026-06-21_001"
+      "item_2026-06-22_002"
+    ],
+    "ai_models": [
+      "item_2026-06-22_001",
+      "item_2026-06-22_003"
     ]
   },
   "items": [
     {
-      "id": "item_2026-06-21_001",
-      "title_original": "Deindexing Reports Keep Coming, Google Sees Nothing Unusual via @sejournal, @MattGSouthern",
-      "title_it": "Segnalazioni di deindexing in aumento, Google nega anomalie",
-      "summary_it": "Continua il flusso di segnalazioni da parte di webmaster riguardanti pagine rimosse dall'indice di Google, mentre il motore di ricerca dichiara di non riscontrare comportamenti anomali. L'articolo fornisce indicazioni per distinguere tra deindexing effettivo, perdita di ranking e falsi positivi nelle segnalazioni.",
-      "url": "https://www.searchenginejournal.com/deindexing-reports-keep-coming-google-sees-nothing-unusual/579847",
+      "id": "item_2026-06-22_001",
+      "title_original": "Make Something Agents Want via @sejournal, @slobodanmanic",
+      "title_it": "Creare contenuti che gli agenti AI vogliono",
+      "summary_it": "L'articolo affronta la visibilità dei siti web agli agenti AI, evidenziando come sei aziende abbiano confermato la rilevanza di questo canale. Viene sottolineato un periodo ancora aperto per adattare i contenuti alle esigenze degli agenti intelligenti, prima che le dinamiche di ranking si stabilizzino.",
+      "url": "https://www.searchenginejournal.com/make-something-agents-want/576188",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -43,145 +45,179 @@
         "target_url": null,
         "selectors": null,
         "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "ai_agent",
+        "content_optimization",
+        "visibility",
+        "emerging_channel"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-21T11:00:34Z",
+      "fetched_at": "2026-06-22T05:02:34.364304Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:7f62a47a3ed151f9",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-22_002",
+      "title_original": "Google Search Ranking Update Hits Friday June 19th Impacting Black Hats?",
+      "title_it": "Possibile aggiornamento algoritmico di Google il 19 giugno colpisce principalmente siti black hat",
+      "summary_it": "Google ha probabilmente implementato un aggiornamento non ufficiale venerdì 19 giugno che sembra aver impattato principalmente siti con pratiche black hat SEO. L'attività nei forum black hat mostra segnalazioni di cali di traffico tra il 25-50%, mentre i tool di tracking rimangono stabili e il chatter nei forum white hat è minore. L'update segue la conclusione del core update di maggio 2026 e una serie di volatilità registrate nelle settimane precedenti.",
+      "url": "https://www.seroundtable.com/google-search-ranking-hits-black-hats-41541.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "google_updates",
       "tags": [
-        "deindexing",
-        "google_index",
-        "ranking_loss",
-        "troubleshooting"
+        "algorithm_update",
+        "black_hat_seo",
+        "ranking_volatility",
+        "traffic_impact"
       ],
-      "importance": 2,
-      "published_at": "2026-06-20T11:30:44Z",
-      "fetched_at": "2026-06-21T06:02:33.803505Z",
+      "importance": 3,
+      "published_at": "2026-06-21T11:20:00Z",
+      "fetched_at": "2026-06-22T05:02:37.543972Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:6f69eeed2072af6c",
+      "raw_hash": "sha256:f95d543810ffcb9e",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-21_002",
-      "title_original": "The Content Framework That Worked In 2019 Is Now Working Against You via @sejournal, @gregjarboe",
-      "title_it": "I framework di contenuto del 2019 ora lavorano contro di te",
-      "summary_it": "Le strategie di content marketing consolidate nel 2019 risultano obsolete e controproducenti nel contesto attuale di ranking. L'articolo analizza come i modelli di creazione contenuti devono evolversi abbandonando approcci datati e adottando nuovi dati per mantenere competitività nei risultati di ricerca.",
-      "url": "https://www.searchenginejournal.com/the-content-framework-that-worked-in-2019-is-now-working-against-you/579051",
+      "id": "item_2026-06-22_003",
+      "title_original": "Samsung Electronics brings ChatGPT and Codex to employees",
+      "title_it": "Samsung Electronics integra ChatGPT e Codex per i dipendenti",
+      "summary_it": "Samsung Electronics ha implementato ChatGPT Enterprise e Codex su scala globale per i propri dipendenti, rappresentando uno dei maggiori rollout enterprise di OpenAI. L'integrazione riguarda strumenti di generazione di testo e codice destinati all'uso interno aziendale.",
+      "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://openai.com/blog/rss.xml",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "ai_models",
         "enabled": true
       },
-      "category": "content_eeat",
+      "category": "ai_models",
       "tags": [
-        "content_strategy",
-        "ranking_factor",
-        "framework_evolution",
-        "seo_trend"
+        "enterprise_ai",
+        "chatgpt_deployment",
+        "corporate_adoption"
       ],
-      "importance": 3,
-      "published_at": "2026-06-20T13:00:50Z",
-      "fetched_at": "2026-06-21T06:02:35.990747Z",
+      "importance": 2,
+      "published_at": "2026-06-21T22:00:00Z",
+      "fetched_at": "2026-06-22T05:02:39.298898Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:9a20c76ce7da7b27",
+      "raw_hash": "sha256:ecd34a23bf4c8edc",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-21T06:01:27.573077Z",
+      "last_checked": "2026-06-22T05:01:26.959644Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-21T06:01:27.985869Z",
+      "last_checked": "2026-06-22T05:01:27.176106Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-21T06:01:29.338854Z",
+      "last_checked": "2026-06-22T05:01:28.494408Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-21T06:01:53.381986Z",
+      "last_checked": "2026-06-22T05:01:52.588507Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-21T06:01:53.928436Z",
+      "last_checked": "2026-06-22T05:01:52.886458Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-21T06:01:55.312753Z",
+      "last_checked": "2026-06-22T05:01:54.855240Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-21T06:01:57.302377Z",
+      "last_checked": "2026-06-22T05:01:56.241932Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-21T06:01:58.028629Z",
+      "last_checked": "2026-06-22T05:01:57.997850Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-21T06:01:58.086644Z",
+      "last_checked": "2026-06-22T05:01:58.022344Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-21T06:01:58.583585Z",
+      "last_checked": "2026-06-22T05:01:59.740397Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-21T06:01:59.405492Z",
+      "last_checked": "2026-06-22T05:02:00.093826Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-21T06:02:00.397722Z",
+      "last_checked": "2026-06-22T05:02:01.593265Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-21T06:02:01.887124Z",
+      "last_checked": "2026-06-22T05:02:03.221568Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-21T06:02:03.192683Z",
+      "last_checked": "2026-06-22T05:02:04.623955Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-21T06:02:04.815680Z",
+      "last_checked": "2026-06-22T05:02:06.145832Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-21T06:02:06.864182Z",
+      "last_checked": "2026-06-22T05:02:07.733849Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-21T06:02:31.105384Z",
+      "last_checked": "2026-06-22T05:02:31.834419Z",
       "changed": false
     }
   ],
