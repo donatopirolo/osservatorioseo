@@ -1,42 +1,105 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-22T06:01:23.180801Z",
-  "generated_at_local": "2026-06-22T08:01:23.180801+02:00",
+  "generated_at": "2026-06-23T05:01:18.491103Z",
+  "generated_at_local": "2026-06-23T07:01:18.491103+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-22-0801",
+  "run_id": "2026-06-23-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2141,
-    "items_after_dedup": 3,
+    "items_collected": 2145,
+    "items_after_dedup": 19,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0046,
-    "summarize_attempted": 3,
+    "ai_cost_eur": 0.0303,
+    "summarize_attempted": 19,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-06-22_002",
-    "item_2026-06-22_001",
-    "item_2026-06-22_003"
+    "item_2026-06-23_013",
+    "item_2026-06-23_005",
+    "item_2026-06-23_016",
+    "item_2026-06-23_008",
+    "item_2026-06-23_011",
+    "item_2026-06-23_012",
+    "item_2026-06-23_009",
+    "item_2026-06-23_018",
+    "item_2026-06-23_004",
+    "item_2026-06-23_003"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-06-22_002"
-    ],
     "ai_overviews_llm_seo": [
-      "item_2026-06-22_001"
+      "item_2026-06-23_013",
+      "item_2026-06-23_011",
+      "item_2026-06-23_017"
+    ],
+    "google_updates": [
+      "item_2026-06-23_005",
+      "item_2026-06-23_016"
+    ],
+    "tools_platforms": [
+      "item_2026-06-23_008",
+      "item_2026-06-23_006",
+      "item_2026-06-23_007",
+      "item_2026-06-23_010",
+      "item_2026-06-23_002",
+      "item_2026-06-23_015"
+    ],
+    "technical_seo": [
+      "item_2026-06-23_012",
+      "item_2026-06-23_009"
+    ],
+    "industry_news": [
+      "item_2026-06-23_018",
+      "item_2026-06-23_003",
+      "item_2026-06-23_001",
+      "item_2026-06-23_014",
+      "item_2026-06-23_019"
     ],
     "ai_models": [
-      "item_2026-06-22_003"
+      "item_2026-06-23_004"
     ]
   },
   "items": [
     {
-      "id": "item_2026-06-22_001",
-      "title_original": "Make Something Agents Want via @sejournal, @slobodanmanic",
-      "title_it": "Creare contenuti che gli agenti AI vogliono",
-      "summary_it": "Sei aziende hanno confermato che il canale degli agenti AI è concreto e operativo. L'articolo analizza la finestra temporale ancora disponibile per ottimizzare i siti web affinché siano visibili e rilevanti per gli agenti AI, rappresentando una nuova sfida per la visibilità online.",
-      "url": "https://www.searchenginejournal.com/make-something-agents-want/576188",
+      "id": "item_2026-06-23_001",
+      "title_original": "Stop trying to replace people with AI",
+      "title_it": "Smettila di cercare di sostituire le persone con l'IA",
+      "summary_it": "Kevin Indig affronta il tema della sostituzione del lavoro umano con l'IA, sottolineando come questo approccio sia controproducente. L'articolo rappresenta una riflessione critica su come le aziende dovrebbero integrare l'IA per potenziare i team piuttosto che eliminarli.",
+      "url": "https://www.growth-memo.com/p/stop-trying-to-replace-people-with",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ai_adoption",
+        "workforce_strategy",
+        "human_ai_collaboration"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T06:11:07Z",
+      "fetched_at": "2026-06-23T05:02:36.816529Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:ddb1706851598592",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_002",
+      "title_original": "Build A Live Data Stack With MCP For Smarter Campaign Performance",
+      "title_it": "Costruire uno stack di dati live con MCP per migliori performance di campagna",
+      "summary_it": "L'articolo illustra come implementare un'architettura di dati in tempo reale utilizzando Model Context Protocol (MCP) per integrare direttamente i dati delle campagne negli strumenti AI, evitando il copia-incolla manuale di report. L'approccio consente coerenza comportamentale e collaborazione di team nell'analisi e ottimizzazione delle performance.",
+      "url": "https://www.searchenginejournal.com/build-a-live-data-stack-with-mcp-for-smarter-campaign-performance/577414",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -49,64 +112,64 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "tools_platforms",
       "tags": [
-        "ai_agent",
-        "visibility",
-        "optimization_window",
-        "website_indexing"
+        "mcp_protocol",
+        "data_integration",
+        "ai_tool",
+        "campaign_analytic"
       ],
-      "importance": 3,
-      "published_at": "2026-06-21T11:00:34Z",
-      "fetched_at": "2026-06-22T06:02:36.902088Z",
+      "importance": 2,
+      "published_at": "2026-06-22T07:30:04Z",
+      "fetched_at": "2026-06-23T05:02:39.145222Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:7f62a47a3ed151f9",
+      "raw_hash": "sha256:f7ca3f8eace39d61",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-22_002",
-      "title_original": "Google Search Ranking Update Hits Friday June 19th Impacting Black Hats?",
-      "title_it": "Possibile aggiornamento algoritmo Google il 19 giugno colpisce principalmente siti black hat",
-      "summary_it": "Google ha probabilmente implementato un aggiornamento il 19 giugno 2026 che sembra aver impattato principalmente tecniche black hat SEO, con segnalazioni di cali di traffico tra il 25-50% nei forum della comunità. L'update non è stato ufficialmente confermato da Google, ma la volatilità è stata rilevata principalmente nei forum black hat rispetto a quelli white hat.",
-      "url": "https://www.seroundtable.com/google-search-ranking-hits-black-hats-41541.html",
+      "id": "item_2026-06-23_003",
+      "title_original": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+      "title_it": "Patch the Planet: l'iniziativa Daybreak di OpenAI per supportare i manutentori open source",
+      "summary_it": "OpenAI lancia Patch the Planet, un programma che assiste i manutentori di progetti open source nell'identificazione, validazione e correzione delle vulnerabilità attraverso AI e revisione di esperti. L'iniziativa mira a rafforzare la sicurezza dell'ecosistema open source, riducendo i rischi di exploit su software ampiamente utilizzato.",
+      "url": "https://openai.com/index/patch-the-planet",
       "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
         "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "feed_url": "https://openai.com/blog/rss.xml",
         "target_url": null,
         "selectors": null,
-        "category_hint": "google_updates",
+        "category_hint": "ai_models",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "industry_news",
       "tags": [
-        "algorithm_update",
-        "black_hat_seo",
-        "ranking_volatility",
-        "traffic_impact"
+        "open_source_security",
+        "ai_tool",
+        "vulnerability_management",
+        "ecosystem"
       ],
-      "importance": 3,
-      "published_at": "2026-06-21T11:20:00Z",
-      "fetched_at": "2026-06-22T06:02:39.475043Z",
+      "importance": 2,
+      "published_at": "2026-06-22T09:00:00Z",
+      "fetched_at": "2026-06-23T05:02:41.535818Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:f95d543810ffcb9e",
+      "raw_hash": "sha256:94b7f5c1137a2e28",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-22_003",
-      "title_original": "Samsung Electronics brings ChatGPT and Codex to employees",
-      "title_it": "Samsung Electronics integra ChatGPT e Codex per i dipendenti in tutto il mondo",
-      "summary_it": "Samsung Electronics ha implementato ChatGPT Enterprise e Codex su scala globale per i propri dipendenti, rappresentando uno dei più grandi deployment enterprise di OpenAI. L'adozione riguarda sia strumenti di conversazione che di generazione di codice, con implicazioni sulla produttività interna e potenzialmente sui processi di sviluppo software.",
-      "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+      "id": "item_2026-06-23_004",
+      "title_original": "Daybreak: Tools for securing every organization in the world",
+      "title_it": "Daybreak: strumenti per la sicurezza informatica delle organizzazioni",
+      "summary_it": "OpenAI ha presentato Daybreak, una suite di strumenti per la sicurezza che include Codex Security e GPT-5.5-Cyber, progettati per identificare, validare e correggere vulnerabilità su larga scala. Gli strumenti si rivolgono alle organizzazioni che necessitano di automazione nella gestione della sicurezza informatica.",
+      "url": "https://openai.com/index/daybreak-securing-the-world",
       "source": {
         "id": "openai_blog",
         "name": "OpenAI Blog",
@@ -121,106 +184,631 @@
       },
       "category": "ai_models",
       "tags": [
-        "enterprise_ai",
-        "chatgpt_deployment",
-        "codex",
-        "samsung"
+        "openai",
+        "security_tool",
+        "vulnerability_management",
+        "ai_automation"
       ],
       "importance": 2,
-      "published_at": "2026-06-21T22:00:00Z",
-      "fetched_at": "2026-06-22T06:02:41.764499Z",
+      "published_at": "2026-06-22T09:00:00Z",
+      "fetched_at": "2026-06-23T05:02:43.717255Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "anthropic/claude-haiku-4.5",
-      "raw_hash": "sha256:ecd34a23bf4c8edc",
+      "raw_hash": "sha256:c9b71accace3c063",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_005",
+      "title_original": "Preferred Sources & AI Mode Are Creating Filter Bubbles – A New Discovery Problem via @sejournal, @MattGSouthern",
+      "title_it": "Fonti Preferite e Modalità AI creano bolle di filtro: un nuovo problema di scoperta",
+      "summary_it": "Google Preferred Sources e gli strumenti di fedeltà favoriscono la visibilità degli editori consolidati, rendendo più difficile la scoperta per i siti non ancora in lista. Questo meccanismo crea effetti di filter bubble che limitano l'accesso ai nuovi contenitori editoriali.",
+      "url": "https://www.searchenginejournal.com/preferred-sources-ai-mode-are-creating-filter-bubbles-a-new-discovery-problem/579738",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "preferred_source",
+        "ai_mode",
+        "filter_bubble",
+        "discovery"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-22T10:00:02Z",
+      "fetched_at": "2026-06-23T05:02:46.964414Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:c3fc60bec9fb1b3d",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_006",
+      "title_original": "Google Business Profiles New Collected Info Actions",
+      "title_it": "Google Business Profile: nuova sezione Informazioni Raccolte per la verifica dei dati",
+      "summary_it": "Google introduce una nuova funzionalità nelle Business Profile che consente ai proprietari di verificare e gestire le informazioni raccolte automaticamente dal motore di ricerca. La feature, attualmente in rollout selettivo per alcune regioni e categorie, permette di visualizzare la fonte dei dati (chiamate, messaggi, WhatsApp) e di rifiutare informazioni non corrette direttamente dall'interfaccia di gestione.",
+      "url": "https://www.seroundtable.com/google-business-profiles-collected-info-41535.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_business_profile",
+        "local_seo",
+        "business_verification",
+        "data_management"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T10:11:00Z",
+      "fetched_at": "2026-06-23T05:02:50.295805Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:60008d966d204dde",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_007",
+      "title_original": "Google Ads Smart Bidding Strategies Target CPA & Target ROAS Updates",
+      "title_it": "Google Ads separa Target CPA e Target ROAS dalle strategie Maximize",
+      "summary_it": "Google sta aggiornando l'etichettatura delle strategie di offerta in Google Ads, separando Target CPA e Target ROAS come opzioni standalone distinte da Maximize conversions e Maximize conversion value. Il rollout è in corso a giugno 2026 e il funzionamento sottostante rimane identico; non sono richieste azioni dagli inserzionisti, anche se durante la transizione potrebbero visualizzarsi denominazioni miste tra le diverse interfacce.",
+      "url": "https://www.seroundtable.com/google-ads-target-cpa-roas-updates-41539.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "smart_bidding",
+        "target_cpa_roa",
+        "ui_change"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T10:21:00Z",
+      "fetched_at": "2026-06-23T05:02:53.380541Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:27137e1f2e88f8fb",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_008",
+      "title_original": "Google Ads Rolling Out Text Disclaimers To All",
+      "title_it": "Google Ads introduce i disclaimer testuali per tutti gli inserzionisti",
+      "summary_it": "Google ha avviato il rollout globale dei disclaimer testuali in Google Ads, una funzionalità che garantisce la visualizzazione di testi obbligatori, termini e informative legali negli annunci di ricerca responsive. La feature è disponibile nella sezione Assets con limite di 90 caratteri e rappresenta uno strumento di compliance per i settori regolamentati.",
+      "url": "https://www.seroundtable.com/google-ads-text-disclaimers-live-41536.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "compliance",
+        "text_disclaimer",
+        "ppc"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-22T10:31:00Z",
+      "fetched_at": "2026-06-23T05:02:56.278287Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:3b980870ec80c7ba",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_009",
+      "title_original": "Google Says X-Frame-Options Matters For SEO via @sejournal, @martinibuster",
+      "title_it": "Google conferma che X-Frame-Options influisce sulla SEO",
+      "summary_it": "John Mueller di Google ha identificato X-Frame-Options come l'unico security header con impatto diretto sulla SEO. Questo header HTTP, utilizzato per prevenire attacchi clickjacking, rappresenta un elemento tecnico che i professionisti SEO devono considerare nell'ottimizzazione on-page.",
+      "url": "https://www.searchenginejournal.com/google-says-x-frame-options-matters-for-seo/580126",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "x_frame_option",
+        "security_header",
+        "technical_seo",
+        "google_guidance"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-22T10:35:18Z",
+      "fetched_at": "2026-06-23T05:02:59.472835Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:4d3911a579d55b82",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_010",
+      "title_original": "Google Ads Provides More Tips On Pin Headlines & Descriptions",
+      "title_it": "Google Ads aggiorna le linee guida sul pinning di headline e descrizioni",
+      "summary_it": "Google ha ampliato la documentazione ufficiale sugli annunci responsive search ads con nuove raccomandazioni sul pinning. Le indicazioni principali sono: evitare di pinnare testi identici o molto simili nello stesso slot, adottare una strategia ibrida pinnando solo 1-2 headline essenziali e lasciando il resto in rotazione dinamica, e spostare keyword superiori a 30 caratteri nel campo descrizione da 90 caratteri.",
+      "url": "https://www.seroundtable.com/google-ads-pin-headlines-tips-41538.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "responsive_search_ad",
+        "pinning_strategy",
+        "ad_strength"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T10:41:00Z",
+      "fetched_at": "2026-06-23T05:03:02.710762Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:cafa19a45af49d6b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_011",
+      "title_original": "Surging in ChatGPT, Dead in Google – The curious case of a YMYL site with no search visibility in Google, but cited like crazy in ChatGPT",
+      "title_it": "Un sito YMYL assente da Google ma citato massicciamente da ChatGPT: il caso anomalo",
+      "summary_it": "Glenn Gabe documenta un caso insolito di sito YMYL privo di visibilità organica su Google ma ampiamente citato da ChatGPT. Sebbene ChatGPT utilizzi parzialmente Google Search come fonte, questo esempio suggerisce che OpenAI stia diversificando le proprie fonti di addestramento, potenzialmente sviluppando un indice indipendente. La scoperta contraddice il pattern consolidato secondo cui i cali su Google si riflettono anche sulle piattaforme AI downstream.",
+      "url": "https://www.gsqi.com/marketing-blog/surging-in-chatgpt-dead-in-google",
+      "source": {
+        "id": "glenn_gabe_hifpm",
+        "name": "Glenn Gabe — HIFPM",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.gsqi.com/marketing-blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "chatgpt_citation",
+        "ymyl_site",
+        "ai_search_independence",
+        "google_visibility"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-22T10:47:02Z",
+      "fetched_at": "2026-06-23T05:03:06.068167Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:0820b9bfcc2fca2a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_012",
+      "title_original": "Google: Site Move Outcomes Impossible To Fully Know Ahead Of Time",
+      "title_it": "Google: gli esiti di una migrazione di dominio sono impossibili da prevedere completamente",
+      "summary_it": "John Mueller di Google sconsiglia migrazioni di dominio (es. da .ca a .com) per motivi puramente di branding, sottolineando che rimangono operazioni ad alto rischio anche se eseguite correttamente. Mueller evidenzia che gli esiti di una site move non possono essere pienamente previsti in anticipo, nonostante il rispetto della documentazione ufficiale di Google.",
+      "url": "https://www.seroundtable.com/google-site-move-outcomes-impossible-know-41543.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "site_migration",
+        "domain_change",
+        "john_mueller",
+        "risk_management"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-22T10:51:00Z",
+      "fetched_at": "2026-06-23T05:03:09.311478Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:0596c79e3622d581",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_013",
+      "title_original": "A German Court Made Google Liable For What Its AI Says About You via @sejournal, @slobodanmanic",
+      "title_it": "Un tribunale tedesco rende Google responsabile di ciò che dice la sua IA su di te",
+      "summary_it": "Una corte di Monaco ha stabilito che gli AI Overviews rappresentano il discorso diretto di Google, non risultati di ricerca. Questa sentenza cambia la responsabilità legale: Google è ora direttamente imputabile per le informazioni inesatte generate dall'IA su persone e aziende.",
+      "url": "https://www.searchenginejournal.com/a-german-court-made-google-liable-for-what-its-ai-says-about-you/579295",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_overviews",
+        "legal_liability",
+        "google_responsibility",
+        "germany"
+      ],
+      "importance": 4,
+      "published_at": "2026-06-22T12:00:47Z",
+      "fetched_at": "2026-06-23T05:03:12.364515Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:2f07dc4f871c016f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_014",
+      "title_original": "Daily Search Forum Recap: June 22, 2026",
+      "title_it": "Recap dei forum SEO: volatilità ranking e aggiornamenti Google Ads",
+      "summary_it": "Nel fine settimana si è registrata volatilità nei ranking di Google, apparentemente con maggior impatto su tecniche black hat. Google ha confermato che gli spostamenti di dominio comportano rischi difficili da prevedere. Nel frattempo, Google Ads continua il rollout di disclaimer testuali e aggiorna l'etichettatura delle strategie di bidding.",
+      "url": "https://www.seroundtable.com/recap-06-22-2026-41544.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ranking_volatility",
+        "google_ads_update",
+        "site_migration",
+        "black_hat_seo"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T13:00:00Z",
+      "fetched_at": "2026-06-23T05:03:15.531340Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:a89ec384919addab",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_015",
+      "title_original": "What is a Good Organic CTR? Real Website Benchmarks (June 2026)",
+      "title_it": "Qual è un buon CTR organico? Benchmark reali da siti web (giugno 2026)",
+      "summary_it": "Ahrefs pubblica un'analisi sui benchmark di CTR organico, indicando un range medio tra l'1% e il 2% per l'intero sito, con variazioni significative in base a industria, autorità del dominio e dimensioni del sito. Lo studio fornisce dati segmentati per settore utili per valutare le performance relative della propria proprietà.",
+      "url": "https://ahrefs.com/blog/what-is-a-good-ctr",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "ctr_benchmark",
+        "organic_search",
+        "performance_metric",
+        "ahrefs_data"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T13:59:11Z",
+      "fetched_at": "2026-06-23T05:03:18.131186Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:e4f14e1871958fda",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_016",
+      "title_original": "Google Says SEO Tools Lack Access To Its Internal Metrics via @sejournal, @MattGSouthern",
+      "title_it": "Google afferma che i tool SEO non hanno accesso alle sue metriche interne",
+      "summary_it": "Google ribadisce ai CMO che la SEO rimane rilevante e chiarisce che i tool di terze parti non dispongono di accesso alle metriche interne della ricerca. Il messaggio sottolinea il divario informativo tra le piattaforme di analisi esterne e i dati effettivi utilizzati da Google per il ranking.",
+      "url": "https://www.searchenginejournal.com/google-says-seo-tools-lack-access-to-its-internal-metrics/580176",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_metric",
+        "seo_tool",
+        "data_access",
+        "ranking_factor"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-22T18:58:25Z",
+      "fetched_at": "2026-06-23T05:03:20.641465Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:e472f27fb934bc3c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_017",
+      "title_original": "AI Chatbot Use Hits 49%, But Skepticism Stays High via @sejournal, @MattGSouthern",
+      "title_it": "L'uso dei chatbot AI raggiunge il 49%, ma lo scetticismo rimane elevato",
+      "summary_it": "Circa il 49% degli adulti americani utilizza chatbot AI e il 60% legge AI Overviews, ma la maggioranza della popolazione ritiene che l'IA avrà effetti negativi sulla società. I dati evidenziano un divario tra l'adozione effettiva della tecnologia e la percezione dei rischi associati.",
+      "url": "https://www.searchenginejournal.com/ai-chatbot-use-hits-49-but-skepticism-stays-high/580184",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_adoption",
+        "user_behavior",
+        "ai_overviews",
+        "market_sentiment"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T21:50:40Z",
+      "fetched_at": "2026-06-23T05:03:23.331673Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:008791a325a1b60c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_018",
+      "title_original": "Google And Shopify Back Cloudflare’s AI Bot Gatekeeping Initiative via @sejournal, @martinibuster",
+      "title_it": "Google e Shopify supportano l'iniziativa di Cloudflare per il controllo dei bot AI",
+      "summary_it": "Google, Shopify e i principali browser maker hanno appoggiato il nuovo protocollo PACT su infrastruttura Cloudflare per implementare meccanismi di gatekeeping degli agenti AI. L'iniziativa mira a controllare l'accesso e il comportamento dei bot intelligenti sulla rete.",
+      "url": "https://www.searchenginejournal.com/google-and-shopify-back-cloudflares-ai-bot-gatekeeping-initiative/580182",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ai_bot",
+        "cloudflare_pact",
+        "google_shopify",
+        "bot_control"
+      ],
+      "importance": 3,
+      "published_at": "2026-06-22T22:14:36Z",
+      "fetched_at": "2026-06-23T05:03:25.728745Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:af95aaf35f20ac04",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-06-23_019",
+      "title_original": "Google Loses Two Top AI Researchers To OpenAI & Anthropic via @sejournal, @MattGSouthern",
+      "title_it": "Google perde due ricercatori AI di spicco verso OpenAI e Anthropic",
+      "summary_it": "Noam Shazeer, co-lead di Gemini, e John Jumper, ricercatore di AlphaFold, lasciano Google nella stessa settimana per trasferirsi rispettivamente a OpenAI e Anthropic. La partenza di due figure senior rappresenta un cambio significativo nel panorama della ricerca AI e potrebbe influenzare la roadmap dei modelli linguistici di Google.",
+      "url": "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ai_talent",
+        "openai_anthropic",
+        "gemini_alphafold",
+        "ai_research"
+      ],
+      "importance": 2,
+      "published_at": "2026-06-22T22:52:22Z",
+      "fetched_at": "2026-06-23T05:03:28.508759Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "anthropic/claude-haiku-4.5",
+      "raw_hash": "sha256:2b9addccf4041e9e",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-22T06:01:28.792261Z",
+      "last_checked": "2026-06-23T05:01:25.788633Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-22T06:01:29.318343Z",
+      "last_checked": "2026-06-23T05:01:26.111368Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-22T06:01:30.548227Z",
+      "last_checked": "2026-06-23T05:01:27.298409Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-22T06:01:53.874749Z",
+      "last_checked": "2026-06-23T05:01:52.467614Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-22T06:01:54.416241Z",
+      "last_checked": "2026-06-23T05:01:53.034964Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-22T06:01:56.179809Z",
+      "last_checked": "2026-06-23T05:01:54.639643Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-22T06:01:57.252484Z",
+      "last_checked": "2026-06-23T05:01:55.615430Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-22T06:01:58.806874Z",
+      "last_checked": "2026-06-23T05:01:57.433754Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-22T06:01:58.842843Z",
+      "last_checked": "2026-06-23T05:01:57.463581Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-22T06:02:02.333782Z",
+      "last_checked": "2026-06-23T05:02:01.724143Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-22T06:02:02.619220Z",
+      "last_checked": "2026-06-23T05:02:02.542862Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-22T06:02:04.569772Z",
+      "last_checked": "2026-06-23T05:02:03.616840Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-22T06:02:05.765894Z",
+      "last_checked": "2026-06-23T05:02:05.018969Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-22T06:02:07.368131Z",
+      "last_checked": "2026-06-23T05:02:06.175817Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-22T06:02:08.592987Z",
+      "last_checked": "2026-06-23T05:02:07.809573Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-22T06:02:10.493469Z",
+      "last_checked": "2026-06-23T05:02:09.671481Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-22T06:02:34.286638Z",
+      "last_checked": "2026-06-23T05:02:33.983223Z",
       "changed": false
     }
   ],
