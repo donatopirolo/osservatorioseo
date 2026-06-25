@@ -92,8 +92,8 @@ class SummarizerError(Exception):
 
 # Rough pricing per milione di token (input / output) in USD
 MODEL_PRICING: dict[str, tuple[float, float]] = {
-    "google/gemini-2.0-flash-001": (0.10, 0.40),
-    "google/gemini-2.0-flash-lite-001": (0.075, 0.30),
+    "google/gemini-2.5-flash": (0.30, 2.50),
+    "google/gemini-2.5-flash-lite": (0.10, 0.40),
     "anthropic/claude-haiku-4.5": (1.0, 5.0),
     "openai/gpt-5-mini": (0.25, 2.0),
 }
@@ -111,7 +111,7 @@ class Summarizer:
     def __init__(
         self,
         api_key: str,
-        primary_model: str = "google/gemini-2.0-flash",
+        primary_model: str = "google/gemini-2.5-flash",
         fallback_models: list[str] | None = None,
         max_retries_per_model: int = 2,
     ) -> None:
