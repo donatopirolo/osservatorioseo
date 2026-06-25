@@ -1,5 +1,5 @@
 import json
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from osservatorio_seo.models import Feed, FeedStats, Item, Source
@@ -112,6 +112,37 @@ def test_publish_preserves_doc_change_items_on_same_day_rerun(tmp_path: Path) ->
     assert "doc_spam" in archive["categories"].get("google_docs_change", [])
     # Le notizie normali del secondo run ci sono comunque
     assert "news_b" in ids
+
+
+def test_select_google_updates_filters_sorts_and_caps() -> None:
+    """La sezione 'Aggiornamenti Google' deve includere solo google_updates +
+    doc-change rilevanti, ordinati per importanza e recency, con un cap."""
+    base = datetime(2026, 6, 24, 12, 0, tzinfo=UTC)
+
+    def mk(item_id, cat, imp, days_ago, *, doc=False):
+        it = mk_item(item_id)
+        it.category = cat
+        it.importance = imp
+        it.published_at = base - timedelta(days=days_ago)
+        it.is_doc_change = doc
+        return it
+
+    items = [
+        mk("ai_news", "ai_overviews_llm_seo", 5, 0),  # non-Google → escluso
+        mk("g_spam", "google_updates", 4, 0),  # incluso
+        mk("g_doc", "google_docs_change", 5, 1, doc=True),  # incluso (doc-change)
+        mk("g_minor", "google_updates", 2, 0),  # sotto soglia → escluso
+        mk("g_old", "google_updates", 3, 2),  # incluso
+    ]
+    result = Publisher._select_google_updates(items, limit=10, min_importance=3)
+    ids = [i.id for i in result]
+
+    assert "ai_news" not in ids  # categoria non-Google
+    assert "g_minor" not in ids  # importance < 3
+    assert ids == ["g_doc", "g_spam", "g_old"]  # ordine: importanza desc, poi recency
+
+    # Il cap limita il numero di item
+    assert len(Publisher._select_google_updates(items, limit=1, min_importance=3)) == 1
 
 
 def test_publish_creates_archive_index(tmp_path: Path) -> None:

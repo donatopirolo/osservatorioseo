@@ -1511,6 +1511,25 @@ class Publisher:
 
     # --- Top Week (rolling 7-day top 10) ---
 
+    GOOGLE_UPDATE_CATEGORIES = {"google_updates", "google_docs_change"}
+
+    @staticmethod
+    def _select_google_updates(
+        items: list[Item], limit: int = 10, min_importance: int = 3
+    ) -> list[Item]:
+        """Seleziona gli aggiornamenti Google rilevanti da mostrare in evidenza
+        su /top-settimana/: categoria google_updates/google_docs_change o
+        doc-change, sopra una soglia di importanza, ordinati per importanza e
+        recency e limitati a ``limit``."""
+        selected = [
+            i
+            for i in items
+            if (i.category in Publisher.GOOGLE_UPDATE_CATEGORIES or i.is_doc_change)
+            and i.importance >= min_importance
+        ]
+        selected.sort(key=lambda i: (i.importance, i.published_at), reverse=True)
+        return selected[:limit]
+
     def _ssg_top_week(
         self,
         renderer: HtmlRenderer,
@@ -1599,6 +1618,38 @@ class Publisher:
             else:
                 top10_itemlist.append({"url": canonical("/top-settimana/"), "name": item.title_it})
 
+        # Sezione "Aggiornamenti Google della settimana": gli item google_updates
+        # e le modifiche alle linee guida degli ultimi 7 giorni, in evidenza a
+        # prescindere dal ranking generico della top 10.
+        google_cards: list[str] = []
+        google_updates = self._select_google_updates(combined_items)
+        for idx, item in enumerate(google_updates, start=1):
+            is_today = any(i.id == item.id for i in current_feed.items)
+            if is_today and item.importance >= 4 and item.id in item_slugs:
+                y, m, d = day_iso.split("-")
+                article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
+                is_internal = True
+            else:
+                article_url = item.url
+                is_internal = False
+            google_cards.append(
+                renderer.render_raw(
+                    "partials/_card_top10.html.jinja",
+                    {
+                        "item": item.model_dump(mode="json"),
+                        "search_blob": _build_search_blob(item),
+                        "short_id": _short_id(item),
+                        "relative_date": _relative_date(item.published_at),
+                        "absolute_date": _absolute_date(item.published_at),
+                        "stars": _stars(item.importance),
+                        "tags": item.tags,
+                        "article_url": article_url,
+                        "is_internal_link": is_internal,
+                        "order": idx,
+                    },
+                )
+            )
+
         meta_line = (
             f"SYSTEM STATUS: OPTIMAL // ROLLING 7D // "
             f"{len(combined_items)} ARTICOLI ANALIZZATI // TOP 10"
@@ -1614,6 +1665,7 @@ class Publisher:
             "active_nav": "top-week",
             "noindex": not allow_indexing,
             "meta_line": meta_line,
+            "google_cards": google_cards,
             "top10_cards": top10_cards,
             "top10_itemlist": top10_itemlist,
             "top10_itemlist_name": "Top 10 della settimana — Osservatorio SEO",
