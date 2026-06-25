@@ -59,6 +59,15 @@
       return isoStr.slice(8, 10) + "/" + isoStr.slice(5, 7);
     }
 
+    var MONTHS_IT = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
+      "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
+
+    function fmtMonthYear(isoStr) {
+      if (!isoStr || isoStr.length < 7) return "";
+      var m = parseInt(isoStr.slice(5, 7), 10);
+      return MONTHS_IT[m - 1] + " " + isoStr.slice(0, 4);
+    }
+
     function fmtPct(n) {
       return n.toFixed(1) + "%";
     }
@@ -688,20 +697,51 @@
         var tPts = tIT.points || [];
 
         if (tKw.length > 0 && tPts.length > 0) {
+          /* leader della settimana corrente (e secondo classificato) */
+          function leaderAt(values) {
+            var lk = tKw[0], lv = values[tKw[0]] || 0;
+            for (var k = 1; k < tKw.length; k++) {
+              if ((values[tKw[k]] || 0) > lv) { lk = tKw[k]; lv = values[tKw[k]] || 0; }
+            }
+            return lk;
+          }
           var lastPt = tPts[tPts.length - 1];
           var vals = lastPt.values || {};
-          var bestKw = tKw[0];
-          var bestVal = vals[tKw[0]] || 0;
-          for (var ti = 1; ti < tKw.length; ti++) {
-            if ((vals[tKw[ti]] || 0) > bestVal) {
-              bestKw = tKw[ti];
-              bestVal = vals[tKw[ti]] || 0;
+          var order = tKw.slice().sort(function (a, b) { return (vals[b] || 0) - (vals[a] || 0); });
+          var leadKw = order[0], leadVal = vals[leadKw] || 0;
+          var secondKw = order.length > 1 ? order[1] : null;
+          var secondVal = secondKw ? (vals[secondKw] || 0) : 0;
+
+          /* rileva l'ultimo sorpasso: settimana in cui il leader attuale ha superato un altro */
+          var prevLeader = null, crossoverDate = null;
+          for (var pi = tPts.length - 1; pi >= 0; pi--) {
+            var lk = leaderAt(tPts[pi].values || {});
+            if (lk !== leadKw) {
+              prevLeader = lk;
+              crossoverDate = (tPts[pi + 1] || lastPt).date;
+              break;
             }
           }
-          textEl.innerHTML = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
-            'In Italia la piattaforma AI con più interesse di ricerca è <strong class="text-white">' + escHtml(bestKw) +
-            '</strong> (indice ' + bestVal + '/100). ' +
-            'I valori rappresentano l\'interesse relativo di ricerca su Google (100 = picco massimo nel periodo).</p>';
+
+          var html = '<p class="text-sm text-on-surface-variant leading-relaxed">' +
+            'In Italia l\'AI con più interesse di ricerca su Google è ora <strong class="text-white">' + escHtml(leadKw) +
+            '</strong> (indice ' + leadVal + '/100)';
+          if (secondKw) {
+            html += ', davanti a <strong class="text-white">' + escHtml(secondKw) + '</strong> (' + secondVal + ')';
+          }
+          html += '. ';
+          if (prevLeader) {
+            html += '<strong class="text-white">' + escHtml(leadKw) + '</strong> ha superato <strong class="text-white">' +
+              escHtml(prevLeader) + '</strong> intorno a ' + escHtml(fmtMonthYear(crossoverDate)) + '. ';
+            var avgs = tIT.averages || {};
+            var avgOrder = Object.keys(avgs).sort(function (a, b) { return avgs[b] - avgs[a]; });
+            if (avgOrder.length > 0 && avgOrder[0] !== leadKw) {
+              html += 'La media dell\'intero periodo premia ancora <strong class="text-white">' + escHtml(avgOrder[0]) +
+                '</strong>, in testa fino a poche settimane fa: le card in alto riflettono questa media, non il sorpasso più recente. ';
+            }
+          }
+          html += 'I valori rappresentano l\'interesse relativo di ricerca su Google (100 = picco massimo nel periodo).</p>';
+          textEl.innerHTML = html;
         } else {
           /* Fallback to Radar-based text */
           var best = null;
