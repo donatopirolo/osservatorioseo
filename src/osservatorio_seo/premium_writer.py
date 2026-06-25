@@ -52,7 +52,7 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # Rough pricing (USD per 1M token) — same conversion rate as summarizer
 PREMIUM_PRICING: dict[str, tuple[float, float]] = {
-    "anthropic/claude-sonnet-4-5": (3.0, 15.0),
+    "anthropic/claude-sonnet-4.5": (3.0, 15.0),
     "anthropic/claude-opus-4-6": (15.0, 75.0),
     "anthropic/claude-haiku-4.5": (1.0, 5.0),
 }
@@ -417,7 +417,7 @@ class PremiumWriter:
     def __init__(
         self,
         api_key: str,
-        primary_model: str = "anthropic/claude-sonnet-4-5",
+        primary_model: str = "anthropic/claude-sonnet-4.5",
         fallback_models: list[str] | None = None,
         max_retries_per_model: int = 2,
     ) -> None:

@@ -1,0 +1,27 @@
+# Dossier (pillar pages) generati automaticamente dal workflow dossier-weekly.
+#
+# Ogni tag elencato qui diventa una pagina evergreen /dossier/<slug>/
+# (slug = tag con underscore -> trattino, es. core_update -> core-update).
+#
+# Un dossier viene (ri)generato solo quando:
+#   - non esiste ancora un JSON in data/pillars/, oppure
+#   - ci sono almeno `min_new_items` item qualificanti NUOVI rispetto
+#     all'ultima generazione (confronto su item_refs).
+# Questo evita rigenerazioni inutili — e i relativi costi Sonnet — su
+# contenuto evergreen che non ha materiale nuovo.
+#
+# Per aggiungere/togliere un dossier: modifica la lista `tags`.
+# Per forzare la rigenerazione di tutto: lancia lo script con --force.
+
+# Soglia minima di importance per considerare un item parte del dossier.
+min_importance: 3
+
+# Quanti item qualificanti nuovi servono per rigenerare un dossier esistente.
+min_new_items: 3
+
+tags:
+  - core_update
+  - ai_overviews
+  - ai_mode
+  - local_seo
+  - technical_seo
