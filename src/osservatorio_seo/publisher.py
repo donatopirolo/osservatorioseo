@@ -156,7 +156,10 @@ class Publisher:
 
         date_str = feed.generated_at_local.strftime("%Y-%m-%d")
         archive_file = self._archive_dir / f"{date_str}.json"
-        archive_file.write_text(feed_json, encoding="utf-8")
+        archive_feed = self._preserve_doc_changes(feed, archive_file)
+        archive_file.write_text(
+            archive_feed.model_dump_json(indent=2), encoding="utf-8"
+        )
 
         # Indice archivio: elenco ordinato di tutte le date disponibili
         archive_index = self._build_archive_index()
@@ -174,6 +177,39 @@ class Publisher:
                 shutil.copy2(src, site_archive_dir / src.name)
 
         return feed_file
+
+    def _preserve_doc_changes(self, feed: Feed, archive_file: Path) -> Feed:
+        """Conserva i doc-change item gia' pubblicati nello stesso giorno.
+
+        I doc-change item compaiono solo nel run che rileva la modifica. Senza
+        questa logica un secondo run nello stesso giorno riscriverebbe l'archivio
+        del giorno cancellando la notizia (lo state e' gia' "consumato", quindi
+        la modifica non viene piu' rilevata). Qui i doc-change item presenti
+        nell'archivio esistente ma assenti dal feed corrente vengono reiniettati.
+        """
+        if not archive_file.exists():
+            return feed
+        try:
+            existing = Feed.model_validate_json(archive_file.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            return feed
+
+        current_ids = {i.id for i in feed.items}
+        preserved = [
+            i for i in existing.items if i.is_doc_change and i.id not in current_ids
+        ]
+        if not preserved:
+            return feed
+
+        merged_items = [*feed.items, *preserved]
+        merged_categories = {k: list(v) for k, v in feed.categories.items()}
+        for item in preserved:
+            ids = merged_categories.setdefault(item.category, [])
+            if item.id not in ids:
+                ids.append(item.id)
+        return feed.model_copy(
+            update={"items": merged_items, "categories": merged_categories}
+        )
 
     def _build_archive_index(self) -> list[dict[str, str]]:
         """Ritorna la lista di tutte le date archivio disponibili, ordine desc."""

@@ -3,6 +3,18 @@
 # nel feed con badge "⚠️ Google ha aggiornato ..." e summary del diff.
 
 pages:
+  # Changelog ufficiale "What's new in Search documentation": elenca OGNI
+  # modifica alla documentazione Google, anche alle pagine non monitorate
+  # singolarmente qui sotto. È la rete di sicurezza che intercetta i cambiamenti
+  # che altrimenti sfuggirebbero.
+  - id: google_search_docs_changelog
+    name: "Google Search — Changelog documentazione"
+    url: https://developers.google.com/search/updates
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
   - id: google_spam_policies
     name: "Google Spam Policies"
     url: https://developers.google.com/search/docs/essentials/spam-policies

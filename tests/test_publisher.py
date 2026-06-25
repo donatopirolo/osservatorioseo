@@ -70,6 +70,50 @@ def test_publish_writes_feed_and_archive(tmp_path: Path) -> None:
     assert (tmp_path / "archive" / "index.json").exists()
 
 
+def mk_doc_item(item_id: str) -> Item:
+    it = mk_item(item_id)
+    it.is_doc_change = True
+    it.category = "google_docs_change"
+    return it
+
+
+def mk_feed_on(day: datetime, items: list[Item]) -> Feed:
+    feed = mk_feed()
+    feed.generated_at = day
+    feed.generated_at_local = day
+    feed.items = items
+    feed.categories = {}
+    for it in items:
+        feed.categories.setdefault(it.category, []).append(it.id)
+    feed.top10 = [it.id for it in items]
+    return feed
+
+
+def test_publish_preserves_doc_change_items_on_same_day_rerun(tmp_path: Path) -> None:
+    """Un secondo run nello stesso giorno non deve cancellare i doc-change item
+    pubblicati dal primo run (regressione: overwrite totale dell'archivio)."""
+    archive_dir = tmp_path / "archive"
+    pub = Publisher(data_dir=tmp_path, archive_dir=archive_dir)
+    day = datetime(2026, 5, 16, 7, 0, tzinfo=UTC)
+
+    # Run 1: rileva la modifica alle linee guida e la pubblica
+    pub.publish(mk_feed_on(day, [mk_item("news_a"), mk_doc_item("doc_spam")]))
+
+    # Run 2 (stesso giorno): nessun doc-change rilevato, solo notizie normali
+    pub.publish(mk_feed_on(day, [mk_item("news_a"), mk_item("news_b")]))
+
+    archive = json.loads((archive_dir / "2026-05-16.json").read_text())
+    ids = {i["id"] for i in archive["items"]}
+    # Il doc item del primo run deve sopravvivere
+    assert "doc_spam" in ids, "doc-change item cancellato dal secondo run"
+    doc = next(i for i in archive["items"] if i["id"] == "doc_spam")
+    assert doc["is_doc_change"] is True
+    # Ed è referenziato nella categoria così da essere renderizzato
+    assert "doc_spam" in archive["categories"].get("google_docs_change", [])
+    # Le notizie normali del secondo run ci sono comunque
+    assert "news_b" in ids
+
+
 def test_publish_creates_archive_index(tmp_path: Path) -> None:
     pub = Publisher(data_dir=tmp_path, archive_dir=tmp_path / "archive")
     # Simula 2 run precedenti creando direttamente i file
