@@ -114,32 +114,43 @@ def test_publish_preserves_doc_change_items_on_same_day_rerun(tmp_path: Path) ->
     assert "news_b" in ids
 
 
-def test_select_google_updates_filters_sorts_and_caps() -> None:
-    """La sezione 'Aggiornamenti Google' deve includere solo google_updates +
-    doc-change rilevanti, ordinati per importanza e recency, con un cap."""
+def test_select_google_updates_only_google_sources() -> None:
+    """La sezione mostra SOLO item da fonte ufficiale Google o doc-change Google;
+    gli articoli di terze parti che parlano di Google sono esclusi."""
     base = datetime(2026, 6, 24, 12, 0, tzinfo=UTC)
 
-    def mk(item_id, cat, imp, days_ago, *, doc=False):
+    def mk(item_id, source_id, imp, days_ago, *, doc=False):
         it = mk_item(item_id)
-        it.category = cat
+        it.source = Source(
+            id=source_id,
+            name=source_id,
+            authority=10,
+            type="official",
+            fetcher="rss",
+            feed_url="https://x.com",
+        )
         it.importance = imp
         it.published_at = base - timedelta(days=days_ago)
         it.is_doc_change = doc
         return it
 
     items = [
-        mk("ai_news", "ai_overviews_llm_seo", 5, 0),  # non-Google → escluso
-        mk("g_spam", "google_updates", 4, 0),  # incluso
-        mk("g_doc", "google_docs_change", 5, 1, doc=True),  # incluso (doc-change)
-        mk("g_minor", "google_updates", 2, 0),  # sotto soglia → escluso
-        mk("g_old", "google_updates", 3, 2),  # incluso
+        # Terza parte che parla di Google (es. spam update via Roundtable) → escluso
+        mk("ser_spam", "search_engine_roundtable", 4, 0),
+        # Fonte ufficiale Google → incluso
+        mk("g_blog", "google_search_central_blog", 5, 1),
+        # Doc-change (fonte = documentazione Google) → incluso
+        mk("g_doc", "doc_watcher", 5, 0, doc=True),
+        # Fonte Google ma sotto soglia (es. annuncio evento imp2) → escluso
+        mk("g_event", "google_search_central_blog", 2, 0),
     ]
     result = Publisher._select_google_updates(items, limit=10, min_importance=3)
     ids = [i.id for i in result]
 
-    assert "ai_news" not in ids  # categoria non-Google
-    assert "g_minor" not in ids  # importance < 3
-    assert ids == ["g_doc", "g_spam", "g_old"]  # ordine: importanza desc, poi recency
+    assert "ser_spam" not in ids  # terza parte
+    assert "g_event" not in ids  # sotto soglia
+    assert set(ids) == {"g_doc", "g_blog"}
+    assert ids == ["g_doc", "g_blog"]  # importanza pari → recency desc (doc è più recente)
 
     # Il cap limita il numero di item
     assert len(Publisher._select_google_updates(items, limit=1, min_importance=3)) == 1

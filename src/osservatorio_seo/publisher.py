@@ -21,6 +21,7 @@ from osservatorio_seo.seo import (
     category_path as make_category_path,
 )
 from osservatorio_seo.slug import make_unique_slug
+from osservatorio_seo.sources import is_google_source
 
 if TYPE_CHECKING:
     from osservatorio_seo.config import DocWatcherPage
@@ -1511,20 +1512,21 @@ class Publisher:
 
     # --- Top Week (rolling 7-day top 10) ---
 
-    GOOGLE_UPDATE_CATEGORIES = {"google_updates", "google_docs_change"}
-
     @staticmethod
     def _select_google_updates(
         items: list[Item], limit: int = 10, min_importance: int = 3
     ) -> list[Item]:
-        """Seleziona gli aggiornamenti Google rilevanti da mostrare in evidenza
-        su /top-settimana/: categoria google_updates/google_docs_change o
-        doc-change, sopra una soglia di importanza, ordinati per importanza e
-        recency e limitati a ``limit``."""
+        """Seleziona gli aggiornamenti da FONTE Google da mostrare in evidenza su
+        /top-settimana/: solo item provenienti da fonti ufficiali Google
+        (``is_google_source``) o modifiche alle linee guida rilevate dal doc
+        watcher (``is_doc_change``, la cui fonte è la documentazione Google).
+        Esclude gli articoli di terze parti che parlano di Google. Filtra sotto
+        una soglia di importanza (esclude gli annunci di eventi a bassa
+        importanza), ordina per importanza e recency, limita a ``limit``."""
         selected = [
             i
             for i in items
-            if (i.category in Publisher.GOOGLE_UPDATE_CATEGORIES or i.is_doc_change)
+            if (is_google_source(i.source.id) or i.is_doc_change)
             and i.importance >= min_importance
         ]
         selected.sort(key=lambda i: (i.importance, i.published_at), reverse=True)
