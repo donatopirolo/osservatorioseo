@@ -1,101 +1,66 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-30T05:01:03.287839Z",
-  "generated_at_local": "2026-06-30T07:01:03.287839+02:00",
+  "generated_at": "2026-06-30T06:01:07.920313Z",
+  "generated_at_local": "2026-06-30T08:01:07.920313+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-06-30-0701",
+  "run_id": "2026-06-30-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2162,
-    "items_after_dedup": 14,
+    "items_after_dedup": 13,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.009,
-    "summarize_attempted": 14,
+    "ai_cost_eur": 0.0085,
+    "summarize_attempted": 13,
     "summarize_failed": 0
   },
   "top10": [
+    "item_2026-06-30_005",
     "item_2026-06-30_006",
-    "item_2026-06-30_007",
-    "item_2026-06-30_002",
     "item_2026-06-30_001",
-    "item_2026-06-30_004",
-    "item_2026-06-30_008",
-    "item_2026-06-30_010",
-    "item_2026-06-30_011",
     "item_2026-06-30_003",
+    "item_2026-06-30_007",
+    "item_2026-06-30_009",
+    "item_2026-06-30_010",
+    "item_2026-06-30_002",
+    "item_2026-06-30_011",
     "item_2026-06-30_012"
   ],
   "categories": {
     "google_updates": [
+      "item_2026-06-30_005",
       "item_2026-06-30_006",
-      "item_2026-06-30_007",
-      "item_2026-06-30_002"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-06-30_001",
-      "item_2026-06-30_008",
-      "item_2026-06-30_012",
-      "item_2026-06-30_013",
-      "item_2026-06-30_014",
-      "item_2026-06-30_009"
+      "item_2026-06-30_001"
     ],
     "tools_platforms": [
-      "item_2026-06-30_004"
-    ],
-    "industry_news": [
-      "item_2026-06-30_010"
-    ],
-    "content_eeat": [
-      "item_2026-06-30_011"
-    ],
-    "technical_seo": [
       "item_2026-06-30_003"
     ],
+    "ai_overviews_llm_seo": [
+      "item_2026-06-30_007",
+      "item_2026-06-30_011",
+      "item_2026-06-30_012",
+      "item_2026-06-30_013",
+      "item_2026-06-30_008"
+    ],
+    "industry_news": [
+      "item_2026-06-30_009"
+    ],
+    "content_eeat": [
+      "item_2026-06-30_010"
+    ],
+    "technical_seo": [
+      "item_2026-06-30_002"
+    ],
     "ai_models": [
-      "item_2026-06-30_005"
+      "item_2026-06-30_004"
     ]
   },
   "items": [
     {
       "id": "item_2026-06-30_001",
-      "title_original": "Mapping Europe’s AI Workforce Opportunity",
-      "title_it": "Mappatura delle opportunità lavorative legate all'IA in Europa",
-      "summary_it": "Un nuovo rapporto di OpenAI analizza l'impatto potenziale dell'intelligenza artificiale sul mercato del lavoro nell'Unione Europea. Lo studio identifica le professioni che potrebbero subire automazione, quelle che vedranno una crescita e quelle che richiederanno un adattamento dei flussi di lavoro. L'obiettivo è fornire una panoramica delle trasformazioni occupazionali attese a causa dell'adozione dell'IA.",
-      "url": "https://openai.com/index/mapping-ai-jobs-transition-eu",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_job",
-        "eu_economy",
-        "workforce_automation"
-      ],
-      "importance": 3,
-      "published_at": "2026-06-29T06:00:00Z",
-      "fetched_at": "2026-06-30T05:02:19.716296Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:ad36da735c7fd95b",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-06-30_002",
       "title_original": "Google: Meta Descriptions Not Required For SEO. But They’re Worthwhile. via @sejournal, @martinibuster",
-      "title_it": "Google: le meta descrizioni non sono un requisito SEO, ma sono comunque utili",
-      "summary_it": "Google ha ribadito che le meta descrizioni non costituiscono un fattore di ranking diretto per la SEO. Tuttavia, l'azienda ha sottolineato l'importanza di redigerle per altri scopi. Le meta descrizioni possono influenzare il click-through rate (CTR) e migliorare l'esperienza utente nei risultati di ricerca. La loro utilità risiede nella capacità di fornire un contesto chiaro agli utenti prima di cliccare su un link.",
+      "title_it": "Google: le meta descrizioni non sono un requisito SEO, ma sono utili",
+      "summary_it": "Google ha ribadito che le meta descrizioni non sono un fattore di ranking diretto per la SEO. Tuttavia, l'azienda ha sottolineato l'importanza di redigerle per migliorare il click-through rate (CTR) nei risultati di ricerca. Una meta descrizione ben formulata può influenzare la decisione dell'utente di visitare una pagina, anche se non incide direttamente sul posizionamento.",
       "url": "https://www.searchenginejournal.com/google-meta-descriptions-not-required-for-seo-but-theyre-worthwhile/580694",
       "source": {
         "id": "search_engine_journal",
@@ -112,12 +77,12 @@
       "category": "google_updates",
       "tags": [
         "meta_description",
-        "google_seo",
+        "serp_feature",
         "ctr_optimization"
       ],
       "importance": 3,
       "published_at": "2026-06-29T07:57:26Z",
-      "fetched_at": "2026-06-30T05:02:21.505664Z",
+      "fetched_at": "2026-06-30T06:02:27.354864Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -126,10 +91,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_003",
+      "id": "item_2026-06-30_002",
       "title_original": "Why Internal Links Quietly Decay & How To Reclaim The Equity You’re Losing",
-      "title_it": "Perché i link interni si deteriorano silenziosamente e come recuperare il valore che stai perdendo",
-      "summary_it": "La struttura dei link interni di un sito web tende a perdere efficacia nel tempo a causa dell'introduzione di nuovi contenuti che diluiscono il valore delle pagine esistenti. Questo fenomeno può portare a una diminuzione dell'equità distribuita alle pagine importanti. È fondamentale implementare strategie per monitorare e ottimizzare regolarmente i link interni al fine di mantenere una distribuzione efficace del PageRank e del valore SEO.",
+      "title_it": "Perché i link interni si deteriorano silenziosamente e come recuperare il valore che si sta perdendo",
+      "summary_it": "La struttura dei link interni tende a perdere efficacia nel tempo, poiché i nuovi contenuti diluiscono il valore trasmesso alle pagine più importanti. Questo fenomeno può portare a una diminuzione dell'equità di link e della visibilità delle pagine chiave. È fondamentale implementare strategie per monitorare e ottimizzare regolarmente i link interni al fine di preservare e migliorare la distribuzione del PageRank.",
       "url": "https://www.searchenginejournal.com/why-internal-links-quietly-decay-how-to-reclaim-the-equity-youre-losing/579005",
       "source": {
         "id": "search_engine_journal",
@@ -146,12 +111,12 @@
       "category": "technical_seo",
       "tags": [
         "internal_linking",
-        "seo_equity",
-        "site_architecture"
+        "page_rank",
+        "seo_audit"
       ],
       "importance": 3,
       "published_at": "2026-06-29T10:00:27Z",
-      "fetched_at": "2026-06-30T05:02:23.256592Z",
+      "fetched_at": "2026-06-30T06:02:29.060428Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -160,10 +125,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_004",
+      "id": "item_2026-06-30_003",
       "title_original": "Google Ads PMax Product Reporting By Asset Group & View Audience Segments",
       "title_it": "Nuovi report per Performance Max di Google Ads: prodotti per gruppo di asset e segmenti di pubblico",
-      "summary_it": "Google Ads sta introducendo nuove funzionalità di reporting per le campagne Performance Max. Sarà possibile visualizzare i dati sui prodotti per gruppo di asset e analizzare la spesa per i segmenti di pubblico. Questi aggiornamenti mirano a fornire maggiore chiarezza sull'allocazione del budget e sul ROI delle campagne PMax.",
+      "summary_it": "Google Ads sta introducendo nuove funzionalità di reporting per le campagne Performance Max. Sarà possibile visualizzare i report sui prodotti per gruppo di asset e analizzare la spesa per segmenti di pubblico. Questi aggiornamenti mirano a fornire maggiore chiarezza sull'allocazione del budget e sul ROI delle campagne PMax.",
       "url": "https://www.seroundtable.com/google-ads-pmax-product-reports-audience-segments-41586.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -186,7 +151,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-29T10:11:00Z",
-      "fetched_at": "2026-06-30T05:02:24.601050Z",
+      "fetched_at": "2026-06-30T06:02:30.891114Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -195,10 +160,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_005",
+      "id": "item_2026-06-30_004",
       "title_original": "ChatGPT Ads Drops Sponsored Label For Ad Label",
-      "title_it": "ChatGPT: il tag 'Sponsored' sostituito da 'Ad' per gli annunci",
-      "summary_it": "OpenAI ha modificato l'etichetta degli annunci su ChatGPT da 'Sponsored' a 'Ad'. La posizione dell'etichetta è stata spostata dall'angolo superiore sinistro al lato destro dell'unità pubblicitaria. Questo cambiamento, rilevato da Brodie Clark, riflette una pratica comune nel settore per ottimizzare l'efficacia degli annunci. Le modifiche alle etichette e al posizionamento possono influenzare significativamente i tassi di clic.",
+      "title_it": "ChatGPT: il label 'Sponsored' sostituito da 'Ad' per gli annunci",
+      "summary_it": "OpenAI ha modificato l'etichetta degli annunci su ChatGPT, passando da 'Sponsored' a 'Ad'. La posizione dell'etichetta è stata spostata dall'angolo superiore sinistro al lato destro dell'unità pubblicitaria. Questa modifica è stata notata da Brodie Clark e replicata da Search Engine Roundtable. Variazioni nelle etichette e nel posizionamento degli annunci possono influenzare significativamente i tassi di click-through.",
       "url": "https://www.seroundtable.com/chatgpt-ads-drops-sponsored-label-41584.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -221,7 +186,7 @@
       ],
       "importance": 2,
       "published_at": "2026-06-29T10:21:00Z",
-      "fetched_at": "2026-06-30T05:02:26.246063Z",
+      "fetched_at": "2026-06-30T06:02:32.358870Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -230,10 +195,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_006",
+      "id": "item_2026-06-30_005",
       "title_original": "Google Breaks Out Where Local Inventory Ads & Free Local Listings Are Available",
       "title_it": "Google specifica le regioni di disponibilità per gli annunci di inventario locale e le schede locali gratuite",
-      "summary_it": "Google ha aggiornato la documentazione per distinguere le regioni in cui sono disponibili gli annunci di inventario locale (Local Inventory Ads) e le schede locali gratuite (Free Local Listings). In precedenza, queste due funzionalità erano raggruppate, ma ora è chiaro che gli annunci di inventario locale sono supportati in un numero maggiore di paesi rispetto alle schede locali gratuite. Questa distinzione fornisce maggiore chiarezza per i professionisti che gestiscono campagne locali su Google Merchant Center.",
+      "summary_it": "Google ha aggiornato la documentazione per distinguere le regioni in cui sono disponibili gli annunci di inventario locale (Local Inventory Ads) e le schede locali gratuite (Free Local Listings). In precedenza, queste due funzionalità erano raggruppate, ma ora è chiaro che gli annunci di inventario locale sono supportati in un numero maggiore di paesi rispetto alle schede locali gratuite. Questa distinzione fornisce maggiore chiarezza per i professionisti che gestiscono la presenza locale dei propri clienti su Google Merchant Center.",
       "url": "https://www.seroundtable.com/google-local-inventory-ads-and-free-local-listings-regions-41578.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -256,7 +221,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-29T10:31:00Z",
-      "fetched_at": "2026-06-30T05:02:27.921347Z",
+      "fetched_at": "2026-06-30T06:02:33.852631Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -265,10 +230,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_007",
+      "id": "item_2026-06-30_006",
       "title_original": "Google Begins Rollout Of Top Stories Carousel In AI Overviews",
       "title_it": "Google introduce il carosello Top Stories nelle AI Overviews",
-      "summary_it": "Google sta implementando un carosello di notizie principali all'interno delle AI Overviews nei risultati di ricerca. Questa funzionalità, preannunciata il mese scorso, è stata avvistata da alcuni utenti e sembra essere in fase di rollout graduale. L'obiettivo è rendere più visibili gli articoli tempestivi per un'ampia gamma di query, includendo potenzialmente anche le fonti preferite dagli utenti.",
+      "summary_it": "Google sta implementando il carosello Top Stories all'interno delle AI Overviews nei risultati di ricerca. Questa funzionalità, preannunciata il mese scorso, è stata avvistata da alcuni utenti. Il carosello mira a rendere più visibili gli articoli tempestivi per un'ampia gamma di query, potenzialmente aumentando il traffico verso gli editori.",
       "url": "https://www.seroundtable.com/google-top-stories-ai-overviews-41583.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -287,11 +252,11 @@
         "google_ai_overview",
         "top_storie",
         "serp_feature",
-        "news_carousel"
+        "publisher_traffic"
       ],
       "importance": 3,
       "published_at": "2026-06-29T10:41:00Z",
-      "fetched_at": "2026-06-30T05:02:29.420595Z",
+      "fetched_at": "2026-06-30T06:02:35.217038Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -300,10 +265,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_008",
+      "id": "item_2026-06-30_007",
       "title_original": "Google's Head Of Search - Liz Reid: We Want Great Content To Shine",
       "title_it": "Liz Reid, Responsabile della Ricerca di Google: Vogliamo che i Contenuti di Qualità Emergano",
-      "summary_it": "Liz Reid, Head of Search di Google, ha ribadito l'intenzione di Google di far emergere contenuti di qualità nei risultati di ricerca e nelle esperienze AI. L'intervista ha toccato le preoccupazioni degli editori riguardo al traffico e alla mancanza di dati sui clic per le AI Overviews in Search Console. Reid ha suggerito agli editori di innovare i formati e produrre contenuti unici per aumentare la visibilità. Ha inoltre menzionato l'importanza di rendere i contenuti accessibili a Google e di costruire un pubblico.",
+      "summary_it": "Liz Reid, Head of Search di Google, ha ribadito l'intenzione di Google di far emergere contenuti di alta qualità nei risultati di ricerca e nelle esperienze AI. Ha sottolineato l'importanza per gli editori di innovare nei formati e di produrre contenuti unici per attrarre traffico. Google sta lavorando per connettere gli utenti a questi contenuti, anche tramite le nuove funzionalità AI. Sono stati menzionati i report sulle performance AI in Search Console, sebbene manchino ancora i dati sui clic.",
       "url": "https://www.seroundtable.com/google-we-want-great-content-to-shine-41582.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -322,11 +287,11 @@
         "google_search",
         "ai_overviews",
         "content_quality",
-        "publisher_guidance"
+        "publisher"
       ],
       "importance": 3,
       "published_at": "2026-06-29T10:51:00Z",
-      "fetched_at": "2026-06-30T05:02:31.398033Z",
+      "fetched_at": "2026-06-30T06:02:36.979998Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -335,10 +300,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_009",
+      "id": "item_2026-06-30_008",
       "title_original": "Selling AI As A Replacement Wins Attention & Kills Trust via @sejournal, @gregjarboe",
-      "title_it": "Vendere l'IA come sostituto: attira l'attenzione ma distrugge la fiducia",
-      "summary_it": "La narrazione che presenta l'intelligenza artificiale come un sostituto del lavoro umano può alienare i potenziali acquirenti e contraddire i dati sull'occupazione. Questo approccio rischia di compromettere la fiducia nel lungo termine. È fondamentale considerare le implicazioni di marketing di tale comunicazione.",
+      "title_it": "Vendere l'AI come sostituto: attira l'attenzione ma distrugge la fiducia",
+      "summary_it": "La narrazione che presenta l'intelligenza artificiale come un sostituto del lavoro umano può alienare i potenziali acquirenti e contraddire i dati sull'occupazione. Questo approccio rischia di compromettere la fiducia nel lungo termine. È fondamentale considerare le implicazioni di tale comunicazione.",
       "url": "https://www.searchenginejournal.com/selling-ai-as-a-replacement-wins-attention-kills-trust/580637",
       "source": {
         "id": "search_engine_journal",
@@ -356,11 +321,11 @@
       "tags": [
         "ai_marketing",
         "trust_building",
-        "ai_adoption"
+        "ai_ethic"
       ],
       "importance": 2,
       "published_at": "2026-06-29T12:00:34Z",
-      "fetched_at": "2026-06-30T05:02:32.743621Z",
+      "fetched_at": "2026-06-30T06:02:38.177692Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -369,10 +334,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_010",
+      "id": "item_2026-06-30_009",
       "title_original": "Daily Search Forum Recap: June 29, 2026",
       "title_it": "Riepilogo giornaliero del forum di ricerca: 29 giugno 2026",
-      "summary_it": "L'aggiornamento spam di Google di giugno 2026 è stato completato. Liz Reid, Head of Search di Google, ha ribadito l'obiettivo di far emergere contenuti di qualità nei risultati di ricerca e nelle esperienze AI. Google ha iniziato a implementare le Top Stories nelle AI Overviews e ha dettagliato le regioni per gli annunci di inventario locale e le schede gratuite. Si segnala inoltre la scomparsa di Bruce Clay, figura storica del settore SEO.",
+      "summary_it": "L'aggiornamento spam di Google di giugno 2026 è stato completato. Liz Reid, Head of Search di Google, ha ribadito l'obiettivo di far emergere contenuti di qualità. Google ha iniziato a implementare le Top Stories nelle AI Overviews e ha dettagliato la disponibilità regionale degli annunci di inventario locale. Si segnala inoltre la scomparsa di Bruce Clay, figura storica del settore SEO.",
       "url": "https://www.seroundtable.com/recap-06-29-2026-41587.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -391,11 +356,11 @@
         "google_update",
         "ai_overviews",
         "google_ad",
-        "seo_industry"
+        "industry_figure"
       ],
       "importance": 3,
       "published_at": "2026-06-29T13:00:00Z",
-      "fetched_at": "2026-06-30T05:02:34.403774Z",
+      "fetched_at": "2026-06-30T06:02:39.649168Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -404,7 +369,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_011",
+      "id": "item_2026-06-30_010",
       "title_original": "Why proprietary data is your most defensible AI citation asset",
       "title_it": "Perché i dati proprietari sono il tuo asset più difendibile per le citazioni AI",
       "summary_it": "L'articolo sottolinea l'importanza di pubblicare dati originali e proprietari come strategia per aumentare l'originalità dei contenuti e la loro difendibilità nell'era dell'AI. Viene evidenziato come i dati generati direttamente dal business siano più efficaci rispetto a ricerche esterne commissionate. Questa pratica è considerata un fattore chiave per distinguersi e ottenere citazioni autorevoli.",
@@ -425,12 +390,12 @@
       "tags": [
         "proprietary_data",
         "ai_content",
-        "e_e_a_t",
-        "content_strategy"
+        "originality",
+        "e_e_a_t"
       ],
       "importance": 3,
       "published_at": "2026-06-29T13:20:20Z",
-      "fetched_at": "2026-06-30T05:02:36.184150Z",
+      "fetched_at": "2026-06-30T06:02:41.096031Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -439,10 +404,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_012",
+      "id": "item_2026-06-30_011",
       "title_original": "Buying Reddit To Win AI Citations Is The New Link Farm via @sejournal, @slobodanmanic",
       "title_it": "Acquistare citazioni su Reddit per l'AI è la nuova link farm",
-      "summary_it": "L'articolo avverte che l'acquisto di citazioni su Reddit per influenzare i modelli AI sarà trattato in modo simile a come Google Penguin ha gestito le link farm. Viene sottolineato che l'unica strategia efficace nel contesto del web agentico è l'autenticità. Si prevede che i sistemi AI saranno in grado di identificare e filtrare queste pratiche manipolative.",
+      "summary_it": "L'articolo avverte che l'acquisto di citazioni su Reddit per influenzare i modelli AI sarà trattato in modo simile a come Google Penguin ha gestito i link a pagamento. Si sottolinea che l'unica strategia efficace nel contesto del web agentico è l'autenticità. Vengono messe in guardia le aziende SEO dal replicare pratiche manipolative del passato.",
       "url": "https://www.searchenginejournal.com/buying-reddit-to-win-ai-citations-is-the-new-link-farm/578016",
       "source": {
         "id": "search_engine_journal",
@@ -465,7 +430,7 @@
       ],
       "importance": 3,
       "published_at": "2026-06-29T14:00:10Z",
-      "fetched_at": "2026-06-30T05:02:37.747161Z",
+      "fetched_at": "2026-06-30T06:02:42.487995Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -474,10 +439,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_013",
+      "id": "item_2026-06-30_012",
       "title_original": "Google Defends AI Training As Fair Use In Governance Paper via @sejournal, @MattGSouthern",
       "title_it": "Google difende l'addestramento dell'IA come 'fair use' in un documento di governance",
-      "summary_it": "Google ha pubblicato un documento di governance in cui sostiene che l'addestramento dei modelli di intelligenza artificiale su dati pubblici del web debba rientrare nel 'fair use'. L'azienda fa riferimento a meccanismi di opt-out, richieste di rimozione e accordi commerciali per contenuti specializzati. Questa posizione mira a definire i confini legali e etici dell'utilizzo dei dati per l'IA.",
+      "summary_it": "Google ha pubblicato un documento di governance in cui sostiene che l'addestramento dei modelli di intelligenza artificiale su dati pubblici del web debba essere considerato 'fair use'. L'azienda fa riferimento a meccanismi di opt-out, richieste di rimozione e accordi commerciali per contenuti specializzati. Questo posizionamento mira a definire i confini legali e etici dell'utilizzo dei dati per l'addestramento dell'IA. La discussione è rilevante per i creatori di contenuti e per le implicazioni sul diritto d'autore nell'era dell'intelligenza artificiale.",
       "url": "https://www.searchenginejournal.com/google-defends-ai-training-as-fair-use-in-governance-paper/580776",
       "source": {
         "id": "search_engine_journal",
@@ -496,11 +461,11 @@
         "google_ai",
         "fair_use",
         "ai_governance",
-        "data_training"
+        "copyright"
       ],
       "importance": 3,
       "published_at": "2026-06-29T14:38:04Z",
-      "fetched_at": "2026-06-30T05:02:39.316937Z",
+      "fetched_at": "2026-06-30T06:02:44.519217Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -509,10 +474,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-06-30_014",
+      "id": "item_2026-06-30_013",
       "title_original": "Google’s Liz Reid: Personalization Can Help Small Publishers via @sejournal, @MattGSouthern",
       "title_it": "Liz Reid di Google: la personalizzazione può aiutare i piccoli editori",
-      "summary_it": "Liz Reid di Google ha suggerito che la personalizzazione e le fonti preferite dagli utenti potrebbero favorire la visibilità dei piccoli editori nella ricerca basata sull'IA. Tuttavia, non sono stati forniti dati a supporto di questa affermazione. La dichiarazione si inserisce nel dibattito sull'impatto dell'IA sui contenuti e sulla loro scoperta.",
+      "summary_it": "Liz Reid di Google ha suggerito che la personalizzazione e le fonti preferite dagli utenti potrebbero favorire la visibilità dei piccoli editori nella ricerca basata sull'intelligenza artificiale. Tuttavia, non sono stati forniti dati a supporto di questa affermazione. La dichiarazione si inserisce nel dibattito su come i contenuti dei piccoli editori possano emergere nel contesto delle nuove interfacce di ricerca AI.",
       "url": "https://www.searchenginejournal.com/googles-liz-reid-personalization-can-help-small-publishers/581010",
       "source": {
         "id": "search_engine_journal",
@@ -531,11 +496,11 @@
         "google_ai",
         "personalization",
         "small_publisher",
-        "ai_search"
+        "search_generative_experience"
       ],
       "importance": 2,
       "published_at": "2026-06-30T01:54:23Z",
-      "fetched_at": "2026-06-30T05:02:40.606776Z",
+      "fetched_at": "2026-06-30T06:02:46.094664Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -547,92 +512,92 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-06-30T05:01:10.582335Z",
+      "last_checked": "2026-06-30T06:01:13.484203Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-06-30T05:01:11.141023Z",
+      "last_checked": "2026-06-30T06:01:13.936283Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-06-30T05:01:12.758962Z",
+      "last_checked": "2026-06-30T06:01:15.515515Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-06-30T05:01:13.899526Z",
+      "last_checked": "2026-06-30T06:01:16.614157Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-06-30T05:01:37.081795Z",
+      "last_checked": "2026-06-30T06:01:40.424735Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-06-30T05:01:37.373521Z",
+      "last_checked": "2026-06-30T06:01:40.793449Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-06-30T05:01:39.808237Z",
+      "last_checked": "2026-06-30T06:01:42.361198Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-06-30T05:01:40.464514Z",
+      "last_checked": "2026-06-30T06:01:44.368631Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-06-30T05:01:42.114802Z",
+      "last_checked": "2026-06-30T06:01:45.246103Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-06-30T05:01:42.189761Z",
+      "last_checked": "2026-06-30T06:01:45.280306Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-06-30T05:01:47.342430Z",
+      "last_checked": "2026-06-30T06:01:51.351985Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-06-30T05:01:47.742963Z",
+      "last_checked": "2026-06-30T06:01:51.761972Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-06-30T05:01:49.072194Z",
+      "last_checked": "2026-06-30T06:01:52.829285Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-06-30T05:01:50.153159Z",
+      "last_checked": "2026-06-30T06:01:54.646677Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-06-30T05:01:51.883410Z",
+      "last_checked": "2026-06-30T06:01:56.050552Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-06-30T05:01:53.320648Z",
+      "last_checked": "2026-06-30T06:01:57.720120Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-06-30T05:01:55.192219Z",
+      "last_checked": "2026-06-30T06:02:01.950239Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-06-30T05:02:17.712913Z",
+      "last_checked": "2026-06-30T06:02:25.439787Z",
       "changed": false
     }
   ],
