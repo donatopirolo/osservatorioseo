@@ -1,519 +1,34 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-04T06:01:20.491178Z",
-  "generated_at_local": "2026-07-04T08:01:20.491178+02:00",
+  "generated_at": "2026-07-05T05:01:36.164640Z",
+  "generated_at_local": "2026-07-05T07:01:36.164640+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-07-04-0801",
+  "run_id": "2026-07-05-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2170,
-    "items_after_dedup": 16,
+    "items_after_dedup": 1,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0098,
-    "summarize_attempted": 16,
+    "ai_cost_eur": 0.0005,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-07-04_012",
-    "item_2026-07-04_007",
-    "item_2026-07-04_009",
-    "item_2026-07-04_010",
-    "item_2026-07-04_011",
-    "item_2026-07-04_015",
-    "item_2026-07-04_006",
-    "item_2026-07-04_013",
-    "item_2026-07-04_003",
-    "item_2026-07-04_014"
+    "item_2026-07-05_001"
   ],
   "categories": {
     "industry_news": [
-      "item_2026-07-04_012",
-      "item_2026-07-04_014",
-      "item_2026-07-04_001",
-      "item_2026-07-04_002",
-      "item_2026-07-04_008"
-    ],
-    "google_updates": [
-      "item_2026-07-04_007",
-      "item_2026-07-04_009",
-      "item_2026-07-04_010",
-      "item_2026-07-04_011",
-      "item_2026-07-04_015"
-    ],
-    "tools_platforms": [
-      "item_2026-07-04_006",
-      "item_2026-07-04_013",
-      "item_2026-07-04_005"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-07-04_003"
-    ],
-    "technical_seo": [
-      "item_2026-07-04_016"
-    ],
-    "content_eeat": [
-      "item_2026-07-04_004"
+      "item_2026-07-05_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-07-04_001",
-      "title_original": "Top Trending Topics (July 2026)",
-      "title_it": "Argomenti di Tendenza (Luglio 2026)",
-      "summary_it": "Ahrefs ha pubblicato un elenco di argomenti che hanno registrato il maggiore aumento nel volume di ricerca negli ultimi tre mesi, basandosi sul loro database di keyword. Questi dati evidenziano le tendenze emergenti negli Stati Uniti. La lista include esempi specifici di query con crescite significative.",
-      "url": "https://ahrefs.com/blog/trending-topics",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "keyword_research",
-        "trending_topic",
-        "ahrefs_data"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-03T07:46:34Z",
-      "fetched_at": "2026-07-04T06:02:40.578645Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:8829a4e6b121d65e",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_002",
-      "title_original": "Top Google Searches (July 2026)",
-      "title_it": "Le ricerche più popolari su Google (Luglio 2026)",
-      "summary_it": "Ahrefs ha pubblicato un'analisi delle 100 ricerche e domande più popolari su Google a livello globale e negli Stati Uniti, basandosi sul proprio database di keyword. I dati mostrano un volume di ricerca elevato per termini legati a piattaforme tecnologiche e servizi online. Questa analisi offre uno spaccato sulle tendenze di ricerca attuali.",
-      "url": "https://ahrefs.com/blog/top-google-searches",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "search_trend",
-        "keyword_research",
-        "google_searche",
-        "ahrefs_data"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-03T07:48:56Z",
-      "fetched_at": "2026-07-04T06:02:41.790952Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:6faec0f962616122",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_003",
-      "title_original": "AI Search Is Nothing Without SEO & It Knows It via @sejournal, @TaylorDanRW",
-      "title_it": "La ricerca AI non può prescindere dalla SEO",
-      "summary_it": "La SEO tecnica è fondamentale per la preparazione dei contenuti alla ricerca basata sull'intelligenza artificiale. Fornisce agli LLM la struttura e i segnali necessari per recuperare e citare le informazioni. Questo sottolinea l'importanza della SEO nel contesto dei nuovi paradigmi di ricerca.",
-      "url": "https://www.searchenginejournal.com/ai-search-is-nothing-without-seo-it-knows-it/580452",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "technical_seo",
-        "llm_optimization"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T08:30:26Z",
-      "fetched_at": "2026-07-04T06:02:43.268984Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d4d2cdaeaa59cc68",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_004",
-      "title_original": "100 Most Asked Questions on Google (July 2026)",
-      "title_it": "Le 100 domande più cercate su Google (Luglio 2026)",
-      "summary_it": "Ahrefs ha pubblicato un elenco delle 100 domande più frequenti su Google, basato sui volumi di ricerca mensili. La lista include query generiche come 'qual è il mio IP' e 'quanti giorni a Natale'. Questo tipo di dati può essere utile per l'analisi delle intenzioni di ricerca e l'ottimizzazione dei contenuti.",
-      "url": "https://ahrefs.com/blog/top-google-questions",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "search_querie",
-        "keyword_research",
-        "content_strategy"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-03T08:30:43Z",
-      "fetched_at": "2026-07-04T06:02:44.395971Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a67664f32e2619ae",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_005",
-      "title_original": "100 Most Expensive Keywords for Google Ads (July 2026)",
-      "title_it": "Le 100 parole chiave più costose per Google Ads (Luglio 2026)",
-      "summary_it": "Ahrefs ha pubblicato un elenco delle 100 parole chiave più costose su Google Ads, fornendo il costo per clic (CPC) e il volume di ricerca mensile per ciascuna. L'analisi include termini ad alto valore in settori specifici come il legale e il medico. Questi dati possono essere utili per strategie di offerta e analisi della concorrenza in campagne PPC.",
-      "url": "https://ahrefs.com/blog/most-expensive-keywords",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "keyword",
-        "cpc",
-        "ppc"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-03T08:30:59Z",
-      "fetched_at": "2026-07-04T06:02:45.648788Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c0762b4a69afe376",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_006",
-      "title_original": "Microsoft Advertising Performance Max Experiments Beta Types",
-      "title_it": "Microsoft Advertising introduce esperimenti beta per Performance Max",
-      "summary_it": "Microsoft Advertising ha lanciato una nuova beta per gli esperimenti di Performance Max, consentendo di valutare l'efficacia delle campagne PMax. Gli esperimenti permettono di confrontare le performance di nuove campagne PMax rispetto a quelle esistenti o di misurare l'incrementalità delle conversioni. L'accesso alla beta è disponibile tramite i rappresentanti di chat di Microsoft Advertising.",
-      "url": "https://www.seroundtable.com/microsoft-advertising-pmax-experiments-41615.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "microsoft_advertising",
-        "performance_max",
-        "experiment",
-        "beta"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T10:11:00Z",
-      "fetched_at": "2026-07-04T06:02:46.988833Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f27d222762c2b963",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_007",
-      "title_original": "Google Third-Party Rates For Hotel Ads Feature Going Away On Sept. 30",
-      "title_it": "Google eliminerà la funzionalità delle tariffe di terze parti per gli annunci hotel dal 30 settembre",
-      "summary_it": "Google ha annunciato che la funzionalità delle tariffe di terze parti per gli annunci hotel non sarà più disponibile dopo il 30 settembre 2026. Le campagne Hotel Ads che utilizzano questa funzionalità smetteranno di essere pubblicate. Le campagne Performance Max per obiettivi di viaggio continueranno a funzionare tramite altri canali. Per continuare a mostrare annunci hotel, gli inserzionisti dovranno configurare un feed di prezzi diretto.",
-      "url": "https://www.seroundtable.com/google-third-party-rates-for-hotel-ads-sunset-41603.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "hotel_ad",
-        "performance_max",
-        "sunset_feature"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T10:21:00Z",
-      "fetched_at": "2026-07-04T06:02:48.683784Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2841a7cc9d00d8ee",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_008",
-      "title_original": "Google Fourth Of July 2026 Doodle Celebrating 250 Years Of The USA",
-      "title_it": "Google celebra il 250° anniversario degli Stati Uniti con un Doodle per il 4 luglio 2026",
-      "summary_it": "Google ha pubblicato il Doodle per il 4 luglio 2026, che celebra il 250° anniversario della Dichiarazione d'Indipendenza degli Stati Uniti. Il Doodle è una GIF animata della bandiera americana e, cliccandoci sopra, si accede a una pagina di ricerca Google con effetti visivi a tema. La celebrazione anticipa la data ufficiale, dato che il 4 luglio cade di sabato.",
-      "url": "https://www.seroundtable.com/google-fourth-of-july-2026-doodle-41625.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_doodle",
-        "holiday_celebration",
-        "search_interface"
-      ],
-      "importance": 1,
-      "published_at": "2026-07-03T10:23:00Z",
-      "fetched_at": "2026-07-04T06:02:50.040599Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:ad3db1ceedaab44c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_009",
-      "title_original": "Google Tests New Local Places Layout Design",
-      "title_it": "Google testa un nuovo layout per i risultati locali",
-      "summary_it": "Google sta sperimentando un aggiornamento del design per il local pack e le schede delle attività locali nella ricerca. La mappa è stata spostata in alto, anziché a destra, e anche i pulsanti di azione sono stati riposizionati e modificati. Questo test mira a valutare l'efficacia di una diversa disposizione degli elementi visivi e interattivi per gli utenti.",
-      "url": "https://www.seroundtable.com/google-tests-local-places-layout-design-41608.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_local_pack",
-        "ui_test",
-        "local_seo",
-        "serp_layout"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T10:31:00Z",
-      "fetched_at": "2026-07-04T06:02:51.367327Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:29d4341937af1f4b",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_010",
-      "title_original": "Google Business Profile Restrictions & Penalties Are Additive",
-      "title_it": "Le restrizioni e le penalità di Google Business Profile sono cumulative",
-      "summary_it": "Google applica restrizioni e penalità cumulative ai profili Google Business che violano ripetutamente le stesse policy. Una violazione successiva alla prima può comportare un raddoppio della durata della restrizione iniziale. Un esempio recente ha mostrato una restrizione di due mesi per recensioni incentivate, in aggiunta a precedenti violazioni. Questo indica un approccio più severo da parte di Google per mantenere l'integrità dell'ecosistema.",
-      "url": "https://www.seroundtable.com/google-business-profile-restrictions-double-41594.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_business_profile",
-        "penaltie",
-        "local_seo",
-        "policy_violation"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T10:41:00Z",
-      "fetched_at": "2026-07-04T06:02:53.091903Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:94cd8bc32fdb2ad9",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_011",
-      "title_original": "Google Local Reviews Go Missing For Many Businesses",
-      "title_it": "Recensioni Google scomparse per molte attività locali",
-      "summary_it": "Numerose recensioni stanno scomparendo dai profili Google Business Profile di diverse attività locali. Google ha confermato di essere a conoscenza del problema e sta lavorando per risolverlo. Molti proprietari di attività hanno segnalato la perdita di un numero significativo di recensioni, con alcuni che hanno visto sparire migliaia di contributi. La situazione sembra essere un bug generalizzato che sta interessando un'ampia platea di utenti.",
-      "url": "https://www.seroundtable.com/google-business-profile-reviews-vanish-41620.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_business_profile",
-        "local_seo",
-        "review",
-        "bug"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T10:51:00Z",
-      "fetched_at": "2026-07-04T06:02:54.625483Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:dd30cb671510ded9",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_012",
-      "title_original": "Search News Buzz Video Recap: Google June Spam Update Done, Fraud DMCA Takedowns Breaks Google, Costly Google Ad Budget Changes & More",
-      "title_it": "Riepilogo settimanale delle notizie di ricerca: aggiornamenti Google, problemi DMCA fraudolenti e modifiche al budget di Google Ads",
-      "summary_it": "Il riepilogo settimanale delle notizie di ricerca ha evidenziato il completamento dell'aggiornamento spam di Google di giugno 2026 e la persistenza di richieste DMCA fraudolente che impattano la ricerca Google. Sono state segnalate modifiche significative alla gestione del budget in Google Ads, che potrebbero comportare costi maggiori per gli inserzionisti. Inoltre, Google AI Overviews ha iniziato a mostrare caroselli di notizie principali e Google sta reindirizzando gli utenti alle pagine AMP ospitate dagli editori.",
-      "url": "https://www.seroundtable.com/video-06-03-2026-41619.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_update",
-        "google_ad",
-        "ai_overviews",
-        "dmca_takedown"
-      ],
-      "importance": 4,
-      "published_at": "2026-07-03T11:01:00Z",
-      "fetched_at": "2026-07-04T06:02:56.286706Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a3a306a1ed15f4f8",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_013",
-      "title_original": "Google Page Indexing Report Has Been Fixed & Updated",
-      "title_it": "Il report sull'indicizzazione delle pagine di Google è stato corretto e aggiornato",
-      "summary_it": "Google ha risolto il problema che affliggeva il report sull'indicizzazione delle pagine in Google Search Console, che era rimasto bloccato per oltre tre settimane. Il report mostra ora dati aggiornati al 29 giugno, dopo essere stato fermo all'11 giugno. Gli utenti possono ora accedere a Search Console per visualizzare i dati di indicizzazione aggiornati per i propri siti.",
-      "url": "https://www.seroundtable.com/google-page-indexing-report-fixed-and-updated-41626.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_search_console",
-        "page_indexing",
-        "bug_fix",
-        "data_update"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T11:20:00Z",
-      "fetched_at": "2026-07-04T06:02:57.514190Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:737b61dbe569651f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_014",
-      "title_original": "Where Clicks Go, What Agents Skip, Who’s Leaving Bing – SEO Pulse via @sejournal, @MattGSouthern",
-      "title_it": "Dove vanno i click, cosa ignorano gli agenti e chi sta lasciando Bing – SEO Pulse",
-      "summary_it": "L'articolo analizza la destinazione dei click generati dalle AI Overview di Google e le ragioni per cui alcuni agenti AI potrebbero ignorare determinati siti web. Vengono inoltre discussi i recenti movimenti di personale da Bing. La pubblicazione offre una panoramica delle principali notizie della settimana nel settore della ricerca.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-where-clicks-go-what-agents-skip-whos-leaving-bing/581426",
+      "id": "item_2026-07-05_001",
+      "title_original": "Fake DMCA Complaints Keep Erasing Real Pages From Google – What To Watch For via @sejournal, @MattGSouthern",
+      "title_it": "Reclami DMCA falsi continuano a rimuovere pagine reali da Google: cosa osservare",
+      "summary_it": "La notizia evidenzia come reclami DMCA fraudolenti possano portare alla rimozione di pagine legittime dai risultati di ricerca di Google. Viene descritto il funzionamento del processo di rimozione e vengono forniti consigli su come identificare e gestire tali situazioni. Questo fenomeno può avere un impatto negativo sulla visibilità organica dei siti web.",
+      "url": "https://www.searchenginejournal.com/fake-dmca-complaints-keep-erasing-real-pages-from-google-what-to-watch-for/581299",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -528,181 +43,111 @@
       },
       "category": "industry_news",
       "tags": [
-        "ai_overviews",
-        "bing",
-        "click_behavior",
-        "search_new"
+        "dmca_takedown",
+        "google_search",
+        "content_removal",
+        "seo_security"
       ],
       "importance": 3,
-      "published_at": "2026-07-03T11:30:55Z",
-      "fetched_at": "2026-07-04T06:02:59.007491Z",
+      "published_at": "2026-07-04T11:30:57Z",
+      "fetched_at": "2026-07-05T05:02:54.093447Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1248999b9c24102c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_015",
-      "title_original": "Daily Search Forum Recap: July 3, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 3 luglio 2026",
-      "summary_it": "Google sta indagando sulla scomparsa delle recensioni locali per molte attività. Il report sull'indicizzazione delle pagine in Search Console è stato finalmente corretto dopo tre settimane. Le penalità per le violazioni delle policy di Google Business Profile sono cumulative. Google sta testando un nuovo design per il local pack e rimuoverà le tariffe di terze parti per gli annunci hotel.",
-      "url": "https://www.seroundtable.com/recap-07-03-2026-41624.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_business_profile",
-        "google_search_console",
-        "local_seo",
-        "google_ad"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T13:00:00Z",
-      "fetched_at": "2026-07-04T06:03:00.451406Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:00abd662da182f24",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-04_016",
-      "title_original": "Lighthouse Fails Your Llms.txt Without Markdown Links via @sejournal, @slobodanmanic",
-      "title_it": "Lighthouse segnala errori nel file LLMs.txt senza link Markdown",
-      "summary_it": "Lighthouse 13.3 può segnalare un errore nella categoria 'Agentic Browsing' se il file LLMs.txt non include link in formato Markdown. La correzione di questo problema è generalmente rapida. L'articolo approfondisce cosa indicano e cosa non indicano questi specifici avvisi di Lighthouse.",
-      "url": "https://www.searchenginejournal.com/lighthouse-fails-your-llms-txt-without-markdown-links/577590",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "lighthouse",
-        "llms_txt",
-        "markdown_link",
-        "agentic_browsing"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-03T13:00:03Z",
-      "fetched_at": "2026-07-04T06:03:01.747594Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:904e793d04fdf2c3",
+      "raw_hash": "sha256:3f59c410146a4a9c",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-07-04T06:01:26.824312Z",
+      "last_checked": "2026-07-05T05:01:42.464166Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-07-04T06:01:27.586949Z",
+      "last_checked": "2026-07-05T05:01:43.235099Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-07-04T06:01:28.333024Z",
+      "last_checked": "2026-07-05T05:01:44.798154Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-07-04T06:01:30.546854Z",
+      "last_checked": "2026-07-05T05:01:45.935727Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-07-04T06:01:54.833390Z",
+      "last_checked": "2026-07-05T05:02:10.875719Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-07-04T06:01:55.165954Z",
+      "last_checked": "2026-07-05T05:02:11.821983Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-07-04T06:01:56.973556Z",
+      "last_checked": "2026-07-05T05:02:13.509464Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-07-04T06:01:58.078826Z",
+      "last_checked": "2026-07-05T05:02:15.578886Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-07-04T06:01:59.030964Z",
+      "last_checked": "2026-07-05T05:02:15.905961Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-07-04T06:01:59.058942Z",
+      "last_checked": "2026-07-05T05:02:15.990425Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-07-04T06:02:06.549829Z",
+      "last_checked": "2026-07-05T05:02:18.198765Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-07-04T06:02:06.944090Z",
+      "last_checked": "2026-07-05T05:02:18.981598Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-07-04T06:02:08.681858Z",
+      "last_checked": "2026-07-05T05:02:20.528370Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-07-04T06:02:09.531708Z",
+      "last_checked": "2026-07-05T05:02:21.992534Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-07-04T06:02:11.022073Z",
+      "last_checked": "2026-07-05T05:02:23.530981Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-07-04T06:02:12.916757Z",
+      "last_checked": "2026-07-05T05:02:25.018473Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-07-04T06:02:14.057807Z",
+      "last_checked": "2026-07-05T05:02:27.754908Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-07-04T06:02:38.929810Z",
+      "last_checked": "2026-07-05T05:02:52.221564Z",
       "changed": false
     }
   ],
