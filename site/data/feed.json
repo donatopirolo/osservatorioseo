@@ -1,34 +1,38 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-05T06:01:58.058174Z",
-  "generated_at_local": "2026-07-05T08:01:58.058174+02:00",
+  "generated_at": "2026-07-06T05:01:48.230837Z",
+  "generated_at_local": "2026-07-06T07:01:48.230837+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-07-05-0801",
+  "run_id": "2026-07-06-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2170,
-    "items_after_dedup": 1,
+    "items_collected": 2171,
+    "items_after_dedup": 2,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0005,
-    "summarize_attempted": 1,
+    "ai_cost_eur": 0.0011,
+    "summarize_attempted": 2,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-07-05_001"
+    "item_2026-07-06_001",
+    "item_2026-07-06_002"
   ],
   "categories": {
-    "industry_news": [
-      "item_2026-07-05_001"
+    "ai_overviews_llm_seo": [
+      "item_2026-07-06_001"
+    ],
+    "technical_seo": [
+      "item_2026-07-06_002"
     ]
   },
   "items": [
     {
-      "id": "item_2026-07-05_001",
-      "title_original": "Fake DMCA Complaints Keep Erasing Real Pages From Google – What To Watch For via @sejournal, @MattGSouthern",
-      "title_it": "Reclami DMCA falsi continuano a rimuovere pagine reali da Google: cosa osservare",
-      "summary_it": "La notizia evidenzia come reclami DMCA fraudolenti possano portare alla rimozione di pagine legittime dai risultati di ricerca di Google. Viene descritto il funzionamento del processo di rimozione e vengono forniti suggerimenti su come identificare tali pratiche. Questo fenomeno può avere un impatto negativo sulla visibilità organica dei siti web.",
-      "url": "https://www.searchenginejournal.com/fake-dmca-complaints-keep-erasing-real-pages-from-google-what-to-watch-for/581299",
+      "id": "item_2026-07-06_001",
+      "title_original": "Google Put AI Visibility Inside The SEO Tool On Purpose via @sejournal, @slobodanmanic",
+      "title_it": "Google ha integrato la visibilità AI negli strumenti SEO intenzionalmente",
+      "summary_it": "Google ha categorizzato la visibilità generata dall'intelligenza artificiale all'interno della ricerca, suggerendo che non debba essere gestita come un flusso di lavoro separato. Questo implica che le strategie SEO dovrebbero considerare l'AI come parte integrante delle attività di ottimizzazione. La notizia sottolinea la necessità di un approccio unificato alla visibilità online, includendo le componenti AI. Si evidenzia come Google stia spingendo per un'integrazione delle metriche AI negli strumenti SEO esistenti.",
+      "url": "https://www.searchenginejournal.com/google-put-ai-visibility-inside-the-seo-tool-on-purpose/577889",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -41,113 +45,148 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "dmca_takedown",
-        "google_search",
-        "content_removal",
-        "copyright_infringement"
+        "google_ai",
+        "seo_tool",
+        "ai_visibility",
+        "search_integration"
       ],
       "importance": 3,
-      "published_at": "2026-07-04T11:30:57Z",
-      "fetched_at": "2026-07-05T06:03:02.878567Z",
+      "published_at": "2026-07-05T11:00:33Z",
+      "fetched_at": "2026-07-06T05:03:10.761059Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:3f59c410146a4a9c",
+      "raw_hash": "sha256:630138c14ed3e75a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-06_002",
+      "title_original": "Safari’s New MCP Server Enables AI Debugging For SEO And CWV via @sejournal, @martinibuster",
+      "title_it": "Il nuovo server MCP di Safari abilita il debugging AI per SEO e Core Web Vitals",
+      "summary_it": "Apple WebKit ha annunciato l'introduzione di un nuovo server MCP per Safari. Questo server è progettato per facilitare il debugging basato su intelligenza artificiale. Le funzionalità sono orientate al miglioramento delle performance SEO e dei Core Web Vitals.",
+      "url": "https://www.searchenginejournal.com/safaris-mcp-server/581487",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "safari",
+        "core_web_vital",
+        "ai_debugging",
+        "webkit"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-05T20:15:10Z",
+      "fetched_at": "2026-07-06T05:03:11.890639Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:c3ebc958a223d65f",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-07-05T06:02:05.979834Z",
+      "last_checked": "2026-07-06T05:01:54.602869Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-07-05T06:02:06.658094Z",
+      "last_checked": "2026-07-06T05:01:55.038842Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-07-05T06:02:07.386484Z",
+      "last_checked": "2026-07-06T05:01:56.931777Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-07-05T06:02:09.217187Z",
+      "last_checked": "2026-07-06T05:01:58.007530Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-07-05T06:02:28.297483Z",
+      "last_checked": "2026-07-06T05:02:22.558143Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-07-05T06:02:28.695689Z",
+      "last_checked": "2026-07-06T05:02:23.052375Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-07-05T06:02:30.121453Z",
+      "last_checked": "2026-07-06T05:02:24.754207Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-07-05T06:02:31.628093Z",
+      "last_checked": "2026-07-06T05:02:26.405894Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-07-05T06:02:33.068009Z",
+      "last_checked": "2026-07-06T05:02:28.339634Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-07-05T06:02:33.147238Z",
+      "last_checked": "2026-07-06T05:02:28.360227Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-07-05T06:02:34.288516Z",
+      "last_checked": "2026-07-06T05:02:35.053586Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-07-05T06:02:35.659509Z",
+      "last_checked": "2026-07-06T05:02:35.584842Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-07-05T06:02:36.064945Z",
+      "last_checked": "2026-07-06T05:02:37.109587Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-07-05T06:02:38.092470Z",
+      "last_checked": "2026-07-06T05:02:38.735116Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-07-05T06:02:39.398967Z",
+      "last_checked": "2026-07-06T05:02:40.669479Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-07-05T06:02:41.016372Z",
+      "last_checked": "2026-07-06T05:02:42.047211Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-07-05T06:02:42.583261Z",
+      "last_checked": "2026-07-06T05:02:43.644560Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-07-05T06:03:01.004232Z",
+      "last_checked": "2026-07-06T05:03:07.832403Z",
       "changed": false
     }
   ],
