@@ -1,73 +1,100 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-06T06:01:52.638689Z",
-  "generated_at_local": "2026-07-06T08:01:52.638689+02:00",
+  "generated_at": "2026-07-07T05:01:32.519816Z",
+  "generated_at_local": "2026-07-07T07:01:32.519816+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-07-06-0801",
+  "run_id": "2026-07-07-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2171,
-    "items_after_dedup": 2,
+    "items_collected": 2173,
+    "items_after_dedup": 13,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.001,
-    "summarize_attempted": 2,
+    "ai_cost_eur": 0.0088,
+    "summarize_attempted": 13,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-07-06_001",
-    "item_2026-07-06_002"
+    "item_2026-07-07_009",
+    "item_2026-07-07_013",
+    "item_2026-07-07_001",
+    "item_2026-07-07_005",
+    "item_2026-07-07_006",
+    "item_2026-07-07_008",
+    "item_2026-07-07_010",
+    "item_2026-07-07_012",
+    "item_2026-07-07_002",
+    "item_2026-07-07_003"
   ],
   "categories": {
+    "ai_models": [
+      "item_2026-07-07_009"
+    ],
+    "google_updates": [
+      "item_2026-07-07_013",
+      "item_2026-07-07_004"
+    ],
+    "content_eeat": [
+      "item_2026-07-07_001"
+    ],
+    "industry_news": [
+      "item_2026-07-07_005",
+      "item_2026-07-07_006",
+      "item_2026-07-07_012"
+    ],
     "ai_overviews_llm_seo": [
-      "item_2026-07-06_001"
+      "item_2026-07-07_008",
+      "item_2026-07-07_003",
+      "item_2026-07-07_007",
+      "item_2026-07-07_011"
     ],
     "technical_seo": [
-      "item_2026-07-06_002"
+      "item_2026-07-07_010",
+      "item_2026-07-07_002"
     ]
   },
   "items": [
     {
-      "id": "item_2026-07-06_001",
-      "title_original": "Google Put AI Visibility Inside The SEO Tool On Purpose via @sejournal, @slobodanmanic",
-      "title_it": "Google integra la visibilità AI negli strumenti SEO",
-      "summary_it": "Google ha intenzionalmente inserito la visibilità legata all'intelligenza artificiale all'interno dei suoi strumenti SEO. Questo suggerisce che le attività relative all'AI non dovrebbero essere considerate un flusso di lavoro separato, ma integrate nelle strategie SEO esistenti. L'azienda sembra voler unificare l'approccio alla visibilità online, includendo le metriche AI nel contesto più ampio della ricerca.",
-      "url": "https://www.searchenginejournal.com/google-put-ai-visibility-inside-the-seo-tool-on-purpose/577889",
+      "id": "item_2026-07-07_001",
+      "title_original": "Why most original data never gets cited",
+      "title_it": "Perché la maggior parte dei dati originali non viene citata",
+      "summary_it": "L'articolo analizza le ragioni per cui i dati originali pubblicati raramente ricevono citazioni, nonostante la loro importanza per l'originalità dei contenuti. Viene evidenziato che non è sufficiente pubblicare dati proprietari, ma è cruciale il modo in cui questi vengono presentati e contestualizzati. La ricerca si basa sull'analisi dei dati di citazione di Gauge per comprendere cosa viene effettivamente premiato dagli algoritmi AI in termini di dati di prima parte.",
+      "url": "https://www.growth-memo.com/p/why-most-original-data-never-gets",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://www.growth-memo.com/feed",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "ai_overviews_llm_seo",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "content_eeat",
       "tags": [
-        "google_ai",
-        "seo_tool",
-        "ai_visibility",
-        "search_integration"
+        "original_data",
+        "citation",
+        "e_e_a_t",
+        "content_strategy"
       ],
       "importance": 3,
-      "published_at": "2026-07-05T11:00:33Z",
-      "fetched_at": "2026-07-06T06:02:55.597717Z",
+      "published_at": "2026-07-06T07:59:39Z",
+      "fetched_at": "2026-07-07T05:02:47.968781Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:630138c14ed3e75a",
+      "raw_hash": "sha256:cad7474d2116a55b",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-07-06_002",
-      "title_original": "Safari’s New MCP Server Enables AI Debugging For SEO And CWV via @sejournal, @martinibuster",
-      "title_it": "Il nuovo server MCP di Safari abilita il debugging AI per SEO e Core Web Vitals",
-      "summary_it": "Apple WebKit ha annunciato l'introduzione di un nuovo server MCP per Safari. Questo server è progettato per facilitare il debugging dei siti web basato sull'intelligenza artificiale. Le funzionalità sono orientate al miglioramento della SEO e delle Core Web Vitals.",
-      "url": "https://www.searchenginejournal.com/safaris-mcp-server/581487",
+      "id": "item_2026-07-07_002",
+      "title_original": "Google’s Open Knowledge Format Could Work For Websites, Too via @sejournal, @slobodanmanic",
+      "title_it": "Il formato Open Knowledge di Google potrebbe essere applicato anche ai siti web",
+      "summary_it": "Google sta sviluppando un formato Open Knowledge che permette di trasformare le informazioni di un sito web in un grafo di conoscenza collegato. Questo approccio facilita la comprensione dei contenuti da parte degli agenti automatici. L'obiettivo è migliorare l'interpretazione dei dati da parte delle macchine, rendendo i siti più accessibili e comprensibili per i sistemi di intelligenza artificiale.",
+      "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-could-work-for-websites-too/579200",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -82,111 +109,496 @@
       },
       "category": "technical_seo",
       "tags": [
-        "safari",
-        "core_web_vital",
-        "ai_debugging",
-        "webkit"
+        "open_knowledge_format",
+        "semantic_web",
+        "knowledge_graph",
+        "ai_seo"
       ],
       "importance": 3,
-      "published_at": "2026-07-05T20:15:10Z",
-      "fetched_at": "2026-07-06T06:02:56.941955Z",
+      "published_at": "2026-07-06T08:00:43Z",
+      "fetched_at": "2026-07-07T05:02:49.656412Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c3ebc958a223d65f",
+      "raw_hash": "sha256:4505992e5441b486",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_003",
+      "title_original": "Self-Promotional Content Works—Until It Backfires (AI SEO Experiment)",
+      "title_it": "Contenuti autopromozionali: efficacia e rischi nell'era dell'AI (Esperimento SEO con AI)",
+      "summary_it": "Uno studio ha analizzato come i contenuti autopromozionali vengano utilizzati dai sistemi di intelligenza artificiale, in particolare nelle risposte generate da AI. È emerso che le liste di 'migliori [categoria]' sono tra le fonti più citate. Questo suggerisce che l'AI attinge a tali contenuti, ma solleva interrogativi sulla loro efficacia a lungo termine e sui potenziali effetti negativi se percepiti come eccessivamente promozionali.",
+      "url": "https://ahrefs.com/blog/self-promotional-content-ai-seo-experiment",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_content",
+        "self_promotion",
+        "content_strategy",
+        "llm_ranking"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T09:00:22Z",
+      "fetched_at": "2026-07-07T05:02:51.708692Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b1b2def1db2819aa",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_004",
+      "title_original": "Google Answers Question About LLMs-Author.txt For SEO via @sejournal, @martinibuster",
+      "title_it": "Google chiarisce l'uso di LLMs-Author.txt per la SEO",
+      "summary_it": "John Mueller di Google ha risposto a una domanda riguardante l'utilizzo del file LLMs-Author.txt. L'intento era distinguere un autore da omonimi, ma Mueller ha chiarito che questo file non è riconosciuto da Google per scopi SEO. Attualmente, non esiste un meccanismo specifico per la gestione dell'attribuzione degli autori tramite file testuali per i motori di ricerca.",
+      "url": "https://www.searchenginejournal.com/google-answers-question-about-llms-author-txt-for-seo/581547",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_guidance",
+        "author_attribution",
+        "llms_author_txt",
+        "john_mueller"
+      ],
+      "importance": 2,
+      "published_at": "2026-07-06T09:05:35Z",
+      "fetched_at": "2026-07-07T05:02:53.420295Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:86f19efa557edd97",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_005",
+      "title_original": "Bing Tests Product Detail Overlay With Retailer Pricing, Price Insights & More",
+      "title_it": "Bing testa un overlay con dettagli sui prodotti, prezzi dei rivenditori e approfondimenti sui prezzi",
+      "summary_it": "Microsoft Bing sta sperimentando un nuovo overlay per i dettagli dei prodotti direttamente nei risultati di ricerca. Questa funzionalità mostra immagini, descrizioni, prezzi dei rivenditori e dati storici sui prezzi quando si clicca su un prodotto. L'obiettivo è fornire informazioni più complete all'utente prima di reindirizzarlo a Bing Shopping. La funzionalità è attualmente in fase di test e non è disponibile per tutti gli utenti o browser.",
+      "url": "https://www.seroundtable.com/bing-product-detail-overlay-41623.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "bing_shopping",
+        "product_search",
+        "serp_feature",
+        "ecommerce_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T10:11:00Z",
+      "fetched_at": "2026-07-07T05:02:54.948162Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2cf43d123696aa03",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_006",
+      "title_original": "Google & YouTube Shopify App Sync May Cause Mess After August 18th",
+      "title_it": "Sincronizzazione app Google & YouTube Shopify: possibili problemi dopo il 18 agosto",
+      "summary_it": "Gli utenti dell'app Google & YouTube per Shopify potrebbero affrontare problemi dopo il 18 agosto 2026. Si prevede che la reinstallazione dell'app, necessaria per la migrazione dall'API Content all'API Merchant, modificherà gli ID prodotto. Questo cambiamento potrebbe causare la perdita dello storico delle performance e influire sui dati delle campagne Google Ads. Google ha riconosciuto il problema e sta indagando, ma non ha ancora fornito una soluzione definitiva.",
+      "url": "https://www.seroundtable.com/google-youtube-shopify-app-sync-merchant-concerns-41627.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "shopify",
+        "google_merchant_center",
+        "product_id",
+        "api_migration"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T10:21:00Z",
+      "fetched_at": "2026-07-07T05:02:57.188476Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:3f0ebf496dedcd74",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_007",
+      "title_original": "AI Content Didn’t Stop Working, Your Metrics Did via @sejournal, @MattGSouthern",
+      "title_it": "Il contenuto AI non ha smesso di funzionare, sono le tue metriche ad averlo fatto",
+      "summary_it": "Il calo del traffico organico non indica necessariamente un fallimento dei contenuti. L'articolo suggerisce che l'introduzione della ricerca basata sull'AI sta alterando le metriche SEO tradizionali. È fondamentale adattare le metodologie di misurazione per valutare l'efficacia dei contenuti in questo nuovo scenario. Si evidenzia la necessità di riconsiderare come l'influenza dei contenuti venga tracciata e analizzata.",
+      "url": "https://www.searchenginejournal.com/ai-content-didnt-stop-working-your-metrics-did/580976",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_content",
+        "seo_metric",
+        "organic_traffic",
+        "ai_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T10:30:07Z",
+      "fetched_at": "2026-07-07T05:02:58.920464Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:9d91eb248effd883",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_008",
+      "title_original": "Further Exploration Found In The Wild Within Google AI Overviews",
+      "title_it": "Google AI Overviews: Avvistata la funzionalità 'Further Exploration' in fase di test",
+      "summary_it": "Alcuni utenti stanno riscontrando la funzionalità 'Further Exploration' all'interno delle AI Overviews di Google Search. Questa sezione, annunciata in precedenza da Google, appare alla fine delle risposte generate dall'IA e suggerisce ulteriori approfondimenti o articoli correlati. La sua comparsa indica una fase di test pubblico più ampia per questa nuova modalità di interazione con i risultati di ricerca.",
+      "url": "https://www.seroundtable.com/google-further-exploration-41621.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai_overview",
+        "further_exploration",
+        "serp_feature",
+        "ai_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T10:31:00Z",
+      "fetched_at": "2026-07-07T05:03:00.488386Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0248d4185665ed6d",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_009",
+      "title_original": "ChatGPT Ads Can Generate Ads For You",
+      "title_it": "La piattaforma pubblicitaria di ChatGPT ora genera automaticamente annunci",
+      "summary_it": "La piattaforma pubblicitaria di OpenAI, ChatGPT Ads, ha introdotto una funzionalità che genera automaticamente varianti di annunci per gli utenti. Gli annunci vengono creati basandosi sul sito web e sulle impostazioni della campagna, offrendo la possibilità di revisione, modifica e approvazione. Questa automazione mira a semplificare il processo di creazione degli annunci all'interno della piattaforma.",
+      "url": "https://www.seroundtable.com/chatgpt-ads-generated-ads-41622.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt_ad",
+        "ad_generation",
+        "openai",
+        "ai_automation"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T10:32:00Z",
+      "fetched_at": "2026-07-07T05:03:02.048359Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d81941f74f99c64c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_010",
+      "title_original": "Google: Cloudflare Content Signals Robots.txt Directive Has No Effects",
+      "title_it": "Google: la direttiva robots.txt di Cloudflare Content Signals non ha alcun effetto",
+      "summary_it": "John Mueller di Google ha dichiarato che la direttiva robots.txt 'Content Signals' introdotta da Cloudflare non ha alcun impatto sui crawler o sui modelli LLM, inclusi quelli di Google. Ha sottolineato che l'implementazione di tale direttiva aggiunge solo complessità e manutenzione non necessaria al file robots.txt. Google non utilizza nemmeno i file llms.txt o llms-author.txt. Cloudflare ha fissato una scadenza per il 15 settembre 2026 per l'impostazione di nuovi default per le classificazioni Training, Agent e Search per i nuovi domini.",
+      "url": "https://www.seroundtable.com/google-cloudflare-content-signals-41631.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "robots_txt",
+        "cloudflare",
+        "googlebot",
+        "llm_crawling"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T10:51:00Z",
+      "fetched_at": "2026-07-07T05:03:03.875015Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:81f47f88c29d0291",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_011",
+      "title_original": "Build An OKF Brain Like Mine! via @sejournal, @marie_haynes",
+      "title_it": "Costruire un sistema di conoscenza basato su OKF",
+      "summary_it": "Marie Haynes propone un approccio per sviluppare un sistema di conoscenza ottimizzato per l'AI, basato sul formato Open Knowledge Format (OKF) di Google. L'obiettivo è migliorare la gestione delle informazioni per la ricerca e l'automazione. Questo metodo mira a strutturare i dati in modo che siano facilmente interpretabili e utilizzabili dagli algoritmi di intelligenza artificiale.",
+      "url": "https://www.searchenginejournal.com/build-an-okf-brain-like-mine/580661",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "knowledge_graph",
+        "ai_optimization",
+        "data_structuring",
+        "marie_hayne"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T12:00:47Z",
+      "fetched_at": "2026-07-07T05:03:05.349249Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f4272e8af12d659f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_012",
+      "title_original": "Daily Search Forum Recap: July 6, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 6 luglio 2026",
+      "summary_it": "Google ha chiarito che la direttiva robots.txt 'content-signals' di Cloudflare non ha alcun impatto su crawler o LLM. ChatGPT Ads ora offre la generazione automatica di annunci. La sezione 'Further Exploration' nelle AI Overviews di Google sta iniziando a comparire per gli utenti. L'app Google & YouTube Shopify potrebbe causare problemi di tracciamento dei prodotti dopo il 18 agosto a causa della riscrittura degli ID prodotto.",
+      "url": "https://www.seroundtable.com/recap-07-06-2026-41632.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_update",
+        "ai_overviews",
+        "shopify_integration",
+        "robots_txt"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T13:00:00Z",
+      "fetched_at": "2026-07-07T05:03:06.939209Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ace5d892dc8077f7",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-07_013",
+      "title_original": "Google research reveals pattern-level AI video spam detection",
+      "title_it": "La ricerca di Google rivela il rilevamento dello spam video AI a livello di pattern",
+      "summary_it": "Una nuova ricerca di Google indica un approccio al rilevamento dello spam video generato da AI che si concentra sull'identificazione di pattern a livello di account, piuttosto che sull'analisi di singoli video. Questo suggerisce un'evoluzione nelle strategie di Google per contrastare i contenuti manipolativi. L'obiettivo è identificare reti o comportamenti coordinati che sfruttano l'AI per generare spam. Tale metodologia potrebbe avere implicazioni per i creatori di contenuti e le piattaforme video.",
+      "url": "https://www.semrush.com/blog/google-research-and-ai-spam-detection",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "ai_spam_detection",
+        "video_seo",
+        "google_research",
+        "content_quality"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-06T14:10:00Z",
+      "fetched_at": "2026-07-07T05:03:08.641525Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:01fddabe0bcc86e3",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-07-06T06:01:58.033987Z",
+      "last_checked": "2026-07-07T05:01:39.221925Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-07-06T06:01:58.464754Z",
+      "last_checked": "2026-07-07T05:01:40.216651Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-07-06T06:02:00.357873Z",
+      "last_checked": "2026-07-07T05:01:41.086956Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-07-06T06:02:00.920881Z",
+      "last_checked": "2026-07-07T05:01:42.790451Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-07-06T06:02:18.936239Z",
+      "last_checked": "2026-07-07T05:02:04.499947Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-07-06T06:02:19.251122Z",
+      "last_checked": "2026-07-07T05:02:04.760308Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-07-06T06:02:20.822088Z",
+      "last_checked": "2026-07-07T05:02:06.646938Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-07-06T06:02:22.109138Z",
+      "last_checked": "2026-07-07T05:02:07.883657Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-07-06T06:02:23.545480Z",
+      "last_checked": "2026-07-07T05:02:09.583296Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-07-06T06:02:23.580774Z",
+      "last_checked": "2026-07-07T05:02:09.635097Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-07-06T06:02:28.489799Z",
+      "last_checked": "2026-07-07T05:02:15.257175Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-07-06T06:02:28.987277Z",
+      "last_checked": "2026-07-07T05:02:15.867115Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-07-06T06:02:30.182225Z",
+      "last_checked": "2026-07-07T05:02:17.509233Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-07-06T06:02:31.838812Z",
+      "last_checked": "2026-07-07T05:02:18.966834Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-07-06T06:02:33.059739Z",
+      "last_checked": "2026-07-07T05:02:20.750367Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-07-06T06:02:34.284294Z",
+      "last_checked": "2026-07-07T05:02:22.554265Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-07-06T06:02:35.419796Z",
+      "last_checked": "2026-07-07T05:02:24.459909Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-07-06T06:02:53.771183Z",
+      "last_checked": "2026-07-07T05:02:46.000990Z",
       "changed": false
     }
   ],
