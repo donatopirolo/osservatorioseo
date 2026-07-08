@@ -1,0 +1,22 @@
+--- prev
++++ curr
+@@ -12,4 +12,19 @@
+ 
+ ## July 2026
++
++July 7
++ 
++
++### Added `category` to merchant listing structured data
++
++**What** : Updated the Merchant listing documentation to detail how the `Product.category` property can be used with both `Text` and `CategoryCode` types. This aligns with the Google Merchant Center feed specifications for the product_type and google_product_category attributes. 
++
++**Why** : To help merchants provide both merchant-defined and Google-defined category information within their schema.org markup, enhancing product information for Google Search and Shopping. 
++
++### Clarified how to specify sale price effective dates in Product structured data
++
++**What** : Added a new section on "Sale duration" to the Merchant listing guide. This explains how to use the `validFrom`, `validThrough`, and `priceValidUntil` schema.org properties to set the effective range for sale prices, including best practices and examples for placement on either `Offer` or `PriceSpecification` nodes. 
++
++**Why** : This aligns schema.org usage with the Merchant Center feed attribute sale_price_effective_date, providing clear instructions and best practices for merchants using structured data. 
+ 
+ July 1
