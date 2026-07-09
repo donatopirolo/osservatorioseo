@@ -169,7 +169,7 @@ Usage:
  
  sitemap: [absoluteURL]
 
-The `[absoluteURL]` line points to the location of a sitemap or sitemap index file. It must be a fully qualified URL, including the protocol and host, and doesn't have to be URL-encoded. The URL doesn't have to be on the same host as the robots.txt file. You can specify multiple `sitemap` fields. The sitemap field isn't tied to any specific user agent and may be followed by all crawlers, provided it isn't disallowed for crawling. 
+The `[absoluteURL]` line points to the location of a sitemap or sitemap index file. It must be a fully qualified URL, including the protocol and host, and doesn't have to be URL-encoded. The URL doesn't have to be on the same host as the robots.txt file. You can specify multiple `sitemap` fields, with no limit to the number of sitemaps you can include. The sitemap field isn't tied to any specific user agent and may be followed by all crawlers, provided it isn't disallowed for crawling. 
 
 For example:
  
