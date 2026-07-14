@@ -1,34 +1,102 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-13T06:01:49.027133Z",
-  "generated_at_local": "2026-07-13T08:01:49.027133+02:00",
+  "generated_at": "2026-07-14T05:00:57.706292Z",
+  "generated_at_local": "2026-07-14T07:00:57.706292+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-07-13-0801",
+  "run_id": "2026-07-14-0700",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2193,
-    "items_after_dedup": 1,
+    "items_after_dedup": 16,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0005,
-    "summarize_attempted": 1,
+    "ai_cost_eur": 0.0106,
+    "summarize_attempted": 16,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-07-13_001"
+    "item_2026-07-14_005",
+    "item_2026-07-14_007",
+    "item_2026-07-14_010",
+    "item_2026-07-14_013",
+    "item_2026-07-14_014",
+    "item_2026-07-14_016",
+    "item_2026-07-14_001",
+    "item_2026-07-14_003",
+    "item_2026-07-14_004",
+    "item_2026-07-14_008"
   ],
   "categories": {
-    "ai_models": [
-      "item_2026-07-13_001"
+    "google_updates": [
+      "item_2026-07-14_005",
+      "item_2026-07-14_007",
+      "item_2026-07-14_010",
+      "item_2026-07-14_013",
+      "item_2026-07-14_014",
+      "item_2026-07-14_016"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-07-14_001",
+      "item_2026-07-14_002",
+      "item_2026-07-14_006",
+      "item_2026-07-14_015"
+    ],
+    "tools_platforms": [
+      "item_2026-07-14_003",
+      "item_2026-07-14_004",
+      "item_2026-07-14_008"
+    ],
+    "technical_seo": [
+      "item_2026-07-14_009"
+    ],
+    "content_eeat": [
+      "item_2026-07-14_011"
+    ],
+    "industry_news": [
+      "item_2026-07-14_012"
     ]
   },
   "items": [
     {
-      "id": "item_2026-07-13_001",
-      "title_original": "The WebMCP Tools You Expose To Agents Can Be Used To Hijack Them via @sejournal, @slobodanmanic",
-      "title_it": "Gli strumenti WebMCP esposti agli agenti AI possono essere usati per dirottarli",
-      "summary_it": "La notizia evidenzia un rischio di sicurezza legato all'esposizione degli strumenti WebMCP agli agenti AI, che possono essere vulnerabili a prompt injection. Questo permette potenzialmente il dirottamento degli agenti. Vengono fornite indicazioni su come mitigare tali rischi, con un focus sulle impostazioni di sicurezza di Chrome.",
-      "url": "https://www.searchenginejournal.com/the-webmcp-tools-you-expose-to-agents-can-be-used-to-hijack-them/579204",
+      "id": "item_2026-07-14_001",
+      "title_original": "Where AI agents get stuck on your site",
+      "title_it": "Dove gli agenti AI incontrano difficoltà sul tuo sito",
+      "summary_it": "L'articolo analizza le problematiche che gli agenti AI possono incontrare durante l'interazione con i siti web. Vengono identificati i punti critici che ostacolano l'efficace funzionamento di questi agenti. La comprensione di tali ostacoli è fondamentale per ottimizzare i siti in vista di un'interazione sempre maggiore con sistemi basati su intelligenza artificiale.",
+      "url": "https://www.growth-memo.com/p/where-ai-agents-get-stuck-on-your",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_agent",
+        "website_optimization",
+        "llm_interaction"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T08:05:49Z",
+      "fetched_at": "2026-07-14T05:02:01.356628Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d8f53cf90d345502",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_002",
+      "title_original": "AI Agent Standards: What Do We Need To Know? via @sejournal, @chrisgreenseo",
+      "title_it": "Standard per gli Agenti AI: Cosa Dobbiamo Sapere?",
+      "summary_it": "L'articolo discute la necessità di comprendere i vari protocolli e standard emergenti per gli agenti AI nel contesto del web. Viene evidenziata l'importanza di mappare ciascun protocollo al problema specifico che intende risolvere. Questo approccio aiuta a determinare quali standard siano più rilevanti per i professionisti del settore.",
+      "url": "https://www.searchenginejournal.com/ai-agent-standards-what-do-we-need-to-know/581763",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -41,113 +109,600 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_models",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "ai_security",
-        "prompt_injection",
-        "webmcp",
-        "ai_agent"
+        "ai_agent",
+        "ai_standard",
+        "web_protocol",
+        "ai_seo"
       ],
       "importance": 3,
-      "published_at": "2026-07-12T11:00:52Z",
-      "fetched_at": "2026-07-13T06:02:59.006107Z",
+      "published_at": "2026-07-13T08:30:08Z",
+      "fetched_at": "2026-07-14T05:02:02.960090Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:abbbdea1efcfa9c5",
+      "raw_hash": "sha256:b798b28afd0d1ce4",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_003",
+      "title_original": "Google Business Profiles New Collected Info (Visuals)",
+      "title_it": "Nuova sezione 'Informazioni Raccolte' nei Profili Google Business",
+      "summary_it": "Google sta introducendo una nuova funzionalità nei Profili Google Business denominata 'Informazioni Raccolte'. Questa sezione permetterà ai proprietari di attività di visualizzare i dati raccolti da Google tramite chiamate o chat, spesso effettuate da assistenti automatizzati. Sarà possibile rivedere l'accuratezza di queste informazioni e rimuovere dettagli specifici da Google Search e Maps. L'obiettivo è aumentare la trasparenza e fornire maggiore controllo ai business owner sui dati del proprio profilo.",
+      "url": "https://www.seroundtable.com/google-business-profiles-new-collected-info-41672.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_business_profile",
+        "local_seo",
+        "data_management",
+        "google_map"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T10:05:00Z",
+      "fetched_at": "2026-07-14T05:02:05.783313Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7374013f8960153a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_004",
+      "title_original": "Google Ads Conversion Tracking Status: Awaiting Conversions & Misconfigured",
+      "title_it": "Google Ads aggiorna gli stati di monitoraggio delle conversioni",
+      "summary_it": "Google Ads ha introdotto nuovi stati per il monitoraggio delle conversioni nell'interfaccia utente, sostituendo le precedenti diciture. Ora sono presenti stati come 'Misconfigured', 'Awaiting conversions' e 'Removed'. Questi aggiornamenti mirano a fornire una maggiore chiarezza sullo stato delle azioni di conversione e sulle eventuali problematiche.",
+      "url": "https://www.seroundtable.com/google-ads-conversion-tracking-status-updates-41668.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "conversion_tracking",
+        "ui_update"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T10:11:00Z",
+      "fetched_at": "2026-07-14T05:02:07.619186Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f1cff9b081c7c524",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_005",
+      "title_original": "Google Tests Sticky Sponsored Results With Gray Curved Borders, Again",
+      "title_it": "Google testa nuovamente risultati sponsorizzati 'sticky' con bordi curvi grigi",
+      "summary_it": "Google sta sperimentando una nuova interfaccia per i risultati sponsorizzati, caratterizzata da un'etichetta 'Sponsored' più piccola e bordi curvi. Questo test riprende e modifica precedenti sperimentazioni di Google relative all'aspetto degli annunci. L'obiettivo sembra essere quello di integrare gli annunci in modo più fluido nell'interfaccia utente.",
+      "url": "https://www.seroundtable.com/google-sticky-sponsored-results-again-41671.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "serp_feature",
+        "ui_test"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T10:21:00Z",
+      "fetched_at": "2026-07-14T05:02:09.485629Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e4676e6f8a88c94b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_006",
+      "title_original": "Only 28% Of Americans Trust AI Search – And That Gap Is Your SEO Opening via @sejournal, @gregjarboe",
+      "title_it": "Solo il 28% degli americani si fida della ricerca AI: un'opportunità per la SEO",
+      "summary_it": "Un recente articolo evidenzia come una bassa percentuale di americani si fidi dei risultati della ricerca generata dall'intelligenza artificiale. Questo dato suggerisce che esiste un'opportunità per i professionisti SEO di focalizzarsi sulla costruzione di contenuti autorevoli e affidabili. L'obiettivo è generare click-through, piuttosto che puntare solo alla citazione da parte dei sistemi AI. La strategia dovrebbe concentrarsi sull'ottenere la fiducia degli utenti.",
+      "url": "https://www.searchenginejournal.com/only-28-of-americans-trust-ai-search-and-that-gap-is-your-seo-opening/581913",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_search",
+        "user_trust",
+        "seo_strategy",
+        "click_through_rate"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T10:30:27Z",
+      "fetched_at": "2026-07-14T05:02:11.289144Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0537f55d69d27c1e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_007",
+      "title_original": "Bing: We Do Not Do One Off Indexing / Ranking Penalties, It's Not Scalable",
+      "title_it": "Bing: non applichiamo penalizzazioni singole, non è scalabile",
+      "summary_it": "Krishna Madhavan di Microsoft Bing ha dichiarato che Bing non applica penalizzazioni \"una tantum\" ai siti web, poiché tale approccio non sarebbe scalabile. Invece, Bing sviluppa algoritmi anti-spam che identificano specifici tipi di spam e li applicano all'intero indice. Questo permette di agire su tutti i siti che presentano quel tipo di spam, non solo su un singolo caso, garantendo un'azione su larga scala.",
+      "url": "https://www.seroundtable.com/bing-indexing-penalties-41670.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "bing_indexing",
+        "spam_algorithm",
+        "search_penaltie",
+        "microsoft_bing"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T10:31:00Z",
+      "fetched_at": "2026-07-14T05:02:13.193880Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:10fb1a4e7a80b700",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_008",
+      "title_original": "Google Ads Previews For Assets, Text Customizations & Final URL Expansion",
+      "title_it": "Anteprime Google Ads: nuove funzionalità per asset, personalizzazioni del testo ed espansione dell'URL finale",
+      "summary_it": "Google Ads ha introdotto nuove funzionalità di anteprima che consentono agli utenti di visualizzare le inserzioni filtrando per asset. È ora possibile anche visualizzare esempi di personalizzazioni del testo e dell'espansione dell'URL finale direttamente nella console di Google Ads. Queste aggiunte mirano a fornire un maggiore controllo e una migliore visualizzazione delle campagne prima della loro attivazione.",
+      "url": "https://www.seroundtable.com/google-ads-previews-updates-41666.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "ad_preview",
+        "ppc",
+        "asset_management"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T10:41:00Z",
+      "fetched_at": "2026-07-14T05:02:14.760104Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d284cc048c0fc576",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_009",
+      "title_original": "Google Reaffirms Include Canonical On Canonical Page Itself",
+      "title_it": "Google ribadisce l'importanza del canonical auto-referenziale",
+      "summary_it": "Google ha aggiornato la sua documentazione ufficiale sui canonical, specificando di includere un link rel=\"canonical\" anche sulla pagina canonica stessa. Questo consiglio, sebbene non nuovo, è stato ora formalmente aggiunto alle linee guida. La pratica del canonical auto-referenziale è raccomandata per aiutare Google a consolidare URL duplicati e mantenere l'ordine nell'indicizzazione.",
+      "url": "https://www.seroundtable.com/google-self-referential-canonical-41669.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "canonical_tag",
+        "google_guideline",
+        "technical_seo",
+        "indexing"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T10:51:00Z",
+      "fetched_at": "2026-07-14T05:02:16.417744Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:924a17e10cc46e23",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_010",
+      "title_original": "Google Search Ranking Volatility Around 7-Eleven",
+      "title_it": "Volatilità del ranking di ricerca di Google intorno all'11 luglio",
+      "summary_it": "Si è registrata una potenziale volatilità nel ranking di ricerca di Google intorno all'11 luglio, sebbene non sia stata confermata ufficialmente. Strumenti di monitoraggio di terze parti hanno rilevato fluttuazioni, con un limitato riscontro nella community SEO. Alcuni esperti hanno notato recuperi per siti precedentemente penalizzati da aggiornamenti non confermati di gennaio 2026, in particolare quelli che producevano contenuti di massa o 'commodity content'.",
+      "url": "https://www.seroundtable.com/google-search-ranking-volatility-july-11th-41676.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_algorithm",
+        "ranking_volatility",
+        "unconfirmed_update",
+        "seo_chatter"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T12:25:00Z",
+      "fetched_at": "2026-07-14T05:02:18.357256Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:460ef6ec0afeede2",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_011",
+      "title_original": "Evergreen Content Is Over – The Individual Is The Only Strategy Left via @sejournal, @theshelleywalsh",
+      "title_it": "Il contenuto evergreen è superato: l'individuo è l'unica strategia rimasta",
+      "summary_it": "L'articolo suggerisce che il concetto tradizionale di contenuto evergreen stia perdendo rilevanza. Viene evidenziato come l'influenza degli individui e il cosiddetto 'reverse halo effect' stiano ridefinendo le strategie di contenuto per i brand nella ricerca. Questo implica un cambiamento nell'approccio alla creazione e distribuzione dei contenuti, focalizzandosi maggiormente sull'autorevolezza e la risonanza personale.",
+      "url": "https://www.searchenginejournal.com/evergreen-is-over-the-individual-is-the-only-strategy-left/581532",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "content_strategy",
+        "evergreen_content",
+        "personal_branding",
+        "e_e_a_t"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T12:30:51Z",
+      "fetched_at": "2026-07-14T05:02:20.263125Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:406a89376e0d9fe4",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_012",
+      "title_original": "Google Ads Email Support Broke",
+      "title_it": "Il supporto email di Google Ads non funziona",
+      "summary_it": "Gli utenti stanno riscontrando un malfunzionamento nel supporto email di Google Ads. Tentando di accedere all'opzione di contatto via email, viene visualizzato un messaggio di errore generico. Il problema è stato replicato da diverse fonti e sembra impedire l'invio di richieste di assistenza tramite questo canale. Si prevede che Google risolverà l'inconveniente a breve.",
+      "url": "https://www.seroundtable.com/google-ads-email-support-broke-41677.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "support_issue",
+        "platform_bug"
+      ],
+      "importance": 2,
+      "published_at": "2026-07-13T12:45:00Z",
+      "fetched_at": "2026-07-14T05:02:21.986688Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f3d65c33013d2554",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_013",
+      "title_original": "Daily Search Forum Recap: July 13, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 13 luglio 2026",
+      "summary_it": "Si segnala una possibile volatilità nel ranking di Google intorno all'11 luglio. Google ha ribadito l'importanza di includere canonical self-referential sulle pagine stesse. Bing ha dichiarato di non applicare penalità di indicizzazione una tantum, preferendo algoritmi anti-spam scalabili. Google Ads ha introdotto nuove funzionalità di anteprima per asset, personalizzazioni del testo ed espansione dell'URL finale, oltre a nuovi stati di conversione.",
+      "url": "https://www.seroundtable.com/recap-07-13-2026-41673.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ranking_volatility",
+        "canonical_tag",
+        "bing_penaltie",
+        "google_ads_update"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T13:00:00Z",
+      "fetched_at": "2026-07-14T05:02:23.853728Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:55be91c13c82431d",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_014",
+      "title_original": "Google Ads Requires Disclosure For AI-Generated Content via @sejournal, @brookeosmundson",
+      "title_it": "Google Ads Richiede la Dichiarazione per Contenuti Generati da AI",
+      "summary_it": "Google Ads ha introdotto l'obbligo di etichettare i contenuti creativi di terze parti generati tramite intelligenza artificiale. Questa nuova politica mira ad aumentare la trasparenza per gli utenti e gli inserzionisti. Gli inserzionisti dovranno adeguare i propri flussi di lavoro per conformarsi ai nuovi requisiti di divulgazione.",
+      "url": "https://www.searchenginejournal.com/google-ads-requires-disclosure-for-ai-generated-content/581925",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "ai_content",
+        "disclosure",
+        "advertising_policy"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T15:00:35Z",
+      "fetched_at": "2026-07-14T05:02:25.265433Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:83d3ce39aea4c68f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_015",
+      "title_original": "ChatGPT Access Tied To 9% Drop In Traditional Search via @sejournal, @MattGSouthern",
+      "title_it": "L'accesso a ChatGPT è correlato a un calo del 9% nella ricerca tradizionale",
+      "summary_it": "Una nuova ricerca ha analizzato l'impatto dell'accesso a ChatGPT sul traffico verso i siti web, confrontando il comportamento di invio di utenti tra ChatGPT e Google. Lo studio suggerisce una correlazione tra una maggiore disponibilità di ChatGPT e una diminuzione del 9% nell'utilizzo della ricerca tradizionale. Questo dato indica un potenziale spostamento nelle abitudini di ricerca degli utenti.",
+      "url": "https://www.searchenginejournal.com/chatgpt-access-tied-to-9-drop-in-traditional-search/582167",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "chatgpt_impact",
+        "search_behavior",
+        "ai_search",
+        "user_engagement"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T16:54:10Z",
+      "fetched_at": "2026-07-14T05:02:26.945981Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8f875b8da8239e44",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-14_016",
+      "title_original": "Google’s Marvin Clarifies AI Search and Qualified Future Conversions via @sejournal, @brookeosmundson",
+      "title_it": "Ginny Marvin di Google chiarisce la ricerca AI e le conversioni future qualificate",
+      "summary_it": "Ginny Marvin di Google ha fornito chiarimenti sull'idoneità alla ricerca AI, sulle conversioni future qualificate e sulle partnership con i creator. Queste spiegazioni aggiungono contesto agli annunci chiave fatti durante il Google Marketing Live. La comunicazione mira a delineare meglio le implicazioni di queste novità per gli operatori del settore.",
+      "url": "https://www.searchenginejournal.com/googles-marvin-clarifies-ai-search-and-qualified-future-conversions/582185",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ai_search",
+        "qualified_future_conversion",
+        "google_marketing_live",
+        "ginny_marvin"
+      ],
+      "importance": 3,
+      "published_at": "2026-07-13T19:46:27Z",
+      "fetched_at": "2026-07-14T05:02:28.659701Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5d8f45be1844aa78",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-07-13T06:01:54.316455Z",
+      "last_checked": "2026-07-14T05:01:03.039806Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-07-13T06:01:55.801333Z",
+      "last_checked": "2026-07-14T05:01:04.281398Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-07-13T06:01:56.105368Z",
+      "last_checked": "2026-07-14T05:01:04.846129Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-07-13T06:01:57.311746Z",
+      "last_checked": "2026-07-14T05:01:05.977741Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-07-13T06:02:19.744906Z",
+      "last_checked": "2026-07-14T05:01:25.315263Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-07-13T06:02:20.087609Z",
+      "last_checked": "2026-07-14T05:01:25.664692Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-07-13T06:02:21.718774Z",
+      "last_checked": "2026-07-14T05:01:27.474936Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-07-13T06:02:23.157102Z",
+      "last_checked": "2026-07-14T05:01:28.579367Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-07-13T06:02:24.758508Z",
+      "last_checked": "2026-07-14T05:01:29.913716Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-07-13T06:02:24.816322Z",
+      "last_checked": "2026-07-14T05:01:29.990432Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-07-13T06:02:27.023355Z",
+      "last_checked": "2026-07-14T05:01:32.653516Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-07-13T06:02:27.508527Z",
+      "last_checked": "2026-07-14T05:01:33.205379Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-07-13T06:02:28.779810Z",
+      "last_checked": "2026-07-14T05:01:34.111956Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-07-13T06:02:30.030872Z",
+      "last_checked": "2026-07-14T05:01:35.303021Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-07-13T06:02:32.128336Z",
+      "last_checked": "2026-07-14T05:01:37.235249Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-07-13T06:02:32.912807Z",
+      "last_checked": "2026-07-14T05:01:39.083558Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-07-13T06:02:34.249649Z",
+      "last_checked": "2026-07-14T05:01:40.235446Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-07-13T06:02:57.295773Z",
+      "last_checked": "2026-07-14T05:01:59.325843Z",
       "changed": false
     }
   ],
