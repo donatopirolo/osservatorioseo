@@ -1,30 +1,30 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-17T05:01:05.664983Z",
-  "generated_at_local": "2026-07-17T07:01:05.664983+02:00",
+  "generated_at": "2026-07-17T06:01:06.994307Z",
+  "generated_at_local": "2026-07-17T08:01:06.994307+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-07-17-0701",
+  "run_id": "2026-07-17-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2197,
     "items_after_dedup": 19,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0547,
+    "ai_cost_eur": 0.055,
     "summarize_attempted": 19,
     "summarize_failed": 0
   },
   "top10": [
     "item_2026-07-17_002",
+    "item_2026-07-17_012",
     "item_2026-07-17_006",
     "item_2026-07-17_009",
     "item_2026-07-17_010",
-    "item_2026-07-17_012",
-    "item_2026-07-17_003",
     "item_2026-07-17_016",
     "item_2026-07-17_017",
     "item_2026-07-17_019",
-    "item_2026-07-17_005"
+    "item_2026-07-17_005",
+    "item_2026-07-17_007"
   ],
   "categories": {
     "ai_models": [
@@ -33,11 +33,10 @@
       "item_2026-07-17_019"
     ],
     "google_updates": [
+      "item_2026-07-17_012",
       "item_2026-07-17_006",
       "item_2026-07-17_009",
       "item_2026-07-17_010",
-      "item_2026-07-17_012",
-      "item_2026-07-17_003",
       "item_2026-07-17_017"
     ],
     "tools_platforms": [
@@ -52,6 +51,7 @@
       "item_2026-07-17_015"
     ],
     "ai_overviews_llm_seo": [
+      "item_2026-07-17_003",
       "item_2026-07-17_004",
       "item_2026-07-17_013",
       "item_2026-07-17_018"
@@ -66,7 +66,7 @@
       "id": "item_2026-07-17_001",
       "title_original": "How Do I Split Pages Between Brand Building & Converting? – Ask An SEO via @sejournal, @rollerblader",
       "title_it": "Come bilanciare pagine dedicate al brand building e alla conversione?",
-      "summary_it": "L'articolo affronta la distinzione tra pagine orientate alla conversione e quelle focalizzate sulla costruzione del brand. Viene suggerito di definire chiaramente lo scopo di ogni pagina e stabilire dei confini per ottimizzare sia il traffico che i ricavi. La strategia proposta mira a far coesistere efficacemente entrambe le tipologie di contenuto.",
+      "summary_it": "L'articolo affronta la distinzione tra pagine orientate alla conversione (CRO) e pagine focalizzate sulla SEO e sul brand building. Viene suggerito di definire chiaramente lo scopo di ciascuna pagina. Una chiara delimitazione degli obiettivi può contribuire alla crescita sia del traffico che dei ricavi.",
       "url": "https://www.searchenginejournal.com/ask-an-seo-how-do-i-balance-content-that-converts-with-content-that-builds-brand-authority/566261",
       "source": {
         "id": "search_engine_journal",
@@ -89,7 +89,7 @@
       ],
       "importance": 2,
       "published_at": "2026-07-16T08:30:23Z",
-      "fetched_at": "2026-07-17T05:02:00.896182Z",
+      "fetched_at": "2026-07-17T06:02:06.323672Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -101,7 +101,7 @@
       "id": "item_2026-07-17_002",
       "title_original": "Our approach to bioresilience",
       "title_it": "L'approccio di Google DeepMind alla bioresilienza",
-      "summary_it": "Google DeepMind e Isomorphic Labs hanno delineato il loro approccio congiunto alla bioresilienza e all'applicazione dei modelli di intelligenza artificiale in questo campo. L'iniziativa mira a esplorare come l'AI possa contribuire alla resilienza dei sistemi biologici. Questo include la ricerca su come l'AI possa essere utilizzata per affrontare sfide complesse legate alla stabilità e all'adattabilità degli ecosistemi e degli organismi viventi.",
+      "summary_it": "Google DeepMind e Isomorphic Labs hanno delineato la loro strategia congiunta per affrontare la bioresilienza. L'iniziativa si concentra sull'applicazione di modelli di intelligenza artificiale in questo campo. L'obiettivo è esplorare come l'AI possa contribuire a rafforzare la resilienza biologica.",
       "url": "https://deepmind.google/blog/our-approach-to-bioresilience",
       "source": {
         "id": "google_deepmind_blog",
@@ -119,66 +119,65 @@
       "tags": [
         "google_deepmind",
         "bioresilience",
-        "ai_research",
-        "isomorphic_lab"
+        "ai_application"
       ],
       "importance": 5,
       "published_at": "2026-07-16T08:30:42Z",
-      "fetched_at": "2026-07-17T05:02:02.656551Z",
+      "fetched_at": "2026-07-17T06:02:07.834705Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
       "raw_hash": "sha256:4d1c4906e3bb55f9",
       "deep_analysis": {
-        "detailed_description": "Google DeepMind e Isomorphic Labs hanno formalizzato un framework congiunto per applicare modelli di intelligenza artificiale alla bioresilienza, un campo che studia la capacità dei sistemi biologici di resistere e adattarsi a stress ambientali. L'annuncio segna un cambio di strategia: non più solo scoperta di farmaci (il core business di Isomorphic), ma modellazione predittiva di ecosistemi e organismi sotto pressione.\n\nL'approccio si basa sull'uso di modelli generativi e di simulazione per anticipare come proteine, pathway metabolici e reti cellulari rispondano a perturbazioni. In pratica, DeepMind porta l'infrastruttura di modellazione (AlphaFold e successori), Isomorphic la validazione sperimentale e i dataset biologici proprietari. L'obiettivo dichiarato è costruire un layer predittivo per scenari di stress biologico: cambiamenti climatici, patogeni emergenti, collasso di popolazioni microbiche.\n\nPer chi lavora in ambito SEO, l'interesse non è immediato ma strategico. Google sta posizionando DeepMind come autorità scientifica in domini ad alto valore informativo: salute, ambiente, biologia. Questo significa che i contenuti prodotti o citati da DeepMind in questi verticali acquisiranno peso algoritmico crescente, soprattutto in contesti dove Google privilegia fonti autorevoli (YMYL esteso).\n\nL'iniziativa si inserisce in un pattern più ampio: Google usa le pubblicazioni di DeepMind per alimentare Knowledge Graph, featured snippet e AI Overviews in ambiti scientifici. Ogni paper, ogni dataset reso pubblico, ogni framework open source diventa un segnale di autorità che Google può sfruttare per validare o penalizzare contenuti terzi. Chi produce contenuti in nicchie bio-tech, salute ambientale o ricerca applicata deve monitorare cosa DeepMind pubblica, perché diventa de facto il benchmark informativo.\n\nLa bioresilienza è un termine ancora poco battuto nelle SERP generaliste, ma destinato a crescere con l'accelerazione del dibattito climatico e sanitario. Google sta costruendo la semantic authority su questo tema prima che diventi mainstream. Chi vuole posizionarsi su query correlate (adattamento biologico, stabilità ecosistemica, AI in biologia) dovrà confrontarsi con contenuti prodotti o validati da un'entità che Google controlla direttamente.\n\nIn termini di contenuto, l'approccio DeepMind privilegia dati strutturati, citazioni peer-reviewed, e linguaggio tecnico ma accessibile. Non è content marketing: è ricerca pubblicata con rigore accademico, ma distribuita attraverso canali Google (blog, YouTube, Scholar). Questo crea un vantaggio competitivo difficile da replicare per editori terzi, anche autorevoli.\n\nL'aspetto operativo per i SEO è duplice: da un lato, monitorare l'evoluzione semantica di termini come bioresilienza e derivati; dall'altro, valutare se e come citare o linkare ricerche DeepMind nei propri contenuti YMYL, sapendo che Google potrebbe premiare chi si allinea alle sue fonti proprietarie.",
+        "detailed_description": "Google DeepMind e Isomorphic Labs hanno formalizzato una strategia congiunta per applicare modelli di intelligenza artificiale alla bioresilienza, un campo che studia la capacità dei sistemi biologici di resistere e adattarsi a stress ambientali. L'annuncio segna un'espansione delle applicazioni AI oltre i confini tradizionali del search e del machine learning applicato ai prodotti consumer.\n\nPer chi lavora in ambito SEO, l'interesse non è immediato sul piano algoritmico, ma diventa rilevante sul piano strategico: Google sta allocando risorse significative di DeepMind su verticali scientifici ad alto valore aggiunto. Questo tipo di investimento influenza la roadmap dei prodotti di ricerca, soprattutto nelle SERP verticali legate a salute, ambiente, scienze della vita.\n\nLa bioresilienza come campo di ricerca interseca temi come cambiamento climatico, sicurezza alimentare, epidemiologia: tutte aree in cui Google ha già implementato feature SERP dedicate (Health Knowledge Panels, Climate Change Information Panels). L'integrazione di modelli AI avanzati in questi domini potrebbe tradursi in nuovi formati di risultato, widget interattivi, o risposte generate dinamicamente per query scientifiche complesse.\n\nIsomorphic Labs, spin-off di DeepMind focalizzato su drug discovery, porta competenze nella modellazione molecolare e nella predizione di strutture proteiche (vedi AlphaFold). La collaborazione suggerisce che i modelli AI sviluppati per la bioresilienza potrebbero alimentare anche sistemi di risposta a query mediche o ambientali, con implicazioni per chi ottimizza contenuti in questi settori.\n\nL'aspetto operativo per i SEO riguarda la preparazione a SERP sempre più dinamiche e basate su dati strutturati complessi. Se Google integra modelli predittivi o simulativi direttamente nei risultati di ricerca per query scientifiche, il traffico organico verso contenuti editoriali tradizionali potrebbe subire erosione, spostando il valore verso fonti dati certificate o partnership dirette con enti di ricerca.\n\nNon ci sono annunci specifici su modifiche algoritmiche o nuovi ranking factor, ma la direzione è chiara: Google continua a investire in AI verticale per sostituire o integrare risultati organici con risposte generate o arricchite da modelli proprietari. Chi lavora su contenuti scientifici, medici o ambientali dovrebbe monitorare l'evoluzione delle feature SERP in questi ambiti e valutare strategie di markup strutturato più sofisticate.\n\nLa tempistica dell'annuncio, a metà 2026, coincide con il consolidamento di SGE (Search Generative Experience) e con la crescente integrazione di Gemini nei prodotti Google. La bioresilienza potrebbe diventare un caso d'uso pilota per testare nuove modalità di presentazione di informazioni complesse direttamente in SERP, riducendo ulteriormente il click-through verso siti terzi.",
         "implications": [
-          "Google sta costruendo autorità semantica proprietaria in verticali YMYL scientifici prima che diventino competitivi. Chi produce contenuti in bio-tech, salute ambientale o ricerca applicata vedrà DeepMind emergere come fonte di riferimento nelle AI Overviews e nei featured snippet.",
-          "I termini e i framework introdotti da DeepMind (come bioresilienza) diventeranno anchor semantici nel Knowledge Graph. Ottimizzare per queste entità emergenti richiede monitoraggio attivo delle pubblicazioni DeepMind e allineamento lessicale precoce.",
-          "La strategia di Google è usare la ricerca proprietaria per validare o penalizzare contenuti terzi in ambiti YMYL. Chi cita o linka ricerche DeepMind potrebbe ottenere un boost di autorità, ma rischia anche di competere con contenuti prodotti direttamente da Google.",
-          "L'approccio tecnico-divulgativo di DeepMind (rigore + accessibilità) diventa il benchmark qualitativo per contenuti scientifici. Editori che non raggiungono questo standard rischiano declassamento in contesti dove Google privilegia expertise dimostrabile."
+          "Google sta espandendo l'uso di AI proprietaria in verticali scientifici ad alto valore, segnalando una possibile riduzione del traffico organico verso contenuti editoriali in ambito salute, ambiente, scienze della vita se le SERP integreranno risposte generate da modelli avanzati.",
+          "Chi ottimizza contenuti in settori come epidemiologia, cambiamento climatico, sicurezza alimentare dovrebbe prepararsi a SERP più dinamiche, con widget interattivi o risposte predittive che potrebbero cannibalizzare il CTR organico.",
+          "L'alleanza DeepMind-Isomorphic Labs suggerisce che i dati strutturati e le partnership con enti di ricerca certificati diventeranno ancora più critici per mantenere visibilità in SERP scientifiche, dove Google potrebbe privilegiare fonti validate direttamente integrate nei suoi modelli.",
+          "Non ci sono modifiche algoritmiche immediate da implementare, ma la direzione strategica di Google verso AI verticale richiede un monitoraggio costante delle feature SERP in ambiti scientifici e una revisione delle strategie di markup Schema.org per contenuti complessi."
         ],
         "examples": [
-          "Un sito di divulgazione ambientale che pubblica un articolo su 'adattamento degli ecosistemi al cambiamento climatico' dovrebbe verificare se DeepMind ha pubblicato ricerche correlate alla bioresilienza. Citare e linkare questi studi può rafforzare l'autorità percepita, ma espone anche al rischio che Google mostri direttamente il contenuto DeepMind al posto del tuo nelle AI Overviews.",
-          "Evitare di creare contenuti generici su temi emergenti come bioresilienza senza un angolo tecnico o dati originali. Google premierà chi porta expertise dimostrabile (dataset, case study, peer review), non chi riassume concetti già coperti da fonti proprietarie come DeepMind.",
-          "Un e-commerce di integratori o prodotti bio potrebbe trovarsi penalizzato se usa claim su 'resilienza biologica' senza citare fonti scientifiche solide. Con DeepMind attivo su questi temi, Google ha ora un benchmark interno per valutare la qualità delle affermazioni YMYL in ambito bio-salute."
+          "Un sito di divulgazione scientifica che pubblica articoli su adattamento delle colture al cambiamento climatico potrebbe vedere traffico in calo se Google inizia a generare risposte predittive direttamente in SERP usando modelli di bioresilienza. Conviene investire in dati strutturati avanzati (Dataset, ScholarlyArticle) e in partnership con enti di ricerca per essere citati come fonte nei nuovi formati di risultato.",
+          "Evitare di puntare solo su contenuti editoriali generalisti in ambito salute o ambiente: se Google integra modelli AI per rispondere a query complesse tipo 'come le piante resistono alla siccità', un articolo blog standard rischia di finire sotto widget interattivi o risposte generate. Meglio differenziarsi con dataset originali, strumenti interattivi, o contenuti firmati da esperti certificati.",
+          "Un e-commerce di integratori o prodotti bio potrebbe subire impatto indiretto: se le SERP informazionali su temi di salute e resilienza biologica diventano più ricche di feature proprietarie Google, il traffico top-funnel si riduce. Scenario tipo: query 'integratori per sistema immunitario' potrebbe mostrare un pannello generato da AI con raccomandazioni generiche, spostando il click più in basso nel funnel."
         ],
         "testing_steps": [
-          "Cerca 'bioresilienza' e varianti (biological resilience, ecosystem stability, adaptive biology) su Google e verifica se compaiono già contenuti DeepMind o Google Scholar in posizione dominante.",
-          "Analizza le AI Overviews per query scientifiche nel tuo verticale: controlla se citano già pubblicazioni DeepMind o Isomorphic Labs come fonte primaria.",
-          "Apri Google Trends e imposta alert per 'bioresilience' e termini correlati: monitora l'evoluzione del volume di ricerca nei prossimi 6-12 mesi.",
-          "Verifica nel tuo Google Search Console se hai contenuti che rankano per query semanticamente vicine (es. 'adattamento biologico', 'stabilità ecosistemi'): valuta se aggiornare con citazioni a ricerche DeepMind.",
-          "Controlla il Knowledge Graph per entità correlate (es. 'ecosystem resilience', 'biological adaptation'): verifica se Google ha già integrato definizioni o dati da fonti DeepMind.",
-          "Se produci contenuti YMYL in ambito bio-salute, fai un audit delle tue fonti: verifica quante sono peer-reviewed e quante potrebbero essere sostituite o integrate con ricerche DeepMind per rafforzare l'E-E-A-T."
+          "Identifica le query principali del tuo sito che intersecano temi scientifici (salute, ambiente, biologia) e monitora in Search Console l'andamento del CTR organico nei prossimi 6-12 mesi.",
+          "Usa un tool di tracking SERP (es. STAT, SEMrush) per verificare se Google introduce nuovi widget, pannelli informativi o risposte generate su query del tuo verticale.",
+          "Controlla in Google Search Console → Aspetto nella ricerca se i tuoi contenuti vengono mostrati in feature snippet o pannelli Knowledge Graph: un calo di impression in queste feature potrebbe segnalare sostituzione con contenuti generati da AI.",
+          "Rivedi il markup Schema.org dei tuoi contenuti scientifici: assicurati di usare tipi avanzati come MedicalWebPage, ScholarlyArticle, Dataset, e di linkare fonti autorevoli (PubMed, enti di ricerca).",
+          "Monitora le SERP competitor: se siti simili al tuo perdono traffico su query informazionali mentre feature Google si espandono, prepara una strategia di diversificazione (newsletter, community, strumenti proprietari).",
+          "Testa l'integrazione di dati strutturati più granulari (es. ClaimReview per affermazioni scientifiche, FAQPage per query complesse) per aumentare le chance di essere citato come fonte in eventuali risposte AI-generated."
         ],
         "faqs": [
           {
-            "question": "Devo citare le ricerche DeepMind nei miei contenuti scientifici per rankare meglio?",
-            "answer": "Citare ricerche DeepMind può rafforzare l'E-E-A-T se sono pertinenti e peer-reviewed, ma non è una garanzia di ranking. Google premia la coerenza tra claim e fonti autorevoli: se DeepMind è la fonte più solida su un tema, citarla è utile. Il rischio è competere con contenuti che Google controlla direttamente, quindi serve un angolo originale (dati proprietari, caso studio, analisi critica) per differenziarsi."
+            "question": "Questo annuncio cambia qualcosa per la SEO nei prossimi 3 mesi?",
+            "answer": "No, non ci sono modifiche algoritmiche immediate. L'impatto è strategico e si manifesterà nel medio termine (6-18 mesi) con l'eventuale integrazione di modelli AI avanzati nelle SERP scientifiche. Chi lavora su contenuti salute, ambiente o scienze della vita dovrebbe iniziare ora a rafforzare markup strutturato e partnership con fonti autorevoli, ma non serve cambiare tattiche SEO di base."
           },
           {
-            "question": "La bioresilienza diventerà un termine competitivo nelle SERP?",
-            "answer": "Attualmente il volume di ricerca è basso, ma Google sta costruendo autorità semantica su questo termine prima che esploda. Se il dibattito climatico e sanitario accelera, bioresilienza e derivati diventeranno query ad alto valore. Chi si posiziona ora con contenuti tecnici e ben documentati avrà vantaggio, ma dovrà competere con contenuti proprietari Google (DeepMind, Scholar, AI Overviews)."
+            "question": "La bioresilienza è un tema di nicchia: perché dovrebbe interessare un SEO generalista?",
+            "answer": "Perché segnala la direzione strategica di Google: investire in AI verticale per sostituire risultati organici con risposte generate. Oggi è bioresilienza, domani potrebbe essere finanza personale, legal, real estate. Il pattern è lo stesso: Google allena modelli proprietari su verticali ad alto valore e riduce la dipendenza da contenuti terzi. Chi lavora su qualsiasi verticale informazionale dovrebbe monitorare questa tendenza."
           },
           {
-            "question": "Questo annuncio impatta direttamente il mio lavoro SEO oggi?",
-            "answer": "No, a meno che tu non operi in verticali bio-tech, salute ambientale o ricerca scientifica. L'impatto è strategico: Google sta usando DeepMind per costruire autorità proprietaria in domini YMYL emergenti. Se produci contenuti in questi ambiti, devi monitorare cosa DeepMind pubblica perché diventerà il benchmark qualitativo e semantico contro cui Google valuterà i tuoi contenuti."
+            "question": "Devo preoccuparmi se il mio sito non tratta temi scientifici?",
+            "answer": "Dipende. Se il tuo traffico viene da query informazionali complesse (how-to, guide, comparazioni), il rischio di cannibalizzazione da parte di risposte AI-generated esiste già con SGE. La bioresilienza è solo un altro caso d'uso. Se invece lavori su transazionale puro o local, l'impatto è minore. Ma la tendenza generale è chiara: Google vuole rispondere direttamente a più query possibili."
           },
           {
-            "question": "Google userà la ricerca DeepMind per penalizzare contenuti terzi in ambito YMYL?",
-            "answer": "Non direttamente, ma DeepMind diventa il riferimento interno per valutare qualità e accuratezza. Se pubblichi claim scientifici in ambito YMYL senza fonti solide, e Google ha ricerche DeepMind che contraddicono o superano i tuoi contenuti, rischi declassamento. La penalizzazione non è esplicita: è il risultato di un confronto qualitativo dove Google ha un vantaggio proprietario."
+            "question": "Conviene investire in contenuti scientifici originali o è meglio puntare su altri verticali?",
+            "answer": "Contenuti scientifici originali con dati proprietari, ricerche esclusive o firma di esperti certificati restano difendibili. Contenuti editoriali generalisti o rielaborazioni di fonti pubbliche sono a rischio alto. Se hai le risorse per produrre contenuti di qualità eccellente e differenziati, il verticale scientifico può ancora funzionare. Altrimenti, meglio diversificare verso verticali meno esposti ad AI-generated answers."
           }
         ],
-        "editorial_commentary": "Google sta giocando una partita a lungo termine: posizionare DeepMind come autorità scientifica proprietaria in verticali YMYL prima che diventino competitivi. La bioresilienza è un test case perfetto: un tema emergente, ad alto valore informativo, con basso volume di ricerca attuale ma destinato a esplodere. Chi controlla la semantica e le fonti autorevoli su questi temi controlla le SERP future.\n\nPer chi lavora in nicchie scientifiche o YMYL, questo è un campanello d'allarme. Google non si limita più a indicizzare contenuti terzi: produce ricerca proprietaria, la distribuisce attraverso i suoi canali, e la usa come benchmark per valutare (e potenzialmente declassare) contenuti concorrenti. Non è una violazione delle linee guida, ma un vantaggio strutturale difficile da contrastare.\n\nLa mossa operativa è duplice: monitorare attivamente cosa DeepMind pubblica e anticipare l'evoluzione semantica di termini emergenti. Chi aspetta che bioresilienza diventi mainstream troverà Google già posizionato come fonte primaria. Chi si muove ora, con contenuti tecnici e dati originali, può ancora competere. Ma serve consapevolezza: stai gareggiando contro chi scrive le regole del gioco.",
+        "editorial_commentary": "L'annuncio di DeepMind su bioresilienza e AI è l'ennesimo segnale che Google sta costruendo un ecosistema in cui la ricerca organica diventa progressivamente residuale per query informazionali complesse. Non è un cambio improvviso, ma un'accelerazione di una traiettoria già evidente con SGE, Gemini, e i vari pannelli Knowledge Graph verticali.\n\nChi lavora su contenuti scientifici, medici o ambientali dovrebbe smettere di pensare alla SEO come ottimizzazione per il ranking organico tradizionale. Il gioco si sta spostando su: essere citati come fonte in risposte generate, avere dati strutturati così solidi da essere ingeriti dai modelli Google, costruire brand authority che spinga gli utenti a cercarti direttamente anche quando Google offre una risposta immediata.\n\nSe il modello di business dipende da traffico informazionale top-funnel su temi che Google può modellare con AI, è il momento di diversificare. Newsletter, community, strumenti proprietari, contenuti dietro registrazione: tutto ciò che riduce la dipendenza dal traffico organico puro. Google non ha più bisogno di mandare utenti altrove se può rispondere direttamente, e la bioresilienza è solo l'ultimo verticale in cui sta testando questa capacità.",
         "premium_model_used": "anthropic/claude-sonnet-4.5",
-        "cost_eur": 0.042644760000000004
+        "cost_eur": 0.043122240000000006
       }
     },
     {
       "id": "item_2026-07-17_003",
       "title_original": "Google Is Using Social Media Signals To Mask AI Search Click Loss via @sejournal, @TaylorDanRW",
-      "title_it": "Google utilizza i segnali dei social media per mascherare la perdita di clic dalla ricerca AI",
-      "summary_it": "La nuova funzionalità di tracciamento social di Search Console potrebbe nascondere la diminuzione dei clic organici derivante dall'integrazione dell'AI nella ricerca. Questa implementazione potrebbe inoltre trasformare i profili social verificati in fonti di dati gratuite per l'addestramento dei modelli di Google. Si suggerisce che Google stia cercando di compensare la potenziale riduzione del traffico verso i siti web. L'analisi evidenzia un possibile impatto sulla visibilità e sul valore dei clic per i publisher.",
+      "title_it": "Google utilizza i segnali dei social media per mascherare la perdita di clic dovuta alla ricerca AI",
+      "summary_it": "La nuova funzionalità di tracciamento social di Search Console potrebbe nascondere la diminuzione dei clic organici causata dall'integrazione dell'IA nella ricerca. Questo sistema trasformerebbe i profili social verificati in dati di addestramento gratuiti per i modelli di Google. La mossa solleva interrogativi sull'impatto reale dell'IA sul traffico dei siti web e sull'utilizzo dei dati degli utenti.",
       "url": "https://www.searchenginejournal.com/google-is-using-social-media-signals-to-mask-ai-search-click-loss/582227",
       "source": {
         "id": "search_engine_journal",
@@ -192,7 +191,7 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "ai_overviews_llm_seo",
       "tags": [
         "google_search_console",
         "ai_search",
@@ -201,7 +200,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:00:03Z",
-      "fetched_at": "2026-07-17T05:02:04.618393Z",
+      "fetched_at": "2026-07-17T06:02:09.622010Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -212,8 +211,8 @@
     {
       "id": "item_2026-07-17_004",
       "title_original": "AI SEO: Writing That’s Specific May Get Cited More via @sejournal, @martinibuster",
-      "title_it": "SEO e AI: Contenuti Specifici Potrebbero Ottenere Più Citazioni",
-      "summary_it": "La specificità dei contenuti è un fattore chiave per l'ottimizzazione SEO in un contesto di intelligenza artificiale. Contenuti altamente dettagliati e mirati hanno maggiori probabilità di essere citati dai motori di ricerca basati su AI. Questo suggerisce un'evoluzione nelle strategie di creazione di contenuti per migliorare la visibilità online.",
+      "title_it": "SEO e AI: Contenuti Specifici Potrebbero Essere Citati Più Spesso",
+      "summary_it": "La specificità dei contenuti potrebbe diventare un fattore chiave per essere citati dai motori di ricerca basati sull'intelligenza artificiale. Questo suggerisce un'evoluzione nelle strategie di scrittura SEO, dove la precisione e il dettaglio assumono maggiore rilevanza. L'obiettivo è produrre testi che l'AI possa facilmente identificare e referenziare come fonti autorevoli.",
       "url": "https://www.searchenginejournal.com/ai-seo-writing-thats-specific-may-get-cited-more/582531",
       "source": {
         "id": "search_engine_journal",
@@ -236,7 +235,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:03:01Z",
-      "fetched_at": "2026-07-17T05:02:06.369896Z",
+      "fetched_at": "2026-07-17T06:02:10.961496Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -247,8 +246,8 @@
     {
       "id": "item_2026-07-17_005",
       "title_original": "Google Ads To Turn On Local Inventory Ads By Default For Shopping Campaigns",
-      "title_it": "Google Ads attiverà per impostazione predefinita gli annunci di inventario locale per le campagne Shopping",
-      "summary_it": "Google ha comunicato agli inserzionisti che gli annunci di inventario locale (LIA) verranno attivati di default nelle campagne Shopping. Questa modifica riguarda gli account manager con campagne Shopping collegate a un account Merchant Center che ha l'add-on LIA abilitato. La gestione delle impostazioni avverrà tramite il filtro \"Inventario\" anziché la precedente opzione \"Prodotti locali\", che verrà rimossa. Gli inserzionisti hanno tempo fino al 31 agosto 2026 per rivedere e modificare le impostazioni del filtro \"Inventario\" per separare i budget online e locali, se necessario.",
+      "title_it": "Google Ads attiverà di default gli annunci di inventario locale per le campagne Shopping",
+      "summary_it": "Google ha comunicato agli inserzionisti che gli annunci di inventario locale verranno attivati di default nelle campagne Shopping. Questa modifica riguarda gli account manager con campagne Shopping collegate a un account Merchant Center che ha l'add-on per gli annunci di inventario locale abilitato. La precedente impostazione \"Prodotti locali\" verrà rimossa e la gestione avverrà tramite il filtro \"Inventario\". Gli inserzionisti hanno tempo fino al 31 agosto 2026 per modificare le impostazioni e separare i budget online e locali, se necessario.",
       "url": "https://www.seroundtable.com/google-local-inventory-ads-setting-shopping-campaigns-41699.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -271,7 +270,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:05:00Z",
-      "fetched_at": "2026-07-17T05:02:08.516395Z",
+      "fetched_at": "2026-07-17T06:02:12.732366Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -282,8 +281,8 @@
     {
       "id": "item_2026-07-17_006",
       "title_original": "Google To Merge Google Shopping Ads & Free Listing Policies To One Policy",
-      "title_it": "Google unifica le policy per gli annunci Shopping e le schede gratuite",
-      "summary_it": "A settembre 2026, Google consoliderà le policy relative agli annunci Shopping e alle schede di prodotto gratuite in un unico documento. L'obiettivo è migliorare l'organizzazione e la chiarezza per i merchant. Google ha dichiarato che questa unificazione non introduce modifiche sostanziali o restrizioni aggiuntive alle policy esistenti. Alcune regole continueranno ad applicarsi specificamente agli annunci o alle schede gratuite, con indicazioni chiare in merito.",
+      "title_it": "Google unificherà le policy per gli annunci Shopping e le schede gratuite",
+      "summary_it": "A settembre 2026, Google consoliderà le policy relative agli annunci Shopping e alle schede gratuite in un unico documento. L'obiettivo dichiarato è migliorare l'organizzazione e la chiarezza per i merchant. Google ha specificato che non ci saranno modifiche sostanziali o restrizioni aggiuntive dirette per i prodotti. Alcune policy continueranno ad applicarsi solo agli annunci o solo alle schede gratuite, con indicazioni chiare in merito.",
       "url": "https://www.seroundtable.com/google-shopping-ads-free-listing-policies-merge-41695.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -306,7 +305,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:11:00Z",
-      "fetched_at": "2026-07-17T05:02:10.273192Z",
+      "fetched_at": "2026-07-17T06:02:14.396111Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -317,8 +316,8 @@
     {
       "id": "item_2026-07-17_007",
       "title_original": "Google: You're Better Off Without Lastmod Dates When They Are Incorrect",
-      "title_it": "Google: Meglio non usare date lastmod errate nelle Sitemap",
-      "summary_it": "Gary Illyes di Google ha ribadito che è preferibile omettere le date 'lastmod' nelle Sitemap XML se queste non sono accurate. L'indicazione è stata fornita in risposta a una domanda sull'affidabilità di tali date. Google ha in passato sottolineato l'importanza di utilizzare le date 'lastmod' solo per modifiche significative ai contenuti, non per aggiornamenti minori o frequenti. L'azienda valuta l'affidabilità di queste date e può ignorarle se percepite come inaffidabili.",
+      "title_it": "Google: Meglio non usare le date lastmod se sono errate",
+      "summary_it": "Gary Illyes di Google ha ribadito che è preferibile omettere le date lastmod nelle Sitemap XML se queste non riflettono accuratamente le modifiche. L'indicazione è stata fornita in risposta a una domanda su Bluesky riguardo a date lastmod inaffidabili. Google ha precedentemente chiarito che si fida delle date lastmod solo se utilizzate correttamente e per modifiche significative. L'uso improprio o troppo frequente di queste date può portare Google a ignorarle.",
       "url": "https://www.seroundtable.com/google-lastmod-dates-incorrect-41697.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -336,12 +335,12 @@
       "tags": [
         "xml_sitemap",
         "lastmod_date",
-        "google_guideline",
-        "crawl_optimization"
+        "google_indexing",
+        "gary_illye"
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:21:00Z",
-      "fetched_at": "2026-07-17T05:02:11.911102Z",
+      "fetched_at": "2026-07-17T06:02:16.088344Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -352,8 +351,8 @@
     {
       "id": "item_2026-07-17_008",
       "title_original": "The Free Tools SEO Strategy: How to Rank With Calculators, Converters, and Generators",
-      "title_it": "La strategia SEO basata su strumenti gratuiti: posizionarsi con calcolatori, convertitori e generatori",
-      "summary_it": "La strategia SEO degli strumenti gratuiti consiste nel creare utility semplici ma efficaci, come calcolatori o convertitori, per posizionarsi su query ad alta domanda e bassa concorrenza. Questo approccio mira a generare traffico organico offrendo valore diretto agli utenti. La chiave è identificare nicchie dove gli utenti cercano soluzioni pratiche anziché solo informazioni testuali. Tali strumenti possono attrarre link e migliorare l'autorità del dominio.",
+      "title_it": "La strategia SEO basata su strumenti gratuiti: come posizionarsi con calcolatori, convertitori e generatori",
+      "summary_it": "La strategia SEO degli strumenti gratuiti consiste nel creare utility semplici ma utili, come calcolatori o convertitori, e pubblicarle su pagine dedicate. L'obiettivo è posizionarsi per query con alta domanda e bassa concorrenza di contenuti di qualità. Questo approccio mira a generare traffico organico significativo senza la necessità di produrre guide estese. Se ben implementato, può rappresentare una tattica efficace per acquisire visibilità.",
       "url": "https://ahrefs.com/blog/the-free-tools-seo-strategy",
       "source": {
         "id": "ahrefs_blog",
@@ -371,12 +370,12 @@
       "tags": [
         "free_tool",
         "content_strategy",
-        "niche_seo",
-        "link_building"
+        "keyword_research",
+        "traffic_generation"
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:30:20Z",
-      "fetched_at": "2026-07-17T05:02:13.940713Z",
+      "fetched_at": "2026-07-17T06:02:17.808943Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -388,7 +387,7 @@
       "id": "item_2026-07-17_009",
       "title_original": "Google Manufacturer Center Removed Manual Update Or Add Products",
       "title_it": "Google Manufacturer Center: rimossa la possibilità di aggiornare o aggiungere prodotti manualmente",
-      "summary_it": "Google ha eliminato la funzionalità di aggiornamento e aggiunta manuale dei prodotti direttamente nel Manufacturer Center. Gli utenti sono ora tenuti a utilizzare l'API del Manufacturer Center o caricare un file di prodotto per gestire i propri dati. I dati inseriti prima del 9 luglio 2026 rimangono invariati. Questa modifica era stata preannunciata con diverse comunicazioni.",
+      "summary_it": "Google ha comunicato la rimozione della funzionalità di aggiunta o aggiornamento manuale dei prodotti direttamente nel Manufacturer Center. Gli utenti sono ora invitati a utilizzare l'API del Manufacturer Center o a caricare un file di prodotto per la gestione dei dati. I dati inseriti prima del 9 luglio 2026 rimarranno invariati e non richiedono alcuna azione. Questa modifica era stata preannunciata con diverse comunicazioni precedenti.",
       "url": "https://www.seroundtable.com/google-manufacturer-center-manual-updates-41683.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -411,7 +410,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:31:00Z",
-      "fetched_at": "2026-07-17T05:02:15.540934Z",
+      "fetched_at": "2026-07-17T06:02:19.535746Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -422,8 +421,8 @@
     {
       "id": "item_2026-07-17_010",
       "title_original": "Google Ads Performance Max Product Reporting Now Uses All Networks",
-      "title_it": "Il reporting dei prodotti Google Ads Performance Max ora include tutti i network",
-      "summary_it": "Google Ads ha aggiornato il reporting a livello di prodotto per Performance Max, includendo ora i dati provenienti da tutti i network. In precedenza, il reporting si basava su un sottoinsieme limitato di network. Questo cambiamento, attivo dal 15 giugno 2026, potrebbe causare un aumento una tantum nelle metriche come impressioni e clic per le campagne Performance Max, dovuto all'ampliamento dello scope di misurazione. È consigliabile informare i clienti e considerare questa modifica nell'analisi delle performance.",
+      "title_it": "Il reporting dei prodotti di Google Ads Performance Max ora include tutti i network",
+      "summary_it": "Google Ads ha aggiornato il reporting a livello di prodotto per le campagne Performance Max. Ora i dati includono tutti i network, non più solo un sottoinsieme come in precedenza. Questo cambiamento, attivo dal 15 giugno 2026, potrebbe causare un aumento una tantum nelle metriche come impressioni e clic, dovuto all'ampliamento dello scope di misurazione. È consigliabile informare i clienti e considerare questa modifica nell'analisi delle performance.",
       "url": "https://www.seroundtable.com/google-ads-pmax-product-reporting-all-networks-41694.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -442,11 +441,11 @@
         "google_ad",
         "performance_max",
         "reporting",
-        "ppc"
+        "ppc_update"
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:41:00Z",
-      "fetched_at": "2026-07-17T05:02:17.362260Z",
+      "fetched_at": "2026-07-17T06:02:21.308384Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -458,7 +457,7 @@
       "id": "item_2026-07-17_011",
       "title_original": "Apple Maps Ads Bans Home Service Businesses With Updated Terms",
       "title_it": "Apple Maps Ads vieta le attività di servizi a domicilio con i termini aggiornati",
-      "summary_it": "Apple ha aggiornato le sue policy per gli annunci su Apple Maps, vietando esplicitamente la promozione di servizi a domicilio come idraulici, elettricisti e servizi HVAC. Sono stati esclusi anche i servizi di cauzione, gli ATM di criptovalute e alcuni servizi medici. Questa mossa differenzia l'approccio di Apple rispetto a Google, che invece promuove attivamente gli annunci per servizi locali.",
+      "summary_it": "Apple ha aggiornato le sue policy per gli annunci su Apple Maps, vietando esplicitamente la promozione di servizi a domicilio come idraulici, elettricisti e servizi di controllo dei parassiti. Sono stati esclusi anche i servizi di cauzione, gli ATM di criptovalute e alcuni servizi medici. Questa mossa differenzia l'approccio di Apple rispetto a Google, che invece promuove attivamente gli annunci per servizi locali.",
       "url": "https://www.seroundtable.com/apple-maps-ads-bans-home-services-41696.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -481,7 +480,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T10:51:00Z",
-      "fetched_at": "2026-07-17T05:02:19.205652Z",
+      "fetched_at": "2026-07-17T06:02:22.856274Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -492,8 +491,8 @@
     {
       "id": "item_2026-07-17_012",
       "title_original": "Google: Discovered vs Crawled Not Indexed Quality Issues & AI-Generated Content",
-      "title_it": "Google: Problemi di qualità e contenuti generati dall'IA possono causare lo stato 'Scansionato, non indicizzato'",
-      "summary_it": "John Mueller e Martin Splitt di Google hanno discusso nel podcast Search Off the Record come problemi di qualità, inclusi contenuti AI di bassa qualità, possano portare le pagine a non essere indicizzate. Questo si manifesta spesso con lo stato 'scansionato - attualmente non indicizzato' nel rapporto di Google Search Console. Mueller ha sottolineato che se i sistemi di Google rilevano gravi preoccupazioni sulla qualità di un sito, ridurranno il numero di pagine indicizzate. Non si tratta di un problema tecnico da risolvere, ma di un segnale per rivalutare la qualità complessiva del sito.",
+      "title_it": "Google: Problemi di qualità e contenuti generati dall'IA dietro lo stato 'Scansionato, non indicizzato'",
+      "summary_it": "John Mueller e Martin Splitt di Google hanno discusso nel podcast Search Off the Record come problemi di qualità, inclusi contenuti AI di bassa qualità, possano portare le pagine a non essere indicizzate. Questo si manifesta spesso con lo stato 'scansionato - attualmente non indicizzato' nel report di Google Search Console. Mueller ha sottolineato che se i sistemi di Google rilevano gravi problemi di qualità su un sito, riducono l'indicizzazione delle pagine. Non si tratta di un problema tecnico da risolvere, ma di un segnale per rivalutare la qualità complessiva del sito.",
       "url": "https://www.seroundtable.com/google-crawled-not-indexed-quality-ai-content-41701.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -512,11 +511,11 @@
         "indexing",
         "quality_issue",
         "ai_content",
-        "google_search_console"
+        "search_console"
       ],
-      "importance": 3,
+      "importance": 4,
       "published_at": "2026-07-16T10:55:00Z",
-      "fetched_at": "2026-07-17T05:02:21.116060Z",
+      "fetched_at": "2026-07-17T06:02:24.679377Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -528,7 +527,7 @@
       "id": "item_2026-07-17_013",
       "title_original": "Do The Answer Engines Keep Your Fingerprint, Or Do They Start Fresh Every Time? via @sejournal, @DuaneForrester",
       "title_it": "I motori di risposta conservano la tua impronta digitale o ripartono da zero ogni volta?",
-      "summary_it": "L'articolo esplora come i sistemi di ranking di Google, basati sull'\"impronta digitale\" dell'utente, influenzino le risposte generate dall'intelligenza artificiale. Viene analizzato in quali contesti questa impronta persista e dove invece venga ignorata. La discussione si concentra sulla continuità o meno dei dati utente nei nuovi paradigmi di ricerca basati sull'AI.",
+      "summary_it": "L'articolo esplora come i sistemi di ranking di Google, che in passato registravano l'\"impronta digitale\" degli utenti, influenzino ora le risposte generate dall'intelligenza artificiale. Viene analizzato in quali contesti questa impronta persista e dove invece venga ignorata. La discussione si concentra sulla continuità o discontinuità dei dati utente nell'evoluzione dei motori di ricerca verso i motori di risposta basati sull'AI.",
       "url": "https://www.searchenginejournal.com/do-the-answer-engines-keep-your-fingerprint-or-do-they-start-fresh-every-time/582124",
       "source": {
         "id": "search_engine_journal",
@@ -551,7 +550,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T12:30:01Z",
-      "fetched_at": "2026-07-17T05:02:22.818801Z",
+      "fetched_at": "2026-07-17T06:02:26.613688Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -563,7 +562,7 @@
       "id": "item_2026-07-17_014",
       "title_original": "Daily Search Forum Recap: July 16, 2026",
       "title_it": "Riepilogo giornaliero del forum di ricerca: 16 luglio 2026",
-      "summary_it": "Google ha discusso problemi di indicizzazione legati alla qualità dei contenuti, inclusi quelli generati dall'IA. Apple Maps Ads ha vietato gli annunci per servizi a domicilio, mentre Google Ads ha aggiornato il reporting di Performance Max e rimosso la possibilità di aggiornare manualmente i prodotti nel Manufacturer Center. Google consoliderà le policy per gli annunci Shopping e le schede gratuite a settembre 2026 e attiverà per impostazione predefinita gli annunci di inventario locale nelle campagne Shopping.",
+      "summary_it": "Google ha discusso problemi di indicizzazione legati alla qualità dei contenuti, inclusi quelli generati dall'IA. Apple Maps Ads ha vietato gli annunci per i servizi a domicilio, mentre Google Ads ha aggiornato il reporting di Performance Max e rimosso la possibilità di aggiornare manualmente i prodotti nel Manufacturer Center. Google consoliderà le policy per gli annunci Shopping e le schede gratuite entro settembre 2026.",
       "url": "https://www.seroundtable.com/recap-07-16-2026-41698.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -579,14 +578,14 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_update",
-        "apple_maps_ad",
+        "google_indexing",
+        "ai_content",
         "google_ad",
-        "indexing_issue"
+        "apple_maps_ad"
       ],
       "importance": 3,
       "published_at": "2026-07-16T13:00:00Z",
-      "fetched_at": "2026-07-17T05:02:24.557555Z",
+      "fetched_at": "2026-07-17T06:02:28.139835Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -597,8 +596,8 @@
     {
       "id": "item_2026-07-17_015",
       "title_original": "How We Reorganized our Agency Around AI Search",
-      "title_it": "Come abbiamo riorganizzato la nostra agenzia per la ricerca basata sull'IA",
-      "summary_it": "L'articolo descrive come un'agenzia SEO ha riorganizzato i propri servizi e la struttura interna per affrontare le sfide e le opportunità della ricerca basata sull'intelligenza artificiale. Vengono presentati tre livelli di servizio (Emerging, Growth, Elite) pensati per diverse tipologie di aziende, dalla startup all'impresa. L'obiettivo è fornire un modello di servizio che si adatti alle esigenze specifiche di ogni fase di sviluppo aziendale in relazione alla visibilità AI.",
+      "title_it": "Come abbiamo riorganizzato la nostra agenzia per la ricerca AI",
+      "summary_it": "L'articolo descrive come un'agenzia SEO ha ristrutturato i propri servizi per affrontare le sfide della ricerca basata sull'intelligenza artificiale. Vengono presentati tre livelli di servizio (Emerging, Growth, Elite) pensati per diverse tipologie di aziende, dalla startup all'impresa. L'obiettivo è aiutare le organizzazioni a costruire o adattare la propria strategia SEO in un panorama dominato dall'AI.",
       "url": "https://ipullrank.com/ai-search-agency",
       "source": {
         "id": "ipullrank_blog",
@@ -616,12 +615,12 @@
       "tags": [
         "ai_search",
         "agency_restructuring",
-        "service_model",
-        "seo_strategy"
+        "seo_strategy",
+        "service_model"
       ],
       "importance": 3,
       "published_at": "2026-07-16T14:00:00Z",
-      "fetched_at": "2026-07-17T05:02:26.715660Z",
+      "fetched_at": "2026-07-17T06:02:29.825749Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -632,7 +631,7 @@
     {
       "id": "item_2026-07-17_016",
       "title_original": "Why teens deserve access to safe AI",
-      "title_it": "Perché gli adolescenti meritano l'accesso a un'IA sicura",
+      "title_it": "Perché gli adolescenti meritano accesso a un'IA sicura",
       "summary_it": "OpenAI sta implementando misure per rendere ChatGPT più sicuro per gli adolescenti. Queste includono protezioni adeguate all'età, strumenti di apprendimento e controlli parentali. L'azienda collabora con esperti per garantire un ambiente sicuro per gli utenti più giovani.",
       "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
       "source": {
@@ -652,11 +651,11 @@
         "openai",
         "ai_safety",
         "teenager",
-        "parental_control"
+        "chatgpt"
       ],
       "importance": 3,
       "published_at": "2026-07-16T15:00:00Z",
-      "fetched_at": "2026-07-17T05:02:28.003265Z",
+      "fetched_at": "2026-07-17T06:02:31.163403Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -667,8 +666,8 @@
     {
       "id": "item_2026-07-17_017",
       "title_original": "Google Starts Rolling Out Connected Apps In AI Mode Search via @sejournal, @MattGSouthern",
-      "title_it": "Google introduce il rollout delle app connesse nella ricerca in modalità AI",
-      "summary_it": "Google ha avviato la distribuzione delle app connesse all'interno della modalità di ricerca basata su intelligenza artificiale. Questa funzionalità consente agli utenti di inviare attività direttamente a servizi esterni, come Canva, partendo da una query di ricerca. L'integrazione mira a facilitare l'esecuzione di azioni specifiche direttamente dall'interfaccia di ricerca AI.",
+      "title_it": "Google introduce le app connesse nella ricerca in modalità AI",
+      "summary_it": "Google ha iniziato a implementare la funzionalità delle app connesse all'interno della ricerca in modalità AI. Questa integrazione consente agli utenti di inviare attività direttamente a servizi esterni, come Canva, partendo da una query di ricerca. L'obiettivo è facilitare l'interazione tra i risultati di ricerca e le applicazioni di terze parti.",
       "url": "https://www.searchenginejournal.com/google-starts-rolling-out-connected-apps-in-ai-mode-search/582545",
       "source": {
         "id": "search_engine_journal",
@@ -691,7 +690,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T15:00:53Z",
-      "fetched_at": "2026-07-17T05:02:29.732790Z",
+      "fetched_at": "2026-07-17T06:02:32.552161Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -702,8 +701,8 @@
     {
       "id": "item_2026-07-17_018",
       "title_original": "AI Search Cites Reddit: 5 Proven Plays To Boost Multi-Location Visibility via @sejournal, @lorenbaker",
-      "title_it": "La ricerca AI cita Reddit: 5 strategie comprovate per aumentare la visibilità multi-locale",
-      "summary_it": "L'articolo esplora l'importanza di Reddit nelle strategie di citazione per la ricerca basata sull'intelligenza artificiale. Vengono presentate cinque tattiche per migliorare la visibilità multi-locale attraverso la piattaforma. Si analizza come Reddit influenzi la visibilità nei risultati di ricerca e le raccomandazioni commerciali.",
+      "title_it": "La ricerca AI cita Reddit: 5 strategie per aumentare la visibilità multi-locale",
+      "summary_it": "L'articolo esplora l'importanza di Reddit nelle strategie di citazione per la ricerca basata su intelligenza artificiale. Vengono illustrate cinque tattiche comprovate per migliorare la visibilità multi-locale. Si analizza come l'integrazione di Reddit possa influenzare la visibilità nei risultati di ricerca e le raccomandazioni aziendali.",
       "url": "https://www.searchenginejournal.com/ai-search-cites-reddit-5-proven-plays-to-boost-multi-location-visibility-recap/582568",
       "source": {
         "id": "search_engine_journal",
@@ -719,14 +718,14 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "reddit",
+        "reddit_seo",
         "ai_search",
         "local_seo",
-        "visibility_strategie"
+        "multi_location_visibility"
       ],
       "importance": 3,
       "published_at": "2026-07-16T20:23:43Z",
-      "fetched_at": "2026-07-17T05:02:31.233069Z",
+      "fetched_at": "2026-07-17T06:02:34.276568Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -738,7 +737,7 @@
       "id": "item_2026-07-17_019",
       "title_original": "Gemini 3.5 Pro Delayed Over Coding, Bloomberg Reports via @sejournal, @MattGSouthern",
       "title_it": "Ritardo per Gemini 3.5 Pro a causa di problemi di codifica, secondo Bloomberg",
-      "summary_it": "Il lancio di Gemini 3.5 Pro, atteso per questo periodo, ha subito un ritardo. Secondo quanto riportato da Bloomberg, la causa principale del posticipo è legata a questioni di codifica interna. Google non ha ancora fornito una nuova data di rilascio per la versione Pro del suo modello Gemini.",
+      "summary_it": "Il lancio di Gemini 3.5 Pro, atteso da Google, ha subito un ritardo. Secondo quanto riportato da Bloomberg, la causa principale di questo slittamento è attribuibile a problematiche legate alla codifica del modello. Non sono state fornite nuove tempistiche per il rilascio.",
       "url": "https://www.searchenginejournal.com/gemini-3-5-pro-delayed-over-coding-bloomberg-reports/582660",
       "source": {
         "id": "search_engine_journal",
@@ -761,7 +760,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-16T21:44:17Z",
-      "fetched_at": "2026-07-17T05:02:32.862474Z",
+      "fetched_at": "2026-07-17T06:02:35.797623Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -773,92 +772,92 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-07-17T05:01:12.103891Z",
+      "last_checked": "2026-07-17T06:01:12.408278Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-07-17T05:01:12.723025Z",
+      "last_checked": "2026-07-17T06:01:12.960488Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-07-17T05:01:14.928625Z",
+      "last_checked": "2026-07-17T06:01:14.099680Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-07-17T05:01:16.032583Z",
+      "last_checked": "2026-07-17T06:01:15.205856Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-07-17T05:01:29.978076Z",
+      "last_checked": "2026-07-17T06:01:32.202434Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-07-17T05:01:30.439287Z",
+      "last_checked": "2026-07-17T06:01:32.999967Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-07-17T05:01:31.857096Z",
+      "last_checked": "2026-07-17T06:01:34.395645Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-07-17T05:01:34.035545Z",
+      "last_checked": "2026-07-17T06:01:35.925862Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-07-17T05:01:35.176290Z",
+      "last_checked": "2026-07-17T06:01:37.091436Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-07-17T05:01:35.229327Z",
+      "last_checked": "2026-07-17T06:01:37.158582Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-07-17T05:01:35.543442Z",
+      "last_checked": "2026-07-17T06:01:39.524430Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-07-17T05:01:36.709802Z",
+      "last_checked": "2026-07-17T06:01:40.274402Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-07-17T05:01:38.151836Z",
+      "last_checked": "2026-07-17T06:01:41.414045Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-07-17T05:01:39.960498Z",
+      "last_checked": "2026-07-17T06:01:42.853359Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-07-17T05:01:40.896305Z",
+      "last_checked": "2026-07-17T06:01:44.325743Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-07-17T05:01:42.450641Z",
+      "last_checked": "2026-07-17T06:01:45.712536Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-07-17T05:01:44.265638Z",
+      "last_checked": "2026-07-17T06:01:46.650853Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-07-17T05:01:58.897362Z",
+      "last_checked": "2026-07-17T06:02:04.322278Z",
       "changed": false
     }
   ],
