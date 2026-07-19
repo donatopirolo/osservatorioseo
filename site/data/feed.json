@@ -1,136 +1,40 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-18T06:01:02.333222Z",
-  "generated_at_local": "2026-07-18T08:01:02.333222+02:00",
+  "generated_at": "2026-07-19T05:02:03.931265Z",
+  "generated_at_local": "2026-07-19T07:02:03.931265+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-07-18-0801",
+  "run_id": "2026-07-19-0702",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2198,
-    "items_after_dedup": 16,
+    "items_after_dedup": 3,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0099,
-    "summarize_attempted": 16,
+    "ai_cost_eur": 0.0016,
+    "summarize_attempted": 3,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-07-18_007",
-    "item_2026-07-18_010",
-    "item_2026-07-18_011",
-    "item_2026-07-18_001",
-    "item_2026-07-18_006",
-    "item_2026-07-18_012",
-    "item_2026-07-18_015",
-    "item_2026-07-18_003",
-    "item_2026-07-18_014",
-    "item_2026-07-18_016"
+    "item_2026-07-19_003",
+    "item_2026-07-19_001",
+    "item_2026-07-19_002"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-07-18_007",
-      "item_2026-07-18_010",
-      "item_2026-07-18_011",
-      "item_2026-07-18_006",
-      "item_2026-07-18_012",
-      "item_2026-07-18_016"
+    "technical_seo": [
+      "item_2026-07-19_003",
+      "item_2026-07-19_002"
     ],
-    "ai_models": [
-      "item_2026-07-18_001",
-      "item_2026-07-18_015",
-      "item_2026-07-18_008"
-    ],
-    "industry_news": [
-      "item_2026-07-18_003",
-      "item_2026-07-18_014",
-      "item_2026-07-18_009",
-      "item_2026-07-18_013",
-      "item_2026-07-18_005"
-    ],
-    "content_eeat": [
-      "item_2026-07-18_002"
-    ],
-    "tools_platforms": [
-      "item_2026-07-18_004"
+    "ai_overviews_llm_seo": [
+      "item_2026-07-19_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-07-18_001",
-      "title_original": "A scorecard for the AI age",
-      "title_it": "Una scorecard per l'era dell'IA",
-      "summary_it": "OpenAI ha introdotto una scorecard per misurare il ROI dell'IA, focalizzandosi su metriche pratiche. Questo strumento valuta l'efficacia attraverso il lavoro utile generato, il costo per attività completata con successo, l'affidabilità e il ritorno sull'investimento computazionale. L'obiettivo è fornire un quadro chiaro per quantificare il valore delle applicazioni IA.",
-      "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_roi",
-        "openai",
-        "performance_metric",
-        "ai_evaluation"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-17T09:00:00Z",
-      "fetched_at": "2026-07-18T06:02:07.611476Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:dd09a6a8df79f65d",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_002",
-      "title_original": "Link building for SEO: What works in 2026",
-      "title_it": "Link Building per la SEO: Strategie Efficaci nel 2026",
-      "summary_it": "L'articolo di Semrush esplora le pratiche di link building più efficaci per il 2026, evidenziando come queste influenzino la visibilità sui motori di ricerca e nei sistemi AI. Vengono analizzate le metodologie attuali e future per l'acquisizione di backlink di qualità. L'obiettivo è fornire una panoramica delle strategie che contribuiscono a migliorare il posizionamento organico.",
-      "url": "https://www.semrush.com/blog/link-building",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "link_building",
-        "seo_strategy",
-        "backlink",
-        "ranking_factor"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-17T09:24:00Z",
-      "fetched_at": "2026-07-18T06:02:09.035855Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d09f7e11bac6d4eb",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_003",
-      "title_original": "Avinash Kaushik Says Renegotiate Now – SEO Fees 25% To 75% Lower via @sejournal, @gregjarboe",
-      "title_it": "Avinash Kaushik suggerisce di rinegoziare subito le tariffe SEO, con riduzioni del 25-75%",
-      "summary_it": "Avinash Kaushik propone un approccio alla rinegoziazione dei contratti SEO, suggerendo di spostare il focus dalle attività al giudizio professionale e ai risultati di business verificabili. L'obiettivo è allineare meglio le tariffe con il valore generato, potenzialmente riducendo i costi per i clienti. Questo implica una revisione delle Scope of Work (SOW) delle agenzie. La discussione verte sulla necessità di un modello di pricing più orientato alla performance e all'impatto reale.",
-      "url": "https://www.searchenginejournal.com/avinash-kaushik-says-renegotiate-now-seo-fees-25-to-75-lower/581891",
+      "id": "item_2026-07-19_001",
+      "title_original": "Google NotebookLM Rebrand May Expose Your Site To More AI Scraping via @sejournal, @martinibuster",
+      "title_it": "Il rebranding di Google NotebookLM potrebbe aumentare lo scraping AI dei siti web",
+      "summary_it": "Il rebranding di Google NotebookLM solleva preoccupazioni riguardo un potenziale aumento dello scraping di contenuti web da parte dell'IA. Questo potrebbe avvenire senza attribuzione, richiedendo ai proprietari dei siti di adottare misure preventive. La questione riguarda l'utilizzo dei dati per l'addestramento dei modelli AI di Google.",
+      "url": "https://www.searchenginejournal.com/google-notebooklm-rebrand-may-expose-your-site-to-more-ai-scraping/582775",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -143,98 +47,29 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "seo_fee",
-        "agency_contract",
-        "avinash_kaushik",
-        "pricing_strategy"
+        "google_notebooklm",
+        "ai_scraping",
+        "content_attribution",
+        "data_privacy"
       ],
       "importance": 3,
-      "published_at": "2026-07-17T09:30:56Z",
-      "fetched_at": "2026-07-18T06:02:10.724705Z",
+      "published_at": "2026-07-18T09:09:29Z",
+      "fetched_at": "2026-07-19T05:03:16.524613Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:70e58964f01f3f5a",
+      "raw_hash": "sha256:2a09ac3136067932",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-07-18_004",
-      "title_original": "How to measure AI share of voice using Semrush",
-      "title_it": "Come misurare la quota di voce AI con Semrush",
-      "summary_it": "L'articolo descrive un metodo per quantificare la visibilità di un brand all'interno dei risultati generati dall'intelligenza artificiale, utilizzando le funzionalità della piattaforma Semrush. Viene illustrato come monitorare e analizzare la presenza del proprio marchio nelle risposte AI, fornendo indicazioni per ottimizzare tale visibilità. L'obiettivo è permettere ai professionisti SEO di comprendere e migliorare la propria performance nel contesto della ricerca AI.",
-      "url": "https://www.semrush.com/blog/how-to-measure-ai-share-of-voice",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "semrush",
-        "ai_seo",
-        "share_of_voice",
-        "measurement"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-17T09:35:00Z",
-      "fetched_at": "2026-07-18T06:02:12.221753Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0b35c1722a6a32be",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_005",
-      "title_original": "Bing Tests Black Magnifying Glass Icon In Search Bar",
-      "title_it": "Bing testa un'icona a lente d'ingrandimento nera nella barra di ricerca",
-      "summary_it": "Microsoft Bing sta sperimentando l'uso di un'icona a lente d'ingrandimento completamente nera nella barra di ricerca, in sostituzione delle versioni grigie o con contorno. Questo test è stato notato da un utente e condiviso sui social media. Si tratta di una modifica estetica minore nell'interfaccia utente del motore di ricerca.",
-      "url": "https://www.seroundtable.com/bing-black-magnifying-glass-41552.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "bing",
-        "ui_test",
-        "search_interface"
-      ],
-      "importance": 1,
-      "published_at": "2026-07-17T10:11:00Z",
-      "fetched_at": "2026-07-18T06:02:13.525403Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:135335afacaff633",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_006",
-      "title_original": "Google Explains SEO Connection Of Site Quality To Non-Indexed Pages via @sejournal, @martinibuster",
-      "title_it": "Google chiarisce il legame tra qualità del sito e pagine non indicizzate",
-      "summary_it": "John Mueller di Google ha ribadito che la qualità complessiva di un sito web non si limita al contenuto testuale, ma include anche l'esperienza utente. Ha sottolineato che una bassa qualità generale del sito può influenzare negativamente l'indicizzazione di pagine specifiche, anche se queste ultime sono di buona qualità. Questo suggerisce che Google valuta la qualità a livello di dominio, con ripercussioni sull'indicizzazione di singole URL.",
-      "url": "https://www.searchenginejournal.com/google-explains-seo-connection-of-site-quality-to-non-indexed-pages/582683",
+      "id": "item_2026-07-19_002",
+      "title_original": "When To Use Search Console’s ‘Validate Fix,’ According To Google via @sejournal, @MattGSouthern",
+      "title_it": "Quando utilizzare la funzione 'Convalida Correzione' di Search Console, secondo Google",
+      "summary_it": "John Mueller di Google ha fornito chiarimenti sull'utilizzo del pulsante 'Convalida Correzione' in Google Search Console. Ha spiegato il processo che si attiva cliccando su questa opzione e in quali scenari è più opportuno impiegarla. Le indicazioni mirano a ottimizzare l'efficacia delle azioni di recupero e validazione delle problematiche segnalate dallo strumento.",
+      "url": "https://www.searchenginejournal.com/when-to-use-search-consoles-validate-fix-according-to-google/582791",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -247,274 +82,29 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "google_updates",
-      "tags": [
-        "site_quality",
-        "indexing",
-        "john_mueller",
-        "user_experience"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-17T10:16:20Z",
-      "fetched_at": "2026-07-18T06:02:14.819092Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4008f57631a1d96f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_007",
-      "title_original": "Google StoreBot Accessibility Issues Help Document Updated",
-      "title_it": "Google aggiorna la documentazione sulle problematiche di accessibilità di StoreBot",
-      "summary_it": "Google ha aggiornato il documento di aiuto relativo ai problemi di accessibilità del crawler StoreBot per le pagine di prodotto in-store. Le modifiche includono chiarimenti su user-agent, gestione di robots.txt e blocco IP, oltre a indicazioni sui tempi di rielaborazione delle pagine. Viene specificato che, una volta ripristinata l'accessibilità, sono necessarie 12-48 ore affinché i prodotti vengano nuovamente approvati e mostrati negli annunci di inventario locale.",
-      "url": "https://www.seroundtable.com/google-storebot-accessibility-41650.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_merchant_center",
-        "storebot",
-        "accessibility",
-        "crawling"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-17T10:21:00Z",
-      "fetched_at": "2026-07-18T06:02:16.299518Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:aa78e7404dd187ee",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_008",
-      "title_original": "Google Renamed NotebookLM Useragent To Google-GeminiNotebook",
-      "title_it": "Google rinomina l'user-agent di NotebookLM in Google-GeminiNotebook",
-      "summary_it": "Google ha aggiornato il nome dell'user-agent associato a NotebookLM, ora chiamato Google-GeminiNotebook, in seguito al rebranding del prodotto in Gemini Notebook. L'azienda ha comunicato che il vecchio user-agent Google-NotebookLM continuerà ad essere supportato per un periodo di transizione. I professionisti che hanno hardcodato il valore precedente nei loro sistemi dovrebbero aggiornarlo per evitare potenziali problemi. Questo cambiamento riflette l'integrazione del prodotto nell'ecosistema Gemini.",
-      "url": "https://www.seroundtable.com/google-renames-notebooklm-gemininotebook-41704.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "google_gemini",
-        "user_agent",
-        "notebooklm",
-        "rebranding"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-17T10:31:00Z",
-      "fetched_at": "2026-07-18T06:02:17.726880Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0fe306e81481b225",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_009",
-      "title_original": "Did Google Maps Turn Off OpenTable Reservations?",
-      "title_it": "Google Maps ha interrotto le prenotazioni OpenTable?",
-      "summary_it": "Google ha rimosso la documentazione di supporto relativa alle prenotazioni OpenTable in Google Maps. Questo suggerisce una possibile interruzione dell'integrazione tra Google Maps e OpenTable per le prenotazioni di ristoranti. La pagina di supporto è stata reindirizzata alla sezione principale di aiuto di Google Maps.",
-      "url": "https://www.seroundtable.com/google-maps-opentable-reservations-gone-41700.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_map",
-        "opentable",
-        "local_seo",
-        "integration"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-17T10:41:00Z",
-      "fetched_at": "2026-07-18T06:02:18.906155Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:49a82c40ada0941f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_010",
-      "title_original": "Google Ads Making Broader Smart Bidding Updates? Google Says No.",
-      "title_it": "Google nega aggiornamenti più ampi a Smart Bidding in Google Ads",
-      "summary_it": "La comunità PPC ha espresso preoccupazioni riguardo a un imminente cambiamento in Google Ads relativo alle campagne con budget limitato, interpretandolo come un aggiornamento più ampio di Smart Bidding. Google, tramite la sua liaison Ginny Marvin, ha chiarito che la modifica riguarda esclusivamente le campagne con budget limitato che utilizzano un target. L'obiettivo è uniformare il comportamento di bidding e stabilizzare le performance quando si modificano i budget in queste campagne. Google afferma che l'aggiornamento non estende il suo impatto oltre questo specifico scenario.",
-      "url": "https://www.seroundtable.com/google-ads-broader-smart-bidding-updates-41702.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "smart_bidding",
-        "ppc",
-        "campaign_management"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-17T10:51:00Z",
-      "fetched_at": "2026-07-18T06:02:20.437987Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:356527b9152e2420",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_011",
-      "title_original": "Search News Buzz Video Recap: Google 7/11 Update, Bing Penalties, Google Images, AI Overviews AI Images, Google Ads Updates, ChatGPT Ads Features & Apple Maps",
-      "title_it": "Riepilogo delle notizie di ricerca: aggiornamenti Google, Bing, immagini AI e funzionalità pubblicitarie",
-      "summary_it": "Il riepilogo settimanale delle notizie di ricerca ha evidenziato una volatilità nel ranking di Google intorno all'11 luglio, definita '7-Eleven update'. Sono state discusse le nuove funzionalità di Google Immagini e l'introduzione di immagini generate da AI nelle AI Overviews. Sono stati inoltre trattati aggiornamenti significativi per Google Ads, inclusi nuovi report e opzioni di tracciamento, e le nuove funzionalità pubblicitarie di ChatGPT.",
-      "url": "https://www.seroundtable.com/video-07-17-2026-41703.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_search",
-        "google_ad",
-        "ai_overviews",
-        "chatgpt_ad"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-17T11:01:00Z",
-      "fetched_at": "2026-07-18T06:02:21.821392Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5d29ace3b1d01f34",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_012",
-      "title_original": "Google On Canonical Fixes, Mueller On Hidden Link Pitfalls – SEO Pulse via @sejournal, @MattGSouthern",
-      "title_it": "Google: Aggiornamenti su Canonical, Mueller sui Rischi dei Link Nascosti e Altro",
-      "summary_it": "Google ha introdotto report per i post social in Search Console e ha aggiornato le linee guida per il markup dei prodotti. L'azienda ha inoltre sconsigliato la creazione di pagine markdown separate per l'AI. La notizia include anche approfondimenti sui problemi legati ai canonical e ai link nascosti.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-google-on-canonical-fixes-mueller-on-hidden-links/582671",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
+      "category": "technical_seo",
       "tags": [
         "google_search_console",
-        "canonical_tag",
-        "product_markup",
-        "ai_content"
+        "validate_fix",
+        "john_mueller",
+        "technical_seo_tip"
       ],
       "importance": 3,
-      "published_at": "2026-07-17T11:30:33Z",
-      "fetched_at": "2026-07-18T06:02:23.179583Z",
+      "published_at": "2026-07-18T20:41:52Z",
+      "fetched_at": "2026-07-19T05:03:18.002053Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4bef408e53da6eaf",
+      "raw_hash": "sha256:97f0a4e4420bfa81",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-07-18_013",
-      "title_original": "Daily Search Forum Recap: July 17, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 17 luglio 2026",
-      "summary_it": "Il riepilogo odierno include discussioni su un presunto aggiornamento di Smart Bidding di Google Ads, la possibile rimozione dell'integrazione OpenTable da Google Maps e il rebranding dell'user-agent di NotebookLM a Google-GeminiNotebook. Si segnala inoltre un aggiornamento al documento di aiuto di Google relativo all'accessibilità di StoreBot e test di Bing con un'icona della lente d'ingrandimento nera. Il video settimanale riassume la volatilità di Google Search dell'11 luglio e altre notizie.",
-      "url": "https://www.seroundtable.com/recap-07-17-2026-41705.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_ad",
-        "google_map",
-        "google_gemini",
-        "bing_search"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-17T13:00:00Z",
-      "fetched_at": "2026-07-18T06:02:24.555024Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1f37f3d77504b6b1",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_014",
-      "title_original": "Apple Maps Ads Ban Home Services, Crypto ATMs, Bail Bonds via @sejournal, @brookeosmundson",
-      "title_it": "Apple Maps vieta la pubblicità per servizi a domicilio, ATM cripto e cauzioni",
-      "summary_it": "Apple Maps ha implementato un divieto sulla pubblicità per determinate categorie di attività commerciali. Le categorie interessate includono i servizi a domicilio, gli ATM di criptovalute e i servizi di cauzione. Questa restrizione mira a definire quali tipi di aziende possono utilizzare la piattaforma pubblicitaria di Apple Maps.",
-      "url": "https://www.searchenginejournal.com/apple-maps-ads-ban-home-services/582542",
+      "id": "item_2026-07-19_003",
+      "title_original": "“Are You A Bot” Screens Can Get Your Pages Dropped By Google via @sejournal, @MattGSouthern",
+      "title_it": "Le schermate anti-bot possono causare la deindicizzazione delle pagine da parte di Google",
+      "summary_it": "John Mueller di Google ha chiarito che le schermate di verifica anti-bot (CAPTCHA) possono impedire a Google di indicizzare correttamente le pagine di un sito. Questo può portare alla deindicizzazione delle pagine interessate o alla selezione di una pagina diversa come canonica. È fondamentale assicurarsi che i crawler di Google possano accedere ai contenuti senza ostacoli.",
+      "url": "https://www.searchenginejournal.com/are-you-a-bot-screens-can-get-your-pages-dropped-by-google/582801",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -527,181 +117,113 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "technical_seo",
       "tags": [
-        "apple_map",
-        "advertising_policy",
-        "local_seo"
+        "google_indexing",
+        "captcha",
+        "crawl_budget",
+        "canonicalization"
       ],
       "importance": 3,
-      "published_at": "2026-07-17T18:38:09Z",
-      "fetched_at": "2026-07-18T06:02:25.749746Z",
+      "published_at": "2026-07-19T04:00:38Z",
+      "fetched_at": "2026-07-19T05:03:19.391092Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c2fb42a64bcc7305",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_015",
-      "title_original": "Google Faces Class Action Over Books Used To Train Gemini via @sejournal, @MattGSouthern",
-      "title_it": "Google affronta una class action per l'uso di libri nell'addestramento di Gemini",
-      "summary_it": "Google è oggetto di una class action da parte di editori che sostengono che opere fornite a Google Books, Play Books e Scholar siano state utilizzate per addestrare il modello Gemini senza autorizzazione. Al momento, nessun tribunale si è pronunciato in merito a queste accuse. La vicenda solleva questioni legali sull'utilizzo di contenuti protetti da copyright per l'addestramento di modelli di intelligenza artificiale.",
-      "url": "https://www.searchenginejournal.com/google-faces-class-action-over-books-used-to-train-gemini/582708",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "google_gemini",
-        "copyright_infringement",
-        "class_action",
-        "ai_training_data"
-      ],
-      "importance": 3,
-      "published_at": "2026-07-17T18:51:57Z",
-      "fetched_at": "2026-07-18T06:02:27.033829Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c1440f7edd3930cb",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-07-18_016",
-      "title_original": "Google Puts A Number On AI Search Clicks, Without The Data via @sejournal, @MattGSouthern",
-      "title_it": "Google dichiara miliardi di clic settimanali da funzionalità AI, ma senza dati verificabili",
-      "summary_it": "Google ha affermato che le funzionalità di intelligenza artificiale nella Ricerca generano miliardi di clic settimanali verso i siti web. Questa dichiarazione è stata fatta da Nick Fox di Google. Tuttavia, non sono stati forniti dati o metriche verificabili a supporto di tale affermazione.",
-      "url": "https://www.searchenginejournal.com/google-puts-a-number-on-ai-search-clicks-without-the-data/582755",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ai",
-        "search_click",
-        "data_transparency"
-      ],
-      "importance": 2,
-      "published_at": "2026-07-18T04:00:48Z",
-      "fetched_at": "2026-07-18T06:02:28.337921Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:830eb98435ad6629",
+      "raw_hash": "sha256:b8e736105d4d76f8",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-07-18T06:01:08.942719Z",
+      "last_checked": "2026-07-19T05:02:10.493202Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-07-18T06:01:09.865342Z",
+      "last_checked": "2026-07-19T05:02:11.056137Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-07-18T06:01:11.190273Z",
+      "last_checked": "2026-07-19T05:02:12.619237Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-07-18T06:01:12.225932Z",
+      "last_checked": "2026-07-19T05:02:13.739655Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-07-18T06:01:30.004846Z",
+      "last_checked": "2026-07-19T05:02:36.958110Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-07-18T06:01:30.304810Z",
+      "last_checked": "2026-07-19T05:02:37.437928Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-07-18T06:01:32.103993Z",
+      "last_checked": "2026-07-19T05:02:38.755731Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-07-18T06:01:33.687369Z",
+      "last_checked": "2026-07-19T05:02:41.030415Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-07-18T06:01:35.477916Z",
+      "last_checked": "2026-07-19T05:02:41.905410Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-07-18T06:01:35.545475Z",
+      "last_checked": "2026-07-19T05:02:41.963638Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-07-18T06:01:38.416295Z",
+      "last_checked": "2026-07-19T05:02:44.588885Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-07-18T06:01:39.316742Z",
+      "last_checked": "2026-07-19T05:02:45.054237Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-07-18T06:01:40.710472Z",
+      "last_checked": "2026-07-19T05:02:46.091044Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-07-18T06:01:42.437292Z",
+      "last_checked": "2026-07-19T05:02:47.942954Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-07-18T06:01:44.408611Z",
+      "last_checked": "2026-07-19T05:02:49.068271Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-07-18T06:01:46.458286Z",
+      "last_checked": "2026-07-19T05:02:50.533832Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-07-18T06:01:47.478620Z",
+      "last_checked": "2026-07-19T05:02:51.512783Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-07-18T06:02:05.740006Z",
+      "last_checked": "2026-07-19T05:03:14.722145Z",
       "changed": false
     }
   ],
