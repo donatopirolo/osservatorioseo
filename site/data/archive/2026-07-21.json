@@ -1,58 +1,59 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-21T05:01:23.657035Z",
-  "generated_at_local": "2026-07-21T07:01:23.657035+02:00",
+  "generated_at": "2026-07-21T06:01:22.734301Z",
+  "generated_at_local": "2026-07-21T08:01:22.734301+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-07-21-0701",
+  "run_id": "2026-07-21-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2199,
-    "items_after_dedup": 18,
+    "items_after_dedup": 19,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0118,
-    "summarize_attempted": 18,
+    "ai_cost_eur": 0.012,
+    "summarize_attempted": 19,
     "summarize_failed": 0
   },
   "top10": [
     "item_2026-07-21_002",
+    "item_2026-07-21_012",
     "item_2026-07-21_016",
     "item_2026-07-21_004",
     "item_2026-07-21_010",
-    "item_2026-07-21_003",
-    "item_2026-07-21_012",
     "item_2026-07-21_007",
     "item_2026-07-21_005",
     "item_2026-07-21_008",
-    "item_2026-07-21_009"
+    "item_2026-07-21_009",
+    "item_2026-07-21_011"
   ],
   "categories": {
     "ai_models": [
       "item_2026-07-21_002",
       "item_2026-07-21_007"
     ],
+    "google_updates": [
+      "item_2026-07-21_012",
+      "item_2026-07-21_004",
+      "item_2026-07-21_010"
+    ],
     "industry_news": [
       "item_2026-07-21_016",
       "item_2026-07-21_008",
       "item_2026-07-21_015"
     ],
-    "google_updates": [
-      "item_2026-07-21_004",
-      "item_2026-07-21_010",
-      "item_2026-07-21_003",
-      "item_2026-07-21_012"
-    ],
     "tools_platforms": [
       "item_2026-07-21_005",
+      "item_2026-07-21_003",
       "item_2026-07-21_017"
     ],
     "ai_overviews_llm_seo": [
       "item_2026-07-21_009",
       "item_2026-07-21_011",
-      "item_2026-07-21_006",
       "item_2026-07-21_014",
       "item_2026-07-21_018",
-      "item_2026-07-21_013"
+      "item_2026-07-21_013",
+      "item_2026-07-21_019",
+      "item_2026-07-21_006"
     ],
     "technical_seo": [
       "item_2026-07-21_001"
@@ -62,8 +63,8 @@
     {
       "id": "item_2026-07-21_001",
       "title_original": "Why Your Pages Are Stuck In Crawled-Currently Not Indexed & What To Do About It via @sejournal, @marie_haynes",
-      "title_it": "Perché le tue pagine sono bloccate in 'Scansionate - Attualmente non indicizzate' e come intervenire",
-      "summary_it": "L'articolo analizza le ragioni per cui Google scansiona determinate pagine ma non le indicizza, distinguendo tra problemi tecnici e di qualità dei contenuti. Vengono fornite indicazioni pratiche per diagnosticare e risolvere questa problematica. La guida propone un approccio passo-passo per identificare le cause sottostanti e implementare le correzioni necessarie.",
+      "title_it": "Perché le tue pagine sono bloccate in 'Scansionate - Attualmente non indicizzate' e come risolvere",
+      "summary_it": "L'articolo analizza le cause comuni per cui Google scansiona le pagine ma non le indicizza, distinguendo tra problemi tecnici e di qualità dei contenuti. Vengono fornite indicazioni pratiche per identificare e risolvere queste problematiche. La guida è strutturata per aiutare i professionisti SEO a diagnosticare e intervenire efficacemente.",
       "url": "https://www.searchenginejournal.com/why-your-pages-are-stuck-in-crawled-currently-not-indexed-what-to-do-about-it/582585",
       "source": {
         "id": "search_engine_journal",
@@ -79,14 +80,14 @@
       },
       "category": "technical_seo",
       "tags": [
-        "indexing_issue",
-        "crawl_budget",
-        "content_quality",
-        "google_search_console"
+        "indexing",
+        "crawling",
+        "google_search_console",
+        "technical_seo_audit"
       ],
       "importance": 3,
       "published_at": "2026-07-20T08:30:32Z",
-      "fetched_at": "2026-07-21T05:02:59.327440Z",
+      "fetched_at": "2026-07-21T06:02:40.477079Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -98,7 +99,7 @@
       "id": "item_2026-07-21_002",
       "title_original": "Safety and alignment in an era of long-horizon models",
       "title_it": "Sicurezza e allineamento nell'era dei modelli a lungo orizzonte",
-      "summary_it": "OpenAI ha condiviso le lezioni apprese dall'implementazione di modelli AI a lungo termine, evidenziando nuovi rischi per la sicurezza e fallimenti osservati. L'azienda ha migliorato le proprie salvaguardie attraverso un approccio di deployment iterativo. Questo approccio mira a mitigare i rischi emergenti associati all'operatività prolungata dei sistemi di intelligenza artificiale.",
+      "summary_it": "OpenAI ha condiviso le lezioni apprese dall'implementazione di modelli AI a lungo termine, evidenziando nuovi rischi per la sicurezza e fallimenti osservati. L'azienda ha migliorato le proprie salvaguardie attraverso un approccio di deployment iterativo. Questo approccio mira a mitigare i rischi emergenti man mano che i modelli AI diventano più complessi e autonomi.",
       "url": "https://openai.com/index/safety-alignment-long-horizon-models",
       "source": {
         "id": "openai_blog",
@@ -117,11 +118,11 @@
         "ai_safety",
         "model_alignment",
         "openai",
-        "long_horizon_model"
+        "ai_ethic"
       ],
       "importance": 4,
       "published_at": "2026-07-20T09:00:00Z",
-      "fetched_at": "2026-07-21T05:03:00.828968Z",
+      "fetched_at": "2026-07-21T06:02:41.725918Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -133,7 +134,7 @@
       "id": "item_2026-07-21_003",
       "title_original": "Google Downplays Search Console “Error” Reports. Says Many Aren’t Real Problems via @sejournal, @martinibuster",
       "title_it": "Google minimizza i report di 'errore' di Search Console, affermando che molti non sono problemi reali",
-      "summary_it": "Google ha chiarito che molti dei report di 'errore' presenti in Search Console non indicano necessariamente problemi reali o critici. L'azienda sottolinea che lo strumento non è concepito come una checklist di elementi da correggere indiscriminatamente. Questa precisazione suggerisce un approccio più sfumato all'interpretazione dei dati forniti da Search Console.",
+      "summary_it": "Google ha chiarito che molti dei report di 'errore' presenti in Search Console non indicano necessariamente problemi reali o critici. L'azienda sottolinea che lo strumento non è concepito come una checklist di elementi da correggere obbligatoriamente. Questa precisazione mira a ricalibrare la percezione degli utenti riguardo alla gravità e all'urgenza di tali segnalazioni.",
       "url": "https://www.searchenginejournal.com/google-downplays-search-console-error-reports-says-many-arent-real-problems/582890",
       "source": {
         "id": "search_engine_journal",
@@ -147,15 +148,15 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "tools_platforms",
       "tags": [
         "google_search_console",
         "error_report",
-        "data_interpretation"
+        "google_guidance"
       ],
       "importance": 3,
       "published_at": "2026-07-20T09:42:07Z",
-      "fetched_at": "2026-07-21T05:03:02.266020Z",
+      "fetched_at": "2026-07-21T06:02:43.619680Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -167,7 +168,7 @@
       "id": "item_2026-07-21_004",
       "title_original": "Google Warns Not To Place AI Labels On Corners Of Images",
       "title_it": "Google sconsiglia di posizionare etichette AI negli angoli delle immagini",
-      "summary_it": "Google ha aggiornato la documentazione relativa alle etichette per contenuti generati dall'IA, specificando di non posizionare tali etichette negli angoli delle risorse immagine. Questa indicazione mira a ridurre il rischio che le etichette vengano tagliate durante il rendering degli annunci. La modifica sostituisce una precedente raccomandazione che suggeriva un margine del 5.5% dal perimetro dell'immagine.",
+      "summary_it": "Google ha aggiornato la documentazione relativa alle etichette per contenuti generati da AI, specificando di non posizionare tali etichette negli angoli delle immagini. Questa indicazione mira a prevenire il troncamento delle etichette durante il rendering degli annunci. La modifica sostituisce una precedente raccomandazione che suggeriva un margine del 5.5% dal perimetro dell'immagine.",
       "url": "https://www.seroundtable.com/google-ai-labels-corners-41711.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -185,12 +186,12 @@
       "tags": [
         "google_ad",
         "ai_content",
-        "image_guideline",
-        "ad_rendering"
+        "image_optimization",
+        "guideline"
       ],
       "importance": 3,
       "published_at": "2026-07-20T10:11:00Z",
-      "fetched_at": "2026-07-21T05:03:03.770943Z",
+      "fetched_at": "2026-07-21T06:02:44.990890Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -201,8 +202,8 @@
     {
       "id": "item_2026-07-21_005",
       "title_original": "Google Content API Extended Access Form Now Available",
-      "title_it": "Disponibile il modulo per la richiesta di estensione dell'accesso all'API Google Content",
-      "summary_it": "Google ha reso disponibile un modulo per richiedere un'estensione della scadenza del 18 agosto 2026 per la migrazione dalla Content API for Shopping alla nuova Merchant API. Le aziende che non riusciranno a completare la migrazione entro tale data possono richiedere un'estensione fino al 15 ottobre o al 31 dicembre 2026. La mancata migrazione o l'assenza di un'estensione approvata comporterà una degradazione del servizio, con impatti sull'integrazione API e sulle performance pubblicitarie e organiche.",
+      "title_it": "Disponibile il modulo per la richiesta di estensione dell'accesso alla Google Content API",
+      "summary_it": "Google ha reso disponibile un modulo per richiedere un'estensione della scadenza del 18 agosto 2026 per la Content API for Shopping, che verrà sostituita dalla Google Merchant API. Le aziende che necessitano di tempo aggiuntivo per la migrazione possono compilare il modulo indicando la giustificazione e la data di estensione desiderata, scegliendo tra il 15 ottobre o il 31 dicembre 2026. La mancata richiesta o concessione dell'estensione comporterà una degradazione del servizio, con impatti sull'integrazione API e sulle performance pubblicitarie e organiche.",
       "url": "https://www.seroundtable.com/google-content-api-extension-41710.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -221,11 +222,11 @@
         "google_api",
         "merchant_api",
         "content_api",
-        "ecommerce_seo"
+        "e_commerce_seo"
       ],
       "importance": 3,
       "published_at": "2026-07-20T10:21:00Z",
-      "fetched_at": "2026-07-21T05:03:05.368554Z",
+      "fetched_at": "2026-07-21T06:02:46.511500Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -237,7 +238,7 @@
       "id": "item_2026-07-21_006",
       "title_original": "MCP For Marketers: What To Connect First & Why Your Data Wins",
       "title_it": "MCP per i Marketer: Cosa Connettere Prima e Perché i Tuoi Dati Sono Fondamentali",
-      "summary_it": "L'articolo discute l'importanza del Marketing Control Panel (MCP) per i marketer, focalizzandosi su come integrare gli assistenti AI per migliorare l'efficacia delle strategie. Viene evidenziato il ruolo cruciale dei dati proprietari nel massimizzare i benefici dell'MCP. La pubblicazione fornisce indicazioni su quali connessioni prioritarie stabilire all'interno di questo framework.",
+      "summary_it": "L'articolo discute l'importanza del Marketing Control Panel (MCP) per i marketer, focalizzandosi su quali elementi connettere inizialmente. Viene evidenziato il ruolo del MCP nel collegare assistenti AI per migliorare l'efficacia delle strategie di marketing. La gestione e l'utilizzo dei dati proprietari sono presentati come un fattore chiave per il successo nell'implementazione di questa tecnologia.",
       "url": "https://www.searchenginejournal.com/how-marketers-should-use-mcp-what-to-connect-how-to-make-it-work/581171",
       "source": {
         "id": "search_engine_journal",
@@ -254,13 +255,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "mcp",
-        "ai_marketing",
-        "data_strategy",
-        "marketing_automation"
+        "ai_assistant",
+        "marketing_strategy",
+        "data_management"
       ],
-      "importance": 3,
+      "importance": 2,
       "published_at": "2026-07-20T10:30:09Z",
-      "fetched_at": "2026-07-21T05:03:06.963170Z",
+      "fetched_at": "2026-07-21T06:02:48.083894Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -272,7 +273,7 @@
       "id": "item_2026-07-21_007",
       "title_original": "ChatGPT Showing Two Ads In Footer Of Results",
       "title_it": "ChatGPT mostra due annunci nel footer dei risultati",
-      "summary_it": "OpenAI ha iniziato a mostrare due annunci distinti nel footer delle risposte di ChatGPT. Precedentemente, era comune osservare un singolo annuncio o due annunci dallo stesso inserzionista. Questa modifica suggerisce un'espansione dell'inventario pubblicitario sulla piattaforma.",
+      "summary_it": "OpenAI ha iniziato a mostrare due annunci distinti nel footer delle risposte di ChatGPT. In precedenza, era comune osservare un singolo annuncio o due annunci dallo stesso inserzionista. Questa novità indica un potenziale aumento dell'inventario pubblicitario disponibile sulla piattaforma.",
       "url": "https://www.seroundtable.com/chatgpt-showing-two-ads-41706.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -294,7 +295,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-20T10:31:00Z",
-      "fetched_at": "2026-07-21T05:03:08.243153Z",
+      "fetched_at": "2026-07-21T06:02:49.165074Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -306,7 +307,7 @@
       "id": "item_2026-07-21_008",
       "title_original": "Google Warns Not To Uninstall/Reinstall Google & YouTube Shopify App",
       "title_it": "Google sconsiglia di disinstallare e reinstallare l'app Google & YouTube per Shopify",
-      "summary_it": "Google ha chiarito che gli utenti dell'app Google & YouTube per Shopify non devono disinstallarla e reinstallarla in vista della transizione dall'API Content all'API Merchant. La migrazione verrà gestita automaticamente da Google. La disinstallazione e reinstallazione dell'app può causare problemi, inclusa la perdita di dati storici sulle performance, un bug che Google sta risolvendo. Si raccomanda di mantenere l'app installata così com'è.",
+      "summary_it": "Google ha chiarito che gli utenti dell'app Google & YouTube per Shopify non devono disinstallare e reinstallare l'applicazione in vista della transizione dall'API Content all'API Merchant. La migrazione verrà gestita automaticamente da Google. La disinstallazione e reinstallazione può causare problemi, inclusa la perdita di dati storici sulle performance, che Google sta risolvendo. La scadenza per la migrazione all'API Merchant è il 18 agosto.",
       "url": "https://www.seroundtable.com/google-google-youtube-shopify-app-update-41713.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -329,7 +330,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-20T10:41:00Z",
-      "fetched_at": "2026-07-21T05:03:09.746028Z",
+      "fetched_at": "2026-07-21T06:02:50.653671Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -340,8 +341,8 @@
     {
       "id": "item_2026-07-21_009",
       "title_original": "Google: We Send Billions Of Clicks To Websites Weekly Through AI Search",
-      "title_it": "Google: Le funzionalità di ricerca AI generano miliardi di clic settimanali verso i siti web",
-      "summary_it": "Nick Fox, responsabile della ricerca di Google, ha dichiarato che le funzionalità AI di Google Search, inclusi AI Mode e AI Overviews, inviano miliardi di clic ai siti web ogni settimana. Ha sottolineato che Google Search nel complesso continua a generare miliardi di clic giornalieri e sta registrando una crescita complessiva. L'azienda afferma di aver progettato le funzionalità AI per connettere gli utenti ai siti web, migliorando la visibilità dei link per approfondire i contenuti.",
+      "title_it": "Google afferma di inviare miliardi di clic ai siti web tramite la ricerca AI",
+      "summary_it": "Nick Fox, responsabile della ricerca di Google, ha dichiarato che le funzionalità di ricerca basate sull'IA, come AI Mode e AI Overviews, generano miliardi di clic settimanali verso i siti web. Ha sottolineato che la ricerca Google nel complesso continua a inviare miliardi di clic quotidianamente e sta registrando una crescita. L'azienda ha progettato queste funzionalità AI per connettere gli utenti ai siti web, migliorando la visibilità dei link.",
       "url": "https://www.seroundtable.com/google-ai-search-billions-clicks-41709.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -364,7 +365,7 @@
       ],
       "importance": 3,
       "published_at": "2026-07-20T10:51:00Z",
-      "fetched_at": "2026-07-21T05:03:11.293864Z",
+      "fetched_at": "2026-07-21T06:02:52.021980Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -376,7 +377,7 @@
       "id": "item_2026-07-21_010",
       "title_original": "Google Search Ranking Volatility This Weekend - Around July 18th & 19th",
       "title_it": "Volatilità nel ranking di ricerca di Google nel weekend del 18 e 19 luglio",
-      "summary_it": "Nel weekend del 18 e 19 luglio è stata rilevata una potenziale volatilità nel ranking di ricerca di Google, suggerendo un aggiornamento non confermato. Strumenti di monitoraggio di terze parti e discussioni nella comunità SEO indicano movimenti significativi. Questa attività segue altri aggiornamenti non confermati e il completamento del Google June 2026 spam update e del Google May 2026 core update.",
+      "summary_it": "Nel weekend del 18 e 19 luglio è stata rilevata una potenziale fluttuazione non confermata nel ranking di Google. Strumenti di monitoraggio di terze parti e discussioni nella comunità SEO indicano movimenti significativi. Questa volatilità segue altri aggiornamenti non confermati e il completamento del Google June 2026 spam update.",
       "url": "https://www.seroundtable.com/google-search-ranking-volatility-41712.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -392,14 +393,14 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_update",
+        "google_algorithm",
         "ranking_volatility",
         "unconfirmed_update",
-        "serp_change"
+        "serp_tracking"
       ],
       "importance": 3,
       "published_at": "2026-07-20T11:04:00Z",
-      "fetched_at": "2026-07-21T05:03:12.887408Z",
+      "fetched_at": "2026-07-21T06:02:53.441258Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -411,7 +412,7 @@
       "id": "item_2026-07-21_011",
       "title_original": "Does topical authority matter in AI Search?",
       "title_it": "L'autorità tematica è ancora rilevante nella ricerca AI?",
-      "summary_it": "L'articolo analizza il ruolo dell'autorità tematica nell'era della ricerca basata sull'AI. Viene evidenziato come, nonostante alcuni grandi brand possano spaziare su molti argomenti, la maggior parte dei siti tragga vantaggio da una focalizzazione tematica. Si discute l'importanza di costruire una solida autorità su specifici argomenti per migliorare la visibilità nei risultati di ricerca AI. Vengono forniti spunti su come misurare e sviluppare l'autorità tematica in un contesto di ricerca in evoluzione.",
+      "summary_it": "L'articolo esplora la rilevanza dell'autorità tematica nell'era della ricerca basata sull'intelligenza artificiale. Viene analizzato come alcuni brand riescano a posizionarsi su argomenti disparati, mentre per la maggior parte è più efficace una strategia di contenuto focalizzata. Si discute l'importanza di costruire una forte autorità tematica per migliorare la visibilità nei risultati di ricerca AI.",
       "url": "https://www.growth-memo.com/p/does-topical-authority-matter-in",
       "source": {
         "id": "growth_memo_kevin_indig",
@@ -430,11 +431,11 @@
         "topical_authority",
         "ai_search",
         "content_strategy",
-        "seo_strategy"
+        "seo_fundamental"
       ],
       "importance": 3,
       "published_at": "2026-07-20T11:05:40Z",
-      "fetched_at": "2026-07-21T05:03:15.363389Z",
+      "fetched_at": "2026-07-21T06:02:54.972130Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -467,9 +468,9 @@
         "performance_max",
         "paid_search"
       ],
-      "importance": 3,
+      "importance": 4,
       "published_at": "2026-07-20T12:00:33Z",
-      "fetched_at": "2026-07-21T05:03:16.699615Z",
+      "fetched_at": "2026-07-21T06:02:56.214488Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -480,8 +481,8 @@
     {
       "id": "item_2026-07-21_013",
       "title_original": "AI visibility is a topic-level game: A study of 50,000 brands in ChatGPT [Study]",
-      "title_it": "La visibilità AI è un gioco a livello di argomento: uno studio su 50.000 brand in ChatGPT",
-      "summary_it": "Uno studio di Semrush analizza la visibilità dei brand all'interno di ChatGPT, evidenziando come la dominanza su specifici argomenti sia ancora limitata per la maggior parte dei settori. La ricerca suggerisce che l'autorità tematica è un fattore chiave per emergere nelle risposte generate dall'AI. Vengono esaminate le strategie per acquisire visibilità a livello di topic, basandosi sull'analisi di 50.000 brand.",
+      "title_it": "La visibilità AI è una questione di autorità tematica: uno studio su 50.000 brand in ChatGPT",
+      "summary_it": "Uno studio condotto su 50.000 brand in ChatGPT rivela che la maggior parte degli argomenti trattati non presenta ancora un brand dominante. La ricerca esplora le dinamiche della visibilità AI a livello tematico. I risultati suggeriscono l'importanza di costruire autorità su specifici argomenti per emergere nelle risposte generate dall'intelligenza artificiale.",
       "url": "https://www.semrush.com/blog/chatgpt-topic-authority-study",
       "source": {
         "id": "semrush_blog",
@@ -500,11 +501,11 @@
         "ai_visibility",
         "chatgpt",
         "topic_authority",
-        "brand_seo"
+        "brand_visibility"
       ],
       "importance": 3,
       "published_at": "2026-07-20T12:04:00Z",
-      "fetched_at": "2026-07-21T05:03:18.479464Z",
+      "fetched_at": "2026-07-21T06:02:57.997416Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -516,7 +517,7 @@
       "id": "item_2026-07-21_014",
       "title_original": "AI Answers About Your Locations Are Often Wrong – Check Before Customers Do via @sejournal, @MattGSouthern",
       "title_it": "Le risposte AI sulle tue sedi sono spesso errate: verifica prima dei clienti",
-      "summary_it": "Test condotti da un fornitore hanno rivelato che le risposte generate dall'intelligenza artificiale riguardo alle informazioni sulle sedi aziendali presentano frequenti inesattezze, come codici postali errati, orari di chiusura non veritieri o servizi inventati. È consigliabile effettuare un audit su diverse piattaforme per garantire l'accuratezza delle informazioni. Questo è cruciale per evitare che i clienti riscontrino dati errati.",
+      "summary_it": "Test condotti da un fornitore hanno rivelato che le risposte generate dall'intelligenza artificiale riguardo alle informazioni sulle sedi aziendali presentano frequenti inesattezze. Queste includono codici postali errati, indicazioni di attività chiuse e servizi inventati. È consigliabile effettuare un audit su diverse piattaforme per prevenire disinformazione ai danni dei clienti.",
       "url": "https://www.searchenginejournal.com/ai-answers-about-your-locations-are-often-wrong-check-before-customers-do/582205",
       "source": {
         "id": "search_engine_journal",
@@ -534,12 +535,12 @@
       "tags": [
         "ai_accuracy",
         "local_seo",
-        "data_verification",
-        "generative_ai"
+        "data_validation",
+        "business_listing"
       ],
       "importance": 3,
       "published_at": "2026-07-20T12:30:47Z",
-      "fetched_at": "2026-07-21T05:03:20.076650Z",
+      "fetched_at": "2026-07-21T06:02:59.676317Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -551,7 +552,7 @@
       "id": "item_2026-07-21_015",
       "title_original": "Daily Search Forum Recap: July 20, 2026",
       "title_it": "Riepilogo Quotidiano del Forum di Ricerca: 20 Luglio 2026",
-      "summary_it": "Il riepilogo odierno evidenzia una notevole volatilità nel ranking di ricerca di Google durante il weekend. Google ha dichiarato di generare miliardi di clic verso il web aperto tramite AI Mode e AI Overviews. Si sconsiglia di disinstallare e reinstallare l'app Google & YouTube Shopify Sync, mentre ChatGPT sta testando la visualizzazione di due annunci da inserzionisti diversi. Google ha anche avvisato di non posizionare le etichette AI troppo vicino al margine delle immagini.",
+      "summary_it": "Il riepilogo odierno evidenzia una notevole volatilità nel ranking di ricerca di Google durante il weekend. Google ha dichiarato di generare miliardi di clic verso il web aperto tramite AI Mode e AI Overviews. Si sconsiglia di disinstallare e reinstallare l'app di sincronizzazione Google & YouTube Shopify. ChatGPT sta testando la visualizzazione di due annunci da inserzionisti diversi nelle risposte.",
       "url": "https://www.seroundtable.com/recap-07-20-2026-41715.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -567,14 +568,14 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_search_volatility",
+        "google_ranking_volatility",
         "ai_search_click",
-        "shopify_app_issue",
+        "shopify_app_warning",
         "chatgpt_ad"
       ],
       "importance": 3,
       "published_at": "2026-07-20T13:00:00Z",
-      "fetched_at": "2026-07-21T05:03:21.818397Z",
+      "fetched_at": "2026-07-21T06:03:01.513030Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -586,7 +587,7 @@
       "id": "item_2026-07-21_016",
       "title_original": "Google Must Share Anonymized Search Data With Rivals via @sejournal, @MattGSouthern",
       "title_it": "Google dovrà condividere dati di ricerca anonimizzati con i concorrenti",
-      "summary_it": "Nuove normative europee impongono a Google di condividere dati di ricerca anonimizzati con motori di ricerca rivali e chatbot AI abilitati alla ricerca. Questa misura mira a promuovere la concorrenza nel settore. La condivisione dei dati è vincolante per Google.",
+      "summary_it": "Nuove normative europee impongono a Google di condividere dati di ricerca anonimizzati con motori di ricerca rivali e chatbot AI. Questa misura mira a promuovere la concorrenza nel settore. La condivisione dei dati è vincolante per Google.",
       "url": "https://www.searchenginejournal.com/google-must-share-anonymized-search-data-with-rivals/582922",
       "source": {
         "id": "search_engine_journal",
@@ -609,7 +610,7 @@
       ],
       "importance": 4,
       "published_at": "2026-07-20T17:12:10Z",
-      "fetched_at": "2026-07-21T05:03:23.135028Z",
+      "fetched_at": "2026-07-21T06:03:02.580003Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -621,7 +622,7 @@
       "id": "item_2026-07-21_017",
       "title_original": "The 9 Best Generative Engine Optimization (GEO) Tools of 2026",
       "title_it": "I 9 migliori strumenti di Generative Engine Optimization (GEO) del 2026",
-      "summary_it": "L'articolo presenta una selezione di strumenti di Generative Engine Optimization (GEO) per il 2026. Questi tool sono progettati per monitorare le menzioni dei Large Language Models (LLM), analizzare la concorrenza e migliorare la visibilità nei motori di ricerca basati sull'intelligenza artificiale. La lista include soluzioni per ottimizzare la presenza in contesti di ricerca generativa.",
+      "summary_it": "L'articolo presenta una selezione di strumenti GEO per il 2026, focalizzati sul monitoraggio delle menzioni di LLM, l'analisi della concorrenza e il miglioramento della visibilità nei motori di ricerca basati sull'IA. La lista è stata curata per aiutare i professionisti a ottimizzare la propria presenza in un panorama di ricerca in evoluzione. Vengono descritte le funzionalità principali di ciascuno strumento e il loro potenziale impatto sulle strategie SEO future.",
       "url": "https://www.semrush.com/blog/best-generative-engine-optimization-tools",
       "source": {
         "id": "semrush_blog",
@@ -644,7 +645,7 @@
       ],
       "importance": 2,
       "published_at": "2026-07-20T19:36:00Z",
-      "fetched_at": "2026-07-21T05:03:24.687299Z",
+      "fetched_at": "2026-07-21T06:03:04.086027Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -655,8 +656,8 @@
     {
       "id": "item_2026-07-21_018",
       "title_original": "Google Is AI Mode’s No. 2 Cited Domain, Data Shows via @sejournal, @MattGSouthern",
-      "title_it": "Google è il secondo dominio più citato nella modalità AI, secondo i dati",
-      "summary_it": "Nuovi dati indicano che Google è diventato il secondo dominio più citato nella modalità AI. Questo posizionamento è attribuibile principalmente alle schede di Google Business Profile e ai Knowledge Panel dei prodotti ospitati da Google. La rilevanza di queste fonti contribuisce a un'ampia citazione all'interno dei risultati generati dall'intelligenza artificiale.",
+      "title_it": "Google è il secondo dominio più citato nelle modalità AI, secondo i dati",
+      "summary_it": "Nuovi dati indicano che Google è diventato il secondo dominio più citato nelle modalità AI. Questo fenomeno è principalmente attribuibile alle schede di Google Business Profile e ai pannelli di conoscenza dei prodotti ospitati da Google. La citazione avviene quando le risposte generate dall'AI fanno riferimento a queste fonti.",
       "url": "https://www.searchenginejournal.com/google-is-ai-modes-no-2-cited-domain-data-shows/582941",
       "source": {
         "id": "search_engine_journal",
@@ -672,111 +673,146 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "google_ai_mode",
-        "cited_domain",
+        "google_ai",
+        "ai_citation",
         "business_profile",
         "knowledge_panel"
       ],
       "importance": 3,
       "published_at": "2026-07-20T22:26:26Z",
-      "fetched_at": "2026-07-21T05:03:26.176187Z",
+      "fetched_at": "2026-07-21T06:03:05.578980Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
       "raw_hash": "sha256:7dc65f216581e39a",
       "deep_analysis": null
+    },
+    {
+      "id": "item_2026-07-21_019",
+      "title_original": "AI Content Marketing For Agencies: 6 Ways To Stay Competitive Right Now",
+      "title_it": "Marketing di Contenuto con AI per Agenzie: 6 Modi per Mantenere la Competitività",
+      "summary_it": "L'articolo di Search Engine Journal esplora come le agenzie di marketing possono integrare l'intelligenza artificiale nelle loro strategie di contenuto. Vengono presentati sei approcci per migliorare la competitività e la fidelizzazione dei clienti. L'obiettivo è ottimizzare i processi e i risultati nel contesto attuale del marketing digitale.",
+      "url": "https://www.searchenginejournal.com/content-marketing-agencies-ai-contentworkshop-spcs/581935",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_content",
+        "content_marketing",
+        "agency_seo",
+        "competitive_advantage"
+      ],
+      "importance": 2,
+      "published_at": "2026-07-21T04:00:53Z",
+      "fetched_at": "2026-07-21T06:03:06.987098Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b0e4b3fa2dd694e7",
+      "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-07-21T05:01:34.243599Z",
+      "last_checked": "2026-07-21T06:01:28.064964Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-07-21T05:01:34.836665Z",
+      "last_checked": "2026-07-21T06:01:28.614283Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-07-21T05:01:36.460609Z",
+      "last_checked": "2026-07-21T06:01:29.875367Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-07-21T05:01:37.921221Z",
+      "last_checked": "2026-07-21T06:01:30.909994Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-07-21T05:02:01.783057Z",
+      "last_checked": "2026-07-21T06:01:55.099253Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-07-21T05:02:02.076728Z",
+      "last_checked": "2026-07-21T06:01:55.304961Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-07-21T05:02:03.336363Z",
+      "last_checked": "2026-07-21T06:01:57.014638Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-07-21T05:02:04.532116Z",
+      "last_checked": "2026-07-21T06:01:58.453962Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-07-21T05:02:06.788817Z",
+      "last_checked": "2026-07-21T06:02:00.364096Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-07-21T05:02:06.879902Z",
+      "last_checked": "2026-07-21T06:02:00.386927Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-07-21T05:02:08.415810Z",
+      "last_checked": "2026-07-21T06:02:05.594134Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-07-21T05:02:08.808429Z",
+      "last_checked": "2026-07-21T06:02:06.479557Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-07-21T05:02:26.771794Z",
+      "last_checked": "2026-07-21T06:02:07.548481Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-07-21T05:02:27.448801Z",
+      "last_checked": "2026-07-21T06:02:09.123592Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-07-21T05:02:28.506304Z",
+      "last_checked": "2026-07-21T06:02:10.204454Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-07-21T05:02:30.854976Z",
+      "last_checked": "2026-07-21T06:02:12.028082Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-07-21T05:02:32.446170Z",
+      "last_checked": "2026-07-21T06:02:13.902583Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-07-21T05:02:57.158904Z",
+      "last_checked": "2026-07-21T06:02:38.756579Z",
       "changed": false
     }
   ],
