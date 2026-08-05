@@ -1,179 +1,63 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-04T06:01:21.272776Z",
-  "generated_at_local": "2026-08-04T08:01:21.272776+02:00",
+  "generated_at": "2026-08-05T05:01:23.858593Z",
+  "generated_at_local": "2026-08-05T07:01:23.858593+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-04-0801",
+  "run_id": "2026-08-05-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2272,
-    "items_after_dedup": 20,
+    "items_collected": 2275,
+    "items_after_dedup": 11,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0121,
-    "summarize_attempted": 20,
+    "ai_cost_eur": 0.0069,
+    "summarize_attempted": 11,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-04_008",
-    "item_2026-08-04_020",
-    "item_2026-08-04_004",
-    "item_2026-08-04_010",
-    "item_2026-08-04_012",
-    "item_2026-08-04_018",
-    "item_2026-08-04_002",
-    "item_2026-08-04_003",
-    "item_2026-08-04_006",
-    "item_2026-08-04_007"
+    "item_2026-08-05_008",
+    "item_2026-08-05_005",
+    "item_2026-08-05_001",
+    "item_2026-08-05_010",
+    "item_2026-08-05_002",
+    "item_2026-08-05_003",
+    "item_2026-08-05_004",
+    "item_2026-08-05_007",
+    "item_2026-08-05_006",
+    "item_2026-08-05_009"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-08-04_008",
-      "item_2026-08-04_004"
-    ],
-    "technical_seo": [
-      "item_2026-08-04_020",
-      "item_2026-08-04_011",
-      "item_2026-08-04_017"
-    ],
-    "ai_models": [
-      "item_2026-08-04_010",
-      "item_2026-08-04_012"
+      "item_2026-08-05_008",
+      "item_2026-08-05_001"
     ],
     "industry_news": [
-      "item_2026-08-04_018",
-      "item_2026-08-04_007",
-      "item_2026-08-04_014",
-      "item_2026-08-04_005",
-      "item_2026-08-04_019",
-      "item_2026-08-04_013"
+      "item_2026-08-05_005",
+      "item_2026-08-05_004",
+      "item_2026-08-05_007",
+      "item_2026-08-05_006"
+    ],
+    "ai_models": [
+      "item_2026-08-05_010"
     ],
     "tools_platforms": [
-      "item_2026-08-04_002",
-      "item_2026-08-04_003",
-      "item_2026-08-04_006"
+      "item_2026-08-05_002",
+      "item_2026-08-05_003"
     ],
-    "content_eeat": [
-      "item_2026-08-04_015",
-      "item_2026-08-04_001"
+    "technical_seo": [
+      "item_2026-08-05_009"
     ],
     "ai_overviews_llm_seo": [
-      "item_2026-08-04_009",
-      "item_2026-08-04_016"
+      "item_2026-08-05_011"
     ]
   },
   "items": [
     {
-      "id": "item_2026-08-04_001",
-      "title_original": "Google’s Documentation Refresh Offers Ideas For SEO Content Updates via @sejournal, @martinibuster",
-      "title_it": "L'aggiornamento della documentazione di Google offre spunti per l'ottimizzazione dei contenuti SEO",
-      "summary_it": "Google ha recentemente aggiornato la propria documentazione, fornendo indicazioni su come approcciare l'aggiornamento dei contenuti per fini SEO. Queste revisioni possono essere utilizzate come modello per migliorare le strategie di content update. L'analisi di tali modifiche può rivelare le priorità attuali di Google in termini di qualità e pertinenza dei contenuti.",
-      "url": "https://www.searchenginejournal.com/googles-documentation-refresh-offers-seo-lessons-on-content-updates/584464",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "google_documentation",
-        "content_update",
-        "seo_strategy",
-        "e_e_a_t"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T08:17:27Z",
-      "fetched_at": "2026-08-04T06:02:40.577768Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2a8a25b3d1ffde27",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_002",
-      "title_original": "Bing Webmaster Tools SOAP/POX APIs To Be Retired On August 31, 2026",
-      "title_it": "Le API SOAP/POX di Bing Webmaster Tools saranno dismesse il 31 agosto 2026",
-      "summary_it": "Microsoft ha annunciato la dismissione delle API SOAP/POX di Bing Webmaster Tools a partire dal 31 agosto 2026. Gli utenti che utilizzano queste API legacy sono invitati a migrare alla versione JSON/HTTP (REST) prima di tale data per evitare interruzioni del servizio. Le funzionalità API, le chiavi, le quote e i limiti di frequenza rimarranno invariati con la nuova versione.",
-      "url": "https://www.seroundtable.com/bing-webmaster-tools-soap-pox-apis-retire-41805.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "bing_webmaster_tool",
-        "api_deprecation",
-        "rest_api",
-        "microsoft_bing"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T10:05:00Z",
-      "fetched_at": "2026-08-04T06:02:42.018916Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:31a231da84105d7b",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_003",
-      "title_original": "Google Trends Lets You Compare 220% More Search Terms",
-      "title_it": "Google Trends ora permette di confrontare un numero significativamente maggiore di termini di ricerca",
-      "summary_it": "Google Trends ha aumentato la capacità di confronto dei termini di ricerca. È ora possibile analizzare fino a 400 termini, suddivisi in 8 gruppi da 50 termini ciascuno. In precedenza, il limite era di 125 termini in 5 gruppi da 25. Questa modifica è stata implementata silenziosamente e documentata nella pagina di supporto di Google Trends.",
-      "url": "https://www.seroundtable.com/google-trends-more-search-terms-41788.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_trend",
-        "data_analysi",
-        "search_term",
-        "tool_update"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T10:11:00Z",
-      "fetched_at": "2026-08-04T06:02:43.737202Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:00a133005d652954",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_004",
-      "title_original": "Google Search Tests Sign In To Verify Searches Are Human (Not Captcha)",
-      "title_it": "Google testa la richiesta di accesso per verificare l'utente come umano nella ricerca",
-      "summary_it": "Google sta sperimentando una nuova modalità per verificare che gli utenti siano umani e non bot durante le ricerche. Invece dei tradizionali CAPTCHA, alcuni utenti vengono invitati ad effettuare il login per continuare a visualizzare i risultati. Questa richiesta appare dopo aver navigato per alcune pagine di risultati, bloccando la visualizzazione successiva. La funzionalità è stata segnalata da un utente su X e non è ancora replicabile universalmente.",
-      "url": "https://www.seroundtable.com/google-search-sign-in-verify-41808.html",
+      "id": "item_2026-08-05_001",
+      "title_original": "Handle Swapping Coming To Google Search Profiles",
+      "title_it": "Introduzione della funzionalità di 'Handle Swapping' nei profili di ricerca Google",
+      "summary_it": "Google sta testando una nuova funzionalità denominata 'Handle Swapping' per i profili di ricerca. Questa permette agli utenti di scambiare il proprio handle con quelli di altre piattaforme verificate collegate al profilo Google. La funzionalità è attualmente in beta con un lancio previsto a breve per tutti gli utenti.",
+      "url": "https://www.seroundtable.com/google-handle-swapping-search-profiles-41813.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -188,62 +72,27 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_search",
-        "bot_detection",
-        "user_verification",
-        "incognito_mode"
+        "google_search_profile",
+        "handle_swapping",
+        "beta_feature",
+        "user_profile"
       ],
       "importance": 3,
-      "published_at": "2026-08-03T10:21:00Z",
-      "fetched_at": "2026-08-04T06:02:45.492291Z",
+      "published_at": "2026-08-04T10:11:00Z",
+      "fetched_at": "2026-08-05T05:02:36.171157Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:26a320b4f405e043",
+      "raw_hash": "sha256:5d4e5b6dee78f353",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_005",
-      "title_original": "EU Commission Article 50 AI Transparency Law Has Four Exemptions via @sejournal, @martinibuster",
-      "title_it": "La legge europea sulla trasparenza dell'IA presenta quattro esenzioni",
-      "summary_it": "La normativa europea sulla trasparenza dell'intelligenza artificiale, recentemente entrata in vigore, include quattro eccezioni ai requisiti di etichettatura per i sistemi di IA. Queste esenzioni riguardano specifiche casistiche in cui non sarà obbligatorio indicare l'utilizzo di contenuti generati da IA. La comprensione di queste eccezioni è rilevante per i professionisti che operano con contenuti e strumenti basati sull'intelligenza artificiale.",
-      "url": "https://www.searchenginejournal.com/eu-commission-article-50-ai-transparency-law-has-four-exemptions/584528",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "eu_ai_act",
-        "ai_transparency",
-        "ai_regulation",
-        "content_labeling"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T10:27:15Z",
-      "fetched_at": "2026-08-04T06:02:47.015752Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:686cb34544323940",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_006",
-      "title_original": "Bing Webmaster Tools Page & Query Level Filtering Coming To Reports",
-      "title_it": "Filtri a livello di pagina e query in arrivo nei report di Bing Webmaster Tools",
-      "summary_it": "Microsoft ha confermato l'introduzione di funzionalità di filtraggio per i report sulle performance di Bing Webmaster Tools. Attualmente, la piattaforma non offre filtri nativi per le metriche, a differenza di Google Search Console. L'implementazione di questa funzionalità è stata sollecitata da Lily Ray e confermata da Krishna Madhavan di Microsoft.",
-      "url": "https://www.seroundtable.com/bing-webmaster-tools-page-query-level-filtering-coming-41802.html",
+      "id": "item_2026-08-05_002",
+      "title_original": "Google Ads Text Disclaimer Override Pinned Descriptions Position One",
+      "title_it": "Google Ads testa una funzione per far prevalere i disclaimer testuali sulle descrizioni bloccate in prima posizione",
+      "summary_it": "Google Ads sta introducendo una nuova funzionalità che consente ai disclaimer testuali di sovrascrivere le descrizioni bloccate in prima posizione negli annunci. Questa opzione, etichettata come 'nuova' nell'interfaccia di Google Ads, permette di garantire la visibilità di termini e condizioni o informazioni critiche. La funzione è utile per la conformità normativa, assicurando che il testo richiesto appaia nella sezione della descrizione degli annunci di ricerca adattabili.",
+      "url": "https://www.seroundtable.com/google-ads-text-disclaimer-override-41803.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -258,26 +107,62 @@
       },
       "category": "tools_platforms",
       "tags": [
-        "bing_webmaster_tool",
-        "reporting_feature",
-        "data_filtering"
+        "google_ad",
+        "ppc",
+        "ad_disclaimer",
+        "ad_management"
       ],
       "importance": 3,
-      "published_at": "2026-08-03T10:31:00Z",
-      "fetched_at": "2026-08-04T06:02:48.905572Z",
+      "published_at": "2026-08-04T10:21:00Z",
+      "fetched_at": "2026-08-05T05:02:38.876890Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0dccdb3067907e5a",
+      "raw_hash": "sha256:a6c63bc3b743b709",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_007",
-      "title_original": "Google Business Profiles Protect From Fraudulent Calls and Texts Updated",
-      "title_it": "Google aggiorna le linee guida per proteggere i profili Google Business da chiamate e SMS fraudolenti",
-      "summary_it": "Google ha aggiornato la pagina di supporto relativa alla protezione da chiamate e SMS fraudolenti per i profili Google Business. Le modifiche includono indicazioni su come identificare comunicazioni legittime tramite WhatsApp e messaggi RCS, oltre a nuovi esempi di tentativi di frode. L'aggiornamento mira a migliorare la sicurezza per i gestori di profili aziendali.",
-      "url": "https://www.seroundtable.com/google-business-profiles-fraud-calls-texts-41806.html",
+      "id": "item_2026-08-05_003",
+      "title_original": "Google Ads Ad Preview & Diagnosis Captcha Bug",
+      "title_it": "Bug nel tool di anteprima e diagnostica annunci di Google Ads",
+      "summary_it": "Il tool di anteprima e diagnostica degli annunci di Google Ads presenta un malfunzionamento. Gli utenti riscontrano un CAPTCHA persistente che impedisce l'utilizzo della funzionalità. Il problema è stato segnalato da circa una settimana e non è ancora stata comunicata una data di risoluzione.",
+      "url": "https://www.seroundtable.com/google-ads-ad-preview-and-diagnosis-broken-41812.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "bug",
+        "ad_preview_tool",
+        "captcha"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-04T10:31:00Z",
+      "fetched_at": "2026-08-05T05:02:40.176888Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:12209fbabdbcf9f4",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-05_004",
+      "title_original": "Google Ads Tests Anchor Text Hyperlinks In Ad Descriptions",
+      "title_it": "Google Ads testa hyperlink con anchor text nelle descrizioni degli annunci",
+      "summary_it": "Google sta sperimentando l'introduzione di hyperlink con anchor text nelle descrizioni degli annunci sponsorizzati nella Ricerca Google. Questi link, basati su parole chiave, indirizzano l'utente alla stessa landing page dell'annuncio principale. L'obiettivo sembra essere quello di migliorare il click-through rate degli annunci, selezionando il testo da collegare in base all'intento di ricerca dell'utente.",
+      "url": "https://www.seroundtable.com/google-ads-text-hyperlinks-ad-descriptions-41814.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -292,27 +177,26 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_business_profile",
-        "security",
-        "fraud_prevention",
-        "local_seo"
+        "google_ad",
+        "ad_format",
+        "ctr_optimization"
       ],
       "importance": 3,
-      "published_at": "2026-08-03T10:41:00Z",
-      "fetched_at": "2026-08-04T06:02:50.734470Z",
+      "published_at": "2026-08-04T10:41:00Z",
+      "fetched_at": "2026-08-05T05:02:41.755029Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c80afa53ff1c70d7",
+      "raw_hash": "sha256:996a696dcaa189dc",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_008",
-      "title_original": "Google Search Ranking Volatility Hits August 1st & Heats Up Into August 3rd",
-      "title_it": "Volatilità nel ranking di ricerca di Google dal 1° al 3 agosto",
-      "summary_it": "Si registra una nuova ondata di volatilità nel ranking di ricerca di Google, iniziata il 1° agosto e proseguita fino al 3 agosto. Strumenti di monitoraggio di terze parti e la community SEO segnalano significativi cambiamenti nelle posizioni. Questo evento segue diverse fluttuazioni non confermate avvenute nel mese di luglio.",
-      "url": "https://www.seroundtable.com/google-search-ranking-volatility-august-1-41811.html",
+      "id": "item_2026-08-05_005",
+      "title_original": "August 2026 Google Webmaster Report",
+      "title_it": "Report di Google Webmaster - Agosto 2026",
+      "summary_it": "Il report di agosto 2026 evidenzia una continua volatilità nel ranking di ricerca di Google e l'integrazione di Gemini 3.5 Flash-Lite negli AI Overviews. Google ha registrato guadagni significativi, nonostante una multa di 1 miliardo di dollari dall'UE e la perdita di una causa contro SerpApi. Si osserva un aumento degli AI Overviews, con alcuni editori che valutano il blocco di Google Search. Google Search Console ha introdotto la visualizzazione dei dati da Instagram, TikTok, YouTube e X, sebbene il report sull'indicizzazione delle pagine mostri ritardi.",
+      "url": "https://www.seroundtable.com/august-2026-google-webmaster-report-41804.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -325,168 +209,29 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "industry_news",
       "tags": [
-        "google_algorithm",
-        "ranking_volatility",
-        "unconfirmed_update"
+        "google_update",
+        "search_volatility",
+        "ai_overviews",
+        "search_console"
       ],
       "importance": 4,
-      "published_at": "2026-08-03T10:51:00Z",
-      "fetched_at": "2026-08-04T06:02:52.082591Z",
+      "published_at": "2026-08-04T10:51:00Z",
+      "fetched_at": "2026-08-05T05:02:43.294127Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:15761faba0e35e34",
+      "raw_hash": "sha256:80d9b5d82287db2c",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_009",
-      "title_original": "Reviews, Reputation & Listings: The Local Signals AI Now Reads via @sejournal, @MattGSouthern",
-      "title_it": "Recensioni, Reputazione e Listing: i Segnali Locali che l'AI Ora Interpreta",
-      "summary_it": "L'intelligenza artificiale sta ora analizzando le incongruenze nei listing, il linguaggio delle recensioni e le citazioni di terze parti per determinare la visibilità delle attività locali. È fondamentale ottimizzare questi aspetti prima di implementare tattiche SEO specifiche per l'AI. La coerenza delle informazioni e la qualità delle recensioni sono diventate fattori chiave per la presenza locale gestita dall'AI.",
-      "url": "https://www.searchenginejournal.com/reviews-reputation-listings-the-local-signals-ai-now-reads/583795",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "local_seo",
-        "ai_signal",
-        "reputation_management",
-        "listing"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T11:00:26Z",
-      "fetched_at": "2026-08-04T06:02:54.224121Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2195c9bafe438006",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_010",
-      "title_original": "Google’s AI Image Generation In Google Earth Literally Became Disastrous via @sejournal, @martinibuster",
-      "title_it": "La generazione di immagini AI di Google Earth ha causato problemi",
-      "summary_it": "La funzionalità di generazione di immagini tramite intelligenza artificiale integrata in Google Earth è stata ritirata. Questo è avvenuto dopo che gli utenti hanno sfruttato lo strumento per creare scenari realistici di distruzione. La decisione evidenzia le sfide legate alla moderazione dei contenuti generati dall'IA in piattaforme pubbliche.",
-      "url": "https://www.searchenginejournal.com/googles-ai-image-generation-in-google-earth-literally-became-disastrous/584536",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "google_earth",
-        "ai_image_generation",
-        "content_moderation",
-        "ai_ethic"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T11:01:02Z",
-      "fetched_at": "2026-08-04T06:02:55.877934Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:ef967a54b8253c17",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_011",
-      "title_original": "Google Recommends Using 304 Status Code To Conserve Crawl Budget via @sejournal, @martinibuster",
-      "title_it": "Google suggerisce l'uso del codice di stato 304 per ottimizzare il crawl budget",
-      "summary_it": "La documentazione aggiornata di Google sul crawl budget include ora la raccomandazione di utilizzare il codice di stato HTTP 304 (Not Modified) per le pagine che non hanno subito modifiche. Questa pratica è suggerita per aiutare a conservare il crawl budget. L'implementazione del 304 può ridurre il carico sui server e migliorare l'efficienza della scansione da parte di Googlebot.",
-      "url": "https://www.searchenginejournal.com/google-recommends-using-304-status-code-to-conserve-crawl-budget/584543",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "crawl_budget",
-        "http_status_code",
-        "googlebot",
-        "technical_optimization"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T11:55:15Z",
-      "fetched_at": "2026-08-04T06:02:57.293929Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:60b855239827ffaa",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_012",
-      "title_original": "How topical authority spreads (and where it doesn’t) in ChatGPT [Study]",
-      "title_it": "Come l'autorità tematica si diffonde (e dove non lo fa) in ChatGPT [Studio]",
-      "summary_it": "Uno studio di Semrush ha analizzato la diffusione dell'autorità tematica all'interno di ChatGPT. La ricerca evidenzia in quali contesti l'autorità acquisita su un argomento può influenzare la percezione su altri temi correlati. Vengono inoltre identificate le situazioni in cui tale trasferimento di autorità non avviene. Questo studio fornisce indicazioni su come la pertinenza tematica viene gestita e percepita dai modelli linguistici.",
-      "url": "https://www.semrush.com/blog/chatgpt-topical-focus-study",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "topical_authority",
-        "chatgpt",
-        "llm_behavior",
-        "semrush_study"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T12:00:00Z",
-      "fetched_at": "2026-08-04T06:02:59.052754Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f3248fb3d34b28eb",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_013",
-      "title_original": "Free Advanced Link Training Lessons via @sejournal, @martinibuster",
-      "title_it": "Lezioni gratuite avanzate sul link building",
-      "summary_it": "Bill Hartzer, esperto SEO, offre lezioni gratuite avanzate sul link building. Questo corso è rivolto a professionisti che desiderano approfondire le proprie conoscenze in materia. L'iniziativa mira a fornire competenze pratiche nel campo della costruzione di link.",
-      "url": "https://www.searchenginejournal.com/free-advanced-link-training-lessons/584551",
+      "id": "item_2026-08-05_006",
+      "title_original": "Paid Search Absorbed Organic’s Collapse – Then Q2 Slowed Down via @sejournal, @brookeosmundson",
+      "title_it": "La crescita della ricerca a pagamento ha rallentato nel secondo trimestre del 2026",
+      "summary_it": "La crescita della ricerca a pagamento di Google ha subito un rallentamento nel secondo trimestre del 2026. Questo trend è influenzato da confronti più difficili rispetto all'anno precedente e da un cambiamento nella spesa pubblicitaria. Tali fattori avranno implicazioni per i budget PPC e la pianificazione per la seconda metà dell'anno.",
+      "url": "https://www.searchenginejournal.com/paid-search-absorbed-organics-collapse-then-q2-slowed-down/583560",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -501,26 +246,27 @@
       },
       "category": "industry_news",
       "tags": [
-        "link_building",
-        "seo_training",
-        "free_resource"
+        "paid_search",
+        "ppc",
+        "market_trend",
+        "q2_2026"
       ],
-      "importance": 1,
-      "published_at": "2026-08-03T12:17:55Z",
-      "fetched_at": "2026-08-04T06:03:00.450380Z",
+      "importance": 3,
+      "published_at": "2026-08-04T11:00:50Z",
+      "fetched_at": "2026-08-05T05:02:44.687286Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:fafe7f6d993155eb",
+      "raw_hash": "sha256:5b140e478d04b7a3",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_014",
-      "title_original": "Daily Search Forum Recap: August 3, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 3 agosto 2026",
-      "summary_it": "Si registra volatilità nel ranking di Google Search a partire dal 1° agosto. Microsoft ha confermato l'introduzione di funzionalità di filtraggio nei report sulle performance di Bing Webmaster Tools. Google Trends ha aumentato il numero di termini di ricerca comparabili, mentre Google sta testando una richiesta di accesso per verificare gli utenti. Microsoft ritirerà le API SOAP/POX di Bing Webmaster Tools il 31 agosto 2026.",
-      "url": "https://www.seroundtable.com/recap-08-03-2026-41810.html",
+      "id": "item_2026-08-05_007",
+      "title_original": "Daily Search Forum Recap: August 4, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 4 agosto 2026",
+      "summary_it": "Google sta testando l'inserimento di hyperlink con anchor text nelle descrizioni degli annunci Google Ads e una nuova funzionalità di disclaimer testuale che può sovrascrivere le descrizioni bloccate in prima posizione. È stato segnalato un malfunzionamento dello strumento di anteprima e diagnostica degli annunci Google Ads. Inoltre, Google sta testando in beta una funzionalità di 'Handle Swapping' per i profili di ricerca.",
+      "url": "https://www.seroundtable.com/recap-08-04-2026-41815.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -535,62 +281,27 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_ranking_volatility",
-        "bing_webmaster_tool",
-        "google_trend",
-        "api_deprecation"
+        "google_ad",
+        "google_search_profile",
+        "ad_testing",
+        "search_feature"
       ],
       "importance": 3,
-      "published_at": "2026-08-03T13:00:00Z",
-      "fetched_at": "2026-08-04T06:03:02.099992Z",
+      "published_at": "2026-08-04T13:00:00Z",
+      "fetched_at": "2026-08-05T05:02:46.158937Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:97eed505c40f673f",
+      "raw_hash": "sha256:436127279bdfe628",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_015",
-      "title_original": "Does topical focus make your brand more visible?",
-      "title_it": "Il focus tematico aumenta la visibilità del brand?",
-      "summary_it": "L'articolo esplora se una strategia di contenuto focalizzata su pochi argomenti chiave sia più efficace per la visibilità del brand rispetto a un approccio più ampio. Viene esaminata la presenza ripetuta di brand in diverse categorie per valutare l'esistenza di 'proprietari di categoria' che mantengono la leadership nel tempo. La discussione si concentra sull'impatto del focus tematico sulla visibilità e l'autorità nel contesto della ricerca.",
-      "url": "https://www.growth-memo.com/p/does-topical-focus-make-your-brand",
-      "source": {
-        "id": "growth_memo_kevin_indig",
-        "name": "Growth Memo (Kevin Indig)",
-        "authority": 9,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://www.growth-memo.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "topical_authority",
-        "content_strategy",
-        "brand_visibility",
-        "seo_research"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-03T14:50:05Z",
-      "fetched_at": "2026-08-04T06:03:03.789897Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1d17128afff729d6",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_016",
-      "title_original": "Why AI Recommends Your Competitor & What To Do About It via @sejournal, @lorenbaker",
-      "title_it": "Perché l'IA raccomanda i tuoi competitor e come agire",
-      "summary_it": "Kris Jones sottolinea come la capacità di sintesi sia cruciale per determinare se l'IA raccomanda un brand. Questo aspetto influisce sulle decisioni di budget per il prossimo trimestre. Comprendere i meccanismi di raccomandazione dell'IA è fondamentale per la strategia SEO.",
-      "url": "https://www.searchenginejournal.com/why-ai-recommends-your-competitor-what-to-do-about-it/584488",
+      "id": "item_2026-08-05_008",
+      "title_original": "Google Now Reports AI Search Impressions. Here’s How To Read Them via @sejournal, @cshel",
+      "title_it": "Google ora mostra le impressioni delle ricerche AI: come interpretarle",
+      "summary_it": "Google ha introdotto la possibilità di visualizzare le impressioni generate dalle risposte AI all'interno di Search Console. Questo nuovo report permette di confrontare le pagine utilizzate nelle risposte AI con il loro posizionamento organico tradizionale. L'analisi di questi dati può fornire indicazioni su come i contenuti vengono percepiti e utilizzati dai sistemi di intelligenza artificiale di Google.",
+      "url": "https://www.searchenginejournal.com/google-reports-ai-search-impressions-how-to-read-them/582824",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -603,29 +314,29 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "google_updates",
       "tags": [
-        "ai_recommendation",
-        "competitive_analysi",
-        "content_strategy",
-        "brand_visibility"
+        "google_search_console",
+        "ai_search",
+        "impression",
+        "data_analysi"
       ],
-      "importance": 3,
-      "published_at": "2026-08-03T16:30:55Z",
-      "fetched_at": "2026-08-04T06:03:05.345655Z",
+      "importance": 4,
+      "published_at": "2026-08-04T13:30:39Z",
+      "fetched_at": "2026-08-05T05:02:47.492349Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2333b0e2ec359f43",
+      "raw_hash": "sha256:b35044fe072bd531",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_017",
-      "title_original": "Open Knowledge Format v0.2 Adds A Trust Layer – No AI Agent Reads It Yet via @sejournal, @slobodanmanic",
-      "title_it": "Open Knowledge Format v0.2 introduce un livello di fiducia",
-      "summary_it": "La versione 0.2 dell'Open Knowledge Format (OKF) è stata rilasciata, introducendo campi per la provenienza e la 'staleness' (obsolescenza) delle informazioni. Questi nuovi elementi mirano a esporre le affermazioni che un sito web non può sostenere. Attualmente, nessun agente AI è ancora in grado di interpretare i bundle OKF, ma la specifica è stata aggiornata per migliorare la trasparenza e la verificabilità dei dati.",
-      "url": "https://www.searchenginejournal.com/open-knowledge-format-v0-2-adds-a-trust-layer-no-ai-agent-reads-it-yet/583661",
+      "id": "item_2026-08-05_009",
+      "title_original": "Report That Cloudflare AI Bot Blocking Prevents Googlebot From Indexing Sites via @sejournal, @martinibuster",
+      "title_it": "Segnalazioni: il blocco dei bot AI di Cloudflare impedisce l'indicizzazione di Googlebot",
+      "summary_it": "È stato riportato che l'implementazione di blocchi per i bot di training AI tramite Cloudflare possa inibire l'indicizzazione dei siti web da parte di Googlebot. Questa problematica è stata osservata in contesti aneddotici. La configurazione delle regole di blocco potrebbe quindi avere effetti collaterali sull'accessibilità dei crawler legittimi.",
+      "url": "https://www.searchenginejournal.com/report-that-cloudflare-ai-bot-blocking-prevents-googlebot-from-indexing-sites/584673",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -640,27 +351,27 @@
       },
       "category": "technical_seo",
       "tags": [
-        "open_knowledge_format",
-        "data_provenance",
-        "trust_signal",
-        "semantic_web"
+        "cloudflare",
+        "googlebot",
+        "indexing",
+        "ai_bots_blocking"
       ],
       "importance": 3,
-      "published_at": "2026-08-03T18:00:01Z",
-      "fetched_at": "2026-08-04T06:03:07.095963Z",
+      "published_at": "2026-08-04T14:18:58Z",
+      "fetched_at": "2026-08-05T05:02:49.311814Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:345e8958134c4d81",
+      "raw_hash": "sha256:638cf5e6b774c6ea",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_018",
-      "title_original": "Apple is getting this wrong",
-      "title_it": "OpenAI risponde alle accuse di Apple",
-      "summary_it": "OpenAI ha rilasciato una dichiarazione in cui affronta la causa intentata da Apple, contestando le affermazioni relative ai propri dipendenti. L'azienda ha condiviso comunicazioni interne per documentare la propria posizione. La risposta mira a chiarire la situazione e a confutare le accuse mosse da Apple.",
-      "url": "https://openai.com/index/apple-is-getting-this-wrong",
+      "id": "item_2026-08-05_010",
+      "title_original": "Third-party cyber evaluations involving OpenAI models",
+      "title_it": "Valutazioni di sicurezza informatica di terze parti sui modelli OpenAI",
+      "summary_it": "OpenAI ha fornito chiarimenti in merito a recenti incidenti di valutazione della sicurezza informatica condotti da terze parti sui propri modelli. L'azienda ha delineato nuove misure di salvaguardia volte a rafforzare i processi di test e valutazione dei modelli di intelligenza artificiale. L'obiettivo è migliorare la robustezza e la sicurezza dei sistemi AI attraverso un approccio collaborativo e trasparente.",
+      "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
       "source": {
         "id": "openai_blog",
         "name": "OpenAI Blog",
@@ -673,29 +384,29 @@
         "category_hint": "ai_models",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_models",
       "tags": [
         "openai",
-        "apple",
-        "legal_dispute",
-        "tech_industry"
+        "cybersecurity",
+        "ai_safety",
+        "model_evaluation"
       ],
       "importance": 3,
-      "published_at": "2026-08-03T21:00:00Z",
-      "fetched_at": "2026-08-04T06:03:08.484192Z",
+      "published_at": "2026-08-04T18:00:00Z",
+      "fetched_at": "2026-08-05T05:02:50.700040Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:209b8968c523115e",
+      "raw_hash": "sha256:cbad791bc0d02d3b",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-04_019",
-      "title_original": "Snapchat Clamps Down On AI-Generated Videos via @sejournal, @martinibuster",
-      "title_it": "Snapchat limita i video generati dall'IA su Spotlight",
-      "summary_it": "Snapchat ha annunciato la rimozione dei video interamente generati dall'intelligenza artificiale dalle raccomandazioni di Spotlight. La piattaforma intende privilegiare contenuti autentici creati da esseri umani. Questa decisione mira a migliorare l'esperienza utente promuovendo interazioni più genuine.",
-      "url": "https://www.searchenginejournal.com/snapchat-clamps-down-on-ai-generated-spotlight-videos/584594",
+      "id": "item_2026-08-05_011",
+      "title_original": "What Top Stories Inside AI Overviews Means For Publishers And Brands In 2026 And Beyond via @sejournal, @gregjarboe",
+      "title_it": "Cosa significano le Top Stories nelle AI Overviews per editori e brand nel 2026 e oltre",
+      "summary_it": "L'articolo analizza l'impatto delle AI Overviews di Google sui publisher, evidenziando come il file robots.txt non impedisca l'inclusione dei contenuti. Vengono presentati dati che mostrano le perdite economiche per le redazioni che adottano impostazioni errate. La discussione si concentra sulle implicazioni future per la visibilità e la monetizzazione dei contenuti.",
+      "url": "https://www.searchenginejournal.com/what-top-stories-inside-ai-overviews-means-for-publishers-and-brands-in-2026-and-beyond/584175",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -708,148 +419,113 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "snapchat",
-        "ai_content",
-        "content_moderation",
-        "social_media"
+        "ai_overviews",
+        "publisher",
+        "robots_txt",
+        "content_visibility"
       ],
-      "importance": 2,
-      "published_at": "2026-08-03T21:23:57Z",
-      "fetched_at": "2026-08-04T06:03:09.982078Z",
+      "importance": 3,
+      "published_at": "2026-08-04T18:00:12Z",
+      "fetched_at": "2026-08-05T05:02:52.159578Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a6d03cea6160af03",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-04_020",
-      "title_original": "WooCommerce Social Login WordPress Plugin Enables Full Site Takeover via @sejournal, @martinibuster",
-      "title_it": "Vulnerabilità nel plugin WooCommerce Social Login permette il controllo completo del sito",
-      "summary_it": "Una vulnerabilità critica è stata scoperta nel plugin WooCommerce Social Login per WordPress. Questa falla di sicurezza consente ad attaccanti non autenticati di ottenere il controllo totale dei siti e-commerce che utilizzano il plugin. Si raccomanda agli utenti di aggiornare o disabilitare il plugin per mitigare il rischio.",
-      "url": "https://www.searchenginejournal.com/woocommerce-social-login-wordpress-plugin-enables-full-site-takeover/584601",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "wordpress_security",
-        "woocommerce",
-        "plugin_vulnerability",
-        "ecommerce_security"
-      ],
-      "importance": 4,
-      "published_at": "2026-08-03T22:26:39Z",
-      "fetched_at": "2026-08-04T06:03:11.417154Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:92f4e2473afdcc94",
+      "raw_hash": "sha256:5bcf0ccaeda5cb39",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-04T06:01:28.589813Z",
+      "last_checked": "2026-08-05T05:01:29.546474Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-04T06:01:29.153793Z",
+      "last_checked": "2026-08-05T05:01:30.199611Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-04T06:01:30.416316Z",
+      "last_checked": "2026-08-05T05:01:32.193857Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-04T06:01:32.327095Z",
+      "last_checked": "2026-08-05T05:01:33.042661Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-04T06:01:57.535516Z",
+      "last_checked": "2026-08-05T05:01:56.399476Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-04T06:01:57.968144Z",
+      "last_checked": "2026-08-05T05:01:56.889635Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-04T06:01:59.186414Z",
+      "last_checked": "2026-08-05T05:01:58.345215Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-04T06:02:00.516614Z",
+      "last_checked": "2026-08-05T05:01:59.390903Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-04T06:02:03.490673Z",
+      "last_checked": "2026-08-05T05:02:00.866642Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-04T06:02:03.540870Z",
+      "last_checked": "2026-08-05T05:02:00.926715Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-04T06:02:05.331331Z",
+      "last_checked": "2026-08-05T05:02:01.183121Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-04T06:02:05.867117Z",
+      "last_checked": "2026-08-05T05:02:02.294755Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-04T06:02:06.678474Z",
+      "last_checked": "2026-08-05T05:02:03.771560Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-04T06:02:08.414189Z",
+      "last_checked": "2026-08-05T05:02:05.081200Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-04T06:02:10.056043Z",
+      "last_checked": "2026-08-05T05:02:06.620277Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-04T06:02:12.777091Z",
+      "last_checked": "2026-08-05T05:02:08.438227Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-04T06:02:13.643521Z",
+      "last_checked": "2026-08-05T05:02:10.089944Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-04T06:02:38.729384Z",
+      "last_checked": "2026-08-05T05:02:34.009063Z",
       "changed": false
     }
   ],
