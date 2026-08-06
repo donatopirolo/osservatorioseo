@@ -1,63 +1,100 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-05T06:01:35.270584Z",
-  "generated_at_local": "2026-08-05T08:01:35.270584+02:00",
+  "generated_at": "2026-08-06T05:01:15.583917Z",
+  "generated_at_local": "2026-08-06T07:01:15.583917+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-05-0801",
+  "run_id": "2026-08-06-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2255,
-    "items_after_dedup": 11,
+    "items_collected": 2275,
+    "items_after_dedup": 14,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0071,
-    "summarize_attempted": 11,
+    "ai_cost_eur": 0.0087,
+    "summarize_attempted": 14,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-05_008",
-    "item_2026-08-05_005",
-    "item_2026-08-05_001",
-    "item_2026-08-05_010",
-    "item_2026-08-05_002",
-    "item_2026-08-05_004",
-    "item_2026-08-05_006",
-    "item_2026-08-05_009",
-    "item_2026-08-05_011",
-    "item_2026-08-05_003"
+    "item_2026-08-06_002",
+    "item_2026-08-06_006",
+    "item_2026-08-06_005",
+    "item_2026-08-06_004",
+    "item_2026-08-06_008",
+    "item_2026-08-06_007",
+    "item_2026-08-06_009",
+    "item_2026-08-06_010",
+    "item_2026-08-06_011",
+    "item_2026-08-06_013"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-08-05_008",
-      "item_2026-08-05_001"
-    ],
-    "industry_news": [
-      "item_2026-08-05_005",
-      "item_2026-08-05_006",
-      "item_2026-08-05_007"
+      "item_2026-08-06_002",
+      "item_2026-08-06_006",
+      "item_2026-08-06_003"
     ],
     "ai_models": [
-      "item_2026-08-05_010"
+      "item_2026-08-06_005"
     ],
-    "tools_platforms": [
-      "item_2026-08-05_002",
-      "item_2026-08-05_004",
-      "item_2026-08-05_003"
-    ],
-    "technical_seo": [
-      "item_2026-08-05_009"
+    "industry_news": [
+      "item_2026-08-06_004",
+      "item_2026-08-06_008",
+      "item_2026-08-06_007",
+      "item_2026-08-06_014",
+      "item_2026-08-06_001"
     ],
     "ai_overviews_llm_seo": [
-      "item_2026-08-05_011"
+      "item_2026-08-06_009",
+      "item_2026-08-06_011",
+      "item_2026-08-06_013"
+    ],
+    "tools_platforms": [
+      "item_2026-08-06_010"
+    ],
+    "content_eeat": [
+      "item_2026-08-06_012"
     ]
   },
   "items": [
     {
-      "id": "item_2026-08-05_001",
-      "title_original": "Handle Swapping Coming To Google Search Profiles",
-      "title_it": "Google introduce la funzionalità di 'Handle Swapping' per i profili di ricerca",
-      "summary_it": "Google sta testando una nuova funzionalità denominata 'Handle Swapping' per i profili di ricerca. Questa permette agli utenti di cambiare il proprio handle con uno associato a piattaforme verificate collegate al profilo Google. La funzione è attualmente in beta con un lancio previsto a breve per tutti gli utenti.",
-      "url": "https://www.seroundtable.com/google-handle-swapping-search-profiles-41813.html",
+      "id": "item_2026-08-06_001",
+      "title_original": "Reddit CEO Intends To Show More Reviews And Recommendations via @sejournal, @martinibuster",
+      "title_it": "Il CEO di Reddit intende valorizzare recensioni e raccomandazioni",
+      "summary_it": "Il CEO di Reddit, Steve Huffman, ha espresso l'intenzione di sfruttare l'ampio volume di contenuti evergreen presenti sulla piattaforma, in particolare quelli relativi a recensioni e raccomandazioni. Questa strategia mira a rendere più accessibili e visibili tali informazioni. L'obiettivo è capitalizzare il valore intrinseco delle discussioni degli utenti.",
+      "url": "https://www.searchenginejournal.com/reddit-ceo-intends-to-show-more-reviews-and-recommendations/584731",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "reddit",
+        "user_generated_content",
+        "platform_strategy"
+      ],
+      "importance": 2,
+      "published_at": "2026-08-05T08:17:33Z",
+      "fetched_at": "2026-08-06T05:02:11.310606Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:da0752f80e22907b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_002",
+      "title_original": "Google Local Services Platform Policies Now Local Services Ads Requirements",
+      "title_it": "Google rinomina le politiche della piattaforma Local Services in requisiti per gli annunci Local Services",
+      "summary_it": "Google ha aggiornato la denominazione del documento relativo alle politiche della piattaforma Local Services, ora chiamato 'Requisiti per gli annunci Local Services'. Questa modifica include un allineamento della terminologia con le definizioni standard di Google Ads e l'incorporazione delle recenti modifiche strutturali al sistema dei badge Google Guarantee. Sono state rimosse diverse politiche obsolete e il testo è stato ristrutturato per maggiore chiarezza, includendo esempi espliciti di violazioni e le relative conseguenze.",
+      "url": "https://www.seroundtable.com/google-renames-local-services-platform-policies-to-requirements-41809.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -72,27 +109,27 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_search_profile",
-        "handle_swapping",
-        "beta_feature",
-        "user_profile"
+        "google_ad",
+        "local_services_ad",
+        "policy_update",
+        "google_guarantee"
       ],
       "importance": 3,
-      "published_at": "2026-08-04T10:11:00Z",
-      "fetched_at": "2026-08-05T06:02:33.883709Z",
+      "published_at": "2026-08-05T10:11:00Z",
+      "fetched_at": "2026-08-06T05:02:13.198161Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5d4e5b6dee78f353",
+      "raw_hash": "sha256:54507b855ff1d798",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-05_002",
-      "title_original": "Google Ads Text Disclaimer Override Pinned Descriptions Position One",
-      "title_it": "Google Ads testa una funzione per sovrascrivere le descrizioni bloccate con disclaimer di testo",
-      "summary_it": "Google Ads sta introducendo una nuova funzionalità che permette ai disclaimer di testo di sovrascrivere le descrizioni bloccate in prima posizione. Questa opzione, etichettata come 'nuova' nell'interfaccia di Google Ads, consente un maggiore controllo sul messaggio visualizzato. L'obiettivo è garantire che informazioni critiche o requisiti normativi siano sempre visibili nelle inserzioni. La funzione è stata individuata da Emirhan Bayutmuş e discussa su LinkedIn.",
-      "url": "https://www.seroundtable.com/google-ads-text-disclaimer-override-41803.html",
+      "id": "item_2026-08-06_003",
+      "title_original": "Bing Top Source Search Feature",
+      "title_it": "Bing testa la funzionalità 'Top Source' nei risultati di ricerca",
+      "summary_it": "Microsoft sta sperimentando una nuova sezione denominata 'Top Source' all'interno dell'interfaccia dei risultati di ricerca di Bing. Questa sezione evidenzia una fonte principale, mostrando diverse sezioni o articoli di notizie provenienti da quel sito. La funzionalità è stata individuata da un utente e condivisa tramite video. Non è chiaro come Bing determini la 'Top Source' per una query specifica.",
+      "url": "https://www.seroundtable.com/bing-top-source-41530.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -103,311 +140,206 @@
         "target_url": null,
         "selectors": null,
         "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "ppc",
-        "ad_disclaimer",
-        "ad_management"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-04T10:21:00Z",
-      "fetched_at": "2026-08-05T06:02:35.472202Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a6c63bc3b743b709",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-05_003",
-      "title_original": "Google Ads Ad Preview & Diagnosis Captcha Bug",
-      "title_it": "Bug nel tool di anteprima e diagnostica annunci di Google Ads",
-      "summary_it": "Il tool di anteprima e diagnostica degli annunci di Google Ads presenta un malfunzionamento. Gli utenti riscontrano la comparsa di un CAPTCHA che impedisce l'utilizzo della funzionalità. Il problema è stato segnalato da diversi utenti e persiste da circa una settimana, rendendo impossibile la visualizzazione delle anteprime degli annunci.",
-      "url": "https://www.seroundtable.com/google-ads-ad-preview-and-diagnosis-broken-41812.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "bug",
-        "ad_preview",
-        "captcha"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-04T10:31:00Z",
-      "fetched_at": "2026-08-05T06:02:37.209006Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:12209fbabdbcf9f4",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-05_004",
-      "title_original": "Google Ads Tests Anchor Text Hyperlinks In Ad Descriptions",
-      "title_it": "Google Ads testa hyperlink con anchor text nelle descrizioni degli annunci",
-      "summary_it": "Google sta sperimentando l'introduzione di hyperlink con anchor text nelle descrizioni degli annunci sponsorizzati nella Ricerca Google. Questi link, basati su parole chiave, indirizzano l'utente alla stessa landing page dell'annuncio principale. L'obiettivo sembra essere quello di migliorare il click-through rate (CTR) degli annunci, selezionando il testo da collegare in base all'intento di ricerca dell'utente.",
-      "url": "https://www.seroundtable.com/google-ads-text-hyperlinks-ad-descriptions-41814.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "ad_description",
-        "hyperlink",
-        "ctr_optimization"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-04T10:41:00Z",
-      "fetched_at": "2026-08-05T06:02:38.622873Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:996a696dcaa189dc",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-05_005",
-      "title_original": "August 2026 Google Webmaster Report",
-      "title_it": "Report di Google Webmaster - Agosto 2026",
-      "summary_it": "Il report di agosto 2026 evidenzia una continua volatilità nel ranking di ricerca di Google, con diverse fluttuazioni registrate nel mese precedente. Google ha integrato Gemini 3.5 Flash-Lite in Google Search, influenzando alcune AI Overviews e la modalità AI. Si segnala inoltre l'introduzione della possibilità di visualizzare dati da Instagram, TikTok, YouTube e X in Google Search Console. Nonostante le affermazioni di Google sui miliardi di click generati dalla ricerca AI, diversi editori stanno valutando di bloccare Google Search a causa dell'aumento delle AI Overviews.",
-      "url": "https://www.seroundtable.com/august-2026-google-webmaster-report-41804.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_update",
-        "search_volatility",
-        "ai_overviews",
-        "search_console"
-      ],
-      "importance": 4,
-      "published_at": "2026-08-04T10:51:00Z",
-      "fetched_at": "2026-08-05T06:02:40.572048Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:80d9b5d82287db2c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-05_006",
-      "title_original": "Paid Search Absorbed Organic’s Collapse – Then Q2 Slowed Down via @sejournal, @brookeosmundson",
-      "title_it": "La crescita della ricerca a pagamento ha rallentato nel secondo trimestre del 2026",
-      "summary_it": "La crescita della ricerca a pagamento di Google ha subito un rallentamento nel secondo trimestre del 2026. Questo trend è influenzato da confronti più difficili rispetto all'anno precedente e da un cambiamento nella spesa pubblicitaria. Tali fattori suggeriscono la necessità di riconsiderare i budget PPC e la pianificazione per la seconda metà dell'anno.",
-      "url": "https://www.searchenginejournal.com/paid-search-absorbed-organics-collapse-then-q2-slowed-down/583560",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "paid_search",
-        "ppc",
-        "market_trend",
-        "q2_2026"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-04T11:00:50Z",
-      "fetched_at": "2026-08-05T06:02:41.975287Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5b140e478d04b7a3",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-05_007",
-      "title_original": "Daily Search Forum Recap: August 4, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 4 agosto 2026",
-      "summary_it": "Google sta testando l'inserimento di hyperlink con anchor text nelle descrizioni degli annunci Google Ads e una nuova funzionalità di disclaimer testuale che può sovrascrivere le descrizioni bloccate in posizione 1. È stato segnalato un malfunzionamento dello strumento di anteprima e diagnosi degli annunci Google Ads. Inoltre, Google sta testando in beta una funzione di 'Handle Swapping' per i profili di ricerca.",
-      "url": "https://www.seroundtable.com/recap-08-04-2026-41815.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_ad",
-        "google_search_profile",
-        "ad_testing",
-        "bug_report"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-04T13:00:00Z",
-      "fetched_at": "2026-08-05T06:02:43.498439Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:436127279bdfe628",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-05_008",
-      "title_original": "Google Now Reports AI Search Impressions. Here’s How To Read Them via @sejournal, @cshel",
-      "title_it": "Google ora mostra le impressioni delle ricerche AI: come interpretarle",
-      "summary_it": "Google ha introdotto la possibilità di visualizzare le impressioni generate dalle risposte AI all'interno della Search Console. Questo nuovo report permette di confrontare le pagine utilizzate nelle risposte AI con il loro posizionamento organico tradizionale. L'analisi di questi dati può fornire indicazioni su come i contenuti vengono percepiti e utilizzati dai sistemi di intelligenza artificiale di Google.",
-      "url": "https://www.searchenginejournal.com/google-reports-ai-search-impressions-how-to-read-them/582824",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
         "enabled": true
       },
       "category": "google_updates",
       "tags": [
-        "google_search_console",
-        "ai_search",
-        "impression",
-        "data_analysi"
+        "bing_search",
+        "serp_feature",
+        "microsoft_bing",
+        "search_testing"
       ],
-      "importance": 4,
-      "published_at": "2026-08-04T13:30:39Z",
-      "fetched_at": "2026-08-05T06:02:44.885359Z",
+      "importance": 2,
+      "published_at": "2026-08-05T10:21:00Z",
+      "fetched_at": "2026-08-06T05:02:15.133185Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b35044fe072bd531",
+      "raw_hash": "sha256:86157d5df8975fa4",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-05_009",
-      "title_original": "Report That Cloudflare AI Bot Blocking Prevents Googlebot From Indexing Sites via @sejournal, @martinibuster",
-      "title_it": "Segnalazioni: il blocco dei bot AI di Cloudflare impedisce l'indicizzazione di Googlebot",
-      "summary_it": "È stato segnalato che l'implementazione di blocchi per i bot di training AI tramite Cloudflare può inibire la capacità di Googlebot di indicizzare i siti web. Questa situazione suggerisce una potenziale sovrapposizione o un'interpretazione errata dei bot da parte dei sistemi di sicurezza. Gli amministratori di siti dovrebbero verificare le configurazioni di Cloudflare per evitare impatti negativi sull'indicizzazione. La problematica è attualmente basata su osservazioni aneddotiche.",
-      "url": "https://www.searchenginejournal.com/report-that-cloudflare-ai-bot-blocking-prevents-googlebot-from-indexing-sites/584673",
+      "id": "item_2026-08-06_004",
+      "title_original": "Google Ads Government Documents & Services Policy To Be Updated",
+      "title_it": "Google Ads aggiorna la policy sui documenti e servizi governativi",
+      "summary_it": "Google ha annunciato un aggiornamento della sua policy relativa ai documenti e servizi governativi per Google Ads, che entrerà in vigore il 5 ottobre 2026. Le modifiche riguardano i requisiti per gli inserzionisti che promuovono l'acquisizione diretta di tali servizi. Saranno considerati fornitori autorizzati solo coloro che hanno un'esplicita autorizzazione governativa, con il dominio collegato da un sito web governativo ufficiale. Vengono specificati esempi di autorizzazioni valide e non valide, e i requisiti per la promozione di specifici documenti o servizi e il targeting geografico.",
+      "url": "https://www.seroundtable.com/google-ads-government-documents-and-services-41819.html",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
         "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "technical_seo",
+      "category": "industry_news",
       "tags": [
-        "cloudflare",
-        "googlebot",
-        "indexing",
-        "ai_bots_blocking"
+        "google_ad",
+        "policy_update",
+        "government_service",
+        "advertising_guideline"
       ],
       "importance": 3,
-      "published_at": "2026-08-04T14:18:58Z",
-      "fetched_at": "2026-08-05T06:02:46.873549Z",
+      "published_at": "2026-08-05T10:31:00Z",
+      "fetched_at": "2026-08-06T05:02:17.191847Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:638cf5e6b774c6ea",
+      "raw_hash": "sha256:62a6f7818d85c8e0",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-05_010",
-      "title_original": "Third-party cyber evaluations involving OpenAI models",
-      "title_it": "Valutazioni di sicurezza informatica di terze parti sui modelli OpenAI",
-      "summary_it": "OpenAI ha fornito chiarimenti in merito a recenti incidenti legati a valutazioni di cybersecurity condotte da terze parti sui propri modelli. L'azienda ha delineato nuove misure di salvaguardia volte a rafforzare i processi di test e valutazione dei modelli di intelligenza artificiale. L'obiettivo è migliorare la robustezza e la sicurezza dei sistemi AI. Queste iniziative mirano a prevenire futuri exploit e a garantire un utilizzo più sicuro delle tecnologie.",
-      "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "id": "item_2026-08-06_005",
+      "title_original": "Google Assistant Shutting Down On Mobile Devices On September 4",
+      "title_it": "Google Assistant verrà dismesso sui dispositivi mobili il 4 settembre 2026",
+      "summary_it": "Google ha annunciato la dismissione di Google Assistant sui dispositivi mobili a partire dal 4 settembre 2026. Gemini lo sostituirà come assistente predefinito su smartphone, tablet, WearOS, cuffie compatibili e Android Auto. La transizione avverrà gradualmente e l'accesso a Google Assistant verrà rimosso in modo permanente da tali dispositivi.",
+      "url": "https://www.seroundtable.com/google-assistant-shutting-down-41822.html",
       "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "ai_models",
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "ai_models",
       "tags": [
-        "openai",
-        "cybersecurity",
-        "ai_safety",
-        "model_evaluation"
+        "google_assistant",
+        "gemini",
+        "mobile_device",
+        "ai_assistant"
       ],
       "importance": 3,
-      "published_at": "2026-08-04T18:00:00Z",
-      "fetched_at": "2026-08-05T06:02:48.333040Z",
+      "published_at": "2026-08-05T10:41:00Z",
+      "fetched_at": "2026-08-06T05:02:19.146414Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:cbad791bc0d02d3b",
+      "raw_hash": "sha256:8289d09c868d4f1a",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-05_011",
-      "title_original": "What Top Stories Inside AI Overviews Means For Publishers And Brands In 2026 And Beyond via @sejournal, @gregjarboe",
-      "title_it": "Cosa significano le Top Stories nelle AI Overviews per editori e brand nel 2026 e oltre",
-      "summary_it": "L'articolo analizza l'impatto delle AI Overviews di Google sui publisher e sui brand, in particolare per quanto riguarda la sezione Top Stories. Viene evidenziato come il file robots.txt non sia sufficiente a escludere i contenuti dalle AI Overviews. I dati di John Shehata mostrano le perdite economiche per le redazioni che adottano impostazioni errate.",
-      "url": "https://www.searchenginejournal.com/what-top-stories-inside-ai-overviews-means-for-publishers-and-brands-in-2026-and-beyond/584175",
+      "id": "item_2026-08-06_006",
+      "title_original": "Google: Reddit Gets No Special Preference In Google Search Rankings",
+      "title_it": "Google: Reddit non riceve trattamenti preferenziali nel ranking di ricerca",
+      "summary_it": "Google ha dichiarato, tramite la sua rappresentante Jennifer Kutz, che Reddit non gode di alcun trattamento preferenziale nei sistemi di ranking di Google Search o nelle funzionalità di ricerca AI. La dichiarazione sottolinea che i sistemi di Google sono progettati per valutare la qualità dei contenuti generati dagli utenti, indipendentemente dalla piattaforma. Google ha inoltre ribadito il suo impegno nella lotta allo spam, mantenendo i risultati di ricerca puliti al 99%.",
+      "url": "https://www.seroundtable.com/reddit-no-special-preference-google-41818.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ranking",
+        "reddit",
+        "ai_search",
+        "spam_prevention"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-05T10:51:00Z",
+      "fetched_at": "2026-08-06T05:02:20.863602Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:299e6d661b7adf95",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_007",
+      "title_original": "Reddit Wants To Be The Destination, Not Just The Source Behind Search & AI via @sejournal, @brentcsutoras",
+      "title_it": "Reddit mira a diventare una destinazione, non solo una fonte per la ricerca e l'IA",
+      "summary_it": "Reddit intende posizionarsi come destinazione primaria per gli utenti, piuttosto che un semplice punto di origine per contenuti utilizzati da motori di ricerca e sistemi AI. Questa strategia è stata delineata durante la call del secondo trimestre, evidenziando le sfide legate alla partecipazione degli utenti. Per i marketer, ciò implica la necessità di riconsiderare l'approccio alla piattaforma.",
+      "url": "https://www.searchenginejournal.com/reddit-wants-to-be-the-destination-not-just-the-source-behind-search-ai/584586",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "reddit",
+        "ai_integration",
+        "platform_strategy",
+        "marketing_implication"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-05T11:00:08Z",
+      "fetched_at": "2026-08-06T05:02:22.599437Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5cc7a7c672f8fa14",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_008",
+      "title_original": "Daily Search Forum Recap: August 5, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 5 agosto 2026",
+      "summary_it": "Google ha dichiarato che Reddit non riceve preferenze speciali nel ranking di Google Search o Google AI Search. Google Assistant verrà dismesso sui dispositivi mobili il 4 settembre, sostituito da Gemini. Google Ads aggiornerà la sua policy sui servizi governativi in ottobre, mentre Bing sta testando una sezione 'Top Source'. Google ha inoltre rinominato le policy della piattaforma Local Services in requisiti per gli annunci Local Services.",
+      "url": "https://www.seroundtable.com/recap-08-05-2026-41820.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_search",
+        "google_ad",
+        "bing_search",
+        "google_assistant"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-05T13:00:00Z",
+      "fetched_at": "2026-08-06T05:02:24.123559Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:993bee6b9c36fb1d",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_009",
+      "title_original": "AI Visibility Measurement: What To Track & What To Ignore",
+      "title_it": "Misurazione della visibilità AI: cosa tracciare e cosa ignorare",
+      "summary_it": "L'articolo discute le metriche chiave per valutare l'impatto dell'AI sulla visibilità online, evidenziando come alcune metriche comunemente usate, come le citazioni o il traffico referral da LLM, siano poco efficaci. Vengono invece suggeriti indicatori più direttamente correlati a lead, pipeline e ricavi. L'obiettivo è fornire ai professionisti SEO una guida per misurare l'efficacia delle strategie AI in modo significativo.",
+      "url": "https://www.searchenginejournal.com/ai-visibility-measurement-what-to-track-what-to-ignore/582009",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -422,111 +354,285 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "ai_overviews",
-        "publisher",
-        "robots_txt",
-        "google_search"
+        "ai_metric",
+        "visibility_measurement",
+        "seo_strategy",
+        "llm_impact"
       ],
       "importance": 3,
-      "published_at": "2026-08-04T18:00:12Z",
-      "fetched_at": "2026-08-05T06:02:50.190138Z",
+      "published_at": "2026-08-05T13:30:03Z",
+      "fetched_at": "2026-08-06T05:02:25.916109Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5bcf0ccaeda5cb39",
+      "raw_hash": "sha256:1c5b4fa8e03426b6",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_010",
+      "title_original": "Microsoft Advertising Adds AI Visibility Insights, PMax Testing, And Creative Preview Updates via @sejournal, @brookeosmundson",
+      "title_it": "Microsoft Advertising introduce insight sulla visibilità basati su AI, test PMax e aggiornamenti alle anteprime creative",
+      "summary_it": "Microsoft Advertising ha implementato nuove funzionalità, tra cui insight sulla visibilità generati dall'intelligenza artificiale. Sono stati introdotti anche strumenti per il testing delle campagne Performance Max e miglioramenti all'Ad Preview Hub. Questi aggiornamenti mirano a fornire maggiori capacità di analisi e ottimizzazione per gli inserzionisti sulla piattaforma.",
+      "url": "https://www.searchenginejournal.com/microsoft-advertising-adds-ai-visibility-insights-pmax-testing-and-creative-preview-updates/584760",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "microsoft_advertising",
+        "ai_insight",
+        "pmax_testing",
+        "ad_preview"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-05T16:00:19Z",
+      "fetched_at": "2026-08-06T05:02:27.444244Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e4f519f483283b4a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_011",
+      "title_original": "When AI Takes The Click, Click Worthiness Should Guide Your Strategy via @sejournal, @billhunt",
+      "title_it": "Quando l'AI si prende il click, la 'click worthiness' dovrebbe guidare la tua strategia",
+      "summary_it": "L'articolo suggerisce che il volume di ricerca tradizionale non è più sufficiente per valutare l'intento dell'utente, dato che l'AI può fornire risposte dirette. In questo scenario, la 'click worthiness' diventa un fattore cruciale per attrarre traffico. Le strategie SEO dovrebbero quindi concentrarsi sulla creazione di contenuti che incentivino attivamente il click, anche in presenza di risposte AI.",
+      "url": "https://www.searchenginejournal.com/when-ai-takes-the-click-click-worthiness-should-guide-your-strategy/582587",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_impact",
+        "click_worthiness",
+        "seo_strategy",
+        "search_behavior"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-05T16:30:05Z",
+      "fetched_at": "2026-08-06T05:02:29.121747Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ad00b33be6676573",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_012",
+      "title_original": "The Future Of Discoverability",
+      "title_it": "Il Futuro della Scopribilità",
+      "summary_it": "Il contenuto testuale da solo non è più sufficiente per la scopribilità. Gli editori devono adottare un framework che includa strategie passive, attive e proprietarie. L'articolo suggerisce che il giornalismo basato sull'intento è fondamentale per raggiungere questi obiettivi.",
+      "url": "https://www.searchenginejournal.com/the-future-of-discoverability/584489",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "discoverability",
+        "content_strategy",
+        "publishing",
+        "intent_journalism"
+      ],
+      "importance": 2,
+      "published_at": "2026-08-05T18:00:27Z",
+      "fetched_at": "2026-08-06T05:02:30.541175Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:a44eeeaa94eb215a",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_013",
+      "title_original": "AI Referrals Are Recreating The Oldest Mistake In Conversion Optimization via @sejournal, @slobodanmanic",
+      "title_it": "I referral da AI stanno ripetendo il più vecchio errore nell'ottimizzazione delle conversioni",
+      "summary_it": "L'articolo evidenzia come i referral generati dall'intelligenza artificiale stiano riproponendo un errore storico nell'ottimizzazione del tasso di conversione (CRO). Viene sottolineata la necessità di affrontare questa problematica per evitare distorsioni nell'analisi delle performance. La pubblicazione propone soluzioni per correggere questo scenario, fornendo indicazioni pratiche per professionisti SEO e CRO.",
+      "url": "https://www.searchenginejournal.com/ai-referrals-are-recreating-the-oldest-mistake-in-conversion-optimization/584331",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_referral",
+        "conversion_optimization",
+        "cro",
+        "data_analysi"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-05T19:12:01Z",
+      "fetched_at": "2026-08-06T05:02:32.141211Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:4d458ec6a3d07e1b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-06_014",
+      "title_original": "Google Chief Scientist Who Helped Build Modern Search And AI Steps Away via @sejournal, @martinibuster",
+      "title_it": "Il Chief Scientist di Google, co-creatore di Search e AI, lascia l'incarico",
+      "summary_it": "Jeff Dean, figura chiave nello sviluppo di Google Search e dell'intelligenza artificiale dell'azienda, ha lasciato il suo ruolo di Chief Scientist. Sarà sostituito da Demis Hassabis di DeepMind. Questo cambiamento segna una transizione nella leadership scientifica di Google.",
+      "url": "https://www.searchenginejournal.com/google-loses-the-engineer-who-helped-build-search-and-modern-ai/584785",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_personnel",
+        "ai_leadership",
+        "search_development"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-05T21:16:33Z",
+      "fetched_at": "2026-08-06T05:02:33.448151Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5cb63f3600d7d13e",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-05T06:01:40.744429Z",
+      "last_checked": "2026-08-06T05:01:21.138271Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-05T06:01:41.403897Z",
+      "last_checked": "2026-08-06T05:01:22.032036Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-05T06:01:42.632621Z",
+      "last_checked": "2026-08-06T05:01:23.305080Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-05T06:01:44.115393Z",
+      "last_checked": "2026-08-06T05:01:25.361873Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-05T06:02:01.014891Z",
+      "last_checked": "2026-08-06T05:01:39.951610Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-05T06:02:01.914437Z",
+      "last_checked": "2026-08-06T05:01:40.427755Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-05T06:02:02.664479Z",
+      "last_checked": "2026-08-06T05:01:41.386937Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-05T06:02:04.555523Z",
+      "last_checked": "2026-08-06T05:01:42.547228Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-05T06:02:05.880705Z",
+      "last_checked": "2026-08-06T05:01:43.737664Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-05T06:02:05.936100Z",
+      "last_checked": "2026-08-06T05:01:43.803551Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-05T06:02:06.380741Z",
+      "last_checked": "2026-08-06T05:01:44.150706Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-05T06:02:07.551808Z",
+      "last_checked": "2026-08-06T05:01:46.478224Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-05T06:02:08.361387Z",
+      "last_checked": "2026-08-06T05:01:47.627197Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-05T06:02:10.309818Z",
+      "last_checked": "2026-08-06T05:01:49.327183Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-05T06:02:11.554427Z",
+      "last_checked": "2026-08-06T05:01:51.046066Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-05T06:02:13.358032Z",
+      "last_checked": "2026-08-06T05:01:52.946351Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-05T06:02:14.314761Z",
+      "last_checked": "2026-08-06T05:01:54.821117Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-05T06:02:31.986424Z",
+      "last_checked": "2026-08-06T05:02:09.550875Z",
       "changed": false
     }
   ],
