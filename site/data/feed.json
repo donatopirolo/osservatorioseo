@@ -1,349 +1,34 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-08T06:01:42.124722Z",
-  "generated_at_local": "2026-08-08T08:01:42.124722+02:00",
+  "generated_at": "2026-08-09T05:01:35.674313Z",
+  "generated_at_local": "2026-08-09T07:01:35.674313+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-08-0801",
+  "run_id": "2026-08-09-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2281,
-    "items_after_dedup": 15,
+    "items_after_dedup": 1,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0095,
-    "summarize_attempted": 15,
+    "ai_cost_eur": 0.0006,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-08_010",
-    "item_2026-08-08_006",
-    "item_2026-08-08_014",
-    "item_2026-08-08_003",
-    "item_2026-08-08_005",
-    "item_2026-08-08_007",
-    "item_2026-08-08_008",
-    "item_2026-08-08_012",
-    "item_2026-08-08_011",
-    "item_2026-08-08_015"
+    "item_2026-08-09_001"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-08-08_010"
-    ],
-    "tools_platforms": [
-      "item_2026-08-08_006",
-      "item_2026-08-08_003",
-      "item_2026-08-08_007",
-      "item_2026-08-08_008",
-      "item_2026-08-08_004"
-    ],
-    "ai_models": [
-      "item_2026-08-08_014",
-      "item_2026-08-08_002"
-    ],
-    "technical_seo": [
-      "item_2026-08-08_005"
-    ],
-    "industry_news": [
-      "item_2026-08-08_012"
-    ],
     "ai_overviews_llm_seo": [
-      "item_2026-08-08_011",
-      "item_2026-08-08_015",
-      "item_2026-08-08_009",
-      "item_2026-08-08_013"
-    ],
-    "content_eeat": [
-      "item_2026-08-08_001"
+      "item_2026-08-09_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-08-08_001",
-      "title_original": "The AEO Playbook: How to Get Cited & Stay Visible via @sejournal, @hethr_campbell",
-      "title_it": "Il manuale AEO: come ottenere citazioni e mantenere la visibilità",
-      "summary_it": "L'articolo discute strategie per mantenere la visibilità e ottenere citazioni nell'attuale panorama della ricerca guidato dall'intelligenza artificiale. Vengono esplorate tattiche per l'ottimizzazione dell'esperienza utente e la creazione di contenuti autorevoli. L'obiettivo è fornire un approccio pratico per i professionisti SEO.",
-      "url": "https://www.searchenginejournal.com/aeo-playbook-get-cited-stay-visible-recap/584926",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "aeo",
-        "citation",
-        "ai_search",
-        "content_strategy"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-07T06:45:43Z",
-      "fetched_at": "2026-08-08T06:02:54.312008Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f48a038d142ba921",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_002",
-      "title_original": "How HSP GRUPPE builds AI capabilities for tax advisory",
-      "title_it": "Come HSP GRUPPE sviluppa capacità AI per la consulenza fiscale",
-      "summary_it": "HSP GRUPPE sta implementando ChatGPT Enterprise per ottimizzare i processi interni. L'obiettivo è incrementare la produttività e migliorare la qualità del lavoro. Questo permette di dedicare maggiori risorse alla consulenza fiscale e al servizio clienti.",
-      "url": "https://openai.com/index/hsp-gruppe",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_adoption",
-        "enterprise_ai",
-        "productivity",
-        "case_study"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-07T08:00:00Z",
-      "fetched_at": "2026-08-08T06:02:55.769881Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:37d42755edc5b581",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_003",
-      "title_original": "Google Ads Live Tests Of Strong Match Labels",
-      "title_it": "Google Ads testa etichette di corrispondenza forte in tempo reale",
-      "summary_it": "Google Ads ha avviato test dal vivo per le etichette \"Strongest match\" e \"Strong match\" annunciate a giugno. Queste etichette mirano a identificare gli annunci più pertinenti per le query degli utenti, basandosi su segnali di qualità e rilevanza degli annunci esistenti. L'obiettivo è aiutare gli utenti a trovare rapidamente informazioni rilevanti e gli inserzionisti a connettersi con audience ad alta intenzione. Nonostante alcune reazioni negative iniziali del settore, Google sta procedendo con la sperimentazione per raccogliere dati.",
-      "url": "https://www.seroundtable.com/google-ads-strong-match-labels-live-test-41836.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "ad_relevance",
-        "user_experience",
-        "testing"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-07T08:55:00Z",
-      "fetched_at": "2026-08-08T06:02:58.095330Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:af20eae2bb82177f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_004",
-      "title_original": "Google Ads Phone Conversions Report Gets View Call Report Link",
-      "title_it": "Google Ads introduce un link diretto al report delle chiamate nelle conversioni telefoniche",
-      "summary_it": "Google Ads ha aggiunto un link \"Visualizza report chiamate\" direttamente nel report delle conversioni telefoniche. Questa funzionalità semplifica l'accesso ai dettagli delle metriche relative alle chiamate. Il link apre il report completo in una nuova scheda, migliorando l'usabilità per gli analisti.",
-      "url": "https://www.seroundtable.com/google-ads-phone-call-view-call-report-link-41772.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "phone_conversion",
-        "reporting",
-        "ui_update"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-07T10:11:00Z",
-      "fetched_at": "2026-08-08T06:02:59.533252Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c34a73ed846096e6",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_005",
-      "title_original": "Google Crawlers Send HTTP Requests: HEAD, OPTIONS, PUT, PATCH, DELETE",
-      "title_it": "I crawler di Google inviano richieste HTTP di tipo HEAD, OPTIONS, PUT, PATCH, DELETE",
-      "summary_it": "Gary Illyes di Google ha chiarito che i crawler di Google non si limitano a inviare richieste GET e POST, ma utilizzano anche i metodi HTTP HEAD, OPTIONS, PUT, PATCH e DELETE. Queste richieste aggiuntive rappresentano meno dell'1,5% del totale e sono principalmente legate all'esecuzione di JavaScript. La loro presenza è dovuta al modo in cui il rendering di JavaScript innesca tali richieste.",
-      "url": "https://www.seroundtable.com/google-crawlers-head-options-put-patch-delete-41833.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "google_crawler",
-        "http_request",
-        "javascript_rendering",
-        "gary_illye"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-07T10:21:00Z",
-      "fetched_at": "2026-08-08T06:03:00.986437Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2ae00f605cdcfd88",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_006",
-      "title_original": "On Sep 1 Google Ads To Migrate ACA & Campaign-Level Broad Match To AI Max",
-      "title_it": "Google Ads migrerà gli asset creati automaticamente e il broad match a livello di campagna ad AI Max dal 1° settembre",
-      "summary_it": "A partire dal 1° settembre 2026, Google Ads avvierà la migrazione degli asset creati automaticamente (ACA) e delle impostazioni di broad match a livello di campagna verso AI Max. Le campagne interessate verranno aggiornate automaticamente, con configurazioni che rispecchieranno le impostazioni precedenti. Per le campagne con ACA, AI Max sarà abilitato con corrispondenza dei termini di ricerca e personalizzazione del testo. Per le campagne con broad match a livello di campagna, AI Max sarà abilitato con corrispondenza dei termini di ricerca.",
-      "url": "https://www.seroundtable.com/google-ads-migrate-ai-max-sep1-41829.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "ai_max",
-        "broad_match",
-        "campaign_management"
-      ],
-      "importance": 4,
-      "published_at": "2026-08-07T10:31:00Z",
-      "fetched_at": "2026-08-08T06:03:02.654644Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:9c772608c5296fb8",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_007",
-      "title_original": "ChatGPT Ads Updates: oCPC, Dynamic URLs, Muti-Product Carousel & More",
-      "title_it": "Aggiornamenti per le campagne pubblicitarie su ChatGPT: oCPC, URL dinamici e caroselli multi-prodotto",
-      "summary_it": "OpenAI ha annunciato nuovi aggiornamenti per il gestore delle campagne pubblicitarie di ChatGPT. Tra le novità figurano l'introduzione di un formato carosello multi-prodotto per le campagne di feed, l'ottimizzazione delle conversioni tramite oCPC e l'implementazione di parametri URL dinamici. Sono state inoltre integrate nuove funzionalità per la misurazione e l'ottimizzazione, come l'integrazione con Triple Whale e il supporto per l'API di conversione di Hightouch.",
-      "url": "https://www.seroundtable.com/openai-chatgpt-ads-updates-41828.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "chatgpt_ad",
-        "ocpc",
-        "dynamic_url",
-        "ad_manager_update"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-07T10:41:00Z",
-      "fetched_at": "2026-08-08T06:03:04.556229Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:75000eee790e6dee",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_008",
-      "title_original": "New Google Ads Report On New Customers Acquired",
-      "title_it": "Nuovo report di Google Ads sull'acquisizione di nuovi clienti",
-      "summary_it": "Google Ads sta introducendo una nuova opzione di reportistica denominata \"Report on new customers acquired\". Questa funzionalità consente di monitorare gli acquisti da clienti nuovi ed esistenti senza influenzare le strategie di offerta. In precedenza, era necessario un workaround che prevedeva di impostare un'offerta minima per i nuovi clienti per ottenere questa segmentazione. Il nuovo report offre una misurazione diretta, sostituendo la precedente soluzione.",
-      "url": "https://www.seroundtable.com/google-ads-report-on-new-customers-acquired-41832.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "customer_acquisition",
-        "reporting",
-        "ppc"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-07T10:51:00Z",
-      "fetched_at": "2026-08-08T06:03:06.109288Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:839d66b1db419325",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_009",
-      "title_original": "How Cats.txt Showed LLMs.txt Evidence Is GEO Astrology",
-      "title_it": "Come Cats.txt ha dimostrato che le prove di LLMs.txt sono GEO Astrologia",
-      "summary_it": "L'articolo analizza come le argomentazioni utilizzate per promuovere il concetto di LLMs.txt possano essere applicate anche a un file di testo generico come Cats.txt. Questo suggerisce una mancanza di specificità e validità nelle prove presentate per le tattiche GEO basate su LLMs.txt. Viene sollevato il dubbio sull'affidabilità di tali approcci nel contesto SEO.",
-      "url": "https://www.searchenginejournal.com/how-cats-txt-showed-llms-txt-evidence-is-geo-astrology/584653",
+      "id": "item_2026-08-09_001",
+      "title_original": "AI’s Impact Is Outrunning Measurement: The Trust And Attribution Gap Facing Brands via @sejournal, @gregjarboe",
+      "title_it": "L'impatto dell'IA supera la nostra capacità di misurazione: il divario di fiducia e attribuzione per i brand",
+      "summary_it": "L'articolo evidenzia come l'impatto dell'intelligenza artificiale stia superando le attuali capacità di misurazione nel primo semestre del 2026. Vengono analizzati dati di citazione, cambiamenti nella quota di mercato degli agenti e la distinzione tra intelligenza e agenzia per spiegare le prossime evoluzioni. Si sottolinea un crescente divario tra la fiducia riposta nell'IA e la capacità di attribuirne correttamente i risultati.",
+      "url": "https://www.searchenginejournal.com/ais-impact-is-outrunning-measurement-the-trust-and-attribution-gap-facing-brands/584141",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -358,321 +43,111 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "llm_seo",
-        "geo_tactic",
-        "ai_evidence",
-        "seo_critique"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-07T11:00:42Z",
-      "fetched_at": "2026-08-08T06:03:07.932778Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:591357398b68b9e5",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_010",
-      "title_original": "Search News Buzz Video Recap: Wild Google Ranking Volatility, Reddit Special Preference, Big Google Executive Shakeup & More Search News",
-      "title_it": "Riepilogo delle notizie di ricerca: Volatilità del ranking di Google, preferenza per Reddit, cambiamenti dirigenziali e altro",
-      "summary_it": "Questa settimana è stata caratterizzata da due aggiornamenti non confermati del ranking di Google, con notevole volatilità. Google ha ribadito che Reddit non riceve trattamenti preferenziali nei risultati di ricerca o AI. Sono stati segnalati cambiamenti significativi nella leadership del dipartimento AI di Google, con Jeff Dean che lascia e Demis Hassabis che assume un nuovo ruolo. Google Assistant sarà sostituito da Gemini sui dispositivi mobili a partire dal 4 settembre.",
-      "url": "https://www.seroundtable.com/video-08-07-2026-41834.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ranking",
-        "google_ai",
-        "google_search_console",
-        "google_ad"
-      ],
-      "importance": 4,
-      "published_at": "2026-08-07T11:01:00Z",
-      "fetched_at": "2026-08-08T06:03:09.554010Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4d1a7b00156dd1f7",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_011",
-      "title_original": "Google’s Ex-AI Chief Jeff Dean Explains How To Improve Context Engineering via @sejournal, @martinibuster",
-      "title_it": "L'ex capo dell'AI di Google, Jeff Dean, spiega come migliorare l'ingegneria del contesto",
-      "summary_it": "Jeff Dean, ex Chief Scientist di Google, ha evidenziato l'importanza crescente dell'ingegneria del contesto rispetto ai modelli AI stessi. Ha sottolineato come una migliore gestione del contesto possa ottimizzare le prestazioni dei modelli. Questo approccio suggerisce un focus maggiore sulla preparazione e presentazione dei dati agli LLM.",
-      "url": "https://www.searchenginejournal.com/googles-ex-ai-chief-jeff-dean-explains-how-to-improve-context-engineering/584955",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "context_engineering",
-        "llm_optimization",
-        "jeff_dean",
-        "ai_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-07T11:11:48Z",
-      "fetched_at": "2026-08-08T06:03:11.775199Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:87c94e4f40b10968",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_012",
-      "title_original": "Daily Search Forum Recap: August 7, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 7 agosto 2026",
-      "summary_it": "Google Ads sta testando nuove etichette di corrispondenza ('Strong' e 'Strongest') e introducendo un'opzione per acquisire nuovi clienti. A partire dal 1° settembre 2026, Google Ads migrerà gli asset creati automaticamente e le impostazioni di corrispondenza generica a livello di campagna verso AI Max. Gary Illyes di Google ha chiarito che i crawler di Google inviano richieste HTTP di vari tipi, non solo GET e POST. OpenAI ha annunciato aggiornamenti per ChatGPT Ads Manager, inclusi nuovi formati di carosello e miglioramenti alla piattaforma.",
-      "url": "https://www.seroundtable.com/recap-08-07-2026-41837.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_ad",
-        "openai",
-        "google_crawler",
-        "ai_max"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-07T13:00:00Z",
-      "fetched_at": "2026-08-08T06:03:13.437085Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d784987631d3d74c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_013",
-      "title_original": "Gen Z Now Treats Claude And OpenAI Like Consumer Brands, But Trust Is Still An Issue via @sejournal, @gregjarboe",
-      "title_it": "La Gen Z considera Claude e OpenAI come brand di consumo, ma la fiducia resta un problema",
-      "summary_it": "Dati YouGov indicano che la considerazione di Claude e OpenAI tra la Gen Z è raddoppiata. Nonostante ciò, la fiducia complessiva negli assistenti AI negli Stati Uniti si attesta al 28%. Questa discrepanza evidenzia una sfida per le strategie di marketing e adozione dell'AI.",
-      "url": "https://www.searchenginejournal.com/gen-z-now-treats-claude-and-openai-like-consumer-brands-but-trust-is-still-an-issue/584449",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "gen_z",
-        "ai_adoption",
-        "brand_perception",
-        "user_trust"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-07T13:30:16Z",
-      "fetched_at": "2026-08-08T06:03:14.940849Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:3613f6e6536ef43b",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_014",
-      "title_original": "Responding to the next frontier of critical cyber capabilities",
-      "title_it": "OpenAI presenta le valutazioni di sicurezza informatica per Astra",
-      "summary_it": "OpenAI ha rilasciato le prime valutazioni sulla sicurezza informatica relative al modello Astra. L'azienda sta implementando nuove misure per rafforzare le protezioni e i controlli di sicurezza. Questo rientra nell'impegno di OpenAI per affrontare le sfide emergenti nel campo della cyber security.",
-      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "cybersecurity",
-        "ai_safety",
-        "astra"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-07T14:20:00Z",
-      "fetched_at": "2026-08-08T06:03:16.234928Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:81bf2e58eda29266",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-08_015",
-      "title_original": "AI Search Only Feels New If Your SEO Was Shallow via @sejournal, @slobodanmanic",
-      "title_it": "La ricerca AI sembra nuova solo a chi ha un approccio SEO superficiale",
-      "summary_it": "L'articolo sostiene che l'introduzione della ricerca basata sull'intelligenza artificiale non rappresenta una novità radicale per i professionisti SEO che hanno sempre adottato strategie approfondite e orientate all'utente. Vengono analizzati gli aspetti realmente modificati e quelli che rimangono invariati nel panorama della SEO con l'avvento dell'AI. La tesi è che un approccio SEO solido e basato sui fondamentali sia resiliente ai cambiamenti tecnologici.",
-      "url": "https://www.searchenginejournal.com/ai-search-only-feels-new-if-your-seo-was-shallow/584115",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "seo_fundamental",
         "ai_impact",
-        "search_evolution"
+        "measurement_gap",
+        "brand_trust",
+        "attribution"
       ],
       "importance": 3,
-      "published_at": "2026-08-07T18:00:31Z",
-      "fetched_at": "2026-08-08T06:03:17.971190Z",
+      "published_at": "2026-08-08T11:00:30Z",
+      "fetched_at": "2026-08-09T05:02:39.852095Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:6ff1f654e81be78a",
+      "raw_hash": "sha256:cf866803d88d4e0c",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-08T06:01:48.691958Z",
+      "last_checked": "2026-08-09T05:01:41.478100Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-08T06:01:49.778637Z",
+      "last_checked": "2026-08-09T05:01:41.993814Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-08T06:01:50.941561Z",
+      "last_checked": "2026-08-09T05:01:43.715347Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-08T06:01:52.902091Z",
+      "last_checked": "2026-08-09T05:01:45.276565Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-08T06:02:15.776668Z",
+      "last_checked": "2026-08-09T05:02:03.404552Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-08T06:02:16.258481Z",
+      "last_checked": "2026-08-09T05:02:04.204317Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-08T06:02:17.792022Z",
+      "last_checked": "2026-08-09T05:02:05.571417Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-08T06:02:19.817107Z",
+      "last_checked": "2026-08-09T05:02:08.579665Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-08T06:02:21.325028Z",
+      "last_checked": "2026-08-09T05:02:09.163823Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-08T06:02:21.408955Z",
+      "last_checked": "2026-08-09T05:02:09.224641Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-08T06:02:21.692371Z",
+      "last_checked": "2026-08-09T05:02:09.492755Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-08T06:02:22.835007Z",
+      "last_checked": "2026-08-09T05:02:10.868651Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-08T06:02:24.043182Z",
+      "last_checked": "2026-08-09T05:02:12.593003Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-08T06:02:25.810715Z",
+      "last_checked": "2026-08-09T05:02:14.054422Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-08T06:02:27.070705Z",
+      "last_checked": "2026-08-09T05:02:15.612058Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-08T06:02:28.275053Z",
+      "last_checked": "2026-08-09T05:02:17.577805Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-08T06:02:29.734570Z",
+      "last_checked": "2026-08-09T05:02:18.936294Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-08T06:02:52.602641Z",
+      "last_checked": "2026-08-09T05:02:37.552664Z",
       "changed": false
     }
   ],
