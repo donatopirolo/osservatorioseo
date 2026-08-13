@@ -1,490 +1,67 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-12T06:01:14.787555Z",
-  "generated_at_local": "2026-08-12T08:01:14.787555+02:00",
+  "generated_at": "2026-08-13T05:01:02.893894Z",
+  "generated_at_local": "2026-08-13T07:01:02.893894+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-12-0801",
+  "run_id": "2026-08-13-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2295,
-    "items_after_dedup": 19,
+    "items_collected": 2297,
+    "items_after_dedup": 15,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0114,
-    "summarize_attempted": 19,
+    "ai_cost_eur": 0.0518,
+    "summarize_attempted": 15,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-12_002",
-    "item_2026-08-12_009",
-    "item_2026-08-12_010",
-    "item_2026-08-12_003",
-    "item_2026-08-12_004",
-    "item_2026-08-12_016",
-    "item_2026-08-12_019",
-    "item_2026-08-12_007",
-    "item_2026-08-12_014",
-    "item_2026-08-12_001"
+    "item_2026-08-13_010",
+    "item_2026-08-13_015",
+    "item_2026-08-13_008",
+    "item_2026-08-13_003",
+    "item_2026-08-13_012",
+    "item_2026-08-13_004",
+    "item_2026-08-13_005",
+    "item_2026-08-13_006",
+    "item_2026-08-13_007",
+    "item_2026-08-13_009"
   ],
   "categories": {
-    "tools_platforms": [
-      "item_2026-08-12_002",
-      "item_2026-08-12_007"
+    "ai_models": [
+      "item_2026-08-13_010",
+      "item_2026-08-13_015",
+      "item_2026-08-13_003",
+      "item_2026-08-13_012"
     ],
     "google_updates": [
-      "item_2026-08-12_009",
-      "item_2026-08-12_010"
+      "item_2026-08-13_008"
     ],
-    "ai_models": [
-      "item_2026-08-12_003",
-      "item_2026-08-12_004",
-      "item_2026-08-12_016",
-      "item_2026-08-12_019"
-    ],
-    "industry_news": [
-      "item_2026-08-12_014",
-      "item_2026-08-12_001",
-      "item_2026-08-12_012",
-      "item_2026-08-12_006",
-      "item_2026-08-12_008",
-      "item_2026-08-12_015",
-      "item_2026-08-12_005"
+    "tools_platforms": [
+      "item_2026-08-13_004",
+      "item_2026-08-13_007"
     ],
     "ai_overviews_llm_seo": [
-      "item_2026-08-12_017",
-      "item_2026-08-12_018",
-      "item_2026-08-12_011"
+      "item_2026-08-13_005",
+      "item_2026-08-13_011",
+      "item_2026-08-13_001"
+    ],
+    "industry_news": [
+      "item_2026-08-13_006",
+      "item_2026-08-13_009",
+      "item_2026-08-13_013",
+      "item_2026-08-13_002"
     ],
     "content_eeat": [
-      "item_2026-08-12_013"
+      "item_2026-08-13_014"
     ]
   },
   "items": [
     {
-      "id": "item_2026-08-12_001",
-      "title_original": "WPForms Lite Accused Of Adding Backdoor. I Tested It And Was Surprised via @sejournal, @martinibuster",
-      "title_it": "WPForms Lite sotto accusa per l'aggiunta di una backdoor: un test rivela dettagli inaspettati",
-      "summary_it": "Il plugin WordPress WPForms Lite è stato accusato di aver introdotto una backdoor nelle nuove installazioni. Un'analisi approfondita ha rivelato comportamenti inattesi del plugin. La situazione solleva interrogativi sulla sicurezza e l'integrità dei plugin WordPress ampiamente utilizzati.",
-      "url": "https://www.searchenginejournal.com/wpforms-lite-accused-of-adding-backdoor-i-tested-it-and-was-surprised/585273",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "wordpress_plugin",
-        "security_vulnerability",
-        "wpform"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T08:03:14Z",
-      "fetched_at": "2026-08-12T06:02:27.729390Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:9ce71509e8e754c1",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_002",
-      "title_original": "Google Search Console Generative AI Performance Report Available For All",
-      "title_it": "Il report sulle performance della AI generativa in Google Search Console è disponibile per tutti",
-      "summary_it": "Il report sulle performance della AI generativa in Google Search Console sembra essere stato rilasciato a livello globale. Sebbene Google non abbia ancora annunciato ufficialmente il rollout completo, numerosi professionisti SEO confermano la sua disponibilità. Il report fornisce dati su impressioni, pagine, paesi, dispositivi e date, ma non include dati sui clic o sulle query. La sua visualizzazione è condizionata da un numero sufficiente di impressioni nelle funzionalità AI generative di Google Search.",
-      "url": "https://www.seroundtable.com/google-search-console-ai-report-live-41850.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_search_console",
-        "generative_ai",
-        "performance_report",
-        "serp_feature"
-      ],
-      "importance": 4,
-      "published_at": "2026-08-11T08:46:00Z",
-      "fetched_at": "2026-08-12T06:02:29.600304Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:17d611274880fe51",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_003",
-      "title_original": "Testing ads in ChatGPT",
-      "title_it": "OpenAI avvia la sperimentazione di annunci pubblicitari in ChatGPT",
-      "summary_it": "OpenAI ha iniziato a testare l'introduzione di annunci pubblicitari all'interno di ChatGPT. L'obiettivo è sostenere l'accesso gratuito alla piattaforma, garantendo al contempo etichette chiare per gli annunci, indipendenza delle risposte e solide protezioni della privacy. Gli utenti manterranno il controllo sulle proprie impostazioni.",
-      "url": "https://openai.com/index/testing-ads-in-chatgpt",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "chatgpt",
-        "advertising",
-        "monetization"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T09:00:00Z",
-      "fetched_at": "2026-08-12T06:02:31.084201Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:9bc6b7adc1b8e6e6",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_004",
-      "title_original": "Daybreak models are now available on AWS",
-      "title_it": "I modelli Daybreak di OpenAI sono ora disponibili su AWS",
-      "summary_it": "OpenAI ha reso disponibili i suoi modelli Daybreak, focalizzati sulla cybersecurity, tramite Amazon Bedrock. Questa integrazione mira a supportare i flussi di lavoro di sicurezza aziendali. La collaborazione estende l'accesso a queste capacità avanzate per le imprese che utilizzano l'infrastruttura AWS.",
-      "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "aws",
-        "cybersecurity",
-        "amazon_bedrock"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T09:00:00Z",
-      "fetched_at": "2026-08-12T06:02:32.182457Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0bc4cf04f9bc3084",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_005",
-      "title_original": "iPullRank Named to the 2026 Inc. 5000 List of America’s Fastest-Growing Private Companies",
-      "title_it": "iPullRank inclusa nella lista Inc. 5000 delle aziende private americane in più rapida crescita per il 2026",
-      "summary_it": "L'agenzia iPullRank è stata inserita nella lista Inc. 5000 delle aziende private americane a più rapida crescita, posizionandosi al 2647° posto. L'azienda ha registrato una crescita del fatturato del 94,3% e un aumento del personale del 71,4% su base annua. Questo riconoscimento evidenzia la crescente domanda di expertise nel campo della ricerca AI e l'adattamento dell'agenzia a un modello AI-native.",
-      "url": "https://ipullrank.com/2026-fastest-growing-companies",
-      "source": {
-        "id": "ipullrank_blog",
-        "name": "iPullRank Blog (Mike King)",
-        "authority": 8,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://ipullrank.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "agency_growth",
-        "inc_5000",
-        "ai_search",
-        "ipullrank"
-      ],
-      "importance": 1,
-      "published_at": "2026-08-11T10:00:00Z",
-      "fetched_at": "2026-08-12T06:02:33.912022Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b07567791e9d38cd",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_006",
-      "title_original": "SEOs Taking Over Expired Google X Accounts",
-      "title_it": "Account X di Googler scaduti acquisiti da servizi SEO",
-      "summary_it": "Alcuni account X (ex Twitter) di Googler, inclusi quelli di figure note come Martin Splitt, sono stati acquisiti da siti che offrono servizi SEO, talvolta di bassa qualità. Questo fenomeno ricorda l'acquisto di domini scaduti per scopi non correlati all'originale. La situazione solleva interrogativi sull'importanza di mantenere il controllo degli account social anche dopo aver cessato l'attività.",
-      "url": "https://www.seroundtable.com/seo-expired-google-x-accounts-41844.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "social_media",
-        "expired_account",
-        "brand_reputation",
-        "spam"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-11T10:11:00Z",
-      "fetched_at": "2026-08-12T06:02:35.484203Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:ae8941741ed6669e",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_007",
-      "title_original": "Google Ads & Google Analytics Gain New AI Features",
-      "title_it": "Nuove funzionalità AI per Google Ads e Google Analytics",
-      "summary_it": "Google ha introdotto nuove funzionalità basate sull'intelligenza artificiale per Google Ads e Google Analytics. Tra queste, spiccano le AI Overviews che forniscono riepiloghi rapidi sulla homepage e dashboard di reporting AI che trasformano i dati in visualizzazioni chiare tramite prompt testuali. È stata inoltre aggiunta una funzionalità di benchmarking AI in Google Analytics per confrontare le performance con aziende simili.",
-      "url": "https://www.seroundtable.com/google-ads-analytics-new-ai-features-41848.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "google_analytic",
-        "ai_feature",
-        "data_analysi"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T10:21:00Z",
-      "fetched_at": "2026-08-12T06:02:36.868033Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2f65d13dce578944",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_008",
-      "title_original": "Google Still Aggressively Poaching Agency Ads Accounts",
-      "title_it": "Google continua ad approcciare direttamente i clienti delle agenzie pubblicitarie",
-      "summary_it": "Si registrano nuove segnalazioni da parte della comunità PPC riguardo a rappresentanti Google che tentano di contattare direttamente i clienti gestiti da agenzie. Nonostante Google avesse promesso modifiche nel 2022 e offra ora la possibilità di disiscriversi da queste email, il fenomeno persiste. Le agenzie esprimono frustrazione per questa pratica, considerandola non etica e dannosa per il rapporto con i clienti.",
-      "url": "https://www.seroundtable.com/google-poaching-agency-ads-accounts-41845.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_ad",
-        "ppc",
-        "agency_relation",
-        "ethical_concern"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-11T10:31:00Z",
-      "fetched_at": "2026-08-12T06:02:38.344263Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f3142db53c5b6b4f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_009",
-      "title_original": "Google Travel Campaigns Migrating To Search Campaigns For Travel",
-      "title_it": "Le campagne Google Travel migreranno alle campagne di ricerca per il settore viaggi",
-      "summary_it": "Google ha annunciato che le attuali campagne Travel verranno migrate alle nuove campagne di ricerca per il settore viaggi all'interno di Google Ads. La transizione è prevista per il terzo trimestre del 2026. Le nuove campagne verranno create automaticamente replicando le impostazioni esistenti, ma sarà possibile effettuare la migrazione manualmente in anticipo. Gli utenti sono invitati a monitorare le notifiche per le date precise.",
-      "url": "https://www.seroundtable.com/google-travel-campaigns-migrating-41849.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "travel_campaign",
-        "search_ad",
-        "migration"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T10:41:00Z",
-      "fetched_at": "2026-08-12T06:02:39.589276Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:59d6d8f99b48c3e0",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_010",
-      "title_original": "Google Ads Sponsored Results Tests Advertiser Name & Favicon Summary",
-      "title_it": "Google Ads testa l'intestazione riassuntiva con nome dell'inserzionista e favicon per i risultati sponsorizzati",
-      "summary_it": "Google sta sperimentando una nuova visualizzazione per i risultati sponsorizzati su mobile. La novità consiste nell'inserimento del nome dell'inserzionista e della favicon direttamente sotto l'intestazione 'Risultati sponsorizzati', prima degli annunci veri e propri. Questa modifica mira a raggruppare le informazioni sugli inserzionisti, potenzialmente influenzando il CTR degli annunci. La funzionalità è stata notata da Sachin Patel su X.",
-      "url": "https://www.seroundtable.com/google-ads-sponsored-results-ad-summary-header-41851.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "sponsored_result",
-        "mobile_search",
-        "ui_test"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T10:51:00Z",
-      "fetched_at": "2026-08-12T06:02:41.161282Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b7cb5edc65cba9b2",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_011",
-      "title_original": "The AI Detection False Economy: Fueling FOW (Fear of Writing) via @sejournal, @andybetts1",
-      "title_it": "L'illusione del rilevamento AI: alimentare la paura di scrivere",
-      "summary_it": "Gli strumenti di rilevamento AI producono risultati incoerenti, etichettando come generati dall'intelligenza artificiale anche contenuti scritti da esseri umani, inclusi testi antecedenti all'ampia diffusione dell'AI. Questa inaffidabilità genera preoccupazione tra i creatori di contenuti. L'efficacia di tali strumenti è messa in discussione, evidenziando la necessità di un approccio più critico al loro utilizzo.",
-      "url": "https://www.searchenginejournal.com/the-ai-detection-false-economy-fueling-fear-of-writing/584967",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_detection",
-        "content_creation",
-        "ai_bia",
-        "false_positive"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-11T11:00:08Z",
-      "fetched_at": "2026-08-12T06:02:42.875667Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:236097ec9db95a9c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_012",
-      "title_original": "YouTube Adds New Shorts Payout Rules To Partner Program Terms via @sejournal, @MattGSouthern",
-      "title_it": "YouTube introduce nuove regole per i pagamenti degli Shorts nel Programma Partner",
-      "summary_it": "YouTube ha annunciato modifiche al Programma Partner che entreranno in vigore nel 2027. Le novità includono nuove regole per la monetizzazione dei video Shorts e controlli sull'attività dei canali. È stata fissata una scadenza per l'accettazione dei nuovi termini da parte dei creator.",
-      "url": "https://www.searchenginejournal.com/youtube-updates-partner-program-terms-shorts-payout-rules/585331",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "youtube_short",
-        "partner_program",
-        "monetization",
-        "platform_update"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T11:13:24Z",
-      "fetched_at": "2026-08-12T06:02:44.109784Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:7bb9a6792066acfd",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_013",
-      "title_original": "Topical Gravity: Why topics are the new unit of your search strategy",
-      "title_it": "Topical Gravity: Perché gli argomenti sono la nuova unità della tua strategia di ricerca",
-      "summary_it": "L'articolo introduce il concetto di Topical Gravity, un framework per costruire e misurare l'autorità tematica. Questo approccio mira a ottimizzare la strategia SEO considerando gli argomenti come unità fondamentali. La metodologia è applicabile sia per l'ottimizzazione per Google che per i modelli AI.",
-      "url": "https://www.semrush.com/blog/topical-gravity",
+      "id": "item_2026-08-13_001",
+      "title_original": "234 ChatGPT prompts (and how to write your own)",
+      "title_it": "234 prompt per ChatGPT e come crearne di propri",
+      "summary_it": "Semrush ha pubblicato una raccolta di 234 prompt per ChatGPT, focalizzati su marketing, SEO e vendite. L'articolo include anche il framework PROMPT per la creazione di prompt personalizzati. L'obiettivo è fornire esempi pratici e una metodologia per ottimizzare l'interazione con i modelli linguistici.",
+      "url": "https://www.semrush.com/blog/chatgpt-prompts",
       "source": {
         "id": "semrush_blog",
         "name": "Semrush Blog",
@@ -497,29 +74,169 @@
         "category_hint": "tools_platforms",
         "enabled": true
       },
-      "category": "content_eeat",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "topical_authority",
-        "content_strategy",
-        "seo_framework",
-        "ai_seo"
+        "chatgpt_prompt",
+        "ai_content",
+        "prompt_engineering",
+        "semrush"
       ],
-      "importance": 3,
-      "published_at": "2026-08-11T12:00:00Z",
-      "fetched_at": "2026-08-12T06:02:45.473024Z",
+      "importance": 2,
+      "published_at": "2026-08-12T05:58:00Z",
+      "fetched_at": "2026-08-13T05:02:30.873597Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:54ffa81dd0c7eb7f",
+      "raw_hash": "sha256:3b1ea0ca46d849e1",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-12_014",
-      "title_original": "Daily Search Forum Recap: August 11, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 11 agosto 2026",
-      "summary_it": "Il report sulle performance AI di Google Search Console risulta ora pienamente disponibile. Google Ads sta testando nuove visualizzazioni per gli annunci e migrerà le campagne Travel. Sono state introdotte nuove funzionalità AI in Google Ads e Google Analytics. Si segnalano inoltre tentativi di Google di acquisire direttamente clienti dalle agenzie PPC.",
-      "url": "https://www.seroundtable.com/recap-08-11-2026-41852.html",
+      "id": "item_2026-08-13_002",
+      "title_original": "Automattic Fires Back At WP Engine’s Motion For Sanctions via @sejournal, @martinibuster",
+      "title_it": "Automattic risponde alla richiesta di sanzioni di WP Engine",
+      "summary_it": "Automattic ha respinto la mozione di WP Engine per sanzioni legali. La difesa di Automattic sostiene che le comunicazioni personali del CEO Matt Mullenweg non sono pertinenti al caso in questione. Questo sviluppo si inserisce in una disputa legale più ampia tra le due aziende.",
+      "url": "https://www.searchenginejournal.com/automattic-fires-back-at-wp-engines-motion-for-sanctions/585472",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "legal_dispute",
+        "automattic",
+        "wp_engine",
+        "industry_new"
+      ],
+      "importance": 2,
+      "published_at": "2026-08-12T09:33:17Z",
+      "fetched_at": "2026-08-13T05:02:32.313882Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2f3c9515a3c0e0b5",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_003",
+      "title_original": "ChatGPT Ads With AI Descriptive Heading",
+      "title_it": "ChatGPT testa intestazioni descrittive generate dall'IA per gli annunci",
+      "summary_it": "OpenAI sta sperimentando l'introduzione di intestazioni descrittive sopra gli annunci all'interno delle risposte di ChatGPT. Si ipotizza che queste intestazioni siano generate tramite intelligenza artificiale. Questa funzionalità è stata notata da Brodie Clark e potrebbe influenzare la percezione e l'efficacia degli annunci sulla piattaforma. Simili test di Google con intestazioni generate dall'IA per gli annunci non hanno riscosso grande successo tra gli inserzionisti.",
+      "url": "https://www.seroundtable.com/chatgpt-ads-descriptive-heading-41853.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt_ad",
+        "ai_generated_content",
+        "openai",
+        "ad_format"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T10:11:00Z",
+      "fetched_at": "2026-08-13T05:02:33.961479Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:031525329d4d2881",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_004",
+      "title_original": "Google Merchant Center Performance Reporting Update Coming August 24th",
+      "title_it": "Aggiornamenti ai report sulle performance di Google Merchant Center in arrivo il 24 agosto",
+      "summary_it": "Google ha annunciato quattro aggiornamenti ai report sulle performance di Merchant Center, effettivi dal 24 agosto 2026. Le modifiche includono la separazione dei risultati di affiliazione YouTube dal traffico organico e l'aggiornamento delle definizioni del traffico organico da YouTube. Verranno inoltre espanse le funzionalità di reporting a livello di prodotto per Google Ads e introdotte nuove capacità di segmentazione delle performance. Questi cambiamenti mirano a migliorare la chiarezza e la coerenza dei dati tra le diverse piattaforme Google.",
+      "url": "https://www.seroundtable.com/google-merchant-center-performance-report-update-41859.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_merchant_center",
+        "performance_reporting",
+        "youtube_affiliate",
+        "google_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T10:21:00Z",
+      "fetched_at": "2026-08-13T05:02:35.915541Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:61b72d3358797f8f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_005",
+      "title_original": "Google AI Overview Local Results Pulling From Low-Quality Listicles",
+      "title_it": "I risultati locali di Google AI Overview citano listicle di bassa qualità",
+      "summary_it": "Google AI Overview sta mostrando informazioni locali generate dall'IA che spesso citano articoli listicle di bassa qualità e autopromozionali. Questo comportamento è stato osservato in diversi casi, dove l'AI Overview linka a queste fonti anziché ai siti web delle attività locali. La problematica solleva interrogativi sulla qualità delle fonti utilizzate dall'IA per i risultati locali.",
+      "url": "https://www.seroundtable.com/google-ai-overview-local-results-listicles-41854.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai_overview",
+        "local_seo",
+        "content_quality",
+        "serp_feature"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T10:31:00Z",
+      "fetched_at": "2026-08-13T05:02:37.600019Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:39b3e29b608e5ce0",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_006",
+      "title_original": "Google Amends Lawsuit Against SerpApi Over Licensed Content",
+      "title_it": "Google modifica la causa contro SerpApi per contenuti con licenza",
+      "summary_it": "Google ha modificato la sua denuncia contro SerpApi, precedentemente archiviata, concentrandosi ora sulla protezione dei contenuti con licenza presenti nei risultati di ricerca. La nuova accusa sostiene che SerpApi estrae e commercializza contenuti che Google ha licenziato da terze parti, come Reddit. Google afferma che i suoi partner di licenza hanno espressamente richiesto di impedire l'accesso non autorizzato e la commercializzazione di tali contenuti da parte di terzi. Questa mossa indica un tentativo di Google di salvaguardare gli accordi di licenza e prevenire lo scraping di dati specifici.",
+      "url": "https://www.seroundtable.com/google-amends-lawsuit-against-serpapi-41860.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -534,27 +251,280 @@
       },
       "category": "industry_news",
       "tags": [
-        "google_search_console",
-        "google_ad",
-        "google_analytic",
-        "ai_feature"
+        "google_lawsuit",
+        "serpapi",
+        "content_licensing",
+        "data_scraping"
       ],
       "importance": 3,
-      "published_at": "2026-08-11T13:00:00Z",
-      "fetched_at": "2026-08-12T06:02:47.325078Z",
+      "published_at": "2026-08-12T10:41:00Z",
+      "fetched_at": "2026-08-13T05:02:39.354151Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:31ef1e2a33e15cf4",
+      "raw_hash": "sha256:d1ac93f337cababf",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-12_015",
-      "title_original": "How TransUnion’s AI Findings Should Change the Way SEOs Pitch GEO via @sejournal, @gregjarboe",
-      "title_it": "Come le scoperte sull'AI di TransUnion dovrebbero modificare l'approccio dei SEO al GEO",
-      "summary_it": "Un sondaggio di TransUnion tra 100 leader di marketing evidenzia che le lacune nella ricerca AI riflettono le problematiche di misurazione nei walled garden. Per ottenere finanziamenti, è consigliabile presentare il GEO come una problematica aziendale trasversale. Questo suggerisce un cambio di prospettiva nella proposizione di progetti SEO legati alla geolocalizzazione.",
-      "url": "https://www.searchenginejournal.com/how-transunions-ai-findings-should-change-the-way-seos-pitch-geo/584922",
+      "id": "item_2026-08-13_007",
+      "title_original": "Google Ads New Local Customer Optimization Help Doc",
+      "title_it": "Nuova documentazione di Google Ads sull'ottimizzazione per clienti locali",
+      "summary_it": "Google ha rilasciato un nuovo documento di aiuto per Google Ads, focalizzato sull'ottimizzazione dei clienti locali all'interno delle campagne Performance Max per obiettivi di negozio. Questo aggiornamento segue la migrazione degli annunci di servizi locali alla piattaforma principale di Google Ads. La funzionalità mira a raggiungere potenziali clienti nelle vicinanze o interessati all'area di attività, pronti a intraprendere azioni immediate come visitare o contattare l'attività.",
+      "url": "https://www.seroundtable.com/google-ads-new-local-customer-optimization-41862.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "performance_max",
+        "local_seo",
+        "google_map"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T10:51:00Z",
+      "fetched_at": "2026-08-13T05:02:41.091996Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2fbef4c9ed951a7c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_008",
+      "title_original": "Google Is Ending Target Overperformance – What to Fix Before August 17 via @sejournal, @brookeosmundson",
+      "title_it": "Google interrompe la funzionalità Target Overperformance: cosa controllare prima del 17 agosto",
+      "summary_it": "Google sta apportando modifiche a Smart Bidding, eliminando la funzionalità Target Overperformance. Gli inserzionisti devono rivedere le campagne Target CPA e Target ROAS. È necessario effettuare un audit e aggiornare le impostazioni prima del 17 agosto per evitare interruzioni.",
+      "url": "https://www.searchenginejournal.com/google-is-ending-target-overperformance-what-to-fix-before-august-17/584875",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "smart_bidding",
+        "target_cpa",
+        "target_roa"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T11:00:33Z",
+      "fetched_at": "2026-08-13T05:02:43.563632Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7e4910227d1cbd3e",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_009",
+      "title_original": "Daily Search Forum Recap: August 12, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 12 agosto 2026",
+      "summary_it": "Google ha modificato la sua causa contro SerpApi, citando ora la protezione dei contenuti con licenza. Google Ads ha introdotto un nuovo documento di aiuto per l'ottimizzazione dei clienti locali nelle campagne Performance Max. Google mostrerà casualmente AI Overviews per i risultati locali, spesso basandosi su listicle di bassa qualità. Sono stati annunciati diversi aggiornamenti al report sulle performance di Google Merchant Center, a partire dal 24 agosto 2026.",
+      "url": "https://www.seroundtable.com/recap-08-12-2026-41861.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_lawsuit",
+        "google_ad",
+        "ai_overviews",
+        "merchant_center_update"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T13:00:00Z",
+      "fetched_at": "2026-08-13T05:02:45.040878Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:484b8373950dc1a5",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_010",
+      "title_original": "Putting sign language AI into users’ hands",
+      "title_it": "L'IA per la lingua dei segni a disposizione degli utenti",
+      "summary_it": "Google DeepMind ha presentato SL2T, un modello innovativo che abilita nuove funzionalità per la lingua dei segni, rivolte agli utenti sordi e con problemi di udito. Questa tecnologia mira a migliorare l'accessibilità e la comunicazione, convertendo la lingua dei segni in testo. L'iniziativa rappresenta un passo avanti nell'applicazione dell'intelligenza artificiale per supportare comunità specifiche. Il modello è stato sviluppato per essere integrato in prodotti e servizi, rendendolo accessibile a un pubblico più ampio.",
+      "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands",
+      "source": {
+        "id": "google_deepmind_blog",
+        "name": "Google DeepMind Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://deepmind.google/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "sign_language_ai",
+        "accessibility",
+        "google_deepmind",
+        "ai_application"
+      ],
+      "importance": 5,
+      "published_at": "2026-08-12T13:01:59Z",
+      "fetched_at": "2026-08-13T05:02:46.998549Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b53a78efc91f0ba7",
+      "deep_analysis": {
+        "detailed_description": "Google DeepMind ha rilasciato SL2T (Sign Language to Text), un modello di intelligenza artificiale progettato per convertire la lingua dei segni in testo scritto. L'obiettivo dichiarato è migliorare l'accessibilità per utenti sordi e con problemi di udito, integrando la tecnologia in prodotti e servizi esistenti dell'ecosistema Google.\n\nIl modello rappresenta un avanzamento nell'elaborazione visiva applicata alla comunicazione non verbale. A differenza di sistemi precedenti limitati a gesti isolati o alfabeti manuali, SL2T è stato addestrato per riconoscere sequenze continue di segni, interpretando grammatica e sintassi proprie delle lingue dei segni (che differiscono strutturalmente dalle lingue parlate).\n\nL'integrazione in prodotti Google significa che funzionalità basate su SL2T potrebbero apparire in Search, YouTube, Meet o altri servizi dove la comunicazione visiva è rilevante. Questo apre scenari in cui contenuti video contenenti lingua dei segni diventano indicizzabili e ricercabili come testo, ampliando la superficie di contenuti accessibili ai motori di ricerca.\n\nDal punto di vista SEO, l'impatto più diretto riguarda la gestione dei contenuti video. Se Google inizia a estrarre automaticamente testo da segni visivi nei video, la necessità di metadati espliciti (titoli, descrizioni, trascrizioni manuali) per contenuti in lingua dei segni potrebbe ridursi. Allo stesso tempo, chi produce contenuti accessibili potrebbe vedere aumentare la visibilità organica se il modello viene applicato all'indicizzazione.\n\nLa tecnologia solleva anche questioni di qualità e accuratezza. Le lingue dei segni variano per paese (ASL, BSL, LIS, ecc.) e includono varianti regionali, espressioni facciali e movimenti del corpo che contribuiscono al significato. Un errore di interpretazione del modello potrebbe generare metadati fuorvianti, impattando negativamente la rilevanza dei risultati di ricerca.\n\nNon è chiaro dalla comunicazione ufficiale quali lingue dei segni siano supportate al lancio, né se SL2T sarà applicato retroattivamente a contenuti video già indicizzati o solo a nuovi caricamenti. Questi dettagli tecnici determineranno l'ampiezza dell'impatto operativo per chi gestisce contenuti multimediali.\n\nL'annuncio si inserisce in una strategia più ampia di Google per espandere le capacità di comprensione multimodale dell'IA, dopo Gemini e altri modelli visione-linguaggio. SL2T è un caso d'uso verticale che dimostra come l'IA generativa possa essere applicata a nicchie specifiche, con implicazioni dirette per l'accessibilità ma anche per l'indicizzazione e il ranking di contenuti non testuali.",
+        "implications": [
+          "I contenuti video che includono lingua dei segni potrebbero diventare automaticamente indicizzabili senza trascrizioni manuali, modificando le best practice per l'ottimizzazione di contenuti accessibili.",
+          "Chi gestisce canali YouTube o piattaforme video con contenuti in lingua dei segni potrebbe vedere variazioni di traffico organico se Google inizia a estrarre e indicizzare testo da segni visivi.",
+          "La qualità dei metadati generati automaticamente da SL2T diventa un fattore di ranking: errori di interpretazione potrebbero danneggiare la rilevanza percepita da Google, rendendo necessario monitorare e correggere eventuali trascrizioni automatiche errate.",
+          "Siti e piattaforme che offrono contenuti accessibili (es. corsi, tutorial, servizi pubblici) potrebbero guadagnare visibilità se Google premia l'accessibilità come segnale di qualità, ma solo se il modello interpreta correttamente i contenuti.",
+          "L'assenza di dettagli su lingue supportate e rollout geografico rende prematuro qualsiasi intervento operativo immediato: serve monitorare annunci ufficiali e test sul campo prima di modificare workflow di produzione contenuti."
+        ],
+        "examples": [
+          "Un canale YouTube educativo che pubblica lezioni in LIS (Lingua Italiana dei Segni) senza trascrizioni testuali potrebbe iniziare a comparire in SERP per query testuali correlate, se Google applica SL2T all'indicizzazione video. Questo aumenta la superficie di traffico organico senza interventi manuali, ma espone al rischio di metadati generati male se il modello interpreta erroneamente segni o contesto.",
+          "Evitare di eliminare trascrizioni manuali esistenti confidando ciecamente in SL2T: le lingue dei segni hanno varianti regionali e sfumature (espressioni facciali, velocità, contesto culturale) che un modello potrebbe non cogliere. Mantenere metadati curati a mano garantisce controllo su come Google interpreta i contenuti, almeno finché l'accuratezza del modello non è verificata su larga scala.",
+          "Un sito di servizi pubblici (es. ASL, enti governativi) che integra video in lingua dei segni nelle FAQ potrebbe testare l'impatto su ricerche vocali e featured snippet: se Google estrae testo da SL2T e lo considera per risposte dirette, contenuti accessibili diventano competitivi anche per query tradizionali, non solo per ricerche specifiche su accessibilità."
+        ],
+        "testing_steps": [
+          "Carica un video di test con contenuto in lingua dei segni (senza trascrizione manuale) su YouTube e monitora in Search Console se Google inizia a mostrare impression per query testuali correlate al contenuto segnato.",
+          "Confronta le trascrizioni automatiche generate da YouTube (se disponibili) con il contenuto effettivo del video: verifica accuratezza, lingua riconosciuta e presenza di errori semantici che potrebbero danneggiare la rilevanza.",
+          "Filtra in Google Search Console le query per contenuti video accessibili e analizza variazioni di CTR e posizione media dopo eventuali rollout di SL2T, confrontando con periodi precedenti.",
+          "Testa ricerche Google per query di nicchia legate a contenuti in lingua dei segni (es. 'corso LIS base', 'tutorial ASL alfabeto') e verifica se compaiono video senza trascrizioni manuali: segnala l'attivazione di SL2T nell'indicizzazione.",
+          "Monitora Google Search Central Blog e canali ufficiali per annunci su lingue supportate, mercati di rollout e integrazione di SL2T in Search: l'assenza di dettagli tecnici pubblici rende necessario seguire comunicazioni ufficiali.",
+          "Se gestisci contenuti accessibili, configura alert su variazioni anomale di traffico organico da video: picchi o cali improvvisi potrebbero indicare attivazione di SL2T o errori di interpretazione del modello."
+        ],
+        "faqs": [
+          {
+            "question": "SL2T impatta già l'indicizzazione di video su Google Search?",
+            "answer": "Non ci sono conferme ufficiali che SL2T sia attivo nell'indicizzazione di Google Search al momento dell'annuncio. DeepMind ha dichiarato che il modello sarà integrato in prodotti Google, ma non ha specificato tempistiche né quali servizi (Search, YouTube, Meet) lo adotteranno per primi. Serve monitorare annunci ufficiali e testare sul campo prima di modificare strategie di ottimizzazione video."
+          },
+          {
+            "question": "Quali lingue dei segni sono supportate da SL2T?",
+            "answer": "L'annuncio non specifica quali lingue dei segni (ASL, BSL, LIS, ecc.) siano supportate al lancio. Le lingue dei segni variano significativamente per grammatica, lessico e struttura tra paesi e regioni. Senza dettagli ufficiali, è prematuro assumere che contenuti in una lingua dei segni specifica saranno riconosciuti: chi produce contenuti accessibili deve attendere documentazione tecnica prima di fare affidamento su SL2T."
+          },
+          {
+            "question": "Devo eliminare le trascrizioni manuali dai video in lingua dei segni?",
+            "answer": "No. Le trascrizioni manuali restano la soluzione più affidabile per garantire accuratezza e controllo sui metadati indicizzati. SL2T è un modello di IA che può commettere errori di interpretazione, soprattutto con varianti regionali, espressioni facciali o contesti ambigui. Mantenere trascrizioni curate permette di verificare cosa Google indicizza e correggere eventuali errori generati automaticamente, proteggendo rilevanza e ranking."
+          },
+          {
+            "question": "SL2T può migliorare il ranking di contenuti accessibili?",
+            "answer": "Potenzialmente sì, ma solo se Google usa l'accessibilità come segnale di qualità e se SL2T interpreta correttamente i contenuti. Se il modello genera metadati accurati, contenuti in lingua dei segni diventano indicizzabili e competitivi per query testuali. Se invece produce trascrizioni errate, il ranking potrebbe peggiorare per mancanza di rilevanza. L'impatto dipende dall'accuratezza del modello e da come Google integra SL2T nel ranking."
+          }
+        ],
+        "editorial_commentary": "L'annuncio di SL2T è tecnicamente interessante ma operativamente vago. Google DeepMind non ha fornito dettagli su lingue supportate, accuratezza del modello, tempistiche di rollout né integrazione concreta in Search o YouTube. Senza queste informazioni, qualsiasi azione immediata è prematura.\n\nChi gestisce contenuti accessibili dovrebbe monitorare, non agire. Le trascrizioni manuali restano lo standard affidabile: un modello di IA, per quanto avanzato, può sbagliare interpretazioni di lingue dei segni complesse, danneggiando rilevanza e ranking. Non eliminare metadati curati confidando in una tecnologia non ancora verificata su larga scala.\n\nSe SL2T viene integrato nell'indicizzazione, l'impatto sarà significativo per nicchie specifiche (educazione, servizi pubblici, contenuti accessibili). Ma serve trasparenza da Google su come il modello viene applicato, quali lingue copre e come gestisce errori. Fino ad allora, trattare l'annuncio come una direzione strategica, non come un cambio operativo immediato.",
+        "premium_model_used": "anthropic/claude-sonnet-4.5",
+        "cost_eur": 0.042722039999999996
+      }
+    },
+    {
+      "id": "item_2026-08-13_011",
+      "title_original": "Cloudflare Gives AI Agents Wallets That Pay For What They Access via @sejournal, @slobodanmanic",
+      "title_it": "Cloudflare introduce wallet per agenti AI per pagamenti basati sull'accesso",
+      "summary_it": "Cloudflare ha annunciato l'introduzione di wallet e handle di identità opzionali per gli agenti AI. Questa funzionalità estende la possibilità di accesso a pagamento, precedentemente riservata ai crawler, a qualsiasi chiamante e risorsa. L'obiettivo è permettere agli agenti AI di pagare per i servizi o i dati a cui accedono, introducendo un nuovo modello di interazione economica nel web.",
+      "url": "https://www.searchenginejournal.com/cloudflare-gives-ai-agents-wallets-that-pay-for-what-they-access/584959",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "cloudflare",
+        "ai_agent",
+        "web3",
+        "monetization"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T13:30:08Z",
+      "fetched_at": "2026-08-13T05:02:49.019235Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:19cdb35b7731f3ab",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_012",
+      "title_original": "OpenAI Allows Some Health & Finance Ads In ChatGPT via @sejournal, @MattGSouthern",
+      "title_it": "OpenAI autorizza alcune pubblicità in ambito salute e finanza su ChatGPT",
+      "summary_it": "OpenAI ha aggiornato le proprie policy pubblicitarie, consentendo ora la visualizzazione di annunci relativi ai settori della salute e della finanza all'interno di ChatGPT. Restano in vigore restrizioni sul posizionamento degli annunci in conversazioni considerate sensibili. Questa modifica indica un'espansione delle opportunità di monetizzazione per la piattaforma.",
+      "url": "https://www.searchenginejournal.com/openai-allows-some-health-finance-ads-in-chatgpt/585516",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "advertising",
+        "policy_update"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T14:14:23Z",
+      "fetched_at": "2026-08-13T05:02:50.702674Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7272a4582f2f5538",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_013",
+      "title_original": "Google Amends SerpApi Suit With Content Licensing Terms via @sejournal, @MattGSouthern",
+      "title_it": "Google modifica la causa contro SerpApi aggiungendo termini di licenza sui contenuti",
+      "summary_it": "Google ha emendato la sua denuncia DMCA contro SerpApi, introducendo termini di licenza per i contenuti. Questa modifica segue il rigetto delle accuse iniziali relative allo scraping dei risultati di ricerca da parte di un tribunale. La mossa indica un tentativo di rafforzare la posizione legale di Google contro l'uso non autorizzato dei propri dati.",
+      "url": "https://www.searchenginejournal.com/google-amends-serpapi-suit-with-content-licensing-terms/585505",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -569,27 +539,62 @@
       },
       "category": "industry_news",
       "tags": [
+        "google",
+        "serpapi",
+        "legal_dispute",
+        "content_licensing"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-12T17:02:14Z",
+      "fetched_at": "2026-08-13T05:02:52.489530Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8ba13ffa1a0b0840",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-13_014",
+      "title_original": "How to Create Health & YMYL Content That Performs in AI Search",
+      "title_it": "Come creare contenuti Salute e YMYL efficaci nella ricerca AI",
+      "summary_it": "L'articolo discute l'importanza di produrre contenuti di alta qualità per le tematiche Salute e YMYL, specialmente in un contesto di ricerca dominato dalle AI Overviews. Viene sottolineato come i contenuti superficiali siano ormai inefficaci e si evidenziano le caratteristiche che permettono ai contenuti di ottenere citazioni e visibilità. L'attenzione è posta sulla necessità di un approccio approfondito e autorevole per emergere nelle SERP AI.",
+      "url": "https://www.searchenginejournal.com/how-to-create-health-ymyl-content-that-performs-in-ai-search/584431",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "ymyl",
+        "health_content",
         "ai_search",
-        "geo_seo",
-        "marketing_strategy",
-        "transunion_report"
+        "e_e_a_t"
       ],
-      "importance": 2,
-      "published_at": "2026-08-11T13:30:56Z",
-      "fetched_at": "2026-08-12T06:02:48.849402Z",
+      "importance": 3,
+      "published_at": "2026-08-12T18:00:47Z",
+      "fetched_at": "2026-08-13T05:02:54.644285Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:7a619d50b9ac6e7d",
+      "raw_hash": "sha256:f5bc3e2bddb58071",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-12_016",
-      "title_original": "Anthropic To Mark Claude Text & Files Under EU AI Act Code via @sejournal, @MattGSouthern",
-      "title_it": "Anthropic implementerà watermark su testi e file generati da Claude in conformità con l'EU AI Act",
-      "summary_it": "Anthropic ha annunciato l'introduzione di watermark invisibili sui testi e la firma digitale sui file prodotti dal suo modello AI, Claude. Questa iniziativa mira a conformarsi alle normative previste dall'EU AI Act. L'obiettivo è garantire la tracciabilità e l'identificazione dei contenuti generati dall'intelligenza artificiale.",
-      "url": "https://www.searchenginejournal.com/anthropic-claude-watermarks-eu-ai-act-code/585355",
+      "id": "item_2026-08-13_015",
+      "title_original": "Google Gemini Passes 1B Monthly Users, 63% Now Use Voice via @sejournal, @MattGSouthern",
+      "title_it": "Google Gemini supera il miliardo di utenti mensili, il 63% utilizza ora la voce",
+      "summary_it": "L'applicazione Gemini di Google ha raggiunto oltre un miliardo di utenti attivi mensili. Un dato significativo è che il 63% di questi utenti interagisce con l'app tramite comandi vocali. Vengono inoltre evidenziati altri metodi di interazione come l'uso della fotocamera, l'upload di contenuti e l'automazione delle app.",
+      "url": "https://www.searchenginejournal.com/google-gemini-passes-1b-monthly-users-63-now-use-voice/585624",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -604,216 +609,111 @@
       },
       "category": "ai_models",
       "tags": [
-        "anthropic",
-        "claude",
-        "eu_ai_act",
-        "watermarking"
+        "google_gemini",
+        "voice_search",
+        "user_adoption",
+        "ai_usage"
       ],
       "importance": 3,
-      "published_at": "2026-08-11T15:03:35Z",
-      "fetched_at": "2026-08-12T06:02:50.188301Z",
+      "published_at": "2026-08-13T00:00:07Z",
+      "fetched_at": "2026-08-13T05:02:56.470501Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:339a1414689dd573",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_017",
-      "title_original": "Organic Traffic Dropped? What to Tell Clients & the AI Visibility Metrics to Report Instead",
-      "title_it": "Calo del traffico organico: come comunicarlo ai clienti e quali metriche di visibilità AI presentare",
-      "summary_it": "L'articolo affronta il tema del calo del traffico organico, un problema comune per molte agenzie SEO. Vengono esplorate le possibili cause di tale diminuzione. Si suggeriscono inoltre nuove metriche di visibilità basate sull'intelligenza artificiale da presentare ai clienti in queste situazioni.",
-      "url": "https://www.searchenginejournal.com/organic-traffic-dropped-what-to-tell-clients-the-ai-visibility-metrics-to-report-instead-spa/584388",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "organic_traffic",
-        "client_reporting",
-        "ai_metric",
-        "seo_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T17:59:11Z",
-      "fetched_at": "2026-08-12T06:02:51.601324Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:757451b03fe474be",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_018",
-      "title_original": "The Metric Most SEOs Are Still Not Measuring In The Age Of AI via @sejournal, @SequinsNsearch",
-      "title_it": "La metrica che la maggior parte dei SEO non sta ancora misurando nell'era dell'AI",
-      "summary_it": "L'articolo evidenzia come le risposte generate dall'AI influenzino le decisioni degli utenti prima che questi raggiungano un sito web. Si sottolinea l'importanza di misurare l'allineamento con i fattori decisionali piuttosto che concentrarsi solo sui click successivi. Questo suggerisce un cambiamento di paradigma nelle metriche SEO rilevanti.",
-      "url": "https://www.searchenginejournal.com/the-metric-most-seos-are-still-not-measuring-in-the-age-of-ai/584027",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_impact",
-        "seo_metric",
-        "user_behavior",
-        "decision_driver"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T18:00:19Z",
-      "fetched_at": "2026-08-12T06:02:53.315672Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:78b2bd5e4f8a7027",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-12_019",
-      "title_original": "ChatGPT’s Search Index Serves Small Sites Too, Data Shows via @sejournal, @MattGSouthern",
-      "title_it": "L'indice di ricerca di ChatGPT include anche i siti più piccoli, secondo i dati",
-      "summary_it": "Nuovi dati indicano che l'indice di ricerca interno di OpenAI non discrimina tra siti web con licenza e senza licenza. L'analisi suggerisce che anche i siti di piccole dimensioni vengono inclusi nei risultati di ricerca di ChatGPT. Questo implica un approccio inclusivo nella raccolta dei dati per il modello.",
-      "url": "https://www.searchenginejournal.com/chatgpts-search-index-serves-small-sites-too-data-shows/585388",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "chatgpt_index",
-        "openai_data",
-        "small_site",
-        "search_index"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-11T18:11:46Z",
-      "fetched_at": "2026-08-12T06:02:54.838495Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:97b351ffb99993bd",
+      "raw_hash": "sha256:56053bec8ab20200",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-12T06:01:20.234075Z",
+      "last_checked": "2026-08-13T05:01:09.072633Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-12T06:01:20.954627Z",
+      "last_checked": "2026-08-13T05:01:09.925312Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-12T06:01:22.438813Z",
+      "last_checked": "2026-08-13T05:01:11.523659Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-12T06:01:23.716880Z",
+      "last_checked": "2026-08-13T05:01:12.743896Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-12T06:01:48.150567Z",
+      "last_checked": "2026-08-13T05:01:36.519273Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-12T06:01:48.432644Z",
+      "last_checked": "2026-08-13T05:01:51.487929Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-12T06:01:49.776929Z",
+      "last_checked": "2026-08-13T05:01:51.860313Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-12T06:01:51.011456Z",
+      "last_checked": "2026-08-13T05:01:53.532078Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-12T06:01:52.522328Z",
+      "last_checked": "2026-08-13T05:01:54.148225Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-12T06:01:52.547805Z",
+      "last_checked": "2026-08-13T05:01:54.214519Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-12T06:01:52.731157Z",
+      "last_checked": "2026-08-13T05:01:54.457746Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-12T06:01:53.860001Z",
+      "last_checked": "2026-08-13T05:01:55.848799Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-12T06:01:55.089861Z",
+      "last_checked": "2026-08-13T05:01:57.195973Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-12T06:01:56.571655Z",
+      "last_checked": "2026-08-13T05:01:58.916969Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-12T06:01:57.611268Z",
+      "last_checked": "2026-08-13T05:02:00.776835Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-12T06:01:59.246966Z",
+      "last_checked": "2026-08-13T05:02:02.588647Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-12T06:02:01.303556Z",
+      "last_checked": "2026-08-13T05:02:04.595004Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-12T06:02:25.931979Z",
+      "last_checked": "2026-08-13T05:02:28.870648Z",
       "changed": false
     }
   ],
