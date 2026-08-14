@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-14T05:01:01.262460Z",
-  "generated_at_local": "2026-08-14T07:01:01.262460+02:00",
+  "generated_at": "2026-08-14T06:01:21.638250Z",
+  "generated_at_local": "2026-08-14T08:01:21.638250+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-14-0701",
+  "run_id": "2026-08-14-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2302,
     "items_after_dedup": 20,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0122,
+    "ai_cost_eur": 0.012,
     "summarize_attempted": 20,
     "summarize_failed": 0
   },
@@ -19,12 +19,12 @@
     "item_2026-08-14_004",
     "item_2026-08-14_020",
     "item_2026-08-14_008",
-    "item_2026-08-14_007",
     "item_2026-08-14_010",
     "item_2026-08-14_011",
     "item_2026-08-14_009",
     "item_2026-08-14_017",
-    "item_2026-08-14_016"
+    "item_2026-08-14_016",
+    "item_2026-08-14_007"
   ],
   "categories": {
     "ai_models": [
@@ -36,19 +36,16 @@
     ],
     "google_updates": [
       "item_2026-08-14_020",
-      "item_2026-08-14_007",
       "item_2026-08-14_010",
       "item_2026-08-14_011"
     ],
     "technical_seo": [
-      "item_2026-08-14_008"
+      "item_2026-08-14_008",
+      "item_2026-08-14_007"
     ],
-    "ai_overviews_llm_seo": [
+    "tools_platforms": [
       "item_2026-08-14_013",
-      "item_2026-08-14_012",
-      "item_2026-08-14_001",
-      "item_2026-08-14_005",
-      "item_2026-08-14_006"
+      "item_2026-08-14_018"
     ],
     "industry_news": [
       "item_2026-08-14_014",
@@ -56,8 +53,11 @@
       "item_2026-08-14_015",
       "item_2026-08-14_019"
     ],
-    "tools_platforms": [
-      "item_2026-08-14_018"
+    "ai_overviews_llm_seo": [
+      "item_2026-08-14_001",
+      "item_2026-08-14_012",
+      "item_2026-08-14_005",
+      "item_2026-08-14_006"
     ]
   },
   "items": [
@@ -65,7 +65,7 @@
       "id": "item_2026-08-14_001",
       "title_original": "37 Proven Ways to Use AI in Marketing",
       "title_it": "37 Metodi Collaudati per Utilizzare l'IA nel Marketing",
-      "summary_it": "L'articolo presenta 37 applicazioni pratiche dell'intelligenza artificiale nel marketing, coprendo ambiti che vanno dalla SEO al marketing internazionale. Ogni metodo è illustrato da un professionista che ne ha dimostrato l'efficacia sul campo. La risorsa offre spunti concreti per l'integrazione dell'IA nelle strategie di marketing.",
+      "summary_it": "L'articolo di Ahrefs presenta 37 applicazioni pratiche dell'intelligenza artificiale nel marketing, coprendo ambiti che vanno dalla SEO al marketing internazionale. Ogni metodo è illustrato da un professionista che ne ha dimostrato l'efficacia. La risorsa offre spunti concreti per l'integrazione dell'IA nelle strategie di marketing.",
       "url": "https://ahrefs.com/blog/how-to-use-ai-in-marketing",
       "source": {
         "id": "ahrefs_blog",
@@ -82,12 +82,12 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "ai_marketing",
-        "marketing_strategie",
-        "ai_application"
+        "ai_application",
+        "marketing_strategie"
       ],
-      "importance": 2,
+      "importance": 3,
       "published_at": "2026-08-13T07:32:36Z",
-      "fetched_at": "2026-08-14T05:02:14.490327Z",
+      "fetched_at": "2026-08-14T06:02:22.144037Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -122,7 +122,7 @@
       ],
       "importance": 2,
       "published_at": "2026-08-13T08:00:00Z",
-      "fetched_at": "2026-08-14T05:02:16.043715Z",
+      "fetched_at": "2026-08-14T06:02:23.378753Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -134,7 +134,7 @@
       "id": "item_2026-08-14_003",
       "title_original": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
       "title_it": "Anteprima della modalità Ultrafast: GPT-5.6 Sol fino a 14 volte più veloce",
-      "summary_it": "OpenAI ha annunciato una nuova modalità Ultrafast per il suo modello GPT-5.6 Sol, che promette una velocità fino a 14 volte superiore. Questa funzionalità, alimentata da Cerebras, consente di generare fino a 750 token di output al secondo. Si tratta di un nuovo livello di servizio API che mira a migliorare significativamente le prestazioni per gli sviluppatori.",
+      "summary_it": "OpenAI ha annunciato una nuova modalità Ultrafast per la sua API, che permette a GPT-5.6 Sol di operare fino a 14 volte più velocemente. Questa funzionalità, basata sulla tecnologia Cerebras, consente di generare fino a 750 token di output al secondo. Si tratta di un significativo miglioramento in termini di velocità di elaborazione per i modelli linguistici di grandi dimensioni.",
       "url": "https://openai.com/index/previewing-ultrafast",
       "source": {
         "id": "openai_blog",
@@ -150,14 +150,14 @@
       },
       "category": "ai_models",
       "tags": [
-        "openai",
+        "openai_api",
         "gpt_5_6_sol",
-        "api_performance",
-        "ai_speed"
+        "model_speed",
+        "cerebras_technology"
       ],
       "importance": 4,
       "published_at": "2026-08-13T09:00:00Z",
-      "fetched_at": "2026-08-14T05:02:17.627491Z",
+      "fetched_at": "2026-08-14T06:02:25.439157Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -169,7 +169,7 @@
       "id": "item_2026-08-14_004",
       "title_original": "The builder’s guide to GPT‑5.6",
       "title_it": "Guida per sviluppatori a GPT-5.6",
-      "summary_it": "OpenAI ha pubblicato una guida che illustra come le startup stanno impiegando GPT-5.6 per accelerare lo sviluppo di agenti AI. Il documento evidenzia l'ottimizzazione dei costi e l'efficienza raggiunta tramite una selezione più intelligente dei modelli. Vengono inoltre presentate le nuove funzionalità dell'API Responses per migliorare le interazioni.",
+      "summary_it": "OpenAI ha pubblicato una guida che illustra come le startup stanno impiegando GPT-5.6 per sviluppare agenti AI in modo più rapido ed economico. Vengono evidenziate le nuove capacità di selezione del modello e le funzionalità dell'API Responses. L'obiettivo è ottimizzare l'efficienza e la performance nello sviluppo di applicazioni basate su AI.",
       "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
       "source": {
         "id": "openai_blog",
@@ -187,12 +187,12 @@
       "tags": [
         "gpt_5_6",
         "openai",
-        "ai_agent",
+        "ai_development",
         "api_update"
       ],
       "importance": 4,
       "published_at": "2026-08-13T10:00:00Z",
-      "fetched_at": "2026-08-14T05:02:18.935274Z",
+      "fetched_at": "2026-08-14T06:02:26.981905Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -203,8 +203,8 @@
     {
       "id": "item_2026-08-14_005",
       "title_original": "AI Overviews: How Freshpet Stands Out in SEO & GEO [Webinar] via @sejournal, @hethr_campbell",
-      "title_it": "AI Overviews: Il caso Freshpet per SEO e GEO",
-      "summary_it": "La notizia anticipa un webinar che esplora come il brand Freshpet si distingua nelle AI Overviews di Google. Verrà analizzato il ruolo dei segnali di fiducia per la riconoscibilità del marchio nella ricerca basata sull'intelligenza artificiale. L'evento si concentrerà sulle strategie SEO e GEO adottate dall'azienda.",
+      "title_it": "AI Overviews: Il caso Freshpet in SEO e GEO",
+      "summary_it": "Il webinar di Search Engine Journal esplora come Freshpet si distingue nelle AI Overviews di Google. Verrà analizzato il ruolo dei segnali di fiducia per il riconoscimento del brand nella ricerca basata sull'intelligenza artificiale. L'evento si concentra sulle strategie SEO e GEO adottate dall'azienda.",
       "url": "https://www.searchenginejournal.com/ai-overviews-how-freshpet-stands-out-seo-geo/584796",
       "source": {
         "id": "search_engine_journal",
@@ -222,11 +222,12 @@
       "tags": [
         "ai_overviews",
         "local_seo",
-        "brand_signal"
+        "brand_signal",
+        "webinar"
       ],
       "importance": 2,
       "published_at": "2026-08-13T10:06:50Z",
-      "fetched_at": "2026-08-14T05:02:20.450402Z",
+      "fetched_at": "2026-08-14T06:02:28.565311Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -238,7 +239,7 @@
       "id": "item_2026-08-14_006",
       "title_original": "AI keyword research: How to use free chatbot tools",
       "title_it": "Ricerca di parole chiave con l'AI: Come usare chatbot gratuiti",
-      "summary_it": "L'articolo analizza l'efficacia di cinque chatbot gratuiti per la ricerca di parole chiave. Vengono presentati i risultati dei test e le metodologie per validare i suggerimenti forniti dall'intelligenza artificiale con dati di ricerca reali. L'obiettivo è fornire indicazioni pratiche sull'integrazione di questi strumenti nei flussi di lavoro SEO.",
+      "summary_it": "L'articolo analizza l'efficacia di cinque chatbot gratuiti per la ricerca di parole chiave. Vengono presentati i risultati dei test e le metodologie per validare i suggerimenti forniti dall'intelligenza artificiale con dati di ricerca reali. L'obiettivo è mostrare come integrare questi strumenti nel processo di keyword research.",
       "url": "https://www.semrush.com/blog/ai-keyword-research",
       "source": {
         "id": "semrush_blog",
@@ -256,12 +257,12 @@
       "tags": [
         "ai_keyword_research",
         "free_chatbot",
-        "keyword_validation",
-        "semrush"
+        "semrush",
+        "content_strategy"
       ],
       "importance": 2,
       "published_at": "2026-08-13T10:09:00Z",
-      "fetched_at": "2026-08-14T05:02:21.878472Z",
+      "fetched_at": "2026-08-14T06:02:30.653101Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -273,7 +274,7 @@
       "id": "item_2026-08-14_007",
       "title_original": "Spammy Google Selected Canonical In Search Console",
       "title_it": "Canonical selezionato da Google errato in Search Console",
-      "summary_it": "È stato segnalato un caso in cui Google Search Console ha mostrato un URL canonico selezionato da Google che puntava a un sito spam. John Mueller ha commentato che tali situazioni possono verificarsi quando i domini hanno utilizzato la stessa pagina interstiziale o parcheggiata. Ha suggerito di attendere alcune settimane per vedere se Google aggiorna l'URL. Questo fenomeno, sebbene non comune, non è del tutto inedito.",
+      "summary_it": "È stato segnalato un caso in cui Google Search Console ha mostrato un URL canonico selezionato da Google che puntava a un sito spam. John Mueller di Google ha suggerito che ciò potrebbe derivare dall'uso di pagine interstiziali o parcheggiate comuni tra domini. Ha consigliato di attendere alcune settimane per vedere se l'URL si aggiorna. Questo fenomeno, sebbene non comune, può verificarsi in determinate circostanze.",
       "url": "https://www.seroundtable.com/spammy-google-selected-canonical-41863.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -287,16 +288,16 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "google_updates",
+      "category": "technical_seo",
       "tags": [
         "google_search_console",
         "canonical_tag",
-        "indexing",
-        "john_mueller"
+        "technical_seo",
+        "google_bug"
       ],
       "importance": 3,
       "published_at": "2026-08-13T10:11:00Z",
-      "fetched_at": "2026-08-14T05:02:23.733644Z",
+      "fetched_at": "2026-08-14T06:02:32.289060Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -308,7 +309,7 @@
       "id": "item_2026-08-14_008",
       "title_original": "Misconfiguring Cloudflare Can Hurt Your SEO Badly",
       "title_it": "Una configurazione errata di Cloudflare può danneggiare gravemente la SEO",
-      "summary_it": "Una configurazione impropria di Cloudflare o di altri CDN può bloccare i crawler dei motori di ricerca, causando un drastico calo del posizionamento e dell'indicizzazione. È fondamentale prestare attenzione alle impostazioni di protezione dai bot per evitare di escludere inavvertitamente Google e altri crawler legittimi. Diversi casi recenti hanno evidenziato come errori di configurazione abbiano portato a perdite significative di traffico organico e problemi con Google Ads e Merchant Center.",
+      "summary_it": "Una configurazione impropria di Cloudflare o di altri CDN può bloccare i crawler dei motori di ricerca, causando un drastico calo del posizionamento e dell'indicizzazione. Molti strumenti di protezione dai bot, se mal configurati, possono impedire a Google di accedere al sito. Sono stati riportati casi in cui questa problematica ha avuto un impatto negativo significativo sul traffico organico e sulle attività commerciali. È fondamentale prestare attenzione alle impostazioni per evitare di bloccare involontariamente i bot legittimi.",
       "url": "https://www.seroundtable.com/misconfigure-cloudflare-seo-41865.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -326,12 +327,12 @@
       "tags": [
         "cloudflare",
         "cdn",
-        "crawl_blocking",
-        "seo_impact"
+        "crawling",
+        "indexing"
       ],
       "importance": 4,
       "published_at": "2026-08-13T10:21:00Z",
-      "fetched_at": "2026-08-14T05:02:25.436202Z",
+      "fetched_at": "2026-08-14T06:02:34.573292Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -343,7 +344,7 @@
       "id": "item_2026-08-14_009",
       "title_original": "OpenAI Makes The ChatGPT Sources Less Visible",
       "title_it": "OpenAI rende meno visibili le fonti di ChatGPT",
-      "summary_it": "OpenAI sta testando o implementando una modifica alla visibilità delle fonti nelle risposte di ChatGPT. La funzionalità per visualizzare le fonti, precedentemente accessibile tramite un pulsante diretto, è ora spesso nascosta all'interno del menu 'Altre azioni'. Questo cambiamento potrebbe ridurre significativamente l'interazione degli utenti con le citazioni e le fonti originali. La modifica è stata notata da Glenn Gabe, che ha evidenziato come ciò possa diminuire la visibilità e i clic verso i siti citati.",
+      "summary_it": "OpenAI sta modificando la modalità di visualizzazione delle fonti nelle risposte di ChatGPT. La funzionalità 'Sources', precedentemente un pulsante diretto, è ora spesso nascosta nel menu 'More actions' (tre puntini). Questo cambiamento richiede un passaggio aggiuntivo per accedere alle citazioni, riducendone potenzialmente la visibilità e i click. La modifica potrebbe influenzare l'interazione degli utenti con le fonti citate dal modello.",
       "url": "https://www.seroundtable.com/openai-chatgpt-sources-less-visible-41864.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -366,7 +367,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-13T10:31:00Z",
-      "fetched_at": "2026-08-14T05:02:27.058784Z",
+      "fetched_at": "2026-08-14T06:02:36.276307Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -378,7 +379,7 @@
       "id": "item_2026-08-14_010",
       "title_original": "Google Lowers Subscriber Requirements For Search Profiles",
       "title_it": "Google riduce i requisiti di iscritti per i profili di ricerca",
-      "summary_it": "Google ha abbassato la soglia minima di iscritti necessaria per ottenere un Profilo di Ricerca. Per piattaforme come YouTube, Instagram e X, il requisito è passato da 100.000 a 35.000 iscritti. La soglia per TikTok rimane invariata a 100.000 iscritti. Questa modifica mira a consentire a un numero maggiore di creatori e publisher di accedere a questa funzionalità.",
+      "summary_it": "Google ha abbassato la soglia minima di iscritti necessaria per ottenere un Profilo di Ricerca. Per piattaforme come YouTube, Instagram e X, il requisito è passato da 100.000 a 35.000 iscritti. La soglia per TikTok rimane invariata a 100.000 iscritti. Questa modifica mira a consentire a un maggior numero di creatori e publisher di accedere a questa funzionalità.",
       "url": "https://www.seroundtable.com/google-search-profiles-lowers-subscriber-requirements-41866.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -400,7 +401,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-13T10:41:00Z",
-      "fetched_at": "2026-08-14T05:02:28.500825Z",
+      "fetched_at": "2026-08-14T06:02:37.867392Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -412,7 +413,7 @@
       "id": "item_2026-08-14_011",
       "title_original": "Google Search Ranking Volatility Spikes On August 12-13",
       "title_it": "Picco di volatilità nel ranking di ricerca di Google il 12-13 agosto",
-      "summary_it": "Il 12 e 13 agosto si è registrato un aumento della volatilità nei risultati di ricerca di Google, rilevato dagli strumenti di monitoraggio. Questo movimento non è stato confermato da Google come un aggiornamento ufficiale. La volatilità si inserisce in un periodo di frequenti fluttuazioni non confermate, seguendo l'aggiornamento spam di giugno 2026 e il core update di maggio 2026. La notizia evidenzia anche una crescente preoccupazione tra gli editori riguardo al traffico inviato da Google.",
+      "summary_it": "Il 12 e 13 agosto si è registrato un aumento della volatilità nei risultati di ricerca di Google, rilevato dagli strumenti di monitoraggio. Questo movimento si aggiunge a una serie di fluttuazioni non confermate osservate nelle settimane precedenti. L'ultima conferma di un aggiornamento risale al June 2026 Spam Update. La notizia evidenzia anche una crescente preoccupazione tra gli editori riguardo alla diminuzione del traffico inviato da Google.",
       "url": "https://www.seroundtable.com/google-search-ranking-volatility-spikes-41869.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -434,7 +435,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-13T10:51:00Z",
-      "fetched_at": "2026-08-14T05:02:30.387340Z",
+      "fetched_at": "2026-08-14T06:02:39.894247Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -445,8 +446,8 @@
     {
       "id": "item_2026-08-14_012",
       "title_original": "How Do I Know If AI Overviews Are Taking Clicks From My Site And What Can I Do About It? – Ask An SEO via @sejournal, @HelenPollitt1",
-      "title_it": "Come capire se le AI Overviews stanno riducendo i click al tuo sito e cosa fare",
-      "summary_it": "L'articolo affronta il tema della potenziale perdita di click dovuta alle AI Overviews di Google. Viene suggerito che un calo del CTR, a fronte di ranking e impression stabili, potrebbe indicare un impatto negativo. Vengono fornite indicazioni su come identificare questo fenomeno e valutare le strategie di recupero.",
+      "title_it": "Come capire se le AI Overviews stanno riducendo i clic sul tuo sito e come agire",
+      "summary_it": "L'articolo affronta il tema della potenziale perdita di clic dovuta alle AI Overviews di Google. Vengono descritti i segnali per identificare questa problematica, come ranking e impression stabili con un CTR in calo. Vengono inoltre forniti suggerimenti su come valutare l'impatto e decidere le strategie di recupero più opportune.",
       "url": "https://www.searchenginejournal.com/how-do-i-know-if-ai-overviews-are-taking-clicks-from-my-site-and-what-can-i-do-about-it-ask-an-seo/583417",
       "source": {
         "id": "search_engine_journal",
@@ -463,13 +464,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "ai_overviews",
-        "ctr_loss",
+        "ctr_optimization",
         "google_serp",
-        "seo_strategy"
+        "traffic_analysi"
       ],
       "importance": 3,
       "published_at": "2026-08-13T11:00:20Z",
-      "fetched_at": "2026-08-14T05:02:31.719550Z",
+      "fetched_at": "2026-08-14T06:02:41.825339Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -481,7 +482,7 @@
       "id": "item_2026-08-14_013",
       "title_original": "How To Find And Organize AI Mode Queries Via the Search Analytics API, Analytics Edge, and Claude Cowork",
       "title_it": "Come trovare e organizzare le query in modalità AI tramite l'API Search Analytics, Analytics Edge e Claude Cowork",
-      "summary_it": "L'articolo affronta la difficoltà di identificare le query generate dalla modalità AI all'interno di Google Search Console, dato che non sono esplicitamente separate dalle query tradizionali. Viene proposta una soluzione che prevede l'esportazione dei dati completi delle query e delle landing page tramite l'API Search Analytics. Successivamente, si suggerisce l'utilizzo di Claude per analizzare e categorizzare queste query, identificando quelle presumibilmente generate dalla modalità AI. Questo metodo permette di superare i limiti dell'interfaccia utente di GSC e ottenere una visione più chiara delle interazioni con l'AI.",
+      "summary_it": "L'articolo affronta la difficoltà di identificare le query generate dalla modalità AI all'interno di Google Search Console, dato che non sono esplicitamente separate dalle query tradizionali. Viene proposta una metodologia per estrarre i dati completi delle query e delle landing page tramite l'API Search Analytics. Successivamente, si suggerisce l'utilizzo di Claude per analizzare e categorizzare queste query, identificando quelle presumibilmente generate dalla modalità AI.",
       "url": "https://www.gsqi.com/marketing-blog/how-to-find-ai-mode-queries-gsc",
       "source": {
         "id": "glenn_gabe_hifpm",
@@ -495,16 +496,16 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "tools_platforms",
       "tags": [
-        "gsc_data_analysi",
-        "ai_mode_querie",
-        "search_analytics_api",
+        "gsc_api",
+        "ai_querie",
+        "data_analysi",
         "claude_ai"
       ],
       "importance": 3,
       "published_at": "2026-08-13T12:05:43Z",
-      "fetched_at": "2026-08-14T05:02:33.587040Z",
+      "fetched_at": "2026-08-14T06:02:43.654416Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -516,7 +517,7 @@
       "id": "item_2026-08-14_014",
       "title_original": "Daily Search Forum Recap: August 13, 2026",
       "title_it": "Riepilogo giornaliero del forum di ricerca: 13 agosto 2026",
-      "summary_it": "Si è registrata una significativa volatilità nel ranking di Google Search tra il 12 e il 13 agosto. OpenAI sta testando una modifica che rende meno visibili le fonti nelle risposte di ChatGPT. Google ha abbassato i requisiti minimi di follower per l'approvazione dei Profili di Ricerca. Una configurazione errata di Cloudflare può avere un impatto negativo sulla SEO, bloccando la scansione di Google.",
+      "summary_it": "Si è registrata una significativa volatilità nel ranking di ricerca di Google tra il 12 e il 13 agosto. OpenAI sta testando una modifica che rende meno visibili le fonti nelle risposte di ChatGPT. Google ha abbassato i requisiti minimi di follower per l'approvazione dei profili di ricerca. Una configurazione errata di Cloudflare può avere un impatto negativo sulla SEO, bloccando la scansione di Google.",
       "url": "https://www.seroundtable.com/recap-08-13-2026-41868.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -539,7 +540,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-13T13:00:00Z",
-      "fetched_at": "2026-08-14T05:02:35.158135Z",
+      "fetched_at": "2026-08-14T06:02:45.351253Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -550,8 +551,8 @@
     {
       "id": "item_2026-08-14_015",
       "title_original": "Reddit Preserved The Part Of The Internet We Broke via @sejournal, @brentcsutoras",
-      "title_it": "Reddit ha preservato una parte di internet che abbiamo danneggiato",
-      "summary_it": "L'articolo suggerisce che Reddit ha svolto un ruolo cruciale nel mantenere viva una certa tipologia di interazione online, che altrove è andata perduta. Sebbene le metriche di referral indichino come gli utenti arrivano su Reddit, non spiegano il valore intrinseco che la piattaforma offre. Questo valore risiede nella capacità di Reddit di fungere da archivio e forum per discussioni autentiche e di nicchia.",
+      "title_it": "Reddit ha preservato la parte di internet che abbiamo rovinato",
+      "summary_it": "L'articolo discute il ruolo di Reddit come archivio di informazioni e discussioni, sottolineando come la piattaforma abbia mantenuto un valore intrinseco per gli utenti. Viene evidenziato che le metriche di referral non catturano appieno il motivo per cui gli utenti cercano attivamente contenuti su Reddit. La piattaforma è presentata come un baluardo contro la frammentazione e la perdita di contenuti di valore online.",
       "url": "https://www.searchenginejournal.com/reddit-preserved-the-part-of-the-internet-we-broke/585485",
       "source": {
         "id": "search_engine_journal",
@@ -568,12 +569,13 @@
       "category": "industry_news",
       "tags": [
         "reddit",
-        "online_communitie",
-        "content_preservation"
+        "content_preservation",
+        "user_behavior",
+        "search_referral"
       ],
       "importance": 2,
       "published_at": "2026-08-13T13:30:44Z",
-      "fetched_at": "2026-08-14T05:02:36.686780Z",
+      "fetched_at": "2026-08-14T06:02:48.031287Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -585,7 +587,7 @@
       "id": "item_2026-08-14_016",
       "title_original": "Claude watermarks its output: what content teams should know",
       "title_it": "Claude introduce i watermark nei suoi output: implicazioni per i team di contenuti",
-      "summary_it": "Anthropic ha implementato un sistema di watermark per identificare i contenuti generati o modificati da Claude. Questa funzionalità mira a tracciare l'origine del testo, sebbene esistano limiti sulla sua capacità di prova. I team di contenuti dovrebbero essere consapevoli di questa novità e delle sue potenziali implicazioni.",
+      "summary_it": "Anthropic ha implementato un sistema di watermark per il contenuto generato o modificato da Claude. Questa funzionalità mira a identificare l'origine AI del testo. È importante comprendere il funzionamento di questi watermark e le loro limitazioni. I team di contenuti dovrebbero considerare queste novità nelle loro strategie di produzione.",
       "url": "https://www.semrush.com/blog/claude-ai-watermarks",
       "source": {
         "id": "semrush_blog",
@@ -602,13 +604,13 @@
       "category": "ai_models",
       "tags": [
         "claude_ai",
-        "ai_content_detection",
+        "ai_content",
         "watermarking",
         "content_authenticity"
       ],
       "importance": 3,
       "published_at": "2026-08-13T13:56:00Z",
-      "fetched_at": "2026-08-14T05:02:38.206824Z",
+      "fetched_at": "2026-08-14T06:02:49.416255Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -619,8 +621,8 @@
     {
       "id": "item_2026-08-14_017",
       "title_original": "Why Anthropic’s Claude Watermark May Be A New Text-Marking Method via @sejournal, @martinibuster",
-      "title_it": "Il watermark di Claude di Anthropic: un nuovo metodo di marcatura del testo",
-      "summary_it": "Anthropic ha fornito dettagli sul funzionamento del watermark di Claude, suggerendo un nuovo approccio alla marcatura del testo generato. Un recente documento di ricerca potrebbe chiarire ulteriormente la tecnologia sottostante. Questo sistema potrebbe avere implicazioni per l'identificazione dei contenuti prodotti da intelligenza artificiale.",
+      "title_it": "Il watermark di Claude di Anthropic: un nuovo metodo per marcare il testo generato?",
+      "summary_it": "Anthropic ha fornito dettagli sul funzionamento del watermark di Claude, suggerendo un potenziale nuovo approccio per identificare il testo generato da IA. Un recente documento di ricerca potrebbe chiarire ulteriormente questa metodologia. La tecnica mira a distinguere i contenuti prodotti dall'intelligenza artificiale da quelli creati da esseri umani.",
       "url": "https://www.searchenginejournal.com/why-anthropics-claude-watermark-may-be-a-new-text-marking-method/585703",
       "source": {
         "id": "search_engine_journal",
@@ -638,12 +640,12 @@
       "tags": [
         "anthropic_claude",
         "ai_watermarking",
-        "content_identification",
-        "ai_ethic"
+        "ai_content",
+        "text_generation"
       ],
       "importance": 3,
       "published_at": "2026-08-13T14:23:00Z",
-      "fetched_at": "2026-08-14T05:02:39.663194Z",
+      "fetched_at": "2026-08-14T06:02:51.012783Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -654,8 +656,8 @@
     {
       "id": "item_2026-08-14_018",
       "title_original": "The PPC Clean-Up: How to Audit and Fix ‘Value Inflation’ in Google Ads",
-      "title_it": "La pulizia del PPC: come verificare e correggere la 'gonfiamento del valore' in Google Ads",
-      "summary_it": "L'articolo evidenzia l'importanza di verificare il valore delle conversioni negli account Google Ads ereditati prima di modificare le strategie di offerta. Vengono proposti cinque controlli per distinguere il valore reale da quello gonfiato. L'obiettivo è evitare decisioni basate su dati di conversione inaccurati.",
+      "title_it": "La pulizia del PPC: come verificare e correggere l'inflazione del valore in Google Ads",
+      "summary_it": "L'articolo evidenzia l'importanza di verificare il valore di conversione negli account Google Ads ereditati prima di modificare le strategie di offerta. Vengono proposti cinque controlli per distinguere il fatturato reale da valori gonfiati. L'obiettivo è ottimizzare le campagne PPC basandosi su dati accurati.",
       "url": "https://www.searchenginejournal.com/the-ppc-clean-up-how-to-audit-and-fix-value-inflation-in-google-ads/583009",
       "source": {
         "id": "search_engine_journal",
@@ -674,11 +676,11 @@
         "google_ad",
         "ppc_audit",
         "conversion_tracking",
-        "data_accuracy"
+        "value_inflation"
       ],
       "importance": 3,
       "published_at": "2026-08-13T16:30:31Z",
-      "fetched_at": "2026-08-14T05:02:41.076531Z",
+      "fetched_at": "2026-08-14T06:02:52.580608Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -689,8 +691,8 @@
     {
       "id": "item_2026-08-14_019",
       "title_original": "The GEO Trust Gap: SEOs Want The Data, But Not The Platforms Selling It via @sejournal, @DuaneForrester",
-      "title_it": "Il divario di fiducia GEO: i professionisti SEO desiderano i dati, ma non le piattaforme che li vendono",
-      "summary_it": "Una recente indagine evidenzia una discrepanza tra il valore attribuito dai professionisti SEO ai dati di visibilità generati dall'AI e la loro riluttanza a finanziare le piattaforme che li offrono. Questo divario di fiducia impedisce l'adozione e lo sviluppo del settore. La ricerca analizza i fattori che ostacolano la crescita di questa categoria di strumenti. I risultati suggeriscono una necessità di maggiore trasparenza e affidabilità da parte dei fornitori.",
+      "title_it": "Il divario di fiducia GEO: i SEO desiderano i dati, ma non le piattaforme che li vendono",
+      "summary_it": "Una nuova indagine rivela che i professionisti SEO attribuiscono grande valore ai dati di visibilità generati dall'AI. Tuttavia, emerge una riluttanza a finanziare le piattaforme che offrono tali dati. Questo indica un divario tra la domanda di informazioni e la fiducia nei fornitori di servizi.",
       "url": "https://www.searchenginejournal.com/the-geo-trust-gap-seos-want-the-data-but-not-the-platforms-selling-it/585161",
       "source": {
         "id": "search_engine_journal",
@@ -709,11 +711,11 @@
         "ai_data",
         "seo_tool",
         "industry_survey",
-        "trust_gap"
+        "data_trust"
       ],
       "importance": 2,
       "published_at": "2026-08-13T18:00:43Z",
-      "fetched_at": "2026-08-14T05:02:42.693218Z",
+      "fetched_at": "2026-08-14T06:02:54.214322Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -725,7 +727,7 @@
       "id": "item_2026-08-14_020",
       "title_original": "Google Is Removing Language Targeting From Search Campaigns via @sejournal, @brookeosmundson",
       "title_it": "Google rimuove il targeting linguistico dalle campagne di ricerca",
-      "summary_it": "A partire da settembre 2026, Google Ads eliminerà l'opzione di targeting linguistico per le campagne Search e Performance Max. Questa modifica richiederà agli inserzionisti di adattare le proprie strategie per raggiungere il pubblico desiderato. Sarà necessario considerare nuove metodologie per la segmentazione degli utenti in base alla lingua.",
+      "summary_it": "A partire da settembre 2026, Google Ads eliminerà l'opzione di targeting linguistico per le campagne Search e Performance Max. Gli annunci verranno mostrati agli utenti in base alla lingua della query di ricerca e alle impostazioni del browser, indipendentemente dalle impostazioni linguistiche della campagna. Questa modifica mira a semplificare la gestione delle campagne e a migliorare la pertinenza degli annunci.",
       "url": "https://www.searchenginejournal.com/google-is-removing-language-targeting-from-search-campaigns/585592",
       "source": {
         "id": "search_engine_journal",
@@ -748,7 +750,7 @@
       ],
       "importance": 4,
       "published_at": "2026-08-13T20:30:33Z",
-      "fetched_at": "2026-08-14T05:02:44.137856Z",
+      "fetched_at": "2026-08-14T06:02:56.096902Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -760,92 +762,92 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-14T05:01:07.386423Z",
+      "last_checked": "2026-08-14T06:01:28.976761Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-14T05:01:07.894314Z",
+      "last_checked": "2026-08-14T06:01:29.606487Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-14T05:01:09.101359Z",
+      "last_checked": "2026-08-14T06:01:30.409712Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-14T05:01:10.771145Z",
+      "last_checked": "2026-08-14T06:01:31.799218Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-14T05:01:34.753450Z",
+      "last_checked": "2026-08-14T06:01:48.797905Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-14T05:01:35.180928Z",
+      "last_checked": "2026-08-14T06:01:49.111592Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-14T05:01:36.468949Z",
+      "last_checked": "2026-08-14T06:01:50.378590Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-14T05:01:38.387374Z",
+      "last_checked": "2026-08-14T06:01:51.872037Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-14T05:01:39.324069Z",
+      "last_checked": "2026-08-14T06:01:53.440744Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-14T05:01:39.365582Z",
+      "last_checked": "2026-08-14T06:01:53.494002Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-14T05:01:39.598937Z",
+      "last_checked": "2026-08-14T06:01:53.937829Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-14T05:01:41.362490Z",
+      "last_checked": "2026-08-14T06:01:55.459347Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-14T05:01:42.772614Z",
+      "last_checked": "2026-08-14T06:01:57.082445Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-14T05:01:43.099723Z",
+      "last_checked": "2026-08-14T06:01:58.836470Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-14T05:01:44.929630Z",
+      "last_checked": "2026-08-14T06:01:59.854218Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-14T05:01:46.465575Z",
+      "last_checked": "2026-08-14T06:02:00.898163Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-14T05:01:48.042420Z",
+      "last_checked": "2026-08-14T06:02:02.165196Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-14T05:02:12.487013Z",
+      "last_checked": "2026-08-14T06:02:19.743848Z",
       "changed": false
     }
   ],
