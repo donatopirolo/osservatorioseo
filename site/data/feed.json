@@ -1,106 +1,71 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T05:01:56.309784Z",
-  "generated_at_local": "2026-08-20T07:01:56.309784+02:00",
+  "generated_at": "2026-08-20T06:02:02.452197Z",
+  "generated_at_local": "2026-08-20T08:02:02.452197+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-20-0701",
+  "run_id": "2026-08-20-0802",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2317,
-    "items_after_dedup": 21,
+    "items_after_dedup": 20,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0124,
-    "summarize_attempted": 21,
+    "ai_cost_eur": 0.012,
+    "summarize_attempted": 20,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-20_014",
-    "item_2026-08-20_008",
-    "item_2026-08-20_010",
-    "item_2026-08-20_011",
-    "item_2026-08-20_001",
-    "item_2026-08-20_006",
+    "item_2026-08-20_013",
+    "item_2026-08-20_018",
     "item_2026-08-20_007",
-    "item_2026-08-20_017",
-    "item_2026-08-20_012",
-    "item_2026-08-20_021"
+    "item_2026-08-20_009",
+    "item_2026-08-20_010",
+    "item_2026-08-20_005",
+    "item_2026-08-20_006",
+    "item_2026-08-20_016",
+    "item_2026-08-20_011",
+    "item_2026-08-20_020"
   ],
   "categories": {
     "industry_news": [
-      "item_2026-08-20_014",
-      "item_2026-08-20_016",
-      "item_2026-08-20_015"
-    ],
-    "google_updates": [
-      "item_2026-08-20_008",
-      "item_2026-08-20_010",
-      "item_2026-08-20_011",
-      "item_2026-08-20_006",
-      "item_2026-08-20_007"
-    ],
-    "ai_models": [
-      "item_2026-08-20_001",
-      "item_2026-08-20_017",
-      "item_2026-08-20_012",
-      "item_2026-08-20_021"
-    ],
-    "tools_platforms": [
-      "item_2026-08-20_005",
-      "item_2026-08-20_009",
       "item_2026-08-20_013",
-      "item_2026-08-20_020",
-      "item_2026-08-20_002",
-      "item_2026-08-20_004"
+      "item_2026-08-20_015",
+      "item_2026-08-20_014"
     ],
     "ai_overviews_llm_seo": [
       "item_2026-08-20_018",
-      "item_2026-08-20_019"
+      "item_2026-08-20_017"
+    ],
+    "google_updates": [
+      "item_2026-08-20_007",
+      "item_2026-08-20_009",
+      "item_2026-08-20_010",
+      "item_2026-08-20_005",
+      "item_2026-08-20_006"
+    ],
+    "ai_models": [
+      "item_2026-08-20_016",
+      "item_2026-08-20_011",
+      "item_2026-08-20_020"
+    ],
+    "tools_platforms": [
+      "item_2026-08-20_004",
+      "item_2026-08-20_008",
+      "item_2026-08-20_012",
+      "item_2026-08-20_019",
+      "item_2026-08-20_001",
+      "item_2026-08-20_003"
     ],
     "content_eeat": [
-      "item_2026-08-20_003"
+      "item_2026-08-20_002"
     ]
   },
   "items": [
     {
       "id": "item_2026-08-20_001",
-      "title_original": "Replit expands access to software creation with GPT-5.6 Luna",
-      "title_it": "Replit amplia l'accesso alla creazione di software con GPT-5.6 Luna",
-      "summary_it": "Replit ha lanciato una nuova modalità gratuita, alimentata da GPT-5.6 Luna, che permette agli utenti di sviluppare software senza costi legati all'utilizzo dei token. Questa iniziativa mira a democratizzare la creazione di software, rendendola accessibile a un pubblico più ampio. La piattaforma intende rimuovere le barriere economiche per la prototipazione e lo sviluppo di idee.",
-      "url": "https://openai.com/index/replit",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_development",
-        "software_creation",
-        "openai_gpt"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-19T06:00:00Z",
-      "fetched_at": "2026-08-20T05:03:12.671660Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:cf5b4748b0b13398",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-20_002",
       "title_original": "Microsoft Clarity adds an AI Scrape-to-Referral Ratio",
       "title_it": "Microsoft Clarity introduce il rapporto AI Scrape-to-Referral",
-      "summary_it": "Microsoft Clarity ha integrato una nuova metrica basata sull'intelligenza artificiale, il rapporto Scrape-to-Referral. Questa funzionalità analizza la quantità di dati che i crawler AI estraggono da un sito web e la confronta con il traffico di riferimento che tali AI generano. L'obiettivo è fornire ai professionisti SEO una visione più chiara dell'impatto dei bot AI sul proprio traffico e sulla visibilità.",
+      "summary_it": "Microsoft Clarity ha aggiunto una nuova metrica basata sull'intelligenza artificiale, il rapporto Scrape-to-Referral. Questo strumento confronta la quantità di dati che i crawler AI estraggono da un sito web con il traffico che essi restituiscono. L'obiettivo è fornire insight sull'interazione tra i contenuti del sito e i sistemi AI, aiutando a comprendere l'efficacia delle strategie di contenuto in relazione all'AI.",
       "url": "https://www.semrush.com/blog/microsoft-clarity-scrape-to-referral",
       "source": {
         "id": "semrush_blog",
@@ -117,13 +82,13 @@
       "category": "tools_platforms",
       "tags": [
         "microsoft_clarity",
-        "ai_crawler",
+        "ai_metric",
         "web_analytic",
-        "referral_traffic"
+        "scrape_to_referral"
       ],
       "importance": 3,
       "published_at": "2026-08-19T07:22:00Z",
-      "fetched_at": "2026-08-20T05:03:14.127226Z",
+      "fetched_at": "2026-08-20T06:03:17.471748Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -132,10 +97,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_003",
+      "id": "item_2026-08-20_002",
       "title_original": "The ultimate guide to creating a content marketing strategy",
       "title_it": "La guida definitiva alla creazione di una strategia di content marketing",
-      "summary_it": "Questo articolo di Semrush offre una panoramica completa sulla costruzione di una strategia di content marketing efficace. Vengono esplorati i passaggi chiave per raggiungere il pubblico attraverso vari canali, inclusi la ricerca organica e l'intelligenza artificiale. La guida si propone di fornire un framework per lo sviluppo e l'implementazione di piani di contenuto mirati.",
+      "summary_it": "Questo articolo di Semrush offre una panoramica completa sulla costruzione di una strategia di content marketing efficace. Vengono esplorati i passaggi chiave per raggiungere il pubblico attraverso vari canali, inclusi motori di ricerca, intelligenza artificiale e social media. La guida si propone di fornire un framework per lo sviluppo e l'implementazione di piani di contenuto.",
       "url": "https://www.semrush.com/blog/content-marketing-strategy-guide",
       "source": {
         "id": "semrush_blog",
@@ -152,13 +117,13 @@
       "category": "content_eeat",
       "tags": [
         "content_marketing",
-        "content_strategy",
+        "strategy",
         "semrush",
-        "marketing_guide"
+        "content_planning"
       ],
       "importance": 2,
       "published_at": "2026-08-19T07:34:00Z",
-      "fetched_at": "2026-08-20T05:03:15.737011Z",
+      "fetched_at": "2026-08-20T06:03:18.949131Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -167,10 +132,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_004",
+      "id": "item_2026-08-20_003",
       "title_original": "Google Analytics Real Time Outage Seems To Be Resolving",
-      "title_it": "Il problema di Google Analytics Real Time sembra in via di risoluzione",
-      "summary_it": "Si è verificata un'interruzione nel report Real Time di Google Analytics, iniziata intorno alle 4 del mattino ET. Molti utenti hanno segnalato dati incompleti o assenti. Il problema sembra essersi risolto dopo alcune ore, anche se alcuni hanno ipotizzato un'interruzione regionale. L'incidente ha generato preoccupazione, soprattutto in concomitanza con l'annuncio di un aggiornamento spam di Google.",
+      "title_it": "Il report in tempo reale di Google Analytics sembra ripristinarsi dopo un'interruzione",
+      "summary_it": "Si è verificata un'interruzione nel report in tempo reale di Google Analytics, iniziata intorno alle 4 del mattino ET. Gli utenti hanno segnalato dati incompleti o assenti. Il problema sembra essersi risolto dopo alcune ore, anche se inizialmente si temeva potesse essere correlato a un aggiornamento spam di Google. Alcuni utenti hanno ipotizzato che l'interruzione potesse essere regionale.",
       "url": "https://www.seroundtable.com/google-analytics-real-time-outage-41898.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -188,12 +153,12 @@
       "tags": [
         "google_analytic",
         "real_time_report",
-        "data_outage",
-        "ga4"
+        "outage",
+        "data_reporting"
       ],
       "importance": 2,
       "published_at": "2026-08-19T08:44:00Z",
-      "fetched_at": "2026-08-20T05:03:17.210502Z",
+      "fetched_at": "2026-08-20T06:03:20.453056Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -202,10 +167,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_005",
+      "id": "item_2026-08-20_004",
       "title_original": "Google Trends Gains Explore Maps & Regional Breakdown",
       "title_it": "Google Trends introduce mappe esplorative e analisi regionale",
-      "summary_it": "Google Trends ha implementato due nuove funzionalità: mappe esplorative interattive e una ripartizione regionale dei dati. Queste novità mirano a migliorare la visualizzazione e l'analisi delle tendenze di ricerca a livello geografico. Gli utenti possono ora identificare più facilmente le tendenze regionali e ottenere insight visivi sulla provenienza delle ricerche.",
+      "summary_it": "Google Trends ha implementato due nuove funzionalità: mappe esplorative interattive e una ripartizione regionale dei dati. Queste novità mirano a migliorare la visualizzazione e l'analisi delle tendenze di ricerca a livello geografico. Gli utenti possono ora identificare più facilmente i trend regionali e ottenere insight visivi sulla provenienza delle ricerche.",
       "url": "https://www.seroundtable.com/google-trends-explore-maps-and-regional-breakdown-41899.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -223,12 +188,12 @@
       "tags": [
         "google_trend",
         "data_analysi",
-        "regional_data",
-        "search_trend"
+        "regional_seo",
+        "search_data"
       ],
       "importance": 3,
       "published_at": "2026-08-19T08:54:00Z",
-      "fetched_at": "2026-08-20T05:03:18.566198Z",
+      "fetched_at": "2026-08-20T06:03:21.776318Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -237,10 +202,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_006",
+      "id": "item_2026-08-20_005",
       "title_original": "Google Answers Why Search Updates Aren’t Announced Right Away via @sejournal, @martinibuster",
-      "title_it": "Google spiega il ritardo negli annunci degli aggiornamenti di ricerca",
-      "summary_it": "John Mueller di Google ha fornito chiarimenti sul motivo per cui gli aggiornamenti dell'algoritmo di ricerca non vengono annunciati immediatamente. La ragione principale è che Google necessita di tempo per valutare l'impatto effettivo e la stabilità delle modifiche prima di rilasciare comunicazioni ufficiali. Questo approccio mira a evitare annunci prematuri che potrebbero generare confusione o aspettative errate nella comunità SEO.",
+      "title_it": "Google spiega perché gli aggiornamenti di ricerca non vengono annunciati immediatamente",
+      "summary_it": "John Mueller di Google ha fornito chiarimenti sul motivo per cui gli aggiornamenti dell'algoritmo di ricerca non vengono comunicati tempestivamente. Ha indicato che le fluttuazioni iniziali nei ranking sono spesso parte di un processo di test e calibrazione. L'annuncio avviene solo quando l'aggiornamento è stabile e pienamente implementato. Questo approccio mira a evitare confusione e a fornire informazioni accurate agli operatori SEO.",
       "url": "https://www.searchenginejournal.com/google-answers-why-search-updates-arent-announced-right-away/586370",
       "source": {
         "id": "search_engine_journal",
@@ -259,11 +224,11 @@
         "google_algorithm",
         "search_update",
         "john_mueller",
-        "google_communication"
+        "ranking_fluctuation"
       ],
       "importance": 3,
       "published_at": "2026-08-19T09:19:30Z",
-      "fetched_at": "2026-08-20T05:03:19.891394Z",
+      "fetched_at": "2026-08-20T06:03:23.628685Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -272,10 +237,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_007",
+      "id": "item_2026-08-20_006",
       "title_original": "Google Answers Why Spam Updates Need To Happen via @sejournal, @martinibuster",
       "title_it": "Google spiega la necessità degli aggiornamenti anti-spam",
-      "summary_it": "John Mueller di Google ha fornito chiarimenti sul motivo per cui la compagnia rilascia periodicamente aggiornamenti dedicati allo spam. Ha spiegato che, nonostante l'esistenza di algoritmi come SpamBrain e sistemi per la valutazione della qualità e dei link, gli aggiornamenti specifici sono necessari. Questi interventi mirano a contrastare nuove forme di spam che gli algoritmi esistenti potrebbero non rilevare immediatamente. La natura evolutiva dello spam richiede un approccio dinamico e continui affinamenti dei sistemi di rilevamento.",
+      "summary_it": "John Mueller di Google ha chiarito le ragioni dietro la periodicità degli aggiornamenti anti-spam, spiegando perché non sia possibile eliminare lo spam costantemente con gli algoritmi esistenti. Ha evidenziato l'esistenza di diversi algoritmi, come SpamBrain basato sull'AI, per identificare vari tipi di spam. Questi sistemi includono fattori di qualità e algoritmi per rilevare attività di link inautentiche. La necessità di aggiornamenti specifici deriva dalla continua evoluzione delle tecniche di spam.",
       "url": "https://www.searchenginejournal.com/google-answers-why-spam-updates-need-to-happen/586382",
       "source": {
         "id": "search_engine_journal",
@@ -298,7 +263,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-19T09:42:13Z",
-      "fetched_at": "2026-08-20T05:03:21.468585Z",
+      "fetched_at": "2026-08-20T06:03:25.184590Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -307,10 +272,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_008",
+      "id": "item_2026-08-20_007",
       "title_original": "Google Business Profiles Testing Revamped Q&A Feature",
       "title_it": "Google Business Profile testa una nuova funzionalità Q&A",
-      "summary_it": "Google sta testando una versione aggiornata della funzionalità Q&A per i profili Google Business. Questa include un nuovo pulsante nella dashboard GBP e un flusso di domande sì/no specifiche per l'attività. L'obiettivo sembra essere quello di raccogliere risposte per alimentare la funzionalità 'Ask Maps'.",
+      "summary_it": "Google sta testando una versione aggiornata della funzionalità Q&A per i profili Google Business. Questa include un nuovo pulsante nella dashboard GBP e un flusso di domande sì/no specifiche per l'attività. L'obiettivo sembra essere quello di raccogliere informazioni per alimentare funzionalità come 'Ask Maps'.",
       "url": "https://www.seroundtable.com/google-business-profiles-revamped-qa-41896.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -332,7 +297,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-19T10:11:00Z",
-      "fetched_at": "2026-08-20T05:03:22.620061Z",
+      "fetched_at": "2026-08-20T06:03:26.541588Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -341,10 +306,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_009",
+      "id": "item_2026-08-20_008",
       "title_original": "Google Ads Bidding Option For Customer Retention Loyalty Program Members",
       "title_it": "Nuova opzione di offerta in Google Ads per i membri dei programmi fedeltà",
-      "summary_it": "Google Ads ha introdotto una nuova opzione di offerta che consente agli inserzionisti di puntare specificamente sui membri dei programmi fedeltà. Questa funzionalità permette di impostare offerte più alte per questi segmenti di pubblico e di mostrare loro benefici esclusivi. L'aggiornamento mira a migliorare le strategie di retention dei clienti, distinguendo le offerte per i membri fedeli da quelle per i clienti inattivi.",
+      "summary_it": "Google Ads ha introdotto una nuova opzione di offerta che consente agli inserzionisti di puntare specificamente sui membri dei programmi fedeltà. Questa funzionalità permette di impostare offerte più alte per questi segmenti di pubblico e di mostrare loro benefici esclusivi. L'opzione è separata dalle impostazioni di offerta per i clienti inattivi, offrendo una maggiore granularità nella gestione delle campagne di retention.",
       "url": "https://www.seroundtable.com/google-ads-bidding-loyalty-program-members-41897.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -367,7 +332,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-19T10:21:00Z",
-      "fetched_at": "2026-08-20T05:03:24.023345Z",
+      "fetched_at": "2026-08-20T06:03:27.934934Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -376,10 +341,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_010",
+      "id": "item_2026-08-20_009",
       "title_original": "Google Search Video Carousel Showing Less Often",
       "title_it": "Il carosello video di Google Search appare meno frequentemente",
-      "summary_it": "Dati recenti indicano una diminuzione significativa nella frequenza di visualizzazione del carosello video all'interno dei risultati di ricerca di Google. Semrush ha rilevato un calo dal 30% a meno del 20% delle query, mentre un'analisi su ricerche di brand ha mostrato una riduzione dal 40% a circa il 5%. Questa tendenza suggerisce un cambiamento nella presentazione dei contenuti video da parte di Google nelle SERP.",
+      "summary_it": "Il carosello video nelle SERP di Google sta mostrando una diminuzione significativa nella frequenza di apparizione. Dati di Semrush indicano un calo dal 30% a meno del 20% delle query. Un'analisi su ricerche di brand ha rilevato una riduzione ancora più drastica, passando dal 40% al 5% circa. Questo cambiamento è stato notato intorno al 12 agosto.",
       "url": "https://www.seroundtable.com/google-video-carousel-drops-41894.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -397,12 +362,12 @@
       "tags": [
         "google_serp",
         "video_carousel",
-        "search_feature",
+        "serp_feature",
         "data_analysi"
       ],
       "importance": 3,
       "published_at": "2026-08-19T10:31:00Z",
-      "fetched_at": "2026-08-20T05:03:25.531026Z",
+      "fetched_at": "2026-08-20T06:03:29.512932Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -411,7 +376,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_011",
+      "id": "item_2026-08-20_010",
       "title_original": "Google: We Do Not Roll Out Updates Prior To The Announcement",
       "title_it": "Google: Non rilasciamo aggiornamenti prima dell'annuncio",
       "summary_it": "John Mueller di Google ha ribadito che gli aggiornamenti di ricerca vengono annunciati poco dopo l'inizio del loro rollout. La volatilità osservata prima di un annuncio ufficiale non è correlata all'aggiornamento in questione. Google non attende giorni per comunicare l'avvio di un aggiornamento, sebbene possano esserci piccoli aggiornamenti non annunciati.",
@@ -436,7 +401,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-19T10:41:00Z",
-      "fetched_at": "2026-08-20T05:03:26.887105Z",
+      "fetched_at": "2026-08-20T06:03:31.132918Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -445,10 +410,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_012",
+      "id": "item_2026-08-20_011",
       "title_original": "ChatGPT Ads Expanding To 31 European Countries",
-      "title_it": "Gli annunci di ChatGPT si espandono in 31 paesi europei",
-      "summary_it": "OpenAI ha annunciato l'espansione del proprio servizio di annunci su ChatGPT a 31 paesi europei, inclusi Italia, Germania e Francia. Gli inserzionisti potranno accedere a ChatGPT Ads tramite il team OpenAI Ads Solutions, partner di agenzia e partner tecnologici, con l'accesso self-service tramite Ads Manager previsto per la fine dell'estate. Gli annunci saranno mostrati solo agli utenti con piani Free e Go, mentre gli abbonamenti Plus, Pro ed Enterprise rimarranno senza pubblicità. OpenAI ha dichiarato che decine di migliaia di marketer hanno già utilizzato la piattaforma, che è in fase di continuo miglioramento.",
+      "title_it": "Gli annunci su ChatGPT si espandono a 31 paesi europei",
+      "summary_it": "OpenAI ha annunciato l'espansione del proprio servizio di annunci su ChatGPT a 31 paesi europei, inclusi Germania, Francia, Spagna e Italia. Gli inserzionisti potranno accedere tramite il team OpenAI Ads Solutions e partner, con un'interfaccia self-service prevista per la fine dell'estate. Gli annunci saranno mostrati solo agli utenti dei piani Free e Go, mentre gli abbonamenti Plus, Pro ed Enterprise rimarranno senza pubblicità.",
       "url": "https://www.seroundtable.com/chatgpt-ads-europe-41902.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -466,12 +431,11 @@
       "tags": [
         "openai_ad",
         "chatgpt_europe",
-        "ai_monetization",
-        "ad_expansion"
+        "ai_monetization"
       ],
       "importance": 3,
       "published_at": "2026-08-19T10:51:00Z",
-      "fetched_at": "2026-08-20T05:03:28.548121Z",
+      "fetched_at": "2026-08-20T06:03:32.496022Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -480,7 +444,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_013",
+      "id": "item_2026-08-20_012",
       "title_original": "How To Track Google AI Mode Traffic In Search Console via @sejournal, @suganthan",
       "title_it": "Come monitorare il traffico della modalità AI di Google in Search Console",
       "summary_it": "La Search Console di Google nasconde i dati delle query relative alla modalità AI per impostazione predefinita. L'articolo confronta quattro metodi per estrarre questi dati, inclusa una soluzione gratuita basata su machine learning. L'obiettivo è fornire ai professionisti SEO strumenti per analizzare l'impatto della modalità AI sul traffico organico.",
@@ -500,13 +464,13 @@
       "category": "tools_platforms",
       "tags": [
         "google_search_console",
-        "ai_mode",
-        "traffic_analysi",
-        "data_extraction"
+        "ai_search",
+        "data_analysi",
+        "traffic_tracking"
       ],
       "importance": 3,
       "published_at": "2026-08-19T11:00:51Z",
-      "fetched_at": "2026-08-20T05:03:29.753505Z",
+      "fetched_at": "2026-08-20T06:03:33.859576Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -515,10 +479,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_014",
+      "id": "item_2026-08-20_013",
       "title_original": "Daily Search Forum Recap: August 19, 2026",
       "title_it": "Riepilogo giornaliero del forum di ricerca: 19 agosto 2026",
-      "summary_it": "Google ha rilasciato l'aggiornamento spam di agosto 2026, che dovrebbe impattare i siti che praticano spam a livello globale. John Mueller ha ribadito che Google non annuncia gli aggiornamenti prima del loro rollout. Si registra una diminuzione della frequenza del carosello video nei risultati di ricerca di Google. OpenAI sta espandendo la disponibilità di ChatGPT Ads a 31 paesi europei.",
+      "summary_it": "Google ha rilasciato l'aggiornamento spam di agosto 2026, che dovrebbe concludersi in pochi giorni e interessare tutti i linguaggi. John Mueller ha ribadito che Google non annuncia gli aggiornamenti prima del loro rollout effettivo. Si osserva una diminuzione della frequenza del carosello video nei risultati di ricerca di Google. OpenAI sta espandendo la disponibilità di ChatGPT Ads a 31 paesi europei.",
       "url": "https://www.seroundtable.com/recap-08-19-2026-41900.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -541,7 +505,7 @@
       ],
       "importance": 4,
       "published_at": "2026-08-19T13:00:00Z",
-      "fetched_at": "2026-08-20T05:03:31.166170Z",
+      "fetched_at": "2026-08-20T06:03:35.358166Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -550,10 +514,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_015",
+      "id": "item_2026-08-20_014",
       "title_original": "InMotion Hosting Launches Tiered Agency Partner Program via @sejournal, @inmotionhosting",
       "title_it": "InMotion Hosting lancia un programma partner per agenzie a livelli",
-      "summary_it": "InMotion Hosting ha introdotto un nuovo programma partner a livelli rivolto alle agenzie digitali. L'iniziativa mira a offrire alle agenzie l'opportunità di generare entrate ricorrenti. Il programma include anche l'accesso a lead di clienti, sconti sull'hosting e strumenti per semplificare la gestione degli account.",
+      "summary_it": "InMotion Hosting ha introdotto un nuovo programma partner a livelli, mirato alle agenzie digitali. L'iniziativa offre opportunità di guadagno ricorrente, accesso a lead qualificati e sconti sui servizi di hosting. Il programma include anche strumenti per semplificare la gestione degli account dei clienti.",
       "url": "https://www.searchenginejournal.com/inmotion-hosting-launches-tiered-agency-partner-program-spn/586195",
       "source": {
         "id": "search_engine_journal",
@@ -569,13 +533,13 @@
       },
       "category": "industry_news",
       "tags": [
+        "hosting_partnership",
         "agency_program",
-        "hosting",
-        "partnership"
+        "inmotion_hosting"
       ],
       "importance": 1,
       "published_at": "2026-08-19T13:29:43Z",
-      "fetched_at": "2026-08-20T05:03:32.388672Z",
+      "fetched_at": "2026-08-20T06:03:37.062232Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -584,10 +548,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_016",
+      "id": "item_2026-08-20_015",
       "title_original": "Clicks Are Down 42%, LinkedIn Reach Down 47% But You’re Raging At The Wrong Target via @sejournal, @gregjarboe",
-      "title_it": "Calo dei click del 42% e della reach di LinkedIn del 47%: un'analisi sulla percezione del declino",
-      "summary_it": "L'articolo discute il calo significativo dei click da Google e della reach su LinkedIn. Viene suggerito che i professionisti SEO potrebbero interpretare questi dati come un declino, mentre potrebbero essere indicativi di una disruption strutturale. L'autore invita a riconsiderare l'approccio diagnostico e le soluzioni proposte.",
+      "title_it": "Calo di clic e copertura su LinkedIn: una questione di diagnosi errata?",
+      "summary_it": "L'articolo suggerisce che il calo dei clic su Google e della copertura su LinkedIn, rispettivamente del 42% e 47%, non sia un semplice declino, ma piuttosto una disruption strutturale. Viene evidenziato come i professionisti SEO potrebbero interpretare erroneamente questi cambiamenti, concentrandosi su soluzioni inefficaci. La tesi è che si stia reagendo a sintomi senza comprenderne le cause profonde. Si invita a una riflessione più ampia sulle dinamiche attuali del traffico e dell'engagement online.",
       "url": "https://www.searchenginejournal.com/clicks-are-down-42-linkedin-reach-down-47-but-youre-raging-at-the-wrong-target/585862",
       "source": {
         "id": "search_engine_journal",
@@ -610,7 +574,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-19T13:30:55Z",
-      "fetched_at": "2026-08-20T05:03:34.089050Z",
+      "fetched_at": "2026-08-20T06:03:38.809706Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -619,10 +583,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_017",
+      "id": "item_2026-08-20_016",
       "title_original": "Offering Zero Data Retention for frontier models",
-      "title_it": "OpenAI introduce la conservazione zero dei dati per i modelli di frontiera",
-      "summary_it": "OpenAI ha ribadito l'offerta di Zero Data Retention per i clienti API idonei. L'azienda ha inoltre presentato in anteprima il Private Safety Processing, una soluzione volta a migliorare la sicurezza dell'IA senza compromettere la privacy dei dati. Queste iniziative mirano a fornire maggiore controllo e riservatezza agli utenti che impiegano i modelli più avanzati.",
+      "title_it": "OpenAI introduce la conservazione zero dei dati per i modelli più avanzati",
+      "summary_it": "OpenAI ha ribadito l'offerta di Zero Data Retention per i clienti API idonei. L'azienda ha inoltre presentato in anteprima il Private Safety Processing, una soluzione volta a migliorare la sicurezza dell'IA senza compromettere la privacy dei dati. Queste iniziative mirano a fornire maggiore controllo e riservatezza agli utenti che impiegano i modelli più recenti.",
       "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
       "source": {
         "id": "openai_blog",
@@ -645,7 +609,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-19T18:00:00Z",
-      "fetched_at": "2026-08-20T05:03:35.494953Z",
+      "fetched_at": "2026-08-20T06:03:40.289148Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -654,10 +618,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_018",
+      "id": "item_2026-08-20_017",
       "title_original": "Decision Coverage: Why AI Recommends Some Brands And Not Others via @sejournal, @billhunt",
       "title_it": "Copertura decisionale: perché l'IA raccomanda alcuni brand e altri no",
-      "summary_it": "Un'analisi suggerisce che l'IA non raccomanda prodotti, ma piuttosto decisioni. Uno studio di caso SaaS evidenzia come la mancanza di prove, e non una debole autorità, sia la causa dell'esclusione di un brand dalle raccomandazioni AI. Questo implica che la completezza e la disponibilità dei dati sono cruciali per essere inclusi nei suggerimenti generati dall'intelligenza artificiale.",
+      "summary_it": "Un'analisi suggerisce che l'IA non raccomanda prodotti, ma decisioni. Uno studio di caso SaaS evidenzia come la mancanza di prove, piuttosto che una bassa autorità, sia la causa dell'esclusione di brand dalle raccomandazioni AI. Questo implica che la completezza delle informazioni disponibili è cruciale per essere inclusi nei suggerimenti generati dall'intelligenza artificiale.",
       "url": "https://www.searchenginejournal.com/decision-coverage-why-ai-recommends-some-brands-and-not-others/583028",
       "source": {
         "id": "search_engine_journal",
@@ -675,12 +639,12 @@
       "tags": [
         "ai_recommendation",
         "decision_coverage",
-        "data_completeness",
-        "brand_visibility"
+        "brand_visibility",
+        "data_completeness"
       ],
       "importance": 3,
       "published_at": "2026-08-19T18:00:10Z",
-      "fetched_at": "2026-08-20T05:03:37.264832Z",
+      "fetched_at": "2026-08-20T06:03:41.908268Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -689,10 +653,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_019",
+      "id": "item_2026-08-20_018",
       "title_original": "Google Expands Generative UI Beyond AI Mode Into AI Overviews via @sejournal, @MattGSouthern",
       "title_it": "Google estende l'interfaccia utente generativa alle panoramiche AI",
-      "summary_it": "Google sta espandendo la sua interfaccia utente generativa, precedentemente introdotta in AI Mode, alle AI Overviews. Questa UI è progettata per creare layout visivi personalizzati e strumenti interattivi. L'implementazione mira a migliorare l'esperienza utente nelle panoramiche generate dall'intelligenza artificiale.",
+      "summary_it": "Google sta implementando la sua interfaccia utente generativa, che crea layout visivi e strumenti interattivi personalizzati, nelle Panoramiche AI. Questa funzionalità era stata precedentemente introdotta nella modalità AI. L'espansione indica un'integrazione più profonda delle capacità generative nell'esperienza di ricerca.",
       "url": "https://www.searchenginejournal.com/google-expands-generative-ui-beyond-ai-mode-into-ai-overviews/586452",
       "source": {
         "id": "search_engine_journal",
@@ -708,14 +672,14 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "google_ai",
+        "google_ai_overview",
         "generative_ui",
-        "ai_overviews",
-        "search_experience"
+        "search_experience",
+        "ai_mode"
       ],
-      "importance": 3,
+      "importance": 4,
       "published_at": "2026-08-19T18:00:27Z",
-      "fetched_at": "2026-08-20T05:03:38.557956Z",
+      "fetched_at": "2026-08-20T06:03:43.309568Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -724,10 +688,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_020",
+      "id": "item_2026-08-20_019",
       "title_original": "Microsoft Advertising Rolls Out AI Max Globally via @sejournal, @brookeosmundson",
       "title_it": "Microsoft Advertising lancia AI Max a livello globale",
-      "summary_it": "Microsoft Advertising sta implementando AI Max a livello mondiale, introducendo funzionalità avanzate per le campagne di ricerca. Queste includono un matching di ricerca ampliato, personalizzazione del testo e espansione degli URL. La piattaforma offre inoltre nuovi controlli per gli inserzionisti.",
+      "summary_it": "Microsoft Advertising sta implementando globalmente AI Max, una suite di funzionalità basate sull'intelligenza artificiale per le campagne di ricerca. Questo aggiornamento include un matching di ricerca ampliato, opzioni di personalizzazione del testo e l'espansione degli URL. Vengono inoltre introdotti nuovi controlli per gli inserzionisti.",
       "url": "https://www.searchenginejournal.com/microsoft-advertising-rolls-out-ai-max-globally/586459",
       "source": {
         "id": "search_engine_journal",
@@ -750,7 +714,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-19T18:41:53Z",
-      "fetched_at": "2026-08-20T05:03:39.743400Z",
+      "fetched_at": "2026-08-20T06:03:44.842563Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -759,10 +723,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-20_021",
+      "id": "item_2026-08-20_020",
       "title_original": "Why Reddit’s ChatGPT Citation Drop Isn’t Fully Explained via @sejournal, @MattGSouthern",
       "title_it": "Il calo delle citazioni di Reddit in ChatGPT non è del tutto spiegato",
-      "summary_it": "Dati recenti di Promptwatch indicano una diminuzione significativa delle citazioni di Reddit nelle risposte di ChatGPT nel corso di questo mese. Le ragioni precise di questo calo non sono state completamente chiarite. La tendenza suggerisce un cambiamento nel modo in cui i modelli AI attingono o priorizzano le fonti di informazione.",
+      "summary_it": "I dati di Promptwatch indicano un significativo calo nelle citazioni di Reddit all'interno delle risposte di ChatGPT nel corso del mese corrente. Le ragioni precise di questa diminuzione non sono state completamente chiarite. La tendenza suggerisce un cambiamento nel modo in cui i modelli AI utilizzano o percepiscono i contenuti di Reddit.",
       "url": "https://www.searchenginejournal.com/why-reddits-chatgpt-citation-drop-isnt-fully-explained/586479",
       "source": {
         "id": "search_engine_journal",
@@ -781,11 +745,11 @@
         "reddit",
         "chatgpt",
         "citation_drop",
-        "ai_data"
+        "ai_behavior"
       ],
       "importance": 3,
       "published_at": "2026-08-19T21:03:26Z",
-      "fetched_at": "2026-08-20T05:03:41.290385Z",
+      "fetched_at": "2026-08-20T06:03:46.205020Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -797,92 +761,92 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-20T05:02:03.159678Z",
+      "last_checked": "2026-08-20T06:02:10.030489Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-20T05:02:04.656554Z",
+      "last_checked": "2026-08-20T06:02:10.827008Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-20T05:02:05.254161Z",
+      "last_checked": "2026-08-20T06:02:12.232204Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-20T05:02:07.738839Z",
+      "last_checked": "2026-08-20T06:02:13.311870Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-20T05:02:31.675944Z",
+      "last_checked": "2026-08-20T06:02:37.085637Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-20T05:02:32.020784Z",
+      "last_checked": "2026-08-20T06:02:37.564812Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-20T05:02:33.621368Z",
+      "last_checked": "2026-08-20T06:02:39.722174Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-20T05:02:35.732693Z",
+      "last_checked": "2026-08-20T06:02:40.731517Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-20T05:02:36.838016Z",
+      "last_checked": "2026-08-20T06:02:42.476483Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-20T05:02:36.863424Z",
+      "last_checked": "2026-08-20T06:02:42.517888Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-20T05:02:37.100105Z",
+      "last_checked": "2026-08-20T06:02:42.919285Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-20T05:02:39.257590Z",
+      "last_checked": "2026-08-20T06:02:44.624507Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-20T05:02:40.128045Z",
+      "last_checked": "2026-08-20T06:02:45.625453Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-20T05:02:41.835667Z",
+      "last_checked": "2026-08-20T06:02:46.935433Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-20T05:02:43.290183Z",
+      "last_checked": "2026-08-20T06:02:48.311088Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-20T05:02:44.021334Z",
+      "last_checked": "2026-08-20T06:02:49.741965Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-20T05:02:46.779104Z",
+      "last_checked": "2026-08-20T06:02:51.308325Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-20T05:03:11.048695Z",
+      "last_checked": "2026-08-20T06:03:15.556118Z",
       "changed": false
     }
   ],
