@@ -1,314 +1,68 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-21T06:02:04.313993Z",
-  "generated_at_local": "2026-08-21T08:02:04.313993+02:00",
+  "generated_at": "2026-08-22T05:01:14.834747Z",
+  "generated_at_local": "2026-08-22T07:01:14.834747+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-21-0802",
+  "run_id": "2026-08-22-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2321,
-    "items_after_dedup": 17,
+    "items_collected": 2322,
+    "items_after_dedup": 16,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0111,
-    "summarize_attempted": 17,
+    "ai_cost_eur": 0.059,
+    "summarize_attempted": 16,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-21_002",
-    "item_2026-08-21_003",
-    "item_2026-08-21_007",
-    "item_2026-08-21_014",
-    "item_2026-08-21_001",
-    "item_2026-08-21_004",
-    "item_2026-08-21_005",
-    "item_2026-08-21_006",
-    "item_2026-08-21_010",
-    "item_2026-08-21_012"
+    "item_2026-08-22_010",
+    "item_2026-08-22_002",
+    "item_2026-08-22_006",
+    "item_2026-08-22_005",
+    "item_2026-08-22_012",
+    "item_2026-08-22_011",
+    "item_2026-08-22_004",
+    "item_2026-08-22_009",
+    "item_2026-08-22_014",
+    "item_2026-08-22_003"
   ],
   "categories": {
+    "ai_models": [
+      "item_2026-08-22_010"
+    ],
     "google_updates": [
-      "item_2026-08-21_002",
-      "item_2026-08-21_003",
-      "item_2026-08-21_007",
-      "item_2026-08-21_014"
-    ],
-    "tools_platforms": [
-      "item_2026-08-21_001",
-      "item_2026-08-21_004",
-      "item_2026-08-21_005",
-      "item_2026-08-21_006",
-      "item_2026-08-21_011",
-      "item_2026-08-21_009"
-    ],
-    "industry_news": [
-      "item_2026-08-21_010",
-      "item_2026-08-21_012",
-      "item_2026-08-21_016"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-08-21_008"
-    ],
-    "content_eeat": [
-      "item_2026-08-21_013",
-      "item_2026-08-21_017"
+      "item_2026-08-22_002",
+      "item_2026-08-22_006",
+      "item_2026-08-22_004",
+      "item_2026-08-22_009",
+      "item_2026-08-22_014"
     ],
     "technical_seo": [
-      "item_2026-08-21_015"
+      "item_2026-08-22_005"
+    ],
+    "industry_news": [
+      "item_2026-08-22_012",
+      "item_2026-08-22_008"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-08-22_011",
+      "item_2026-08-22_015",
+      "item_2026-08-22_016",
+      "item_2026-08-22_001"
+    ],
+    "tools_platforms": [
+      "item_2026-08-22_003",
+      "item_2026-08-22_007",
+      "item_2026-08-22_013"
     ]
   },
   "items": [
     {
-      "id": "item_2026-08-21_001",
-      "title_original": "Google Ads API Version 25.1 Now Available",
-      "title_it": "Disponibile la versione 25.1 dell'API di Google Ads",
-      "summary_it": "Google ha rilasciato la versione 25.1 della sua API per Google Ads. Questo aggiornamento minore introduce diverse novità, tra cui asset per disclaimer testuali e funzionalità di tracciamento AI Max. Sono stati inclusi anche miglioramenti per la misurazione di Brand e Conversion Lift, oltre a insight sul sentiment del brand.",
-      "url": "https://www.seroundtable.com/google-ads-api-version-25-1-41908.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ads_api",
-        "api_update",
-        "advertising_tool",
-        "ai_tracking"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T10:05:00Z",
-      "fetched_at": "2026-08-21T06:02:58.033950Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a7efb2d3fb092f90",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_002",
-      "title_original": "Spike In Complaints On Favicons Disappearing From Google Search",
-      "title_it": "Aumento delle segnalazioni sulla scomparsa delle favicon dalla Ricerca Google",
-      "summary_it": "Si registra un incremento delle segnalazioni relative alla mancata visualizzazione delle favicon nei risultati di ricerca di Google. Questo fenomeno, iniziato prima dell'aggiornamento spam di agosto 2026, suggerisce una modifica interna da parte di Google piuttosto che problemi tecnici diffusi sui siti. Numerosi utenti hanno riportato la scomparsa delle proprie favicon, sostituite dall'icona generica del globo, nonostante le configurazioni tecniche siano corrette. Le segnalazioni provengono dai forum di supporto Google Webmaster e da altre piattaforme.",
-      "url": "https://www.seroundtable.com/google-search-favicons-breaking-41904.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_search",
-        "favicon",
-        "serp_feature",
-        "technical_issue"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T10:11:00Z",
-      "fetched_at": "2026-08-21T06:02:59.908424Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:05c248408f1d9d2e",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_003",
-      "title_original": "Google Bringing Back Google Posts Insights (People Viewed)",
-      "title_it": "Google reintroduce le statistiche di visualizzazione per i Google Post",
-      "summary_it": "Google sta testando la reintroduzione delle metriche di visualizzazione per i Google Post all'interno di Google Business Profile, dopo averle rimosse a gennaio 2023. Questa funzionalità, ora denominata \"persone visualizzate\", era stata originariamente lanciata nel 2018 come parte di Google Posts Insights. La riattivazione sembra essere in fase di test limitato, non essendo ancora disponibile per tutti gli utenti. Questo segue la recente aggiunta di conteggi di visualizzazione per foto e video nelle schede di Google Business Profile.",
-      "url": "https://www.seroundtable.com/google-posts-insights-views-41913.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_business_profile",
-        "google_post",
-        "local_seo",
-        "analytics"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T10:15:00Z",
-      "fetched_at": "2026-08-21T06:03:01.709530Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:40c875287c9ef243",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_004",
-      "title_original": "Microsoft Advertising Rolling Out AI Max Globally",
-      "title_it": "Microsoft Advertising lancia globalmente AI Max per le campagne di ricerca",
-      "summary_it": "Microsoft Advertising sta implementando a livello globale la funzionalità AI Max per tutte le campagne di ricerca. Questa opzione, attivabile dagli inserzionisti, mira a migliorare le performance delle campagne utilizzando l'IA per identificare query ad alta intenzione, generare nuovi asset e indirizzare gli utenti alle landing page più pertinenti. L'obiettivo è aumentare le conversioni e ridurre il lavoro manuale, espandendo la copertura oltre le parole chiave esistenti e personalizzando i contenuti degli annunci.",
-      "url": "https://www.seroundtable.com/microsoft-advertising-ai-max-41909.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "microsoft_advertising",
-        "ai_max",
-        "ppc",
-        "campaign_management"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T10:21:00Z",
-      "fetched_at": "2026-08-21T06:03:03.427703Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:07a15c4b3e8d854a",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_005",
-      "title_original": "Google Ads Enhanced Matching In Customer Match",
-      "title_it": "Google Ads introduce il 'matching avanzato' per le liste Customer Match",
-      "summary_it": "Google Ads sta implementando una nuova opzione di Customer Match denominata 'enhanced matching'. Questa funzionalità mira ad ampliare la copertura delle audience, consentendo di abbinare le liste di utenti con consenso a quelle degli editori. Il sistema promette di migliorare i tassi di corrispondenza e l'efficacia del targeting, operando anche in ambienti senza cookie di terze parti e con una durata massima di appartenenza di 60 giorni. La tecnologia è progettata per garantire la privacy degli utenti, elaborando i dati in uno spazio digitale isolato e sicuro.",
-      "url": "https://www.seroundtable.com/google-ads-enhanced-matching-41905.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "customer_match",
-        "enhanced_matching",
-        "privacy_sandbox"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T10:31:00Z",
-      "fetched_at": "2026-08-21T06:03:05.342352Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:15fc72af75584da2",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_006",
-      "title_original": "Google Ads Can Find Sitelinks For You",
-      "title_it": "Google Ads può suggerire sitelink per le tue estensioni annuncio",
-      "summary_it": "Google Ads ha introdotto una nuova funzionalità che suggerisce sitelink per le estensioni annuncio. Questa opzione è disponibile direttamente nella console di Google Ads. La funzione propone sitelink basati sull'URL finale dell'annuncio, facilitando l'aggiunta di collegamenti a pagine specifiche del sito.",
-      "url": "https://www.seroundtable.com/google-ads-find-sitelinks-for-you-41907.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "sitelink",
-        "ppc",
-        "ad_extension"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T10:41:00Z",
-      "fetched_at": "2026-08-21T06:03:06.737386Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:cbdc7535fe83da31",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_007",
-      "title_original": "Why Google Announces Some Search Updates But Not All",
-      "title_it": "Perché Google annuncia alcuni aggiornamenti di ricerca ma non tutti",
-      "summary_it": "Google annuncia solo gli aggiornamenti di ricerca più significativi e di ampio impatto, per aiutare i professionisti SEO a distinguere tra cambiamenti algoritmici e modifiche tecniche ai propri siti. Questa strategia mira a fornire trasparenza senza generare preoccupazioni inutili per aggiornamenti minori. John Mueller ha ribadito che trovare un equilibrio tra trasparenza e prevenzione dell'ansia è una sfida costante per Google.",
-      "url": "https://www.seroundtable.com/google-announces-some-updates-41903.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_algorithm",
-        "search_update",
-        "john_mueller",
-        "transparency"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T10:51:00Z",
-      "fetched_at": "2026-08-21T06:03:08.406191Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:7a4322d4472cc49f",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_008",
-      "title_original": "Prompt Injections Just Proved Something SEO Has Known For 25 Years via @sejournal, @theshelleywalsh",
-      "title_it": "Le prompt injection confermano un principio SEO noto da 25 anni",
-      "summary_it": "L'articolo evidenzia come le tecniche di prompt injection nelle AI riflettano pratiche SEO obsolete, come il testo nascosto. Questo parallelo suggerisce che i modelli AI possono essere manipolati in modi simili a come i motori di ricerca venivano ingannati in passato. La vulnerabilità delle AI a queste manipolazioni sottolinea la necessità di strategie di sicurezza robuste. La comprensione di queste dinamiche è cruciale per chi opera nel settore SEO e AI.",
-      "url": "https://www.searchenginejournal.com/prompt-injection-just-proved-something-seo-has-known-for-25-years/586405",
+      "id": "item_2026-08-22_001",
+      "title_original": "What AI Bot Data From Hundreds Of Sites Reveals About AI Search [Webinar] via @sejournal, @lorenbaker",
+      "title_it": "Cosa rivelano i dati dei bot AI da centinaia di siti sulla ricerca AI",
+      "summary_it": "Un webinar di Search Engine Journal esplora le limitazioni delle metriche di ricerca AI e come utilizzare efficacemente i dati. L'evento si propone di ottimizzare le strategie di marketing in relazione all'impatto dell'intelligenza artificiale sulla ricerca. Verranno analizzati i dati raccolti dai bot AI su centinaia di siti web.",
+      "url": "https://www.searchenginejournal.com/what-ai-bot-data-from-hundreds-of-sites-reveals-about-ai-search-webinar/586556",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -323,62 +77,423 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "prompt_injection",
-        "ai_security",
-        "seo_history",
-        "llm_manipulation"
+        "ai_search",
+        "ai_bot",
+        "data_analysi",
+        "webinar"
       ],
-      "importance": 3,
-      "published_at": "2026-08-20T11:00:39Z",
-      "fetched_at": "2026-08-21T06:03:10.416864Z",
+      "importance": 2,
+      "published_at": "2026-08-21T06:45:38Z",
+      "fetched_at": "2026-08-22T05:02:31.030490Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e43a5c79b55d3a6d",
+      "raw_hash": "sha256:1f5447eac223b668",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-21_009",
-      "title_original": "Google Search Console: the ultimate guide for 2026",
-      "title_it": "Google Search Console: la guida definitiva per il 2026",
-      "summary_it": "Semrush ha pubblicato una guida completa su Google Search Console, focalizzata sulla configurazione e sull'utilizzo dello strumento per identificare problemi del sito e opportunità di miglioramento. Il contenuto copre le funzionalità principali e le best practice per sfruttare al meglio GSC. La guida è aggiornata per riflettere le attuali funzionalità della piattaforma.",
-      "url": "https://www.semrush.com/blog/google-search-console",
+      "id": "item_2026-08-22_002",
+      "title_original": "Google August 2026 Spam Update Has Finished Rolling Out",
+      "title_it": "Concluso il Google August 2026 Spam Update",
+      "summary_it": "L'aggiornamento anti-spam di Google, denominato August 2026 Spam Update, ha completato il suo rollout. Iniziato il 18 agosto 2026, si è concluso il 21 agosto 2026. Questo aggiornamento globale mira a penalizzare i siti che violano le policy anti-spam di Google, escludendo specificamente lo spam di link e la policy sull'abuso della reputazione del sito. Google ha ribadito che si tratta di un normale aggiornamento anti-spam e ha fornito indicazioni per il recupero basate sulla revisione delle proprie policy.",
+      "url": "https://www.seroundtable.com/google-august-2026-spam-update-done-41906.html",
       "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "tools_platforms",
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_update",
+        "spam_update",
+        "algorithm_update",
+        "search_ranking"
+      ],
+      "importance": 4,
+      "published_at": "2026-08-21T08:20:00Z",
+      "fetched_at": "2026-08-22T05:02:33.158109Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:17fb1e7bdd1521c8",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_003",
+      "title_original": "Google Tag & Google Tag Manager Updated",
+      "title_it": "Aggiornamenti per Google Tag e Google Tag Manager",
+      "summary_it": "Google ha rilasciato aggiornamenti per Google Tag e Google Tag Manager, volti a semplificare la configurazione della misurazione e migliorare le prestazioni. Le modifiche includono strumenti di tagging consolidati, un'interfaccia utente ottimizzata e nuove funzionalità come il tracciamento eventi senza codice e il tagging visuale. L'obiettivo è offrire un'esperienza più unificata e una gestione più efficiente per gli inserzionisti.",
+      "url": "https://www.seroundtable.com/google-tag-and-google-tag-manager-updated-41918.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "tools_platforms",
       "tags": [
-        "google_search_console",
-        "gsc_guide",
-        "site_audit",
-        "seo_tool"
+        "google_tag",
+        "google_tag_manager",
+        "measurement",
+        "google_ad"
       ],
-      "importance": 2,
-      "published_at": "2026-08-20T11:57:00Z",
-      "fetched_at": "2026-08-21T06:03:11.949972Z",
+      "importance": 3,
+      "published_at": "2026-08-21T10:05:00Z",
+      "fetched_at": "2026-08-22T05:02:38.050180Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:29e0a0c8e8d0659b",
+      "raw_hash": "sha256:044652dcecaa9185",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-21_010",
-      "title_original": "Daily Search Forum Recap: August 20, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 20 agosto 2026",
-      "summary_it": "Google ha chiarito i criteri per l'annuncio degli aggiornamenti, indicando che vengono comunicati solo quelli più significativi. Si registra un aumento delle segnalazioni relative alla scomparsa delle favicon dalla Ricerca Google. Google Ads introduce nuove funzionalità per la gestione dei sitelink e un'opzione di 'enhanced matching' per Customer Match. Microsoft Advertising sta estendendo globalmente la funzionalità AI Max a tutti gli inserzionisti.",
-      "url": "https://www.seroundtable.com/recap-08-20-2026-41914.html",
+      "id": "item_2026-08-22_004",
+      "title_original": "Google Discover Feed Can Be Tailored By Words",
+      "title_it": "Google Discover: Personalizzazione del Feed Tramite Interazione Conversazionale",
+      "summary_it": "Google sta introducendo una funzionalità che permette agli utenti di personalizzare il proprio feed Discover utilizzando input testuali in un'interfaccia conversazionale. Gli utenti potranno specificare argomenti di interesse e interagire con un'AI per affinare i contenuti desiderati. Questa novità consente di indicare a Google quali temi o link si desidera visualizzare maggiormente o meno, con aggiornamenti in tempo reale del feed.",
+      "url": "https://www.seroundtable.com/google-discover-tailored-feed-by-words-41911.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_discover",
+        "personalization",
+        "ai_feature",
+        "user_experience"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-21T10:11:00Z",
+      "fetched_at": "2026-08-22T05:02:39.538711Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7797d01001788017",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_005",
+      "title_original": "JSON-LD Extraction For Googlebot Now Does One Pass Of HTML Unescaping",
+      "title_it": "Googlebot ora esegue un singolo passaggio di unescaping HTML per l'estrazione JSON-LD",
+      "summary_it": "Googlebot ha modificato il suo processo di estrazione JSON-LD, applicando ora un singolo passaggio di unescaping HTML. Questo significa che le entità HTML con doppio escaping (es. &amp;amp;) non verranno più interpretate correttamente. Gli sviluppatori devono assicurarsi che il JSON-LD sia conforme agli standard RFC 8259, utilizzando escaping JSON standard o esadecimali Unicode.",
+      "url": "https://www.seroundtable.com/json-ld-extraction-googlebot-41921.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "json_ld",
+        "structured_data",
+        "googlebot"
+      ],
+      "importance": 4,
+      "published_at": "2026-08-21T10:15:00Z",
+      "fetched_at": "2026-08-22T05:02:41.058403Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:41c6a286058f7836",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_006",
+      "title_original": "Google Local Service Ads Pre-Badge Ads & Expansion Of Verticals",
+      "title_it": "Google introduce annunci pre-badge e amplia le categorie per Local Service Ads",
+      "summary_it": "Google ha implementato aggiornamenti significativi per Local Service Ads (LSA), introducendo gli annunci pre-badge che consentono di ricevere lead durante il processo di onboarding. È stata inoltre ampliata notevolmente la lista delle categorie di business idonee, rendendole più granulari. Questi cambiamenti, pur in vista della transizione di LSA verso Google Ads, indicano un continuo investimento nel prodotto.",
+      "url": "https://www.seroundtable.com/google-lsa-prebadge-new-verticals-41920.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_lsa",
+        "local_seo",
+        "google_ad",
+        "vertical_expansion"
+      ],
+      "importance": 4,
+      "published_at": "2026-08-21T10:21:00Z",
+      "fetched_at": "2026-08-22T05:02:42.659965Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8b7d37c5c7385797",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_007",
+      "title_original": "Google Ads & AI Max New Experimentation & Planning Features",
+      "title_it": "Nuove funzionalità di sperimentazione e pianificazione per Google Ads e AI Max",
+      "summary_it": "Google sta introducendo nuove capacità di sperimentazione e pianificazione in Google Ads e AI Max. Sarà possibile eseguire A/B test su più campagne Search e condurre esperimenti AI Max con parametri di brand e località attivi. Il Performance Planner offrirà previsioni sull'impatto delle modifiche a budget e offerte, con la possibilità di applicare immediatamente i suggerimenti.",
+      "url": "https://www.seroundtable.com/google-ads-ai-max-experimentation-planning-41910.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "ai_max",
+        "experimentation",
+        "performance_planner"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-21T10:23:00Z",
+      "fetched_at": "2026-08-22T05:02:44.085858Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:073c8122bffba83c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_008",
+      "title_original": "Microsoft Advertising Max CPC Won't Be Available For New Campaigns On Oct 1",
+      "title_it": "Microsoft Advertising: il CPC massimo non sarà più disponibile per le nuove campagne dal 1° ottobre",
+      "summary_it": "Microsoft Advertising ha annunciato che dal 1° ottobre 2026 la funzionalità Max CPC non sarà più disponibile per le nuove campagne non-portfolio. Le campagne esistenti create prima di tale data manterranno questa opzione, così come le campagne che utilizzano strategie di offerta portfolio. L'azienda suggerisce di sperimentare la rimozione del Max CPC per prepararsi ai futuri aggiornamenti, indicando una transizione verso strategie di offerta basate sulla conversione.",
+      "url": "https://www.seroundtable.com/microsoft-advertising-max-cpc-sunset-41917.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "microsoft_advertising",
+        "max_cpc",
+        "bidding_strategie",
+        "paid_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-21T10:41:00Z",
+      "fetched_at": "2026-08-22T05:02:45.812541Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d4d41c6e3d3d958f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_009",
+      "title_original": "Google Preferred Source Button Improved For Publishers",
+      "title_it": "Google migliora il pulsante 'Fonte Preferita' per gli editori",
+      "summary_it": "Google ha aggiornato il pulsante 'Aggiungi a Fonti Preferite' per gli editori, modificando il flusso utente. Ora, dopo aver aggiunto una fonte, l'utente viene reindirizzato automaticamente alla pagina di provenienza. Questo aggiornamento mira a migliorare l'esperienza utente e a mantenere i lettori sui siti degli editori. Google ha fornito un nuovo codice di embed per implementare questa funzionalità.",
+      "url": "https://www.seroundtable.com/google-preferred-source-button-update-41912.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_new",
+        "publisher_tool",
+        "user_experience",
+        "preferred_source"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-21T10:51:00Z",
+      "fetched_at": "2026-08-22T05:02:47.408735Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6d6b0d0c8737138f",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_010",
+      "title_original": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+      "title_it": "Da Atari a EVE Online: 15 anni di ricerca sull'IA nei giochi",
+      "summary_it": "Google DeepMind sta collaborando con studi di sviluppo di videogiochi per esplorare nuove applicazioni dell'intelligenza artificiale nel gameplay. Questa iniziativa si basa su un decennio e mezzo di ricerca nel campo dell'IA applicata ai giochi. L'obiettivo è prototipare soluzioni innovative che possano migliorare l'esperienza di gioco e le interazioni con gli ambienti virtuali.",
+      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games",
+      "source": {
+        "id": "google_deepmind_blog",
+        "name": "Google DeepMind Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://deepmind.google/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "ai_research",
+        "deepmind",
+        "gaming_ai",
+        "google_ai"
+      ],
+      "importance": 5,
+      "published_at": "2026-08-21T10:59:48Z",
+      "fetched_at": "2026-08-22T05:02:49.031919Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:05bc33c18ec13a5a",
+      "deep_analysis": {
+        "detailed_description": "Google DeepMind ha avviato partnership operative con studi di sviluppo videoludico per portare 15 anni di ricerca in IA applicata – da Atari a EVE Online – dentro meccaniche di gioco reali. L'obiettivo dichiarato è prototipare sistemi di IA che modifichino il gameplay, non solo l'automazione backend o la generazione di asset. Si tratta di un cambio di perimetro: dall'ambiente di ricerca controllato (benchmark, simulazioni) all'integrazione in prodotti commerciali con milioni di utenti attivi.\n\nLa collaborazione con EVE Online è particolarmente significativa: un MMO con economia player-driven e sistemi complessi dove l'IA potrebbe agire come agente economico, moderatore dinamico o generatore di eventi emergenti. DeepMind ha già dimostrato capacità di apprendimento per rinforzo in ambienti multi-agente (AlphaStar su StarCraft II), ma EVE rappresenta un salto di scala in termini di imprevedibilità e conseguenze permanenti sulle scelte dei giocatori.\n\nIl passaggio da Atari – ambiente deterministico, spazio degli stati limitato – a EVE Online – economia persistente, interazioni sociali, asimmetria informativa – segna l'evoluzione della ricerca DeepMind verso sistemi aperti. Gli agenti IA non devono solo vincere, ma coesistere, bilanciare, sorprendere senza rompere l'equilibrio. Questo richiede architetture che gestiscano incertezza, feedback ritardato e obiettivi multipli non allineati.\n\nPer i SEO, l'interesse non è diretto ma strategico: Google sta addestrando modelli su ambienti dove le regole cambiano, gli utenti reagiscono e le metriche di successo sono sfumate. Questi apprendimenti alimentano i sistemi di ranking, dove l'IA deve interpretare intent ambiguo, bilanciare freshness e autorevolezza, gestire manipolazione e spam. La capacità di DeepMind di far funzionare agenti in contesti ostili e competitivi si traduce, nel tempo, in algoritmi di Search più resilienti a pattern SEO predittivi.\n\nLa timeline è rilevante: 15 anni di ricerca condensati ora in prototipi commerciali significa che Google ha superato la fase esplorativa. I modelli addestrati su giochi complessi – dove ogni azione ha costo, ogni ricompensa è contestuale – sono più vicini alla logica di un motore di ricerca che a un chatbot. EVE Online, in particolare, è un laboratorio di comportamento strategico a lungo termine, esattamente ciò che serve per addestrare sistemi anti-manipolazione.\n\nLa scelta di rendere pubblica questa collaborazione non è casuale: Google sta segnalando agli sviluppatori (e indirettamente ai SEO) che l'IA generativa è solo una faccia della medaglia. L'altra è l'IA decisionale in ambienti complessi, dove la posta in gioco non è generare testo plausibile ma prendere decisioni ottimali sotto incertezza. Questo tipo di IA è già dentro Search, e si sta affinando.",
+        "implications": [
+          "I modelli addestrati su giochi multi-agente complessi come EVE Online migliorano la capacità di Google di rilevare schemi coordinati di manipolazione (link farm, PBN, content farms) perché imparano a identificare comportamenti strategici collettivi in ambienti ostili.",
+          "L'IA decisionale che emerge da questi progetti privilegia segnali contestuali e dinamici rispetto a pattern statici. Tattiche SEO basate su regole fisse (es. densità keyword, schemi di link prevedibili) diventano più facilmente individuabili e penalizzabili.",
+          "La collaborazione con studi di gioco accelera il ciclo di feedback tra ricerca DeepMind e prodotti Google. Aspettati che innovazioni testate in ambienti ludici (es. agenti che bilanciano obiettivi multipli) vengano integrate in Search entro 12-18 mesi, non anni.",
+          "Per chi lavora su siti in nicchie competitive (finance, health, legal), l'analogia con EVE Online è diretta: Google sta addestrando sistemi che interpretano il tuo sito non in isolamento ma come nodo in una rete di attori con interessi conflittuali. La reputazione relativa conta più della qualità assoluta.",
+          "Se gestisci strategie di content automation o programmatic SEO, considera che Google sta affinando modelli capaci di distinguere contenuto generato per utenti da contenuto generato per algoritmi, anche quando la qualità superficiale è alta. Il contesto d'uso diventa discriminante."
+        ],
+        "examples": [
+          "Un sito di comparazione prezzi che usa content automation per generare migliaia di pagine prodotto potrebbe essere valutato non sulla qualità del singolo testo, ma sul pattern complessivo: se l'IA di Google rileva che il 90% delle pagine non riceve engagement organico (scroll, click interni, ritorni), il sito viene trattato come un agente 'estrattivo' in un gioco a somma zero, esattamente come un bot in EVE Online che mina risorse senza contribuire all'economia.",
+          "Evita di costruire reti di siti satellite con interlinking schematico e tematiche sovrapposte. I modelli addestrati su giochi multi-agente eccellono nel rilevare coalizioni: se 10 domini condividono pattern di pubblicazione, struttura URL, e link reciproci, vengono trattati come un singolo attore, non come entità indipendenti. La penalizzazione colpisce l'intero cluster.",
+          "Un caso positivo: un sito editoriale che varia formato (long-form, video, infografiche), frequenza di pubblicazione, e tipologia di link in uscita (mix di fonti primarie, competitor, risorse laterali) genera un profilo comportamentale 'umano' e imprevedibile. Questo è esattamente ciò che un agente IA addestrato su EVE Online impara a riconoscere come giocatore reale vs bot."
+        ],
+        "testing_steps": [
+          "Estrai da Google Search Console le query che portano traffico ma zero engagement (bounce >90%, tempo <10 sec). Se superano il 30% del totale, il tuo sito potrebbe essere classificato come 'estrattivo'.",
+          "Usa Screaming Frog per mappare la struttura di interlinking interno. Se oltre il 70% dei link segue uno schema ripetitivo (es. sempre footer, sempre sidebar, sempre anchor ottimizzato), stai segnalando automazione.",
+          "Analizza la distribuzione temporale delle pubblicazioni negli ultimi 6 mesi. Se segue pattern regolari (es. sempre lunedì/mercoledì/venerdì alle 9:00), introduci variabilità: orari casuali, giorni diversi, pause irregolari.",
+          "Controlla i link in uscita: se puntano sempre alle stesse 5-10 fonti (Wikipedia, siti istituzionali, competitor diretti), stai creando un pattern. Aggiungi fonti laterali, blog di nicchia, paper accademici, anche se meno autorevoli.",
+          "Verifica la coerenza tra topic dichiarato (title, H1) e comportamento utente (pagine visitate dopo). Se il 60%+ degli utenti esce subito o torna alla SERP, Google interpreta il contenuto come non allineato all'intent, anche se il testo è tecnicamente corretto.",
+          "Monitora la percentuale di traffico da query branded vs non-branded. Se il non-branded crolla mentre il branded resta stabile, è segnale che Google sta riducendo la fiducia sul tuo dominio come fonte generica, trattandolo come attore di nicchia o manipolativo."
+        ],
+        "faqs": [
+          {
+            "question": "Perché Google investe in IA per videogiochi se il core business è Search?",
+            "answer": "I videogiochi complessi come EVE Online sono ambienti ideali per addestrare IA decisionale in contesti multi-agente, competitivi e con feedback ritardato. Queste caratteristiche sono identiche a quelle di Search: milioni di siti che competono, utenti con intent ambiguo, manipolazione attiva. I modelli addestrati su giochi migliorano direttamente la capacità di ranking e anti-spam di Google."
+          },
+          {
+            "question": "Quanto tempo passa tra una ricerca DeepMind e l'integrazione in Search?",
+            "answer": "Storicamente, tra 18 e 36 mesi. BERT è stato pubblicato nel 2018 e integrato in Search nel 2019. MUM è stato annunciato nel 2021 e distribuito gradualmente fino al 2023. Con partnership commerciali attive (come quella con studi di gioco), il ciclo si accorcia: aspettati 12-18 mesi tra prototipo funzionante e rollout parziale in Search."
+          },
+          {
+            "question": "Devo preoccuparmi se uso AI per generare contenuti?",
+            "answer": "Dipende dal pattern, non dallo strumento. Se generi contenuti AI che rispondono a intent reale, ricevono engagement e si inseriscono in un ecosistema editoriale vario, il rischio è basso. Se generi migliaia di pagine con pattern ripetitivo, zero engagement e interlinking schematico, l'IA di Google – addestrata a rilevare bot in ambienti ostili – ti classificherà come attore manipolativo."
+          },
+          {
+            "question": "EVE Online è rilevante per la SEO locale o solo per siti globali?",
+            "answer": "La logica è trasferibile: EVE Online insegna a gestire economie locali (sistemi stellari) dentro un contesto globale (universo). Google applica lo stesso principio alla Local Search: il tuo ranking locale dipende non solo da segnali on-site, ma da come ti posizioni rispetto a competitor diretti, recensioni relative, e comportamento utenti nella tua area geografica. L'IA impara a bilanciare segnali micro e macro."
+          },
+          {
+            "question": "Questa ricerca impatta la SGE (Search Generative Experience)?",
+            "answer": "Indirettamente sì. SGE usa modelli generativi (LLM) per produrre risposte, ma la selezione delle fonti e il ranking delle citazioni richiedono IA decisionale. I modelli addestrati su giochi complessi migliorano la capacità di SGE di scegliere fonti affidabili in contesti ambigui, penalizzare contenuti manipolativi mascherati da autorevoli, e bilanciare diversità vs rilevanza nelle citazioni."
+          }
+        ],
+        "editorial_commentary": "Questa mossa va letta come segnale strategico, non come novità tecnica immediata. Google sta comunicando che l'IA dietro Search non è solo generativa (LLM, chatbot) ma decisionale: sistemi addestrati a operare in ambienti ostili, competitivi, dove ogni attore cerca di massimizzare il proprio vantaggio. EVE Online è un laboratorio perfetto per questo, e chi ha costruito traffico su tattiche prevedibili dovrebbe preoccuparsi.\n\nLa timeline dei 15 anni non è casuale: Google sta consolidando un vantaggio accumulato in contesti dove l'IA deve imparare da avversari intelligenti (giocatori umani, bot sofisticati). Questo tipo di addestramento è esattamente ciò che serve per contrastare SEO black-hat, content farms, e schemi di link. Se la tua strategia si basa su pattern ripetibili e scalabili, sei nel mirino.\n\nFermati prima di seguire best practice che funzionavano 24 mesi fa. L'IA addestrata su giochi multi-agente non cerca segnali isolati (keyword, backlink, freshness) ma coerenza comportamentale complessiva. Se il tuo sito si comporta come un bot in EVE Online – azioni prevedibili, nessuna variabilità, obiettivo unico – verrà trattato di conseguenza.",
+        "premium_model_used": "anthropic/claude-sonnet-4.5",
+        "cost_eur": 0.04821444
+      }
+    },
+    {
+      "id": "item_2026-08-22_011",
+      "title_original": "Google’s Generated Interfaces Could Compete With Tool Pages via @sejournal, @MattGSouthern",
+      "title_it": "Le interfacce generate da Google potrebbero competere con le pagine di strumenti",
+      "summary_it": "Google sta testando interfacce generate dall'IA che possono creare strumenti interattivi direttamente all'interno della ricerca. Questi strumenti, integrati nelle AI Overviews, hanno dimostrato di superare i risultati tradizionali in confronti diretti. Ciò suggerisce una potenziale concorrenza con le attuali pagine web che offrono funzionalità simili.",
+      "url": "https://www.searchenginejournal.com/googles-generated-interfaces-could-compete-with-tool-pages/586589",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai_overview",
+        "generated_interface",
+        "search_feature",
+        "tool_pages_competition"
+      ],
+      "importance": 4,
+      "published_at": "2026-08-21T11:00:32Z",
+      "fetched_at": "2026-08-22T05:02:50.667976Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:72bd5c590ab97fe8",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-22_012",
+      "title_original": "Search News Buzz Video Recap: Google Unleashed The August 2026 Spam Update, Gemini 3.7 Powers AI Mode, Google and Microsoft Ads News & More",
+      "title_it": "Riepilogo delle notizie di ricerca: aggiornamento spam di agosto 2026, Gemini 3.7 per la modalità AI e novità su Google e Microsoft Ads",
+      "summary_it": "Google ha rilasciato il suo terzo aggiornamento spam del 2026, completato il 21 agosto. La modalità AI di Google Search è ora alimentata in parte da Gemini 3.7 Flash. Sono stati segnalati bug nel report Performance di Google per le funzionalità AI generativa e nella visualizzazione delle favicon. Google sta inoltre mettendo in pausa le immagini generate dall'AI negli AI Overviews e sta testando nuove funzionalità in Google Ads e Microsoft Advertising.",
+      "url": "https://www.seroundtable.com/video-08-21-2026-41915.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -394,165 +509,96 @@
       "category": "industry_news",
       "tags": [
         "google_update",
+        "ai_mode",
         "google_ad",
-        "microsoft_advertising",
-        "favicon_issue"
+        "microsoft_ad"
       ],
-      "importance": 3,
-      "published_at": "2026-08-20T13:00:00Z",
-      "fetched_at": "2026-08-21T06:03:13.517075Z",
+      "importance": 4,
+      "published_at": "2026-08-21T11:01:00Z",
+      "fetched_at": "2026-08-22T05:02:52.572139Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b5069f1f0ab203bb",
+      "raw_hash": "sha256:eb98920ddb2a1824",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-21_011",
-      "title_original": "The Conversion Setup Errors That Break Smart Bidding",
-      "title_it": "Errori di configurazione delle conversioni che compromettono lo Smart Bidding",
-      "summary_it": "L'articolo evidenzia come i problemi dello Smart Bidding siano spesso riconducibili a un tracciamento delle conversioni difettoso, piuttosto che a strategie di offerta errate. Vengono identificati sette errori comuni nella configurazione che possono corrompere i dati alimentando le campagne. La corretta implementazione del tracciamento è fondamentale per l'efficacia delle strategie di offerta automatizzate.",
-      "url": "https://www.searchenginejournal.com/the-conversion-setup-errors-that-break-smart-bidding/584671",
+      "id": "item_2026-08-22_013",
+      "title_original": "Google Search Console Crawl Stats Missing Two Days Of Data",
+      "title_it": "Dati mancanti nel report sulle statistiche di scansione di Google Search Console",
+      "summary_it": "Il report sulle statistiche di scansione all'interno di Google Search Console presenta nuovamente un'interruzione dei dati. Mancano i dati relativi ai giorni 15 e 16 agosto. Google non ha ancora risolto il problema, sebbene in passato sia riuscita a recuperare i dati mancanti in situazioni simili. Questo tipo di lacuna nei dati si è verificato più volte in passato.",
+      "url": "https://www.seroundtable.com/google-search-console-crawl-stats-missing-41923.html",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
         "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "tools_platforms",
       "tags": [
-        "smart_bidding",
-        "conversion_tracking",
-        "google_ad",
-        "data_integrity"
+        "google_search_console",
+        "crawl_stat",
+        "data_gap",
+        "bug"
       ],
-      "importance": 3,
-      "published_at": "2026-08-20T13:30:03Z",
-      "fetched_at": "2026-08-21T06:03:14.814981Z",
+      "importance": 2,
+      "published_at": "2026-08-21T12:12:00Z",
+      "fetched_at": "2026-08-22T05:02:54.109975Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:9d6cbe5525598384",
+      "raw_hash": "sha256:9f13c76967179a11",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-21_012",
-      "title_original": "Growth Intelligence Brief #23",
-      "title_it": "Growth Intelligence Brief #23: Volatilità della Ricerca e Impatto dell'AI",
-      "summary_it": "Il report evidenzia un'impennata della volatilità nella ricerca organica, con l'11% delle aziende che hanno registrato variazioni di visibilità superiori al 20% in una singola settimana. Questo dato è significativamente più alto rispetto alle settimane precedenti e rappresenta un record per l'indice. Nonostante l'assenza di annunci ufficiali da parte di Google, si osserva un'instabilità crescente nel panorama SEO.",
-      "url": "https://www.growth-memo.com/p/growth-intelligence-brief-23",
+      "id": "item_2026-08-22_014",
+      "title_original": "Daily Search Forum Recap: August 21, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 21 agosto 2026",
+      "summary_it": "L'aggiornamento spam di Google di agosto 2026 è stato completato. Google ha rilasciato un pulsante migliorato per le fonti preferite e ha aggiornato le funzionalità di sperimentazione e pianificazione in Google Ads e AI Max. Il rapporto sulle statistiche di scansione di Google Search Console presenta una lacuna di dati di due giorni. Microsoft Ads interromperà il supporto per le offerte Max CPC nelle nuove campagne dal 1° ottobre.",
+      "url": "https://www.seroundtable.com/recap-08-21-2026-41922.html",
       "source": {
-        "id": "growth_memo_kevin_indig",
-        "name": "Growth Memo (Kevin Indig)",
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
         "authority": 9,
-        "type": "independent",
-        "fetcher": "rss",
-        "feed_url": "https://www.growth-memo.com/feed",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "search_volatility",
-        "google_algorithm",
-        "seo_trend"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T14:21:29Z",
-      "fetched_at": "2026-08-21T06:03:16.404051Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a2fcb9bd8273c2b3",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_013",
-      "title_original": "What Is Information Gain in SEO? (and How To Add It to Your Content)",
-      "title_it": "Cos'è l'Information Gain nella SEO e come applicarlo ai contenuti",
-      "summary_it": "Il concetto di Information Gain in SEO si riferisce all'aggiunta di valore unico e approfondito ai contenuti, distinguendoli dalla concorrenza. Sebbene non sia confermato un punteggio diretto da parte di Google, l'applicazione di questo principio migliora la qualità complessiva del contenuto. L'obiettivo è fornire informazioni utili e differenzianti che vadano oltre quanto già presente online. Questo approccio contribuisce a soddisfare meglio l'intento di ricerca dell'utente.",
-      "url": "https://ahrefs.com/blog/information-gain",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "information_gain",
-        "content_strategy",
-        "content_quality",
-        "differentiation"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T14:39:55Z",
-      "fetched_at": "2026-08-21T06:03:18.075919Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e7ceba8415070b8c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_014",
-      "title_original": "Google Expands Personalization Across Search, Discover & News via @sejournal, @MattGSouthern",
-      "title_it": "Google estende la personalizzazione a Ricerca, Discover e Notizie",
-      "summary_it": "Google sta introducendo nuove funzionalità di personalizzazione per i suoi prodotti. Tra queste, un pulsante per le fonti preferite, controlli in linguaggio naturale per Discover e briefing audio personalizzabili nell'app Google News. Queste modifiche mirano a offrire un'esperienza utente più su misura attraverso le diverse piattaforme.",
-      "url": "https://www.searchenginejournal.com/google-expands-personalization-across-search-discover-news/586528",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
         "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "google_updates",
       "tags": [
-        "google_personalization",
-        "discover_feed",
-        "google_new",
-        "user_experience"
+        "google_spam_update",
+        "google_ad",
+        "google_search_console",
+        "microsoft_ad"
       ],
       "importance": 3,
-      "published_at": "2026-08-20T15:02:52Z",
-      "fetched_at": "2026-08-21T06:03:19.622376Z",
+      "published_at": "2026-08-21T13:00:00Z",
+      "fetched_at": "2026-08-22T05:02:55.606606Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:244e4f1bf6341fcf",
+      "raw_hash": "sha256:ff1d94b891aef357",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-21_015",
-      "title_original": "How Do I Identify Cannibalization Problems & Consolidate Without Loss Of Visibility? – Ask An SEO via @sejournal, @rollerblader",
-      "title_it": "Come identificare e risolvere la cannibalizzazione delle keyword senza perdere visibilità",
-      "summary_it": "L'articolo fornisce una guida pratica per individuare problemi di cannibalizzazione delle keyword utilizzando strumenti come Search Console, crawler e rank tracker. Vengono illustrate diverse soluzioni, tra cui l'uso di canonical, meta robot e l'ottimizzazione dei link interni. L'obiettivo è consolidare i contenuti senza compromettere la visibilità organica.",
-      "url": "https://www.searchenginejournal.com/ask-an-seo-how-do-i-identify-cannibalization-problems-consolidate-without-loss-of-visibility/553881",
+      "id": "item_2026-08-22_015",
+      "title_original": "The House Doesn’t Publish Its Tells via @sejournal, @pedrodias",
+      "title_it": "I laboratori di IA non rivelano le loro strategie",
+      "summary_it": "I laboratori di intelligenza artificiale stanno acquisendo libri pubblicati prima del 2022 per evitare di addestrare i loro modelli su contenuti generati da IA. Contemporaneamente, stanno sviluppando sistemi di watermarking per il testo. Questo suggerisce che le strategie di creazione di contenuti su larga scala basate sull'IA potrebbero essere inefficaci a lungo termine.",
+      "url": "https://www.searchenginejournal.com/the-house-doesnt-publish-its-tells/586359",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -565,29 +611,28 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "technical_seo",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "keyword_cannibalization",
-        "search_console",
-        "site_audit",
-        "seo_strategy"
+        "ai_training_data",
+        "content_quality",
+        "ai_watermarking"
       ],
       "importance": 3,
-      "published_at": "2026-08-20T16:30:58Z",
-      "fetched_at": "2026-08-21T06:03:20.998065Z",
+      "published_at": "2026-08-21T13:30:45Z",
+      "fetched_at": "2026-08-22T05:02:57.117074Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:459a515b917a6347",
+      "raw_hash": "sha256:2dd506121ff6c6b6",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-21_016",
-      "title_original": "Microsoft Ads Is Removing Max CPC From New Campaigns via @sejournal, @brookeosmundson",
-      "title_it": "Microsoft Ads rimuove il CPC massimo dalle nuove campagne",
-      "summary_it": "A partire dal 1° ottobre, Microsoft Advertising eliminerà l'opzione del CPC massimo per le nuove campagne non-portfolio. Questa modifica spingerà gli inserzionisti verso l'utilizzo di controlli di offerta automatizzati e obiettivi di performance. L'obiettivo è ottimizzare la gestione delle campagne attraverso sistemi più automatizzati.",
-      "url": "https://www.searchenginejournal.com/microsoft-ads-is-removing-max-cpc-from-new-campaigns/586527",
+      "id": "item_2026-08-22_016",
+      "title_original": "AI Mode Queries Are 3X Longer – Why Your Page Should Lead With The Answer via @sejournal, @gregjarboe",
+      "title_it": "Le query in modalità AI sono tre volte più lunghe: perché la tua pagina dovrebbe iniziare con la risposta",
+      "summary_it": "Dati recenti indicano che le query formulate in modalità AI sono significativamente più lunghe rispetto alle ricerche tradizionali. Questo suggerisce un cambiamento nel comportamento degli utenti, che tendono a porre domande complete anziché frammenti di testo. Di conseguenza, è consigliabile strutturare i contenuti web in modo che la risposta principale sia presentata all'inizio della pagina.",
+      "url": "https://www.searchenginejournal.com/ai-mode-queries-are-3x-longer-the-case-for-leading-with-the-answer/585990",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -600,147 +645,113 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "microsoft_ad",
-        "ppc",
-        "automated_bidding",
-        "ad_platform"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-20T17:13:03Z",
-      "fetched_at": "2026-08-21T06:03:22.519576Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1eabfa98bbf5fbf7",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-21_017",
-      "title_original": "The Keyword Universe Was Always Smaller Than We Thought via @sejournal, @DuaneForrester",
-      "title_it": "L'universo delle parole chiave è sempre stato più piccolo di quanto pensassimo",
-      "summary_it": "L'articolo suggerisce che l'ambito delle parole chiave rilevanti per la SEO potrebbe essere meno esteso di quanto tradizionalmente percepito. Vengono menzionati i tool di citazione come strumenti che rispondono a domande diverse rispetto ai rank tracker, focalizzandosi sulla stabilità delle frasi di ricerca. Questo implica una riconsiderazione delle strategie di keyword research e targeting.",
-      "url": "https://www.searchenginejournal.com/the-keyword-universe-was-always-smaller-than-we-thought/586065",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "keyword_research",
-        "seo_strategy",
+        "ai_querie",
+        "content_strategy",
+        "user_behavior",
         "search_intent"
       ],
       "importance": 3,
-      "published_at": "2026-08-20T18:00:38Z",
-      "fetched_at": "2026-08-21T06:03:24.160347Z",
+      "published_at": "2026-08-21T18:00:14Z",
+      "fetched_at": "2026-08-22T05:03:02.018803Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:8c767f759b536a46",
+      "raw_hash": "sha256:0657589484b00666",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-21T06:02:10.876530Z",
+      "last_checked": "2026-08-22T05:01:22.119503Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-21T06:02:11.345059Z",
+      "last_checked": "2026-08-22T05:01:22.904902Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-21T06:02:12.211675Z",
+      "last_checked": "2026-08-22T05:01:23.954937Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-21T06:02:14.003071Z",
+      "last_checked": "2026-08-22T05:01:25.759110Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-21T06:02:28.663635Z",
+      "last_checked": "2026-08-22T05:01:50.853240Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-21T06:02:29.173126Z",
+      "last_checked": "2026-08-22T05:01:51.389419Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-21T06:02:30.712521Z",
+      "last_checked": "2026-08-22T05:01:53.038403Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-21T06:02:32.876066Z",
+      "last_checked": "2026-08-22T05:01:54.471349Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-21T06:02:33.705705Z",
+      "last_checked": "2026-08-22T05:01:55.825027Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-21T06:02:33.827527Z",
+      "last_checked": "2026-08-22T05:01:55.919491Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-21T06:02:34.869186Z",
+      "last_checked": "2026-08-22T05:01:56.220133Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-21T06:02:35.363509Z",
+      "last_checked": "2026-08-22T05:01:57.830288Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-21T06:02:36.945064Z",
+      "last_checked": "2026-08-22T05:01:58.980948Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-21T06:02:38.371328Z",
+      "last_checked": "2026-08-22T05:02:00.160562Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-21T06:02:39.872141Z",
+      "last_checked": "2026-08-22T05:02:01.828219Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-21T06:02:41.105941Z",
+      "last_checked": "2026-08-22T05:02:03.437875Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-21T06:02:42.183259Z",
+      "last_checked": "2026-08-22T05:02:05.080742Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-21T06:02:56.150660Z",
+      "last_checked": "2026-08-22T05:02:28.371679Z",
       "changed": false
     }
   ],
