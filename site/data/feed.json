@@ -1,310 +1,73 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-25T06:01:02.882687Z",
-  "generated_at_local": "2026-08-25T08:01:02.882687+02:00",
+  "generated_at": "2026-08-26T05:00:54.299292Z",
+  "generated_at_local": "2026-08-26T07:00:54.299292+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-25-0801",
+  "run_id": "2026-08-26-0700",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2325,
-    "items_after_dedup": 15,
+    "items_collected": 2332,
+    "items_after_dedup": 19,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0096,
-    "summarize_attempted": 15,
+    "ai_cost_eur": 0.0117,
+    "summarize_attempted": 19,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-25_006",
-    "item_2026-08-25_010",
-    "item_2026-08-25_015",
-    "item_2026-08-25_001",
-    "item_2026-08-25_008",
-    "item_2026-08-25_002",
-    "item_2026-08-25_003",
-    "item_2026-08-25_005",
-    "item_2026-08-25_009",
-    "item_2026-08-25_011"
+    "item_2026-08-26_001",
+    "item_2026-08-26_002",
+    "item_2026-08-26_007",
+    "item_2026-08-26_010",
+    "item_2026-08-26_012",
+    "item_2026-08-26_018",
+    "item_2026-08-26_003",
+    "item_2026-08-26_016",
+    "item_2026-08-26_017",
+    "item_2026-08-26_008"
   ],
   "categories": {
-    "google_updates": [
-      "item_2026-08-25_006",
-      "item_2026-08-25_010",
-      "item_2026-08-25_015",
-      "item_2026-08-25_001",
-      "item_2026-08-25_004"
-    ],
     "ai_models": [
-      "item_2026-08-25_008"
+      "item_2026-08-26_001",
+      "item_2026-08-26_002",
+      "item_2026-08-26_017"
     ],
-    "tools_platforms": [
-      "item_2026-08-25_002",
-      "item_2026-08-25_003",
-      "item_2026-08-25_012"
-    ],
-    "industry_news": [
-      "item_2026-08-25_005",
-      "item_2026-08-25_013"
+    "google_updates": [
+      "item_2026-08-26_007",
+      "item_2026-08-26_010",
+      "item_2026-08-26_012",
+      "item_2026-08-26_018",
+      "item_2026-08-26_003",
+      "item_2026-08-26_016"
     ],
     "technical_seo": [
-      "item_2026-08-25_009",
-      "item_2026-08-25_007"
+      "item_2026-08-26_008"
     ],
     "ai_overviews_llm_seo": [
-      "item_2026-08-25_011",
-      "item_2026-08-25_014"
+      "item_2026-08-26_009",
+      "item_2026-08-26_011",
+      "item_2026-08-26_014",
+      "item_2026-08-26_006"
+    ],
+    "industry_news": [
+      "item_2026-08-26_013",
+      "item_2026-08-26_019"
+    ],
+    "content_eeat": [
+      "item_2026-08-26_015"
+    ],
+    "tools_platforms": [
+      "item_2026-08-26_004",
+      "item_2026-08-26_005"
     ]
   },
   "items": [
     {
-      "id": "item_2026-08-25_001",
-      "title_original": "Google Answers If Some Sites Can Ignore GEO And Just Focus On SEO via @sejournal, @martinibuster",
-      "title_it": "Google chiarisce se alcuni siti possono ignorare la geolocalizzazione e concentrarsi solo sulla SEO",
-      "summary_it": "Google ha fornito indicazioni sulla possibilità per determinate tipologie di siti web di trascurare gli aspetti di geolocalizzazione, focalizzandosi esclusivamente sulle strategie SEO generiche. La discussione verte su quali settori o modelli di business possano effettivamente beneficiare di un tale approccio. Questo suggerisce che non tutti i siti necessitano di una strategia SEO localizzata.",
-      "url": "https://www.searchenginejournal.com/google-answers-if-some-sites-can-ignore-geo-and-just-focus-on-seo/586737",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "local_seo",
-        "geo_targeting",
-        "google_guidance"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T09:52:48Z",
-      "fetched_at": "2026-08-25T06:02:16.840377Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1f91cb3fe5eced01",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_002",
-      "title_original": "Google Search Console Sends New Owner Email Notifications - Bug?",
-      "title_it": "Google Search Console invia notifiche email di 'nuovo proprietario': un bug?",
-      "summary_it": "Molti utenti di Google Search Console hanno ricevuto notifiche via email riguardanti l'aggiunta di nuovi proprietari ai loro account. Le segnalazioni indicano che queste notifiche si riferiscono a utenti già esistenti e con accesso consolidato, alcuni da anni. Questo comportamento anomalo suggerisce la presenza di un bug nel sistema di notifica di Google Search Console. La situazione ha generato confusione e preoccupazione tra i professionisti SEO.",
-      "url": "https://www.seroundtable.com/google-search-console-new-owner-emails-41932.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_search_console",
-        "bug",
-        "email_notification",
-        "data_integrity"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T10:05:00Z",
-      "fetched_at": "2026-08-25T06:02:18.315733Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f886069093c89349",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_003",
-      "title_original": "Google Ads Reduces Conversion Cycle For Maximize Conversion Value Bidding",
-      "title_it": "Google Ads riduce il ciclo di conversione per le offerte 'Massimizza il valore di conversione'",
-      "summary_it": "Google ha aggiornato la documentazione di supporto per le offerte 'Massimizza il valore di conversione' in Google Ads. La modifica principale riguarda la riduzione del requisito dei cicli di conversione da tre a uno o due. Questo significa che gli inserzionisti dovranno attendere meno tempo prima che le campagne si adattino ai nuovi valori di conversione. Sono stati aggiunti anche nuovi documenti di risoluzione dei problemi per diverse tipologie di campagne.",
-      "url": "https://www.seroundtable.com/google-ads-conversion-cycle-max-conv-41919.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "bidding_strategy",
-        "conversion_tracking",
-        "ppc_update"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T10:11:00Z",
-      "fetched_at": "2026-08-25T06:02:19.871381Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e14c3cff3097ccce",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_004",
-      "title_original": "Google Tests Pink Highlights In Featured Snippets",
-      "title_it": "Google testa evidenziazioni rosa negli snippet in primo piano",
-      "summary_it": "Google sta sperimentando l'uso di evidenziazioni di colore rosa all'interno degli snippet in primo piano e delle AI Overview. Tradizionalmente, queste evidenziazioni sono di colore blu. Non è la prima volta che Google testa colori diversi per queste funzionalità, ma questa è una nuova variazione osservata.",
-      "url": "https://www.seroundtable.com/google-pink-highlights-featured-snippets-41926.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_test",
-        "featured_snippet",
-        "ui_change",
-        "serp_feature"
-      ],
-      "importance": 1,
-      "published_at": "2026-08-24T10:21:00Z",
-      "fetched_at": "2026-08-25T06:02:21.299583Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:95f52a17675a0399",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_005",
-      "title_original": "Google Aware Of Reviews Missing After Google Business Profile Reinstatement",
-      "title_it": "Google è a conoscenza del problema delle recensioni mancanti dopo il ripristino di un profilo Google Business",
-      "summary_it": "Google ha riconosciuto un problema per cui le recensioni scompaiono dai profili Google Business Profile (GBP) dopo che questi sono stati ripristinati da una sospensione. L'azienda sta attivamente lavorando a una soluzione, ma non è stata fornita una tempistica per la risoluzione. Si consiglia agli utenti interessati di segnalare il problema rispondendo direttamente al ticket di supporto originale per documentare il caso.",
-      "url": "https://www.seroundtable.com/reviews-missing-google-business-profile-reinstatement-41927.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_business_profile",
-        "local_seo",
-        "google_review",
-        "bug_fix"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T10:31:00Z",
-      "fetched_at": "2026-08-25T06:02:23.009851Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5dd23d6044cce04d",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_006",
-      "title_original": "Google Merchant Center Product Images Minimum Size Will Be 500x500 Pixels",
-      "title_it": "Google Merchant Center: la dimensione minima delle immagini dei prodotti sarà di 500x500 pixel",
-      "summary_it": "Google ha annunciato che a partire dal 31 gennaio 2027, la dimensione minima delle immagini dei prodotti su Google Merchant Center sarà di 500x500 pixel. Attualmente, le immagini inferiori a questa dimensione genereranno avvisi nel Merchant Center. Google raccomanda comunque l'utilizzo di immagini di almeno 1500x1500 pixel per prestazioni ottimali.",
-      "url": "https://www.seroundtable.com/google-merchant-center-product-images-update-41924.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_merchant_center",
-        "product_image",
-        "image_size",
-        "ecommerce_seo"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T10:41:00Z",
-      "fetched_at": "2026-08-25T06:02:24.438804Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:86b2562231e62c44",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_007",
-      "title_original": "Google Makes Minor Updates To Canonicalization Help Docs",
-      "title_it": "Google aggiorna la documentazione sulla canonicalizzazione",
-      "summary_it": "Google ha apportato aggiornamenti minori ai documenti di aiuto sulla canonicalizzazione, in particolare alle pagine 'Cos'è la canonicalizzazione' e 'Risolvere i problemi di canonicalizzazione'. Le modifiche sembrano mirare a migliorare la comprensione e la fruibilità dei contenuti. Non sono state introdotte modifiche sostanziali alle linee guida, ma piuttosto una riorganizzazione per maggiore chiarezza.",
-      "url": "https://www.seroundtable.com/google-updates-canonicalization-help-docs-41925.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "google_doc",
-        "canonicalization",
-        "technical_seo_update"
-      ],
-      "importance": 2,
-      "published_at": "2026-08-24T10:51:00Z",
-      "fetched_at": "2026-08-25T06:02:25.736794Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1c1bcbc84479f3f1",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_008",
-      "title_original": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-      "title_it": "Miglioramento del rapporto prezzo-prestazioni per gli sviluppatori con GPT-5.6 in Kiro",
-      "summary_it": "OpenAI ha rilasciato GPT-5.6 all'interno della piattaforma Kiro, con l'obiettivo di ottimizzare il rapporto prezzo-prestazioni per gli sviluppatori. Questa integrazione è pensata per supportare le fasi di pianificazione, sviluppo, revisione e test del software. L'aggiornamento mira a fornire maggiore efficienza e costi contenuti per le operazioni di sviluppo.",
-      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "id": "item_2026-08-26_001",
+      "title_original": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "title_it": "I primi risultati di Jalapeño evidenziano velocità ed efficienza leader nel settore per l'inferenza AI",
+      "summary_it": "OpenAI ha presentato Jalapeño, un chip personalizzato progettato per l'inferenza AI. I primi test dimostrano un miglioramento significativo in termini di velocità, efficienza energetica, throughput e latenza rispetto alle soluzioni attuali. Questo sviluppo mira a ottimizzare le prestazioni dei modelli AI moderni.",
+      "url": "https://openai.com/index/jalapeno-first-results",
       "source": {
         "id": "openai_blog",
         "name": "OpenAI Blog",
@@ -320,26 +83,61 @@
       "category": "ai_models",
       "tags": [
         "openai",
-        "gpt_5_6",
-        "kiro",
-        "developer_tool"
+        "ai_chip",
+        "inference",
+        "performance"
       ],
-      "importance": 3,
-      "published_at": "2026-08-24T11:00:00Z",
-      "fetched_at": "2026-08-25T06:02:27.201499Z",
+      "importance": 4,
+      "published_at": "2026-08-25T06:00:00Z",
+      "fetched_at": "2026-08-26T05:02:03.815100Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:027f4c2bb6c99a8f",
+      "raw_hash": "sha256:c6761d3cf08cfe59",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-25_009",
-      "title_original": "How To Audit Publisher Websites In 2026",
-      "title_it": "Come Effettuare un Audit dei Siti Web di Editori nel 2026",
-      "summary_it": "L'articolo presenta un framework pratico per l'audit di siti web editoriali, focalizzandosi su aspetti come la SEO tecnica, la qualità dei contenuti e l'E-E-A-T. Viene inoltre trattata la coerenza delle entità attraverso canali di scoperta passivi e attivi. La metodologia proposta è pensata per essere applicata nel contesto del 2026.",
-      "url": "https://www.searchenginejournal.com/how-to-audit-publisher-websites-in-2026/586349",
+      "id": "item_2026-08-26_002",
+      "title_original": "The full stack behind abundant intelligence",
+      "title_it": "L'infrastruttura completa dietro l'intelligenza abbondante",
+      "summary_it": "Il CFO di OpenAI, Sarah Friar, illustra come i progressi in chip, capacità computazionale, modelli e prodotti si combinino per fornire intelligenza più utile su larga scala e a costi inferiori. L'articolo esplora l'interconnessione di questi elementi tecnologici. Viene evidenziato come l'ottimizzazione di ogni componente contribuisca all'efficienza complessiva. La discussione si concentra sull'impatto di queste sinergie sull'accessibilità e l'utilità dell'AI.",
+      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "ai_infrastructure",
+        "compute",
+        "ai_cost_efficiency"
+      ],
+      "importance": 4,
+      "published_at": "2026-08-25T06:05:00Z",
+      "fetched_at": "2026-08-26T05:02:05.528150Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:39d4056e7c7e62eb",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_003",
+      "title_original": "Google Local Services Ads Are Moving To Performance Max: What To Check First",
+      "title_it": "Gli annunci Google Local Services confluiscono in Performance Max: cosa verificare prima",
+      "summary_it": "Google sta integrando gli annunci Local Services all'interno delle campagne Performance Max. È consigliabile eseguire un audit dell'account prima e dopo questa migrazione. Un webinar di CallRail fornirà una checklist per questa transizione.",
+      "url": "https://www.searchenginejournal.com/google-local-services-ads-performance-max-webinar/586879",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -350,101 +148,31 @@
         "target_url": null,
         "selectors": null,
         "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "seo_audit",
-        "publisher_seo",
-        "e_e_a_t",
-        "technical_seo"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T11:00:14Z",
-      "fetched_at": "2026-08-25T06:02:28.589192Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:733ade64b3da4a5d",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_010",
-      "title_original": "Daily Search Forum Recap: August 24, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 24 agosto 2026",
-      "summary_it": "Google ha risolto bug relativi alle favicon e ai dati mancanti nelle statistiche di scansione di Search Console. Sono stati apportati aggiornamenti minori ai documenti di aiuto sulla canonicalizzazione e Google ha inviato notifiche email per nuovi proprietari in Search Console, che sembravano un bug. Google Merchant Center aumenterà la dimensione minima delle immagini dei prodotti a 500x500 pixel a partire dal 31 gennaio 2027. Google è a conoscenza di un problema di recensioni mancanti dopo il ripristino di un profilo Google Business e sta testando evidenziazioni rosa per i featured snippet.",
-      "url": "https://www.seroundtable.com/recap-08-24-2026-41933.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "google_updates",
       "tags": [
-        "google_search_console",
-        "google_merchant_center",
-        "google_business_profile",
-        "canonicalization"
+        "google_ad",
+        "performance_max",
+        "local_seo",
+        "paid_search"
       ],
       "importance": 3,
-      "published_at": "2026-08-24T13:00:00Z",
-      "fetched_at": "2026-08-25T06:02:30.593073Z",
+      "published_at": "2026-08-25T06:45:03Z",
+      "fetched_at": "2026-08-26T05:02:06.744054Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:aa601e7baf2c4799",
+      "raw_hash": "sha256:ea1adbcb8f1b2f7e",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-25_011",
-      "title_original": "SEOs Are Becoming The Tools Of Their Tools – The AI Slop Backlash via @sejournal, @gregjarboe",
-      "title_it": "I SEO stanno diventando strumenti dei loro stessi strumenti: il contraccolpo del contenuto AI di bassa qualità",
-      "summary_it": "Piattaforme come Spotify e LinkedIn stanno intensificando le misure contro i contenuti generati da AI di bassa qualità. Questo scenario impone ai professionisti SEO di scegliere se utilizzare l'intelligenza artificiale come scorciatoia o come supporto editoriale. La discussione verte sulla necessità di mantenere standard qualitativi elevati nell'era dell'AI generativa.",
-      "url": "https://www.searchenginejournal.com/seos-are-becoming-the-tools-of-their-tools-the-ai-slop-backlash/586298",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_content",
-        "content_quality",
-        "ai_ethic",
-        "seo_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T13:30:06Z",
-      "fetched_at": "2026-08-25T06:02:32.164755Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:131278a89252103a",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_012",
-      "title_original": "Google Ads Launches New Search and AI Max Experimentation Tools via @sejournal, @brookeosmundson",
-      "title_it": "Google Ads introduce nuovi strumenti di sperimentazione per Search e AI Max",
-      "summary_it": "Google Ads ha rilasciato nuovi strumenti di sperimentazione per le campagne Search e AI Max. Questi permettono di testare variazioni su budget, obiettivi di ROI, controlli del brand, impostazioni di località e altre modifiche alle campagne. L'obiettivo è facilitare l'ottimizzazione delle performance attraverso test controllati.",
-      "url": "https://www.searchenginejournal.com/google-ads-launches-new-search-and-ai-max-experimentation-tools/586549",
+      "id": "item_2026-08-26_004",
+      "title_original": "Webflow’s New OpenAI Codex Integration Simplifies Site Management via @sejournal, @martinibuster",
+      "title_it": "L'integrazione di OpenAI Codex in Webflow semplifica la gestione dei siti",
+      "summary_it": "Webflow ha introdotto il supporto per OpenAI Codex, integrando funzionalità che automatizzano le attività comuni di gestione e sviluppo dei siti web. Questa integrazione mira a semplificare i flussi di lavoro per gli utenti della piattaforma. La novità è presentata come un modo per ottimizzare le operazioni quotidiane.",
+      "url": "https://www.searchenginejournal.com/webflows-new-openai-codex-integration-simplifies-site-management/586931",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -459,62 +187,27 @@
       },
       "category": "tools_platforms",
       "tags": [
-        "google_ad",
-        "experimentation_tool",
-        "ai_max",
-        "search_ad"
+        "webflow",
+        "openai_codex",
+        "site_management",
+        "automation"
       ],
-      "importance": 3,
-      "published_at": "2026-08-24T13:50:16Z",
-      "fetched_at": "2026-08-25T06:02:33.223615Z",
+      "importance": 2,
+      "published_at": "2026-08-25T08:17:23Z",
+      "fetched_at": "2026-08-26T05:02:08.210046Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:ad297c391d2ca9b4",
+      "raw_hash": "sha256:1d77dda8024ceaed",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-25_013",
-      "title_original": "MBA Metrics for SEO: How to Speak Leadership’s Language",
-      "title_it": "Metriche MBA per la SEO: come comunicare con la dirigenza",
-      "summary_it": "L'articolo evidenzia l'importanza per i professionisti SEO di tradurre le metriche tradizionali in un linguaggio comprensibile per i team dirigenziali. Si suggerisce di focalizzarsi su indicatori come la quota di mercato e il ritorno sull'investimento (ROI). Questo approccio mira a dimostrare il valore strategico della SEO in termini economici e di business. La comunicazione efficace delle performance SEO è cruciale per ottenere supporto e risorse.",
-      "url": "https://ahrefs.com/blog/mba-metrics-for-seo",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "seo_strategy",
-        "business_metric",
-        "roi",
-        "stakeholder_management"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-24T14:52:49Z",
-      "fetched_at": "2026-08-25T06:02:34.713729Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:35c56cd544c233cb",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-08-25_014",
-      "title_original": "1 In 10 Webpages Shows Signs Of AI Authorship, Pew Reports via @sejournal, @MattGSouthern",
-      "title_it": "Il 10% delle pagine web mostra segni di autorialità AI, secondo Pew",
-      "summary_it": "Una ricerca di Pew ha rilevato che il 10% delle pagine web analizzate presenta indicazioni di essere state generate o assistite dall'intelligenza artificiale. Questa percentuale sale al 35% per i contenuti pubblicati dopo il lancio di ChatGPT. Lo studio suggerisce una crescente integrazione dell'AI nella produzione di contenuti online.",
-      "url": "https://www.searchenginejournal.com/1-in-10-webpages-shows-signs-of-ai-authorship-pew-reports/586883",
+      "id": "item_2026-08-26_005",
+      "title_original": "Cloudflare Says EmDash Version 1.0 Is Releasing Soon via @sejournal, @martinibuster",
+      "title_it": "Cloudflare annuncia l'imminente rilascio della versione 1.0 di EmDash",
+      "summary_it": "Cloudflare ha annunciato il prossimo rilascio della versione 1.0 di EmDash, il proprio CMS. Questo sistema è stato testato con successo sul blog ad alto traffico di Cloudflare. EmDash è presentato come un successore spirituale di WordPress.",
+      "url": "https://www.searchenginejournal.com/cloudflare-says-emdash-version-1-0-is-releasing-soon/586951",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -527,148 +220,600 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "tools_platforms",
       "tags": [
-        "ai_content",
-        "content_generation",
-        "pew_research",
-        "ai_authorship"
+        "cloudflare",
+        "emdash",
+        "cms",
+        "platform_update"
       ],
-      "importance": 3,
-      "published_at": "2026-08-24T17:50:15Z",
-      "fetched_at": "2026-08-25T06:02:36.133511Z",
+      "importance": 2,
+      "published_at": "2026-08-25T09:14:19Z",
+      "fetched_at": "2026-08-26T05:02:09.504974Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4260e5a1f2de070c",
+      "raw_hash": "sha256:d9c49d8ec8b3b8ad",
       "deep_analysis": null
     },
     {
-      "id": "item_2026-08-25_015",
-      "title_original": "Has Google demoted listicles?",
-      "title_it": "Google ha penalizzato le listicle?",
-      "summary_it": "Si sta osservando una diminuzione della visibilità delle listicle nei risultati di ricerca di Google. Molti esperti SEO hanno notato un calo significativo nel traffico organico per questo formato di contenuto. Questo suggerisce che Google potrebbe aver modificato il modo in cui valuta e classifica le pagine basate su elenchi. La tendenza è stata osservata negli ultimi 12 mesi, in concomitanza con l'avvento della ricerca basata sull'IA.",
-      "url": "https://www.growth-memo.com/p/has-google-demoted-listicles",
+      "id": "item_2026-08-26_006",
+      "title_original": "Google Copyable Emojis In AI Overviews",
+      "title_it": "Google introduce emoji copiabili nelle AI Overviews",
+      "summary_it": "Google ha esteso la funzionalità di copia delle emoji direttamente dai risultati di ricerca anche alle AI Overviews. Questa implementazione permette agli utenti di copiare emoji visualizzate all'interno dei riepiloghi generati dall'intelligenza artificiale. La funzionalità era già presente nelle answer box e ora appare anche nelle AI Overviews, talvolta in modo ridondante. Questa novità potrebbe influenzare il traffico verso siti specializzati in emoji.",
+      "url": "https://www.seroundtable.com/google-copyable-emojis-ai-overviews-41929.html",
       "source": {
-        "id": "growth_memo_kevin_indig",
-        "name": "Growth Memo (Kevin Indig)",
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
         "authority": 9,
-        "type": "independent",
+        "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.growth-memo.com/feed",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai_overview",
+        "serp_feature",
+        "emoji",
+        "user_experience"
+      ],
+      "importance": 2,
+      "published_at": "2026-08-25T10:11:00Z",
+      "fetched_at": "2026-08-26T05:02:10.954366Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:cb7a9a521f3cd35c",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_007",
+      "title_original": "Reports Indicate Google’s Spam Update Focused On SEO AI Content via @sejournal, @martinibuster",
+      "title_it": "Segnalazioni indicano che l'aggiornamento spam di Google si è concentrato sui contenuti SEO generati da AI",
+      "summary_it": "Recenti analisi suggeriscono che il Google Spam Update potrebbe aver preso di mira i contenuti SEO prodotti in massa tramite intelligenza artificiale. Questo aggiornamento rientra nelle continue azioni di Google per contrastare lo spam e migliorare la qualità dei risultati di ricerca. L'attenzione sui contenuti AI evidenzia la necessità di strategie di contenuto che privilegino l'originalità e il valore per l'utente. I professionisti SEO dovrebbero valutare l'impatto di tali contenuti sui propri siti.",
+      "url": "https://www.searchenginejournal.com/reports-indicate-googles-spam-update-focused-on-seo-ai-content/586978",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
         "enabled": true
       },
       "category": "google_updates",
       "tags": [
-        "listicle",
-        "google_algorithm",
-        "content_strategy",
-        "ai_search"
+        "google_spam_update",
+        "ai_content",
+        "content_quality",
+        "search_ranking"
       ],
-      "importance": 3,
-      "published_at": "2026-08-24T18:18:49Z",
-      "fetched_at": "2026-08-25T06:02:37.730790Z",
+      "importance": 4,
+      "published_at": "2026-08-25T10:20:31Z",
+      "fetched_at": "2026-08-26T05:02:12.585386Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2e478f5feca99ddb",
+      "raw_hash": "sha256:b3aac4b9054a56b1",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_008",
+      "title_original": "Google Says Google's Crawlers Don't Parse JSON",
+      "title_it": "Google chiarisce che i suoi crawler non analizzano i file JSON",
+      "summary_it": "Gary Illyes di Google ha ribadito che Googlebot si limita a scaricare i file JSON, senza analizzarne il contenuto. L'analisi e l'elaborazione dei dati avvengono in una fase successiva, gestita dall'indexer. Questo processo si applica anche ad altri servizi Google, come Merchant Center, che utilizzano infrastrutture condivise per il parsing.",
+      "url": "https://www.seroundtable.com/google-crawlers-dont-parse-json-41936.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "googlebot",
+        "json",
+        "crawling",
+        "indexing"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T10:21:00Z",
+      "fetched_at": "2026-08-26T05:02:14.193847Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b66f7ecf4acaea61",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_009",
+      "title_original": "Google: There Is Nothing Special To Do For Generative AI Responses In Search",
+      "title_it": "Google: Nessuna azione specifica richiesta per le risposte AI generative nella ricerca",
+      "summary_it": "John Mueller di Google ha ribadito che non ci sono azioni specifiche da intraprendere per ottimizzare i contenuti in vista delle risposte generate dall'AI nella ricerca. Questa posizione è coerente con precedenti dichiarazioni di Google, che equiparano l'ottimizzazione per l'AI (AEO) all'ottimizzazione SEO tradizionale. L'azienda suggerisce di concentrarsi sulla creazione di contenuti di qualità, senza strategie dedicate all'AI generativa.",
+      "url": "https://www.seroundtable.com/google-generative-ai-search-responses-todo-41916.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai",
+        "john_mueller",
+        "generative_ai",
+        "seo_strategy"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T10:31:00Z",
+      "fetched_at": "2026-08-26T05:02:15.805940Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ea6b0ab1092091e8",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_010",
+      "title_original": "Google Ads Tests Loading Sponsored Results Using Gemini With Animation",
+      "title_it": "Google Ads testa un'animazione di caricamento per i risultati sponsorizzati, con riferimento a Gemini",
+      "summary_it": "Google Ads sta sperimentando un'animazione di caricamento per i risultati sponsorizzati nella ricerca mobile. Questa animazione include la dicitura \"Valutazione dei risultati sponsorizzati\" e mostra i loghi di Google e Gemini. Il test suggerisce un potenziale coinvolgimento di Gemini nell'erogazione degli annunci sponsorizzati.",
+      "url": "https://www.seroundtable.com/google-ads-loading-gemini-41937.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "gemini",
+        "sponsored_result",
+        "mobile_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T10:41:00Z",
+      "fetched_at": "2026-08-26T05:02:17.144711Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ae905bf99c81489b",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_011",
+      "title_original": "Google Shows AI Overviews Above Stock Charts For Stock Price Queries",
+      "title_it": "Google mostra le AI Overviews sopra i grafici azionari per le query sui prezzi delle azioni",
+      "summary_it": "Google sta mostrando le AI Overviews in cima ai risultati di ricerca per le query relative ai prezzi delle azioni, come ad esempio [GOOG stock] o [MSFT stock]. Questa implementazione posiziona le AI Overviews al di sopra del grafico azionario, a differenza di precedenti osservazioni in cui apparivano sotto. L'autore della notizia ha replicato il comportamento, suggerendo che potrebbe ridurre la pertinenza dei risultati per queste specifiche ricerche.",
+      "url": "https://www.seroundtable.com/google-ai-overviews-stock-price-queries-41934.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai_overview",
+        "serp_feature",
+        "stock_querie",
+        "search_relevance"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T10:51:00Z",
+      "fetched_at": "2026-08-26T05:02:18.725355Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d7b8be8bca341cc7",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_012",
+      "title_original": "Google To Charge For Missed & Subsequent Calls On LSAs",
+      "title_it": "Google introdurrà addebiti per chiamate perse e successive nelle Local Service Ads",
+      "summary_it": "A partire dal 1° ottobre 2026, Google modificherà la politica di addebito per le Local Service Ads (LSA). Saranno addebitate le chiamate perse durante l'orario di lavoro se l'utente rimane in linea per più di 20 secondi, con alcune eccezioni. Inoltre, se una chiamata iniziale non viene qualificata come lead a pagamento, eventuali chiamate di follow-up tra l'attività e l'utente che soddisfano i criteri di lead valido saranno addebitate. Google giustifica questi cambiamenti con la necessità di garantire che la piattaforma continui a soddisfare le aspettative dei clienti e a premiare le attività con un'ottima reattività.",
+      "url": "https://www.seroundtable.com/google-lsa-missed-subsequent-calls-41940.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "local_seo",
+        "lsa",
+        "paid_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T10:57:00Z",
+      "fetched_at": "2026-08-26T05:02:20.400992Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d938b679fa2973c8",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_013",
+      "title_original": "Your Promo Code Field May Be Sending Revenue To Affiliates via @sejournal, @lorenbaker",
+      "title_it": "Il campo del codice promozionale può dirottare ricavi verso gli affiliati",
+      "summary_it": "La presenza di un campo per il codice promozionale durante il checkout può spingere gli utenti a cercare coupon online, indirizzandoli verso siti affiliati. Questo meccanismo può comportare una perdita di ricavi per l'e-commerce, che si trova a pagare commissioni per vendite che sarebbero avvenute comunque. L'implementazione di una pagina promozionale interna può aiutare a mitigare questo fenomeno, mantenendo i clienti all'interno del proprio ecosistema.",
+      "url": "https://www.searchenginejournal.com/promo-code-search-affiliate-revenue-leak/586554",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ecommerce_seo",
+        "affiliate_marketing",
+        "revenue_leak",
+        "conversion_rate_optimization"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T11:30:50Z",
+      "fetched_at": "2026-08-26T05:02:22.015224Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6aa9e002098ca393",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_014",
+      "title_original": "Daily Search Forum Recap: August 25, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 25 agosto 2026",
+      "summary_it": "Google Ads sta testando l'integrazione di Gemini per caricare risultati sponsorizzati con animazioni. Google ha chiarito che non sono necessarie azioni specifiche per le risposte AI generative nella ricerca. A partire dal 1° ottobre, Google addebiterà le chiamate perse e successive per gli annunci di servizi locali (LSA). Inoltre, Google sta mostrando le AI Overviews sopra i grafici azionari per le query sui prezzi delle azioni e ha confermato che Googlebot non analizza i file JSON, ma li scarica.",
+      "url": "https://www.seroundtable.com/recap-08-25-2026-41938.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ad",
+        "gemini",
+        "ai_overviews",
+        "local_service_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T13:00:00Z",
+      "fetched_at": "2026-08-26T05:02:23.524479Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:bf4f73b72c84c5a2",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_015",
+      "title_original": "Why International SEO Needs Machine-Recognizable E-E-A-T via @sejournal, @motokohunt",
+      "title_it": "Perché la SEO internazionale richiede E-E-A-T riconoscibile dalle macchine",
+      "summary_it": "L'intelligenza artificiale può appiattire l'esperienza localizzata, rendendo necessario per i brand globali tradurre le proprie credenziali in prove che le macchine possano riconoscere. Questo è fondamentale per mantenere la rilevanza e l'autorità nei mercati internazionali. L'articolo sottolinea l'importanza di rendere l'E-E-A-T comprensibile agli algoritmi per una SEO internazionale efficace.",
+      "url": "https://www.searchenginejournal.com/why-international-seo-needs-machine-recognizable-e-e-a-t/583439",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "international_seo",
+        "e_e_a_t",
+        "ai_impact",
+        "content_strategy"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T13:30:30Z",
+      "fetched_at": "2026-08-26T05:02:24.937257Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:1018bff2be713777",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_016",
+      "title_original": "Google Brings Developing-Topic Link Carousels To AI Mode via @sejournal, @MattGSouthern",
+      "title_it": "Google introduce caroselli di link per argomenti in sviluppo nella modalità AI",
+      "summary_it": "Google ha integrato i caroselli di link relativi ad argomenti in evoluzione all'interno della sua modalità AI. Questa funzionalità posiziona in modo prominente link ad articoli tempestivi e fonti preferite direttamente nelle risposte generate dall'intelligenza artificiale. L'obiettivo è fornire agli utenti accesso rapido a informazioni aggiornate su temi in rapida evoluzione.",
+      "url": "https://www.searchenginejournal.com/google-brings-developing-topic-link-carousels-to-ai-mode/587022",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ai",
+        "serp_feature",
+        "link_carousel"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T16:39:07Z",
+      "fetched_at": "2026-08-26T05:02:26.275642Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:09588deb981cbdfb",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_017",
+      "title_original": "ChatGPT Rebuilt Its Search Tool, I Read The New Language It Speaks via @sejournal, @suganthan",
+      "title_it": "ChatGPT ha ricostruito il suo strumento di ricerca: analisi del nuovo linguaggio",
+      "summary_it": "ChatGPT ha aggiornato il suo strumento di ricerca interno, introducendo un nuovo formato di \"tool-call\" che mostra le informazioni recuperate prima di generare una risposta. Questo permette di comprendere meglio le fonti utilizzate dal modello. L'analisi evidenzia come, nonostante l'accesso a un ampio pool di dati, alcune fonti come i thread di Reddit non vengano citate direttamente.",
+      "url": "https://www.searchenginejournal.com/chatgpt-rebuilt-its-search-tool-i-read-the-new-language-it-speaks/586710",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt",
+        "ai_search",
+        "tool_call",
+        "information_retrieval"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T18:00:30Z",
+      "fetched_at": "2026-08-26T05:02:27.673442Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:fb5e0fd40f7a5600",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_018",
+      "title_original": "Google Search Showing Fewer PDF Files. But Why?",
+      "title_it": "Google Search mostra meno file PDF: quali sono le ragioni?",
+      "summary_it": "Si sta osservando una diminuzione della visibilità dei file PDF nei risultati di ricerca di Google, anche per siti autorevoli come IRS.gov. Molti professionisti SEO stanno riscontrando cali significativi nei clic verso i PDF tramite Search Console. Questo fenomeno suggerisce un possibile cambiamento nel modo in cui Google indicizza e classifica i documenti PDF.",
+      "url": "https://www.seroundtable.com/google-search-fewer-pdf-files-41946.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "pdf_indexing",
+        "google_search_result",
+        "search_console_data"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-25T20:01:00Z",
+      "fetched_at": "2026-08-26T05:02:29.143717Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:1f9175db47a80977",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-26_019",
+      "title_original": ".Org Sites Are 34% Likelier To Generate Ecommerce Revenue Than .Com via @sejournal, @martinibuster",
+      "title_it": "I siti .org hanno una probabilità maggiore del 34% di generare entrate e-commerce rispetto ai .com",
+      "summary_it": "Uno studio indica che i domini .org mostrano una maggiore propensione a generare ricavi e-commerce rispetto ai tradizionali domini .com. Questa analisi suggerisce che le estensioni di dominio alternative possono avere un impatto sulle performance commerciali online. I dati evidenziano una differenza significativa nel tasso di conversione tra queste due tipologie di domini.",
+      "url": "https://www.searchenginejournal.com/org-sites-are-34-likelier-to-generate-ecommerce-revenue-than-com/587082",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "domain_extension",
+        "ecommerce_revenue",
+        "data_analysi"
+      ],
+      "importance": 2,
+      "published_at": "2026-08-25T21:36:35Z",
+      "fetched_at": "2026-08-26T05:02:30.761993Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:a35917c1da1f89a2",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-25T06:01:09.915090Z",
+      "last_checked": "2026-08-26T05:00:59.470491Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-25T06:01:10.784890Z",
+      "last_checked": "2026-08-26T05:01:00.295780Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-25T06:01:12.375167Z",
+      "last_checked": "2026-08-26T05:01:01.442731Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-25T06:01:13.575798Z",
+      "last_checked": "2026-08-26T05:01:02.736761Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-25T06:01:38.116950Z",
+      "last_checked": "2026-08-26T05:01:25.271925Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-25T06:01:38.309413Z",
+      "last_checked": "2026-08-26T05:01:25.825301Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-25T06:01:39.711870Z",
+      "last_checked": "2026-08-26T05:01:27.160891Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-25T06:01:41.293730Z",
+      "last_checked": "2026-08-26T05:01:28.900882Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-25T06:01:43.009556Z",
+      "last_checked": "2026-08-26T05:01:30.283456Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-25T06:01:43.035737Z",
+      "last_checked": "2026-08-26T05:01:30.325131Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-25T06:01:43.339433Z",
+      "last_checked": "2026-08-26T05:01:30.645337Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-25T06:01:44.140472Z",
+      "last_checked": "2026-08-26T05:01:32.885809Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-25T06:01:45.087876Z",
+      "last_checked": "2026-08-26T05:01:33.972028Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-25T06:01:46.750846Z",
+      "last_checked": "2026-08-26T05:01:34.955919Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-25T06:01:48.913590Z",
+      "last_checked": "2026-08-26T05:01:36.197944Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-25T06:01:50.222117Z",
+      "last_checked": "2026-08-26T05:01:37.420666Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-25T06:01:51.492873Z",
+      "last_checked": "2026-08-26T05:01:38.993464Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-25T06:02:14.532049Z",
+      "last_checked": "2026-08-26T05:02:01.436721Z",
       "changed": false
     }
   ],
