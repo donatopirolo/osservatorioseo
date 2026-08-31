@@ -1,34 +1,38 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-30T06:01:45.209696Z",
-  "generated_at_local": "2026-08-30T08:01:45.209696+02:00",
+  "generated_at": "2026-08-31T05:01:39.633292Z",
+  "generated_at_local": "2026-08-31T07:01:39.633292+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-08-30-0801",
+  "run_id": "2026-08-31-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2343,
-    "items_after_dedup": 1,
+    "items_after_dedup": 2,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0006,
-    "summarize_attempted": 1,
+    "ai_cost_eur": 0.0011,
+    "summarize_attempted": 2,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-08-30_001"
+    "item_2026-08-31_001",
+    "item_2026-08-31_002"
   ],
   "categories": {
-    "industry_news": [
-      "item_2026-08-30_001"
+    "tools_platforms": [
+      "item_2026-08-31_001"
+    ],
+    "ai_models": [
+      "item_2026-08-31_002"
     ]
   },
   "items": [
     {
-      "id": "item_2026-08-30_001",
-      "title_original": "Judge Questions Google AI, Spam Update Fallout – SEO Pulse via @sejournal, @MattGSouthern",
-      "title_it": "Il Giudice Interroga Google su AI e Conseguenze dell'Aggiornamento Spam",
-      "summary_it": "L'ultimo SEO Pulse di Search Engine Journal affronta la disputa tra Google e gli editori riguardo all'AI, le ripercussioni dell'aggiornamento spam e il dibattito sulla geolocalizzazione. Vengono inoltre esaminate le lacune nelle citazioni AI e il comportamento di ChatGPT su Reddit in relazione alla ricerca. La notizia evidenzia le crescenti tensioni e le sfide legali che Google sta affrontando.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-judge-questions-google-ai-spam-update-fallout/587325",
+      "id": "item_2026-08-31_001",
+      "title_original": "Rank Math WordPress Plugin Accused Of Secretly Taking Admin Access via @sejournal, @martinibuster",
+      "title_it": "Accuse a Rank Math di acquisire segretamente l'accesso amministrativo su WordPress",
+      "summary_it": "Sono emerse accuse secondo cui il plugin Rank Math per WordPress acquisirebbe segretamente permessi di livello amministratore sui siti. Questo avverrebbe quando un utente, connesso a un account Rank Math gratuito, apre la sezione Aiuto e Supporto del plugin. La funzionalità creerebbe una password applicativa di WordPress legata all'utente senza esplicito consenso o notifica. La questione è stata sollevata dal developer del plugin The SEO Framework.",
+      "url": "https://www.searchenginejournal.com/rank-math-wordpress-plugin-accused-of-secretly-taking-admin-access/587554",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -41,113 +45,148 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "tools_platforms",
       "tags": [
-        "google_ai",
-        "spam_update",
-        "publisher_dispute",
-        "seo_pulse"
+        "rank_math",
+        "wordpress_plugin",
+        "security_vulnerability",
+        "admin_access"
       ],
-      "importance": 3,
-      "published_at": "2026-08-29T11:30:49Z",
-      "fetched_at": "2026-08-30T06:02:57.742256Z",
+      "importance": 4,
+      "published_at": "2026-08-30T10:11:17Z",
+      "fetched_at": "2026-08-31T05:02:53.020015Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1f274c9a238d5ffd",
+      "raw_hash": "sha256:d6104c8e3c186361",
+      "deep_analysis": null
+    },
+    {
+      "id": "item_2026-08-31_002",
+      "title_original": "Anthropic Warns Hackers Are Stealing Claude Sessions To Hijack Accounts via @sejournal, @martinibuster",
+      "title_it": "Anthropic avverte: hacker rubano sessioni di Claude per dirottare account",
+      "summary_it": "Anthropic ha segnalato che malware di tipo infostealer sta compromettendo le sessioni di accesso a Claude. Questo permette agli attaccanti di accedere agli account degli utenti e sfruttarne l'utilizzo. La minaccia riguarda la sicurezza degli account e l'integrità dei dati degli utenti della piattaforma AI.",
+      "url": "https://www.searchenginejournal.com/anthropic-warns-hackers-are-stealing-claude-sessions-to-hijack-accounts/587566",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "anthropic",
+        "claude",
+        "security",
+        "data_breach"
+      ],
+      "importance": 3,
+      "published_at": "2026-08-30T21:45:39Z",
+      "fetched_at": "2026-08-31T05:02:54.529083Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:80ae7280638b9dfb",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-08-30T06:01:49.919600Z",
+      "last_checked": "2026-08-31T05:01:45.147382Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-08-30T06:01:50.658184Z",
+      "last_checked": "2026-08-31T05:01:45.765668Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-08-30T06:01:51.900425Z",
+      "last_checked": "2026-08-31T05:01:46.861927Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-08-30T06:01:53.171006Z",
+      "last_checked": "2026-08-31T05:01:48.385407Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-08-30T06:02:18.133848Z",
+      "last_checked": "2026-08-31T05:02:12.465301Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-08-30T06:02:18.381932Z",
+      "last_checked": "2026-08-31T05:02:12.707685Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-08-30T06:02:20.362675Z",
+      "last_checked": "2026-08-31T05:02:14.088681Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-08-30T06:02:21.529066Z",
+      "last_checked": "2026-08-31T05:02:15.298538Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-08-30T06:02:23.237534Z",
+      "last_checked": "2026-08-31T05:02:16.643738Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-08-30T06:02:23.319597Z",
+      "last_checked": "2026-08-31T05:02:16.669075Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-08-30T06:02:23.549745Z",
+      "last_checked": "2026-08-31T05:02:17.148205Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-08-30T06:02:25.488395Z",
+      "last_checked": "2026-08-31T05:02:18.740352Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-08-30T06:02:25.808508Z",
+      "last_checked": "2026-08-31T05:02:20.079491Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-08-30T06:02:27.211866Z",
+      "last_checked": "2026-08-31T05:02:21.524054Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-08-30T06:02:28.546455Z",
+      "last_checked": "2026-08-31T05:02:23.058681Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-08-30T06:02:30.020208Z",
+      "last_checked": "2026-08-31T05:02:24.522781Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-08-30T06:02:31.553262Z",
+      "last_checked": "2026-08-31T05:02:26.223047Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-08-30T06:02:55.118476Z",
+      "last_checked": "2026-08-31T05:02:50.658116Z",
       "changed": false
     }
   ],
