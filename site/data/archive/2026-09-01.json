@@ -1,153 +1,81 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-01T05:01:48.297206Z",
-  "generated_at_local": "2026-09-01T07:01:48.297206+02:00",
+  "generated_at": "2026-09-01T06:01:41.088364Z",
+  "generated_at_local": "2026-09-01T08:01:41.088364+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-01-0701",
+  "run_id": "2026-09-01-0801",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
-    "items_collected": 2344,
-    "items_after_dedup": 27,
-    "doc_changes_detected": 1,
-    "ai_cost_eur": 0.0172,
-    "summarize_attempted": 28,
+    "items_collected": 2345,
+    "items_after_dedup": 25,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.0159,
+    "summarize_attempted": 25,
     "summarize_failed": 0
   },
   "top10": [
-    "doc_2026-09-01_011",
+    "item_2026-09-01_012",
     "item_2026-09-01_014",
-    "item_2026-09-01_016",
+    "item_2026-09-01_020",
+    "item_2026-09-01_023",
+    "item_2026-09-01_011",
     "item_2026-09-01_022",
+    "item_2026-09-01_003",
+    "item_2026-09-01_006",
     "item_2026-09-01_013",
-    "item_2026-09-01_024",
-    "item_2026-09-01_001",
-    "item_2026-09-01_005",
-    "item_2026-09-01_008",
     "item_2026-09-01_015"
   ],
   "categories": {
-    "google_docs_change": [
-      "doc_2026-09-01_011"
-    ],
     "google_updates": [
+      "item_2026-09-01_012",
       "item_2026-09-01_014",
-      "item_2026-09-01_016",
-      "item_2026-09-01_013",
-      "item_2026-09-01_024"
+      "item_2026-09-01_011",
+      "item_2026-09-01_022"
     ],
     "industry_news": [
-      "item_2026-09-01_022",
-      "item_2026-09-01_023",
-      "item_2026-09-01_027",
-      "item_2026-09-01_004",
-      "item_2026-09-01_007"
-    ],
-    "ai_models": [
-      "item_2026-09-01_001",
+      "item_2026-09-01_020",
+      "item_2026-09-01_018",
+      "item_2026-09-01_021",
+      "item_2026-09-01_025",
+      "item_2026-09-01_002",
       "item_2026-09-01_005"
     ],
-    "content_eeat": [
-      "item_2026-09-01_008",
-      "item_2026-09-01_002"
-    ],
     "tools_platforms": [
+      "item_2026-09-01_023",
+      "item_2026-09-01_013",
       "item_2026-09-01_015",
       "item_2026-09-01_017",
-      "item_2026-09-01_019",
-      "item_2026-09-01_025",
-      "item_2026-09-01_018",
-      "item_2026-09-01_026",
-      "item_2026-09-01_003",
+      "item_2026-09-01_016",
+      "item_2026-09-01_024",
+      "item_2026-09-01_001",
+      "item_2026-09-01_007",
+      "item_2026-09-01_008"
+    ],
+    "ai_models": [
+      "item_2026-09-01_003"
+    ],
+    "content_eeat": [
+      "item_2026-09-01_006"
+    ],
+    "technical_seo": [
       "item_2026-09-01_009"
     ],
     "ai_overviews_llm_seo": [
-      "item_2026-09-01_020",
-      "item_2026-09-01_021",
-      "item_2026-09-01_006",
-      "item_2026-09-01_012",
+      "item_2026-09-01_019",
+      "item_2026-09-01_004",
       "item_2026-09-01_010"
     ],
-    "technical_seo": [
-      "item_2026-09-01_011"
+    "google_docs_change": [
+      "doc_2026-09-01_011"
     ]
   },
   "items": [
     {
       "id": "item_2026-09-01_001",
-      "title_original": "Polimill builds Japan's next-generation public AI infrastructure",
-      "title_it": "Polimill sviluppa l'infrastruttura AI pubblica di prossima generazione del Giappone",
-      "summary_it": "Polimill sta realizzando un'infrastruttura AI per il Giappone, utilizzando i modelli GPT e Codex di OpenAI. Questa iniziativa mira a supportare le municipalità nella ricerca e nell'utilizzo delle conoscenze amministrative. L'obiettivo è accelerare lo sviluppo e l'adozione dell'intelligenza artificiale nel settore pubblico giapponese.",
-      "url": "https://openai.com/index/polimill",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_infrastructure",
-        "japan",
-        "openai_gpt",
-        "public_sector_ai"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-31T06:00:00Z",
-      "fetched_at": "2026-09-01T05:03:02.360532Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d4da3fb595c5df82",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-01_002",
-      "title_original": "Facebook Groups Are Google’s No. 2 Forum Source via @sejournal, @MattGSouthern",
-      "title_it": "I gruppi Facebook sono la seconda fonte di forum più rilevante per Google",
-      "summary_it": "Secondo i dati di Ahrefs, i post dei gruppi pubblici di Facebook compaiono nel 38% dei risultati di Google nella sezione 'Discussioni e forum'. Questo posiziona Facebook al secondo posto tra le fonti di forum, superando Quora e rimanendo dietro solo a Reddit. La rilevanza dei gruppi Facebook per Google indica un'opportunità per i professionisti SEO di considerare queste piattaforme per la visibilità organica.",
-      "url": "https://www.searchenginejournal.com/facebook-groups-are-googles-no-2-forum-source/587545",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "facebook_group",
-        "google_serp",
-        "forum_seo",
-        "ahrefs_data"
-      ],
-      "importance": 3,
-      "published_at": "2026-08-31T06:00:24Z",
-      "fetched_at": "2026-09-01T05:03:04.528577Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:66ea60815781fb43",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-01_003",
       "title_original": "8 Best AI Content Marketing Tools for 2026 (Tried & Tested)",
       "title_it": "Gli 8 migliori strumenti AI per il content marketing nel 2026 (testati)",
-      "summary_it": "L'articolo di Semrush presenta una selezione di otto strumenti basati sull'intelligenza artificiale ritenuti più efficaci per le strategie di content marketing nel 2026. Tra gli strumenti menzionati figurano il toolkit AI Visibility di Semrush e ChatGPT. La selezione si basa su test e valutazioni delle funzionalità offerte da ciascuna piattaforma.",
+      "summary_it": "L'articolo di Semrush presenta una selezione degli otto migliori strumenti basati sull'intelligenza artificiale per il content marketing, con un focus sulle loro funzionalità e applicazioni pratiche. Tra gli strumenti menzionati figurano il toolkit AI Visibility di Semrush e ChatGPT. La guida offre una panoramica delle soluzioni disponibili per ottimizzare la creazione e la gestione dei contenuti.",
       "url": "https://www.semrush.com/blog/best-ai-content-marketing-tools",
       "source": {
         "id": "semrush_blog",
@@ -166,11 +94,11 @@
         "ai_tool",
         "content_marketing",
         "semrush",
-        "ai_content"
+        "ai_content_generation"
       ],
       "importance": 2,
       "published_at": "2026-08-31T06:41:00Z",
-      "fetched_at": "2026-09-01T05:03:05.987849Z",
+      "fetched_at": "2026-09-01T06:02:37.667205Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -179,10 +107,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_004",
+      "id": "item_2026-09-01_002",
       "title_original": "Why is SEO important? 11 reasons it still matters.",
       "title_it": "Perché la SEO è importante? 11 ragioni per cui è ancora rilevante.",
-      "summary_it": "L'articolo di Semrush ribadisce l'importanza della SEO nel panorama digitale attuale, evidenziando come essa migliori la visibilità online. Vengono presentati 11 motivi che ne sottolineano la continua rilevanza, anche in relazione all'ottimizzazione per i motori di risposta. Il contenuto si propone di fornire una panoramica delle ragioni per cui la SEO rimane una strategia fondamentale per le aziende.",
+      "summary_it": "L'articolo di Semrush ribadisce l'importanza della SEO nel panorama digitale attuale, evidenziando come essa migliori la visibilità online e si integri con l'ottimizzazione per i motori di risposta. Vengono presentati 11 motivi specifici che ne sottolineano la continua rilevanza nel 2026. Il contenuto si concentra sui benefici strategici e operativi derivanti da un'efficace implementazione SEO.",
       "url": "https://www.semrush.com/blog/importance-of-seo",
       "source": {
         "id": "semrush_blog",
@@ -199,12 +127,13 @@
       "category": "industry_news",
       "tags": [
         "seo_importance",
+        "semrush",
         "online_visibility",
-        "semrush"
+        "seo_strategy"
       ],
       "importance": 2,
       "published_at": "2026-08-31T07:21:00Z",
-      "fetched_at": "2026-09-01T05:03:07.760273Z",
+      "fetched_at": "2026-09-01T06:02:39.373163Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -213,10 +142,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_005",
+      "id": "item_2026-09-01_003",
       "title_original": "Claude Searches Web Differently From Claude Code, Data Shows via @sejournal, @MattGSouthern",
       "title_it": "Claude e Claude Code: differenze nell'utilizzo della ricerca web",
-      "summary_it": "Nuovi dati indicano che le versioni di Claude e Claude Code di Anthropic utilizzano la ricerca web con frequenze diverse. Le analisi mostrano anche che menzionano brand differenti e indirizzano i loro agenti verso tipologie di pagine distinte. Questo suggerisce un'ottimizzazione specifica per i rispettivi ambiti di applicazione.",
+      "summary_it": "Nuovi dati indicano che le versioni Claude e Claude Code di Anthropic utilizzano la ricerca web con frequenze diverse. Le analisi mostrano che le due versioni menzionano brand differenti e indirizzano i loro agenti verso tipologie di pagine distinte. Questo suggerisce un approccio diversificato all'acquisizione di informazioni online tra le due iterazioni del modello.",
       "url": "https://www.searchenginejournal.com/claude-code-rarely-searches-web-compared-claude-data/587584",
       "source": {
         "id": "search_engine_journal",
@@ -233,13 +162,13 @@
       "category": "ai_models",
       "tags": [
         "claude",
-        "ai_search",
-        "llm_behavior",
-        "anthropic"
+        "ai_behavior",
+        "web_search",
+        "llm_analysi"
       ],
       "importance": 3,
       "published_at": "2026-08-31T07:30:36Z",
-      "fetched_at": "2026-09-01T05:03:09.366455Z",
+      "fetched_at": "2026-09-01T06:02:41.038431Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -248,10 +177,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_006",
+      "id": "item_2026-09-01_004",
       "title_original": "How to rank in ChatGPT search: 8 steps to improve visibility",
       "title_it": "Come posizionarsi nella ricerca di ChatGPT: 8 passaggi per migliorare la visibilità",
-      "summary_it": "L'articolo di Semrush esplora le strategie per ottimizzare i contenuti al fine di migliorare la loro visibilità all'interno dei sistemi di ricerca basati su intelligenza artificiale come ChatGPT. Vengono suggeriti otto passaggi chiave, focalizzati sull'estrazione facilitata delle informazioni da parte dell'AI e sulla costruzione di un consenso off-site. L'obiettivo è rendere i contenuti più accessibili e rilevanti per le risposte generate dai modelli linguistici.",
+      "summary_it": "L'articolo di Semrush propone otto passaggi per ottimizzare i contenuti al fine di migliorare la loro visibilità all'interno dei sistemi di ricerca basati su AI, come ChatGPT. Vengono suggerite strategie per facilitare l'estrazione delle informazioni da parte dell'intelligenza artificiale e per costruire un consenso off-site. L'obiettivo è rendere il contenuto più accessibile e rilevante per le risposte generate dai modelli linguistici.",
       "url": "https://www.semrush.com/blog/chatgpt-search",
       "source": {
         "id": "semrush_blog",
@@ -269,12 +198,11 @@
       "tags": [
         "chatgpt_seo",
         "ai_content_optimization",
-        "llm_ranking",
-        "semrush_insight"
+        "llm_visibility"
       ],
       "importance": 3,
       "published_at": "2026-08-31T07:45:00Z",
-      "fetched_at": "2026-09-01T05:03:11.289484Z",
+      "fetched_at": "2026-09-01T06:02:42.998197Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -283,10 +211,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_007",
+      "id": "item_2026-09-01_005",
       "title_original": "Enterprise SEO: What it is & how to build a winning strategy",
       "title_it": "SEO per le grandi aziende: definizione e strategie vincenti",
-      "summary_it": "L'articolo di Semrush definisce la SEO Enterprise come l'ottimizzazione della visibilità di un sito web su larga scala, attraverso approcci standardizzati e automatizzati. Vengono illustrate le caratteristiche distintive della SEO Enterprise rispetto alla SEO tradizionale. Il contenuto si propone di guidare i professionisti nella costruzione di una strategia efficace per contesti aziendali complessi.",
+      "summary_it": "L'articolo di Semrush definisce la SEO Enterprise come l'ottimizzazione della visibilità di un sito web su larga scala, attraverso approcci standardizzati e automatizzati. Vengono illustrate le caratteristiche distintive della SEO per le grandi organizzazioni rispetto a quella per le piccole e medie imprese. Il contenuto si concentra su come costruire una strategia efficace in contesti aziendali complessi, evidenziando l'importanza di un approccio strutturato e scalabile.",
       "url": "https://www.semrush.com/blog/enterprise-seo",
       "source": {
         "id": "semrush_blog",
@@ -304,11 +232,12 @@
       "tags": [
         "enterprise_seo",
         "seo_strategy",
+        "scalability",
         "semrush"
       ],
       "importance": 2,
       "published_at": "2026-08-31T08:09:00Z",
-      "fetched_at": "2026-09-01T05:03:12.997946Z",
+      "fetched_at": "2026-09-01T06:02:44.498477Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -317,10 +246,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_008",
+      "id": "item_2026-09-01_006",
       "title_original": "What makes a good listicle?",
-      "title_it": "Cosa rende efficace un listicle?",
-      "summary_it": "L'articolo analizza le caratteristiche che definiscono un listicle di successo, sia per la ricerca tradizionale che per quella basata sull'intelligenza artificiale. Vengono esplorati gli elementi chiave che contribuiscono alla performance di questo formato di contenuto. L'autore fornisce indicazioni su come ottimizzare i listicle per massimizzare la loro visibilità e impatto.",
+      "title_it": "Cosa rende efficace una listicle?",
+      "summary_it": "L'articolo analizza le caratteristiche che definiscono una listicle di successo, sia per la ricerca tradizionale che per quella basata sull'AI. Vengono esplorati gli elementi chiave che contribuiscono alla performance di questo formato di contenuto. L'autore fornisce indicazioni su come ottimizzare le listicle per massimizzare la loro visibilità e il loro impatto.",
       "url": "https://www.growth-memo.com/p/what-makes-a-good-listicle",
       "source": {
         "id": "growth_memo_kevin_indig",
@@ -343,7 +272,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-31T08:10:43Z",
-      "fetched_at": "2026-09-01T05:03:14.598215Z",
+      "fetched_at": "2026-09-01T06:02:46.041702Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -352,10 +281,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_009",
+      "id": "item_2026-09-01_007",
       "title_original": "18 SEO KPIs to measure organic & AI search performance",
       "title_it": "18 KPI SEO per misurare le performance di ricerca organica e AI",
-      "summary_it": "L'articolo di Semrush elenca 18 indicatori chiave di performance (KPI) per monitorare l'efficacia delle strategie SEO, includendo metriche tradizionali e quelle emergenti legate alla visibilità nell'AI. Vengono trattati aspetti come il posizionamento delle parole chiave, il traffico organico e le menzioni del brand. L'obiettivo è fornire un quadro completo per valutare le prestazioni sia nella ricerca tradizionale che in quella basata sull'intelligenza artificiale.",
+      "summary_it": "L'articolo di Semrush identifica 18 indicatori chiave di performance (KPI) per valutare l'efficacia delle strategie SEO in un contesto che include la ricerca organica tradizionale e l'impatto dell'intelligenza artificiale. Vengono suggeriti KPI come la visibilità AI, il posizionamento delle parole chiave, il traffico organico e le menzioni del brand. L'obiettivo è fornire ai professionisti SEO metriche rilevanti per monitorare e ottimizzare le proprie attività.",
       "url": "https://www.semrush.com/blog/seo-kpis",
       "source": {
         "id": "semrush_blog",
@@ -378,7 +307,7 @@
       ],
       "importance": 2,
       "published_at": "2026-08-31T08:23:00Z",
-      "fetched_at": "2026-09-01T05:03:17.019240Z",
+      "fetched_at": "2026-09-01T06:02:47.790248Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -387,10 +316,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_010",
+      "id": "item_2026-09-01_008",
       "title_original": "How to use AI tools for competitor analysis in 2026",
       "title_it": "Come utilizzare gli strumenti AI per l'analisi della concorrenza nel 2026",
-      "summary_it": "L'articolo di Semrush illustra l'impiego di strumenti basati sull'intelligenza artificiale per l'analisi competitiva, evidenziando come soluzioni come Semrush MCP possano integrare le capacità di modelli linguistici generici. Viene presentato un flusso di lavoro dettagliato per sfruttare l'AI in questo contesto. L'obiettivo è fornire un approccio strutturato all'analisi dei competitor tramite l'AI, superando i limiti di un uso isolato di chatbot generici.",
+      "summary_it": "L'articolo di Semrush illustra l'impiego di strumenti AI, inclusi quelli proprietari come Semrush MCP, per condurre un'efficace analisi della concorrenza. Viene presentato un flusso di lavoro dettagliato per integrare l'intelligenza artificiale in questo processo. L'obiettivo è mostrare come le soluzioni AI possano supportare l'identificazione di strategie e opportunità competitive.",
       "url": "https://www.semrush.com/blog/ai-tools-for-competitor-analysis",
       "source": {
         "id": "semrush_blog",
@@ -404,7 +333,7 @@
         "category_hint": "tools_platforms",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "tools_platforms",
       "tags": [
         "ai_tool",
         "competitor_analysi",
@@ -413,7 +342,7 @@
       ],
       "importance": 2,
       "published_at": "2026-08-31T08:42:00Z",
-      "fetched_at": "2026-09-01T05:03:18.816442Z",
+      "fetched_at": "2026-09-01T06:02:49.582576Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -422,10 +351,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_011",
+      "id": "item_2026-09-01_009",
       "title_original": "UCP Releases Spec Update With Schema Changes via @sejournal, @MattGSouthern",
-      "title_it": "UCP rilascia un aggiornamento delle specifiche con modifiche allo Schema",
-      "summary_it": "Il Universal Commerce Protocol (UCP) ha rilasciato il suo primo aggiornamento delle specifiche da aprile. Questo aggiornamento introduce la compatibilità per il settore alimentare e getta le basi per l'integrazione di cibo e alloggi. Sono state apportate anche modifiche allo schema per supportare queste nuove funzionalità.",
+      "title_it": "UCP rilascia aggiornamento delle specifiche con modifiche allo Schema",
+      "summary_it": "Il Universal Commerce Protocol (UCP) ha rilasciato un aggiornamento delle sue specifiche, il primo da aprile. Questo aggiornamento introduce la compatibilità per il settore alimentare e getta le basi per l'integrazione di servizi di ristorazione e alloggio. Sono state implementate anche modifiche allo schema per supportare queste nuove funzionalità.",
       "url": "https://www.searchenginejournal.com/ucp-releases-spec-update-with-schema-changes/587590",
       "source": {
         "id": "search_engine_journal",
@@ -441,13 +370,13 @@
       },
       "category": "technical_seo",
       "tags": [
-        "ucp",
         "structured_data",
+        "ucp",
         "ecommerce_seo"
       ],
-      "importance": 2,
+      "importance": 3,
       "published_at": "2026-08-31T09:00:27Z",
-      "fetched_at": "2026-09-01T05:03:20.219198Z",
+      "fetched_at": "2026-09-01T06:02:51.204983Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -456,7 +385,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_012",
+      "id": "item_2026-09-01_010",
       "title_original": "Google’s Mueller Shares Their Experience With Markdown For AI SEO via @sejournal, @martinibuster",
       "title_it": "John Mueller di Google condivide la sua esperienza con Markdown per la SEO basata sull'IA",
       "summary_it": "John Mueller di Google ha verificato se i crawler AI stessero richiedendo contenuti in formato Markdown dai suoi siti. L'analisi mirava a comprendere l'interazione tra i bot AI e i formati di contenuto. I risultati della sua indagine sono stati condivisi per informare la comunità SEO.",
@@ -482,7 +411,7 @@
       ],
       "importance": 2,
       "published_at": "2026-08-31T09:44:54Z",
-      "fetched_at": "2026-09-01T05:03:21.758563Z",
+      "fetched_at": "2026-09-01T06:02:52.810755Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -491,10 +420,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_013",
+      "id": "item_2026-09-01_011",
       "title_original": "Google AI Mode With Inline Shopping Carousel Ads & Single Ad Unit",
-      "title_it": "Google AI Mode: Caroselli di Shopping e Unità Pubblicitarie Singole Integrate",
-      "summary_it": "Google sta implementando annunci shopping in formato carosello e unità pubblicitarie singole direttamente all'interno dei risultati della modalità AI. Questi annunci compaiono sia in linea con la risposta che nella parte inferiore dei risultati. Questa integrazione mira a monetizzare ulteriormente le interazioni degli utenti all'interno della modalità AI.",
+      "title_it": "Google AI Mode introduce caroselli di shopping e singole unità pubblicitarie in linea",
+      "summary_it": "Google sta implementando annunci shopping in formato carosello e singole unità pubblicitarie direttamente all'interno dei risultati della modalità AI. Questi annunci compaiono sia in linea con la risposta che nella parte inferiore della pagina. Questa integrazione mira a monetizzare ulteriormente i risultati generati dall'intelligenza artificiale.",
       "url": "https://www.seroundtable.com/google-ai-mode-shopping-carousel-ads-41973.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -517,7 +446,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-31T10:11:00Z",
-      "fetched_at": "2026-09-01T05:03:23.140809Z",
+      "fetched_at": "2026-09-01T06:02:54.580426Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -526,10 +455,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_014",
+      "id": "item_2026-09-01_012",
       "title_original": "Google Confirms Search Spam Team Is Fighting & Well Resourced",
       "title_it": "Google conferma che il team anti-spam è attivo e ben supportato",
-      "summary_it": "Rajan Patel, VP of Engineering per Google Search, ha confermato che il team anti-spam di Google è ancora ben fornito di risorse per contrastare lo spam nella ricerca. Il team continua ad aggiornare i suoi algoritmi, come dimostrato dal recente aggiornamento spam di agosto 2026. Questo aggiornamento ha avuto un impatto significativo, con un aumento dell'82% di URL rimossi dalle prime 100 posizioni, secondo i dati di SE Ranking.",
+      "summary_it": "Rajan Patel, VP of Engineering per Google Search, ha confermato che il team anti-spam di Google è ancora ben fornito di risorse nella lotta contro lo spam di ricerca. Il team continua ad aggiornare i suoi algoritmi anti-spam, come dimostrato dal recente aggiornamento di agosto 2026. Questo aggiornamento ha avuto un impatto significativo, con un aumento dell'82% di URL rimossi dalle prime 100 posizioni, indicando un'azione mirata contro lo spam.",
       "url": "https://www.seroundtable.com/google-search-spam-team-fighting-41980.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -546,13 +475,13 @@
       "category": "google_updates",
       "tags": [
         "google_spam_update",
-        "search_quality",
+        "search_spam",
         "algorithm_update",
-        "anti_spam_team"
+        "google_resource"
       ],
       "importance": 4,
       "published_at": "2026-08-31T10:21:00Z",
-      "fetched_at": "2026-09-01T05:03:25.083344Z",
+      "fetched_at": "2026-09-01T06:02:56.372693Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -561,9 +490,9 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_015",
+      "id": "item_2026-09-01_013",
       "title_original": "Microsoft Forcing Copilot Users To Login But Not For Copilot Search Answers",
-      "title_it": "Microsoft richiede l'accesso per l'utilizzo di Copilot, ma non per le risposte di ricerca",
+      "title_it": "Microsoft impone l'accesso per l'utilizzo di Copilot, ma non per le risposte di ricerca",
       "summary_it": "Microsoft ha introdotto l'obbligo di login per tutti gli utenti che desiderano utilizzare Copilot direttamente. Questa modifica non si applica tuttavia alle risposte generate da Copilot all'interno dei risultati di ricerca di Bing. Gli utenti che accedono a Copilot tramite il sito dedicato o il pulsante sulla homepage di Bing dovranno autenticarsi, mentre le risposte integrate nella ricerca Bing rimangono accessibili senza login.",
       "url": "https://www.seroundtable.com/microsoft-copilot-login-41975.html",
       "source": {
@@ -582,12 +511,12 @@
       "tags": [
         "microsoft_copilot",
         "bing_search",
-        "user_experience",
+        "user_authentication",
         "ai_tool"
       ],
       "importance": 3,
       "published_at": "2026-08-31T10:31:00Z",
-      "fetched_at": "2026-09-01T05:03:26.671895Z",
+      "fetched_at": "2026-09-01T06:02:58.108673Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -596,10 +525,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_016",
+      "id": "item_2026-09-01_014",
       "title_original": "Google’s August 2026 Spam Update – Scaled Content Abuse, AI Content, Programmatic Content, Thin Affiliates, And More [Case Studies]",
-      "title_it": "Aggiornamento Spam di Google di Agosto 2026: Contenuti Scalati, AI, Programmatici e Affiliati Sottili",
-      "summary_it": "Google ha rilasciato un aggiornamento spam il 18 agosto 2026, completato in poco più di due giorni. Questo aggiornamento ha avuto un impatto significativo su siti che utilizzano tattiche spam, inclusi contenuti generati da AI e programmatici. Le penalizzazioni hanno interessato anche le visualizzazioni in AI Overviews e AI Mode. L'analisi di Glenn Gabe presenta casi studio di siti colpiti, evidenziando le tipologie di spam prese di mira.",
+      "title_it": "Aggiornamento Spam di Google di Agosto 2026: Contenuti Scalati, AI e Affiliazione Sottile",
+      "summary_it": "Google ha rilasciato un nuovo aggiornamento spam il 18 agosto 2026, completato in circa due giorni. Questo aggiornamento ha avuto un impatto significativo su siti che utilizzano tattiche spam, inclusi contenuti generati su larga scala, contenuti AI e schemi di affiliazione sottili. L'analisi di casi studio evidenzia come l'aggiornamento abbia colpito anche la visibilità in contesti di ricerca AI come AI Overviews e ChatGPT. L'obiettivo è comprendere le tipologie di spam penalizzate per favorire il recupero dei siti colpiti.",
       "url": "https://www.gsqi.com/marketing-blog/august-2026-google-spam-update-case-studies",
       "source": {
         "id": "glenn_gabe_hifpm",
@@ -618,11 +547,11 @@
         "spam_update",
         "ai_content",
         "scaled_content",
-        "google_algorithm"
+        "affiliate_marketing"
       ],
       "importance": 4,
       "published_at": "2026-08-31T10:38:35Z",
-      "fetched_at": "2026-09-01T05:03:28.504406Z",
+      "fetched_at": "2026-09-01T06:02:59.832605Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -631,10 +560,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_017",
+      "id": "item_2026-09-01_015",
       "title_original": "Google Merchant Center Popular Products Enhanced Coverage & Insights",
       "title_it": "Google Merchant Center: Miglioramenti alla Copertura e agli Insight dei Prodotti Popolari",
-      "summary_it": "Google ha annunciato miglioramenti ai report sui prodotti popolari in Merchant Center, implementati a fine giugno 2026. Questi aggiornamenti mirano a fornire una visione più accurata e completa delle performance dei prodotti. Le modifiche potrebbero influenzare la copertura, il ranking e le prestazioni dei prodotti in tutte le regioni disponibili, estendendosi anche all'API di Merchant Center e a BigQuery.",
+      "summary_it": "Google ha annunciato miglioramenti ai report sui prodotti popolari in Merchant Center, implementati a fine giugno 2026. Questi aggiornamenti mirano a fornire una visione più accurata e completa delle performance dei prodotti. Le modifiche potrebbero influenzare la copertura, il ranking e le prestazioni dei prodotti e dei brand in tutte le regioni disponibili. I dati aggiornati sono disponibili settimanalmente, con un ritardo massimo di due settimane per l'inclusione nelle metriche.",
       "url": "https://www.seroundtable.com/google-merchant-center-popular-products-report-enhanced-41977.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -653,11 +582,11 @@
         "google_merchant_center",
         "ecommerce_seo",
         "product_data",
-        "performance_reporting"
+        "reporting_enhancement"
       ],
       "importance": 3,
       "published_at": "2026-08-31T10:41:00Z",
-      "fetched_at": "2026-09-01T05:03:30.180035Z",
+      "fetched_at": "2026-09-01T06:03:01.580802Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -666,10 +595,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_018",
+      "id": "item_2026-09-01_016",
       "title_original": "Microsoft Advertising New Updated Design Preview",
       "title_it": "Anteprima del nuovo design aggiornato di Microsoft Advertising",
-      "summary_it": "Microsoft Advertising ha rilasciato un'anteprima di un aggiornamento del design della sua piattaforma pubblicitaria. L'aggiornamento include una navigazione ridisegnata e tabelle e layout migliorati. L'obiettivo è rendere la gestione delle campagne pubblicitarie più efficiente e intuitiva. Gli utenti possono fornire feedback e tornare all'esperienza classica in qualsiasi momento durante la fase di anteprima.",
+      "summary_it": "Microsoft Advertising sta introducendo un'anteprima di un aggiornamento del design della sua piattaforma pubblicitaria. Le modifiche includono una navigazione riprogettata e miglioramenti alle tabelle e ai layout. L'obiettivo è rendere la gestione delle campagne pubblicitarie più efficiente e intuitiva per gli utenti. Gli inserzionisti possono già accedere a questa anteprima e fornire feedback, con la possibilità di tornare all'esperienza classica.",
       "url": "https://www.seroundtable.com/microsoft-advertising-updated-design-preview-41978.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -692,7 +621,7 @@
       ],
       "importance": 2,
       "published_at": "2026-08-31T10:51:00Z",
-      "fetched_at": "2026-09-01T05:03:31.661856Z",
+      "fetched_at": "2026-09-01T06:03:03.162089Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -701,7 +630,7 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_019",
+      "id": "item_2026-09-01_017",
       "title_original": "Google Ads Is Automating More Decisions, Your Measurement Needs To Get Better via @sejournal, @brookeosmundson",
       "title_it": "Google Ads automatizza sempre più decisioni: la misurazione deve migliorare",
       "summary_it": "Con l'aumento dell'automazione in Google Ads, gli inserzionisti devono spostare il focus della misurazione oltre le metriche della piattaforma. È fondamentale tracciare i lead e le vendite fino ai risultati di business effettivi. Questo approccio consente di valutare l'efficacia delle campagne in un contesto più ampio e orientato agli obiettivi aziendali.",
@@ -727,7 +656,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-31T11:00:36Z",
-      "fetched_at": "2026-09-01T05:03:33.126208Z",
+      "fetched_at": "2026-09-01T06:03:04.832821Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -736,10 +665,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_020",
+      "id": "item_2026-09-01_018",
       "title_original": "Daily Search Forum Recap: August 31, 2026",
       "title_it": "Riepilogo giornaliero del forum di ricerca: 31 agosto 2026",
-      "summary_it": "Google sta testando una visualizzazione espansa degli AI Overviews, simile alla modalità AI, che spinge i risultati di ricerca organici più in basso. Rajan Patel ha confermato che il team antispam di Google è ben equipaggiato e attivo. Microsoft Advertising ha presentato un'anteprima di un aggiornamento del design della sua piattaforma, mentre Google ha migliorato i report sui prodotti popolari in Merchant Center. Microsoft richiede ora il login per Copilot, ma non per le risposte di Copilot in Bing Search, e Google mostra annunci shopping in carosello o singoli all'interno dei risultati della modalità AI.",
+      "summary_it": "Google sta espandendo le AI Overviews per alcune query, rendendole più simili alla modalità AI e spostando i risultati di ricerca principali più in basso. Rajan Patel di Google ha confermato che il team antispam è ben equipaggiato. Microsoft Advertising sta presentando in anteprima un nuovo design per la sua piattaforma pubblicitaria e Google ha migliorato i report sui prodotti popolari in Merchant Center. Microsoft richiede ora l'accesso per Copilot, ma non per le risposte di ricerca di Copilot in Bing, mentre Google mostra annunci shopping in carosello o singoli all'interno dei risultati della modalità AI.",
       "url": "https://www.seroundtable.com/recap-08-31-2026-41981.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -753,7 +682,7 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "industry_news",
       "tags": [
         "google_ai_overview",
         "google_spam_team",
@@ -762,7 +691,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-31T13:00:00Z",
-      "fetched_at": "2026-09-01T05:03:35.340650Z",
+      "fetched_at": "2026-09-01T06:03:06.517317Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -771,10 +700,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_021",
+      "id": "item_2026-09-01_019",
       "title_original": "How To Restructure Your Marketing Team & Budget For The AI-Search Era",
-      "title_it": "Come riorganizzare il team marketing e il budget per l'era della ricerca AI",
-      "summary_it": "L'articolo suggerisce che l'adattamento dei team marketing all'era della ricerca basata sull'intelligenza artificiale non richiede necessariamente nuove assunzioni. Si propone una riorganizzazione di tre ruoli chiave e un ribilanciamento del budget. L'obiettivo è migliorare la visibilità dei contenuti nei risultati di ricerca generati dall'AI.",
+      "title_it": "Come riorganizzare team e budget marketing per l'era della ricerca AI",
+      "summary_it": "L'articolo suggerisce che la riorganizzazione dei team marketing e del budget è fondamentale per adattarsi all'era della ricerca basata sull'intelligenza artificiale. Vengono proposte tre modifiche ai ruoli e un riequilibrio del budget per migliorare la visibilità nei risultati di ricerca AI. L'obiettivo è ottimizzare le risorse esistenti senza la necessità di nuove assunzioni.",
       "url": "https://www.searchenginejournal.com/how-to-restructure-your-marketing-team-budget-for-the-ai-search-era/586153",
       "source": {
         "id": "search_engine_journal",
@@ -791,13 +720,13 @@
       "category": "ai_overviews_llm_seo",
       "tags": [
         "ai_search",
-        "marketing_team",
-        "budget_allocation",
-        "seo_strategy"
+        "marketing_strategy",
+        "team_restructuring",
+        "budget_allocation"
       ],
       "importance": 3,
       "published_at": "2026-08-31T13:30:03Z",
-      "fetched_at": "2026-09-01T05:03:36.874855Z",
+      "fetched_at": "2026-09-01T06:03:07.808944Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -806,10 +735,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_022",
+      "id": "item_2026-09-01_020",
       "title_original": "Google European Search Dataset Licensing Program Details",
       "title_it": "Dettagli sul programma di licenza dei dataset di ricerca europei di Google",
-      "summary_it": "Google ha aggiornato la pagina del suo programma di licenza dei dataset di ricerca europei, fornendo dettagli sul funzionamento. Questo programma è una risposta agli obblighi imposti dal Digital Markets Act (DMA), che designa Google come \"gatekeeper\". La normativa richiede a Google di condividere dati di ricerca anonimizzati con motori di ricerca concorrenti, inclusi chatbot AI con funzionalità di ricerca, operanti nell'UE e nello Spazio Economico Europeo. I dati includono ranking, query, click e visualizzazioni, e la licenza è soggetta a termini FRAND e rigorose misure di anonimizzazione.",
+      "summary_it": "Google ha aggiornato la pagina del suo programma di licenza dei dataset di ricerca europei, fornendo dettagli sul funzionamento. Questo programma è una risposta agli obblighi imposti dal Digital Markets Act (DMA) dell'UE, che designa Google come \"gatekeeper\". Il programma prevede la condivisione di dati di ricerca anonimizzati, inclusi ranking, query, click e visualizzazioni, con motori di ricerca terzi qualificati e chatbot AI con funzionalità di ricerca operanti nell'UE e nello Spazio Economico Europeo. La condivisione avviene a condizioni FRAND (Fair, Reasonable, and Non-Discriminatory) e con rigorose misure di anonimizzazione e protezione dei dati.",
       "url": "https://www.seroundtable.com/google-european-search-dataset-licensing-program-41986.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -832,7 +761,7 @@
       ],
       "importance": 4,
       "published_at": "2026-08-31T15:13:00Z",
-      "fetched_at": "2026-09-01T05:03:38.866498Z",
+      "fetched_at": "2026-09-01T06:03:09.744744Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -841,10 +770,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_023",
+      "id": "item_2026-09-01_021",
       "title_original": "ChatGPT Is Now A “Very Large Online Search Engine” In The EU via @sejournal, @MattGSouthern",
       "title_it": "ChatGPT classificato come 'motore di ricerca online molto grande' nell'UE",
-      "summary_it": "OpenAI ha dichiarato che ChatGPT ha raggiunto circa 159,1 milioni di destinatari medi mensili, portandolo a essere designato come 'motore di ricerca online molto grande' ai sensi del Digital Services Act (DSA) dell'UE. Questa classificazione impone a ChatGPT di aderire a requisiti normativi specifici previsti dalla legislazione europea. La mossa riflette il crescente impatto delle piattaforme AI sul panorama digitale e le relative implicazioni normative.",
+      "summary_it": "OpenAI ha dichiarato che ChatGPT ha raggiunto circa 159,1 milioni di destinatari medi mensili di ricerca nell'Unione Europea. Questo volume di utenti ha portato alla classificazione di ChatGPT come 'motore di ricerca online molto grande' ai sensi del Digital Services Act (DSA) dell'UE. Tale designazione implica l'applicazione di specifici obblighi normativi per la piattaforma.",
       "url": "https://www.searchenginejournal.com/chatgpt-is-now-a-very-large-online-search-engine-in-the-eu/587801",
       "source": {
         "id": "search_engine_journal",
@@ -867,7 +796,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-31T17:31:32Z",
-      "fetched_at": "2026-09-01T05:03:40.466305Z",
+      "fetched_at": "2026-09-01T06:03:11.373853Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -876,10 +805,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_024",
+      "id": "item_2026-09-01_022",
       "title_original": "Google: We Don't Penalize For Old Outbound Links With Shady Content",
-      "title_it": "Google non penalizza per vecchi link in uscita a contenuti ora scadenti",
-      "summary_it": "John Mueller di Google ha chiarito che Google non penalizza i siti per la presenza di vecchi link in uscita che puntano a domini che, nel tempo, hanno cambiato proprietà e ora ospitano contenuti di bassa qualità o 'shady'. Ha ribadito che il web è in continua evoluzione e che Google è in grado di ignorare i link obsoleti o irrilevanti, piuttosto che penalizzarli. Questa posizione è coerente con dichiarazioni precedenti di Google riguardo alla gestione del 'link cruft'.",
+      "title_it": "Google non penalizza per vecchi link esterni a contenuti ora discutibili",
+      "summary_it": "John Mueller di Google ha chiarito che Google non penalizza i siti per la presenza di vecchi link esterni che puntano a domini che, nel tempo, hanno cambiato proprietà e ora ospitano contenuti discutibili. Ha sottolineato che il web è in costante evoluzione e che Google è in grado di ignorare i link obsoleti o di bassa qualità. Questa posizione è coerente con precedenti dichiarazioni di Google, secondo cui il motore di ricerca tende a ignorare i link piuttosto che declassare i siti a causa loro.",
       "url": "https://www.seroundtable.com/google-old-shady-links-41987.html",
       "source": {
         "id": "search_engine_roundtable",
@@ -895,14 +824,14 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_guideline",
+        "google_link",
         "outbound_link",
-        "penaltie",
-        "john_mueller"
+        "john_mueller",
+        "seo_penaltie"
       ],
       "importance": 3,
       "published_at": "2026-08-31T17:59:00Z",
-      "fetched_at": "2026-09-01T05:03:42.568882Z",
+      "fetched_at": "2026-09-01T06:03:12.927541Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -911,10 +840,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_025",
+      "id": "item_2026-09-01_023",
       "title_original": "Google Search Console AI Reports Rolled Out Worldwide via @sejournal, @MattGSouthern",
       "title_it": "Report AI di Google Search Console disponibili a livello globale",
-      "summary_it": "Google ha annunciato il rollout globale dei report sulle performance dell'AI in Search Console. Questi report consentono di monitorare le impressioni generate da AI Overviews e AI Mode. La funzionalità è ora accessibile a tutti i siti web.",
+      "summary_it": "Google ha esteso la disponibilità dei report sulle performance della AI generativa in Search Console a tutti i siti a livello mondiale. Questi report consentono di monitorare le impressioni relative agli AI Overviews e alla modalità AI. La funzionalità offre dati sulle interazioni degli utenti con le risposte generate dall'intelligenza artificiale di Google. Questo aggiornamento fornisce ai professionisti SEO nuovi insight sulle performance dei contenuti in un contesto di ricerca sempre più influenzato dall'AI.",
       "url": "https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836",
       "source": {
         "id": "search_engine_journal",
@@ -932,12 +861,12 @@
       "tags": [
         "google_search_console",
         "ai_overviews",
-        "ai_mode",
-        "reporting"
+        "performance_report",
+        "generative_ai"
       ],
-      "importance": 3,
+      "importance": 4,
       "published_at": "2026-08-31T18:04:38Z",
-      "fetched_at": "2026-09-01T05:03:44.250992Z",
+      "fetched_at": "2026-09-01T06:03:14.761552Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -946,10 +875,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_026",
+      "id": "item_2026-09-01_024",
       "title_original": "Rank Math SEO Plugin Pauses Controversial Feature. Says It Will Return via @sejournal, @martinibuster",
-      "title_it": "Rank Math Sospende una Funzionalità Controversa, ma Prevede di Reintrodurla",
-      "summary_it": "Il plugin SEO Rank Math ha temporaneamente sospeso una funzionalità che aveva generato polemiche tra gli utenti. L'azienda ha riconosciuto un problema legato al consenso degli utenti nell'implementazione iniziale. Nonostante la sospensione, Rank Math ha dichiarato l'intenzione di reintrodurre la funzionalità in futuro, presumibilmente con modifiche per affrontare le critiche.",
+      "title_it": "Rank Math sospende una funzionalità controversa, ma annuncia il suo ritorno",
+      "summary_it": "Il plugin Rank Math ha temporaneamente sospeso una funzionalità che aveva generato polemiche tra gli utenti. L'azienda ha riconosciuto un problema relativo al consenso degli utenti per l'utilizzo di tale funzione. Nonostante la sospensione, Rank Math ha dichiarato l'intenzione di reintrodurre la funzionalità in futuro, presumibilmente dopo aver risolto le criticità riscontrate.",
       "url": "https://www.searchenginejournal.com/rank-math-seo-plugin-pauses-controversial-feature-says-it-will-return/587853",
       "source": {
         "id": "search_engine_journal",
@@ -972,7 +901,7 @@
       ],
       "importance": 2,
       "published_at": "2026-08-31T20:40:45Z",
-      "fetched_at": "2026-09-01T05:03:45.835241Z",
+      "fetched_at": "2026-09-01T06:03:16.326442Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -981,10 +910,10 @@
       "deep_analysis": null
     },
     {
-      "id": "item_2026-09-01_027",
+      "id": "item_2026-09-01_025",
       "title_original": "FTC Sues Amazon Over Alleged $20 Billion Advertising Surcharge Scheme via @sejournal, @brookeosmundson",
-      "title_it": "La FTC fa causa ad Amazon per presunte sovrattasse pubblicitarie da 20 miliardi di dollari",
-      "summary_it": "La Federal Trade Commission (FTC) e 22 stati hanno intentato una causa contro Amazon. L'accusa riguarda presunte modifiche alle aste pubblicitarie che avrebbero portato a sovrattasse per gli inserzionisti. Si stima che tali sovrattasse ammontino a oltre 20 miliardi di dollari.",
+      "title_it": "La FTC fa causa ad Amazon per presunto schema di sovrapprezzo pubblicitario da 20 miliardi di dollari",
+      "summary_it": "La Federal Trade Commission (FTC) e 22 stati hanno intentato una causa contro Amazon. L'accusa riguarda presunte modifiche alle aste pubblicitarie che avrebbero portato a un sovrapprezzo di oltre 20 miliardi di dollari per gli inserzionisti. La causa suggerisce che Amazon avrebbe manipolato il proprio sistema di aste pubblicitarie a danno delle aziende che utilizzano la piattaforma. Questo sviluppo potrebbe avere implicazioni significative per il panorama della pubblicità online e le pratiche di mercato delle grandi piattaforme.",
       "url": "https://www.searchenginejournal.com/ftc-sues-amazon-over-alleged-20-billion-advertising-surcharge-scheme/587870",
       "source": {
         "id": "search_engine_journal",
@@ -1007,7 +936,7 @@
       ],
       "importance": 3,
       "published_at": "2026-08-31T22:49:40Z",
-      "fetched_at": "2026-09-01T05:03:47.308662Z",
+      "fetched_at": "2026-09-01T06:03:18.425814Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
@@ -1062,92 +991,92 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-01T05:01:53.598515Z",
+      "last_checked": "2026-09-01T06:01:45.096613Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-01T05:01:55.321894Z",
+      "last_checked": "2026-09-01T06:01:45.626779Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-01T05:01:55.673536Z",
+      "last_checked": "2026-09-01T06:01:47.202881Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-01T05:01:57.188795Z",
+      "last_checked": "2026-09-01T06:01:48.776013Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-01T05:02:21.852804Z",
+      "last_checked": "2026-09-01T06:02:05.084503Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-01T05:02:22.552026Z",
+      "last_checked": "2026-09-01T06:02:05.774786Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-01T05:02:23.536262Z",
+      "last_checked": "2026-09-01T06:02:06.849480Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-01T05:02:24.900122Z",
+      "last_checked": "2026-09-01T06:02:08.178543Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-09-01T05:02:26.920593Z",
+      "last_checked": "2026-09-01T06:02:09.355883Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-01T05:02:26.993543Z",
+      "last_checked": "2026-09-01T06:02:09.417179Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-01T05:02:27.410702Z",
-      "changed": true
+      "last_checked": "2026-09-01T06:02:09.872568Z",
+      "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-01T05:02:27.837761Z",
+      "last_checked": "2026-09-01T06:02:11.066921Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-01T05:02:29.495840Z",
+      "last_checked": "2026-09-01T06:02:12.686766Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-01T05:02:31.335274Z",
+      "last_checked": "2026-09-01T06:02:13.714674Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-01T05:02:33.624312Z",
+      "last_checked": "2026-09-01T06:02:15.704205Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-01T05:02:34.521595Z",
+      "last_checked": "2026-09-01T06:02:17.027524Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-01T05:02:36.301799Z",
+      "last_checked": "2026-09-01T06:02:18.504529Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-09-01T05:03:00.201725Z",
+      "last_checked": "2026-09-01T06:02:35.348792Z",
       "changed": false
     }
   ],
