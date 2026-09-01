@@ -286,7 +286,7 @@ When the crawlers process the robots.txt rules, they ignore the `sitemap` line. 
 
 ## URL matching based on path values
 
-Google uses the path value in the `allow` and `disallow` rules as a basis to determine whether or not a rule applies to a specific URL on a site. This works by comparing the rule to the path component of the URL that the crawler is trying to fetch. Non-7-bit ASCII characters in a path may be included as UTF-8 characters or as percent-escaped UTF-8 encoded characters per RFC 3986. 
+Google uses the path value in the `allow` and `disallow` rules as a basis to determine whether or not a rule applies to a specific URL on a site. This works by comparing the rule to the path component of the URL that the crawler is trying to fetch. The path in the rules can be either raw UTF-8 characters or percent-encoded UTF-8 strings (per RFC 3986). As defined in RFC 9309 Section 2.2.2, Google's crawlers compare rules against URLs using their percent-encoded forms, and automatically canonicalize raw UTF-8 rule paths into percent-encoded forms. This means that, for example, `Disallow: /foo/bar/ツ` and `Disallow: /foo/bar/%E3%83%84` are treated identically by the parser. 
 
 Google, Bing, and other major search engines support a limited form of _wildcards_ for path values. These wildcard characters are: 
 
