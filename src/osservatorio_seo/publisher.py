@@ -286,12 +286,21 @@ class Publisher:
 
         day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
 
+        # URL gia' pubblicati (con pagina propria) in un giorno precedente:
+        # non generare una seconda pagina per lo stesso URL (es. una fonte
+        # ripubblica/aggiorna un articolo vecchio senza cambiarne l'URL).
+        urls_published_before_today = {
+            meta["url"] for meta in self._build_item_index().values() if meta["date"] < day_iso
+        }
+
         # Slugs univoci per gli item con importance>=4 (quelli che avranno una
         # single-article page).
         existing_slugs: set[str] = set()
         item_slugs: dict[str, str] = {}
         for item in feed.items:
             if not is_indexable(item):
+                continue
+            if item.url in urls_published_before_today:
                 continue
             slug = make_unique_slug(item.title_it, existing_slugs)
             existing_slugs.add(slug)
@@ -806,12 +815,20 @@ class Publisher:
         """Scansione una tantum di tutti gli archive per id → metadata dell'item.
 
         Ritorna mapping ``item.id → {date, title, source, importance, slug,
-        site_path}`` per risolvere i ``Pillar.item_refs`` nel template.
+        site_path, url}`` per risolvere i ``Pillar.item_refs`` nel template
+        e per il dedup cross-day (D 1.4: non generare una seconda pagina per
+        un URL gia' pubblicato in un giorno precedente).
         """
         idx: dict[str, dict[str, Any]] = {}
-        for arc in self._archive_dir.glob("*.json"):
-            if arc.stem == "index":
-                continue
+        # Ordine cronologico: serve a "seen_urls" per sapere qual e' il PRIMO
+        # giorno in cui un URL ha ricevuto una pagina (stessa regola di
+        # publish_ssg: niente seconda pagina per un URL gia' pubblicato).
+        archive_files = sorted(
+            (p for p in self._archive_dir.glob("*.json") if p.stem != "index"),
+            key=lambda p: p.stem,
+        )
+        seen_urls: set[str] = set()
+        for arc in archive_files:
             try:
                 feed = Feed.model_validate(json.loads(arc.read_text(encoding="utf-8")))
             except Exception:  # noqa: BLE001
@@ -820,7 +837,7 @@ class Publisher:
             y, m, d = day.split("-")
             existing_slugs: set[str] = set()
             for item in feed.items:
-                if not is_indexable(item):
+                if not is_indexable(item) or item.url in seen_urls:
                     continue
                 slug = make_unique_slug(item.title_it, existing_slugs)
                 existing_slugs.add(slug)
@@ -832,7 +849,9 @@ class Publisher:
                     "importance": item.importance,
                     "stars": _stars(item.importance),
                     "site_path": site_path,
+                    "url": item.url,
                 }
+                seen_urls.add(item.url)
         return idx
 
     def _ssg_dossiers(

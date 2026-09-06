@@ -64,6 +64,43 @@ def test_dedup_by_fuzzy_title() -> None:
     assert out[0].source_id == "s2"
 
 
+def test_dedup_by_token_set_ratio_catches_reordered_titles() -> None:
+    """Due fonti che titolano la stessa notizia con le stesse parole chiave
+    ma ordine/formulazione diversa: fuzz.ratio le manca (64, sotto la soglia
+    85) ma token_set_ratio le cattura (95, sopra la soglia 80)."""
+    norm = Normalizer()
+    items = [
+        mk_raw("https://a.com/x", "Google Ends Support for the Old Search Console API", "s1"),
+        mk_raw("https://b.com/y", "Search Console: Google Ends Support for Old API", "s2"),
+    ]
+    out = norm.normalize(items, {"s1": mk_source(5), "s2": mk_source(10)})
+    assert len(out) == 1
+    assert out[0].source_id == "s2"
+
+
+def test_no_dedup_for_distinct_stories_same_topic() -> None:
+    """Titoli reali dall'archivio del 2026-06-03 (stessa fonte, stesso
+    argomento — il Google May 2026 Core Update — ma DUE notizie diverse:
+    la volatilita' che riprende il 2 giugno, e il rollout completato).
+    token_set_ratio tra i due e' 69: sotto la soglia 80, non deve collassare.
+    """
+    norm = Normalizer()
+    items = [
+        mk_raw(
+            "https://a.com/x",
+            "Google May 2026 Core Update Volatility Hits Hard Again June 2nd",
+            "s1",
+        ),
+        mk_raw(
+            "https://b.com/y",
+            "Google May 2026 Core Update Has Completed Rolling Out",
+            "s1",
+        ),
+    ]
+    out = norm.normalize(items, {"s1": mk_source(5)})
+    assert len(out) == 2
+
+
 def test_filter_too_old() -> None:
     norm = Normalizer(max_age_hours=48)
     old_item = RawItem(

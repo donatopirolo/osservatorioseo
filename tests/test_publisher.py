@@ -366,6 +366,44 @@ def test_publish_ssg_writes_article_for_high_importance(tmp_path: Path) -> None:
     assert '"@type": "BreadcrumbList"' in article_html
 
 
+def test_publish_ssg_skips_article_page_for_url_published_earlier(tmp_path: Path) -> None:
+    """Se lo stesso URL ha gia' una pagina in un giorno precedente (es. una
+    fonte ripubblica un articolo vecchio senza cambiare URL), non va
+    generata una seconda pagina articolo per il giorno corrente (1.4)."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+
+    old_item = mk_item("old")
+    old_item.importance = 5
+    old_item.url = "https://example.com/shared-article"
+    old_feed = mk_feed_on(datetime(2026, 4, 10, 7, 0, tzinfo=UTC), [old_item])
+    pub.publish(old_feed)
+    pub.publish_ssg(
+        old_feed, [], [], templates_dir=Path("templates"), site_dir=site_dir, allow_indexing=True
+    )
+
+    new_item = mk_item("new")
+    new_item.importance = 5
+    new_item.url = "https://example.com/shared-article"  # stesso URL del giorno prima
+    new_feed = mk_feed_on(datetime(2026, 4, 11, 7, 0, tzinfo=UTC), [new_item])
+    pub.publish(new_feed)
+
+    pub.publish_ssg(
+        new_feed, [], [], templates_dir=Path("templates"), site_dir=site_dir, allow_indexing=True
+    )
+
+    # Il giorno vecchio ha la sua pagina...
+    assert (site_dir / "archivio" / "2026" / "04" / "10" / "old" / "index.html").exists()
+    # ...ma il giorno nuovo NON genera una seconda pagina per lo stesso URL.
+    new_day_dir = site_dir / "archivio" / "2026" / "04" / "11"
+    article_dirs = [p for p in new_day_dir.iterdir() if p.is_dir() and p.name != "hub"]
+    assert article_dirs == []
+
+
 def test_publish_ssg_writes_archive_hubs(tmp_path: Path) -> None:
     site_dir = tmp_path / "site"
     archive_dir = tmp_path / "data" / "archive"
@@ -454,6 +492,40 @@ def test_publish_ssg_sitemap_includes_past_days_with_real_lastmod(tmp_path: Path
     # Lo slug e' derivato dal titolo (== item_id nei fixture di test)
     assert "/archivio/2026/04/10/old/" in sitemap
     assert "/archivio/2026/04/11/new/" in sitemap
+
+
+def test_publish_ssg_sitemap_excludes_cross_day_republished_url(tmp_path: Path) -> None:
+    """La sitemap non deve elencare la pagina del secondo giorno per un URL
+    gia' pubblicato in un giorno precedente (1.4): quella pagina non viene
+    piu' generata (in 301 verso la prima), quindi non va nemmeno in sitemap
+    (regressione: _build_item_index applicava is_indexable ma non il
+    dedup cross-day di publish_ssg, elencando URL redirect-301 in sitemap)."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+
+    old_item = mk_item("old")
+    old_item.importance = 5
+    old_item.url = "https://example.com/shared-article"
+    old_feed = mk_feed_on(datetime(2026, 4, 10, 7, 0, tzinfo=UTC), [old_item])
+    pub.publish(old_feed)
+
+    new_item = mk_item("new")
+    new_item.importance = 5
+    new_item.url = "https://example.com/shared-article"
+    new_feed = mk_feed_on(datetime(2026, 4, 11, 7, 0, tzinfo=UTC), [new_item])
+    pub.publish(new_feed)
+
+    pub.publish_ssg(
+        new_feed, [], [], templates_dir=Path("templates"), site_dir=site_dir, allow_indexing=True
+    )
+
+    sitemap = (site_dir / "sitemap.xml").read_text()
+    assert "/archivio/2026/04/10/old/" in sitemap
+    assert "/archivio/2026/04/11/new/" not in sitemap
 
 
 def test_publish_ssg_news_sitemap_uses_site_publication_date(tmp_path: Path) -> None:
