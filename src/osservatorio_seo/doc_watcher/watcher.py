@@ -16,6 +16,11 @@ from osservatorio_seo.doc_watcher.state import StateStore
 from osservatorio_seo.http_client import HttpClient
 
 MAX_DIFF_CHARS = 50_000
+MIN_CHANGED_CHARS = 80
+
+
+class DocExtractError(RuntimeError):
+    """Il selettore configurato non trova nulla nella pagina scaricata."""
 
 
 @dataclass(frozen=True)
@@ -36,11 +41,11 @@ class DocWatcher:
         self,
         http: HttpClient,
         state: StateStore,
-        similarity_threshold: float = 0.003,
+        min_changed_chars: int = MIN_CHANGED_CHARS,
     ) -> None:
         self._http = http
         self._state = state
-        self._similarity_threshold = similarity_threshold
+        self._min_changed_chars = min_changed_chars
         self._h2t = html2text.HTML2Text()
         self._h2t.ignore_links = True
         self._h2t.ignore_images = True
@@ -86,7 +91,10 @@ class DocWatcher:
             )
 
         if not self._is_significant_change(previous_text or "", new_text):
-            self._state.save(page.id, current_hash, new_text)
+            # NB: lo state NON viene aggiornato qui. La baseline resta quella
+            # precedente cosi' le micro-modifiche si accumulano tra un run e
+            # l'altro finche', sommate, superano MIN_CHANGED_CHARS invece di
+            # essere perse una per una (ognuna sotto soglia da sola).
             return DocChangeResult(
                 page_id=page.id,
                 changed=False,
@@ -134,11 +142,13 @@ class DocWatcher:
         )
 
     async def _fetch_html(self, url: str, selector: str | None) -> str:
+        # HttpClient.get() solleva gia' su status != 200 (vedi http_client.py).
         resp = await self._http.get(url)
         tree = HTMLParser(resp.text)
         root = tree.css_first(selector) if selector else tree.body
-        html_frag = root.html if root else resp.text
-        return self._h2t.handle(html_frag or "")
+        if root is None:
+            raise DocExtractError(f"{url}: selector {selector!r} matched nothing")
+        return self._h2t.handle(root.html or "")
 
     async def _fetch_pdf(self, url: str) -> str:
         import io
@@ -157,8 +167,21 @@ class DocWatcher:
             text = re.sub(pattern, "", text, flags=re.MULTILINE)
         return text.strip()
 
+    def _changed_chars(self, old: str, new: str) -> int:
+        """Caratteri effettivamente toccati (insert/delete/replace), non una
+        percentuale relativa alla lunghezza totale del testo: su una pagina
+        lunga una frase nuova puo' essere sotto lo 0.3% ma restare comunque
+        una modifica importante. Un blocco 'replace' conta max(len_old,
+        len_new) per non contare due volte la stessa porzione sostituita."""
+        matcher = difflib.SequenceMatcher(None, old, new, autojunk=False)
+        total = 0
+        for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+            if tag == "equal":
+                continue
+            total += max(i2 - i1, j2 - j1)
+        return total
+
     def _is_significant_change(self, old: str, new: str) -> bool:
         if not old:
             return True
-        ratio = difflib.SequenceMatcher(None, old, new).ratio()
-        return (1.0 - ratio) >= self._similarity_threshold
+        return self._changed_chars(old, new) >= self._min_changed_chars

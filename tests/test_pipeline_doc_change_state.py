@@ -14,7 +14,7 @@ from unittest.mock import AsyncMock
 
 from osservatorio_seo.config import DocWatcherPage, Settings
 from osservatorio_seo.doc_watcher.state import StateStore
-from osservatorio_seo.doc_watcher.watcher import DocChangeResult
+from osservatorio_seo.doc_watcher.watcher import DocChangeResult, DocWatcher
 from osservatorio_seo.pipeline import Pipeline
 from osservatorio_seo.summarizer import AISummary, Summarizer
 
@@ -111,3 +111,17 @@ async def test_summarize_success_commits_doc_state(tmp_path: Path) -> None:
     # State aggiornato sul nuovo hash/text
     assert state.load_hash("google_spam_policies") == "sha256:NEW_HASH"
     assert state.load_text("google_spam_policies") == "new normalized text content"
+
+
+async def test_check_doc_pages_skips_failing_page_without_raising(tmp_path: Path) -> None:
+    """Una pagina che fallisce (403/404, selettore rotto, ecc.) non deve
+    bloccare l'intero run: viene loggata e saltata, non entra ne' in
+    doc_results ne' in doc_watcher_status."""
+    watcher = AsyncMock(spec=DocWatcher)
+    watcher.check.side_effect = RuntimeError("HTTP 404")
+
+    pipeline = _make_pipeline(tmp_path)
+    results, statuses = await pipeline._check_doc_pages([_make_page()], watcher)
+
+    assert results == []
+    assert statuses == []
