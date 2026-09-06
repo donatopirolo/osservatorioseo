@@ -1,9 +1,10 @@
 import json
+import time
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from osservatorio_seo.models import Feed, FeedStats, Item, Source
-from osservatorio_seo.publisher import Publisher
+from osservatorio_seo.publisher import Publisher, _absolute_date
 
 
 def mk_item(item_id: str) -> Item:
@@ -162,6 +163,26 @@ def test_select_google_updates_only_google_sources() -> None:
 
     # Il cap limita il numero di item
     assert len(Publisher._select_google_updates(items, limit=1, min_importance=3)) == 1
+
+
+def test_absolute_date_converts_utc_to_rome_local(monkeypatch) -> None:
+    """Regressione: _absolute_date formattava published_at (sempre UTC) senza
+    convertirlo in ora locale Europe/Rome. Un item pubblicato la sera tardi in
+    UTC puo' cadere nel giorno dopo a Roma (CEST = UTC+2): qui verifichiamo
+    che la data mostrata avanzi di giorno, indipendentemente dal TZ del
+    processo (la conversione usa ZoneInfo('Europe/Rome') fisso, non il TZ
+    di sistema)."""
+    with monkeypatch.context() as m:
+        m.setenv("TZ", "UTC")
+        time.tzset()
+        published = datetime(2026, 4, 11, 22, 30, tzinfo=UTC)
+        result = _absolute_date(published)
+    time.tzset()
+
+    # 22:30 UTC + 2h (CEST) = 00:30 del giorno dopo a Roma
+    parts = result.split()
+    assert parts[1] == "12", f"giorno non convertito a Roma: {result!r}"
+    assert result.endswith("00:30"), f"ora non convertita a Roma: {result!r}"
 
 
 def test_publish_creates_archive_index(tmp_path: Path) -> None:

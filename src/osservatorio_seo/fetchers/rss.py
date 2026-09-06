@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
+from calendar import timegm
 from datetime import UTC, datetime
-from time import mktime
 
 import feedparser
 
@@ -55,5 +55,9 @@ class RSSFetcher:
         for key in ("published_parsed", "updated_parsed"):
             struct = entry.get(key)
             if struct:
-                return datetime.fromtimestamp(mktime(struct), tz=UTC)
+                # feedparser normalizza published_parsed/updated_parsed in UTC:
+                # timegm() interpreta lo struct_time come UTC, a differenza di
+                # time.mktime() che lo interpreterebbe come ora locale del
+                # processo (sbagliato quando TZ != UTC, es. TZ=Europe/Rome).
+                return datetime.fromtimestamp(timegm(struct), tz=UTC)
         return datetime.now(UTC)

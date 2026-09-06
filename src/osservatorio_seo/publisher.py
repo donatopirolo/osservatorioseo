@@ -10,6 +10,7 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 from urllib.parse import urlparse
+from zoneinfo import ZoneInfo
 
 from osservatorio_seo.models import Feed, Item, Pillar, Source
 from osservatorio_seo.ranker import Ranker
@@ -68,6 +69,8 @@ _MONTH_LABELS: dict[int, str] = {
     12: "Dicembre",
 }
 
+_ROME_TZ = ZoneInfo("Europe/Rome")
+
 _TYPE_LABELS: dict[str, str] = {
     "official": "UFFICIALE",
     "media": "MEDIA",
@@ -117,11 +120,11 @@ def _relative_date(published: datetime) -> str:
         return "ieri"
     if days < 7:
         return f"{days} giorni fa"
-    return published.strftime("%-d %b %Y")
+    return published.astimezone(_ROME_TZ).strftime("%-d %b %Y")
 
 
 def _absolute_date(published: datetime) -> str:
-    return published.strftime("%A %-d %B %Y, %H:%M")
+    return published.astimezone(_ROME_TZ).strftime("%A %-d %B %Y, %H:%M")
 
 
 def _safe_hostname(url: str) -> str:
