@@ -170,6 +170,32 @@ def _absolute_date(published: datetime) -> str:
     return format_date_it(published.astimezone(_ROME_TZ), "%A %-d %B %Y, %H:%M")
 
 
+def _resolve_article_link(
+    item: Item,
+    item_idx: dict[str, dict[str, Any]],
+    item_slugs: dict[str, str],
+    day_iso: str,
+) -> tuple[str, bool]:
+    """URL e flag "e' interna" per un item, indipendentemente da quale
+    giorno dell'archivio provenga.
+
+    Prima cerca in ``item_idx`` (da ``_build_item_index()``, copre tutto
+    l'archivio): senza questo, un item pubblicato in un giorno diverso da
+    quello corrente risultava sempre linkato all'URL esterno della fonte
+    anche se aveva gia' una pagina propria. Ricade su ``item_slugs`` (solo
+    item del giorno corrente) per i casi in cui l'archivio non contiene
+    ancora il file di oggi (es. nei test che chiamano publish_ssg senza
+    prima scrivere l'archivio).
+    """
+    meta = item_idx.get(item.id)
+    if meta:
+        return meta["site_path"], True
+    if is_indexable(item) and item.id in item_slugs:
+        y, m, d = day_iso.split("-")
+        return f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/", True
+    return item.url, False
+
+
 def _safe_hostname(url: str) -> str:
     try:
         return urlparse(url).hostname or url
@@ -540,16 +566,38 @@ class Publisher:
         day_iso: str,
     ) -> None:
         y, m, d = day_iso.split("-")
+
+        # Mappa tag -> dossier: un tag cliccabile ha senso solo se porta a un
+        # contenuto vero (il dossier che lo tratta), non a un hub generico
+        # (i tag hub sono disattivati, vedi nota in _ssg_category_tag_hubs).
+        tag_to_dossier = {p.tag: p.slug for p in self._load_pillars()}
+
+        # Pool per la sezione "Correlati": altri item indicizzabili della
+        # stessa categoria, in tutto l'archivio, piu' recenti prima.
+        item_idx = self._build_item_index()
+        related_by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        for iid, meta in item_idx.items():
+            related_by_category[meta["category"]].append({**meta, "id": iid})
+        for cat_items in related_by_category.values():
+            cat_items.sort(key=lambda meta: meta["date"], reverse=True)
+
         for item in feed.items:
             if not is_indexable(item) or item.id not in item_slugs:
                 continue
             slug = item_slugs[item.id]
             article_url = canonical(f"/archivio/{y}/{m}/{d}/{slug}/")
+            related = [
+                {"title": meta["title"], "path": meta["site_path"]}
+                for meta in related_by_category.get(item.category, [])
+                if meta["id"] != item.id
+            ][:5]
             ctx = {
                 "page_title": f"{item.title_it} — Osservatorio SEO",
                 "page_description": _meta_description(item.summary_it),
                 "canonical_url": article_url,
                 "active_nav": "archive",
+                "tag_to_dossier": tag_to_dossier,
+                "related_articles": related,
                 "noindex": not allow_indexing or not is_indexable(item),
                 "og_type": "article",
                 "item": item.model_dump(mode="json"),
@@ -613,12 +661,18 @@ class Publisher:
             return
 
         by_year: dict[int, dict[int, list[str]]] = defaultdict(lambda: defaultdict(list))
+        day_item_counts: dict[str, int] = {}
         for p in dated_files:
             try:
                 y, m, d = p.stem.split("-")
                 by_year[int(y)][int(m)].append(d)
             except ValueError:
                 continue
+            try:
+                data = json.loads(p.read_text(encoding="utf-8"))
+                day_item_counts[p.stem] = len(data.get("items", []))
+            except Exception:  # noqa: BLE001
+                day_item_counts[p.stem] = 0
 
         # Archive index
         years_ctx = [
@@ -690,7 +744,7 @@ class Publisher:
                             "date": f"{year:04d}-{month:02d}-{day}",
                             "path": f"/archivio/{year:04d}/{month:02d}/{day}/",
                             "label": f"{int(day)} {_MONTH_LABELS[month]}",
-                            "count": "?",
+                            "count": day_item_counts.get(f"{year:04d}-{month:02d}-{day}", 0),
                         }
                         for day in sorted(days, reverse=True)
                     ],
@@ -719,8 +773,6 @@ class Publisher:
         item_slugs: dict[str, str],
         day_iso: str,
     ) -> None:
-        y, m, d = day_iso.split("-")
-
         # Ultimi 30 giorni di archivio, non solo il feed di oggi: una hub
         # costruita sul solo giorno corrente sparisce (o resta vuota) per
         # qualunque categoria senza notizie proprio oggi, pur avendo storia
@@ -775,23 +827,14 @@ class Publisher:
                 items_by_tag[tag].append(item)
 
         def build_teaser(item: Item) -> str:
-            meta = item_idx.get(item.id)
-            if meta:
-                article_url = meta["site_path"]
-                is_internal = True
-            elif is_indexable(item) and item.id in item_slugs:
-                article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
-                is_internal = True
-            elif item.id in item_day:
+            article_url, is_internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
+            if not is_internal and item.id in item_day:
                 # Nessuna pagina propria: si va allo snapshot del giorno in cui
                 # la notizia e' comparsa. E' interno, pertinente, e da' un
-                # percorso a chi arriva sulla hub di categoria.
+                # percorso a chi arriva sulla hub di categoria (1.9-fix).
                 dy, dm, dd = item_day[item.id].split("-")
                 article_url = f"/archivio/{dy}/{dm}/{dd}/"
                 is_internal = True
-            else:
-                article_url = item.url
-                is_internal = False
             return renderer.render_raw(
                 "partials/_card_article_teaser.html.jinja",
                 {
@@ -933,10 +976,11 @@ class Publisher:
     def _build_item_index(self) -> dict[str, dict[str, Any]]:
         """Scansione una tantum di tutti gli archive per id → metadata dell'item.
 
-        Ritorna mapping ``item.id → {date, title, source, importance, slug,
-        site_path, url}`` per risolvere i ``Pillar.item_refs`` nel template
-        e per il dedup cross-day (D 1.4: non generare una seconda pagina per
-        un URL gia' pubblicato in un giorno precedente).
+        Ritorna mapping ``item.id → {date, title, source, importance, category,
+        slug, site_path, url}`` per risolvere i ``Pillar.item_refs`` nel
+        template, per il dedup cross-day (D 1.4: non generare una seconda
+        pagina per un URL gia' pubblicato in un giorno precedente) e per la
+        sezione "Correlati" nella pagina articolo.
         """
         idx: dict[str, dict[str, Any]] = {}
         # Ordine cronologico: serve a "seen_urls" per sapere qual e' il PRIMO
@@ -966,6 +1010,7 @@ class Publisher:
                     "title": item.title_it,
                     "source": item.source.name,
                     "importance": item.importance,
+                    "category": item.category,
                     "stars": _stars(item.importance),
                     "site_path": site_path,
                     "url": item.url,
@@ -1587,6 +1632,19 @@ class Publisher:
             encoding="utf-8",
         )
 
+        # item_index.json: id -> site_path degli item con pagina propria, in
+        # tutto l'archivio. Il client (app.js) non puo' ricostruire lo slug
+        # di un articolo da solo (dipende da un contatore di disambiguazione
+        # calcolato lato Python sull'intero batch del giorno): senza questo
+        # indice, la ricerca cross-archivio linkava sempre allo snapshot del
+        # giorno invece che alla pagina dell'articolo.
+        item_index_json = {iid: meta["site_path"] for iid, meta in self._build_item_index().items()}
+        data_dir = site_dir / "data"
+        data_dir.mkdir(parents=True, exist_ok=True)
+        (data_dir / "item_index.json").write_text(
+            json.dumps(item_index_json, indent=2), encoding="utf-8"
+        )
+
     # --- Top Week (rolling 7-day top 10) ---
 
     @staticmethod
@@ -1657,6 +1715,13 @@ class Publisher:
         ranked = ranker.rank(combined_items)
         items_by_id = {i.id: i for i in combined_items}
 
+        # Metadata (slug/site_path) degli item con pagina interna in
+        # QUALSIASI giorno dell'archivio: prima solo gli item del feed di
+        # oggi potevano linkare alla propria pagina, quelli degli altri 6
+        # giorni finivano sempre linkati all'URL esterno della fonte anche
+        # quando avevano gia' una pagina propria.
+        item_idx = self._build_item_index()
+
         top10_cards: list[str] = []
         top10_itemlist: list[dict[str, str]] = []
         for idx, item_id in enumerate(ranked.top10, start=1):
@@ -1664,16 +1729,7 @@ class Publisher:
             if not item:
                 continue
 
-            # Link articolo: se importance>=4 AND è nel feed corrente, punta alla
-            # pagina SSG di oggi; altrimenti URL originale
-            is_today = any(i.id == item.id for i in current_feed.items)
-            if is_today and is_indexable(item) and item.id in item_slugs:
-                y, m, d = day_iso.split("-")
-                article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
-                is_internal = True
-            else:
-                article_url = item.url
-                is_internal = False
+            article_url, is_internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
 
             ctx = {
                 "item": item.model_dump(mode="json"),
@@ -1702,14 +1758,7 @@ class Publisher:
         google_cards: list[str] = []
         google_updates = self._select_google_updates(combined_items)
         for idx, item in enumerate(google_updates, start=1):
-            is_today = any(i.id == item.id for i in current_feed.items)
-            if is_today and is_indexable(item) and item.id in item_slugs:
-                y, m, d = day_iso.split("-")
-                article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
-                is_internal = True
-            else:
-                article_url = item.url
-                is_internal = False
+            article_url, is_internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
             google_cards.append(
                 renderer.render_raw(
                     "partials/_card_top10.html.jinja",

@@ -6,6 +6,7 @@
 
 const ARCHIVE_SEARCH_DAYS = 7;
 let archiveItemsCache = null;
+let itemIndexCache = null;
 
 (function init() {
   redirectLegacyDateParam();
@@ -86,6 +87,9 @@ async function showArchiveResults(query) {
     if (archiveItemsCache === null) {
       archiveItemsCache = await loadArchiveItems(ARCHIVE_SEARCH_DAYS);
     }
+    if (itemIndexCache === null) {
+      itemIndexCache = await loadItemIndex();
+    }
   } catch (e) {
     meta.textContent = "Errore caricamento archivio: " + e.message;
     list.innerHTML = "";
@@ -109,7 +113,7 @@ async function showArchiveResults(query) {
   list.innerHTML = Object.entries(byDate)
     .sort(([a], [b]) => (a < b ? 1 : -1))
     .map(([date, items]) => {
-      const cards = items.map((i) => renderArchiveSearchResult(i, date)).join("");
+      const cards = items.map((i) => renderArchiveSearchResult(i, date, itemIndexCache)).join("");
       return `<div class="flex flex-col gap-4">
         <div class="flex items-center justify-between border-b border-outline-variant pb-2">
           <h3 class="text-outline font-bold uppercase tracking-widest text-xs">[ ARCHIVE // ${escape(date)} ]</h3>
@@ -121,9 +125,13 @@ async function showArchiveResults(query) {
     .join("");
 }
 
-function renderArchiveSearchResult(item, date) {
+function renderArchiveSearchResult(item, date, itemIndex) {
   const [y, m, d] = date.split("-");
-  const path = item.importance >= 4 ? `/archivio/${y}/${m}/${d}/` : item.url;
+  // Pagina dell'articolo se ne ha una (item_index.json), altrimenti lo
+  // snapshot del giorno per gli item indicizzabili non ancora nell'indice,
+  // altrimenti l'URL esterno della fonte.
+  const indexed = itemIndex && itemIndex[item.id];
+  const path = indexed || (item.importance >= 4 ? `/archivio/${y}/${m}/${d}/` : item.url);
   const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
   return `<a href="${escape(path)}" class="block p-4 border-l-2 border-outline-variant bg-surface-container-lowest hover:bg-surface-container transition-colors">
     <h4 class="text-sm font-bold text-white hover:text-primary-container">${escape(item.title_it)}</h4>
@@ -167,6 +175,15 @@ async function loadArchiveItems(days) {
     }
   }
   return items;
+}
+
+async function loadItemIndex() {
+  try {
+    const resp = await fetch("/data/item_index.json", { cache: "no-cache" });
+    return resp.ok ? await resp.json() : {};
+  } catch {
+    return {};
+  }
 }
 
 function buildSearchBlob(item) {

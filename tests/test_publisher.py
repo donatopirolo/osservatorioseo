@@ -91,6 +91,32 @@ def mk_feed_on(day: datetime, items: list[Item]) -> Feed:
     return feed
 
 
+def mk_pillar_file(data_dir: Path, tag: str, slug: str) -> None:
+    pillars_dir = data_dir / "pillars"
+    pillars_dir.mkdir(parents=True, exist_ok=True)
+    (pillars_dir / f"{tag}.json").write_text(
+        json.dumps(
+            {
+                "schema_version": "1.0",
+                "tag": tag,
+                "slug": slug,
+                "title_it": f"Dossier {tag}",
+                "subtitle_it": "sub",
+                "intro_long": "intro",
+                "context_section": "ctx",
+                "timeline_narrative": "timeline",
+                "takeaways": [],
+                "outlook": "outlook",
+                "item_refs": [],
+                "generated_at": datetime.now(UTC).isoformat(),
+                "model_used": "test",
+                "cost_eur": 0.0,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+
 def test_publish_preserves_doc_change_items_on_same_day_rerun(tmp_path: Path) -> None:
     """Un secondo run nello stesso giorno non deve cancellare i doc-change item
     pubblicati dal primo run (regressione: overwrite totale dell'archivio)."""
@@ -613,6 +639,114 @@ def test_publish_ssg_category_hub_includes_last_30_days_and_links_internal(tmp_p
     assert "old_google" in cat_html  # entro i 30 giorni: presente
     assert "too_old_google" not in cat_html  # oltre i 30 giorni: escluso
     assert old_item.url not in cat_html  # linkato alla pagina interna, non all'URL esterno
+
+
+def test_publish_ssg_article_tag_links_to_dossier(tmp_path: Path) -> None:
+    """Regressione 1.10: i tag nella pagina articolo erano <span> non
+    cliccabili anche quando corrispondevano a un dossier esistente."""
+    site_dir = tmp_path / "site"
+    data_dir = tmp_path / "data"
+    pub = Publisher(
+        data_dir=data_dir, archive_dir=data_dir / "archive", site_data_dir=site_dir / "data"
+    )
+    mk_pillar_file(data_dir, "core_update", "core-update")
+
+    day = datetime(2026, 6, 24, 7, 0, tzinfo=UTC)
+    item = mk_item("tagged")
+    item.importance = 5
+    item.tags = ["core_update", "untracked_tag"]
+    pub.publish(mk_feed_on(day, [item]))
+    pub.publish_ssg(
+        mk_feed_on(day, [item]), [], [], templates_dir=Path("templates"), site_dir=site_dir
+    )
+
+    article_files = list((site_dir / "archivio" / "2026" / "06" / "24").glob("*/index.html"))
+    assert len(article_files) == 1
+    html = article_files[0].read_text()
+    assert 'href="/dossier/core-update/"' in html
+    assert "dossier/untracked_tag" not in html
+
+
+def test_publish_ssg_article_has_related_section(tmp_path: Path) -> None:
+    """Regressione 1.10: la pagina articolo non aveva una sezione 'Correlati'
+    verso altre notizie della stessa categoria."""
+    site_dir = tmp_path / "site"
+    data_dir = tmp_path / "data"
+    archive_dir = data_dir / "archive"
+    pub = Publisher(data_dir=data_dir, archive_dir=archive_dir, site_data_dir=site_dir / "data")
+
+    day1 = datetime(2026, 6, 20, 7, 0, tzinfo=UTC)
+    day2 = datetime(2026, 6, 24, 7, 0, tzinfo=UTC)
+
+    older_items = [mk_item(f"older_{i}") for i in range(4)]
+    for it in older_items:
+        it.importance = 5
+    pub.publish(mk_feed_on(day1, older_items))
+
+    main_item = mk_item("main")
+    main_item.importance = 5
+    pub.publish(mk_feed_on(day2, [main_item]))
+    pub.publish_ssg(
+        mk_feed_on(day2, [main_item]), [], [], templates_dir=Path("templates"), site_dir=site_dir
+    )
+
+    article_files = list((site_dir / "archivio" / "2026" / "06" / "24").glob("*/index.html"))
+    assert len(article_files) == 1
+    html = article_files[0].read_text()
+    assert "CORRELATI" in html
+    for it in older_items:
+        assert f"→ {it.title_it}" in html
+    assert "→ main" not in html  # non correlato a se stesso
+
+
+def test_publish_ssg_top_week_links_past_day_items_internally(tmp_path: Path) -> None:
+    """Regressione 1.10: nella top settimana, le notizie di giorni diversi da
+    oggi con pagina propria venivano linkate all'URL esterno della fonte
+    invece che alla pagina interna."""
+    site_dir = tmp_path / "site"
+    data_dir = tmp_path / "data"
+    archive_dir = data_dir / "archive"
+    pub = Publisher(data_dir=data_dir, archive_dir=archive_dir, site_data_dir=site_dir / "data")
+
+    now = datetime.now(UTC)
+    old_day = now - timedelta(days=2)
+
+    old_item = mk_item("old_topweek")
+    old_item.importance = 5
+    old_item.title_it = "Notizia di due giorni fa"
+    pub.publish(mk_feed_on(old_day, [old_item]))
+
+    today_item = mk_item("today_topweek")
+    pub.publish(mk_feed_on(now, [today_item]))
+    pub.publish_ssg(
+        mk_feed_on(now, [today_item]), [], [], templates_dir=Path("templates"), site_dir=site_dir
+    )
+
+    top_week_html = (site_dir / "top-settimana" / "index.html").read_text()
+    m = re.search(r'<a href="([^"]*)"[^>]*>Notizia di due giorni fa</a>', top_week_html)
+    assert m, "titolo non trovato o non linkato nella top settimana"
+    assert m.group(1).startswith("/archivio/"), f"link non interno: {m.group(1)!r}"
+    assert old_item.url not in top_week_html
+
+
+def test_publish_ssg_month_hub_shows_real_day_count(tmp_path: Path) -> None:
+    """Regressione 1.10: il conteggio per giorno nel month hub era sempre
+    '?' invece del numero reale di notizie di quel giorno."""
+    site_dir = tmp_path / "site"
+    archive_dir = tmp_path / "data" / "archive"
+    pub = Publisher(
+        data_dir=tmp_path / "data", archive_dir=archive_dir, site_data_dir=site_dir / "data"
+    )
+    day = datetime(2026, 4, 11, 7, 0, tzinfo=UTC)
+    items = [mk_item("a"), mk_item("b"), mk_item("c")]
+    pub.publish(mk_feed_on(day, items))
+    pub.publish_ssg(
+        mk_feed_on(day, items), [], [], templates_dir=Path("templates"), site_dir=site_dir
+    )
+
+    month_html = (site_dir / "archivio" / "2026" / "04" / "index.html").read_text()
+    assert "3 LOGS" in month_html
+    assert "? LOGS" not in month_html
 
 
 def test_publish_ssg_writes_docs_about_sitemap_feed_robots(tmp_path: Path) -> None:
