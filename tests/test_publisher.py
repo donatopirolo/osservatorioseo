@@ -113,6 +113,14 @@ def test_publish_preserves_doc_change_items_on_same_day_rerun(tmp_path: Path) ->
     # Le notizie normali del secondo run ci sono comunque
     assert "news_b" in ids
 
+    feed_json = json.loads((tmp_path / "feed.json").read_text())
+    feed_ids = {i["id"] for i in feed_json["items"]}
+    assert "doc_spam" in feed_ids, "doc-change item assente da feed.json dopo il secondo run"
+    feed_doc = next(i for i in feed_json["items"] if i["id"] == "doc_spam")
+    assert feed_doc["is_doc_change"] is True
+    assert "doc_spam" in feed_json["categories"].get("google_docs_change", [])
+    assert "news_b" in feed_ids
+
 
 def test_select_google_updates_only_google_sources() -> None:
     """La sezione mostra SOLO item da fonte ufficiale Google o doc-change Google;

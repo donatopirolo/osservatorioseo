@@ -147,18 +147,19 @@ class Publisher:
         self._archive_dir = Path(archive_dir)
         self._site_data_dir = Path(site_data_dir) if site_data_dir else None
 
-    def publish(self, feed: Feed) -> Path:
+    def publish(self, feed: Feed) -> Feed:
         self._data_dir.mkdir(parents=True, exist_ok=True)
         self._archive_dir.mkdir(parents=True, exist_ok=True)
 
-        feed_json = feed.model_dump_json(indent=2)
+        date_str = feed.generated_at_local.strftime("%Y-%m-%d")
+        archive_file = self._archive_dir / f"{date_str}.json"
+        merged_feed = self._preserve_doc_changes(feed, archive_file)
+
+        feed_json = merged_feed.model_dump_json(indent=2)
         feed_file = self._data_dir / "feed.json"
         feed_file.write_text(feed_json, encoding="utf-8")
 
-        date_str = feed.generated_at_local.strftime("%Y-%m-%d")
-        archive_file = self._archive_dir / f"{date_str}.json"
-        archive_feed = self._preserve_doc_changes(feed, archive_file)
-        archive_file.write_text(archive_feed.model_dump_json(indent=2), encoding="utf-8")
+        archive_file.write_text(feed_json, encoding="utf-8")
 
         # Indice archivio: elenco ordinato di tutte le date disponibili
         archive_index = self._build_archive_index()
@@ -175,7 +176,7 @@ class Publisher:
             for src in self._archive_dir.glob("*.json"):
                 shutil.copy2(src, site_archive_dir / src.name)
 
-        return feed_file
+        return merged_feed
 
     def _preserve_doc_changes(self, feed: Feed, archive_file: Path) -> Feed:
         """Conserva i doc-change item gia' pubblicati nello stesso giorno.

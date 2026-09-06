@@ -138,7 +138,7 @@ class Pipeline:
             archive_dir=self._settings.archive_dir,
             site_data_dir=self._site_data_dir,
         )
-        publisher.publish(feed)
+        feed = publisher.publish(feed)
         # Snapshot di sources + doc_watcher pages per /docs/ SSG
         publisher.publish_config_snapshot(sources, doc_pages)
         # SSG: genera tutti gli HTML statici (homepage, archivio, articoli,
