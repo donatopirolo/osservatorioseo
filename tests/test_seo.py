@@ -1,5 +1,7 @@
 from datetime import UTC, datetime
 
+import pytest
+
 from osservatorio_seo.models import Item, Source
 from osservatorio_seo.seo import (
     article_path,
@@ -84,3 +86,11 @@ def test_is_indexable_false_below_4() -> None:
 def test_canonical_builds_absolute_url_from_relative_path() -> None:
     assert canonical("/archivio/") == "https://www.osservatorioseo.com/archivio/"
     assert canonical("archivio/") == "https://www.osservatorioseo.com/archivio/"
+
+
+def test_canonical_rejects_absolute_external_url() -> None:
+    """canonical() vuole path interni: un URL esterno (es. item.url) non va
+    mai avvolto qui, o produce un canonical rotto tipo
+    osservatorioseo.com/https://fonte.it/... (bug del 1.6)."""
+    with pytest.raises(ValueError):
+        canonical("https://esempio.it/una-notizia")

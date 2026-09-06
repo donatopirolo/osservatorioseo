@@ -8,11 +8,13 @@
 <title>{{ page_title }}</title>
 <meta name="description" content="{{ page_description }}" />
 <link rel="canonical" href="{{ canonical_url }}" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="{{ site_url }}/feed.xml" />
 <meta property="og:title" content="{{ page_title }}" />
 <meta property="og:description" content="{{ page_description }}" />
 <meta property="og:type" content="{{ og_type | default('website') }}" />
 <meta property="og:url" content="{{ canonical_url }}" />
 <meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
 <meta property="og:image" content="{{ page_image | default(site_url ~ '/logo-512.png') }}" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="{{ page_image | default(site_url ~ '/logo-512.png') }}" />

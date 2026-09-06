@@ -474,7 +474,13 @@ def test_publish_ssg_writes_docs_about_sitemap_feed_robots(tmp_path: Path) -> No
     assert "<loc>" in sitemap.read_text()
     feed_xml = site_dir / "feed.xml"
     assert feed_xml.exists()
-    assert "<feed xmlns" in feed_xml.read_text()
+    feed_xml_text = feed_xml.read_text()
+    assert "<feed xmlns" in feed_xml_text
+    # item "a" ha importance 3 (mk_item), quindi non e' indicizzabile e non ha
+    # una pagina interna: il link nel feed deve restare l'URL esterno della
+    # fonte cosi' com'e', non "osservatorioseo.com/https://..." (bug 1.6).
+    assert '<link href="https://example.com/a" />' in feed_xml_text
+    assert "osservatorioseo.com/https://" not in feed_xml_text
     robots = site_dir / "robots.txt"
     assert robots.exists()
     assert "Disallow: /" in robots.read_text()

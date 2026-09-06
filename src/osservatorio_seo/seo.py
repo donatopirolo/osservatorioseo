@@ -34,7 +34,16 @@ def tag_path(tag: str) -> str:
 
 
 def canonical(path: str) -> str:
-    """Build full canonical URL from a site-relative path."""
+    """Build full canonical URL from a site-relative path.
+
+    ``path`` deve essere interno al sito: un URL assoluto esterno (es. quello
+    di una fonte, ``item.url``) non va mai passato qui, altrimenti si ottiene
+    un canonical rotto tipo ``osservatorioseo.com/https://fonte.it/...``.
+    """
+    if path.startswith("http://") or path.startswith("https://"):
+        raise ValueError(
+            f"canonical() vuole un path interno al sito, non un URL assoluto: {path!r}"
+        )
     if path.startswith("/"):
         return SITE_URL + path
     return SITE_URL + "/" + path

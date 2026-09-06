@@ -29,6 +29,12 @@ def test_renderer_smoke_layout() -> None:
     assert (
         '<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png"' in html
     )
+    # 1.6: rel=alternate verso il feed e og:locale it_IT nel head
+    assert (
+        '<link rel="alternate" type="application/atom+xml"'
+        ' title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />' in html
+    )
+    assert '<meta property="og:locale" content="it_IT" />' in html
 
 
 def test_renderer_no_noindex_when_false() -> None:

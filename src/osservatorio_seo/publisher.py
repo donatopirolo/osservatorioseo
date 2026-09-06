@@ -1438,8 +1438,8 @@ class Publisher:
         entries = [
             {
                 "title": item.title_it,
-                "url": canonical(
-                    f"/archivio/{y}/{m}/{d}/{item_slugs.get(item.id, 'untitled')}/"
+                "url": (
+                    canonical(f"/archivio/{y}/{m}/{d}/{item_slugs.get(item.id, 'untitled')}/")
                     if is_indexable(item) and item.id in item_slugs
                     else item.url
                 ),
