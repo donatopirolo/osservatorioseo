@@ -302,8 +302,14 @@ class Publisher:
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
         self._ssg_tracker(renderer, site_dir, allow_indexing)
         self._ssg_tracker_reports(renderer, site_dir, allow_indexing)
-        self._ssg_google_financials(renderer, site_dir, allow_indexing)
-        self._ssg_google_financials_quarters(renderer, site_dir, allow_indexing)
+        # Google Financials DISATTIVATO il 2026-09-06: i dati EDGAR erano errati
+        # (edgar_client._find_entry non verifica che la data `end` cada nel trimestre
+        # richiesto; nei 10-Q il comparativo dell'anno prima ha gli stessi fy/fp).
+        # Le pagine sono state rimosse da site/ e vanno in 301 verso la home
+        # (site/_redirects). Riattivare solo dopo aver corretto _find_entry E aver
+        # trovato una fonte reale per Search revenue/TAC, che companyfacts non espone.
+        # self._ssg_google_financials(renderer, site_dir, allow_indexing)
+        # self._ssg_google_financials_quarters(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
 
@@ -1188,7 +1194,8 @@ class Publisher:
             ),
             "canonical_url": canonical("/google-financials/"),
             "active_nav": "google-financials",
-            "noindex": not allow_indexing,
+            # DEPRECATO: dati errati, sempre noindex (vedi commento in _ssg_seo_assets)
+            "noindex": True,
             "og_type": "website",
             "updated_label": latest.generated_at.strftime("%d %B %Y"),
             "latest": latest.model_dump(mode="json"),
@@ -1250,7 +1257,8 @@ class Publisher:
                 "page_description": analysis.subtitle_it,
                 "canonical_url": canonical_url,
                 "active_nav": "google-financials",
-                "noindex": not allow_indexing,
+                # DEPRECATO: dati errati, sempre noindex (vedi commento in _ssg_seo_assets)
+                "noindex": True,
                 "og_type": "article",
                 "analysis": raw,
                 "snapshot": snapshot.model_dump(mode="json") if snapshot else None,
@@ -1313,6 +1321,10 @@ class Publisher:
         }
 
     def _build_financials_teaser(self) -> dict[str, Any] | None:
+        # DEPRECATO: i dati EDGAR sono errati, il teaser non va piu' mostrato in home.
+        return None
+
+    def _build_financials_teaser_legacy(self) -> dict[str, Any] | None:
         """Small dict for homepage Google Financials teaser, or None."""
         from osservatorio_seo.google_financials.collector import FinancialsCollector
 
@@ -1384,30 +1396,11 @@ class Publisher:
                 }
             )
 
-        # Google Financials: add if snapshots exist
-        gf_snapshots = self._data_dir / "google_financials" / "alphabet" / "snapshots"
-        if gf_snapshots.exists() and any(gf_snapshots.glob("*.json")):
-            urls.append(
-                {
-                    "loc": canonical("/google-financials/"),
-                    "lastmod": today,
-                    "priority": "0.8",
-                    "changefreq": "monthly",
-                }
-            )
-            # Individual quarter reports
-            gf_analyses = self._data_dir / "google_financials" / "alphabet" / "analyses"
-            if gf_analyses.exists():
-                for f in sorted(gf_analyses.glob("*.json")):
-                    slug = f.stem  # e.g. "2025-Q4"
-                    urls.append(
-                        {
-                            "loc": canonical(f"/google-financials/{slug}/"),
-                            "lastmod": today,
-                            "priority": "0.7",
-                            "changefreq": "yearly",
-                        }
-                    )
+        # Google Financials: DEPRECATO, fuori dalla sitemap.
+        # I dati EDGAR sono errati (edgar_client._find_entry non verifica che la data
+        # `end` cada nel trimestre richiesto: nei 10-Q il comparativo dell'anno prima
+        # ha gli stessi fy/fp e vince l'ordinamento). Le pagine restano servite in
+        # noindex finche' Google le rimuove dall'indice, poi vanno cancellate.
 
         categories_seen = {i.category for i in feed.items}
         for cat in categories_seen:

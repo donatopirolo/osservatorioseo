@@ -1,9 +1,11 @@
 name: Google Financials weekly check
 
 on:
-  schedule:
-    # Every Monday at 10:00 UTC (after tracker update at 07:00)
-    - cron: "0 10 * * 1"
+  # DISATTIVATO 2026-09-06: i dati EDGAR prodotti sono errati (vedi
+  # edgar_client._find_entry). Il workflow resta invocabile a mano per i test,
+  # ma non genera piu' contenuti in automatico.
+  # schedule:
+  #   - cron: "0 10 * * 1"
   workflow_dispatch:
     inputs:
       mode:
