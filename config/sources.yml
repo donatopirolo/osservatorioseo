@@ -20,7 +20,7 @@ sources:
     fetcher: rss
     feed_url: https://status.search.google.com/incidents.rss
     category_hint: google_updates
-    enabled: true
+    enabled: false  # 2026-09-06: feed risponde 404, fonte morta (task 0.4)
 
   - id: openai_blog
     name: "OpenAI Blog"
@@ -42,7 +42,7 @@ sources:
       title: "h3, h2"
       link: ""
     category_hint: ai_models
-    enabled: true
+    enabled: false  # 2026-09-06: pagina non piu' raggiungibile con lo scraper, fonte morta (task 0.4)
 
   - id: google_deepmind_blog
     name: "Google DeepMind Blog"
@@ -70,7 +70,7 @@ sources:
     fetcher: rss
     feed_url: https://searchengineland.com/feed
     category_hint: industry_news
-    enabled: true
+    enabled: false  # 2026-09-06: feed risponde 403, fonte morta (task 0.4)
 
   - id: search_engine_journal
     name: "Search Engine Journal"
@@ -176,7 +176,7 @@ sources:
       title: "h2, h3"
       link: ""
     category_hint: ai_models
-    enabled: true
+    enabled: false  # 2026-09-06: pagina non piu' raggiungibile con lo scraper, fonte morta (task 0.4)
 
   - id: perplexity_blog
     name: "Perplexity Blog"
@@ -189,7 +189,7 @@ sources:
       title: "h2, h3"
       link: ""
     category_hint: ai_overviews_llm_seo
-    enabled: true
+    enabled: false  # 2026-09-06: pagina non piu' raggiungibile con lo scraper, fonte morta (task 0.4)
 
   - id: huggingface_blog
     name: "Hugging Face Blog"
@@ -231,4 +231,4 @@ sources:
       text: "div[data-testid='tweetText']"
       link: "a[href*='/status/']"
     category_hint: google_updates
-    enabled: true
+    enabled: false  # 2026-09-06: account irraggiungibile via scraping X, fonte morta (task 0.4)
