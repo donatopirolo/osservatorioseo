@@ -1,274 +1,34 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-05T06:01:40.660926Z",
-  "generated_at_local": "2026-09-05T08:01:40.660926+02:00",
+  "generated_at": "2026-09-06T05:01:52.353017Z",
+  "generated_at_local": "2026-09-06T07:01:52.353017+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-05-0801",
+  "run_id": "2026-09-06-0701",
   "stats": {
     "sources_checked": 21,
     "sources_failed": 0,
     "items_collected": 2362,
-    "items_after_dedup": 14,
+    "items_after_dedup": 1,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0094,
-    "summarize_attempted": 14,
+    "ai_cost_eur": 0.0005,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-09-05_004",
-    "item_2026-09-05_005",
-    "item_2026-09-05_006",
-    "item_2026-09-05_012",
-    "item_2026-09-05_001",
-    "item_2026-09-05_002",
-    "item_2026-09-05_008",
-    "item_2026-09-05_014",
-    "item_2026-09-05_007",
-    "item_2026-09-05_009"
+    "item_2026-09-06_001"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-09-05_004",
-      "item_2026-09-05_005",
-      "item_2026-09-05_006",
-      "item_2026-09-05_012",
-      "item_2026-09-05_003"
-    ],
-    "ai_models": [
-      "item_2026-09-05_001"
-    ],
-    "tools_platforms": [
-      "item_2026-09-05_002",
-      "item_2026-09-05_014"
-    ],
-    "industry_news": [
-      "item_2026-09-05_008",
-      "item_2026-09-05_010"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-09-05_007",
-      "item_2026-09-05_009",
-      "item_2026-09-05_011",
-      "item_2026-09-05_013"
+      "item_2026-09-06_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-09-05_001",
-      "title_original": "ChatGPT Ads Manager Plugin, Audience Updates, Product Feeds & More",
-      "title_it": "Aggiornamenti per ChatGPT Ads Manager: plugin, audience e feed di prodotto",
-      "summary_it": "OpenAI ha rilasciato diversi aggiornamenti per ChatGPT Ads e il relativo Ads Manager. Tra le novità figurano un plugin per la gestione delle campagne direttamente da ChatGPT, miglioramenti nelle audience personalizzate e nuove opzioni per il matching delle conversioni. I risultati di shopping in ChatGPT ora provengono esclusivamente da brand che inviano feed di prodotto.",
-      "url": "https://www.seroundtable.com/openai-chatgpt-ads-updates-42017.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "chatgpt_ad",
-        "openai_update",
-        "product_feed",
-        "audience_targeting"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T10:05:00Z",
-      "fetched_at": "2026-09-05T06:02:52.003397Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:13d5aea6f614009a",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_002",
-      "title_original": "Google Ads Pushing Dismissed Recommendations",
-      "title_it": "Google Ads insiste con raccomandazioni precedentemente ignorate",
-      "summary_it": "Google Ads ha iniziato a notificare agli inserzionisti raccomandazioni che erano state precedentemente scartate. Gli utenti stanno riscontrando messaggi che indicano la presenza di raccomandazioni ancora attive per le campagne, anche se già ignorate. La documentazione di Google Ads conferma che le raccomandazioni scartate possono riapparire dopo un certo periodo. Questo comportamento suggerisce un approccio più insistente da parte della piattaforma.",
-      "url": "https://www.seroundtable.com/google-ads-dismissed-recommendations-42016.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "recommendation",
-        "ppc",
-        "user_experience"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T10:11:00Z",
-      "fetched_at": "2026-09-05T06:02:53.338008Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a30458b3620d32c1",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_003",
-      "title_original": "Bing Tests Bolded HTTPS URLs In Snippets",
-      "title_it": "Bing testa URL HTTPS in grassetto negli snippet di ricerca",
-      "summary_it": "Bing sta sperimentando la visualizzazione in grassetto della porzione HTTPS degli URL nei risultati di ricerca. Questa modifica, più sottile rispetto a test precedenti con etichette o icone a lucchetto, è stata notata in alcuni snippet, inclusi quelli sponsorizzati. Al momento, la funzionalità non è ampiamente replicabile e potrebbe essere un test limitato.",
-      "url": "https://www.seroundtable.com/bing-bolded-https-urls-41939.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "bing_search",
-        "http",
-        "serp_feature",
-        "ui_test"
-      ],
-      "importance": 2,
-      "published_at": "2026-09-04T10:21:00Z",
-      "fetched_at": "2026-09-05T06:02:55.211182Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:97399d41d76576dd",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_004",
-      "title_original": "Google Ads Collapsing Sitelinks That You Can Expand",
-      "title_it": "Google Ads testa sitelink comprimibili ed espandibili",
-      "summary_it": "Google Ads sta testando una nuova variante di sitelink espandibili. Questi sitelink appaiono inizialmente compressi, mostrando un indicatore numerico del numero di link disponibili. Gli utenti possono cliccare per espandere e visualizzare tutti i sitelink. Questa funzionalità è stata avvistata e replicata, indicando un potenziale aggiornamento nel formato di visualizzazione degli annunci.",
-      "url": "https://www.seroundtable.com/google-ads-collapsing-sitelinks-42014.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "sitelink",
-        "ad_format",
-        "ppc"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T10:31:00Z",
-      "fetched_at": "2026-09-05T06:02:57.093081Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:57b789388bd9b511",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_005",
-      "title_original": "Google Expands Waze Ads Beyond The United States",
-      "title_it": "Google estende la disponibilità degli annunci Waze al di fuori degli Stati Uniti",
-      "summary_it": "Google ha ampliato la disponibilità degli annunci Waze a 42 paesi, inclusa l'Italia, superando la precedente limitazione agli Stati Uniti. Questa espansione è stata implementata tramite Performance Max per campagne con obiettivi di negozio. La modifica è stata documentata negli help center di Google Ads.",
-      "url": "https://www.seroundtable.com/google-expands-waze-ads-42018.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "waze_ad",
-        "google_ad",
-        "performance_max",
-        "local_seo"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T10:41:00Z",
-      "fetched_at": "2026-09-05T06:02:58.336581Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a1f4e1ea825b1756",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_006",
-      "title_original": "New Google Business Profiles Submit A Business Photo For Verification",
-      "title_it": "Nuova opzione di verifica per Google Business Profile: invio di una foto dell'attività",
-      "summary_it": "Google Business Profile sta introducendo una nuova modalità di verifica per le attività commerciali, che prevede l'invio di una foto della sede. Questa opzione si aggiunge ai metodi esistenti come telefono, email, videochiamata e cartolina. Le foto richieste devono mostrare l'insegna con il nome dell'attività e l'intera facciata del negozio in un'unica inquadratura. Al momento, Google non ha ancora aggiornato la documentazione ufficiale relativa a questa funzionalità.",
-      "url": "https://www.seroundtable.com/google-business-profiles-business-photo-verification-42019.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_business_profile",
-        "local_seo",
-        "verification",
-        "google_my_business"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T10:51:00Z",
-      "fetched_at": "2026-09-05T06:02:59.744134Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:17ff4a81f74effd2",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_007",
-      "title_original": "People Aren’t Leaving Google For AI. They’re Using Both via @sejournal, @MattGSouthern",
-      "title_it": "Le persone non abbandonano Google per l'IA, usano entrambi",
-      "summary_it": "Una ricerca indica che gli utenti continuano a utilizzare Google, ma con un numero inferiore di ricerche tradizionali e meno clic sui siti web. Questo suggerisce un'integrazione delle funzionalità AI nelle abitudini di ricerca, piuttosto che una sostituzione completa. Il comportamento degli utenti evolve verso un approccio ibrido, sfruttando sia i motori di ricerca tradizionali che le interfacce basate sull'intelligenza artificiale.",
-      "url": "https://www.searchenginejournal.com/google-chatgpt-audience-search-queries-clicks/588200",
+      "id": "item_2026-09-06_001",
+      "title_original": "Search Console AI Reports Go Global, Mueller On Recovery – SEO Pulse via @sejournal, @MattGSouthern",
+      "title_it": "I report AI di Search Console sono ora globali, Mueller sul recupero",
+      "summary_it": "Google ha annunciato la disponibilità globale dei report AI in Search Console. John Mueller ha fornito chiarimenti sui tempi di recupero dopo penalizzazioni, sull'uso del markdown per i crawler AI e sul cache-busting delle sitemap. Queste informazioni sono rilevanti per la gestione e l'ottimizzazione della visibilità sui motori di ricerca.",
+      "url": "https://www.searchenginejournal.com/seo-pulse-search-console-ai-reports-go-global-mueller-recovery/588443",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -281,358 +41,113 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "user_behavior",
-        "ai_search",
-        "google_search",
-        "search_trend"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T11:00:01Z",
-      "fetched_at": "2026-09-05T06:03:01.134023Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b09ab7093cd51920",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_008",
-      "title_original": "Search News Buzz Video Recap: Google Ad Tech Monopoly Wonât Be Broken Up, AI Mode Takes Over, Gemini Not Citing, AdSense Impression Changes & Bugs",
-      "title_it": "Riepilogo Notizie di Ricerca: Google Ad Tech, AI Mode, Gemini e Aggiornamenti Vari",
-      "summary_it": "Questa settimana, Google ha evitato per la seconda volta lo smembramento del suo monopolio ad tech. Le AI Overviews di Google si stanno espandendo per default, alimentate da Gemini 3.8 Flash, ma con una notevole assenza di citazioni e link. Sono stati segnalati bug in Google News, Google Analytics e Google Discover, mentre Google Search Console ha implementato globalmente i report e i controlli sulle performance AI. Google ha inoltre chiarito la sua posizione sui link obsoleti e sull'uso dello strumento disavow.",
-      "url": "https://www.seroundtable.com/video-09-04-2026-42015.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_update",
-        "ai_overviews",
-        "gemini",
-        "adsense_change"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T11:01:00Z",
-      "fetched_at": "2026-09-05T06:03:02.699331Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:8a4588a84447eb16",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_009",
-      "title_original": "How To Measure Your Brand’s Visibility In AI Answers (And Fix What You Find)",
-      "title_it": "Come misurare la visibilità del tuo brand nelle risposte AI e intervenire sui risultati",
-      "summary_it": "L'articolo esplora le metodologie per valutare la presenza di un brand all'interno delle risposte generate dall'intelligenza artificiale nei motori di ricerca. Vengono analizzate le differenze tra il posizionamento tradizionale e quello nelle interfacce AI. Vengono inoltre suggerite strategie per migliorare la visibilità del brand in questi nuovi contesti di ricerca.",
-      "url": "https://www.searchenginejournal.com/measure-brand-ai-visibility-hubspot-spa/588040",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "brand_visibility",
-        "ai_answer",
-        "seo_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T12:57:33Z",
-      "fetched_at": "2026-09-05T06:03:03.905637Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5c3d9072cacb950d",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_010",
-      "title_original": "Daily Search Forum Recap: September 4, 2026",
-      "title_it": "Riepilogo giornaliero dei forum di ricerca: 4 settembre 2026",
-      "summary_it": "Google sta testando nuove modalità di verifica per Google Business Profile tramite foto aziendali e ha esteso la disponibilità degli annunci Waze a 42 paesi. Google Ads sperimenta sitelink espandibili e invia notifiche per raccomandazioni precedentemente ignorate. Bing sta testando la formattazione in grassetto della porzione HTTPS degli URL nei risultati di ricerca.",
-      "url": "https://www.seroundtable.com/recap-09-04-2026-42020.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_business_profile",
-        "google_ad",
-        "bing_serp",
-        "waze_ad"
-      ],
-      "importance": 2,
-      "published_at": "2026-09-04T13:00:00Z",
-      "fetched_at": "2026-09-05T06:03:05.771696Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:41982211f3d63e93",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_011",
-      "title_original": "Getting Your Product Into ChatGPT Isn’t The Hard Part, Getting It Through Checkout Is via @sejournal, @gregjarboe",
-      "title_it": "Integrare i prodotti in ChatGPT è facile, il vero ostacolo è il checkout",
-      "summary_it": "L'articolo evidenzia come l'integrazione dei prodotti all'interno di ChatGPT sia relativamente semplice, mentre la vera sfida per i retailer risieda nell'ottimizzazione del processo di checkout. Vengono suggeriti tre controlli fondamentali che ogni rivenditore dovrebbe effettuare prima di implementare protocolli di commercio basati su agenti AI. L'obiettivo è garantire una transazione fluida e completa per l'utente finale.",
-      "url": "https://www.searchenginejournal.com/getting-your-product-into-chatgpt-isnt-the-hard-part-getting-it-through-checkout-is/587470",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "chatgpt",
-        "ecommerce",
-        "ai_commerce",
-        "checkout_optimization"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T13:30:02Z",
-      "fetched_at": "2026-09-05T06:03:07.699523Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0bb69ac331c54a1c",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_012",
-      "title_original": "Google Job Search Not Showing New Jobs?",
-      "title_it": "La ricerca di lavoro di Google non mostra nuove offerte?",
-      "summary_it": "Si segnala un potenziale bug nella funzionalità di ricerca di lavoro di Google, che da circa una settimana mostra un numero esiguo di nuove offerte. Gli utenti hanno notato che i filtri temporali per le nuove posizioni restituiscono pochi o nessun risultato, nonostante i recenti dati sul mercato del lavoro indichino un'abbondanza di opportunità. La causa del problema non è chiara e si ipotizza possa essere correlata a precedenti glitch nei filtri temporali di Google.",
-      "url": "https://www.seroundtable.com/google-job-search-bug-42022.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
       "category": "google_updates",
       "tags": [
-        "google_job",
-        "bug",
-        "search_feature",
-        "job_listing"
+        "google_search_console",
+        "ai_report",
+        "john_mueller",
+        "seo_recovery"
       ],
       "importance": 3,
-      "published_at": "2026-09-04T14:12:00Z",
-      "fetched_at": "2026-09-05T06:03:10.127202Z",
+      "published_at": "2026-09-05T11:30:53Z",
+      "fetched_at": "2026-09-06T05:03:03.494254Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:57ec62e49e858173",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_013",
-      "title_original": "How To Win More Citations In AI Answers, Live With Ahrefs’ Constance Tan via @sejournal, @hethr_campbell",
-      "title_it": "Come ottenere più citazioni nelle risposte AI: approfondimento con Constance Tan di Ahrefs",
-      "summary_it": "L'articolo discute le metriche rilevanti per la visibilità nelle risposte generate dall'AI e come prioritizzare le azioni per migliorarla. Vengono illustrate tattiche specifiche per aumentare le citazioni all'interno di tali risposte. L'analisi è presentata in collaborazione con Constance Tan di Ahrefs.",
-      "url": "https://www.searchenginejournal.com/most-teams-can-measure-ai-visibility-few-can-move-it/588219",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_citation",
-        "ai_visibility",
-        "seo_strategy",
-        "ahref"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T17:08:42Z",
-      "fetched_at": "2026-09-05T06:03:11.629321Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:869fde00adda0923",
-      "deep_analysis": null
-    },
-    {
-      "id": "item_2026-09-05_014",
-      "title_original": "Google Ads Tests Serving Search Ads With Restrictive Match Types In AI Mode",
-      "title_it": "Google Ads testa annunci di ricerca con tipi di corrispondenza restrittivi in modalità AI",
-      "summary_it": "Google ha avviato un piccolo esperimento che consente alle campagne di ricerca tradizionali con tipi di corrispondenza restrittivi (esatta e a frase) di essere mostrate in modalità AI. Questa funzionalità è limitata ai casi con intento utente esplicito e diretto. L'obiettivo è catturare intenti conversazionali complessi e utilizzare i formati di annunci più recenti, come le risposte evidenziate, precedentemente disponibili solo con AI Max e PMax per la ricerca.",
-      "url": "https://www.seroundtable.com/google-ads-serving-restrictive-match-types-ai-mode-42024.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "ai_mode",
-        "match_type",
-        "ppc"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-04T17:50:00Z",
-      "fetched_at": "2026-09-05T06:03:13.665122Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:6f1bd2d58fe2b161",
+      "raw_hash": "sha256:afe4c81bceffcc15",
       "deep_analysis": null
     }
   ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-05T06:01:46.796431Z",
+      "last_checked": "2026-09-06T05:01:56.798984Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-05T06:01:47.211334Z",
+      "last_checked": "2026-09-06T05:01:57.270086Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-05T06:01:48.765598Z",
+      "last_checked": "2026-09-06T05:01:58.482755Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-05T06:01:50.501127Z",
+      "last_checked": "2026-09-06T05:02:00.210393Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-05T06:02:13.597634Z",
+      "last_checked": "2026-09-06T05:02:23.861750Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-05T06:02:14.520056Z",
+      "last_checked": "2026-09-06T05:02:24.182237Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-05T06:02:15.304873Z",
+      "last_checked": "2026-09-06T05:02:26.063705Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-05T06:02:16.511889Z",
+      "last_checked": "2026-09-06T05:02:27.840781Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-09-05T06:02:18.342575Z",
+      "last_checked": "2026-09-06T05:02:29.214313Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-05T06:02:18.383693Z",
+      "last_checked": "2026-09-06T05:02:29.261996Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-05T06:02:18.577471Z",
+      "last_checked": "2026-09-06T05:02:29.603367Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-05T06:02:19.760200Z",
+      "last_checked": "2026-09-06T05:02:31.265687Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-05T06:02:21.274835Z",
+      "last_checked": "2026-09-06T05:02:31.986768Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-05T06:02:22.304068Z",
+      "last_checked": "2026-09-06T05:02:33.368723Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-05T06:02:24.031298Z",
+      "last_checked": "2026-09-06T05:02:34.184759Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-05T06:02:25.389882Z",
+      "last_checked": "2026-09-06T05:02:36.035352Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-05T06:02:26.607349Z",
+      "last_checked": "2026-09-06T05:02:37.243241Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-09-05T06:02:50.157483Z",
+      "last_checked": "2026-09-06T05:03:01.366217Z",
       "changed": false
     }
   ],
