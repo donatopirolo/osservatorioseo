@@ -9,6 +9,7 @@ Usage:
 from __future__ import annotations
 
 import json
+import shutil
 import sys
 from pathlib import Path
 
@@ -34,6 +35,12 @@ def main() -> None:
         archive_dir=archive_dir,
         site_data_dir=site_dir / "data",
     )
+
+    # Pulizia totale prima di rigenerare: senza questo, le pagine che un run
+    # precedente ha scritto ma che il run corrente non riscrive piu' (slug
+    # cambiato, importance abbassata, doppio run dello stesso giorno)
+    # restano per sempre in site/archivio come pagine orfane indicizzabili.
+    shutil.rmtree(site_dir / "archivio", ignore_errors=True)
 
     # Rigenera snapshot + articoli per ogni file archive
     for json_path in sorted(archive_dir.glob("20*.json")):

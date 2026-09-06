@@ -322,7 +322,7 @@ def test_publish_ssg_writes_homepage(tmp_path: Path) -> None:
     assert mk_feed().items[0].title_it in content
 
 
-def test_publish_ssg_writes_snapshot_and_day_hub(tmp_path: Path) -> None:
+def test_publish_ssg_writes_snapshot(tmp_path: Path) -> None:
     site_dir = tmp_path / "site"
     pub = Publisher(
         data_dir=tmp_path / "data",
@@ -338,8 +338,10 @@ def test_publish_ssg_writes_snapshot_and_day_hub(tmp_path: Path) -> None:
     assert snapshot.exists()
     assert f"TOP 10 DEL GIORNO {d} {m} {y}" in snapshot.read_text()
 
+    # La hub /hub/ del giorno e' stata rimossa (1.3): 155 pagine thin-content
+    # duplicate dello snapshot, non linkate da nessun template.
     day_hub = site_dir / "archivio" / y / m / d / "hub" / "index.html"
-    assert day_hub.exists()
+    assert not day_hub.exists()
 
 
 def test_publish_ssg_writes_article_for_high_importance(tmp_path: Path) -> None:
@@ -416,6 +418,67 @@ def test_publish_ssg_writes_docs_about_sitemap_feed_robots(tmp_path: Path) -> No
     assert robots.exists()
     assert "Disallow: /" in robots.read_text()
     assert "Sitemap:" in robots.read_text()
+
+
+def test_publish_ssg_sitemap_includes_past_days_with_real_lastmod(tmp_path: Path) -> None:
+    """La sitemap deve includere snapshot e articoli di TUTTI i giorni
+    archiviati (non solo il run corrente), ciascuno col proprio lastmod
+    (regressione: prima 'lastmod' era 'oggi' su ogni URL e gli articoli dei
+    giorni precedenti sparivano dalla sitemap a ogni run)."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+
+    old_item = mk_item("old")
+    old_item.importance = 5
+    old_feed = mk_feed_on(datetime(2026, 4, 10, 7, 0, tzinfo=UTC), [old_item])
+    pub.publish(old_feed)
+
+    new_item = mk_item("new")
+    new_item.importance = 5
+    new_feed = mk_feed_on(datetime(2026, 4, 11, 7, 0, tzinfo=UTC), [new_item])
+    pub.publish(new_feed)
+
+    pub.publish_ssg(
+        new_feed, [], [], templates_dir=Path("templates"), site_dir=site_dir, allow_indexing=True
+    )
+
+    sitemap = (site_dir / "sitemap.xml").read_text()
+    assert "/archivio/2026/04/10/" in sitemap
+    assert "<lastmod>2026-04-10</lastmod>" in sitemap
+    assert "/archivio/2026/04/11/" in sitemap
+    assert "<lastmod>2026-04-11</lastmod>" in sitemap
+    # Lo slug e' derivato dal titolo (== item_id nei fixture di test)
+    assert "/archivio/2026/04/10/old/" in sitemap
+    assert "/archivio/2026/04/11/new/" in sitemap
+
+
+def test_publish_ssg_news_sitemap_uses_site_publication_date(tmp_path: Path) -> None:
+    """news:publication_date deve essere la data di pubblicazione SUL SITO
+    (feed.generated_at), non quella della fonte (item.published_at): sono
+    volutamente diverse in questo test per non poter passare per caso."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+    item = mk_item("fresh")
+    item.importance = 5
+    item.published_at = datetime.now(UTC) - timedelta(hours=2)
+    generated_at = datetime.now(UTC) - timedelta(hours=1)
+    feed = mk_feed_on(generated_at, [item])
+    pub.publish(feed)
+    pub.publish_ssg(
+        feed, [], [], templates_dir=Path("templates"), site_dir=site_dir, allow_indexing=True
+    )
+
+    news_sitemap = (site_dir / "sitemap-news.xml").read_text()
+    assert feed.generated_at.isoformat() in news_sitemap
+    assert item.published_at.isoformat() not in news_sitemap
 
 
 def test_publish_ssg_writes_top_week(tmp_path: Path) -> None:

@@ -17,6 +17,7 @@ from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.renderer import HtmlRenderer
 from osservatorio_seo.seo import (
     canonical,
+    is_indexable,
 )
 from osservatorio_seo.seo import (
     category_path as make_category_path,
@@ -290,7 +291,7 @@ class Publisher:
         existing_slugs: set[str] = set()
         item_slugs: dict[str, str] = {}
         for item in feed.items:
-            if item.importance < 4:
+            if not is_indexable(item):
                 continue
             slug = make_unique_slug(item.title_it, existing_slugs)
             existing_slugs.add(slug)
@@ -298,7 +299,6 @@ class Publisher:
 
         self._ssg_homepage(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_snapshot(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
-        self._ssg_day_hub(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_articles(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_archive_hubs(renderer, site_dir, allow_indexing)
         self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
@@ -323,7 +323,7 @@ class Publisher:
         self, item: Item, day_iso: str, item_slugs: dict[str, str]
     ) -> dict[str, Any]:
         y, m, d = day_iso.split("-")
-        if item.importance >= 4 and item.id in item_slugs:
+        if is_indexable(item) and item.id in item_slugs:
             article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
             is_internal = True
         else:
@@ -465,67 +465,6 @@ class Publisher:
         target.mkdir(parents=True, exist_ok=True)
         (target / "index.html").write_text(html, encoding="utf-8")
 
-    def _ssg_day_hub(
-        self,
-        renderer: HtmlRenderer,
-        feed: Feed,
-        site_dir: Path,
-        allow_indexing: bool,
-        item_slugs: dict[str, str],
-        day_iso: str,
-    ) -> None:
-        y, m, d = day_iso.split("-")
-        teaser_cards: list[str] = []
-        for item in feed.items:
-            if item.importance >= 4 and item.id in item_slugs:
-                article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
-                is_internal = True
-            else:
-                article_url = item.url
-                is_internal = False
-            teaser_cards.append(
-                renderer.render_raw(
-                    "partials/_card_article_teaser.html.jinja",
-                    {
-                        "item": item.model_dump(mode="json"),
-                        "short_id": _short_id(item),
-                        "relative_date": _relative_date(item.published_at),
-                        "stars": _stars(item.importance),
-                        "article_url": article_url,
-                        "is_internal_link": is_internal,
-                    },
-                )
-            )
-
-        day_label = feed.generated_at_local.strftime("%A %d %B %Y")
-        ctx = {
-            "page_title": f"Archivio {day_iso} — Osservatorio SEO",
-            "page_description": f"Tutte le notizie SEO e AI del {day_label}",
-            "canonical_url": canonical(f"/archivio/{y}/{m}/{d}/hub/"),
-            "active_nav": "archive",
-            "noindex": not allow_indexing,
-            "meta_line": f"{len(feed.items)} ARTICOLI",
-            "year": int(y),
-            "year_path": f"/archivio/{y}/",
-            "month_label": _MONTH_LABELS.get(int(m), m),
-            "month_path": f"/archivio/{y}/{m}/",
-            "day": int(d),
-            "day_label": day_label,
-            "teaser_cards": teaser_cards,
-            "snapshot_path": f"/archivio/{y}/{m}/{d}/",
-            "breadcrumbs": [
-                {"name": "Home", "url": canonical("/")},
-                {"name": "Archivio", "url": canonical("/archivio/")},
-                {"name": y, "url": canonical(f"/archivio/{y}/")},
-                {"name": _MONTH_LABELS.get(int(m), m), "url": canonical(f"/archivio/{y}/{m}/")},
-                {"name": d, "url": canonical(f"/archivio/{y}/{m}/{d}/hub/")},
-            ],
-        }
-        html = renderer.render_day_hub(ctx)
-        target = site_dir / "archivio" / y / m / d / "hub"
-        target.mkdir(parents=True, exist_ok=True)
-        (target / "index.html").write_text(html, encoding="utf-8")
-
     def _ssg_articles(
         self,
         renderer: HtmlRenderer,
@@ -537,7 +476,7 @@ class Publisher:
     ) -> None:
         y, m, d = day_iso.split("-")
         for item in feed.items:
-            if item.importance < 4 or item.id not in item_slugs:
+            if not is_indexable(item) or item.id not in item_slugs:
                 continue
             slug = item_slugs[item.id]
             article_url = canonical(f"/archivio/{y}/{m}/{d}/{slug}/")
@@ -546,7 +485,7 @@ class Publisher:
                 "page_description": item.summary_it[:155],
                 "canonical_url": article_url,
                 "active_nav": "archive",
-                "noindex": not allow_indexing,
+                "noindex": not allow_indexing or not is_indexable(item),
                 "og_type": "article",
                 "item": item.model_dump(mode="json"),
                 "stars": _stars(item.importance),
@@ -720,7 +659,7 @@ class Publisher:
                 items_by_tag[tag].append(item)
 
         def build_teaser(item: Item) -> str:
-            if item.importance >= 4 and item.id in item_slugs:
+            if is_indexable(item) and item.id in item_slugs:
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True
             else:
@@ -881,7 +820,7 @@ class Publisher:
             y, m, d = day.split("-")
             existing_slugs: set[str] = set()
             for item in feed.items:
-                if item.importance < 4:
+                if not is_indexable(item):
                     continue
                 slug = make_unique_slug(item.title_it, existing_slugs)
                 existing_slugs.add(slug)
@@ -1413,19 +1352,25 @@ class Publisher:
             )
         # Tag pages intentionally NOT in sitemap — no SEO strategy on tags yet.
 
-        urls.append(
-            {"loc": canonical(f"/archivio/{y}/{m}/{d}/"), "lastmod": today, "priority": "0.8"}
-        )
-        for item in feed.items:
-            if item.importance < 4 or item.id not in item_slugs:
-                continue
-            slug = item_slugs[item.id]
+        # Snapshot giornalieri: un URL per ogni giorno archiviato (non solo
+        # oggi), con lastmod = il giorno stesso: la pagina non cambia piu'
+        # dopo la pubblicazione.
+        for entry in self._build_archive_index():
+            snap_y, snap_m, snap_d = entry["date"].split("-")
             urls.append(
                 {
-                    "loc": canonical(f"/archivio/{y}/{m}/{d}/{slug}/"),
-                    "lastmod": today,
-                    "priority": "0.7",
+                    "loc": canonical(f"/archivio/{snap_y}/{snap_m}/{snap_d}/"),
+                    "lastmod": entry["date"],
+                    "priority": "0.8" if entry["date"] == today else "0.5",
                 }
+            )
+
+        # Articoli: uno per ogni item indicizzabile mai pubblicato (da
+        # _build_item_index, che scansiona tutto l'archivio), con lastmod
+        # pari al giorno di pubblicazione sul sito — non "oggi" per tutti.
+        for meta in self._build_item_index().values():
+            urls.append(
+                {"loc": canonical(meta["site_path"]), "lastmod": meta["date"], "priority": "0.7"}
             )
 
         # Dossier pillar pages: priorità alta perché sono contenuto evergreen
@@ -1449,7 +1394,7 @@ class Publisher:
         news_cutoff = now - timedelta(hours=48)
         news_entries: list[dict[str, str]] = []
         for item in feed.items:
-            if item.importance < 4 or item.id not in item_slugs:
+            if not is_indexable(item) or item.id not in item_slugs:
                 continue
             if item.published_at < news_cutoff:
                 continue
@@ -1457,7 +1402,10 @@ class Publisher:
             news_entries.append(
                 {
                     "loc": canonical(f"/archivio/{y}/{m}/{d}/{slug}/"),
-                    "publication_date": item.published_at.isoformat(),
+                    # Data di pubblicazione SUL SITO (questo run), non quella
+                    # della fonte: Google News valuta la freschezza della
+                    # pagina indicizzata, non dell'articolo originale.
+                    "publication_date": feed.generated_at.isoformat(),
                     "title": item.title_it,
                 }
             )
@@ -1470,7 +1418,7 @@ class Publisher:
                 "title": item.title_it,
                 "url": canonical(
                     f"/archivio/{y}/{m}/{d}/{item_slugs.get(item.id, 'untitled')}/"
-                    if item.importance >= 4 and item.id in item_slugs
+                    if is_indexable(item) and item.id in item_slugs
                     else item.url
                 ),
                 "updated": item.fetched_at.isoformat(),
@@ -1581,7 +1529,7 @@ class Publisher:
             # Link articolo: se importance>=4 AND è nel feed corrente, punta alla
             # pagina SSG di oggi; altrimenti URL originale
             is_today = any(i.id == item.id for i in current_feed.items)
-            if is_today and item.importance >= 4 and item.id in item_slugs:
+            if is_today and is_indexable(item) and item.id in item_slugs:
                 y, m, d = day_iso.split("-")
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True
@@ -1617,7 +1565,7 @@ class Publisher:
         google_updates = self._select_google_updates(combined_items)
         for idx, item in enumerate(google_updates, start=1):
             is_today = any(i.id == item.id for i in current_feed.items)
-            if is_today and item.importance >= 4 and item.id in item_slugs:
+            if is_today and is_indexable(item) and item.id in item_slugs:
                 y, m, d = day_iso.split("-")
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True
