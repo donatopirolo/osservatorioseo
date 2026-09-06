@@ -568,12 +568,14 @@ class Publisher:
                         "site_path": f"/archivio/{y}/",
                     },
                     {
-                        "name": m,
+                        # Nome del mese, non "09": il breadcrumb e' testo per
+                        # utenti e per la SERP, non un percorso di filesystem.
+                        "name": _MONTH_LABELS[int(m)],
                         "url": canonical(f"/archivio/{y}/{m}/"),
                         "site_path": f"/archivio/{y}/{m}/",
                     },
                     {
-                        "name": d,
+                        "name": f"{int(d)} {_MONTH_LABELS[int(m)].lower()}",
                         "url": canonical(f"/archivio/{y}/{m}/{d}/"),
                         "site_path": f"/archivio/{y}/{m}/{d}/",
                     },
