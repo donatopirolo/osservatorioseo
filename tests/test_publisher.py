@@ -1,4 +1,5 @@
 import json
+import re
 import time
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -493,6 +494,38 @@ def test_publish_ssg_snapshot_breadcrumb_uses_month_name(tmp_path: Path) -> None
     snapshot_html = (site_dir / "archivio" / "2026" / "05" / "16" / "index.html").read_text()
     assert '"name": "Maggio"' in snapshot_html
     assert '"name": "05"' not in snapshot_html
+
+
+def test_publish_ssg_snapshot_has_own_title_and_description(tmp_path: Path) -> None:
+    """Regressione 1.8: lo snapshot ereditava la page_description della home
+    (identica su ogni giorno). Titolo e descrizione devono essere propri e
+    diversi da quelli della homepage."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+    feed = mk_feed_on(datetime(2026, 5, 16, 7, 0, tzinfo=UTC), [mk_item("a")])
+    pub.publish_ssg(feed, [], [], templates_dir=Path("templates"), site_dir=site_dir)
+
+    home_html = (site_dir / "index.html").read_text()
+    snapshot_html = (site_dir / "archivio" / "2026" / "05" / "16" / "index.html").read_text()
+
+    def meta_description(html: str) -> str:
+        m = re.search(r'<meta name="description" content="([^"]*)" />', html)
+        assert m
+        return m.group(1)
+
+    def title(html: str) -> str:
+        m = re.search(r"<title>([^<]*)</title>", html)
+        assert m
+        return m.group(1)
+
+    assert title(snapshot_html) != title(home_html)
+    assert meta_description(snapshot_html) != meta_description(home_html)
+    assert "16 Maggio 2026" in title(snapshot_html)
+    assert "16 Maggio 2026" in meta_description(snapshot_html)
 
 
 def test_publish_ssg_writes_category_hub(tmp_path: Path) -> None:

@@ -495,9 +495,15 @@ class Publisher:
     ) -> None:
         base = self._build_homepage_context(feed, allow_indexing, item_slugs, renderer, day_iso)
         y, m, d = day_iso.split("-")
+        day_label_full = format_date_it(datetime(int(y), int(m), int(d)), "%-d %B %Y")
         ctx = {
             **base,
-            "page_title": f"Snapshot {day_iso} — Osservatorio SEO",
+            "page_title": f"Notizie SEO del {day_label_full} — Osservatorio SEO",
+            "page_description": (
+                f"Le notizie SEO e AI del {day_label_full}: "
+                f"{feed.stats.items_after_dedup} segnalazioni da fonti autorevoli, "
+                "riassunte in italiano nell'archivio di Osservatorio SEO."
+            ),
             "canonical_url": canonical(f"/archivio/{y}/{m}/{d}/"),
             "active_nav": "archive",
             "meta_line": f"SNAPSHOT {day_iso} // " + base["meta_line"],
