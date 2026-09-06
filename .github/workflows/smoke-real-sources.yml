@@ -8,7 +8,7 @@ on:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Setup uv
@@ -16,26 +16,42 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync
-      - name: Probe 3 real RSS sources
+      - name: Probe all enabled sources
         run: |
           uv run python <<'PY'
           import asyncio
           from pathlib import Path
           from osservatorio_seo.config import load_sources
           from osservatorio_seo.fetchers.rss import RSSFetcher
+          from osservatorio_seo.fetchers.scraper import ScraperFetcher
           from osservatorio_seo.http_client import HttpClient
 
-          CANARY_IDS = {"google_search_central_blog", "search_engine_roundtable", "web_dev"}
-
           async def main():
-              sources = [s for s in load_sources(Path("config/sources.yml")) if s.id in CANARY_IDS]
-              assert sources, "no canary sources found"
+              sources = load_sources(Path("config/sources.yml"))  # gia' filtrate su enabled
+              assert sources, "no enabled sources found"
               async with HttpClient() as client:
-                  fetcher = RSSFetcher(client)
-                  for src in sources:
-                      items = await fetcher.fetch(src)
-                      print(f"{src.id}: {len(items)} items")
-                      assert len(items) > 0, f"{src.id} returned 0 items!"
+                  fetchers = {"rss": RSSFetcher(client), "scraper": ScraperFetcher(client)}
+                  probed = [s for s in sources if s.fetcher in fetchers]
+                  results = await asyncio.gather(
+                      *(fetchers[s.fetcher].fetch(s) for s in probed), return_exceptions=True
+                  )
+
+              failed, empty = [], []
+              for src, res in zip(probed, results):
+                  if isinstance(res, BaseException):
+                      failed.append(src.id)
+                      print(f"FAIL  {src.id}: {type(res).__name__}: {str(res)[:120]}")
+                  elif not res:
+                      empty.append(src.id)
+                      print(f"EMPTY {src.id}: 0 items")
+                  else:
+                      print(f"OK    {src.id}: {len(res)} items")
+
+              skipped = [s.id for s in sources if s.fetcher not in fetchers]
+              for src_id in skipped:
+                  print(f"SKIP  {src_id}: fetcher non testato dallo smoke (es. playwright)")
+
+              assert not failed and not empty, f"failed={failed} empty={empty}"
 
           asyncio.run(main())
           PY
@@ -48,7 +64,7 @@ jobs:
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `[osservatorioseo] Canary smoke test failed ${date}`,
-              body: `Weekly smoke test against real sources failed. One or more parsers may have broken due to upstream HTML changes.\n\nSee run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              title: `[osservatorioseo] Smoke test failed ${date}`,
+              body: `Weekly smoke test against all enabled real sources failed. One or more sources may be dead (403/404) or a parser may have broken due to upstream HTML changes.\n\nSee run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               labels: ['bug', 'parser', 'automated']
             });

@@ -8,6 +8,7 @@ import pytest
 from pytest_httpx import HTTPXMock
 
 from osservatorio_seo.config import Settings
+from osservatorio_seo.models import RawItem, Source
 from osservatorio_seo.pipeline import Pipeline
 from osservatorio_seo.summarizer import AISummary
 
@@ -84,5 +85,79 @@ async def test_pipeline_end_to_end(
 
     assert feed.stats.sources_checked == 1
     assert feed.stats.items_collected >= 1
+    assert feed.stats.sources_failed == 0
+    assert feed.stats.sources_empty == 0
     assert (smoke_settings.data_dir / "feed.json").exists()
     assert (tmp_path / "site" / "data" / "feed.json").exists()
+
+
+async def test_fetch_all_counts_failed_and_empty_sources(
+    smoke_settings: Settings, fixtures_dir: Path
+) -> None:
+    """Regressione: failed_sources era vuoto da 155 giorni perche' le fonti
+    che ritornano [] (senza sollevare) non venivano contate come guasto ne'
+    come vuote da nessuna parte."""
+
+    def mk_source(source_id: str, fetcher: str) -> Source:
+        return Source(
+            id=source_id,
+            name=source_id,
+            authority=5,
+            type="media",
+            fetcher=fetcher,
+            feed_url="https://example.com" if fetcher != "scraper" else None,
+            target_url="https://example.com" if fetcher == "scraper" else None,
+        )
+
+    async def ok_fetch(source: Source) -> list[RawItem]:
+        return [
+            RawItem(
+                title="t",
+                url="https://example.com/1",
+                source_id=source.id,
+                published_at=datetime.now(UTC),
+                content="c",
+            ),
+            RawItem(
+                title="t2",
+                url="https://example.com/2",
+                source_id=source.id,
+                published_at=datetime.now(UTC),
+                content="c",
+            ),
+        ]
+
+    async def empty_fetch(source: Source) -> list[RawItem]:
+        return []
+
+    async def failing_fetch(source: Source) -> list[RawItem]:
+        raise RuntimeError("boom")
+
+    class StubFetcher:
+        def __init__(self, fn):
+            self._fn = fn
+
+        async def fetch(self, source: Source) -> list[RawItem]:
+            return await self._fn(source)
+
+    pipeline = Pipeline(
+        settings=smoke_settings,
+        sources_path=fixtures_dir / "sources.smoke.yml",
+        doc_watcher_path=fixtures_dir / "doc_watcher.test.yml",
+    )
+    sources = [
+        mk_source("source_ok", "rss"),
+        mk_source("source_empty", "scraper"),
+        mk_source("source_failing", "playwright"),
+    ]
+    fetchers = {
+        "rss": StubFetcher(ok_fetch),
+        "scraper": StubFetcher(empty_fetch),
+        "playwright": StubFetcher(failing_fetch),
+    }
+
+    raw_items, failed, empty = await pipeline._fetch_all(sources, fetchers)
+
+    assert len(raw_items) == 2
+    assert [f.id for f in failed] == ["source_failing"]
+    assert empty == ["source_empty"]

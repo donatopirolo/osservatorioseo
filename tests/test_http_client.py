@@ -1,4 +1,5 @@
 # tests/test_http_client.py
+import httpx
 import pytest
 from pytest_httpx import HTTPXMock
 
@@ -38,3 +39,28 @@ async def test_retry_gives_up_after_max(httpx_mock: HTTPXMock) -> None:
     async with HttpClient() as client:
         with pytest.raises(RuntimeError, match="max retries"):
             await client.get("https://example.com/a")
+
+
+@pytest.mark.parametrize("status", [403, 404, 410, 429])
+async def test_4xx_raises_without_retry(httpx_mock: HTTPXMock, status: int) -> None:
+    """Un 4xx e' definitivo: deve sollevare subito, senza consumare i retry
+    riservati ai 5xx (una sola risposta mockata: se il client ritentasse,
+    la seconda richiesta senza mock farebbe fallire il test)."""
+    httpx_mock.add_response(url="https://example.com/a", status_code=status)
+    async with HttpClient() as client:
+        with pytest.raises(httpx.HTTPStatusError, match=str(status)):
+            await client.get("https://example.com/a")
+    assert len(httpx_mock.get_requests()) == 1
+
+
+async def test_redirect_to_200_is_not_an_error(httpx_mock: HTTPXMock) -> None:
+    httpx_mock.add_response(
+        url="https://example.com/old",
+        status_code=301,
+        headers={"Location": "https://example.com/new"},
+    )
+    httpx_mock.add_response(url="https://example.com/new", status_code=200, text="ok")
+    async with HttpClient() as client:
+        resp = await client.get("https://example.com/old")
+        assert resp.status_code == 200
+        assert resp.text == "ok"

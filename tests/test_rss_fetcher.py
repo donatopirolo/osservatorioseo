@@ -3,6 +3,8 @@ import time
 from datetime import UTC, datetime
 from pathlib import Path
 
+import httpx
+import pytest
 from pytest_httpx import HTTPXMock
 
 from osservatorio_seo.fetchers.rss import RSSFetcher
@@ -50,6 +52,24 @@ async def test_rss_empty_feed(httpx_mock: HTTPXMock) -> None:
         fetcher = RSSFetcher(client)
         items = await fetcher.fetch(source)
     assert items == []
+
+
+async def test_rss_403_is_failure_not_empty_feed(httpx_mock: HTTPXMock) -> None:
+    """Un feed che risponde 403 e' una fonte morta: deve sollevare, non
+    ritornare [] come se il feed fosse semplicemente senza voci."""
+    httpx_mock.add_response(url="https://example.com/feed.xml", status_code=403, text="Forbidden")
+    source = Source(
+        id="x",
+        name="x",
+        authority=5,
+        type="media",
+        fetcher="rss",
+        feed_url="https://example.com/feed.xml",
+    )
+    async with HttpClient() as client:
+        fetcher = RSSFetcher(client)
+        with pytest.raises(httpx.HTTPStatusError, match="403"):
+            await fetcher.fetch(source)
 
 
 async def test_rss_dates_are_utc_regardless_of_process_tz(

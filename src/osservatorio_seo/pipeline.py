@@ -74,7 +74,7 @@ class Pipeline:
                 "scraper": ScraperFetcher(http),
                 "playwright": PlaywrightFetcher(self._settings.playwright_timeout_s),
             }
-            raw_items, failed_sources = await self._fetch_all(sources, fetchers)
+            raw_items, failed_sources, empty_sources = await self._fetch_all(sources, fetchers)
 
             state = StateStore(self._settings.state_dir)
             doc_watcher = DocWatcher(http=http, state=state)
@@ -113,6 +113,7 @@ class Pipeline:
         stats = FeedStats(
             sources_checked=len(sources),
             sources_failed=len(failed_sources),
+            sources_empty=len(empty_sources),
             items_collected=len(raw_items),
             items_after_dedup=len(normalized),
             doc_changes_detected=sum(1 for r in doc_results if r.changed),
@@ -156,9 +157,10 @@ class Pipeline:
 
     async def _fetch_all(
         self, sources: list[Source], fetchers: dict[str, Fetcher]
-    ) -> tuple[list[RawItem], list[FailedSource]]:
+    ) -> tuple[list[RawItem], list[FailedSource], list[str]]:
         raw_items: list[RawItem] = []
         failed: list[FailedSource] = []
+        empty: list[str] = []
 
         async def fetch_one(src: Source) -> None:
             fetcher = fetchers.get(src.fetcher)
@@ -170,13 +172,16 @@ class Pipeline:
                     fetcher.fetch(src),
                     timeout=self._settings.fetcher_timeout_s,
                 )
+                if not items:
+                    logger.warning("source %s returned 0 items", src.id)
+                    empty.append(src.id)
                 raw_items.extend(items)
             except Exception as e:  # noqa: BLE001
                 logger.warning("source %s failed: %s", src.id, e)
                 failed.append(FailedSource(id=src.id, error=type(e).__name__ + ": " + str(e)[:200]))
 
         await asyncio.gather(*(fetch_one(s) for s in sources))
-        return raw_items, failed
+        return raw_items, failed, empty
 
     async def _check_doc_pages(
         self, pages: list[DocWatcherPage], watcher: DocWatcher

@@ -111,6 +111,7 @@ class Item(BaseModel):
 class FeedStats(BaseModel):
     sources_checked: int
     sources_failed: int
+    sources_empty: int = 0
     items_collected: int
     items_after_dedup: int
     doc_changes_detected: int

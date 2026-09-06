@@ -28,6 +28,8 @@ class HttpClient:
     - Max N concurrent per host (default 3)
     - Delay 1-2s + jitter tra richieste sequenziali sullo stesso host
     - Retry 2x su 5xx e timeout con exponential backoff
+    - Solleva HTTPStatusError su qualsiasi status finale diverso da 200
+      (i redirect sono gia' risolti da httpx tramite follow_redirects)
     """
 
     def __init__(
@@ -70,7 +72,16 @@ class HttpClient:
         }
         async with self._host_semaphores[host]:
             await self._rate_limit_per_host(host)
-            return await self._get_with_retry(url, headers, **kwargs)
+            resp = await self._get_with_retry(url, headers, **kwargs)
+        if resp.status_code != 200:
+            # Fuori dal retry loop: un 4xx e' definitivo, non ha senso
+            # ritentarlo 3 volte (a differenza dei 5xx gestiti sopra).
+            raise httpx.HTTPStatusError(
+                f"unexpected status {resp.status_code} for {url}",
+                request=resp.request,
+                response=resp,
+            )
+        return resp
 
     async def _rate_limit_per_host(self, host: str) -> None:
         async with self._host_locks[host]:

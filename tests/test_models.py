@@ -131,3 +131,19 @@ def test_feed_serialization_round_trip() -> None:
     dumped = feed.model_dump(mode="json")
     restored = Feed.model_validate(dumped)
     assert restored.schema_version == "1.0"
+
+
+def test_feed_stats_sources_empty_defaults_to_zero() -> None:
+    """Compatibilita' con i 155 archivi storici, scritti prima che il campo
+    esistesse: la validazione non deve fallire e deve assumere 0."""
+    stats = FeedStats.model_validate(
+        {
+            "sources_checked": 10,
+            "sources_failed": 0,
+            "items_collected": 15,
+            "items_after_dedup": 12,
+            "doc_changes_detected": 0,
+            "ai_cost_eur": 0.0,
+        }
+    )
+    assert stats.sources_empty == 0

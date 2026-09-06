@@ -1,6 +1,8 @@
 # tests/test_scraper_fetcher.py
 from pathlib import Path
 
+import httpx
+import pytest
 from pytest_httpx import HTTPXMock
 
 from osservatorio_seo.fetchers.scraper import ScraperFetcher
@@ -86,3 +88,22 @@ async def test_scraper_empty_link_selector_uses_article_node(
     assert items[0].title == "Alpha news"
     assert items[0].url == "https://example.com/news/alpha"
     assert items[1].url == "https://example.com/news/beta"
+
+
+async def test_scraper_403_is_failure_not_empty_result(httpx_mock: HTTPXMock) -> None:
+    """Una pagina che risponde 403 e' una fonte morta: deve sollevare, non
+    ritornare [] come se semplicemente non ci fossero articoli da estrarre."""
+    httpx_mock.add_response(url="https://example.com/news", status_code=403, text="Forbidden")
+    source = Source(
+        id="example_scraper",
+        name="Example Scraper",
+        authority=7,
+        type="media",
+        fetcher="scraper",
+        target_url="https://example.com/news",
+        selectors={"article": "article.post", "title": "h2 a", "link": "h2 a"},
+    )
+    async with HttpClient() as client:
+        fetcher = ScraperFetcher(client)
+        with pytest.raises(httpx.HTTPStatusError, match="403"):
+            await fetcher.fetch(source)
