@@ -720,15 +720,60 @@ class Publisher:
         day_iso: str,
     ) -> None:
         y, m, d = day_iso.split("-")
+
+        # Ultimi 30 giorni di archivio, non solo il feed di oggi: una hub
+        # costruita sul solo giorno corrente sparisce (o resta vuota) per
+        # qualunque categoria senza notizie proprio oggi, pur avendo storia
+        # nell'archivio. Stesso pattern di dedup-per-URL di _ssg_top_week.
+        cutoff = datetime.now(UTC) - timedelta(days=30)
+        combined_items: list[Item] = []
+        seen_urls: set[str] = set()
+        for item in feed.items:
+            if item.url not in seen_urls:
+                combined_items.append(item)
+                seen_urls.add(item.url)
+
+        archive_files = sorted(
+            (
+                p
+                for p in self._archive_dir.glob("*.json")
+                if p.stem != "index" and p.stem != day_iso
+            ),
+            reverse=True,
+        )
+        for path in archive_files[:30]:
+            try:
+                past_feed = Feed.model_validate(json.loads(path.read_text(encoding="utf-8")))
+            except Exception:  # noqa: BLE001
+                continue
+            if past_feed.generated_at < cutoff:
+                continue
+            for item in past_feed.items:
+                if item.url in seen_urls:
+                    continue
+                combined_items.append(item)
+                seen_urls.add(item.url)
+
+        combined_items.sort(key=lambda i: i.published_at, reverse=True)
+
+        # Metadata (slug/site_path) degli item con pagina interna in QUALSIASI
+        # giorno dell'archivio, non solo oggi: senza questo le card di un
+        # item pubblicato ieri puntavano sempre all'URL esterno della fonte.
+        item_idx = self._build_item_index()
+
         items_by_cat: dict[str, list[Item]] = defaultdict(list)
         items_by_tag: dict[str, list[Item]] = defaultdict(list)
-        for item in feed.items:
+        for item in combined_items:
             items_by_cat[item.category].append(item)
             for tag in item.tags:
                 items_by_tag[tag].append(item)
 
         def build_teaser(item: Item) -> str:
-            if is_indexable(item) and item.id in item_slugs:
+            meta = item_idx.get(item.id)
+            if meta:
+                article_url = meta["site_path"]
+                is_internal = True
+            elif is_indexable(item) and item.id in item_slugs:
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True
             else:
@@ -746,23 +791,24 @@ class Publisher:
                 },
             )
 
-        for cat_id, items in items_by_cat.items():
+        # Tutte le categorie note, non solo quelle con notizie negli ultimi
+        # 30 giorni: altrimenti una categoria senza notizie perde la pagina
+        # (e sparisce da sitemap/navigazione) invece di mostrarla vuota.
+        for cat_id, label in _CATEGORY_LABELS.items():
+            items = items_by_cat.get(cat_id, [])
             cards = [build_teaser(i) for i in items]
             ctx = {
-                "page_title": f"{_CATEGORY_LABELS.get(cat_id, cat_id)} — Osservatorio SEO",
-                "page_description": f"Notizie SEO e AI della categoria {cat_id}",
+                "page_title": f"{label} — Osservatorio SEO",
+                "page_description": f"Notizie SEO e AI della categoria {label}, ultimi 30 giorni.",
                 "canonical_url": canonical(make_category_path(cat_id)),
                 "active_nav": "today",
                 "noindex": not allow_indexing,
-                "category_label": _CATEGORY_LABELS.get(cat_id, cat_id),
-                "meta_line": f"{len(items)} ARTICOLI IN CATEGORIA",
+                "category_label": label,
+                "meta_line": f"{len(items)} ARTICOLI (ULTIMI 30 GIORNI)",
                 "teaser_cards": cards,
                 "breadcrumbs": [
                     {"name": "Home", "url": canonical("/")},
-                    {
-                        "name": _CATEGORY_LABELS.get(cat_id, cat_id),
-                        "url": canonical(make_category_path(cat_id)),
-                    },
+                    {"name": label, "url": canonical(make_category_path(cat_id))},
                 ],
             }
             target = site_dir / "categoria" / cat_id.replace("_", "-")

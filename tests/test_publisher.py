@@ -542,6 +542,79 @@ def test_publish_ssg_writes_category_hub(tmp_path: Path) -> None:
     assert "Google Updates" in cat_html.read_text()
 
 
+def test_publish_ssg_category_hub_covers_all_categories_even_if_empty(tmp_path: Path) -> None:
+    """Regressione 1.9: prima veniva scritta una hub solo per le categorie
+    con notizie nel feed del giorno corrente; una categoria senza notizie
+    proprio oggi spariva del tutto (niente pagina, niente sitemap)."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+    # mk_feed() ha un solo item, in categoria google_updates
+    pub.publish_ssg(mk_feed(), [], [], templates_dir=Path("templates"), site_dir=site_dir)
+    for cat_id in [
+        "ai_models",
+        "ai_overviews_llm_seo",
+        "technical_seo",
+        "content_eeat",
+        "tools_platforms",
+        "industry_news",
+    ]:
+        cat_html = site_dir / "categoria" / cat_id.replace("_", "-") / "index.html"
+        assert cat_html.exists(), f"manca la hub per {cat_id}"
+
+
+def test_publish_ssg_category_hub_description_has_no_underscore(tmp_path: Path) -> None:
+    """Regressione 1.9: la page_description usava l'id grezzo della categoria
+    (es. 'ai_overviews_llm_seo') invece dell'etichetta leggibile."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+    pub.publish_ssg(mk_feed(), [], [], templates_dir=Path("templates"), site_dir=site_dir)
+    cat_html = (site_dir / "categoria" / "ai-overviews-llm-seo" / "index.html").read_text()
+    m = re.search(r'<meta name="description" content="([^"]*)"', cat_html)
+    assert m
+    assert "_" not in m.group(1)
+
+
+def test_publish_ssg_category_hub_includes_last_30_days_and_links_internal(tmp_path: Path) -> None:
+    """Regressione 1.9: la hub di categoria mostrava solo il feed del giorno
+    corrente (niente storia), e le notizie di giorni precedenti con pagina
+    propria venivano linkate all'URL esterno della fonte invece che alla
+    pagina interna."""
+    archive_dir = tmp_path / "data" / "archive"
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data", archive_dir=archive_dir, site_data_dir=site_dir / "data"
+    )
+
+    now = datetime.now(UTC)
+    old_day = now - timedelta(days=5)
+    too_old_day = now - timedelta(days=40)
+
+    old_item = mk_item("old_google")
+    old_item.importance = 5  # indicizzabile: ha una pagina propria nell'archivio
+    too_old_item = mk_item("too_old_google")
+    today_item = mk_item("today_google")
+
+    pub.publish(mk_feed_on(old_day, [old_item]))
+    pub.publish(mk_feed_on(too_old_day, [too_old_item]))
+    pub.publish(mk_feed_on(now, [today_item]))
+    pub.publish_ssg(
+        mk_feed_on(now, [today_item]), [], [], templates_dir=Path("templates"), site_dir=site_dir
+    )
+
+    cat_html = (site_dir / "categoria" / "google-updates" / "index.html").read_text()
+    assert "old_google" in cat_html  # entro i 30 giorni: presente
+    assert "too_old_google" not in cat_html  # oltre i 30 giorni: escluso
+    assert old_item.url not in cat_html  # linkato alla pagina interna, non all'URL esterno
+
+
 def test_publish_ssg_writes_docs_about_sitemap_feed_robots(tmp_path: Path) -> None:
     site_dir = tmp_path / "site"
     pub = Publisher(
