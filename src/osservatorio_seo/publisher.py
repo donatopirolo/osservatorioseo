@@ -71,6 +71,16 @@ _MONTH_LABELS: dict[int, str] = {
     12: "Dicembre",
 }
 
+_DAY_LABELS: dict[int, str] = {
+    0: "Lunedì",
+    1: "Martedì",
+    2: "Mercoledì",
+    3: "Giovedì",
+    4: "Venerdì",
+    5: "Sabato",
+    6: "Domenica",
+}
+
 _ROME_TZ = ZoneInfo("Europe/Rome")
 
 _TYPE_LABELS: dict[str, str] = {
@@ -80,6 +90,37 @@ _TYPE_LABELS: dict[str, str] = {
     "tool_vendor": "TOOL VENDOR",
     "social": "SOCIAL",
 }
+
+
+def format_date_it(dt: datetime, fmt: str) -> str:
+    """strftime indipendente dalla locale di sistema, per formati in italiano.
+
+    ``%A`` e ``%B`` (nome giorno/mese esteso) dipendono dalla locale del
+    processo: sui runner di GitHub Actions non c'e' una locale it_IT
+    installata, quindi strftime produce nomi in inglese ("Sunday", "April").
+    Qui vengono sostituiti con ``_DAY_LABELS``/``_MONTH_LABELS`` prima di
+    delegare il resto del formato (numerico, non locale-dipendente) a
+    strftime.
+    """
+    fmt = fmt.replace("%A", _DAY_LABELS[dt.weekday()]).replace("%B", _MONTH_LABELS[dt.month])
+    return dt.strftime(fmt)
+
+
+def _meta_description(text: str, max_len: int = 155) -> str:
+    """Taglia una descrizione a ``max_len`` caratteri sull'ultimo spazio.
+
+    Un taglio secco a lunghezza fissa spezza le parole a meta' circa la
+    meta' delle volte sui summary reali dell'archivio; qui si torna indietro
+    fino all'ultimo spazio cosi' la descrizione finisce sempre a fine parola.
+    """
+    text = (text or "").strip()
+    if len(text) <= max_len:
+        return text
+    truncated = text[:max_len]
+    last_space = truncated.rfind(" ")
+    if last_space > 0:
+        truncated = truncated[:last_space]
+    return truncated.rstrip(" ,;:.") + "…"
 
 
 def _stars(importance: int) -> str:
@@ -126,7 +167,7 @@ def _relative_date(published: datetime) -> str:
 
 
 def _absolute_date(published: datetime) -> str:
-    return published.astimezone(_ROME_TZ).strftime("%A %-d %B %Y, %H:%M")
+    return format_date_it(published.astimezone(_ROME_TZ), "%A %-d %B %Y, %H:%M")
 
 
 def _safe_hostname(url: str) -> str:
@@ -405,7 +446,7 @@ class Publisher:
 
         meta_line = (
             f"SYSTEM STATUS: OPTIMAL // LAST REFRESH "
-            f"{feed.generated_at_local.strftime('%A %d %B %Y, %H:%M')} // "
+            f"{format_date_it(feed.generated_at_local, '%A %d %B %Y, %H:%M')} // "
             f"{feed.stats.sources_checked} SOURCES // {feed.stats.items_after_dedup} LOGS // "
             f"{feed.stats.doc_changes_detected} DOC CHANGES // €{feed.stats.ai_cost_eur:.3f} AI COST"
         )
@@ -466,7 +507,10 @@ class Publisher:
                 {"name": "Home", "url": canonical("/")},
                 {"name": "Archivio", "url": canonical("/archivio/")},
                 {"name": y, "url": canonical(f"/archivio/{y}/")},
-                {"name": m, "url": canonical(f"/archivio/{y}/{m}/")},
+                {
+                    "name": _MONTH_LABELS[int(m)],
+                    "url": canonical(f"/archivio/{y}/{m}/"),
+                },
                 {"name": day_iso, "url": canonical(f"/archivio/{y}/{m}/{d}/")},
             ],
         }
@@ -492,7 +536,7 @@ class Publisher:
             article_url = canonical(f"/archivio/{y}/{m}/{d}/{slug}/")
             ctx = {
                 "page_title": f"{item.title_it} — Osservatorio SEO",
-                "page_description": item.summary_it[:155],
+                "page_description": _meta_description(item.summary_it),
                 "canonical_url": article_url,
                 "active_nav": "archive",
                 "noindex": not allow_indexing or not is_indexable(item),
@@ -500,7 +544,7 @@ class Publisher:
                 "item": item.model_dump(mode="json"),
                 "stars": _stars(item.importance),
                 "absolute_date": _absolute_date(item.published_at),
-                "day_label": feed.generated_at_local.strftime("%A %d %B %Y"),
+                "day_label": format_date_it(feed.generated_at_local, "%A %d %B %Y"),
                 "day_path": f"/archivio/{y}/{m}/{d}/",
                 "category_path": make_category_path(item.category),
                 "category_label": _CATEGORY_LABELS.get(item.category, item.category),
@@ -881,7 +925,7 @@ class Publisher:
                     "title_it": p.title_it,
                     "subtitle_it": p.subtitle_it,
                     "refs_count": len(p.item_refs),
-                    "updated_label": p.generated_at.strftime("%d %B %Y"),
+                    "updated_label": format_date_it(p.generated_at, "%d %B %Y"),
                     "word_count": word_count,
                 }
             )
@@ -922,7 +966,7 @@ class Publisher:
             related.sort(key=lambda r: r["date"], reverse=True)
 
             updated_iso = pillar.generated_at.isoformat()
-            updated_label = pillar.generated_at.strftime("%d %B %Y")
+            updated_label = format_date_it(pillar.generated_at, "%d %B %Y")
             article_url = canonical(f"/dossier/{slug_dir}/")
 
             ctx = {
@@ -978,9 +1022,9 @@ class Publisher:
         if snapshot.schema_version not in ("2.0", "3.0"):
             return
 
-        updated_label = snapshot.generated_at.strftime("%d %B %Y")
+        updated_label = format_date_it(snapshot.generated_at, "%d %B %Y")
         nxt = snapshot.generated_at + timedelta(days=7)
-        next_update = nxt.strftime("%d %B %Y")
+        next_update = format_date_it(nxt, "%d %B %Y")
 
         tracker_json = snapshot.model_dump_json()
 
@@ -1027,7 +1071,7 @@ class Publisher:
                 report_path.read_text(encoding="utf-8")
             )
             year_str, month_str = report_path.stem.split("-")
-            month_label = datetime(report.year, report.month, 1).strftime("%B %Y")
+            month_label = format_date_it(datetime(report.year, report.month, 1), "%B %Y")
             canonical_url = canonical(f"/tracker/report/{year_str}-{month_str}/")
 
             ctx = {
@@ -1162,7 +1206,7 @@ class Publisher:
             # DEPRECATO: dati errati, sempre noindex (vedi commento in _ssg_seo_assets)
             "noindex": True,
             "og_type": "website",
-            "updated_label": latest.generated_at.strftime("%d %B %Y"),
+            "updated_label": format_date_it(latest.generated_at, "%d %B %Y"),
             "latest": latest.model_dump(mode="json"),
             "snapshots": [s.model_dump(mode="json") for s in snapshots],
             "analyses": analyses,

@@ -4,7 +4,7 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from osservatorio_seo.models import Feed, FeedStats, Item, Source
-from osservatorio_seo.publisher import Publisher, _absolute_date
+from osservatorio_seo.publisher import Publisher, _absolute_date, _meta_description, format_date_it
 
 
 def mk_item(item_id: str) -> Item:
@@ -183,6 +183,38 @@ def test_absolute_date_converts_utc_to_rome_local(monkeypatch) -> None:
     parts = result.split()
     assert parts[1] == "12", f"giorno non convertito a Roma: {result!r}"
     assert result.endswith("00:30"), f"ora non convertita a Roma: {result!r}"
+
+
+def test_format_date_it_uses_italian_day_and_month_names() -> None:
+    """Regressione 1.7: strftime('%A ... %B ...') dipende dalla locale di
+    sistema, assente sui runner (produce 'Sunday'/'April' in inglese).
+    format_date_it deve restare in italiano indipendentemente dalla locale."""
+    dt = datetime(2026, 4, 12, 0, 30)  # domenica
+    result = format_date_it(dt, "%A %-d %B %Y, %H:%M")
+    assert result == "Domenica 12 Aprile 2026, 00:30"
+
+
+def test_format_date_it_leaves_numeric_directives_untouched() -> None:
+    dt = datetime(2026, 9, 3)
+    assert format_date_it(dt, "%d %B %Y") == "03 Settembre 2026"
+    assert format_date_it(dt, "%Y-%m-%d") == "2026-09-03"
+
+
+def test_meta_description_cuts_on_word_boundary() -> None:
+    """Regressione 1.7: un taglio secco a lunghezza fissa spezza le parole a
+    meta' su circa la meta' dei summary reali dell'archivio (es. 'sn' invece
+    di 'snippet'). Il taglio deve tornare indietro fino all'ultimo spazio."""
+    words = ["Questa", "frase", "contiene", "diverse", "parole", "distinte", "per", "il", "test"]
+    text = " ".join(words)
+    # max_len scelto apposta a meta' di una parola ("distinte" -> "disti|nte")
+    result = _meta_description(text, max_len=text.index("distinte") + 5)
+    assert result.endswith("…")
+    kept_words = result[:-1].split()
+    assert kept_words == words[: len(kept_words)]  # solo parole intere, niente troncate
+
+
+def test_meta_description_leaves_short_text_untouched() -> None:
+    assert _meta_description("Testo breve.", max_len=155) == "Testo breve."
 
 
 def test_publish_creates_archive_index(tmp_path: Path) -> None:
@@ -444,6 +476,23 @@ def test_publish_ssg_writes_archive_hubs(tmp_path: Path) -> None:
     assert (site_dir / "archivio" / "index.html").exists()
     assert (site_dir / "archivio" / "2026" / "index.html").exists()
     assert (site_dir / "archivio" / "2026" / "04" / "index.html").exists()
+
+
+def test_publish_ssg_snapshot_breadcrumb_uses_month_name(tmp_path: Path) -> None:
+    """Regressione 1.7: il breadcrumb dello snapshot mostrava '05' invece di
+    'Maggio' (la etichetta era il numero del mese, non _MONTH_LABELS)."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+    feed = mk_feed_on(datetime(2026, 5, 16, 7, 0, tzinfo=UTC), [mk_item("a")])
+    pub.publish_ssg(feed, [], [], templates_dir=Path("templates"), site_dir=site_dir)
+
+    snapshot_html = (site_dir / "archivio" / "2026" / "05" / "16" / "index.html").read_text()
+    assert '"name": "Maggio"' in snapshot_html
+    assert '"name": "05"' not in snapshot_html
 
 
 def test_publish_ssg_writes_category_hub(tmp_path: Path) -> None:
