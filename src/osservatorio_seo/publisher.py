@@ -728,10 +728,15 @@ class Publisher:
         cutoff = datetime.now(UTC) - timedelta(days=30)
         combined_items: list[Item] = []
         seen_urls: set[str] = set()
+        # Giorno d'archivio di ogni item: serve come destinazione di ripiego
+        # per le card degli item senza pagina propria (importance < 4). Senza,
+        # il template le rende come <span> e restano testo non cliccabile.
+        item_day: dict[str, str] = {}
         for item in feed.items:
             if item.url not in seen_urls:
                 combined_items.append(item)
                 seen_urls.add(item.url)
+                item_day[item.id] = day_iso
 
         archive_files = sorted(
             (
@@ -753,6 +758,7 @@ class Publisher:
                     continue
                 combined_items.append(item)
                 seen_urls.add(item.url)
+                item_day[item.id] = path.stem
 
         combined_items.sort(key=lambda i: i.published_at, reverse=True)
 
@@ -775,6 +781,13 @@ class Publisher:
                 is_internal = True
             elif is_indexable(item) and item.id in item_slugs:
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
+                is_internal = True
+            elif item.id in item_day:
+                # Nessuna pagina propria: si va allo snapshot del giorno in cui
+                # la notizia e' comparsa. E' interno, pertinente, e da' un
+                # percorso a chi arriva sulla hub di categoria.
+                dy, dm, dd = item_day[item.id].split("-")
+                article_url = f"/archivio/{dy}/{dm}/{dd}/"
                 is_internal = True
             else:
                 article_url = item.url
