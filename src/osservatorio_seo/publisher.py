@@ -299,7 +299,6 @@ class Publisher:
 
         self._ssg_homepage(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_snapshot(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
-        self._ssg_day_hub(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_articles(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_archive_hubs(renderer, site_dir, allow_indexing)
         self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
@@ -463,67 +462,6 @@ class Publisher:
         }
         html = renderer.render_snapshot(ctx)
         target = site_dir / "archivio" / y / m / d
-        target.mkdir(parents=True, exist_ok=True)
-        (target / "index.html").write_text(html, encoding="utf-8")
-
-    def _ssg_day_hub(
-        self,
-        renderer: HtmlRenderer,
-        feed: Feed,
-        site_dir: Path,
-        allow_indexing: bool,
-        item_slugs: dict[str, str],
-        day_iso: str,
-    ) -> None:
-        y, m, d = day_iso.split("-")
-        teaser_cards: list[str] = []
-        for item in feed.items:
-            if is_indexable(item) and item.id in item_slugs:
-                article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
-                is_internal = True
-            else:
-                article_url = item.url
-                is_internal = False
-            teaser_cards.append(
-                renderer.render_raw(
-                    "partials/_card_article_teaser.html.jinja",
-                    {
-                        "item": item.model_dump(mode="json"),
-                        "short_id": _short_id(item),
-                        "relative_date": _relative_date(item.published_at),
-                        "stars": _stars(item.importance),
-                        "article_url": article_url,
-                        "is_internal_link": is_internal,
-                    },
-                )
-            )
-
-        day_label = feed.generated_at_local.strftime("%A %d %B %Y")
-        ctx = {
-            "page_title": f"Archivio {day_iso} — Osservatorio SEO",
-            "page_description": f"Tutte le notizie SEO e AI del {day_label}",
-            "canonical_url": canonical(f"/archivio/{y}/{m}/{d}/hub/"),
-            "active_nav": "archive",
-            "noindex": not allow_indexing,
-            "meta_line": f"{len(feed.items)} ARTICOLI",
-            "year": int(y),
-            "year_path": f"/archivio/{y}/",
-            "month_label": _MONTH_LABELS.get(int(m), m),
-            "month_path": f"/archivio/{y}/{m}/",
-            "day": int(d),
-            "day_label": day_label,
-            "teaser_cards": teaser_cards,
-            "snapshot_path": f"/archivio/{y}/{m}/{d}/",
-            "breadcrumbs": [
-                {"name": "Home", "url": canonical("/")},
-                {"name": "Archivio", "url": canonical("/archivio/")},
-                {"name": y, "url": canonical(f"/archivio/{y}/")},
-                {"name": _MONTH_LABELS.get(int(m), m), "url": canonical(f"/archivio/{y}/{m}/")},
-                {"name": d, "url": canonical(f"/archivio/{y}/{m}/{d}/hub/")},
-            ],
-        }
-        html = renderer.render_day_hub(ctx)
-        target = site_dir / "archivio" / y / m / d / "hub"
         target.mkdir(parents=True, exist_ok=True)
         (target / "index.html").write_text(html, encoding="utf-8")
 

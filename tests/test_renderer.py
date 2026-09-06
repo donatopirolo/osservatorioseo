@@ -186,19 +186,6 @@ def test_all_hub_templates_render() -> None:
             "days": [],
         }
     )
-    assert "sabato 11 aprile 2026" in renderer.render_day_hub(
-        {
-            **base_ctx,
-            "year": 2026,
-            "year_path": "/archivio/2026/",
-            "month_label": "Aprile",
-            "month_path": "/archivio/2026/04/",
-            "day": 11,
-            "day_label": "sabato 11 aprile 2026",
-            "teaser_cards": [],
-            "snapshot_path": "/archivio/2026/04/11/",
-        }
-    )
     assert "Google Updates" in renderer.render_category_hub(
         {**base_ctx, "category_label": "Google Updates", "teaser_cards": []}
     )

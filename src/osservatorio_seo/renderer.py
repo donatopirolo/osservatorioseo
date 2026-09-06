@@ -41,9 +41,6 @@ class HtmlRenderer:
     def render_month_hub(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/month_hub.html.jinja", context)
 
-    def render_day_hub(self, context: dict[str, Any]) -> str:
-        return self.render_raw("pages/day_hub.html.jinja", context)
-
     def render_category_hub(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/category_hub.html.jinja", context)
 

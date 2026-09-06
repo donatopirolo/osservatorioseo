@@ -322,7 +322,7 @@ def test_publish_ssg_writes_homepage(tmp_path: Path) -> None:
     assert mk_feed().items[0].title_it in content
 
 
-def test_publish_ssg_writes_snapshot_and_day_hub(tmp_path: Path) -> None:
+def test_publish_ssg_writes_snapshot(tmp_path: Path) -> None:
     site_dir = tmp_path / "site"
     pub = Publisher(
         data_dir=tmp_path / "data",
@@ -338,8 +338,10 @@ def test_publish_ssg_writes_snapshot_and_day_hub(tmp_path: Path) -> None:
     assert snapshot.exists()
     assert f"TOP 10 DEL GIORNO {d} {m} {y}" in snapshot.read_text()
 
+    # La hub /hub/ del giorno e' stata rimossa (1.3): 155 pagine thin-content
+    # duplicate dello snapshot, non linkate da nessun template.
     day_hub = site_dir / "archivio" / y / m / d / "hub" / "index.html"
-    assert day_hub.exists()
+    assert not day_hub.exists()
 
 
 def test_publish_ssg_writes_article_for_high_importance(tmp_path: Path) -> None:
