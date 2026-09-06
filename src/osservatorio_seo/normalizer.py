@@ -32,12 +32,10 @@ class Normalizer:
         max_age_hours: int = 24,
         min_content_chars: int = 20,
         title_similarity_threshold: int = 85,
-        title_token_set_threshold: int = 80,
     ) -> None:
         self._max_age = timedelta(hours=max_age_hours)
         self._min_content_chars = min_content_chars
         self._title_threshold = title_similarity_threshold
-        self._title_token_set_threshold = title_token_set_threshold
 
     def normalize(self, raw_items: list[RawItem], sources: dict[str, Source]) -> list[RawItem]:
         cleaned: list[RawItem] = []
@@ -91,16 +89,17 @@ class Normalizer:
         for item in items:
             duplicate_idx: int | None = None
             for i, existing in enumerate(kept):
-                title = item.title.lower()
-                existing_title = existing.title.lower()
-                # ratio: titoli quasi identici, stessa formulazione.
-                # token_set_ratio: stesse parole chiave in ordine/forma diversa
-                # (es. fonti diverse che titolano la stessa notizia in modo
-                # differente) — cattura duplicati che ratio da solo perde.
-                if fuzz.ratio(title, existing_title) >= self._title_threshold:
-                    duplicate_idx = i
-                    break
-                if fuzz.token_set_ratio(title, existing_title) >= self._title_token_set_threshold:
+                # Solo ratio: confronto sulla formulazione intera.
+                #
+                # NON usare token_set_ratio: restituisce 100 quando un titolo e'
+                # sottoinsieme dell'altro, e sui titoli reali dell'archivio
+                # produce 3 falsi positivi su 5 collassi (verificato il
+                # 2026-09-06 su 155 giorni). Collasserebbe fra l'altro
+                # "...in Google AI Overviews" con "...in Grok", che sono due
+                # studi diversi. I duplicati veri hanno titoli diversi per
+                # costruzione: la strada e' la pagina-evento, non una soglia
+                # piu' aggressiva. Vedi tests/test_normalizer.py.
+                if fuzz.ratio(item.title.lower(), existing.title.lower()) >= self._title_threshold:
                     duplicate_idx = i
                     break
             if duplicate_idx is None:

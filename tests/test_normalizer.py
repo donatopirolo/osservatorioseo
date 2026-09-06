@@ -64,20 +64,6 @@ def test_dedup_by_fuzzy_title() -> None:
     assert out[0].source_id == "s2"
 
 
-def test_dedup_by_token_set_ratio_catches_reordered_titles() -> None:
-    """Due fonti che titolano la stessa notizia con le stesse parole chiave
-    ma ordine/formulazione diversa: fuzz.ratio le manca (64, sotto la soglia
-    85) ma token_set_ratio le cattura (95, sopra la soglia 80)."""
-    norm = Normalizer()
-    items = [
-        mk_raw("https://a.com/x", "Google Ends Support for the Old Search Console API", "s1"),
-        mk_raw("https://b.com/y", "Search Console: Google Ends Support for Old API", "s2"),
-    ]
-    out = norm.normalize(items, {"s1": mk_source(5), "s2": mk_source(10)})
-    assert len(out) == 1
-    assert out[0].source_id == "s2"
-
-
 def test_no_dedup_for_distinct_stories_same_topic() -> None:
     """Titoli reali dall'archivio del 2026-06-03 (stessa fonte, stesso
     argomento — il Google May 2026 Core Update — ma DUE notizie diverse:
@@ -119,3 +105,35 @@ def test_filter_too_short() -> None:
     short = mk_raw("https://a.com/short", "Hi", "s1", content="tiny")
     out = norm.normalize([short], {"s1": mk_source()})
     assert out == []
+
+
+def test_no_dedup_on_subset_titles_regression() -> None:
+    """Regressione: titoli reali dell'archivio che NON devono collassare.
+
+    Un tentativo di aggiungere ``fuzz.token_set_ratio >= 80`` al dedup
+    (2026-09-06) produceva 3 falsi positivi su 5 collassi sui dati veri:
+    token_set_ratio vale 100 quando un titolo e' sottoinsieme dell'altro.
+    Queste coppie sono notizie distinte e devono restare due.
+    """
+    coppie = [
+        (
+            "The 50 Most-Cited Websites in Google AI Overviews (June 2026)",
+            "The 50 Most-Cited Websites in Grok (June 2026)",
+        ),
+        (
+            "Google Answers Why Search Updates Aren't Announced Right Away",
+            "Google Answers Why Spam Updates Need To Happen",
+        ),
+        (
+            "Search News Buzz Video Recap: Google Search Breaks Usage Records",
+            "Google Search Console adds social and video reports",
+        ),
+    ]
+    norm = Normalizer()
+    for i, (t1, t2) in enumerate(coppie):
+        items = [
+            mk_raw(f"https://a.example/{i}", t1, "s1"),
+            mk_raw(f"https://b.example/{i}", t2, "s2"),
+        ]
+        out = norm.normalize(items, {"s1": mk_source(5), "s2": mk_source(10)})
+        assert len(out) == 2, f"collassate erroneamente: {t1!r} / {t2!r}"
