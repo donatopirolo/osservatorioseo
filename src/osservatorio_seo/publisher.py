@@ -17,6 +17,7 @@ from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.renderer import HtmlRenderer
 from osservatorio_seo.seo import (
     canonical,
+    is_indexable,
 )
 from osservatorio_seo.seo import (
     category_path as make_category_path,
@@ -290,7 +291,7 @@ class Publisher:
         existing_slugs: set[str] = set()
         item_slugs: dict[str, str] = {}
         for item in feed.items:
-            if item.importance < 4:
+            if not is_indexable(item):
                 continue
             slug = make_unique_slug(item.title_it, existing_slugs)
             existing_slugs.add(slug)
@@ -323,7 +324,7 @@ class Publisher:
         self, item: Item, day_iso: str, item_slugs: dict[str, str]
     ) -> dict[str, Any]:
         y, m, d = day_iso.split("-")
-        if item.importance >= 4 and item.id in item_slugs:
+        if is_indexable(item) and item.id in item_slugs:
             article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
             is_internal = True
         else:
@@ -477,7 +478,7 @@ class Publisher:
         y, m, d = day_iso.split("-")
         teaser_cards: list[str] = []
         for item in feed.items:
-            if item.importance >= 4 and item.id in item_slugs:
+            if is_indexable(item) and item.id in item_slugs:
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True
             else:
@@ -537,7 +538,7 @@ class Publisher:
     ) -> None:
         y, m, d = day_iso.split("-")
         for item in feed.items:
-            if item.importance < 4 or item.id not in item_slugs:
+            if not is_indexable(item) or item.id not in item_slugs:
                 continue
             slug = item_slugs[item.id]
             article_url = canonical(f"/archivio/{y}/{m}/{d}/{slug}/")
@@ -546,7 +547,7 @@ class Publisher:
                 "page_description": item.summary_it[:155],
                 "canonical_url": article_url,
                 "active_nav": "archive",
-                "noindex": not allow_indexing,
+                "noindex": not allow_indexing or not is_indexable(item),
                 "og_type": "article",
                 "item": item.model_dump(mode="json"),
                 "stars": _stars(item.importance),
@@ -720,7 +721,7 @@ class Publisher:
                 items_by_tag[tag].append(item)
 
         def build_teaser(item: Item) -> str:
-            if item.importance >= 4 and item.id in item_slugs:
+            if is_indexable(item) and item.id in item_slugs:
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True
             else:
@@ -881,7 +882,7 @@ class Publisher:
             y, m, d = day.split("-")
             existing_slugs: set[str] = set()
             for item in feed.items:
-                if item.importance < 4:
+                if not is_indexable(item):
                     continue
                 slug = make_unique_slug(item.title_it, existing_slugs)
                 existing_slugs.add(slug)
@@ -1417,7 +1418,7 @@ class Publisher:
             {"loc": canonical(f"/archivio/{y}/{m}/{d}/"), "lastmod": today, "priority": "0.8"}
         )
         for item in feed.items:
-            if item.importance < 4 or item.id not in item_slugs:
+            if not is_indexable(item) or item.id not in item_slugs:
                 continue
             slug = item_slugs[item.id]
             urls.append(
@@ -1449,7 +1450,7 @@ class Publisher:
         news_cutoff = now - timedelta(hours=48)
         news_entries: list[dict[str, str]] = []
         for item in feed.items:
-            if item.importance < 4 or item.id not in item_slugs:
+            if not is_indexable(item) or item.id not in item_slugs:
                 continue
             if item.published_at < news_cutoff:
                 continue
@@ -1470,7 +1471,7 @@ class Publisher:
                 "title": item.title_it,
                 "url": canonical(
                     f"/archivio/{y}/{m}/{d}/{item_slugs.get(item.id, 'untitled')}/"
-                    if item.importance >= 4 and item.id in item_slugs
+                    if is_indexable(item) and item.id in item_slugs
                     else item.url
                 ),
                 "updated": item.fetched_at.isoformat(),
@@ -1581,7 +1582,7 @@ class Publisher:
             # Link articolo: se importance>=4 AND è nel feed corrente, punta alla
             # pagina SSG di oggi; altrimenti URL originale
             is_today = any(i.id == item.id for i in current_feed.items)
-            if is_today and item.importance >= 4 and item.id in item_slugs:
+            if is_today and is_indexable(item) and item.id in item_slugs:
                 y, m, d = day_iso.split("-")
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True
@@ -1617,7 +1618,7 @@ class Publisher:
         google_updates = self._select_google_updates(combined_items)
         for idx, item in enumerate(google_updates, start=1):
             is_today = any(i.id == item.id for i in current_feed.items)
-            if is_today and item.importance >= 4 and item.id in item_slugs:
+            if is_today and is_indexable(item) and item.id in item_slugs:
                 y, m, d = day_iso.split("-")
                 article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
                 is_internal = True

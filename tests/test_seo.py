@@ -3,8 +3,10 @@ from datetime import UTC, datetime
 from osservatorio_seo.models import Item, Source
 from osservatorio_seo.seo import (
     article_path,
+    canonical,
     category_path,
     day_path,
+    is_indexable,
     month_path,
     tag_path,
     year_path,
@@ -14,6 +16,7 @@ from osservatorio_seo.seo import (
 def mk_item(
     item_id: str = "item_2026-04-11_001",
     title_it: str = "Google rilascia il Core Update",
+    importance: int = 5,
 ) -> Item:
     return Item(
         id=item_id,
@@ -31,7 +34,7 @@ def mk_item(
         ),
         category="google_updates",
         tags=["core_update"],
-        importance=5,
+        importance=importance,
         published_at=datetime(2026, 4, 11, 7, 0, tzinfo=UTC),
         fetched_at=datetime(2026, 4, 11, 7, 0, tzinfo=UTC),
         is_doc_change=False,
@@ -66,3 +69,18 @@ def test_category_path() -> None:
 def test_tag_path() -> None:
     assert tag_path("core_update") == "/tag/core-update/"
     assert tag_path("ai_overviews") == "/tag/ai-overviews/"
+
+
+def test_is_indexable_true_for_importance_4_and_5() -> None:
+    assert is_indexable(mk_item(importance=4)) is True
+    assert is_indexable(mk_item(importance=5)) is True
+
+
+def test_is_indexable_false_below_4() -> None:
+    assert is_indexable(mk_item(importance=3)) is False
+    assert is_indexable(mk_item(importance=1)) is False
+
+
+def test_canonical_builds_absolute_url_from_relative_path() -> None:
+    assert canonical("/archivio/") == "https://www.osservatorioseo.com/archivio/"
+    assert canonical("archivio/") == "https://www.osservatorioseo.com/archivio/"

@@ -38,3 +38,14 @@ def canonical(path: str) -> str:
     if path.startswith("/"):
         return SITE_URL + path
     return SITE_URL + "/" + path
+
+
+def is_indexable(item: Item) -> bool:
+    """True se l'item ha (o avra') una pagina articolo dedicata e indicizzabile.
+
+    Unico criterio oggi: ``importance >= 4`` (D1 — tutti gli importance 4 e 5
+    restano indicizzabili, nessuna soglia aggiuntiva). Centralizzato qui
+    perche' prima era ripetuto identico in una decina di punti di
+    publisher.py (sitemap, news sitemap, hub, feed.xml, top-settimana).
+    """
+    return item.importance >= 4
