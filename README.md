@@ -31,19 +31,19 @@ Pipeline:
 
 ## Quick start locale
 
+Richiede [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
 ```bash
 git clone https://github.com/<your-user>/osservatorioseo.git
 cd osservatorioseo
-python -m venv .venv
-source .venv/bin/activate
-pip install -e ".[dev]"
-python -m playwright install --with-deps chromium
+uv sync --extra dev
+uv run playwright install --with-deps chromium
 
 cp .env.example .env
 # modifica .env con la tua API key OpenRouter
 
 export $(cat .env | xargs)
-python -m osservatorio_seo refresh
+uv run python -m osservatorio_seo refresh
 ```
 
 ## Deploy
@@ -62,9 +62,9 @@ python -m osservatorio_seo refresh
 ## Testing
 
 ```bash
-pytest -v
-ruff check .
-ruff format --check .
+uv run pytest -v
+uv run ruff check .
+uv run ruff format --check .
 ```
 
 ## Configurazione

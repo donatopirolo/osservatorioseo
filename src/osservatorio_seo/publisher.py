@@ -158,9 +158,7 @@ class Publisher:
         date_str = feed.generated_at_local.strftime("%Y-%m-%d")
         archive_file = self._archive_dir / f"{date_str}.json"
         archive_feed = self._preserve_doc_changes(feed, archive_file)
-        archive_file.write_text(
-            archive_feed.model_dump_json(indent=2), encoding="utf-8"
-        )
+        archive_file.write_text(archive_feed.model_dump_json(indent=2), encoding="utf-8")
 
         # Indice archivio: elenco ordinato di tutte le date disponibili
         archive_index = self._build_archive_index()
@@ -196,9 +194,7 @@ class Publisher:
             return feed
 
         current_ids = {i.id for i in feed.items}
-        preserved = [
-            i for i in existing.items if i.is_doc_change and i.id not in current_ids
-        ]
+        preserved = [i for i in existing.items if i.is_doc_change and i.id not in current_ids]
         if not preserved:
             return feed
 
@@ -208,9 +204,7 @@ class Publisher:
             ids = merged_categories.setdefault(item.category, [])
             if item.id not in ids:
                 ids.append(item.id)
-        return feed.model_copy(
-            update={"items": merged_items, "categories": merged_categories}
-        )
+        return feed.model_copy(update={"items": merged_items, "categories": merged_categories})
 
     def _build_archive_index(self) -> list[dict[str, str]]:
         """Ritorna la lista di tutte le date archivio disponibili, ordine desc."""
@@ -1526,8 +1520,7 @@ class Publisher:
         selected = [
             i
             for i in items
-            if (is_google_source(i.source.id) or i.is_doc_change)
-            and i.importance >= min_importance
+            if (is_google_source(i.source.id) or i.is_doc_change) and i.importance >= min_importance
         ]
         selected.sort(key=lambda i: (i.importance, i.published_at), reverse=True)
         return selected[:limit]

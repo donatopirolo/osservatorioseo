@@ -59,9 +59,7 @@ def load_existing_pillar(path: Path) -> Pillar | None:
 async def main() -> None:
     parser = argparse.ArgumentParser(description="Aggiorna i dossier pillar.")
     parser.add_argument("--tag", help="Aggiorna solo questo tag (deve essere in config).")
-    parser.add_argument(
-        "--force", action="store_true", help="Rigenera anche senza item nuovi."
-    )
+    parser.add_argument("--force", action="store_true", help="Rigenera anche senza item nuovi.")
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parent.parent
