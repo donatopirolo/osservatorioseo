@@ -11,14 +11,14 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v10.0.1
         with:
-          python-version: "3.12"
-          cache: pip
-      - run: pip install -e .
+          enable-cache: true
+      - run: uv sync
       - name: Probe 3 real RSS sources
         run: |
-          python <<'PY'
+          uv run python <<'PY'
           import asyncio
           from pathlib import Path
           from osservatorio_seo.config import load_sources

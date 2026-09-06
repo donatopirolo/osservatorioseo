@@ -1,9 +1,15 @@
 name: Daily Refresh
 
 on:
-  # Scheduling gestito da Cloudflare Worker (workers/cron-trigger) che triggera
+  # Scheduling gestito dal Cloudflare Worker (workers/cron-trigger) che triggera
   # workflow_dispatch alle 07:00 Europe/Rome. Più affidabile del cron GitHub Actions.
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Esegui anche fuori dalle 07:00 di Roma (per lanci manuali)"
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: daily-refresh
@@ -12,45 +18,67 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     permissions:
       contents: write
       issues: write
     steps:
+      # Rete di sicurezza: il Worker gia' scarta il cron del fuso sbagliato, ma se
+      # viene deployata una versione vecchia del Worker la pipeline girerebbe due
+      # volte al giorno (costo AI e deploy doppi, pagine orfane in site/archivio).
+      - name: Verifica che a Roma siano le 07
+        id: timecheck
+        run: |
+          HOUR=$(TZ=Europe/Rome date +%H)
+          if [ "${{ inputs.force }}" = "true" ]; then
+            echo "::notice::Lancio forzato a mano (a Roma sono le $HOUR)."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$HOUR" = "07" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::A Roma sono le $HOUR, non le 07: run saltato. Usa force per forzarlo."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout
+        if: steps.timecheck.outputs.run == 'true'
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup uv
+        if: steps.timecheck.outputs.run == 'true'
+        uses: astral-sh/setup-uv@v10.0.1
         with:
-          python-version: "3.12"
-          cache: pip
+          enable-cache: true
 
       - name: Setup Node
+        if: steps.timecheck.outputs.run == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: npm
 
       - name: Install dependencies
+        if: steps.timecheck.outputs.run == 'true'
         run: |
-          python -m pip install --upgrade pip
-          pip install -e .
-          python -m playwright install --with-deps chromium
+          uv sync
+          uv run playwright install --with-deps chromium
           npm install
 
       - name: Build Tailwind CSS
+        if: steps.timecheck.outputs.run == 'true'
         run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
 
       - name: Run refresh
+        if: steps.timecheck.outputs.run == 'true'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           TZ: Europe/Rome
-        run: python -m osservatorio_seo refresh
+        run: uv run python -m osservatorio_seo refresh
 
       - name: Commit and push
+        if: steps.timecheck.outputs.run == 'true'
         run: |
           git config user.name "osservatorioseo-bot"
           git config user.email "bot@osservatorioseo.local"
@@ -75,6 +103,7 @@ jobs:
           fi
 
       - name: Deploy to Cloudflare Pages
+        if: steps.timecheck.outputs.run == 'true'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

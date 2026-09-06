@@ -18,16 +18,17 @@ permissions:
 jobs:
   update-dossiers:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v10.0.1
         with:
-          python-version: "3.12"
+          enable-cache: true
 
       - name: Setup Node (for Tailwind CLI)
         uses: actions/setup-node@v4
@@ -36,9 +37,7 @@ jobs:
 
       - name: Install Python deps
         run: |
-          python -m venv .venv
-          .venv/bin/pip install --upgrade pip
-          .venv/bin/pip install -e ".[dev]"
+          uv sync
 
       - name: Install Node deps (Tailwind CLI)
         run: npm install
@@ -47,13 +46,13 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          .venv/bin/python scripts/update_pillars.py ${{ inputs.force && '--force' || '' }}
+          uv run python scripts/update_pillars.py ${{ inputs.force && '--force' || '' }}
 
       - name: Rebuild Tailwind CSS
         run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
 
       - name: Rebuild SSG HTML
-        run: .venv/bin/python scripts/rebuild_seo_html.py
+        run: uv run python scripts/rebuild_seo_html.py
 
       - name: Commit and push
         run: |
