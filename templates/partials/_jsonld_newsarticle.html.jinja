@@ -1,4 +1,5 @@
-{# Context: item, article_url (absolute), published_iso, category_label, word_count #}
+{# Context: item, article_url (absolute), published_iso (data pubblicazione
+   SUL SITO, non della fonte), category_label, word_count #}
 {%- set _body = item.deep_analysis.detailed_description if item.deep_analysis else item.summary_it -%}
 {%- set _word_count = (_body.split() | length) if _body else (word_count | default(0)) -%}
 <script type="application/ld+json">
@@ -11,18 +12,19 @@
   "wordCount": {{ _word_count }},
   "datePublished": "{{ published_iso }}",
   "dateModified": "{{ published_iso }}",
+  "image": ["{{ site_url }}/logo-512.png"],
   "author": {
-    "@type": "Organization",
-    "name": "Osservatorio SEO",
-    "url": "https://osservatorioseo.pages.dev/"
+    "@type": "Person",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Osservatorio SEO",
-    "url": "https://osservatorioseo.pages.dev/",
+    "url": "{{ site_url }}/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://osservatorioseo.pages.dev/tailwind.css",
+      "url": "{{ site_url }}/logo-512.png",
       "width": "512",
       "height": "512"
     }

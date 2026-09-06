@@ -25,6 +25,10 @@ def test_renderer_smoke_layout() -> None:
     assert 'href="/"' in html
     assert 'href="/archivio/"' in html
     assert 'href="/docs/"' in html
+    # D5/1.5: og:image sempre presente (fallback sul logo del sito)
+    assert (
+        '<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png"' in html
+    )
 
 
 def test_renderer_no_noindex_when_false() -> None:
@@ -71,6 +75,12 @@ def test_render_homepage_includes_top10_and_categories() -> None:
     assert "Google Updates" in html
     assert "FakeCat" in html
     assert 'id="archive-results"' in html
+    # D5/1.5: WebSite schema senza SearchAction (feature ritirata da Google),
+    # dominio www e logo reale
+    assert '"@type": "WebSite"' in html
+    assert "SearchAction" not in html
+    assert "pages.dev" not in html
+    assert "https://www.osservatorioseo.com/logo-512.png" in html
 
 
 def test_render_snapshot_has_date_in_titles() -> None:
@@ -162,6 +172,13 @@ def test_render_article_has_jsonld_and_breadcrumb() -> None:
     assert "/categoria/google-updates/" in html
     # Tags are rendered as non-clickable <span>, not <a href="/tag/...">
     assert "core_update" in html
+    # D5: autore Person, non Organization; dominio www, non pages.dev; logo
+    # reale (non piu' tailwind.css)
+    assert '"@type": "Person"' in html
+    assert '"name": "Donato Pirolo"' in html
+    assert "pages.dev" not in html
+    assert "https://www.osservatorioseo.com/logo-512.png" in html
+    assert '"image": ["https://www.osservatorioseo.com/logo-512.png"]' in html
 
 
 def test_all_hub_templates_render() -> None:

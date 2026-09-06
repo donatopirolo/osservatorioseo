@@ -11,15 +11,22 @@
   "wordCount": {{ _word_count }},
   "datePublished": "{{ updated_iso }}",
   "dateModified": "{{ updated_iso }}",
+  "image": ["{{ site_url }}/logo-512.png"],
   "author": {
-    "@type": "Organization",
-    "name": "Osservatorio SEO",
-    "url": "https://osservatorioseo.pages.dev/"
+    "@type": "Person",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Osservatorio SEO",
-    "url": "https://osservatorioseo.pages.dev/"
+    "url": "{{ site_url }}/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site_url }}/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",

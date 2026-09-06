@@ -7,6 +7,8 @@ from typing import Any
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from osservatorio_seo.seo import SITE_URL
+
 
 class HtmlRenderer:
     def __init__(self, templates_dir: Path) -> None:
@@ -17,6 +19,7 @@ class HtmlRenderer:
             lstrip_blocks=True,
             keep_trailing_newline=True,
         )
+        self._env.globals["site_url"] = SITE_URL
 
     def render_raw(self, template_name: str, context: dict[str, Any]) -> str:
         """Render a template file to a string."""

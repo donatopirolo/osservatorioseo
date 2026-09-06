@@ -16,6 +16,7 @@ from osservatorio_seo.models import Feed, Item, Pillar, Source
 from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.renderer import HtmlRenderer
 from osservatorio_seo.seo import (
+    SITE_URL,
     canonical,
     is_indexable,
 )
@@ -503,7 +504,9 @@ class Publisher:
                 "day_path": f"/archivio/{y}/{m}/{d}/",
                 "category_path": make_category_path(item.category),
                 "category_label": _CATEGORY_LABELS.get(item.category, item.category),
-                "published_iso": item.published_at.isoformat(),
+                # Data di pubblicazione SUL SITO (questo run), non della
+                # fonte: e' quella corretta per NewsArticle.datePublished.
+                "published_iso": feed.generated_at.isoformat(),
                 "article_url": article_url,
                 "word_count": len((item.summary_it or "").split()),
                 "breadcrumbs": [
@@ -1450,7 +1453,7 @@ class Publisher:
         (site_dir / "feed.xml").write_text(
             renderer.render_feed_xml(
                 {
-                    "site_url": "https://www.osservatorioseo.com",
+                    "site_url": SITE_URL,
                     "updated": feed.generated_at.isoformat(),
                     "entries": entries,
                 }
@@ -1462,7 +1465,7 @@ class Publisher:
             renderer.render_robots_txt(
                 {
                     "allow_indexing": allow_indexing,
-                    "site_url": "https://www.osservatorioseo.com",
+                    "site_url": SITE_URL,
                 }
             ),
             encoding="utf-8",

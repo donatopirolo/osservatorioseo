@@ -366,6 +366,29 @@ def test_publish_ssg_writes_article_for_high_importance(tmp_path: Path) -> None:
     assert '"@type": "BreadcrumbList"' in article_html
 
 
+def test_publish_ssg_article_date_published_is_site_date_not_source(tmp_path: Path) -> None:
+    """NewsArticle.datePublished deve essere la data di pubblicazione SUL
+    SITO (feed.generated_at), non quella della fonte (item.published_at):
+    volutamente diverse in questo test (1.5/D5)."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+    item = mk_item("a")
+    item.importance = 5
+    item.published_at = datetime(2026, 4, 9, 12, 0, tzinfo=UTC)
+    feed = mk_feed_on(datetime(2026, 4, 11, 7, 0, tzinfo=UTC), [item])
+    pub.publish_ssg(feed, [], [], templates_dir=Path("templates"), site_dir=site_dir)
+
+    day_dir = site_dir / "archivio" / "2026" / "04" / "11"
+    article_dir = next(p for p in day_dir.iterdir() if p.is_dir())
+    article_html = (article_dir / "index.html").read_text()
+    assert '"datePublished": "2026-04-11T07:00:00+00:00"' in article_html
+    assert '"dateModified": "2026-04-11T07:00:00+00:00"' in article_html
+
+
 def test_publish_ssg_skips_article_page_for_url_published_earlier(tmp_path: Path) -> None:
     """Se lo stesso URL ha gia' una pagina in un giorno precedente (es. una
     fonte ripubblica un articolo vecchio senza cambiare URL), non va
