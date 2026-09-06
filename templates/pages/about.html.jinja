@@ -10,7 +10,7 @@
 
   <h2 class="text-xl font-bold mt-8 mb-3">Come sono generati i contenuti</h2>
   <p class="font-mono text-sm text-on-surface-variant mb-4">
-    Ogni mattina alle 07:00 Europe/Rome, una pipeline Python scarica gli ultimi articoli da {{ source_count }} fonti (blog ufficiali Google/OpenAI/Anthropic, media come Search Engine Land/Journal/Roundtable, voci indipendenti come Kevin Indig e Glenn Gabe). Per ogni articolo, un modello AI (<code class="text-primary-container">google/gemini-2.0-flash-001</code>) genera un riassunto in italiano, una categoria, tag, e un punteggio di importanza 1-5.
+    Ogni mattina alle 07:00 Europe/Rome, una pipeline Python scarica gli ultimi articoli da {{ source_count }} fonti (blog ufficiali Google/OpenAI/Anthropic, media come Search Engine Journal e Search Engine Roundtable, voci indipendenti come Kevin Indig e Glenn Gabe). Per ogni articolo un modello linguistico genera un riassunto in italiano, una categoria, dei tag e un punteggio di importanza da 1 a 5.
   </p>
 
   <h2 class="text-xl font-bold mt-8 mb-3">Trasparenza AI</h2>
