@@ -524,8 +524,9 @@ def test_publish_ssg_snapshot_has_own_title_and_description(tmp_path: Path) -> N
 
     assert title(snapshot_html) != title(home_html)
     assert meta_description(snapshot_html) != meta_description(home_html)
-    assert "16 Maggio 2026" in title(snapshot_html)
-    assert "16 Maggio 2026" in meta_description(snapshot_html)
+    # Mese minuscolo: in italiano e' la forma corretta nel testo corrente.
+    assert "16 maggio 2026" in title(snapshot_html)
+    assert "16 maggio 2026" in meta_description(snapshot_html)
 
 
 def test_publish_ssg_writes_category_hub(tmp_path: Path) -> None:

@@ -495,13 +495,18 @@ class Publisher:
     ) -> None:
         base = self._build_homepage_context(feed, allow_indexing, item_slugs, renderer, day_iso)
         y, m, d = day_iso.split("-")
-        day_label_full = format_date_it(datetime(int(y), int(m), int(d)), "%-d %B %Y")
+        # Mesi minuscoli: in italiano vanno cosi' nel testo corrente, anche
+        # dentro un <title>. _MONTH_LABELS li ha capitalizzati perche' servono
+        # anche da soli nei breadcrumb, dove la maiuscola e' corretta.
+        day_label_full = format_date_it(datetime(int(y), int(m), int(d)), "%-d %B %Y").lower()
         ctx = {
             **base,
             "page_title": f"Notizie SEO del {day_label_full} — Osservatorio SEO",
             "page_description": (
                 f"Le notizie SEO e AI del {day_label_full}: "
-                f"{feed.stats.items_after_dedup} segnalazioni da fonti autorevoli, "
+                f"{feed.stats.items_after_dedup} "
+                f"{'segnalazione' if feed.stats.items_after_dedup == 1 else 'segnalazioni'} "
+                "da fonti autorevoli, "
                 "riassunte in italiano nell'archivio di Osservatorio SEO."
             ),
             "canonical_url": canonical(f"/archivio/{y}/{m}/{d}/"),
