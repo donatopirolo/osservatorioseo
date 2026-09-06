@@ -1414,19 +1414,25 @@ class Publisher:
             )
         # Tag pages intentionally NOT in sitemap — no SEO strategy on tags yet.
 
-        urls.append(
-            {"loc": canonical(f"/archivio/{y}/{m}/{d}/"), "lastmod": today, "priority": "0.8"}
-        )
-        for item in feed.items:
-            if not is_indexable(item) or item.id not in item_slugs:
-                continue
-            slug = item_slugs[item.id]
+        # Snapshot giornalieri: un URL per ogni giorno archiviato (non solo
+        # oggi), con lastmod = il giorno stesso: la pagina non cambia piu'
+        # dopo la pubblicazione.
+        for entry in self._build_archive_index():
+            snap_y, snap_m, snap_d = entry["date"].split("-")
             urls.append(
                 {
-                    "loc": canonical(f"/archivio/{y}/{m}/{d}/{slug}/"),
-                    "lastmod": today,
-                    "priority": "0.7",
+                    "loc": canonical(f"/archivio/{snap_y}/{snap_m}/{snap_d}/"),
+                    "lastmod": entry["date"],
+                    "priority": "0.8" if entry["date"] == today else "0.5",
                 }
+            )
+
+        # Articoli: uno per ogni item indicizzabile mai pubblicato (da
+        # _build_item_index, che scansiona tutto l'archivio), con lastmod
+        # pari al giorno di pubblicazione sul sito — non "oggi" per tutti.
+        for meta in self._build_item_index().values():
+            urls.append(
+                {"loc": canonical(meta["site_path"]), "lastmod": meta["date"], "priority": "0.7"}
             )
 
         # Dossier pillar pages: priorità alta perché sono contenuto evergreen
@@ -1458,7 +1464,10 @@ class Publisher:
             news_entries.append(
                 {
                     "loc": canonical(f"/archivio/{y}/{m}/{d}/{slug}/"),
-                    "publication_date": item.published_at.isoformat(),
+                    # Data di pubblicazione SUL SITO (questo run), non quella
+                    # della fonte: Google News valuta la freschezza della
+                    # pagina indicizzata, non dell'articolo originale.
+                    "publication_date": feed.generated_at.isoformat(),
                     "title": item.title_it,
                 }
             )
