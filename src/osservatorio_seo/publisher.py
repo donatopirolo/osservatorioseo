@@ -45,6 +45,13 @@ _CATEGORY_LABELS: dict[str, str] = {
     "industry_news": "Industry News",
 }
 
+# D7: title dedicati per singole hub di categoria, ottimizzati per query
+# specifiche. Le categorie non elencate qui ricadono sul pattern generico
+# "<Label> — Osservatorio SEO".
+_CATEGORY_PAGE_TITLES: dict[str, str] = {
+    "google_updates": "Aggiornamenti Google Search: core update, spam update e novità",
+}
+
 _CATEGORY_ICONS: dict[str, str] = {
     "google_updates": "history",
     "google_docs_change": "warning",
@@ -478,7 +485,7 @@ class Publisher:
         )
 
         return {
-            "page_title": "Osservatorio SEO — News giornaliere SEO e AI",
+            "page_title": "Notizie SEO di oggi: novità Google, AI e aggiornamenti",
             "page_description": (
                 "Hub giornaliero di notizie SEO e AI aggiornato alle 07:00. "
                 "Fonti autorevoli, riassunti in italiano, rilevamento modifiche policy Google."
@@ -854,7 +861,7 @@ class Publisher:
             items = items_by_cat.get(cat_id, [])
             cards = [build_teaser(i) for i in items]
             ctx = {
-                "page_title": f"{label} — Osservatorio SEO",
+                "page_title": _CATEGORY_PAGE_TITLES.get(cat_id, f"{label} — Osservatorio SEO"),
                 "page_description": f"Notizie SEO e AI della categoria {label}, ultimi 30 giorni.",
                 "canonical_url": canonical(make_category_path(cat_id)),
                 "active_nav": "today",
@@ -1783,7 +1790,7 @@ class Publisher:
         )
 
         ctx = {
-            "page_title": "Top della Settimana — Osservatorio SEO",
+            "page_title": "Novità SEO della settimana: le 10 notizie che contano",
             "page_description": (
                 "Le 10 notizie SEO e AI più rilevanti degli ultimi 7 giorni, "
                 "aggiornate ogni mattina."

@@ -568,6 +568,33 @@ def test_publish_ssg_writes_category_hub(tmp_path: Path) -> None:
     assert "Google Updates" in cat_html.read_text()
 
 
+def test_publish_ssg_applies_d7_titles(tmp_path: Path) -> None:
+    """Regressione 1.12: home, top-settimana e /categoria/google-updates/
+    devono avere i title esatti decisi in D7, non quelli generici."""
+    site_dir = tmp_path / "site"
+    pub = Publisher(
+        data_dir=tmp_path / "data",
+        archive_dir=tmp_path / "data" / "archive",
+        site_data_dir=site_dir / "data",
+    )
+    pub.publish_ssg(mk_feed(), [], [], templates_dir=Path("templates"), site_dir=site_dir)
+
+    home_html = (site_dir / "index.html").read_text()
+    assert "<title>Notizie SEO di oggi: novità Google, AI e aggiornamenti<" in home_html
+
+    top_week_html = (site_dir / "top-settimana" / "index.html").read_text()
+    assert "<title>Novità SEO della settimana: le 10 notizie che contano<" in top_week_html
+
+    google_updates_html = (site_dir / "categoria" / "google-updates" / "index.html").read_text()
+    assert (
+        "<title>Aggiornamenti Google Search: core update, spam update e novità<"
+        in google_updates_html
+    )
+    # le altre categorie non sono toccate dal title dedicato di D7
+    ai_models_html = (site_dir / "categoria" / "ai-models" / "index.html").read_text()
+    assert "<title>AI Models — Osservatorio SEO<" in ai_models_html
+
+
 def test_publish_ssg_category_hub_covers_all_categories_even_if_empty(tmp_path: Path) -> None:
     """Regressione 1.9: prima veniva scritta una hub solo per le categorie
     con notizie nel feed del giorno corrente; una categoria senza notizie
