@@ -36,6 +36,7 @@ from osservatorio_seo.normalizer import Normalizer
 from osservatorio_seo.premium_writer import PremiumWriter
 from osservatorio_seo.publisher import Publisher
 from osservatorio_seo.ranker import Ranker
+from osservatorio_seo.seen_urls import SeenUrlStore
 from osservatorio_seo.sources import is_event_item, override_importance
 from osservatorio_seo.summarizer import Summarizer
 from osservatorio_seo.tags import normalize_tags
@@ -80,9 +81,23 @@ class Pipeline:
             doc_watcher = DocWatcher(http=http, state=state)
             doc_results, doc_statuses = await self._check_doc_pages(doc_pages, doc_watcher)
 
-        normalizer = Normalizer()
+        normalizer = Normalizer(max_age_hours=self._settings.normalizer_max_age_hours)
         sources_by_id = {s.id: s for s in sources}
         normalized = normalizer.normalize(raw_items, sources_by_id)
+
+        # Con una finestra di freschezza di 72h lo stesso item puo' ricomparire
+        # in `normalized` per piu' run consecutivi: seen_urls.json ricorda
+        # quali sono gia' stati riassunti con successo per non pagare di nuovo
+        # il summarizer AI. Un item che fallisce la summarization NON viene
+        # marcato: verra' ritentato al prossimo run (stesso principio dei
+        # doc-change, vedi _summarize_doc_changes).
+        seen_urls = SeenUrlStore(
+            self._settings.seen_urls_path, retention_hours=self._settings.seen_url_retention_hours
+        )
+        to_summarize = [raw for raw in normalized if raw.url not in seen_urls]
+        skipped_seen = len(normalized) - len(to_summarize)
+        if skipped_seen:
+            logger.info("seen_urls: %d item gia' processati, saltati", skipped_seen)
 
         summarizer = Summarizer(
             api_key=self._settings.openrouter_api_key,
@@ -90,8 +105,11 @@ class Pipeline:
             fallback_models=self._settings.fallback_models,
         )
         items, ai_cost, sum_attempted, sum_failed = await self._summarize_all(
-            normalized, sources_by_id, summarizer
+            to_summarize, sources_by_id, summarizer
         )
+        for item in items:
+            seen_urls.mark_seen(item.url)
+        seen_urls.save()
 
         doc_items, doc_cost, doc_attempted, doc_failed = await self._summarize_doc_changes(
             doc_results, doc_pages, summarizer, state

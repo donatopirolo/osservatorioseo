@@ -20,6 +20,7 @@ def smoke_settings(tmp_path: Path) -> Settings:
         data_dir=tmp_path / "data",
         archive_dir=tmp_path / "data" / "archive",
         state_dir=tmp_path / "data" / "state" / "doc_watcher",
+        seen_urls_path=tmp_path / "data" / "state" / "seen_urls.json",
     )
 
 
@@ -89,6 +90,63 @@ async def test_pipeline_end_to_end(
     assert feed.stats.sources_empty == 0
     assert (smoke_settings.data_dir / "feed.json").exists()
     assert (tmp_path / "site" / "data" / "feed.json").exists()
+
+
+async def test_pipeline_skips_previously_seen_url_on_second_run(
+    smoke_settings: Settings,
+    fixtures_dir: Path,
+    tmp_path: Path,
+    httpx_mock: HTTPXMock,
+) -> None:
+    """Regressione 2.1: con la finestra di freschezza a 72h lo stesso item
+    ricompare in `normalized` per piu' run consecutivi. Senza seen_urls.json
+    verrebbe rimandato al summarizer AI (pagato) e ripubblicato ogni giorno
+    come se fosse nuovo."""
+    rss = build_rss_with_current_dates()
+    for _ in range(2):
+        httpx_mock.add_response(url="https://developers.google.com/search/blog/rss", text=rss)
+        httpx_mock.add_response(
+            url="https://developers.google.com/search/docs/essentials/spam-policies",
+            text="<html><body><main><article>Stable content for doc watcher.</article></main></body></html>",
+        )
+
+    fake_summary = AISummary(
+        title_it="Titolo IT di prova",
+        summary_it="Riassunto in italiano di almeno venti caratteri.",
+        category="google_updates",
+        tags=["core_update"],
+        importance=5,
+        model_used="google/gemini-2.0-flash",
+        cost_eur=0.001,
+    )
+    summarize_mock = AsyncMock(return_value=fake_summary)
+
+    def mk_pipeline() -> Pipeline:
+        return Pipeline(
+            settings=smoke_settings,
+            sources_path=fixtures_dir / "sources.smoke.yml",
+            doc_watcher_path=fixtures_dir / "doc_watcher.test.yml",
+            site_data_dir=tmp_path / "site" / "data",
+        )
+
+    with (
+        patch("osservatorio_seo.summarizer.Summarizer.summarize_item", new=summarize_mock),
+        patch(
+            "osservatorio_seo.premium_writer.PremiumWriter.analyze",
+            new=AsyncMock(side_effect=Exception("skip in smoke test")),
+        ),
+    ):
+        feed1 = await mk_pipeline().run()
+        feed2 = await mk_pipeline().run()
+
+    assert feed1.stats.summarize_attempted == 1
+    assert len(feed1.items) == 1
+
+    # Stesso URL, secondo run: gia' visto, non deve tornare al summarizer ne'
+    # ricomparire nel feed come se fosse una notizia nuova.
+    assert summarize_mock.await_count == 1
+    assert feed2.stats.summarize_attempted == 0
+    assert len(feed2.items) == 0
 
 
 async def test_fetch_all_counts_failed_and_empty_sources(

@@ -25,6 +25,7 @@ def _make_pipeline(tmp_path: Path) -> Pipeline:
         data_dir=tmp_path / "data",
         archive_dir=tmp_path / "data" / "archive",
         state_dir=tmp_path / "state",
+        seen_urls_path=tmp_path / "state" / "seen_urls.json",
     )
     return Pipeline(
         settings=settings,

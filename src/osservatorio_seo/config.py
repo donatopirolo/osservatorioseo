@@ -41,6 +41,16 @@ class Settings(BaseModel):
     data_dir: Path = Path("data")
     state_dir: Path = Path("data/state/doc_watcher")
     archive_dir: Path = Path("data/archive")
+    seen_urls_path: Path = Path("data/state/seen_urls.json")
+    # Finestra di freschezza del Normalizer: un item con published_at piu'
+    # vecchio non entra nel feed. 72h (non 24h) per non perdere le fonti che
+    # pubblicano nel weekend o con ritardo; seen_urls.json evita che questo
+    # ri-sottoponga al summarizer un item gia' processato in un run precedente.
+    normalizer_max_age_hours: int = 72
+    # Margine oltre le 72h della finestra: un item puo' restare in
+    # `normalized` fino a 72h dalla pubblicazione, quindi la memoria deve
+    # sopravvivere almeno cosi' a lungo dal momento in cui l'abbiamo vista.
+    seen_url_retention_hours: int = 96
 
 
 def load_sources(path: Path) -> list[Source]:
