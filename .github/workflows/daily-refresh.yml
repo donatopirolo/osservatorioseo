@@ -74,6 +74,7 @@ jobs:
         if: steps.timecheck.outputs.run == 'true'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
           TZ: Europe/Rome
         run: uv run python -m osservatorio_seo refresh
 

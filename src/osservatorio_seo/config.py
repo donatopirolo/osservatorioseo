@@ -27,6 +27,8 @@ class DocWatcherPage(BaseModel):
 
 class Settings(BaseModel):
     openrouter_api_key: str
+    jina_api_key: str | None = None
+    jina_timeout_s: int = 30
     summarizer_model: str = "google/gemini-2.5-flash"
     fallback_models: list[str] = Field(
         default_factory=lambda: [
@@ -68,4 +70,7 @@ def load_settings() -> Settings:
     api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
         raise RuntimeError("OPENROUTER_API_KEY environment variable not set")
-    return Settings(openrouter_api_key=api_key)
+    # JINA_API_KEY e' opzionale: senza, lo stadio Jina Reader (2.2) e'
+    # semplicemente disattivato, non e' un requisito per far girare la pipeline.
+    jina_api_key = os.environ.get("JINA_API_KEY") or None
+    return Settings(openrouter_api_key=api_key, jina_api_key=jina_api_key)

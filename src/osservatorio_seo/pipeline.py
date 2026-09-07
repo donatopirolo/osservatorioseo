@@ -22,6 +22,7 @@ from osservatorio_seo.fetchers.playwright_fetcher import PlaywrightFetcher
 from osservatorio_seo.fetchers.rss import RSSFetcher
 from osservatorio_seo.fetchers.scraper import ScraperFetcher
 from osservatorio_seo.http_client import HttpClient
+from osservatorio_seo.jina_reader import JinaReader
 from osservatorio_seo.models import (
     DocChange,
     DocWatcherStatus,
@@ -103,6 +104,18 @@ class Pipeline:
         skipped_seen = len(normalized) - len(to_summarize)
         if skipped_seen:
             logger.info("seen_urls: %d item gia' processati, saltati", skipped_seen)
+
+        # Jina Reader: le fonti RSS espongono spesso solo un excerpt breve
+        # (vedi RSSFetcher._extract_content), il summarizer lavorerebbe su
+        # poche centinaia di caratteri. Arricchisce solo gli item che
+        # verranno davvero riassunti (dopo dedup + filtro seen_urls), per
+        # non sprecare chiamate su item scartati. No-op se JINA_API_KEY manca.
+        if self._settings.jina_api_key:
+            async with HttpClient(timeout_s=self._settings.jina_timeout_s) as jina_http:
+                jina_reader = JinaReader(jina_http, self._settings.jina_api_key)
+                to_summarize, jina_attempted, jina_failed = await jina_reader.enrich(to_summarize)
+            if jina_attempted:
+                logger.info("jina reader: %d tentativi, %d falliti", jina_attempted, jina_failed)
 
         summarizer = Summarizer(
             api_key=self._settings.openrouter_api_key,

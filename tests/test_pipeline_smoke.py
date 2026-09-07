@@ -92,6 +92,63 @@ async def test_pipeline_end_to_end(
     assert (tmp_path / "site" / "data" / "feed.json").exists()
 
 
+async def test_pipeline_completes_when_jina_reader_fails(
+    smoke_settings: Settings,
+    fixtures_dir: Path,
+    tmp_path: Path,
+    httpx_mock: HTTPXMock,
+) -> None:
+    """Regressione 2.2: lo stadio Jina Reader e' best-effort. Un fallimento
+    (qui: 500 da r.jina.ai) non deve mai impedire alla pipeline di produrre
+    un feed — l'item prosegue con il content originale del fetcher."""
+    jina_settings = smoke_settings.model_copy(update={"jina_api_key": "test-jina-key"})
+
+    httpx_mock.add_response(
+        url="https://developers.google.com/search/blog/rss",
+        text=build_rss_with_current_dates(),
+    )
+    httpx_mock.add_response(
+        url="https://developers.google.com/search/docs/essentials/spam-policies",
+        text="<html><body><main><article>Stable content for doc watcher first run.</article></main></body></html>",
+    )
+    for _ in range(3):  # esaurisce i retry su 5xx di HttpClient
+        httpx_mock.add_response(
+            url="https://r.jina.ai/https://example.com/core-update", status_code=500
+        )
+
+    fake_summary = AISummary(
+        title_it="Titolo IT di prova",
+        summary_it="Riassunto in italiano di almeno venti caratteri.",
+        category="google_updates",
+        tags=["core_update"],
+        importance=5,
+        model_used="google/gemini-2.0-flash",
+        cost_eur=0.001,
+    )
+
+    pipeline = Pipeline(
+        settings=jina_settings,
+        sources_path=fixtures_dir / "sources.smoke.yml",
+        doc_watcher_path=fixtures_dir / "doc_watcher.test.yml",
+        site_data_dir=tmp_path / "site" / "data",
+    )
+
+    with (
+        patch(
+            "osservatorio_seo.summarizer.Summarizer.summarize_item",
+            new=AsyncMock(return_value=fake_summary),
+        ),
+        patch(
+            "osservatorio_seo.premium_writer.PremiumWriter.analyze",
+            new=AsyncMock(side_effect=Exception("skip in smoke test")),
+        ),
+    ):
+        feed = await pipeline.run()
+
+    assert len(feed.items) == 1
+    assert (smoke_settings.data_dir / "feed.json").exists()
+
+
 async def test_pipeline_skips_previously_seen_url_on_second_run(
     smoke_settings: Settings,
     fixtures_dir: Path,
