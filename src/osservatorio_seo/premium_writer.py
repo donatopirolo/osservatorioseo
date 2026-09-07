@@ -436,7 +436,12 @@ class PremiumWriter:
         ``raw_content`` è il testo originale dell'articolo (facoltativo).
         Se non disponibile, il prompt usa solo ``item.summary_it`` come base.
         """
-        content = (raw_content or item.summary_it or "")[:6000]
+        # 9000 e non 6000: con Jina Reader il content e' l'articolo integrale
+        # e non piu' l'excerpt RSS, e la deep analysis produce ~2000 parole,
+        # dove il materiale di partenza cambia davvero il risultato. Il
+        # summarizer resta invece a 3000: deve scrivere ~50 parole, e la meta'
+        # iniziale di un articolo basta a coprire la notizia.
+        content = (raw_content or item.summary_it or "")[:9000]
         prompt = PROMPT.format(
             title=item.title_it,
             source_name=item.source.name,
