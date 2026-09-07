@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from typing import Any
 
 import httpx
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
 
 from osservatorio_seo.models import CategoryId, RawItem, Source
 
@@ -153,7 +153,7 @@ class Summarizer:
             url=raw.url,
             content=raw.content[:3000],
         )
-        result = await self._call_with_fallback(prompt)
+        result = await self._call_with_fallback(prompt, AISummary)
         return AISummary(
             model_used=result.model,
             cost_eur=result.cost_eur,
@@ -164,14 +164,16 @@ class Summarizer:
         self, page_name: str, page_url: str, diff: str
     ) -> DocChangeSummary:
         prompt = DOC_CHANGE_PROMPT.format(page_name=page_name, page_url=page_url, diff=diff)
-        result = await self._call_with_fallback(prompt)
+        result = await self._call_with_fallback(prompt, DocChangeSummary)
         return DocChangeSummary(
             model_used=result.model,
             cost_eur=result.cost_eur,
             **result.parsed,
         )
 
-    async def _call_with_fallback(self, prompt: str) -> _RawResult:
+    async def _call_with_fallback(
+        self, prompt: str, schema: type[BaseModel] | None = None
+    ) -> _RawResult:
         if self._max_cost_eur is not None and self.total_cost_eur >= self._max_cost_eur:
             raise SummarizerBudgetExceededError(
                 f"tetto di spesa raggiunto: {self.total_cost_eur:.4f} EUR "
@@ -181,7 +183,7 @@ class Summarizer:
         last_error: Exception | None = None
         for model in models:
             try:
-                result = await self._call_model(model, prompt)
+                result = await self._call_model(model, prompt, schema)
             except Exception as e:  # noqa: BLE001
                 logger.warning("model %s failed: %s", model, e)
                 last_error = e
@@ -190,7 +192,9 @@ class Summarizer:
             return result
         raise SummarizerError(f"all models failed: {last_error}")
 
-    async def _call_model(self, model: str, prompt: str) -> _RawResult:
+    async def _call_model(
+        self, model: str, prompt: str, schema: type[BaseModel] | None = None
+    ) -> _RawResult:
         headers = {
             "Authorization": f"Bearer {self._api_key}",
             "HTTP-Referer": "https://github.com/osservatorioseo",
@@ -221,7 +225,21 @@ class Summarizer:
                         raise SummarizerError(f"server error {resp.status_code}")
                     await asyncio.sleep(2**attempt + random.uniform(0.0, 0.5))
                     continue
-                resp.raise_for_status()  # 4xx: definitivo, non e' un errore transitorio
+                if resp.status_code == 429:
+                    # Rate limit: e' l'errore transitorio per definizione. Senza
+                    # questo ramo finiva in raise_for_status insieme agli altri
+                    # 4xx e faceva scattare subito il fallback, cioe' il modello
+                    # che costa tre volte tanto, invece di aspettare un istante.
+                    if is_last:
+                        raise SummarizerError(f"rate limited by {model}")
+                    retry_after = resp.headers.get("retry-after")
+                    delay = 2**attempt + random.uniform(0.0, 0.5)
+                    if retry_after and retry_after.isdigit():
+                        delay = max(delay, min(float(retry_after), 30.0))
+                    logger.warning("rate limit da %s, riprovo tra %.1fs", model, delay)
+                    await asyncio.sleep(delay)
+                    continue
+                resp.raise_for_status()  # altri 4xx: definitivi, non transitori
                 data = resp.json()
                 try:
                     content = data["choices"][0]["message"]["content"]
@@ -238,6 +256,21 @@ class Summarizer:
                     usage.get("prompt_tokens", 0),
                     usage.get("completion_tokens", 0),
                 )
+                # Validazione DENTRO il ciclo: un JSON sintatticamente valido
+                # ma semanticamente sbagliato (importance 7, categoria
+                # inesistente, campi mancanti) e' lo stesso tipo di errore di
+                # un JSON malformato, e va ritentato sullo stesso modello.
+                # Validandola fuori, l'item risultava fallito senza un solo
+                # nuovo tentativo.
+                try:
+                    if schema is not None:
+                        schema(model_used=model, cost_eur=cost, **parsed)
+                except ValidationError as e:
+                    if is_last:
+                        raise SummarizerError(f"invalid summary from {model}: {e}") from e
+                    logger.warning("summary non valido da %s, riprovo: %s", model, e)
+                    await asyncio.sleep(2**attempt + random.uniform(0.0, 0.5))
+                    continue
                 return _RawResult(parsed=parsed, model=model, cost_eur=cost)
             raise SummarizerError("retries exhausted")
 
