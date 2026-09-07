@@ -41,7 +41,13 @@ class Normalizer:
         cleaned: list[RawItem] = []
         now = datetime.now(UTC)
         for item in raw_items:
-            if len(item.content) < self._min_content_chars:
+            # Il filtro sul contenuto corto puo' essere disattivato
+            # (min_content_chars=0) quando a valle c'e' Jina Reader: alcune
+            # fonti espongono un feed senza testo (Moz e Hugging Face: 10 su
+            # 10 e 859 su 859 senza contenuto) e scartarle qui significa non
+            # dare mai a Jina la possibilita' di recuperarle. Il filtro viene
+            # riapplicato dopo l'arricchimento, in pipeline.
+            if self._min_content_chars and len(item.content) < self._min_content_chars:
                 continue
             if now - item.published_at > self._max_age:
                 continue

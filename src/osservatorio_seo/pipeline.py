@@ -82,7 +82,13 @@ class Pipeline:
             doc_watcher = DocWatcher(http=http, state=state)
             doc_results, doc_statuses = await self._check_doc_pages(doc_pages, doc_watcher)
 
-        normalizer = Normalizer(max_age_hours=self._settings.normalizer_max_age_hours)
+        # Con Jina attivo il filtro sul contenuto corto si sposta a valle
+        # dell'arricchimento: qui scarterebbe le fonti il cui feed non porta
+        # testo, che sono proprio quelle che Jina serve a recuperare.
+        normalizer = Normalizer(
+            max_age_hours=self._settings.normalizer_max_age_hours,
+            min_content_chars=0 if self._settings.jina_api_key else 20,
+        )
         sources_by_id = {s.id: s for s in sources}
         normalized = normalizer.normalize(raw_items, sources_by_id)
 
@@ -116,6 +122,17 @@ class Pipeline:
                 to_summarize, jina_attempted, jina_failed = await jina_reader.enrich(to_summarize)
             if jina_attempted:
                 logger.info("jina reader: %d tentativi, %d falliti", jina_attempted, jina_failed)
+
+            # Filtro sul contenuto corto, spostato qui: un item che nemmeno
+            # dopo Jina ha testo utile non va mandato al summarizer, che
+            # scriverebbe un riassunto sul solo titolo.
+            before = len(to_summarize)
+            to_summarize = [r for r in to_summarize if len(r.content.strip()) >= 20]
+            if before != len(to_summarize):
+                logger.info(
+                    "scartati %d item senza contenuto utile neppure dopo Jina",
+                    before - len(to_summarize),
+                )
 
         summarizer = Summarizer(
             api_key=self._settings.openrouter_api_key,

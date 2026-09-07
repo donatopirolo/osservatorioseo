@@ -137,3 +137,24 @@ def test_no_dedup_on_subset_titles_regression() -> None:
         ]
         out = norm.normalize(items, {"s1": mk_source(5), "s2": mk_source(10)})
         assert len(out) == 2, f"collassate erroneamente: {t1!r} / {t2!r}"
+
+
+def test_content_filter_disabilitabile_per_jina() -> None:
+    """Con min_content_chars=0 gli item senza testo nel feed sopravvivono.
+
+    Moz e Hugging Face espongono feed RSS senza contenuto (10 su 10 e 859 su
+    859, misurato il 2026-09-07). Scartarli nel normalizer significa non dare
+    mai a Jina Reader la possibilita' di scaricare l'articolo: le due fonti
+    risultavano attive ma non producevano nulla da mesi. Il filtro viene
+    riapplicato in pipeline DOPO l'arricchimento.
+    """
+    items = [mk_raw("https://moz.com/blog/x", "Un articolo Moz", "s1", content="")]
+    sources = {"s1": mk_source(8)}
+
+    # comportamento storico: scartato subito
+    assert len(Normalizer(min_content_chars=20).normalize(items, sources)) == 0
+
+    # con Jina a valle: sopravvive e arriva all'arricchimento
+    out = Normalizer(min_content_chars=0).normalize(items, sources)
+    assert len(out) == 1
+    assert out[0].url == "https://moz.com/blog/x"
