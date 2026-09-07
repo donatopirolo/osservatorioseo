@@ -111,6 +111,24 @@ class Pipeline:
         if skipped_seen:
             logger.info("seen_urls: %d item gia' processati, saltati", skipped_seen)
 
+        # Sindacazione: lo stesso pezzo ricompare il giorno dopo su un'altra
+        # testata, con URL diverso. Il dedup del Normalizer non lo vede
+        # (lavora dentro un run), il filtro per URL nemmeno. Lo si riconosce
+        # dal titolo, che nei casi reali dell'archivio resta identico.
+        fresh: list[RawItem] = []
+        for raw in to_summarize:
+            known = seen_urls.seen_title(raw.title)
+            if known is None:
+                fresh.append(raw)
+            else:
+                logger.info("titolo gia' pubblicato, saltato: %r (era %r)", raw.title, known)
+        if len(fresh) != len(to_summarize):
+            logger.info(
+                "sindacazione: %d item con titolo gia' pubblicato, saltati",
+                len(to_summarize) - len(fresh),
+            )
+        to_summarize = fresh
+
         # Jina Reader: le fonti RSS espongono spesso solo un excerpt breve
         # (vedi RSSFetcher._extract_content), il summarizer lavorerebbe su
         # poche centinaia di caratteri. Arricchisce solo gli item che
@@ -144,7 +162,7 @@ class Pipeline:
             to_summarize, sources_by_id, summarizer
         )
         for item in items:
-            seen_urls.mark_seen(item.url)
+            seen_urls.mark_seen(item.url, item.title_original)
         seen_urls.save()
 
         doc_items, doc_cost, doc_attempted, doc_failed = await self._summarize_doc_changes(
@@ -298,6 +316,7 @@ class Pipeline:
                     language_original=raw.language_original,
                     summarizer_model=summary.model_used,
                     raw_hash="sha256:" + hashlib.sha256(raw.content.encode()).hexdigest()[:16],
+                    also_in=raw.also_in,
                 )
             )
             total_cost += summary.cost_eur

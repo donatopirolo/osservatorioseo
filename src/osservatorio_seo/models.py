@@ -36,6 +36,23 @@ class Source(BaseModel):
     enabled: bool = True
 
 
+class AlsoIn(BaseModel):
+    """Una fonte secondaria che ha coperto la stessa notizia.
+
+    Nasce dal dedup per titolo: la notizia viene attribuita alla fonte con
+    autorita' piu' alta, ma le altre non vengono buttate via, restano qui e
+    finiscono in pagina come "Anche su". E' cio' che rende sicura una soglia
+    di somiglianza bassa: un accorpamento sbagliato aggiunge un link di
+    troppo, non fa sparire una notizia.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    source_id: str
+    source_name: str
+    url: str
+
+
 class RawItem(BaseModel):
     """Output di un Fetcher, prima di normalizzazione e AI."""
 
@@ -47,6 +64,7 @@ class RawItem(BaseModel):
     published_at: datetime
     content: str
     language_original: str = "en"
+    also_in: list[AlsoIn] = Field(default_factory=list)
 
 
 class DocChange(BaseModel):
@@ -106,6 +124,7 @@ class Item(BaseModel):
     summarizer_model: str
     raw_hash: str
     deep_analysis: DeepAnalysis | None = None
+    also_in: list[AlsoIn] = Field(default_factory=list)
 
 
 class FeedStats(BaseModel):

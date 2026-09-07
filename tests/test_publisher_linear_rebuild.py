@@ -132,3 +132,47 @@ def test_publish_ssg_unchanged_still_does_day_and_global_in_one_call(tmp_path: P
     assert (site_dir / "archivio" / y / m / d / "index.html").exists()
     assert (site_dir / "index.html").exists()
     assert (site_dir / "sitemap.xml").exists()
+
+
+def test_articolo_mostra_le_fonti_secondarie(tmp_path: Path) -> None:
+    """Le fonti accorpate finiscono in pagina, non nel nulla.
+
+    Il dedup per titolo attribuisce la notizia alla fonte con autorita' piu'
+    alta; le altre restano in `also_in` e devono comparire come "Anche su".
+    """
+    from osservatorio_seo.models import AlsoIn
+
+    pub, site_dir = _pub(tmp_path)
+    item = mk_item("a")
+    item.importance = 5
+    item.also_in = [
+        AlsoIn(
+            source_id="sej",
+            source_name="Search Engine Journal",
+            url="https://www.searchenginejournal.com/x",
+        )
+    ]
+    feed = mk_feed_on(datetime.now(UTC), [item])
+    pub.publish_day(feed, templates_dir=Path("templates"), site_dir=site_dir)
+
+    y, m, d = feed.generated_at_local.strftime("%Y-%m-%d").split("-")
+    day_dir = site_dir / "archivio" / y / m / d
+    article = next(p / "index.html" for p in day_dir.iterdir() if p.is_dir() and p.name != "hub")
+    html = article.read_text(encoding="utf-8")
+
+    assert "Anche su" in html
+    assert "Search Engine Journal" in html
+    assert 'href="https://www.searchenginejournal.com/x"' in html
+
+
+def test_articolo_senza_fonti_secondarie_non_mostra_nulla(tmp_path: Path) -> None:
+    pub, site_dir = _pub(tmp_path)
+    item = mk_item("a")
+    item.importance = 5
+    feed = mk_feed_on(datetime.now(UTC), [item])
+    pub.publish_day(feed, templates_dir=Path("templates"), site_dir=site_dir)
+
+    y, m, d = feed.generated_at_local.strftime("%Y-%m-%d").split("-")
+    day_dir = site_dir / "archivio" / y / m / d
+    article = next(p / "index.html" for p in day_dir.iterdir() if p.is_dir() and p.name != "hub")
+    assert "Anche su" not in article.read_text(encoding="utf-8")

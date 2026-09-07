@@ -7,6 +7,14 @@ lo stesso item puo' ricomparire in ``normalized`` per piu' run consecutivi.
 Senza questo store, ogni ricomparsa verrebbe rimandata al summarizer AI e
 pagata di nuovo. Lo store ricorda quali URL sono gia' stati riassunti con
 successo e per quanto tempo, cosi' la pipeline puo' saltarli.
+
+Ricorda anche i *titoli*, e li confronta in modo fuzzy. Il dedup del
+Normalizer lavora dentro un singolo run e non vede la sindacazione, che
+avviene il giorno dopo: nell'archivio (155 giorni) ci sono 8 casi in cui
+lo stesso pezzo e' uscito due volte a 24 ore di distanza, con URL diversi
+- cinque Growth Memo ripresi da Search Engine Journal, due notizie
+Microsoft Advertising coperte da SEJ e Roundtable. Per l'URL erano nuovi;
+per il lettore erano doppioni.
 """
 
 from __future__ import annotations
@@ -15,6 +23,8 @@ import json
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
+from rapidfuzz import fuzz
+
 
 class SeenUrlStore:
     def __init__(
@@ -22,10 +32,14 @@ class SeenUrlStore:
         path: Path,
         retention_hours: int = 96,
         bootstrap_archive_dir: Path | None = None,
+        title_similarity_threshold: int = 85,
     ) -> None:
         self._path = Path(path)
         self._retention = timedelta(hours=retention_hours)
-        self._seen: dict[str, str] = self._load()
+        self._title_threshold = title_similarity_threshold
+        self._seen: dict[str, str] = {}
+        self._titles: dict[str, str] = {}
+        self._load()
         if not self._seen and bootstrap_archive_dir is not None:
             self._bootstrap(Path(bootstrap_archive_dir))
 
@@ -65,21 +79,45 @@ class SeenUrlStore:
                 url = item.get("url")
                 if url:
                     self._seen.setdefault(str(url), stamp)
+                title = item.get("title_original")
+                if title:
+                    self._titles.setdefault(str(title).strip().lower(), stamp)
 
-    def _load(self) -> dict[str, str]:
+    def _load(self) -> None:
         if not self._path.exists():
-            return {}
+            return
         try:
             data = json.loads(self._path.read_text(encoding="utf-8"))
-            return {str(k): str(v) for k, v in data.get("urls", {}).items()}
         except Exception:  # noqa: BLE001
-            return {}
+            return
+        self._seen = {str(k): str(v) for k, v in data.get("urls", {}).items()}
+        self._titles = {str(k): str(v) for k, v in data.get("titles", {}).items()}
 
     def __contains__(self, url: str) -> bool:
         return url in self._seen
 
-    def mark_seen(self, url: str, seen_at: datetime | None = None) -> None:
-        self._seen[url] = (seen_at or datetime.now(UTC)).isoformat()
+    def seen_title(self, title: str) -> str | None:
+        """Il titolo gia' pubblicato che corrisponde a questo, se c'e'.
+
+        Confronto fuzzy con la stessa soglia del Normalizer: la sindacazione
+        cambia solo la capitalizzazione o poche parole (99-100 nei casi reali
+        dell'archivio), quindi l'uguaglianza esatta non basterebbe.
+        """
+        needle = title.strip().lower()
+        if not needle:
+            return None
+        for known in self._titles:
+            if fuzz.ratio(needle, known) >= self._title_threshold:
+                return known
+        return None
+
+    def mark_seen(
+        self, url: str, title: str | None = None, seen_at: datetime | None = None
+    ) -> None:
+        stamp = (seen_at or datetime.now(UTC)).isoformat()
+        self._seen[url] = stamp
+        if title and title.strip():
+            self._titles[title.strip().lower()] = stamp
 
     def save(self) -> None:
         """Pota le entry piu' vecchie della finestra di retention e scrive su disco."""
@@ -94,8 +132,22 @@ class SeenUrlStore:
                 pruned[url] = seen_at
         self._seen = pruned
 
+        pruned_titles: dict[str, str] = {}
+        for title, seen_at in self._titles.items():
+            try:
+                ts = datetime.fromisoformat(seen_at)
+            except ValueError:
+                continue
+            if ts >= cutoff:
+                pruned_titles[title] = seen_at
+        self._titles = pruned_titles
+
         self._path.parent.mkdir(parents=True, exist_ok=True)
         self._path.write_text(
-            json.dumps({"schema_version": "1", "urls": self._seen}, indent=2, sort_keys=True),
+            json.dumps(
+                {"schema_version": "2", "urls": self._seen, "titles": self._titles},
+                indent=2,
+                sort_keys=True,
+            ),
             encoding="utf-8",
         )

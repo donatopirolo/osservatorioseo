@@ -8,7 +8,7 @@ from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 from rapidfuzz import fuzz
 
-from osservatorio_seo.models import RawItem, Source
+from osservatorio_seo.models import AlsoIn, RawItem, Source
 
 TRACKING_PARAMS = {
     "utm_source",
@@ -24,6 +24,9 @@ TRACKING_PARAMS = {
     "ref_src",
     "igshid",
 }
+
+
+BYLINE_SUFFIX = re.compile(r"\s+via\s+@[\w.-]+(?:\s*,\s*@[\w.-]+)*\s*$", re.IGNORECASE)
 
 
 class Normalizer:
@@ -76,6 +79,13 @@ class Normalizer:
         import html
 
         title = html.unescape(title)
+        # Search Engine Journal appende la firma redazionale al titolo RSS
+        # ("... via @sejournal, @MattGSouthern"): 691 titoli su 1936
+        # nell'archivio. E' rumore per il lettore e, soprattutto, impedisce
+        # di riconoscere la sindacazione: lo stesso pezzo di Kevin Indig sul
+        # suo blog e su SEJ si fermava a ratio 73 solo per via del suffisso,
+        # e usciva due volte. Senza, e' 100.
+        title = BYLINE_SUFFIX.sub("", title)
         title = re.sub(r"\s+", " ", title).strip()
         return title
 
@@ -102,16 +112,42 @@ class Normalizer:
                 # produce 3 falsi positivi su 5 collassi (verificato il
                 # 2026-09-06 su 155 giorni). Collasserebbe fra l'altro
                 # "...in Google AI Overviews" con "...in Grok", che sono due
-                # studi diversi. I duplicati veri hanno titoli diversi per
-                # costruzione: la strada e' la pagina-evento, non una soglia
-                # piu' aggressiva. Vedi tests/test_normalizer.py.
+                # studi diversi.
                 if fuzz.ratio(item.title.lower(), existing.title.lower()) >= self._title_threshold:
                     duplicate_idx = i
                     break
             if duplicate_idx is None:
                 kept.append(item)
                 continue
-            existing = kept[duplicate_idx]
-            if sources[item.source_id].authority > sources[existing.source_id].authority:
-                kept[duplicate_idx] = item
+            kept[duplicate_idx] = self._merge(kept[duplicate_idx], item, sources)
         return kept
+
+    def _merge(self, a: RawItem, b: RawItem, sources: dict[str, Source]) -> RawItem:
+        """Fonde due item sullo stesso fatto: vince l'autorita' piu' alta.
+
+        Il perdente non viene buttato: diventa una voce `also_in` sul
+        vincitore, cosi' l'accorpamento aggiunge una fonte invece di
+        perderla. E' la ragione per cui la soglia di somiglianza puo'
+        stare a 75 senza rischi: nel caso peggiore la pagina mostra un
+        "Anche su" di troppo, mai una notizia in meno.
+        """
+        winner, loser = (
+            (a, b) if sources[a.source_id].authority >= sources[b.source_id].authority else (b, a)
+        )
+        also: list[AlsoIn] = []
+        known = {winner.url}
+        # Le catene di accorpamenti sono transitive: A assorbe B, poi C
+        # assorbe A e deve ereditare anche B.
+        for entry in [*winner.also_in, *loser.also_in]:
+            if entry.url not in known and entry.source_id != winner.source_id:
+                also.append(entry)
+                known.add(entry.url)
+        if loser.url not in known and loser.source_id != winner.source_id:
+            also.append(
+                AlsoIn(
+                    source_id=loser.source_id,
+                    source_name=sources[loser.source_id].name,
+                    url=loser.url,
+                )
+            )
+        return winner.model_copy(update={"also_in": also})

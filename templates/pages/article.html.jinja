@@ -27,6 +27,13 @@
     </p>
     <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">{{ item.title_it }}</h1>
     <p class="text-sm text-outline font-mono uppercase">Fonte: <a class="text-primary-container hover:underline" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.source.name }}</a></p>
+    {%- if item.also_in %}
+    <p class="text-sm text-outline font-mono uppercase mt-1">Anche su:
+      {%- for other in item.also_in %}
+      <a class="text-primary-container hover:underline" href="{{ other.url }}" target="_blank" rel="noopener">{{ other.source_name }}</a>{% if not loop.last %} ·{% endif %}
+      {%- endfor %}
+    </p>
+    {%- endif %}
   </header>
 
   <section class="prose prose-invert mb-10">

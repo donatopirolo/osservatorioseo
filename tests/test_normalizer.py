@@ -158,3 +158,80 @@ def test_content_filter_disabilitabile_per_jina() -> None:
     out = Normalizer(min_content_chars=0).normalize(items, sources)
     assert len(out) == 1
     assert out[0].url == "https://moz.com/blog/x"
+
+
+def test_byline_sejournal_rimosso_dal_titolo() -> None:
+    """Search Engine Journal appende la firma redazionale al titolo RSS.
+
+    691 titoli su 1936 nell'archivio (misurato il 2026-09-07). Il suffisso
+    non e' informazione per il lettore, ed e' proprio cio' che impediva di
+    riconoscere la sindacazione.
+    """
+    clean = Normalizer._clean_title
+    assert (
+        clean("Google Rolls Out Core Update via @sejournal, @MattGSouthern")
+        == "Google Rolls Out Core Update"
+    )
+    assert clean("The Ghost Citation Problem via @sejournal") == "The Ghost Citation Problem"
+    # "via @" solo a fine titolo: in mezzo alla frase non si tocca nulla
+    assert clean("Come arrivare via @casa in tempo") == "Come arrivare via @casa in tempo"
+
+
+def test_sindacazione_growth_memo_riconosciuta() -> None:
+    """Lo stesso pezzo su blog dell'autore e su SEJ deve collassare in uno.
+
+    Caso reale, 15 aprile 2026: con il suffisso byline i due titoli si
+    fermavano a ratio 73 e uscivano entrambi. Ripuliti sono identici.
+    """
+    norm = Normalizer()
+    items = [
+        mk_raw("https://www.growth-memo.com/p/x", "Shorter, Focused Content Wins in ChatGPT", "s9"),
+        mk_raw(
+            "https://www.searchenginejournal.com/x",
+            "Shorter, Focused Content Wins In ChatGPT via @sejournal, @Kevin_Indig",
+            "s8",
+        ),
+    ]
+    out = norm.normalize(items, {"s9": mk_source(9), "s8": mk_source(8)})
+    assert len(out) == 1
+    assert out[0].url == "https://www.growth-memo.com/p/x"
+
+
+def test_accorpamento_conserva_la_fonte_secondaria() -> None:
+    """Il perdente non sparisce: resta come `also_in` sul vincitore.
+
+    E' la differenza fra un accorpamento che aggiunge informazione e uno che
+    la perde in silenzio. Prima del 2026-09-07 il secondo articolo veniva
+    scartato senza lasciare traccia in pagina.
+    """
+    norm = Normalizer()
+    items = [
+        mk_raw(
+            "https://sej.example/ai-max", "Microsoft Advertising Rolls Out AI Max Globally", "s8"
+        ),
+        mk_raw(
+            "https://sero.example/ai-max", "Microsoft Advertising Rolling Out AI Max Globally", "s9"
+        ),
+    ]
+    out = norm.normalize(items, {"s8": mk_source(8), "s9": mk_source(9)})
+
+    assert len(out) == 1
+    assert out[0].source_id == "s9", "vince l'autorita' piu' alta"
+    assert [(a.source_id, a.url) for a in out[0].also_in] == [("s8", "https://sej.example/ai-max")]
+    assert out[0].also_in[0].source_name == "src8"
+
+
+def test_accorpamento_transitivo_conserva_tutte_le_fonti() -> None:
+    """A assorbe B, poi C assorbe A: B non deve perdersi per strada."""
+    norm = Normalizer()
+    titolo = "Google Rolls Out The September 2026 Core Update"
+    items = [
+        mk_raw("https://a.example/x", titolo, "s5"),
+        mk_raw("https://b.example/x", titolo + " Today", "s7"),
+        mk_raw("https://c.example/x", titolo + " Now", "s9"),
+    ]
+    out = norm.normalize(items, {"s5": mk_source(5), "s7": mk_source(7), "s9": mk_source(9)})
+
+    assert len(out) == 1
+    assert out[0].source_id == "s9"
+    assert sorted(a.source_id for a in out[0].also_in) == ["s5", "s7"]
