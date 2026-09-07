@@ -7,8 +7,16 @@ from unittest.mock import AsyncMock, MagicMock
 import pytest
 import yaml
 
-from osservatorio_seo.tracker.collector import TrackerCollector
+from osservatorio_seo.tracker.collector import TrackerCollector, _rank_to_bucket
 from osservatorio_seo.tracker.models import TrackerSnapshot
+
+
+def test_rank_to_bucket_rounds_up_to_nearest_tier():
+    assert _rank_to_bucket(1) == "100"
+    assert _rank_to_bucket(100) == "100"
+    assert _rank_to_bucket(101) == "200"
+    assert _rank_to_bucket(1500) == "5000"
+    assert _rank_to_bucket(300_000) == ">200000"
 
 
 @pytest.fixture
@@ -104,6 +112,61 @@ async def test_collect_handles_partial_failures(mock_radar, platforms_config):
     # But bot_human should be empty
     assert len(snapshot.bot_human_it.points) == 0
     assert any("API down" in w for w in snapshot.metadata.warnings)
+
+
+@pytest.mark.asyncio
+async def test_ai_platforms_it_differs_from_global(platforms_config):
+    """Regressione D11: la sezione Italia usava domain_detail(location="IT"),
+    ma quell'endpoint ignora il parametro location — Italia finiva sempre
+    identica al globale. Ora usa domain_timeseries (che il location lo
+    supporta davvero), quindi con dati diversi per location il risultato
+    deve essere davvero diverso."""
+    radar = AsyncMock()
+    radar.ranking_top.return_value = []
+
+    async def domain_timeseries(*, domain, location=None, date_range="52w"):
+        # Rank diverso per location: 5 in Italia, 50 nel mondo.
+        rank = 5 if location == "IT" else 50
+        return [{"date": "2026-04-13T00:00:00Z", "rank": rank}]
+
+    radar.domain_timeseries.side_effect = domain_timeseries
+    radar.domain_detail.return_value = {"rank": 50, "bucket": "100"}
+    radar.bot_human_timeseries.return_value = []
+    radar.ai_bots_user_agent.return_value = ([], [])
+    radar.crawl_purpose.return_value = ([], [])
+    radar.industry_summary.return_value = []
+    radar.device_type_timeseries.return_value = []
+    radar.os_summary.return_value = []
+
+    collector = TrackerCollector(radar=radar, platforms_config=platforms_config)
+    snapshot = await collector.collect(year=2026, week=16)
+
+    assert snapshot.ai_platforms_it != snapshot.ai_platforms_global
+    assert snapshot.ai_platforms_it[0].rank == 5
+    assert snapshot.ai_platforms_global[0].rank == 50
+
+
+@pytest.mark.asyncio
+async def test_ai_platforms_it_falls_back_when_no_timeseries_data(platforms_config):
+    """Se timeseries_groups non ha dati per quel dominio in quella location
+    (fuori dalla soglia tracciata), rank resta None con un bucket di
+    ripiego, invece di un crash su lista vuota."""
+    radar = AsyncMock()
+    radar.ranking_top.return_value = []
+    radar.domain_timeseries.return_value = []  # nessun dato per questa location
+    radar.domain_detail.return_value = {"rank": None, "bucket": "1000"}
+    radar.bot_human_timeseries.return_value = []
+    radar.ai_bots_user_agent.return_value = ([], [])
+    radar.crawl_purpose.return_value = ([], [])
+    radar.industry_summary.return_value = []
+    radar.device_type_timeseries.return_value = []
+    radar.os_summary.return_value = []
+
+    collector = TrackerCollector(radar=radar, platforms_config=platforms_config)
+    snapshot = await collector.collect(year=2026, week=16)
+
+    assert snapshot.ai_platforms_it[0].rank is None
+    assert snapshot.ai_platforms_it[0].bucket == ">200000"
 
 
 @pytest.mark.asyncio

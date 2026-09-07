@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import csv
 import json
 import re
 import shutil
@@ -208,6 +209,66 @@ def _safe_hostname(url: str) -> str:
         return urlparse(url).hostname or url
     except Exception:
         return url
+
+
+def _build_tracker_trends_table(snapshot: Any) -> list[dict[str, Any]]:
+    """Ultimo punto di Google Trends per keyword, IT vs Mondo, IT decrescente.
+
+    Stessa logica della tabella che tracker-charts.js costruisce lato client
+    (usata li' come fallback quando il canvas non ha senso su schermi
+    piccoli): qui serve a mettere gli stessi numeri nell'HTML servito, cosi'
+    esistono anche per crawler e client senza JS (D11).
+    """
+    trends_it = snapshot.trends_it
+    trends_global = snapshot.trends_global
+    if not trends_it.keywords or not trends_it.points:
+        return []
+    last_it = trends_it.points[-1].values
+    last_global = trends_global.points[-1].values if trends_global.points else {}
+    ranked = sorted(trends_it.keywords, key=lambda kw: last_it.get(kw, 0), reverse=True)
+    return [
+        {"keyword": kw, "it": last_it.get(kw, 0), "global": last_global.get(kw, 0)} for kw in ranked
+    ]
+
+
+def _tracker_csv_rows(snapshot: Any) -> list[tuple[str, str, str, str]]:
+    """Appiattisce lo snapshot in righe (scope, sezione, chiave, valore)."""
+    rows: list[tuple[str, str, str, str]] = []
+    for scope, top10 in (("it", snapshot.top10_it), ("global", snapshot.top10_global)):
+        for entry in top10:
+            rows.append((scope, "top10_rank", entry.domain, str(entry.rank)))
+    for scope, platforms in (
+        ("it", snapshot.ai_platforms_it),
+        ("global", snapshot.ai_platforms_global),
+    ):
+        for p in platforms:
+            rows.append(
+                (scope, "ai_platform_rank", p.label, str(p.rank) if p.rank is not None else "")
+            )
+            rows.append((scope, "ai_platform_bucket", p.label, p.bucket))
+    for scope, trends in (("it", snapshot.trends_it), ("global", snapshot.trends_global)):
+        for kw, avg in trends.averages.items():
+            rows.append((scope, "trends_avg", kw, str(avg)))
+    for scope, industry in (("it", snapshot.industry_it), ("global", snapshot.industry_global)):
+        for i in industry:
+            rows.append((scope, "industry_pct", i.industry, str(i.pct)))
+    for scope, os_list in (("it", snapshot.os_it), ("global", snapshot.os_global)):
+        for o in os_list:
+            rows.append((scope, "os_pct", o.os, str(o.pct)))
+    for scope, bh in (("it", snapshot.bot_human_it), ("global", snapshot.bot_human_global)):
+        if bh.points:
+            last = bh.points[-1]
+            rows.append((scope, "bot_human_pct", "human", str(last.human_pct)))
+            rows.append((scope, "bot_human_pct", "bot", str(last.bot_pct)))
+    return rows
+
+
+def _write_tracker_csv(snapshot: Any, path: Path) -> None:
+    """Esporta lo snapshot in CSV long-format (D11): scope,section,key,value."""
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.writer(fh)
+        writer.writerow(["scope", "section", "key", "value"])
+        writer.writerows(_tracker_csv_rows(snapshot))
 
 
 # ============================================================================
@@ -1126,52 +1187,134 @@ class Publisher:
         site_dir: Path,
         allow_indexing: bool,
     ) -> None:
-        """Render the /tracker/ dashboard using the latest v2 snapshot."""
+        """Render /tracker/ (ultimo snapshot) e /tracker/YYYY-MM/ (archivio mensile, D11)."""
+        monthly = self._load_tracker_snapshots_by_month()
+        if not monthly:
+            return
+
+        latest_key = max(monthly.keys())
+        latest = monthly[latest_key]
+
+        archive_links = [
+            {
+                "label": format_date_it(datetime(y, m, 1), "%B %Y"),
+                "path": f"/tracker/{y:04d}-{m:02d}/",
+            }
+            for (y, m) in sorted(monthly.keys(), reverse=True)
+        ]
+
+        self._render_tracker_page(
+            renderer,
+            latest,
+            site_dir / "tracker",
+            canonical_path="/tracker/",
+            allow_indexing=allow_indexing,
+            page_title="AI Tracker — Adozione e tendenze — Osservatorio SEO",
+            page_description=(
+                "Dashboard settimanale: quali AI usano gli italiani (Google Trends), "
+                "traffico bot AI, crawler per settore, confronto Italia vs Mondo."
+            ),
+            breadcrumbs=[
+                {"name": "Home", "url": canonical("/")},
+                {"name": "Tracker", "url": canonical("/tracker/")},
+            ],
+            archive_links=archive_links,
+        )
+
+        for (y, m), snap in monthly.items():
+            month_str = f"{y:04d}-{m:02d}"
+            month_label = format_date_it(datetime(y, m, 1), "%B %Y")
+            canonical_path = f"/tracker/{month_str}/"
+            self._render_tracker_page(
+                renderer,
+                snap,
+                site_dir / "tracker" / month_str,
+                canonical_path=canonical_path,
+                allow_indexing=allow_indexing,
+                page_title=f"AI Tracker — {month_label} — Osservatorio SEO",
+                page_description=(
+                    f"Snapshot storico del tracker AI di {month_label}: adozione AI "
+                    "in Italia, traffico bot, confronto con il mondo."
+                ),
+                breadcrumbs=[
+                    {"name": "Home", "url": canonical("/")},
+                    {"name": "Tracker", "url": canonical("/tracker/")},
+                    {"name": month_label, "url": canonical(canonical_path)},
+                ],
+                archive_links=archive_links,
+            )
+
+    def _load_tracker_snapshots_by_month(self) -> dict[tuple[int, int], Any]:
+        """Un TrackerSnapshot per mese: l'ultimo generato in quel mese.
+
+        Usato sia per /tracker/YYYY-MM/ (D11) sia per la sitemap: cosi' un
+        mese passato resta raggiungibile invece di sparire quando /tracker/
+        passa all'ultimo snapshot piu' recente.
+        """
         from osservatorio_seo.tracker.models import TrackerSnapshot
 
         snapshots_dir = self._data_dir / "tracker" / "snapshots"
         if not snapshots_dir.exists():
-            return
+            return {}
 
-        latest = self._find_latest_snapshot(snapshots_dir)
-        if latest is None:
-            return
+        monthly: dict[tuple[int, int], TrackerSnapshot] = {}
+        for path in sorted(snapshots_dir.glob("*.json")):
+            try:
+                snap = TrackerSnapshot.model_validate_json(path.read_text(encoding="utf-8"))
+            except Exception:  # noqa: BLE001
+                continue
+            if snap.schema_version not in ("2.0", "3.0"):
+                continue
+            key = (snap.generated_at.year, snap.generated_at.month)
+            existing = monthly.get(key)
+            if existing is None or snap.generated_at > existing.generated_at:
+                monthly[key] = snap
+        return monthly
 
-        snapshot = TrackerSnapshot.model_validate_json(latest.read_text(encoding="utf-8"))
-
-        if snapshot.schema_version not in ("2.0", "3.0"):
-            return
-
+    def _render_tracker_page(
+        self,
+        renderer: HtmlRenderer,
+        snapshot: Any,
+        target_dir: Path,
+        *,
+        canonical_path: str,
+        allow_indexing: bool,
+        page_title: str,
+        page_description: str,
+        breadcrumbs: list[dict[str, str]],
+        archive_links: list[dict[str, str]],
+    ) -> None:
         updated_label = format_date_it(snapshot.generated_at, "%d %B %Y")
         nxt = snapshot.generated_at + timedelta(days=7)
         next_update = format_date_it(nxt, "%d %B %Y")
 
-        tracker_json = snapshot.model_dump_json()
-
         ctx = {
-            "page_title": "AI Tracker — Adozione e tendenze — Osservatorio SEO",
-            "page_description": (
-                "Dashboard settimanale: quali AI usano gli italiani (Google Trends), "
-                "traffico bot AI, crawler per settore, confronto Italia vs Mondo."
-            ),
-            "canonical_url": canonical("/tracker/"),
+            "page_title": page_title,
+            "page_description": page_description,
+            "canonical_url": canonical(canonical_path),
             "active_nav": "tracker",
             "noindex": not allow_indexing,
             "og_type": "website",
-            "page_headline": (f"AI Tracker — Settimana {snapshot.week}, {snapshot.year}"),
+            "page_headline": f"AI Tracker — Settimana {snapshot.week}, {snapshot.year}",
             "updated_label": updated_label,
             "updated_iso": snapshot.generated_at.isoformat(),
             "next_update_label": next_update,
-            "tracker_json": tracker_json,
-            "breadcrumbs": [
-                {"name": "Home", "url": canonical("/")},
-                {"name": "Tracker", "url": canonical("/tracker/")},
-            ],
+            "tracker_json": snapshot.model_dump_json(),
+            # D11: numeri reali in tabella HTML, non solo dentro il canvas
+            # JS (invisibili a crawler e client senza JS).
+            "trends_table": _build_tracker_trends_table(snapshot),
+            # D11: partial mai incluso finora.
+            "dataset_name": "Osservatorio SEO — AI Tracker",
+            "dataset_description": page_description,
+            "dataset_url": canonical(canonical_path),
+            "csv_path": canonical_path + "data.csv",
+            "archive_links": archive_links,
+            "breadcrumbs": breadcrumbs,
         }
 
-        target_dir = site_dir / "tracker"
         target_dir.mkdir(parents=True, exist_ok=True)
         (target_dir / "index.html").write_text(renderer.render_tracker(ctx), encoding="utf-8")
+        _write_tracker_csv(snapshot, target_dir / "data.csv")
 
     def _ssg_tracker_reports(
         self,
@@ -1317,6 +1460,30 @@ class Publisher:
                     "changefreq": "weekly",
                 }
             )
+            # D11: permalink mensili /tracker/YYYY-MM/, mai in sitemap prima.
+            for (y, m), snap in self._load_tracker_snapshots_by_month().items():
+                urls.append(
+                    {
+                        "loc": canonical(f"/tracker/{y:04d}-{m:02d}/"),
+                        "lastmod": snap.generated_at.strftime("%Y-%m-%d"),
+                        "priority": "0.5",
+                        "changefreq": "monthly",
+                    }
+                )
+
+        # Tracker report mensile: mai in sitemap prima (D11).
+        tracker_reports = self._data_dir / "tracker" / "reports"
+        if tracker_reports.exists():
+            for report_path in sorted(tracker_reports.glob("????-??.json")):
+                year_str, month_str = report_path.stem.split("-")
+                urls.append(
+                    {
+                        "loc": canonical(f"/tracker/report/{year_str}-{month_str}/"),
+                        "lastmod": today,
+                        "priority": "0.6",
+                        "changefreq": "monthly",
+                    }
+                )
 
         categories_seen = {i.category for i in feed.items}
         for cat in categories_seen:

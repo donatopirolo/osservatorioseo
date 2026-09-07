@@ -48,6 +48,16 @@ def _parse_dt(date_str: str) -> datetime:
     return datetime.fromisoformat(date_str.replace("Z", "+00:00"))
 
 
+_BUCKET_TIERS = (100, 200, 500, 1000, 5000, 10000, 50000, 100000, 200000)
+
+
+def _rank_to_bucket(rank: int) -> str:
+    for tier in _BUCKET_TIERS:
+        if rank <= tier:
+            return str(tier)
+    return ">200000"
+
+
 class TrackerCollector:
     """Orchestrates data fetches and produces a TrackerSnapshot."""
 
@@ -158,7 +168,7 @@ class TrackerCollector:
         self,
     ) -> tuple[list[AIPlatformEntry], list[AIPlatformEntry]]:
         it = await self._safe(
-            self._fetch_ai_platforms, "domain_detail platforms(IT)", location="IT", default=[]
+            self._fetch_ai_platforms, "platforms rank(IT)", location="IT", default=[]
         )
         glb = await self._safe(
             self._fetch_ai_platforms,
@@ -172,17 +182,47 @@ class TrackerCollector:
         entries: list[AIPlatformEntry] = []
         for platform in self._platforms:
             domain = platform["domain"]
-            detail = await self._radar.domain_detail(domain=domain, location=location)
+            if location is None:
+                # Globale: /ranking/domain/{domain} funziona cosi' com'e'.
+                detail = await self._radar.domain_detail(domain=domain, location=None)
+                rank, bucket = detail.get("rank"), str(detail.get("bucket", ""))
+            else:
+                # D11: /ranking/domain/{domain} NON supporta il parametro
+                # location (Cloudflare lo ignora silenziosamente) — per
+                # questo "Italia" mostrava sempre gli stessi dati del
+                # globale. /ranking/timeseries_groups invece lo supporta
+                # davvero (e' lo stesso endpoint gia' usato per il top10
+                # IT, che infatti differisce dal top10 globale): usiamo
+                # l'ultimo punto della serie come rank corrente per quella
+                # location.
+                rank, bucket = await self._latest_rank_for_location(domain, location)
             entries.append(
                 AIPlatformEntry(
                     domain=domain,
                     label=platform["label"],
                     type=platform["type"],
-                    rank=detail.get("rank"),
-                    bucket=str(detail.get("bucket", "")),
+                    rank=rank,
+                    bucket=bucket,
                 )
             )
         return entries
+
+    async def _latest_rank_for_location(self, domain: str, location: str) -> tuple[int | None, str]:
+        """Rank piu' recente di ``domain`` in ``location``, o (None, bucket).
+
+        A differenza di domain_detail, timeseries_groups non restituisce un
+        bucket quando il dominio non ha un rank preciso: lo approssimiamo
+        arrotondando alla soglia superiore piu' vicina, nello stesso stile
+        delle soglie che Cloudflare stesso usa (es. "200", ">200000").
+        """
+        series = await self._radar.domain_timeseries(
+            domain=domain, location=location, date_range="4w"
+        )
+        rank = series[-1]["rank"] if series else None
+        if rank is None:
+            return None, ">200000"
+        rank = int(rank)
+        return rank, _rank_to_bucket(rank)
 
     # ------------------------------------------------------------------
     # Section 3: bot/human

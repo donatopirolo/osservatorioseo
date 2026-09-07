@@ -3,11 +3,15 @@
 from datetime import datetime
 from unittest.mock import MagicMock, patch
 
-from osservatorio_seo.tracker.trends_client import TrendsClient
+import httpx
+import pytest
+
+from osservatorio_seo.tracker.trends_client import TrendsClient, TrendsClientError
 
 
 def _make_response(items, status_code=20000):
     mock = MagicMock()
+    mock.status_code = 200  # HTTP-level status; status_code qui e' quello del task DataForSEO
     mock.raise_for_status = MagicMock()
     mock.json.return_value = {"tasks": [{"status_code": status_code, "result": [{"items": items}]}]}
     return mock
@@ -53,7 +57,10 @@ class TestTrendsClient:
         assert points == []
         assert averages == {}
 
-    def test_fetch_interest_returns_empty_on_api_error(self):
+    def test_fetch_interest_raises_with_real_status_message_on_api_error(self):
+        """Regressione D11: un errore a livello di task (status_code != 20000)
+        deve riportare il vero status_message di DataForSEO, non un generico
+        "no data returned" che nasconde la causa reale."""
         resp = _make_response([], status_code=40000)
         resp.json.return_value = {
             "tasks": [{"status_code": 40000, "status_message": "Bad request"}]
@@ -61,16 +68,50 @@ class TestTrendsClient:
 
         with patch("osservatorio_seo.tracker.trends_client.httpx.post", return_value=resp):
             client = TrendsClient(api_key="dGVzdDp0ZXN0")
-            keywords, points, averages = client.fetch_interest(keywords=["ChatGPT"], geo="IT")
-
-        assert keywords == []
-        assert points == []
-        assert averages == {}
+            with pytest.raises(TrendsClientError, match="Bad request"):
+                client.fetch_interest(keywords=["ChatGPT"], geo="IT")
 
     def test_default_keywords(self):
         assert len(TrendsClient.DEFAULT_KEYWORDS) == 6
         assert "ChatGPT" in TrendsClient.DEFAULT_KEYWORDS
         assert "Grok" in TrendsClient.DEFAULT_KEYWORDS
+
+    def test_retries_on_5xx_then_succeeds(self):
+        """Regressione D11: un 5xx transitorio non deve svuotare la sezione,
+        va ritentato con backoff."""
+        resp_fail = MagicMock(status_code=500)
+        resp_ok = _make_response([_GRAPH_ITEM])
+
+        with (
+            patch(
+                "osservatorio_seo.tracker.trends_client.httpx.post",
+                side_effect=[resp_fail, resp_ok],
+            ),
+            patch("osservatorio_seo.tracker.trends_client.time.sleep"),
+        ):
+            client = TrendsClient(api_key="dGVzdDp0ZXN0")
+            keywords, points, averages = client.fetch_interest(
+                keywords=["ChatGPT", "Claude AI"], geo="IT"
+            )
+
+        assert keywords == ["ChatGPT", "Claude AI"]
+
+    def test_retries_on_timeout_then_succeeds(self):
+        resp_ok = _make_response([_GRAPH_ITEM])
+
+        with (
+            patch(
+                "osservatorio_seo.tracker.trends_client.httpx.post",
+                side_effect=[httpx.ReadTimeout("boom"), resp_ok],
+            ),
+            patch("osservatorio_seo.tracker.trends_client.time.sleep"),
+        ):
+            client = TrendsClient(api_key="dGVzdDp0ZXN0")
+            keywords, points, averages = client.fetch_interest(
+                keywords=["ChatGPT", "Claude AI"], geo="IT"
+            )
+
+        assert keywords == ["ChatGPT", "Claude AI"]
 
     def test_global_fetch_has_no_location(self):
         resp = _make_response(

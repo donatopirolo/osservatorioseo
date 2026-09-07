@@ -13,12 +13,24 @@ Docs: https://docs.dataforseo.com/v3/keywords_data/google_trends/explore/live/
 from __future__ import annotations
 
 import logging
+import random
+import time
 from datetime import datetime, timedelta
 from typing import Any
 
 import httpx
 
 logger = logging.getLogger(__name__)
+
+
+class TrendsClientError(Exception):
+    """DataForSEO ha risposto ma segnala un errore a livello di task.
+
+    Porta il vero ``status_message`` dell'API, invece del generico "no data
+    returned" che il chiamante mostrava finora qualunque fosse la causa
+    reale (rate limit, credito esaurito, keyword non valide, ecc.).
+    """
+
 
 DEFAULT_KEYWORDS = ["ChatGPT", "Gemini", "Claude", "Perplexity", "DeepSeek", "Grok"]
 
@@ -33,9 +45,10 @@ class TrendsClient:
 
     DEFAULT_KEYWORDS = DEFAULT_KEYWORDS
 
-    def __init__(self, api_key: str, timeout_s: int = 60) -> None:
+    def __init__(self, api_key: str, timeout_s: int = 60, max_retries: int = 3) -> None:
         self._api_key = api_key
         self._timeout = timeout_s
+        self._max_retries = max_retries
 
     def fetch_interest(
         self,
@@ -126,28 +139,18 @@ class TrendsClient:
             payload["location_code"] = _LOCATION_IT
             payload["language_code"] = "it"
 
-        try:
-            resp = httpx.post(
-                _API_URL,
-                headers={
-                    "Authorization": f"Basic {self._api_key}",
-                    "Content-Type": "application/json",
-                },
-                json=[payload],
-                timeout=self._timeout,
-            )
-            resp.raise_for_status()
-            data = resp.json()
-        except Exception:
-            logger.warning("DataForSEO Trends fetch failed for geo=%s", geo, exc_info=True)
+        data = self._post_with_retry(payload, geo)
+        if data is None:
             return [], [], {}
 
-        try:
-            task = data["tasks"][0]
-            if task["status_code"] != 20000:
-                logger.warning("DataForSEO task error: %s", task.get("status_message"))
-                return [], [], {}
+        task = data["tasks"][0]
+        if task["status_code"] != 20000:
+            raise TrendsClientError(
+                f"DataForSEO status {task['status_code']}: "
+                f"{task.get('status_message', 'nessun messaggio')}"
+            )
 
+        try:
             items = task["result"][0]["items"]
             graph_item = next(i for i in items if i["type"] == "google_trends_graph")
             raw_points = graph_item["data"]
@@ -165,3 +168,49 @@ class TrendsClient:
         averages = {kw: int(v) for kw, v in zip(kws, raw_averages, strict=False)}
 
         return list(kws), points, averages
+
+    def _post_with_retry(self, payload: dict[str, Any], geo: str) -> dict[str, Any] | None:
+        """POST con retry e backoff su errori transitori (timeout, 429, 5xx).
+
+        Ritorna None (invece di sollevare) sugli errori non transitori o a
+        retry esauriti: il chiamante li tratta come "nessun dato", stesso
+        comportamento di prima per queste due categorie di fallimento.
+        """
+        headers = {
+            "Authorization": f"Basic {self._api_key}",
+            "Content-Type": "application/json",
+        }
+        for attempt in range(self._max_retries):
+            is_last = attempt == self._max_retries - 1
+            try:
+                resp = httpx.post(_API_URL, headers=headers, json=[payload], timeout=self._timeout)
+            except httpx.TransportError as e:
+                # Timeout, connessione rifiutata, DNS: transitori, ritentabili.
+                if is_last:
+                    logger.warning("DataForSEO Trends errore di rete per geo=%s: %s", geo, e)
+                    return None
+                time.sleep(2**attempt + random.uniform(0.0, 0.5))
+                continue
+            except Exception:
+                # Errore imprevisto e non di trasporto: non e' detto sia
+                # transitorio, ci arrendiamo subito come prima di questa fix.
+                logger.warning("DataForSEO Trends fetch failed for geo=%s", geo, exc_info=True)
+                return None
+            if resp.status_code == 429 or resp.status_code >= 500:
+                if is_last:
+                    logger.warning(
+                        "DataForSEO Trends HTTP %s per geo=%s dopo %d tentativi",
+                        resp.status_code,
+                        geo,
+                        self._max_retries,
+                    )
+                    return None
+                time.sleep(2**attempt + random.uniform(0.0, 0.5))
+                continue
+            try:
+                resp.raise_for_status()
+            except httpx.HTTPStatusError:
+                logger.warning("DataForSEO Trends fetch failed for geo=%s", geo, exc_info=True)
+                return None
+            return resp.json()
+        return None

@@ -7,7 +7,9 @@ Free tier, requires API token with `Zone.Radar Read` permission.
 
 from __future__ import annotations
 
+import asyncio
 import logging
+import random
 from typing import Any
 
 import httpx
@@ -29,8 +31,10 @@ class RadarClient:
         api_token: str,
         timeout_s: int = 30,
         base_url: str = RADAR_BASE_URL,
+        max_retries: int = 3,
     ) -> None:
         self._api_token = api_token
+        self._max_retries = max_retries
         self._timeout = timeout_s
         self._base_url = base_url.rstrip("/")
 
@@ -238,13 +242,34 @@ class RadarClient:
     async def _get(self, path: str, params: dict[str, Any]) -> dict:
         url = f"{self._base_url}{path}"
         headers = {"Authorization": f"Bearer {self._api_token}"}
+        last_exc: Exception | None = None
         async with httpx.AsyncClient(timeout=self._timeout) as client:
-            resp = await client.get(url, params=params, headers=headers)
-        if resp.status_code >= 400:
-            raise RadarClientError(f"Radar API error {resp.status_code}: {resp.text[:200]}")
-        data = resp.json()
-        if not data.get("success", False):
-            errs = data.get("errors", [])
-            msg = "; ".join(e.get("message", str(e)) for e in errs) or "unknown"
-            raise RadarClientError(f"Radar API reported failure: {msg}")
-        return data
+            for attempt in range(self._max_retries):
+                is_last = attempt == self._max_retries - 1
+                try:
+                    resp = await client.get(url, params=params, headers=headers)
+                except httpx.TimeoutException as e:
+                    last_exc = e
+                    if is_last:
+                        raise RadarClientError(f"Radar API timeout su {path}: {e}") from e
+                    await asyncio.sleep(2**attempt + random.uniform(0.0, 0.5))
+                    continue
+                # 429 e 5xx sono transitori (rate limit, hiccup del servizio):
+                # ritentabili con backoff. Gli altri 4xx sono definitivi.
+                if resp.status_code == 429 or resp.status_code >= 500:
+                    last_exc = RadarClientError(
+                        f"Radar API error {resp.status_code}: {resp.text[:200]}"
+                    )
+                    if is_last:
+                        raise last_exc
+                    await asyncio.sleep(2**attempt + random.uniform(0.0, 0.5))
+                    continue
+                if resp.status_code >= 400:
+                    raise RadarClientError(f"Radar API error {resp.status_code}: {resp.text[:200]}")
+                data = resp.json()
+                if not data.get("success", False):
+                    errs = data.get("errors", [])
+                    msg = "; ".join(e.get("message", str(e)) for e in errs) or "unknown"
+                    raise RadarClientError(f"Radar API reported failure: {msg}")
+                return data
+        raise RadarClientError(f"Radar API: retry esauriti su {path}: {last_exc}")

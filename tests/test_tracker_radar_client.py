@@ -256,15 +256,49 @@ async def test_industry_summary_sorted_desc_other_last(httpx_mock, client, radar
 
 @pytest.mark.asyncio
 async def test_error_on_non_200(httpx_mock, client):
-    httpx_mock.add_response(
-        url=re.compile(r".*radar/ranking/top.*"),
-        status_code=500,
-        json={"success": False, "errors": [{"message": "internal server error"}]},
-    )
+    # 500 e' transitorio (vedi test_retries_on_5xx_then_succeeds): il client
+    # ritenta fino a max_retries prima di arrendersi, quindi serve una
+    # risposta mockata per ciascun tentativo.
+    for _ in range(3):
+        httpx_mock.add_response(
+            url=re.compile(r".*radar/ranking/top.*"),
+            status_code=500,
+            json={"success": False, "errors": [{"message": "internal server error"}]},
+        )
 
     with pytest.raises(RadarClientError) as exc_info:
         await client.ranking_top(limit=5)
     assert "500" in str(exc_info.value)
+
+
+@pytest.mark.asyncio
+async def test_retries_on_5xx_then_succeeds(httpx_mock, client, radar_ranking_top):
+    """Regressione D11: un 500 transitorio non deve far fallire subito la
+    chiamata, deve essere ritentato con backoff."""
+    httpx_mock.add_response(url=re.compile(r".*radar/ranking/top.*"), status_code=500)
+    httpx_mock.add_response(url=re.compile(r".*radar/ranking/top.*"), json=radar_ranking_top)
+
+    result = await client.ranking_top(limit=5)
+    assert len(result) > 0
+
+
+@pytest.mark.asyncio
+async def test_retries_on_429_then_succeeds(httpx_mock, client, radar_ranking_top):
+    httpx_mock.add_response(url=re.compile(r".*radar/ranking/top.*"), status_code=429)
+    httpx_mock.add_response(url=re.compile(r".*radar/ranking/top.*"), json=radar_ranking_top)
+
+    result = await client.ranking_top(limit=5)
+    assert len(result) > 0
+
+
+@pytest.mark.asyncio
+async def test_does_not_retry_on_4xx(httpx_mock, client):
+    """Un 4xx (diverso da 429) e' definitivo: niente retry, fallisce subito."""
+    httpx_mock.add_response(url=re.compile(r".*radar/ranking/top.*"), status_code=403)
+
+    with pytest.raises(RadarClientError) as exc_info:
+        await client.ranking_top(limit=5)
+    assert "403" in str(exc_info.value)
 
 
 @pytest.mark.asyncio
