@@ -3,9 +3,17 @@ import re
 import time
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from osservatorio_seo.models import Feed, FeedStats, Item, Source
-from osservatorio_seo.publisher import Publisher, _absolute_date, _meta_description, format_date_it
+from osservatorio_seo.publisher import (
+    _MONTH_LABELS,
+    Publisher,
+    _absolute_date,
+    _meta_description,
+    _relative_date,
+    format_date_it,
+)
 
 
 def mk_item(item_id: str) -> Item:
@@ -210,6 +218,18 @@ def test_absolute_date_converts_utc_to_rome_local(monkeypatch) -> None:
     parts = result.split()
     assert parts[1] == "12", f"giorno non convertito a Roma: {result!r}"
     assert result.endswith("00:30"), f"ora non convertita a Roma: {result!r}"
+
+
+def test_relative_date_older_than_a_week_uses_italian_month() -> None:
+    """Regressione: oltre i 7 giorni _relative_date ricadeva su
+    strftime('%-d %b %Y'), locale-dipendente (produce 'Aug' sui runner senza
+    it_IT), sfuggito alla bonifica 1.7 perche' non usa %A/%B."""
+    published = datetime.now(UTC) - timedelta(days=10)
+    result = _relative_date(published)
+    assert "Aug" not in result and "Sep" not in result
+    local = published.astimezone(ZoneInfo("Europe/Rome"))
+    month_it = _MONTH_LABELS[local.month].lower()
+    assert result == f"{local.day} {month_it} {local.year}"
 
 
 def test_format_date_it_uses_italian_day_and_month_names() -> None:

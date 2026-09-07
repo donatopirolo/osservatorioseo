@@ -175,7 +175,8 @@ def _relative_date(published: datetime) -> str:
         return "ieri"
     if days < 7:
         return f"{days} giorni fa"
-    return published.astimezone(_ROME_TZ).strftime("%-d %b %Y")
+    local = published.astimezone(_ROME_TZ)
+    return f"{local.day} {_MONTH_LABELS[local.month].lower()} {local.year}"
 
 
 def _absolute_date(published: datetime) -> str:
