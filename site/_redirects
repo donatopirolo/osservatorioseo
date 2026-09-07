@@ -4,6 +4,14 @@ https://osservatorioseo.com/* https://www.osservatorioseo.com/:splat 301
 # Redirect old pages.dev to www (301 permanent)
 https://osservatorioseo.pages.dev/* https://www.osservatorioseo.com/:splat 301
 
+# Le ~100 regole per le pagine fantasma sono state rimosse il 2026-09-07:
+# Cloudflare Pages applica solo le PRIME 100 regole di questo file e scarta le
+# altre in silenzio (verificato: la 95esima e' attiva, la 100esima no). Quelle
+# pagine erano residui del vecchio doppio run, senza un contenuto equivalente
+# a cui rimandare: adesso rispondono 404, che e' il segnale corretto e che
+# Google onora piu' in fretta di un redirect verso una pagina diversa.
+# Restano solo i 5 duplicati veri, che una pagina equivalente ce l'hanno.
+
 # Google Financials rimosso il 2026-09-06: i dati EDGAR pubblicati erano
 # errati (comparativi dell'anno precedente scambiati per il trimestre corrente).
 /google-financials/* / 301
@@ -16,109 +24,6 @@ https://osservatorioseo.pages.dev/* https://www.osservatorioseo.com/:splat 301
 # Pagine articolo orfane del vecchio doppio-run rimosse il 2026-09-06 (1.3):
 # esistevano in site/ ma non erano piu' derivabili da data/archive/*.json.
 # In 301 verso lo snapshot del loro giorno (D3).
-/archivio/2026/04/13/integrazione-openai-cloudflare-agent-cloud-workflow/ /archivio/2026/04/13/ 301
-/archivio/2026/04/13/politiche-spam-riformulazione-sezione-malware-and-malicious/ /archivio/2026/04/13/ 301
-/archivio/2026/04/13/ricerca-agentica-task-based-google-sta-rivoluzionando-seo/ /archivio/2026/04/13/ 301
-/archivio/2026/04/16/google-potrebbe-usare-report-spam-azioni-manuali/ /archivio/2026/04/16/ 301
-/archivio/2026/04/16/google-sta-sostituendo-campagne-dynamic-search-ads-ai-max/ /archivio/2026/04/16/ 301
-/archivio/2026/04/18/novita-mondo-ricerca-google-penalizza-l-hijacking-tasto/ /archivio/2026/04/18/ 301
-/archivio/2026/04/18/strategia-google-sui-feed-prodotti-indica-futuro-scoperta/ /archivio/2026/04/18/ 301
-/archivio/2026/04/21/caso-studio-crollo-sito-mt-ai-conseguenze-chatgpt/ /archivio/2026/04/21/ 301
-/archivio/2026/04/21/commissione-europea-potrebbe-obbligare-google-condividere/ /archivio/2026/04/21/ 301
-/archivio/2026/04/23/ricerca-ai-si-sta-auto-divorando-causa-l-industria-seo/ /archivio/2026/04/23/ 301
-/archivio/2026/04/23/sblocco-structured-clone-api-messaggistica-estensioni-chrome/ /archivio/2026/04/23/ 301
-/archivio/2026/04/24/google-sottolinea-l-importanza-evitare-contenuti-commodity/ /archivio/2026/04/24/ 301
-/archivio/2026/04/24/google-utilizzera-segnalazioni-spam-contenenti-informazioni/ /archivio/2026/04/24/ 301
-/archivio/2026/04/24/perche-ottimi-contenuti-sono-piu-sufficienti-cosa-li-supera/ /archivio/2026/04/24/ 301
-/archivio/2026/04/24/presentazione-gpt-5-5/ /archivio/2026/04/24/ 301
-/archivio/2026/04/24/risposte-recensioni-locali-google-sono-ora-moderate/ /archivio/2026/04/24/ 301
-/archivio/2026/04/25/google-utilizzera-segnalazioni-spam-contenenti-informazioni/ /archivio/2026/04/25/ 301
-/archivio/2026/04/25/supporto-localizzazione-manifest-web-app/ /archivio/2026/04/25/ 301
-/archivio/2026/04/28/google-deepmind-collabora-corea-sud-accelerare-scoperte/ /archivio/2026/04/28/ 301
-/archivio/2026/04/28/l-audit-seo-tecnico-richiede-nuovo-livello/ /archivio/2026/04/28/ 301
-/archivio/2026/04/29/google-avvisa-siti-pratiche-back-button-hijacking-notifica/ /archivio/2026/04/29/ 301
-/archivio/2026/04/30/l-origine-goblin-analisi-comportamenti-anomali-modelli-ai/ /archivio/2026/04/30/ 301
-/archivio/2026/05/01/google-deepmind-presenta-nuovo-modello-sanita-co-clinico-ai/ /archivio/2026/05/01/ 301
-/archivio/2026/05/05/reddit-continua-espandere-traduzioni-ai-domina-serp/ /archivio/2026/05/05/ 301
-/archivio/2026/05/06/novita-chrome-148/ /archivio/2026/05/06/ 301
-/archivio/2026/05/06/novita-devtools-chrome-148/ /archivio/2026/05/06/ 301
-/archivio/2026/05/06/openai-rilascia-gpt-5-5-instant-risposte-migliorate/ /archivio/2026/05/06/ 301
-/archivio/2026/05/08/google-migliora-l-integrazione-link-risposte-ai-ai-overview/ /archivio/2026/05/08/ 301
-/archivio/2026/05/08/soglia-qualita-google-penalizza-silenziosamente-contenuti/ /archivio/2026/05/08/ 301
-/archivio/2026/05/09/aggiornamenti-ai-search-vincitori-vinti-core-update-seo/ /archivio/2026/05/09/ 301
-/archivio/2026/05/11/google-rimuove-risultati-avanzati-faq-ricerca/ /archivio/2026/05/11/ 301
-/archivio/2026/05/13/accesso-semplificato-disponibile-modalita-ui-immediata/ /archivio/2026/05/13/ 301
-/archivio/2026/05/16/aggiornamento-definizione-spam-google-spam-policies/ /archivio/2026/05/16/ 301
-/archivio/2026/05/16/decorazioni-spazi-vuoti-ora-disponibili-chromium/ /archivio/2026/05/16/ 301
-/archivio/2026/05/16/growth-intelligence-brief-18-microsoft-ridefinisce-l-indice/ /archivio/2026/05/16/ 301
-/archivio/2026/05/19/google-pubblica-guida-all-ottimizzazione-l-ai-generativa/ /archivio/2026/05/19/ 301
-/archivio/2026/05/20/aggiornamenti-parziali-dichiarativi-chrome-148/ /archivio/2026/05/20/ 301
-/archivio/2026/05/20/presentazione-origin-trial-dell-api-html-canvas/ /archivio/2026/05/20/ 301
-/archivio/2026/05/20/riepilogo-15-aggiornamenti-principali-chrome-presentati/ /archivio/2026/05/20/ 301
-/archivio/2026/05/20/semplificazione-flusso-lavoro-codifica-ai-chrome-devtools/ /archivio/2026/05/20/ 301
-/archivio/2026/05/21/oltre-rag-piattaforme-ricerca-ai-diventano-agentiche/ /archivio/2026/05/21/ 301
-/archivio/2026/05/21/riassunto-quotidiano-forum-ricerca-20-maggio-2026/ /archivio/2026/05/21/ 301
-/archivio/2026/05/22/google-introduce-shopping-ads-modalita-ai-business-agent/ /archivio/2026/05/22/ 301
-/archivio/2026/05/22/modernizzazione-dell-autenticazione-passkey-credenziali/ /archivio/2026/05/22/ 301
-/archivio/2026/05/22/novita-chrome-presentate-google-2026/ /archivio/2026/05/22/ 301
-/archivio/2026/05/22/report-link-google-search-console-presenta-problemi/ /archivio/2026/05/22/ 301
-/archivio/2026/05/23/novita-sulle-estensioni-web-riepilogo-google-2026/ /archivio/2026/05/23/ 301
-/archivio/2026/05/23/riepilogo-giornaliero-forum-ricerca-22-maggio-2026/ /archivio/2026/05/23/ 301
-/archivio/2026/05/26/google-risolve-ritardo-rimozione-dall-indice-l-esclusione/ /archivio/2026/05/26/ 301
-/archivio/2026/05/26/rilasciato-fine-settimana-core-update-google-maggio-2026/ /archivio/2026/05/26/ 301
-/archivio/2026/05/27/ceo-google-ammette-ai-overview-sono-troppo-orientate/ /archivio/2026/05/27/ 301
-/archivio/2026/05/27/fine-web-aperto-causa-machine-media/ /archivio/2026/05/27/ 301
-/archivio/2026/05/27/monitoraggio-dell-hijacking-pulsante-indietro-come-hanno/ /archivio/2026/05/27/ 301
-/archivio/2026/05/27/nuove-funzionalita-basate-sull-ai-integrata-chrome/ /archivio/2026/05/27/ 301
-/archivio/2026/05/29/google-ai-introdotte-etichette-fonti-preferite-nuovi/ /archivio/2026/05/29/ 301
-/archivio/2026/05/30/modifiche-layout-serp-google-posizione-numero-ora-appare/ /archivio/2026/05/30/ 301
-/archivio/2026/06/02/google-introduce-fonti-preferite-ai-overviews-ai-mode/ /archivio/2026/06/02/ 301
-/archivio/2026/06/03/google-core-update-maggio-2026-volatilita-continua-2-giugno/ /archivio/2026/06/03/ 301
-/archivio/2026/06/03/recap-forum-seo-completamento-core-update-maggio-2026/ /archivio/2026/06/03/ 301
-/archivio/2026/06/04/google-aggiunge-categoria-dedicata-browsing-agentico/ /archivio/2026/06/04/ 301
-/archivio/2026/06/09/visibilita-nell-ai-passa-citazioni-transazioni-fine-giugno/ /archivio/2026/06/09/ 301
-/archivio/2026/06/12/google-costruisce-ecosistema-fedelta-pubblico/ /archivio/2026/06/12/ 301
-/archivio/2026/06/12/vulnerabilita-critica-updraftplus-3-milioni-siti-wordpress/ /archivio/2026/06/12/ 301
-/archivio/2026/06/13/google-posticipa-migrazione-obbligatoria-dynamic-search-ads/ /archivio/2026/06/13/ 301
-/archivio/2026/06/13/google-pubblica-orientamenti-sulla-blacklist-ricerca/ /archivio/2026/06/13/ 301
-/archivio/2026/06/19/google-diventa-specchio-personalizzato-prima-ancora-tu/ /archivio/2026/06/19/ 301
-/archivio/2026/06/23/tribunale-tedesco-rende-google-responsabile-cio-dice-sua-ia/ /archivio/2026/06/23/ 301
-/archivio/2026/06/25/google-ha-rilasciato-l-aggiornamento-antispam-giugno-2026/ /archivio/2026/06/25/ 301
-/archivio/2026/06/25/l-accessibility-tree-come-agenti-ai-leggono-tuo-sito-perche/ /archivio/2026/06/25/ 301
-/archivio/2026/06/26/google-approfondisce-controlli-l-ia-generativa-ricerca/ /archivio/2026/06/26/ 301
-/archivio/2026/06/27/anteprima-gpt-5-6-sol-modello-nuova-generazione/ /archivio/2026/06/27/ 301
-/archivio/2026/06/27/l-industria-piange-scomparsa-bruce-clay-padre-seo/ /archivio/2026/06/27/ 301
-/archivio/2026/06/27/riepilogo-settimanale-novita-google-aggiornamento-spam/ /archivio/2026/06/27/ 301
-/archivio/2026/06/28/l-aggiornamento-antispam-google-si-estende-ora-risposte/ /archivio/2026/06/28/ 301
-/archivio/2026/07/01/google-ha-completato-rollout-dell-aggiornamento-spam-giugno/ /archivio/2026/07/01/ 301
-/archivio/2026/07/03/report-mensile-google-webmaster-luglio-2026/ /archivio/2026/07/03/ 301
-/archivio/2026/07/04/riepilogo-settimanale-notizie-seo-aggiornamenti-google-dmca/ /archivio/2026/07/04/ 301
-/archivio/2026/07/10/chatgpt-diventa-partner-tuoi-progetti-piu-ambiziosi/ /archivio/2026/07/10/ 301
-/archivio/2026/07/10/controlli-generative-ai-google-search-si-espandono-oltre/ /archivio/2026/07/10/ 301
-/archivio/2026/07/10/gpt-5-6-ora-modello-preferito-microsoft-365-copilot/ /archivio/2026/07/10/ 301
-/archivio/2026/07/11/growth-intelligence-brief-21/ /archivio/2026/07/11/ 301
-/archivio/2026/07/16/generazione-immagini-ai-integrata-ai-overviews-google/ /archivio/2026/07/16/ 301
-/archivio/2026/07/24/riepilogo-giornaliero-forum-ricerca-23-luglio-2026/ /archivio/2026/07/24/ 301
-/archivio/2026/07/25/riepilogo-notizie-ricerca-clic-ai-search-editori-contro/ /archivio/2026/07/25/ 301
-/archivio/2026/07/28/google-estende-linee-guida-sulle-recensioni-avverte/ /archivio/2026/07/28/ 301
-/archivio/2026/07/30/google-introduce-cinque-nuovi-segnali-fiducia-formato-open/ /archivio/2026/07/30/ 301
-/archivio/2026/07/31/quasi-meta-ricerche-google-mostra-ai-overviews-percentuale/ /archivio/2026/07/31/ 301
-/archivio/2026/08/07/aumenta-volatilita-ranking-google-search-5-6-agosto/ /archivio/2026/08/07/ 301
-/archivio/2026/08/07/rapporto-intelligence-sulla-crescita-22/ /archivio/2026/08/07/ 301
-/archivio/2026/08/11/openai-espande-daybreak-gpt-5-6-cyber-sicurezza-informatica/ /archivio/2026/08/11/ 301
-/archivio/2026/08/21/growth-intelligence-brief-23-volatilita-ricerca-impatto/ /archivio/2026/08/21/ 301
-/archivio/2026/08/22/concluso-google-august-2026-spam-update/ /archivio/2026/08/22/ 301
-/archivio/2026/08/22/google-introduce-annunci-pre-badge-amplia-categorie-local/ /archivio/2026/08/22/ 301
-/archivio/2026/08/22/googlebot-ora-esegue-singolo-passaggio-unescaping-html-l/ /archivio/2026/08/22/ 301
-/archivio/2026/08/26/primi-risultati-jalapeno-evidenziano-velocita-efficienza/ /archivio/2026/08/26/ 301
-/archivio/2026/08/27/volatilita-ranking-google-persiste-dopo-l-aggiornamento/ /archivio/2026/08/27/ 301
-/archivio/2026/08/28/sito-web-dell-irs-registra-forte-calo-ricerche-google/ /archivio/2026/08/28/ 301
-/archivio/2026/08/29/aggiornamento-normativa-google-sulla-pubblicita-alcolici-30/ /archivio/2026/08/29/ 301
-/archivio/2026/08/31/accuse-rank-math-acquisire-segretamente-l-accesso/ /archivio/2026/08/31/ 301
-/archivio/2026/09/02/google-specifica-chi-puo-ottenere-licenza-suoi-dati-ricerca/ /archivio/2026/09/02/ 301
-/archivio/2026/09/03/giudice-si-pronuncia-contro-smembramento-business-ad-tech/ /archivio/2026/09/03/ 301
-/archivio/2026/09/03/google-deepmind-gemini-si-evolve-chatbot-ad-agente-ai/ /archivio/2026/09/03/ 301
-/archivio/2026/09/04/legora-ha-esaminato-41-documenti-pochi-minuti-gpt-6-astra/ /archivio/2026/09/04/ 301
 
 # Ripubblicazioni cross-day dello stesso URL sorgente rimosse il 2026-09-06
 # (1.4): la fonte aveva ripubblicato lo stesso articolo il giorno dopo senza
