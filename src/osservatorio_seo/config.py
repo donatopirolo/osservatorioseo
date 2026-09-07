@@ -36,6 +36,11 @@ class Settings(BaseModel):
             "openai/gpt-5-mini",
         ]
     )
+    # Tetto di spesa per il summarizer AI in un singolo run. Il costo medio
+    # storico e' ~0,014 EUR/run (picco osservato 0,124 EUR): un margine ampio
+    # (8x il picco) che protegge da un run fuori controllo (bug, prezzi
+    # cambiati) senza mai bloccare l'attivita' normale.
+    max_ai_cost_eur_per_run: float = 1.0
     max_concurrent_per_host: int = 3
     request_timeout_s: int = 15
     playwright_timeout_s: int = 30

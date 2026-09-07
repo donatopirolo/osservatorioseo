@@ -39,7 +39,7 @@ from osservatorio_seo.publisher import Publisher
 from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.seen_urls import SeenUrlStore
 from osservatorio_seo.sources import is_event_item, override_importance
-from osservatorio_seo.summarizer import Summarizer
+from osservatorio_seo.summarizer import Summarizer, SummarizerBudgetExceededError
 from osservatorio_seo.tags import normalize_tags
 
 logger = logging.getLogger(__name__)
@@ -121,6 +121,7 @@ class Pipeline:
             api_key=self._settings.openrouter_api_key,
             primary_model=self._settings.summarizer_model,
             fallback_models=self._settings.fallback_models,
+            max_cost_eur=self._settings.max_ai_cost_eur_per_run,
         )
         items, ai_cost, sum_attempted, sum_failed = await self._summarize_all(
             to_summarize, sources_by_id, summarizer
@@ -251,6 +252,10 @@ class Pipeline:
             attempted += 1
             try:
                 summary = await summarizer.summarize_item(raw, source)
+            except SummarizerBudgetExceededError as e:
+                logger.warning("tetto di spesa raggiunto, interrompo la summarization: %s", e)
+                attempted -= 1  # non e' stato un vero tentativo, nessuna chiamata fatta
+                break
             except Exception as e:  # noqa: BLE001
                 logger.warning("summarize failed for %s: %s", raw.url, e)
                 failed += 1
@@ -353,6 +358,10 @@ class Pipeline:
                 summary = await summarizer.summarize_doc_change(
                     page_name=page.name, page_url=page.url, diff=r.diff
                 )
+            except SummarizerBudgetExceededError as e:
+                logger.warning("tetto di spesa raggiunto, interrompo i doc-change: %s", e)
+                attempted -= 1  # non e' stato un vero tentativo, nessuna chiamata fatta
+                break
             except Exception as e:  # noqa: BLE001
                 logger.warning("doc change summary failed for %s: %s", page.id, e)
                 failed += 1

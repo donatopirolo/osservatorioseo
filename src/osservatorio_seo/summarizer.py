@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
+import random
 import re
 from dataclasses import dataclass
 from typing import Any
@@ -90,6 +92,10 @@ class SummarizerError(Exception):
     pass
 
 
+class SummarizerBudgetExceededError(SummarizerError):
+    """Il costo cumulato del run ha raggiunto il tetto di spesa configurato."""
+
+
 # Rough pricing per milione di token (input / output) in USD
 MODEL_PRICING: dict[str, tuple[float, float]] = {
     "google/gemini-2.5-flash": (0.30, 2.50),
@@ -114,6 +120,7 @@ class Summarizer:
         primary_model: str = "google/gemini-2.5-flash",
         fallback_models: list[str] | None = None,
         max_retries_per_model: int = 2,
+        max_cost_eur: float | None = None,
     ) -> None:
         self._api_key = api_key
         self._primary = primary_model
@@ -122,6 +129,8 @@ class Summarizer:
             "openai/gpt-5-mini",
         ]
         self._max_retries = max_retries_per_model
+        self._max_cost_eur = max_cost_eur
+        self.total_cost_eur = 0.0
 
     async def summarize_item(self, raw: RawItem, source: Source) -> AISummary:
         prompt = ITEM_PROMPT.format(
@@ -152,14 +161,22 @@ class Summarizer:
         )
 
     async def _call_with_fallback(self, prompt: str) -> _RawResult:
+        if self._max_cost_eur is not None and self.total_cost_eur >= self._max_cost_eur:
+            raise SummarizerBudgetExceededError(
+                f"tetto di spesa raggiunto: {self.total_cost_eur:.4f} EUR "
+                f">= {self._max_cost_eur:.4f} EUR"
+            )
         models = [self._primary, *self._fallbacks]
         last_error: Exception | None = None
         for model in models:
             try:
-                return await self._call_model(model, prompt)
+                result = await self._call_model(model, prompt)
             except Exception as e:  # noqa: BLE001
                 logger.warning("model %s failed: %s", model, e)
                 last_error = e
+                continue
+            self.total_cost_eur += result.cost_eur
+            return result
         raise SummarizerError(f"all models failed: {last_error}")
 
     async def _call_model(self, model: str, prompt: str) -> _RawResult:
@@ -179,21 +196,31 @@ class Summarizer:
         }
         async with httpx.AsyncClient(timeout=30) as client:
             for attempt in range(self._max_retries):
-                resp = await client.post(OPENROUTER_URL, headers=headers, json=body)
+                is_last = attempt == self._max_retries - 1
+                try:
+                    resp = await client.post(OPENROUTER_URL, headers=headers, json=body)
+                except httpx.TimeoutException as e:
+                    if is_last:
+                        raise SummarizerError(f"timeout calling {model}") from e
+                    logger.warning("timeout calling %s, retrying: %s", model, e)
+                    await asyncio.sleep(2**attempt + random.uniform(0.0, 0.5))
+                    continue
                 if resp.status_code >= 500:
-                    if attempt < self._max_retries - 1:
-                        continue
-                    raise SummarizerError(f"server error {resp.status_code}")
-                resp.raise_for_status()
+                    if is_last:
+                        raise SummarizerError(f"server error {resp.status_code}")
+                    await asyncio.sleep(2**attempt + random.uniform(0.0, 0.5))
+                    continue
+                resp.raise_for_status()  # 4xx: definitivo, non e' un errore transitorio
                 data = resp.json()
                 try:
                     content = data["choices"][0]["message"]["content"]
                     parsed = _parse_json_loose(content)
                 except (KeyError, json.JSONDecodeError, ValueError) as e:
-                    if attempt < self._max_retries - 1:
-                        logger.warning("malformed JSON from %s, retrying: %s", model, e)
-                        continue
-                    raise SummarizerError(f"malformed JSON from {model}") from e
+                    if is_last:
+                        raise SummarizerError(f"malformed JSON from {model}") from e
+                    logger.warning("malformed JSON from %s, retrying: %s", model, e)
+                    await asyncio.sleep(2**attempt + random.uniform(0.0, 0.5))
+                    continue
                 usage = data.get("usage", {}) or {}
                 cost = self._compute_cost(
                     model,

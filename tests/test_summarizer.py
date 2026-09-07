@@ -1,6 +1,8 @@
 import json
 from datetime import UTC, datetime
 
+import httpx
+import pytest
 from pytest_httpx import HTTPXMock
 
 from osservatorio_seo.models import RawItem, Source
@@ -8,6 +10,7 @@ from osservatorio_seo.summarizer import (
     AISummary,
     DocChangeSummary,
     Summarizer,
+    SummarizerBudgetExceededError,
     _parse_json_loose,
 )
 
@@ -135,6 +138,74 @@ async def test_summarize_doc_change(httpx_mock: HTTPXMock) -> None:
     assert result.title_it.startswith("⚠️")
 
 
+async def test_summarize_item_retries_on_timeout(httpx_mock: HTTPXMock) -> None:
+    """Regressione 2.3: un timeout di rete (non solo un 5xx o un JSON
+    malformato) deve essere ritentato sullo stesso modello prima di passare
+    al fallback."""
+    httpx_mock.add_exception(httpx.ReadTimeout("boom"), url=OPENROUTER_URL)
+    httpx_mock.add_response(
+        url=OPENROUTER_URL,
+        json=mock_response(
+            {
+                "title_it": "Dopo il timeout",
+                "summary_it": "Riassunto dopo un retry.",
+                "category": "google_updates",
+                "tags": [],
+                "importance": 3,
+            }
+        ),
+    )
+    summarizer = Summarizer(api_key="sk-test")
+    result = await summarizer.summarize_item(mk_raw(), mk_source())
+    assert result.importance == 3
+
+
+async def test_summarizer_stops_calling_api_once_budget_exceeded(httpx_mock: HTTPXMock) -> None:
+    """Regressione 2.3: raggiunto il tetto di spesa, le chiamate successive
+    non devono fare nessuna richiesta HTTP (il costo non deve poter
+    scappare oltre il tetto)."""
+    httpx_mock.add_response(
+        url=OPENROUTER_URL,
+        json=mock_response(
+            {
+                "title_it": "Prima chiamata",
+                "summary_it": "Sotto il tetto di spesa.",
+                "category": "google_updates",
+                "tags": [],
+                "importance": 3,
+            }
+        ),
+    )
+    summarizer = Summarizer(api_key="sk-test", max_cost_eur=0.0001)
+    first = await summarizer.summarize_item(mk_raw(), mk_source())
+    assert first.cost_eur > 0  # la prima chiamata supera gia' un tetto minuscolo
+
+    with pytest.raises(SummarizerBudgetExceededError):
+        await summarizer.summarize_item(mk_raw(), mk_source())
+
+    # nessuna seconda richiesta HTTP: la seconda chiamata e' stata bloccata
+    # prima di contattare OpenRouter
+    assert len(httpx_mock.get_requests()) == 1
+
+
+async def test_summarizer_without_cap_never_raises_budget_error(httpx_mock: HTTPXMock) -> None:
+    httpx_mock.add_response(
+        url=OPENROUTER_URL,
+        json=mock_response(
+            {
+                "title_it": "Ok",
+                "summary_it": "Nessun tetto configurato.",
+                "category": "google_updates",
+                "tags": [],
+                "importance": 3,
+            }
+        ),
+    )
+    summarizer = Summarizer(api_key="sk-test")  # max_cost_eur=None di default
+    result = await summarizer.summarize_item(mk_raw(), mk_source())
+    assert result.importance == 3
+
+
 def test_parse_json_loose_plain() -> None:
     assert _parse_json_loose('{"a": 1}') == {"a": 1}
 
@@ -150,7 +221,5 @@ def test_parse_json_loose_with_prefix_text() -> None:
 
 
 def test_parse_json_loose_raises_on_no_json() -> None:
-    import pytest
-
     with pytest.raises(ValueError, match="no JSON"):
         _parse_json_loose("just plain text no braces at all")
