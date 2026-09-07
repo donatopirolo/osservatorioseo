@@ -11,32 +11,12 @@
       "enabled": true
     },
     {
-      "id": "google_search_status_dashboard",
-      "name": "Google Search Status Dashboard",
-      "type": "official",
-      "authority": 10,
-      "fetcher": "rss",
-      "url": "https://status.search.google.com/incidents.rss",
-      "category_hint": "google_updates",
-      "enabled": true
-    },
-    {
       "id": "openai_blog",
       "name": "OpenAI Blog",
       "type": "official",
       "authority": 10,
       "fetcher": "rss",
       "url": "https://openai.com/blog/rss.xml",
-      "category_hint": "ai_models",
-      "enabled": true
-    },
-    {
-      "id": "anthropic_news",
-      "name": "Anthropic News",
-      "type": "official",
-      "authority": 10,
-      "fetcher": "scraper",
-      "url": "https://www.anthropic.com/news",
       "category_hint": "ai_models",
       "enabled": true
     },
@@ -58,16 +38,6 @@
       "fetcher": "rss",
       "url": "https://blogs.bing.com/webmaster/feed",
       "category_hint": "technical_seo",
-      "enabled": true
-    },
-    {
-      "id": "search_engine_land",
-      "name": "Search Engine Land",
-      "type": "media",
-      "authority": 9,
-      "fetcher": "rss",
-      "url": "https://searchengineland.com/feed",
-      "category_hint": "industry_news",
       "enabled": true
     },
     {
@@ -151,26 +121,6 @@
       "enabled": true
     },
     {
-      "id": "mistral_ai_blog",
-      "name": "Mistral AI News",
-      "type": "official",
-      "authority": 8,
-      "fetcher": "scraper",
-      "url": "https://mistral.ai/news",
-      "category_hint": "ai_models",
-      "enabled": true
-    },
-    {
-      "id": "perplexity_blog",
-      "name": "Perplexity Blog",
-      "type": "official",
-      "authority": 8,
-      "fetcher": "scraper",
-      "url": "https://www.perplexity.ai/hub",
-      "category_hint": "ai_overviews_llm_seo",
-      "enabled": true
-    },
-    {
       "id": "huggingface_blog",
       "name": "Hugging Face Blog",
       "type": "official",
@@ -198,16 +148,6 @@
       "fetcher": "rss",
       "url": "https://developer.chrome.com/blog/feed.xml",
       "category_hint": "technical_seo",
-      "enabled": true
-    },
-    {
-      "id": "searchliaison_x",
-      "name": "Danny Sullivan (SearchLiaison) on X",
-      "type": "social",
-      "authority": 10,
-      "fetcher": "playwright",
-      "url": "https://x.com/searchliaison",
-      "category_hint": "google_updates",
       "enabled": true
     }
   ],
