@@ -1,5 +1,7 @@
 User-agent: *
 {% if allow_indexing %}Allow: /
+Disallow: /data/
+Disallow: /_legacy/
 {% else %}Disallow: /
 {% endif %}
 

@@ -264,6 +264,9 @@ def test_render_sitemap_robots_feed() -> None:
 
     robots_allow = renderer.render_robots_txt({"allow_indexing": True, "site_url": "https://x.com"})
     assert "Allow: /" in robots_allow
+    # 1.11: /data/ e /_legacy/ esclusi dal crawling anche quando il resto e' indicizzabile
+    assert "Disallow: /data/" in robots_allow
+    assert "Disallow: /_legacy/" in robots_allow
 
     feed = renderer.render_feed_xml(
         {
