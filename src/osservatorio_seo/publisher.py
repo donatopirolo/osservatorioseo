@@ -420,21 +420,37 @@ class Publisher:
 
         Articoli singoli vengono generati solo per ``item.importance >= 4``
         per mantenere il numero di file sotto i limiti free di Cloudflare.
+
+        Usata dalla pipeline quotidiana, dove c'e' un solo feed da pubblicare:
+        equivale a ``publish_day`` + ``publish_global`` sullo stesso feed. Per
+        rigenerare l'intero archivio (molti feed, un solo stato globale
+        finale) usa quei due metodi separatamente — vedi scripts/rebuild_seo_html.py.
         """
         renderer = HtmlRenderer(templates_dir)
         site_dir.mkdir(parents=True, exist_ok=True)
 
         day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
+        item_slugs = self._compute_item_slugs(feed, day_iso)
 
+        self._ssg_homepage(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+        self._ssg_snapshot(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+        self._ssg_articles(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+        self._ssg_archive_hubs(renderer, site_dir, allow_indexing)
+        self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+        self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
+        self._ssg_dossiers(renderer, site_dir, allow_indexing)
+        self._ssg_tracker(renderer, site_dir, allow_indexing)
+        self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+        self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+
+    def _compute_item_slugs(self, feed: Feed, day_iso: str) -> dict[str, str]:
+        """Slug univoci per gli item indicizzabili di ``feed`` non gia' pubblicati prima di ``day_iso``."""
         # URL gia' pubblicati (con pagina propria) in un giorno precedente:
         # non generare una seconda pagina per lo stesso URL (es. una fonte
         # ripubblica/aggiorna un articolo vecchio senza cambiarne l'URL).
         urls_published_before_today = {
             meta["url"] for meta in self._build_item_index().values() if meta["date"] < day_iso
         }
-
-        # Slugs univoci per gli item con importance>=4 (quelli che avranno una
-        # single-article page).
         existing_slugs: set[str] = set()
         item_slugs: dict[str, str] = {}
         for item in feed.items:
@@ -445,10 +461,58 @@ class Publisher:
             slug = make_unique_slug(item.title_it, existing_slugs)
             existing_slugs.add(slug)
             item_slugs[item.id] = slug
+        return item_slugs
 
-        self._ssg_homepage(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+    def publish_day(
+        self,
+        feed: Feed,
+        templates_dir: Path,
+        site_dir: Path,
+        *,
+        allow_indexing: bool = False,
+    ) -> None:
+        """Genera SOLO le pagine specifiche di questo giorno: snapshot + articoli.
+
+        Usato da scripts/rebuild_seo_html.py per rigenerare l'archivio: a
+        differenza di homepage/hub/sitemap/tracker (che riflettono lo stato
+        completo e vanno ricalcolati una sola volta, vedi ``publish_global``),
+        lo snapshot e gli articoli di un giorno sono permanenti e vanno
+        scritti una volta per ciascun giorno archiviato.
+        """
+        renderer = HtmlRenderer(templates_dir)
+        site_dir.mkdir(parents=True, exist_ok=True)
+        day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
+        item_slugs = self._compute_item_slugs(feed, day_iso)
+
         self._ssg_snapshot(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_articles(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
+
+    def publish_global(
+        self,
+        feed: Feed,
+        sources: list[Source],
+        doc_pages: list[DocWatcherPage],
+        templates_dir: Path,
+        site_dir: Path,
+        *,
+        allow_indexing: bool = False,
+    ) -> None:
+        """Genera tutto cio' che dipende dallo stato COMPLETO, non da un giorno singolo.
+
+        Idempotente rispetto all'archivio completo (ogni sotto-funzione
+        rilegge da disco tutto cio' che le serve): va chiamata UNA VOLTA con
+        il feed piu' recente, non una volta per ogni giorno archiviato —
+        altrimenti rilegge e riscrive homepage/hub/sitemap/tracker/dossier
+        una volta per ogni giorno, un lavoro sprecato che cresce con la
+        dimensione dell'archivio (vedi scripts/rebuild_seo_html.py, dove
+        prima girava dentro il loop di ``publish_ssg``).
+        """
+        renderer = HtmlRenderer(templates_dir)
+        site_dir.mkdir(parents=True, exist_ok=True)
+        day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
+        item_slugs = self._compute_item_slugs(feed, day_iso)
+
+        self._ssg_homepage(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_archive_hubs(renderer, site_dir, allow_indexing)
         self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
