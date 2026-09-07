@@ -35,6 +35,11 @@ def test_renderer_smoke_layout() -> None:
         ' title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />' in html
     )
     assert '<meta property="og:locale" content="it_IT" />' in html
+    # 4.1: preconnect ai domini dei Google Fonts, e niente peso 300 mai usato
+    assert '<link rel="preconnect" href="https://fonts.googleapis.com" />' in html
+    assert '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />' in html
+    assert "wght@400;500;700" in html
+    assert "wght@300;400;500;700" not in html
 
 
 def test_renderer_no_noindex_when_false() -> None:
