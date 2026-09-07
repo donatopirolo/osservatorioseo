@@ -1,102 +1,223 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-07T11:21:52.758778Z",
-  "generated_at_local": "2026-09-07T13:21:52.758778+02:00",
+  "generated_at": "2026-09-07T10:56:26.907182Z",
+  "generated_at_local": "2026-09-07T12:56:26.907182+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-07-1321",
+  "run_id": "2026-09-07-1256",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2282,
-    "items_after_dedup": 17,
+    "items_after_dedup": 20,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0,
-    "summarize_attempted": 0,
+    "ai_cost_eur": 0.0022,
+    "summarize_attempted": 3,
     "summarize_failed": 0
   },
-  "top10": [],
-  "categories": {},
-  "items": [],
+  "top10": [
+    "item_2026-09-07_002",
+    "item_2026-09-07_003",
+    "item_2026-09-07_001"
+  ],
+  "categories": {
+    "ai_overviews_llm_seo": [
+      "item_2026-09-07_002",
+      "item_2026-09-07_003"
+    ],
+    "industry_news": [
+      "item_2026-09-07_001"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-09-07_001",
+      "title_original": "Supporting independent journalism in Ukraine",
+      "title_it": "Sostegno al giornalismo indipendente in Ucraina",
+      "summary_it": "OpenAI, WAN-IFRA e AIRPPU hanno lanciato un'iniziativa congiunta per supportare i media ucraini nell'adozione dell'intelligenza artificiale. Il programma mira a rafforzare la sostenibilità e l'efficienza del giornalismo indipendente attraverso la formazione e lo sviluppo di soluzioni AI. Le organizzazioni partecipanti riceveranno crediti per l'API di OpenAI per facilitare l'implementazione di progetti specifici.",
+      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "openai",
+        "journalism",
+        "ai_adoption",
+        "ukraine"
+      ],
+      "importance": 2,
+      "published_at": "2026-09-07T00:00:00Z",
+      "fetched_at": "2026-09-07T10:57:35.531501Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:bcdb1fd3c234aac4",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-07_002",
+      "title_original": "The AI hours nobody on your marketing team is counting",
+      "title_it": "Le ore dedicate all'IA che nessuno nel tuo team marketing sta conteggiando",
+      "summary_it": "L'articolo evidenzia come i team di marketing, in particolare i professionisti SEO, stiano dedicando un tempo crescente all'uso dell'IA, spesso sviluppando soluzioni interne che potrebbero essere acquistate a costi contenuti. Si sottolinea l'impatto positivo dell'automazione tramite IA, ma si avverte che l'efficienza non è automatica. È fondamentale valutare criticamente quando e come l'IA viene impiegata per massimizzare i benefici.",
+      "url": "https://www.growth-memo.com/p/the-ai-hours-nobody-on-your-marketing",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_efficiency",
+        "marketing_automation",
+        "seo_tool",
+        "resource_management"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T08:28:41Z",
+      "fetched_at": "2026-09-07T10:57:37.388209Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e971a985bccbdc3f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-07_003",
+      "title_original": "AI chatbots talked 57.5% of AI users out of buying",
+      "title_it": "I chatbot AI hanno dissuaso il 57,5% degli utenti AI dall'acquisto",
+      "summary_it": "Un sondaggio condotto su consumatori statunitensi rivela che il 65% degli utenti AI ha sostituito parte delle ricerche di prodotti su Google con i chatbot. Il 57,5% degli utenti AI è stato dissuaso dall'acquisto da un chatbot. Inoltre, il 40% degli intervistati non apprezza la presenza di annunci pubblicitari nei chatbot.",
+      "url": "https://www.semrush.com/blog/ai-chatbots-talk-ai-users-out-of-buying",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_chatbot",
+        "consumer_behavior",
+        "search_trend",
+        "ecommerce"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T08:48:00Z",
+      "fetched_at": "2026-09-07T10:57:38.877107Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2e6e8fad16e44c57",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-07T11:21:53.954663Z",
+      "last_checked": "2026-09-07T10:56:28.439129Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-07T11:21:55.385366Z",
+      "last_checked": "2026-09-07T10:56:29.538921Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-07T11:21:56.615425Z",
+      "last_checked": "2026-09-07T10:56:30.264868Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-07T11:21:58.411787Z",
+      "last_checked": "2026-09-07T10:56:32.462657Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-07T11:22:18.234157Z",
+      "last_checked": "2026-09-07T10:56:53.052173Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-07T11:22:18.621258Z",
+      "last_checked": "2026-09-07T10:56:53.359273Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-07T11:22:19.965838Z",
+      "last_checked": "2026-09-07T10:56:55.254306Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-07T11:22:22.821627Z",
+      "last_checked": "2026-09-07T10:56:56.935031Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-07T11:22:23.509235Z",
+      "last_checked": "2026-09-07T10:56:58.328541Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-07T11:22:23.719361Z",
+      "last_checked": "2026-09-07T10:56:58.554612Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-07T11:22:24.862746Z",
+      "last_checked": "2026-09-07T10:57:00.293230Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-07T11:22:26.337722Z",
+      "last_checked": "2026-09-07T10:57:01.590657Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-07T11:22:27.896463Z",
+      "last_checked": "2026-09-07T10:57:02.883454Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-07T11:22:29.476966Z",
+      "last_checked": "2026-09-07T10:57:04.128480Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-07T11:22:30.978928Z",
+      "last_checked": "2026-09-07T10:57:05.543174Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-07T11:22:32.850031Z",
+      "last_checked": "2026-09-07T10:57:07.146555Z",
       "changed": false
     }
   ],
