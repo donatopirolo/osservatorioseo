@@ -70,10 +70,13 @@ class JinaReader:
         try:
             resp = await self._http.get(
                 JINA_READER_BASE + url,
-                headers={
-                    "Authorization": f"Bearer {self._api_key}",
-                    "X-Return-Format": "text",
-                },
+                # Formato predefinito (markdown) e non "text": quello grezzo
+                # restituisce il menu di navigazione del sito prima
+                # dell'articolo, e il boilerplate finirebbe in testa al prompt
+                # del summarizer, dove pesa di piu'. Il markdown antepone
+                # invece Title, URL Source e Published Time, e parte dal corpo
+                # vero dell'articolo. Verificato su piu' URL dell'archivio.
+                headers={"Authorization": f"Bearer {self._api_key}"},
             )
         except Exception as e:  # noqa: BLE001
             logger.warning("jina reader failed for %s: %s", url, e)
