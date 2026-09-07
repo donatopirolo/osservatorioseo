@@ -115,6 +115,29 @@ jobs:
             --commit-hash="$GITHUB_SHA" \
             --commit-message="refresh $(TZ=Europe/Rome date +%Y-%m-%d)"
 
+      # La homepage e' renderizzata dal feed corrente: un feed vuoto la
+      # lascia senza articoli, e nessun controllo se ne accorgerebbe
+      # (feed_health considera sano un run con zero riassunti, e tutte le
+      # pagine continuano a rispondere 200). E' successo il 2026-09-07.
+      # La pipeline ora si rifiuta di pubblicare un feed vuoto, ma il
+      # deploy passa da wrangler e da site/ sul disco: qui si verifica il
+      # risultato vero, quello che vede il lettore.
+      - name: Verifica che la home abbia articoli
+        if: steps.timecheck.outputs.run == 'true'
+        run: |
+          URL=https://www.osservatorioseo.com/
+          for i in 1 2 3 4 5; do
+            N=$(curl -sS --max-time 20 "$URL?cachebust=$(date +%s)" | grep -c '<article' || true)
+            echo "tentativo $i: $N schede articolo in home"
+            if [ "$N" -gt 0 ]; then
+              echo "::notice::Home verificata: $N schede articolo."
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::error::La homepage non contiene nessuna scheda articolo dopo il deploy."
+          exit 1
+
       - name: Open issue on failure
         if: failure()
         uses: actions/github-script@v9
