@@ -82,9 +82,3 @@ class HtmlRenderer:
 
     def render_tracker_report(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/tracker_report.html.jinja", context)
-
-    def render_google_financials(self, context: dict[str, Any]) -> str:
-        return self.render_raw("pages/google_financials.html.jinja", context)
-
-    def render_google_financials_quarter(self, context: dict[str, Any]) -> str:
-        return self.render_raw("pages/google_financials_quarter.html.jinja", context)

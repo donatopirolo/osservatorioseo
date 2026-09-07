@@ -390,14 +390,6 @@ class Publisher:
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
         self._ssg_tracker(renderer, site_dir, allow_indexing)
         self._ssg_tracker_reports(renderer, site_dir, allow_indexing)
-        # Google Financials DISATTIVATO il 2026-09-06: i dati EDGAR erano errati
-        # (edgar_client._find_entry non verifica che la data `end` cada nel trimestre
-        # richiesto; nei 10-Q il comparativo dell'anno prima ha gli stessi fy/fp).
-        # Le pagine sono state rimosse da site/ e vanno in 301 verso la home
-        # (site/_redirects). Riattivare solo dopo aver corretto _find_entry E aver
-        # trovato una fonte reale per Search revenue/TAC, che companyfacts non espone.
-        # self._ssg_google_financials(renderer, site_dir, allow_indexing)
-        # self._ssg_google_financials_quarters(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
 
@@ -500,7 +492,6 @@ class Publisher:
             "categories": categories,
             "failed_sources": [fs.model_dump() for fs in feed.failed_sources],
             "tracker_teaser": self._build_tracker_teaser(),
-            "financials_teaser": self._build_financials_teaser(),
             "breadcrumbs": [{"name": "Home", "url": canonical("/")}],
         }
 
@@ -1270,213 +1261,6 @@ class Publisher:
             "year": snapshot.year,
         }
 
-    # --- Google Financials ---
-
-    def _ssg_google_financials(
-        self,
-        renderer: HtmlRenderer,
-        site_dir: Path,
-        allow_indexing: bool,
-    ) -> None:
-        """Render /google-financials/ dashboard from all quarterly snapshots."""
-        from osservatorio_seo.google_financials.collector import FinancialsCollector
-
-        base_dir = self._data_dir / "google_financials"
-        snapshots = FinancialsCollector.load_all_snapshots(base_dir, "alphabet")
-        analyses = FinancialsCollector.load_all_analyses(base_dir, "alphabet")
-
-        if not snapshots:
-            return
-
-        latest = snapshots[-1]
-
-        kpi_keys = [
-            "google_search_revenue",
-            "youtube_revenue",
-            "google_cloud_revenue",
-            "capital_expenditures",
-        ]
-
-        table_keys = [
-            "total_revenue",
-            "google_search_revenue",
-            "youtube_revenue",
-            "google_cloud_revenue",
-            "traffic_acquisition_costs",
-            "capital_expenditures",
-            "operating_income",
-        ]
-        table_labels = {
-            "total_revenue": "Revenue",
-            "google_search_revenue": "Search",
-            "youtube_revenue": "YouTube",
-            "google_cloud_revenue": "Cloud",
-            "traffic_acquisition_costs": "TAC",
-            "capital_expenditures": "CapEx",
-            "operating_income": "Op. Income",
-        }
-
-        # Build chart data
-        chart_data = self._build_financials_chart_data(snapshots)
-
-        ctx = {
-            "page_title": "Google Financials SEO Analyzer — Osservatorio SEO",
-            "page_description": (
-                "Analisi trimestrale dei dati finanziari Alphabet e implicazioni "
-                "per la SEO: ricavi Search, TAC, YouTube, Cloud, CapEx."
-            ),
-            "canonical_url": canonical("/google-financials/"),
-            "active_nav": "google-financials",
-            # DEPRECATO: dati errati, sempre noindex (vedi commento in _ssg_seo_assets)
-            "noindex": True,
-            "og_type": "website",
-            "updated_label": format_date_it(latest.generated_at, "%d %B %Y"),
-            "latest": latest.model_dump(mode="json"),
-            "snapshots": [s.model_dump(mode="json") for s in snapshots],
-            "analyses": analyses,
-            "kpi_keys": kpi_keys,
-            "table_keys": table_keys,
-            "table_labels": table_labels,
-            "chart_json": json.dumps(chart_data),
-            "breadcrumbs": [
-                {"name": "Home", "url": canonical("/")},
-                {"name": "Google Financials", "url": canonical("/google-financials/")},
-            ],
-        }
-
-        target_dir = site_dir / "google-financials"
-        target_dir.mkdir(parents=True, exist_ok=True)
-        (target_dir / "index.html").write_text(
-            renderer.render_google_financials(ctx), encoding="utf-8"
-        )
-
-    def _ssg_google_financials_quarters(
-        self,
-        renderer: HtmlRenderer,
-        site_dir: Path,
-        allow_indexing: bool,
-    ) -> None:
-        """Render per-quarter analysis pages."""
-        from osservatorio_seo.google_financials.collector import FinancialsCollector
-        from osservatorio_seo.google_financials.models import QuarterlyAnalysis
-
-        base_dir = self._data_dir / "google_financials"
-        snapshots = FinancialsCollector.load_all_snapshots(base_dir, "alphabet")
-        snap_by_key = {(s.fiscal_year, s.fiscal_quarter): s for s in snapshots}
-
-        analyses_dir = base_dir / "alphabet" / "analyses"
-        if not analyses_dir.exists():
-            return
-
-        kpi_keys = [
-            "google_search_revenue",
-            "youtube_revenue",
-            "google_cloud_revenue",
-            "capital_expenditures",
-        ]
-
-        for analysis_path in sorted(analyses_dir.glob("*.json")):
-            raw = json.loads(analysis_path.read_text(encoding="utf-8"))
-            analysis = QuarterlyAnalysis(**raw)
-
-            quarter_key = (analysis.fiscal_year, analysis.fiscal_quarter)
-            snapshot = snap_by_key.get(quarter_key)
-            quarter_label = f"Q{analysis.fiscal_quarter} {analysis.fiscal_year}"
-            slug = f"{analysis.fiscal_year}-Q{analysis.fiscal_quarter}"
-            canonical_url = canonical(f"/google-financials/{slug}/")
-
-            ctx = {
-                "page_title": f"{analysis.title_it} — Osservatorio SEO",
-                "page_description": analysis.subtitle_it,
-                "canonical_url": canonical_url,
-                "active_nav": "google-financials",
-                # DEPRECATO: dati errati, sempre noindex (vedi commento in _ssg_seo_assets)
-                "noindex": True,
-                "og_type": "article",
-                "analysis": raw,
-                "snapshot": snapshot.model_dump(mode="json") if snapshot else None,
-                "company_name": "Alphabet Inc.",
-                "sec_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-Q&dateb=&owner=include&count=5",
-                "kpi_keys": kpi_keys,
-                "updated_iso": analysis.generated_at.isoformat(),
-                "breadcrumbs": [
-                    {"name": "Home", "url": canonical("/")},
-                    {"name": "Google Financials", "url": canonical("/google-financials/")},
-                    {"name": quarter_label, "url": canonical_url},
-                ],
-            }
-
-            target_dir = site_dir / "google-financials" / slug
-            target_dir.mkdir(parents=True, exist_ok=True)
-            (target_dir / "index.html").write_text(
-                renderer.render_google_financials_quarter(ctx), encoding="utf-8"
-            )
-
-    @staticmethod
-    def _build_financials_chart_data(snapshots: list) -> dict[str, Any]:
-        """Build JSON-serializable chart data from snapshots."""
-        revenue_data = []
-        tac_data = []
-        capex_data = []
-
-        for s in snapshots:
-            label = f"Q{s.fiscal_quarter} {s.fiscal_year}"
-            metrics = s.metrics
-
-            # Revenue chart
-            revenue_entry = {"label": label}
-            search = metrics.get("google_search_revenue")
-            youtube = metrics.get("youtube_revenue")
-            cloud = metrics.get("google_cloud_revenue")
-            revenue_entry["search"] = search.value_usd_millions if search else 0
-            revenue_entry["youtube"] = youtube.value_usd_millions if youtube else 0
-            revenue_entry["cloud"] = cloud.value_usd_millions if cloud else 0
-            revenue_data.append(revenue_entry)
-
-            # TAC chart
-            tac_entry = {"label": label}
-            tac_entry["tac_pct"] = s.tac_as_pct_of_search_revenue or 0
-            tac_data.append(tac_entry)
-
-            # CapEx chart
-            capex = metrics.get("capital_expenditures")
-            capex_data.append(
-                {
-                    "label": label,
-                    "capex": capex.value_usd_millions if capex else 0,
-                }
-            )
-
-        return {
-            "revenue": revenue_data,
-            "tac": tac_data,
-            "capex": capex_data,
-        }
-
-    def _build_financials_teaser(self) -> dict[str, Any] | None:
-        # DEPRECATO: i dati EDGAR sono errati, il teaser non va piu' mostrato in home.
-        return None
-
-    def _build_financials_teaser_legacy(self) -> dict[str, Any] | None:
-        """Small dict for homepage Google Financials teaser, or None."""
-        from osservatorio_seo.google_financials.collector import FinancialsCollector
-
-        base_dir = self._data_dir / "google_financials"
-        snapshots = FinancialsCollector.load_all_snapshots(base_dir, "alphabet")
-        if not snapshots:
-            return None
-        latest = snapshots[-1]
-        search = latest.metrics.get("google_search_revenue")
-        cloud = latest.metrics.get("google_cloud_revenue")
-        capex = latest.metrics.get("capital_expenditures")
-        return {
-            "quarter": f"Q{latest.fiscal_quarter} {latest.fiscal_year}",
-            "search_revenue": search.value_usd_millions if search else None,
-            "search_yoy": search.yoy_change_pct if search else None,
-            "cloud_revenue": cloud.value_usd_millions if cloud else None,
-            "capex": capex.value_usd_millions if capex else None,
-        }
-
     def _ssg_seo_assets(
         self,
         renderer: HtmlRenderer,
@@ -1528,12 +1312,6 @@ class Publisher:
                     "changefreq": "weekly",
                 }
             )
-
-        # Google Financials: DEPRECATO, fuori dalla sitemap.
-        # I dati EDGAR sono errati (edgar_client._find_entry non verifica che la data
-        # `end` cada nel trimestre richiesto: nei 10-Q il comparativo dell'anno prima
-        # ha gli stessi fy/fp e vince l'ordinamento). Le pagine restano servite in
-        # noindex finche' Google le rimuove dall'indice, poi vanno cancellate.
 
         categories_seen = {i.category for i in feed.items}
         for cat in categories_seen:
