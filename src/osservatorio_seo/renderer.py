@@ -79,6 +79,3 @@ class HtmlRenderer:
 
     def render_tracker(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/tracker.html.jinja", context)
-
-    def render_tracker_report(self, context: dict[str, Any]) -> str:
-        return self.render_raw("pages/tracker_report.html.jinja", context)

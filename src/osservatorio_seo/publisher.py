@@ -450,7 +450,6 @@ class Publisher:
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
         self._ssg_tracker(renderer, site_dir, allow_indexing)
-        self._ssg_tracker_reports(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
 
@@ -1316,51 +1315,6 @@ class Publisher:
         (target_dir / "index.html").write_text(renderer.render_tracker(ctx), encoding="utf-8")
         _write_tracker_csv(snapshot, target_dir / "data.csv")
 
-    def _ssg_tracker_reports(
-        self,
-        renderer: HtmlRenderer,
-        site_dir: Path,
-        allow_indexing: bool,
-    ) -> None:
-        """Render monthly tracker reports from data/tracker/reports/*.json."""
-        reports_dir = self._data_dir / "tracker" / "reports"
-        if not reports_dir.exists():
-            return
-
-        from osservatorio_seo.tracker.models import TrackerMonthlyReport
-
-        for report_path in sorted(reports_dir.glob("????-??.json")):
-            report = TrackerMonthlyReport.model_validate_json(
-                report_path.read_text(encoding="utf-8")
-            )
-            year_str, month_str = report_path.stem.split("-")
-            month_label = format_date_it(datetime(report.year, report.month, 1), "%B %Y")
-            canonical_url = canonical(f"/tracker/report/{year_str}-{month_str}/")
-
-            ctx = {
-                "page_title": f"{report.title_it} — Tracker — Osservatorio SEO",
-                "page_description": report.subtitle_it,
-                "canonical_url": canonical_url,
-                "active_nav": "tracker",
-                "noindex": not allow_indexing,
-                "og_type": "article",
-                "report": report.model_dump(mode="json"),
-                "article_url": canonical_url,
-                "updated_iso": report.generated_at.isoformat(),
-                "month_label": month_label,
-                "breadcrumbs": [
-                    {"name": "Home", "url": canonical("/"), "site_path": "/"},
-                    {"name": "Tracker", "url": canonical("/tracker/"), "site_path": "/tracker/"},
-                    {"name": month_label, "url": canonical_url, "site_path": ""},
-                ],
-            }
-
-            target_dir = site_dir / "tracker" / "report" / f"{year_str}-{month_str}"
-            target_dir.mkdir(parents=True, exist_ok=True)
-            (target_dir / "index.html").write_text(
-                renderer.render_tracker_report(ctx), encoding="utf-8"
-            )
-
     @staticmethod
     def _find_latest_snapshot(snapshots_dir: Path) -> Path | None:
         candidates = sorted(snapshots_dir.glob("*-W*.json"))
@@ -1467,20 +1421,6 @@ class Publisher:
                         "loc": canonical(f"/tracker/{y:04d}-{m:02d}/"),
                         "lastmod": snap.generated_at.strftime("%Y-%m-%d"),
                         "priority": "0.5",
-                        "changefreq": "monthly",
-                    }
-                )
-
-        # Tracker report mensile: mai in sitemap prima (D11).
-        tracker_reports = self._data_dir / "tracker" / "reports"
-        if tracker_reports.exists():
-            for report_path in sorted(tracker_reports.glob("????-??.json")):
-                year_str, month_str = report_path.stem.split("-")
-                urls.append(
-                    {
-                        "loc": canonical(f"/tracker/report/{year_str}-{month_str}/"),
-                        "lastmod": today,
-                        "priority": "0.6",
                         "changefreq": "monthly",
                     }
                 )

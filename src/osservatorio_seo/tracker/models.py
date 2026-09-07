@@ -136,27 +136,3 @@ class TrackerSnapshot(BaseModel):
     os_it: list[OSEntry] = Field(default_factory=list)
     os_global: list[OSEntry] = Field(default_factory=list)
     metadata: SnapshotMetadata
-
-
-class ReportTakeaway(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    title: str
-    body: str
-
-
-class TrackerMonthlyReport(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    schema_version: str = "2.0"
-    year: int
-    month: int = Field(ge=1, le=12)
-    title_it: str
-    subtitle_it: str
-    hero_mover: str
-    executive_summary: list[str] = Field(default_factory=list, max_length=6)
-    narrative: str
-    takeaways: list[ReportTakeaway] = Field(default_factory=list, max_length=8)
-    outlook: str
-    snapshot_week_refs: list[str] = Field(default_factory=list)
-    generated_at: datetime
-    model_used: str
-    cost_eur: float = 0.0

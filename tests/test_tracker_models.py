@@ -16,11 +16,9 @@ from osservatorio_seo.tracker.models import (
     DeviceTypePoint,
     DeviceTypeTimeseries,
     OSEntry,
-    ReportTakeaway,
     SnapshotMetadata,
     TimeseriesPoint,
     TopDomainEntry,
-    TrackerMonthlyReport,
     TrackerSnapshot,
     TrendsPoint,
     TrendsTimeseries,
@@ -241,32 +239,6 @@ def test_tracker_snapshot_extra_field_rejected():
             metadata=SnapshotMetadata(),
             unknown_field="oops",
         )
-
-
-# ---------------------------------------------------------------------------
-# TrackerMonthlyReport
-# ---------------------------------------------------------------------------
-
-
-def test_tracker_monthly_report_structure():
-    report = TrackerMonthlyReport(
-        year=2026,
-        month=3,
-        title_it="Claude +42% a marzo 2026: il mover del mese in Italia",
-        subtitle_it="Snapshot del mercato AI & Search italiano",
-        hero_mover="claude.ai",
-        executive_summary=["Punto 1", "Punto 2", "Punto 3"],
-        narrative="Paragrafo 1.\n\nParagrafo 2.",
-        takeaways=[ReportTakeaway(title=f"Takeaway {i}", body="Corpo") for i in range(5)],
-        outlook="Cosa aspettarsi.",
-        snapshot_week_refs=["2026-W10", "2026-W11", "2026-W12", "2026-W13"],
-        generated_at=NOW,
-        model_used="anthropic/claude-sonnet-4-5",
-        cost_eur=0.07,
-    )
-    assert report.schema_version == "2.0"  # TrackerMonthlyReport keeps its own versioning
-    assert len(report.takeaways) == 5
-    assert report.hero_mover == "claude.ai"
 
 
 # ---------------------------------------------------------------------------
