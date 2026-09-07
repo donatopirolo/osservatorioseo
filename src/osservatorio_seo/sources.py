@@ -57,15 +57,20 @@ def override_importance(
     source_id: str,
     ai_importance: int,
     tags: list[str] | None = None,
+    authority: int | None = None,
 ) -> int:
     """Restituisce l'importance finale considerando le policy editoriali.
 
     Google → sempre 5, TRANNE per annunci di eventi (Search Central Live,
-    conferenze, meetup) dove rispettiamo il giudizio AI. Tutte le altre
-    fonti → rispetta il giudizio AI.
+    conferenze, meetup) dove rispettiamo il giudizio AI. Per tutte le altre
+    fonti rispettiamo il giudizio AI, con un tetto (D8): una fonte con
+    autorevolezza <= 7 non puo' ricevere importance 5, riservata a fonti
+    sufficientemente autorevoli per meritare il massimo rilievo editoriale.
     """
     if is_google_source(source_id):
         if is_event_item(tags):
             return ai_importance
         return 5
+    if authority is not None and authority <= 7 and ai_importance > 4:
+        return 4
     return ai_importance

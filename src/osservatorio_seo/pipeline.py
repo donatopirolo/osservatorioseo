@@ -272,7 +272,9 @@ class Pipeline:
                     source=source,
                     category=summary.category,
                     tags=normalized_tags,
-                    importance=override_importance(source.id, summary.importance, normalized_tags),
+                    importance=override_importance(
+                        source.id, summary.importance, normalized_tags, source.authority
+                    ),
                     published_at=raw.published_at,
                     fetched_at=datetime.now(UTC),
                     is_doc_change=False,

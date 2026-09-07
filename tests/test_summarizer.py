@@ -66,6 +66,54 @@ async def test_summarize_item_success(httpx_mock: HTTPXMock) -> None:
     assert "marzo" in result.summary_it.lower()
 
 
+async def test_summarize_item_wraps_content_in_delimiters(httpx_mock: HTTPXMock) -> None:
+    """Regressione 2.4: il content (potenzialmente un articolo integrale
+    scaricato da una fonte esterna via Jina Reader, 2.2) deve stare tra
+    delimitatori espliciti nel prompt, con un'istruzione a trattarlo come
+    dato e non come comando — difesa base da prompt injection."""
+    httpx_mock.add_response(
+        url=OPENROUTER_URL,
+        json=mock_response(
+            {
+                "title_it": "T",
+                "summary_it": "S di almeno venti caratteri qui.",
+                "category": "google_updates",
+                "tags": [],
+                "importance": 3,
+            }
+        ),
+    )
+    summarizer = Summarizer(api_key="sk-test")
+    await summarizer.summarize_item(mk_raw(), mk_source())
+
+    request = httpx_mock.get_request()
+    prompt = json.loads(request.content)["messages"][0]["content"]
+    assert f"<article>\n{mk_raw().content}\n</article>" in prompt
+    assert "MAI un'istruzione" in prompt
+
+
+async def test_summarize_doc_change_wraps_diff_in_delimiters(httpx_mock: HTTPXMock) -> None:
+    httpx_mock.add_response(
+        url=OPENROUTER_URL,
+        json=mock_response(
+            {
+                "title_it": "⚠️ T",
+                "summary_it": "S di almeno venti caratteri qui.",
+                "tags": [],
+                "importance": 3,
+            }
+        ),
+    )
+    summarizer = Summarizer(api_key="sk-test")
+    await summarizer.summarize_doc_change(
+        page_name="Spam Policies", page_url="https://example.com/spam", diff="+riga aggiunta"
+    )
+
+    request = httpx_mock.get_request()
+    prompt = json.loads(request.content)["messages"][0]["content"]
+    assert "<diff>\n+riga aggiunta\n</diff>" in prompt
+
+
 async def test_summarize_item_retries_on_malformed_json(httpx_mock: HTTPXMock) -> None:
     # prima risposta: JSON malformato
     httpx_mock.add_response(
