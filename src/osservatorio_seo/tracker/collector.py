@@ -184,7 +184,7 @@ class TrackerCollector:
             domain = platform["domain"]
             if location is None:
                 # Globale: /ranking/domain/{domain} funziona cosi' com'e'.
-                detail = await self._radar.domain_detail(domain=domain, location=None)
+                detail = await self._radar.domain_detail(domain=domain)
                 rank, bucket = detail.get("rank"), str(detail.get("bucket", ""))
             else:
                 # D11: /ranking/domain/{domain} NON supporta il parametro

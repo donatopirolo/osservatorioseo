@@ -63,21 +63,18 @@ class RadarClient:
             for row in rows
         ]
 
-    async def domain_detail(
-        self,
-        *,
-        domain: str,
-        location: str | None = None,
-    ) -> dict:
-        """Fetch rank and bucket for a single domain.
+    async def domain_detail(self, *, domain: str) -> dict:
+        """Rank e bucket GLOBALI di un dominio.
 
-        Returns {rank, bucket} where bucket is always a str (e.g. "200" or ">200000").
-        rank may be None when the domain is outside the ranked set.
+        Nessun parametro ``location``, ed e' voluto: l'endpoint
+        ``/ranking/domain/{domain}`` non lo supporta e Cloudflare lo ignora
+        in silenzio. Accettarlo faceva credere che la sezione "Italia" del
+        tracker mostrasse dati italiani, mentre erano gli stessi del globale
+        (identici in 21 snapshot su 21). Per il dato per paese si usa
+        ``domain_timeseries``, che il parametro lo supporta davvero: vedi
+        ``TrackerCollector._latest_rank_for_location``.
         """
-        params: dict[str, Any] = {}
-        if location is not None:
-            params["location"] = location
-        data = await self._get(f"/ranking/domain/{domain}", params)
+        data = await self._get(f"/ranking/domain/{domain}", {})
         detail = data["result"].get("details_0", {})
         return {
             "rank": detail.get("rank"),
