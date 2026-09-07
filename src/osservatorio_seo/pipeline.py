@@ -206,6 +206,20 @@ class Pipeline:
             failed_sources=failed_sources,
         )
 
+        # Un run senza item non deve toccare il sito.
+        #
+        # La homepage e' renderizzata dal feed corrente: pubblicare un feed
+        # vuoto la lascia senza articoli. E' successo il 2026-09-07, con un
+        # secondo run lanciato 25 minuti dopo il primo: i 17 item in finestra
+        # erano tutti gia' usciti, seen_urls li ha correttamente saltati, e
+        # la home e' rimasta bianca. Non e' un errore da segnalare - il
+        # feed_health considera sano un run con zero tentativi di summary -
+        # e' semplicemente un giorno senza notizie nuove: si tiene in piedi
+        # l'edizione precedente invece di cancellarla.
+        if not items:
+            logger.info("nessun item nuovo: si mantiene l'edizione precedente, niente publish")
+            return feed
+
         publisher = Publisher(
             data_dir=self._settings.data_dir,
             archive_dir=self._settings.archive_dir,

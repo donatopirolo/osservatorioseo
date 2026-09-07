@@ -1,4 +1,5 @@
 # tests/test_pipeline_smoke.py
+import json
 from datetime import UTC, datetime
 from email.utils import format_datetime
 from pathlib import Path
@@ -279,6 +280,71 @@ async def test_pipeline_skips_previously_seen_url_on_second_run(
     assert summarize_mock.await_count == 1
     assert feed2.stats.summarize_attempted == 0
     assert len(feed2.items) == 0
+
+
+async def test_run_a_vuoto_non_cancella_l_edizione_precedente(
+    smoke_settings: Settings,
+    fixtures_dir: Path,
+    tmp_path: Path,
+    httpx_mock: HTTPXMock,
+) -> None:
+    """La homepage e' renderizzata dal feed corrente: un feed vuoto la svuota.
+
+    Successo davvero il 2026-09-07: un secondo run lanciato 25 minuti dopo il
+    primo non aveva niente di nuovo (seen_urls aveva gia' visto tutti e 17 gli
+    item in finestra), ha scritto un feed con `items: []` e la home e' rimasta
+    senza articoli. Un giorno senza notizie nuove deve lasciare in piedi
+    l'edizione precedente, non cancellarla.
+    """
+    rss = build_rss_with_current_dates()
+    for _ in range(2):
+        httpx_mock.add_response(url="https://developers.google.com/search/blog/rss", text=rss)
+        httpx_mock.add_response(
+            url="https://developers.google.com/search/docs/essentials/spam-policies",
+            text="<html><body><main><article>Stable content for doc watcher.</article></main></body></html>",
+        )
+
+    fake_summary = AISummary(
+        title_it="Titolo IT di prova",
+        summary_it="Riassunto in italiano di almeno venti caratteri.",
+        category="google_updates",
+        tags=["core_update"],
+        importance=5,
+        model_used="google/gemini-2.0-flash",
+        cost_eur=0.001,
+    )
+
+    def mk_pipeline() -> Pipeline:
+        return Pipeline(
+            settings=smoke_settings,
+            sources_path=fixtures_dir / "sources.smoke.yml",
+            doc_watcher_path=fixtures_dir / "doc_watcher.test.yml",
+            site_data_dir=tmp_path / "site" / "data",
+        )
+
+    with (
+        patch(
+            "osservatorio_seo.summarizer.Summarizer.summarize_item",
+            new=AsyncMock(return_value=fake_summary),
+        ),
+        patch(
+            "osservatorio_seo.premium_writer.PremiumWriter.analyze",
+            new=AsyncMock(side_effect=Exception("skip in smoke test")),
+        ),
+    ):
+        feed1 = await mk_pipeline().run()
+        feed2 = await mk_pipeline().run()
+
+    assert len(feed2.items) == 0, "il secondo run non ha nulla di nuovo"
+
+    # Il feed su disco e' ancora quello del primo run, non quello vuoto.
+    on_disk = json.loads((smoke_settings.data_dir / "feed.json").read_text(encoding="utf-8"))
+    assert on_disk["run_id"] == feed1.run_id
+    assert len(on_disk["items"]) == 1
+    assert len(on_disk["top10"]) == 1
+
+    published = json.loads((tmp_path / "site" / "data" / "feed.json").read_text(encoding="utf-8"))
+    assert len(published["items"]) == 1
 
 
 async def test_fetch_all_counts_failed_and_empty_sources(
