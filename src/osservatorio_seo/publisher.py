@@ -53,15 +53,19 @@ _CATEGORY_PAGE_TITLES: dict[str, str] = {
     "google_updates": "Aggiornamenti Google Search: core update, spam update e novità",
 }
 
+# Marcatori ASCII, non nomi di icone Material: quel font e' variabile
+# (wght 100..700, FILL 0..1) e veniva caricato su tutte le pagine per otto
+# glifi decorativi, accanto a un'etichetta di categoria gia' scritta in
+# chiaro. Questi costano zero byte e stanno nell'estetica da terminale.
 _CATEGORY_ICONS: dict[str, str] = {
-    "google_updates": "history",
-    "google_docs_change": "warning",
-    "ai_models": "smart_toy",
-    "ai_overviews_llm_seo": "auto_awesome",
-    "technical_seo": "build",
-    "content_eeat": "article",
-    "tools_platforms": "settings",
-    "industry_news": "public",
+    "google_updates": "~",
+    "google_docs_change": "!",
+    "ai_models": "*",
+    "ai_overviews_llm_seo": "+",
+    "technical_seo": "#",
+    "content_eeat": "\u00b6",
+    "tools_platforms": "%",
+    "industry_news": "@",
 }
 
 _MONTH_LABELS: dict[int, str] = {
@@ -523,7 +527,7 @@ class Publisher:
                 categories.append(
                     {
                         "label": _CATEGORY_LABELS.get(cat_id, cat_id),
-                        "icon": _CATEGORY_ICONS.get(cat_id, "folder"),
+                        "icon": _CATEGORY_ICONS.get(cat_id, "-"),
                         "path": make_category_path(cat_id),
                         "cards": cards,
                     }

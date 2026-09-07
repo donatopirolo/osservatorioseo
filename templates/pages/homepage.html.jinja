@@ -81,7 +81,7 @@
           [ <a href="{{ cat.path }}" class="hover:underline" onclick="event.stopPropagation()">{{ cat.label }}</a> ]
           <span class="text-outline text-[10px] font-normal normal-case tracking-normal">({{ cat.cards | length }})</span>
         </h3>
-        <span class="material-symbols-outlined text-primary-container text-sm">{{ cat.icon }}</span>
+        <span class="text-primary-container font-mono text-sm shrink-0" aria-hidden="true">{{ cat.icon }}</span>
       </summary>
       <div class="flex flex-col gap-4 pt-6">
       {% for card in cat.cards %}
