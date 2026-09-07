@@ -1085,7 +1085,12 @@ class Publisher:
             article_url = canonical(f"/dossier/{slug_dir}/")
 
             ctx = {
-                "page_title": f"{pillar.title_it} — Dossier Osservatorio SEO",
+                # pillar.title_it e' gia' completo di branding (il prompt lo
+                # genera nella forma "<Tema>: il dossier di Osservatorio SEO"):
+                # appendere un altro suffisso qui produceva un doppio brand
+                # nel <title> (D10), es. "... di Osservatorio SEO — Dossier
+                # Osservatorio SEO".
+                "page_title": pillar.title_it,
                 "page_description": pillar.subtitle_it,
                 "canonical_url": article_url,
                 "active_nav": "dossier",

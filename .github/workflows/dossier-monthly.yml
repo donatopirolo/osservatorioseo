@@ -1,10 +1,13 @@
-name: Dossier weekly update
+name: Dossier monthly update
 
 on:
   schedule:
-    # Ogni lunedì alle 09:00 Europe/Rome (cron in UTC). Sfasato dopo il
-    # tracker (07:00 UTC) per non sovrapporre i commit su main.
-    - cron: "0 8 * * 1"
+    # Il 1° di ogni mese alle 09:00 Europe/Rome circa (cron in UTC, quindi
+    # 10:00 durante l'ora legale). Sfasato dopo il tracker (07:00 UTC) per
+    # non sovrapporre i commit su main. Cadenza mensile (D10): i dossier
+    # sono contenuto evergreen, non hanno materiale nuovo ogni settimana —
+    # min_new_items filtrava comunque la maggior parte dei run settimanali.
+    - cron: "0 8 1 * *"
   workflow_dispatch:
     inputs:
       force:
@@ -62,8 +65,8 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            WEEK=$(date -u +'%Y-W%V')
-            git commit -m "chore(dossier): weekly update $WEEK"
+            MONTH=$(date -u +'%Y-%m')
+            git commit -m "chore(dossier): monthly update $MONTH"
             for i in 1 2 3; do
               git push && break
               git pull --rebase origin main
@@ -79,5 +82,5 @@ jobs:
             --project-name=osservatorioseo \
             --branch=main \
             --commit-hash="$(git rev-parse HEAD)" \
-            --commit-message="dossier weekly update" \
+            --commit-message="dossier monthly update" \
             --commit-dirty=true

@@ -1,17 +1,22 @@
-# Dossier (pillar pages) generati automaticamente dal workflow dossier-weekly.
+# Dossier (pillar pages) generati automaticamente dal workflow dossier-monthly.
 #
 # Ogni tag elencato qui diventa una pagina evergreen /dossier/<slug>/
 # (slug = tag con underscore -> trattino, es. core_update -> core-update).
 #
-# Un dossier viene (ri)generato solo quando:
-#   - non esiste ancora un JSON in data/pillars/, oppure
+# Un dossier viene toccato solo quando:
+#   - non esiste ancora un JSON in data/pillars/ -> generato ex novo
+#     (intro, contesto, timeline, takeaway, outlook), oppure
 #   - ci sono almeno `min_new_items` item qualificanti NUOVI rispetto
-#     all'ultima generazione (confronto su item_refs).
+#     all'ultima generazione (confronto su item_refs) -> SOLO la timeline
+#     viene estesa, append-only (D10): intro, contesto, takeaway, titolo
+#     e outlook restano quelli della prima generazione.
 # Questo evita rigenerazioni inutili — e i relativi costi Sonnet — su
-# contenuto evergreen che non ha materiale nuovo.
+# contenuto evergreen che non ha materiale nuovo, e mantiene stabile la
+# posizione editoriale del dossier nel tempo.
 #
 # Per aggiungere/togliere un dossier: modifica la lista `tags`.
-# Per forzare la rigenerazione di tutto: lancia lo script con --force.
+# Per far cambiare intro/takeaway dopo la prima generazione (l'unico modo,
+# sono congelati): lancia lo script con --force.
 
 # Soglia minima di importance per considerare un item parte del dossier.
 min_importance: 3

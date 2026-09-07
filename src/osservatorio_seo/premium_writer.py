@@ -222,6 +222,36 @@ valido, parsabile, senza codefence markdown, senza testo extra prima/dopo.
 """
 
 
+PILLAR_UPDATE_PROMPT = """Sei un SEO senior italiano che aggiorna un dossier editoriale \
+gia' pubblicato su Osservatorio SEO, sul tema "{tag_display}".
+
+Il dossier ha gia' introduzione, contesto e takeaway CONGELATI: non li riscrivi, non \
+li vedi nemmeno. Il tuo unico compito e' scrivere il PROSSIMO capitolo della \
+cronologia (timeline), che copre SOLO le notizie nuove elencate sotto, da aggiungere \
+in coda alla cronologia esistente — non un riassunto dell'intero dossier.
+
+Regole:
+- 200-400 parole in paragrafi brevi (2-4 frasi, max ~60 parole ciascuno), separati \
+da \\n\\n.
+- Continua il filo narrativo: sotto trovi l'ultimo estratto della cronologia \
+esistente, solo per contesto. NON ripeterlo, NON riassumerlo: scrivi solo il seguito.
+- Stesso tono del resto del dossier: impersonale o seconda persona diretta al \
+lettore, niente hype, niente "noi"/"nostro"/"crediamo".
+- Cita i titoli delle notizie nuove come riferimenti naturali nel testo. Evidenzia \
+pattern o discontinuita' rispetto a quanto gia' raccontato.
+- Zero markdown, zero bullet: prosa continua.
+
+Rispondi in JSON valido con un solo campo, nessun altro:
+{{"timeline_update": "string"}}
+
+--- ULTIMO ESTRATTO DELLA CRONOLOGIA ESISTENTE (contesto, non ripetere) ---
+{previous_tail}
+
+--- NOTIZIE NUOVE DA COPRIRE (ordinate per data) ---
+{items_block}
+"""
+
+
 class _TagDisplay:
     """Mapping tag → display italiano per prompt. Fallback: title case del tag."""
 
@@ -423,6 +453,51 @@ class PremiumWriter:
             generated_at=datetime.now(UTC),
             model_used=result.model,
             cost_eur=result.cost_eur,
+        )
+
+    async def update_pillar_timeline(self, existing: Pillar, new_items: list[Item]) -> Pillar:
+        """Aggiorna un dossier esistente: SOLO la timeline viene estesa.
+
+        Titolo, sottotitolo, intro, contesto, takeaway e outlook restano
+        CONGELATI (D10): un dossier evergreen non deve cambiare posizione
+        editoriale a ogni run, e ririscriverli ogni volta introdurrebbe
+        derive e incoerenze silenziose col titolo/URL gia' indicizzati.
+        L'aggiornamento e' append-only: il nuovo testo si aggiunge in coda
+        alla timeline_narrative esistente, che non viene mai toccata.
+        """
+        if not new_items:
+            raise PremiumWriterError("update_pillar_timeline requires at least 1 new item")
+
+        items_sorted = sorted(new_items, key=lambda i: i.published_at)
+        items_block = "\n".join(
+            f"[{i}] {it.published_at:%Y-%m-%d} · {it.source.name} · importance={it.importance}\n"
+            f"    Titolo: {it.title_it}\n"
+            f"    URL: {it.url}\n"
+            f"    Summary: {it.summary_it}\n"
+            for i, it in enumerate(items_sorted, start=1)
+        )
+        # Ultimi ~1500 caratteri della cronologia esistente: bastano a dare
+        # continuita' narrativa senza rimandare l'intero testo nel prompt.
+        previous_tail = existing.timeline_narrative.strip()[-1500:]
+
+        prompt = PILLAR_UPDATE_PROMPT.format(
+            tag_display=_TagDisplay.render(existing.tag),
+            previous_tail=previous_tail,
+            items_block=items_block,
+        )
+        result = await self._call_with_fallback(prompt)
+        timeline_update = result.parsed["timeline_update"].strip()
+
+        return existing.model_copy(
+            update={
+                "timeline_narrative": existing.timeline_narrative.rstrip()
+                + "\n\n"
+                + timeline_update,
+                "item_refs": existing.item_refs + [i.id for i in items_sorted],
+                "generated_at": datetime.now(UTC),
+                "model_used": result.model,
+                "cost_eur": existing.cost_eur + result.cost_eur,
+            }
         )
 
     async def write_tracker_report(

@@ -4,16 +4,23 @@
 Per ogni tag configurato:
 1. Raccoglie gli item qualificanti dall'archivio (stesso filtro di
    ``generate_pillar.py``).
-2. Decide se (ri)generare il dossier:
-   - se il JSON non esiste -> genera;
+2. Decide cosa fare:
+   - se il JSON non esiste -> genera il dossier ex novo (intro, contesto,
+     timeline, takeaway, outlook);
    - se esiste ma ci sono almeno ``min_new_items`` item nuovi rispetto a
-     ``Pillar.item_refs`` -> rigenera;
+     ``Pillar.item_refs`` -> aggiorna SOLO la timeline (append-only, D10):
+     intro, contesto, takeaway, titolo e outlook restano quelli della
+     prima generazione, il nuovo testo si aggiunge in coda alla cronologia
+     esistente;
    - altrimenti -> skip (nessun materiale nuovo, niente costi).
+   ``--force`` bypassa tutto questo e rigenera il dossier da zero, intro e
+   takeaway compresi: e' l'unico modo per farli cambiare dopo la prima
+   generazione.
 3. Salva il risultato in ``data/pillars/<tag>.json``.
 
 Usage:
     .venv/bin/python scripts/update_pillars.py            # tutti i tag in config
-    .venv/bin/python scripts/update_pillars.py --force    # rigenera tutto
+    .venv/bin/python scripts/update_pillars.py --force    # rigenera tutto da zero
     .venv/bin/python scripts/update_pillars.py --tag core_update [--force]
 
 Richiede ``OPENROUTER_API_KEY`` in env.
@@ -103,6 +110,7 @@ async def main() -> None:
             continue
 
         existing = load_existing_pillar(out)
+        new_ids: set[str] = set()
         if existing is not None and not args.force:
             new_ids = current_ids - set(existing.item_refs)
             if len(new_ids) < min_new_items:
@@ -112,25 +120,37 @@ async def main() -> None:
                 )
                 skipped += 1
                 continue
-            print(f"  {len(new_ids)} item nuovi >= {min_new_items}: rigenero.")
+            print(f"  {len(new_ids)} item nuovi >= {min_new_items}: aggiorno la timeline.")
         elif existing is None:
             print("  dossier assente: genero ex novo.")
         else:
-            print("  --force: rigenero.")
+            print("  --force: rigenero da zero (intro/takeaway compresi).")
 
+        cost_before = existing.cost_eur if existing is not None else 0.0
         try:
-            pillar = await writer.write_pillar(tag, items)
+            if existing is not None and not args.force:
+                # D10: solo la timeline si aggiorna, append-only. Intro,
+                # contesto, takeaway, titolo e outlook restano quelli
+                # generati la prima volta.
+                new_items = [it for it in items if it.id in new_ids]
+                pillar = await writer.update_pillar_timeline(existing, new_items)
+            else:
+                pillar = await writer.write_pillar(tag, items)
         except Exception as e:  # noqa: BLE001
             print(f"  ERRORE generazione: {e}")
             failed += 1
             continue
 
+        # pillar.cost_eur e' cumulato su tutta la vita del dossier (D10:
+        # update_pillar_timeline somma al costo esistente): il costo di
+        # QUESTO run e' solo la differenza rispetto a prima dell'update.
+        run_cost = pillar.cost_eur - cost_before
         out.write_text(pillar.model_dump_json(indent=2) + "\n", encoding="utf-8")
-        total_cost += pillar.cost_eur
+        total_cost += run_cost
         generated += 1
         print(
             f"  OK: {pillar.title_it!r} · modello {pillar.model_used} · "
-            f"€{pillar.cost_eur:.5f} · {len(pillar.takeaways)} takeaway"
+            f"€{run_cost:.5f} · {len(pillar.takeaways)} takeaway"
         )
 
     print(
