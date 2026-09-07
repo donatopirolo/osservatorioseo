@@ -17,10 +17,54 @@ from pathlib import Path
 
 
 class SeenUrlStore:
-    def __init__(self, path: Path, retention_hours: int = 96) -> None:
+    def __init__(
+        self,
+        path: Path,
+        retention_hours: int = 96,
+        bootstrap_archive_dir: Path | None = None,
+    ) -> None:
         self._path = Path(path)
         self._retention = timedelta(hours=retention_hours)
         self._seen: dict[str, str] = self._load()
+        if not self._seen and bootstrap_archive_dir is not None:
+            self._bootstrap(Path(bootstrap_archive_dir))
+
+    def _bootstrap(self, archive_dir: Path) -> None:
+        """Semina lo store dagli archivi recenti quando il file non esiste.
+
+        Senza questo passaggio, il primo run dopo l'introduzione dello store
+        parte con memoria vuota mentre la finestra di freschezza e' gia' a 72
+        ore: tutti gli item pubblicati nei giorni precedenti risulterebbero
+        nuovi e verrebbero riassunti e ripubblicati come notizie di oggi.
+        Con l'archivio attuale sarebbero una cinquantina.
+
+        Si guardano gli archivi che coprono la finestra di retention, e si
+        marcano i loro URL con la data dell'archivio: cosi' la potatura in
+        ``save()`` li fa scadere con la stessa regola degli altri.
+        """
+        if not archive_dir.is_dir():
+            return
+        cutoff = datetime.now(UTC) - self._retention
+        files = sorted(
+            (p for p in archive_dir.glob("*.json") if p.stem != "index"),
+            reverse=True,
+        )
+        for path in files[:14]:
+            try:
+                day = datetime.fromisoformat(path.stem).replace(tzinfo=UTC)
+            except ValueError:
+                continue
+            if day < cutoff:
+                break
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except Exception:  # noqa: BLE001
+                continue
+            stamp = day.isoformat()
+            for item in data.get("items", []):
+                url = item.get("url")
+                if url:
+                    self._seen.setdefault(str(url), stamp)
 
     def _load(self) -> dict[str, str]:
         if not self._path.exists():

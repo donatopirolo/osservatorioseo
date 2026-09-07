@@ -92,7 +92,12 @@ class Pipeline:
         # marcato: verra' ritentato al prossimo run (stesso principio dei
         # doc-change, vedi _summarize_doc_changes).
         seen_urls = SeenUrlStore(
-            self._settings.seen_urls_path, retention_hours=self._settings.seen_url_retention_hours
+            self._settings.seen_urls_path,
+            retention_hours=self._settings.seen_url_retention_hours,
+            # Al primo run il file non esiste: si semina dagli archivi recenti,
+            # altrimenti la finestra a 72h ripubblicherebbe come nuovi gli item
+            # dei giorni precedenti.
+            bootstrap_archive_dir=self._settings.archive_dir,
         )
         to_summarize = [raw for raw in normalized if raw.url not in seen_urls]
         skipped_seen = len(normalized) - len(to_summarize)
