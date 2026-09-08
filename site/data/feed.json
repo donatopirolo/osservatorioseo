@@ -1,113 +1,352 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-07T10:56:26.907182Z",
-  "generated_at_local": "2026-09-07T12:56:26.907182+02:00",
+  "generated_at": "2026-09-08T05:01:32.770098Z",
+  "generated_at_local": "2026-09-08T07:01:32.770098+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-07-1256",
+  "run_id": "2026-09-08-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2282,
-    "items_after_dedup": 20,
+    "items_after_dedup": 17,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0022,
-    "summarize_attempted": 3,
+    "ai_cost_eur": 0.0085,
+    "summarize_attempted": 11,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-09-07_002",
-    "item_2026-09-07_003",
-    "item_2026-09-07_001"
+    "item_2026-09-08_005",
+    "item_2026-09-08_008",
+    "item_2026-09-08_001",
+    "item_2026-09-08_002",
+    "item_2026-09-08_003",
+    "item_2026-09-08_006",
+    "item_2026-09-08_010",
+    "item_2026-09-08_007",
+    "item_2026-09-08_011",
+    "item_2026-09-08_004"
   ],
   "categories": {
+    "google_updates": [
+      "item_2026-09-08_005",
+      "item_2026-09-08_008"
+    ],
     "ai_overviews_llm_seo": [
-      "item_2026-09-07_002",
-      "item_2026-09-07_003"
+      "item_2026-09-08_001",
+      "item_2026-09-08_003",
+      "item_2026-09-08_007",
+      "item_2026-09-08_011",
+      "item_2026-09-08_004"
+    ],
+    "technical_seo": [
+      "item_2026-09-08_002"
+    ],
+    "tools_platforms": [
+      "item_2026-09-08_006"
     ],
     "industry_news": [
-      "item_2026-09-07_001"
+      "item_2026-09-08_010"
+    ],
+    "content_eeat": [
+      "item_2026-09-08_009"
     ]
   },
   "items": [
     {
-      "id": "item_2026-09-07_001",
-      "title_original": "Supporting independent journalism in Ukraine",
-      "title_it": "Sostegno al giornalismo indipendente in Ucraina",
-      "summary_it": "OpenAI, WAN-IFRA e AIRPPU hanno lanciato un'iniziativa congiunta per supportare i media ucraini nell'adozione dell'intelligenza artificiale. Il programma mira a rafforzare la sostenibilità e l'efficienza del giornalismo indipendente attraverso la formazione e lo sviluppo di soluzioni AI. Le organizzazioni partecipanti riceveranno crediti per l'API di OpenAI per facilitare l'implementazione di progetti specifici.",
-      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "id": "item_2026-09-08_001",
+      "title_original": "Google AI Overviews Get A Character Counter Tool",
+      "title_it": "Google AI Overviews introduce uno strumento per il conteggio dei caratteri",
+      "summary_it": "Google ha implementato uno strumento di conteggio dei caratteri per le sue AI Overviews. Questa funzionalità permette agli utenti di visualizzare la lunghezza del testo generato. L'introduzione mira a fornire maggiore controllo e trasparenza sulla quantità di contenuto prodotto dalle AI Overviews.",
+      "url": "https://www.seroundtable.com/google-ai-overviews-character-counter-42026.html",
       "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "openai",
-        "journalism",
-        "ai_adoption",
-        "ukraine"
-      ],
-      "importance": 2,
-      "published_at": "2026-09-07T00:00:00Z",
-      "fetched_at": "2026-09-07T10:57:35.531501Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:bcdb1fd3c234aac4",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-07_002",
-      "title_original": "The AI hours nobody on your marketing team is counting",
-      "title_it": "Le ore dedicate all'IA che nessuno nel tuo team marketing sta conteggiando",
-      "summary_it": "L'articolo evidenzia come i team di marketing, in particolare i professionisti SEO, stiano dedicando un tempo crescente all'uso dell'IA, spesso sviluppando soluzioni interne che potrebbero essere acquistate a costi contenuti. Si sottolinea l'impatto positivo dell'automazione tramite IA, ma si avverte che l'efficienza non è automatica. È fondamentale valutare criticamente quando e come l'IA viene impiegata per massimizzare i benefici.",
-      "url": "https://www.growth-memo.com/p/the-ai-hours-nobody-on-your-marketing",
-      "source": {
-        "id": "growth_memo_kevin_indig",
-        "name": "Growth Memo (Kevin Indig)",
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
         "authority": 9,
-        "type": "independent",
+        "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.growth-memo.com/feed",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "ai_overviews_llm_seo",
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "ai_efficiency",
-        "marketing_automation",
-        "seo_tool",
-        "resource_management"
+        "google_ai_overview",
+        "character_counter",
+        "ai_tool",
+        "serp_feature"
       ],
       "importance": 3,
-      "published_at": "2026-09-07T08:28:41Z",
-      "fetched_at": "2026-09-07T10:57:37.388209Z",
+      "published_at": "2026-09-07T11:05:00Z",
+      "fetched_at": "2026-09-08T05:02:57.713681Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e971a985bccbdc3f",
+      "raw_hash": "sha256:6b0d7a3bcd8572cb",
       "deep_analysis": null,
       "also_in": []
     },
     {
-      "id": "item_2026-09-07_003",
-      "title_original": "AI chatbots talked 57.5% of AI users out of buying",
-      "title_it": "I chatbot AI hanno dissuaso il 57,5% degli utenti AI dall'acquisto",
-      "summary_it": "Un sondaggio condotto su consumatori statunitensi rivela che il 65% degli utenti AI ha sostituito parte delle ricerche di prodotti su Google con i chatbot. Il 57,5% degli utenti AI è stato dissuaso dall'acquisto da un chatbot. Inoltre, il 40% degli intervistati non apprezza la presenza di annunci pubblicitari nei chatbot.",
-      "url": "https://www.semrush.com/blog/ai-chatbots-talk-ai-users-out-of-buying",
+      "id": "item_2026-09-08_002",
+      "title_original": "Site Rules For Applebot-Extended Are Not Considered In Ranking For Search",
+      "title_it": "Le regole del sito per Applebot-Extended non influenzano il ranking di ricerca",
+      "summary_it": "Le direttive specifiche per Applebot-Extended, il crawler di Apple, non vengono considerate come fattori di ranking per i risultati di ricerca. Questo significa che le istruzioni fornite ai siti web tramite file robots.txt o meta tag, indirizzate specificamente a questa versione del bot, non hanno impatto sulla visibilità nei motori di ricerca. La distinzione tra le regole di crawling e i segnali di ranking rimane un aspetto fondamentale per i crawler.",
+      "url": "https://www.seroundtable.com/applebot-extended-search-ranking-42025.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "applebot",
+        "crawling",
+        "ranking_factor",
+        "robots_txt"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T11:11:00Z",
+      "fetched_at": "2026-09-08T05:02:59.523895Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d580fb5af2d3b0b1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_003",
+      "title_original": "Google Shopping Ads Have A Reverse Crocodile Effect With AI Overviews",
+      "title_it": "Gli annunci Google Shopping mostrano un effetto coccodrillo inverso con le panoramiche AI",
+      "summary_it": "Nuovi dati indicano che gli annunci Google Shopping stanno sperimentando un \"effetto coccodrillo inverso\" in seguito all'introduzione delle Panoramiche AI (AIOs). Si osserva una diminuzione delle impressioni e un aumento del Click-Through Rate (CTR) per gli annunci Shopping. Questo suggerisce che Google potrebbe privilegiare le AIOs per query con minore probabilità di clic, preservando il CTR degli annunci Shopping attraverso una selezione più mirata.",
+      "url": "https://www.seroundtable.com/google-shopping-ads-imp-ctr-42021.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_shopping_ad",
+        "ai_overviews",
+        "ctr",
+        "impression"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T11:21:00Z",
+      "fetched_at": "2026-09-08T05:03:01.189258Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e4bb4a603c529a10",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_004",
+      "title_original": "Google Merchant Center Shows AI Prompts For Top Performance Insights",
+      "title_it": "Google Merchant Center mostra accidentalmente i prompt AI per le analisi di performance",
+      "summary_it": "Google Merchant Center ha mostrato inavvertitamente i prompt interni utilizzati dalla sua intelligenza artificiale per generare le analisi di performance. Invece di un riassunto delle metriche, sono apparsi i comandi e le istruzioni impartite all'AI. Questo incidente ha fornito una visione temporanea del funzionamento interno del sistema di generazione di insight di Google.",
+      "url": "https://www.seroundtable.com/google-merchant-center-ai-prompts-42023.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_merchant_center",
+        "ai_prompt",
+        "performance_insight",
+        "google_shopping"
+      ],
+      "importance": 2,
+      "published_at": "2026-09-07T11:31:00Z",
+      "fetched_at": "2026-09-08T05:03:02.652167Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:be20b06bf738ec53",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_005",
+      "title_original": "Google Search Booking Partner Prices Are Customized",
+      "title_it": "I prezzi dei partner di prenotazione su Google Search sono personalizzati",
+      "summary_it": "Google ha confermato che i prezzi mostrati per i partner di prenotazione nei risultati di ricerca possono variare in base a diversi fattori, inclusa la posizione dell'utente. Questa personalizzazione mira a fornire offerte più pertinenti. La variazione dei prezzi non è un errore, ma una funzionalità intenzionale della piattaforma. Questo approccio influisce sulla visibilità e sulla competitività dei fornitori di servizi di viaggio e alloggio.",
+      "url": "https://www.seroundtable.com/google-booking-partner-prices-customized-41935.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search",
+        "booking_partner",
+        "price_customization",
+        "travel_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T11:41:00Z",
+      "fetched_at": "2026-09-08T05:03:03.956358Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f81b185fc0545ff0",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_006",
+      "title_original": "New Google Ads Automated Promotions",
+      "title_it": "Nuove promozioni automatizzate in Google Ads",
+      "summary_it": "Google Ads ha introdotto una funzionalità che identifica e applica automaticamente le offerte promozionali attive direttamente dai siti web degli inserzionisti. Queste promozioni verranno mostrate nelle campagne Search e Performance Max idonee, a condizione che abbiano asset di località e non stiano già utilizzando promozioni manuali. La funzionalità mira a collegare i potenziali clienti con le offerte attive, estraendo dettagli come sconti percentuali dalle landing page. È fondamentale mantenere aggiornate le informazioni promozionali sul proprio sito per un corretto funzionamento.",
+      "url": "https://www.seroundtable.com/google-ads-automated-promotions-42006.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "automated_promotion",
+        "ppc",
+        "performance_max"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T11:51:00Z",
+      "fetched_at": "2026-09-08T05:03:05.556082Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:975eeb540b541d15",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_007",
+      "title_original": "Your Biggest AI Search Risk Is Conflicting Information About Your Brand",
+      "title_it": "Il rischio maggiore per i brand nella ricerca AI è l'informazione contrastante",
+      "summary_it": "Il principale rischio per i brand nella ricerca basata su AI è la presenza di informazioni contrastanti o obsolete. Questo non è un problema di scarsità di contenuti, ma piuttosto di eccesso di dati non allineati tra diverse fonti aziendali. Mentre la ricerca tradizionale poteva mostrare più versioni, la ricerca AI sintetizza una singola risposta, che può risultare errata se basata su dati non aggiornati. La gestione e la governance dei contenuti diventano quindi cruciali per l'accuratezza delle risposte AI.",
+      "url": "https://www.searchenginejournal.com/biggest-ai-search-risk-is-conflicting-information/586904",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_search",
+        "brand_reputation",
+        "content_governance",
+        "llm_risk"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T12:00:11Z",
+      "fetched_at": "2026-09-08T05:03:07.236554Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ef2c21d5f4ed66ff",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_008",
+      "title_original": "Google Can Lose Faith In Sites Based On Low Value Programmatic SEO",
+      "title_it": "Google può perdere fiducia nei siti basati su SEO programmatica di scarso valore",
+      "summary_it": "John Mueller di Google ha ribadito che la SEO programmatica può portare a siti considerati spam, borderline spam o di bassa qualità. Ha sottolineato che è facile generare molte pagine, ma difficile fornire valore reale agli utenti. Se i sistemi di Google perdono fiducia nel valore di un sito, recuperare tale fiducia richiede tempo e sforzi significativi.",
+      "url": "https://www.seroundtable.com/google-lose-faith-42032.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "programmatic_seo",
+        "john_mueller",
+        "google_guideline",
+        "content_quality"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T12:37:00Z",
+      "fetched_at": "2026-09-08T05:03:08.333719Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e2095d457a3bce1c",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_009",
+      "title_original": "Topic clusters for SEO: what they are & how to create them",
+      "title_it": "Cluster di argomenti per la SEO: cosa sono e come crearli",
+      "summary_it": "I cluster di argomenti sono una strategia SEO che organizza i contenuti attorno a un argomento centrale, collegando pagine correlate. Questo approccio mira a migliorare la visibilità sui motori di ricerca e sulle piattaforme di ricerca basate su AI. La creazione di cluster di argomenti segue un processo strutturato in cinque passaggi. L'obiettivo è stabilire l'autorità tematica e migliorare l'esperienza utente.",
+      "url": "https://www.semrush.com/blog/topic-clusters",
       "source": {
         "id": "semrush_blog",
         "name": "Semrush Blog",
@@ -120,21 +359,93 @@
         "category_hint": "tools_platforms",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "content_eeat",
       "tags": [
-        "ai_chatbot",
-        "consumer_behavior",
-        "search_trend",
-        "ecommerce"
+        "topic_cluster",
+        "content_strategy",
+        "seo_strategy",
+        "ai_search"
       ],
-      "importance": 3,
-      "published_at": "2026-09-07T08:48:00Z",
-      "fetched_at": "2026-09-07T10:57:38.877107Z",
+      "importance": 2,
+      "published_at": "2026-09-07T12:58:00Z",
+      "fetched_at": "2026-09-08T05:03:09.788831Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2e6e8fad16e44c57",
+      "raw_hash": "sha256:fa4257e0c82990e6",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_010",
+      "title_original": "Daily Search Forum Recap: September 7, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 7 settembre 2026",
+      "summary_it": "Google ha ribadito che la SEO programmatica di bassa qualità può portare alla perdita di fiducia nel sito da parte dei suoi sistemi. Google Ads sta testando un esperimento per servire campagne di ricerca con tipi di corrispondenza restrittivi in modalità AI. È stato segnalato un potenziale bug nella funzione di ricerca lavoro di Google, che mostra pochi nuovi annunci. Google Ads ha pubblicato una nuova guida sulle promozioni automatizzate che identifica e applica offerte promozionali dai siti web.",
+      "url": "https://www.seroundtable.com/recap-09-07-2026-42028.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_update",
+        "programmatic_seo",
+        "google_ad",
+        "ai_mode"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T14:00:00Z",
+      "fetched_at": "2026-09-08T05:03:11.198233Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2ed8096ee51ae8c0",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-08_011",
+      "title_original": "Harvard Found The Public Has Little Objection To AI Taking Search Marketers’ Jobs",
+      "title_it": "Il pubblico non si oppone all'automazione dei lavori dei marketer SEO da parte dell'IA, secondo Harvard",
+      "summary_it": "Uno studio di Harvard ha rilevato che il pubblico americano ha poche obiezioni morali all'automazione dei lavori nel marketing di ricerca da parte dell'intelligenza artificiale. I marketer SEO hanno ottenuto un punteggio basso (2.31 su 7) in termini di opposizione all'automazione, superando solo gli impiegati d'archivio tra le professioni analizzate. La ricerca indica che il supporto pubblico all'automazione aumenta significativamente se l'IA supera le prestazioni umane a costi inferiori. Questo suggerisce che la percezione pubblica non rappresenta un ostacolo significativo all'adozione dell'IA in questo settore.",
+      "url": "https://www.searchenginejournal.com/harvard-found-the-public-has-little-objection-to-ai-taking-search-marketers-jobs/587715",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_automation",
+        "job_displacement",
+        "public_perception",
+        "seo_industry"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-07T14:30:22Z",
+      "fetched_at": "2026-09-08T05:03:12.995487Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b94e393d0a45b7da",
       "deep_analysis": null,
       "also_in": []
     }
@@ -142,82 +453,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-07T10:56:28.439129Z",
+      "last_checked": "2026-09-08T05:01:34.525150Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-07T10:56:29.538921Z",
+      "last_checked": "2026-09-08T05:01:35.197207Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-07T10:56:30.264868Z",
+      "last_checked": "2026-09-08T05:01:36.914955Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-07T10:56:32.462657Z",
+      "last_checked": "2026-09-08T05:01:38.482498Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-07T10:56:53.052173Z",
+      "last_checked": "2026-09-08T05:01:57.963836Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-07T10:56:53.359273Z",
+      "last_checked": "2026-09-08T05:01:58.271068Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-07T10:56:55.254306Z",
+      "last_checked": "2026-09-08T05:01:59.893306Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-07T10:56:56.935031Z",
+      "last_checked": "2026-09-08T05:02:01.525501Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-07T10:56:58.328541Z",
+      "last_checked": "2026-09-08T05:02:03.212006Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-07T10:56:58.554612Z",
+      "last_checked": "2026-09-08T05:02:03.558821Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-07T10:57:00.293230Z",
+      "last_checked": "2026-09-08T05:02:04.972585Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-07T10:57:01.590657Z",
+      "last_checked": "2026-09-08T05:02:06.146572Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-07T10:57:02.883454Z",
+      "last_checked": "2026-09-08T05:02:07.952741Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-07T10:57:04.128480Z",
+      "last_checked": "2026-09-08T05:02:09.338967Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-07T10:57:05.543174Z",
+      "last_checked": "2026-09-08T05:02:10.896397Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-07T10:57:07.146555Z",
+      "last_checked": "2026-09-08T05:02:12.253749Z",
       "changed": false
     }
   ],
