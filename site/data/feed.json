@@ -1,646 +1,35 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-12T05:00:45.569065Z",
-  "generated_at_local": "2026-09-12T07:00:45.569065+02:00",
+  "generated_at": "2026-09-13T05:00:54.819565Z",
+  "generated_at_local": "2026-09-13T07:00:54.819565+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-12-0700",
+  "run_id": "2026-09-13-0700",
   "stats": {
     "sources_checked": 15,
-    "sources_failed": 0,
+    "sources_failed": 1,
     "sources_empty": 0,
-    "items_collected": 2303,
-    "items_after_dedup": 56,
+    "items_collected": 2293,
+    "items_after_dedup": 42,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0151,
-    "summarize_attempted": 19,
+    "ai_cost_eur": 0.0008,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-09-12_019",
-    "item_2026-09-12_015",
-    "item_2026-09-12_017",
-    "item_2026-09-12_003",
-    "item_2026-09-12_005",
-    "item_2026-09-12_006",
-    "item_2026-09-12_007",
-    "item_2026-09-12_009",
-    "item_2026-09-12_012",
-    "item_2026-09-12_013"
+    "item_2026-09-13_001"
   ],
   "categories": {
-    "ai_models": [
-      "item_2026-09-12_019",
-      "item_2026-09-12_015"
-    ],
     "google_updates": [
-      "item_2026-09-12_017",
-      "item_2026-09-12_008"
-    ],
-    "industry_news": [
-      "item_2026-09-12_003",
-      "item_2026-09-12_012",
-      "item_2026-09-12_018"
-    ],
-    "tools_platforms": [
-      "item_2026-09-12_005",
-      "item_2026-09-12_006",
-      "item_2026-09-12_007",
-      "item_2026-09-12_009",
-      "item_2026-09-12_013",
-      "item_2026-09-12_016",
-      "item_2026-09-12_010"
-    ],
-    "content_eeat": [
-      "item_2026-09-12_001",
-      "item_2026-09-12_004"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-09-12_002",
-      "item_2026-09-12_011",
-      "item_2026-09-12_014"
+      "item_2026-09-13_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-09-12_001",
-      "title_original": "How to Strengthen Your Brand's Authority — Whiteboard Friday",
-      "title_it": "Come rafforzare l'autorità del tuo brand",
-      "summary_it": "L'articolo presenta nove passaggi per costruire l'autorità di un brand, evidenziando l'importanza di un prodotto eccellente come base. Vengono trattati elementi chiave come l'identità del brand, la strategia di contenuto omnichannel e la customer advocacy. L'obiettivo è fornire indicazioni pratiche per migliorare la presenza e l'autorità del brand sui canali digitali.",
-      "url": "https://moz.com/blog/strengthen-your-brands-authority-whiteboard-friday",
-      "source": {
-        "id": "moz_blog",
-        "name": "Moz Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://moz.com/posts/rss/blog",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "brand_authority",
-        "brand_building",
-        "content_strategy",
-        "e_e_a_t"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T07:00:00Z",
-      "fetched_at": "2026-09-12T05:02:16.279099Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b634d9cd52826100",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_002",
-      "title_original": "New AI Search & SEO KPIs: 4 Signals That Guide Real Decisions [Watch Now]",
-      "title_it": "Nuovi KPI per la ricerca AI e la SEO: 4 segnali che guidano decisioni reali",
-      "summary_it": "L'articolo discute l'importanza di superare le metriche superficiali come menzioni e citazioni nell'analisi della visibilità AI per la SEO. Viene proposto un approccio basato su quattro segnali chiave per misurare le performance della ricerca AI. Questi segnali mirano a trasformare l'attività AI in decisioni SEO pratiche, distinguendo tra dati di benchmarking e dati di performance reali. L'analisi si basa su dati di bot AI e referral umani provenienti da centinaia di siti web.",
-      "url": "https://www.searchenginejournal.com/new-ai-search-seo-kpis-4-signals-that-guide-real-decisions/588605",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "seo_kpi",
-        "performance_measurement",
-        "ai_visibility"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T07:45:21Z",
-      "fetched_at": "2026-09-12T05:02:17.922495Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:76898d9bbe06380f",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_003",
-      "title_original": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-      "title_it": "Scalare rapidamente lo storage online per servire oltre 1 miliardo di utenti ChatGPT",
-      "summary_it": "OpenAI ha sviluppato Habitat, una piattaforma di storage online, per gestire l'accesso rapido e affidabile ai dati per i suoi prodotti, incluso ChatGPT. Questa piattaforma gestisce oltre 70 milioni di richieste al secondo e supporta più di un miliardo di utenti settimanali, gestendo oltre 500 petabyte di dati. L'articolo descrive l'evoluzione di Habitat da una semplice libreria Python a un sistema distribuito complesso, evidenziando le sfide di scalabilità affrontate da OpenAI.",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "openai",
-        "chatgpt",
-        "scalability",
-        "infrastructure"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T10:00:00Z",
-      "fetched_at": "2026-09-12T05:02:19.505942Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e7bb3af8e8e04ac3",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_004",
-      "title_original": "What is zero-click marketing? How to execute and measure it",
-      "title_it": "Cos'è il marketing a zero clic: esecuzione e misurazione",
-      "summary_it": "Il marketing a zero clic è una strategia che mira a fornire valore direttamente agli utenti sulle piattaforme dove si trovano, senza richiedere un clic per visitare un sito esterno. Questo approccio è nato dalla constatazione che le piattaforme di ricerca e social inviano meno traffico ai siti web rispetto al passato. L'obiettivo è offrire contenuti completi e autonomi, come post sui social o newsletter dettagliate, che soddisfino l'utente direttamente. Si distingue dalla ricerca a zero clic, che si riferisce a risposte ottenute direttamente dalla SERP.",
-      "url": "https://www.semrush.com/blog/zero-click-marketing",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "zero_click_marketing",
-        "content_strategy",
-        "user_experience",
-        "platform_optimization"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T10:06:00Z",
-      "fetched_at": "2026-09-12T05:02:22.042612Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b05807f97b28ee99",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_005",
-      "title_original": "Google AdSense Max Message Coverage & Optimize My Consent Message",
-      "title_it": "Nuove funzionalità AdSense: copertura massima dei messaggi e ottimizzazione del consenso",
-      "summary_it": "Google AdSense ha introdotto due nuove funzionalità incentrate sulla privacy per l'EEA, il Regno Unito e la Svizzera: 'Massimizza la copertura dei messaggi' e 'Ottimizza il mio messaggio di consenso'. La prima garantisce la raccolta del consenso tramite un fallback automatico in caso di malfunzionamenti o assenza di CMP, creando messaggi di consenso per i nuovi siti. La seconda, lanciata a maggio 2026, ottimizza i messaggi di consenso per massimizzare le entrate basandosi sulle performance passate, mostrando messaggi standard o limitati a seconda della probabilità di generare ricavi.",
-      "url": "https://www.seroundtable.com/google-adsense-maximize-message-coverage-optimize-consent-message-42069.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_adsense",
-        "consent_management_platform",
-        "privacy",
-        "e_e_a_t"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T11:05:00Z",
-      "fetched_at": "2026-09-12T05:02:25.131101Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1ad59c6959951a38",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_006",
-      "title_original": "Google Merchant Center With Add Product Videos",
-      "title_it": "Google Merchant Center introduce la possibilità di aggiungere video ai prodotti",
-      "summary_it": "Google Merchant Center ha implementato una nuova sezione che consente agli utenti di caricare video dei propri prodotti. Questa funzionalità mira a offrire un'esperienza più coinvolgente e immersiva per i clienti, mostrando i prodotti da diverse angolazioni e dettagli non catturabili con immagini statiche. Sono state definite linee guida specifiche per i video, inclusi requisiti di durata, risoluzione e dimensione massima del file. La novità si aggiunge a precedenti integrazioni di contenuti creativi nella piattaforma.",
-      "url": "https://www.seroundtable.com/google-merchant-center-add-product-videos-42064.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_merchant_center",
-        "product_video",
-        "e_commerce",
-        "google_shopping"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T11:11:00Z",
-      "fetched_at": "2026-09-12T05:02:26.724160Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b9ebb7008eccf666",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_007",
-      "title_original": "Google Ads Video Campaign Group Beta",
-      "title_it": "Google Ads introduce la beta per i gruppi di campagne video",
-      "summary_it": "Google Ads ha lanciato una versione beta per i gruppi di campagne video. Questa funzionalità mira a migliorare l'organizzazione e la gestione delle campagne pubblicitarie basate su video. La novità potrebbe offrire agli inserzionisti strumenti più granulari per ottimizzare le performance.",
-      "url": "https://www.seroundtable.com/google-ads-video-campaign-group-42027.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "video_campaign",
-        "beta_feature"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T11:21:00Z",
-      "fetched_at": "2026-09-12T05:02:28.019203Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:8aae95c049b442ff",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_008",
-      "title_original": "Google Ads Sponsored Results Label Alignment Is Off (Sometimes)",
-      "title_it": "Allineamento errato dell'etichetta dei risultati sponsorizzati di Google Ads",
-      "summary_it": "È stato segnalato un potenziale bug di formattazione in Google Search che causa un disallineamento dell'etichetta \"Sponsorizzato\" per alcuni risultati di Google Ads. Il problema si manifesta in modo intermittente e non sembra essere intenzionale, suggerendo un difetto nella visualizzazione. Questo disallineamento è stato osservato su diverse query e browser, come evidenziato da screenshot e GIF. La problematica è stata notata da Sachin Patel e discussa su X e Search Engine Watch.",
-      "url": "https://www.seroundtable.com/google-sponsored-result-label-alignment-off-42059.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "serp_display",
-        "bug",
-        "ui_glitch"
-      ],
-      "importance": 2,
-      "published_at": "2026-09-11T11:31:00Z",
-      "fetched_at": "2026-09-12T05:02:29.863496Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5cc02271597da66f",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_009",
-      "title_original": "Google Ads Reporting Segments For Loyalty Program Members",
-      "title_it": "Segmenti di reporting di Google Ads per i membri dei programmi fedeltà",
-      "summary_it": "Google Ads ha introdotto la possibilità di segmentare i report in base ai membri dei programmi fedeltà. Questa funzionalità si aggiunge all'opzione di targeting per la fidelizzazione dei clienti, rilasciata in precedenza. La novità consente agli inserzionisti di analizzare le performance delle campagne specificamente per questo segmento di pubblico.",
-      "url": "https://www.seroundtable.com/google-ads-loyalty-program-members-segments-42050.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "reporting",
-        "loyalty_program",
-        "customer_retention"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T11:41:00Z",
-      "fetched_at": "2026-09-12T05:02:31.293718Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a9f0f8074c6e8f65",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_010",
-      "title_original": "Google Shopping Ads X Days Left Attribute On Sponsored Ads",
-      "title_it": "Google testa l'attributo 'Giorni rimanenti' nelle Shopping Ads",
-      "summary_it": "Google sta conducendo un esperimento iniziale per mostrare un nuovo attributo nelle Shopping Ads, indicando i giorni rimanenti per una promozione o un'offerta. Questa etichetta appare direttamente negli annunci sponsorizzati nella Ricerca Google. Un portavoce di Google ha confermato la natura sperimentale della funzionalità, senza fornire ulteriori dettagli. Si ipotizza che questa novità sia collegata alla gestione delle annotazioni di fine offerta da parte di Merchant Center.",
-      "url": "https://www.seroundtable.com/google-ads-x-days-left-42063.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "shopping_ad",
-        "ecommerce",
-        "ad_feature"
-      ],
-      "importance": 2,
-      "published_at": "2026-09-11T11:51:00Z",
-      "fetched_at": "2026-09-12T05:02:33.752269Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:968711cf9b421859",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_011",
-      "title_original": "What Wikipedia Reveals About AI Overviews And Web Traffic",
-      "title_it": "Cosa rivela Wikipedia sulle panoramiche AI e il traffico web",
-      "summary_it": "Uno studio preliminare dell'Università di Washington stima che le AI Overviews di Google abbiano ridotto i referral mensili di ricerca a Wikipedia in inglese di circa il 5% dopo l'implementazione della funzionalità negli Stati Uniti nel 2024. La ricerca, basata sull'analisi dei dati di clickstream di Wikipedia, confronta il traffico verso l'edizione inglese con quelle tedesca e francese. Questo calo si traduce in circa 100 milioni di referral in meno al mese per Wikipedia in inglese. Google contesta la metodologia utilizzata per isolare l'impatto specifico delle AI Overviews.",
-      "url": "https://www.searchenginejournal.com/what-wikipedia-reveals-about-ai-overviews-and-web-traffic/589042",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_overviews",
-        "web_traffic",
-        "wikipedia",
-        "google_search"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T12:00:42Z",
-      "fetched_at": "2026-09-12T05:02:35.546234Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d92776986f377994",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_012",
-      "title_original": "Search News Buzz Video Recap: Google Degrades EU Search Quality, Losing Faith In Your Site, AI Mode Match Types & Google Maps Photo Scams",
-      "title_it": "Riepilogo settimanale delle notizie di ricerca: Qualità di ricerca Google in UE, fiducia nel sito, tipi di corrispondenza AI e truffe su Google Maps",
-      "summary_it": "Google ha dichiarato di aver implementato la maggiore riduzione della qualità di ricerca in Europa a causa delle leggi DMA, pubblicando un documento sulle differenze regionali. È stato riscontrato un bug temporaneo di indicizzazione in Search Console e Google può perdere fiducia nei siti che utilizzano SEO programmatico. Quasi il 100% dei risultati \"Le persone hanno chiesto anche\" sono ora alimentati da AI Overviews, che sta testando pannelli di citazione più sottili e un contatore di caratteri. Google Ads sta introducendo nuove funzionalità AI e testando tipi di corrispondenza restrittivi in modalità AI, mentre sono state segnalate truffe telefoniche su Google Maps e dati mancanti in Google Business Profile.",
-      "url": "https://www.seroundtable.com/video-09-11-2026-42061.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_update",
-        "ai_overviews",
-        "google_ad",
-        "search_quality"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T12:01:00Z",
-      "fetched_at": "2026-09-12T05:02:37.851367Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b5bfed1679639668",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_013",
-      "title_original": "Google Search Console Indexing Report Missing Old June Data",
-      "title_it": "Dati mancanti nel report di indicizzazione di Google Search Console per giugno",
-      "summary_it": "Il report di indicizzazione delle pagine di Google Search Console presenta una lacuna significativa nei dati relativi a giugno 2026. Diversi utenti hanno segnalato la scomparsa di queste informazioni, che erano presenti fino a poche ore prima. Questo si aggiunge a precedenti problemi di reporting e ritardi riscontrati nel medesimo strumento negli ultimi mesi. Al momento, la causa sembra essere un bug di visualizzazione piuttosto che un problema di indicizzazione effettivo.",
-      "url": "https://www.seroundtable.com/google-search-console-indexing-report-missing-data-42073.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_search_console",
-        "indexing_report",
-        "data_bug",
-        "serp_tool"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T13:17:00Z",
-      "fetched_at": "2026-09-12T05:02:40.261621Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e8cbb6d48b076136",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_014",
-      "title_original": "The 2003 Framework That Was Already Doing Query Fan-Out",
-      "title_it": "Il framework del 2003 che anticipava il Query Fan-Out",
-      "summary_it": "L'articolo analizza come il concetto di 'query fan-out', oggi associato ai modelli AI, fosse già applicato manualmente in ambito SEO fin dal 2003. L'autore descrive una tecnica di ottimizzazione basata sull'inclusione di frasi chiave più corte all'interno di query più lunghe, simile al principio delle matrioske. Questa metodologia mirava a intercettare sia le ricerche esistenti che quelle non ancora formulate, un fenomeno che Google quantifica nel 15% delle query giornaliere. Viene evidenziato come questa percentuale di query inedite rimanga costante nel tempo, nonostante l'evoluzione della ricerca e l'introduzione dei LLM.",
-      "url": "https://www.searchenginejournal.com/the-2003-framework-that-was-already-doing-query-fan-out/588595",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "query_fan_out",
-        "seo_history",
-        "long_tail_keyword",
-        "ai_search"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T14:30:50Z",
-      "fetched_at": "2026-09-12T05:02:42.188947Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:bd4757497d97de5a",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_015",
-      "title_original": "Cognition helps Devin test its own work with GPT‑6 Astra",
-      "title_it": "Cognition utilizza GPT-6 Astra per migliorare il testing automatico di Devin",
-      "summary_it": "Cognition, l'azienda dietro l'ingegnere software autonomo Devin, sta integrando GPT-6 Astra per ottimizzare il processo di testing e revisione del codice. Questa integrazione permette a Devin di testare autonomamente il proprio lavoro, fornendo report dettagliati e registrazioni del funzionamento, riducendo la necessità di revisione manuale. L'obiettivo è aumentare l'efficienza nello sviluppo software e accelerare la risoluzione dei bug segnalati dai clienti.",
-      "url": "https://openai.com/index/cognition-devin-testing-with-astra",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_testing",
-        "software_development",
-        "gpt_6",
-        "devin"
-      ],
-      "importance": 4,
-      "published_at": "2026-09-11T16:00:00Z",
-      "fetched_at": "2026-09-12T05:02:43.738468Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4aad37aa64b5ecb6",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_016",
-      "title_original": "Dashboards Available In Google Analytics",
-      "title_it": "Dashboard Personalizzabili Disponibili in Google Analytics",
-      "summary_it": "Google Analytics ha introdotto la possibilità di creare dashboard personalizzate per visualizzare i KPI. Questa funzionalità permette di consolidare metriche da diverse fonti in un'unica pagina, utilizzando un'interfaccia drag-and-drop. Sono supportati vari tipi di visualizzazione, inclusi score card, tabelle, grafici a linee, a barre, a ciambella e a imbuto.",
-      "url": "https://www.seroundtable.com/google-analytics-dashboards-42075.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_analytic",
-        "data_visualization",
-        "kpi_dashboard"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T16:32:00Z",
-      "fetched_at": "2026-09-12T05:02:45.864753Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d3f19e2cae21d70c",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_017",
-      "title_original": "Google Documents Partner-Only API For Full-Web Search Results",
-      "title_it": "Google documenta un'API solo per partner per i risultati di ricerca web completi",
-      "summary_it": "Google ha documentato un'API che consente ai partner di accedere ai risultati di ricerca web completi. Questa API è destinata esclusivamente all'uso da parte di partner selezionati. L'iniziativa suggerisce un approccio più controllato alla distribuzione dei dati di ricerca. Non sono state fornite indicazioni su un'eventuale disponibilità più ampia in futuro.",
-      "url": "https://www.searchenginejournal.com/google-documents-partner-only-api-for-full-web-search-results/589194",
+      "id": "item_2026-09-13_001",
+      "title_original": "Google Search Redesign, Business Profile Post Views – SEO Pulse",
+      "title_it": "Riprogettazione della Ricerca Google e Visualizzazioni dei Post di Google Business Profile",
+      "summary_it": "Google ha introdotto un nuovo layout per i risultati di ricerca commerciali nell'Area Economica Europea (EEA), includendo unità specializzate per siti di comparazione e fornitori diretti. Contestualmente, Google ha ripristinato i contatori di visualizzazioni per i post di Google Business Profile a livello globale, dopo una sospensione di oltre tre anni. Questi contatori mostrano le visualizzazioni aggregate da Search e Maps per i post degli ultimi 18 mesi. Inoltre, si osserva che le raccomandazioni di prodotti di ChatGPT Shopping si basano prevalentemente su feed di prodotti integrati.",
+      "url": "https://www.searchenginejournal.com/google-search-redesign-business-profile-post-views-seo-pulse/589151",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -655,90 +44,19 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_api",
-        "search_result",
-        "partner_program",
-        "data_access"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-11T17:32:12Z",
-      "fetched_at": "2026-09-12T05:02:47.430649Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:67864b879a4e380b",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_018",
-      "title_original": "SEO For Paws Live Stream Conference: Free Tickets & Big Names For A Good Cause",
-      "title_it": "Conferenza in live streaming SEO For Paws: biglietti gratuiti e nomi importanti per una buona causa",
-      "summary_it": "È stata annunciata la conferenza in live streaming 'SEO For Paws', un evento che riunirà professionisti SEO di spicco. L'iniziativa offre biglietti gratuiti e mira a sostenere una causa benefica. Maggiori dettagli sull'evento e sui relatori saranno disponibili a breve.",
-      "url": "https://www.searchenginejournal.com/seo-for-paws-live-stream-conference-free-tickets-big-names-for-a-good-cause/588889",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "seo_conference",
-        "charity_event",
-        "live_stream"
-      ],
-      "importance": 1,
-      "published_at": "2026-09-11T19:00:59Z",
-      "fetched_at": "2026-09-12T05:02:49.463305Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5caf22b55263e585",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-12_019",
-      "title_original": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-      "title_it": "Perplexity si affida a GPT-6 Astra per i sistemi end-to-end",
-      "summary_it": "Perplexity sta integrando GPT-6 Astra nei suoi sistemi per migliorare la scrittura di comunicazioni, la modifica di software e il monitoraggio dei sistemi di produzione. L'adozione del nuovo modello consente un'automazione più profonda e una minore necessità di intervento umano rispetto alle generazioni precedenti. In particolare, GPT-6 Astra viene utilizzato per generare programmi di test e simulare risposte di servizi esterni, ottimizzando i flussi di lavoro e l'accuratezza del motore di ricerca di Perplexity.",
-      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "gpt_6_astra",
-        "perplexity_ai",
-        "ai_application",
-        "system_automation"
+        "google_search",
+        "google_business_profile",
+        "eea_search_result",
+        "chatgpt_shopping"
       ],
       "importance": 4,
-      "published_at": "2026-09-14T00:00:00Z",
-      "fetched_at": "2026-09-12T05:02:51.258718Z",
+      "published_at": "2026-09-12T12:30:38Z",
+      "fetched_at": "2026-09-13T05:01:47.726975Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4c0666d336abf68b",
+      "raw_hash": "sha256:67709ce1e9514413",
       "deep_analysis": null,
       "also_in": []
     }
@@ -746,84 +64,90 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-12T05:00:46.848349Z",
+      "last_checked": "2026-09-13T05:00:56.102478Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-12T05:00:47.660146Z",
+      "last_checked": "2026-09-13T05:00:56.788411Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-12T05:00:49.646233Z",
+      "last_checked": "2026-09-13T05:00:57.853026Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-12T05:00:50.811631Z",
+      "last_checked": "2026-09-13T05:00:59.107148Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-12T05:01:06.854374Z",
+      "last_checked": "2026-09-13T05:01:11.880391Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-12T05:01:07.277878Z",
+      "last_checked": "2026-09-13T05:01:13.090900Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-12T05:01:08.827165Z",
+      "last_checked": "2026-09-13T05:01:13.679311Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-12T05:01:10.331434Z",
+      "last_checked": "2026-09-13T05:01:14.646540Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-12T05:01:11.899233Z",
+      "last_checked": "2026-09-13T05:01:16.763419Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-12T05:01:12.146746Z",
+      "last_checked": "2026-09-13T05:01:17.094473Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-12T05:01:13.968055Z",
+      "last_checked": "2026-09-13T05:01:17.782971Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-12T05:01:14.617010Z",
+      "last_checked": "2026-09-13T05:01:18.557489Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-12T05:01:16.243541Z",
+      "last_checked": "2026-09-13T05:01:20.038225Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-12T05:01:18.361216Z",
+      "last_checked": "2026-09-13T05:01:21.230429Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-12T05:01:19.516343Z",
+      "last_checked": "2026-09-13T05:01:22.670209Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-12T05:01:20.808787Z",
+      "last_checked": "2026-09-13T05:01:24.594802Z",
       "changed": false
     }
   ],
-  "failed_sources": []
+  "failed_sources": [
+    {
+      "id": "ahrefs_blog",
+      "error": "ConnectError: ",
+      "last_success": null
+    }
+  ]
 }
