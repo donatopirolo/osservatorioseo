@@ -1,35 +1,77 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-13T05:00:54.819565Z",
-  "generated_at_local": "2026-09-13T07:00:54.819565+02:00",
+  "generated_at": "2026-09-14T05:00:54.434273Z",
+  "generated_at_local": "2026-09-14T07:00:54.434273+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-13-0700",
+  "run_id": "2026-09-14-0700",
   "stats": {
     "sources_checked": 15,
-    "sources_failed": 1,
+    "sources_failed": 0,
     "sources_empty": 0,
-    "items_collected": 2293,
-    "items_after_dedup": 42,
+    "items_collected": 2303,
+    "items_after_dedup": 23,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0008,
-    "summarize_attempted": 1,
+    "ai_cost_eur": 0.0024,
+    "summarize_attempted": 3,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-09-13_001"
+    "item_2026-09-14_002",
+    "item_2026-09-14_003",
+    "item_2026-09-14_001"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-09-13_001"
+      "item_2026-09-14_002"
+    ],
+    "industry_news": [
+      "item_2026-09-14_003",
+      "item_2026-09-14_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-09-13_001",
-      "title_original": "Google Search Redesign, Business Profile Post Views – SEO Pulse",
-      "title_it": "Riprogettazione della Ricerca Google e Visualizzazioni dei Post di Google Business Profile",
-      "summary_it": "Google ha introdotto un nuovo layout per i risultati di ricerca commerciali nell'Area Economica Europea (EEA), includendo unità specializzate per siti di comparazione e fornitori diretti. Contestualmente, Google ha ripristinato i contatori di visualizzazioni per i post di Google Business Profile a livello globale, dopo una sospensione di oltre tre anni. Questi contatori mostrano le visualizzazioni aggregate da Search e Maps per i post degli ultimi 18 mesi. Inoltre, si osserva che le raccomandazioni di prodotti di ChatGPT Shopping si basano prevalentemente su feed di prodotti integrati.",
-      "url": "https://www.searchenginejournal.com/google-search-redesign-business-profile-post-views-seo-pulse/589151",
+      "id": "item_2026-09-14_001",
+      "title_original": "Daily Search Forum Recap: September 11, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 11 settembre 2026",
+      "summary_it": "Il report sull'indicizzazione delle pagine di Google Search Console presenta un'anomalia, con dati mancanti da giugno 2026, probabilmente un bug di reporting. Google Ads sta testando nuove funzionalità, tra cui un attributo per i giorni rimanenti nelle offerte e la segmentazione dei report per membri di programmi fedeltà. Inoltre, Google Merchant Center ha introdotto la possibilità di aggiungere video ai prodotti.",
+      "url": "https://www.seroundtable.com/recap-09-11-2026-42070.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_search_console",
+        "google_ad",
+        "google_merchant_center",
+        "reporting_bug"
+      ],
+      "importance": 2,
+      "published_at": "2026-09-11T14:00:00Z",
+      "fetched_at": "2026-09-14T05:02:08.710289Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f744c47f6e12cafd",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-14_002",
+      "title_original": "Google Admits Search Console Reporting For AI Search Is Inadequate",
+      "title_it": "Google ammette che i report di Search Console per la ricerca AI sono inadeguati",
+      "summary_it": "Google ha riconosciuto che i dati di Search Console relativi alla ricerca AI non forniscono informazioni sufficienti sulla posizione per i professionisti SEO. John Mueller ha difeso le carenze, attribuendole alla complessità intrinseca della ricerca basata sull'intelligenza artificiale. I report attuali si concentrano sulle impressioni, ma non riflettono accuratamente la visibilità effettiva dei link, specialmente quelli nascosti dietro opzioni come 'Mostra altro'. La metrica della posizione, inoltre, si riferisce alla posizione dell'AI Overview e non del singolo link, rendendo i dati potenzialmente fuorvianti.",
+      "url": "https://www.searchenginejournal.com/google-admits-search-console-reporting-for-ai-search-is-inadequate/589236",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -44,19 +86,55 @@
       },
       "category": "google_updates",
       "tags": [
-        "google_search",
-        "google_business_profile",
-        "eea_search_result",
-        "chatgpt_shopping"
+        "search_console",
+        "ai_search",
+        "reporting",
+        "john_mueller"
       ],
       "importance": 4,
-      "published_at": "2026-09-12T12:30:38Z",
-      "fetched_at": "2026-09-13T05:01:47.726975Z",
+      "published_at": "2026-09-13T12:17:31Z",
+      "fetched_at": "2026-09-14T05:02:10.380977Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:67709ce1e9514413",
+      "raw_hash": "sha256:bc4a2af56b4ab4ec",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-14_003",
+      "title_original": "Matt Mullenweg Apparently Back In Charge At Automattic",
+      "title_it": "Matt Mullenweg apparentemente di nuovo al comando di Automattic",
+      "summary_it": "Un portavoce di Automattic ha confermato il ritorno di Matt Mullenweg alla guida dell'azienda. La notizia segue un periodo di incertezza in cui Mullenweg sembrava aver ripreso il controllo solo dell'account Slack aziendale. In precedenza, il consiglio di amministrazione aveva messo Mullenweg in congedo retribuito, nominando il CFO Mark Davies come CEO ad interim. La situazione ha generato confusione, con Mullenweg che annunciava il suo ritorno tramite Slack prima della conferma ufficiale.",
+      "url": "https://www.searchenginejournal.com/matt-mullenweg-apparently-back-in-charge-at-automattic/589251",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "automattic",
+        "wordpress",
+        "matt_mullenweg",
+        "company_leadership"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-13T21:10:22Z",
+      "fetched_at": "2026-09-14T05:02:12.515964Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:67682f4440406497",
       "deep_analysis": null,
       "also_in": []
     }
@@ -64,90 +142,84 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-13T05:00:56.102478Z",
+      "last_checked": "2026-09-14T05:00:56.828508Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-13T05:00:56.788411Z",
+      "last_checked": "2026-09-14T05:00:57.434298Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-13T05:00:57.853026Z",
+      "last_checked": "2026-09-14T05:00:58.982798Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-13T05:00:59.107148Z",
+      "last_checked": "2026-09-14T05:01:00.887286Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-13T05:01:11.880391Z",
+      "last_checked": "2026-09-14T05:01:21.695528Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-13T05:01:13.090900Z",
+      "last_checked": "2026-09-14T05:01:22.163977Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-13T05:01:13.679311Z",
+      "last_checked": "2026-09-14T05:01:23.124545Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-13T05:01:14.646540Z",
+      "last_checked": "2026-09-14T05:01:25.041396Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-13T05:01:16.763419Z",
+      "last_checked": "2026-09-14T05:01:26.258760Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-13T05:01:17.094473Z",
+      "last_checked": "2026-09-14T05:01:26.504904Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-13T05:01:17.782971Z",
+      "last_checked": "2026-09-14T05:01:27.743558Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-13T05:01:18.557489Z",
+      "last_checked": "2026-09-14T05:01:29.658583Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-13T05:01:20.038225Z",
+      "last_checked": "2026-09-14T05:01:31.270385Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-13T05:01:21.230429Z",
+      "last_checked": "2026-09-14T05:01:32.429187Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-13T05:01:22.670209Z",
+      "last_checked": "2026-09-14T05:01:34.863566Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-13T05:01:24.594802Z",
+      "last_checked": "2026-09-14T05:01:35.920810Z",
       "changed": false
     }
   ],
-  "failed_sources": [
-    {
-      "id": "ahrefs_blog",
-      "error": "ConnectError: ",
-      "last_success": null
-    }
-  ]
+  "failed_sources": []
 }
