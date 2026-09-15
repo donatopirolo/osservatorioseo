@@ -1,41 +1,136 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-14T05:00:54.434273Z",
-  "generated_at_local": "2026-09-14T07:00:54.434273+02:00",
+  "generated_at": "2026-09-15T05:00:47.638054Z",
+  "generated_at_local": "2026-09-15T07:00:47.638054+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-14-0700",
+  "run_id": "2026-09-15-0700",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
-    "items_collected": 2303,
-    "items_after_dedup": 23,
+    "items_collected": 2305,
+    "items_after_dedup": 18,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0024,
-    "summarize_attempted": 3,
+    "ai_cost_eur": 0.0107,
+    "summarize_attempted": 13,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-09-14_002",
-    "item_2026-09-14_003",
-    "item_2026-09-14_001"
+    "item_2026-09-15_013",
+    "item_2026-09-15_006",
+    "item_2026-09-15_011",
+    "item_2026-09-15_009",
+    "item_2026-09-15_002",
+    "item_2026-09-15_004",
+    "item_2026-09-15_005",
+    "item_2026-09-15_007",
+    "item_2026-09-15_010",
+    "item_2026-09-15_012"
   ],
   "categories": {
+    "ai_overviews_llm_seo": [
+      "item_2026-09-15_013",
+      "item_2026-09-15_004",
+      "item_2026-09-15_007",
+      "item_2026-09-15_010",
+      "item_2026-09-15_012",
+      "item_2026-09-15_003"
+    ],
     "google_updates": [
-      "item_2026-09-14_002"
+      "item_2026-09-15_006",
+      "item_2026-09-15_011",
+      "item_2026-09-15_008"
+    ],
+    "ai_models": [
+      "item_2026-09-15_009"
     ],
     "industry_news": [
-      "item_2026-09-14_003",
-      "item_2026-09-14_001"
+      "item_2026-09-15_002",
+      "item_2026-09-15_001"
+    ],
+    "tools_platforms": [
+      "item_2026-09-15_005"
     ]
   },
   "items": [
     {
-      "id": "item_2026-09-14_001",
-      "title_original": "Daily Search Forum Recap: September 11, 2026",
-      "title_it": "Riepilogo giornaliero del forum di ricerca: 11 settembre 2026",
-      "summary_it": "Il report sull'indicizzazione delle pagine di Google Search Console presenta un'anomalia, con dati mancanti da giugno 2026, probabilmente un bug di reporting. Google Ads sta testando nuove funzionalità, tra cui un attributo per i giorni rimanenti nelle offerte e la segmentazione dei report per membri di programmi fedeltà. Inoltre, Google Merchant Center ha introdotto la possibilità di aggiungere video ai prodotti.",
-      "url": "https://www.seroundtable.com/recap-09-11-2026-42070.html",
+      "id": "item_2026-09-15_001",
+      "title_original": "Search Central Live India 2026: Bengaluru, We're Coming (For Real This Time)",
+      "title_it": "Search Central Live India 2026: Bengaluru, stiamo arrivando (questa volta per davvero)",
+      "summary_it": "Google ha annunciato l'organizzazione dell'evento Search Central Live in India nel 2026, specificando che si terrà a Bengaluru. L'annuncio sottolinea l'impegno di Google nel portare eventi dedicati agli sviluppatori e ai professionisti SEO anche in questa regione. L'evento offrirà probabilmente sessioni e workshop sulle migliori pratiche SEO e sugli aggiornamenti di Google Search.",
+      "url": "https://developers.google.com/search/blog/2026/09/search-central-live-india-2026",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_event",
+        "search_central",
+        "india",
+        "seo_community"
+      ],
+      "importance": 2,
+      "published_at": "2026-09-14T00:00:00Z",
+      "fetched_at": "2026-09-15T05:02:08.678861Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:936857bea41ca5cd",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_002",
+      "title_original": "Are you doing marketing… or building software?",
+      "title_it": "Stai facendo marketing o sviluppando software?",
+      "summary_it": "L'articolo di Kevin Indig suggerisce che il marketing moderno si sta evolvendo verso un approccio più simile allo sviluppo software. Questo implica l'adozione di metodologie agili, test continui e un focus sulla scalabilità e l'automazione. La distinzione tra le due discipline sta diventando meno netta, richiedendo ai professionisti del marketing di acquisire competenze più tecniche. L'autore sottolinea l'importanza di un pensiero strategico profondo prima dell'esecuzione delle attività di marketing.",
+      "url": "https://www.growth-memo.com/p/are-you-doing-marketing-or-building",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "marketing_strategy",
+        "software_development",
+        "agile_marketing",
+        "marketing_automation"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-14T10:03:27Z",
+      "fetched_at": "2026-09-15T05:02:10.209844Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:c335790de00321a8",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_003",
+      "title_original": "Google AI Overviews Practice Knowledge Quiz",
+      "title_it": "Quiz di conoscenza pratica sulle AI Overviews di Google",
+      "summary_it": "Google ha lanciato un quiz di conoscenza generale per testare la comprensione delle sue AI Overviews. Questo strumento permette agli utenti di valutare la propria familiarità con il funzionamento e le risposte generate dall'intelligenza artificiale di Google. Il quiz è pensato per aiutare a comprendere meglio come le AI Overviews elaborano e presentano le informazioni.",
+      "url": "https://www.seroundtable.com/google-ai-overviews-global-general-knowledge-quiz-42054.html",
       "source": {
         "id": "search_engine_roundtable",
         "name": "Search Engine Roundtable",
@@ -48,66 +143,244 @@
         "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "google_search_console",
-        "google_ad",
-        "google_merchant_center",
-        "reporting_bug"
+        "google_ai_overview",
+        "ai_quiz",
+        "search_feature"
       ],
       "importance": 2,
-      "published_at": "2026-09-11T14:00:00Z",
-      "fetched_at": "2026-09-14T05:02:08.710289Z",
+      "published_at": "2026-09-14T11:11:00Z",
+      "fetched_at": "2026-09-15T05:02:12.001735Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f744c47f6e12cafd",
+      "raw_hash": "sha256:fa728fe69d705d4b",
       "deep_analysis": null,
       "also_in": []
     },
     {
-      "id": "item_2026-09-14_002",
-      "title_original": "Google Admits Search Console Reporting For AI Search Is Inadequate",
-      "title_it": "Google ammette che i report di Search Console per la ricerca AI sono inadeguati",
-      "summary_it": "Google ha riconosciuto che i dati di Search Console relativi alla ricerca AI non forniscono informazioni sufficienti sulla posizione per i professionisti SEO. John Mueller ha difeso le carenze, attribuendole alla complessità intrinseca della ricerca basata sull'intelligenza artificiale. I report attuali si concentrano sulle impressioni, ma non riflettono accuratamente la visibilità effettiva dei link, specialmente quelli nascosti dietro opzioni come 'Mostra altro'. La metrica della posizione, inoltre, si riferisce alla posizione dell'AI Overview e non del singolo link, rendendo i dati potenzialmente fuorvianti.",
-      "url": "https://www.searchenginejournal.com/google-admits-search-console-reporting-for-ai-search-is-inadequate/589236",
+      "id": "item_2026-09-15_004",
+      "title_original": "Google Al Contribution Pilot - Paying Publishers For Use Of Content In AI",
+      "title_it": "Google testa un programma pilota per remunerare gli editori per l'uso dei loro contenuti nell'IA",
+      "summary_it": "Google sta conducendo un test limitato, denominato 'AI contribution pilot', che prevede il pagamento agli editori per l'utilizzo dei loro contenuti all'interno di funzionalità AI come AI Overviews, AI Mode e Gemini. Il programma mira a remunerare i publisher quando il loro contenuto contribuisce in modo significativo alla generazione di risposte AI. Gli editori partecipanti possono monitorare i guadagni e gestire la propria partecipazione tramite Search Console.",
+      "url": "https://www.seroundtable.com/google-al-contribution-pilot-42076.html",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
         "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai",
+        "publisher_payment",
+        "ai_overviews",
+        "content_licensing"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-14T11:13:00Z",
+      "fetched_at": "2026-09-15T05:02:14.431039Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:1531fb43946344f9",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_005",
+      "title_original": "Google Ads Product Value Optimization Beta",
+      "title_it": "Google Ads introduce la beta per l'ottimizzazione del valore del prodotto",
+      "summary_it": "Google Ads ha lanciato una nuova funzionalità beta denominata Product Value Optimization. Questa permette agli inserzionisti di configurare aggiustamenti di valore per guidare le offerte automatiche. L'obiettivo è ottimizzare per i prodotti più rilevanti rispetto agli obiettivi di business, come profitto o stagionalità. La funzione mira a semplificare la gestione delle campagne e a ottimizzare in tempo reale, specialmente per Performance Max e campagne Shopping.",
+      "url": "https://www.seroundtable.com/google-ads-product-value-optimization-42071.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "product_value_optimization",
+        "automated_bidding",
+        "performance_max"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-14T11:21:00Z",
+      "fetched_at": "2026-09-15T05:02:15.981112Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:3ef16c66698e83bd",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_006",
+      "title_original": "Google Search: It's Normal For Image Thumbnails To Be Slow To Update",
+      "title_it": "Google Search: è normale che le miniature delle immagini si aggiornino lentamente",
+      "summary_it": "John Mueller di Google ha confermato che è normale che le miniature delle immagini nei risultati di ricerca impieghino tempo ad aggiornarsi, anche se l'immagine è stata modificata o spostata sulla pagina. Questo può accadere anche quando l'immagine è specificata come primaria nei dati strutturati. Un caso specifico ha evidenziato come, anche dopo diverse settimane e con il JSON-LD aggiornato, Google continuasse a mostrare una vecchia immagine ancora presente sulla pagina, seppur non più come principale. La rimozione dell'immagine 'vecchia' dalla pagina potrebbe accelerare il processo di aggiornamento.",
+      "url": "https://www.seroundtable.com/google-search-slow-image-thumbnails-42072.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "google_updates",
       "tags": [
-        "search_console",
-        "ai_search",
-        "reporting",
-        "john_mueller"
+        "image_thumbnail",
+        "google_search",
+        "indexing",
+        "structured_data"
       ],
-      "importance": 4,
-      "published_at": "2026-09-13T12:17:31Z",
-      "fetched_at": "2026-09-14T05:02:10.380977Z",
+      "importance": 3,
+      "published_at": "2026-09-14T11:31:00Z",
+      "fetched_at": "2026-09-15T05:02:18.498824Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:bc4a2af56b4ab4ec",
+      "raw_hash": "sha256:f8a67ef85975c7ae",
       "deep_analysis": null,
       "also_in": []
     },
     {
-      "id": "item_2026-09-14_003",
-      "title_original": "Matt Mullenweg Apparently Back In Charge At Automattic",
-      "title_it": "Matt Mullenweg apparentemente di nuovo al comando di Automattic",
-      "summary_it": "Un portavoce di Automattic ha confermato il ritorno di Matt Mullenweg alla guida dell'azienda. La notizia segue un periodo di incertezza in cui Mullenweg sembrava aver ripreso il controllo solo dell'account Slack aziendale. In precedenza, il consiglio di amministrazione aveva messo Mullenweg in congedo retribuito, nominando il CFO Mark Davies come CEO ad interim. La situazione ha generato confusione, con Mullenweg che annunciava il suo ritorno tramite Slack prima della conferma ufficiale.",
-      "url": "https://www.searchenginejournal.com/matt-mullenweg-apparently-back-in-charge-at-automattic/589251",
+      "id": "item_2026-09-15_007",
+      "title_original": "Google AI Mode More Query Expansion Interfaces",
+      "title_it": "Google AI: Nuove Interfacce per l'Espansione delle Query",
+      "summary_it": "Google sta implementando nuove interfacce per l'espansione delle query nella sua modalità AI. Queste modifiche mirano a migliorare la capacità del sistema di comprendere e ampliare le intenzioni di ricerca degli utenti. L'obiettivo è fornire risultati più pertinenti e diversificati attraverso suggerimenti di ricerca potenziati dall'intelligenza artificiale.",
+      "url": "https://www.seroundtable.com/google-ai-mode-more-query-expansions-42074.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai",
+        "query_expansion",
+        "search_interface",
+        "ai_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-14T11:41:00Z",
+      "fetched_at": "2026-09-15T05:02:19.772623Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:87aa4cc06992ff2a",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_008",
+      "title_original": "Google Search Tests Blue More Link In Shopping Results",
+      "title_it": "Google testa un link blu 'Altro' nei risultati di shopping",
+      "summary_it": "Google sta sperimentando l'introduzione di un link blu denominato 'Altro' all'interno dei risultati di ricerca dedicati allo shopping. Questa modifica è stata notata da alcuni utenti e potrebbe influenzare la navigazione e l'interazione con i prodotti visualizzati. La funzionalità è attualmente in fase di test e non è stata rilasciata a livello globale.",
+      "url": "https://www.seroundtable.com/google-blue-more-link-in-shopping-results-42077.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_shopping",
+        "serp_feature",
+        "ui_testing"
+      ],
+      "importance": 2,
+      "published_at": "2026-09-14T11:51:00Z",
+      "fetched_at": "2026-09-15T05:02:21.284900Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5b5b5e1958c07596",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_009",
+      "title_original": "How Fyxer built an AI executive assistant people trust",
+      "title_it": "Come Fyxer ha creato un assistente esecutivo AI di cui le persone si fidano",
+      "summary_it": "Fyxer ha sviluppato un assistente AI che integra i modelli OpenAI con oltre 500.000 ore di workflow di assistenti esecutivi, suddividendo il lavoro tra decine di modelli specializzati che migliorano tramite feedback utente. Questo sistema gestisce la complessità delle comunicazioni professionali, come le email, imparando il modo di lavorare di ciascun utente per fornire risposte contestualizzate. L'approccio di Fyxer si basa sulla scomposizione dei compiti in modelli più piccoli e specializzati, che analizzano l'intento e il contesto per generare risposte appropriate. La scelta di OpenAI è stata motivata dalle prestazioni superiori dei loro modelli e dal supporto ingegneristico offerto.",
+      "url": "https://openai.com/index/fyxer",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "ai_assistant",
+        "openai_model",
+        "workflow_automation",
+        "user_feedback"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-14T12:00:00Z",
+      "fetched_at": "2026-09-15T05:02:23.357731Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d3086180be3c7f35",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_010",
+      "title_original": "How To Connect AI Search Visibility To Local Leads",
+      "title_it": "Come collegare la visibilità della ricerca AI ai lead locali",
+      "summary_it": "I click sulle citazioni AI generano circa l'1-2% delle chiamate per i clienti CallRail, un dato raddoppiato da gennaio. La misurazione dell'impatto diretto dell'AI sui lead locali è complessa, poiché gli strumenti di tracciamento sono ancora limitati rispetto ai sistemi pubblicitari tradizionali. Si osserva che il traffico generato dall'AI tende ad arrivare maggiormente al di fuori degli orari lavorativi. Attualmente, i metodi tracciabili includono i click sulle citazioni AI e l'attribuzione auto-dichiarata dai clienti.",
+      "url": "https://www.searchenginejournal.com/how-to-connect-ai-search-visibility-to-local-leads/588096",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -120,21 +393,129 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_overviews_llm_seo",
       "tags": [
-        "automattic",
-        "wordpress",
-        "matt_mullenweg",
-        "company_leadership"
+        "ai_search",
+        "local_seo",
+        "lead_generation",
+        "measurement"
       ],
       "importance": 3,
-      "published_at": "2026-09-13T21:10:22Z",
-      "fetched_at": "2026-09-14T05:02:12.515964Z",
+      "published_at": "2026-09-14T12:00:25Z",
+      "fetched_at": "2026-09-15T05:02:25.158957Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:67682f4440406497",
+      "raw_hash": "sha256:741822fbf1179afa",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_011",
+      "title_original": "Google Search Update September 4th That Reverted September 13th?",
+      "title_it": "Aggiornamento di Google Search del 4 settembre, poi annullato il 13 settembre?",
+      "summary_it": "Si è osservata una significativa fluttuazione nel ranking di Google intorno al 4 settembre, con impatti negativi per alcuni siti. Curiosamente, per molti di questi siti, la situazione si è completamente invertita il 13 settembre, con un recupero delle posizioni perse. Questo comportamento anomalo suggerisce un possibile aggiornamento non confermato, seguito da un rollback o una correzione. Le osservazioni provengono da analisi di terze parti e dati analitici diretti dei siti interessati.",
+      "url": "https://www.seroundtable.com/google-search-ranking-update-94-42079.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_algorithm_update",
+        "ranking_volatility",
+        "unconfirmed_update",
+        "serp_fluctuation"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-14T12:05:00Z",
+      "fetched_at": "2026-09-15T05:02:27.802136Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:c363c55b09e01474",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_012",
+      "title_original": "AI Isn’t Delivering Marketing Efficiency, It’s Repeating Programmatic’s Broken Promise",
+      "title_it": "L'IA non sta migliorando l'efficienza del marketing, sta ripetendo la falsa promessa del programmatic",
+      "summary_it": "L'articolo paragona l'attuale promessa di efficienza dell'IA nel marketing a quella del programmatic buying, evidenziando come entrambe le tecnologie abbiano spostato il lavoro anziché eliminarlo. Viene sottolineato come, analogamente al programmatic, l'IA introduca nuove complessità e problemi, come la necessità di gestire nuove sfide e la potenziale diminuzione dell'affidabilità delle misurazioni. L'autore avverte che l'argomento dell'efficienza per gli strumenti di marketing basati sull'IA potrebbe fallire, come già accaduto in passato. Viene citato uno studio che mostra come l'IA non abbia ridotto il carico di lavoro degli sviluppatori, ma lo abbia modificato.",
+      "url": "https://www.searchenginejournal.com/ai-isnt-delivering-marketing-efficiency-its-repeating-programmatics-broken-promise/588722",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_marketing",
+        "programmatic_advertising",
+        "marketing_efficiency",
+        "ai_challenge"
+      ],
+      "importance": 3,
+      "published_at": "2026-09-14T14:30:08Z",
+      "fetched_at": "2026-09-15T05:02:29.804210Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:a1b76af73516eeeb",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-09-15_013",
+      "title_original": "Google Tests Paying Publishers For AI Answers Via Search Console",
+      "title_it": "Google sperimenta la retribuzione degli editori per le risposte AI tramite Search Console",
+      "summary_it": "Google sta testando un sistema per compensare gli editori i cui contenuti vengono utilizzati per generare risposte AI all'interno della ricerca. Questo programma pilota prevede pagamenti diretti agli editori, gestiti tramite Search Console. L'iniziativa mira a stabilire un modello di monetizzazione per i contenuti che alimentano le funzionalità di intelligenza artificiale di Google, riconoscendo il valore del contributo degli editori.",
+      "url": "https://www.searchenginejournal.com/google-tests-paying-publishers-for-ai-answers-via-search-console/589414",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_ai",
+        "publisher_payment",
+        "search_console",
+        "content_monetization"
+      ],
+      "importance": 4,
+      "published_at": "2026-09-14T17:38:53Z",
+      "fetched_at": "2026-09-15T05:02:31.396166Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e94a3e791399750c",
       "deep_analysis": null,
       "also_in": []
     }
@@ -142,82 +523,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-14T05:00:56.828508Z",
+      "last_checked": "2026-09-15T05:00:49.196124Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-14T05:00:57.434298Z",
+      "last_checked": "2026-09-15T05:00:50.423010Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-14T05:00:58.982798Z",
+      "last_checked": "2026-09-15T05:00:51.138731Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-14T05:01:00.887286Z",
+      "last_checked": "2026-09-15T05:00:52.697900Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-14T05:01:21.695528Z",
+      "last_checked": "2026-09-15T05:01:10.037651Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-14T05:01:22.163977Z",
+      "last_checked": "2026-09-15T05:01:11.400856Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-14T05:01:23.124545Z",
+      "last_checked": "2026-09-15T05:01:12.156902Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-14T05:01:25.041396Z",
+      "last_checked": "2026-09-15T05:01:13.400360Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-14T05:01:26.258760Z",
+      "last_checked": "2026-09-15T05:01:14.850938Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-14T05:01:26.504904Z",
+      "last_checked": "2026-09-15T05:01:15.142855Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-14T05:01:27.743558Z",
+      "last_checked": "2026-09-15T05:01:16.339155Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-14T05:01:29.658583Z",
+      "last_checked": "2026-09-15T05:01:17.058059Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-14T05:01:31.270385Z",
+      "last_checked": "2026-09-15T05:01:18.529210Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-14T05:01:32.429187Z",
+      "last_checked": "2026-09-15T05:01:20.085209Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-14T05:01:34.863566Z",
+      "last_checked": "2026-09-15T05:01:21.893530Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-14T05:01:35.920810Z",
+      "last_checked": "2026-09-15T05:01:23.791952Z",
       "changed": false
     }
   ],
