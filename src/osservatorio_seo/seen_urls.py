@@ -30,7 +30,7 @@ class SeenUrlStore:
     def __init__(
         self,
         path: Path,
-        retention_hours: int = 96,
+        retention_hours: int = 336,
         bootstrap_archive_dir: Path | None = None,
         title_similarity_threshold: int = 85,
     ) -> None:

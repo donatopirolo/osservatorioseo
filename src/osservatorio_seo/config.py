@@ -54,10 +54,11 @@ class Settings(BaseModel):
     # pubblicano nel weekend o con ritardo; seen_urls.json evita che questo
     # ri-sottoponga al summarizer un item gia' processato in un run precedente.
     normalizer_max_age_hours: int = 72
-    # Margine oltre le 72h della finestra: un item puo' restare in
-    # `normalized` fino a 72h dalla pubblicazione, quindi la memoria deve
-    # sopravvivere almeno cosi' a lungo dal momento in cui l'abbiamo vista.
-    seen_url_retention_hours: int = 96
+    # 14 giorni: oltre a coprire la finestra di freschezza del Normalizer
+    # (72h), la memoria deve sopravvivere abbastanza da intercettare la
+    # sindacazione tardiva (stesso pezzo ripreso da un'altra fonte giorni
+    # dopo, non solo il giorno successivo) via confronto fuzzy dei titoli.
+    seen_url_retention_hours: int = 336
 
 
 def load_sources(path: Path) -> list[Source]:
