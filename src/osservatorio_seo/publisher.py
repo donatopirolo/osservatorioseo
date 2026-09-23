@@ -216,6 +216,56 @@ def _safe_hostname(url: str) -> str:
         return url
 
 
+_RELATED_WINDOW_DAYS = 30
+_RELATED_MIN = 3
+_RELATED_MAX = 5
+
+
+def _related_articles(
+    item_idx: dict[str, dict[str, Any]],
+    item_id: str,
+    category: str,
+    tags: list[str],
+    day_iso: str,
+) -> list[dict[str, Any]]:
+    """Articoli correlati: stesso tag o categoria, pubblicati nei 30 giorni
+    precedenti la data dell'articolo (non "oggi" del rebuild), cosi' la
+    sezione resta ancorata al contesto storico della pagina invece di
+    rincorrere a ogni rebuild i contenuti piu' recenti dell'intero archivio.
+    Non guarda mai avanti nel tempo rispetto all'articolo.
+
+    Se tag/categoria nella finestra di 30 giorni non bastano a raggiungere il
+    minimo di 3, si allarga a tutto l'archivio precedente (sempre stesso tag
+    o categoria) prima di lasciare la sezione con meno di 3 elementi.
+    """
+    ref_date = datetime.strptime(day_iso, "%Y-%m-%d")
+    window_start_iso = (ref_date - timedelta(days=_RELATED_WINDOW_DAYS)).strftime("%Y-%m-%d")
+    tag_set = set(tags)
+
+    def matches(meta: dict[str, Any]) -> bool:
+        return meta["category"] == category or tag_set.intersection(meta.get("tags") or [])
+
+    candidates = [
+        {**meta, "id": iid}
+        for iid, meta in item_idx.items()
+        if iid != item_id and meta["date"] <= day_iso and matches(meta)
+    ]
+    candidates.sort(key=lambda meta: meta["date"], reverse=True)
+
+    windowed = [meta for meta in candidates if meta["date"] >= window_start_iso]
+    selected = windowed[:_RELATED_MAX]
+    if len(selected) < _RELATED_MIN:
+        selected_ids = {meta["id"] for meta in selected}
+        for meta in candidates:
+            if len(selected) >= _RELATED_MIN:
+                break
+            if meta["id"] not in selected_ids:
+                selected.append(meta)
+                selected_ids.add(meta["id"])
+
+    return [{"title": meta["title"], "path": meta["site_path"]} for meta in selected[:_RELATED_MAX]]
+
+
 def _build_tracker_trends_table(snapshot: Any) -> list[dict[str, Any]]:
     """Ultimo punto di Google Trends per keyword, IT vs Mondo, IT decrescente.
 
@@ -699,25 +749,16 @@ class Publisher:
         # (i tag hub sono disattivati, vedi nota in _ssg_category_tag_hubs).
         tag_to_dossier = {p.tag: p.slug for p in self._load_pillars()}
 
-        # Pool per la sezione "Correlati": altri item indicizzabili della
-        # stessa categoria, in tutto l'archivio, piu' recenti prima.
+        # Pool per la sezione "Correlati": costruito una volta per tutto
+        # l'archivio, poi filtrato per item in _related_articles().
         item_idx = self._build_item_index()
-        related_by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
-        for iid, meta in item_idx.items():
-            related_by_category[meta["category"]].append({**meta, "id": iid})
-        for cat_items in related_by_category.values():
-            cat_items.sort(key=lambda meta: meta["date"], reverse=True)
 
         for item in feed.items:
             if not is_indexable(item) or item.id not in item_slugs:
                 continue
             slug = item_slugs[item.id]
             article_url = canonical(f"/archivio/{y}/{m}/{d}/{slug}/")
-            related = [
-                {"title": meta["title"], "path": meta["site_path"]}
-                for meta in related_by_category.get(item.category, [])
-                if meta["id"] != item.id
-            ][:5]
+            related = _related_articles(item_idx, item.id, item.category, item.tags, day_iso)
             ctx = {
                 "page_title": f"{item.title_it} — Osservatorio SEO",
                 "page_description": _meta_description(item.summary_it),
@@ -1138,6 +1179,7 @@ class Publisher:
                     "source": item.source.name,
                     "importance": item.importance,
                     "category": item.category,
+                    "tags": item.tags,
                     "stars": _stars(item.importance),
                     "site_path": site_path,
                     "url": item.url,
