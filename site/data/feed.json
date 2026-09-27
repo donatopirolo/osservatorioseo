@@ -1,355 +1,35 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-26T05:01:10.817386Z",
-  "generated_at_local": "2026-09-26T07:01:10.817386+02:00",
+  "generated_at": "2026-09-27T05:01:15.519631Z",
+  "generated_at_local": "2026-09-27T07:01:15.519631+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-09-26-0701",
+  "run_id": "2026-09-27-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2348,
-    "items_after_dedup": 51,
+    "items_after_dedup": 34,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0132,
-    "summarize_attempted": 16,
+    "ai_cost_eur": 0.0009,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-09-26_010",
-    "item_2026-09-26_011",
-    "item_2026-09-26_004",
-    "item_2026-09-26_007",
-    "item_2026-09-26_015",
-    "item_2026-09-26_008",
-    "item_2026-09-26_003",
-    "item_2026-09-26_005",
-    "item_2026-09-26_001",
-    "item_2026-09-26_009"
+    "item_2026-09-27_001"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-09-26_010",
-      "item_2026-09-26_004",
-      "item_2026-09-26_007"
-    ],
-    "ai_models": [
-      "item_2026-09-26_011",
-      "item_2026-09-26_015",
-      "item_2026-09-26_008"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-09-26_003",
-      "item_2026-09-26_001",
-      "item_2026-09-26_009",
-      "item_2026-09-26_013",
-      "item_2026-09-26_014",
-      "item_2026-09-26_016",
-      "item_2026-09-26_002"
-    ],
-    "tools_platforms": [
-      "item_2026-09-26_005",
-      "item_2026-09-26_012"
-    ],
-    "industry_news": [
-      "item_2026-09-26_006"
+      "item_2026-09-27_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-09-26_001",
-      "title_original": "WTF is NLWeb? — Whiteboard Friday",
-      "title_it": "Cos'è NLWeb? — Whiteboard Friday",
-      "summary_it": "NLWeb (Natural Language Web) è un progetto open-source di Microsoft lanciato nella primavera del 2025, che mira a rendere i siti web più compatibili con l'\"agentic web\". Utilizza il protocollo ASK e i dati strutturati per consentire ai siti di rispondere a query complesse in linguaggio naturale. Questo sistema permette di aggregare informazioni da diverse sezioni del sito per fornire risposte più coerenti e dettagliate, migliorando l'interazione con agenti AI o utenti umani.",
-      "url": "https://moz.com/blog/wtf-is-nl-web-whiteboard-friday",
-      "source": {
-        "id": "moz_blog",
-        "name": "Moz Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://moz.com/posts/rss/blog",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "technical_seo",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "nlweb",
-        "natural_language_processing",
-        "structured_data",
-        "agentic_web"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T07:00:00Z",
-      "fetched_at": "2026-09-26T05:02:59.693626Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1b8b09b0ac261f9f",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_002",
-      "title_original": "B2B answer engine optimization: How to show up in AI",
-      "title_it": "Ottimizzazione per i motori di risposta B2B: come apparire nell'AI",
-      "summary_it": "L'ottimizzazione per i motori di risposta B2B (AEO) è il processo per aumentare la visibilità di un brand nelle risposte generate dall'AI, specialmente quando i potenziali acquirenti B2B cercano fornitori. Questo approccio è cruciale poiché le risposte AI influenzano la shortlist dei fornitori considerati. L'AEO B2B si distingue per la necessità di rispondere a diverse domande poste da molteplici stakeholder, la durata dei cicli di acquisto e l'importanza delle fonti di terze parti come le piattaforme di recensioni.",
-      "url": "https://www.semrush.com/blog/b2b-answer-engine-optimization",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "b2b_seo",
-        "answer_engine_optimization",
-        "ai_search",
-        "generative_ai"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T09:06:00Z",
-      "fetched_at": "2026-09-26T05:03:01.325201Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:288a1ca432235883",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_003",
-      "title_original": "Bing Tests Replacing Copilot With AI Mode In Search Tabs",
-      "title_it": "Bing sperimenta la sostituzione di Copilot con la modalità AI nelle schede di ricerca",
-      "summary_it": "Bing sta testando una nuova funzionalità che prevede la sostituzione dell'icona di Copilot con una modalità AI direttamente nelle schede di ricerca. Questa modifica mira a integrare più strettamente le capacità di intelligenza artificiale nell'esperienza utente della ricerca. La modalità AI potrebbe offrire interazioni più dirette e contestuali rispetto all'attuale implementazione di Copilot. L'esperimento suggerisce un'evoluzione nell'approccio di Bing all'integrazione dell'AI nella SERP.",
-      "url": "https://www.seroundtable.com/bing-ai-mode-search-tabs-42165.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "bing",
-        "ai_mode",
-        "copilot",
-        "search_feature"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T11:05:00Z",
-      "fetched_at": "2026-09-26T05:03:03.144330Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2745e7d85f6b20ca",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_004",
-      "title_original": "Google Posts Cracks Down On Unverified Contact Information",
-      "title_it": "Google inasprisce le regole sui contatti non verificati nei Google Post",
-      "summary_it": "Google ha aggiornato la documentazione relativa ai Google Post, consentendo l'inclusione di numeri di telefono solo se verificati. I post contenenti informazioni di contatto non verificate, inclusi numeri di telefono, email e handle di social media, potrebbero essere rimossi per prevenire frodi o abusi. Si consiglia di utilizzare i pulsanti CTA per indirizzare gli utenti al sito web ufficiale o alle pagine social, piuttosto che inserire direttamente i contatti nel contenuto del post.",
-      "url": "https://www.seroundtable.com/unverified-contact-information-google-posts-42159.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_post",
-        "local_seo",
-        "google_business_profile",
-        "content_guideline"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T11:11:00Z",
-      "fetched_at": "2026-09-26T05:03:04.959552Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:85d8bc819b495c58",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_005",
-      "title_original": "Google Ads Disables Editing Target ROAS While Promotion Mode Is Active",
-      "title_it": "Google Ads disabilita la modifica del ROAS target durante la modalità promozione attiva",
-      "summary_it": "Google Ads ha implementato una restrizione che impedisce la modifica del ROAS target (Target Return On Ad Spend) quando una promozione è attiva. Questa modifica significa che gli inserzionisti non potranno aggiustare l'obiettivo di ritorno sull'investimento pubblicitario mentre una campagna promozionale è in corso. La funzionalità è stata disabilitata per evitare potenziali conflitti o manipolazioni delle strategie di offerta durante periodi promozionali. Gli utenti dovranno attendere la fine della promozione per apportare modifiche al ROAS target.",
-      "url": "https://www.seroundtable.com/google-ads-target-roas-promotion-mode-42150.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "target_roa",
-        "promotion_mode",
-        "ppc_management"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T11:21:00Z",
-      "fetched_at": "2026-09-26T05:03:06.839396Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0f1cd02b9923629a",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_006",
-      "title_original": "Bing Testing Editable Labels On Images",
-      "title_it": "Bing sta testando etichette modificabili sulle immagini",
-      "summary_it": "Bing sta sperimentando una nuova funzionalità che consente agli utenti di modificare le etichette associate alle immagini nei risultati di ricerca. Questa opzione potrebbe migliorare la pertinenza e l'accuratezza delle descrizioni visive. La modifica delle etichette potrebbe influenzare il modo in cui le immagini vengono indicizzate e presentate agli utenti. Al momento, la funzionalità è in fase di test e non è disponibile per tutti gli utenti.",
-      "url": "https://www.seroundtable.com/bing-images-editable-labels-42152.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "bing",
-        "image_search",
-        "user_generated_content",
-        "search_feature"
-      ],
-      "importance": 2,
-      "published_at": "2026-09-25T11:31:00Z",
-      "fetched_at": "2026-09-26T05:03:08.205218Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d3daed517c855ffb",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_007",
-      "title_original": "Google LSAs Showing Google Business Profile Number, Not Google Ads Number",
-      "title_it": "I Local Services Ads di Google mostrano il numero di Google Business Profile anziché quello di Google Ads",
-      "summary_it": "Google ha modificato il comportamento dei Local Services Ads (LSA), che ora mostrano il numero di telefono associato al Google Business Profile (GBP) anche quando nelle impostazioni è specificato il numero di Google Ads per il tracciamento. Questa modifica, segnalata da diversi utenti e confermata da Google, impedisce il corretto tracciamento delle chiamate tramite i numeri di Google Ads. Non è chiaro se Google ripristinerà il comportamento precedente.",
-      "url": "https://www.seroundtable.com/google-lsa-phone-number-42160.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "local_services_ad",
-        "google_business_profile",
-        "call_tracking"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T11:41:00Z",
-      "fetched_at": "2026-09-26T05:03:09.883397Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:07d014af992965c6",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_008",
-      "title_original": "OpenAI Has Quality Raters, AI Trainers, & They Cheated With AI",
-      "title_it": "OpenAI impiega valutatori di qualità e addestratori AI che hanno utilizzato l'IA per il loro lavoro",
-      "summary_it": "OpenAI si avvale di valutatori di qualità e addestratori di intelligenza artificiale per migliorare i propri modelli. È emerso che alcuni di questi professionisti hanno utilizzato strumenti AI per svolgere i loro compiti. Questa pratica solleva interrogativi sull'efficacia e l'integrità del processo di valutazione e addestramento. La notizia evidenzia una potenziale problematica interna relativa alla metodologia di miglioramento dei modelli AI.",
-      "url": "https://www.seroundtable.com/openai-quality-raters-ai-trainers-42149.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "ai_training",
-        "quality_rater",
-        "ai_ethic"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T11:51:00Z",
-      "fetched_at": "2026-09-26T05:03:11.506634Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:bf6ce2dcc1d67038",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_009",
-      "title_original": "Google AI Overviews Have More Links, But Not All Reach The Web",
-      "title_it": "Le panoramiche AI di Google contengono più link, ma non tutti portano al web",
-      "summary_it": "Le panoramiche AI di Google presentano diverse tipologie di link, inclusi quelli a siti esterni, suggerimenti di articoli e discussioni online. Non tutti i link all'interno delle AI Overviews conducono a pagine web esterne; alcuni possono avviare una nuova query di ricerca o una conversazione in modalità AI. Google ha dichiarato l'intenzione di aumentare la presenza di link inline nelle AI Overviews. I click sui link esterni nelle AI Overviews vengono tracciati in Search Console, mentre i link che generano nuove query non contano come click o impression.",
-      "url": "https://www.searchenginejournal.com/google-ai-overviews-have-more-links-but-not-all-reach-the-web/590762",
+      "id": "item_2026-09-27_001",
+      "title_original": "Google Spam Update, Image Search Data In GSC – SEO Pulse",
+      "title_it": "Aggiornamento Spam di Google e Dati di Ricerca Immagini in GSC",
+      "summary_it": "Google ha avviato il rollout dell'aggiornamento spam di settembre 2026, con una finestra di implementazione estesa fino a due settimane. Contestualmente, Google Search Console introduce un filtro multimodale nel report Performance per le ricerche basate su immagini, includendo dati da Google Lens e altre funzionalità. Questo permette di analizzare il traffico generato da ricerche visive, sebbene non siano disponibili i dati delle query specifiche. L'aggiornamento spam è globale e interessa tutte le lingue, mentre il nuovo filtro GSC è anch'esso in rollout a livello mondiale.",
+      "url": "https://www.searchenginejournal.com/seo-pulse-google-spam-update-image-search-data/590882",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -360,275 +40,23 @@
         "target_url": null,
         "selectors": null,
         "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ai_overview",
-        "ai_mode",
-        "search_console",
-        "linking"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T12:00:57Z",
-      "fetched_at": "2026-09-26T05:03:13.498246Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d70e70f5a02de5ae",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_010",
-      "title_original": "Search News Buzz Video Recap: Google September 2026 Spam Update Is Here, Goodbye Discover Traffic, Multimodal Search Reporting & CrUX Ad Metrics In Page Experience",
-      "title_it": "Riepilogo delle notizie di ricerca: aggiornamento spam di settembre 2026, traffico Discover e metriche CrUX",
-      "summary_it": "Google ha rilasciato il suo quarto aggiornamento spam dell'anno a settembre 2026, causando volatilità nel ranking di ricerca. Google Search Console ha introdotto filtri di ricerca multimodali nei report sulle performance. Le metriche CrUX relative agli annunci sono state aggiunte alla documentazione sull'esperienza di pagina, sebbene non siano un fattore di ranking diretto. Google sta anche testando una funzione 'Dive deeper' in Discover che potrebbe ridurre il traffico verso gli editori.",
-      "url": "https://www.seroundtable.com/video-09-25-2026-42164.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "google_updates",
       "tags": [
         "google_spam_update",
-        "search_console",
-        "page_experience",
-        "google_discover"
+        "google_search_console",
+        "image_search",
+        "multimodal_search"
       ],
       "importance": 4,
-      "published_at": "2026-09-25T12:01:00Z",
-      "fetched_at": "2026-09-26T05:03:14.920778Z",
+      "published_at": "2026-09-26T12:00:46Z",
+      "fetched_at": "2026-09-27T05:02:10.626946Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:81a825de91c4e85d",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_011",
-      "title_original": "Google Has Deployed A New AI Spam Detector Called SAFE",
-      "title_it": "Google ha implementato un nuovo rilevatore di spam basato sull'IA chiamato SAFE",
-      "summary_it": "Google ha introdotto SAFE (Scaled Abuse Forensics Examiner), un nuovo sistema basato sull'intelligenza artificiale per rilevare lo spam, in particolare quello generato dall'IA. Questo sistema è progettato per identificare contenuti che violano le linee guida di Google, superando i limiti delle revisioni manuali. SAFE utilizza un approccio multimodale per analizzare contenuti sintetici e modelli di engagement non umani, mirando a contrastare la produzione di massa di spam tramite IA.",
-      "url": "https://www.searchenginejournal.com/google-has-deployed-a-new-ai-spam-detector-called-safe/590918",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "google_ai",
-        "spam_detection",
-        "ai_content",
-        "safe_system"
-      ],
-      "importance": 4,
-      "published_at": "2026-09-25T12:47:46Z",
-      "fetched_at": "2026-09-26T05:03:16.544329Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:41662a21d411f080",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_012",
-      "title_original": "How to make the most of your 7-day Semrush free trial",
-      "title_it": "Come sfruttare al meglio la prova gratuita di 7 giorni di Semrush",
-      "summary_it": "L'articolo fornisce una guida su come ottimizzare l'utilizzo della prova gratuita di 7 giorni di Semrush. Vengono suggeriti sei passaggi chiave per ottenere il massimo valore dalla piattaforma in un breve lasso di tempo. Questi includono l'analisi del traffico organico, il monitoraggio delle parole chiave, l'identificazione di gap di contenuto e l'audit tecnico del sito. L'obiettivo è fornire ai professionisti SEO un piano d'azione per raccogliere insight utili anche in un periodo limitato.",
-      "url": "https://www.semrush.com/blog/free-7-day-semrush-one-trial",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "semrush",
-        "free_trial",
-        "seo_tool",
-        "platform_guide"
-      ],
-      "importance": 1,
-      "published_at": "2026-09-25T13:26:00Z",
-      "fetched_at": "2026-09-26T05:03:18.277320Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:70571aa9dac790a4",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_013",
-      "title_original": "How to Optimize for AI Search: A Guide for You and Your AI Agent",
-      "title_it": "Come ottimizzare per la ricerca AI: una guida per te e il tuo agente AI",
-      "summary_it": "L'ottimizzazione per la ricerca basata su intelligenza artificiale richiede che i contenuti siano accessibili, indicizzabili e utili, come per la ricerca tradizionale. Tuttavia, è fondamentale che i fatti siano facilmente estraibili e affidabili per essere citati dagli assistenti AI. Questo implica la necessità di mantenere i dati aggiornati e monitorare le citazioni. Gli agenti AI possono supportare queste attività, ma la decisione finale sulla pubblicazione rimane umana.",
-      "url": "https://ahrefs.com/blog/how-to-optimize-for-ai-search",
-      "source": {
-        "id": "ahrefs_blog",
-        "name": "Ahrefs Blog",
-        "authority": 8,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://ahrefs.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "content_optimization",
-        "ai_agent",
-        "fact_checking"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T13:48:53Z",
-      "fetched_at": "2026-09-26T05:03:19.883821Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a6d0101766d70bfc",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_014",
-      "title_original": "AI Agents Won’t Fix Bad Audience Data, They’ll Amplify It",
-      "title_it": "Gli agenti AI non risolveranno i problemi dei dati sull'audience, li amplificheranno",
-      "summary_it": "Gli agenti AI, pur elaborando grandi volumi di dati a velocità elevate, non possono correggere la scarsa qualità dei dati sull'audience. Se i dati di input sono errati o incompleti, gli output degli agenti AI rifletteranno e amplificheranno tali difetti. La loro efficacia dipende dalla qualità dei dati forniti, non dalla loro capacità di generare nuove informazioni. È fondamentale che i professionisti SEO si concentrino sulla raccolta e la pulizia di dati accurati per evitare di automatizzare errori e pregiudizi.",
-      "url": "https://www.searchenginejournal.com/ai-agents-wont-fix-bad-audience-data-theyll-amplify-it/589792",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_agent",
-        "data_quality",
-        "audience_data",
-        "llm_limitation"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T14:30:43Z",
-      "fetched_at": "2026-09-26T05:03:21.763607Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f4f5310fcec14503",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_015",
-      "title_original": "Proaction boosts sales 60% and saves 75+ hours with Codex",
-      "title_it": "Proaction aumenta le vendite del 60% e risparmia oltre 75 ore grazie a Codex",
-      "summary_it": "Proaction, azienda che sviluppa software per la gestione di flotte veicolari, ha utilizzato Codex per creare demo personalizzate per i potenziali clienti. Questo ha permesso di aumentare le vendite del 60% e di ridurre significativamente il tempo dedicato dagli ingegneri alla preparazione delle demo. L'implementazione di Codex ha anche ottimizzato il processo di sviluppo delle soluzioni, fornendo agli ingegneri un riferimento visivo chiaro delle esigenze del cliente.",
-      "url": "https://openai.com/index/proaction",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai_codex",
-        "sales_automation",
-        "efficiency_gain",
-        "custom_demo"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T19:00:00Z",
-      "fetched_at": "2026-09-26T05:03:23.358477Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:6ac307d82f9e5dac",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-09-26_016",
-      "title_original": "The Text-Only Version Of Your Website Strips Out The Wrong Layer",
-      "title_it": "La versione solo testo del tuo sito web rimuove lo strato sbagliato",
-      "summary_it": "L'articolo critica l'approccio attuale delle versioni solo testo dei siti web fornite agli agenti AI, sostenendo che esse rimuovono le funzionalità interattive anziché preservarle. Viene evidenziato come i mirror Markdown e i punteggi di prontezza si concentrino sul contenuto testuale, ignorando le azioni che un utente o un agente AI potrebbero voler compiere. Si suggerisce che i dati strutturati e l'HTML semantico siano fondamentali per esporre le azioni ai sistemi automatici, mentre le versioni solo testo attuali non supportano adeguatamente l'interazione.",
-      "url": "https://www.searchenginejournal.com/the-text-only-version-of-your-website-strips-out-the-wrong-layer/590088",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_agent",
-        "semantic_html",
-        "structured_data",
-        "markdown_mirror"
-      ],
-      "importance": 3,
-      "published_at": "2026-09-25T19:00:09Z",
-      "fetched_at": "2026-09-26T05:03:25.353456Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b88e74a743412384",
+      "raw_hash": "sha256:190a628dfd8e520f",
       "deep_analysis": null,
       "also_in": []
     }
@@ -636,82 +64,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-09-26T05:01:12.469203Z",
+      "last_checked": "2026-09-27T05:01:16.574402Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-09-26T05:01:12.958968Z",
+      "last_checked": "2026-09-27T05:01:17.879903Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-09-26T05:01:14.449309Z",
+      "last_checked": "2026-09-27T05:01:18.963032Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-09-26T05:01:16.585668Z",
+      "last_checked": "2026-09-27T05:01:20.576604Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-09-26T05:01:37.635469Z",
+      "last_checked": "2026-09-27T05:01:33.435450Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-09-26T05:01:37.886686Z",
+      "last_checked": "2026-09-27T05:01:33.772719Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-09-26T05:01:39.647136Z",
+      "last_checked": "2026-09-27T05:01:35.431896Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-09-26T05:01:41.667439Z",
+      "last_checked": "2026-09-27T05:01:37.373362Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-09-26T05:01:43.186385Z",
+      "last_checked": "2026-09-27T05:01:38.269892Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-09-26T05:01:43.514386Z",
+      "last_checked": "2026-09-27T05:01:38.637519Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-09-26T05:01:44.610771Z",
+      "last_checked": "2026-09-27T05:01:39.590926Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-09-26T05:01:45.975254Z",
+      "last_checked": "2026-09-27T05:01:40.869413Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-09-26T05:01:47.405205Z",
+      "last_checked": "2026-09-27T05:01:42.360294Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-09-26T05:01:49.339550Z",
+      "last_checked": "2026-09-27T05:01:44.571341Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-09-26T05:01:51.476073Z",
+      "last_checked": "2026-09-27T05:01:45.323066Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-09-26T05:01:52.476719Z",
+      "last_checked": "2026-09-27T05:01:46.602279Z",
       "changed": false
     }
   ],
