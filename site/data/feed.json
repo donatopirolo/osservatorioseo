@@ -1,39 +1,73 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-04T05:01:48.084684Z",
-  "generated_at_local": "2026-10-04T07:01:48.084684+02:00",
+  "generated_at": "2026-10-05T05:01:48.960770Z",
+  "generated_at_local": "2026-10-05T07:01:48.960770+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-10-04-0701",
+  "run_id": "2026-10-05-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2368,
-    "items_after_dedup": 42,
+    "items_after_dedup": 22,
     "doc_changes_detected": 0,
     "ai_cost_eur": 0.0016,
     "summarize_attempted": 2,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-10-04_001",
-    "item_2026-10-04_002"
+    "item_2026-10-05_001",
+    "item_2026-10-05_002"
   ],
   "categories": {
-    "ai_overviews_llm_seo": [
-      "item_2026-10-04_001"
-    ],
-    "ai_models": [
-      "item_2026-10-04_002"
+    "google_updates": [
+      "item_2026-10-05_001",
+      "item_2026-10-05_002"
     ]
   },
   "items": [
     {
-      "id": "item_2026-10-04_001",
-      "title_original": "Google Wants AI Content Fact-Checked, Gemini UTM Tags – SEO Pulse",
-      "title_it": "Google richiede la verifica dei fatti per i contenuti AI e introduce i tag UTM per Gemini",
-      "summary_it": "Google ha aggiornato le sue linee guida per i contenuti generati dall'intelligenza artificiale, richiedendo una verifica manuale dei fatti prima della pubblicazione, inclusi i metadati. Questa modifica sottolinea l'importanza dell'accuratezza e dell'affidabilità dei contenuti AI. Inoltre, sono stati rilevati parametri UTM sui link provenienti da Google Gemini, suggerendo un nuovo metodo per tracciare il traffico di riferimento. Google non ha ancora documentato ufficialmente questo processo di tagging.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-google-ai-content-fact-check-gemini-utm-tags/591787",
+      "id": "item_2026-10-05_001",
+      "title_original": "Daily Search Forum Recap: October 2, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 2 ottobre 2026",
+      "summary_it": "La seconda fase dell'aggiornamento spam di Google di settembre è stata osservata. Google ha ribadito l'importanza della revisione manuale dei contenuti generati dall'IA prima della pubblicazione e ha aggiornato la documentazione sui contenuti utili, specificando cosa costituisce il contenuto principale e come i quality rater lo valutano. Sono stati notati test di Google su parametri URL di tracciamento per i link di AI Overview e nuovi sitelink in modalità AI. Google ha vinto una causa relativa all'impatto di AI Overview sui ricavi pubblicitari degli editori.",
+      "url": "https://www.seroundtable.com/recap-10-02-2026-42220.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_spam_update",
+        "ai_content_guideline",
+        "helpful_content",
+        "ai_overviews"
+      ],
+      "importance": 4,
+      "published_at": "2026-10-02T14:00:00Z",
+      "fetched_at": "2026-10-05T05:02:59.219478Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d961483276ac52c7",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-05_002",
+      "title_original": "Google Shows How Long Crawling, Indexing & Recovery Can Take",
+      "title_it": "Google illustra i tempi di crawling, indicizzazione e recupero",
+      "summary_it": "Google ha fornito indicazioni sui tempi necessari per il crawling e l'indicizzazione dei contenuti, nonché per il recupero da eventuali penalizzazioni. Le tempistiche possono variare significativamente in base a diversi fattori, tra cui la qualità del sito e la frequenza degli aggiornamenti. Comprendere questi intervalli può aiutare i professionisti SEO a gestire meglio le aspettative e le strategie.",
+      "url": "https://www.searchenginejournal.com/google-crawling-indexing-recovery-timing-ranges/591829",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -46,57 +80,21 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "google_updates",
       "tags": [
-        "ai_content",
-        "fact_checking",
-        "google_gemini",
-        "utm_parameter"
-      ],
-      "importance": 4,
-      "published_at": "2026-10-03T12:00:26Z",
-      "fetched_at": "2026-10-04T05:02:57.204917Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:06d94f637456b6f1",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-04_002",
-      "title_original": "The Agent Said It Was Done. The Database Disagreed.",
-      "title_it": "L'agente AI ha dichiarato il compito completato, ma il database non era d'accordo",
-      "summary_it": "Microsoft ha rilasciato ThinkingBox, una piattaforma per valutare gli agenti AI basandosi sullo stato finale del backend e sugli effetti collaterali generati, piuttosto che sulle risposte testuali. Questo strumento testa la capacità degli agenti di raggiungere lo stato desiderato in workflow complessi, eseguendo ogni test più volte. ThinkingBox è ora disponibile tramite Hugging Face e mira a misurare la coerenza e l'accuratezza delle azioni degli agenti AI in scenari reali.",
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
-      "source": {
-        "id": "huggingface_blog",
-        "name": "Hugging Face Blog",
-        "authority": 8,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://huggingface.co/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_agent",
-        "evaluation_metric",
-        "microsoft",
-        "hugging_face"
+        "google_crawl",
+        "indexing",
+        "seo_recovery",
+        "google_guideline"
       ],
       "importance": 3,
-      "published_at": "2026-10-03T22:56:48Z",
-      "fetched_at": "2026-10-04T05:02:58.941004Z",
+      "published_at": "2026-10-04T20:41:36Z",
+      "fetched_at": "2026-10-05T05:03:05.098500Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:1db873de92e835e3",
+      "raw_hash": "sha256:0ee3727d453a1cff",
       "deep_analysis": null,
       "also_in": []
     }
@@ -104,82 +102,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-10-04T05:01:49.675493Z",
+      "last_checked": "2026-10-05T05:01:50.469517Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-10-04T05:01:50.537976Z",
+      "last_checked": "2026-10-05T05:01:51.179704Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-10-04T05:01:51.463646Z",
+      "last_checked": "2026-10-05T05:01:52.493029Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-10-04T05:01:52.795214Z",
+      "last_checked": "2026-10-05T05:01:54.035936Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-10-04T05:02:13.014456Z",
+      "last_checked": "2026-10-05T05:02:14.817078Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-10-04T05:02:13.272436Z",
+      "last_checked": "2026-10-05T05:02:15.157153Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-10-04T05:02:15.165417Z",
+      "last_checked": "2026-10-05T05:02:16.575887Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-10-04T05:02:16.541867Z",
+      "last_checked": "2026-10-05T05:02:18.503797Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-10-04T05:02:17.953834Z",
+      "last_checked": "2026-10-05T05:02:19.748754Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-10-04T05:02:18.244189Z",
+      "last_checked": "2026-10-05T05:02:19.972546Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-10-04T05:02:19.863978Z",
+      "last_checked": "2026-10-05T05:02:21.002405Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-10-04T05:02:21.029466Z",
+      "last_checked": "2026-10-05T05:02:22.517239Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-10-04T05:02:22.518473Z",
+      "last_checked": "2026-10-05T05:02:23.855758Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-10-04T05:02:23.613915Z",
+      "last_checked": "2026-10-05T05:02:24.829494Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-10-04T05:02:25.186488Z",
+      "last_checked": "2026-10-05T05:02:26.277103Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-10-04T05:02:27.338037Z",
+      "last_checked": "2026-10-05T05:02:27.745255Z",
       "changed": false
     }
   ],
