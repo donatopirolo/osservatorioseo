@@ -1686,12 +1686,21 @@ class Publisher:
         seven_days_ago = datetime.now(UTC) - timedelta(days=7)
         combined_items: list[Item] = []
         seen_urls: set[str] = set()
+        # Giorno d'archivio di ogni item: serve come destinazione di ripiego
+        # per gli item senza pagina propria (es. i doc_watcher, che condividono
+        # tutti lo stesso url della pagina di changelog monitorata — solo la
+        # primissima occorrenza nell'intero archivio riceve una pagina in
+        # _build_item_index, le successive restavano linkate alla fonte
+        # esterna anche quando finivano in top10 o tra gli aggiornamenti
+        # Google della settimana). Stesso pattern di _ssg_category_tag_hubs.
+        item_day: dict[str, str] = {}
 
         # Items del feed corrente prima (priorità su dedup)
         for item in current_feed.items:
             if item.url not in seen_urls:
                 combined_items.append(item)
                 seen_urls.add(item.url)
+                item_day[item.id] = day_iso
 
         # Items da archivio (esclude il giorno corrente)
         archive_files = sorted(
@@ -1715,6 +1724,7 @@ class Publisher:
                     continue
                 combined_items.append(item)
                 seen_urls.add(item.url)
+                item_day[item.id] = path.stem
 
         if not combined_items:
             return
@@ -1730,6 +1740,13 @@ class Publisher:
         # quando avevano gia' una pagina propria.
         item_idx = self._build_item_index()
 
+        def resolve_link(item: Item) -> tuple[str, bool]:
+            url, internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
+            if not internal and item.id in item_day:
+                dy, dm, dd = item_day[item.id].split("-")
+                return f"/archivio/{dy}/{dm}/{dd}/", True
+            return url, internal
+
         top10_cards: list[str] = []
         top10_itemlist: list[dict[str, str]] = []
         for idx, item_id in enumerate(ranked.top10, start=1):
@@ -1737,7 +1754,7 @@ class Publisher:
             if not item:
                 continue
 
-            article_url, is_internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
+            article_url, is_internal = resolve_link(item)
 
             ctx = {
                 "item": item.model_dump(mode="json"),
@@ -1766,7 +1783,7 @@ class Publisher:
         google_cards: list[str] = []
         google_updates = self._select_google_updates(combined_items)
         for idx, item in enumerate(google_updates, start=1):
-            article_url, is_internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
+            article_url, is_internal = resolve_link(item)
             google_cards.append(
                 renderer.render_raw(
                     "partials/_card_top10.html.jinja",
