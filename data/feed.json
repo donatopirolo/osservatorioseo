@@ -1,533 +1,35 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-10T05:01:51.013175Z",
-  "generated_at_local": "2026-10-10T07:01:51.013175+02:00",
+  "generated_at": "2026-10-11T05:01:48.881496Z",
+  "generated_at_local": "2026-10-11T07:01:48.881496+02:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-10-10-0701",
+  "run_id": "2026-10-11-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2413,
-    "items_after_dedup": 48,
+    "items_after_dedup": 33,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0112,
-    "summarize_attempted": 14,
+    "ai_cost_eur": 0.0008,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-10-10_012",
-    "item_2026-10-10_003",
-    "item_2026-10-10_002",
-    "item_2026-10-10_014",
-    "item_2026-10-10_004",
-    "item_2026-10-10_013",
-    "item_2026-10-10_008",
-    "item_2026-10-10_010",
-    "item_2026-10-10_001",
-    "item_2026-10-10_011"
+    "item_2026-10-11_001"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-10-10_012",
-      "item_2026-10-10_014"
-    ],
-    "ai_models": [
-      "item_2026-10-10_003",
-      "item_2026-10-10_002",
-      "item_2026-10-10_004",
-      "item_2026-10-10_013"
-    ],
-    "tools_platforms": [
-      "item_2026-10-10_008",
-      "item_2026-10-10_010",
-      "item_2026-10-10_001"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-10-10_011"
-    ],
-    "industry_news": [
-      "item_2026-10-10_006",
-      "item_2026-10-10_007",
-      "item_2026-10-10_009"
-    ],
-    "content_eeat": [
-      "item_2026-10-10_005"
+      "item_2026-10-11_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-10-10_001",
-      "title_original": "Jetpack 16.3 WordPress Plugin Update Is A Winner",
-      "title_it": "Aggiornamento del plugin Jetpack 16.3 per WordPress",
-      "summary_it": "L'aggiornamento 16.3 del plugin Jetpack per WordPress introduce tre nuovi blocchi per la gestione di playlist video e la programmazione di appuntamenti Zoom. Sono state apportate migliorie alle funzionalità esistenti di VideoPress e Jetpack AI, con un'espansione delle integrazioni. L'aggiornamento include anche un widget per suggerimenti di scrittura e miglioramenti all'interfaccia utente, come la logica condizionale per i moduli.",
-      "url": "https://www.searchenginejournal.com/jetpack-16-3-wordpress-plugin-update-is-a-winner/592452",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "wordpress",
-        "jetpack",
-        "plugin_update",
-        "content_management"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-09T05:06:52Z",
-      "fetched_at": "2026-10-10T05:03:32.681899Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:aab258f2a33d49f4",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_002",
-      "title_original": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-      "title_it": "Sophos riduce del 96% i tempi di indagine sulle minacce con OpenAI Daybreak",
-      "summary_it": "Sophos ha integrato i modelli OpenAI tramite il programma Daybreak per migliorare la sua piattaforma di cyber difesa Sophos Fusion. Questa integrazione ha permesso di automatizzare l'indagine e la risposta a circa la metà dei casi di sicurezza. Di conseguenza, il tempo medio di risposta per i casi gestiti dagli agenti Daybreak è sceso da 38 minuti a circa 89 secondi.",
-      "url": "https://openai.com/index/sophos",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai_daybreak",
-        "sopho",
-        "cybersecurity",
-        "ai_automation"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-09T07:00:00Z",
-      "fetched_at": "2026-10-10T05:03:34.172379Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:19a2284f1c27fb9b",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_003",
-      "title_original": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "title_it": "Asana riduce i costi dei modelli di 76 volte nei test browser con GPT-6.1 Sol",
-      "summary_it": "Asana ha ottimizzato il workflow del suo browser agent su GPT-6.1 Sol, ottenendo una riduzione dei costi di 76 volte e un aumento della velocità di 5 volte. L'ottimizzazione è stata guidata da GPT-6 Astra in Codex, che ha identificato e testato le inefficienze. Questo ha permesso di ridurre i tempi di ricerca da mesi a circa una settimana. I test hanno dimostrato che il workflow ottimizzato su GPT-6.1 Sol ha un costo stimato di $0.47 e un tempo di esecuzione di circa quattro minuti per operazione.",
-      "url": "https://openai.com/index/asana-browser-agent",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_optimization",
-        "cost_reduction",
-        "gpt_model",
-        "asana_ai"
-      ],
-      "importance": 4,
-      "published_at": "2026-10-09T07:00:00Z",
-      "fetched_at": "2026-10-10T05:03:36.071973Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a7ba29a4eb5ec351",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_004",
-      "title_original": "Claude’s New Rules Target Fake Sources Built To Sway AI Answers",
-      "title_it": "Le nuove regole di Claude contro le fonti false create per influenzare le risposte AI",
-      "summary_it": "Anthropic ha aggiornato la sua politica d'uso per Claude, introducendo nuove restrizioni sull'uso di fonti false o manipolate. La policy vieta di alimentare i sistemi di ricerca e AI con contenuti che travisano origine, autorialità o indipendenza. Questo include reti di siti che si presentano come fonti indipendenti per corroborare le stesse affermazioni. Le nuove regole, in vigore dal 12 novembre, mirano a contrastare campagne ingannevoli e attività artificiali, estendendo le precedenti direttive su frode e disinformazione.",
-      "url": "https://www.searchenginejournal.com/claude-rules-fake-sources-ai-answers/592456",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "claude_ai",
-        "anthropic",
-        "ai_policy",
-        "content_integrity"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-09T08:00:16Z",
-      "fetched_at": "2026-10-10T05:03:37.771146Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4267785dd880a9fa",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_005",
-      "title_original": "4 types of keywords in SEO (+ examples)",
-      "title_it": "I 4 tipi di parole chiave nella SEO (con esempi)",
-      "summary_it": "L'articolo classifica le parole chiave SEO in quattro categorie principali basate sull'intento di ricerca: informazionale, navigazionale, commerciale e transazionale. Viene sottolineata l'importanza di comprendere l'intento per allineare il contenuto della pagina alle aspettative dell'utente. La corrispondenza tra il tipo di keyword e il contenuto è fondamentale per il posizionamento. Vengono forniti esempi per ciascuna tipologia di keyword.",
-      "url": "https://www.semrush.com/blog/types-of-keywords-commercial-informational-navigational-transactional",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "content_eeat",
-      "tags": [
-        "keyword_research",
-        "search_intent",
-        "keyword_type",
-        "content_strategy"
-      ],
-      "importance": 2,
-      "published_at": "2026-10-09T09:10:00Z",
-      "fetched_at": "2026-10-10T05:03:39.402182Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b6d44ef2016be48d",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_006",
-      "title_original": "Bing Tests Removing Favicons From Search Result Snippets",
-      "title_it": "Bing sperimenta la rimozione delle favicon dagli snippet dei risultati di ricerca",
-      "summary_it": "Bing sta testando una modifica all'interfaccia utente che prevede la rimozione delle favicon dagli snippet dei risultati di ricerca. Questa sperimentazione è stata notata da alcuni utenti e potrebbe indicare un potenziale cambiamento nel modo in cui i risultati vengono visualizzati. Al momento non è chiaro se si tratti di un test limitato o di un'indicazione di un rollout più ampio.",
-      "url": "https://www.seroundtable.com/bing-no-favicons-snippets-42262.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "bing",
-        "serp_feature",
-        "ui_test"
-      ],
-      "importance": 2,
-      "published_at": "2026-10-09T11:11:00Z",
-      "fetched_at": "2026-10-10T05:03:41.380925Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5c12fbea305468eb",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_007",
-      "title_original": "Bing Tests Faded Stylish Line Separators",
-      "title_it": "Bing testa separatori di linea sfumati e stilizzati",
-      "summary_it": "Bing sta sperimentando una modifica estetica nell'interfaccia dei risultati di ricerca, introducendo separatori di linea sfumati. Questa modifica riguarda l'aspetto visivo degli elementi nella SERP. Si tratta di un test sull'interfaccia utente che potrebbe essere implementato in futuro.",
-      "url": "https://www.seroundtable.com/bing-faded-line-separators-42192.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "bing",
-        "ui_test",
-        "serp_feature"
-      ],
-      "importance": 1,
-      "published_at": "2026-10-09T11:21:00Z",
-      "fetched_at": "2026-10-10T05:03:42.667441Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e0ec5c24c55268da",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_008",
-      "title_original": "Google Updates Reader Revenue Manager Home Page",
-      "title_it": "Google aggiorna la homepage di Reader Revenue Manager",
-      "summary_it": "Google ha rinnovato la homepage di Reader Revenue Manager, introducendo un nuovo design e menzionando esplicitamente AI Mode, AI Overviews e Gemini. La modifica più significativa riguarda la visibilità dei contenuti sottoscritti, che ora possono apparire con la dicitura 'Dai tuoi abbonamenti' anche in Google Search, AI Mode, AI Overviews e Gemini. La pagina aggiornata include una sezione 'Funzionalità avanzate' più dettagliata, con opzioni come pricing a 5 step, paywall misurato e sondaggi personalizzabili.",
-      "url": "https://www.seroundtable.com/google-updates-reader-revenue-manager-42261.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_reader_revenue_manager",
-        "publisher_tool",
-        "ai_integration",
-        "content_monetization"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-09T11:31:00Z",
-      "fetched_at": "2026-10-10T05:03:44.207364Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:3f9e7dad1e73bf79",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_009",
-      "title_original": "Bing Testing Local Pack Without Borders",
-      "title_it": "Bing testa il local pack senza bordi",
-      "summary_it": "Bing sta sperimentando una modifica visiva nel local pack, rimuovendo i bordi che solitamente delimitano i risultati. Questa variazione è stata notata da alcuni utenti e replicata da Search Engine Roundtable. Si tratta di un test sull'interfaccia utente che non impatta la rilevanza o il ranking dei risultati locali.",
-      "url": "https://www.seroundtable.com/bing-local-pack-without-borders-42257.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "bing",
-        "local_pack",
-        "ui_test",
-        "serp_feature"
-      ],
-      "importance": 1,
-      "published_at": "2026-10-09T11:41:00Z",
-      "fetched_at": "2026-10-10T05:03:45.537286Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:8d10ccf6814e56c6",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_010",
-      "title_original": "Google Ads Enables Text Customization Asset Previews",
-      "title_it": "Google Ads introduce l'anteprima degli asset di personalizzazione del testo generati dall'IA",
-      "summary_it": "Google Ads ha implementato una nuova funzionalità che consente agli inserzionisti di visualizzare in anteprima gli asset di testo (titoli e descrizioni) generati dall'IA per le campagne Search e Performance Max. Questa opzione permette di verificare la conformità degli asset alle linee guida del brand prima di attivarli o lanciare una campagna. La generazione degli esempi avviene rapidamente e supporta tutte le lingue della personalizzazione del testo, filtrando automaticamente in base alle linee guida definite dall'utente.",
-      "url": "https://www.seroundtable.com/google-ads-text-customization-asset-previews-42264.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "ai_generated_content",
-        "ppc",
-        "asset_preview"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-09T11:51:00Z",
-      "fetched_at": "2026-10-10T05:03:47.929317Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:5d2b1a080b05d7c1",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_011",
-      "title_original": "AI Overviews Have Spread To Most Big-Brand Searches",
-      "title_it": "Le AI Overviews si sono diffuse nella maggior parte delle ricerche di grandi brand",
-      "summary_it": "Uno studio di Ahrefs ha rilevato che le AI Overviews sono apparse nel 63% delle ricerche esatte per 100 grandi brand negli Stati Uniti entro fine settembre, partendo dal 5% a luglio. Altri report di Chris Long e DemandSphere mostrano percentuali simili, indicando una rapida espansione delle AI Overviews per le query di brand. Ahrefs ha anche osservato un aumento delle AI Overviews per le keyword brandizzate, raggiungendo il 73.3% a settembre, con un incremento maggiore rispetto alle keyword non brandizzate.",
-      "url": "https://www.searchenginejournal.com/ai-overviews-big-brand-searches/592280",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_overviews",
-        "branded_search",
-        "serp_feature",
-        "ahrefs_study"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-09T12:00:00Z",
-      "fetched_at": "2026-10-10T05:03:50.375520Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:7a7a5b3ee0ac0dbb",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_012",
-      "title_original": "Search News Buzz Video Recap: Google Spam Update Done, Penalties Rise, Factcheck AI, Content Quality, Fake Authors, Ads & So Much More",
-      "title_it": "Riepilogo settimanale delle notizie SEO: aggiornamento spam di Google completato, aumento delle penalità e novità su AI e contenuti",
-      "summary_it": "La settimana ha visto il completamento del Google September 2026 spam update, con la sua terza e ultima fase. Google ha segnalato un potenziale aumento delle penalità manuali e ha ribadito l'importanza del fact-checking per i contenuti generati da AI. Sono state fornite indicazioni sulla qualità dei contenuti e sull'uso di autori fittizi, oltre a dettagli su crawling, indicizzazione e serving. Sono state introdotte anche diverse novità in Google Search Console e Google Ads, inclusi strumenti AI per la localizzazione delle campagne.",
-      "url": "https://www.seroundtable.com/video-10-09-2026-42263.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_spam_update",
-        "ai_content",
-        "content_quality",
-        "google_ad"
-      ],
-      "importance": 4,
-      "published_at": "2026-10-09T12:01:00Z",
-      "fetched_at": "2026-10-10T05:03:52.189480Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:7f50bee68aa47a93",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_013",
-      "title_original": "Impactful scheduling for GPU clusters",
-      "title_it": "Pianificazione efficace per cluster GPU",
-      "summary_it": "Hugging Face ha pubblicato un articolo che descrive l'approccio di Allen Institute for AI (Ai2) alla gestione e pianificazione dei cluster GPU. L'obiettivo è massimizzare l'impatto della ricerca mantenendo un'elevata occupazione delle risorse. Viene introdotto un nuovo sistema di scheduling basato su budget di tempo GPU, allocazione fair-share gerarchica e time-slicing, sostituendo un precedente scheduler basato su priorità. Questo permette di gestire la domanda di GPU, che supera l'offerta, in modo più trasparente e amministrativo.",
-      "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
-      "source": {
-        "id": "huggingface_blog",
-        "name": "Hugging Face Blog",
-        "authority": 8,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://huggingface.co/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "gpu_scheduling",
-        "ai_infrastructure",
-        "resource_management",
-        "hugging_face"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-09T15:20:29Z",
-      "fetched_at": "2026-10-10T05:03:53.903200Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:912a2de00ce3056d",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-10_014",
-      "title_original": "Google Explains How To Use HTML Sitemaps For SEO",
-      "title_it": "Google chiarisce l'utilità delle sitemap HTML per la SEO",
-      "summary_it": "John Mueller e Martin Splitt di Google hanno discusso l'attuale rilevanza delle sitemap HTML per la SEO. Hanno sottolineato che le sitemap HTML non sostituiscono le sitemap XML, le quali offrono una struttura più rigorosa per i crawler. Le sitemap HTML sono utili per gli utenti e possono comunque aiutare i crawler a scoprire pagine, ma non possono essere inviate come file di sitemap standard. La loro funzione principale è quella di una mappa del sito per gli utenti, facilitando la navigazione e la scoperta dei contenuti.",
-      "url": "https://www.searchenginejournal.com/google-explains-how-to-use-html-sitemaps-for-seo/592508",
+      "id": "item_2026-10-11_001",
+      "title_original": "Google Ends Spam Update, Shares Crawl Timing Ranges – SEO Pulse",
+      "title_it": "Google conclude l'aggiornamento antispam e condivide i tempi di crawling",
+      "summary_it": "L'aggiornamento antispam di Google di settembre 2026 si è concluso l'8 ottobre, dopo quasi 14 giorni di rollout. Questo offre una finestra temporale definita (24 settembre - 8 ottobre) per analizzare le performance in Search Console. Gary Illyes ha inoltre fornito indicazioni sui tempi medi per crawling, indicizzazione, migrazioni di siti e recupero da core update, con tempistiche che possono variare da mesi a oltre un anno in alcuni casi.",
+      "url": "https://www.searchenginejournal.com/seo-pulse-google-spam-update-crawl-timing-ranges/592469",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -542,19 +44,19 @@
       },
       "category": "google_updates",
       "tags": [
-        "html_sitemap",
-        "xml_sitemap",
-        "crawl_discovery",
-        "john_mueller"
+        "google_update",
+        "spam_update",
+        "crawl_timing",
+        "search_console"
       ],
-      "importance": 3,
-      "published_at": "2026-10-09T21:31:30Z",
-      "fetched_at": "2026-10-10T05:03:55.650501Z",
+      "importance": 4,
+      "published_at": "2026-10-10T12:00:00Z",
+      "fetched_at": "2026-10-11T05:02:56.241349Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:416470b6b3c6c2b8",
+      "raw_hash": "sha256:a8660051f9b50fcc",
       "deep_analysis": null,
       "also_in": []
     }
@@ -562,82 +64,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-10-10T05:01:52.915272Z",
+      "last_checked": "2026-10-11T05:01:50.222660Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-10-10T05:01:53.607013Z",
+      "last_checked": "2026-10-11T05:01:51.232074Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-10-10T05:01:54.447304Z",
+      "last_checked": "2026-10-11T05:01:52.600191Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-10-10T05:01:58.521080Z",
+      "last_checked": "2026-10-11T05:01:55.899293Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-10-10T05:02:20.155169Z",
+      "last_checked": "2026-10-11T05:02:16.174087Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-10-10T05:02:20.454340Z",
+      "last_checked": "2026-10-11T05:02:16.810590Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-10-10T05:02:22.784536Z",
+      "last_checked": "2026-10-11T05:02:17.752736Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-10-10T05:02:24.267190Z",
+      "last_checked": "2026-10-11T05:02:19.577079Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-10-10T05:02:25.876694Z",
+      "last_checked": "2026-10-11T05:02:21.345282Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-10-10T05:02:26.272614Z",
+      "last_checked": "2026-10-11T05:02:21.811171Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-10-10T05:02:28.112979Z",
+      "last_checked": "2026-10-11T05:02:22.448143Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-10-10T05:02:29.160777Z",
+      "last_checked": "2026-10-11T05:02:23.986167Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-10-10T05:02:30.345494Z",
+      "last_checked": "2026-10-11T05:02:26.722834Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-10-10T05:02:32.093979Z",
+      "last_checked": "2026-10-11T05:02:27.393469Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-10-10T05:02:33.508914Z",
+      "last_checked": "2026-10-11T05:02:28.749776Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-10-10T05:02:34.875467Z",
+      "last_checked": "2026-10-11T05:02:29.433947Z",
       "changed": false
     }
   ],
