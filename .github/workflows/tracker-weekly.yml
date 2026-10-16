@@ -55,7 +55,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tracker site/tracker site/sitemap.xml site/tailwind.css
+          # Il rebuild sopra rigenera TUTTE le pagine di site/ (il widget tracker e'
+          # incorporato anche in archivio/, index, categoria/, top-settimana/): va
+          # committato tutto, non solo site/tracker, altrimenti le altre pagine
+          # restano con i numeri della settimana precedente fino al prossimo rebuild
+          # lineare completo.
+          git add data/tracker site
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
