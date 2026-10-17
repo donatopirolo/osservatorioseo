@@ -1,0 +1,810 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-17T05:01:04.281205Z",
+  "generated_at_local": "2026-10-17T07:01:04.281205+02:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-10-17-0701",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 1,
+    "sources_empty": 0,
+    "items_collected": 2418,
+    "items_after_dedup": 55,
+    "doc_changes_detected": 1,
+    "ai_cost_eur": 0.0139,
+    "summarize_attempted": 18,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "doc_2026-10-17_001",
+    "item_2026-10-17_001",
+    "item_2026-10-17_013",
+    "item_2026-10-17_005",
+    "item_2026-10-17_011",
+    "item_2026-10-17_012",
+    "item_2026-10-17_015",
+    "item_2026-10-17_002",
+    "item_2026-10-17_006",
+    "item_2026-10-17_008"
+  ],
+  "categories": {
+    "google_docs_change": [
+      "doc_2026-10-17_001"
+    ],
+    "ai_models": [
+      "item_2026-10-17_001",
+      "item_2026-10-17_015",
+      "item_2026-10-17_002"
+    ],
+    "industry_news": [
+      "item_2026-10-17_013",
+      "item_2026-10-17_010",
+      "item_2026-10-17_017",
+      "item_2026-10-17_007",
+      "item_2026-10-17_009"
+    ],
+    "google_updates": [
+      "item_2026-10-17_005",
+      "item_2026-10-17_011",
+      "item_2026-10-17_012"
+    ],
+    "tools_platforms": [
+      "item_2026-10-17_006",
+      "item_2026-10-17_008",
+      "item_2026-10-17_003"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-10-17_004"
+    ],
+    "technical_seo": [
+      "item_2026-10-17_014"
+    ],
+    "content_eeat": [
+      "item_2026-10-17_016"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-10-17_001",
+      "title_original": "Welcome Beam: a 501B open model you can own, customize, and scale",
+      "title_it": "Presentazione di Beam: un modello aperto da 501B che puoi possedere, personalizzare e scalare",
+      "summary_it": "Hugging Face ha rilasciato Beam, un nuovo modello open-source di tipo Mixture-of-Experts (MoE) con 501 miliardi di parametri e una finestra di contesto di 1 milione di token. Sviluppato da Reflection, è progettato per casi d'uso di coding e agentici, permettendo personalizzazione e scalabilità su hardware e infrastrutture proprie. Il modello è accompagnato da un harness basato su Rust per ottimizzare le prestazioni e supporta diverse librerie per l'inferenza e il fine-tuning.",
+      "url": "https://huggingface.co/blog/reflection-beam",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "open_source_llm",
+        "mixture_of_expert",
+        "coding_ai",
+        "hugging_face"
+      ],
+      "importance": 4,
+      "published_at": "2026-10-16T00:00:00Z",
+      "fetched_at": "2026-10-17T05:04:11.687845Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f6e14b7ebfb2040f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_002",
+      "title_original": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "title_it": "Stack Overflow for Agents triplica le iscrizioni grazie al plugin ChatGPT",
+      "summary_it": "Stack Overflow ha sviluppato un plugin per ChatGPT per il suo prodotto 'Stack Overflow for Agents', una piattaforma di knowledge intelligence. L'implementazione di questo plugin ha portato a un triplicamento delle registrazioni al servizio. La piattaforma utilizza modelli OpenAI come GPT-6 Astra e Sol per elaborare il contesto e generare conoscenza verificata. Lo sviluppo del prodotto è stato accelerato dall'uso di Codex, che ha permesso di ridurre i tempi di creazione dei connettori e di lancio sul mercato.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt_plugin",
+        "stack_overflow",
+        "ai_agent",
+        "codex"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T00:00:00Z",
+      "fetched_at": "2026-10-17T05:04:13.376710Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:130fda8a5ac9bee2",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_003",
+      "title_original": "2027 SEO Planning Workbook",
+      "title_it": "Workbook per la pianificazione SEO 2027",
+      "summary_it": "Growth Memo ha pubblicato un workbook per la pianificazione SEO del 2027. L'approccio suggerito si concentra sui segnali che precedono la visita, piuttosto che sui target di traffico. Questo strumento è destinato ad aiutare i professionisti SEO a strutturare le loro strategie future.",
+      "url": "https://www.growth-memo.com/p/2027-seo-planning-workbook",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "seo_planning",
+        "strategy",
+        "growth_memo",
+        "workbook"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-16T06:11:18Z",
+      "fetched_at": "2026-10-17T05:04:14.500240Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:fb014f3a20eb3e78",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_004",
+      "title_original": "How to Automate Content Creation: A Follow-Along Guide",
+      "title_it": "Come automatizzare la creazione di contenuti: una guida pratica",
+      "summary_it": "L'articolo esplora l'automazione nella creazione di contenuti, distinguendo tra la generazione massiva di spam e l'uso strategico per ottimizzare processi ripetitivi. Viene presentato un caso studio interno ad Ahrefs, il \"Data Refresh Hub\", che automatizza l'aggiornamento di articoli basati su dati. L'obiettivo è liberare i professionisti SEO da compiti noiosi, permettendo loro di concentrarsi sulla creazione di contenuti di valore. La guida illustra come replicare questo approccio per altre attività di content marketing.",
+      "url": "https://ahrefs.com/blog/automated-content-creation",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "content_automation",
+        "ai_in_seo",
+        "content_marketing",
+        "workflow_optimization"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T09:21:11Z",
+      "fetched_at": "2026-10-17T05:04:16.290559Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:054c1f7f177e007f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_005",
+      "title_original": "Google Updated Indexing API Quota Details & More",
+      "title_it": "Google aggiorna i dettagli sulle quote dell'API di indicizzazione",
+      "summary_it": "Google ha aggiornato la documentazione dell'API di indicizzazione, rimuovendo le informazioni sul processo di approvazione e sulla quota predefinita. Sono stati eliminati anche i riferimenti alla raccomandazione di utilizzare l'API al posto delle sitemap per pagine a breve termine. Le modifiche riguardano le pagine di avvio rapido, utilizzo e quote dell'API.",
+      "url": "https://www.seroundtable.com/google-updates-indexing-api-quota-information-42316.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "indexing_api",
+        "google_search_console",
+        "api_quota"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T10:05:00Z",
+      "fetched_at": "2026-10-17T05:04:17.859269Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:776baa3ff9e7c234",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_006",
+      "title_original": "Google Ads API Releases Twice Per Month Going Forward",
+      "title_it": "L'API di Google Ads riceverà aggiornamenti due volte al mese",
+      "summary_it": "Google ha annunciato che l'API di Google Ads riceverà aggiornamenti con una frequenza raddoppiata, passando da una a due release al mese. Questa modifica, che inizia con la versione v26, mira a fornire un accesso più rapido alle nuove funzionalità di Google Ads. L'obiettivo è consentire agli sviluppatori di integrare le novità più velocemente nei propri strumenti e flussi di lavoro automatizzati. Il nuovo calendario di rilascio è previsto per il resto dell'anno corrente e per il 2027.",
+      "url": "https://www.seroundtable.com/google-ads-api-twice-a-month-42303.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ads_api",
+        "api_update",
+        "ppc_management",
+        "developer_tool"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T11:11:00Z",
+      "fetched_at": "2026-10-17T05:04:19.757817Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:538be736e6f5b69f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_007",
+      "title_original": "Bing Search Testing Popular Links On Snippets",
+      "title_it": "Bing testa i link popolari negli snippet di ricerca",
+      "summary_it": "Bing sta sperimentando l'aggiunta dell'etichetta \"Popular Links\" ai sitelink nei risultati di ricerca. Questa funzionalità è stata individuata da un utente e condivisa sui social media. La novità ricorda test simili condotti in passato da Google per mostrare pagine popolari.",
+      "url": "https://www.seroundtable.com/bing-testing-popular-links-42304.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "bing_search",
+        "sitelink",
+        "serp_feature",
+        "ui_testing"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-16T11:21:00Z",
+      "fetched_at": "2026-10-17T05:04:21.142255Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:86588a35d8f22aea",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_008",
+      "title_original": "Google Ads Lead Form Adds Lead Scoring For Lead Qualification",
+      "title_it": "Google Ads introduce lo scoring dei lead nei moduli per la qualificazione",
+      "summary_it": "Google Ads ha implementato una funzionalità di scoring dei lead all'interno dei moduli di contatto. Gli inserzionisti possono ora indicare quali risposte alle domande personalizzate qualificano un lead, contribuendo a migliorare la qualità dei contatti acquisiti. Questa opzione è disponibile nella sezione delle domande personalizzate durante la creazione di un modulo lead e permette di selezionare fino a 12 risposte qualificanti per domanda. La gestione dei lead avviene tramite la pagina Leads di Google Ads.",
+      "url": "https://www.seroundtable.com/google-ads-lead-form-scoring-42310.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "lead_generation",
+        "lead_scoring",
+        "ppc_update"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T11:31:00Z",
+      "fetched_at": "2026-10-17T05:04:22.832186Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0a1bebcb0b1da5ae",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_009",
+      "title_original": "Bing Tests Read More Links In Search Result Snippets",
+      "title_it": "Bing testa i link 'Leggi di più' negli snippet dei risultati di ricerca",
+      "summary_it": "Bing sta sperimentando l'introduzione di link 'Leggi di più' all'interno degli snippet dei risultati di ricerca. Questa funzionalità potrebbe consentire agli utenti di espandere il contenuto dello snippet direttamente nella SERP. L'obiettivo è fornire maggiori informazioni senza dover cliccare sul risultato completo. Si tratta di un test che potrebbe influenzare il modo in cui gli utenti interagiscono con i risultati di ricerca di Bing.",
+      "url": "https://www.seroundtable.com/bing-read-more-links-42311.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "bing",
+        "serp_feature",
+        "search_snippet"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-16T11:41:00Z",
+      "fetched_at": "2026-10-17T05:04:24.464400Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:eb8d772877d41535",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_010",
+      "title_original": "Google Ads To Allow Certification For Online Gambling Advertisers",
+      "title_it": "Google Ads introdurrà la certificazione per gli inserzionisti di gioco d'azzardo online",
+      "summary_it": "Google Ads sta implementando gradualmente la possibilità per alcuni inserzionisti di richiedere una certificazione specifica per la categoria del gioco d'azzardo online. Questa funzionalità, avviata a ottobre 2026, sarà disponibile progressivamente per tutti gli inserzionisti interessati. Le richieste di certificazione potranno essere gestite tramite il Centro assistenza Google Ads o una nuova sezione 'Policy > Account' all'interno dell'account Google Ads. Le certificazioni esistenti e le domande in sospeso non subiranno modifiche a seguito di questa introduzione.",
+      "url": "https://www.seroundtable.com/google-ads-online-gambling-certification-42314.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "gambling_ad",
+        "ad_policy",
+        "certification"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T11:51:00Z",
+      "fetched_at": "2026-10-17T05:04:26.734436Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:9c69d88d096bea28",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_011",
+      "title_original": "Google Search Ranking Volatility & Chatter Spike Today",
+      "title_it": "Aumento della volatilità e del dibattito sul ranking di Google Search",
+      "summary_it": "Si registra un'impennata nella volatilità dei ranking di Google Search e un aumento significativo delle discussioni tra i professionisti SEO nelle ultime 24 ore. Questo avviene dopo una serie di aggiornamenti e volatilità non confermate che hanno interessato i risultati di ricerca di Google. Alcuni strumenti di monitoraggio mostrano fluttuazioni, mentre la community SEO segnala cali di traffico e cambiamenti nelle posizioni.",
+      "url": "https://www.seroundtable.com/google-search-ranking-volatility-chatter-42317.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_algorithm",
+        "ranking_volatility",
+        "seo_chatter",
+        "unconfirmed_update"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T11:55:00Z",
+      "fetched_at": "2026-10-17T05:04:28.444444Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8cbc8945fb678225",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_012",
+      "title_original": "Google Takes Applications For A UGC Pipeline Separate From Crawling",
+      "title_it": "Google apre le candidature per un canale di contenuti generati dagli utenti (UGC) separato dal crawling tradizionale",
+      "summary_it": "Google ha introdotto il programma UGC Fresh Data, che consente a forum e piattaforme social approvate di inviare contenuti generati dagli utenti direttamente tramite una pipeline di dati dedicata. Questo sistema è distinto dal crawling tradizionale e dall'Indexing API, con l'obiettivo di processare rapidamente contenuti UGC freschi e di alta qualità. La partecipazione al programma non garantisce l'inclusione dei contenuti in Google Search. Le piattaforme interessate possono presentare domanda, rispettando specifici criteri di idoneità.",
+      "url": "https://www.searchenginejournal.com/google-ugc-fresh-data-program-applications/593113",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "ugc",
+        "google_search",
+        "data_ingestion",
+        "content_submission"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T12:00:00Z",
+      "fetched_at": "2026-10-17T05:04:30.821564Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:54138c55deb96a87",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_013",
+      "title_original": "Search News Buzz Video Recap: Google Poisoning Tracking Tools, Google AI Results Updates, Discover To Change, Google Ads, ChatGPT & SEO",
+      "title_it": "Riepilogo settimanale delle notizie SEO: Strumenti di tracciamento, aggiornamenti AI di Google, Discover, Google Ads e ChatGPT",
+      "summary_it": "Google starebbe influenzando gli strumenti di tracciamento di terze parti con dati fittizi, causando problemi nel monitoraggio delle parole chiave. Sono stati rilasciati aggiornamenti per Gemini 4 Argon e per le funzionalità AI di Google Search, inclusi i collegamenti nelle AI Overviews e una nuova sidebar in modalità AI. Google Discover si evolverà in un servizio personalizzato e Google Ads ha introdotto nuove funzionalità per la prioritizzazione dei canali e l'allocazione del budget, oltre a testare l'uso dell'AI per obiettivi e asset. ChatGPT sembra aver rimosso i parametri UTM e OpenAI sta assegnando rappresentanti agli inserzionisti.",
+      "url": "https://www.seroundtable.com/video-09-16-2026-42313.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_update",
+        "ai_search",
+        "google_ad",
+        "chatgpt"
+      ],
+      "importance": 4,
+      "published_at": "2026-10-16T12:01:00Z",
+      "fetched_at": "2026-10-17T05:04:32.685276Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:4220cbe18e6b7399",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_014",
+      "title_original": "It’s Possible Your Migration Issues May Be Due To Site Quality",
+      "title_it": "I problemi di migrazione del sito potrebbero essere legati alla qualità del sito",
+      "summary_it": "L'articolo ipotizza che le migrazioni di siti web possano innescare una revisione della qualità da parte di Google, con standard di valutazione più severi. Viene presentato un caso studio in cui un sito, nonostante una migrazione tecnicamente corretta, ha visto la maggior parte delle sue pagine non indicizzate. Questo suggerisce che Google potrebbe aver crawlato le pagine ma deciso di non indicizzarle a causa di presunti problemi di qualità, evidenziando l'importanza della qualità del sito anche in fase di migrazione.",
+      "url": "https://www.searchenginejournal.com/its-possible-your-migration-issues-may-be-due-to-site-quality/592899",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "site_migration",
+        "site_quality",
+        "google_indexing",
+        "search_console"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T14:00:20Z",
+      "fetched_at": "2026-10-17T05:04:35.185979Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:81d4cabcfe11fab4",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_015",
+      "title_original": "How Itaú is building generative AI for its entire customer base",
+      "title_it": "Come Itaú sta implementando l'IA generativa per la sua intera base clienti",
+      "summary_it": "Itaú, una banca brasiliana, sta sviluppando una piattaforma di intelligenza artificiale generativa chiamata ia.i per offrire un'esperienza finanziaria personalizzata a milioni di clienti. La soluzione mira a semplificare la gestione finanziaria, agendo come un copilota e integrando diverse funzionalità bancarie in un'unica interfaccia conversazionale. L'implementazione si basa sull'utilizzo dei modelli OpenAI, scelti per la loro capacità di gestire un'ampia gamma di esigenze, dalle interazioni semplici a quelle più complesse che richiedono ragionamento avanzato. La piattaforma è progettata per essere interattiva, multimodale e individualizzata, con l'obiettivo di rendere la tecnologia quasi impercettibile per l'utente finale.",
+      "url": "https://openai.com/index/itau-generative-ai",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "generative_ai",
+        "openai_model",
+        "customer_experience",
+        "financial_service"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T19:00:00Z",
+      "fetched_at": "2026-10-17T05:04:37.403031Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:03e582b951be07bb",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_016",
+      "title_original": "Why The New York Times Puts Free Content First",
+      "title_it": "Perché il New York Times privilegia i contenuti gratuiti",
+      "summary_it": "L'articolo esplora la strategia del New York Times di offrire contenuti gratuiti come parte del proprio modello di business. Questa tattica mira ad attrarre un pubblico più ampio e a costruire consapevolezza del marchio. L'obiettivo finale è convertire gli utenti gratuiti in abbonati paganti, dimostrando il valore del giornalismo offerto. La strategia si concentra sulla creazione di un imbuto di conversione che inizia con l'accesso libero all'informazione.",
+      "url": "https://www.searchenginejournal.com/why-the-new-york-times-puts-free-content-first/593021",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "content_strategy",
+        "paywall",
+        "user_acquisition",
+        "publishing"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-16T19:00:23Z",
+      "fetched_at": "2026-10-17T05:04:39.135709Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:41e4e693dfa8e29f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-17_017",
+      "title_original": "Meta’s New Terms Expand Crawling Rights Beyond Advertisers",
+      "title_it": "I nuovi termini di Meta espandono i diritti di crawling oltre gli inserzionisti",
+      "summary_it": "Meta ha aggiornato i suoi Termini Commerciali, che entreranno in vigore il 30 ottobre, per consentire il crawling dei siti web associati alle aziende che utilizzano i suoi prodotti. Questo include l'uso dei contenuti raccolti per addestrare i prodotti di Meta. La modifica si applica a qualsiasi uso aziendale dei prodotti Meta, non solo alla pubblicità. Un portavoce di Meta ha chiarito che l'obiettivo è migliorare le informazioni sui prodotti per le raccomandazioni, non lo scraping di siti di notizie.",
+      "url": "https://www.searchenginejournal.com/metas-new-terms-expand-crawling-rights-beyond-advertisers/593217",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "meta_term",
+        "data_crawling",
+        "ai_training",
+        "business_product"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T21:38:49Z",
+      "fetched_at": "2026-10-17T05:04:40.774992Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e701322ee6259b6b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "doc_2026-10-17_001",
+      "title_original": "Google Search — Changelog documentazione",
+      "title_it": "⚠️ Aggiornamento documentazione quote Indexing API",
+      "summary_it": "È stata aggiunta una nuova voce nel changelog di ottobre 2026 che documenta l'aggiornamento della pagina relativa alle quote dell'Indexing API. Questo aggiornamento include i limiti di quota attuali e rimuove un modulo obsoleto per la richiesta di aumento delle quote.",
+      "url": "https://developers.google.com/search/updates",
+      "source": {
+        "id": "doc_watcher",
+        "name": "OsservatorioSEO Doc Watcher",
+        "authority": 10,
+        "type": "doc_change",
+        "fetcher": "rss",
+        "feed_url": null,
+        "target_url": null,
+        "selectors": null,
+        "category_hint": null,
+        "enabled": true
+      },
+      "category": "google_docs_change",
+      "tags": [
+        "indexing_api",
+        "quote",
+        "documentazione",
+        "changelog"
+      ],
+      "importance": 4,
+      "published_at": "2026-10-17T05:01:05.501433Z",
+      "fetched_at": "2026-10-17T05:01:05.501433Z",
+      "is_doc_change": true,
+      "doc_change": {
+        "page_id": "google_search_docs_changelog",
+        "previous_hash": "sha256:a3fd2f1caaab7bda8c8fdc4d0c8e42ac4c2a4158a53a3b9fbe09aa954b9d548c",
+        "current_hash": "sha256:8877daa96b1eac00a3d7e339207cf4b604ecd51a001a22f0e1358fa085e26627",
+        "diff_url": null,
+        "lines_added": 9,
+        "lines_removed": 0
+      },
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8877daa96b1eac00a3d7e339207cf4b604ecd51a001a22f0e1358fa085e26627",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-10-17T05:01:05.501433Z",
+      "changed": true
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-10-17T05:02:46.096664Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-10-17T05:02:46.548724Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines",
+      "last_checked": "2026-10-17T05:02:50.135522Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-10-17T05:03:05.298732Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-10-17T05:03:05.634696Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-10-17T05:03:07.569636Z",
+      "changed": false
+    },
+    {
+      "page_id": "structured_data_docs",
+      "last_checked": "2026-10-17T05:03:08.396184Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-10-17T05:03:09.637374Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-10-17T05:03:10.034637Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-10-17T05:03:11.127035Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-10-17T05:03:12.824711Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-10-17T05:03:14.353403Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-10-17T05:03:15.637095Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-10-17T05:03:17.324437Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-10-17T05:03:18.969569Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": [
+    {
+      "id": "bing_webmaster_blog",
+      "error": "TooManyRedirects: Exceeded maximum allowed redirects.",
+      "last_success": null
+    }
+  ]
+}
