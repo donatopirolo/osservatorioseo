@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-18T05:01:39.036904Z",
+  "generated_at_local": "2026-10-18T07:01:39.036904+02:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-10-18-0701",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 1,
+    "sources_empty": 0,
+    "items_collected": 2419,
+    "items_after_dedup": 42,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.0025,
+    "summarize_attempted": 3,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "item_2026-10-18_003",
+    "item_2026-10-18_001",
+    "item_2026-10-18_002"
+  ],
+  "categories": {
+    "google_updates": [
+      "item_2026-10-18_003"
+    ],
+    "ai_models": [
+      "item_2026-10-18_001"
+    ],
+    "industry_news": [
+      "item_2026-10-18_002"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-10-18_001",
+      "title_original": "Benefit Street Partners answers questions faster with Codex",
+      "title_it": "Benefit Street Partners risponde più velocemente alle domande con Codex",
+      "summary_it": "Benefit Street Partners, un gestore di investimenti, ha ridotto significativamente i tempi di risposta alle domande del comitato di investimento utilizzando Codex di OpenAI. Gli analisti ora possono elaborare commenti in un giorno, rispetto ai giorni o settimane precedenti, e rispondere spesso durante le riunioni stesse. L'azienda ha impiegato l'AI per sviluppare strumenti interni, come un tracker per confrontare le valutazioni dei prestiti e un analizzatore di accordi di credito, quest'ultimo ora basato su GPT-6 Astra. Questi strumenti aumentano la capacità di revisione e la rigorosità nell'analisi, migliorando la qualità e la velocità delle decisioni di investimento.",
+      "url": "https://openai.com/index/benefit-street-partners",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai_codex",
+        "gpt_6_astra",
+        "ai_application",
+        "investment_management"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-16T00:00:00Z",
+      "fetched_at": "2026-10-18T05:02:53.710825Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6e9e0a759152bd54",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-18_002",
+      "title_original": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse",
+      "title_it": "Dati di Rank Tracker, Tag ChatGPT e Link di Ricerca AI – SEO Pulse",
+      "summary_it": "Un'analisi di Nozzle ha rilevato che una percentuale significativa di pagine dei risultati di Google ha mostrato un'anomalia nella presenza dei siti abituali tra settembre e ottobre, attribuita a possibili risposte di Google allo scraping AI. Contemporaneamente, si è verificato un calo nelle sessioni attribuite a ChatGPT in Google Analytics 4, a causa della rimozione del tag utm_source=chatgpt.com dai link, un problema che OpenAI ha riconosciuto e sta risolvendo. Questi eventi suggeriscono la necessità di un'attenta verifica dei dati di ranking e di traffico referral da AI.",
+      "url": "https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "rank_tracking",
+        "chatgpt_referral",
+        "google_serp",
+        "ai_scraping"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-17T12:00:00Z",
+      "fetched_at": "2026-10-18T05:02:55.679857Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:09751e6a5ffcc646",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-18_003",
+      "title_original": "Google’s Indexing API Docs No Longer Explain How To Get Approval",
+      "title_it": "La documentazione dell'API di indicizzazione di Google non spiega più come ottenere l'approvazione",
+      "summary_it": "Google ha rimosso dalle sue pagine di supporto le istruzioni relative alla richiesta di approvazione per l'utilizzo dell'Indexing API. Precedentemente, la documentazione forniva indicazioni su come ottenere l'accesso a questa API, destinata principalmente a siti con contenuti di breve durata come annunci di lavoro o eventi live. La modifica suggerisce un possibile cambiamento nella gestione o disponibilità dell'API per nuovi utenti.",
+      "url": "https://www.searchenginejournal.com/google-indexing-api-docs-approval-form-removed/593292",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "indexing_api",
+        "google_documentation",
+        "technical_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-17T18:15:44Z",
+      "fetched_at": "2026-10-18T05:02:57.282888Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:4439fed586fef154",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-10-18T05:01:40.082151Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-10-18T05:01:41.918815Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-10-18T05:01:42.359416Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines",
+      "last_checked": "2026-10-18T05:01:45.104476Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-10-18T05:01:57.916212Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-10-18T05:01:58.413626Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-10-18T05:02:00.673723Z",
+      "changed": false
+    },
+    {
+      "page_id": "structured_data_docs",
+      "last_checked": "2026-10-18T05:02:01.753351Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-10-18T05:02:03.168174Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-10-18T05:02:03.489879Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-10-18T05:02:04.387037Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-10-18T05:02:06.282455Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-10-18T05:02:07.631603Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-10-18T05:02:09.248597Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-10-18T05:02:10.883880Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-10-18T05:02:12.429885Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": [
+    {
+      "id": "bing_webmaster_blog",
+      "error": "TooManyRedirects: Exceeded maximum allowed redirects.",
+      "last_success": null
+    }
+  ]
+}
