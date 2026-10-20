@@ -1,0 +1,719 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-20T05:01:29.632969Z",
+  "generated_at_local": "2026-10-20T07:01:29.632969+02:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-10-20-0701",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 0,
+    "sources_empty": 0,
+    "items_collected": 2432,
+    "items_after_dedup": 20,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.013,
+    "summarize_attempted": 16,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "item_2026-10-20_005",
+    "item_2026-10-20_008",
+    "item_2026-10-20_002",
+    "item_2026-10-20_006",
+    "item_2026-10-20_004",
+    "item_2026-10-20_012",
+    "item_2026-10-20_013",
+    "item_2026-10-20_014",
+    "item_2026-10-20_001",
+    "item_2026-10-20_003"
+  ],
+  "categories": {
+    "google_updates": [
+      "item_2026-10-20_005",
+      "item_2026-10-20_002",
+      "item_2026-10-20_006"
+    ],
+    "ai_models": [
+      "item_2026-10-20_008",
+      "item_2026-10-20_004",
+      "item_2026-10-20_012",
+      "item_2026-10-20_013",
+      "item_2026-10-20_014",
+      "item_2026-10-20_001"
+    ],
+    "tools_platforms": [
+      "item_2026-10-20_003",
+      "item_2026-10-20_007"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-10-20_010",
+      "item_2026-10-20_011",
+      "item_2026-10-20_016"
+    ],
+    "industry_news": [
+      "item_2026-10-20_009",
+      "item_2026-10-20_015"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-10-20_001",
+      "title_original": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
+      "title_it": "TorchNeuron: eseguire modelli Hugging Face su AWS Trainium è più semplice che mai",
+      "summary_it": "Hugging Face ha introdotto TorchNeuron, un nuovo backend nativo per PyTorch su AWS Trainium, che semplifica l'esecuzione di modelli su questa piattaforma. Questa integrazione diretta in PyTorch consente l'esecuzione eager e il supporto per le API distribuite native, rendendo Trainium un dispositivo come gli altri per le librerie Hugging Face. Di conseguenza, la compatibilità per l'inferenza di modelli di generazione di testo è significativamente aumentata rispetto alla precedente soluzione Optimum Neuron.",
+      "url": "https://huggingface.co/blog/hf-torchneuron",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "aws_trainium",
+        "pytorch",
+        "hugging_face",
+        "llm_deployment"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T00:00:00Z",
+      "fetched_at": "2026-10-20T05:03:17.519151Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0e747a16d289b9e2",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_002",
+      "title_original": "Google Ads To No Longer Show Featured Professionals, Headshots Are Optional",
+      "title_it": "Google Ads: i professionisti in evidenza non verranno più mostrati, le foto profilo diventano opzionali",
+      "summary_it": "Google Ads ha comunicato agli inserzionisti di Local Service Ads che i professionisti in evidenza non appariranno più negli annunci. Le foto profilo diventeranno opzionali e non influenzeranno la pubblicazione degli annunci. Le altre componenti dell'annuncio, come foto e recensioni, rimarranno invariate.",
+      "url": "https://www.seroundtable.com/google-ads-featured-professionals-headshots-42325.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "local_service_ad",
+        "ad_serving",
+        "featured_professional"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T11:05:00Z",
+      "fetched_at": "2026-10-20T05:03:19.227696Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:135738d197299dc9",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_003",
+      "title_original": "ChatGPT Ads New Ad Formats, Updated Conversion Page, Performance Emails...",
+      "title_it": "ChatGPT Ads introduce nuovi formati pubblicitari, pagina conversioni aggiornata e email sulle performance",
+      "summary_it": "OpenAI ha annunciato diversi aggiornamenti per ChatGPT Ads, inclusi nuovi formati pubblicitari visivi come immagini più grandi e formati multi-immagine. È stata ridisegnata la pagina delle conversioni per una migliore panoramica delle attività e delle raccomandazioni. Vengono introdotte email settimanali sulle performance e l'ecosistema di misurazione è stato ampliato con nuovi partner. Gli utenti possono ora inviare feedback e segnalare bug direttamente dall'Ads Manager.",
+      "url": "https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "chatgpt_ad",
+        "openai",
+        "ad_format",
+        "performance_tracking"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T11:11:00Z",
+      "fetched_at": "2026-10-20T05:03:21.525266Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:245e2102619c7ae9",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_004",
+      "title_original": "Google AI Mode Citations With Preferred Source Preferences",
+      "title_it": "Citazioni della modalità AI di Google con preferenze per le fonti",
+      "summary_it": "Google sta esplorando la possibilità di consentire agli utenti di specificare fonti preferite per le citazioni generate dalla modalità AI. Questa funzionalità permetterebbe di influenzare le fonti utilizzate per supportare le risposte dell'intelligenza artificiale. L'obiettivo è offrire maggiore controllo e personalizzazione sull'affidabilità delle informazioni presentate. Non è ancora chiaro se e quando questa opzione verrà implementata pubblicamente.",
+      "url": "https://www.seroundtable.com/google-ai-mode-citations-preferred-sources-42323.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_ai",
+        "citation",
+        "source_preference",
+        "ai_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T11:21:00Z",
+      "fetched_at": "2026-10-20T05:03:23.024434Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:3521022e390237f1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_005",
+      "title_original": "Google Ads Now In AI Mode With Personal Intelligence",
+      "title_it": "Google Ads ora in modalità AI con Personal Intelligence",
+      "summary_it": "Google ha confermato l'introduzione di annunci pubblicitari nei risultati della modalità AI con Personal Intelligence abilitata. Questa decisione segna un cambiamento rispetto alla precedente dichiarazione di Google, che prevedeva un'esperienza senza annunci per gli utenti con Personal Intelligence attiva. Gli annunci saranno pertinenti alla query, al contesto della risposta e agli interessi dell'utente, senza basarsi direttamente su dati sensibili o contenuti di Gmail/Google Foto. Gli utenti mantengono il controllo sulle impostazioni e sulla connessione delle app.",
+      "url": "https://www.seroundtable.com/google-ads-ai-mode-personal-intelligence-42320.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "ai_mode",
+        "personal_intelligence",
+        "ad_monetization"
+      ],
+      "importance": 4,
+      "published_at": "2026-10-19T11:31:00Z",
+      "fetched_at": "2026-10-20T05:03:24.674988Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:22c4da77aa4f61b7",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_006",
+      "title_original": "Google Moves Google Posts Higher Up On Local Panel",
+      "title_it": "Google sposta i Google Post più in alto nel pannello locale",
+      "summary_it": "Google ha modificato la visualizzazione dei Google Post all'interno del pannello di conoscenza locale. Questi contenuti generati dalle attività commerciali appaiono ora in una posizione più prominente. La modifica mira a dare maggiore visibilità agli aggiornamenti e alle offerte delle aziende direttamente nei risultati di ricerca locali.",
+      "url": "https://www.seroundtable.com/google-posts-higher-42319.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_my_business",
+        "local_seo",
+        "google_post",
+        "serp_feature"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T11:41:00Z",
+      "fetched_at": "2026-10-20T05:03:26.815109Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6a7d871400ea8050",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_007",
+      "title_original": "Is It New? AI Scan Tool",
+      "title_it": "È nuovo? Strumento di scansione AI",
+      "summary_it": "Search Engine Roundtable ha lanciato un nuovo strumento basato su intelligenza artificiale chiamato \"Is it new?\" che permette agli utenti di caricare screenshot di funzionalità di ricerca e ricevere una valutazione sulla loro novità. Lo strumento confronta l'immagine fornita con un database di immagini storiche del sito per determinare se la funzionalità è già stata trattata. L'accesso richiede l'iscrizione a una newsletter per gestire i costi operativi.",
+      "url": "https://www.seroundtable.com/is-it-new-ai-scan-tool-42322.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "ai_tool",
+        "search_feature",
+        "seroundtable",
+        "image_recognition"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-19T11:51:00Z",
+      "fetched_at": "2026-10-20T05:03:31.669110Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:9840f6019e3b9b40",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_008",
+      "title_original": "Advancing coding in low‑resource programming languages",
+      "title_it": "Avanzamento della programmazione in linguaggi a basse risorse",
+      "summary_it": "OpenAI ha migliorato le capacità dei suoi modelli per la programmazione in linguaggi a basse risorse come COBOL e Fortran, essenziali per infrastrutture critiche. I nuovi modelli, GPT-6 Astra e GPT-6.1 Sol, mostrano progressi significativi in test di creazione di software e migrazione di codice. Questi miglioramenti mirano a facilitare la manutenzione e la modernizzazione di sistemi software legacy, riducendo al contempo i costi operativi.",
+      "url": "https://openai.com/index/low-resource-programming-languages",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "llm",
+        "coding",
+        "legacy_system"
+      ],
+      "importance": 4,
+      "published_at": "2026-10-19T12:00:00Z",
+      "fetched_at": "2026-10-20T05:03:33.247908Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2ca3d09783ba224c",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_009",
+      "title_original": "The New Rules Of Journalist Outreach, Based On Millions Of Emails",
+      "title_it": "Le nuove regole per il contatto con i giornalisti, basate su milioni di email",
+      "summary_it": "L'articolo analizza l'evoluzione delle strategie di outreach verso i giornalisti, evidenziando come l'intelligenza artificiale abbia aumentato il volume di comunicazioni, spesso irrilevanti. Si sottolinea la crescente sproporzione tra professionisti PR e giornalisti, rendendo più difficile catturare l'attenzione. Vengono presentati dati su 14.3 milioni di email per età del dominio e 39 milioni per oggetto, oltre a 628 riassunti AI, per illustrare l'impatto di questi fattori. La qualità e la pertinenza del contatto sono indicate come elementi cruciali per il successo.",
+      "url": "https://www.searchenginejournal.com/the-new-rules-of-journalist-outreach-based-on-millions-of-emails/592060",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "pr_outreach",
+        "ai_impact",
+        "journalist_relation",
+        "email_deliverability"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T12:00:45Z",
+      "fetched_at": "2026-10-20T05:03:35.262271Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:696e27f000f84f96",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_010",
+      "title_original": "Does AI drive more direct traffic?",
+      "title_it": "L'IA genera più traffico diretto?",
+      "summary_it": "L'articolo analizza se l'integrazione dell'IA nei motori di ricerca possa aumentare il traffico diretto verso i siti web. Vengono esplorati diversi scenari e le loro implicazioni per le strategie SEO. La discussione si concentra sull'impatto potenziale dell'IA sulla visibilità organica e sulla navigazione degli utenti.",
+      "url": "https://www.growth-memo.com/p/does-ai-drive-more-direct-traffic",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_impact",
+        "direct_traffic",
+        "search_engine",
+        "seo_strategy"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T12:29:03Z",
+      "fetched_at": "2026-10-20T05:03:36.951550Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5d089c34f1cb2e42",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_011",
+      "title_original": "434 Days Later – Are AI Search Platforms Like ChatGPT and Claude Still Unable To Render JavaScript In October 2026?",
+      "title_it": "Le piattaforme di ricerca AI come ChatGPT e Claude sono ancora incapaci di renderizzare JavaScript nell'ottobre 2026?",
+      "summary_it": "Un'analisi aggiornata verifica se le piattaforme di ricerca basate su intelligenza artificiale come ChatGPT e Claude sono in grado di renderizzare contenuti JavaScript. I test iniziali del 2025 avevano mostrato significative difficoltà per queste piattaforme nel leggere contenuti generati via JS. L'articolo riesamina la situazione a distanza di 434 giorni, confrontando i risultati attuali con quelli precedenti. Viene ribadito che, mentre Gemini e Copilot (che sfruttano i sistemi di Google e Bing) gestiscono meglio il JavaScript, altre AI continuano a incontrare ostacoli.",
+      "url": "https://www.gsqi.com/marketing-blog/can-ai-search-platforms-render-javascript",
+      "source": {
+        "id": "glenn_gabe_hifpm",
+        "name": "Glenn Gabe — HIFPM",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.gsqi.com/marketing-blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_search",
+        "javascript_rendering",
+        "llm_capabilitie",
+        "content_accessibility"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T12:42:58Z",
+      "fetched_at": "2026-10-20T05:03:38.870615Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:de789a25af506a8b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_012",
+      "title_original": "AI Search Tools Cited A Made-Up Concept Within A Week, Paper Finds",
+      "title_it": "Strumenti di ricerca AI citano un concetto inventato entro una settimana, secondo uno studio",
+      "summary_it": "Uno studio ha rilevato che strumenti di ricerca basati sull'intelligenza artificiale come ChatGPT, Perplexity, Grok e Google AI hanno citato contenuti relativi a un concetto inventato entro sette giorni dalla loro pubblicazione. I ricercatori hanno inserito post su piattaforme frequentemente citate da questi strumenti. Questo evidenzia la rapidità con cui le informazioni, anche se non verificate, possono essere incorporate nei risultati generati dall'IA.",
+      "url": "https://www.searchenginejournal.com/ai-search-tools-cited-a-made-up-concept-within-a-week-paper-finds/593472",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "ai_search",
+        "information_accuracy",
+        "llm_bia",
+        "content_citation"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T13:34:28Z",
+      "fetched_at": "2026-10-20T05:03:40.330003Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:af1f6dca964fdc27",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_013",
+      "title_original": "It Knew Every Word",
+      "title_it": "Il modello conosceva ogni parola",
+      "summary_it": "L'articolo analizza la differenza tra la memorizzazione del testo da parte dei modelli linguistici e la loro capacità di estrarre e utilizzare i fatti. Viene evidenziato come un modello possa essere estremamente bravo a riprodurre informazioni apprese, ma fallire nell'applicarle a nuove domande o contesti. La ricerca citata utilizza biografie fittizie per dimostrare che la pre-formazione su un testo non garantisce la capacità di rispondere a domande su di esso senza un fine-tuning specifico. Questo solleva interrogativi sulla reale comprensione dei modelli e sulla loro \"memoria parametrica\".",
+      "url": "https://www.searchenginejournal.com/it-knew-every-word/592680",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "llm_capabilitie",
+        "model_memory",
+        "information_retrieval",
+        "ai_understanding"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T14:00:20Z",
+      "fetched_at": "2026-10-20T05:03:42.135947Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:10bf790824c54da1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_014",
+      "title_original": "DeepSeek Opens Its In-House Search Engine To Developers",
+      "title_it": "DeepSeek apre il suo motore di ricerca interno agli sviluppatori",
+      "summary_it": "DeepSeek ha reso disponibile la sua API di ricerca agli sviluppatori, dichiarando di filtrare spam SEO, manipolazione GEO e contenuti AI di bassa qualità. Ogni risultato include un livello di autorità e un punteggio di rilevanza. La documentazione indica che il motore indicizza centinaia di miliardi di pagine e gestisce milioni di richieste giornaliere. Nonostante le affermazioni, non sono stati forniti dettagli specifici su come vengano rilevate le manipolazioni GEO o come vengano assegnati i punteggi di autorità.",
+      "url": "https://www.searchenginejournal.com/deepseek-opens-its-in-house-search-engine-to-developers/593526",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "deepseek",
+        "search_api",
+        "ai_search",
+        "spam_detection"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T15:02:15Z",
+      "fetched_at": "2026-10-20T05:03:44.330018Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8a0ac7f65292a996",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_015",
+      "title_original": "B2B Lead Generation: How To Choose Your 2027 Marketing Channels [Webinar]",
+      "title_it": "Generazione di Lead B2B: Come Scegliere i Canali di Marketing per il 2027 [Webinar]",
+      "summary_it": "Search Engine Journal annuncia un webinar focalizzato sulla selezione dei canali di marketing B2B più efficaci per la lead generation nel 2027. L'evento mira a fornire strategie e approfondimenti per aiutare i professionisti a ottimizzare le proprie scelte di canale in un panorama in evoluzione. Verranno discussi approcci per riscrivere le descrizioni dei prodotti e renderle più comprensibili sia per gli acquirenti che per le IA.",
+      "url": "https://www.searchenginejournal.com/b2b-lead-generation-how-to-choose-your-2027-marketing-channels-webinar/593589",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "b2b_marketing",
+        "lead_generation",
+        "marketing_channel",
+        "webinar"
+      ],
+      "importance": 1,
+      "published_at": "2026-10-19T18:28:32Z",
+      "fetched_at": "2026-10-20T05:03:46.771633Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:31d4485c62cff0e1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-20_016",
+      "title_original": "Meta Drops Training From Its Crawl Clause And Keeps The Crawl",
+      "title_it": "Meta rimuove la clausola di addestramento dai termini di crawling, mantenendo l'accesso ai dati",
+      "summary_it": "Meta ha aggiornato i suoi termini commerciali, eliminando la clausola che permetteva l'utilizzo dei dati raccolti tramite crawling per l'addestramento di modelli di intelligenza artificiale. Nonostante questa modifica, l'azienda mantiene il diritto di effettuare il crawling dei contenuti. La rimozione della clausola potrebbe riflettere una risposta alle preoccupazioni sulla privacy e sull'uso dei dati per l'AI.",
+      "url": "https://www.searchenginejournal.com/meta-removes-training-crawl-clause-commercial-terms/593584",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "meta",
+        "ai_training",
+        "data_crawling",
+        "terms_of_service"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-19T18:30:50Z",
+      "fetched_at": "2026-10-20T05:03:48.925921Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:86242ebebb877db1",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-10-20T05:01:31.275562Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-10-20T05:01:32.079460Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-10-20T05:01:33.690151Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines",
+      "last_checked": "2026-10-20T05:01:37.848079Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-10-20T05:01:58.356285Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-10-20T05:01:58.629323Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-10-20T05:02:00.799236Z",
+      "changed": false
+    },
+    {
+      "page_id": "structured_data_docs",
+      "last_checked": "2026-10-20T05:02:01.712373Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-10-20T05:02:03.623913Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-10-20T05:02:12.744263Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-10-20T05:02:13.565654Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-10-20T05:02:14.684469Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-10-20T05:02:16.603321Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-10-20T05:02:18.622498Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-10-20T05:02:19.959473Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-10-20T05:02:21.457228Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": []
+}
