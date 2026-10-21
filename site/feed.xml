@@ -5,201 +5,334 @@
   <link href="https://www.osservatorioseo.com/feed.xml" rel="self" />
   <link href="https://www.osservatorioseo.com/" />
   <id>https://www.osservatorioseo.com/</id>
-  <updated>2026-10-20T05:01:29.632969+00:00</updated>
+  <updated>2026-10-21T05:01:26.073932+00:00</updated>
   <author>
     <name>Osservatorio SEO</name>
     <uri>https://www.osservatorioseo.com/</uri>
   </author>
   <entry>
-    <title>TorchNeuron: eseguire modelli Hugging Face su AWS Trainium è più semplice che mai</title>
-    <link href="https://huggingface.co/blog/hf-torchneuron" />
-    <id>https://huggingface.co/blog/hf-torchneuron</id>
-    <updated>2026-10-20T05:03:17.519151+00:00</updated>
-    <published>2026-10-19T00:00:00+00:00</published>
-    <summary type="html">Hugging Face ha introdotto TorchNeuron, un nuovo backend nativo per PyTorch su AWS Trainium, che semplifica l&#39;esecuzione di modelli su questa piattaforma. Questa integrazione diretta in PyTorch consente l&#39;esecuzione eager e il supporto per le API distribuite native, rendendo Trainium un dispositivo come gli altri per le librerie Hugging Face. Di conseguenza, la compatibilità per l&#39;inferenza di modelli di generazione di testo è significativamente aumentata rispetto alla precedente soluzione Optimum Neuron.</summary>
-    <category term="aws_trainium" />
-    <category term="pytorch" />
+    <title>Hugging Face e TorchTPU: supporto nativo per le TPU</title>
+    <link href="https://www.osservatorioseo.com/archivio/2026/10/21/hugging-face-torchtpu-supporto-nativo-tpu/" />
+    <id>https://www.osservatorioseo.com/archivio/2026/10/21/hugging-face-torchtpu-supporto-nativo-tpu/</id>
+    <updated>2026-10-21T05:04:14.013196+00:00</updated>
+    <published>2026-10-20T00:00:00+00:00</published>
+    <summary type="html">Hugging Face annuncia l&#39;integrazione nativa delle Tensor Processing Units (TPU) di Google tramite TorchTPU, un nuovo backend per PyTorch. Questo permette agli utenti di eseguire modelli Transformers, Diffusers e Kernels direttamente sulle TPU, semplificando notevolmente l&#39;utilizzo di queste accelerazioni hardware. In precedenza, l&#39;interazione con le TPU da PyTorch richiedeva l&#39;uso di `torch_xla` o l&#39;apprendimento di JAX, introducendo complessità e limitazioni. Con TorchTPU, le TPU sono ora trattate come un dispositivo standard in PyTorch, migliorando l&#39;accessibilità e l&#39;efficienza per lo sviluppo e il deployment di modelli AI su larga scala.</summary>
     <category term="hugging_face" />
-    <category term="llm_deployment" />
+    <category term="pytorch" />
+    <category term="tpu" />
+    <category term="ai_acceleration" />
   </entry>
   <entry>
-    <title>Google Ads: i professionisti in evidenza non verranno più mostrati, le foto profilo diventano opzionali</title>
-    <link href="https://www.seroundtable.com/google-ads-featured-professionals-headshots-42325.html" />
-    <id>https://www.seroundtable.com/google-ads-featured-professionals-headshots-42325.html</id>
-    <updated>2026-10-20T05:03:19.227696+00:00</updated>
-    <published>2026-10-19T11:05:00+00:00</published>
-    <summary type="html">Google Ads ha comunicato agli inserzionisti di Local Service Ads che i professionisti in evidenza non appariranno più negli annunci. Le foto profilo diventeranno opzionali e non influenzeranno la pubblicazione degli annunci. Le altre componenti dell&#39;annuncio, come foto e recensioni, rimarranno invariate.</summary>
-    <category term="google_ad" />
-    <category term="local_service_ad" />
-    <category term="ad_serving" />
-    <category term="featured_professional" />
+    <title>AnyLanguageModel 1.0: Un Anno di Modelli Locali sulle Piattaforme Apple</title>
+    <link href="https://huggingface.co/blog/anylanguagemodel-1-0" />
+    <id>https://huggingface.co/blog/anylanguagemodel-1-0</id>
+    <updated>2026-10-21T05:04:15.522320+00:00</updated>
+    <published>2026-10-20T00:00:00+00:00</published>
+    <summary type="html">Hugging Face ha rilasciato AnyLanguageModel 1.0, uno strumento che consente agli sviluppatori di app Apple di integrare modelli linguistici locali o ospitati utilizzando un&#39;API compatibile con Foundation Models. Questa versione introduce il supporto per tool calling, generazione guidata e gestione delle immagini nei prompt. L&#39;obiettivo è semplificare l&#39;adozione di modelli AI nelle app, offrendo flessibilità nella scelta del provider e del modello.</summary>
+    <category term="local_llm" />
+    <category term="apple_platform" />
+    <category term="hugging_face" />
+    <category term="ai_development" />
   </entry>
   <entry>
-    <title>ChatGPT Ads introduce nuovi formati pubblicitari, pagina conversioni aggiornata e email sulle performance</title>
-    <link href="https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html" />
-    <id>https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html</id>
-    <updated>2026-10-20T05:03:21.525266+00:00</updated>
-    <published>2026-10-19T11:11:00+00:00</published>
-    <summary type="html">OpenAI ha annunciato diversi aggiornamenti per ChatGPT Ads, inclusi nuovi formati pubblicitari visivi come immagini più grandi e formati multi-immagine. È stata ridisegnata la pagina delle conversioni per una migliore panoramica delle attività e delle raccomandazioni. Vengono introdotte email settimanali sulle performance e l&#39;ecosistema di misurazione è stato ampliato con nuovi partner. Gli utenti possono ora inviare feedback e segnalare bug direttamente dall&#39;Ads Manager.</summary>
-    <category term="chatgpt_ad" />
-    <category term="openai" />
-    <category term="ad_format" />
-    <category term="performance_tracking" />
+    <title>Miglioramenti significativi per MPS in PyTorch 2.15</title>
+    <link href="https://huggingface.co/blog/mps-pytorch-2-15" />
+    <id>https://huggingface.co/blog/mps-pytorch-2-15</id>
+    <updated>2026-10-21T05:04:17.033722+00:00</updated>
+    <published>2026-10-20T00:00:00+00:00</published>
+    <summary type="html">PyTorch 2.15 introduce notevoli miglioramenti per l&#39;accelerazione MPS sui Mac, con l&#39;integrazione del formato FP8 e un aumento della velocità di decodifica per i modelli MoE (Mixture-of-Experts) fino a 6.5 volte. Sono stati ottimizzati i layer lineari e le operazioni softmax per i Large Language Models, riducendo il tempo per token. Inoltre, sono state implementate nuove kernel Metal per accelerare carichi di lavoro audio, video e di training, con una gestione della memoria più efficiente.</summary>
+    <category term="pytorch" />
+    <category term="mps" />
+    <category term="machine_learning" />
+    <category term="llm_optimization" />
   </entry>
   <entry>
-    <title>Citazioni della modalità AI di Google con preferenze per le fonti</title>
-    <link href="https://www.seroundtable.com/google-ai-mode-citations-preferred-sources-42323.html" />
-    <id>https://www.seroundtable.com/google-ai-mode-citations-preferred-sources-42323.html</id>
-    <updated>2026-10-20T05:03:23.024434+00:00</updated>
-    <published>2026-10-19T11:21:00+00:00</published>
-    <summary type="html">Google sta esplorando la possibilità di consentire agli utenti di specificare fonti preferite per le citazioni generate dalla modalità AI. Questa funzionalità permetterebbe di influenzare le fonti utilizzate per supportare le risposte dell&#39;intelligenza artificiale. L&#39;obiettivo è offrire maggiore controllo e personalizzazione sull&#39;affidabilità delle informazioni presentate. Non è ancora chiaro se e quando questa opzione verrà implementata pubblicamente.</summary>
-    <category term="google_ai" />
-    <category term="citation" />
-    <category term="source_preference" />
-    <category term="ai_search" />
+    <title>OpenAI acquisisce Orchestra Bio per potenziare la ricerca nelle scienze della vita</title>
+    <link href="https://openai.com/index/openai-to-acquire-orchestra-bio" />
+    <id>https://openai.com/index/openai-to-acquire-orchestra-bio</id>
+    <updated>2026-10-21T05:04:18.413886+00:00</updated>
+    <published>2026-10-20T00:00:00+00:00</published>
+    <summary type="html">OpenAI ha acquisito Orchestra Bio, una piattaforma specializzata nel coordinamento dello sviluppo di farmaci. L&#39;acquisizione mira a integrare la tecnologia di Orchestra con Rosalind, i modelli e gli strumenti AI di OpenAI per le scienze della vita. L&#39;obiettivo è accelerare la scoperta scientifica e la gestione dei processi per portare più rapidamente i trattamenti ai pazienti. Questa mossa intende sfruttare l&#39;AI per gestire compiti complessi e flussi di lavoro nel settore biofarmaceutico.</summary>
+    <category term="openai_acquisition" />
+    <category term="ai_in_biotech" />
+    <category term="rosalind" />
+    <category term="drug_development" />
   </entry>
   <entry>
-    <title>Google Ads ora in modalità AI con Personal Intelligence</title>
-    <link href="https://www.osservatorioseo.com/archivio/2026/10/20/google-ads-ora-modalita-ai-personal-intelligence/" />
-    <id>https://www.osservatorioseo.com/archivio/2026/10/20/google-ads-ora-modalita-ai-personal-intelligence/</id>
-    <updated>2026-10-20T05:03:24.674988+00:00</updated>
-    <published>2026-10-19T11:31:00+00:00</published>
-    <summary type="html">Google ha confermato l&#39;introduzione di annunci pubblicitari nei risultati della modalità AI con Personal Intelligence abilitata. Questa decisione segna un cambiamento rispetto alla precedente dichiarazione di Google, che prevedeva un&#39;esperienza senza annunci per gli utenti con Personal Intelligence attiva. Gli annunci saranno pertinenti alla query, al contesto della risposta e agli interessi dell&#39;utente, senza basarsi direttamente su dati sensibili o contenuti di Gmail/Google Foto. Gli utenti mantengono il controllo sulle impostazioni e sulla connessione delle app.</summary>
-    <category term="google_ad" />
-    <category term="ai_mode" />
-    <category term="personal_intelligence" />
-    <category term="ad_monetization" />
+    <title>Terminal X raggiunge l&#39;88,6% di concordanza con il giudizio degli investitori senior utilizzando GPT-6.1</title>
+    <link href="https://openai.com/index/terminal-x" />
+    <id>https://openai.com/index/terminal-x</id>
+    <updated>2026-10-21T05:04:20.324599+00:00</updated>
+    <published>2026-10-20T07:00:00+00:00</published>
+    <summary type="html">Terminal X ha sviluppato un sistema operativo chiamato Capital Memory che utilizza i modelli GPT-6.1 Sol e GPT-6 Luna di OpenAI per replicare il giudizio degli investitori senior. Questo sistema mira a codificare il processo decisionale degli investitori, riducendo la perdita di conoscenza quando il personale senior lascia l&#39;azienda. I modelli AI gestiscono la sintesi delle tesi di investimento e l&#39;identificazione delle considerazioni chiave, con GPT-6.1 Sol che eccelle nel ragionamento a lungo contesto e GPT-6 Luna nell&#39;efficienza dei token per operazioni ad alto volume. I test hanno mostrato che il sistema ha raggiunto l&#39;88,6% di concordanza con il giudizio degli investitori esperti.</summary>
+    <category term="gpt_6_1" />
+    <category term="ai_in_finance" />
+    <category term="knowledge_management" />
+    <category term="llm_application" />
   </entry>
   <entry>
-    <title>Google sposta i Google Post più in alto nel pannello locale</title>
-    <link href="https://www.seroundtable.com/google-posts-higher-42319.html" />
-    <id>https://www.seroundtable.com/google-posts-higher-42319.html</id>
-    <updated>2026-10-20T05:03:26.815109+00:00</updated>
-    <published>2026-10-19T11:41:00+00:00</published>
-    <summary type="html">Google ha modificato la visualizzazione dei Google Post all&#39;interno del pannello di conoscenza locale. Questi contenuti generati dalle attività commerciali appaiono ora in una posizione più prominente. La modifica mira a dare maggiore visibilità agli aggiornamenti e alle offerte delle aziende direttamente nei risultati di ricerca locali.</summary>
-    <category term="google_my_business" />
+    <title>Dove cercare le prossime citazioni e clic dall&#39;IA</title>
+    <link href="https://www.searchenginejournal.com/where-your-next-ai-citations-clicks-come-from/592892" />
+    <id>https://www.searchenginejournal.com/where-your-next-ai-citations-clicks-come-from/592892</id>
+    <updated>2026-10-21T05:04:21.864807+00:00</updated>
+    <published>2026-10-20T07:45:18+00:00</published>
+    <summary type="html">L&#39;articolo esplora come le analisi delle conversazioni con i clienti (chiamate, chat) possano essere utilizzate per migliorare la qualità dei lead e la strategia di contenuto. Viene sottolineata l&#39;importanza di definire la qualità dei lead in modo condiviso tra marketing e vendite. Le domande e obiezioni ricorrenti dei clienti possono guidare la creazione di contenuti pertinenti, inclusi FAQ e testi per annunci, per intercettare meglio l&#39;intento di ricerca e le esigenze degli utenti.</summary>
+    <category term="ai_citation" />
+    <category term="lead_quality" />
+    <category term="content_strategy" />
+    <category term="customer_insight" />
+  </entry>
+  <entry>
+    <title>La quota di traffico da ricerca per gli editori nordamericani è scesa al 12% secondo Chartbeat</title>
+    <link href="https://www.searchenginejournal.com/chartbeat-search-share-north-american-publishers-q3-2026/593673" />
+    <id>https://www.searchenginejournal.com/chartbeat-search-share-north-american-publishers-q3-2026/593673</id>
+    <updated>2026-10-21T05:04:23.413226+00:00</updated>
+    <published>2026-10-20T08:00:00+00:00</published>
+    <summary type="html">Un&#39;analisi di Chartbeat rivela che la quota di traffico proveniente dalla ricerca per gli editori nordamericani è diminuita significativamente, attestandosi al 12%. Questo dato evidenzia una contrazione della dipendenza dal traffico organico per i publisher nella regione. La tendenza suggerisce un cambiamento nelle dinamiche di acquisizione del pubblico per i siti di notizie e contenuti.</summary>
+    <category term="search_traffic" />
+    <category term="publisher" />
+    <category term="chartbeat" />
+    <category term="north_america" />
+  </entry>
+  <entry>
+    <title>Un ristoratore riduce drasticamente i tempi di riconciliazione contabile e gestione prezzi con ChatGPT Work</title>
+    <link href="https://openai.com/index/ted-taylor-restaurant" />
+    <id>https://openai.com/index/ted-taylor-restaurant</id>
+    <updated>2026-10-21T05:04:24.908685+00:00</updated>
+    <published>2026-10-20T10:00:00+00:00</published>
+    <summary type="html">Un franchisee di ristoranti ha integrato ChatGPT Work per ottimizzare diverse operazioni aziendali. L&#39;adozione ha permesso di ridurre del 95% il tempo dedicato alla riorganizzazione dei prezzi e di risparmiare 4 ore sulle elaborazioni delle buste paga. Inoltre, la riconciliazione della cassa è stata accelerata del 94%, dimostrando un impatto significativo sull&#39;efficienza operativa.</summary>
+    <category term="chatgpt_work" />
+    <category term="business_efficiency" />
+    <category term="process_automation" />
+    <category term="case_study" />
+  </entry>
+  <entry>
+    <title>Google Search testa la rimozione della linea orizzontale sotto le schede</title>
+    <link href="https://www.seroundtable.com/google-search-horizontal-rule-line-removed-42333.html" />
+    <id>https://www.seroundtable.com/google-search-horizontal-rule-line-removed-42333.html</id>
+    <updated>2026-10-21T05:04:26.710696+00:00</updated>
+    <published>2026-10-20T11:05:00+00:00</published>
+    <summary type="html">Google sta sperimentando una modifica all&#39;interfaccia utente della ricerca, rimuovendo la linea orizzontale che separa le schede di navigazione (come &#39;Tutto&#39;, &#39;Immagini&#39;, &#39;Notizie&#39;) dai risultati di ricerca. Questa modifica, attualmente in fase di test, mira a semplificare l&#39;aspetto visivo della SERP. Non è ancora chiaro se questa variazione verrà implementata globalmente o rimarrà un test limitato.</summary>
+    <category term="google_search" />
+    <category term="ui_test" />
+    <category term="serp_change" />
+  </entry>
+  <entry>
+    <title>Ritardi prolungati nelle richieste di appello per le recensioni di Google Business Profile</title>
+    <link href="https://www.seroundtable.com/google-business-profiles-review-appeals-delays-42331.html" />
+    <id>https://www.seroundtable.com/google-business-profiles-review-appeals-delays-42331.html</id>
+    <updated>2026-10-21T05:04:28.358374+00:00</updated>
+    <published>2026-10-20T11:11:00+00:00</published>
+    <summary type="html">Google ha annunciato un nuovo ritardo nella gestione degli appelli relativi alle recensioni su Google Business Profile. La causa è attribuita all&#39;elevato volume di richieste, con tempi di elaborazione estesi e nessuna stima per la risoluzione. Si consiglia di non inviare appelli duplicati e di attendere l&#39;elaborazione di quelli già inoltrati.</summary>
+    <category term="google_business_profile" />
     <category term="local_seo" />
-    <category term="google_post" />
+    <category term="review" />
+    <category term="appeal" />
+  </entry>
+  <entry>
+    <title>Bing sperimenta la rimozione dei sitelink nei risultati di ricerca</title>
+    <link href="https://www.seroundtable.com/bing-no-sitelinks-42327.html" />
+    <id>https://www.seroundtable.com/bing-no-sitelinks-42327.html</id>
+    <updated>2026-10-21T05:04:29.773542+00:00</updated>
+    <published>2026-10-20T11:21:00+00:00</published>
+    <summary type="html">Bing sta conducendo test in cui i sitelink non vengono visualizzati nei risultati di ricerca per alcune query. Questa sperimentazione potrebbe indicare un potenziale cambiamento nel modo in cui Bing presenta le informazioni aggiuntive per i siti web. Gli specialisti SEO dovrebbero monitorare l&#39;evoluzione di questi test per comprendere eventuali impatti sulla visibilità e sulla struttura delle SERP di Bing.</summary>
+    <category term="bing" />
+    <category term="sitelink" />
     <category term="serp_feature" />
+    <category term="search_experiment" />
   </entry>
   <entry>
-    <title>È nuovo? Strumento di scansione AI</title>
-    <link href="https://www.seroundtable.com/is-it-new-ai-scan-tool-42322.html" />
-    <id>https://www.seroundtable.com/is-it-new-ai-scan-tool-42322.html</id>
-    <updated>2026-10-20T05:03:31.669110+00:00</updated>
-    <published>2026-10-19T11:51:00+00:00</published>
-    <summary type="html">Search Engine Roundtable ha lanciato un nuovo strumento basato su intelligenza artificiale chiamato &#34;Is it new?&#34; che permette agli utenti di caricare screenshot di funzionalità di ricerca e ricevere una valutazione sulla loro novità. Lo strumento confronta l&#39;immagine fornita con un database di immagini storiche del sito per determinare se la funzionalità è già stata trattata. L&#39;accesso richiede l&#39;iscrizione a una newsletter per gestire i costi operativi.</summary>
-    <category term="ai_tool" />
-    <category term="search_feature" />
-    <category term="seroundtable" />
-    <category term="image_recognition" />
+    <title>Google ha avuto problemi interni con le parentesi quadre nelle URL</title>
+    <link href="https://www.seroundtable.com/google-square-brackets-urls-42332.html" />
+    <id>https://www.seroundtable.com/google-square-brackets-urls-42332.html</id>
+    <updated>2026-10-21T05:04:31.626680+00:00</updated>
+    <published>2026-10-20T11:31:00+00:00</published>
+    <summary type="html">Google ha riscontrato in passato e continua a monitorare internamente problemi nella gestione delle parentesi quadre ([]) nelle URL. John Mueller ha confermato che, secondo la RFC 3986, le URL con caratteri riservati non codificati (come le parentesi quadre) non sono equivalenti alle loro versioni codificate. Sebbene Google possa deduplicare contenuti identici, è consigliabile scegliere e utilizzare in modo coerente una singola versione dell&#39;URL per evitare ambiguità. Le parentesi quadre, in particolare, sono tecnicamente invalide nelle URL se non utilizzate per indirizzi IPv6.</summary>
+    <category term="url_parameter" />
+    <category term="url_encoding" />
+    <category term="rfc_3986" />
+    <category term="canonicalization" />
   </entry>
   <entry>
-    <title>Avanzamento della programmazione in linguaggi a basse risorse</title>
-    <link href="https://www.osservatorioseo.com/archivio/2026/10/20/avanzamento-programmazione-linguaggi-basse-risorse/" />
-    <id>https://www.osservatorioseo.com/archivio/2026/10/20/avanzamento-programmazione-linguaggi-basse-risorse/</id>
-    <updated>2026-10-20T05:03:33.247908+00:00</updated>
-    <published>2026-10-19T12:00:00+00:00</published>
-    <summary type="html">OpenAI ha migliorato le capacità dei suoi modelli per la programmazione in linguaggi a basse risorse come COBOL e Fortran, essenziali per infrastrutture critiche. I nuovi modelli, GPT-6 Astra e GPT-6.1 Sol, mostrano progressi significativi in test di creazione di software e migrazione di codice. Questi miglioramenti mirano a facilitare la manutenzione e la modernizzazione di sistemi software legacy, riducendo al contempo i costi operativi.</summary>
-    <category term="openai" />
-    <category term="llm" />
-    <category term="coding" />
-    <category term="legacy_system" />
+    <title>Google chiarisce l&#39;aggiustamento delle offerte per la durata del soggiorno nelle campagne Hotel Ads legacy</title>
+    <link href="https://www.seroundtable.com/google-hotel-ads-length-of-booking-bid-legacy-42330.html" />
+    <id>https://www.seroundtable.com/google-hotel-ads-length-of-booking-bid-legacy-42330.html</id>
+    <updated>2026-10-21T05:04:33.511022+00:00</updated>
+    <published>2026-10-20T11:41:00+00:00</published>
+    <summary type="html">Google ha pubblicato un nuovo documento di supporto che dettaglia le differenze nell&#39;aggiustamento delle offerte basato sulla durata del soggiorno tra le campagne Hotel legacy e le nuove Search Campaigns for Travel (SCT). Nelle campagne Hotel, l&#39;offerta base veniva moltiplicata automaticamente per la durata del soggiorno, mentre le SCT non supportano questa logica. Il documento fornisce una formula e scenari pratici per replicare l&#39;efficacia delle offerte delle campagne Hotel legacy nelle SCT, utilizzando gli aggiustamenti per la durata della prenotazione.</summary>
+    <category term="google_ad" />
+    <category term="hotel_ad" />
+    <category term="bid_management" />
+    <category term="travel_seo" />
   </entry>
   <entry>
-    <title>Le nuove regole per il contatto con i giornalisti, basate su milioni di email</title>
-    <link href="https://www.searchenginejournal.com/the-new-rules-of-journalist-outreach-based-on-millions-of-emails/592060" />
-    <id>https://www.searchenginejournal.com/the-new-rules-of-journalist-outreach-based-on-millions-of-emails/592060</id>
-    <updated>2026-10-20T05:03:35.262271+00:00</updated>
-    <published>2026-10-19T12:00:45+00:00</published>
-    <summary type="html">L&#39;articolo analizza l&#39;evoluzione delle strategie di outreach verso i giornalisti, evidenziando come l&#39;intelligenza artificiale abbia aumentato il volume di comunicazioni, spesso irrilevanti. Si sottolinea la crescente sproporzione tra professionisti PR e giornalisti, rendendo più difficile catturare l&#39;attenzione. Vengono presentati dati su 14.3 milioni di email per età del dominio e 39 milioni per oggetto, oltre a 628 riassunti AI, per illustrare l&#39;impatto di questi fattori. La qualità e la pertinenza del contatto sono indicate come elementi cruciali per il successo.</summary>
-    <category term="pr_outreach" />
-    <category term="ai_impact" />
-    <category term="journalist_relation" />
-    <category term="email_deliverability" />
+    <title>Verifica dei profili Google Business con documento d&#39;identità governativo</title>
+    <link href="https://www.seroundtable.com/google-business-profiles-verification-government-id-42329.html" />
+    <id>https://www.seroundtable.com/google-business-profiles-verification-government-id-42329.html</id>
+    <updated>2026-10-21T05:04:35.147214+00:00</updated>
+    <published>2026-10-20T11:51:00+00:00</published>
+    <summary type="html">Google sta introducendo un nuovo metodo di verifica per i profili Google Business che richiede l&#39;utilizzo di un documento d&#39;identità rilasciato dal governo. Questa misura mira a rafforzare l&#39;autenticità delle attività commerciali presenti su Google Maps e nella Ricerca. L&#39;obiettivo è migliorare la fiducia degli utenti e ridurre le frodi o le schede aziendali false. Questo processo si affianca ai metodi di verifica esistenti, offrendo un&#39;opzione aggiuntiva per le aziende.</summary>
+    <category term="google_business_profile" />
+    <category term="local_seo" />
+    <category term="verification" />
+    <category term="identity_verification" />
   </entry>
   <entry>
-    <title>L&#39;IA genera più traffico diretto?</title>
-    <link href="https://www.growth-memo.com/p/does-ai-drive-more-direct-traffic" />
-    <id>https://www.growth-memo.com/p/does-ai-drive-more-direct-traffic</id>
-    <updated>2026-10-20T05:03:36.951550+00:00</updated>
-    <published>2026-10-19T12:29:03+00:00</published>
-    <summary type="html">L&#39;articolo analizza se l&#39;integrazione dell&#39;IA nei motori di ricerca possa aumentare il traffico diretto verso i siti web. Vengono esplorati diversi scenari e le loro implicazioni per le strategie SEO. La discussione si concentra sull&#39;impatto potenziale dell&#39;IA sulla visibilità organica e sulla navigazione degli utenti.</summary>
-    <category term="ai_impact" />
-    <category term="direct_traffic" />
-    <category term="search_engine" />
-    <category term="seo_strategy" />
+    <title>L&#39;impatto degli agenti AI personali come Meta Muse e OpenAI Dots sul SEO</title>
+    <link href="https://www.osservatorioseo.com/archivio/2026/10/21/l-impatto-agenti-ai-personali-come-meta-muse-openai-dots/" />
+    <id>https://www.osservatorioseo.com/archivio/2026/10/21/l-impatto-agenti-ai-personali-come-meta-muse-openai-dots/</id>
+    <updated>2026-10-21T05:04:36.852495+00:00</updated>
+    <published>2026-10-20T12:00:04+00:00</published>
+    <summary type="html">L&#39;emergere di agenti AI personali come Meta Muse e OpenAI Dots sta ridefinendo l&#39;interazione degli utenti con il web, agendo come intermediari per ricerche e acquisti. Questi agenti possono navigare, leggere contenuti e completare transazioni, influenzando direttamente il traffico e le conversioni. Per i professionisti SEO, la visibilità e la struttura della pagina rimangono cruciali, mentre l&#39;attribuzione e l&#39;analisi dei dati richiederanno nuovi approcci per distinguere l&#39;attività umana da quella degli agenti. Si prevede che questi agenti cambieranno significativamente il modo in cui le persone utilizzano internet, similmente alla transizione dal desktop al mobile.</summary>
+    <category term="ai_agent" />
+    <category term="meta_muse" />
+    <category term="openai_dot" />
+    <category term="seo_impact" />
+    <category term="web_interaction" />
   </entry>
   <entry>
-    <title>Le piattaforme di ricerca AI come ChatGPT e Claude sono ancora incapaci di renderizzare JavaScript nell&#39;ottobre 2026?</title>
-    <link href="https://www.gsqi.com/marketing-blog/can-ai-search-platforms-render-javascript" />
-    <id>https://www.gsqi.com/marketing-blog/can-ai-search-platforms-render-javascript</id>
-    <updated>2026-10-20T05:03:38.870615+00:00</updated>
-    <published>2026-10-19T12:42:58+00:00</published>
-    <summary type="html">Un&#39;analisi aggiornata verifica se le piattaforme di ricerca basate su intelligenza artificiale come ChatGPT e Claude sono in grado di renderizzare contenuti JavaScript. I test iniziali del 2025 avevano mostrato significative difficoltà per queste piattaforme nel leggere contenuti generati via JS. L&#39;articolo riesamina la situazione a distanza di 434 giorni, confrontando i risultati attuali con quelli precedenti. Viene ribadito che, mentre Gemini e Copilot (che sfruttano i sistemi di Google e Bing) gestiscono meglio il JavaScript, altre AI continuano a incontrare ostacoli.</summary>
-    <category term="ai_search" />
-    <category term="javascript_rendering" />
-    <category term="llm_capabilitie" />
-    <category term="content_accessibility" />
+    <title>Google rimuove l&#39;etichetta &#39;AI Overviews&#39; da alcuni risultati</title>
+    <link href="https://www.seroundtable.com/google-ai-overviews-label-missing-42337.html" />
+    <id>https://www.seroundtable.com/google-ai-overviews-label-missing-42337.html</id>
+    <updated>2026-10-21T05:04:38.389794+00:00</updated>
+    <published>2026-10-20T13:03:00+00:00</published>
+    <summary type="html">Google sta rimuovendo l&#39;etichetta &#39;AI Overviews&#39; da alcune delle sue panoramiche generate dall&#39;intelligenza artificiale, in particolare sulla versione desktop dei risultati di ricerca. Questa anomalia è stata notata da Glenn Gabe, che ha evidenziato la discrepanza tra desktop e mobile per le stesse funzionalità. Sebbene molte AI Overviews mantengano l&#39;etichetta, la sua assenza in alcuni casi potrebbe indicare un bug, come già accaduto in passato.</summary>
+    <category term="google_ai_overview" />
+    <category term="serp_feature" />
+    <category term="ai_labeling" />
+    <category term="desktop_vs_mobile" />
   </entry>
   <entry>
-    <title>Strumenti di ricerca AI citano un concetto inventato entro una settimana, secondo uno studio</title>
-    <link href="https://www.searchenginejournal.com/ai-search-tools-cited-a-made-up-concept-within-a-week-paper-finds/593472" />
-    <id>https://www.searchenginejournal.com/ai-search-tools-cited-a-made-up-concept-within-a-week-paper-finds/593472</id>
-    <updated>2026-10-20T05:03:40.330003+00:00</updated>
-    <published>2026-10-19T13:34:28+00:00</published>
-    <summary type="html">Uno studio ha rilevato che strumenti di ricerca basati sull&#39;intelligenza artificiale come ChatGPT, Perplexity, Grok e Google AI hanno citato contenuti relativi a un concetto inventato entro sette giorni dalla loro pubblicazione. I ricercatori hanno inserito post su piattaforme frequentemente citate da questi strumenti. Questo evidenzia la rapidità con cui le informazioni, anche se non verificate, possono essere incorporate nei risultati generati dall&#39;IA.</summary>
-    <category term="ai_search" />
-    <category term="information_accuracy" />
-    <category term="llm_bia" />
-    <category term="content_citation" />
+    <title>Riepilogo giornaliero del forum di ricerca: 20 ottobre 2026</title>
+    <link href="https://www.seroundtable.com/recap-10-20-2026-42334.html" />
+    <id>https://www.seroundtable.com/recap-10-20-2026-42334.html</id>
+    <updated>2026-10-21T05:04:39.975585+00:00</updated>
+    <published>2026-10-20T14:00:00+00:00</published>
+    <summary type="html">Google sta testando la rimozione delle etichette AI Overview in alcune SERP desktop e l&#39;introduzione della verifica delle Google Business Profile tramite documento d&#39;identità governativo. Sono stati riscontrati problemi interni nella gestione di URL contenenti parentesi quadre. Inoltre, Google Ads ha chiarito le differenze nell&#39;aggiustamento delle offerte per la durata del soggiorno tra le campagne Hotel legacy e le campagne di ricerca per i viaggi.</summary>
+    <category term="google_update" />
+    <category term="ai_overviews" />
+    <category term="google_business_profile" />
+    <category term="technical_seo" />
   </entry>
   <entry>
-    <title>Il modello conosceva ogni parola</title>
-    <link href="https://www.searchenginejournal.com/it-knew-every-word/592680" />
-    <id>https://www.searchenginejournal.com/it-knew-every-word/592680</id>
-    <updated>2026-10-20T05:03:42.135947+00:00</updated>
-    <published>2026-10-19T14:00:20+00:00</published>
-    <summary type="html">L&#39;articolo analizza la differenza tra la memorizzazione del testo da parte dei modelli linguistici e la loro capacità di estrarre e utilizzare i fatti. Viene evidenziato come un modello possa essere estremamente bravo a riprodurre informazioni apprese, ma fallire nell&#39;applicarle a nuove domande o contesti. La ricerca citata utilizza biografie fittizie per dimostrare che la pre-formazione su un testo non garantisce la capacità di rispondere a domande su di esso senza un fine-tuning specifico. Questo solleva interrogativi sulla reale comprensione dei modelli e sulla loro &#34;memoria parametrica&#34;.</summary>
-    <category term="llm_capabilitie" />
-    <category term="model_memory" />
-    <category term="information_retrieval" />
-    <category term="ai_understanding" />
-  </entry>
-  <entry>
-    <title>DeepSeek apre il suo motore di ricerca interno agli sviluppatori</title>
-    <link href="https://www.searchenginejournal.com/deepseek-opens-its-in-house-search-engine-to-developers/593526" />
-    <id>https://www.searchenginejournal.com/deepseek-opens-its-in-house-search-engine-to-developers/593526</id>
-    <updated>2026-10-20T05:03:44.330018+00:00</updated>
-    <published>2026-10-19T15:02:15+00:00</published>
-    <summary type="html">DeepSeek ha reso disponibile la sua API di ricerca agli sviluppatori, dichiarando di filtrare spam SEO, manipolazione GEO e contenuti AI di bassa qualità. Ogni risultato include un livello di autorità e un punteggio di rilevanza. La documentazione indica che il motore indicizza centinaia di miliardi di pagine e gestisce milioni di richieste giornaliere. Nonostante le affermazioni, non sono stati forniti dettagli specifici su come vengano rilevate le manipolazioni GEO o come vengano assegnati i punteggi di autorità.</summary>
-    <category term="deepseek" />
+    <title>Ho testato la nuova API di ricerca di DeepSeek: ecco come classifica e valuta i siti web</title>
+    <link href="https://www.searchenginejournal.com/i-tested-deepseeks-new-search-api-heres-how-it-ranks-and-scores-websites/593408" />
+    <id>https://www.searchenginejournal.com/i-tested-deepseeks-new-search-api-heres-how-it-ranks-and-scores-websites/593408</id>
+    <updated>2026-10-21T05:04:41.375790+00:00</updated>
+    <published>2026-10-20T14:00:13+00:00</published>
+    <summary type="html">DeepSeek ha rilasciato una nuova API di ricerca e fetch che promette di filtrare spam SEO e contenuti AI di bassa qualità, assegnando un punteggio di autorità ai risultati. I test preliminari hanno rivelato alcune incongruenze, come siti con basso punteggio di autorità e la capacità dell&#39;API di accedere a URL disabilitati da robots.txt. L&#39;API fornisce due punteggi principali: &#39;authority&#39; (da 0 a 4) e &#39;rerank_score&#39; (da 0 a 3), che combinano rilevanza, autorità e freschezza.</summary>
+    <category term="deepseek_api" />
     <category term="search_api" />
     <category term="ai_search" />
-    <category term="spam_detection" />
+    <category term="authority_score" />
   </entry>
   <entry>
-    <title>Generazione di Lead B2B: Come Scegliere i Canali di Marketing per il 2027 [Webinar]</title>
-    <link href="https://www.searchenginejournal.com/b2b-lead-generation-how-to-choose-your-2027-marketing-channels-webinar/593589" />
-    <id>https://www.searchenginejournal.com/b2b-lead-generation-how-to-choose-your-2027-marketing-channels-webinar/593589</id>
-    <updated>2026-10-20T05:03:46.771633+00:00</updated>
-    <published>2026-10-19T18:28:32+00:00</published>
-    <summary type="html">Search Engine Journal annuncia un webinar focalizzato sulla selezione dei canali di marketing B2B più efficaci per la lead generation nel 2027. L&#39;evento mira a fornire strategie e approfondimenti per aiutare i professionisti a ottimizzare le proprie scelte di canale in un panorama in evoluzione. Verranno discussi approcci per riscrivere le descrizioni dei prodotti e renderle più comprensibili sia per gli acquirenti che per le IA.</summary>
-    <category term="b2b_marketing" />
-    <category term="lead_generation" />
-    <category term="marketing_channel" />
-    <category term="webinar" />
+    <title>Riappropriarsi del controllo su Google Ads: tracking migliorato e prova più chiara del ROI</title>
+    <link href="https://www.searchenginejournal.com/rundowns/regain-control-of-google-ads-better-tracking-clearer-proof-of-roi" />
+    <id>https://www.searchenginejournal.com/rundowns/regain-control-of-google-ads-better-tracking-clearer-proof-of-roi</id>
+    <updated>2026-10-21T05:04:43.088589+00:00</updated>
+    <published>2026-10-20T14:17:07+00:00</published>
+    <summary type="html">L&#39;automazione crescente in Google Ads richiede agli inserzionisti di ridefinire il successo, andando oltre le metriche della piattaforma per tracciare lead e vendite fino ai risultati di business effettivi. È fondamentale che la misurazione delle conversioni non si fermi alle azioni interne alla piattaforma, ma valuti l&#39;impatto reale sul business. Questo implica un&#39;estensione dell&#39;expertise PPC oltre le impostazioni di campagna, concentrandosi sulla scelta di obiettivi di conversione che riflettano accuratamente il valore aziendale.</summary>
+    <category term="google_ad" />
+    <category term="conversion_tracking" />
+    <category term="roi_measurement" />
+    <category term="ppc_automation" />
   </entry>
   <entry>
-    <title>Meta rimuove la clausola di addestramento dai termini di crawling, mantenendo l&#39;accesso ai dati</title>
-    <link href="https://www.searchenginejournal.com/meta-removes-training-crawl-clause-commercial-terms/593584" />
-    <id>https://www.searchenginejournal.com/meta-removes-training-crawl-clause-commercial-terms/593584</id>
-    <updated>2026-10-20T05:03:48.925921+00:00</updated>
-    <published>2026-10-19T18:30:50+00:00</published>
-    <summary type="html">Meta ha aggiornato i suoi termini commerciali, eliminando la clausola che permetteva l&#39;utilizzo dei dati raccolti tramite crawling per l&#39;addestramento di modelli di intelligenza artificiale. Nonostante questa modifica, l&#39;azienda mantiene il diritto di effettuare il crawling dei contenuti. La rimozione della clausola potrebbe riflettere una risposta alle preoccupazioni sulla privacy e sull&#39;uso dei dati per l&#39;AI.</summary>
-    <category term="meta" />
-    <category term="ai_training" />
-    <category term="data_crawling" />
-    <category term="terms_of_service" />
+    <title>ChatGPT può attingere a più pagine web grazie a un progetto pilota con Cloudflare</title>
+    <link href="https://www.searchenginejournal.com/chatgpt-search-can-draw-on-more-pages-after-a-cloudflare-pilot/593720" />
+    <id>https://www.searchenginejournal.com/chatgpt-search-can-draw-on-more-pages-after-a-cloudflare-pilot/593720</id>
+    <updated>2026-10-21T05:04:45.052926+00:00</updated>
+    <published>2026-10-20T15:00:36+00:00</published>
+    <summary type="html">Cloudflare e OpenAI hanno condotto un progetto pilota di ricerca che ha permesso a OpenAI di scoprire e indicizzare centinaia di milioni di nuove pagine web. Il progetto ha utilizzato segnali dalla rete di Cloudflare per aiutare il crawler di OpenAI a identificare pagine di valore, anche se con pochi link in ingresso. L&#39;obiettivo è migliorare la scoperta di contenuti rilevanti e ottimizzare il crawling, riducendo le richieste non necessarie e identificando pagine potenzialmente dannose. I risultati iniziali indicano un aumento del crawling per le nuove pagine scoperte.</summary>
+    <category term="openai" />
+    <category term="cloudflare" />
+    <category term="chatgpt_search" />
+    <category term="web_crawling" />
+  </entry>
+  <entry>
+    <title>ALTK-Evolve: La memoria appresa supera la classifica τ²-bench nei compiti di servizio clienti senza un modello frontier</title>
+    <link href="https://huggingface.co/blog/ibm-research/altk-evolve-bc" />
+    <id>https://huggingface.co/blog/ibm-research/altk-evolve-bc</id>
+    <updated>2026-10-21T05:04:46.612263+00:00</updated>
+    <published>2026-10-20T15:19:48+00:00</published>
+    <summary type="html">IBM Research ha sviluppato ALTK-Evolve, un sistema che permette a un agente basato su GPT-4.1 di superare i benchmark di servizio clienti τ²-bench. Questo approccio utilizza una &#34;memoria appresa&#34; sotto forma di linee guida comportamentali estratte automaticamente, che vengono aggiunte al prompt del sistema. Il sistema non richiede aggiornamenti dei pesi del modello o annotazioni umane, dimostrando l&#39;efficacia dell&#39;apprendimento di playbook per migliorare le performance degli agenti LLM in compiti specifici.</summary>
+    <category term="llm_agent" />
+    <category term="customer_service_ai" />
+    <category term="prompt_engineering" />
+    <category term="ai_benchmarking" />
+  </entry>
+  <entry>
+    <title>Google Ads estende la verifica dei servizi finanziari a Stati Uniti e Canada</title>
+    <link href="https://www.seroundtable.com/google-ads-financial-services-verification-expand-42338.html" />
+    <id>https://www.seroundtable.com/google-ads-financial-services-verification-expand-42338.html</id>
+    <updated>2026-10-21T05:04:48.148293+00:00</updated>
+    <published>2026-10-20T15:20:00+00:00</published>
+    <summary type="html">Google ha annunciato l&#39;espansione dei requisiti di verifica per gli annunci di servizi finanziari negli Stati Uniti e in Canada, a partire dall&#39;inizio del 2027. Questa iniziativa, già attiva in altre regioni, mira a tutelare i consumatori e sarà implementata in collaborazione con le associazioni bancarie locali. Gli inserzionisti riceveranno istruzioni specifiche prima dell&#39;applicazione delle nuove policy.</summary>
+    <category term="google_ad" />
+    <category term="financial_service" />
+    <category term="ad_verification" />
+    <category term="policy_update" />
+  </entry>
+  <entry>
+    <title>FairStress: Una valutazione più approfondita dell&#39;equità nel processo decisionale degli LLM</title>
+    <link href="https://www.osservatorioseo.com/archivio/2026/10/21/fairstress-valutazione-piu-approfondita-dell-equita/" />
+    <id>https://www.osservatorioseo.com/archivio/2026/10/21/fairstress-valutazione-piu-approfondita-dell-equita/</id>
+    <updated>2026-10-21T05:04:49.666050+00:00</updated>
+    <published>2026-10-20T16:09:19+00:00</published>
+    <summary type="html">È stato introdotto FairStress, un nuovo benchmark per misurare l&#39;equità demografica negli LLM, andando oltre la semplice decisione finale del modello. Questo strumento valuta come gli LLM modificano le proprie decisioni quando sottoposti ad argomenti persuasivi, i cosiddetti &#39;prefix avversari&#39;, in scenari che impattano le persone. La ricerca ha rilevato che gli stessi argomenti possono influenzare la propensione dei modelli a cambiare decisione in modo diverso a seconda del gruppo demografico favorito. FairStress è disponibile per il download e sarà integrato in Olmo-eval.</summary>
+    <category term="llm_fairness" />
+    <category term="ai_ethic" />
+    <category term="model_evaluation" />
+    <category term="demographic_bia" />
+  </entry>
+  <entry>
+    <title>NVIDIA Cosmos3-H-Dreams: La simulazione generativa porta la chirurgia clinica alla vita</title>
+    <link href="https://huggingface.co/blog/nvidia/cosmos3-h-dreams" />
+    <id>https://huggingface.co/blog/nvidia/cosmos3-h-dreams</id>
+    <updated>2026-10-21T05:04:51.319459+00:00</updated>
+    <published>2026-10-20T18:17:47+00:00</published>
+    <summary type="html">NVIDIA ha introdotto Cosmos3-H-Dreams, un simulatore chirurgico generativo interattivo che riproduce procedure cliniche complesse. Questo sistema apprende le dinamiche visive direttamente da video e cinematica robotica di interventi reali, offrendo un realismo elevato. È il primo simulatore generativo in tempo reale addestrato su registrazioni di colecistectomie cliniche, supportando il controllo cinematico in tempo reale. Funziona su una singola GPU NVIDIA RTX PRO 6000, rendendolo accessibile per la formazione e la pianificazione chirurgica.</summary>
+    <category term="nvidia" />
+    <category term="generative_ai" />
+    <category term="medical_simulation" />
+    <category term="robotic" />
+  </entry>
+  <entry>
+    <title>Il tuo pubblico usa l&#39;IA ma non si fida: crea contenuti per colmare il divario</title>
+    <link href="https://www.searchenginejournal.com/your-audience-uses-ai-but-doesnt-trust-it-build-content-for-the-gap/592818" />
+    <id>https://www.searchenginejournal.com/your-audience-uses-ai-but-doesnt-trust-it-build-content-for-the-gap/592818</id>
+    <updated>2026-10-21T05:04:52.889253+00:00</updated>
+    <published>2026-10-20T19:00:30+00:00</published>
+    <summary type="html">Un&#39;analisi di YouGov rivela che, nonostante l&#39;89% degli adulti statunitensi abbia preoccupazioni sull&#39;IA, il 55% la utilizza settimanalmente. Le principali preoccupazioni riguardano la privacy dei dati, l&#39;eccessiva dipendenza umana e l&#39;accuratezza delle risposte. Questo divario tra uso e fiducia offre un&#39;opportunità per i professionisti SEO di sviluppare contenuti che affrontino queste incertezze, focalizzandosi su affidabilità e trasparenza.</summary>
+    <category term="ai_trust" />
+    <category term="content_strategy" />
+    <category term="audience_behavior" />
+    <category term="data_privacy" />
+  </entry>
+  <entry>
+    <title>OpenAI abilita automaticamente i miglioramenti creativi per gli annunci ChatGPT</title>
+    <link href="https://www.seroundtable.com/openai-chatgpt-ads-enabling-creative-enhancements-42344.html" />
+    <id>https://www.seroundtable.com/openai-chatgpt-ads-enabling-creative-enhancements-42344.html</id>
+    <updated>2026-10-21T05:04:55.007698+00:00</updated>
+    <published>2026-10-20T19:35:00+00:00</published>
+    <summary type="html">OpenAI ha informato gli inserzionisti che abiliterà automaticamente i &#34;miglioramenti creativi&#34; per le campagne pubblicitarie di ChatGPT a partire dal 30 ottobre 2026. Questa funzionalità mira a rendere gli annunci più pertinenti al contesto della conversazione e agli interessi dell&#39;utente, adattando contenuti esistenti come titoli, descrizioni e immagini. Gli inserzionisti possono disattivare questa opzione o modificare le impostazioni tramite l&#39;Ads Manager di OpenAI.</summary>
+    <category term="openai_ad" />
+    <category term="chatgpt_ad" />
+    <category term="creative_enhancement" />
+    <category term="ai_advertising" />
+  </entry>
+  <entry>
+    <title>⚠️ Ristrutturazione e aggiunta metadati alla Usage Policy di Anthropic</title>
+    <link href="https://www.anthropic.com/legal/aup" />
+    <id>https://www.anthropic.com/legal/aup</id>
+    <updated>2026-10-21T05:02:02.011287+00:00</updated>
+    <published>2026-10-21T05:02:02.011287+00:00</published>
+    <summary type="html">La pagina della Usage Policy di Anthropic è stata ristrutturata con l&#39;aggiunta di metadati chiari come &#39;Effective Date&#39;, &#39;Type&#39;, &#39;Audience&#39; e &#39;Language&#39;, e un link alla cronologia delle versioni. La gerarchia dei titoli è stata modificata da H2 a H3 per le sezioni principali, e da H3 a H4 per le sottosezioni, migliorando la leggibilità e la struttura semantica del documento.</summary>
+    <category term="seo_tecnico" />
+    <category term="struttura_del_contenuto" />
+    <category term="usabilita" />
+    <category term="metadati" />
+    <category term="policy" />
   </entry>
 </feed>
