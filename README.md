@@ -1,6 +1,6 @@
 # OsservatorioSEO
 
-Hub giornaliero di notizie **SEO e AI** da fonti autorevoli. Ogni mattina alle 07:00 (Europe/Rome) un workflow GitHub Actions recupera notizie da blog ufficiali (Google, OpenAI, Anthropic), testate di settore (Search Engine Land, Journal, Roundtable), e voci indipendenti. L'AI (via OpenRouter → Gemini 2.0 Flash) le riassume in italiano, e il **Doc Watcher** segnala quando Google aggiorna silenziosamente una pagina di documentazione critica.
+Hub giornaliero di notizie **SEO e AI** da fonti autorevoli. Ogni mattina alle 07:00 (Europe/Rome) un Cloudflare Worker (`workers/cron-trigger`) innesca via `workflow_dispatch` il workflow GitHub Actions `daily-refresh.yml`, che recupera notizie da blog ufficiali (Google, OpenAI, Anthropic), testate di settore (Search Engine Land, Journal, Roundtable), e voci indipendenti. L'AI (via OpenRouter → Gemini 2.0 Flash) le riassume in italiano, e il **Doc Watcher** segnala quando Google aggiorna silenziosamente una pagina di documentazione critica.
 
 L'output è un `feed.json` pubblico consumabile anche da altri tool AI, e una pagina web statica servita da Cloudflare Pages.
 
@@ -50,8 +50,13 @@ uv run python -m osservatorio_seo refresh
 
 ### 1. GitHub
 - Fork/clona il repo
-- Aggiungi secret `OPENROUTER_API_KEY` in Settings → Secrets and variables → Actions
-- Il workflow `daily-refresh.yml` partirà automaticamente alle 07:00 Rome
+- Aggiungi i secret in Settings → Secrets and variables → Actions:
+  - `OPENROUTER_API_KEY` (obbligatorio, summarizer)
+  - `JINA_API_KEY` (opzionale, estrazione contenuto via Jina Reader con fallback all'estratto RSS)
+  - `DATAFORSEO_API_KEY` (tracker: ranking/trend)
+  - `CLOUDFLARE_RADAR_TOKEN` (tracker: dati Radar)
+  - `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID` (deploy su Cloudflare Pages da CI)
+- `daily-refresh.yml` è `workflow_dispatch`-only: a innescarlo ogni mattina alle 07:00 Rome è il Cloudflare Worker `workers/cron-trigger` (il cron di GitHub Actions è meno affidabile sugli orari). `tracker-weekly.yml` e `dossier-monthly.yml` hanno invece un proprio trigger `schedule`.
 
 ### 2. Cloudflare Pages
 - Vai su Cloudflare Pages → Create a project → Connect to GitHub
@@ -90,7 +95,6 @@ osservatorioseo/
 - [ ] Newsletter email giornaliera
 - [ ] Notifiche Telegram/Slack sui doc changes
 - [ ] Espansione Doc Watcher a Bing, Perplexity, Meta AI
-- [ ] RSS output del feed stesso
 
 ## Contenuti e policy
 
@@ -98,4 +102,4 @@ OsservatorioSEO pubblica solo **titolo + nostro riassunto + link alla fonte**. N
 
 ## License
 
-MIT — vedi `LICENSE`.
+Nessun file `LICENSE` ancora pubblicato nel repo: licenza da definire.
