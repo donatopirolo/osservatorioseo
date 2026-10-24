@@ -128,10 +128,10 @@ async function showArchiveResults(query) {
 function renderArchiveSearchResult(item, date, itemIndex) {
   const [y, m, d] = date.split("-");
   // Pagina dell'articolo se ne ha una (item_index.json), altrimenti lo
-  // snapshot del giorno per gli item indicizzabili non ancora nell'indice,
-  // altrimenti l'URL esterno della fonte.
+  // snapshot del giorno: esiste per ogni giorno in archivio, quindi copre
+  // anche gli item con importance < 4 (mai indicizzati singolarmente).
   const indexed = itemIndex && itemIndex[item.id];
-  const path = indexed || (item.importance >= 4 ? `/archivio/${y}/${m}/${d}/` : item.url);
+  const path = indexed || `/archivio/${y}/${m}/${d}/`;
   const stars = "★".repeat(item.importance) + "☆".repeat(5 - item.importance);
   return `<a href="${escape(path)}" class="block p-4 border-l-2 border-outline-variant bg-surface-container-lowest hover:bg-surface-container transition-colors">
     <h4 class="text-sm font-bold text-white hover:text-primary-container">${escape(item.title_it)}</h4>
