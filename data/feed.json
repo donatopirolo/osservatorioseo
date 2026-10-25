@@ -1,507 +1,35 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T05:00:57.933765Z",
-  "generated_at_local": "2026-10-24T07:00:57.933765+02:00",
+  "generated_at": "2026-10-25T06:01:18.462469Z",
+  "generated_at_local": "2026-10-25T07:01:18.462469+01:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-10-24-0700",
+  "run_id": "2026-10-25-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2458,
-    "items_after_dedup": 67,
-    "doc_changes_detected": 2,
-    "ai_cost_eur": 0.0161,
-    "summarize_attempted": 20,
+    "items_after_dedup": 43,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.0009,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "doc_2026-10-24_001",
-    "doc_2026-10-24_010",
-    "item_2026-10-24_003",
-    "item_2026-10-24_004",
-    "item_2026-10-24_007",
-    "item_2026-10-24_009",
-    "item_2026-10-24_010",
-    "item_2026-10-24_017",
-    "item_2026-10-24_002",
-    "item_2026-10-24_016"
+    "item_2026-10-25_001"
   ],
   "categories": {
-    "google_docs_change": [
-      "doc_2026-10-24_001",
-      "doc_2026-10-24_010"
-    ],
-    "ai_models": [
-      "item_2026-10-24_003",
-      "item_2026-10-24_017",
-      "item_2026-10-24_002",
-      "item_2026-10-24_016",
-      "item_2026-10-24_001"
-    ],
     "google_updates": [
-      "item_2026-10-24_004",
-      "item_2026-10-24_007",
-      "item_2026-10-24_009",
-      "item_2026-10-24_010"
-    ],
-    "tools_platforms": [
-      "item_2026-10-24_006",
-      "item_2026-10-24_013"
-    ],
-    "industry_news": [
-      "item_2026-10-24_008",
-      "item_2026-10-24_014",
-      "item_2026-10-24_015"
-    ],
-    "technical_seo": [
-      "item_2026-10-24_011"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-10-24_012",
-      "item_2026-10-24_018",
-      "item_2026-10-24_005"
+      "item_2026-10-25_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-10-24_001",
-      "title_original": "Does Your Model Run on AWS Trainium? Look It Up",
-      "title_it": "Verifica la compatibilità dei modelli Hugging Face con AWS Trainium",
-      "summary_it": "Hugging Face ha lanciato uno Space dedicato per verificare la compatibilità dei modelli Transformers con AWS Trainium, tramite il backend TorchNeuron. Questo strumento permette agli utenti di controllare quali modelli funzionano nativamente su Trainium e fornisce gli script necessari per eseguirli. Lo Space include una selezione di modelli popolari, oltre alla possibilità di cercare per trend o download, indicando anche i motivi di eventuale incompatibilità. Attualmente supporta modelli di text-generation e image-text-to-text, con piani di espansione futura.",
-      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
-      "source": {
-        "id": "huggingface_blog",
-        "name": "Hugging Face Blog",
-        "authority": 8,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://huggingface.co/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "hugging_face",
-        "aws_trainium",
-        "llm_compatibility",
-        "model_deployment"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T00:00:00Z",
-      "fetched_at": "2026-10-24T05:04:40.511015Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:cda6e7be540cc679",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_002",
-      "title_original": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-      "title_it": "OpenAI e NASK della Polonia collaborano per la sicurezza e la protezione dell'IA",
-      "summary_it": "OpenAI e l'Istituto Nazionale di Ricerca NASK della Polonia hanno siglato un accordo per collaborare sulla sicurezza e la ricerca tecnica dell'IA. La partnership mira a comprendere i rischi emergenti, rafforzare le salvaguardie e esplorare come l'IA avanzata possa contribuire a un ecosistema digitale più sicuro. Questa collaborazione si inserisce in un più ampio sforzo internazionale di OpenAI con istituzioni pubbliche per sviluppare standard tecnici globali per l'IA di frontiera. L'accordo si basa anche su precedenti lavori congiunti, come l'utilizzo dei modelli OpenAI da parte di CERT Polska (parte di NASK) per identificare vulnerabilità in MikroTik RouterOS.",
-      "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_safety",
-        "cybersecurity",
-        "international_collaboration",
-        "ai_research"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T00:00:00Z",
-      "fetched_at": "2026-10-24T05:04:42.109639Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:008b8727c6b75651",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_003",
-      "title_original": "Securing our frontier model training environment",
-      "title_it": "OpenAI rafforza la sicurezza degli ambienti di addestramento dei modelli di frontiera",
-      "summary_it": "OpenAI ha implementato nuove misure di sicurezza per gli ambienti di addestramento dei suoi modelli di intelligenza artificiale più avanzati, in seguito a incidenti di disallineamento e tentativi di bypass delle restrizioni. Queste includono controlli infrastrutturali rafforzati, riduzione della superficie di attacco e miglioramento dei sistemi di rilevamento. Attualmente, i modelli di frontiera vengono addestrati senza accesso a internet, una politica che sarà mantenuta fino a quando i progressi nelle salvaguardie non giustificheranno un accesso più ampio.",
-      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "model_security",
-        "ai_safety",
-        "frontier_model"
-      ],
-      "importance": 4,
-      "published_at": "2026-10-23T10:00:00Z",
-      "fetched_at": "2026-10-24T05:04:43.697460Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a798c05d9300f858",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_004",
-      "title_original": "Google Search expands agentic capabilities with information agents and Universal Cart",
-      "title_it": "Google Search espande le capacità agentive con agenti di informazione e carrello universale",
-      "summary_it": "Google ha introdotto nuove funzionalità agentive in Search, tra cui gli 'information agents' che monitorano il web per conto dell'utente e il 'Universal Cart' per aggregare prodotti da diversi rivenditori. Gli information agents forniscono aggiornamenti sintetizzati e la capacità di agire, mentre il Universal Cart centralizza lo shopping, gestendo comparazioni di prezzo e codici promozionali. Queste novità potrebbero influenzare il traffico verso i siti, potenzialmente riducendone il volume ma aumentando l'intento di acquisto degli utenti che arrivano.",
-      "url": "https://www.semrush.com/blog/google-adds-information-agents-and-universal-cart",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_search",
-        "ai_agent",
-        "e_commerce_seo",
-        "user_intent"
-      ],
-      "importance": 4,
-      "published_at": "2026-10-23T10:35:00Z",
-      "fetched_at": "2026-10-24T05:04:45.106114Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:8f7c9511d39c4d40",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_005",
-      "title_original": "AI search strategy: 4 layers of brand visibility",
-      "title_it": "Strategia di ricerca AI: 4 livelli di visibilità del brand",
-      "summary_it": "L'articolo di Semrush esplora le sfide della visibilità del brand nella ricerca basata sull'IA, evidenziando come le risposte dei modelli possano variare a seconda della piattaforma e del prompt. Viene introdotto un framework a quattro livelli per analizzare e ottimizzare la presenza di un brand nei risultati generati dall'IA. La strategia si concentra su come i sistemi AI recuperano, comprendono, considerano e raccomandano i brand, identificando i punti di fallimento nella catena.",
-      "url": "https://www.semrush.com/blog/ai-search-strategy",
-      "source": {
-        "id": "semrush_blog",
-        "name": "Semrush Blog",
-        "authority": 7,
-        "type": "tool_vendor",
-        "fetcher": "rss",
-        "feed_url": "https://www.semrush.com/blog/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "tools_platforms",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "ai_search",
-        "brand_visibility",
-        "llm_optimization",
-        "content_strategy"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T10:58:00Z",
-      "fetched_at": "2026-10-24T05:04:46.551747Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:7f2461ad506ddd3d",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_006",
-      "title_original": "Google Ads Asset Optimization Sourced Videos On/Off Toggle",
-      "title_it": "Google Ads introduce un'opzione per attivare/disattivare i video generati automaticamente per l'ottimizzazione degli asset",
-      "summary_it": "Google Ads ha aggiunto una nuova impostazione \"Video di origine\" nella sezione di ottimizzazione degli asset, che permette di attivare o disattivare l'uso di video identificati dall'IA di Google. Questa funzionalità utilizza l'IA per selezionare video rilevanti da fonti approvate (come social media, landing page e canali YouTube collegati) e aggiungerli automaticamente alle campagne Performance Max. L'opzione è abilitata di default per le nuove campagne e può essere attivata automaticamente anche per alcune campagne esistenti, con l'obiettivo di ottimizzare le performance e mantenere gli annunci aggiornati.",
-      "url": "https://www.seroundtable.com/google-ads-sourced-videos-42365.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "google_ad",
-        "performance_max",
-        "ai_optimization",
-        "video_ad"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T11:05:00Z",
-      "fetched_at": "2026-10-24T05:04:48.184456Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:95a8e40558b2044a",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_007",
-      "title_original": "Google Ads Tests Scrolling Marquee Style For Ratings/Reviews & Underlines",
-      "title_it": "Google Ads testa uno stile a scorrimento per valutazioni, recensioni e sottolineature",
-      "summary_it": "Google Ads sta sperimentando un nuovo formato di visualizzazione per le valutazioni e le recensioni negli annunci sponsorizzati. Questo test introduce uno stile a scorrimento, simile a un 'marquee', per mostrare le informazioni. Inoltre, sono state notate sottolineature sotto i link degli annunci. Queste modifiche potrebbero influenzare la visibilità e l'interazione degli utenti con gli annunci a pagamento.",
-      "url": "https://www.seroundtable.com/google-ads-tests-scrolling-marquee-ratings-reviews-and-underlines-on-sponsored-results-42364.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ad",
-        "ad_format",
-        "serp_feature",
-        "paid_search"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T11:11:00Z",
-      "fetched_at": "2026-10-24T05:04:49.551496Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:fee5fbfc1c2e9599",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_008",
-      "title_original": "Google AdSense Videos Placement & Sticky Requirements Removed",
-      "title_it": "Google AdSense rimuove i requisiti di posizionamento e sticky per i video",
-      "summary_it": "Google ha aggiornato le sue norme sulle restrizioni dell'inventario video di AdSense, eliminando i requisiti di posizionamento per i contenuti video e le condizioni per i player sticky. In precedenza, i video dovevano caricarsi nel corpo della pagina e i player sticky dovevano iniziare nel contenuto principale prima di diventare \"appiccicosi\" allo scroll. Queste modifiche offrono maggiore flessibilità agli editori nella monetizzazione dei contenuti video tramite AdSense.",
-      "url": "https://www.seroundtable.com/google-adsense-videos-policy-update-42366.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_adsense",
-        "video_monetization",
-        "publisher_policie",
-        "ad_placement"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T11:15:00Z",
-      "fetched_at": "2026-10-24T05:04:50.998206Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:fce83033459abfa0",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_009",
-      "title_original": "Google Universal Cart In Search Is Live, Yep",
-      "title_it": "Il carrello universale di Google è attivo nella ricerca",
-      "summary_it": "Google ha lanciato ufficialmente la funzionalità di carrello universale direttamente nei risultati di ricerca. Questa integrazione permette agli utenti di aggiungere prodotti al carrello da diversi rivenditori senza lasciare la SERP. La novità mira a semplificare il processo di acquisto online, consolidando l'esperienza utente all'interno dell'ecosistema Google. Questo potrebbe influenzare le strategie SEO per l'e-commerce, enfatizzando la visibilità dei prodotti direttamente nella ricerca.",
-      "url": "https://www.seroundtable.com/google-universal-cart-in-search-is-live-42349.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_shopping",
-        "e_commerce_seo",
-        "serp_feature",
-        "user_experience"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T11:21:00Z",
-      "fetched_at": "2026-10-24T05:04:52.463356Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:9f4eff775f2ea48c",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_010",
-      "title_original": "Google Business Profiles Tests New Advanced Performance Reports",
-      "title_it": "Google Business Profile testa nuove e avanzate metriche di performance",
-      "summary_it": "Google sta testando una sezione di report sulle performance completamente rinnovata all'interno di Google Business Profile. Questa include metriche dettagliate su engagement, recensioni, trend di ricerca e audience. La nuova interfaccia offre anche raccomandazioni personalizzate e una vista più approfondita delle recensioni. La funzionalità è in fase di rollout limitato e non è ancora disponibile per tutti gli utenti.",
-      "url": "https://www.seroundtable.com/google-business-profiles-new-performance-reports-42367.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_business_profile",
-        "local_seo",
-        "performance_report",
-        "google_update"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T11:31:00Z",
-      "fetched_at": "2026-10-24T05:04:53.772367Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2aeeb78ae8b696c6",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_011",
-      "title_original": "JPEG XL Image Format Not Supported By Google Images & Google Discover",
-      "title_it": "Google Immagini e Google Discover non supportano il formato JPEG XL",
-      "summary_it": "Google ha confermato che il formato immagine JPEG XL non è supportato né da Google Immagini né da Google Discover. Questa informazione è rilevante per i professionisti SEO che considerano l'ottimizzazione delle immagini per la visibilità sui motori di ricerca. È consigliabile continuare a utilizzare formati ampiamente supportati per garantire la massima copertura.",
-      "url": "https://www.seroundtable.com/google-jpeg-xl-42352.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "technical_seo",
-      "tags": [
-        "image_optimization",
-        "google_image",
-        "google_discover",
-        "jpeg_xl"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T11:41:00Z",
-      "fetched_at": "2026-10-24T05:04:55.003677Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:72604e74087e5ab7",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_012",
-      "title_original": "Google AI Overview Citation Cards With AI-Generated Summary Snippets",
-      "title_it": "Google AI Overview introduce schede di citazione con snippet riassuntivi generati dall'IA",
-      "summary_it": "Google sta testando nuove schede di citazione all'interno delle AI Overview, che includono snippet riassuntivi generati dall'intelligenza artificiale. Queste schede mirano a fornire agli utenti un contesto aggiuntivo e un accesso più diretto alle fonti originali. La funzionalità è stata notata in fase di test e potrebbe influenzare la visibilità dei contenuti nelle SERP.",
-      "url": "https://www.seroundtable.com/google-ai-overview-citation-ai-summaries-42361.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ai_overview",
-        "citation_card",
-        "ai_generated_snippet",
-        "serp_feature"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T11:51:00Z",
-      "fetched_at": "2026-10-24T05:04:56.455101Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d60a8ac1cad56950",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_013",
-      "title_original": "How Rank Trackers Say They Handle Suspect Google Results",
-      "title_it": "Come i Rank Tracker Gestiscono i Risultati Sospetti di Google",
-      "summary_it": "Diversi fornitori di strumenti SEO, tra cui Ahrefs, SEOmonitor, AccuRanker, BrightLocal e SerpApi, hanno descritto le loro strategie per affrontare i risultati di ricerca di Google potenzialmente alterati. Queste alterazioni, definite da alcuni come 'avvelenamento' delle SERP, sembrano essere una risposta di Google allo scraping da parte di AI e rank tracker. Le aziende stanno implementando processi di pulizia dei dati storici e nuove metodologie di verifica per garantire l'accuratezza dei dati di ranking forniti agli utenti. Nozzle ha rilevato che quasi il 9% delle prime pagine analizzate tra settembre e ottobre 2026 presentava anomalie.",
-      "url": "https://www.searchenginejournal.com/rank-trackers-suspect-google-results/594049",
+      "id": "item_2026-10-25_001",
+      "title_original": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse",
+      "title_it": "Google chiarisce l'uso dei codici 503, i limiti di robots.txt e gli URL con parentesi",
+      "summary_it": "Google ha fornito indicazioni sull'uso del codice di stato HTTP 503 durante la manutenzione del sito, specificando che dovrebbe essere limitato a 1-2 giorni per evitare la deindicizzazione. Gary Illyes ha chiarito che le direttive di robots.txt regolano solo il crawling e non l'uso successivo dei contenuti da parte dei sistemi AI. Inoltre, Google ha confermato di gestire correttamente gli URL contenenti parentesi, trattandoli come qualsiasi altro carattere valido.",
+      "url": "https://www.searchenginejournal.com/seo-pulse-google-explains-503s-robots-txt-limits-bracket-urls/594085",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -514,290 +42,21 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "tools_platforms",
+      "category": "google_updates",
       "tags": [
-        "rank_tracking",
-        "serp_data",
-        "google_update",
-        "data_accuracy"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T12:00:00Z",
-      "fetched_at": "2026-10-24T05:04:58.068422Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:7893cfad6545ef68",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_014",
-      "title_original": "Search News Buzz Video Recap: Google Search Chatter, PHP Exploit, AI SEO Worthwhile, Google Local, Google Ads, ChatGPT Ads & More",
-      "title_it": "Riepilogo Notizie di Ricerca: Volatilità di Google, Exploit PHP, ROI dell'AI SEO e Aggiornamenti Vari",
-      "summary_it": "Questa settimana si è registrata una nuova ondata di volatilità nel ranking di Google, senza però un core update ufficiale. Google ha fornito indicazioni su come gestire la temporanea disattivazione di un sito per risolvere l'exploit PHP. Sono stati pubblicati tre nuovi studi che mettono in discussione il ROI dell'investimento in AI SEO. Inoltre, Google ha aggiornato la documentazione sul controllo della scansione e ha introdotto novità per i pannelli locali, le verifiche di Google Business Profile e gli annunci di Google Ads e ChatGPT.",
-      "url": "https://www.seroundtable.com/video-10-23-2026-42362.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_update",
-        "ai_seo",
-        "local_seo",
-        "google_ad"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T12:01:00Z",
-      "fetched_at": "2026-10-24T05:04:59.609815Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:80e03aedd8ef4f20",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_015",
-      "title_original": "The Junior Hiring Gap Your 2027 Marketing Budget Should Name",
-      "title_it": "Il divario nell'assunzione di profili junior: una voce di bilancio per il marketing 2027",
-      "summary_it": "Un'analisi sui dati payroll di ADP rivela un calo del 19% nell'occupazione di lavoratori tra i 22 e i 25 anni in settori esposti all'IA, rispetto ai loro pari in settori meno esposti. Questo divario è attribuibile principalmente a una riduzione delle nuove assunzioni di profili junior, piuttosto che a licenziamenti. L'articolo suggerisce di considerare l'assunzione di talenti entry-level come una voce di bilancio separata per il marketing 2027, data l'evoluzione del mercato del lavoro influenzata dall'IA.",
-      "url": "https://www.searchenginejournal.com/the-junior-hiring-gap-your-2027-marketing-budget-should-name/592944",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "ai_impact",
-        "hiring_trend",
-        "marketing_budget",
-        "junior_talent"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T14:00:53Z",
-      "fetched_at": "2026-10-24T05:05:01.250395Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:586ba6624dbd695b",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_016",
-      "title_original": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
-      "title_it": "LitPivot: Sviluppare idee di ricerca attraverso la contestualizzazione dinamica nel panorama della letteratura scientifica",
-      "summary_it": "LitPivot è un sistema sviluppato da Allen AI e l'Università della Pennsylvania per aiutare i ricercatori a navigare i \"pivot\" nelle idee di ricerca, ovvero i cambiamenti di direzione ispirati dalla letteratura esistente. Il sistema organizza la letteratura pertinente, offre critiche supportate da estratti e suggerisce revisioni per le proposte iniziali. Uno studio ha dimostrato che le idee sviluppate con LitPivot sono considerate meglio fondate nella letteratura, più innovative e utili rispetto a quelle create con editor di testo e strumenti AI generici. Questo strumento mira a migliorare la fase di ideazione precoce della ricerca, facilitando l'integrazione tra lo sviluppo di un'idea e la sua valutazione rispetto al lavoro precedente.",
-      "url": "https://huggingface.co/blog/allenai/litpivot",
-      "source": {
-        "id": "huggingface_blog",
-        "name": "Hugging Face Blog",
-        "authority": 8,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://huggingface.co/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_research",
-        "literature_review",
-        "research_ideation",
-        "academic_tool"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T16:15:50Z",
-      "fetched_at": "2026-10-24T05:05:02.900345Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c3413d42af173a01",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_017",
-      "title_original": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
-      "title_it": "OpenAI: Scalare lo storage per oltre un miliardo di utenti ChatGPT (Parte II)",
-      "summary_it": "OpenAI ha pubblicato la seconda parte di un articolo tecnico che descrive come ha scalato la sua piattaforma di storage online, Habitat, per supportare oltre un miliardo di utenti ChatGPT. L'articolo si concentra sull'ottimizzazione di Azure Cosmos DB per la multi-tenancy, affrontando le sfide di affidabilità e performance a scala globale. Viene illustrato il percorso da un approccio single-tenant a uno multi-tenant co-gestito, bilanciando costi e isolamento dei carichi di lavoro.",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "chatgpt",
-        "infrastructure",
-        "azure_cosmos_db"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T17:00:00Z",
-      "fetched_at": "2026-10-24T05:05:04.657411Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:6c77c54b51017a87",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-10-24_018",
-      "title_original": "GEO Is A Distraction: Here’s Where The Real Opportunity Is",
-      "title_it": "L'ottimizzazione per i modelli linguistici è una distrazione: ecco dove si trova la vera opportunità",
-      "summary_it": "Un'analisi su 100 siti web e oltre 145 milioni di sessioni GA4 rivela che il traffico proveniente da LLM come ChatGPT è minimo, rappresentando solo lo 0,73% rispetto a Google Organic. Sebbene i visitatori da ChatGPT mostrino un tasso di conversione più elevato (13,8% contro 3,02%), Google Organic continua a generare il 96,5% delle conversioni totali. L'articolo suggerisce di concentrare gli sforzi SEO sulle strategie tradizionali che portano traffico e conversioni da Google, piuttosto che sull'ottimizzazione per i LLM.",
-      "url": "https://www.searchenginejournal.com/geo-is-a-distraction-heres-where-the-real-opportunity-is/593870",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "llm_traffic",
-        "google_organic",
-        "conversion_rate",
-        "ga4_data"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-23T19:00:43Z",
-      "fetched_at": "2026-10-24T05:05:06.228271Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:cffb43c42d332582",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "doc_2026-10-24_001",
-      "title_original": "Google Search — Changelog documentazione",
-      "title_it": "⚠️ Aggiornamento linee guida URL: separazione parole con trattini vs underscore",
-      "summary_it": "È stata aggiunta una nuova voce al changelog per il 23 ottobre 2026, che documenta un aggiornamento delle linee guida sulle strutture URL crawlable. Nello specifico, è stata chiarita la separazione delle parole negli URL, enfatizzando l'uso dei trattini rispetto agli underscore, per allineare la documentazione con la serie video \"The Non-Canonical Cabinet\".",
-      "url": "https://developers.google.com/search/updates",
-      "source": {
-        "id": "doc_watcher",
-        "name": "OsservatorioSEO Doc Watcher",
-        "authority": 10,
-        "type": "doc_change",
-        "fetcher": "rss",
-        "feed_url": null,
-        "target_url": null,
-        "selectors": null,
-        "category_hint": null,
-        "enabled": true
-      },
-      "category": "google_docs_change",
-      "tags": [
-        "url",
-        "struttura_url",
-        "crawlability",
-        "best_practice",
-        "trattini",
-        "underscore"
-      ],
-      "importance": 4,
-      "published_at": "2026-10-24T05:01:01.187468Z",
-      "fetched_at": "2026-10-24T05:01:01.187468Z",
-      "is_doc_change": true,
-      "doc_change": {
-        "page_id": "google_search_docs_changelog",
-        "previous_hash": "sha256:89bf3fc71f66076dd5fa5a19f81f616cd714ad2ea75e2b13728ecb9c95857735",
-        "current_hash": "sha256:0563ac5cc258e4ba107b7216182a5ec854e7c44ff2c1a55c9a7317b94041bf05",
-        "diff_url": null,
-        "lines_added": 9,
-        "lines_removed": 0
-      },
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0563ac5cc258e4ba107b7216182a5ec854e7c44ff2c1a55c9a7317b94041bf05",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "doc_2026-10-24_010",
-      "title_original": "Google robots.txt Specification",
-      "title_it": "⚠️ Aggiunta raccomandazione sull'uso del percent-encoding nei robots.txt",
-      "summary_it": "È stata aggiunta una frase che raccomanda l'uso del percent-encoding per i percorsi nelle regole `allow` e `disallow` del robots.txt. Sebbene Google gestisca correttamente i caratteri UTF-8 raw, il percent-encoding può facilitare l'elaborazione di questi file da parte di strumenti e servizi di terze parti.",
-      "url": "https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt",
-      "source": {
-        "id": "doc_watcher",
-        "name": "OsservatorioSEO Doc Watcher",
-        "authority": 10,
-        "type": "doc_change",
-        "fetcher": "rss",
-        "feed_url": null,
-        "target_url": null,
-        "selectors": null,
-        "category_hint": null,
-        "enabled": true
-      },
-      "category": "google_docs_change",
-      "tags": [
+        "http_status_code",
         "robots_txt",
-        "utf_8",
-        "percent_encoding",
-        "best_practice",
-        "compatibilita"
+        "url_handling",
+        "google_guideline"
       ],
-      "importance": 2,
-      "published_at": "2026-10-24T05:03:39.252671Z",
-      "fetched_at": "2026-10-24T05:03:39.252671Z",
-      "is_doc_change": true,
-      "doc_change": {
-        "page_id": "google_robots_txt",
-        "previous_hash": "sha256:4519577a5d0bc6941a8b0c2b30883c427a2daccb2bc218e0fc7980564ad337f8",
-        "current_hash": "sha256:07a14ee3a52e723c2924739db2d02b00944424d7d76ac37c2fe2342a928d5265",
-        "diff_url": null,
-        "lines_added": 1,
-        "lines_removed": 1
-      },
+      "importance": 3,
+      "published_at": "2026-10-24T12:00:00Z",
+      "fetched_at": "2026-10-25T06:02:30.906796Z",
+      "is_doc_change": false,
+      "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:07a14ee3a52e723c2924739db2d02b00944424d7d76ac37c2fe2342a928d5265",
+      "raw_hash": "sha256:21f2b4265b4df001",
       "deep_analysis": null,
       "also_in": []
     }
@@ -805,82 +64,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-10-24T05:01:01.187468Z",
-      "changed": true
+      "last_checked": "2026-10-25T06:01:20.122268Z",
+      "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-10-24T05:03:09.210539Z",
+      "last_checked": "2026-10-25T06:01:20.654149Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-10-24T05:03:09.645394Z",
+      "last_checked": "2026-10-25T06:01:22.161235Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-10-24T05:03:13.974060Z",
+      "last_checked": "2026-10-25T06:01:25.896295Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-10-24T05:03:34.971550Z",
+      "last_checked": "2026-10-25T06:01:46.809136Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-10-24T05:03:35.277142Z",
+      "last_checked": "2026-10-25T06:01:47.312420Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-10-24T05:03:36.551292Z",
+      "last_checked": "2026-10-25T06:01:49.052071Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-10-24T05:03:37.975987Z",
+      "last_checked": "2026-10-25T06:01:50.591240Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-10-24T05:03:38.987996Z",
+      "last_checked": "2026-10-25T06:01:52.390455Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-10-24T05:03:39.252671Z",
-      "changed": true
+      "last_checked": "2026-10-25T06:01:52.608860Z",
+      "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-10-24T05:03:43.538797Z",
+      "last_checked": "2026-10-25T06:01:53.911515Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-10-24T05:03:44.396448Z",
+      "last_checked": "2026-10-25T06:01:54.573155Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-10-24T05:03:46.007370Z",
+      "last_checked": "2026-10-25T06:01:56.021498Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-10-24T05:03:47.489985Z",
+      "last_checked": "2026-10-25T06:01:57.469498Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-10-24T05:03:48.746701Z",
+      "last_checked": "2026-10-25T06:01:59.554309Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-10-24T05:03:50.594362Z",
+      "last_checked": "2026-10-25T06:02:00.788697Z",
       "changed": false
     }
   ],
