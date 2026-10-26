@@ -286,6 +286,24 @@ def _build_tracker_trends_table(snapshot: Any) -> list[dict[str, Any]]:
     ]
 
 
+def _tracker_trends_warning(snapshot: Any) -> str | None:
+    """Messaggio da mostrare quando la tabella Google Trends (IT) e' vuota.
+
+    Senza questo, la sezione resta silenziosamente senza dati: D11 chiede
+    di riportare il vero ``status_message`` di DataForSEO (rate limit,
+    credito esaurito, keyword non valide, ...) invece di lasciare il
+    lettore senza spiegazione. ``metadata.warnings`` lo contiene gia'
+    (vedi TrackerCollector._fetch_trends), va solo estratto e mostrato.
+    """
+    if snapshot.trends_it.keywords and snapshot.trends_it.points:
+        return None
+    for w in snapshot.metadata.warnings:
+        if w.startswith("google_trends(geo=IT)"):
+            _, _, detail = w.partition(": ")
+            return detail or w
+    return "dati non disponibili per questa settimana"
+
+
 def _tracker_csv_rows(snapshot: Any) -> list[tuple[str, str, str, str]]:
     """Appiattisce lo snapshot in righe (scope, sezione, chiave, valore)."""
     rows: list[tuple[str, str, str, str]] = []
@@ -1413,6 +1431,9 @@ class Publisher:
             # D11: numeri reali in tabella HTML, non solo dentro il canvas
             # JS (invisibili a crawler e client senza JS).
             "trends_table": _build_tracker_trends_table(snapshot),
+            # D11: se la tabella e' vuota, mostriamo il vero errore di
+            # DataForSEO invece di una sezione silenziosamente vuota.
+            "trends_warning": _tracker_trends_warning(snapshot),
             # D11: partial mai incluso finora.
             "dataset_name": "Osservatorio SEO — AI Tracker",
             "dataset_description": page_description,

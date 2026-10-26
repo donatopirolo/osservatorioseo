@@ -128,6 +128,54 @@ def test_ssg_tracker_renders_real_trends_numbers_in_html(tmp_path: Path) -> None
     assert ">90<" in html  # valore Mondo di ChatGPT
 
 
+def test_ssg_tracker_shows_real_dataforseo_error_when_trends_empty(tmp_path: Path) -> None:
+    """Regressione D11: quando Google Trends IT e' vuoto, la pagina deve
+    mostrare il vero status_message di DataForSEO (da metadata.warnings),
+    non lasciare la sezione silenziosamente senza spiegazioni."""
+    data_dir = tmp_path / "data"
+    site_dir = tmp_path / "site"
+    _write_snapshot(
+        data_dir,
+        2026,
+        14,
+        datetime(2026, 4, 6, tzinfo=UTC),
+        trends_it={"keywords": [], "points": [], "averages": {}},
+        metadata={
+            "radar_calls": 0,
+            "warnings": ["google_trends(geo=IT): DataForSEO status 40202: Credits limit reached"],
+        },
+    )
+
+    pub = Publisher(data_dir=data_dir, archive_dir=data_dir / "archive")
+    pub._ssg_tracker(renderer=_renderer(), site_dir=site_dir, allow_indexing=True)
+
+    html = (site_dir / "tracker" / "index.html").read_text()
+    assert "Credits limit reached" in html
+
+
+def test_ssg_tracker_shows_generic_message_when_trends_empty_without_warning(
+    tmp_path: Path,
+) -> None:
+    """Se trends_it e' vuoto ma non c'e' un warning specifico (es. nessun
+    dato tornato dall'API senza errore), la pagina mostra comunque un
+    messaggio invece di una sezione vuota."""
+    data_dir = tmp_path / "data"
+    site_dir = tmp_path / "site"
+    _write_snapshot(
+        data_dir,
+        2026,
+        14,
+        datetime(2026, 4, 6, tzinfo=UTC),
+        trends_it={"keywords": [], "points": [], "averages": {}},
+    )
+
+    pub = Publisher(data_dir=data_dir, archive_dir=data_dir / "archive")
+    pub._ssg_tracker(renderer=_renderer(), site_dir=site_dir, allow_indexing=True)
+
+    html = (site_dir / "tracker" / "index.html").read_text()
+    assert "Dati Google Trends non disponibili" in html
+
+
 def test_ssg_tracker_includes_jsonld_dataset(tmp_path: Path) -> None:
     data_dir = tmp_path / "data"
     site_dir = tmp_path / "site"

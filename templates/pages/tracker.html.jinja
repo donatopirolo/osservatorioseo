@@ -78,6 +78,8 @@
       </tbody>
     </table>
     <p class="text-[10px] text-outline mt-2">Valori = interesse di ricerca relativo su Google (0-100). 100 = picco massimo nel periodo. Fonte: Google Trends via DataForSEO.</p>
+    {% else %}
+    <p class="text-sm text-outline">Dati Google Trends non disponibili per questa settimana{% if trends_warning %}: {{ trends_warning }}{% endif %}.</p>
     {% endif %}
   </div>
 
