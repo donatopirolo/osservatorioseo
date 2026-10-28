@@ -1,0 +1,987 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-28T06:01:36.836630Z",
+  "generated_at_local": "2026-10-28T07:01:36.836630+01:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-10-28-0701",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 0,
+    "sources_empty": 0,
+    "items_collected": 2472,
+    "items_after_dedup": 48,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.0582,
+    "summarize_attempted": 22,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "item_2026-10-28_016",
+    "item_2026-10-28_019",
+    "item_2026-10-28_009",
+    "item_2026-10-28_010",
+    "item_2026-10-28_002",
+    "item_2026-10-28_006",
+    "item_2026-10-28_014",
+    "item_2026-10-28_018",
+    "item_2026-10-28_022",
+    "item_2026-10-28_001"
+  ],
+  "categories": {
+    "ai_models": [
+      "item_2026-10-28_016",
+      "item_2026-10-28_019",
+      "item_2026-10-28_002",
+      "item_2026-10-28_014",
+      "item_2026-10-28_001",
+      "item_2026-10-28_013",
+      "item_2026-10-28_017"
+    ],
+    "google_updates": [
+      "item_2026-10-28_009",
+      "item_2026-10-28_010",
+      "item_2026-10-28_006",
+      "item_2026-10-28_018",
+      "item_2026-10-28_022"
+    ],
+    "industry_news": [
+      "item_2026-10-28_005",
+      "item_2026-10-28_012",
+      "item_2026-10-28_007",
+      "item_2026-10-28_008"
+    ],
+    "technical_seo": [
+      "item_2026-10-28_021"
+    ],
+    "content_eeat": [
+      "item_2026-10-28_011"
+    ],
+    "tools_platforms": [
+      "item_2026-10-28_015",
+      "item_2026-10-28_003",
+      "item_2026-10-28_004"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-10-28_020"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-10-28_001",
+      "title_original": "How Check Point accelerates vulnerability research with Daybreak",
+      "title_it": "Come Check Point accelera la ricerca sulle vulnerabilità con Daybreak di OpenAI",
+      "summary_it": "Check Point sta utilizzando Daybreak, un servizio di OpenAI, per ridurre i tempi di ricerca sulle vulnerabilità da ore a minuti. Daybreak fornisce accesso a modelli AI avanzati per analizzare vulnerabilità, percorsi di attacco e identificare lacune di sicurezza nel codice. Questo permette a Check Point di sviluppare più rapidamente protezioni per i propri clienti contro le nuove minacce informatiche.",
+      "url": "https://openai.com/index/check-point-daybreak",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "daybreak",
+        "cybersecurity",
+        "vulnerability_research"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T00:00:00Z",
+      "fetched_at": "2026-10-28T06:03:27.340457Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:06c846e107781469",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_002",
+      "title_original": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "title_it": "OpenAI estende la partnership con Oracle per integrare le sue applicazioni in ChatGPT",
+      "summary_it": "OpenAI e Oracle hanno ampliato la loro collaborazione per integrare le applicazioni e i dati Oracle in ChatGPT, oltre a potenziare nuovi prodotti e servizi Oracle con i modelli OpenAI. L'obiettivo è facilitare l'uso dell'IA nelle operazioni aziendali, nello sviluppo di applicazioni e nel rafforzamento della sicurezza. Questa espansione include lo sviluppo di Oracle AI Workspace per ChatGPT e nuove offerte Oracle basate su modelli OpenAI, come Oracle AI Security Mesh e Oracle App Composer.",
+      "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai_partnership",
+        "oracle_integration",
+        "chatgpt_enterprise",
+        "ai_application"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T07:00:00Z",
+      "fetched_at": "2026-10-28T06:03:28.905633Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:141589e7db065e55",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_003",
+      "title_original": "Poisoned SERPs: An update on Google ranking data in Semrush",
+      "title_it": "SERP inquinate: un aggiornamento sui dati di ranking di Google in Semrush",
+      "summary_it": "Semrush ha rilasciato un aggiornamento riguardo la qualità dei dati di ranking di Google forniti dalla piattaforma. L'articolo affronta il tema delle SERP che possono essere influenzate da fattori esterni o anomalie, portando a dati di ranking meno affidabili. Viene spiegato come Semrush stia lavorando per identificare e mitigare queste problematiche, assicurando maggiore accuratezza per gli utenti. L'obiettivo è mantenere l'integrità dei dati di visibilità e analisi competitiva offerti dal tool.",
+      "url": "https://www.semrush.com/blog/poisoned-serps",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "semrush",
+        "ranking_data",
+        "serp_accuracy",
+        "data_quality"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T08:17:00Z",
+      "fetched_at": "2026-10-28T06:03:30.723933Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:002992ace1005113",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_004",
+      "title_original": "7 free SEO tools to boost visibility & traffic",
+      "title_it": "7 strumenti SEO gratuiti per aumentare visibilità e traffico",
+      "summary_it": "L'articolo presenta sette strumenti SEO gratuiti essenziali per coprire le basi dell'ottimizzazione, dalla ricerca di parole chiave all'audit del sito. Vengono descritti tool come Semrush, Google Search Console e Google PageSpeed Insights, evidenziandone le funzionalità principali e i limiti delle versioni gratuite. L'obiettivo è aiutare i professionisti SEO a migliorare la visibilità e il traffico senza costi iniziali.",
+      "url": "https://www.semrush.com/blog/free-seo-tools",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "free_seo_tool",
+        "keyword_research",
+        "site_audit",
+        "visibility_tracking"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-27T09:05:00Z",
+      "fetched_at": "2026-10-28T06:03:32.371792Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:79ac15937de552f1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_005",
+      "title_original": "Google Ads To Update Child Sexual Abuse and Exploitation (CSAE) Policy",
+      "title_it": "Google Ads aggiorna la policy sulla sicurezza dei minori e lo sfruttamento sessuale infantile",
+      "summary_it": "Google Ads aggiornerà a gennaio la sua policy relativa all'abuso e allo sfruttamento sessuale minorile (CSAE), rinominandola \"Sicurezza dei minori\" e rendendola una policy autonoma. L'aggiornamento mira a migliorare le protezioni, la chiarezza e la trasparenza, ampliando lo spettro delle violazioni coperte. La nuova policy ribadisce il divieto di contenuti che danneggiano, sfruttano o mettono in pericolo i minori, includendo anche contenuti generati da AI.",
+      "url": "https://www.seroundtable.com/google-ads-csae-ads-policy-42375.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "policy_update",
+        "child_safety",
+        "ai_content"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T11:11:00Z",
+      "fetched_at": "2026-10-28T06:03:33.902293Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:aea14dc6047e5d37",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_006",
+      "title_original": "Google Responds To Concern Over Search Console Indexing Reports",
+      "title_it": "Google risponde alle preoccupazioni sui ritardi nei report di indicizzazione di Search Console",
+      "summary_it": "John Mueller di Google ha affrontato le preoccupazioni degli utenti riguardo ai ritardi nell'aggiornamento del report sull'indicizzazione delle pagine in Google Search Console. Ha suggerito che i professionisti SEO potrebbero dover essere meno ansiosi riguardo alla freschezza dei dati, specialmente per siti con numeri di indicizzazione stabili. Mueller ha spiegato che i dati di indicizzazione non cambiano rapidamente e che eventuali variazioni significative si riflettono prima nei report sulle prestazioni.",
+      "url": "https://www.searchenginejournal.com/google-responds-to-concern-over-search-console-indexing-reports/594494",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search_console",
+        "indexing_report",
+        "john_mueller",
+        "data_freshness"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T11:17:59Z",
+      "fetched_at": "2026-10-28T06:03:35.438583Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:56256b5b7145efe6",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_007",
+      "title_original": "Google Ads Tests Dotted Underlined Links In Sponsored Results",
+      "title_it": "Google Ads testa link sottolineati a puntini nei risultati sponsorizzati",
+      "summary_it": "Google sta sperimentando l'introduzione di link sottolineati a puntini nelle descrizioni degli annunci sponsorizzati. Questi link, se cliccati, reindirizzano l'utente alla URL di destinazione dell'annuncio, analogamente al click sul titolo. Questa implementazione è simile a precedenti test di hyperlink nelle descrizioni degli annunci, ma si distingue per il formato visivo della sottolineatura a puntini.",
+      "url": "https://www.seroundtable.com/google-ads-dotted-underlined-links-42290.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "serp_feature",
+        "ad_format",
+        "user_experience"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-27T11:21:00Z",
+      "fetched_at": "2026-10-28T06:03:36.826929Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:9131f123e2175466",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_008",
+      "title_original": "Advertisers Can't Figure Out If An Ad Is A Google Local Service Ad Or Not",
+      "title_it": "Gli inserzionisti faticano a distinguere gli annunci Local Service di Google",
+      "summary_it": "Gli esperti di Google Ads stanno riscontrando difficoltà nell'identificare se un'unità pubblicitaria locale specifica sia un annuncio Local Service (LSA) o un altro tipo di annuncio locale di Google. La confusione è emersa da una discussione su X (ex Twitter) dove gli specialisti non riuscivano a concordare sulla natura di un annuncio mostrato in uno screenshot. Questa incertezza evidenzia una mancanza di chiarezza da parte di Google nella distinzione visiva tra le diverse tipologie di annunci locali.",
+      "url": "https://www.seroundtable.com/google-local-service-ad-confusion-42328.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "local_seo",
+        "local_service_ad",
+        "paid_search"
+      ],
+      "importance": 2,
+      "published_at": "2026-10-27T11:31:00Z",
+      "fetched_at": "2026-10-28T06:03:38.335774Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d398b765b63cd848",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_009",
+      "title_original": "Google Downplays The Importance Of Fresh Index Reporting",
+      "title_it": "Google minimizza l'importanza della tempestività dei report sull'indicizzazione in Search Console",
+      "summary_it": "John Mueller di Google ha dichiarato che la freschezza dei dati nel report sull'indicizzazione di Google Search Console non è così cruciale come gli SEO tendono a pensare. Ha suggerito di non sprecare energie nel monitorare costantemente questi aggiornamenti, poiché l'indicizzazione non cambia rapidamente e le variazioni significative si riflettono prima nei report sulle performance. Google prioritizza aggiornamenti più rapidi solo dove ritiene siano effettivamente utili per gli utenti.",
+      "url": "https://www.seroundtable.com/google-downplays-importance-of-fresh-index-reporting-42381.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search_console",
+        "indexing",
+        "john_mueller",
+        "data_freshness"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T11:41:00Z",
+      "fetched_at": "2026-10-28T06:03:39.887825Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:379cb559e1a00163",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_010",
+      "title_original": "Unconfirmed Google Search Ranking Update: Volatility & Chatter Spike",
+      "title_it": "Picco di volatilità e discussioni: possibile aggiornamento non confermato del ranking di Google",
+      "summary_it": "Si registra un nuovo aumento della volatilità nei ranking di ricerca di Google, accompagnato da un incremento delle discussioni nella comunità SEO. Questo fenomeno, non ancora confermato ufficialmente da Google, segue una serie di fluttuazioni osservate nelle scorse settimane. Gli strumenti di monitoraggio di terze parti mostrano un'elevata attività, indicando un potenziale aggiornamento algoritmico.",
+      "url": "https://www.seroundtable.com/google-search-ranking-volatility-42379.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_update",
+        "ranking_volatility",
+        "unconfirmed_update",
+        "seo_chatter"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T11:51:00Z",
+      "fetched_at": "2026-10-28T06:03:41.232397Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ceae6e6491745daa",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_011",
+      "title_original": "Flat Traffic, No Budget: What Ziff Davis’ Jonathan Berthold Tests First",
+      "title_it": "Traffico Stabile e Budget Limitato: Le Priorità di Test di Jonathan Berthold di Ziff Davis",
+      "summary_it": "Jonathan Berthold di Ziff Davis suggerisce di iniziare con un'analisi completa del sito quando il traffico è piatto e il budget è limitato. L'obiettivo è identificare le cause del ristagno e concentrarsi su opportunità a fondo funnel. Egli propone di ottimizzare pagine esistenti per intenti commerciali o creare nuovi contenuti per colmare lacune tematiche, data la crescente influenza degli LLM sul traffico top-of-funnel.",
+      "url": "https://www.searchenginejournal.com/flat-traffic-no-budget-what-ziff-davis-jonathan-berthold-tests-first/593483",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "seo_strategy",
+        "budget_optimization",
+        "conversion_rate_optimization",
+        "site_analysi"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T12:00:41Z",
+      "fetched_at": "2026-10-28T06:03:42.705362Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b4d96ffd381e1ca0",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_012",
+      "title_original": "How I Decide Where The Next $100,000 Of Marketing Budget Should Go",
+      "title_it": "Come allocare un budget di marketing aggiuntivo di 100.000 dollari",
+      "summary_it": "L'articolo descrive un processo decisionale per l'allocazione di un budget di marketing aggiuntivo, focalizzandosi sull'identificazione del collo di bottiglia principale nella canalizzazione di vendita. L'autore propone di analizzare l'intero funnel, inclusa la fase post-vendita, per determinare dove l'investimento può generare il maggiore impatto sulla crescita. Viene presentato un caso studio ipotetico per illustrare l'applicazione di questo approccio, evidenziando come spesso le aree che limitano la crescita non siano quelle che ricevono automaticamente più fondi.",
+      "url": "https://www.searchenginejournal.com/how-i-decide-where-the-next-100000-of-marketing-budget-should-go/593211",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "marketing_budget",
+        "funnel_analysi",
+        "growth_strategy",
+        "resource_allocation"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T14:00:18Z",
+      "fetched_at": "2026-10-28T06:03:44.373351Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:86a00a1d9a4ab903",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_013",
+      "title_original": "ChatGPT Data: 1 In 5 Consumer Messages Now Seek Information",
+      "title_it": "I dati di ChatGPT rivelano che una parte significativa dei messaggi degli utenti è ora dedicata alla ricerca di informazioni",
+      "summary_it": "Secondo i dati di OpenAI Signals, la ricerca di informazioni ha rappresentato il 20,7% dei messaggi su ChatGPT ad agosto, superando quasi la scrittura (20,6%). Questo trend indica un aumento costante dell'uso di ChatGPT per reperire fatti, chiedere informazioni su prodotti e servizi, e ottenere aiuto pratico. Sebbene la scrittura sia tornata in testa a settembre, la categoria della ricerca di informazioni ha mostrato una crescita significativa dal luglio 2024. I dati evidenziano anche che i messaggi legati al lavoro costituiscono una parte consistente dell'utilizzo complessivo, con una crescente percentuale dedicata alla ricerca di informazioni in ambito professionale.",
+      "url": "https://www.searchenginejournal.com/chatgpt-signals-consumer-messages-information-seeking/594527",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt_usage",
+        "openai_signal",
+        "information_seeking",
+        "ai_trend"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T14:13:30Z",
+      "fetched_at": "2026-10-28T06:03:46.111183Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:18cfe7f9ae6acbd7",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_014",
+      "title_original": "Retell uses OpenAI models to help power 100M monthly calls",
+      "title_it": "Retell AI utilizza i modelli OpenAI per gestire oltre 100 milioni di chiamate mensili",
+      "summary_it": "Retell AI, una piattaforma di intelligenza artificiale vocale per contact center, ha visto il suo volume di chiamate mensili crescere da 30 a oltre 100 milioni. La piattaforma impiega i modelli OpenAI per generare risposte nell'80% delle chiamate, raggiungendo tassi di risoluzione superiori all'80%. Retell utilizza anche modelli OpenAI per lo sviluppo e il testing, evidenziando le prestazioni di GPT-6 Astra nei benchmark interni per il rispetto delle istruzioni.",
+      "url": "https://openai.com/index/retell-ai",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai_model",
+        "voice_ai",
+        "contact_center",
+        "gpt_6_astra"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T15:00:00Z",
+      "fetched_at": "2026-10-28T06:03:47.721151Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:de910d50b5930e21",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_015",
+      "title_original": "Shopify Moves AI Agent Knowledge Base Into Merchant Admin",
+      "title_it": "Shopify integra la Knowledge Base per agenti AI nell'Admin dei commercianti",
+      "summary_it": "Shopify ha sostituito la sua app Knowledge Base standalone con una funzionalità integrata nell'Admin dei commercianti, dedicata agli agenti AI per rispondere alle domande dei clienti. Questa Knowledge Base gestisce informazioni non relative ai prodotti, come politiche di reso o tempi di spedizione, e sarà l'unica opzione disponibile dopo il 15 gennaio 2027. Le informazioni possono essere generate tramite scansioni dello storefront, impostazioni dell'admin o input manuale, e sono pubblicamente accessibili tramite lo Storefront MCP per app AI.",
+      "url": "https://www.searchenginejournal.com/shopify-ai-agent-knowledge-base-admin/594551",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "shopify",
+        "ai_agent",
+        "ecommerce_seo",
+        "knowledge_base"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T15:39:22Z",
+      "fetched_at": "2026-10-28T06:03:49.616963Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:1eafee8aa9ed2e23",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_016",
+      "title_original": "Genie 4: A new generation of world simulation",
+      "title_it": "Genie 4: Una nuova generazione di simulazione di mondi",
+      "summary_it": "Google DeepMind ha annunciato Genie 4, un nuovo modello AI progettato per generare e permettere l'esplorazione di mondi virtuali interattivi. Questa evoluzione mira a migliorare la capacità di creare ambienti simulati complessi. Il modello si inserisce nel portfolio di DeepMind che include sistemi come Gemini e Veo, focalizzandosi sulla simulazione avanzata.",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "source": {
+        "id": "google_deepmind_blog",
+        "name": "Google DeepMind Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://deepmind.google/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_deepmind",
+        "ai_simulation",
+        "virtual_world",
+        "genie_4"
+      ],
+      "importance": 5,
+      "published_at": "2026-10-27T16:01:38Z",
+      "fetched_at": "2026-10-28T06:03:51.010676Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2012ca5e1b2d56e8",
+      "deep_analysis": {
+        "detailed_description": "Google DeepMind ha rilasciato Genie 4, un modello di simulazione in tempo reale che punta a generare mondi virtuali interattivi con un livello di realismo dichiarato come senza precedenti. Il modello si colloca nella linea evolutiva dei sistemi di world simulation, un filone di ricerca che mira a creare ambienti digitali complessi e navigabili attraverso input testuali o visivi.\n\nGenie 4 rappresenta il quarto step di una famiglia di modelli già presentata da DeepMind negli anni precedenti. La prima versione, Genie 1, aveva dimostrato capacità di generare ambienti 2D interattivi a partire da singole immagini. Le iterazioni successive hanno progressivamente aumentato la complessità degli scenari e la fluidità dell'interazione. Questa release promette un salto qualitativo sul fronte del realismo visivo e della coerenza temporale delle simulazioni.\n\nIl modello opera in tempo reale, caratteristica cruciale per applicazioni che richiedono feedback immediato. DeepMind sottolinea come Genie 4 sia in grado di mantenere coerenza fisica e visiva anche in sessioni di esplorazione prolungate, riducendo artefatti e discontinuità che affliggevano le generazioni precedenti. La capacità di simulare ambienti complessi apre scenari in ambiti come training di agenti AI, prototipazione rapida di contenuti digitali e testing di scenari virtuali.\n\nL'annuncio si inserisce in un contesto competitivo dove altri player (OpenAI con Sora, Runway, Stability AI) stanno spingendo su modelli generativi video e di simulazione. DeepMind posiziona Genie 4 come complementare al portfolio esistente: Gemini per il linguaggio e il ragionamento multimodale, Veo per la generazione video, Genie per la simulazione interattiva di mondi.\n\nPer il settore SEO, l'impatto diretto è limitato ma non nullo. La capacità di generare ambienti virtuali realistici in tempo reale potrebbe accelerare la produzione di contenuti immersivi (video 360°, preview interattive di prodotti, demo virtuali) che stanno guadagnando spazio nelle SERP, soprattutto in verticali come real estate, turismo, e-commerce di fascia alta. Google ha già segnalato interesse per contenuti immersivi attraverso feature come View in 3D e integrazioni AR nei risultati di ricerca.\n\nLa tecnologia potrebbe inoltre alimentare la creazione di contenuti sintetici su larga scala, con implicazioni sulla qualità percepita e sulla necessità di segnalare chiaramente la natura generata del materiale. Le linee guida di Google su contenuti AI-generated richiedono trasparenza quando il contenuto è prodotto in modo automatizzato, aspetto che diventa critico quando la qualità visiva rende difficile distinguere simulazione da ripresa reale.",
+        "implications": [
+          "La produzione di contenuti immersivi (video 360°, preview interattive) potrebbe accelerare, aumentando la competizione su query dove Google privilegia risultati rich media. Chi opera in verticali visual-intensive (real estate, travel, e-commerce) potrebbe trovarsi a dover integrare formati più sofisticati per mantenere visibilità.",
+          "La generazione di contenuti sintetici su scala industriale rende più urgente implementare markup e disclosure chiari sulla natura AI-generated del materiale, per rispettare le linee guida di trasparenza di Google ed evitare penalizzazioni future.",
+          "Strumenti di simulazione in tempo reale potrebbero ridurre drasticamente i costi di produzione di asset visivi per testing A/B di landing page, hero image, product demo, spostando il collo di bottiglia dalla produzione all'analisi delle performance.",
+          "La capacità di creare ambienti virtuali coerenti potrebbe alimentare nuove tipologie di contenuto long-form interattivo, con potenziale impatto su metriche di engagement (tempo sulla pagina, scroll depth) che Google considera segnali di qualità indiretti."
+        ],
+        "examples": [
+          "Un e-commerce di arredamento potrebbe usare Genie 4 per generare configurazioni di ambienti domestici personalizzate in base alle preferenze dell'utente, offrendo preview interattive dei prodotti in contesti realistici. Questo tipo di contenuto immersivo può aumentare il tempo di permanenza e ridurre il bounce rate, segnali positivi per il ranking.",
+          "Evitare di pubblicare gallerie di immagini o video generati da Genie 4 senza disclosure esplicita sulla loro natura sintetica. Google ha chiarito che contenuti AI-generated non sono penalizzati di per sé, ma la mancanza di trasparenza quando rilevante può configurare pratica ingannevole, con rischi di manual action.",
+          "Un portale di viaggi potrebbe testare rapidamente varianti di hero video per destinazioni turistiche, generando simulazioni di location in diverse condizioni meteo o orari, per identificare quale versione massimizza il CTR organico senza investire in riprese multiple sul campo."
+        ],
+        "testing_steps": [
+          "Identifica pagine ad alto valore nel tuo sito dove contenuti immersivi (video 360°, preview interattive) potrebbero aumentare engagement e conversioni.",
+          "Valuta la fattibilità tecnica di integrare contenuti generati da modelli di simulazione, verificando compatibilità con Core Web Vitals (peso file, rendering client-side).",
+          "Implementa markup Schema.org appropriato (VideoObject, 3DModel) e aggiungi disclosure chiara sulla natura AI-generated del contenuto dove applicabile.",
+          "Configura eventi GA4 per tracciare interazioni con contenuti immersivi (play, pause, rotazione 3D) e correla con metriche di conversione.",
+          "Monitora in GSC l'andamento di impression e CTR per pagine con contenuti immersivi vs. pagine tradizionali nello stesso cluster tematico.",
+          "Testa varianti A/B di landing page con e senza contenuti generati, misurando impatto su bounce rate, tempo sulla pagina e conversioni prima di scalare."
+        ],
+        "faqs": [
+          {
+            "question": "Genie 4 può generare contenuti che Google considera spam o low-quality?",
+            "answer": "Dipende dall'uso. Google non penalizza contenuti AI-generated per definizione, ma valuta se aggiungono valore per l'utente. Simulazioni generiche senza contesto editoriale o disclosure, pubblicate in massa per targeting keyword, rischiano di essere classificate come spam. Contenuti immersivi che rispondono a intent specifici (es. preview prodotto, virtual tour) e sono chiaramente etichettati hanno probabilità molto più basse di problemi."
+          },
+          {
+            "question": "I contenuti immersivi generati da Genie 4 possono influenzare il ranking direttamente?",
+            "answer": "Non esiste un ranking boost diretto per contenuti immersivi. L'impatto è indiretto: se video 360° o simulazioni interattive aumentano engagement (tempo sulla pagina, riduzione bounce rate) e soddisfano meglio l'intent di ricerca rispetto a competitor con solo testo/immagini statiche, Google può interpretarlo come segnale di qualità superiore. L'effetto varia molto per verticale e query."
+          },
+          {
+            "question": "È necessario segnalare a Google che un video o ambiente virtuale è generato da AI?",
+            "answer": "Le linee guida attuali richiedono trasparenza quando la natura sintetica del contenuto è rilevante per l'utente. Per preview di prodotti o scenari illustrativi, una nota discreta è sufficiente. Per contenuti che potrebbero essere scambiati per riprese reali (es. testimonianze, documentazione di eventi) la disclosure diventa obbligatoria per evitare pratiche ingannevoli. In caso di dubbio, meglio essere espliciti."
+          },
+          {
+            "question": "Genie 4 può sostituire fotografi e videomaker per contenuti SEO?",
+            "answer": "Per asset generici (ambientazioni, scenari illustrativi, mockup) la sostituzione è tecnicamente possibile, con risparmio di costi e tempi. Per contenuti che richiedono autenticità documentale (foto prodotto reale, testimonianze clienti, reportage) la sostituzione è sconsigliata: Google valorizza E-E-A-T e gli utenti percepiscono la differenza. L'uso ottimale è ibrido: simulazioni per testing rapido, materiale reale per asset definitivi ad alto impatto."
+          }
+        ],
+        "editorial_commentary": "Genie 4 è tecnologia impressionante sul piano ingegneristico, ma per chi fa SEO l'entusiasmo va calibrato. La capacità di generare mondi virtuali realistici in tempo reale non risolve il problema fondamentale: creare contenuti che rispondano meglio di competitor a un intent di ricerca specifico. La simulazione è un mezzo, non un fine.\n\nIl rischio concreto è che la facilità di produzione spinga a saturare siti con contenuti immersivi generici, nella convinzione che \"più rich media = più ranking\". Non funziona così. Google valuta se il formato aggiunge valore per quella specifica query. Un video 360° generato di una camera d'albergo ha senso; lo stesso video per una pagina di categoria generica è rumore.\n\nChi opera in verticali dove l'esperienza visiva è differenziante (real estate, travel, luxury e-commerce) dovrebbe testare, ma con metodo: A/B test rigorosi, monitoraggio Core Web Vitals, disclosure trasparente. Per tutti gli altri, meglio concentrarsi su fondamentali: intent matching, autorevolezza, esperienza utente. La tecnologia abilita, non sostituisce la strategia.",
+        "premium_model_used": "anthropic/claude-sonnet-4.5",
+        "cost_eur": 0.04026012000000001
+      },
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_017",
+      "title_original": "Can we trust LLMs to judge whether a research idea is novel?",
+      "title_it": "Possiamo fidarci dei LLM per valutare la novità di un'idea di ricerca?",
+      "summary_it": "Uno studio di Allen AI, intitolato \"Old Ideas, Novel Problems\", indaga l'affidabilità dei Large Language Models (LLM) nel giudicare la novità di idee di ricerca scientifica. I risultati del benchmark indicano che la valutazione della novità tramite LLM è inaffidabile, con piccole modifiche al setup di valutazione che producono giudizi drasticamente diversi. Anche l'integrazione di sistemi di retrieval o ragionamento aggiuntivo non migliora in modo consistente l'accuratezza delle valutazioni.",
+      "url": "https://huggingface.co/blog/allenai/novelty-bench",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "llm_evaluation",
+        "research_novelty",
+        "ai_reliability",
+        "scientific_discovery"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T16:12:42Z",
+      "fetched_at": "2026-10-28T06:03:53.034378Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6c034ca1cac10b37",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_018",
+      "title_original": "Google Privacy Update Lets Connected Apps Shape AI Mode Ads",
+      "title_it": "Google aggiorna la privacy policy: le app connesse influenzano gli annunci in modalità AI",
+      "summary_it": "Google ha aggiornato la sua privacy policy, consentendo ai contenuti di Gmail, Google Foto e Google Drive di influenzare gli annunci personalizzati, a condizione che gli utenti connettano queste app ad altri servizi Google e optino per Personal Intelligence in Gemini o AI Mode in Search. Questa modifica, in vigore dal 16 ottobre, introduce la possibilità che le informazioni condivise per l'assistenza personalizzata possano anche modellare gli annunci visualizzati. Google sta testando annunci in AI Mode per gli utenti che hanno attivato Personal Intelligence, un'opzione che permette all'AI di attingere contesto dalle app connesse per personalizzare le risposte e, ora, anche la pubblicità.",
+      "url": "https://www.searchenginejournal.com/google-privacy-policy-connected-apps-ai-mode-ads/594546",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_privacy",
+        "ai_mode_ad",
+        "personal_intelligence",
+        "google_ads_policy"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T17:11:52Z",
+      "fetched_at": "2026-10-28T06:03:54.654158Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:570fe05774ad244f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_019",
+      "title_original": "Build specialized multimodal models with LFM3",
+      "title_it": "Costruire modelli multimodali specializzati con LFM3",
+      "summary_it": "Hugging Face ha introdotto LFM3, una nuova generazione di Liquid Foundation Models (LFMs) progettati per la specializzazione. Questi modelli multimodali (testo, visione, audio, omni, decisione) operano con circa 2 miliardi di parametri e sono ottimizzati per il fine-tuning su singola GPU e il deployment su dispositivi edge. LFM3 offre maggiore capacità per parametro rispetto alla generazione precedente, grazie a una nuova architettura tri-ibrida e un'efficienza migliorata.",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "multimodal_model",
+        "foundation_model",
+        "edge_ai",
+        "hugging_face"
+      ],
+      "importance": 4,
+      "published_at": "2026-10-27T17:16:52Z",
+      "fetched_at": "2026-10-28T06:03:56.131396Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:abd68c4e1ea3b13e",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_020",
+      "title_original": "Why We Should Fear The Shadow Web We’re Building For AI",
+      "title_it": "Perché dovremmo temere la 'Shadow Web' che stiamo costruendo per l'IA",
+      "summary_it": "L'articolo solleva preoccupazioni riguardo la creazione di contenuti specifici per gli agenti IA, separati dai siti web pubblici, per influenzare i sistemi di intelligenza artificiale. Si evidenzia il rischio di replicare pratiche manipolative già viste in passato nella SEO, come il cloaking e il keyword stuffing. Viene sottolineato che i motori di ricerca hanno sempre contrastato le tecniche che minano la qualità dei risultati, suggerendo che anche i contenuti 'AI-first' non trasparenti potrebbero essere penalizzati. La questione centrale è la fiducia che un provider di ricerca AI riporrebbe in informazioni deliberatamente separate dal sito ufficiale di un brand.",
+      "url": "https://www.searchenginejournal.com/why-we-should-fear-the-shadow-web-were-building-for-ai/593930",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_seo",
+        "content_strategy",
+        "spam_prevention",
+        "search_quality"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T19:00:25Z",
+      "fetched_at": "2026-10-28T06:03:57.903143Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:bab05c7b2a5ec61d",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_021",
+      "title_original": "Googlebot Must Follow Redirects From Homepage To Favicon, Updated Doc Say",
+      "title_it": "Googlebot deve seguire i redirect dalla homepage alla favicon, secondo la documentazione aggiornata",
+      "summary_it": "Google ha aggiornato la sua documentazione per specificare che Googlebot deve seguire i redirect che dalla homepage portano alla favicon. Questa indicazione chiarisce un aspetto tecnico relativo al crawling e all'indicizzazione delle favicon. È importante assicurarsi che i redirect siano configurati correttamente per garantire che Googlebot possa accedere e visualizzare la favicon associata al sito.",
+      "url": "https://www.seroundtable.com/googlebot-redirects-from-homepage-to-favicon-42396.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "googlebot",
+        "redirect",
+        "favicon",
+        "crawling"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T19:05:00Z",
+      "fetched_at": "2026-10-28T06:03:59.208603Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:fe961321c9242f38",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-10-28_022",
+      "title_original": "Google: Disabled Discover Clicks Were A Bug In An Experiment",
+      "title_it": "Google: I click disabilitati in Discover erano un bug in un esperimento",
+      "summary_it": "Google ha confermato che la disabilitazione dei click sulle fonti in Discover, notata da alcuni utenti, era dovuta a un bug all'interno di un esperimento. Rajan Patel di Google ha chiarito che non si trattava di una modifica intenzionale alla funzionalità. L'azienda ha risolto il problema, ripristinando la normale operatività dei link. Questo episodio evidenzia l'impatto degli esperimenti interni di Google sull'esperienza utente e sulla visibilità dei contenuti.",
+      "url": "https://www.searchenginejournal.com/rajan-patel-disabled-discover-source-clicks-bug/594579",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_discover",
+        "google_bug",
+        "user_experience",
+        "content_visibility"
+      ],
+      "importance": 3,
+      "published_at": "2026-10-27T20:06:27Z",
+      "fetched_at": "2026-10-28T06:04:00.510048Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:916ea1899b188e91",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-10-28T06:01:38.647309Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-10-28T06:01:39.969071Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-10-28T06:01:40.689667Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines",
+      "last_checked": "2026-10-28T06:01:44.884025Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-10-28T06:02:05.954152Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-10-28T06:02:06.474053Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-10-28T06:02:07.295165Z",
+      "changed": false
+    },
+    {
+      "page_id": "structured_data_docs",
+      "last_checked": "2026-10-28T06:02:09.524748Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-10-28T06:02:09.853850Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-10-28T06:02:10.073863Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-10-28T06:02:11.850318Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-10-28T06:02:13.368178Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-10-28T06:02:15.356769Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-10-28T06:02:16.787741Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-10-28T06:02:17.722959Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-10-28T06:02:19.223531Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": []
+}
