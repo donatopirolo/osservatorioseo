@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US10002201B2: Accesso diretto a siti tramite query in linguaggio naturale — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema dell&#39;inserimento di URL formali nella barra degli indirizzi del browser. Propone di consentire agli utenti di digitare termini in linguaggio naturale: se il motore di ricerca determina con alta confidenza che un singolo risultato è molto rilevante per quei termini, i" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us10002201b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US10002201B2: Accesso diretto a siti tramite query in linguaggio naturale — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema dell&#39;inserimento di URL formali nella barra degli indirizzi del browser. Propone di consentire agli utenti di digitare termini in linguaggio naturale: se il motore di ricerca determina con alta confidenza che un singolo risultato è molto rilevante per quei termini, i" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us10002201b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US10002201B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us10002201b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US10002201B2: Accesso diretto a siti tramite query in linguaggio naturale",
+  "description": "Il brevetto affronta il problema dell\u0027inserimento di URL formali nella barra degli indirizzi del browser. Propone di consentire agli utenti di digitare termini in linguaggio naturale: se il motore di ricerca determina con alta confidenza che un singolo risultato \u00e8 molto rilevante per quei termini, il browser accede direttamente a quel documento invece di mostrare una pagina di risultati.",
+  "articleBody": "Il brevetto affronta il problema dell\u0027inserimento di URL formali nella barra degli indirizzi del browser. Propone di consentire agli utenti di digitare termini in linguaggio naturale: se il motore di ricerca determina con alta confidenza che un singolo risultato \u00e8 molto rilevante per quei termini, il browser accede direttamente a quel documento invece di mostrare una pagina di risultati.\n\nLa rivendicazione indipendente 1 copre un metodo che determina se, tra un insieme di risultati di ricerca identificati come almeno potenzialmente rilevanti da un motore di ricerca in risposta a una query, un singolo risultato \u00e8 classificato come molto rilevante (very relevant) sulla base di almeno un parametro che determina la rilevanza. Quando questa condizione \u00e8 soddisfatta, il metodo prevede di restituire automaticamente la pagina web referenziata da quel singolo risultato, anzich\u00e9 fornire una pagina di risultati di ricerca. Il risultato \u00e8 classificato come molto rilevante sulla base di un relevance score relativo agli score degli altri risultati in una lista ordinata. La pagina viene fornita direttamente all\u0027utente dopo che il client ha visualizzato la pagina per sottoporre la query al motore.\n\nLe rivendicazioni dipendenti 2, 3 e 4 specificano che il parametro per classificare il risultato come molto rilevante pu\u00f2 essere un observed historical click through rate associato al risultato. La rivendicazione 3 definisce questo tasso come un rapporto tra il numero totale di volte che gli utenti hanno selezionato il singolo risultato e il numero totale di volte che hanno selezionato un secondo risultato diverso. La rivendicazione 4 lo definisce come rapporto tra le selezioni del singolo risultato in risposta a una query e le selezioni di tutti gli altri risultati per quella query.\n\nLe rivendicazioni 6-10 e 11-14 replicano la stessa struttura per un sistema e per un supporto leggibile da computer, rispettivamente. La rivendicazione 10 specifica che le istruzioni causano la visualizzazione della pagina web senza input aggiuntivo dall\u0027utente dopo che la query \u00e8 stata sottoposta al motore.\n\nLa descrizione contempla diversi parametri per determinare se un documento \u00e8 very relevant. Il componente 401 considera la posizione del documento nella lista ordinata dei risultati. Il componente 402 si basa sul click through rate storico osservato: la descrizione propone di calcolare un rapporto tra il documento D e ogni altro documento E come numero totale di selezioni di D diviso per il numero totale di selezioni di E (formula 1). In un\u0027implementazione alternativa, il rapporto potrebbe essere definito come numero di selezioni di D per una query Q diviso per il numero di selezioni di qualsiasi documento per Q. Il componente 403 confronta il relevance score di D con gli score degli altri documenti. Il componente 404 verifica se il documento \u00e8 pornografico.\n\nLa descrizione contempla che il decision component 410 possa classificare un documento come very relevant quando: (1) \u00e8 primo nella lista ordinata, (2) ha un click through rate elevato oltre una soglia predefinita, (3) il suo relevance score \u00e8 significativamente maggiore del secondo classificato, e (4) non \u00e8 classificato come pornografico. La descrizione suggerisce possibili tradeoff: con un relevance score alto, potrebbe bastare un click through rate moderato; con uno score basso, servirebbe un click through rate molto pi\u00f9 alto.\n\nLa descrizione contempla anche parametri aggiuntivi non coperti dalle rivendicazioni: il rapporto storico tra selezioni di D dopo una query e il numero di volte che la query \u00e8 stata sottoposta, oppure il numero di link che puntano a D in cui il testo dell\u0027anchor corrisponde alla query, confrontato con analoghi conteggi per altri documenti.\n\nPer la SEO, questo brevetto potrebbe suggerire che query navigazionali molto chiare (es. nomi di brand) potrebbero attivare un accesso diretto al sito, bypassando la SERP tradizionale. Il click through rate storico per una query specifica potrebbe essere un segnale determinante: se un sito domina costantemente i clic per una query, potrebbe essere candidato all\u0027accesso diretto. Tuttavia, la descrizione parla di \"browse by name\" e di termini in linguaggio naturale inseriti nella barra degli indirizzi, non necessariamente di query digitate nella search box standard. Il contesto d\u0027uso potrebbe quindi essere limitato a scenari specifici di navigazione assistita.",
+  "wordCount": 677,
+  "datePublished": "2026-10-29T09:56:10.498764+00:00",
+  "dateModified": "2026-10-29T09:56:10.498764+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us10002201b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Named URL entry",
+    "identifier": "US10002201B2",
+    "url": "https://patents.google.com/patent/US10002201B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US10002201B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US10002201B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Accesso diretto a siti tramite query in linguaggio naturale</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Named URL entry</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema dell&#39;inserimento di URL formali nella barra degli indirizzi del browser. Propone di consentire agli utenti di digitare termini in linguaggio naturale: se il motore di ricerca determina con alta confidenza che un singolo risultato è molto rilevante per quei termini, il browser accede direttamente a quel documento invece di mostrare una pagina di risultati.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, navigazione tramite browser</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">19 Giugno 2018</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2003-06-10</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Comprensione e riscrittura delle query</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">14</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che determina se, tra un insieme di risultati di ricerca identificati come almeno potenzialmente rilevanti da un motore di ricerca in risposta a una query, un singolo risultato è classificato come molto rilevante (very relevant) sulla base di almeno un parametro che determina la rilevanza. Quando questa condizione è soddisfatta, il metodo prevede di restituire automaticamente la pagina web referenziata da quel singolo risultato, anziché fornire una pagina di risultati di ricerca. Il risultato è classificato come molto rilevante sulla base di un relevance score relativo agli score degli altri risultati in una lista ordinata. La pagina viene fornita direttamente all&#39;utente dopo che il client ha visualizzato la pagina per sottoporre la query al motore.</p>
+      <p>Le rivendicazioni dipendenti 2, 3 e 4 specificano che il parametro per classificare il risultato come molto rilevante può essere un observed historical click through rate associato al risultato. La rivendicazione 3 definisce questo tasso come un rapporto tra il numero totale di volte che gli utenti hanno selezionato il singolo risultato e il numero totale di volte che hanno selezionato un secondo risultato diverso. La rivendicazione 4 lo definisce come rapporto tra le selezioni del singolo risultato in risposta a una query e le selezioni di tutti gli altri risultati per quella query.</p>
+      <p>Le rivendicazioni 6-10 e 11-14 replicano la stessa struttura per un sistema e per un supporto leggibile da computer, rispettivamente. La rivendicazione 10 specifica che le istruzioni causano la visualizzazione della pagina web senza input aggiuntivo dall&#39;utente dopo che la query è stata sottoposta al motore.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi parametri per determinare se un documento è very relevant. Il componente 401 considera la posizione del documento nella lista ordinata dei risultati. Il componente 402 si basa sul click through rate storico osservato: la descrizione propone di calcolare un rapporto tra il documento D e ogni altro documento E come numero totale di selezioni di D diviso per il numero totale di selezioni di E (formula 1). In un&#39;implementazione alternativa, il rapporto potrebbe essere definito come numero di selezioni di D per una query Q diviso per il numero di selezioni di qualsiasi documento per Q. Il componente 403 confronta il relevance score di D con gli score degli altri documenti. Il componente 404 verifica se il documento è pornografico.</p>
+      <p>La descrizione contempla che il decision component 410 possa classificare un documento come very relevant quando: (1) è primo nella lista ordinata, (2) ha un click through rate elevato oltre una soglia predefinita, (3) il suo relevance score è significativamente maggiore del secondo classificato, e (4) non è classificato come pornografico. La descrizione suggerisce possibili tradeoff: con un relevance score alto, potrebbe bastare un click through rate moderato; con uno score basso, servirebbe un click through rate molto più alto.</p>
+      <p>La descrizione contempla anche parametri aggiuntivi non coperti dalle rivendicazioni: il rapporto storico tra selezioni di D dopo una query e il numero di volte che la query è stata sottoposta, oppure il numero di link che puntano a D in cui il testo dell&#39;anchor corrisponde alla query, confrontato con analoghi conteggi per altri documenti.</p>
+      <p>Per la SEO, questo brevetto potrebbe suggerire che query navigazionali molto chiare (es. nomi di brand) potrebbero attivare un accesso diretto al sito, bypassando la SERP tradizionale. Il click through rate storico per una query specifica potrebbe essere un segnale determinante: se un sito domina costantemente i clic per una query, potrebbe essere candidato all&#39;accesso diretto. Tuttavia, la descrizione parla di &#34;browse by name&#34; e di termini in linguaggio naturale inseriti nella barra degli indirizzi, non necessariamente di query digitate nella search box standard. Il contesto d&#39;uso potrebbe quindi essere limitato a scenari specifici di navigazione assistita.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related) dal 2018, quindi non è più in vigore e non rappresenta una protezione attiva per Google.</li>
+      <li>La descrizione si riferisce esplicitamente a termini inseriti nella barra degli indirizzi del browser (address field), non alla search box standard di Google Search. L&#39;applicazione potrebbe essere limitata a funzionalità di browser o toolbar, non alla SERP principale.</li>
+      <li>Il brevetto non dimostra che Google utilizzi attualmente questi parametri per determinare l&#39;accesso diretto a un sito, né che il click through rate storico influenzi il ranking nella SERP tradizionale.</li>
+      <li>La data di priorità è il 2003 e fa parte di una famiglia con continuation (US9256694B2). I metodi descritti potrebbero essere superati da tecnologie più recenti non documentate in questo brevetto.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Consolidare la dominanza su query navigazionali di brand resta prioritario: un sito che è la destinazione naturale per una query specifica dovrebbe ottimizzare per quella query e mantenere coerenza tra nome del brand, contenuti e aspettative degli utenti.</li>
+      <li class="pl-2">Monitorare il click through rate organico per query chiave può fornire indicazioni sulla chiarezza dell&#39;intento di ricerca e sulla corrispondenza tra snippet e aspettative: un CTR molto alto su una query specifica segnala forte allineamento.</li>
+      <li class="pl-2">Per brand o siti con nomi comuni o ambigui, investire in segnali di disambiguazione (structured data, coerenza del brand, presenza in Knowledge Graph) può aiutare i motori a identificare il sito come destinazione primaria per query navigazionali.</li>
+      <li class="pl-2">Non ottimizzare tattiche specifiche per &#34;forzare&#34; un accesso diretto: il brevetto descrive logiche interne del motore, non leve direttamente azionabili dai SEO.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">very relevant</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Classificazione di un risultato di ricerca che il motore determina, con alta confidenza, essere il documento che l&#39;utente intende effettivamente raggiungere.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">observed historical click through rate</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tasso di clic storico osservato, calcolato come rapporto tra le selezioni di un documento e le selezioni di altri documenti in risposta a una query.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">relevance score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio di rilevanza assegnato dal motore a un documento rispetto a una query, utilizzato per ordinare i risultati.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">browse by name</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Funzionalità che consente agli utenti di inserire termini in linguaggio naturale nella barra degli indirizzi del browser per accedere direttamente a un sito, anziché digitare un URL formale.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US9256694B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9256694B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Named URL entry</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US10002201B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

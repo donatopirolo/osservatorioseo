@@ -29,8 +29,9 @@ THEMES_BLOCK = "\n".join(f'- "{k}": {v}' for k, v in THEMES.items())
 CLASSIFY_PROMPT = """Sei un SEO tecnico senior. Devi decidere se un brevetto (o una \
 domanda di brevetto) puo' interessare chi fa SEO: ranking dei risultati organici, \
 selezione e citazione delle fonti nelle risposte AI di Google Search, comprensione \
-delle query, segnali di qualita'/fiducia, link, comportamento degli utenti nella SERP, \
-interfacce dei risultati di ricerca.
+delle query, segnali di qualita'/fiducia, spam, link, comportamento degli utenti nella \
+SERP, passaggi e risposte dirette, entita' e Knowledge Graph, ricerca locale, \
+contenuti duplicati e canonicalizzazione, interfacce dei risultati di ricerca.
 
 NON sono rilevanti: pubblicita' (Ads) senza effetti sull'organico, hardware, \
 assistenti vocali o chatbot non legati alla ricerca web, addestramento di modelli in \

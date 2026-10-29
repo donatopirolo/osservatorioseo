@@ -103,3 +103,49 @@ def test_build_query_encodes_quotes_and_adds_date(up) -> None:
     assert q == (
         "q=(%22search+results%22)&assignee=Google+Llc&after=publication:20260901&sort=new&num=100"
     )
+
+
+def test_family_duplicates_skips_relatives_of_published_and_of_batch(up) -> None:
+    from datetime import date
+
+    from osservatorio_seo.patents.models import FamilyMember, PatentDoc
+
+    def doc(number: str, relatives: list[str], title: str = "t", prio: str = "2006-01-01"):
+        return PatentDoc(
+            number=number,
+            title=title,
+            abstract="a",
+            priority_date=date.fromisoformat(prio),
+            family=[FamilyMember(number=r, direction="priority") for r in relatives],
+        )
+
+    published = [doc("US8661029B1", [], title="Implicit feedback", prio="2006-11-02")]
+    docs = [
+        # continuation lontana: la famiglia diretta non cita il brevetto schedato,
+        # ma titolo e priorita' coincidono
+        doc("US9811566B1", ["US9235627B1"], title="Implicit feedback ", prio="2006-11-02"),
+        doc("US10000001B1", ["US10000002B1"], title="a"),
+        doc("US10000002B1", ["US10000001B1"], title="b"),  # stessa famiglia nel lotto
+        doc("US10000003B1", [], title="c"),
+    ]
+    dupes = up.family_duplicates(docs, published)
+    assert dupes == {"US9811566B1": "US8661029B1", "US10000002B1": "US10000001B1"}
+
+
+async def test_write_patent_drops_discovery_with_low_final_relevance(
+    up, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from tests.test_patents import _mk_patent
+
+    low = _mk_patent("US1B1")
+    low.analysis.seo_relevance = 2
+
+    async def fake_analyze(writer, doc, origin):
+        return low
+
+    monkeypatch.setattr(up, "analyze", fake_analyze)
+    assert await up.write_patent(None, low.doc, "discovery") is None
+    assert not (up.PATENTS_DIR / "US1B1.json").exists()
+    # Un seed scelto a mano si pubblica comunque.
+    assert await up.write_patent(None, low.doc, "seed") is low
+    assert (up.PATENTS_DIR / "US1B1.json").exists()

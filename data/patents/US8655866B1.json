@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8655866B1",
+    "title": "Returning factual answers in response to queries",
+    "abstract": "Methods, systems, and apparatus, including computer programs encoded on a computer storage medium, for information retrieval. In one aspect, a method includes receiving a fact query; determining an expected type of answer to the fact query; identifying search results responsive to the fact query; identifying phrases from the resources corresponding to the search results that correspond to a form of the expected type; determining a score for each of the identified phrases; and presenting an answer to the fact query using the scores.",
+    "claims": [
+      "1. A method performed by data processing apparatus, the method comprising: receiving a fact query; determining an expected type of answer to the fact query, wherein a type refers to a pattern or a collection of phrases that includes a correct answer to the fact query; identifying one or more search results responsive to the fact query; identifying, from respective resources corresponding to the one or more search results, a first collection of phrases that match a form of the expected type; determining, from the first collection of phrases, a second collection of phrases, the second collection of phrases each corresponding to a canonical form of the expected type; determining, for each canonical phrase in the second collection of phrases, a respective score based on a count of resources corresponding to the one or more search results that include the canonical phrase or a phrase corresponding to the canonical phrase; identifying a particular phrase in the second collection of phrases as an answer to the fact query based on a score of the particular phrase; and providing the answer to the fact query.",
+      "2. The method of claim 1 , where the answer is presented along with one or more search results responsive to the query.",
+      "3. The method of claim 1 , where identifying phrases includes searching indexed annotations of the search results.",
+      "4. The method of claim 3 , where the annotations identify phrases associated with particular types.",
+      "5. The method of claim 1 , where determining a score for a phrase includes determining a frequency of the phrase occurring in the search results.",
+      "6. The method of claim 1 , where the score for a phrase is based on a proximity of the phrase to the query terms in each corresponding resource.",
+      "7. The method of claim 1 , where the score for a phrase is based on a score for each corresponding resource.",
+      "8. The method of claim 1 , where the score for a phrase is based on a proximity of the phrase to other key terms in each corresponding resource.",
+      "9. A system comprising: one or more data processing apparatus operable to perform operations comprising: receiving a fact query; determining an expected type of answer to the fact query, wherein a type refers to a pattern or a collection of phrases that includes a correct answer to the fact query; identifying one or more search results responsive to the fact query; identifying, from respective resources corresponding to the one or more search results, a first collection of phrases that match a form of the expected type; determining, from the first collection of phrases, a second collection of phrases, the second collection of phrases each corresponding to a canonical form of the expected type; determining, for each canonical phrase in the second collection of phrases, a respective score based on a count of resources corresponding to the one or more search results that include the canonical phrase or a phrase corresponding to the canonical phrase; identifying a particular phrase in the second collection of phrases as an answer to the fact query based on a score of the particular phrase; and providing the answer to the fact query.",
+      "10. The system of claim 9 , where the answer is presented along with one or more search results responsive to the query.",
+      "11. The system of claim 9 , where identifying phrases includes searching indexed annotations of the search results.",
+      "12. The system of claim 11 , where the annotations identify phrases associated with particular types.",
+      "13. The system of claim 9 , where determining a score for a phrase includes determining a frequency of the phrase occurring in the search results.",
+      "14. The system of claim 9 , where the score for a phrase is based on a proximity of the phrase to the query terms in each corresponding resource.",
+      "15. The system of claim 9 , where the score for a phrase is based on a score for each corresponding resource.",
+      "16. The system of claim 9 , where the score for a phrase is based on a proximity of the phrase to other key terms in each corresponding resource.",
+      "17. A non-transitory computer storage medium encoded with a computer program, the program comprising instructions that are executed by data processing apparatus to cause the data processing apparatus to perform operations comprising: receiving a fact query; determining an expected type of answer to the fact query, wherein a type refers to a pattern or a collection of phrases that includes a correct answer to the fact query; identifying one or more search results responsive to the fact query; identifying, from respective resources corresponding to the one or more search results, a first collection of phrases that match a form of the expected type; determining, from the first collection of phrases, a second collection of phrases, the second collection of phrases each corresponding to a canonical form of the expected type; determining, for each canonical phrase in the second collection of phrases, a respective score based on a count of resources corresponding to the one or more search results that include the canonical phrase or a phrase corresponding to the canonical phrase; identifying a particular phrase in the second collection of phrases as an answer to the fact query based on a score of the particular phrase; and providing the answer to the fact query.",
+      "18. The computer storage medium of claim 17 , where the answer is presented along with one or more search results responsive to the query.",
+      "19. The computer storage medium of claim 17 , where identifying phrases includes searching indexed annotations of the search results.",
+      "20. The computer storage medium of claim 19 , where the annotations identify phrases associated with particular types.",
+      "21. The computer storage medium of claim 17 , where determining a score for a phrase includes determining a frequency of the phrase occurring in the search results.",
+      "22. The computer storage medium of claim 17 , where the score for a phrase is based on a proximity of the phrase to the query terms in each corresponding resource.",
+      "23. The computer storage medium of claim 17 , where the score for a phrase is based on a score for each corresponding resource.",
+      "24. The computer storage medium of claim 17 , where the score for a phrase is based on a proximity of the phrase to other key terms in each corresponding resource."
+    ],
+    "independent_claims": [
+      "1. A method performed by data processing apparatus, the method comprising: receiving a fact query; determining an expected type of answer to the fact query, wherein a type refers to a pattern or a collection of phrases that includes a correct answer to the fact query; identifying one or more search results responsive to the fact query; identifying, from respective resources corresponding to the one or more search results, a first collection of phrases that match a form of the expected type; determining, from the first collection of phrases, a second collection of phrases, the second collection of phrases each corresponding to a canonical form of the expected type; determining, for each canonical phrase in the second collection of phrases, a respective score based on a count of resources corresponding to the one or more search results that include the canonical phrase or a phrase corresponding to the canonical phrase; identifying a particular phrase in the second collection of phrases as an answer to the fact query based on a score of the particular phrase; and providing the answer to the fact query.",
+      "9. A system comprising: one or more data processing apparatus operable to perform operations comprising: receiving a fact query; determining an expected type of answer to the fact query, wherein a type refers to a pattern or a collection of phrases that includes a correct answer to the fact query; identifying one or more search results responsive to the fact query; identifying, from respective resources corresponding to the one or more search results, a first collection of phrases that match a form of the expected type; determining, from the first collection of phrases, a second collection of phrases, the second collection of phrases each corresponding to a canonical form of the expected type; determining, for each canonical phrase in the second collection of phrases, a respective score based on a count of resources corresponding to the one or more search results that include the canonical phrase or a phrase corresponding to the canonical phrase; identifying a particular phrase in the second collection of phrases as an answer to the fact query based on a score of the particular phrase; and providing the answer to the fact query.",
+      "17. A non-transitory computer storage medium encoded with a computer program, the program comprising instructions that are executed by data processing apparatus to cause the data processing apparatus to perform operations comprising: receiving a fact query; determining an expected type of answer to the fact query, wherein a type refers to a pattern or a collection of phrases that includes a correct answer to the fact query; identifying one or more search results responsive to the fact query; identifying, from respective resources corresponding to the one or more search results, a first collection of phrases that match a form of the expected type; determining, from the first collection of phrases, a second collection of phrases, the second collection of phrases each corresponding to a canonical form of the expected type; determining, for each canonical phrase in the second collection of phrases, a respective score based on a count of resources corresponding to the one or more search results that include the canonical phrase or a phrase corresponding to the canonical phrase; identifying a particular phrase in the second collection of phrases as an answer to the fact query based on a score of the particular phrase; and providing the answer to the fact query."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "John R. Provine",
+      "Engin Cinar Sahin",
+      "Vinicius J. Fortuna",
+      "Andrew W. Hogue",
+      "Kevin Lerman",
+      "Daniel Loreto"
+    ],
+    "priority_date": "2011-02-10",
+    "filing_date": "2011-02-10",
+    "publication_date": "2014-02-18",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9538",
+      "G06F16/951"
+    ],
+    "family": [],
+    "cited_by_count": 24
+  },
+  "analysis": {
+    "title_it": "Risposte fattuali estratte dai risultati di ricerca",
+    "summary": "Il brevetto descrive un metodo per estrarre risposte brevi e fattuali (date, misure, nomi) direttamente dai risultati di ricerca. Il sistema identifica il tipo di risposta attesa, estrae frasi candidate dai documenti risultanti, le aggrega in forma canonica e assegna un punteggio basato principalmente sulla frequenza di occorrenza tra i risultati.",
+    "theme": "passaggi_snippet",
+    "seo_relevance": 4,
+    "scope": "Google Search, risposte fattuali dirette",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che riceve una query fattuale, determina il tipo atteso di risposta (dove \"type\" si riferisce a un pattern o collezione di frasi che include la risposta corretta), identifica risultati di ricerca responsivi, estrae dai documenti corrispondenti una prima collezione di frasi che corrispondono alla forma del tipo atteso, determina da questa una seconda collezione di frasi in forma canonica, calcola per ciascuna frase canonica un punteggio basato sul conteggio delle risorse che includono quella frase o una frase corrispondente, identifica una frase particolare come risposta in base al punteggio e fornisce la risposta.\n\nLa rivendicazione 2 specifica che la risposta viene presentata insieme ai risultati di ricerca. La rivendicazione 3 indica che l'identificazione delle frasi può avvenire cercando annotazioni indicizzate dei risultati, mentre la rivendicazione 4 precisa che tali annotazioni identificano frasi associate a tipi particolari. Le rivendicazioni 5-8 aggiungono dettagli sui fattori di scoring: la rivendicazione 5 indica che il punteggio può includere la frequenza della frase nei risultati; la 6 che può basarsi sulla prossimità della frase ai termini della query in ciascuna risorsa; la 7 che può dipendere dal punteggio della risorsa stessa; la 8 che può considerare la prossimità ad altri termini chiave nella risorsa. Le rivendicazioni 9-24 replicano le stesse caratteristiche per un sistema e per un supporto di memorizzazione.",
+    "seo_reading": "La descrizione contempla un sistema di annotazione preventiva dell'indice in cui le risorse vengono analizzate per identificare frasi associate a tipi specifici (date, misure, nomi) e l'indice viene annotato con queste frasi in forma canonica (paragrafi relativi a FIG. 5 e processo 500). Ogni annotazione può includere un termine di indicizzazione aggregato che indica tipo e sottotipo (esempio: \"meas;length\" per misure di lunghezza), la lunghezza dell'annotazione in token e un valore canonico che consente di aggregare forme diverse (\"Aug. 4, 1961\" e \"08/04/1961\" diventano \"19610408\").\n\nLa descrizione elenca esempi di query fattuali: \"when was barack obama born\", \"what is the capital city of turkey\", \"distance in miles between london and paris\". Specifica che le query fattuali cercano risposte brevi e universalmente accettate, escludendo domande senza risposta, con risposte troppo complesse o contenuti comunemente accettati ma non fattuali (esempio: ricette). La descrizione contempla tecniche per identificare query fattuali, tra cui il riconoscimento di espressioni fortemente orientate ai fatti (\"date of birth\", \"on what date\") e l'analisi della distribuzione delle risposte: se una risposta domina nettamente (esempio: \"Aug. 4, 1961\" per Obama) la query è fattuale, se la distribuzione è dispersa non lo è.\n\nIl punteggio delle frasi candidate potrebbe essere calcolato come semplice conteggio delle risorse che contengono la frase, oppure pesato considerando il punteggio della pagina (risorse con ranking più alto contribuiscono di più), la prossimità ai termini della query (frasi vicine ai termini cercati sono più rilevanti) o la presenza di termini contestuali chiave (esempio: \"height\" per query su altezze, anche se non compare nella query). La descrizione menziona che per alcune query possono esistere risposte multiple corrette (esempio: capitali del Sudafrica) e che queste potrebbero essere presentate in ordine di punteggio se superano una soglia.\n\nPer la SEO, questo approccio suggerirebbe che per query fattuali la frequenza con cui una risposta specifica appare tra i documenti top-ranking potrebbe essere determinante per l'estrazione. La prossimità tra termini della query e frasi candidate, così come la presenza di termini contestuali pertinenti, potrebbero influenzare la selezione. Tuttavia, il brevetto descrive un sistema di estrazione post-ranking: prima vengono selezionati i documenti rilevanti, poi da questi si estraggono le risposte. Non indica che la presenza di risposte fattuali influenzi il ranking organico stesso.",
+    "limits": [
+      "Il brevetto descrive un metodo di estrazione di risposte dai risultati già rankati, non dimostra che la presenza di risposte fattuali influenzi il posizionamento organico dei documenti.",
+      "Non specifica soglie numeriche per frequenza, prossimità o punteggi delle pagine, né quali tipi di query fattuali attivino effettivamente il sistema in produzione.",
+      "La descrizione contempla annotazioni preventive dell'indice ma non dimostra che questo approccio specifico sia implementato rispetto all'estrazione diretta dai documenti al momento della query.",
+      "Trattandosi di tecnologia del 2011, precede le attuali risposte generative e potrebbe essere stato sostituito o integrato da sistemi più recenti non documentati qui."
+    ],
+    "implications": [
+      "Per contenuti che rispondono a query fattuali, strutturare le risposte in modo esplicito e ripetuto (stessa formulazione in forma canonica) può facilitare l'estrazione, indipendentemente dal sistema specifico utilizzato.",
+      "Posizionare risposte fattuali in prossimità dei termini della query e di termini contestuali pertinenti (esempio: \"altezza\", \"data di nascita\") migliora la chiarezza semantica per qualsiasi sistema di estrazione.",
+      "Utilizzare formati standard e riconoscibili per date, misure e altri dati strutturati (oltre a markup come schema.org) riduce l'ambiguità interpretativa.",
+      "Concentrarsi sul ranking organico per query fattuali resta prioritario: l'estrazione avviene dai documenti già selezionati come rilevanti, quindi la visibilità nei risultati tradizionali è prerequisito."
+    ],
+    "key_terms": [
+      {
+        "term": "fact query",
+        "explanation": "Query che cerca una risposta breve, fattuale e universalmente accettata, espressa in una parola o frase concisa"
+      },
+      {
+        "term": "expected type",
+        "explanation": "Pattern o collezione di frasi che include la risposta corretta, ad esempio date, misure, nomi di persone, con eventuali sottotipi"
+      },
+      {
+        "term": "canonical form",
+        "explanation": "Forma normalizzata di una frase che consente di aggregare varianti diverse della stessa risposta (es. date in formati diversi)"
+      },
+      {
+        "term": "annotation",
+        "explanation": "Marcatura preventiva nell'indice che identifica frasi associate a tipi specifici, con informazioni su tipo, lunghezza e valore canonico"
+      },
+      {
+        "term": "phrase score",
+        "explanation": "Punteggio assegnato a una frase candidata basato su frequenza, prossimità ai termini della query, punteggio della risorsa e altri fattori"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:03:51.019311Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.05974296
+}

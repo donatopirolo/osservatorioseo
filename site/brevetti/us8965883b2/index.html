@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8965883B2: Ranking dei contenuti generati dagli utenti tramite grafi di interazione — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di valutare la qualità dei contenuti generati dagli utenti (forum, Q&amp;A, blog) e l&#39;affidabilità degli autori. Propone di costruire un grafo delle interazioni tra utenti (domande, risposte, commenti), assegnare pesi di qualità a ciascuna interazione e calcolare puntegg" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8965883b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8965883B2: Ranking dei contenuti generati dagli utenti tramite grafi di interazione — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di valutare la qualità dei contenuti generati dagli utenti (forum, Q&amp;A, blog) e l&#39;affidabilità degli autori. Propone di costruire un grafo delle interazioni tra utenti (domande, risposte, commenti), assegnare pesi di qualità a ciascuna interazione e calcolare puntegg" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8965883b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8965883B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8965883b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8965883B2: Ranking dei contenuti generati dagli utenti tramite grafi di interazione",
+  "description": "Il brevetto affronta il problema di valutare la qualit\u00e0 dei contenuti generati dagli utenti (forum, Q\u0026A, blog) e l\u0027affidabilit\u00e0 degli autori. Propone di costruire un grafo delle interazioni tra utenti (domande, risposte, commenti), assegnare pesi di qualit\u00e0 a ciascuna interazione e calcolare punteggi di credibilit\u00e0 per ogni utente attraverso un algoritmo iterativo che distingue tra contributiveness (qualit\u00e0 dei contenuti originali) e authority (qualit\u00e0 delle risposte).",
+  "articleBody": "Il brevetto affronta il problema di valutare la qualit\u00e0 dei contenuti generati dagli utenti (forum, Q\u0026A, blog) e l\u0027affidabilit\u00e0 degli autori. Propone di costruire un grafo delle interazioni tra utenti (domande, risposte, commenti), assegnare pesi di qualit\u00e0 a ciascuna interazione e calcolare punteggi di credibilit\u00e0 per ogni utente attraverso un algoritmo iterativo che distingue tra contributiveness (qualit\u00e0 dei contenuti originali) e authority (qualit\u00e0 delle risposte).\n\nLa rivendicazione indipendente 1 copre un metodo implementato su computer che identifica una pluralit\u00e0 di interazioni tra utenti attraverso una rete elettronica, dove ogni interazione tra una coppia di utenti comprende una risposta di un primo utente a un contenuto contribuito da un secondo utente. Il sistema genera un grafo di attivit\u00e0 utente che identifica collegamenti tra utenti basati sulle interazioni, assegna un fattore di ponderazione a ciascuna interazione che rappresenta la qualit\u00e0 dell\u0027interazione, e determina iterativamente due punteggi distinti per ogni utente: un authority score che rappresenta una misurazione della qualit\u00e0 delle risposte che l\u0027utente ha fornito a contenuti contribuiti da altri utenti, basato sui contributiveness score degli utenti con cui \u00e8 collegato nel grafo, ciascuno scalato dal fattore di ponderazione della rispettiva interazione; e un contributiveness score che rappresenta una misurazione della qualit\u00e0 dei contributi dell\u0027utente, basato sugli authority score degli utenti con cui \u00e8 collegato, anch\u0027essi scalati dai fattori di ponderazione. Il sistema genera infine un user credential score per ciascun utente basato sulla combinazione di authority score e contributiveness score, memorizzandolo in associazione con l\u0027identificativo utente.\n\nLa rivendicazione 2 estende il metodo alla ricerca: riceve una query, identifica contenuti generati dagli utenti responsivi alla query e li classifica basandosi almeno in parte sui user credential score associati agli item attraverso gli utenti identificati come autori. La rivendicazione 3 specifica che l\u0027identificazione include l\u0027assegnazione di una misura di content relevance per ogni item e il ranking combina i user credential score con le misure di content relevance. La rivendicazione 4 aggiunge la normalizzazione sia dei user credential score che delle misure di content relevance prima della combinazione. La rivendicazione 5 precisa che gli score vengono generati iterando un processo di aggiornamento iterativo fino al raggiungimento di una soglia di convergenza predeterminata. La rivendicazione 6 specifica che le interazioni possono includere contenuti generati su siti di domande e risposte, bulletin board, blog o social network. La rivendicazione 7 \u00e8 particolarmente rilevante per la SEO: stabilisce che il weighting factor deriva dalla combinazione di una pluralit\u00e0 di quality factor, almeno uno selezionato tra relevance di un contenuto rispetto a un contenuto precedente associato, originality di un contenuto rispetto ad altri contenuti, coverage corrispondente a una misura di termini non comuni nel contenuto, richness del contenuto e timeliness del contenuto.\n\nLe rivendicazioni 10-17 coprono un sistema con server, storage e processori configurati per eseguire funzioni analoghe. La rivendicazione 14 ribadisce che la misura oggettiva di qualit\u00e0 deriva da una combinazione di fattori che rappresentano relevance, originality e coverage di termini non comuni. La rivendicazione 15 specifica che per una particolare interazione che include una risposta elettronica di un primo utente a informazioni pubblicate da un secondo utente, il weighting factor si riferisce ad almeno uno tra relevance della risposta rispetto alle informazioni pubblicate, coverage di informazioni relativamente non comuni nella risposta, o relative originality della risposta.\n\nLa descrizione contempla un sistema dettagliato per analizzare la qualit\u00e0 dei contenuti generati dagli utenti. Il brevetto descrive un post analyzer (paragrafo relativo al blocco 128) che valuta ogni content item per produrre un quality score basato su diversi fattori. Tra i fattori di qualit\u00e0 esplicitamente menzionati nella descrizione figurano: relevance del contenuto rispetto al topic del sito o alla domanda a cui risponde, misurata in alcune implementazioni usando Latent Dirichlet Allocation; coverage, che si riferisce alla generalit\u00e0 o specificit\u00e0 del post in termini di vocabolario impiegato e indica il livello di focus del contributo, misurata in alcune implementazioni usando l\u0027inverse document frequency delle parole; originality, valutata confrontando un contenuto con altri contenuti simili o con altri contenuti dello stesso autore, misurata in alcune implementazioni attraverso il metodo BLEU; timeliness del contributo, con una risposta rapida valutata pi\u00f9 o meno positivamente di una lenta; presenza di multimedia content o rich media content.\n\nLa descrizione contempla inoltre che questi quality factor possano essere combinati usando learned coefficients per generare un combined score, come illustrato nell\u0027esempio matematico fornito nella sezione EXAMPLE Integration of Quality Factor Scores, dove viene applicata una combinazione lineare con coefficienti alpha. Il brevetto descrive un social graphing module (blocco 132) che genera un grafo di attivit\u00e0 utente dove i nodi rappresentano utenti e i link diretti rappresentano interazioni, con la possibilit\u00e0 di introdurre un default user virtuale (come forum_travel nell\u0027esempio della figura 3B) per gestire nuove domande senza risposte.\n\nPer la SEO, questo potrebbe significare che Google potrebbe valutare la qualit\u00e0 di contenuti in forum, sezioni Q\u0026A o commenti non solo in base al contenuto stesso ma anche in base alla reputazione dell\u0027autore calcolata attraverso le sue interazioni pregresse. I siti che ospitano contenuti generati dagli utenti potrebbero vedere alcuni contenuti privilegiati nei risultati di ricerca se provenienti da utenti con elevati user credential score. Tuttavia, la descrizione specifica ripetutamente che il sistema si applica a ricerche di user-generated content e che i punteggi possono essere calcolati separatamente per diverse categorie o label associate ai contenuti (esempio: giardinaggio versus ristorazione), suggerendo un\u0027applicazione verticale piuttosto che generalizzata. La descrizione contempla anche la personalizzazione dei risultati di ricerca basata sulla relationship strength tra l\u0027utente che effettua la ricerca e gli autori dei contenuti, aumentando la rilevanza di risultati associati a utenti con cui il ricercatore ha precedentemente interagito.\n\nLa descrizione fornisce dettagli implementativi come l\u0027uso di una versione modificata dell\u0027algoritmo HITS per calcolare iterativamente authority e contributiveness score fino a convergenza, con formule matematiche specifiche nella sezione EXAMPLE Computing User Credential Scores. Contempla inoltre aggiornamenti incrementali degli score dopo ogni nuova interazione, limitando la propagazione a una distanza definita nel grafo per efficienza computazionale.",
+  "wordCount": 985,
+  "datePublished": "2026-10-29T10:05:40.894020+00:00",
+  "dateModified": "2026-10-29T10:05:40.894020+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8965883b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Ranking user generated web content",
+    "identifier": "US8965883B2",
+    "url": "https://patents.google.com/patent/US8965883B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8965883B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8965883B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking dei contenuti generati dagli utenti tramite grafi di interazione</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Ranking user generated web content</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di valutare la qualità dei contenuti generati dagli utenti (forum, Q&amp;A, blog) e l&#39;affidabilità degli autori. Propone di costruire un grafo delle interazioni tra utenti (domande, risposte, commenti), assegnare pesi di qualità a ciascuna interazione e calcolare punteggi di credibilità per ogni utente attraverso un algoritmo iterativo che distingue tra contributiveness (qualità dei contenuti originali) e authority (qualità delle risposte).</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Contenuti generati dagli utenti, ranking nei risultati di ricerca</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">24 Febbraio 2015</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2009-10-29</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Qualità e fiducia dei siti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo implementato su computer che identifica una pluralità di interazioni tra utenti attraverso una rete elettronica, dove ogni interazione tra una coppia di utenti comprende una risposta di un primo utente a un contenuto contribuito da un secondo utente. Il sistema genera un grafo di attività utente che identifica collegamenti tra utenti basati sulle interazioni, assegna un fattore di ponderazione a ciascuna interazione che rappresenta la qualità dell&#39;interazione, e determina iterativamente due punteggi distinti per ogni utente: un authority score che rappresenta una misurazione della qualità delle risposte che l&#39;utente ha fornito a contenuti contribuiti da altri utenti, basato sui contributiveness score degli utenti con cui è collegato nel grafo, ciascuno scalato dal fattore di ponderazione della rispettiva interazione; e un contributiveness score che rappresenta una misurazione della qualità dei contributi dell&#39;utente, basato sugli authority score degli utenti con cui è collegato, anch&#39;essi scalati dai fattori di ponderazione. Il sistema genera infine un user credential score per ciascun utente basato sulla combinazione di authority score e contributiveness score, memorizzandolo in associazione con l&#39;identificativo utente.</p>
+      <p>La rivendicazione 2 estende il metodo alla ricerca: riceve una query, identifica contenuti generati dagli utenti responsivi alla query e li classifica basandosi almeno in parte sui user credential score associati agli item attraverso gli utenti identificati come autori. La rivendicazione 3 specifica che l&#39;identificazione include l&#39;assegnazione di una misura di content relevance per ogni item e il ranking combina i user credential score con le misure di content relevance. La rivendicazione 4 aggiunge la normalizzazione sia dei user credential score che delle misure di content relevance prima della combinazione. La rivendicazione 5 precisa che gli score vengono generati iterando un processo di aggiornamento iterativo fino al raggiungimento di una soglia di convergenza predeterminata. La rivendicazione 6 specifica che le interazioni possono includere contenuti generati su siti di domande e risposte, bulletin board, blog o social network. La rivendicazione 7 è particolarmente rilevante per la SEO: stabilisce che il weighting factor deriva dalla combinazione di una pluralità di quality factor, almeno uno selezionato tra relevance di un contenuto rispetto a un contenuto precedente associato, originality di un contenuto rispetto ad altri contenuti, coverage corrispondente a una misura di termini non comuni nel contenuto, richness del contenuto e timeliness del contenuto.</p>
+      <p>Le rivendicazioni 10-17 coprono un sistema con server, storage e processori configurati per eseguire funzioni analoghe. La rivendicazione 14 ribadisce che la misura oggettiva di qualità deriva da una combinazione di fattori che rappresentano relevance, originality e coverage di termini non comuni. La rivendicazione 15 specifica che per una particolare interazione che include una risposta elettronica di un primo utente a informazioni pubblicate da un secondo utente, il weighting factor si riferisce ad almeno uno tra relevance della risposta rispetto alle informazioni pubblicate, coverage di informazioni relativamente non comuni nella risposta, o relative originality della risposta.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema dettagliato per analizzare la qualità dei contenuti generati dagli utenti. Il brevetto descrive un post analyzer (paragrafo relativo al blocco 128) che valuta ogni content item per produrre un quality score basato su diversi fattori. Tra i fattori di qualità esplicitamente menzionati nella descrizione figurano: relevance del contenuto rispetto al topic del sito o alla domanda a cui risponde, misurata in alcune implementazioni usando Latent Dirichlet Allocation; coverage, che si riferisce alla generalità o specificità del post in termini di vocabolario impiegato e indica il livello di focus del contributo, misurata in alcune implementazioni usando l&#39;inverse document frequency delle parole; originality, valutata confrontando un contenuto con altri contenuti simili o con altri contenuti dello stesso autore, misurata in alcune implementazioni attraverso il metodo BLEU; timeliness del contributo, con una risposta rapida valutata più o meno positivamente di una lenta; presenza di multimedia content o rich media content.</p>
+      <p>La descrizione contempla inoltre che questi quality factor possano essere combinati usando learned coefficients per generare un combined score, come illustrato nell&#39;esempio matematico fornito nella sezione EXAMPLE Integration of Quality Factor Scores, dove viene applicata una combinazione lineare con coefficienti alpha. Il brevetto descrive un social graphing module (blocco 132) che genera un grafo di attività utente dove i nodi rappresentano utenti e i link diretti rappresentano interazioni, con la possibilità di introdurre un default user virtuale (come forum_travel nell&#39;esempio della figura 3B) per gestire nuove domande senza risposte.</p>
+      <p>Per la SEO, questo potrebbe significare che Google potrebbe valutare la qualità di contenuti in forum, sezioni Q&amp;A o commenti non solo in base al contenuto stesso ma anche in base alla reputazione dell&#39;autore calcolata attraverso le sue interazioni pregresse. I siti che ospitano contenuti generati dagli utenti potrebbero vedere alcuni contenuti privilegiati nei risultati di ricerca se provenienti da utenti con elevati user credential score. Tuttavia, la descrizione specifica ripetutamente che il sistema si applica a ricerche di user-generated content e che i punteggi possono essere calcolati separatamente per diverse categorie o label associate ai contenuti (esempio: giardinaggio versus ristorazione), suggerendo un&#39;applicazione verticale piuttosto che generalizzata. La descrizione contempla anche la personalizzazione dei risultati di ricerca basata sulla relationship strength tra l&#39;utente che effettua la ricerca e gli autori dei contenuti, aumentando la rilevanza di risultati associati a utenti con cui il ricercatore ha precedentemente interagito.</p>
+      <p>La descrizione fornisce dettagli implementativi come l&#39;uso di una versione modificata dell&#39;algoritmo HITS per calcolare iterativamente authority e contributiveness score fino a convergenza, con formule matematiche specifiche nella sezione EXAMPLE Computing User Credential Scores. Contempla inoltre aggiornamenti incrementali degli score dopo ogni nuova interazione, limitando la propagazione a una distanza definita nel grafo per efficienza computazionale.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che Google applichi questo sistema al ranking della ricerca web generale: la descrizione si riferisce esplicitamente a ricerche di user-generated content e a comunità elettroniche specifiche (forum, Q&amp;A, bulletin board).</li>
+      <li>Non specifica quali coefficienti di ponderazione vengano effettivamente applicati ai diversi quality factor né come vengano appresi, limitandosi a dire che possono essere learned e che possono differire a seconda del tipo di comunità elettronica.</li>
+      <li>Non chiarisce se e come questo sistema si integri con altri segnali di ranking già noti, limitandosi a descrivere la combinazione con relevance score tramite normalizzazione e weighted combination senza specificare i pesi relativi.</li>
+      <li>Essendo un brevetto del 2009 con priorità 2009 e concessione 2015, precede l&#39;era dei contenuti generati da AI e potrebbe non riflettere approcci attuali di Google alla valutazione di contenuti e autori.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Curare la qualità delle interazioni nelle sezioni community del sito: risposte pertinenti, originali e che utilizzano terminologia specifica (coverage) potrebbero contribuire positivamente alla reputazione degli autori e potenzialmente al valore percepito di quei contenuti.</li>
+      <li class="pl-2">Nei siti con sezioni Q&amp;A o forum, considerare meccanismi per identificare e valorizzare contributori autorevoli, indipendentemente dall&#39;applicazione di questo brevetto, poiché la qualità delle interazioni migliora l&#39;esperienza utente e potrebbe influenzare metriche comportamentali.</li>
+      <li class="pl-2">Monitorare la pertinenza tematica dei contenuti generati dagli utenti rispetto al topic del sito o della sezione, dato che relevance è uno dei fattori di qualità esplicitamente contemplati e ha valore intrinseco per gli utenti.</li>
+      <li class="pl-2">Evitare contenuti duplicati o spam nelle sezioni community, dato che originality è un fattore esplicitamente menzionato e contenuti ripetitivi potrebbero impattare negativamente la valutazione complessiva della sezione.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">user credential score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio di credibilità assegnato a ciascun utente basato sulla combinazione di authority score e contributiveness score, rappresenta la reputazione o affidabilità dell&#39;utente nella comunità elettronica</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">authority score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misurazione della qualità delle risposte che un utente ha fornito a contenuti contribuiti da altri utenti, basato sui contributiveness score degli utenti con cui ha interagito, scalati dai fattori di qualità delle interazioni</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">contributiveness score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misurazione della qualità dei contenuti originali che un utente ha contribuito, basato sugli authority score degli utenti che hanno risposto ai suoi contenuti, scalati dai fattori di qualità delle interazioni</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">user activity graph</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Grafo sociale che rappresenta utenti come nodi e interazioni tra utenti come collegamenti diretti ponderati, utilizzato per calcolare iterativamente i punteggi di credibilità</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">weighting factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore di ponderazione assegnato a ciascuna interazione che rappresenta la qualità dell&#39;interazione, derivato dalla combinazione di quality factor come relevance, originality, coverage, richness e timeliness</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">coverage</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore di qualità che si riferisce alla generalità o specificità di un contenuto in termini di vocabolario impiegato, misurato attraverso l&#39;inverse document frequency delle parole, indica il livello di focus del contributo</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8965883B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

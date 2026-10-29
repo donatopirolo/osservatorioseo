@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8498984B1: Categorizzazione dei risultati di ricerca — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema della presentazione mista di risultati di ricerca di diverso tipo (web, news, video, blog, siti). Propone di assegnare i risultati a categorie, generare punteggi per le categorie basati sui tassi di selezione delle posizioni occupate dai risultati, e presentare i ris" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8498984b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8498984B1: Categorizzazione dei risultati di ricerca — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema della presentazione mista di risultati di ricerca di diverso tipo (web, news, video, blog, siti). Propone di assegnare i risultati a categorie, generare punteggi per le categorie basati sui tassi di selezione delle posizioni occupate dai risultati, e presentare i ris" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8498984b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8498984B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us8498984b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8498984B1: Categorizzazione dei risultati di ricerca",
+  "description": "Il brevetto affronta il problema della presentazione mista di risultati di ricerca di diverso tipo (web, news, video, blog, siti). Propone di assegnare i risultati a categorie, generare punteggi per le categorie basati sui tassi di selezione delle posizioni occupate dai risultati, e presentare i risultati raggruppati per categoria anzich\u00e9 in una lista unica ordinata per rilevanza.",
+  "articleBody": "Il brevetto affronta il problema della presentazione mista di risultati di ricerca di diverso tipo (web, news, video, blog, siti). Propone di assegnare i risultati a categorie, generare punteggi per le categorie basati sui tassi di selezione delle posizioni occupate dai risultati, e presentare i risultati raggruppati per categoria anzich\u00e9 in una lista unica ordinata per rilevanza.\n\nLa rivendicazione indipendente 1 copre un metodo che prevede: ricevere una query di ricerca; identificare documenti come risultati di ricerca rilevanti, ciascuno con un primo punteggio; classificare i risultati in base ai primi punteggi per formare una lista ordinata, dove ogni risultato ha una posizione; determinare un tasso di selezione (selection rate) corrispondente a ciascuna posizione nella lista ordinata, dove il tasso per una posizione particolare \u00e8 determinato in base alle selezioni da quella posizione, e la determinazione include selettivamente ottenere informazioni su un tasso di selezione effettivo (actual selection rate) da selezioni osservate oppure stimare un tasso di selezione, e usare il tasso effettivo o stimato come tasso per quella posizione; identificare le categorie a cui i risultati sono associati; generare secondi punteggi per le categorie in base ai tassi di selezione, dove il secondo punteggio per una categoria particolare \u00e8 basato sul tasso di selezione corrispondente alla posizione di uno o pi\u00f9 risultati associati a quella categoria, e la generazione include generare il secondo punteggio per una categoria in base a una combinazione di pi\u00f9 tassi di selezione corrispondenti alle posizioni di un insieme di risultati associati a quella categoria; selezionare pi\u00f9 categorie in base ai secondi punteggi; selezionare pi\u00f9 risultati per le categorie selezionate; generare un documento di risultati di ricerca che include informazioni sulle categorie selezionate e sui risultati selezionati; e fornire il documento per la visualizzazione sul dispositivo client.\n\nLa rivendicazione 2 specifica che il primo punteggio pu\u00f2 essere basato su una misura di rilevanza del risultato rispetto alla query o su una misura di qualit\u00e0 del risultato. Le rivendicazioni 3 e 4 descrivono l\u0027identificazione delle categorie tramite lookup in memoria o classificazione dei documenti. La rivendicazione 5 introduce il confronto dei primi punteggi con una soglia e la rimozione dei risultati sotto soglia prima di generare i secondi punteggi. La rivendicazione 6 specifica che la selezione dei risultati pu\u00f2 includere tutti i risultati associati a un insieme di posizioni top nella lista ordinata. La rivendicazione 7 contempla l\u0027organizzazione delle categorie nel documento, dove una prima categoria \u00e8 presentata in una posizione particolare indipendentemente dal suo punteggio, mentre altre categorie sono presentate sotto di essa in base ai loro punteggi. Le rivendicazioni 9 e 16 specificano che una prima categoria pu\u00f2 essere selezionata indipendentemente dal suo punteggio, mentre altre sono selezionate in base al punteggio. Le rivendicazioni 10 e 17 descrivono la selezione di una quantit\u00e0 particolare di risultati per categoria quando disponibili, altrimenti tutti i risultati disponibili. Le rivendicazioni 11 e 19 coprono l\u0027organizzazione dei risultati in modo che risultati della stessa categoria siano presentati adiacenti. La rivendicazione 12 introduce un\u0027opzione per rimuovere l\u0027organizzazione per categoria e tornare a una lista ordinata standard.\n\nLa descrizione contempla diverse modalit\u00e0 per determinare i tassi di selezione. Nel blocco della rivendicazione 1 e nella descrizione relativa a query log 520, si specifica che i tassi di selezione possono essere effettivi (actual selection rate), ottenuti da selezioni osservate degli utenti, oppure stimati. La descrizione fornisce tre esempi di tassi di selezione stimati per le prime dieci posizioni: nel primo esempio, la posizione 1 ha un tasso del 37,3%, la posizione 2 del 12,9%, fino alla posizione 10 con 2,1%; nel secondo esempio i valori vanno dal 33,7% al 2,8%; nel terzo dal 24,8% al 2,1%. Questi tassi sono indipendenti dalle categorie.\n\nLa descrizione contempla che il punteggio di una categoria possa essere calcolato in diversi modi: come funzione della quantit\u00e0 di risultati assegnati a quella categoria; come funzione dei punteggi degli N risultati con punteggio pi\u00f9 alto (dove N potrebbe essere circa 10, 5 o 3); come funzione della media dei punteggi; o come combinazione dei tassi di selezione delle posizioni occupate dai risultati di quella categoria. La descrizione menziona che il punteggio di una categoria potrebbe basarsi sul valore pi\u00f9 alto, sulla media dei primi X valori (dove X potrebbe essere circa 3 o 5), o su una media ponderata.\n\nLa descrizione contempla che le categorie possano includere web, blog, video, news, immagini, siti, forum, prodotti, email, documenti locali, mappe. La classificazione dei risultati nelle categorie pu\u00f2 avvenire tramite lookup in index 410, analisi del contenuto o metadata, confronto dell\u0027URL con pattern (usando espressioni regolari, come *.com per i siti), o analisi del tipo di file.\n\nPer la SEO, questo brevetto potrebbe indicare che Google avrebbe potuto sperimentare presentazioni dei risultati organizzate per tipologia di contenuto anzich\u00e9 per puro ranking. Se applicato, potrebbe significare che la visibilit\u00e0 di un risultato dipenderebbe non solo dal suo punteggio assoluto, ma anche dalla performance della categoria a cui appartiene e dalla posizione che occupa all\u0027interno di quella categoria. Un sito potrebbe beneficiare dell\u0027essere classificato in una categoria con alto tasso di selezione, anche se il suo punteggio individuale non \u00e8 il massimo. Tuttavia, la descrizione specifica che l\u0027utente pu\u00f2 disattivare questa visualizzazione (opzioni 750, 760, 770 nelle figure 7-8), suggerendo che si tratterebbe di una modalit\u00e0 opzionale di presentazione.",
+  "wordCount": 876,
+  "datePublished": "2026-10-29T10:02:00.632548+00:00",
+  "dateModified": "2026-10-29T10:02:00.632548+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8498984b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Categorization of search results",
+    "identifier": "US8498984B1",
+    "url": "https://patents.google.com/patent/US8498984B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8498984B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8498984B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Categorizzazione dei risultati di ricerca</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Categorization of search results</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema della presentazione mista di risultati di ricerca di diverso tipo (web, news, video, blog, siti). Propone di assegnare i risultati a categorie, generare punteggi per le categorie basati sui tassi di selezione delle posizioni occupate dai risultati, e presentare i risultati raggruppati per categoria anziché in una lista unica ordinata per rilevanza.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, organizzazione risultati per categoria</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">30 Luglio 2013</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2011-11-21</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Organizzazione dei risultati per temi</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">21</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che prevede: ricevere una query di ricerca; identificare documenti come risultati di ricerca rilevanti, ciascuno con un primo punteggio; classificare i risultati in base ai primi punteggi per formare una lista ordinata, dove ogni risultato ha una posizione; determinare un tasso di selezione (selection rate) corrispondente a ciascuna posizione nella lista ordinata, dove il tasso per una posizione particolare è determinato in base alle selezioni da quella posizione, e la determinazione include selettivamente ottenere informazioni su un tasso di selezione effettivo (actual selection rate) da selezioni osservate oppure stimare un tasso di selezione, e usare il tasso effettivo o stimato come tasso per quella posizione; identificare le categorie a cui i risultati sono associati; generare secondi punteggi per le categorie in base ai tassi di selezione, dove il secondo punteggio per una categoria particolare è basato sul tasso di selezione corrispondente alla posizione di uno o più risultati associati a quella categoria, e la generazione include generare il secondo punteggio per una categoria in base a una combinazione di più tassi di selezione corrispondenti alle posizioni di un insieme di risultati associati a quella categoria; selezionare più categorie in base ai secondi punteggi; selezionare più risultati per le categorie selezionate; generare un documento di risultati di ricerca che include informazioni sulle categorie selezionate e sui risultati selezionati; e fornire il documento per la visualizzazione sul dispositivo client.</p>
+      <p>La rivendicazione 2 specifica che il primo punteggio può essere basato su una misura di rilevanza del risultato rispetto alla query o su una misura di qualità del risultato. Le rivendicazioni 3 e 4 descrivono l&#39;identificazione delle categorie tramite lookup in memoria o classificazione dei documenti. La rivendicazione 5 introduce il confronto dei primi punteggi con una soglia e la rimozione dei risultati sotto soglia prima di generare i secondi punteggi. La rivendicazione 6 specifica che la selezione dei risultati può includere tutti i risultati associati a un insieme di posizioni top nella lista ordinata. La rivendicazione 7 contempla l&#39;organizzazione delle categorie nel documento, dove una prima categoria è presentata in una posizione particolare indipendentemente dal suo punteggio, mentre altre categorie sono presentate sotto di essa in base ai loro punteggi. Le rivendicazioni 9 e 16 specificano che una prima categoria può essere selezionata indipendentemente dal suo punteggio, mentre altre sono selezionate in base al punteggio. Le rivendicazioni 10 e 17 descrivono la selezione di una quantità particolare di risultati per categoria quando disponibili, altrimenti tutti i risultati disponibili. Le rivendicazioni 11 e 19 coprono l&#39;organizzazione dei risultati in modo che risultati della stessa categoria siano presentati adiacenti. La rivendicazione 12 introduce un&#39;opzione per rimuovere l&#39;organizzazione per categoria e tornare a una lista ordinata standard.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diverse modalità per determinare i tassi di selezione. Nel blocco della rivendicazione 1 e nella descrizione relativa a query log 520, si specifica che i tassi di selezione possono essere effettivi (actual selection rate), ottenuti da selezioni osservate degli utenti, oppure stimati. La descrizione fornisce tre esempi di tassi di selezione stimati per le prime dieci posizioni: nel primo esempio, la posizione 1 ha un tasso del 37,3%, la posizione 2 del 12,9%, fino alla posizione 10 con 2,1%; nel secondo esempio i valori vanno dal 33,7% al 2,8%; nel terzo dal 24,8% al 2,1%. Questi tassi sono indipendenti dalle categorie.</p>
+      <p>La descrizione contempla che il punteggio di una categoria possa essere calcolato in diversi modi: come funzione della quantità di risultati assegnati a quella categoria; come funzione dei punteggi degli N risultati con punteggio più alto (dove N potrebbe essere circa 10, 5 o 3); come funzione della media dei punteggi; o come combinazione dei tassi di selezione delle posizioni occupate dai risultati di quella categoria. La descrizione menziona che il punteggio di una categoria potrebbe basarsi sul valore più alto, sulla media dei primi X valori (dove X potrebbe essere circa 3 o 5), o su una media ponderata.</p>
+      <p>La descrizione contempla che le categorie possano includere web, blog, video, news, immagini, siti, forum, prodotti, email, documenti locali, mappe. La classificazione dei risultati nelle categorie può avvenire tramite lookup in index 410, analisi del contenuto o metadata, confronto dell&#39;URL con pattern (usando espressioni regolari, come *.com per i siti), o analisi del tipo di file.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google avrebbe potuto sperimentare presentazioni dei risultati organizzate per tipologia di contenuto anziché per puro ranking. Se applicato, potrebbe significare che la visibilità di un risultato dipenderebbe non solo dal suo punteggio assoluto, ma anche dalla performance della categoria a cui appartiene e dalla posizione che occupa all&#39;interno di quella categoria. Un sito potrebbe beneficiare dell&#39;essere classificato in una categoria con alto tasso di selezione, anche se il suo punteggio individuale non è il massimo. Tuttavia, la descrizione specifica che l&#39;utente può disattivare questa visualizzazione (opzioni 750, 760, 770 nelle figure 7-8), suggerendo che si tratterebbe di una modalità opzionale di presentazione.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2013), quindi non è più in vigore e non protegge alcuna implementazione attuale.</li>
+      <li>Il brevetto descrive una modalità di presentazione dei risultati, non un fattore di ranking. Non dimostra che l&#39;appartenenza a una categoria influenzi il posizionamento organico di un documento.</li>
+      <li>La descrizione contempla che l&#39;utente possa disattivare la visualizzazione per categoria (figure 7-8, opzioni 750, 760, 770, 810, 820, 830), indicando che si tratterebbe di una modalità di presentazione alternativa, non del sistema standard.</li>
+      <li>Non ci sono evidenze nel testo che questa modalità di categorizzazione sia mai stata implementata in produzione su Google Search.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i contenuti siano chiaramente identificabili per tipologia (news, video, blog, ecc.) attraverso markup strutturato, metadata appropriati e pattern URL coerenti, facilitando qualsiasi sistema di classificazione automatica.</li>
+      <li class="pl-2">Ottimizzare i contenuti per le posizioni alte nella SERP rimane fondamentale, poiché i tassi di selezione descritti nel brevetto mostrano un calo drastico dalla prima alla decima posizione indipendentemente dalla categorizzazione.</li>
+      <li class="pl-2">Considerare che la diversificazione dei formati di contenuto (articoli, video, news) su uno stesso argomento potrebbe aumentare le opportunità di visibilità se il motore presentasse risultati organizzati per categoria.</li>
+      <li class="pl-2">Monitorare come i propri contenuti vengono classificati nei vari vertical di Google (News, Video, Immagini) per comprendere come i sistemi di classificazione automatica interpretano i propri documenti.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">selection rate</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tasso di selezione o click-through rate associato a una posizione specifica nella lista dei risultati o a un documento specifico, calcolato da selezioni osservate degli utenti o stimato</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">first score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio iniziale assegnato a ciascun risultato di ricerca, basato su misure di rilevanza rispetto alla query e/o qualità del documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">second score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio assegnato a una categoria, calcolato in base ai tassi di selezione delle posizioni occupate dai risultati appartenenti a quella categoria</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">actual selection rate</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tasso di selezione effettivo ottenuto da dati osservati di comportamento degli utenti, memorizzato in query log</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">estimated selection rate</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tasso di selezione stimato per una posizione o documento quando i dati effettivi non sono disponibili o sufficienti</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8498984B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

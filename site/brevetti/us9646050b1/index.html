@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US9646050B1: Interpretazione delle query basata su entità e punteggi — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per interpretare query di ricerca in un dominio specifico (es. contenuti media, prodotti, musica) identificando termini che corrispondono a nomi di entità estratti da metadati del dominio. Ogni entità ha un tipo e un punteggio (entity score) basato su popolarità o feed" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us9646050b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US9646050B1: Interpretazione delle query basata su entità e punteggi — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per interpretare query di ricerca in un dominio specifico (es. contenuti media, prodotti, musica) identificando termini che corrispondono a nomi di entità estratti da metadati del dominio. Ogni entità ha un tipo e un punteggio (entity score) basato su popolarità o feed" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us9646050b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US9646050B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us9646050b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US9646050B1: Interpretazione delle query basata su entit\u00e0 e punteggi",
+  "description": "Il brevetto descrive un metodo per interpretare query di ricerca in un dominio specifico (es. contenuti media, prodotti, musica) identificando termini che corrispondono a nomi di entit\u00e0 estratti da metadati del dominio. Ogni entit\u00e0 ha un tipo e un punteggio (entity score) basato su popolarit\u00e0 o feedback utente. Il sistema rimuove entit\u00e0 improbabili in base a punteggi e contesto della query, poi esegue la ricerca con le entit\u00e0 rimanenti associate ai rispettivi tipi.",
+  "articleBody": "Il brevetto descrive un metodo per interpretare query di ricerca in un dominio specifico (es. contenuti media, prodotti, musica) identificando termini che corrispondono a nomi di entit\u00e0 estratti da metadati del dominio. Ogni entit\u00e0 ha un tipo e un punteggio (entity score) basato su popolarit\u00e0 o feedback utente. Il sistema rimuove entit\u00e0 improbabili in base a punteggi e contesto della query, poi esegue la ricerca con le entit\u00e0 rimanenti associate ai rispettivi tipi.\n\nLa rivendicazione indipendente 1 copre un metodo che riceve una query contenente pi\u00f9 termini di ricerca, determina per almeno una porzione dei termini se corrispondono a un nome di entit\u00e0 associato a pi\u00f9 tipi di entit\u00e0, calcola per ciascun tipo un entity score che indica la relazione tra il nome e il tipo, rimuove almeno uno dei nomi di entit\u00e0 in base all\u0027entity score per generare una porzione rimanente, ed esegue la ricerca con la porzione rimanente dove ogni entit\u00e0 \u00e8 cercata secondo il tipo associato.\n\nLe rivendicazioni dipendenti 2 e 3 specificano che l\u0027entity score pu\u00f2 basarsi sulla popolarit\u00e0 dell\u0027entit\u00e0 nel dominio di ricerca o su informazioni di feedback utente. La rivendicazione 4 descrive la generazione di una tabella di entit\u00e0: si recuperano metadati del dominio, si estraggono nomi di entit\u00e0, si determinano tipo e punteggio per ciascuna, e si genera una tabella che include nome, tipo e score. La rivendicazione 5 prevede l\u0027integrazione con informazioni curate manualmente, inclusi termini da ignorare nella query. La rivendicazione 6 copre la selezione del dominio di ricerca tra pi\u00f9 domini in base alla query ricevuta e l\u0027accesso alla tabella corrispondente. La rivendicazione 7 riguarda l\u0027aggiornamento periodico della tabella: si memorizza, si verifica se \u00e8 trascorso un tempo predeterminato, si recuperano metadati aggiornati e si aggiorna la tabella.\n\nLe rivendicazioni 8-14 coprono un sistema con dispositivo di storage per informazioni di entit\u00e0 derivate da metadati e processore configurato per eseguire le stesse operazioni del metodo. Le rivendicazioni 15-21 coprono un mezzo leggibile da computer con istruzioni per eseguire il metodo.\n\nLa descrizione contempla l\u0027applicazione in domini verticali come ricerca di contenuti media (programmi TV, film), prodotti (nome prodotto, produttore, prezzo, categoria), musica (titolo canzone, artista, album, genere) e libri (titolo, autore, editore, genere). Per il dominio media, la descrizione menziona l\u0027estrazione di entit\u00e0 da metadati che includono titoli di serie TV, titoli di film, nomi di attori, produttori, personaggi, generi (paragrafi relativi al processo 200).\n\nL\u0027entity score, secondo i paragrafi che descrivono il blocco 240, potrebbe essere calcolato in base a criteri di popolarit\u00e0: valutazioni utente, numero di ricerche del nome, numero di accessi al contenuto associato. La descrizione contempla entity score aggregati: per un attore come \"tom cruise\" lo score potrebbe essere la media dei punteggi dei contenuti in cui appare, con possibili pesi basati su data di rilascio (contenuti recenti pesano di pi\u00f9). Per un canale TV lo score potrebbe essere la media dei programmi trasmessi.\n\nLa descrizione menziona l\u0027uso di click log (con opt-out utente) per aggiornare entity score in base a quante volte gli utenti hanno cercato o selezionato un\u0027entit\u00e0, e l\u0027integrazione con informazioni curate manualmente che includono termini comuni da ignorare (\"with\", \"the\", \"a\", \"and\") e caratteri da ignorare (apostrofi, trattini).\n\nPer la rimozione di entit\u00e0 improbabili, la descrizione contempla diversi criteri: rimozione di termini sovrapposti (\"tom\" quando \u00e8 presente \"tom cruise\"), rimozione basata su contesto della query (il termine \"2012\" in \"action movie 2012\" avrebbe maggiore probabilit\u00e0 di essere RELEASE_DATE che MOVIE per via della posizione e degli altri termini), rimozione di entit\u00e0 con score pi\u00f9 basso quando esistono omonime pi\u00f9 popolari (\"house\" come SERIES con score alto vs \"house\" come MOVIE con score basso).\n\nPer la SEO, questo potrebbe significare che, in contesti di ricerca verticale o specializzata, Google potrebbe interpretare query ambigue privilegiando entit\u00e0 pi\u00f9 popolari o contestualmente coerenti. Se applicato, potrebbe influenzare come vengono interpretate query in domini come Google Shopping, YouTube, Google Books. Tuttavia la descrizione si concentra su domini chiusi con metadati strutturati, non sulla ricerca web generica. L\u0027approccio descritto sarebbe pi\u00f9 rilevante per piattaforme di e-commerce, cataloghi di contenuti, database verticali che per il ranking organico tradizionale.",
+  "wordCount": 679,
+  "datePublished": "2026-10-29T10:07:49.791805+00:00",
+  "dateModified": "2026-10-29T10:07:49.791805+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us9646050b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Methods, systems, and media for interpreting queries",
+    "identifier": "US9646050B1",
+    "url": "https://patents.google.com/patent/US9646050B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US9646050B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US9646050B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Interpretazione delle query basata su entità e punteggi</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Methods, systems, and media for interpreting queries</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per interpretare query di ricerca in un dominio specifico (es. contenuti media, prodotti, musica) identificando termini che corrispondono a nomi di entità estratti da metadati del dominio. Ogni entità ha un tipo e un punteggio (entity score) basato su popolarità o feedback utente. Il sistema rimuove entità improbabili in base a punteggi e contesto della query, poi esegue la ricerca con le entità rimanenti associate ai rispettivi tipi.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Domini di ricerca verticali (media, prodotti, musica, libri)</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">09 Maggio 2017</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2012-11-14</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Entità e Knowledge Graph</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">21</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che riceve una query contenente più termini di ricerca, determina per almeno una porzione dei termini se corrispondono a un nome di entità associato a più tipi di entità, calcola per ciascun tipo un entity score che indica la relazione tra il nome e il tipo, rimuove almeno uno dei nomi di entità in base all&#39;entity score per generare una porzione rimanente, ed esegue la ricerca con la porzione rimanente dove ogni entità è cercata secondo il tipo associato.</p>
+      <p>Le rivendicazioni dipendenti 2 e 3 specificano che l&#39;entity score può basarsi sulla popolarità dell&#39;entità nel dominio di ricerca o su informazioni di feedback utente. La rivendicazione 4 descrive la generazione di una tabella di entità: si recuperano metadati del dominio, si estraggono nomi di entità, si determinano tipo e punteggio per ciascuna, e si genera una tabella che include nome, tipo e score. La rivendicazione 5 prevede l&#39;integrazione con informazioni curate manualmente, inclusi termini da ignorare nella query. La rivendicazione 6 copre la selezione del dominio di ricerca tra più domini in base alla query ricevuta e l&#39;accesso alla tabella corrispondente. La rivendicazione 7 riguarda l&#39;aggiornamento periodico della tabella: si memorizza, si verifica se è trascorso un tempo predeterminato, si recuperano metadati aggiornati e si aggiorna la tabella.</p>
+      <p>Le rivendicazioni 8-14 coprono un sistema con dispositivo di storage per informazioni di entità derivate da metadati e processore configurato per eseguire le stesse operazioni del metodo. Le rivendicazioni 15-21 coprono un mezzo leggibile da computer con istruzioni per eseguire il metodo.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla l&#39;applicazione in domini verticali come ricerca di contenuti media (programmi TV, film), prodotti (nome prodotto, produttore, prezzo, categoria), musica (titolo canzone, artista, album, genere) e libri (titolo, autore, editore, genere). Per il dominio media, la descrizione menziona l&#39;estrazione di entità da metadati che includono titoli di serie TV, titoli di film, nomi di attori, produttori, personaggi, generi (paragrafi relativi al processo 200).</p>
+      <p>L&#39;entity score, secondo i paragrafi che descrivono il blocco 240, potrebbe essere calcolato in base a criteri di popolarità: valutazioni utente, numero di ricerche del nome, numero di accessi al contenuto associato. La descrizione contempla entity score aggregati: per un attore come &#34;tom cruise&#34; lo score potrebbe essere la media dei punteggi dei contenuti in cui appare, con possibili pesi basati su data di rilascio (contenuti recenti pesano di più). Per un canale TV lo score potrebbe essere la media dei programmi trasmessi.</p>
+      <p>La descrizione menziona l&#39;uso di click log (con opt-out utente) per aggiornare entity score in base a quante volte gli utenti hanno cercato o selezionato un&#39;entità, e l&#39;integrazione con informazioni curate manualmente che includono termini comuni da ignorare (&#34;with&#34;, &#34;the&#34;, &#34;a&#34;, &#34;and&#34;) e caratteri da ignorare (apostrofi, trattini).</p>
+      <p>Per la rimozione di entità improbabili, la descrizione contempla diversi criteri: rimozione di termini sovrapposti (&#34;tom&#34; quando è presente &#34;tom cruise&#34;), rimozione basata su contesto della query (il termine &#34;2012&#34; in &#34;action movie 2012&#34; avrebbe maggiore probabilità di essere RELEASE_DATE che MOVIE per via della posizione e degli altri termini), rimozione di entità con score più basso quando esistono omonime più popolari (&#34;house&#34; come SERIES con score alto vs &#34;house&#34; come MOVIE con score basso).</p>
+      <p>Per la SEO, questo potrebbe significare che, in contesti di ricerca verticale o specializzata, Google potrebbe interpretare query ambigue privilegiando entità più popolari o contestualmente coerenti. Se applicato, potrebbe influenzare come vengono interpretate query in domini come Google Shopping, YouTube, Google Books. Tuttavia la descrizione si concentra su domini chiusi con metadati strutturati, non sulla ricerca web generica. L&#39;approccio descritto sarebbe più rilevante per piattaforme di e-commerce, cataloghi di contenuti, database verticali che per il ranking organico tradizionale.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia utilizzato in Google Search web: gli esempi riguardano ricerca di contenuti media su dispositivi di riproduzione, prodotti, musica e libri in domini verticali con metadati strutturati.</li>
+      <li>Non specifica come gli entity score influenzino il ranking dei risultati finali, solo come vengano usati per disambiguare l&#39;interpretazione della query e rimuovere entità improbabili.</li>
+      <li>La descrizione menziona click log e feedback utente come possibili fonti per entity score ma non quantifica il loro peso né garantisce che siano implementati in produzione.</li>
+      <li>Il brevetto fa parte di una famiglia con continuation (US11210289B2, US9116918B1, US12001429B2, US12499112B2) che condividono la stessa priorità 2012: non sono evidenze indipendenti ma variazioni dello stesso concetto.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">In contesti di ricerca verticale o cataloghi strutturati, assicurarsi che i metadati delle entità (nomi prodotti, titoli, autori, categorie) siano accurati e completi, poiché potrebbero alimentare sistemi di interpretazione delle query.</li>
+      <li class="pl-2">Per contenuti in domini specializzati, la popolarità e il feedback utente potrebbero influenzare come vengono interpretate query ambigue: mantenere segnali di engagement positivi (recensioni, interazioni) potrebbe rafforzare la rilevanza dell&#39;entità.</li>
+      <li class="pl-2">Quando si ottimizzano contenuti per piattaforme verticali (e-commerce, video, musica), considerare che termini ambigui potrebbero essere interpretati in base al contesto: fornire segnali chiari di tipo e categoria aiuta la disambiguazione.</li>
+      <li class="pl-2">Evitare sovrapposizioni confuse tra nomi di entità e termini generici nei titoli e nelle descrizioni, specialmente in domini con metadati strutturati dove l&#39;interpretazione automatica potrebbe privilegiare entità più popolari.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">entity name</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Nome di un&#39;entità estratto da metadati del dominio di ricerca, come titolo di un film, nome di un attore, nome di un prodotto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">entity type</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tipo associato a un&#39;entità che ne definisce la categoria, come SERIES, MOVIE, ACTOR, GENRE, PRODUCT_NAME</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">entity score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio che indica la relazione tra il nome dell&#39;entità e il suo tipo, basato su popolarità nel dominio o feedback utente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">entity table</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tabella generata da metadati del dominio che contiene nomi di entità con i rispettivi tipi e punteggi, usata per interpretare le query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">contextual information</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Informazioni derivate dal contesto della query (posizione dei termini, altri termini presenti) usate per rimuovere entità improbabili</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">search domain</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Dominio specifico di ricerca come contenuti media, prodotti, musica o libri, ciascuno con propri metadati ed entità</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US11210289B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11210289B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Methods, systems, and media for interpreting queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US9116918B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9116918B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Methods, systems, and media for interpreting queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US12001429B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12001429B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Methods, systems, and media for interpreting queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US12499112B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12499112B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Methods, systems, and media for interpreting voice queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US9646050B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US9336318B2: Selezione di contenuti rich per risposte a query domanda — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di selezionare contenuti rich (immagini, video, audio) da mostrare insieme a risposte dirette a query formulate come domande. Il sistema genera una query contestuale che combina elementi della domanda e della risposta, recupera contenuti rich, li classifica in base a" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us9336318b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US9336318B2: Selezione di contenuti rich per risposte a query domanda — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di selezionare contenuti rich (immagini, video, audio) da mostrare insieme a risposte dirette a query formulate come domande. Il sistema genera una query contestuale che combina elementi della domanda e della risposta, recupera contenuti rich, li classifica in base a" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us9336318b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US9336318B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us9336318b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US9336318B2: Selezione di contenuti rich per risposte a query domanda",
+  "description": "Il brevetto affronta il problema di selezionare contenuti rich (immagini, video, audio) da mostrare insieme a risposte dirette a query formulate come domande. Il sistema genera una query contestuale che combina elementi della domanda e della risposta, recupera contenuti rich, li classifica in base alla loro rilevanza contestuale rispetto a entrambi gli elementi, e demota quelli rilevanti solo per uno dei due.",
+  "articleBody": "Il brevetto affronta il problema di selezionare contenuti rich (immagini, video, audio) da mostrare insieme a risposte dirette a query formulate come domande. Il sistema genera una query contestuale che combina elementi della domanda e della risposta, recupera contenuti rich, li classifica in base alla loro rilevanza contestuale rispetto a entrambi gli elementi, e demota quelli rilevanti solo per uno dei due.\n\nLe rivendicazioni indipendenti (1, 7, 13) coprono un metodo, un sistema e un supporto di memorizzazione per fornire contenuti rich con risposte a query domanda. Il processo inizia ricevendo una query identificata come domanda e una risposta generata in risposta, ciascuna con uno o pi\u00f9 termini. Il sistema riceve un primo set di contenuti rich in risposta a un processo di ricerca basato sulla query domanda e sulla risposta, ordinati secondo una classifica. Per ciascun contenuto rich nel set, il sistema riceve dati che specificano etichette (labels) associate.\n\nIl cuore del metodo consiste nel classificare i contenuti rich in due categorie: i contenuti rich che hanno etichette corrispondenti sia ai termini della risposta sia ai termini della query domanda sono determinati come \"first rich content items\"; quelli che hanno etichette corrispondenti solo ai termini della risposta o solo ai termini della query domanda sono determinati come \"second rich content items\". Il sistema demota i second rich content items nell\u0027ordine del primo set rispetto ai first rich content items, producendo un ordine rivisto. Infine, seleziona secondo l\u0027ordine rivisto uno o pi\u00f9 contenuti rich da fornire con la risposta al dispositivo utente.\n\nLe rivendicazioni dipendenti 2-3 e 8-9 e 14-15 specificano che ricevere il primo set pu\u00f2 comprendere la generazione di una \"contextual query\" che include un primo elemento relativo alla query domanda e un secondo elemento relativo alla risposta, sottomettendola a un processo di ricerca di contenuti rich. La contextual query pu\u00f2 includere almeno uno o pi\u00f9 termini dalla query domanda e uno o pi\u00f9 termini dalla risposta. Le rivendicazioni 5, 11 e 17 contemplano un\u0027implementazione alternativa basata sul rilevamento di entit\u00e0 raffigurate nei contenuti rich mediante elaborazione dei contenuti rich, classificando come first items quelli che raffigurano entit\u00e0 descritte da entrambi i termini della risposta e della domanda. Le rivendicazioni 6, 12 e 18 specificano che i contenuti rich possono essere immagini.\n\nLa descrizione contempla due approcci principali per determinare quali contenuti rich siano contestualmente rilevanti. Il primo approccio, descritto nelle figure 5A-5B e nei paragrafi corrispondenti, si basa sul confronto tra set di immagini. Il sistema genera tre set: un primo set per la contextual query, un secondo set per la sola query domanda e un terzo set per la sola risposta usata come query. Le immagini che appaiono solo nel primo set sono classificate come first images, mentre quelle che appaiono anche nel secondo o terzo set sono classificate come second images e demote. La logica \u00e8 che immagini presenti anche nei set separati siano pi\u00f9 rilevanti per uno solo dei due elementi piuttosto che per il contesto completo. La descrizione contempla varianti in cui immagini presenti in tutti e tre i set sono demote meno di quelle presenti solo in due set, e demotions proporzionali alla posizione ordinale dell\u0027immagine negli altri set.\n\nIl secondo approccio, descritto nelle figure 6A-6B, si basa sulle etichette associate a ciascuna immagine. Le etichette possono includere metadata, testo descrittivo associato all\u0027immagine, testo da pagine web che includono l\u0027immagine, testo da link che puntano all\u0027immagine, e testo che descrive entit\u00e0 rilevate nell\u0027immagine mediante tecniche di computer vision. Un\u0027immagine con etichette che corrispondono a termini sia della domanda sia della risposta \u00e8 classificata come first image; se le etichette corrispondono solo a uno dei due, \u00e8 classificata come second image. La descrizione contempla anche una variante in cui immagini con etichette per entrambi gli elementi ma anche per entit\u00e0 aggiuntive sono classificate come second images, per focalizzare la rilevanza contestuale.\n\nPer la SEO, questo brevetto potrebbe indicare che Google valuti la coerenza contestuale dei contenuti rich rispetto al binomio domanda-risposta quando mostra answer box o featured snippet. Immagini ottimizzate solo per l\u0027argomento generale della query o solo per l\u0027entit\u00e0 della risposta potrebbero essere penalizzate rispetto a immagini che rappresentano visivamente la relazione tra i due elementi. L\u0027uso di etichette, metadata, testo circostante e anchor text dei link potrebbe influenzare la selezione. Tuttavia, il brevetto non specifica soglie, pesi o criteri di matching precisi, e la demotion potrebbe essere fissa o variabile secondo fattori non dettagliati.",
+  "wordCount": 733,
+  "datePublished": "2026-10-29T10:06:55.412574+00:00",
+  "dateModified": "2026-10-29T10:06:55.412574+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us9336318b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Rich content for query answers",
+    "identifier": "US9336318B2",
+    "url": "https://patents.google.com/patent/US9336318B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US9336318B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US9336318B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Selezione di contenuti rich per risposte a query domanda</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Rich content for query answers</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di selezionare contenuti rich (immagini, video, audio) da mostrare insieme a risposte dirette a query formulate come domande. Il sistema genera una query contestuale che combina elementi della domanda e della risposta, recupera contenuti rich, li classifica in base alla loro rilevanza contestuale rispetto a entrambi gli elementi, e demota quelli rilevanti solo per uno dei due.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Risposte dirette a query domanda in Search</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">10 Maggio 2016</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2013-12-31</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Passaggi, risposte dirette e snippet</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">18</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 7, 13) coprono un metodo, un sistema e un supporto di memorizzazione per fornire contenuti rich con risposte a query domanda. Il processo inizia ricevendo una query identificata come domanda e una risposta generata in risposta, ciascuna con uno o più termini. Il sistema riceve un primo set di contenuti rich in risposta a un processo di ricerca basato sulla query domanda e sulla risposta, ordinati secondo una classifica. Per ciascun contenuto rich nel set, il sistema riceve dati che specificano etichette (labels) associate.</p>
+      <p>Il cuore del metodo consiste nel classificare i contenuti rich in due categorie: i contenuti rich che hanno etichette corrispondenti sia ai termini della risposta sia ai termini della query domanda sono determinati come &#34;first rich content items&#34;; quelli che hanno etichette corrispondenti solo ai termini della risposta o solo ai termini della query domanda sono determinati come &#34;second rich content items&#34;. Il sistema demota i second rich content items nell&#39;ordine del primo set rispetto ai first rich content items, producendo un ordine rivisto. Infine, seleziona secondo l&#39;ordine rivisto uno o più contenuti rich da fornire con la risposta al dispositivo utente.</p>
+      <p>Le rivendicazioni dipendenti 2-3 e 8-9 e 14-15 specificano che ricevere il primo set può comprendere la generazione di una &#34;contextual query&#34; che include un primo elemento relativo alla query domanda e un secondo elemento relativo alla risposta, sottomettendola a un processo di ricerca di contenuti rich. La contextual query può includere almeno uno o più termini dalla query domanda e uno o più termini dalla risposta. Le rivendicazioni 5, 11 e 17 contemplano un&#39;implementazione alternativa basata sul rilevamento di entità raffigurate nei contenuti rich mediante elaborazione dei contenuti rich, classificando come first items quelli che raffigurano entità descritte da entrambi i termini della risposta e della domanda. Le rivendicazioni 6, 12 e 18 specificano che i contenuti rich possono essere immagini.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla due approcci principali per determinare quali contenuti rich siano contestualmente rilevanti. Il primo approccio, descritto nelle figure 5A-5B e nei paragrafi corrispondenti, si basa sul confronto tra set di immagini. Il sistema genera tre set: un primo set per la contextual query, un secondo set per la sola query domanda e un terzo set per la sola risposta usata come query. Le immagini che appaiono solo nel primo set sono classificate come first images, mentre quelle che appaiono anche nel secondo o terzo set sono classificate come second images e demote. La logica è che immagini presenti anche nei set separati siano più rilevanti per uno solo dei due elementi piuttosto che per il contesto completo. La descrizione contempla varianti in cui immagini presenti in tutti e tre i set sono demote meno di quelle presenti solo in due set, e demotions proporzionali alla posizione ordinale dell&#39;immagine negli altri set.</p>
+      <p>Il secondo approccio, descritto nelle figure 6A-6B, si basa sulle etichette associate a ciascuna immagine. Le etichette possono includere metadata, testo descrittivo associato all&#39;immagine, testo da pagine web che includono l&#39;immagine, testo da link che puntano all&#39;immagine, e testo che descrive entità rilevate nell&#39;immagine mediante tecniche di computer vision. Un&#39;immagine con etichette che corrispondono a termini sia della domanda sia della risposta è classificata come first image; se le etichette corrispondono solo a uno dei due, è classificata come second image. La descrizione contempla anche una variante in cui immagini con etichette per entrambi gli elementi ma anche per entità aggiuntive sono classificate come second images, per focalizzare la rilevanza contestuale.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google valuti la coerenza contestuale dei contenuti rich rispetto al binomio domanda-risposta quando mostra answer box o featured snippet. Immagini ottimizzate solo per l&#39;argomento generale della query o solo per l&#39;entità della risposta potrebbero essere penalizzate rispetto a immagini che rappresentano visivamente la relazione tra i due elementi. L&#39;uso di etichette, metadata, testo circostante e anchor text dei link potrebbe influenzare la selezione. Tuttavia, il brevetto non specifica soglie, pesi o criteri di matching precisi, e la demotion potrebbe essere fissa o variabile secondo fattori non dettagliati.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia attivo in Google Search, né fornisce evidenze di implementazione in produzione per risposte dirette o featured snippet.</li>
+      <li>Non specifica quali tipi di query domanda attivino il processo, né quali fonti di contenuti rich siano utilizzate o come siano indicizzate le etichette.</li>
+      <li>Non chiarisce i pesi relativi tra i due approcci (confronto set vs. etichette), né come interagiscano con altri segnali di ranking dei contenuti rich come click-through rate o popolarità della pagina.</li>
+      <li>Essendo un continuation del brevetto US8819006B1, non rappresenta una protezione indipendente ma un&#39;estensione della stessa famiglia brevettuale.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che immagini associate a contenuti che rispondono a domande frequenti abbiano metadata, alt text e testo circostante che descrivano sia l&#39;argomento della domanda sia l&#39;entità o il concetto della risposta, non solo uno dei due.</li>
+      <li class="pl-2">Per contenuti che mirano a featured snippet o answer box, considerare l&#39;uso di immagini che rappresentino visivamente la relazione tra domanda e risposta, non solo illustrazioni generiche dell&#39;argomento.</li>
+      <li class="pl-2">Ottimizzare il contesto testuale delle immagini (didascalie, paragrafi adiacenti, anchor text di link) per includere termini sia della domanda implicita sia della risposta fornita dal contenuto.</li>
+      <li class="pl-2">Valutare l&#39;uso di markup strutturato per entità e relazioni che possano facilitare l&#39;associazione semantica tra immagini e coppie domanda-risposta.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">question query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query formulata come domanda esplicita o implicita che cerca una risposta specifica, distinta da query informazionali generiche</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">contextual query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query generata combinando elementi della query domanda ed elementi della risposta, usata per recuperare contenuti rich contestualmente rilevanti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">rich content items</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Contenuti non testuali come immagini, video o audio che possono accompagnare una risposta diretta</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">context condition</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Condizione che, quando soddisfatta, indica che un contenuto rich fornisce informazioni contestuali relative a entrambi gli elementi della domanda e della risposta</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">rich content item labels</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Etichette associate a contenuti rich, includenti metadata, testo descrittivo, testo da pagine che li includono, e descrizioni di entità rilevate tramite computer vision</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US8819006B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8819006B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Rich content for query answers</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US9336318B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

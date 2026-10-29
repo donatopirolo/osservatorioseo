@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8407231B2: Scoring dei documenti basato su criteri legati ai link — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per classificare documenti come &#39;stale&#39; (obsoleti) o &#39;fresh&#39; (freschi) in base all&#39;andamento temporale dei link che puntano ad essi. Se il tasso o la quantità di nuovi link in ingresso diminuisce nel tempo, il documento viene classificato come stale e il suo punteggio " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8407231b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8407231B2: Scoring dei documenti basato su criteri legati ai link — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per classificare documenti come &#39;stale&#39; (obsoleti) o &#39;fresh&#39; (freschi) in base all&#39;andamento temporale dei link che puntano ad essi. Se il tasso o la quantità di nuovi link in ingresso diminuisce nel tempo, il documento viene classificato come stale e il suo punteggio " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8407231b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8407231B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8407231b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8407231B2: Scoring dei documenti basato su criteri legati ai link",
+  "description": "Il brevetto descrive un metodo per classificare documenti come \u0027stale\u0027 (obsoleti) o \u0027fresh\u0027 (freschi) in base all\u0027andamento temporale dei link che puntano ad essi. Se il tasso o la quantit\u00e0 di nuovi link in ingresso diminuisce nel tempo, il documento viene classificato come stale e il suo punteggio iniziale viene ridotto, influenzando il ranking nei risultati di ricerca.",
+  "articleBody": "Il brevetto descrive un metodo per classificare documenti come \u0027stale\u0027 (obsoleti) o \u0027fresh\u0027 (freschi) in base all\u0027andamento temporale dei link che puntano ad essi. Se il tasso o la quantit\u00e0 di nuovi link in ingresso diminuisce nel tempo, il documento viene classificato come stale e il suo punteggio iniziale viene ridotto, influenzando il ranking nei risultati di ricerca.\n\nLe rivendicazioni indipendenti (1, 8, 15) coprono un metodo implementato da server che riceve dati storici per un documento, inclusa una \u0027appearance date\u0027 (data di comparsa) per ciascuno di una pluralit\u00e0 di link che puntano al documento. Il sistema determina dai dati storici che c\u0027\u00e8 stata una diminuzione nel tasso o nella quantit\u00e0 di comparsa di nuovi link che puntano al documento nel tempo. Questa determinazione avviene confrontando la data di comparsa pi\u00f9 vecchia tra tutti i link al documento con la data di comparsa pi\u00f9 vecchia di un gruppo dei link pi\u00f9 recenti, dove ogni link in questo gruppo ha una data di comparsa che rientra in una percentuale delle date di comparsa pi\u00f9 recenti. In base a questa determinazione, il documento viene classificato come stale. Una volta classificato come stale, il punteggio iniziale del documento viene ridotto, risultando in un punteggio alterato. Il documento viene quindi classificato rispetto ad almeno un altro documento in base a questo punteggio alterato.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il metodo include la ricezione di una query di ricerca e la presentazione dei documenti secondo il ranking. La rivendicazione 3 definisce che la data di comparsa di un particolare link \u00e8 la data in cui il web crawler del motore di ricerca esegue per la prima volta la scansione di un documento che include quel link. La rivendicazione 4 estende il metodo confrontando la quantit\u00e0 di comparsa di nuovi link durante un periodo di tempo predefinito recente con la quantit\u00e0 totale di comparsa di nuovi link al documento. La rivendicazione 6 contempla il caso opposto: se c\u0027\u00e8 un aumento nel tasso o quantit\u00e0 di comparsa di nuovi link, il documento viene classificato come fresh e il suo punteggio iniziale viene aumentato. La rivendicazione 7 introduce un altro criterio: se c\u0027\u00e8 una diminuzione nel tasso o quantit\u00e0 di scomparsa di link che puntano al documento, questo viene classificato come stale e il punteggio viene ridotto.\n\nLa descrizione contempla numerosi segnali e implementazioni che vanno oltre le rivendicazioni. Nel blocco relativo ai \u0027Link-Based Criteria\u0027, la descrizione contempla che la \u0027appearance date\u0027 di un link possa essere determinata come la prima data in cui il motore trova il link o la data del documento che contiene il link. La \u0027disappearance date\u0027 di un link potrebbe essere la prima data in cui il documento contenente il link lo ha rimosso o \u00e8 scomparso esso stesso. La descrizione contempla il monitoraggio del comportamento temporale dei link, incluso quando i link appaiono o scompaiono, il tasso al quale appaiono o scompaiono nel tempo, quanti link appaiono o scompaiono durante un dato periodo, e se c\u0027\u00e8 una tendenza verso la comparsa di nuovi link rispetto alla scomparsa di link esistenti.\n\nLa descrizione contempla che una tendenza al ribasso nel numero o tasso di nuovi link nel tempo potrebbe segnalare che un documento \u00e8 stale, mentre una tendenza al rialzo potrebbe segnalare un documento fresh. Un\u0027implementazione contemplata confronta il numero di nuovi link a un documento negli ultimi n giorni rispetto al numero di nuovi link da quando il documento \u00e8 stato trovato per la prima volta. Un\u0027altra implementazione contemplata determina l\u0027et\u00e0 pi\u00f9 vecchia del y% pi\u00f9 recente dei link rispetto all\u0027et\u00e0 del primo link trovato. La descrizione contempla anche che i link possano essere pesati in base alla freschezza, determinata dalla data di comparsa o modifica del link, del testo di ancoraggio associato, o del documento contenente il link.\n\nLa descrizione contempla inoltre che la distribuzione dell\u0027et\u00e0 dei link possa essere utilizzata come segnale, assumendo che la distribuzione dell\u0027et\u00e0 di un documento stale sar\u00e0 molto diversa da quella di un documento fresh. Un picco improvviso nella quantit\u00e0 di backlink potrebbe segnalare sia un fenomeno topico che tentativi di spam. La descrizione contempla che la scomparsa di molti link possa significare che il documento \u00e8 stale o \u00e8 stato superato da un altro documento.\n\nPer la SEO, questo brevetto potrebbe significare che un profilo di link building naturale e costante nel tempo sarebbe preferibile a picchi improvvisi. La velocit\u00e0 con cui un sito acquisisce nuovi link rispetto alla sua et\u00e0 potrebbe influenzare il ranking. Un sito che smette di acquisire nuovi link o che vede una diminuzione nel tasso di acquisizione potrebbe essere penalizzato come obsoleto. Tuttavia, \u00e8 importante notare che la descrizione contempla anche misure anti-spam: picchi improvvisi potrebbero essere interpretati come tentativi di manipolazione e portare a una riduzione del punteggio.",
+  "wordCount": 796,
+  "datePublished": "2026-10-29T10:01:39.765814+00:00",
+  "dateModified": "2026-10-29T10:01:39.765814+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8407231b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Document scoring based on link-based criteria",
+    "identifier": "US8407231B2",
+    "url": "https://patents.google.com/patent/US8407231B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8407231B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8407231B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Scoring dei documenti basato su criteri legati ai link</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Document scoring based on link-based criteria</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per classificare documenti come &#39;stale&#39; (obsoleti) o &#39;fresh&#39; (freschi) in base all&#39;andamento temporale dei link che puntano ad essi. Se il tasso o la quantità di nuovi link in ingresso diminuisce nel tempo, il documento viene classificato come stale e il suo punteggio iniziale viene ridotto, influenzando il ranking nei risultati di ricerca.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking dei documenti</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">26 Marzo 2013</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2003-09-30</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Link e ranking</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 8, 15) coprono un metodo implementato da server che riceve dati storici per un documento, inclusa una &#39;appearance date&#39; (data di comparsa) per ciascuno di una pluralità di link che puntano al documento. Il sistema determina dai dati storici che c&#39;è stata una diminuzione nel tasso o nella quantità di comparsa di nuovi link che puntano al documento nel tempo. Questa determinazione avviene confrontando la data di comparsa più vecchia tra tutti i link al documento con la data di comparsa più vecchia di un gruppo dei link più recenti, dove ogni link in questo gruppo ha una data di comparsa che rientra in una percentuale delle date di comparsa più recenti. In base a questa determinazione, il documento viene classificato come stale. Una volta classificato come stale, il punteggio iniziale del documento viene ridotto, risultando in un punteggio alterato. Il documento viene quindi classificato rispetto ad almeno un altro documento in base a questo punteggio alterato.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il metodo include la ricezione di una query di ricerca e la presentazione dei documenti secondo il ranking. La rivendicazione 3 definisce che la data di comparsa di un particolare link è la data in cui il web crawler del motore di ricerca esegue per la prima volta la scansione di un documento che include quel link. La rivendicazione 4 estende il metodo confrontando la quantità di comparsa di nuovi link durante un periodo di tempo predefinito recente con la quantità totale di comparsa di nuovi link al documento. La rivendicazione 6 contempla il caso opposto: se c&#39;è un aumento nel tasso o quantità di comparsa di nuovi link, il documento viene classificato come fresh e il suo punteggio iniziale viene aumentato. La rivendicazione 7 introduce un altro criterio: se c&#39;è una diminuzione nel tasso o quantità di scomparsa di link che puntano al documento, questo viene classificato come stale e il punteggio viene ridotto.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla numerosi segnali e implementazioni che vanno oltre le rivendicazioni. Nel blocco relativo ai &#39;Link-Based Criteria&#39;, la descrizione contempla che la &#39;appearance date&#39; di un link possa essere determinata come la prima data in cui il motore trova il link o la data del documento che contiene il link. La &#39;disappearance date&#39; di un link potrebbe essere la prima data in cui il documento contenente il link lo ha rimosso o è scomparso esso stesso. La descrizione contempla il monitoraggio del comportamento temporale dei link, incluso quando i link appaiono o scompaiono, il tasso al quale appaiono o scompaiono nel tempo, quanti link appaiono o scompaiono durante un dato periodo, e se c&#39;è una tendenza verso la comparsa di nuovi link rispetto alla scomparsa di link esistenti.</p>
+      <p>La descrizione contempla che una tendenza al ribasso nel numero o tasso di nuovi link nel tempo potrebbe segnalare che un documento è stale, mentre una tendenza al rialzo potrebbe segnalare un documento fresh. Un&#39;implementazione contemplata confronta il numero di nuovi link a un documento negli ultimi n giorni rispetto al numero di nuovi link da quando il documento è stato trovato per la prima volta. Un&#39;altra implementazione contemplata determina l&#39;età più vecchia del y% più recente dei link rispetto all&#39;età del primo link trovato. La descrizione contempla anche che i link possano essere pesati in base alla freschezza, determinata dalla data di comparsa o modifica del link, del testo di ancoraggio associato, o del documento contenente il link.</p>
+      <p>La descrizione contempla inoltre che la distribuzione dell&#39;età dei link possa essere utilizzata come segnale, assumendo che la distribuzione dell&#39;età di un documento stale sarà molto diversa da quella di un documento fresh. Un picco improvviso nella quantità di backlink potrebbe segnalare sia un fenomeno topico che tentativi di spam. La descrizione contempla che la scomparsa di molti link possa significare che il documento è stale o è stato superato da un altro documento.</p>
+      <p>Per la SEO, questo brevetto potrebbe significare che un profilo di link building naturale e costante nel tempo sarebbe preferibile a picchi improvvisi. La velocità con cui un sito acquisisce nuovi link rispetto alla sua età potrebbe influenzare il ranking. Un sito che smette di acquisire nuovi link o che vede una diminuzione nel tasso di acquisizione potrebbe essere penalizzato come obsoleto. Tuttavia, è importante notare che la descrizione contempla anche misure anti-spam: picchi improvvisi potrebbero essere interpretati come tentativi di manipolazione e portare a una riduzione del punteggio.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2013), quindi non è più in vigore e Google non ha obblighi di protezione su questa specifica implementazione.</li>
+      <li>Il brevetto descrive cosa Google voleva proteggere nel 2003, con priorità da oltre 20 anni fa, in un&#39;era pre-Penguin e pre-machine learning moderno: non dimostra cosa sia attualmente in uso.</li>
+      <li>La descrizione contempla molteplici implementazioni possibili e segnali opzionali (&#39;may&#39;, &#39;might&#39;, &#39;could&#39;), ma non specifica quali siano effettivamente implementati o con quale peso relativo.</li>
+      <li>Il brevetto non fornisce soglie specifiche, percentuali o parametri numerici per determinare quando un documento diventa stale, lasciando ampio spazio a implementazioni diverse o all&#39;assenza di implementazione.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Mantenere un profilo di link building costante e naturale nel tempo rimane una pratica solida, indipendentemente dall&#39;applicazione di questo brevetto, poiché riflette crescita organica e interesse sostenuto.</li>
+      <li class="pl-2">Monitorare la perdita di backlink (link che scompaiono) è importante per identificare potenziali problemi di obsolescenza percepita o contenuti che non vengono più referenziati, segnalando necessità di aggiornamento.</li>
+      <li class="pl-2">Evitare picchi improvvisi e innaturali nell&#39;acquisizione di link rimane prudente, poiché pattern anomali possono essere interpretati come manipolativi da diversi algoritmi di rilevamento spam.</li>
+      <li class="pl-2">Aggiornare regolarmente i contenuti e mantenere il sito attivo può contribuire a segnali di freschezza che vanno oltre i soli link, creando un ecosistema di segnali coerenti di rilevanza continua.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">appearance date</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Data in cui un link viene scoperto per la prima volta dal crawler o data del documento che contiene il link</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">disappearance date</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Prima data in cui un documento contenente un link lo rimuove o il documento stesso scompare</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">stale document</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documento classificato come obsoleto in base alla diminuzione del tasso o quantità di nuovi link in ingresso nel tempo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">fresh document</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documento classificato come fresco in base all&#39;aumento del tasso o quantità di nuovi link in ingresso nel tempo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">rate of link growth</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Velocità con cui nuovi link a un documento vengono creati nel tempo, calcolata come media per unità di tempo</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="/brevetti/us7346839b2/" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7346839B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Recupero informazioni basato su dati storici</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">scheda</span>
+      </a>
+      <a href="https://patents.google.com/patent/US20070094255A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US20070094255A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Document scoring based on link-based criteria</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8407231B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

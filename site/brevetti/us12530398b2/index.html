@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US12530398B2: Citazioni visive per risposte a query multimodali — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di fornire risposte a query multimodali (immagine + prompt testuale) con la possibilità di verificarne l&#39;accuratezza. Il sistema recupera immagini visivamente simili alla query image, estrae testo dai documenti che le contengono, genera una risposta al prompt elabora" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us12530398b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US12530398B2: Citazioni visive per risposte a query multimodali — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di fornire risposte a query multimodali (immagine + prompt testuale) con la possibilità di verificarne l&#39;accuratezza. Il sistema recupera immagini visivamente simili alla query image, estrae testo dai documenti che le contengono, genera una risposta al prompt elabora" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us12530398b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US12530398B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us12530398b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US12530398B2: Citazioni visive per risposte a query multimodali",
+  "description": "Il brevetto affronta il problema di fornire risposte a query multimodali (immagine + prompt testuale) con la possibilit\u00e0 di verificarne l\u0027accuratezza. Il sistema recupera immagini visivamente simili alla query image, estrae testo dai documenti che le contengono, genera una risposta al prompt elaborando il testo estratto con un modello linguistico, e presenta la risposta insieme alle immagini come \"citazioni visive\" che permettono all\u0027utente di valutare rapidamente la pertinenza delle fonti.",
+  "articleBody": "Il brevetto affronta il problema di fornire risposte a query multimodali (immagine + prompt testuale) con la possibilit\u00e0 di verificarne l\u0027accuratezza. Il sistema recupera immagini visivamente simili alla query image, estrae testo dai documenti che le contengono, genera una risposta al prompt elaborando il testo estratto con un modello linguistico, e presenta la risposta insieme alle immagini come \"citazioni visive\" che permettono all\u0027utente di valutare rapidamente la pertinenza delle fonti.\n\nLa rivendicazione indipendente 1 protegge un metodo che recupera una result image in base alla similarit\u00e0 con una query image, ottiene una prima unit\u00e0 di testo da un documento sorgente che include la result image, riceve un prompt associato alla query image, determina una seconda unit\u00e0 di testo elaborando la prima unit\u00e0 di testo e il prompt con un modello linguistico machine-learned (la seconda unit\u00e0 pu\u00f2 includere testo derivato dalla prima), genera attribution information che include un link associato alla result image elaborando la seconda unit\u00e0 di testo e la result image, e fornisce per la visualizzazione l\u0027attribution information, la seconda unit\u00e0 di testo e la result image.\n\nLa rivendicazione 2 specifica che il recupero avviene elaborando la query image con un modello di visual search per ottenere una rappresentazione intermedia e recuperando la result image in base alla similarit\u00e0 tra le rappresentazioni intermedie. La rivendicazione 3 dettaglia che il modello pu\u00f2 essere un embedding model e il recupero basato sulla distanza tra embeddings in uno spazio di embedding. Le rivendicazioni 4-7 coprono l\u0027ottenimento della query image da un dispositivo utente e la ricezione del prompt prima o dopo la fornitura della result image. La rivendicazione 8 specifica che il documento sorgente pu\u00f2 essere pagine web, articoli, giornali, libri o trascrizioni. Le rivendicazioni 9-11 coprono l\u0027attribution information che identifica il documento o indica dove accedervi (URL per pagine web, citazione per riviste). Le rivendicazioni 12-13 coprono la generazione automatica del prompt elaborando la query image con un modello per ottenere un output semantico. Le rivendicazioni 14-16 coprono tecniche per selezionare porzioni di testo dal documento: uso di euristiche, selezione di testo che precede o segue l\u0027immagine nel documento, o uso di un modello di classificazione.\n\nLa rivendicazione indipendente 17 copre un sistema che ottiene query image e prompt da un dispositivo utente, elabora la query image con un embedding model, recupera result image, identifica il documento sorgente, determina la prima unit\u00e0 di testo, elabora prima unit\u00e0 e prompt con un modello linguistico per ottenere la seconda unit\u00e0, genera attribution information elaborando seconda unit\u00e0 e result image, e fornisce tutto per la visualizzazione. La rivendicazione 18 copre il raffinamento iterativo: ricezione di richiesta di informazioni aggiuntive, recupero di seconda result image, identificazione di pi\u00f9 documenti sorgente per la stessa immagine con contenuto testuale diverso, elaborazione di unit\u00e0 di testo aggiuntive. La rivendicazione 20 copre il caso di pi\u00f9 result images con elaborazione di un set di input testuali che include unit\u00e0 di testo da due o pi\u00f9 result images e il prompt, generando attribution information elaborando la seconda unit\u00e0 di testo e la result image, e fornendo attribution information, seconda unit\u00e0 e le immagini.\n\nLa descrizione contempla un flusso in cui un visual search computing system riceve una multimodal query (query image 206 e prompt 208) da un dispositivo utente. Se il prompt non \u00e8 fornito, il sistema pu\u00f2 generarlo elaborando la query image con un modello semantico (blocco 210, claim 13). L\u0027image evaluation module 210 elabora la query image con un visual search model 214 (tipicamente un embedding model) per generare una rappresentazione intermedia e seleziona result images 212 da un image search space 215 (embedding space) in base alla distanza (blocco 210, FIG. 2).\n\nIl document content selection module 218 recupera documenti 220 che includono le result images tramite document indexing information 216. La descrizione contempla diverse tecniche per estrarre la prima unit\u00e0 di testo 224 dal documento: selezione euristica di testo che precede o segue l\u0027immagine (claim 15, esempio del sito per speed boat enthusiast), selezione di tutto il testo se il documento \u00e8 breve, o uso di un modello di classificazione (claim 16). Il documento pu\u00f2 essere un sito web, articolo accademico, libro, trascrizione (claim 8, blocco 220).\n\nIl text determination module 226 elabora la prima unit\u00e0 di testo 224 e il prompt 208 con un machine-learned language model 230 (descritto come large language model addestrato su ampio corpus, potenzialmente ottimizzato per task specifici, blocco 226) per generare la seconda unit\u00e0 di testo 228. La descrizione specifica che questa pu\u00f2 essere una summarization (embodiment 32), pu\u00f2 includere parte del testo originale o testo derivato (claim 1), e pu\u00f2 includere predictive information che identifica la porzione pi\u00f9 rilevante per il prompt (embodiment 30, emphasis element 506 in FIG. 5A).\n\nL\u0027interface data generation module 232 genera interface data 234 che include la seconda unit\u00e0 di testo, le result images e attribution information 236 (titolo, autore, URL, citazione bibliografica a seconda del tipo di documento, claims 9-11). La descrizione contempla diverse modalit\u00e0 di presentazione: primary interface element 404 con risposta diretta e attribution element 405 (FIG. 4), o interface element 504 con contesto e emphasis element 506 che evidenzia la porzione rilevante (FIG. 5A). La scelta del formato potrebbe dipendere dalla certezza dell\u0027informazione o dalla comprensione semantica del prompt (\"good plane\" \u00e8 soggettivo, quindi viene fornito contesto, blocco tra FIG. 5A e 6A).\n\nLa descrizione contempla raffinamento iterativo basato su feedback utente (FIGS. 6A-7B): l\u0027utente pu\u00f2 selezionare un attribution element 704B per indicare che una result image 612B non \u00e8 pertinente (input 706, FIG. 7A). Il sistema riceve result image selection information 628, rimuove le unit\u00e0 di testo associate al documento di quella immagine dal set di input, rielabora il set ridotto con il language model per generare una seconda unit\u00e0 di testo raffinata 630 (FIG. 6B, claims 28-29). La descrizione contempla anche la rimozione dell\u0027attribution information associata (claim 29).\n\nPer la SEO, questo potrebbe significare che in contesti di ricerca multimodale con risposte generate, la pertinenza visiva tra immagini presenti in un documento e l\u0027oggetto della query potrebbe condizionare l\u0027estrazione e l\u0027utilizzo del testo del documento per generare risposte. Un documento con immagini visivamente coerenti con la query image avrebbe maggiori probabilit\u00e0 di vedere il proprio testo utilizzato. L\u0027attribution tramite link e thumbnail potrebbe rappresentare una forma di visibilit\u00e0, anche se subordinata alla risposta generata. Il meccanismo di feedback negativo contemplato suggerirebbe che segnali di incoerenza visiva potrebbero ridurre il peso di un documento nelle iterazioni successive. Tuttavia, la descrizione non specifica criteri di ranking tra documenti n\u00e9 segnali di qualit\u00e0 del testo oltre alla prossimit\u00e0 all\u0027immagine nel documento.",
+  "wordCount": 1090,
+  "datePublished": "2026-10-29T09:58:55.380968+00:00",
+  "dateModified": "2026-10-29T09:58:55.380968+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us12530398b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Visual citations for information provided in response to multimodal queries",
+    "identifier": "US12530398B2",
+    "url": "https://patents.google.com/patent/US12530398B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US12530398B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US12530398B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Citazioni visive per risposte a query multimodali</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Visual citations for information provided in response to multimodal queries</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di fornire risposte a query multimodali (immagine + prompt testuale) con la possibilità di verificarne l&#39;accuratezza. Il sistema recupera immagini visivamente simili alla query image, estrae testo dai documenti che le contengono, genera una risposta al prompt elaborando il testo estratto con un modello linguistico, e presenta la risposta insieme alle immagini come &#34;citazioni visive&#34; che permettono all&#39;utente di valutare rapidamente la pertinenza delle fonti.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Query multimodali (immagine + testo), risposte generative</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">20 Gennaio 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2023-05-09</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Grounding, attribuzione e citazioni</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 protegge un metodo che recupera una result image in base alla similarità con una query image, ottiene una prima unità di testo da un documento sorgente che include la result image, riceve un prompt associato alla query image, determina una seconda unità di testo elaborando la prima unità di testo e il prompt con un modello linguistico machine-learned (la seconda unità può includere testo derivato dalla prima), genera attribution information che include un link associato alla result image elaborando la seconda unità di testo e la result image, e fornisce per la visualizzazione l&#39;attribution information, la seconda unità di testo e la result image.</p>
+      <p>La rivendicazione 2 specifica che il recupero avviene elaborando la query image con un modello di visual search per ottenere una rappresentazione intermedia e recuperando la result image in base alla similarità tra le rappresentazioni intermedie. La rivendicazione 3 dettaglia che il modello può essere un embedding model e il recupero basato sulla distanza tra embeddings in uno spazio di embedding. Le rivendicazioni 4-7 coprono l&#39;ottenimento della query image da un dispositivo utente e la ricezione del prompt prima o dopo la fornitura della result image. La rivendicazione 8 specifica che il documento sorgente può essere pagine web, articoli, giornali, libri o trascrizioni. Le rivendicazioni 9-11 coprono l&#39;attribution information che identifica il documento o indica dove accedervi (URL per pagine web, citazione per riviste). Le rivendicazioni 12-13 coprono la generazione automatica del prompt elaborando la query image con un modello per ottenere un output semantico. Le rivendicazioni 14-16 coprono tecniche per selezionare porzioni di testo dal documento: uso di euristiche, selezione di testo che precede o segue l&#39;immagine nel documento, o uso di un modello di classificazione.</p>
+      <p>La rivendicazione indipendente 17 copre un sistema che ottiene query image e prompt da un dispositivo utente, elabora la query image con un embedding model, recupera result image, identifica il documento sorgente, determina la prima unità di testo, elabora prima unità e prompt con un modello linguistico per ottenere la seconda unità, genera attribution information elaborando seconda unità e result image, e fornisce tutto per la visualizzazione. La rivendicazione 18 copre il raffinamento iterativo: ricezione di richiesta di informazioni aggiuntive, recupero di seconda result image, identificazione di più documenti sorgente per la stessa immagine con contenuto testuale diverso, elaborazione di unità di testo aggiuntive. La rivendicazione 20 copre il caso di più result images con elaborazione di un set di input testuali che include unità di testo da due o più result images e il prompt, generando attribution information elaborando la seconda unità di testo e la result image, e fornendo attribution information, seconda unità e le immagini.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un flusso in cui un visual search computing system riceve una multimodal query (query image 206 e prompt 208) da un dispositivo utente. Se il prompt non è fornito, il sistema può generarlo elaborando la query image con un modello semantico (blocco 210, claim 13). L&#39;image evaluation module 210 elabora la query image con un visual search model 214 (tipicamente un embedding model) per generare una rappresentazione intermedia e seleziona result images 212 da un image search space 215 (embedding space) in base alla distanza (blocco 210, FIG. 2).</p>
+      <p>Il document content selection module 218 recupera documenti 220 che includono le result images tramite document indexing information 216. La descrizione contempla diverse tecniche per estrarre la prima unità di testo 224 dal documento: selezione euristica di testo che precede o segue l&#39;immagine (claim 15, esempio del sito per speed boat enthusiast), selezione di tutto il testo se il documento è breve, o uso di un modello di classificazione (claim 16). Il documento può essere un sito web, articolo accademico, libro, trascrizione (claim 8, blocco 220).</p>
+      <p>Il text determination module 226 elabora la prima unità di testo 224 e il prompt 208 con un machine-learned language model 230 (descritto come large language model addestrato su ampio corpus, potenzialmente ottimizzato per task specifici, blocco 226) per generare la seconda unità di testo 228. La descrizione specifica che questa può essere una summarization (embodiment 32), può includere parte del testo originale o testo derivato (claim 1), e può includere predictive information che identifica la porzione più rilevante per il prompt (embodiment 30, emphasis element 506 in FIG. 5A).</p>
+      <p>L&#39;interface data generation module 232 genera interface data 234 che include la seconda unità di testo, le result images e attribution information 236 (titolo, autore, URL, citazione bibliografica a seconda del tipo di documento, claims 9-11). La descrizione contempla diverse modalità di presentazione: primary interface element 404 con risposta diretta e attribution element 405 (FIG. 4), o interface element 504 con contesto e emphasis element 506 che evidenzia la porzione rilevante (FIG. 5A). La scelta del formato potrebbe dipendere dalla certezza dell&#39;informazione o dalla comprensione semantica del prompt (&#34;good plane&#34; è soggettivo, quindi viene fornito contesto, blocco tra FIG. 5A e 6A).</p>
+      <p>La descrizione contempla raffinamento iterativo basato su feedback utente (FIGS. 6A-7B): l&#39;utente può selezionare un attribution element 704B per indicare che una result image 612B non è pertinente (input 706, FIG. 7A). Il sistema riceve result image selection information 628, rimuove le unità di testo associate al documento di quella immagine dal set di input, rielabora il set ridotto con il language model per generare una seconda unità di testo raffinata 630 (FIG. 6B, claims 28-29). La descrizione contempla anche la rimozione dell&#39;attribution information associata (claim 29).</p>
+      <p>Per la SEO, questo potrebbe significare che in contesti di ricerca multimodale con risposte generate, la pertinenza visiva tra immagini presenti in un documento e l&#39;oggetto della query potrebbe condizionare l&#39;estrazione e l&#39;utilizzo del testo del documento per generare risposte. Un documento con immagini visivamente coerenti con la query image avrebbe maggiori probabilità di vedere il proprio testo utilizzato. L&#39;attribution tramite link e thumbnail potrebbe rappresentare una forma di visibilità, anche se subordinata alla risposta generata. Il meccanismo di feedback negativo contemplato suggerirebbe che segnali di incoerenza visiva potrebbero ridurre il peso di un documento nelle iterazioni successive. Tuttavia, la descrizione non specifica criteri di ranking tra documenti né segnali di qualità del testo oltre alla prossimità all&#39;immagine nel documento.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia attivo in Google Search o in altri prodotti. È una domanda concessa, ma l&#39;implementazione resta non verificabile.</li>
+      <li>Non specifica criteri di ranking tra documenti sorgente quando più documenti contengono la stessa result image, né pesi assegnati a diversi segnali (qualità del testo, autorevolezza del documento, freschezza).</li>
+      <li>La selezione del testo dal documento è descritta con tecniche euristiche o modelli di classificazione non dettagliati: non è chiaro quali porzioni di un documento lungo vengano effettivamente utilizzate né con quale priorità.</li>
+      <li>Il brevetto copre query multimodali (immagine + testo), non la ricerca testuale tradizionale: l&#39;applicabilità a scenari SEO classici è indiretta e condizionata all&#39;adozione di interfacce multimodali.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che le immagini presenti in un documento siano coerenti e pertinenti al contenuto testuale circostante: la prossimità testo-immagine è contemplata come criterio di selezione.</li>
+      <li class="pl-2">Mantenere una struttura documentale chiara in cui il testo rilevante sia posizionato vicino alle immagini correlate, facilitando l&#39;estrazione automatica di contesto pertinente.</li>
+      <li class="pl-2">Fornire metadati accurati e attribution information chiara (titoli, autori, URL stabili) per documenti e immagini, poiché queste informazioni sono contemplate per l&#39;identificazione delle fonti.</li>
+      <li class="pl-2">Considerare che in scenari di ricerca multimodale, la qualità e la pertinenza visiva delle immagini potrebbero influenzare indirettamente la visibilità del contenuto testuale associato, anche senza modifiche al ranking tradizionale.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query image</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Immagine fornita dall&#39;utente come parte di una query multimodale, utilizzata per recuperare immagini visivamente simili</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">result image</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Immagine recuperata in base alla similarità visiva con la query image, inclusa in un documento sorgente da cui estrarre testo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">prompt</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Testo fornito dall&#39;utente (o generato automaticamente) che accompagna la query image e guida la generazione della risposta</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">first unit of text</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Porzione di contenuto testuale estratta dal documento sorgente che include la result image, selezionata con euristiche o modelli</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">second unit of text</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Testo generato elaborando la prima unità di testo e il prompt con un modello linguistico, può includere testo derivato o una summarization</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">attribution information</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Informazioni che identificano il documento sorgente (titolo, autore, URL, citazione) e permettono all&#39;utente di accedervi o verificarlo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">source document</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documento (pagina web, articolo, libro, trascrizione) che include la result image e il testo associato da cui estrarre informazioni</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">embedding space</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Spazio vettoriale in cui le immagini sono rappresentate come embeddings, utilizzato per calcolare la similarità tramite distanza</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US20260111481A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US20260111481A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Visual Citations for Information Provided in Response to Multimodal Queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/CN118551063A/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">CN118551063A</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Visual reference to information provided in response to multimodal queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/JP7900438B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">JP7900438B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Visual quotation for information provided in response to multimodal queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US12530398B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

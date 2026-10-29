@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8171048B2",
+    "title": "Ranking documents based on a location sensitivity factor",
+    "abstract": "Systems and methods improve search rankings for a search query by using location data associated with queries and documents related to the search query. In one aspect, a search query is received, a location score is determined, a topical score is determined, and an ordering of documents related to the search query is determined based, at least in part, on the location score and the topical score.",
+    "claims": [
+      "1. A method performed by a server device, the method comprising: receiving, by one or more processors of the server device, a query; determining, by one or more processors of the server device, a geographic location associated with the query; determining, by one or more processors of the server device, a topic corresponding to the query; determining, by one or more processors of the server device, a location sensitivity factor associated with the topic; identifying, by one or more processors of the server device, a set of documents based, at least in part, on the query; determining, by one or more processors of the server device, for each document in the set of documents, a topical score based, at least in part, on the query; determining, by one or more processors of the server device, for each document in the set of documents, a distance score based on a measure of distance between a geographic location associated with the document and the geographic location associated with the query, and on the location sensitivity factor; generating, by one or more processors of the server device, for each document in the set of documents, a combined score based, at least in part, on the topical score and the distance score for the document; and ordering, by one or more processors of the server device, the set of documents based, at least in part, on the combined scores for the set of documents.",
+      "2. The method of claim 1 , where the topical score, for a particular document in the set of documents, is an increasing function of a relevance of the particular document with regard to the query.",
+      "3. The method of claim 1 , where the distance score, for a particular document in the set of documents, is a decreasing function of the measure of distance for the particular document.",
+      "4. The method of claim 1 , where the location sensitivity factor differs for different topics with which a query may be associated.",
+      "5. The method of claim 1 , further comprising: assigning a first weight to the topical score, for a particular document in the set of documents, to generate a weighted topical score; and assigning a second weight to the distance score, for the particular document, to generate a weighted distance score; where generating the combined score includes calculating the combined score for the particular document based, at least in part, on the weighted topical score and the weighted distance score.",
+      "6. The method of claim 5 , where the first weight differs from the second weight.",
+      "7. The method of claim 5 , where the first weight and the second weight are based, at least in part, on the topic.",
+      "8. The method of claim 5 , where the first weight and the second weight are based, at least in part, on a keyword included in the query.",
+      "9. The method of claim 1 , where determining the distance score includes: calculating a straight-line distance between the geographic location, associated with a particular document in the set of documents, and the geographic location, associated with the query, and calculating the distance score, for the particular document, based, at least in part, on the straight-line distance.",
+      "10. The method of claim 1 , where determining the distance score includes: calculating a driving distance between the geographic location, associated with a particular document in the set of documents, and the geographic location, associated with the query, and calculating the distance score, for the particular document, based, at least in part, on the driving distance.",
+      "11. A system, comprising: one or more devices comprising: means for receiving a query; means for determining a geographic location associated with the query; means for determining a topic associated with the query; means for determining a location sensitivity factor associated with the topic; means for identifying a plurality of documents based, at least in part, on the query; means for determining a topical score for a particular document, of the plurality of documents, based, at least in part, on the query; means for determining a distance score for the particular document based, at least in part, on a measure of distance between a location associated with the document and the geographic location associated with the query, and on the location sensitivity factor; means for generating a score for the particular document based, at least in part, on the topical score and the distance score; and means for ranking the particular document among the plurality of documents based, at least in part, on the score.",
+      "12. A server device, comprising: a processor to implement: a document locator to: receive a search query, and identify a set of documents based, at least in part, on the search query; a location component to: determine a geographic location associated with the search query, determine a topic associated with the search query, and determine a location sensitivity factor associated with the topic, where the location sensitivity factor differs for different topics; and a ranking component to: determine a topical score for each document, in the set of documents, based, at least in part, on the search query, determine a distance score for each document in the set of documents based, at least in part, on a measure of distance between a location associated with the document and the geographic location associated with the search query, and on the location sensitivity factor, compute a score for each document in the set of documents based, at least in part, on the topical score and the distance score, rank each document within the set of documents, based, at least in part, on the score for the document, to generate a ranked set of documents, and provide information regarding the ranked set of documents in response to the search query.",
+      "13. The server device of claim 12 , where the topical score is an increasing function of a relevance of the particular document with regard to the search query.",
+      "14. The server device of claim 12 , where the distance score is a decreasing function of the measure of distance for the particular document.",
+      "15. The server device of claim 12 , where, when determining the distance score, the ranking component is configured to: calculate a straight-line distance between a geographic location, associated with the particular document, and the geographic location, associated with the query, and calculate the distance score, for the particular document, based, at least in part, on the straight-line distance.",
+      "16. The server device of claim 12 , where, when determining the distance score, the ranking component is configured to: calculate a driving distance between a geographic location, associated with the particular document, and the geographic location, associated with the query, and calculate the distance score, for the particular document, based, at least in part, on the driving distance.",
+      "17. A storage device containing instructions executable by at least one processor, the executable instructions comprising: one or more instructions, which, when executed by the at least one processor, cause the at least one processor to: receive a query; determine a geographic location associated with the query; determine a topic corresponding to the query; determine a location sensitivity factor associated with the topic; identify a plurality of documents based, at least in part, on the query; determine, for a particular document of the plurality of documents, a relevance score based, at least in part, on the query; determine a distance score for the particular document based, at least in part, on a measure of distance between a geographic location associated with the particular document and the geographic location associated with the query, and on the location sensitivity factor; generate a combined score for the particular document based, at least in part, on the relevance score and the distance score for the particular document; rank the particular document, among the plurality of documents, based, at least in part, on the combined score for the particular document, to form a ranked set of documents; and provide information regarding the ranked set of documents in response to the query.",
+      "18. The storage device of claim 17 , where the one or more instructions further cause the at least one processor to: assign a first weight to the relevance score, for the particular document, to generate a weighted relevance score; and assign a second weight to the distance score, for the particular document, to generate a weighted distance score; where the one or more instructions that cause the at least one processor to generate the combined score include one or more instructions to cause the at least one processor to calculate the combined score for the particular document based, at least in part, on the weighted relevance score and the weighted distance score.",
+      "19. The storage device of claim 18 , where the first weight differs from the second weight.",
+      "20. The storage device of claim 18 , where the first weight and the second weight are based, at least in part, on the topic.",
+      "21. The storage device of claim 18 , where the first weight and the second weight are based, at least in part, on a keyword included in the query."
+    ],
+    "independent_claims": [
+      "1. A method performed by a server device, the method comprising: receiving, by one or more processors of the server device, a query; determining, by one or more processors of the server device, a geographic location associated with the query; determining, by one or more processors of the server device, a topic corresponding to the query; determining, by one or more processors of the server device, a location sensitivity factor associated with the topic; identifying, by one or more processors of the server device, a set of documents based, at least in part, on the query; determining, by one or more processors of the server device, for each document in the set of documents, a topical score based, at least in part, on the query; determining, by one or more processors of the server device, for each document in the set of documents, a distance score based on a measure of distance between a geographic location associated with the document and the geographic location associated with the query, and on the location sensitivity factor; generating, by one or more processors of the server device, for each document in the set of documents, a combined score based, at least in part, on the topical score and the distance score for the document; and ordering, by one or more processors of the server device, the set of documents based, at least in part, on the combined scores for the set of documents.",
+      "11. A system, comprising: one or more devices comprising: means for receiving a query; means for determining a geographic location associated with the query; means for determining a topic associated with the query; means for determining a location sensitivity factor associated with the topic; means for identifying a plurality of documents based, at least in part, on the query; means for determining a topical score for a particular document, of the plurality of documents, based, at least in part, on the query; means for determining a distance score for the particular document based, at least in part, on a measure of distance between a location associated with the document and the geographic location associated with the query, and on the location sensitivity factor; means for generating a score for the particular document based, at least in part, on the topical score and the distance score; and means for ranking the particular document among the plurality of documents based, at least in part, on the score.",
+      "12. A server device, comprising: a processor to implement: a document locator to: receive a search query, and identify a set of documents based, at least in part, on the search query; a location component to: determine a geographic location associated with the search query, determine a topic associated with the search query, and determine a location sensitivity factor associated with the topic, where the location sensitivity factor differs for different topics; and a ranking component to: determine a topical score for each document, in the set of documents, based, at least in part, on the search query, determine a distance score for each document in the set of documents based, at least in part, on a measure of distance between a location associated with the document and the geographic location associated with the search query, and on the location sensitivity factor, compute a score for each document in the set of documents based, at least in part, on the topical score and the distance score, rank each document within the set of documents, based, at least in part, on the score for the document, to generate a ranked set of documents, and provide information regarding the ranked set of documents in response to the search query.",
+      "17. A storage device containing instructions executable by at least one processor, the executable instructions comprising: one or more instructions, which, when executed by the at least one processor, cause the at least one processor to: receive a query; determine a geographic location associated with the query; determine a topic corresponding to the query; determine a location sensitivity factor associated with the topic; identify a plurality of documents based, at least in part, on the query; determine, for a particular document of the plurality of documents, a relevance score based, at least in part, on the query; determine a distance score for the particular document based, at least in part, on a measure of distance between a geographic location associated with the particular document and the geographic location associated with the query, and on the location sensitivity factor; generate a combined score for the particular document based, at least in part, on the relevance score and the distance score for the particular document; rank the particular document, among the plurality of documents, based, at least in part, on the combined score for the particular document, to form a ranked set of documents; and provide information regarding the ranked set of documents in response to the query."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Xianping Ge",
+      "Abhishek Parmar",
+      "Amit Singhal",
+      "Adam Smith",
+      "Daniel Egnor",
+      "Elizabeth Hamon"
+    ],
+    "priority_date": "2003-09-22",
+    "filing_date": "2009-08-31",
+    "publication_date": "2012-05-01",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06Q30/00",
+      "G06Q30/02",
+      "G06Q30/0241",
+      "G06Q30/0251",
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9537",
+      "Y10S707/00",
+      "Y10S707/99931",
+      "Y10S707/99933",
+      "Y10S707/99937"
+    ],
+    "family": [
+      {
+        "number": "US7606798B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Methods and systems for improving a search ranking using location awareness"
+      }
+    ],
+    "cited_by_count": 133
+  },
+  "analysis": {
+    "title_it": "Ranking dei documenti basato su sensibilità geografica",
+    "summary": "Il brevetto affronta il problema di fornire risultati di ricerca rilevanti considerando sia la pertinenza topica che quella geografica. Propone un metodo per determinare un punteggio combinato che integra un punteggio topico tradizionale con un punteggio di distanza tra la posizione associata alla query e quella del documento, modulato da un fattore di sensibilità geografica specifico per argomento.",
+    "theme": "ranking_link",
+    "seo_relevance": 3,
+    "scope": "Google Search, risultati organici con rilevanza geografica",
+    "what_it_claims": "La rivendicazione indipendente 1 descrive un metodo eseguito da un server che riceve una query, determina una posizione geografica associata alla query e un argomento (topic) corrispondente alla query, quindi determina un fattore di sensibilità geografica (location sensitivity factor) associato a quell'argomento. Il metodo identifica un insieme di documenti basandosi sulla query, calcola per ciascun documento un punteggio topico (topical score) basato sulla query e un punteggio di distanza (distance score) basato sulla misura di distanza tra la posizione geografica del documento e quella della query, modulato dal fattore di sensibilità geografica. Infine genera un punteggio combinato (combined score) per ciascun documento basandosi su entrambi i punteggi e ordina i documenti in base ai punteggi combinati.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il punteggio topico è una funzione crescente della rilevanza del documento rispetto alla query. La rivendicazione 3 indica che il punteggio di distanza è una funzione decrescente della misura di distanza. La rivendicazione 4 chiarisce che il fattore di sensibilità geografica differisce per argomenti diversi. Le rivendicazioni 5-8 contemplano l'uso di pesi (weights) distinti applicati al punteggio topico e al punteggio di distanza per generare punteggi ponderati, dove i pesi possono basarsi sull'argomento o su parole chiave specifiche nella query. Le rivendicazioni 9 e 10 specificano che la distanza può essere calcolata come distanza in linea retta (straight-line distance) o come distanza di guida (driving distance). Le rivendicazioni indipendenti 11, 12 e 17 riformulano lo stesso metodo in termini di sistema, dispositivo server e istruzioni eseguibili.",
+    "seo_reading": "La descrizione contempla diversi aspetti implementativi che potrebbero avere implicazioni SEO. Nel blocco 206 e nei paragrafi correlati, la descrizione spiega che la posizione associata alla query può essere determinata in vari modi: esplicitamente dall'utente, tramite cookie o profili utente, inferita dall'indirizzo di rete, dalla cronologia di navigazione o ricerca, o estraendo termini geografici dalla query stessa (esempio: \"palo alto\" dalla query \"pizza palo alto\").\n\nLa descrizione contempla che il fattore di sensibilità geografica S possa essere determinato analizzando il comportamento di selezione degli utenti (user selection behavior, come click through, stay time, mouseover, conversion data) rispetto ai risultati di ricerca con rilevanza geografica. Viene fornito l'esempio che argomenti come \"pizza\" potrebbero avere una sensibilità geografica maggiore (utenti interessati a documenti entro 5 miglia) rispetto ad \"automobiles/cars\" (fino a 50 miglia). La descrizione indica che S stesso può essere funzione dell'argomento, dei termini della query, del profilo utente, della posizione associata alla query o di un cluster dei risultati.\n\nNella formulazione matematica contemplata, il punteggio di distanza F potrebbe assumere la forma F(d,S) = α/(β + S×d), dove S modula quanto rapidamente il punteggio decresce con la distanza. Il punteggio combinato C potrebbe essere formulato come C(R,F) = κ*R + λF(d), dove κ e λ sono fattori di ponderazione che potrebbero variare in base alla query, all'argomento o alle parole chiave.\n\nLa descrizione contempla anche applicazioni oltre la ricerca web organica: viene menzionata esplicitamente la possibilità di ordinare annunci pubblicitari in base alla distanza tra la posizione dell'inserzionista e quella associata a un documento target, con riferimenti a brevetti correlati sulla pubblicità.\n\nPer la SEO, questo potrebbe significare che documenti con segnali geografici chiari e coerenti potrebbero beneficiare di un vantaggio di ranking per query con alta sensibilità geografica, anche se il loro punteggio topico tradizionale fosse inferiore. Tuttavia, l'effetto dipenderebbe criticamente dall'argomento della query e dalla distanza effettiva: un documento geograficamente distante potrebbe comunque posizionarsi bene per argomenti a bassa sensibilità geografica se il suo punteggio topico fosse sufficientemente alto.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Fee Related dal 2012), quindi non fornisce indicazioni su cosa Google utilizzi attualmente nei suoi algoritmi di ranking.",
+      "La descrizione non specifica quali segnali concreti vengano utilizzati per determinare la posizione di un documento oltre a riferimenti generici ad \"address/map data\" e non chiarisce come vengano estratti o validati.",
+      "Il brevetto contempla la sensibilità geografica come proprietà dell'argomento ma non fornisce una tassonomia degli argomenti né soglie specifiche per classificarli come più o meno sensibili geograficamente.",
+      "Non viene dimostrato che questo approccio sia mai stato implementato in Google Search o in quale misura i fattori geografici influenzino effettivamente il ranking rispetto ad altri segnali."
+    ],
+    "implications": [
+      "Assicurarsi che i segnali geografici del sito (indirizzo NAP, markup schema LocalBusiness, menzioni geografiche nel contenuto) siano coerenti e accurati, indipendentemente dall'implementazione di questo specifico brevetto.",
+      "Per contenuti con rilevanza geografica intrinseca, rendere esplicita la copertura geografica nel contenuto stesso, poiché i motori di ricerca potrebbero utilizzare vari metodi per associare documenti a posizioni.",
+      "Considerare che la rilevanza geografica potrebbe interagire con la rilevanza topica in modi non lineari: un contenuto geograficamente pertinente ma topicamente debole potrebbe non posizionarsi bene, così come un contenuto topicamente forte ma geograficamente distante potrebbe comunque essere competitivo per certi argomenti.",
+      "Monitorare le variazioni di ranking in base alla posizione geografica dell'utente per comprendere se e come i fattori geografici influenzano la visibilità per query specifiche del proprio settore."
+    ],
+    "key_terms": [
+      {
+        "term": "location sensitivity factor",
+        "explanation": "Fattore che indica quanto un determinato argomento o query sia sensibile alla distanza geografica, modulando l'importanza della vicinanza nel ranking"
+      },
+      {
+        "term": "topical score",
+        "explanation": "Punteggio di rilevanza tradizionale basato su fattori non geografici come testo, link e altri segnali di information retrieval"
+      },
+      {
+        "term": "distance score",
+        "explanation": "Punteggio basato sulla distanza tra la posizione associata al documento e quella associata alla query, tipicamente una funzione decrescente della distanza"
+      },
+      {
+        "term": "combined score",
+        "explanation": "Punteggio finale che integra il punteggio topico e il punteggio di distanza, potenzialmente con pesi diversi, per determinare l'ordinamento dei risultati"
+      },
+      {
+        "term": "user selection behavior",
+        "explanation": "Comportamenti degli utenti come click through, tempo di permanenza, mouseover e conversioni, utilizzabili per determinare la sensibilità geografica di un argomento"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:00:56.631523Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.061768800000000006
+}

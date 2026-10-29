@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US9396268B2: Selezione e presentazione di answer box durante la digitazione — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per selezionare e presentare answer box mentre l&#39;utente digita nella barra di ricerca, prima che invii la query. Il sistema identifica una dominant query dall&#39;input parziale o analizza dati storici di presentazione degli answer box, quindi ottiene e mostra il contenut" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us9396268b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US9396268B2: Selezione e presentazione di answer box durante la digitazione — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per selezionare e presentare answer box mentre l&#39;utente digita nella barra di ricerca, prima che invii la query. Il sistema identifica una dominant query dall&#39;input parziale o analizza dati storici di presentazione degli answer box, quindi ottiene e mostra il contenut" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us9396268b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US9396268B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us9396268b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US9396268B2: Selezione e presentazione di answer box durante la digitazione",
+  "description": "Il brevetto descrive un sistema per selezionare e presentare answer box mentre l\u0027utente digita nella barra di ricerca, prima che invii la query. Il sistema identifica una dominant query dall\u0027input parziale o analizza dati storici di presentazione degli answer box, quindi ottiene e mostra il contenuto dell\u0027answer box pi\u00f9 rilevante insieme ai suggerimenti di query.",
+  "articleBody": "Il brevetto descrive un sistema per selezionare e presentare answer box mentre l\u0027utente digita nella barra di ricerca, prima che invii la query. Il sistema identifica una dominant query dall\u0027input parziale o analizza dati storici di presentazione degli answer box, quindi ottiene e mostra il contenuto dell\u0027answer box pi\u00f9 rilevante insieme ai suggerimenti di query.\n\nLa rivendicazione indipendente 1 copre un metodo implementato su computer che riceve input utente in un campo di ricerca e, mentre riceve l\u0027input e prima che venga inviato come richiesta di ricerca, riceve da un sistema di presentazione un answer box associato a una specifica coppia input-answer box. Questa coppia viene selezionata da coppie candidate in base a un presentation value per ciascuna coppia. Le coppie candidate sono identificate da una pluralit\u00e0 di coppie input-answer box il cui text input corrisponde all\u0027input utente. Il text input di ciascuna coppia \u00e8 associato al rispettivo answer box se quell\u0027answer box \u00e8 stato presentato dal motore di ricerca in risposta a query che iniziano con un input corrispondente al text input. Il presentation value per ciascuna coppia \u00e8 derivato dal numero di volte che l\u0027answer box nella coppia \u00e8 stato presentato dal motore in risposta a query che iniziano con l\u0027input corrispondente al text input nella coppia. Il contenuto dell\u0027answer box include un sommario di informazioni ritenute responsive a query che iniziano con input corrispondente al text input, ed \u00e8 diverso dalla query e dai suggerimenti di query. L\u0027answer box viene quindi presentato all\u0027utente.\n\nLa rivendicazione 2 aggiunge che la coppia particolare pu\u00f2 essere selezionata in base a un\u0027indicazione che la coppia \u00e8 stata utile agli utenti che hanno inviato query inizianti con input corrispondenti al text input nella coppia. La rivendicazione 3 contempla la ricezione di una pluralit\u00e0 di query suggestions per l\u0027input utente, presentate insieme all\u0027answer box. La rivendicazione 4 specifica che il presentation value pu\u00f2 essere derivato dal numero di volte che l\u0027answer box \u00e8 stato presentato diviso per il numero totale di volte che query inizianti con input corrispondenti sono state ricevute dal motore. La rivendicazione 5 prevede una formula alternativa: il numero di presentazioni diviso per il numero totale di volte che uno o pi\u00f9 utenti hanno inviato query per uno o pi\u00f9 query suggestions per il text input nella coppia. Le rivendicazioni 6 e 7 specificano che gli utenti possono essere l\u0027utente stesso o pi\u00f9 utenti. Le rivendicazioni 8-21 sono formulate come sistema e computer storage media che implementano le stesse operazioni.\n\nLa descrizione contempla diversi metodi per identificare quale answer box presentare durante la digitazione. Un approccio centrale \u00e8 l\u0027identificazione di una dominant query dall\u0027input parziale. La descrizione contempla che la dominant query possa essere una completion dell\u0027input, una modifica per correggere errori di ortografia, o una query correlata. La dominant query pu\u00f2 essere selezionata da query suggestions in base a un popularity value, definito come il numero di volte che gli utenti inviano una query diviso per il totale delle query inviate per tutti i suggerimenti, o diviso per il totale delle query che iniziano con l\u0027input. La descrizione contempla soglie di popolarit\u00e0 del 50%, 66% o 75% per selezionare la dominant query. La descrizione contempla anche l\u0027uso di user search history per identificare query precedentemente inviate dall\u0027utente che iniziano con text matching l\u0027input, dove il text match pu\u00f2 tollerare differenze in stop words, spelling, word order o sinonimi. La dominant query potrebbe essere selezionata se appare un numero di volte che soddisfa una soglia, ad esempio il 50% delle query inviate.\n\nLa descrizione contempla l\u0027uso di user profile data per completare input incompleti, ad esempio aggiungendo la location dell\u0027utente a query meteo che mancano di questa informazione. Contempla anche l\u0027analisi del profilo per determinare categorie di answer box frequentemente richieste dall\u0027utente, ad esempio presentando answer box finanziari se l\u0027utente traccia frequentemente azioni. La descrizione contempla che il presentation value nei dati storici possa essere scalato, pesato per query che sono completions rispetto a query esatte, o pesato diversamente se l\u0027answer box \u00e8 stato presentato con risultati di ricerca rispetto a query suggestions. La descrizione contempla anche indicazioni di utilit\u00e0 degli answer box, come tempo di visualizzazione lungo, click su link nell\u0027answer box, assenza di query refinement successive.\n\nPer la SEO, questo brevetto potrebbe suggerire che Google valuti quali answer box presentare in base a pattern storici di presentazione e utilit\u00e0 percepita dagli utenti. Potrebbe significare che contenuti strutturati che alimentano answer box potrebbero essere mostrati anche per query parziali se storicamente quegli answer box sono stati presentati frequentemente per completions di quell\u0027input. Tuttavia, il brevetto si concentra sulla selezione tra answer box gi\u00e0 esistenti, non sulla selezione delle fonti per popolarli. La menzione di usefulness signals come click, tempo di visualizzazione e assenza di refinement potrebbe indicare che questi segnali influenzano quali answer box vengono privilegiati, ma il brevetto non afferma che questi segnali influenzino il ranking organico delle fonti.",
+  "wordCount": 811,
+  "datePublished": "2026-10-29T10:07:00.972915+00:00",
+  "dateModified": "2026-10-29T10:07:00.972915+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us9396268b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Framework for selecting and presenting answer boxes relevant to user input as query suggestions",
+    "identifier": "US9396268B2",
+    "url": "https://patents.google.com/patent/US9396268B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US9396268B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US9396268B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Selezione e presentazione di answer box durante la digitazione</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Framework for selecting and presenting answer boxes relevant to user input as query suggestions</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per selezionare e presentare answer box mentre l&#39;utente digita nella barra di ricerca, prima che invii la query. Il sistema identifica una dominant query dall&#39;input parziale o analizza dati storici di presentazione degli answer box, quindi ottiene e mostra il contenuto dell&#39;answer box più rilevante insieme ai suggerimenti di query.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, answer box e query suggestions</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">19 Luglio 2016</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2009-08-31</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Passaggi, risposte dirette e snippet</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">21</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo implementato su computer che riceve input utente in un campo di ricerca e, mentre riceve l&#39;input e prima che venga inviato come richiesta di ricerca, riceve da un sistema di presentazione un answer box associato a una specifica coppia input-answer box. Questa coppia viene selezionata da coppie candidate in base a un presentation value per ciascuna coppia. Le coppie candidate sono identificate da una pluralità di coppie input-answer box il cui text input corrisponde all&#39;input utente. Il text input di ciascuna coppia è associato al rispettivo answer box se quell&#39;answer box è stato presentato dal motore di ricerca in risposta a query che iniziano con un input corrispondente al text input. Il presentation value per ciascuna coppia è derivato dal numero di volte che l&#39;answer box nella coppia è stato presentato dal motore in risposta a query che iniziano con l&#39;input corrispondente al text input nella coppia. Il contenuto dell&#39;answer box include un sommario di informazioni ritenute responsive a query che iniziano con input corrispondente al text input, ed è diverso dalla query e dai suggerimenti di query. L&#39;answer box viene quindi presentato all&#39;utente.</p>
+      <p>La rivendicazione 2 aggiunge che la coppia particolare può essere selezionata in base a un&#39;indicazione che la coppia è stata utile agli utenti che hanno inviato query inizianti con input corrispondenti al text input nella coppia. La rivendicazione 3 contempla la ricezione di una pluralità di query suggestions per l&#39;input utente, presentate insieme all&#39;answer box. La rivendicazione 4 specifica che il presentation value può essere derivato dal numero di volte che l&#39;answer box è stato presentato diviso per il numero totale di volte che query inizianti con input corrispondenti sono state ricevute dal motore. La rivendicazione 5 prevede una formula alternativa: il numero di presentazioni diviso per il numero totale di volte che uno o più utenti hanno inviato query per uno o più query suggestions per il text input nella coppia. Le rivendicazioni 6 e 7 specificano che gli utenti possono essere l&#39;utente stesso o più utenti. Le rivendicazioni 8-21 sono formulate come sistema e computer storage media che implementano le stesse operazioni.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi metodi per identificare quale answer box presentare durante la digitazione. Un approccio centrale è l&#39;identificazione di una dominant query dall&#39;input parziale. La descrizione contempla che la dominant query possa essere una completion dell&#39;input, una modifica per correggere errori di ortografia, o una query correlata. La dominant query può essere selezionata da query suggestions in base a un popularity value, definito come il numero di volte che gli utenti inviano una query diviso per il totale delle query inviate per tutti i suggerimenti, o diviso per il totale delle query che iniziano con l&#39;input. La descrizione contempla soglie di popolarità del 50%, 66% o 75% per selezionare la dominant query. La descrizione contempla anche l&#39;uso di user search history per identificare query precedentemente inviate dall&#39;utente che iniziano con text matching l&#39;input, dove il text match può tollerare differenze in stop words, spelling, word order o sinonimi. La dominant query potrebbe essere selezionata se appare un numero di volte che soddisfa una soglia, ad esempio il 50% delle query inviate.</p>
+      <p>La descrizione contempla l&#39;uso di user profile data per completare input incompleti, ad esempio aggiungendo la location dell&#39;utente a query meteo che mancano di questa informazione. Contempla anche l&#39;analisi del profilo per determinare categorie di answer box frequentemente richieste dall&#39;utente, ad esempio presentando answer box finanziari se l&#39;utente traccia frequentemente azioni. La descrizione contempla che il presentation value nei dati storici possa essere scalato, pesato per query che sono completions rispetto a query esatte, o pesato diversamente se l&#39;answer box è stato presentato con risultati di ricerca rispetto a query suggestions. La descrizione contempla anche indicazioni di utilità degli answer box, come tempo di visualizzazione lungo, click su link nell&#39;answer box, assenza di query refinement successive.</p>
+      <p>Per la SEO, questo brevetto potrebbe suggerire che Google valuti quali answer box presentare in base a pattern storici di presentazione e utilità percepita dagli utenti. Potrebbe significare che contenuti strutturati che alimentano answer box potrebbero essere mostrati anche per query parziali se storicamente quegli answer box sono stati presentati frequentemente per completions di quell&#39;input. Tuttavia, il brevetto si concentra sulla selezione tra answer box già esistenti, non sulla selezione delle fonti per popolarli. La menzione di usefulness signals come click, tempo di visualizzazione e assenza di refinement potrebbe indicare che questi segnali influenzano quali answer box vengono privilegiati, ma il brevetto non afferma che questi segnali influenzino il ranking organico delle fonti.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia attualmente in uso in Google Search, né che i segnali di utilità descritti influenzino il ranking organico dei siti che forniscono contenuti agli answer box.</li>
+      <li>Il brevetto si concentra sulla selezione di quale answer box presentare durante la digitazione, non su come vengono selezionate le fonti di contenuto per popolare gli answer box o su quali segnali determinano se un sito può diventare fonte di un answer box.</li>
+      <li>La descrizione contempla molte implementazioni alternative e segnali opzionali: non è possibile determinare quali siano effettivamente implementati senza informazioni esterne al brevetto.</li>
+      <li>Il brevetto fa parte di una famiglia con continuation (US9110995B2), quindi non rappresenta una protezione indipendente ma un&#39;estensione di rivendicazioni precedenti.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Strutturare i contenuti in modo che rispondano direttamente a domande specifiche e complete, non solo a query parziali, aumenta la probabilità che possano alimentare answer box per query correlate.</li>
+      <li class="pl-2">Monitorare per quali query il proprio sito appare in answer box e verificare se questi answer box vengono mostrati anche durante la digitazione di query parziali correlate.</li>
+      <li class="pl-2">Considerare che gli utenti potrebbero non completare la digitazione se ricevono una risposta soddisfacente da un answer box durante la digitazione, riducendo potenzialmente il traffico da query complete.</li>
+      <li class="pl-2">Ottimizzare per chiarezza e completezza delle risposte, dato che la descrizione contempla segnali di utilità come tempo di visualizzazione e assenza di query refinement.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">answer box</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Presentazione formattata di contenuto rilevante per una query, organizzata secondo template specifici per categoria, che fornisce un sommario di informazioni responsive alla query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">dominant query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query che corrisponde all&#39;input parziale dell&#39;utente, può essere una completion, una modifica o una query correlata, identificata come la più probabile intenzione dell&#39;utente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">presentation value</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Valore derivato dal numero di volte che un answer box è stato presentato in risposta a query che iniziano con un determinato input, usato per selezionare quale answer box mostrare</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">input-answer box pair</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Associazione tra un text input e un answer box, creata quando quell&#39;answer box è stato presentato in risposta a query che iniziano con input corrispondente al text input</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">popularity value</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura derivata dal numero di volte che gli utenti inviano una query, tipicamente normalizzata sul totale delle query inviate per suggerimenti correlati o query che iniziano con lo stesso input</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">text matching</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Corrispondenza tra testi che può essere identica o tollerare differenze in stop words, spelling, word order, sinonimi o combinazioni di queste eccezioni</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US9110995B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9110995B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Framework for selecting and presenting answer boxes relevant to user input as query suggestions</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US9396268B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

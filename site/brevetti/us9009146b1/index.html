@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US9009146B1: Ranking dei risultati basato su query simili — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema della scarsità di dati comportamentali (click data) per query nuove o rare. Propone di identificare query storiche simili alla query dell&#39;utente, assegnare loro un punteggio di somiglianza basato su corrispondenze di termini (esatti, varianti, sinonimi, stem), e deri" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us9009146b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US9009146B1: Ranking dei risultati basato su query simili — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema della scarsità di dati comportamentali (click data) per query nuove o rare. Propone di identificare query storiche simili alla query dell&#39;utente, assegnare loro un punteggio di somiglianza basato su corrispondenze di termini (esatti, varianti, sinonimi, stem), e deri" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us9009146b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US9009146B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us9009146b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US9009146B1: Ranking dei risultati basato su query simili",
+  "description": "Il brevetto affronta il problema della scarsit\u00e0 di dati comportamentali (click data) per query nuove o rare. Propone di identificare query storiche simili alla query dell\u0027utente, assegnare loro un punteggio di somiglianza basato su corrispondenze di termini (esatti, varianti, sinonimi, stem), e derivare statistiche di qualit\u00e0 per i documenti aggregando i dati comportamentali delle query simili selezionate, pesati per il grado di somiglianza.",
+  "articleBody": "Il brevetto affronta il problema della scarsit\u00e0 di dati comportamentali (click data) per query nuove o rare. Propone di identificare query storiche simili alla query dell\u0027utente, assegnare loro un punteggio di somiglianza basato su corrispondenze di termini (esatti, varianti, sinonimi, stem), e derivare statistiche di qualit\u00e0 per i documenti aggregando i dati comportamentali delle query simili selezionate, pesati per il grado di somiglianza.\n\nLa rivendicazione indipendente 1 copre un metodo per fornire input a un processo di ranking che prende in ingresso una statistica di qualit\u00e0 del risultato per un documento. Per un documento identificato come risultato di una query utente, il metodo prevede di assegnare un punteggio a una o pi\u00f9 query diverse dalla query utente in base alla somiglianza con essa. L\u0027assegnazione del punteggio richiede di ricevere i termini della query utente classificati come optional, regular e stopword, ricevere i pesi associati a ciascun tipo di termine, ricevere i termini delle altre query, determinare per ciascuna query se include una corrispondenza esatta per ogni termine richiesto nella query utente ed escluderla altrimenti, determinare un match score per ciascuna query non esclusa aggiustando il punteggio in base ai pesi dei termini che compaiono (regular, optional, stopword), selezionare una o pi\u00f9 query in base ai rispettivi punteggi, derivare una statistica di qualit\u00e0 per il documento dai dati associati alle query selezionate (dati indicativi di interazione utente pregressa con il documento quando fornito come risultato per quelle query), e fornire tale statistica come input al processo di ranking per la query utente.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 prevede una penalit\u00e0 quando i termini della query storica sono in ordine diverso rispetto alla query utente. La rivendicazione 3 contempla la selezione di una sola query con il punteggio massimo. La rivendicazione 4 specifica che i dati possono essere aggregated click data. La rivendicazione 5 introduce un limite (threshold) alla statistica di qualit\u00e0. La rivendicazione 6 prevede una riduzione della statistica basata sul grado di dissomiglianza tra documento e termini della query utente. La rivendicazione 7 descrive la ponderazione dei dati delle query selezionate per i rispettivi punteggi prima dell\u0027aggregazione. La rivendicazione 8 introduce una penalit\u00e0 per compound term spezzati nelle query storiche. La rivendicazione 9 descrive il calcolo di un multiplicative match score e un absolute match score, la scelta tra i due o una combinazione in base al confronto tra lunghezze delle query. La rivendicazione 11 estende il metodo a variant term con pesi associati. Le rivendicazioni 12-20 coprono prodotti software e sistemi che implementano le stesse funzionalit\u00e0.\n\nLa descrizione contempla un sistema articolato per il borrowing di dati comportamentali. Al paragrafo che descrive la FIG. 1 e la tabella 1022, si illustra come i termini della query di input vengano classificati in regular term (peso 1.0), variant term (peso 1.0, con varianti che ricevono pesi tra 0.6 e 1.0 a seconda della similarit\u00e0), optional term (peso inferiore, esempio 0.3 o 0.6) e stopword term (peso minimo, esempio 0.1 o 0.2). La descrizione contempla che le varianti includano stem, sinonimi e varianti diacritiche, con l\u0027applicazione di queste ultime condizionata alla locale di provenienza della query (paragrafo relativo a step 8012-8014). Per il calcolo del match score, la descrizione contempla due tallies: un absolute match score (somma dei pesi) e un multiplicative match score (prodotto dei pesi), con la possibilit\u00e0 di usare una approssimazione lineare tra i due a seconda della differenza di lunghezza tra query (step 6034-6040). Vengono contemplate penalit\u00e0 per termini fuori ordine (step 6022-6024) e per compound term spezzati (step 6026-6032), con identificazione dei compound basata su confidence score forniti da un motore esterno.\n\nPer la combinazione dei dati, la descrizione contempla diverse tecniche (FIGS. 7A-D): uso di una singola query con il match score pi\u00f9 alto, media ponderata dei dati di pi\u00f9 query pesati per i match score, aggregazione con cap per query (ogni query contribuisce al massimo una soglia, esempio 500 click), aggregazione progressiva fino a raggiungere un livello di confidenza. La descrizione contempla inoltre operazioni di capping e squashing delle statistiche di qualit\u00e0 (step 5024): il capping limita il valore massimo per mitigare falsi match, lo squashing aumenta o diminuisce la statistica confrontando il documento con la query di input (esempio: riduzione se un optional term non ha supporto nel documento). Questi meccanismi potrebbero indicare che Google, in presenza di query con pochi dati storici, attinga a segnali comportamentali di query affini per stimare la rilevanza dei documenti, con maggior peso a query pi\u00f9 simili e controlli per evitare distorsioni da match rischiosi o composti alterati. Tuttavia, il brevetto non dimostra che questo sistema sia operativo n\u00e9 quantifica il peso di questi segnali rispetto ad altri fattori di ranking.",
+  "wordCount": 777,
+  "datePublished": "2026-10-29T10:06:11.511338+00:00",
+  "dateModified": "2026-10-29T10:06:11.511338+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us9009146b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Ranking search results based on similar queries",
+    "identifier": "US9009146B1",
+    "url": "https://patents.google.com/patent/US9009146B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US9009146B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US9009146B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking dei risultati basato su query simili</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Ranking search results based on similar queries</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema della scarsità di dati comportamentali (click data) per query nuove o rare. Propone di identificare query storiche simili alla query dell&#39;utente, assegnare loro un punteggio di somiglianza basato su corrispondenze di termini (esatti, varianti, sinonimi, stem), e derivare statistiche di qualità per i documenti aggregando i dati comportamentali delle query simili selezionate, pesati per il grado di somiglianza.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking dei documenti</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">14 Aprile 2015</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2009-04-08</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Segnali di comportamento degli utenti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo per fornire input a un processo di ranking che prende in ingresso una statistica di qualità del risultato per un documento. Per un documento identificato come risultato di una query utente, il metodo prevede di assegnare un punteggio a una o più query diverse dalla query utente in base alla somiglianza con essa. L&#39;assegnazione del punteggio richiede di ricevere i termini della query utente classificati come optional, regular e stopword, ricevere i pesi associati a ciascun tipo di termine, ricevere i termini delle altre query, determinare per ciascuna query se include una corrispondenza esatta per ogni termine richiesto nella query utente ed escluderla altrimenti, determinare un match score per ciascuna query non esclusa aggiustando il punteggio in base ai pesi dei termini che compaiono (regular, optional, stopword), selezionare una o più query in base ai rispettivi punteggi, derivare una statistica di qualità per il documento dai dati associati alle query selezionate (dati indicativi di interazione utente pregressa con il documento quando fornito come risultato per quelle query), e fornire tale statistica come input al processo di ranking per la query utente.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 prevede una penalità quando i termini della query storica sono in ordine diverso rispetto alla query utente. La rivendicazione 3 contempla la selezione di una sola query con il punteggio massimo. La rivendicazione 4 specifica che i dati possono essere aggregated click data. La rivendicazione 5 introduce un limite (threshold) alla statistica di qualità. La rivendicazione 6 prevede una riduzione della statistica basata sul grado di dissomiglianza tra documento e termini della query utente. La rivendicazione 7 descrive la ponderazione dei dati delle query selezionate per i rispettivi punteggi prima dell&#39;aggregazione. La rivendicazione 8 introduce una penalità per compound term spezzati nelle query storiche. La rivendicazione 9 descrive il calcolo di un multiplicative match score e un absolute match score, la scelta tra i due o una combinazione in base al confronto tra lunghezze delle query. La rivendicazione 11 estende il metodo a variant term con pesi associati. Le rivendicazioni 12-20 coprono prodotti software e sistemi che implementano le stesse funzionalità.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema articolato per il borrowing di dati comportamentali. Al paragrafo che descrive la FIG. 1 e la tabella 1022, si illustra come i termini della query di input vengano classificati in regular term (peso 1.0), variant term (peso 1.0, con varianti che ricevono pesi tra 0.6 e 1.0 a seconda della similarità), optional term (peso inferiore, esempio 0.3 o 0.6) e stopword term (peso minimo, esempio 0.1 o 0.2). La descrizione contempla che le varianti includano stem, sinonimi e varianti diacritiche, con l&#39;applicazione di queste ultime condizionata alla locale di provenienza della query (paragrafo relativo a step 8012-8014). Per il calcolo del match score, la descrizione contempla due tallies: un absolute match score (somma dei pesi) e un multiplicative match score (prodotto dei pesi), con la possibilità di usare una approssimazione lineare tra i due a seconda della differenza di lunghezza tra query (step 6034-6040). Vengono contemplate penalità per termini fuori ordine (step 6022-6024) e per compound term spezzati (step 6026-6032), con identificazione dei compound basata su confidence score forniti da un motore esterno.</p>
+      <p>Per la combinazione dei dati, la descrizione contempla diverse tecniche (FIGS. 7A-D): uso di una singola query con il match score più alto, media ponderata dei dati di più query pesati per i match score, aggregazione con cap per query (ogni query contribuisce al massimo una soglia, esempio 500 click), aggregazione progressiva fino a raggiungere un livello di confidenza. La descrizione contempla inoltre operazioni di capping e squashing delle statistiche di qualità (step 5024): il capping limita il valore massimo per mitigare falsi match, lo squashing aumenta o diminuisce la statistica confrontando il documento con la query di input (esempio: riduzione se un optional term non ha supporto nel documento). Questi meccanismi potrebbero indicare che Google, in presenza di query con pochi dati storici, attinga a segnali comportamentali di query affini per stimare la rilevanza dei documenti, con maggior peso a query più simili e controlli per evitare distorsioni da match rischiosi o composti alterati. Tuttavia, il brevetto non dimostra che questo sistema sia operativo né quantifica il peso di questi segnali rispetto ad altri fattori di ranking.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che Google applichi questo sistema in produzione, né che i click data derivati da query simili influenzino effettivamente il ranking visibile agli utenti.</li>
+      <li>Non specifica soglie, pesi o parametri concreti utilizzati in Search (i valori numerici nella descrizione sono esempi illustrativi).</li>
+      <li>Non chiarisce come questo meccanismo interagisca con altri segnali di ranking (IR score, PageRank, freshness, ecc.) né il peso relativo della statistica di qualità derivata.</li>
+      <li>La data di priorità (2009) e la descrizione di tecniche basate su click data aggregati non riflettono necessariamente l&#39;architettura attuale di ranking, che potrebbe usare modelli di machine learning più complessi.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Concentrarsi su contenuti che rispondano a intenti di ricerca consolidati e a query correlate semanticamente, non solo alla query esatta: la rilevanza percepita dagli utenti su query affini potrebbe essere un segnale indiretto.</li>
+      <li class="pl-2">Curare la coerenza terminologica e semantica dei contenuti, includendo varianti, sinonimi e stem dei termini chiave, per aumentare la probabilità di match con query simili.</li>
+      <li class="pl-2">Prestare attenzione ai compound term rilevanti per il proprio dominio (es. nomi di prodotti, località) e mantenerli integri nei testi, evitando separazioni che potrebbero penalizzare match con query storiche.</li>
+      <li class="pl-2">Monitorare il comportamento degli utenti sui propri contenuti (tempo di permanenza, ritorno alla SERP) come indicatore di rilevanza percepita, indipendentemente dall&#39;applicazione di questo brevetto.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">quality of result statistic</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Statistica derivata da dati comportamentali (es. click data) che indica la rilevanza di un documento per una query, usata come input al ranking</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">match score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio di somiglianza tra una query storica e la query utente, calcolato aggregando pesi di termini corrispondenti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">regular term</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Termine considerato importante o necessario nel contesto della query, con peso massimo (es. 1.0)</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">variant term</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Termine importante che può essere sostituito da stem, sinonimi o varianti diacritiche, con pesi variabili per le varianti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">optional term</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Termine non necessario nel contesto della query, con peso inferiore ai regular term</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">stopword term</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Articoli, congiunzioni, preposizioni, pronomi, con peso minimo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">absolute match score (AMS)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Somma dei pesi dei termini corrispondenti tra query utente e query storica</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">multiplicative match score (MMS)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Prodotto dei pesi dei termini corrispondenti, con penalità moltiplicative per termini mancanti</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US9009146B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

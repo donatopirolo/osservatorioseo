@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8661029B1",
+    "title": "Modifying search result ranking based on implicit user feedback",
+    "abstract": "Systems and techniques relating to ranking search results of a search query include, in general, subject matter that can be embodied in a computer-implemented method that includes determining a measure of relevance for a document result within a context of a search query for which the document result is returned, the determining being based on a first number in relation to a second number, the first number corresponding to longer views of the document result, and the second number corresponding to at least shorter views of the document result; and outputting the measure of relevance to a ranking engine for ranking of search results, including the document result, for a new search corresponding to the search query. The subject matter described in this specification can also be embodied in various corresponding computer program products, apparatus and systems.",
+    "claims": [
+      "1. A computer-implemented method comprising: obtaining a measure of relevance for a document referenced by a search result wherein the search result was provided in response to a search query, the measure of relevance being based on a first number in relation to a second number, the first number corresponding to a subset of a count of views of the document following selections of the search result when the search result was provided in response to the search query, and the second number corresponding to the count of views of the document following selections of the search result; and providing the measure of relevance to a ranking engine for ranking of search results, for the document referenced by the search result.",
+      "2. The method of claim 1 wherein the measure of relevance is calculated by dividing the first number by the second number.",
+      "3. The method of claim 1 wherein the first number is a weighted combination of a plurality of the views of the document wherein one or more of the views is weighted using a respective weight based at least in part on a respective viewing duration of the document.",
+      "4. The method of claim 1 wherein the first number is a total number of long clicks on the search result when the search result was provided in response to the search query, and wherein the second number is a total number of clicks on the search result when the search result was provided in response to the search query.",
+      "5. The method of claim 3 wherein the weight is determined using a continuous function of viewing length.",
+      "6. The method of claim 3 wherein the weight is determined using a discontinuous function of viewing length.",
+      "7. The method of claim 6 , further comprising: classifying the viewing length into a viewing time category of a plurality of viewing time categories; and determining the weight based at least in part on the viewing time category.",
+      "8. The method of claim 3 wherein the weight is further based on using a viewing length differentiator.",
+      "9. The method of claim 8 , wherein the viewing length differentiator includes a factor governed by a determined category of the search query, and the weight is further based at least in part on the determined category of the search query.",
+      "10. The method of claim 8 , wherein the viewing length differentiator includes a factor governed by a determined type of a user generating the individual selections, and the weight is further based at least in part on the determined type of the user.",
+      "11. A computer-readable medium storing a computer program product that, when executed by data processing apparatus, causes the data processing apparatus to perform operations comprising: obtaining a measure of relevance for a document referenced by a search result wherein the search result was provided in response to a search query, the measure of relevance being based on a first number in relation to a second number, the first number corresponding to a subset of a count of views of the document following selections of the search result when the search result was provided in response to the search query, and the second number corresponding to the count of views of the document following selections of the search result; and providing the measure of relevance to a ranking engine for ranking of search results, for the document referenced by the search result.",
+      "12. The computer-readable medium of claim 11 wherein the measure of relevance is calculated by dividing the first number by the second number.",
+      "13. The computer-readable medium of claim 11 wherein the first number is a weighted combination of a plurality of the views of the document wherein one or more of the views is weighted using a respective weight based at least in part on a respective viewing duration of the document.",
+      "14. The computer-readable medium of claim 11 , wherein the first number is a total number of long clicks on the search result when the search result was provided in response to the search query, and wherein the second number is a total number of clicks on the search result when the search result was provided in response to the search query.",
+      "15. The computer-readable medium of claim 13 wherein the weight is determined using a continuous function of viewing length.",
+      "16. The computer-readable medium of claim 13 wherein the weight is determined using a discontinuous function of viewing length.",
+      "17. The computer-readable medium of claim 16 , wherein the operations further comprise: classifying the viewing length into a viewing time category of a plurality of viewing time categories; and determining the weight based at least in part on the viewing time category.",
+      "18. The computer-readable medium of claim 13 wherein the weight is further based on using a viewing length differentiator.",
+      "19. The computer-readable medium of claim 18 , wherein the viewing length differentiator includes a factor governed by a determined category of the search query, and the weight is further based at least in part on the determined category of the search query.",
+      "20. The computer-readable medium of claim 18 , wherein the viewing length differentiator includes a factor governed by a determined type of a user generating the individual selections, and the weight is further based at least in part on the determined type of the user.",
+      "21. A system comprising: data processing apparatus programmed to perform operations comprising: obtaining a measure of relevance for a document referenced by a search result wherein the search result was provided in response to a search query, the measure of relevance being based on a first number in relation to a second number, the first number corresponding to a subset of a count of views of the document following selections of the search result when the search result was provided in response to the search query, and the second number corresponding to the count of views of the document following selections of the search result; and providing the measure of relevance to a ranking engine for ranking of search results, for the document referenced by the search result.",
+      "22. The system of claim 21 wherein the measure of relevance is calculated by dividing the first number by the second number.",
+      "23. The system of claim 21 wherein the first number is a weighted combination of a plurality of the views of the document wherein one or more of the views is weighted using a respective weight based at least in part on a respective viewing duration of the document.",
+      "24. The system of claim 23 wherein the weight is determined using a continuous function of viewing length.",
+      "25. The system of claim 23 wherein the weight is determined using a discontinuous function of viewing length.",
+      "26. The system of claim 23 wherein the weight is further based on using a viewing length differentiator.",
+      "27. The system of claim 26 , wherein the viewing length differentiator includes a factor governed by a determined category of the search query, and the weight is further based at least in part on the determined category of the search query.",
+      "28. The system of claim 26 , wherein the viewing length differentiator includes a factor governed by a determined type of a user generating the individual selections, and the weight is further based at least in part on the determined type of the user.",
+      "29. The system of claim 21 , wherein the first number is a total number of long clicks on the search result when the search result was provided in response to the search query, and wherein the second number is a total number of clicks on the search result when the search result was provided in response to the search query.",
+      "30. The system of claim 29 , wherein the operations further comprise: classifying the viewing length into a viewing time category of a plurality of viewing time categories; and determining the weight based at least in part on the viewing time category."
+    ],
+    "independent_claims": [
+      "1. A computer-implemented method comprising: obtaining a measure of relevance for a document referenced by a search result wherein the search result was provided in response to a search query, the measure of relevance being based on a first number in relation to a second number, the first number corresponding to a subset of a count of views of the document following selections of the search result when the search result was provided in response to the search query, and the second number corresponding to the count of views of the document following selections of the search result; and providing the measure of relevance to a ranking engine for ranking of search results, for the document referenced by the search result.",
+      "11. A computer-readable medium storing a computer program product that, when executed by data processing apparatus, causes the data processing apparatus to perform operations comprising: obtaining a measure of relevance for a document referenced by a search result wherein the search result was provided in response to a search query, the measure of relevance being based on a first number in relation to a second number, the first number corresponding to a subset of a count of views of the document following selections of the search result when the search result was provided in response to the search query, and the second number corresponding to the count of views of the document following selections of the search result; and providing the measure of relevance to a ranking engine for ranking of search results, for the document referenced by the search result.",
+      "21. A system comprising: data processing apparatus programmed to perform operations comprising: obtaining a measure of relevance for a document referenced by a search result wherein the search result was provided in response to a search query, the measure of relevance being based on a first number in relation to a second number, the first number corresponding to a subset of a count of views of the document following selections of the search result when the search result was provided in response to the search query, and the second number corresponding to the count of views of the document following selections of the search result; and providing the measure of relevance to a ranking engine for ranking of search results, for the document referenced by the search result."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Hyung-Jin Kim",
+      "Simon Tong",
+      "Noam M. Shazeer",
+      "Michelangelo Diligenti"
+    ],
+    "priority_date": "2006-11-02",
+    "filing_date": "2006-11-02",
+    "publication_date": "2014-02-25",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24578",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9535",
+      "G06F16/951",
+      "G06F16/9538",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/338",
+      "G06Q30/00",
+      "G06Q30/02"
+    ],
+    "family": [
+      {
+        "number": "US9235627B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Modifying search result ranking based on implicit user feedback"
+      },
+      {
+        "number": "US9811566B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Modifying search result ranking based on implicit user feedback"
+      },
+      {
+        "number": "US10229166B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Modifying search result ranking based on implicit user feedback"
+      },
+      {
+        "number": "US11188544B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Modifying search result ranking based on implicit user feedback"
+      },
+      {
+        "number": "US11816114B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Modifying search result ranking based on implicit user feedback"
+      }
+    ],
+    "cited_by_count": 55
+  },
+  "analysis": {
+    "title_it": "Modifica del ranking basata su feedback implicito degli utenti",
+    "summary": "Il brevetto descrive un metodo per modificare il ranking dei risultati di ricerca utilizzando il tempo di permanenza degli utenti sui documenti cliccati. Il sistema calcola una misura di rilevanza basata sul rapporto tra visualizzazioni lunghe e totale delle visualizzazioni per una coppia query-documento, producendo una frazione (LC|C) che può essere usata per riordinare i risultati futuri.",
+    "theme": "segnali_utente",
+    "seo_relevance": 5,
+    "scope": "Google Search, ranking dei risultati organici",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 11, 21) coprono un metodo implementato su computer che ottiene una misura di rilevanza per un documento referenziato da un risultato di ricerca. La misura si basa su un primo numero in relazione a un secondo numero: il primo corrisponde a un sottoinsieme del conteggio delle visualizzazioni del documento dopo selezioni del risultato (quando fornito in risposta a una query), il secondo corrisponde al conteggio totale delle visualizzazioni. La misura viene fornita a un ranking engine per il riordino dei risultati.\n\nLa rivendicazione 2 specifica che la misura può essere calcolata dividendo il primo numero per il secondo. La rivendicazione 3 introduce che il primo numero può essere una combinazione ponderata delle visualizzazioni, dove ciascuna visualizzazione riceve un peso basato almeno in parte sulla durata di visualizzazione del documento. La rivendicazione 4 definisce esplicitamente il primo numero come totale di long clicks e il secondo come totale di clicks sul risultato.\n\nLe rivendicazioni dipendenti aggiungono dettagli sul sistema di ponderazione. La rivendicazione 5 contempla funzioni continue della durata di visualizzazione, mentre la rivendicazione 6 funzioni discontinue. La rivendicazione 7 specifica la classificazione della durata in categorie temporali e l'assegnazione di pesi basati su tali categorie. Le rivendicazioni 8-10 introducono viewing length differentiators: la rivendicazione 9 contempla fattori governati dalla categoria della query determinata, la rivendicazione 10 fattori governati dal tipo di utente determinato. Le rivendicazioni 11-30 replicano la struttura per computer-readable medium e system.",
+    "seo_reading": "La descrizione contempla un sistema dettagliato per trasformare i dati di click in segnali di ranking. Il documento introduce il concetto di long click versus short click, dove la durata di permanenza su una pagina dopo il click viene tracciata tramite JavaScript embedded, browser tag o toolbar software (paragrafi relativi al tracking component 2050 e FIG. 2). Per ogni click vengono registrati query (Q), documento (D), tempo (T), lingua (L) e paese (C), più aspetti addizionali di utente e sessione.\n\nLa descrizione contempla esplicitamente la frazione LC|C (Long Click given Click) calcolata come numero di click ponderati diviso numero totale di click più un fattore di smoothing S0. Vengono fornite formule specifiche: LCC_BASE=[#WC(Q,D)]/[#C(Q,D)+S0], con varianti per lingua e paese (LCC_LANG, LCC_COUNTRY) che incorporano smoothing gerarchico. La descrizione contempla anche pesi specifici per categorie di click: short click con peso negativo (es. -0.1), medium click con peso moderato (es. 0.5), long click con peso pieno (es. 1.0), last click con peso alto (es. 0.9) che può essere ridotto (es. 0.3) se preceduto da altri click.\n\nLa descrizione contempla viewing length differentiators basati su categoria di query (navigational versus informational, paragrafi FIG. 4E) e tipo di utente. Per query navigational versus informational, le soglie temporali potrebbero essere aggiustate: una query informational-quick come \"George Washington's Birthday\" richiederebbe meno tempo per costituire un long click rispetto a \"Hilbert transform tutorial\". Per tipo di utente, la descrizione contempla clustering basato su velocità di click e comportamento, con utenti esperti che cliccano più velocemente.\n\nLa descrizione contempla trasformazioni della frazione LC|C in boost per l'IR score, con formule esplicite: IRBoost=1+M/(1+e^(X*(LC|C-0.5))) con costanti esempio (M,X)=(100,-100) o forme lineari ed esponenziali alternative. Vengono contemplati anche safeguard anti-spam: modelli di comportamento utente per identificare pattern anomali, rimozione di click sospetti, democrazia nei voti (un voto per cookie/IP per coppia query-URL).\n\nPer la SEO, questo potrebbe significare che il tempo di permanenza degli utenti sui documenti dopo il click costituirebbe un segnale di ranking query-specifico, indipendente dalla posizione o da altri risultati per quella query. La frazione LC|C sarebbe progettata per ridurre il presentation bias, poiché confronta il comportamento degli utenti su uno stesso documento con se stesso piuttosto che con altri risultati. Questo potrebbe premiare documenti che soddisfano l'intento anche se posizionati più in basso o con snippet meno attraenti. Tuttavia, la ponderazione basata su categoria di query e tipo di utente suggerirebbe che non esisterebbe una soglia universale per ciò che costituisce engagement positivo.",
+    "limits": [
+      "Il brevetto non dimostra che Google applichi attualmente questo sistema in produzione, né specifica quale peso abbia la frazione LC|C rispetto ad altri segnali di ranking.",
+      "La descrizione non chiarisce come vengano determinate concretamente le categorie di query o i tipi di utente in un sistema reale, limitandosi a esempi generici (navigational/informational).",
+      "Il documento fa parte di una famiglia con cinque continuation (US9235627B1, US9811566B1, US10229166B1, US11188544B1, US11816114B1), tutte con la stessa data di priorità 2006, il che non costituisce validazione indipendente ma protezione continuata della stessa invenzione.",
+      "Il brevetto non specifica soglie temporali concrete per distinguere short, medium e long click, indicando solo che andrebbero determinate confrontando dati storici con valutazioni umane esplicite."
+    ],
+    "implications": [
+      "Concentrarsi sulla soddisfazione dell'intento di ricerca piuttosto che sull'ottimizzazione per il click iniziale: contenuti che trattengono gli utenti e rispondono compiutamente alle loro domande restano fondamentali indipendentemente dai meccanismi di misurazione.",
+      "Considerare che utenti diversi potrebbero avere aspettative temporali diverse: contenuti informativi complessi potrebbero richiedere legittimamente più tempo di consultazione rispetto a risposte rapide a query fattuali.",
+      "Evitare tattiche che artificialmente prolunghino la permanenza senza fornire valore (es. contenuti dispersivi, navigazione confusa): i safeguard anti-spam descritti contemplano l'identificazione di pattern comportamentali anomali.",
+      "Mantenere coerenza tra snippet/titolo e contenuto effettivo della pagina: la riduzione del presentation bias suggerirebbe che discrepanze tra promessa e contenuto potrebbero emergere attraverso pattern di click brevi."
+    ],
+    "key_terms": [
+      {
+        "term": "long click",
+        "explanation": "Click su un risultato di ricerca seguito da una visualizzazione prolungata del documento, interpretato come segnale di rilevanza positiva"
+      },
+      {
+        "term": "short click",
+        "explanation": "Click seguito da visualizzazione breve, interpretato come segnale che il documento non soddisfa l'intento dell'utente"
+      },
+      {
+        "term": "LC|C fraction",
+        "explanation": "Long Click given Click fraction, rapporto tra click ponderati per durata e totale dei click per una coppia query-documento"
+      },
+      {
+        "term": "presentation bias",
+        "explanation": "Distorsione nei click causata da fattori di presentazione come posizione nel ranking o qualità dello snippet, indipendentemente dalla rilevanza effettiva"
+      },
+      {
+        "term": "viewing length differentiator",
+        "explanation": "Fattore che modifica la ponderazione della durata di visualizzazione basandosi su categoria della query o tipo di utente"
+      },
+      {
+        "term": "smoothing factor",
+        "explanation": "Parametro aggiunto alle formule per ridurre il rumore quando i dati disponibili per una query sono limitati, facendo tendere la frazione verso zero"
+      }
+    ]
+  },
+  "origin": "seed",
+  "generated_at": "2026-10-29T10:03:59.778173Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07134048000000001
+}

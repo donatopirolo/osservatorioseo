@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US9147154B2",
+    "title": "Classifying resources using a deep network",
+    "abstract": "Methods, systems, and apparatus, including computer programs encoded on computer storage media, for scoring concept terms using a deep network. One of the methods includes receiving an input comprising a plurality of features of a resource, wherein each feature is a value of a respective attribute of the resource; processing each of the features using a respective embedding function to generate one or more numeric values; processing the numeric values using one or more neural network layers to generate an alternative representation of the features, wherein processing the floating point values comprises applying one or more non-linear transformations to the floating point values; and processing the alternative representation of the input using a classifier to generate a respective category score for each category in a pre-determined set of categories, wherein each of the respective category scores measure a predicted likelihood that the resource belongs to the corresponding category.",
+    "claims": [
+      "1. A system comprising: a deep network implemented in one or more computers that defines a plurality of layers of non-linear operations, wherein the deep network comprises: an embedding function layer configured to: receive an input comprising a plurality of features of a resource, wherein each feature is a value of a respective attribute of the resource, and process each of the features using a respective embedding function to generate one or more numeric values, and one or more neural network layers configured to: receive the numeric values, and process the numeric values to generate an alternative representation of the features of the resource, wherein processing the numeric values comprises applying one or more non-linear transformations to the numeric values; and a classifier configured to: process the alternative representation of the input to generate a respective category score for each category in a pre-determined set of categories, wherein each of the respective category scores measure a predicted likelihood that the resource belongs to the corresponding category.",
+      "2. The system of claim 1 , wherein each of the embedding functions is specific to features of a respective feature type.",
+      "3. The system of claim 1 , wherein the pre-determined set of categories includes a search engine spam category, and the category score for the resource measures a predicted likelihood that the resource is a search engine spam resource.",
+      "4. The system of claim 1 , wherein the pre-determined set of categories includes a respective category for each of a plurality of types of search engine spam.",
+      "5. The system of claim 1 , wherein the pre-determined set of categories includes a respective category for each resource type in a group of resource types.",
+      "6. The system of claim 1 , wherein the classifier is further configured to provide the category scores to a search system for use in determining whether or not index resources in a search engine index.",
+      "7. The system of claim 1 , wherein the classifier is further configured to provide the category scores to a search system for use in generating and ordering search results in response to received search queries.",
+      "8. The system of claim 1 , wherein the numeric values are floating point values.",
+      "9. The system of claim 1 , wherein the numeric values are quantized integer values, and wherein an encoding of the quantized integer values represents floating point values.",
+      "10. A method performed by one or more computers, the method comprising: receiving an input comprising a plurality of features of a resource, wherein each feature is a value of a respective attribute of the resource; processing each of the features using a respective embedding function to generate one or more numeric values; processing the numeric values using one or more neural network layers to generate an alternative representation of the features of the resource, wherein processing the numeric values comprises applying one or more non-linear transformations to the numeric values; and processing the alternative representation of the input using a classifier to generate a respective category score for each category in a pre-determined set of categories, wherein each of the respective category scores measure a predicted likelihood that the resource belongs to the corresponding category.",
+      "11. The method of claim 10 , wherein each of the embedding functions is specific to features of a respective feature type.",
+      "12. The method of claim 10 , wherein the pre-determined set of categories includes a search engine spam category, and the category score for the resource measures a predicted likelihood that the resource is a search engine spam resource.",
+      "13. The method of claim 10 , wherein the pre-determined set of categories includes a respective category for each of a plurality of types of search engine spam.",
+      "14. The method of claim 10 , wherein the pre-determined set of categories includes a respective category for each resource type in a group of resource types.",
+      "15. The method of claim 10 , further comprising: providing the category scores to a search system for use in determining whether or not index resources in a search engine index.",
+      "16. The method of claim 10 , further comprising: providing the category scores to a search system for use in generating and ordering search results in response to received search queries.",
+      "17. A non-transitory computer storage medium encoded with a computer program, the program comprising instructions that when executed by one or more computers cause the one or more computers to perform operations comprising: receiving an input comprising a plurality of features of a resource, wherein each feature is a value of a respective attribute of the resource; processing each of the features using a respective embedding function to generate one or more numeric values; processing the numeric values using one or more neural network layers to generate an alternative representation of the features of the resource, wherein processing the numeric values comprises applying one or more non-linear transformations to the numeric values; and processing the alternative representation of the input using a classifier to generate a respective category score for each category in a pre-determined set of categories, wherein each of the respective category scores measure a predicted likelihood that the resource belongs to the corresponding category.",
+      "18. The computer storage medium of claim 17 , wherein each of the embedding functions is specific to features of a respective feature type.",
+      "19. The computer storage medium of claim 17 , wherein the pre-determined set of categories includes a search engine spam category, and the category score for the resource measures a predicted likelihood that the resource is a search engine spam resource.",
+      "20. The computer storage medium of claim 17 , wherein the pre-determined set of categories includes a respective category for each of a plurality of types of search engine spam.",
+      "21. The computer storage medium of claim 17 , wherein the pre-determined set of categories includes a respective category for each resource type in a group of resource types.",
+      "22. The computer storage medium of claim 17 , the operations further comprising: providing the category scores to a search system for use in determining whether or not index resources in a search engine index.",
+      "23. The computer storage medium of claim 17 , the operations further comprising: providing the category scores to a search system for use in generating and ordering search results in response to received search queries."
+    ],
+    "independent_claims": [
+      "1. A system comprising: a deep network implemented in one or more computers that defines a plurality of layers of non-linear operations, wherein the deep network comprises: an embedding function layer configured to: receive an input comprising a plurality of features of a resource, wherein each feature is a value of a respective attribute of the resource, and process each of the features using a respective embedding function to generate one or more numeric values, and one or more neural network layers configured to: receive the numeric values, and process the numeric values to generate an alternative representation of the features of the resource, wherein processing the numeric values comprises applying one or more non-linear transformations to the numeric values; and a classifier configured to: process the alternative representation of the input to generate a respective category score for each category in a pre-determined set of categories, wherein each of the respective category scores measure a predicted likelihood that the resource belongs to the corresponding category.",
+      "10. A method performed by one or more computers, the method comprising: receiving an input comprising a plurality of features of a resource, wherein each feature is a value of a respective attribute of the resource; processing each of the features using a respective embedding function to generate one or more numeric values; processing the numeric values using one or more neural network layers to generate an alternative representation of the features of the resource, wherein processing the numeric values comprises applying one or more non-linear transformations to the numeric values; and processing the alternative representation of the input using a classifier to generate a respective category score for each category in a pre-determined set of categories, wherein each of the respective category scores measure a predicted likelihood that the resource belongs to the corresponding category.",
+      "17. A non-transitory computer storage medium encoded with a computer program, the program comprising instructions that when executed by one or more computers cause the one or more computers to perform operations comprising: receiving an input comprising a plurality of features of a resource, wherein each feature is a value of a respective attribute of the resource; processing each of the features using a respective embedding function to generate one or more numeric values; processing the numeric values using one or more neural network layers to generate an alternative representation of the features of the resource, wherein processing the numeric values comprises applying one or more non-linear transformations to the numeric values; and processing the alternative representation of the input using a classifier to generate a respective category score for each category in a pre-determined set of categories, wherein each of the respective category scores measure a predicted likelihood that the resource belongs to the corresponding category."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Qingzhou Wang",
+      "Yu Liang",
+      "Ke Yang",
+      "Kai Chen"
+    ],
+    "priority_date": "2013-03-13",
+    "filing_date": "2013-03-13",
+    "publication_date": "2015-09-29",
+    "status": "Active",
+    "cpc_codes": [
+      "G06N3/00",
+      "G06N3/02",
+      "G06N3/04",
+      "G06N3/08",
+      "G06N3/084",
+      "G06F16/00",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24578",
+      "G06F16/30",
+      "G06F16/35",
+      "G06F16/353",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/951",
+      "G06F16/953",
+      "G06F17/30707",
+      "G06F17/30864"
+    ],
+    "family": [
+      {
+        "number": "US9449271B2",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Classifying resources using a deep network"
+      },
+      {
+        "number": "CN105210064B",
+        "relation": null,
+        "direction": "priority",
+        "title": "Classify resources using deep networks"
+      },
+      {
+        "number": "WO2014160282A1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Classifying resources using a deep network"
+      },
+      {
+        "number": "EP2973038A1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Classifying resources using a deep network"
+      }
+    ],
+    "cited_by_count": 77
+  },
+  "analysis": {
+    "title_it": "Classificazione di risorse tramite reti neurali profonde",
+    "summary": "Il brevetto descrive un sistema che utilizza una rete neurale profonda per classificare risorse web in categorie predeterminate. Il sistema riceve feature di una risorsa, le trasforma in rappresentazioni numeriche tramite funzioni di embedding, le elabora attraverso strati neurali non lineari e genera punteggi che indicano la probabilità che la risorsa appartenga a ciascuna categoria.",
+    "theme": "qualita_fiducia",
+    "seo_relevance": 4,
+    "scope": "Google Search, classificazione risorse e spam",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 10, 17) proteggono un sistema, un metodo e un programma per computer che implementano una rete neurale profonda per la classificazione di risorse. Il sistema riceve in input una pluralità di feature di una risorsa, dove ciascuna feature è il valore di un rispettivo attributo della risorsa. Ogni feature viene processata attraverso una rispettiva funzione di embedding per generare valori numerici. Questi valori numerici vengono poi elaborati da uno o più strati di rete neurale che applicano trasformazioni non lineari per generare una rappresentazione alternativa delle feature. Infine, un classificatore processa questa rappresentazione alternativa per generare un punteggio per ciascuna categoria in un insieme predeterminato di categorie, dove ogni punteggio misura la probabilità prevista che la risorsa appartenga alla categoria corrispondente.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. Le rivendicazioni 2, 11 e 18 specificano che ciascuna funzione di embedding può essere specifica per feature di un rispettivo tipo. Le rivendicazioni 3, 12 e 19 indicano che l'insieme predeterminato di categorie può includere una categoria spam per motori di ricerca, con il punteggio che misura la probabilità che la risorsa sia spam. Le rivendicazioni 4, 13 e 20 estendono questo concetto specificando che l'insieme può includere una categoria per ciascun tipo di spam tra più tipi diversi. Le rivendicazioni 5, 14 e 21 contemplano che l'insieme possa includere una categoria per ciascun tipo di risorsa in un gruppo di tipi di risorsa.\n\nParticolarmente rilevanti per la SEO sono le rivendicazioni 6, 15 e 22, che specificano che i punteggi di categoria possono essere forniti a un sistema di ricerca per determinare se indicizzare o meno le risorse in un indice del motore di ricerca. Le rivendicazioni 7, 16 e 23 indicano che i punteggi possono essere forniti a un sistema di ricerca per generare e ordinare i risultati di ricerca in risposta a query ricevute. Le rivendicazioni 8 e 9 specificano che i valori numerici possono essere valori in virgola mobile o valori interi quantizzati la cui codifica rappresenta valori in virgola mobile.",
+    "seo_reading": "La descrizione contempla diverse implementazioni del sistema di classificazione. Il paragrafo relativo alla FIG. 2 specifica che le feature della risorsa includono token dal contenuto della risorsa, opzionalmente associati a etichette che corrispondono a porzioni specifiche come il titolo, l'header o i link. La descrizione indica inoltre che le feature possono includere l'URL della risorsa, il nome di dominio, l'età della risorsa e la lunghezza della risorsa. Vengono anche contemplate feature che identificano categorie o tipi di entità rilevanti per la risorsa, oltre a feature ottenute da altri sistemi che riassumono il contenuto o l'utilità della risorsa.\n\nLa descrizione contempla tre tipi principali di funzioni di embedding: simple embedding function (mappa un singolo token in un vettore), parallel embedding function (mappa una lista di token in vettori concatenati), combining embedding function (mappa token in vettori che vengono poi fusi tramite funzioni lineari o non lineari) e mixed embedding function (combina gli approcci precedenti). Questi dettagli tecnici suggeriscono che il sistema potrebbe essere in grado di processare sia singoli termini che sequenze di termini con diversi livelli di sofisticazione.\n\nPer quanto riguarda l'applicazione alla ricerca, la descrizione contempla che il sistema di ricerca potrebbe utilizzare i punteggi di categoria per determinare se indicizzare una risorsa: una risorsa con alta probabilità di essere spam sarebbe meno probabile che venga indicizzata. La descrizione contempla anche che i punteggi potrebbero essere utilizzati per rimuovere risultati di ricerca prima della presentazione all'utente o per demotare risultati nell'ordine di presentazione. Quando i punteggi rappresentano la probabilità di appartenenza a tipi di risorsa specifici, la descrizione contempla che potrebbero essere utilizzati per promuovere o demotare risultati in risposta a query specifiche.\n\nUn aspetto interessante contemplato nella descrizione è l'uso dei punteggi per verificare dichiarazioni degli utenti sulle risorse, ad esempio quando un utente segnala che una risorsa è stata classificata erroneamente. Il sistema potrebbe utilizzare i punteggi generati per valutare la probabilità di misclassificazione e determinare se aggiustare la classificazione.\n\nTuttavia, è importante sottolineare che questi sono scenari contemplati nella descrizione come possibili implementazioni. Il brevetto non afferma che Google utilizzi attivamente questo sistema in produzione né specifica quali feature esatte vengano utilizzate o quale peso abbiano nella classificazione finale.",
+    "limits": [
+      "Il brevetto è stato concesso nel 2015 e descrive tecniche di deep learning che potrebbero essere state superate o integrate con approcci più recenti. Non dimostra che Google utilizzi attualmente questo specifico sistema.",
+      "La descrizione non specifica quali feature abbiano maggiore peso nella classificazione né fornisce soglie concrete per determinare quando una risorsa debba essere considerata spam o appartenente a una categoria specifica.",
+      "Il brevetto contempla l'uso per la classificazione spam ma non dimostra che questo sia l'unico o principale utilizzo del sistema, né che sostituisca altri sistemi di rilevamento spam già in uso.",
+      "Fa parte di una famiglia di brevetti con continuation (US9449271B2), il che significa che le rivendicazioni potrebbero essere state raffinate o estese in documenti successivi."
+    ],
+    "implications": [
+      "Mantenere contenuti di qualità con struttura chiara e semantica ben definita resta fondamentale, indipendentemente dai sistemi di classificazione utilizzati, poiché il brevetto contempla l'estrazione di feature da diverse porzioni della risorsa (titolo, header, link).",
+      "Evitare tecniche manipolative che potrebbero essere identificate come spam da sistemi di machine learning, dato che il brevetto contempla la classificazione di diversi tipi di spam attraverso pattern nelle feature.",
+      "Assicurarsi che i segnali di base della risorsa (URL, dominio, età, lunghezza del contenuto) siano coerenti con il tipo di contenuto offerto, poiché questi sono esplicitamente contemplati come feature di input.",
+      "Considerare che sistemi di classificazione automatica potrebbero influenzare sia l'indicizzazione che il ranking, rendendo importante la coerenza complessiva dei segnali della risorsa piuttosto che l'ottimizzazione di singoli fattori."
+    ],
+    "key_terms": [
+      {
+        "term": "embedding function",
+        "explanation": "Funzione che trasforma feature discrete (come token di testo) in rappresentazioni numeriche (vettori) che possono essere elaborate da una rete neurale"
+      },
+      {
+        "term": "deep network",
+        "explanation": "Rete neurale con più strati che applica trasformazioni non lineari successive per generare una rappresentazione alternativa dell'input"
+      },
+      {
+        "term": "category score",
+        "explanation": "Punteggio numerico che rappresenta la probabilità prevista che una risorsa appartenga a una specifica categoria predeterminata"
+      },
+      {
+        "term": "alternative representation",
+        "explanation": "Rappresentazione trasformata delle feature originali generata dagli strati neurali, utilizzata dal classificatore per predire i punteggi di categoria"
+      },
+      {
+        "term": "feature type",
+        "explanation": "Tipo categoriale di una feature, ad esempio token dal titolo, dall'URL o dal contenuto, ciascuno processato da una specifica funzione di embedding"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:06:22.880532Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.060659279999999996
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8510294B2: Ranking basato su segnali di popolazione degli utenti — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per calcolare il ranking score di un documento in risposta a una query determinando prima una popolazione associata all&#39;utente che effettua la ricerca, poi utilizzando dati comportamentali di quella popolazione (principalmente click) per influenzare il punteggio. L&#39;ide" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8510294b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8510294B2: Ranking basato su segnali di popolazione degli utenti — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per calcolare il ranking score di un documento in risposta a una query determinando prima una popolazione associata all&#39;utente che effettua la ricerca, poi utilizzando dati comportamentali di quella popolazione (principalmente click) per influenzare il punteggio. L&#39;ide" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8510294b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8510294B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8510294b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8510294B2: Ranking basato su segnali di popolazione degli utenti",
+  "description": "Il brevetto descrive un metodo per calcolare il ranking score di un documento in risposta a una query determinando prima una popolazione associata all\u0027utente che effettua la ricerca, poi utilizzando dati comportamentali di quella popolazione (principalmente click) per influenzare il punteggio. L\u0027idea \u00e8 che i click degli utenti della stessa popolazione (geografica, demografica, linguistica) siano pi\u00f9 rilevanti per l\u0027utente corrente rispetto ai click della popolazione generale.",
+  "articleBody": "Il brevetto descrive un metodo per calcolare il ranking score di un documento in risposta a una query determinando prima una popolazione associata all\u0027utente che effettua la ricerca, poi utilizzando dati comportamentali di quella popolazione (principalmente click) per influenzare il punteggio. L\u0027idea \u00e8 che i click degli utenti della stessa popolazione (geografica, demografica, linguistica) siano pi\u00f9 rilevanti per l\u0027utente corrente rispetto ai click della popolazione generale.\n\nLa rivendicazione indipendente 1 copre un metodo che prevede: ricevere una query di ricerca; determinare una prima popolazione associata alla query basandosi almeno sul mittente della query; determinare un primo articolo (documento, pagina web) associato alla query; determinare un ranking score per l\u0027articolo basato almeno in parte su dati associati alla prima popolazione. Le rivendicazioni dipendenti specificano come determinare la popolazione. La rivendicazione 2 contempla l\u0027uso di dati demografici del mittente. La rivendicazione 3 specifica la determinazione della probabile posizione geografica del mittente. La rivendicazione 4 elenca tre metodi per determinare la posizione: indirizzo IP da cui \u00e8 stata inviata la query, indirizzo inserito dall\u0027utente per accedere al motore di ricerca, dati demografici inseriti dall\u0027utente. La rivendicazione 5 prevede di determinare dati demografici associati alla query stessa (non solo al mittente). La rivendicazione 6 specifica che ci\u00f2 pu\u00f2 includere: determinare la lingua della query e determinare dati associati ai mittenti precedenti della stessa query. Le rivendicazioni 7-8 coprono l\u0027uso di dati di auto-identificazione dell\u0027utente (user registration data, user preference data, user selected data). Le rivendicazioni 9-10 coprono dati di identificazione automatica (indirizzo IP, dominio, dati di default ottenuti dall\u0027applicazione dell\u0027utente). La rivendicazione 11 specifica che i dati associati alla popolazione comprendono un selection score per l\u0027articolo nel contesto di quella popolazione. La rivendicazione 12 chiarisce che il selection score pu\u00f2 essere il numero di click sull\u0027articolo da parte di membri della popolazione. La rivendicazione 13 contempla l\u0027uso del numero di membri della popolazione. La rivendicazione 14 specifica che pu\u00f2 trattarsi del numero di membri che hanno selezionato un risultato restituito per quella query. Le rivendicazioni 15-20 sono rivendicazioni di sistema che replicano sostanzialmente le rivendicazioni di metodo 1-6 e 11.\n\nLa descrizione contempla un sistema in cui i click degli utenti vengono segmentati per popolazione e utilizzati per calcolare ranking score personalizzati. Nel paragrafo relativo alla popolazione database (blocco 120), la descrizione elenca esempi di popolazione: continente, regione, paese, stato, contea, citt\u00e0, genere, fascia d\u0027et\u00e0, etnia, lingua primaria, gruppo di interesse. La descrizione distingue tra self-identification data (preferenze linguistiche, dati di registrazione) e automatic-identification data (IP, dominio, cookie). Nel clickthrough database (blocco 122) vengono memorizzati i click degli utenti segmentati per popolazione. La descrizione fornisce tre formule di esempio per calcolare il population signal. La formula (1) nel blocco che precede la figura 3 calcola S(q,dj) come rapporto pesato tra click della popolazione P sul documento j e click totali, con un smoothing factor \u03bc che riflette quanti dati servono per considerare affidabile il segnale di click. La formula contempla esplicitamente il caso in cui i dati di una popolazione siano scarsi: nel blocco 310 e 322 si descrive che se i click da una popolazione sono insufficienti, si pu\u00f2 utilizzare una popolazione di livello superiore (esempio: se i click dalla Francia sono pochi, si usano i click dall\u0027Europa). La descrizione contempla anche sub-popolazioni gerarchiche: \"Parisians\" \u00e8 sub-popolazione di \"France\" che \u00e8 sub-popolazione di \"Europe\". Nel blocco 328 si calcola un population signal per ogni documento che rappresenta un \"weighted value\" del numero di click. Questo potrebbe significare per la SEO che Google potrebbe segmentare i segnali comportamentali per gruppi di utenti e utilizzare i comportamenti di utenti simili per personalizzare i risultati. Un sito che riceve molti click da utenti di una specifica area geografica o demografica potrebbe rankare meglio per query successive provenienti da utenti della stessa popolazione. Tuttavia la descrizione non afferma che questo sistema sia in produzione. Le formule contemplano anche il numero di volte che un documento \u00e8 stato mostrato (\"SH(q,di)\" nella formula 2), suggerendo che il sistema potrebbe distinguere tra impression e click. Il smoothing factor contemplato potrebbe servire a evitare che popolazioni con pochi dati distorcano eccessivamente i risultati.",
+  "wordCount": 682,
+  "datePublished": "2026-10-29T10:02:28.897283+00:00",
+  "dateModified": "2026-10-29T10:02:28.897283+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8510294b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Methods and systems for improving a search ranking using population information",
+    "identifier": "US8510294B2",
+    "url": "https://patents.google.com/patent/US8510294B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8510294B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8510294B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking basato su segnali di popolazione degli utenti</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Methods and systems for improving a search ranking using population information</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per calcolare il ranking score di un documento in risposta a una query determinando prima una popolazione associata all&#39;utente che effettua la ricerca, poi utilizzando dati comportamentali di quella popolazione (principalmente click) per influenzare il punteggio. L&#39;idea è che i click degli utenti della stessa popolazione (geografica, demografica, linguistica) siano più rilevanti per l&#39;utente corrente rispetto ai click della popolazione generale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking dei risultati organici</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">13 Agosto 2013</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2003-09-12</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Segnali di comportamento degli utenti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che prevede: ricevere una query di ricerca; determinare una prima popolazione associata alla query basandosi almeno sul mittente della query; determinare un primo articolo (documento, pagina web) associato alla query; determinare un ranking score per l&#39;articolo basato almeno in parte su dati associati alla prima popolazione. Le rivendicazioni dipendenti specificano come determinare la popolazione. La rivendicazione 2 contempla l&#39;uso di dati demografici del mittente. La rivendicazione 3 specifica la determinazione della probabile posizione geografica del mittente. La rivendicazione 4 elenca tre metodi per determinare la posizione: indirizzo IP da cui è stata inviata la query, indirizzo inserito dall&#39;utente per accedere al motore di ricerca, dati demografici inseriti dall&#39;utente. La rivendicazione 5 prevede di determinare dati demografici associati alla query stessa (non solo al mittente). La rivendicazione 6 specifica che ciò può includere: determinare la lingua della query e determinare dati associati ai mittenti precedenti della stessa query. Le rivendicazioni 7-8 coprono l&#39;uso di dati di auto-identificazione dell&#39;utente (user registration data, user preference data, user selected data). Le rivendicazioni 9-10 coprono dati di identificazione automatica (indirizzo IP, dominio, dati di default ottenuti dall&#39;applicazione dell&#39;utente). La rivendicazione 11 specifica che i dati associati alla popolazione comprendono un selection score per l&#39;articolo nel contesto di quella popolazione. La rivendicazione 12 chiarisce che il selection score può essere il numero di click sull&#39;articolo da parte di membri della popolazione. La rivendicazione 13 contempla l&#39;uso del numero di membri della popolazione. La rivendicazione 14 specifica che può trattarsi del numero di membri che hanno selezionato un risultato restituito per quella query. Le rivendicazioni 15-20 sono rivendicazioni di sistema che replicano sostanzialmente le rivendicazioni di metodo 1-6 e 11.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema in cui i click degli utenti vengono segmentati per popolazione e utilizzati per calcolare ranking score personalizzati. Nel paragrafo relativo alla popolazione database (blocco 120), la descrizione elenca esempi di popolazione: continente, regione, paese, stato, contea, città, genere, fascia d&#39;età, etnia, lingua primaria, gruppo di interesse. La descrizione distingue tra self-identification data (preferenze linguistiche, dati di registrazione) e automatic-identification data (IP, dominio, cookie). Nel clickthrough database (blocco 122) vengono memorizzati i click degli utenti segmentati per popolazione. La descrizione fornisce tre formule di esempio per calcolare il population signal. La formula (1) nel blocco che precede la figura 3 calcola S(q,dj) come rapporto pesato tra click della popolazione P sul documento j e click totali, con un smoothing factor μ che riflette quanti dati servono per considerare affidabile il segnale di click. La formula contempla esplicitamente il caso in cui i dati di una popolazione siano scarsi: nel blocco 310 e 322 si descrive che se i click da una popolazione sono insufficienti, si può utilizzare una popolazione di livello superiore (esempio: se i click dalla Francia sono pochi, si usano i click dall&#39;Europa). La descrizione contempla anche sub-popolazioni gerarchiche: &#34;Parisians&#34; è sub-popolazione di &#34;France&#34; che è sub-popolazione di &#34;Europe&#34;. Nel blocco 328 si calcola un population signal per ogni documento che rappresenta un &#34;weighted value&#34; del numero di click. Questo potrebbe significare per la SEO che Google potrebbe segmentare i segnali comportamentali per gruppi di utenti e utilizzare i comportamenti di utenti simili per personalizzare i risultati. Un sito che riceve molti click da utenti di una specifica area geografica o demografica potrebbe rankare meglio per query successive provenienti da utenti della stessa popolazione. Tuttavia la descrizione non afferma che questo sistema sia in produzione. Le formule contemplano anche il numero di volte che un documento è stato mostrato (&#34;SH(q,di)&#34; nella formula 2), suggerendo che il sistema potrebbe distinguere tra impression e click. Il smoothing factor contemplato potrebbe servire a evitare che popolazioni con pochi dati distorcano eccessivamente i risultati.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2013), quindi anche se descrive tecnologie di interesse non costituisce più una protezione attiva per Google.</li>
+      <li>La data di priorità è il 2003: il brevetto descrive tecnologie concepite vent&#39;anni fa, quando i segnali comportamentali e la personalizzazione erano agli albori. Non riflette necessariamente i sistemi attuali.</li>
+      <li>Il brevetto non dimostra che Google utilizzi attualmente questo sistema di segmentazione per popolazione nel ranking. Descrive cosa si voleva proteggere, non cosa è in produzione.</li>
+      <li>La descrizione non specifica soglie, pesi relativi rispetto ad altri fattori di ranking, né come questo sistema interagirebbe con la personalizzazione moderna o con requisiti di privacy più stringenti introdotti dopo il 2003.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Produrre contenuti che rispondano alle esigenze di popolazioni specifiche (geografiche, linguistiche, demografiche) resta una pratica solida indipendentemente da questo brevetto, perché migliora la rilevanza percepita dagli utenti.</li>
+      <li class="pl-2">Monitorare i segnali di engagement (tempo sulla pagina, ritorno al sito, navigazione) per diverse tipologie di utenti può aiutare a identificare gap di contenuto o di user experience per segmenti specifici.</li>
+      <li class="pl-2">Considerare che i motori di ricerca potrebbero valutare la rilevanza di un documento non solo in assoluto ma nel contesto di gruppi di utenti, quindi ottimizzare per un pubblico target ben definito può essere più efficace che cercare di piacere a tutti.</li>
+      <li class="pl-2">La segmentazione geografica e linguistica dei contenuti (hreflang, contenuti localizzati) rimane importante perché risponde a esigenze reali degli utenti, a prescindere dai meccanismi di ranking.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">population</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un gruppo di utenti definito da caratteristiche comuni come posizione geografica, lingua, dati demografici, interessi condivisi o altri criteri di segmentazione</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">selection score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un punteggio che riflette quante volte un documento è stato selezionato (cliccato) da membri di una specifica popolazione in risposta a una query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">smoothing factor (μ)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un fattore che indica quanti dati sono necessari per considerare affidabile un segnale di click da una popolazione, usato per gestire popolazioni con dati scarsi</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">sub-population</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una popolazione più ristretta contenuta in una popolazione più ampia (es. Francia è sub-popolazione di Europa), usata per aggregare dati quando quelli della popolazione specifica sono insufficienti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">self-identification data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Dati forniti volontariamente dall&#39;utente come preferenze linguistiche, dati di registrazione, selezioni esplicite</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">automatic-identification data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Dati raccolti automaticamente dal sistema come indirizzo IP, dominio, cookie, impostazioni di default del browser</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US8090713B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8090713B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Methods and systems for improving a search ranking using population information</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8510294B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

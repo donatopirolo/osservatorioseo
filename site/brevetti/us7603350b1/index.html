@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US7603350B1: Ranking dei risultati basato sulla fiducia nelle etichette — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per riordinare i risultati di ricerca in base alla fiducia accordata alle entità che hanno etichettato i documenti. Gli utenti possono cercare documenti usando termini di query e label (etichette categoriali), e il sistema aggiusta gli score di rilevanza dei risultati" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us7603350b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US7603350B1: Ranking dei risultati basato sulla fiducia nelle etichette — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per riordinare i risultati di ricerca in base alla fiducia accordata alle entità che hanno etichettato i documenti. Gli utenti possono cercare documenti usando termini di query e label (etichette categoriali), e il sistema aggiusta gli score di rilevanza dei risultati" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us7603350b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US7603350B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us7603350b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US7603350B1: Ranking dei risultati basato sulla fiducia nelle etichette",
+  "description": "Il brevetto descrive un sistema per riordinare i risultati di ricerca in base alla fiducia accordata alle entit\u00e0 che hanno etichettato i documenti. Gli utenti possono cercare documenti usando termini di query e label (etichette categoriali), e il sistema aggiusta gli score di rilevanza dei risultati in base al trust rank delle entit\u00e0 che hanno fornito le label corrispondenti alla query.",
+  "articleBody": "Il brevetto descrive un sistema per riordinare i risultati di ricerca in base alla fiducia accordata alle entit\u00e0 che hanno etichettato i documenti. Gli utenti possono cercare documenti usando termini di query e label (etichette categoriali), e il sistema aggiusta gli score di rilevanza dei risultati in base al trust rank delle entit\u00e0 che hanno fornito le label corrispondenti alla query.\n\nLe rivendicazioni indipendenti (1, 4, 7, 10, 13, 14) coprono un metodo e sistemi correlati che ricevono una query composta da un query term e un query label term, dove il query label term \u00e8 un categorical identifier. Il sistema identifica risorse nel search result set che hanno associated matching label terms corrispondenti al query label e associated non-matching label terms che non corrispondono. Ogni label term \u00e8 un categorical identifier che descrive la risorsa ed \u00e8 stato associato alla risorsa da una rispettiva entity.\n\nIl metodo determina per ciascuna risorsa un trust rank dell\u0027entit\u00e0 che ha associato il matching label term alla risorsa, dove il trust rank indica se un utente si fida del matching label term associato. Il sistema aumenta il relevance score di ciascuna risorsa che ha il matching label term in base al rispettivo trust rank. Le risorse vengono quindi rankate in base ai relevance score aggiustati.\n\nUn aspetto distintivo coperto dalle rivendicazioni \u00e8 l\u0027annotazione dei risultati: il sistema annota gli indicia che identificano ciascuna risorsa con il nome della rispettiva entit\u00e0 che ha associato il matching label term (rivendicazioni 1, 4, 7, 10, 13, 14). La rivendicazione 2 aggiunge che l\u0027annotazione pu\u00f2 includere anche il matching label term stesso. Le rivendicazioni 3, 5, 9, 11 coprono la possibilit\u00e0 di aggregare trust rank di pi\u00f9 entit\u00e0 che hanno fornito label corrispondenti per determinare un trust factor complessivo. Le rivendicazioni 4, 10, 14 coprono specificamente il caso in cui una risorsa ha due o pi\u00f9 matching label terms associati da entit\u00e0 diverse.\n\nLa descrizione contempla un sistema in cui le entit\u00e0 (persone, esperti, siti verticali) creano annotations che associano label a documenti web tramite URL pattern (paragrafi che descrivono Expert\u0027s web site 105 e annotations 106). Un\u0027annotation ha la forma schematica \u003clabel, URL_pattern\u003e, dove il pattern pu\u00f2 includere wildcards e regular expressions. Il sistema mantiene un trust database 190 con informazioni sulle relazioni di fiducia tra entit\u00e0, rappresentate come tuple \u003centity1, entity2, trust_value\u003e.\n\nLa descrizione contempla diversi modi per raccogliere trust information: clic su trust button 112, analisi di trust list 109 e vanity list 111 sui siti degli utenti, inferenza da web visitation patterns, email contact list, instant-messaging chat list, e inferenza transitiva della fiducia (FIG. 2, paragrafi su obtaining trust information). Il trust rank TRi per ciascuna entit\u00e0 viene calcolato come componente dell\u0027eigenvector della trust matrix M associato all\u0027eigenvalue 1. La descrizione contempla anche trust rank topic-specific, con tuple estese \u003centity1, entity2, topic, trust_value\u003e.\n\nPer l\u0027aggregazione dei trust rank, la descrizione contempla diverse weighting function: linear weighting (somma semplice), asymptotic weighting (somma dei logaritmi), decay weighting basato sull\u0027et\u00e0 delle annotation, e sigmoid weighting function (paragrafi su aggregation, con tabella di esempio). Il trust factor risultante viene applicato al base information retrieval score moltiplicandolo, producendo un trust-adjusted information retrieval score.\n\nLa descrizione contempla che il sistema possa funzionare anche con query senza label esplicite: se certe annotation sono applicabili a un documento, il trust rank viene comunque recuperato, aggregato e applicato al base score. L\u0027esempio in FIG. 5 mostra risultati annotati con i nomi delle entit\u00e0 (Guha, Roni) e le label associate.\n\nPer la SEO, questo brevetto potrebbe indicare che Google abbia considerato sistemi in cui la categorizzazione e l\u0027etichettatura dei contenuti da parte di entit\u00e0 fidate potrebbe influenzare il ranking, ma solo per query che includono esplicitamente label categoriali. Il meccanismo descritto richiederebbe che gli utenti formulino query con sintassi specifica (es. \"label:symptoms\") e che esistano annotation strutturate associate ai documenti. Questo scenario appare distante dalla ricerca web generalista: potrebbe essere pi\u00f9 rilevante per vertical search o per sistemi di ricerca in domini chiusi dove le annotation sono pi\u00f9 comuni. Il brevetto non fornisce evidenza che tale sistema sia mai stato implementato in Google Search pubblico, dove le query con label esplicite non sono una funzionalit\u00e0 nota.",
+  "wordCount": 693,
+  "datePublished": "2026-10-29T09:59:47.090322+00:00",
+  "dateModified": "2026-10-29T09:59:47.090322+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us7603350b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Search result ranking based on trust",
+    "identifier": "US7603350B1",
+    "url": "https://patents.google.com/patent/US7603350B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US7603350B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US7603350B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking dei risultati basato sulla fiducia nelle etichette</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Search result ranking based on trust</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per riordinare i risultati di ricerca in base alla fiducia accordata alle entità che hanno etichettato i documenti. Gli utenti possono cercare documenti usando termini di query e label (etichette categoriali), e il sistema aggiusta gli score di rilevanza dei risultati in base al trust rank delle entità che hanno fornito le label corrispondenti alla query.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, query con label categoriali</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">13 Ottobre 2009</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2006-05-09</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Qualità e fiducia dei siti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★☆☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">14</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 4, 7, 10, 13, 14) coprono un metodo e sistemi correlati che ricevono una query composta da un query term e un query label term, dove il query label term è un categorical identifier. Il sistema identifica risorse nel search result set che hanno associated matching label terms corrispondenti al query label e associated non-matching label terms che non corrispondono. Ogni label term è un categorical identifier che descrive la risorsa ed è stato associato alla risorsa da una rispettiva entity.</p>
+      <p>Il metodo determina per ciascuna risorsa un trust rank dell&#39;entità che ha associato il matching label term alla risorsa, dove il trust rank indica se un utente si fida del matching label term associato. Il sistema aumenta il relevance score di ciascuna risorsa che ha il matching label term in base al rispettivo trust rank. Le risorse vengono quindi rankate in base ai relevance score aggiustati.</p>
+      <p>Un aspetto distintivo coperto dalle rivendicazioni è l&#39;annotazione dei risultati: il sistema annota gli indicia che identificano ciascuna risorsa con il nome della rispettiva entità che ha associato il matching label term (rivendicazioni 1, 4, 7, 10, 13, 14). La rivendicazione 2 aggiunge che l&#39;annotazione può includere anche il matching label term stesso. Le rivendicazioni 3, 5, 9, 11 coprono la possibilità di aggregare trust rank di più entità che hanno fornito label corrispondenti per determinare un trust factor complessivo. Le rivendicazioni 4, 10, 14 coprono specificamente il caso in cui una risorsa ha due o più matching label terms associati da entità diverse.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema in cui le entità (persone, esperti, siti verticali) creano annotations che associano label a documenti web tramite URL pattern (paragrafi che descrivono Expert&#39;s web site 105 e annotations 106). Un&#39;annotation ha la forma schematica &lt;label, URL_pattern&gt;, dove il pattern può includere wildcards e regular expressions. Il sistema mantiene un trust database 190 con informazioni sulle relazioni di fiducia tra entità, rappresentate come tuple &lt;entity1, entity2, trust_value&gt;.</p>
+      <p>La descrizione contempla diversi modi per raccogliere trust information: clic su trust button 112, analisi di trust list 109 e vanity list 111 sui siti degli utenti, inferenza da web visitation patterns, email contact list, instant-messaging chat list, e inferenza transitiva della fiducia (FIG. 2, paragrafi su obtaining trust information). Il trust rank TRi per ciascuna entità viene calcolato come componente dell&#39;eigenvector della trust matrix M associato all&#39;eigenvalue 1. La descrizione contempla anche trust rank topic-specific, con tuple estese &lt;entity1, entity2, topic, trust_value&gt;.</p>
+      <p>Per l&#39;aggregazione dei trust rank, la descrizione contempla diverse weighting function: linear weighting (somma semplice), asymptotic weighting (somma dei logaritmi), decay weighting basato sull&#39;età delle annotation, e sigmoid weighting function (paragrafi su aggregation, con tabella di esempio). Il trust factor risultante viene applicato al base information retrieval score moltiplicandolo, producendo un trust-adjusted information retrieval score.</p>
+      <p>La descrizione contempla che il sistema possa funzionare anche con query senza label esplicite: se certe annotation sono applicabili a un documento, il trust rank viene comunque recuperato, aggregato e applicato al base score. L&#39;esempio in FIG. 5 mostra risultati annotati con i nomi delle entità (Guha, Roni) e le label associate.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google abbia considerato sistemi in cui la categorizzazione e l&#39;etichettatura dei contenuti da parte di entità fidate potrebbe influenzare il ranking, ma solo per query che includono esplicitamente label categoriali. Il meccanismo descritto richiederebbe che gli utenti formulino query con sintassi specifica (es. &#34;label:symptoms&#34;) e che esistano annotation strutturate associate ai documenti. Questo scenario appare distante dalla ricerca web generalista: potrebbe essere più rilevante per vertical search o per sistemi di ricerca in domini chiusi dove le annotation sono più comuni. Il brevetto non fornisce evidenza che tale sistema sia mai stato implementato in Google Search pubblico, dove le query con label esplicite non sono una funzionalità nota.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia mai stato implementato in Google Search. Le query con sintassi &#34;label:termine&#34; non sono una funzionalità documentata o osservabile nella ricerca web pubblica di Google.</li>
+      <li>Il brevetto fa parte di una famiglia con continuation (US8352467B1, US8818995B1, US10268641B1), quindi le rivendicazioni successive potrebbero aver modificato o esteso l&#39;ambito originale, ma questo non costituisce validazione indipendente dell&#39;uso in produzione.</li>
+      <li>Il sistema descritto richiede un&#39;infrastruttura di annotation strutturate e relazioni di fiducia esplicite tra entità che non corrisponde al funzionamento noto della ricerca web generalista. L&#39;ambito applicativo più plausibile sarebbe vertical search o sistemi di ricerca in domini chiusi.</li>
+      <li>Il brevetto non specifica come il base information retrieval score venga calcolato né quale peso relativo abbiano i trust factor rispetto ad altri segnali di ranking. L&#39;esempio cita PageRank ma solo come possibile modello di retrieval, non come componente integrata nel trust ranking.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Mantenere contenuti che possano essere categorizzati chiaramente e descritti con identifier categoriali precisi resta una buona pratica indipendentemente da questo brevetto, perché facilita la comprensione del contenuto da parte di sistemi automatici.</li>
+      <li class="pl-2">Costruire relazioni con entità autorevoli nel proprio settore (esperti, vertical site, community riconosciute) ha valore per la visibilità e la reputazione, indipendentemente dall&#39;esistenza di meccanismi di trust rank espliciti nei motori di ricerca.</li>
+      <li class="pl-2">Strutturare i contenuti con markup semantico e metadata che ne descrivano chiaramente la natura e la categoria migliora la findability in generale, anche se non esistono annotation esplicite come quelle descritte nel brevetto.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">annotation</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Associazione tra una label (etichetta categoriale) e un URL pattern, creata da un&#39;entità per descrivere documenti web</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">trust rank</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura del grado complessivo di fiducia che gli utenti accordano a una particolare entità, calcolato come eigenvector della trust matrix</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query label term</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Termine nella query che rappresenta un categorical identifier, usato per cercare documenti etichettati con quella categoria specifica</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">trust factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Valore aggregato derivato dai trust rank delle entità che hanno fornito label corrispondenti, usato per aggiustare il relevance score di un documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">matching label term</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Label associata a una risorsa che corrisponde al query label term specificato dall&#39;utente nella query</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US8352467B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8352467B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Search result ranking based on trust</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US10268641B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US10268641B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Search result ranking based on trust</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8818995B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8818995B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Search result ranking based on trust</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US7603350B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US10592540B2: Classificazione di query e generazione di risposte dirette — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per identificare query che cercano risposte concise (answer-seeking queries), classificarle per tipo di domanda e selezionare passaggi di testo dai risultati di ricerca che corrispondono a tipi di risposta associati. Il sistema assegna punteggi ai passaggi in base a qu" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us10592540b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US10592540B2: Classificazione di query e generazione di risposte dirette — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per identificare query che cercano risposte concise (answer-seeking queries), classificarle per tipo di domanda e selezionare passaggi di testo dai risultati di ricerca che corrispondono a tipi di risposta associati. Il sistema assegna punteggi ai passaggi in base a qu" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us10592540b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US10592540B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us10592540b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US10592540B2: Classificazione di query e generazione di risposte dirette",
+  "description": "Il brevetto descrive un metodo per identificare query che cercano risposte concise (answer-seeking queries), classificarle per tipo di domanda e selezionare passaggi di testo dai risultati di ricerca che corrispondono a tipi di risposta associati. Il sistema assegna punteggi ai passaggi in base a quanti elementi di risposta attesi contengono e presenta quelli con punteggio pi\u00f9 alto come risposta diretta.",
+  "articleBody": "Il brevetto descrive un metodo per identificare query che cercano risposte concise (answer-seeking queries), classificarle per tipo di domanda e selezionare passaggi di testo dai risultati di ricerca che corrispondono a tipi di risposta associati. Il sistema assegna punteggi ai passaggi in base a quanti elementi di risposta attesi contengono e presenta quelli con punteggio pi\u00f9 alto come risposta diretta.\n\nLa rivendicazione indipendente 1 copre un metodo che riceve una query con pi\u00f9 termini, la classifica come answer-seeking query di un particolare tipo di domanda (question type), ottiene uno o pi\u00f9 tipi di risposta (answer types) associati a quel tipo di domanda, dove ogni answer type specifica elementi di risposta (answer elements) che rappresentano caratteristiche di una risposta appropriata. Il metodo ottiene risultati di ricerca per la query, calcola per ciascun passaggio di testo nei documenti identificati un conteggio di quanti answer types corrispondono al passaggio, dove un answer type corrisponde quando tutti i suoi answer elements ricorrono nel passaggio. Calcola poi un punteggio per ogni passaggio basato sul conteggio di answer types corrispondenti, determina se il punteggio di un primo passaggio soddisfa una soglia e, in caso affermativo, fornisce una presentazione che include quel passaggio in risposta alla query.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la presentazione pu\u00f2 essere una pagina di risultati che include il passaggio e altri risultati di ricerca. La rivendicazione 3 descrive la classificazione della query come matching dei termini contro una pluralit\u00e0 di question types, dove ogni question type specifica elementi di domanda (question elements) che rappresentano caratteristiche di un tipo di query corrispondente. Le rivendicazioni 4 e 5 specificano che il matching pu\u00f2 riconoscere n-grammi che rappresentano istanze di entit\u00e0 o istanze di classi. Le rivendicazioni da 6 a 10 dettagliano come determinare se un passaggio corrisponde a un answer type: la rivendicazione 7 contempla answer elements che rappresentano misurazioni numeriche, la 8 classi di verbi, la 9 n-grammi che occorrono entro un numero soglia di termini da un\u0027entit\u00e0, la 10 n-grammi che occorrono entro una distanza soglia l\u0027uno dall\u0027altro. Le rivendicazioni 11 e 12 specificano che il punteggio pu\u00f2 rappresentare quanti answer types corrispondono o aggregare punteggi associati agli answer types corrispondenti. Le rivendicazioni da 13 a 25 replicano il metodo come sistema e come prodotto software.\n\nLa descrizione contempla un sistema di apprendimento automatico che genera coppie question type/answer type da dati di addestramento composti da coppie domanda-risposta (paragrafo 310). Il sistema definisce question types identificando quali termini delle domande corrispondono a tipi di question elements predefiniti, tra cui entity instance, entity class, part-of-speech class, root word e n-gram (sezione che inizia con \"Some common question element types\"). Ad esempio, nella domanda \"how to cook lasagna\", il sistema pu\u00f2 generare question types come (how, cook) o (how, entity/hobbies, entity/dishes) combinando diversi livelli di generalit\u00e0.\n\nPer gli answer types, la descrizione contempla answer element types che includono measurement (date, misure fisiche, durate temporali), n-gram (limitati a termini non comuni con inverse document frequency che soddisfa una soglia), verb, preposition, entity_instance, n-gram near entity (n-grammi che occorrono entro un numero soglia di termini da un\u0027entit\u00e0), verb near entity, preposition near entity, verb class (classi di verbi semanticamente correlati, con l\u0027esempio della classe verb/blend che include add, blend, combine, mix) e skip grams (bigrammi con un numero specificato di termini intermedi). Il sistema calcola punteggi point-wise mutual information (PMI) o normalized PMI per ciascuna coppia question type/answer type basati su tassi condizionali e globali derivati dai dati di addestramento (paragrafo 350).\n\nDurante l\u0027elaborazione delle query, il sistema determina se una query corrisponde a un question type e, in caso affermativo, ottiene gli answer types associati ordinati per punteggio (paragrafo 440). Il sistema itera attraverso passaggi di testo nei documenti dei risultati di ricerca, conta quanti answer types corrispondono a ciascun passaggio e pu\u00f2 aggregare punteggi associati a ciascun answer type corrispondente (paragrafo 450). Se il punteggio del passaggio con punteggio pi\u00f9 alto soddisfa una soglia, il sistema include quel passaggio in un answer box (paragrafo 460-470).\n\nPer la SEO, questo potrebbe significare che i contenuti strutturati per rispondere a domande specifiche con elementi caratteristici delle risposte attese potrebbero avere maggiori probabilit\u00e0 di apparire in answer box. La presenza di misurazioni numeriche per domande quantitative, verbi appropriati per domande procedurali, o entit\u00e0 rilevanti in prossimit\u00e0 di termini chiave potrebbero essere segnali considerati. Tuttavia, il brevetto descrive un sistema basato su pattern appresi da training data, non su regole fisse, quindi l\u0027effettiva implementazione potrebbe variare significativamente. La descrizione non specifica quali training data vengono utilizzati in produzione n\u00e9 conferma che questo specifico approccio sia quello attualmente in uso per gli answer box di Google.",
+  "wordCount": 773,
+  "datePublished": "2026-10-29T09:56:58.860765+00:00",
+  "dateModified": "2026-10-29T09:56:58.860765+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us10592540b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Generating elements of answer-seeking queries and elements of answers",
+    "identifier": "US10592540B2",
+    "url": "https://patents.google.com/patent/US10592540B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US10592540B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US10592540B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Classificazione di query e generazione di risposte dirette</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Generating elements of answer-seeking queries and elements of answers</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per identificare query che cercano risposte concise (answer-seeking queries), classificarle per tipo di domanda e selezionare passaggi di testo dai risultati di ricerca che corrispondono a tipi di risposta associati. Il sistema assegna punteggi ai passaggi in base a quanti elementi di risposta attesi contengono e presenta quelli con punteggio più alto come risposta diretta.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, risposte dirette e answer box</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">17 Marzo 2020</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2015-07-07</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Passaggi, risposte dirette e snippet</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">25</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che riceve una query con più termini, la classifica come answer-seeking query di un particolare tipo di domanda (question type), ottiene uno o più tipi di risposta (answer types) associati a quel tipo di domanda, dove ogni answer type specifica elementi di risposta (answer elements) che rappresentano caratteristiche di una risposta appropriata. Il metodo ottiene risultati di ricerca per la query, calcola per ciascun passaggio di testo nei documenti identificati un conteggio di quanti answer types corrispondono al passaggio, dove un answer type corrisponde quando tutti i suoi answer elements ricorrono nel passaggio. Calcola poi un punteggio per ogni passaggio basato sul conteggio di answer types corrispondenti, determina se il punteggio di un primo passaggio soddisfa una soglia e, in caso affermativo, fornisce una presentazione che include quel passaggio in risposta alla query.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la presentazione può essere una pagina di risultati che include il passaggio e altri risultati di ricerca. La rivendicazione 3 descrive la classificazione della query come matching dei termini contro una pluralità di question types, dove ogni question type specifica elementi di domanda (question elements) che rappresentano caratteristiche di un tipo di query corrispondente. Le rivendicazioni 4 e 5 specificano che il matching può riconoscere n-grammi che rappresentano istanze di entità o istanze di classi. Le rivendicazioni da 6 a 10 dettagliano come determinare se un passaggio corrisponde a un answer type: la rivendicazione 7 contempla answer elements che rappresentano misurazioni numeriche, la 8 classi di verbi, la 9 n-grammi che occorrono entro un numero soglia di termini da un&#39;entità, la 10 n-grammi che occorrono entro una distanza soglia l&#39;uno dall&#39;altro. Le rivendicazioni 11 e 12 specificano che il punteggio può rappresentare quanti answer types corrispondono o aggregare punteggi associati agli answer types corrispondenti. Le rivendicazioni da 13 a 25 replicano il metodo come sistema e come prodotto software.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema di apprendimento automatico che genera coppie question type/answer type da dati di addestramento composti da coppie domanda-risposta (paragrafo 310). Il sistema definisce question types identificando quali termini delle domande corrispondono a tipi di question elements predefiniti, tra cui entity instance, entity class, part-of-speech class, root word e n-gram (sezione che inizia con &#34;Some common question element types&#34;). Ad esempio, nella domanda &#34;how to cook lasagna&#34;, il sistema può generare question types come (how, cook) o (how, entity/hobbies, entity/dishes) combinando diversi livelli di generalità.</p>
+      <p>Per gli answer types, la descrizione contempla answer element types che includono measurement (date, misure fisiche, durate temporali), n-gram (limitati a termini non comuni con inverse document frequency che soddisfa una soglia), verb, preposition, entity_instance, n-gram near entity (n-grammi che occorrono entro un numero soglia di termini da un&#39;entità), verb near entity, preposition near entity, verb class (classi di verbi semanticamente correlati, con l&#39;esempio della classe verb/blend che include add, blend, combine, mix) e skip grams (bigrammi con un numero specificato di termini intermedi). Il sistema calcola punteggi point-wise mutual information (PMI) o normalized PMI per ciascuna coppia question type/answer type basati su tassi condizionali e globali derivati dai dati di addestramento (paragrafo 350).</p>
+      <p>Durante l&#39;elaborazione delle query, il sistema determina se una query corrisponde a un question type e, in caso affermativo, ottiene gli answer types associati ordinati per punteggio (paragrafo 440). Il sistema itera attraverso passaggi di testo nei documenti dei risultati di ricerca, conta quanti answer types corrispondono a ciascun passaggio e può aggregare punteggi associati a ciascun answer type corrispondente (paragrafo 450). Se il punteggio del passaggio con punteggio più alto soddisfa una soglia, il sistema include quel passaggio in un answer box (paragrafo 460-470).</p>
+      <p>Per la SEO, questo potrebbe significare che i contenuti strutturati per rispondere a domande specifiche con elementi caratteristici delle risposte attese potrebbero avere maggiori probabilità di apparire in answer box. La presenza di misurazioni numeriche per domande quantitative, verbi appropriati per domande procedurali, o entità rilevanti in prossimità di termini chiave potrebbero essere segnali considerati. Tuttavia, il brevetto descrive un sistema basato su pattern appresi da training data, non su regole fisse, quindi l&#39;effettiva implementazione potrebbe variare significativamente. La descrizione non specifica quali training data vengono utilizzati in produzione né conferma che questo specifico approccio sia quello attualmente in uso per gli answer box di Google.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo specifico metodo basato su question types e answer types sia attualmente utilizzato da Google Search per generare answer box o featured snippets.</li>
+      <li>La descrizione non specifica quali training data vengono utilizzati, quali soglie vengono applicate per determinare se mostrare un answer box, né come questo sistema si integri con altri segnali di ranking.</li>
+      <li>Il brevetto copre un approccio basato su pattern e matching di elementi predefiniti, ma non esclude che Google utilizzi anche o invece sistemi di machine learning più avanzati o modelli linguistici per la generazione di risposte dirette.</li>
+      <li>La data di priorità è 2015 e da allora i sistemi di comprensione del linguaggio naturale e generazione di risposte sono evoluti significativamente, rendendo possibile che approcci più recenti abbiano sostituito o integrato questo metodo.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Strutturare i contenuti in modo che rispondano direttamente a domande comuni nel settore, con risposte che includono gli elementi tipici attesi (misurazioni per domande quantitative, procedure per domande procedurali) rimane una pratica solida indipendentemente dal brevetto.</li>
+      <li class="pl-2">Mantenere la prossimità tra termini chiave e informazioni rilevanti (entità, numeri, verbi d&#39;azione) facilita l&#39;estrazione di passaggi coerenti e autocontenuti da parte di qualsiasi sistema di risposta diretta.</li>
+      <li class="pl-2">Identificare le domande frequenti del proprio settore e fornire risposte concise e complete in passaggi ben delimitati aumenta l&#39;utilità del contenuto per gli utenti e la sua estraibilità da parte dei motori di ricerca.</li>
+      <li class="pl-2">Utilizzare markup strutturati appropriati (schema.org per FAQ, HowTo, ecc.) rimane complementare a qualsiasi approccio basato su analisi testuale e può facilitare l&#39;identificazione di contenuti adatti a risposte dirette.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">answer-seeking query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query per cui l&#39;utente cerca una risposta concisa piuttosto che un elenco di documenti rilevanti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">question type</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Gruppo di question elements che rappresentano collettivamente le caratteristiche di un tipo di domanda</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">answer type</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Gruppo di answer elements che rappresentano collettivamente le caratteristiche di una risposta appropriata a un question type</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">question element</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Caratteristica di un n-gramma in una query, come istanza di entità, classe di entità, parte del discorso o root word</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">answer element</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Caratteristica di un n-gramma in una risposta, come misurazione numerica, classe di verbi, entità o n-grammi in prossimità di entità</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">point-wise mutual information (PMI)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura statistica che quantifica la qualità predittiva di una coppia question type/answer type basata su tassi condizionali e globali nei dati di addestramento</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US10592540B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

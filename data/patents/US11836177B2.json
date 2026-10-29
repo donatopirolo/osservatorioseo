@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US11836177B2",
+    "title": "Providing knowledge panels with search results",
+    "abstract": "Methods, systems, and apparatus, including computer programs encoded on a computer storage medium, for providing knowledge panels with search results. In one aspect, a method includes obtaining search results that are responsive to a received query. A factual entity referenced by the query is identified. Content is identified for display in a knowledge panel for the factual entity. The content includes at least one content item obtained from a first resource and at least one second content item obtained from a second resource different than the first resource. Data is provided that causes the identified search results and the knowledge panel to be presented on a search results page. The knowledge panel presents the identified content in a knowledge panel area that is along side at least a portion of the search results.",
+    "claims": [
+      "1. A method performed by a data processing apparatus of a client device, the method comprising: providing, to a search engine, a query that references a given entity; receiving, from the search engine, (i) search results that each reference a respective electronic resource that is related to the query and (ii) a knowledge panel that includes content that provides at least one image of the given entity in a position of prominence in the knowledge panel, a set of facts for the given entity, and a set of images representing a type of content for the given entity, each image in the set of images representing a different respective entity, the set of images being obtained from multiple disparate electronic resources, each image being an interactive user interface element that enables a user of the client device to request additional content for the respective entity; and presenting, on a search results page, the search results and the knowledge panel.",
+      "2. The method of claim 1 , wherein the knowledge panel further includes a second interactive user interface element that presents content related to the given entity and enables a user of the client device to request display additional content for presentation in the second interactive user interface element and the method further comprises: detecting a user interaction with the second interactive user interface element; and presenting, in the second interactive user interface element, additional content that is related to the given entity without navigating away from the search results page and while maintaining presentation of at least a portion of the content that provides the at least one image and the set of facts for the given entity in the knowledge panel, wherein the additional content is not presented in the knowledge panel prior to the user interaction.",
+      "3. The method of claim 2 , wherein: the second interactive user interface element comprises an interactive scroll bar; the user interaction comprises interaction with a control for requesting a view of a plurality of additional images in the interactive scroll bar; and presenting, in the interactive user interface element, the additional content comprises updating the interactive scroll bar to present the plurality of additional images based on the interaction with the control.",
+      "4. The method of claim 2 , wherein: the second interactive user interface element comprises an interactive social networking element that includes a social networking page of the given entity; the user interaction comprises a request for viewing a recent post of the social networking page for the given entity; and presenting the additional content comprises presenting, in the knowledge panel, the recent post of the social networking page for the given entity.",
+      "5. The method of claim 1 , wherein: the given entity is a person; and the type of content is one of movies, albums, songs.",
+      "6. The method of claim 1 , wherein: the set of images are presented with an interactive scroll bar, and the method further comprises: detecting movement of the interactive scroll bar in a particular direction; and updating the knowledge panel with an additional set of images based on the particular direction.",
+      "7. The method of claim 1 , further comprising: detecting a user interaction with an image of the set of images; and presenting the additional content for the entity represented by the image, wherein the additional content is received at the client device prior to the user interaction and is presented without transmitting a request for the additional content over a network.",
+      "8. The method of claim 1 , further comprising: detecting a user interaction with an image of the set of images; and causing a new search to be initiated for the entity represented by the image.",
+      "9. A method performed by data processing apparatus, the method comprising: receiving, from a client device, a query that references a given entity; providing, for presentation by the client device, a search results page comprising (i) a set of search results that each reference a respective electronic resource that is related to the received query and (ii) a knowledge panel that includes content that provides at least one image in a position of prominence in the knowledge panel, a set of facts for the given entity, and a set of images representing a type of content for the given entity, each image in the set of images representing a different respective entity, the set of images being obtained from multiple disparate electronic resources, each image being an interactive user interface element that enables a user of the client device to request additional content for the respective entity; and providing, to the client device, a search results page that includes the search results and the knowledge panel.",
+      "10. The method of claim 9 , wherein the knowledge panel further includes a second interactive user interface element that presents content related to the given entity and enables a user of the client device to request display additional content for presentation in the second interactive user interface element and the method further comprises: detecting, based on data received from the client device, a user interaction with the second interactive user interface element; and providing to the client device and for presentation in the second interactive user interface element, additional content that is related to the given entity, wherein the client device presents the additional content without navigating away from the search results page and while maintaining presentation of at least a portion of the content that provides the at least one image and the set of facts for the given entity in the knowledge panel, and wherein the additional content is not presented in the knowledge panel prior to the user interaction.",
+      "11. The method of claim 10 , wherein: the second interactive user interface element comprises an interactive scroll bar; the user interaction comprises interaction with a control for requesting a view of a plurality of additional images in the interactive scroll bar; and providing, to the client device for presentation in the interactive user interface element, the additional content comprises updating the interactive scroll bar to present the plurality of additional images based on the interaction with the control.",
+      "12. The method of claim 10 , wherein: the interactive user interface element comprises an interactive social networking element that includes a social networking page of the given entity; the user interaction comprises a request for viewing a recent post of the social networking page for the given entity; and providing the additional content comprises presenting, in the knowledge panel, the recent post of the social networking page for the given entity.",
+      "13. The method of claim 9 , wherein: the given entity is a person; and the type of content is one of movies, albums, songs.",
+      "14. A system comprising: at least one processor; and memory storing instructions that, when executed by the at least one processor, causes the system to perform operations including: providing, to a search engine, a query that references a given entity, receiving, from the search engine, a search results page comprising (i) search results that each reference a respective electronic resource that is related to the received query and (ii) a knowledge panel that includes content that provides at least one image in a position of prominence in the knowledge panel, a set of facts for the given entity, and a set of images representing a type of content for the given entity, each image in the set of images representing a different respective entity, the set of images being obtained from multiple disparate electronic resources, each image being an interactive user interface element that enables a user of the system to request additional content for the respective entity, and presenting the search results page that includes the search results and the knowledge panel.",
+      "15. The system of claim 14 , wherein the knowledge panel further includes a second interactive user interface element that presents content related to the given entity and enables a user of the system to request display additional content for presentation in the second interactive user interface element and the operations further comprise: detecting a user interaction with the second interactive user interface element; and presenting, in the second interactive user interface element, additional content that is related to the given entity without navigating away from the search results page and while maintaining presentation of at least a portion of the content that provides the at least one image and the set of facts for the given entity in the knowledge panel, wherein the additional content is not presented in the knowledge panel prior to the user interaction.",
+      "16. The system of claim 15 , wherein: the second interactive user interface element comprises an interactive scroll bar; the user interaction comprises interaction with a control for requesting a view of a plurality of additional images in the interactive scroll bar; and providing the additional content comprises updating the interactive scroll bar to present the plurality of additional images based on the interaction with the control.",
+      "17. The system of claim 14 , wherein: the given entity is a person; and the type of content is one of movies, albums, songs.",
+      "18. The system of claim 14 , wherein: the set of images are presented with an interactive scroll bar, and the operations further comprise: detecting movement of the interactive scroll bar in a particular direction; and updating the knowledge panel with an additional set of images based on the particular direction.",
+      "19. The system of claim 14 , the operations further comprising: detecting a user interaction with an image of the set of images; and presenting the additional content for the entity represented by the image, wherein the additional content is received at the system prior to the user interaction and is presented without transmitting a request for the additional content over a network.",
+      "20. The system of claim 14 , the operations further comprising: detecting a user interaction with an image of the set of images; and causing a new search to be initiated for the entity represented by the image."
+    ],
+    "independent_claims": [
+      "1. A method performed by a data processing apparatus of a client device, the method comprising: providing, to a search engine, a query that references a given entity; receiving, from the search engine, (i) search results that each reference a respective electronic resource that is related to the query and (ii) a knowledge panel that includes content that provides at least one image of the given entity in a position of prominence in the knowledge panel, a set of facts for the given entity, and a set of images representing a type of content for the given entity, each image in the set of images representing a different respective entity, the set of images being obtained from multiple disparate electronic resources, each image being an interactive user interface element that enables a user of the client device to request additional content for the respective entity; and presenting, on a search results page, the search results and the knowledge panel.",
+      "9. A method performed by data processing apparatus, the method comprising: receiving, from a client device, a query that references a given entity; providing, for presentation by the client device, a search results page comprising (i) a set of search results that each reference a respective electronic resource that is related to the received query and (ii) a knowledge panel that includes content that provides at least one image in a position of prominence in the knowledge panel, a set of facts for the given entity, and a set of images representing a type of content for the given entity, each image in the set of images representing a different respective entity, the set of images being obtained from multiple disparate electronic resources, each image being an interactive user interface element that enables a user of the client device to request additional content for the respective entity; and providing, to the client device, a search results page that includes the search results and the knowledge panel.",
+      "14. A system comprising: at least one processor; and memory storing instructions that, when executed by the at least one processor, causes the system to perform operations including: providing, to a search engine, a query that references a given entity, receiving, from the search engine, a search results page comprising (i) search results that each reference a respective electronic resource that is related to the received query and (ii) a knowledge panel that includes content that provides at least one image in a position of prominence in the knowledge panel, a set of facts for the given entity, and a set of images representing a type of content for the given entity, each image in the set of images representing a different respective entity, the set of images being obtained from multiple disparate electronic resources, each image being an interactive user interface element that enables a user of the system to request additional content for the respective entity, and presenting the search results page that includes the search results and the knowledge panel."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Jeromy William Henry"
+    ],
+    "priority_date": "2011-08-04",
+    "filing_date": "2021-08-12",
+    "publication_date": "2023-12-05",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/34",
+      "G06F16/345",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24578",
+      "G06F16/248",
+      "G06F16/33",
+      "G06F16/338",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/951",
+      "G06F16/953"
+    ],
+    "family": [
+      {
+        "number": "US20240202224A1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Providing knowledge panels with search results"
+      },
+      {
+        "number": "US11093539B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Providing knowledge panels with search results"
+      }
+    ],
+    "cited_by_count": 58
+  },
+  "analysis": {
+    "title_it": "Knowledge panel con risultati di ricerca",
+    "summary": "Il brevetto descrive un sistema per presentare knowledge panel insieme ai risultati di ricerca quando una query riferisce un'entità fattuale. Il knowledge panel aggrega contenuti da più risorse disparate e li presenta in un'area dedicata accanto ai risultati organici, utilizzando template specifici per tipo di entità.",
+    "theme": "entita_knowledge_graph",
+    "seo_relevance": 4,
+    "scope": "Google Search, knowledge panel per entità",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 9, 14) coprono un metodo e un sistema per presentare knowledge panel con risultati di ricerca. La rivendicazione 1 descrive il processo lato client: il dispositivo invia una query che riferisce un'entità, riceve dal motore di ricerca sia risultati organici sia un knowledge panel contenente almeno un'immagine dell'entità in posizione prominente, un set di fatti e un set di immagini rappresentanti un tipo di contenuto per l'entità (ciascuna immagine rappresenta un'entità diversa correlata). Ogni immagine nel set è un elemento interattivo che consente di richiedere contenuti aggiuntivi per l'entità rappresentata. Il set di immagini proviene da multiple risorse elettroniche disparate.\n\nLa rivendicazione 9 copre il processo lato server: ricevere una query che riferisce un'entità, fornire una pagina di risultati con search results e knowledge panel contenente immagine, fatti e set di immagini interattive da fonti multiple disparate.\n\nLe rivendicazioni dipendenti aggiungono dettagli operativi rilevanti. Le rivendicazioni 2, 10 e 15 specificano che il knowledge panel può includere un secondo elemento interattivo che presenta contenuti correlati e consente di richiedere contenuti aggiuntivi senza navigare via dalla pagina, mantenendo visibile almeno parte del contenuto originale. Le rivendicazioni 3, 11 e 16 specificano che questo elemento può essere una scroll bar interattiva con controlli per visualizzare immagini aggiuntive. Le rivendicazioni 4 e 12 contemplano un elemento social networking interattivo che include una pagina social dell'entità e mostra post recenti. Le rivendicazioni 5, 13 e 17 specificano che per entità di tipo persona, il tipo di contenuto può essere film, album o canzoni. Le rivendicazioni 7 e 19 coprono il pre-caricamento di contenuti aggiuntivi prima dell'interazione utente, presentabili senza trasmettere nuove richieste sulla rete. Le rivendicazioni 8 e 20 coprono l'avvio di una nuova ricerca quando l'utente interagisce con un'immagine nel set.",
+    "seo_reading": "La descrizione contempla un sistema di knowledge panel che aggrega contenuti da risorse multiple disparate per presentare informazioni su entità fattuali. Il paragrafo che descrive il processo di identificazione dei contenuti (blocco 1212) specifica che il knowledge panel apparatus accede al content items store per identificare contenuti appropriati basati sul template, e che i contenuti per un'entità particolare possono essere ottenuti da multiple disparate content sources. L'esempio fornito menziona che un'immagine di una persona può provenire da un sito ufficiale mentre fatti e descrizione possono provenire da un'enciclopedia online.\n\nLa descrizione contempla l'uso di template specifici per tipo di entità (blocchi relativi alle Figure 3-11): template per luoghi includono placeholder per mappe e immagini di città o landmark, template per persone includono placeholder per immagini, fatti biografici e opere pubbliche, template per film includono poster e cast, template per business includono logo e informazioni azionarie. Il paragrafo sulla selezione dei fatti (in relazione alla Figura 3, blocco 330) specifica che i fatti presentati possono essere selezionati based on the popularity of the facts with respect to historical search data for the entity, e che fatti cercati più spesso (top X number of searched for facts) possono essere preferiti.\n\nLa descrizione contempla (blocco relativo a Figura 5B) che il knowledge panel apparatus può eseguire web search a query time per identificare contenuti da includere, limitando la ricerca a certi tipi di contenuto come immagini o video, e che questa ricerca può essere basata sul tipo di entità. Il sistema potrebbe quindi selezionare una porzione dei contenuti ricevuti, ad esempio le immagini higher ranked.\n\nPer la SEO, questo potrebbe significare che Google valuta quali contenuti di un sito sono appropriati per essere estratti e presentati in knowledge panel basandosi su ranking di contenuti, search events degli utenti relativi all'entità, e rilevanza del contenuto rispetto al tipo di entità. Potrebbe anche significare che contenuti strutturati e facilmente identificabili (immagini di qualità, fatti verificabili, descrizioni concise) hanno maggiori probabilità di essere selezionati. Tuttavia, il brevetto non specifica criteri tecnici di selezione delle fonti né segnali di ranking per determinare quale risorsa viene preferita quando più risorse offrono lo stesso tipo di contenuto.",
+    "limits": [
+      "Il brevetto non dimostra che Google usi questi knowledge panel in produzione né quali segnali specifici determinano la selezione di una risorsa rispetto a un'altra quando più fonti offrono contenuti simili.",
+      "Non specifica come viene determinata l'autorevolezza o l'affidabilità delle fonti disparate da cui vengono estratti i contenuti, né criteri per risolvere conflitti tra fonti.",
+      "Non chiarisce se e come i webmaster possano segnalare o strutturare contenuti per facilitare l'inclusione nei knowledge panel, né se esistano markup o protocolli preferenziali.",
+      "La data di priorità 2011 precede l'introduzione dei knowledge panel pubblici di Google, quindi il brevetto potrebbe descrivere una fase progettuale iniziale piuttosto che l'implementazione attuale."
+    ],
+    "implications": [
+      "Pubblicare contenuti fattuali verificabili e ben strutturati su entità rilevanti, con immagini di qualità e descrizioni concise, indipendentemente dal fatto che vengano estratti per knowledge panel.",
+      "Mantenere coerenza e accuratezza delle informazioni su entità attraverso le proprie proprietà web, dato che il sistema contempla l'aggregazione da fonti multiple.",
+      "Per siti autorevoli su entità specifiche, considerare che contenuti come immagini, fatti e descrizioni potrebbero essere estratti e presentati separatamente dai risultati organici tradizionali.",
+      "Monitorare quali contenuti del proprio sito appaiono in knowledge panel per entità rilevanti, come indicatore di quali tipi di contenuto il motore considera autorevoli o rappresentativi."
+    ],
+    "key_terms": [
+      {
+        "term": "factual entity",
+        "explanation": "Entità concettuale singola come persona, luogo, evento, organizzazione, opera, per cui possono essere presentati fatti verificabili"
+      },
+      {
+        "term": "knowledge panel template",
+        "explanation": "Template specifico per tipo di entità che specifica tipi di contenuti da includere e include placeholder per ciascun tipo"
+      },
+      {
+        "term": "disparate resources",
+        "explanation": "Risorse multiple e separate, tipicamente da publisher diversi, da cui vengono estratti contenuti per popolare un singolo knowledge panel"
+      },
+      {
+        "term": "content items store",
+        "explanation": "Archivio che indicizza entità e identifica contenuti rilevanti per ciascuna, inclusi titolo, immagini, descrizione, fatti e altri tipi di contenuto"
+      },
+      {
+        "term": "disambiguation knowledge panel",
+        "explanation": "Knowledge panel fornito quando una query ha significati multipli distinti, presentando contenuti per due o più significati"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T09:58:25.613187Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.08167944
+}

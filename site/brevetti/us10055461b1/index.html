@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US10055461B1: Ranking dei documenti basato su segnali comportamentali degli utenti — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per costruire un modello di ranking che predice la probabilità che un utente selezioni un documento nei risultati di ricerca. Il modello viene addestrato su decine di milioni di istanze storiche contenenti dati su utenti, query e documenti selezionati o ignorati, e ut" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us10055461b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US10055461B1: Ranking dei documenti basato su segnali comportamentali degli utenti — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per costruire un modello di ranking che predice la probabilità che un utente selezioni un documento nei risultati di ricerca. Il modello viene addestrato su decine di milioni di istanze storiche contenenti dati su utenti, query e documenti selezionati o ignorati, e ut" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us10055461b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US10055461B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us10055461b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US10055461B1: Ranking dei documenti basato su segnali comportamentali degli utenti",
+  "description": "Il brevetto descrive un sistema per costruire un modello di ranking che predice la probabilit\u00e0 che un utente selezioni un documento nei risultati di ricerca. Il modello viene addestrato su decine di milioni di istanze storiche contenenti dati su utenti, query e documenti selezionati o ignorati, e utilizza queste informazioni per assegnare punteggi ai documenti nelle ricerche successive.",
+  "articleBody": "Il brevetto descrive un sistema per costruire un modello di ranking che predice la probabilit\u00e0 che un utente selezioni un documento nei risultati di ricerca. Il modello viene addestrato su decine di milioni di istanze storiche contenenti dati su utenti, query e documenti selezionati o ignorati, e utilizza queste informazioni per assegnare punteggi ai documenti nelle ricerche successive.\n\nLa rivendicazione indipendente 1 protegge un metodo implementato su sistema distribuito che riceve dati di addestramento composti da istanze che identificano documenti selezionati da utenti specifici quando presentati nei risultati per query specifiche. Il metodo partiziona questi dati su pi\u00f9 dispositivi di calcolo e genera un modello di ranking che produce la probabilit\u00e0 che un utente particolare selezioni un documento particolare quando identificato nei risultati per una query particolare. Il processo include la selezione di condizioni candidate che specificano valori per feature dell\u0027utente, della query e del documento, l\u0027invio di richieste agli altri dispositivi per calcolare statistiche locali per la condizione candidata, la ricezione delle statistiche calcolate, il calcolo di un peso per la condizione candidata secondo le statistiche ricevute, e l\u0027aggiunta di nuove regole al modello quando determinate appropriate. Il metodo poi riceve una query da un primo utente, ottiene risultati che soddisfano la query, determina feature dell\u0027utente e della query, usa queste feature come input al modello per calcolare la probabilit\u00e0 che l\u0027utente selezioni ciascun documento, e rankizza i risultati basandosi su questa probabilit\u00e0 calcolata.\n\nLe rivendicazioni dipendenti 2 e 3 specificano esempi di feature: le feature dell\u0027utente includono localizzazione, lingua, query precedenti o numero di volte che l\u0027utente ha acceduto a un documento particolare; le feature della query includono lingua e termini della query. Le rivendicazioni 4-8 dettagliano aspetti tecnici del sistema distribuito, inclusa la creazione di un indice feature-to-instance che mappa ciascun valore di una feature a istanze che hanno quel valore. La rivendicazione 5 specifica che ogni istanza di addestramento identifica anche documenti che l\u0027utente non ha selezionato quando presentati nei risultati. Le rivendicazioni 6-8 indicano che ogni istanza include dati rappresentanti la posizione del documento selezionato nell\u0027ordine dei risultati, un punteggio precedentemente calcolato per il documento, e il numero di documenti rankizzati sopra il documento selezionato. Le rivendicazioni 9-20 replicano il metodo come sistema e come prodotto software.\n\nLa descrizione contempla un sistema che utilizza triple di dati (u, q, d) dove u rappresenta informazioni sull\u0027utente, q i dati della query e d informazioni sui documenti recuperati e quali sono stati selezionati o meno. La descrizione elenca oltre una dozzina di possibili feature estraibili da queste triple, inclusi elementi come il paese dell\u0027utente, l\u0027ora del giorno, la lingua del paese, le tre query precedenti dell\u0027utente, la lingua della query, la stringa esatta della query, le parole nella query, il numero di parole nella query, le parole nel documento, le parole nell\u0027URL del documento, il dominio di primo livello nell\u0027URL, i prefissi dell\u0027URL, le parole nel titolo del documento, le parole nei link che puntano al documento, le parole nei titoli dei documenti mostrati sopra e sotto il documento per quella query, il numero di volte che una parola nella query corrisponde a una parola nel documento, e il numero di volte che l\u0027utente ha precedentemente acceduto al documento. La descrizione menziona che il repository potrebbe contenere pi\u00f9 di 50 milioni di istanze e pi\u00f9 di 5 milioni di feature distinte.\n\nLa descrizione contempla anche la determinazione di una probabilit\u00e0 a priori di selezione basata su tre valori: la posizione che il documento occupava nei risultati presentati all\u0027utente, il punteggio precedente assegnato al documento, e il numero di documenti sopra quel documento che sono stati selezionati dall\u0027utente. Questa probabilit\u00e0 a priori fornisce la probabilit\u00e0 iniziale di selezione del documento senza considerare le feature. Il modello costruisce regole che sono combinazioni di condizioni (congiunzioni di feature) e pesi, selezionando quelle che massimizzano la log likelihood dei dati di addestramento.\n\nPer la SEO, questo brevetto potrebbe suggerire che i segnali comportamentali storici degli utenti potrebbero influenzare il ranking in modo personalizzato. Se implementato, il sistema potrebbe favorire documenti che utenti simili (per localizzazione, lingua, query precedenti) hanno selezionato in contesti simili. Potrebbe anche considerare la posizione originale nei risultati e quanti documenti sopra sono stati selezionati, suggerendo che il comportamento di selezione relativo alla posizione potrebbe essere un fattore. Il numero di volte che un utente specifico ha acceduto a un documento particolare potrebbe indicare una forma di personalizzazione basata sulla storia individuale. Tuttavia, la descrizione chiarisce che queste sono opzioni contemplate in un sistema di addestramento di modelli, non necessariamente segnali applicati direttamente al ranking in produzione.",
+  "wordCount": 759,
+  "datePublished": "2026-10-29T09:56:11.946571+00:00",
+  "dateModified": "2026-10-29T09:56:11.946571+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us10055461b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Ranking documents based on large data sets",
+    "identifier": "US10055461B1",
+    "url": "https://patents.google.com/patent/US10055461B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US10055461B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US10055461B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking dei documenti basato su segnali comportamentali degli utenti</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Ranking documents based on large data sets</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per costruire un modello di ranking che predice la probabilità che un utente selezioni un documento nei risultati di ricerca. Il modello viene addestrato su decine di milioni di istanze storiche contenenti dati su utenti, query e documenti selezionati o ignorati, e utilizza queste informazioni per assegnare punteggi ai documenti nelle ricerche successive.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking dei risultati</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">21 Agosto 2018</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2003-11-14</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Segnali di comportamento degli utenti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 protegge un metodo implementato su sistema distribuito che riceve dati di addestramento composti da istanze che identificano documenti selezionati da utenti specifici quando presentati nei risultati per query specifiche. Il metodo partiziona questi dati su più dispositivi di calcolo e genera un modello di ranking che produce la probabilità che un utente particolare selezioni un documento particolare quando identificato nei risultati per una query particolare. Il processo include la selezione di condizioni candidate che specificano valori per feature dell&#39;utente, della query e del documento, l&#39;invio di richieste agli altri dispositivi per calcolare statistiche locali per la condizione candidata, la ricezione delle statistiche calcolate, il calcolo di un peso per la condizione candidata secondo le statistiche ricevute, e l&#39;aggiunta di nuove regole al modello quando determinate appropriate. Il metodo poi riceve una query da un primo utente, ottiene risultati che soddisfano la query, determina feature dell&#39;utente e della query, usa queste feature come input al modello per calcolare la probabilità che l&#39;utente selezioni ciascun documento, e rankizza i risultati basandosi su questa probabilità calcolata.</p>
+      <p>Le rivendicazioni dipendenti 2 e 3 specificano esempi di feature: le feature dell&#39;utente includono localizzazione, lingua, query precedenti o numero di volte che l&#39;utente ha acceduto a un documento particolare; le feature della query includono lingua e termini della query. Le rivendicazioni 4-8 dettagliano aspetti tecnici del sistema distribuito, inclusa la creazione di un indice feature-to-instance che mappa ciascun valore di una feature a istanze che hanno quel valore. La rivendicazione 5 specifica che ogni istanza di addestramento identifica anche documenti che l&#39;utente non ha selezionato quando presentati nei risultati. Le rivendicazioni 6-8 indicano che ogni istanza include dati rappresentanti la posizione del documento selezionato nell&#39;ordine dei risultati, un punteggio precedentemente calcolato per il documento, e il numero di documenti rankizzati sopra il documento selezionato. Le rivendicazioni 9-20 replicano il metodo come sistema e come prodotto software.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema che utilizza triple di dati (u, q, d) dove u rappresenta informazioni sull&#39;utente, q i dati della query e d informazioni sui documenti recuperati e quali sono stati selezionati o meno. La descrizione elenca oltre una dozzina di possibili feature estraibili da queste triple, inclusi elementi come il paese dell&#39;utente, l&#39;ora del giorno, la lingua del paese, le tre query precedenti dell&#39;utente, la lingua della query, la stringa esatta della query, le parole nella query, il numero di parole nella query, le parole nel documento, le parole nell&#39;URL del documento, il dominio di primo livello nell&#39;URL, i prefissi dell&#39;URL, le parole nel titolo del documento, le parole nei link che puntano al documento, le parole nei titoli dei documenti mostrati sopra e sotto il documento per quella query, il numero di volte che una parola nella query corrisponde a una parola nel documento, e il numero di volte che l&#39;utente ha precedentemente acceduto al documento. La descrizione menziona che il repository potrebbe contenere più di 50 milioni di istanze e più di 5 milioni di feature distinte.</p>
+      <p>La descrizione contempla anche la determinazione di una probabilità a priori di selezione basata su tre valori: la posizione che il documento occupava nei risultati presentati all&#39;utente, il punteggio precedente assegnato al documento, e il numero di documenti sopra quel documento che sono stati selezionati dall&#39;utente. Questa probabilità a priori fornisce la probabilità iniziale di selezione del documento senza considerare le feature. Il modello costruisce regole che sono combinazioni di condizioni (congiunzioni di feature) e pesi, selezionando quelle che massimizzano la log likelihood dei dati di addestramento.</p>
+      <p>Per la SEO, questo brevetto potrebbe suggerire che i segnali comportamentali storici degli utenti potrebbero influenzare il ranking in modo personalizzato. Se implementato, il sistema potrebbe favorire documenti che utenti simili (per localizzazione, lingua, query precedenti) hanno selezionato in contesti simili. Potrebbe anche considerare la posizione originale nei risultati e quanti documenti sopra sono stati selezionati, suggerendo che il comportamento di selezione relativo alla posizione potrebbe essere un fattore. Il numero di volte che un utente specifico ha acceduto a un documento particolare potrebbe indicare una forma di personalizzazione basata sulla storia individuale. Tuttavia, la descrizione chiarisce che queste sono opzioni contemplate in un sistema di addestramento di modelli, non necessariamente segnali applicati direttamente al ranking in produzione.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2018), quindi non fornisce protezione attuale e non può essere usato per inferire pratiche correnti di Google.</li>
+      <li>La descrizione elenca possibili feature e segnali come esempi di un sistema di machine learning, ma non dimostra quali di questi segnali siano effettivamente utilizzati in Google Search o con quale peso.</li>
+      <li>Il brevetto descrive un approccio tecnico per costruire modelli predittivi su larga scala, ma la data di priorità del 2003 lo rende anteriore a oltre 15 anni di evoluzione degli algoritmi di ranking.</li>
+      <li>Il documento non specifica soglie, pesi relativi o dettagli implementativi che permetterebbero di quantificare l&#39;impatto di ciascun segnale sul ranking.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Mantenere coerenza tra titoli, URL e contenuto dei documenti, dato che la descrizione contempla l&#39;analisi di parole in tutti questi elementi come possibili feature.</li>
+      <li class="pl-2">Considerare che i segnali comportamentali aggregati potrebbero informare modelli di ranking, rendendo importante l&#39;esperienza utente complessiva del sito oltre ai segnali on-page tradizionali.</li>
+      <li class="pl-2">Prestare attenzione alla rilevanza contestuale per specifiche query, dato che il brevetto contempla la corrispondenza tra termini della query e vari elementi del documento.</li>
+      <li class="pl-2">Riconoscere che i sistemi di ranking moderni probabilmente utilizzano approcci di machine learning addestrati su dati comportamentali storici, anche se i dettagli specifici restano proprietari.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">selection rate</dt>
+        <dd class="text-on-surface-variant leading-relaxed">La probabilità che un utente selezioni un documento quando presentato nei risultati di ricerca, usata come metrica predittiva nel modello</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">prior probability of selection</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Probabilità iniziale di selezione basata su posizione nei risultati, punteggio precedente e numero di selezioni sopra, prima di considerare le feature specifiche</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">candidate condition</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Congiunzione di feature (e possibilmente loro complementi) che specifica valori per feature dell&#39;utente, della query e del documento, testata per inclusione nel modello</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">feature-to-instance index</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Struttura dati che mappa ciascuna feature alle istanze di addestramento che contengono quella feature, per velocizzare l&#39;identificazione di corrispondenze</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">log likelihood</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Logaritmo della probabilità dei dati di addestramento dato il modello, usato come metrica per valutare se aggiungere nuove regole al modello</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US9116976B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9116976B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Ranking documents based on large data sets</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US10055461B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

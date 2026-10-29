@@ -39,11 +39,17 @@ discovery:
   # barra degli indirizzi). Lo script aggiunge da solo after=publication:...
   # e l'ordinamento per data.
   queries:
-    - q=("large language model")&q=(search)&assignee=Google+Llc&country=US
-    - q=("search results")&q=(ranking)&assignee=Google+Llc&country=US
-    - q=("search result documents")&assignee=Google+Llc&country=US
-    - q=(citation OR attribution OR grounding)&q=(search)&assignee=Google+Llc&country=US
-    - q=("query")&q=(rewriting OR "fan-out" OR "related queries")&assignee=Google+Llc&country=US
+    # assignee=Google copre sia Google LLC sia Google Inc. (prima del 2017).
+    - q=("large language model" OR "generative model")&q=(search)&assignee=Google&country=US
+    - q=("search results")&q=(ranking)&assignee=Google&country=US
+    - q=(citation OR attribution OR grounding)&q=(search)&assignee=Google&country=US
+    - q=(passage OR "answer passage" OR snippet)&q=(query)&q=(search)&assignee=Google&country=US
+    - q=(entity OR "knowledge graph")&q=(search)&q=(query)&assignee=Google&country=US
+    - q=(local OR geographic OR "business listing")&q=("search results" OR ranking)&assignee=Google&country=US
+    - q=(duplicate OR "near-duplicate" OR canonical)&q=(documents OR "web pages")&q=(search)&assignee=Google&country=US
+    - q=(spam OR manipulation)&q=(search OR ranking)&assignee=Google&country=US
+    - q=("query rewriting" OR "query expansion" OR "query refinement")&assignee=Google&country=US
+    - q=(link OR click OR "user behavior")&q=("search results")&q=(ranking)&assignee=Google&country=US
   # Al primo run (senza stato) quanto indietro guardare.
   initial_lookback_days: 180
   # Google Patents indicizza le pubblicazioni con qualche settimana di
@@ -53,6 +59,10 @@ discovery:
   # Quanti candidati di una ricerca passano dal classificatore (costo LLM,
   # nessuna richiesta a Google Patents).
   max_classify_per_run: 40
+
+# Secondo filtro, dopo l'analisi sul documento completo: una scheda della
+# discovery con rilevanza SEO sotto questa soglia non viene pubblicata.
+min_final_relevance: 3
 
 # Google Patents blocca i runner di GitHub dopo ~4 richieste (test del
 # 29/10/2026): ogni run giornaliero ne fa al massimo queste, il resto lo

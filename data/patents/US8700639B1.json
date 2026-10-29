@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8700639B1",
+    "title": "Rank-adjusted content items",
+    "abstract": "Methods, systems, and apparatus, including computer programs encoded on a computer storage medium, for determining a context of the current search session. In one aspect, a method includes identifying query paths from previous search sessions, each query path defining a context and being a plurality of queries in an order in which the queries were provided for in a respective previous search session; identifying search session queries of a current search session; comparing the search session queries of the current search session to the queries in the query paths from the previous search sessions; and determining that a context of the current search session is related to a query path from the previous search sessions based at least in part on the comparison, the determining including: determining that two or more of the queries of the query path are similar to two or more of the search session queries.",
+    "claims": [
+      "1. A computer-implemented method, comprising: identifying query paths from previous search sessions, each query path defining a context and being a plurality of queries in an order in which the queries were provided for in a respective previous search session; identifying search session queries of a current search session; comparing the search session queries of the current search session to the queries in the query paths from the previous search sessions; and determining, by one or more data processors, that a context of the current search session is related to a query path from the previous search sessions based at least in part on the comparison, the determining comprising: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session.",
+      "2. The method of claim 1 , wherein: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session comprises: identifying a union of the two or more of the queries of the query path from the previous search sessions and the two or more of the search session queries of the current search session.",
+      "3. The method of claim 2 wherein: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session comprises: determining that the context of the current search session is related to a query path from the previous search sessions if the identified union is an exclusive union.",
+      "4. The method of claim 1 , further comprising: identifying content items responsive to a search session query of the current search session based on the determination that the context of the current search session is related to the query path from the previous search sessions.",
+      "5. The method of claim 4 , wherein: identifying content items responsive to the search session query of the current search session based on the determination comprises: adjusting a ranking of a content item responsive to the search session query of the current search session based on the determination.",
+      "6. The method of claim 1 , wherein identifying the query paths from the previous search sessions comprises: analyzing click log and query log data to identify similar or same sets of queries from the previous search sessions during which a presentation of a same content item also occurred.",
+      "7. The method of claim 6 , wherein the same content item is a web page.",
+      "8. A computer-readable storage medium having instructions stored thereon, which, when executed by one or more data processors, cause the one or more processor to perform operations comprising: identifying query paths from previous search sessions, each query path defining a context and being a plurality of queries in an order in which the queries were provided for in a respective previous search session; identifying search session queries of a current search session; comparing the search session queries of the current search session to the queries in the query paths from the previous search sessions; and determining that a context of the current search session is related to a query path from the previous search sessions based at least in part on the comparison, the determining comprising: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session.",
+      "9. The medium of claim 8 , wherein: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session comprises: identifying a union of the two or more of the queries of the query path from the previous search sessions and the two or more of the search session queries of the current search session.",
+      "10. The medium of claim 9 , wherein: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session comprises: determining that the context of the current search session is related to a query path from the previous search sessions if the identified union is an exclusive union.",
+      "11. The medium of claim 8 , wherein the instructions, which, when executed by the one or more data processors, cause the one or more processor to perform further operations comprising: identifying content items responsive to a search session query of the current search session based on the determination that the context of the current search session is related to the query path from the previous search sessions.",
+      "12. The medium of claim 11 , wherein: identifying content items responsive to the search session query of the current search session based on the determination comprises: adjusting a ranking of a content item responsive to the search session query of the current search session based on the determination.",
+      "13. The medium of claim 8 , wherein identifying the query paths from the previous search sessions comprises: analyzing click log and query log data to identify similar or same sets of queries from the previous search sessions during which a presentation of a same content item also occurred.",
+      "14. The medium of claim 13 , wherein the same content item is a web page.",
+      "15. A system comprising: one or more data processing apparatuses; and a data storage apparatus encoded with instructions that when executed by the one or more data processing apparatuses cause the one or more data processing apparatuses to perform operations comprising: identifying query paths from previous search sessions, each query path defining a context and being a plurality of queries in an order in which the queries were provided for in a respective previous search session; identifying search session queries of a current search session; comparing the search session queries of the current search session to the queries in the query paths from the previous search sessions; and determining that a context of the current search session is related to a query path from the previous search sessions based at least in part on the comparison, the determining comprising: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session.",
+      "16. The system of claim 15 , wherein: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session comprises: identifying a union of the two or more of the queries of the query path from the previous search sessions and the two or more of the search session queries of the current search session.",
+      "17. The system of claim 16 , wherein: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session comprises: determining that the context of the current search session is related to a query path from the previous search sessions if the identified union is an exclusive union.",
+      "18. The system of claim 15 , wherein the instructions, which, when executed by the one or more data processors, cause the one or more processor to perform further operations comprising: identifying content items responsive to a search session query of the current search session based on the determination that the context of the current search session is related to the query path from the previous search sessions.",
+      "19. The system of claim 18 , wherein: identifying content items responsive to the search session query of the current search session based on the determination comprises: adjusting a ranking of a content item responsive to the search session query of the current search session based on the determination.",
+      "20. The system of claim 15 , wherein identifying the query paths from the previous search sessions comprises: analyzing click log and query log data to identify similar or same sets of queries from the previous search sessions during which a presentation of a same content item also occurred."
+    ],
+    "independent_claims": [
+      "1. A computer-implemented method, comprising: identifying query paths from previous search sessions, each query path defining a context and being a plurality of queries in an order in which the queries were provided for in a respective previous search session; identifying search session queries of a current search session; comparing the search session queries of the current search session to the queries in the query paths from the previous search sessions; and determining, by one or more data processors, that a context of the current search session is related to a query path from the previous search sessions based at least in part on the comparison, the determining comprising: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session.",
+      "8. A computer-readable storage medium having instructions stored thereon, which, when executed by one or more data processors, cause the one or more processor to perform operations comprising: identifying query paths from previous search sessions, each query path defining a context and being a plurality of queries in an order in which the queries were provided for in a respective previous search session; identifying search session queries of a current search session; comparing the search session queries of the current search session to the queries in the query paths from the previous search sessions; and determining that a context of the current search session is related to a query path from the previous search sessions based at least in part on the comparison, the determining comprising: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session.",
+      "15. A system comprising: one or more data processing apparatuses; and a data storage apparatus encoded with instructions that when executed by the one or more data processing apparatuses cause the one or more data processing apparatuses to perform operations comprising: identifying query paths from previous search sessions, each query path defining a context and being a plurality of queries in an order in which the queries were provided for in a respective previous search session; identifying search session queries of a current search session; comparing the search session queries of the current search session to the queries in the query paths from the previous search sessions; and determining that a context of the current search session is related to a query path from the previous search sessions based at least in part on the comparison, the determining comprising: determining that two or more of the queries of the query path from the previous search sessions are similar to two or more of the search session queries of the current search session."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Mayur Datar",
+      "Kedar Dhamdhere",
+      "Ashutosh Garg"
+    ],
+    "priority_date": "2007-03-30",
+    "filing_date": "2012-06-01",
+    "publication_date": "2014-04-15",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/951",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24575",
+      "G06F16/953",
+      "Y10S707/00",
+      "Y10S707/99931",
+      "Y10S707/99933",
+      "Y10S707/99934",
+      "Y10S707/99935"
+    ],
+    "family": [
+      {
+        "number": "US8195637B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Rank-adjusted content items"
+      }
+    ],
+    "cited_by_count": 46
+  },
+  "analysis": {
+    "title_it": "Aggiustamento del ranking basato su percorsi di query",
+    "summary": "Il brevetto affronta il problema di identificare contenuti rilevanti per l'utente considerando il contesto della sessione di ricerca, non solo la singola query. Il sistema analizza i log storici per identificare percorsi di query ricorrenti (sequenze di ricerche che portano alla selezione di determinati contenuti) e adatta il ranking dei risultati quando la sessione corrente corrisponde a uno di questi percorsi.",
+    "theme": "segnali_utente",
+    "seo_relevance": 3,
+    "scope": "Google Search, sessioni di ricerca contestuali",
+    "what_it_claims": "La rivendicazione indipendente 1 protegge un metodo che identifica \"query paths\" da sessioni di ricerca precedenti, dove ogni query path definisce un contesto ed è costituito da una pluralità di query nell'ordine in cui sono state fornite. Il metodo identifica le query della sessione corrente, le confronta con i query paths storici e determina che il contesto della sessione corrente è correlato a un query path precedente quando due o più query del path storico sono simili a due o più query della sessione corrente.\n\nLa rivendicazione 2 specifica che la determinazione di similarità comprende l'identificazione di una \"union\" (unione) tra le query del path storico e quelle della sessione corrente. La rivendicazione 3 aggiunge che il contesto è correlato al query path se l'unione identificata è una \"exclusive union\" (unione esclusiva), quindi senza query estranee al path.\n\nLe rivendicazioni 4 e 5 coprono l'applicazione pratica: identificare contenuti responsivi a una query della sessione corrente basandosi sulla determinazione del contesto (rivendicazione 4) e aggiustare il ranking di un contenuto responsivo alla query in base a questa determinazione (rivendicazione 5).\n\nLa rivendicazione 6 specifica che l'identificazione dei query paths comprende l'analisi di \"click log and query log data\" per identificare set simili o identici di query da sessioni precedenti durante le quali è avvenuta anche la presentazione di uno stesso contenuto. La rivendicazione 7 precisa che questo contenuto può essere una pagina web.\n\nLe rivendicazioni da 8 a 20 replicano la stessa struttura in forma di \"computer-readable storage medium\" (rivendicazioni 8-14) e \"system\" (rivendicazioni 15-20), senza aggiungere elementi sostanziali diversi dal metodo.",
+    "seo_reading": "La descrizione contempla il concetto di \"content terminus\" (paragrafi relativi a FIG. 1 e FIG. 2), definito come il termine di un query path che corrisponde alla selezione finale di un contenuto. Un content terminus può essere un singolo content item (ad esempio un URL) o un nodo che associa uno o più query paths con uno o più content items. La descrizione indica che i query paths possono essere identificati analizzando click log e query log per trovare set di query simili o identici forniti da un numero statisticamente significativo di utenti che hanno poi selezionato lo stesso contenuto (paragrafo relativo a rivendicazione 6).\n\nLa descrizione contempla diversi criteri di matching tra sessione corrente e query paths storici. In un'implementazione, una sessione è correlata a un query path solo se tutte le query della sessione definiscono una \"exclusive union\" con il path, escludendo quindi sessioni con query estranee (esempio con Q11, Q18, Q13 in FIG. 3). In un'altra implementazione, è sufficiente che alcune query della sessione siano in comune con il path (esempio con Q11, Q18, Q12 in FIG. 3).\n\nLa descrizione contempla aggiustamenti di ranking proporzionali alla probabilità di selezione: se il 55% delle sessioni con un certo contesto ha selezionato BERRYURL1 e il 35% BERRYURL2, questi contenuti potrebbero essere rankati primo e secondo rispettivamente (paragrafo relativo a FIG. 1). La FIG. 5 mostra esempi concreti dove il ranking di contenuti C1 e C2 passa da posizioni 237 e 331 (senza contesto) a posizioni 1 e 2 quando il contesto della sessione corrisponde al query path.\n\nLa descrizione contempla anche la riduzione del ranking: un contenuto normalmente rankato primo per query isolate potrebbe essere declassato se raramente selezionato nel contesto di un query path specifico (paragrafo in FIG. 1). Contempla inoltre l'identificazione di categorie per query paths e sessioni, permettendo aggiustamenti basati su categorie anche quando non c'è corrispondenza diretta tra i termini (FIG. 11, esempio fruit category).\n\nPer la SEO, questo potrebbe significare che la rilevanza di una pagina non dipenderebbe solo dall'ottimizzazione per singole keyword, ma dalla sua capacità di soddisfare utenti in specifici percorsi di ricerca. Se storicamente gli utenti che cercano A, poi B, poi C selezionano la pagina X, questa potrebbe rankare meglio per la query C quando preceduta da A e B. Tuttavia, il brevetto non specifica soglie di significatività statistica né pesi relativi del contesto rispetto ad altri fattori di ranking.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Fee Related dal 2014), quindi non costituisce protezione attiva e non dimostra implementazione corrente in Google Search.",
+      "Non specifica quali soglie quantitative definiscano un numero \"statisticamente significativo\" di utenti né come i segnali contestuali siano pesati rispetto ad altri fattori di ranking.",
+      "Non dimostra che Google applichi effettivamente questo sistema in produzione, né con quale intensità gli aggiustamenti di ranking vengano applicati se implementati.",
+      "La descrizione non chiarisce come vengano gestiti i confini delle sessioni di ricerca né dopo quanto tempo una sessione sia considerata conclusa."
+    ],
+    "implications": [
+      "Progettare contenuti che rispondano a intenti di ricerca progressivi, non solo a singole keyword isolate, considerando i percorsi informativi tipici degli utenti nel proprio settore.",
+      "Analizzare i propri dati analytics per identificare sequenze ricorrenti di landing page e ottimizzare i contenuti per supportare questi percorsi, indipendentemente dal fatto che Google usi questo specifico brevetto.",
+      "Considerare che la rilevanza contestuale potrebbe premiare contenuti che soddisfano utenti in fasi specifiche di un percorso informativo, anche se non ottimizzati per il massimo volume di una singola keyword.",
+      "Monitorare le variazioni di posizionamento per le stesse query in momenti diversi, che potrebbero indicare l'applicazione di segnali contestuali o di sessione."
+    ],
+    "key_terms": [
+      {
+        "term": "query path",
+        "explanation": "Sequenza di query in un ordine specifico fornite durante una sessione di ricerca precedente, che definisce un contesto"
+      },
+      {
+        "term": "content terminus",
+        "explanation": "Termine di un query path che corrisponde alla selezione finale di un contenuto, può essere un singolo URL o un nodo che associa più query paths a più contenuti"
+      },
+      {
+        "term": "exclusive union",
+        "explanation": "Unione tra le query della sessione corrente e quelle di un query path storico che non include query estranee al path"
+      },
+      {
+        "term": "search session context",
+        "explanation": "Contesto definito dalle query multiple di una particolare sessione di ricerca, utilizzato per determinare la correlazione con query paths storici"
+      },
+      {
+        "term": "selection distribution",
+        "explanation": "Distribuzione percentuale delle selezioni di diversi contenuti da parte di utenti che hanno seguito un determinato query path"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:04:31.881143Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.06468888
+}

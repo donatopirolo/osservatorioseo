@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8171048B2: Ranking dei documenti basato su sensibilità geografica — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di fornire risultati di ricerca rilevanti considerando sia la pertinenza topica che quella geografica. Propone un metodo per determinare un punteggio combinato che integra un punteggio topico tradizionale con un punteggio di distanza tra la posizione associata alla q" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8171048b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8171048B2: Ranking dei documenti basato su sensibilità geografica — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di fornire risultati di ricerca rilevanti considerando sia la pertinenza topica che quella geografica. Propone un metodo per determinare un punteggio combinato che integra un punteggio topico tradizionale con un punteggio di distanza tra la posizione associata alla q" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8171048b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8171048B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8171048b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8171048B2: Ranking dei documenti basato su sensibilit\u00e0 geografica",
+  "description": "Il brevetto affronta il problema di fornire risultati di ricerca rilevanti considerando sia la pertinenza topica che quella geografica. Propone un metodo per determinare un punteggio combinato che integra un punteggio topico tradizionale con un punteggio di distanza tra la posizione associata alla query e quella del documento, modulato da un fattore di sensibilit\u00e0 geografica specifico per argomento.",
+  "articleBody": "Il brevetto affronta il problema di fornire risultati di ricerca rilevanti considerando sia la pertinenza topica che quella geografica. Propone un metodo per determinare un punteggio combinato che integra un punteggio topico tradizionale con un punteggio di distanza tra la posizione associata alla query e quella del documento, modulato da un fattore di sensibilit\u00e0 geografica specifico per argomento.\n\nLa rivendicazione indipendente 1 descrive un metodo eseguito da un server che riceve una query, determina una posizione geografica associata alla query e un argomento (topic) corrispondente alla query, quindi determina un fattore di sensibilit\u00e0 geografica (location sensitivity factor) associato a quell\u0027argomento. Il metodo identifica un insieme di documenti basandosi sulla query, calcola per ciascun documento un punteggio topico (topical score) basato sulla query e un punteggio di distanza (distance score) basato sulla misura di distanza tra la posizione geografica del documento e quella della query, modulato dal fattore di sensibilit\u00e0 geografica. Infine genera un punteggio combinato (combined score) per ciascun documento basandosi su entrambi i punteggi e ordina i documenti in base ai punteggi combinati.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il punteggio topico \u00e8 una funzione crescente della rilevanza del documento rispetto alla query. La rivendicazione 3 indica che il punteggio di distanza \u00e8 una funzione decrescente della misura di distanza. La rivendicazione 4 chiarisce che il fattore di sensibilit\u00e0 geografica differisce per argomenti diversi. Le rivendicazioni 5-8 contemplano l\u0027uso di pesi (weights) distinti applicati al punteggio topico e al punteggio di distanza per generare punteggi ponderati, dove i pesi possono basarsi sull\u0027argomento o su parole chiave specifiche nella query. Le rivendicazioni 9 e 10 specificano che la distanza pu\u00f2 essere calcolata come distanza in linea retta (straight-line distance) o come distanza di guida (driving distance). Le rivendicazioni indipendenti 11, 12 e 17 riformulano lo stesso metodo in termini di sistema, dispositivo server e istruzioni eseguibili.\n\nLa descrizione contempla diversi aspetti implementativi che potrebbero avere implicazioni SEO. Nel blocco 206 e nei paragrafi correlati, la descrizione spiega che la posizione associata alla query pu\u00f2 essere determinata in vari modi: esplicitamente dall\u0027utente, tramite cookie o profili utente, inferita dall\u0027indirizzo di rete, dalla cronologia di navigazione o ricerca, o estraendo termini geografici dalla query stessa (esempio: \"palo alto\" dalla query \"pizza palo alto\").\n\nLa descrizione contempla che il fattore di sensibilit\u00e0 geografica S possa essere determinato analizzando il comportamento di selezione degli utenti (user selection behavior, come click through, stay time, mouseover, conversion data) rispetto ai risultati di ricerca con rilevanza geografica. Viene fornito l\u0027esempio che argomenti come \"pizza\" potrebbero avere una sensibilit\u00e0 geografica maggiore (utenti interessati a documenti entro 5 miglia) rispetto ad \"automobiles/cars\" (fino a 50 miglia). La descrizione indica che S stesso pu\u00f2 essere funzione dell\u0027argomento, dei termini della query, del profilo utente, della posizione associata alla query o di un cluster dei risultati.\n\nNella formulazione matematica contemplata, il punteggio di distanza F potrebbe assumere la forma F(d,S) = \u03b1/(\u03b2 + S\u00d7d), dove S modula quanto rapidamente il punteggio decresce con la distanza. Il punteggio combinato C potrebbe essere formulato come C(R,F) = \u03ba*R + \u03bbF(d), dove \u03ba e \u03bb sono fattori di ponderazione che potrebbero variare in base alla query, all\u0027argomento o alle parole chiave.\n\nLa descrizione contempla anche applicazioni oltre la ricerca web organica: viene menzionata esplicitamente la possibilit\u00e0 di ordinare annunci pubblicitari in base alla distanza tra la posizione dell\u0027inserzionista e quella associata a un documento target, con riferimenti a brevetti correlati sulla pubblicit\u00e0.\n\nPer la SEO, questo potrebbe significare che documenti con segnali geografici chiari e coerenti potrebbero beneficiare di un vantaggio di ranking per query con alta sensibilit\u00e0 geografica, anche se il loro punteggio topico tradizionale fosse inferiore. Tuttavia, l\u0027effetto dipenderebbe criticamente dall\u0027argomento della query e dalla distanza effettiva: un documento geograficamente distante potrebbe comunque posizionarsi bene per argomenti a bassa sensibilit\u00e0 geografica se il suo punteggio topico fosse sufficientemente alto.",
+  "wordCount": 642,
+  "datePublished": "2026-10-29T10:00:56.631523+00:00",
+  "dateModified": "2026-10-29T10:00:56.631523+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8171048b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Ranking documents based on a location sensitivity factor",
+    "identifier": "US8171048B2",
+    "url": "https://patents.google.com/patent/US8171048B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8171048B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8171048B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking dei documenti basato su sensibilità geografica</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Ranking documents based on a location sensitivity factor</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di fornire risultati di ricerca rilevanti considerando sia la pertinenza topica che quella geografica. Propone un metodo per determinare un punteggio combinato che integra un punteggio topico tradizionale con un punteggio di distanza tra la posizione associata alla query e quella del documento, modulato da un fattore di sensibilità geografica specifico per argomento.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, risultati organici con rilevanza geografica</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">01 Maggio 2012</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2003-09-22</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Link e ranking</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">21</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 descrive un metodo eseguito da un server che riceve una query, determina una posizione geografica associata alla query e un argomento (topic) corrispondente alla query, quindi determina un fattore di sensibilità geografica (location sensitivity factor) associato a quell&#39;argomento. Il metodo identifica un insieme di documenti basandosi sulla query, calcola per ciascun documento un punteggio topico (topical score) basato sulla query e un punteggio di distanza (distance score) basato sulla misura di distanza tra la posizione geografica del documento e quella della query, modulato dal fattore di sensibilità geografica. Infine genera un punteggio combinato (combined score) per ciascun documento basandosi su entrambi i punteggi e ordina i documenti in base ai punteggi combinati.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il punteggio topico è una funzione crescente della rilevanza del documento rispetto alla query. La rivendicazione 3 indica che il punteggio di distanza è una funzione decrescente della misura di distanza. La rivendicazione 4 chiarisce che il fattore di sensibilità geografica differisce per argomenti diversi. Le rivendicazioni 5-8 contemplano l&#39;uso di pesi (weights) distinti applicati al punteggio topico e al punteggio di distanza per generare punteggi ponderati, dove i pesi possono basarsi sull&#39;argomento o su parole chiave specifiche nella query. Le rivendicazioni 9 e 10 specificano che la distanza può essere calcolata come distanza in linea retta (straight-line distance) o come distanza di guida (driving distance). Le rivendicazioni indipendenti 11, 12 e 17 riformulano lo stesso metodo in termini di sistema, dispositivo server e istruzioni eseguibili.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi aspetti implementativi che potrebbero avere implicazioni SEO. Nel blocco 206 e nei paragrafi correlati, la descrizione spiega che la posizione associata alla query può essere determinata in vari modi: esplicitamente dall&#39;utente, tramite cookie o profili utente, inferita dall&#39;indirizzo di rete, dalla cronologia di navigazione o ricerca, o estraendo termini geografici dalla query stessa (esempio: &#34;palo alto&#34; dalla query &#34;pizza palo alto&#34;).</p>
+      <p>La descrizione contempla che il fattore di sensibilità geografica S possa essere determinato analizzando il comportamento di selezione degli utenti (user selection behavior, come click through, stay time, mouseover, conversion data) rispetto ai risultati di ricerca con rilevanza geografica. Viene fornito l&#39;esempio che argomenti come &#34;pizza&#34; potrebbero avere una sensibilità geografica maggiore (utenti interessati a documenti entro 5 miglia) rispetto ad &#34;automobiles/cars&#34; (fino a 50 miglia). La descrizione indica che S stesso può essere funzione dell&#39;argomento, dei termini della query, del profilo utente, della posizione associata alla query o di un cluster dei risultati.</p>
+      <p>Nella formulazione matematica contemplata, il punteggio di distanza F potrebbe assumere la forma F(d,S) = α/(β + S×d), dove S modula quanto rapidamente il punteggio decresce con la distanza. Il punteggio combinato C potrebbe essere formulato come C(R,F) = κ*R + λF(d), dove κ e λ sono fattori di ponderazione che potrebbero variare in base alla query, all&#39;argomento o alle parole chiave.</p>
+      <p>La descrizione contempla anche applicazioni oltre la ricerca web organica: viene menzionata esplicitamente la possibilità di ordinare annunci pubblicitari in base alla distanza tra la posizione dell&#39;inserzionista e quella associata a un documento target, con riferimenti a brevetti correlati sulla pubblicità.</p>
+      <p>Per la SEO, questo potrebbe significare che documenti con segnali geografici chiari e coerenti potrebbero beneficiare di un vantaggio di ranking per query con alta sensibilità geografica, anche se il loro punteggio topico tradizionale fosse inferiore. Tuttavia, l&#39;effetto dipenderebbe criticamente dall&#39;argomento della query e dalla distanza effettiva: un documento geograficamente distante potrebbe comunque posizionarsi bene per argomenti a bassa sensibilità geografica se il suo punteggio topico fosse sufficientemente alto.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2012), quindi non fornisce indicazioni su cosa Google utilizzi attualmente nei suoi algoritmi di ranking.</li>
+      <li>La descrizione non specifica quali segnali concreti vengano utilizzati per determinare la posizione di un documento oltre a riferimenti generici ad &#34;address/map data&#34; e non chiarisce come vengano estratti o validati.</li>
+      <li>Il brevetto contempla la sensibilità geografica come proprietà dell&#39;argomento ma non fornisce una tassonomia degli argomenti né soglie specifiche per classificarli come più o meno sensibili geograficamente.</li>
+      <li>Non viene dimostrato che questo approccio sia mai stato implementato in Google Search o in quale misura i fattori geografici influenzino effettivamente il ranking rispetto ad altri segnali.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i segnali geografici del sito (indirizzo NAP, markup schema LocalBusiness, menzioni geografiche nel contenuto) siano coerenti e accurati, indipendentemente dall&#39;implementazione di questo specifico brevetto.</li>
+      <li class="pl-2">Per contenuti con rilevanza geografica intrinseca, rendere esplicita la copertura geografica nel contenuto stesso, poiché i motori di ricerca potrebbero utilizzare vari metodi per associare documenti a posizioni.</li>
+      <li class="pl-2">Considerare che la rilevanza geografica potrebbe interagire con la rilevanza topica in modi non lineari: un contenuto geograficamente pertinente ma topicamente debole potrebbe non posizionarsi bene, così come un contenuto topicamente forte ma geograficamente distante potrebbe comunque essere competitivo per certi argomenti.</li>
+      <li class="pl-2">Monitorare le variazioni di ranking in base alla posizione geografica dell&#39;utente per comprendere se e come i fattori geografici influenzano la visibilità per query specifiche del proprio settore.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">location sensitivity factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore che indica quanto un determinato argomento o query sia sensibile alla distanza geografica, modulando l&#39;importanza della vicinanza nel ranking</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">topical score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio di rilevanza tradizionale basato su fattori non geografici come testo, link e altri segnali di information retrieval</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">distance score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio basato sulla distanza tra la posizione associata al documento e quella associata alla query, tipicamente una funzione decrescente della distanza</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">combined score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio finale che integra il punteggio topico e il punteggio di distanza, potenzialmente con pesi diversi, per determinare l&#39;ordinamento dei risultati</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">user selection behavior</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Comportamenti degli utenti come click through, tempo di permanenza, mouseover e conversioni, utilizzabili per determinare la sensibilità geografica di un argomento</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US7606798B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7606798B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Methods and systems for improving a search ranking using location awareness</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8171048B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

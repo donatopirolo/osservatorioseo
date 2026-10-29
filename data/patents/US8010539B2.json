@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8010539B2",
+    "title": "Phrase based snippet generation",
+    "abstract": "Disclosed herein is a method, a system and a computer product for generating a snippet for an entity, wherein each snippet comprises a plurality of sentiments about the entity. One or more textual reviews associated with the entity is selected. A plurality of sentiment phrases are identified based on the one or more textual reviews, wherein each sentiment phrase comprises a sentiment about the entity. One or more sentiment phrases from the plurality of sentiment phrases are selected to generate a snippet.",
+    "claims": [
+      "1. A computer-implemented method for generating a snippet for an entity, wherein the snippet comprises a plurality of sentiments about the entity, the method comprising: selecting a plurality of textual reviews associated with the entity; identifying, based on a domain-specific sentiment lexicon including sentiment phrases extracted from documents specific to a domain, a plurality of sentiment phrases from the plurality of textual reviews, wherein each identified sentiment phrase comprises a sentiment about the entity; determining a plurality of frequency values for the identified plurality of sentiment phrases, wherein each frequency value represents a number of times a sentiment phrase is identified in the one or more of textual reviews; selecting one or more sentiment phrases from the identified plurality of sentiment phrases based on the generated frequency values; generating the snippet including the selected one or more sentiment phrases; and storing the snippet.",
+      "2. The method of claim 1 , further comprising displaying the snippet in association with a search result.",
+      "3. The method of claim 2 , wherein the search result is displayed responsive to a search query comprising an entity type associated with the entity.",
+      "4. The method of claim 1 , wherein identifying a plurality of sentiment phrases comprises identifying a noun phrase corresponding to a property of the entity and an adjective associated with the noun phrase.",
+      "5. The method of claim 4 , wherein identifying a noun phrase corresponding to a property of the entity and an adjective associated with the noun phrase comprises identifying a match between a regular expression and a textual review.",
+      "6. The method of claim 4 , further comprising: generating a sentiment score for each of the plurality of sentiment phrases, wherein each sentiment score is based at least in part on the adjective associated with the noun phrase.",
+      "7. The method of claim 4 , wherein selecting one or more sentiment phrases comprises: determining at least a first group of sentiment scores based on the noun phrase; and selecting a representative sentiment phrase based on the plurality of frequency values.",
+      "8. The method of claim 1 , further comprising: generating a sentiment score for each of the plurality of sentiment phrases; and selecting one or more sentiment phrases from the plurality of sentiment phrases based at least in part on the sentiment scores.",
+      "9. The method of claim 1 , wherein the sentiment phrases are comprised of a plurality of tokens and selecting one or more sentiment phrases comprises: generating a redundancy metric, wherein each redundancy metric is based on a number of tokens shared between two sentiment phrases; and selecting one or more sentiment phrases based on the redundancy metric.",
+      "10. The method of claim 1 , further comprising: associating a sentiment score with each of the identified plurality of sentiment phrases; wherein the selection of the one or more sentiment phrases from the identified plurality of sentiment phrases is based on the corresponding sentiment scores.",
+      "11. The method of claim 1 , further comprising developing the domain-specific sentiment lexicon based on a domain-independent lexicon, the domain-independent sentiment lexicon including sentiment phrases extracted from domain independent documents.",
+      "12. The method of claim 11 , wherein developing the domain-specific sentiment lexicon comprises: determining sentiment scores for each of the documents that are specific to the domain; selecting a subset of the domain-specific documents based on their sentiment scores; selecting sentiment phrases from the subset of domain-specific documents; and including in the domain-specific sentiment lexicon at least some of the sentiment phrases selected from the subset.",
+      "13. The method of claim 1 , wherein the domain comprises a particular sphere of activity and the entity is of a type within the domain.",
+      "14. A computer readable storage medium comprising computer program code for generating a snippet for an entity, wherein the snippet comprises a plurality of sentiments about the entity, the computer program code comprising program code for: selecting a plurality of textual reviews associated with the entity; identifying, based on a domain-specific sentiment lexicon including sentiment phrases extracted from documents specific to a domain, a plurality of sentiment phrases from the plurality of textual reviews, wherein each identified sentiment phrase comprises a sentiment about the entity; determining a plurality of frequency values for the identified plurality of sentiment phrases, wherein each frequency value represents a number of times a sentiment phrase is identified in the one or more of textual reviews; selecting one or more sentiment phrases from the identified plurality of sentiment phrases based on the generated frequency values; generating the snippet including the selected one or more sentiment phrases; and storing the snippet.",
+      "15. The medium of claim 14 , further comprising displaying the snippet in association with a search result.",
+      "16. The medium of claim 15 , wherein the search result is displayed responsive to a search query comprising an entity type associated with the entity.",
+      "17. The medium of claim 14 , wherein identifying a plurality of sentiment phrases comprises identifying a noun phrase corresponding to a property of the entity and an adjective associated with the noun phrase.",
+      "18. The medium of claim 17 , wherein identifying a noun phrase corresponding to a property of the entity and an adjective associated with the noun phrase comprises identifying a match between a regular expression and a textual review.",
+      "19. The medium of claim 17 , further comprising program code for: generating a sentiment score for each of the plurality of sentiment phrases, wherein each sentiment score is based at least in part on the adjective associated with the noun phrase.",
+      "20. The medium of claim 17 , wherein selecting one or more sentiment phrases comprises: determining at least a first group of sentiment scores based on the noun phrase; and selecting a representative sentiment phrase based on the plurality of frequency values.",
+      "21. The medium of claim 14 , further comprising program code for: generating a sentiment score for each of the plurality of sentiment phrases; and selecting one or more sentiment phrases from the plurality of sentiment phrases based at least in part on the sentiment scores.",
+      "22. The medium of claim 14 , wherein the sentiment phrases are comprised of a plurality of tokens and selecting one or more sentiment phrases comprises: generating a redundancy metric, wherein each redundancy metric is based on a number of tokens shared between two sentiment phrases; and selecting one or more sentiment phrases based on the redundancy metric.",
+      "23. A computer system for generating a snippet for an entity, wherein the snippet comprises a plurality of sentiments about the entity, the system comprising: a database comprising a plurality of textual reviews associated with the entity; a phrase extraction module adapted to identify, based on a domain-specific sentiment lexicon including sentiment phrases extracted from documents specific to a domain, a plurality of sentiment phrases from the plurality of textual reviews, wherein each identified sentiment phrase comprises a sentiment about the entity; and determine a plurality of frequency values for the identified plurality of sentiment phrases, wherein each frequency value represents a number of times a sentiment phrase is identified in the one or more of textual reviews; and a snippet generation module adapted to: select one or more sentiment phrases from the identified plurality of sentiment phrases based on the generated frequency values; generate the snippet including the selected one or more sentiment phrases; and store the snippet.",
+      "24. The system of claim 23 , wherein the phrase extraction module is further adapted to identify a noun phrase corresponding to a property of the entity and an adjective associated with the noun phrase.",
+      "25. The system of claim 24 , further comprising a sentiment score module adapted to: generate a sentiment score for each of the plurality of sentiment phrases, wherein each sentiment score is based at least in part on the adjective associated with the noun phrase.",
+      "26. The system of claim 23 , further comprising a sentiment score module adapted to generate a sentiment score for each of the plurality of sentiment phrases and wherein the phrase extraction module is adapted to select one or more sentiment phrases from the plurality of sentiment phrases based at least in part on the sentiment scores."
+    ],
+    "independent_claims": [
+      "1. A computer-implemented method for generating a snippet for an entity, wherein the snippet comprises a plurality of sentiments about the entity, the method comprising: selecting a plurality of textual reviews associated with the entity; identifying, based on a domain-specific sentiment lexicon including sentiment phrases extracted from documents specific to a domain, a plurality of sentiment phrases from the plurality of textual reviews, wherein each identified sentiment phrase comprises a sentiment about the entity; determining a plurality of frequency values for the identified plurality of sentiment phrases, wherein each frequency value represents a number of times a sentiment phrase is identified in the one or more of textual reviews; selecting one or more sentiment phrases from the identified plurality of sentiment phrases based on the generated frequency values; generating the snippet including the selected one or more sentiment phrases; and storing the snippet.",
+      "14. A computer readable storage medium comprising computer program code for generating a snippet for an entity, wherein the snippet comprises a plurality of sentiments about the entity, the computer program code comprising program code for: selecting a plurality of textual reviews associated with the entity; identifying, based on a domain-specific sentiment lexicon including sentiment phrases extracted from documents specific to a domain, a plurality of sentiment phrases from the plurality of textual reviews, wherein each identified sentiment phrase comprises a sentiment about the entity; determining a plurality of frequency values for the identified plurality of sentiment phrases, wherein each frequency value represents a number of times a sentiment phrase is identified in the one or more of textual reviews; selecting one or more sentiment phrases from the identified plurality of sentiment phrases based on the generated frequency values; generating the snippet including the selected one or more sentiment phrases; and storing the snippet.",
+      "23. A computer system for generating a snippet for an entity, wherein the snippet comprises a plurality of sentiments about the entity, the system comprising: a database comprising a plurality of textual reviews associated with the entity; a phrase extraction module adapted to identify, based on a domain-specific sentiment lexicon including sentiment phrases extracted from documents specific to a domain, a plurality of sentiment phrases from the plurality of textual reviews, wherein each identified sentiment phrase comprises a sentiment about the entity; and determine a plurality of frequency values for the identified plurality of sentiment phrases, wherein each frequency value represents a number of times a sentiment phrase is identified in the one or more of textual reviews; and a snippet generation module adapted to: select one or more sentiment phrases from the identified plurality of sentiment phrases based on the generated frequency values; generate the snippet including the selected one or more sentiment phrases; and store the snippet."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Sasha Blair-Goldensohn",
+      "Kerry Hannan",
+      "Ryan McDonald",
+      "Tyler Neylon",
+      "Jeffrey C. Reynar"
+    ],
+    "priority_date": "2008-01-25",
+    "filing_date": "2008-01-25",
+    "publication_date": "2011-08-30",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/34",
+      "G06F16/345",
+      "Y10S707/00",
+      "Y10S707/99931",
+      "Y10S707/99933",
+      "Y10S707/99935"
+    ],
+    "family": [
+      {
+        "number": "US8402036B2",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Phrase based snippet generation"
+      },
+      {
+        "number": "WO2009094586A1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Phrase based snippet generation"
+      }
+    ],
+    "cited_by_count": 139
+  },
+  "analysis": {
+    "title_it": "Generazione di snippet basati su frasi di sentiment",
+    "summary": "Il brevetto descrive un metodo per generare snippet di risultati di ricerca per entità recensibili (ristoranti, hotel, prodotti) estraendo frasi di sentiment da recensioni testuali. Le frasi vengono identificate tramite espressioni regolari, valutate per frequenza e sentiment score, quindi selezionate per comporre snippet rappresentativi e non ridondanti.",
+    "theme": "passaggi_snippet",
+    "seo_relevance": 3,
+    "scope": "Snippet per entità recensibili in Search",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo implementato su computer per generare uno snippet per un'entità, dove lo snippet comprende una pluralità di sentiment sull'entità. Il metodo prevede la selezione di più recensioni testuali associate all'entità, l'identificazione di una pluralità di \"sentiment phrases\" basate su un lessico di sentiment specifico per dominio che include frasi estratte da documenti specifici per quel dominio. Per ciascuna frase identificata viene determinato un valore di frequenza che rappresenta quante volte la frase appare nelle recensioni. Una o più frasi vengono selezionate in base ai valori di frequenza generati, lo snippet viene generato includendo le frasi selezionate e memorizzato.\n\nLa rivendicazione 2 aggiunge che lo snippet può essere visualizzato in associazione con un risultato di ricerca. La rivendicazione 3 specifica che il risultato può essere mostrato in risposta a una query che comprende un tipo di entità associato all'entità.\n\nLe rivendicazioni 4-5 dettagliano che l'identificazione delle sentiment phrases comprende l'identificazione di una noun phrase corrispondente a una proprietà dell'entità e un aggettivo associato, tramite corrispondenza con espressioni regolari.\n\nLe rivendicazioni 6-8 e 10 introducono la generazione di un \"sentiment score\" per ciascuna frase, basato almeno in parte sull'aggettivo associato alla noun phrase, e la selezione delle frasi basata anche su questi punteggi oltre che sulla frequenza.\n\nLa rivendicazione 7 specifica che la selezione può prevedere il raggruppamento di sentiment scores basato sulla noun phrase e la selezione di una frase rappresentativa basata sui valori di frequenza.\n\nLa rivendicazione 9 introduce una \"redundancy metric\" basata sul numero di token condivisi tra due sentiment phrases, utilizzata per selezionare frasi non ridondanti.\n\nLe rivendicazioni 11-13 descrivono lo sviluppo del lessico specifico per dominio partendo da un lessico domain-independent, determinando sentiment scores per documenti specifici del dominio, selezionando un sottoinsieme di questi documenti in base ai loro scores, ed estraendo frasi da questo sottoinsieme. Il dominio è definito come una particolare sfera di attività e l'entità è di un tipo all'interno del dominio.\n\nLe rivendicazioni 14-26 replicano le stesse funzionalità come computer readable storage medium (14-22) e come sistema informatico (23-26) con moduli specifici: phrase extraction module, snippet generation module e sentiment score module.",
+    "seo_reading": "La descrizione contempla un sistema articolato per l'estrazione e la selezione di frasi di sentiment. Nella sezione relativa alla figura 6, blocco 614, vengono fornite sei espressioni regolari specifiche utilizzate per estrarre sentiment phrases dai testi tokenizzati e taggati per part-of-speech. Le espressioni catturano pattern come Aggettivo+Nome (\"great pizza\"), Avverbio+Aggettivo+Nome (\"really great pizza\"), e costruzioni più complesse con verbi modali e pronomi.\n\nLa descrizione contempla (figura 3 e relativo testo) che ogni recensione possa avere associati valori P(entity) e P(sentiment) che rappresentano rispettivamente la probabilità che la recensione riguardi effettivamente l'entità e che contenga sentiment. Per recensioni strutturate da siti di review noti questi valori possono essere impostati al massimo, mentre per recensioni non strutturate vengono calcolati in base a metriche come il numero di menzioni dell'entità.\n\nIl blocco 320 descrive che la \"Phrase Frequency\" può essere calcolata con una funzione di decay per frasi che occorrono oltre un certo numero di volte, usando la formula: (Frequenza della frase) * (1 + log(numero di recensioni in cui la frase appare)). Questo suggerisce un tentativo di bilanciare frasi molto frequenti con la loro distribuzione.\n\nLa descrizione contempla (figura 7, blocco 712) metodi alternativi di selezione delle frasi: per magnitudine e polarità del sentiment score, solo per magnitudine (privilegiando sentiment forti sia positivi che negativi), o incorporando metriche come inverse document frequency per favorire noun phrases meno comuni in un indice globale di documenti.\n\nViene contemplato (blocco 714) il calcolo di una redundancy metric tramite Jaccard overlap con soglia di 0.5, per evitare frasi troppo simili nello snippet. La descrizione menziona anche metodi alternativi come cosine distance ed edit distance.\n\nLa descrizione contempla (blocco relativo a binning) il raggruppamento di frasi con la stessa noun phrase, selezionando poi la frase rappresentativa con la frequenza più alta. Un metodo alternativo prevede il binning separato per polarità positiva e negativa della stessa noun phrase.\n\nPer la SEO, questo potrebbe significare che Google disponga di meccanismi per generare snippet sintetici per entità recensibili, privilegiando frasi che ricorrono frequentemente nelle recensioni ma che non sono troppo generiche (via inverse document frequency) né ridondanti tra loro. Potrebbe suggerire che per entità con molte recensioni, la visibilità negli snippet dipenda dalla capacità di generare sentiment phrases distintive e frequenti. Tuttavia, il brevetto non specifica se questi snippet sostituiscano o integrino gli snippet tradizionali basati su keyword matching, né fornisce indicazioni su come le entità vengano identificate e associate alle recensioni.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Fee Related) dal 2011, quindi anche se fosse stato implementato, non vi è garanzia che la tecnologia sia ancora in uso nella forma descritta.",
+      "Non dimostra che questa tecnologia sia mai stata applicata in Google Search: il brevetto descrive un sistema per snippet di entità recensibili ma non fornisce evidenze di deployment in produzione.",
+      "L'ambito è limitato a entità recensibili (ristoranti, hotel, prodotti) e non si applica a risultati web generici o a query informazionali senza una chiara entità target.",
+      "Non specifica come le recensioni vengano raccolte, filtrate per qualità o associate alle entità, né come vengano gestiti casi di review spam o sentiment manipulation."
+    ],
+    "implications": [
+      "Per entità recensibili, assicurarsi che le recensioni degli utenti contengano frasi di sentiment chiare e leggibili con strutture aggettivo-nome facilmente estraibili, indipendentemente da questo brevetto.",
+      "Favorire la presenza di recensioni su piattaforme strutturate note (menzionate nel brevetto: TripAdvisor, Citysearch, Yelp) che potrebbero avere maggiore peso in sistemi di estrazione di sentiment.",
+      "Evitare recensioni eccessivamente generiche o ridondanti: la diversità di sentiment phrases specifiche potrebbe essere un indicatore di ricchezza informativa per qualsiasi sistema di analisi delle recensioni.",
+      "Monitorare come le proprie entità appaiono negli snippet di ricerca per query sul tipo di entità, verificando se compaiono sintesi di sentiment e da quali fonti provengono."
+    ],
+    "key_terms": [
+      {
+        "term": "sentiment phrase",
+        "explanation": "Frase breve e leggibile che esprime un'opinione su un'entità, tipicamente composta da aggettivo e nome (es. 'great pizza', 'clean rooms')"
+      },
+      {
+        "term": "domain-specific sentiment lexicon",
+        "explanation": "Lessico di frasi ed espressioni che esprimono sentiment in un dominio specifico (es. ristoranti, hotel), estratto da documenti specifici di quel dominio"
+      },
+      {
+        "term": "sentiment score",
+        "explanation": "Punteggio che rappresenta polarità (positivo/negativo) e magnitudine del sentiment espresso da una frase, nel brevetto su scala da -5 a +5"
+      },
+      {
+        "term": "phrase frequency",
+        "explanation": "Numero di volte che una sentiment phrase appare nelle recensioni associate a un'entità, potenzialmente pesato con funzioni di decay"
+      },
+      {
+        "term": "redundancy metric",
+        "explanation": "Metrica per misurare la sovrapposizione tra sentiment phrases, nel brevetto calcolata tramite Jaccard overlap per evitare frasi ridondanti negli snippet"
+      },
+      {
+        "term": "noun phrase",
+        "explanation": "Sintagma nominale all'interno della sentiment phrase che identifica la proprietà dell'entità oggetto del sentiment (es. 'pizza' in 'great pizza')"
+      },
+      {
+        "term": "reviewable entity",
+        "explanation": "Entità su cui è probabile che venga espressa un'opinione pubblica, come ristoranti, hotel, prodotti di consumo, film o libri"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:00:16.595590Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07912920000000001
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8938463B1: Modifica del ranking con feedback implicito e modello di presentation bias — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema del bias di presentazione (posizione, snippet, grassetti) che influenza i clic degli utenti indipendentemente dalla qualità reale dei risultati. Propone di costruire modelli predittivi del click-through rate basati su feature di presentazione e rilevanza per isolare " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8938463b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8938463B1: Modifica del ranking con feedback implicito e modello di presentation bias — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema del bias di presentazione (posizione, snippet, grassetti) che influenza i clic degli utenti indipendentemente dalla qualità reale dei risultati. Propone di costruire modelli predittivi del click-through rate basati su feature di presentazione e rilevanza per isolare " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8938463b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8938463B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us8938463b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8938463B1: Modifica del ranking con feedback implicito e modello di presentation bias",
+  "description": "Il brevetto affronta il problema del bias di presentazione (posizione, snippet, grassetti) che influenza i clic degli utenti indipendentemente dalla qualit\u00e0 reale dei risultati. Propone di costruire modelli predittivi del click-through rate basati su feature di presentazione e rilevanza per isolare e ridurre l\u0027effetto del bias nel ranking futuro.",
+  "articleBody": "Il brevetto affronta il problema del bias di presentazione (posizione, snippet, grassetti) che influenza i clic degli utenti indipendentemente dalla qualit\u00e0 reale dei risultati. Propone di costruire modelli predittivi del click-through rate basati su feature di presentazione e rilevanza per isolare e ridurre l\u0027effetto del bias nel ranking futuro.\n\nLa rivendicazione indipendente 1 copre un metodo che ottiene informazioni sulle selezioni di risultati di ricerca per pi\u00f9 query, dove le informazioni includono una o pi\u00f9 feature di presentation bias (tra cui almeno il rank del risultato) e una o pi\u00f9 feature di rilevanza. Il metodo addestra un modello per predire il click-through rate basandosi su queste feature di presentazione e rilevanza. Il modello viene fornito al motore di ricerca che lo usa per ridurre il presentation bias determinando un quality score per ciascun risultato e fattorizzando gli effetti indipendenti del presentation bias dai quality score usando gli output predittivi del modello, che includono un predicted click-through rate.\n\nLa rivendicazione 2 specifica che il modello pu\u00f2 essere lineare o di regressione. La rivendicazione 3 elenca esempi di feature di presentation bias: posizione di un altro risultato nell\u0027interfaccia grafica, titolo del risultato, lunghezza del titolo, snippet, testo in grassetto nello snippet, presenza di annunci pubblicitari. La rivendicazione 4 elenca feature di rilevanza: information retrieval score del risultato, IR score di altri risultati restituiti insieme, lingua della query, conteggio delle parole nella query.\n\nLe rivendicazioni 5-7 descrivono una variante con due modelli separati: un primo modello addestrato sulle feature di presentation bias e un secondo sulle feature di rilevanza, entrambi per predire click-through rate. La rivendicazione 7 specifica che il predicted click-through rate pu\u00f2 essere calcolato come rapporto tra gli output dei due modelli. Le rivendicazioni 8-9 introducono il confronto tra gli output del modello e un implicit user feedback model (come la click fraction) per aggiustare i ranking score. La rivendicazione 18 specifica che il confronto pu\u00f2 includere un rapporto o una differenza di valore tra predicted click-through rate e click fraction.\n\nLe rivendicazioni 10-27 replicano la struttura per system claims e machine-readable storage claims, mantenendo gli stessi elementi sostanziali.\n\nLa descrizione contempla un sistema dettagliato per separare qualit\u00e0 reale e bias di presentazione nei segnali di clic. Il documento descrive come costruire un \"prior model\" che rappresenta una probabilit\u00e0 di background di selezione dati i valori di multiple feature, indipendente dalla query specifica (paragrafi relativi a FIG. 4B-4E).\n\nLa descrizione elenca feature di presentation bias molto specifiche: numero di termini in grassetto nel titolo e snippet del risultato corrente e dei risultati precedenti/successivi, lunghezza di titolo e snippet, presenza di termini pornografici o attrattivi, presenza di ads, presenza di onebox, indentazione, colore di sfondo, posizione nella pagina (tabella nella sezione \"Description\"). Le feature di rilevanza contemplano: IR score del risultato e di quelli adiacenti, lingua, paese, lunghezza query, tipo di query (navigazionale vs informazionale).\n\nIl documento contempla pesature diverse per i clic in base alla durata di visualizzazione: short click (peso -0.1), medium click (0.5), long click (1.0), last click (0.9), con aggiustamenti se preceduto da altri clic (0.3). Queste soglie potrebbero essere aggiustate per categoria di query e tipo di utente. La descrizione contempla anche l\u0027identificazione di utenti esperti basata su pattern di clic, con possibile pesatura differenziata del loro feedback.\n\nPer la SEO, questo potrebbe significare che Google disporrebbe di meccanismi per distinguere clic dovuti a posizione o snippet attraente da clic che indicano reale soddisfazione. Un risultato in posizione bassa con CTR superiore alle attese del prior model potrebbe ricevere un boost maggiore di uno in prima posizione con CTR nella norma. La descrizione contempla formule di boost come C(a/p) dove \u0027a\u0027 \u00e8 actual click fraction e \u0027p\u0027 \u00e8 predicted, o trasformazioni pi\u00f9 complesse con parametri tuned.\n\nIl brevetto contempla anche l\u0027uso del prior model per assegnare un click-through rate stimato a risultati nuovi senza storico di clic (FIG. 4E), costruendo un modello su risultati meno frequenti. Questo suggerirebbe che contenuti nuovi potrebbero ricevere una stima iniziale di qualit\u00e0 basata su feature osservabili al momento del ranking.",
+  "wordCount": 669,
+  "datePublished": "2026-10-29T10:05:19.083512+00:00",
+  "dateModified": "2026-10-29T10:05:19.083512+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8938463b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Modifying search result ranking based on implicit user feedback and a model of presentation bias",
+    "identifier": "US8938463B1",
+    "url": "https://patents.google.com/patent/US8938463B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8938463B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8938463B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Modifica del ranking con feedback implicito e modello di presentation bias</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Modifying search result ranking based on implicit user feedback and a model of presentation bias</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema del bias di presentazione (posizione, snippet, grassetti) che influenza i clic degli utenti indipendentemente dalla qualità reale dei risultati. Propone di costruire modelli predittivi del click-through rate basati su feature di presentazione e rilevanza per isolare e ridurre l&#39;effetto del bias nel ranking futuro.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking dei risultati organici</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">20 Gennaio 2015</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2007-03-12</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Segnali di comportamento degli utenti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★★</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">27</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che ottiene informazioni sulle selezioni di risultati di ricerca per più query, dove le informazioni includono una o più feature di presentation bias (tra cui almeno il rank del risultato) e una o più feature di rilevanza. Il metodo addestra un modello per predire il click-through rate basandosi su queste feature di presentazione e rilevanza. Il modello viene fornito al motore di ricerca che lo usa per ridurre il presentation bias determinando un quality score per ciascun risultato e fattorizzando gli effetti indipendenti del presentation bias dai quality score usando gli output predittivi del modello, che includono un predicted click-through rate.</p>
+      <p>La rivendicazione 2 specifica che il modello può essere lineare o di regressione. La rivendicazione 3 elenca esempi di feature di presentation bias: posizione di un altro risultato nell&#39;interfaccia grafica, titolo del risultato, lunghezza del titolo, snippet, testo in grassetto nello snippet, presenza di annunci pubblicitari. La rivendicazione 4 elenca feature di rilevanza: information retrieval score del risultato, IR score di altri risultati restituiti insieme, lingua della query, conteggio delle parole nella query.</p>
+      <p>Le rivendicazioni 5-7 descrivono una variante con due modelli separati: un primo modello addestrato sulle feature di presentation bias e un secondo sulle feature di rilevanza, entrambi per predire click-through rate. La rivendicazione 7 specifica che il predicted click-through rate può essere calcolato come rapporto tra gli output dei due modelli. Le rivendicazioni 8-9 introducono il confronto tra gli output del modello e un implicit user feedback model (come la click fraction) per aggiustare i ranking score. La rivendicazione 18 specifica che il confronto può includere un rapporto o una differenza di valore tra predicted click-through rate e click fraction.</p>
+      <p>Le rivendicazioni 10-27 replicano la struttura per system claims e machine-readable storage claims, mantenendo gli stessi elementi sostanziali.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema dettagliato per separare qualità reale e bias di presentazione nei segnali di clic. Il documento descrive come costruire un &#34;prior model&#34; che rappresenta una probabilità di background di selezione dati i valori di multiple feature, indipendente dalla query specifica (paragrafi relativi a FIG. 4B-4E).</p>
+      <p>La descrizione elenca feature di presentation bias molto specifiche: numero di termini in grassetto nel titolo e snippet del risultato corrente e dei risultati precedenti/successivi, lunghezza di titolo e snippet, presenza di termini pornografici o attrattivi, presenza di ads, presenza di onebox, indentazione, colore di sfondo, posizione nella pagina (tabella nella sezione &#34;Description&#34;). Le feature di rilevanza contemplano: IR score del risultato e di quelli adiacenti, lingua, paese, lunghezza query, tipo di query (navigazionale vs informazionale).</p>
+      <p>Il documento contempla pesature diverse per i clic in base alla durata di visualizzazione: short click (peso -0.1), medium click (0.5), long click (1.0), last click (0.9), con aggiustamenti se preceduto da altri clic (0.3). Queste soglie potrebbero essere aggiustate per categoria di query e tipo di utente. La descrizione contempla anche l&#39;identificazione di utenti esperti basata su pattern di clic, con possibile pesatura differenziata del loro feedback.</p>
+      <p>Per la SEO, questo potrebbe significare che Google disporrebbe di meccanismi per distinguere clic dovuti a posizione o snippet attraente da clic che indicano reale soddisfazione. Un risultato in posizione bassa con CTR superiore alle attese del prior model potrebbe ricevere un boost maggiore di uno in prima posizione con CTR nella norma. La descrizione contempla formule di boost come C(a/p) dove &#39;a&#39; è actual click fraction e &#39;p&#39; è predicted, o trasformazioni più complesse con parametri tuned.</p>
+      <p>Il brevetto contempla anche l&#39;uso del prior model per assegnare un click-through rate stimato a risultati nuovi senza storico di clic (FIG. 4E), costruendo un modello su risultati meno frequenti. Questo suggerirebbe che contenuti nuovi potrebbero ricevere una stima iniziale di qualità basata su feature osservabili al momento del ranking.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questi modelli siano attualmente in uso in Google Search, né fornisce evidenza della loro implementazione in produzione.</li>
+      <li>Non specifica i pesi relativi tra segnali tradizionali di ranking e questi aggiustamenti basati su clic, né quanto frequentemente i modelli vengano riaddestrati.</li>
+      <li>La descrizione non chiarisce come vengano gestiti i casi di manipolazione intenzionale (click fraud) oltre a generici riferimenti a &#34;safeguards&#34; e modelli di comportamento utente.</li>
+      <li>Essendo del 2007 con concessione nel 2015, il brevetto precede l&#39;era mobile-first e non contempla differenze tra comportamenti su dispositivi diversi.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Concentrarsi su metriche di soddisfazione reale (tempo di permanenza, mancato ritorno alla SERP) piuttosto che su tattiche per aumentare il CTR assoluto, poiché sistemi sofisticati potrebbero normalizzare i clic in base alle aspettative di posizione.</li>
+      <li class="pl-2">Curare titoli e snippet per accuratezza e pertinenza rispetto al contenuto effettivo, non solo per attrattività, dato che discrepanze tra aspettative (da snippet) e contenuto reale potrebbero emergere dai pattern di short click.</li>
+      <li class="pl-2">Per contenuti nuovi o di nicchia, assicurarsi che i segnali di qualità tradizionali (struttura, contenuto, segnali on-page) siano solidi, dato che potrebbero essere usati per stimare la qualità iniziale in assenza di storico di clic.</li>
+      <li class="pl-2">Monitorare metriche di engagement reale (profondità di scroll, interazioni, conversioni) come proxy della soddisfazione utente, indipendentemente dal fatto che questo specifico sistema sia implementato.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">presentation bias</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Insieme di fattori di presentazione (posizione, grassetti, lunghezza snippet, presenza ads) che influenzano la probabilità di clic indipendentemente dalla qualità reale del risultato</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">prior model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello statistico che rappresenta la probabilità di background di selezione di un risultato dati i valori di feature specifiche, tipicamente indipendente dalla query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">click-through rate (CTR)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tasso di clic su un risultato, che il brevetto propone di predire e confrontare con valori osservati per identificare risultati di qualità superiore o inferiore alle aspettative</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">implicit user feedback</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Segnali di comportamento utente (clic, tempo di permanenza) usati per inferire la rilevanza dei risultati, distinti dal feedback esplicito come rating manuali</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">click fraction</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Frazione di clic ricevuti da un risultato nel contesto di una query specifica, calcolata come rapporto tra clic pesati sul risultato e clic totali per quella query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">quality score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio di qualità di un risultato dal quale vengono fattorizzati gli effetti indipendenti del presentation bias usando gli output del modello predittivo</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8938463B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

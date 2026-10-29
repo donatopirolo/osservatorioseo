@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20240289395A1: Fattualità delle risposte generate da modelli linguistici — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per addestrare un modello linguistico di grandi dimensioni a generare risposte fattuali riducendo le allucinazioni. Il modello riceve sia il contesto del prompt sia passaggi estratti da risorse di supporto identificate tramite query di ricerca, e viene addestrato a de" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20240289395a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20240289395A1: Fattualità delle risposte generate da modelli linguistici — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per addestrare un modello linguistico di grandi dimensioni a generare risposte fattuali riducendo le allucinazioni. Il modello riceve sia il contesto del prompt sia passaggi estratti da risorse di supporto identificate tramite query di ricerca, e viene addestrato a de" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20240289395a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20240289395A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20240289395a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20240289395A1: Fattualit\u00e0 delle risposte generate da modelli linguistici",
+  "description": "Il brevetto descrive un sistema per addestrare un modello linguistico di grandi dimensioni a generare risposte fattuali riducendo le allucinazioni. Il modello riceve sia il contesto del prompt sia passaggi estratti da risorse di supporto identificate tramite query di ricerca, e viene addestrato a determinare quando e come utilizzare tali passaggi nella generazione della risposta.",
+  "articleBody": "Il brevetto descrive un sistema per addestrare un modello linguistico di grandi dimensioni a generare risposte fattuali riducendo le allucinazioni. Il modello riceve sia il contesto del prompt sia passaggi estratti da risorse di supporto identificate tramite query di ricerca, e viene addestrato a determinare quando e come utilizzare tali passaggi nella generazione della risposta.\n\nLa rivendicazione indipendente 1 descrive un sistema composto da un modello linguistico di grandi dimensioni con due porzioni distinte: una porzione di generazione query (query generating portion) e una porzione di generazione risposta (response generating portion). La porzione di generazione query riceve il contesto del prompt come input e produce una query generata. La porzione di generazione risposta riceve sia il contesto del prompt sia una pluralit\u00e0 di passaggi di contesto codificati (encoded context passages) come input e produce una risposta generata. Elemento centrale della rivendicazione \u00e8 che la porzione di generazione risposta \u00e8 addestrata a determinare se utilizzare o meno i passaggi di contesto codificati.\n\nIl metodo rivendicato prevede che il sistema riceva un primo contesto di prompt contenente un prompt dall\u0027utente, fornisca tale contesto alla porzione di generazione query per ottenere una query generata, invii la query a un motore di ricerca per ottenere un insieme di risorse di supporto (supporting resources) identificate come responsive alla query, generi una pluralit\u00e0 di passaggi di contesto codificati basati su tali risorse, fornisca questi passaggi insieme al contesto del prompt alla porzione di generazione risposta per generare la risposta, e infine presenti la risposta all\u0027utente.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che i passaggi di contesto codificati possono includere testo selezionato dal motore di ricerca dal contenuto di ciascuna risorsa di supporto. Le rivendicazioni 3-7 contemplano l\u0027espansione del contenuto rilevante: la rivendicazione 3 prevede l\u0027identificazione di almeno due porzioni rilevanti di contenuto per ciascuna risorsa e la loro concatenazione, mentre la rivendicazione 4 specifica che una porzione rilevante pu\u00f2 avere una lunghezza maggiore del testo selezionato dal motore di ricerca, con la rivendicazione 5 che limita tale lunghezza a meno di 2000 caratteri.\n\nLe rivendicazioni 8-13 riguardano meccanismi di attribuzione e corroborazione. La rivendicazione 8 prevede di determinare se il prompt si riferisce a un fatto e di fornire la query generata insieme alla risposta. Le rivendicazioni 9-11 descrivono l\u0027identificazione di span di testo nella risposta che includono fatti, l\u0027identificazione di risorse di supporto che corroborano tali fatti, l\u0027alterazione dell\u0027aspetto dello span e la fornitura di controlli (come favicon o hyperlink) che navigano verso le risorse di supporto. Le rivendicazioni 12-13 contemplano l\u0027aggiunta di hyperlink configurati per sottomettere lo span di testo come query al motore di ricerca.\n\nLe rivendicazioni indipendenti 14 e 20 descrivono metodi di raffinamento del modello. La rivendicazione 14 prevede l\u0027identificazione di conversazioni seed contenenti prompt e risposte generate con almeno un fatto, la generazione di esempi di addestramento mostrando prompt e risposta a pi\u00f9 utenti che forniscono valutazioni su una scala di rating, l\u0027aggregazione delle valutazioni per determinare un\u0027etichetta di addestramento basata sul conteggio di utenti che danno almeno un rating soglia e sul rating pi\u00f9 basso, e l\u0027uso di questi esempi per addestrare il modello. Le rivendicazioni 15-19 specificano dettagli sulla scala di rating, inclusa una scala a cinque punti (rivendicazione 18) con valori per completamente accurato, ragionevolmente accurato, questionabilmente accurato, inaccurato e non sicuro.\n\nLa rivendicazione 20 descrive un metodo alternativo di raffinamento che prevede di mostrare agli utenti il prompt, la risposta generata, la query generata e almeno due snippet di ricerca, con istruzioni di modificare la risposta quando almeno uno snippet contraddice la risposta o l\u0027utente conosce un fatto che la contraddice. Le rivendicazioni 21-23 aggiungono controlli per indicare se la risposta include affermazioni fattuali, per riscrivere la query, e istruzioni per saltare la modifica quando la risposta include fatti temporali.\n\nLa descrizione contempla diversi segnali e meccanismi per ridurre le allucinazioni nelle risposte generate. Il sistema genera una query per ogni prompt ricevuto, indipendentemente dal fatto che il prompt richieda grounding fattuale, per consentire al modello di apprendere quando fare affidamento sui risultati di ricerca (paragrafi relativi al query generator 240). La descrizione specifica che il query generator pu\u00f2 essere configurato per richiedere un numero predeterminato di risultati top-ranked o risultati con un punteggio minimo di rilevanza (ad esempio 80% o 90% di rilevanza).\n\nL\u0027evidence encoder 260 contemplato nella descrizione pu\u00f2 espandere il contenuto rilevante breve (short content) fornito dal motore di ricerca a contenuto di lunghezza media (medium length content), ad esempio fino a 1000 caratteri, prendendo contenuto che precede o segue il contenuto breve nella risorsa. La descrizione indica che contenuto espanso pi\u00f9 lungo di 2000 caratteri tende a includere boilerplate meno utile. L\u0027evidence encoder pu\u00f2 ottenere le prime due (o tre, o pi\u00f9) porzioni rilevanti di una risorsa di supporto e concatenarle. La descrizione suggerisce che utilizzare due porzioni di contenuto di lunghezza media pu\u00f2 fornire contesto migliore per il response generator rispetto a una porzione lunga, portando a una diminuzione delle allucinazioni.\n\nIl corroborator 280 contemplato nella descrizione pu\u00f2 determinare se uno span di testo nella risposta generata include un fatto e identificare una risorsa corroborante che supporta il fatto potenziale. La risorsa corroborante pu\u00f2 essere una delle risorse dai supporting resources 127 o una risorsa identificata sottomettendo lo span di testo come query al search system 120. La descrizione contempla vari meccanismi di presentazione: alterare l\u0027aspetto dello span (evidenziazione, sottolineatura, grassetto), trasformare lo span in hyperlink, inserire favicon o note a pi\u00e8 di pagina, appendere un elenco di risorse corroboranti con riassunti di risorse presentati in caroselli scorrevoli o griglie.\n\nPer il raffinamento del modello, la descrizione contempla il query refiner 320 che utilizza un\u0027interfaccia utente (query refinement user interface 310a) per ottenere indicatori di rilevanza, indicatori di assunzione (se la query assume un fatto non presente nel prompt) e indicatori di risposta (se la query risponde direttamente al bisogno informativo del prompt). La descrizione contempla anche l\u0027identificazione di prompt non fattuali e la creazione di esempi di addestramento negativi per insegnare al modello quando non fare affidamento sui context passages 245.\n\nIl factual accuracy refiner 330 contemplato utilizza una scala di rating a cinque punti e aggrega le valutazioni di n utenti (dove n pu\u00f2 essere un numero dispari, ad esempio cinque) per determinare un\u0027etichetta di addestramento. La descrizione specifica un algoritmo di aggregazione basato sul conteggio di utenti che danno almeno un rating soglia e sul rating pi\u00f9 basso tra le valutazioni. L\u0027answer re-write refiner 340 contemplato pu\u00f2 utilizzare conversazioni seed etichettate come not confident, inaccurate o questionably accurate dal factual accuracy refiner come input e richiedere agli utenti di riscrivere risposte contraddette da snippet di ricerca o dalla conoscenza dell\u0027utente.\n\nPer la SEO, questo brevetto potrebbe significare che le risposte generate in contesti conversazionali potrebbero privilegiare contenuti che forniscono passaggi di testo di lunghezza media (circa 1000 caratteri) chiari e ben strutturati, senza boilerplate eccessivo. Le risorse che forniscono multiple sezioni rilevanti per una query potrebbero essere favorite come fonti per le risposte generate. I meccanismi di attribuzione contemplati potrebbero rendere visibili le fonti utilizzate, potenzialmente generando traffico verso risorse che corroborano fatti nelle risposte. Tuttavia, la descrizione non afferma che questi meccanismi siano implementati in Google Search o in prodotti specifici, e il focus \u00e8 su sistemi conversazionali generativi piuttosto che su risultati di ricerca tradizionali.",
+  "wordCount": 1213,
+  "datePublished": "2026-10-29T09:59:24.047127+00:00",
+  "dateModified": "2026-10-29T09:59:24.047127+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20240289395a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Factuality of generated responses",
+    "identifier": "US20240289395A1",
+    "url": "https://patents.google.com/patent/US20240289395A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20240289395A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20240289395A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Fattualità delle risposte generate da modelli linguistici</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Factuality of generated responses</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per addestrare un modello linguistico di grandi dimensioni a generare risposte fattuali riducendo le allucinazioni. Il modello riceve sia il contesto del prompt sia passaggi estratti da risorse di supporto identificate tramite query di ricerca, e viene addestrato a determinare quando e come utilizzare tali passaggi nella generazione della risposta.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Risposte generative conversazionali, non necessariamente Search web pubblico</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">29 Agosto 2024</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2023-02-28</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">26</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 descrive un sistema composto da un modello linguistico di grandi dimensioni con due porzioni distinte: una porzione di generazione query (query generating portion) e una porzione di generazione risposta (response generating portion). La porzione di generazione query riceve il contesto del prompt come input e produce una query generata. La porzione di generazione risposta riceve sia il contesto del prompt sia una pluralità di passaggi di contesto codificati (encoded context passages) come input e produce una risposta generata. Elemento centrale della rivendicazione è che la porzione di generazione risposta è addestrata a determinare se utilizzare o meno i passaggi di contesto codificati.</p>
+      <p>Il metodo rivendicato prevede che il sistema riceva un primo contesto di prompt contenente un prompt dall&#39;utente, fornisca tale contesto alla porzione di generazione query per ottenere una query generata, invii la query a un motore di ricerca per ottenere un insieme di risorse di supporto (supporting resources) identificate come responsive alla query, generi una pluralità di passaggi di contesto codificati basati su tali risorse, fornisca questi passaggi insieme al contesto del prompt alla porzione di generazione risposta per generare la risposta, e infine presenti la risposta all&#39;utente.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che i passaggi di contesto codificati possono includere testo selezionato dal motore di ricerca dal contenuto di ciascuna risorsa di supporto. Le rivendicazioni 3-7 contemplano l&#39;espansione del contenuto rilevante: la rivendicazione 3 prevede l&#39;identificazione di almeno due porzioni rilevanti di contenuto per ciascuna risorsa e la loro concatenazione, mentre la rivendicazione 4 specifica che una porzione rilevante può avere una lunghezza maggiore del testo selezionato dal motore di ricerca, con la rivendicazione 5 che limita tale lunghezza a meno di 2000 caratteri.</p>
+      <p>Le rivendicazioni 8-13 riguardano meccanismi di attribuzione e corroborazione. La rivendicazione 8 prevede di determinare se il prompt si riferisce a un fatto e di fornire la query generata insieme alla risposta. Le rivendicazioni 9-11 descrivono l&#39;identificazione di span di testo nella risposta che includono fatti, l&#39;identificazione di risorse di supporto che corroborano tali fatti, l&#39;alterazione dell&#39;aspetto dello span e la fornitura di controlli (come favicon o hyperlink) che navigano verso le risorse di supporto. Le rivendicazioni 12-13 contemplano l&#39;aggiunta di hyperlink configurati per sottomettere lo span di testo come query al motore di ricerca.</p>
+      <p>Le rivendicazioni indipendenti 14 e 20 descrivono metodi di raffinamento del modello. La rivendicazione 14 prevede l&#39;identificazione di conversazioni seed contenenti prompt e risposte generate con almeno un fatto, la generazione di esempi di addestramento mostrando prompt e risposta a più utenti che forniscono valutazioni su una scala di rating, l&#39;aggregazione delle valutazioni per determinare un&#39;etichetta di addestramento basata sul conteggio di utenti che danno almeno un rating soglia e sul rating più basso, e l&#39;uso di questi esempi per addestrare il modello. Le rivendicazioni 15-19 specificano dettagli sulla scala di rating, inclusa una scala a cinque punti (rivendicazione 18) con valori per completamente accurato, ragionevolmente accurato, questionabilmente accurato, inaccurato e non sicuro.</p>
+      <p>La rivendicazione 20 descrive un metodo alternativo di raffinamento che prevede di mostrare agli utenti il prompt, la risposta generata, la query generata e almeno due snippet di ricerca, con istruzioni di modificare la risposta quando almeno uno snippet contraddice la risposta o l&#39;utente conosce un fatto che la contraddice. Le rivendicazioni 21-23 aggiungono controlli per indicare se la risposta include affermazioni fattuali, per riscrivere la query, e istruzioni per saltare la modifica quando la risposta include fatti temporali.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi segnali e meccanismi per ridurre le allucinazioni nelle risposte generate. Il sistema genera una query per ogni prompt ricevuto, indipendentemente dal fatto che il prompt richieda grounding fattuale, per consentire al modello di apprendere quando fare affidamento sui risultati di ricerca (paragrafi relativi al query generator 240). La descrizione specifica che il query generator può essere configurato per richiedere un numero predeterminato di risultati top-ranked o risultati con un punteggio minimo di rilevanza (ad esempio 80% o 90% di rilevanza).</p>
+      <p>L&#39;evidence encoder 260 contemplato nella descrizione può espandere il contenuto rilevante breve (short content) fornito dal motore di ricerca a contenuto di lunghezza media (medium length content), ad esempio fino a 1000 caratteri, prendendo contenuto che precede o segue il contenuto breve nella risorsa. La descrizione indica che contenuto espanso più lungo di 2000 caratteri tende a includere boilerplate meno utile. L&#39;evidence encoder può ottenere le prime due (o tre, o più) porzioni rilevanti di una risorsa di supporto e concatenarle. La descrizione suggerisce che utilizzare due porzioni di contenuto di lunghezza media può fornire contesto migliore per il response generator rispetto a una porzione lunga, portando a una diminuzione delle allucinazioni.</p>
+      <p>Il corroborator 280 contemplato nella descrizione può determinare se uno span di testo nella risposta generata include un fatto e identificare una risorsa corroborante che supporta il fatto potenziale. La risorsa corroborante può essere una delle risorse dai supporting resources 127 o una risorsa identificata sottomettendo lo span di testo come query al search system 120. La descrizione contempla vari meccanismi di presentazione: alterare l&#39;aspetto dello span (evidenziazione, sottolineatura, grassetto), trasformare lo span in hyperlink, inserire favicon o note a piè di pagina, appendere un elenco di risorse corroboranti con riassunti di risorse presentati in caroselli scorrevoli o griglie.</p>
+      <p>Per il raffinamento del modello, la descrizione contempla il query refiner 320 che utilizza un&#39;interfaccia utente (query refinement user interface 310a) per ottenere indicatori di rilevanza, indicatori di assunzione (se la query assume un fatto non presente nel prompt) e indicatori di risposta (se la query risponde direttamente al bisogno informativo del prompt). La descrizione contempla anche l&#39;identificazione di prompt non fattuali e la creazione di esempi di addestramento negativi per insegnare al modello quando non fare affidamento sui context passages 245.</p>
+      <p>Il factual accuracy refiner 330 contemplato utilizza una scala di rating a cinque punti e aggrega le valutazioni di n utenti (dove n può essere un numero dispari, ad esempio cinque) per determinare un&#39;etichetta di addestramento. La descrizione specifica un algoritmo di aggregazione basato sul conteggio di utenti che danno almeno un rating soglia e sul rating più basso tra le valutazioni. L&#39;answer re-write refiner 340 contemplato può utilizzare conversazioni seed etichettate come not confident, inaccurate o questionably accurate dal factual accuracy refiner come input e richiedere agli utenti di riscrivere risposte contraddette da snippet di ricerca o dalla conoscenza dell&#39;utente.</p>
+      <p>Per la SEO, questo brevetto potrebbe significare che le risposte generate in contesti conversazionali potrebbero privilegiare contenuti che forniscono passaggi di testo di lunghezza media (circa 1000 caratteri) chiari e ben strutturati, senza boilerplate eccessivo. Le risorse che forniscono multiple sezioni rilevanti per una query potrebbero essere favorite come fonti per le risposte generate. I meccanismi di attribuzione contemplati potrebbero rendere visibili le fonti utilizzate, potenzialmente generando traffico verso risorse che corroborano fatti nelle risposte. Tuttavia, la descrizione non afferma che questi meccanismi siano implementati in Google Search o in prodotti specifici, e il focus è su sistemi conversazionali generativi piuttosto che su risultati di ricerca tradizionali.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Si tratta di una domanda di brevetto (US20240289395A1) non ancora concessa, quindi non rappresenta una protezione definitiva e potrebbe essere modificata o respinta.</li>
+      <li>Il brevetto non dimostra che questi meccanismi siano implementati in Google Search o in altri prodotti Google specifici; la descrizione si riferisce genericamente a sistemi di conversazione generativa.</li>
+      <li>L&#39;ambito sembra focalizzato su risposte conversazionali generate da modelli linguistici, non necessariamente sulla ricerca web tradizionale o sul ranking organico dei risultati di ricerca.</li>
+      <li>Il brevetto non specifica quali segnali di qualità o autorevolezza delle risorse di supporto vengano utilizzati nella selezione, oltre alla rilevanza rispetto alla query generata.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Strutturare i contenuti con sezioni chiare e ben delimitate di lunghezza media (circa 1000 caratteri) che rispondono direttamente a domande fattuali specifiche, evitando boilerplate eccessivo.</li>
+      <li class="pl-2">Fornire multiple sezioni rilevanti all&#39;interno della stessa risorsa che affrontano aspetti diversi di un argomento, facilitando l&#39;estrazione di passaggi complementari.</li>
+      <li class="pl-2">Assicurarsi che le affermazioni fattuali nei contenuti siano verificabili e supportate da evidenze chiare, dato che sistemi di valutazione umana potrebbero essere utilizzati per addestrare modelli su accuratezza fattuale.</li>
+      <li class="pl-2">Mantenere contenuti aggiornati e accurati, poiché meccanismi di corroborazione potrebbero confrontare affermazioni attraverso multiple fonti per identificare contraddizioni.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">hallucination</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Contenuto creativo generato che include informazioni fattuali non corrette o non supportate da evidenze</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query generating portion</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Porzione del modello linguistico addestrata a generare query di ricerca dato un contesto di prompt</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">response generating portion</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Porzione del modello linguistico addestrata a generare risposte utilizzando sia il contesto del prompt sia passaggi di contesto estratti da risorse di supporto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">encoded context passages</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Passaggi di testo rilevante estratti da risorse di supporto, processati e forniti come input al generatore di risposte</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">supporting resources</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documenti identificati dal motore di ricerca come responsive alla query generata, utilizzati come fonti per i passaggi di contesto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">medium length content</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Contenuto rilevante espanso a circa 1000 caratteri, più lungo degli snippet brevi ma abbastanza conciso da evitare boilerplate eccessivo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">corroborating resource</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Risorsa che include contenuto che supporta o conferma un fatto identificato nella risposta generata</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">seed conversations</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Conversazioni di esempio utilizzate come punto di partenza per generare dati di addestramento per il raffinamento del modello</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20240289395A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

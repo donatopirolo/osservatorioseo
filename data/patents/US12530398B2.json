@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US12530398B2",
+    "title": "Visual citations for information provided in response to multimodal queries",
+    "abstract": "A result image is retrieved based on a similarity between a query image and the result image. A first unit of text is obtained, wherein the first unit of text comprises at least a portion of textual content of a source document that includes the result image. A second unit of text is determined responsive to a prompt associated with the query image, wherein the second unit of text comprises one or more of (a) at least some of the first unit of text, or (b) text derived from the first unit of text. The second unit of text and the result image are provided for display within an interface.",
+    "claims": [
+      "1 . A computer-implemented method, comprising: retrieving, by a computing system comprising one or more processor devices, a result image based on a similarity between a query image and the result image; obtaining, by the computing system, a first unit of text, wherein the first unit of text comprises at least a portion of textual content of a source document that includes the result image; receiving, by the computing system, a prompt associated with the query image; determining, by the computing system, based on processing the first unit of text and the prompt with a machine-learned language model, a second unit of text responsive to the first unit of text and the prompt associated with the query image, wherein the second unit of text comprises text derived from the first unit of text; generating, by the computing system, based on processing the second unit of text and the result image, attribution information comprising a link associated with the result image; and providing, by the computing system, the attribution information comprising the link associated with the result image, the second unit of text, and the result image for display within an interface.",
+      "2 . The method of claim 1 , wherein retrieving the result image comprises: processing, by the computing system, the query image with a machine-learned visual search model to obtain an intermediate representation of the query image; and retrieving, by the computing system, the result image based on a degree of similarity between the intermediate representation of the query image and an intermediate representation of the result image.",
+      "3 . The computer-implemented method of claim 2 , wherein processing the query image with the machine-learned visual search model comprises processing, by the computing system, the query image with a machine-learned embedding model to obtain a query image embedding for the query image; and wherein retrieving the result image comprises retrieving, by the computing system, the result image based on a distance between the query image embedding and an embedding of the result image within an embedding space.",
+      "4 . The computer-implemented method of claim 1 , wherein, prior to processing the query image, the method comprises obtaining, by the computing system, the query image from a user computing device.",
+      "5 . The computer-implemented method of claim 4 , wherein the interface comprises a user interface of an application executed by the user computing device.",
+      "6 . The computer-implemented method of claim 4 , wherein obtaining the query image comprises obtaining, by the computing system, the query image and the prompt associated with the query image from the user computing device.",
+      "7 . The computer-implemented method of claim 4 , wherein retrieving the result image further comprises: providing, by the computing system for display within the interface, the result image to the user computing device; and responsive to providing the result image, receiving, from the user computing device, the prompt associated with the query image.",
+      "8 . The computer-implemented method of claim 1 , wherein the source document comprises: one or more web pages of a web site; an article; a newspaper; a book; or a transcript.",
+      "9 . The computer-implemented method of claim 1 , wherein the attribution information that (a) identifies the source document or indicates a location from which the source document is accessible.",
+      "10 . The computer-implemented method of claim 9 , wherein the source document comprises a web page, and wherein the attribution information comprises an address for the web page.",
+      "11 . The computer-implemented method of claim 9 , wherein the source document comprises a magazine, and wherein the attribution information comprises a citation indicative of a location of the result image within the magazine.",
+      "12 . The computer-implemented method of claim 1 , wherein, prior to determining the second unit of text, the method comprises generating, by the computing system, the prompt associated with the query image based at least in part on the query image.",
+      "13 . The computer-implemented method of claim 12 , wherein generating the prompt associated with the query image comprises: processing, by the computing system, the query image with a machine-learned model to generate a semantic output descriptive of the image; and generating, by the computing system, the prompt based at least in part on the semantic output.",
+      "14 . The computer-implemented method of claim 1 , wherein the obtaining, by the computing system, a first unit of text, wherein the first unit of text comprises at least a portion of textual content of a source document that includes the result image comprises: selecting, by the computing system, based on use of heuristics on the source document, the first unit of text.",
+      "15 . The computer-implemented method of claim 1 , wherein the obtaining, by the computing system, a first unit of text, wherein the first unit of text comprises at least a portion of textual content of a source document that includes the result image comprises: determining, by the computing system, a location of the result image within the source document; and selecting, by the computing system, one or more portions of text that precede or follow the result image.",
+      "16 . The computer-implemented method of claim 1 , wherein the obtaining, by the computing system, a first unit of text, wherein the first unit of text comprises at least a portion of textual content of a source document that includes the result image comprises: obtaining, by the computing system, based on processing the source document with a machine-learned classification model, the first unit of text.",
+      "17 . A computing system, comprising: one or more processors; one or more non-transitory computer-readable media that collectively store a first set of instructions that, when executed by the one or more processors, cause the computing system to perform operations, the operations comprising: obtaining a query image and an associated prompt from a user computing device; processing the query image with a machine-learned embedding model to obtain a query image embedding; retrieving a result image based on a similarity between the query image embedding and an embedding of the result image; identifying a source document for the result image, wherein the source document comprises the result image and textual content associated with the result image; determining a first unit of text comprising at least a portion of the textual content associated with the result image from the source document; processing the first unit of text and the prompt with a machine-learned language model to obtain a language output comprising a second unit of text, wherein the second unit of text comprises text derived from the first unit of text; generating, based on processing the second unit of text and the result image, attribution information comprising a link associated with the result image; and providing the attribution information comprising the link associated with the result image, the second unit of text, and the result image for display within an interface of an application executed by the user computing device.",
+      "18 . The computing system of claim 17 , wherein the operations further comprise: receiving information indicative of a request for additional information from the user computing device; retrieving a second result image based on a similarity between the query image embedding and an embedding of the second result image; identifying a first source document and a second source document for the result image, wherein each of the first source document and the second source document comprise the result image and textual content associated with the result image, and wherein the textual content associated with the result image of the first source document is different than the textual content associated with the result image of the second source document; determining an additional first unit of text comprising at least a portion of the textual content associated with the result image from one or more of first source document or the second source document; processing the additional first unit of text and the prompt with the machine-learned language model to obtain a second language output comprising an additional second unit of text, wherein the additional second unit of text comprises one or more of: (a) at least some of the additional first unit of text; or (b) text derived from the additional first unit of text; and providing the additional second unit of text and the second result image for display within the interface of the application executed by the user computing device.",
+      "19 . The computing system of claim 17 , wherein providing the second unit of text and the result image further comprises providing attribution information that identifies the source document for display within the interface of the application executed by the user computing device.",
+      "20 . One or more non-transitory computer-readable media that collectively store a first set of instructions that, when executed by one or more processors of a computing system, cause the computing system to perform operations, the operations comprising: retrieving a plurality of result images based on a similarity between an intermediate representation of a query image and each of a plurality of intermediate representations respectively associated with the plurality of result images; identifying a plurality of source documents, wherein each of the plurality of source documents comprises a result image of the plurality of result images and textual content associated with the result image; respectively determining a plurality of first units of text for the plurality of result images, wherein each first unit of text comprises at least a portion of the textual content associated with the result image from one or more source documents that include the result image; processing a set of textual inputs with a machine-learned language model to obtain a language output comprising a second unit of text, wherein the set of textual inputs comprises: (a) two or more first units of text respectively associated with two or more result images of the plurality of result images; and (b) a prompt associated with the query image; generating, based on processing the second unit of text and the result image, attribution information comprising a link associated with the result image; and providing the attribution information comprising the link associated with the result image, the second unit of text, and the two or more result images to a user computing device for display within an interface of the user computing device."
+    ],
+    "independent_claims": [
+      "1 . A computer-implemented method, comprising: retrieving, by a computing system comprising one or more processor devices, a result image based on a similarity between a query image and the result image; obtaining, by the computing system, a first unit of text, wherein the first unit of text comprises at least a portion of textual content of a source document that includes the result image; receiving, by the computing system, a prompt associated with the query image; determining, by the computing system, based on processing the first unit of text and the prompt with a machine-learned language model, a second unit of text responsive to the first unit of text and the prompt associated with the query image, wherein the second unit of text comprises text derived from the first unit of text; generating, by the computing system, based on processing the second unit of text and the result image, attribution information comprising a link associated with the result image; and providing, by the computing system, the attribution information comprising the link associated with the result image, the second unit of text, and the result image for display within an interface.",
+      "17 . A computing system, comprising: one or more processors; one or more non-transitory computer-readable media that collectively store a first set of instructions that, when executed by the one or more processors, cause the computing system to perform operations, the operations comprising: obtaining a query image and an associated prompt from a user computing device; processing the query image with a machine-learned embedding model to obtain a query image embedding; retrieving a result image based on a similarity between the query image embedding and an embedding of the result image; identifying a source document for the result image, wherein the source document comprises the result image and textual content associated with the result image; determining a first unit of text comprising at least a portion of the textual content associated with the result image from the source document; processing the first unit of text and the prompt with a machine-learned language model to obtain a language output comprising a second unit of text, wherein the second unit of text comprises text derived from the first unit of text; generating, based on processing the second unit of text and the result image, attribution information comprising a link associated with the result image; and providing the attribution information comprising the link associated with the result image, the second unit of text, and the result image for display within an interface of an application executed by the user computing device.",
+      "20 . One or more non-transitory computer-readable media that collectively store a first set of instructions that, when executed by one or more processors of a computing system, cause the computing system to perform operations, the operations comprising: retrieving a plurality of result images based on a similarity between an intermediate representation of a query image and each of a plurality of intermediate representations respectively associated with the plurality of result images; identifying a plurality of source documents, wherein each of the plurality of source documents comprises a result image of the plurality of result images and textual content associated with the result image; respectively determining a plurality of first units of text for the plurality of result images, wherein each first unit of text comprises at least a portion of the textual content associated with the result image from one or more source documents that include the result image; processing a set of textual inputs with a machine-learned language model to obtain a language output comprising a second unit of text, wherein the set of textual inputs comprises: (a) two or more first units of text respectively associated with two or more result images of the plurality of result images; and (b) a prompt associated with the query image; generating, based on processing the second unit of text and the result image, attribution information comprising a link associated with the result image; and providing the attribution information comprising the link associated with the result image, the second unit of text, and the two or more result images to a user computing device for display within an interface of the user computing device."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Harshit Kharbanda",
+      "Jessica Lee",
+      "Christopher James Kelley",
+      "Belinda Luna Zeng",
+      "Louis Wang"
+    ],
+    "priority_date": "2023-05-09",
+    "filing_date": "2023-05-09",
+    "publication_date": "2026-01-20",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/50",
+      "G06F16/53",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/332",
+      "G06F16/3329",
+      "G06F16/33295",
+      "G06F16/532",
+      "G06F16/538",
+      "G06F16/58",
+      "G06F16/583",
+      "G06F16/5846",
+      "G06F16/5866",
+      "G06F18/00",
+      "G06F18/20",
+      "G06F18/22",
+      "G06N20/00"
+    ],
+    "family": [
+      {
+        "number": "US20260111481A1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Visual Citations for Information Provided in Response to Multimodal Queries"
+      },
+      {
+        "number": "JP7900438B2",
+        "relation": null,
+        "direction": "priority",
+        "title": "Visual quotation for information provided in response to multimodal queries"
+      },
+      {
+        "number": "CN118551063A",
+        "relation": null,
+        "direction": "priority",
+        "title": "Visual reference to information provided in response to multimodal queries"
+      }
+    ],
+    "cited_by_count": 11
+  },
+  "analysis": {
+    "title_it": "Citazioni visive per risposte a query multimodali",
+    "summary": "Il brevetto affronta il problema di fornire risposte a query multimodali (immagine + prompt testuale) con la possibilità di verificarne l'accuratezza. Il sistema recupera immagini visivamente simili alla query image, estrae testo dai documenti che le contengono, genera una risposta al prompt elaborando il testo estratto con un modello linguistico, e presenta la risposta insieme alle immagini come \"citazioni visive\" che permettono all'utente di valutare rapidamente la pertinenza delle fonti.",
+    "theme": "grounding_citazioni",
+    "seo_relevance": 4,
+    "scope": "Query multimodali (immagine + testo), risposte generative",
+    "what_it_claims": "La rivendicazione indipendente 1 protegge un metodo che recupera una result image in base alla similarità con una query image, ottiene una prima unità di testo da un documento sorgente che include la result image, riceve un prompt associato alla query image, determina una seconda unità di testo elaborando la prima unità di testo e il prompt con un modello linguistico machine-learned (la seconda unità può includere testo derivato dalla prima), genera attribution information che include un link associato alla result image elaborando la seconda unità di testo e la result image, e fornisce per la visualizzazione l'attribution information, la seconda unità di testo e la result image.\n\nLa rivendicazione 2 specifica che il recupero avviene elaborando la query image con un modello di visual search per ottenere una rappresentazione intermedia e recuperando la result image in base alla similarità tra le rappresentazioni intermedie. La rivendicazione 3 dettaglia che il modello può essere un embedding model e il recupero basato sulla distanza tra embeddings in uno spazio di embedding. Le rivendicazioni 4-7 coprono l'ottenimento della query image da un dispositivo utente e la ricezione del prompt prima o dopo la fornitura della result image. La rivendicazione 8 specifica che il documento sorgente può essere pagine web, articoli, giornali, libri o trascrizioni. Le rivendicazioni 9-11 coprono l'attribution information che identifica il documento o indica dove accedervi (URL per pagine web, citazione per riviste). Le rivendicazioni 12-13 coprono la generazione automatica del prompt elaborando la query image con un modello per ottenere un output semantico. Le rivendicazioni 14-16 coprono tecniche per selezionare porzioni di testo dal documento: uso di euristiche, selezione di testo che precede o segue l'immagine nel documento, o uso di un modello di classificazione.\n\nLa rivendicazione indipendente 17 copre un sistema che ottiene query image e prompt da un dispositivo utente, elabora la query image con un embedding model, recupera result image, identifica il documento sorgente, determina la prima unità di testo, elabora prima unità e prompt con un modello linguistico per ottenere la seconda unità, genera attribution information elaborando seconda unità e result image, e fornisce tutto per la visualizzazione. La rivendicazione 18 copre il raffinamento iterativo: ricezione di richiesta di informazioni aggiuntive, recupero di seconda result image, identificazione di più documenti sorgente per la stessa immagine con contenuto testuale diverso, elaborazione di unità di testo aggiuntive. La rivendicazione 20 copre il caso di più result images con elaborazione di un set di input testuali che include unità di testo da due o più result images e il prompt, generando attribution information elaborando la seconda unità di testo e la result image, e fornendo attribution information, seconda unità e le immagini.",
+    "seo_reading": "La descrizione contempla un flusso in cui un visual search computing system riceve una multimodal query (query image 206 e prompt 208) da un dispositivo utente. Se il prompt non è fornito, il sistema può generarlo elaborando la query image con un modello semantico (blocco 210, claim 13). L'image evaluation module 210 elabora la query image con un visual search model 214 (tipicamente un embedding model) per generare una rappresentazione intermedia e seleziona result images 212 da un image search space 215 (embedding space) in base alla distanza (blocco 210, FIG. 2).\n\nIl document content selection module 218 recupera documenti 220 che includono le result images tramite document indexing information 216. La descrizione contempla diverse tecniche per estrarre la prima unità di testo 224 dal documento: selezione euristica di testo che precede o segue l'immagine (claim 15, esempio del sito per speed boat enthusiast), selezione di tutto il testo se il documento è breve, o uso di un modello di classificazione (claim 16). Il documento può essere un sito web, articolo accademico, libro, trascrizione (claim 8, blocco 220).\n\nIl text determination module 226 elabora la prima unità di testo 224 e il prompt 208 con un machine-learned language model 230 (descritto come large language model addestrato su ampio corpus, potenzialmente ottimizzato per task specifici, blocco 226) per generare la seconda unità di testo 228. La descrizione specifica che questa può essere una summarization (embodiment 32), può includere parte del testo originale o testo derivato (claim 1), e può includere predictive information che identifica la porzione più rilevante per il prompt (embodiment 30, emphasis element 506 in FIG. 5A).\n\nL'interface data generation module 232 genera interface data 234 che include la seconda unità di testo, le result images e attribution information 236 (titolo, autore, URL, citazione bibliografica a seconda del tipo di documento, claims 9-11). La descrizione contempla diverse modalità di presentazione: primary interface element 404 con risposta diretta e attribution element 405 (FIG. 4), o interface element 504 con contesto e emphasis element 506 che evidenzia la porzione rilevante (FIG. 5A). La scelta del formato potrebbe dipendere dalla certezza dell'informazione o dalla comprensione semantica del prompt (\"good plane\" è soggettivo, quindi viene fornito contesto, blocco tra FIG. 5A e 6A).\n\nLa descrizione contempla raffinamento iterativo basato su feedback utente (FIGS. 6A-7B): l'utente può selezionare un attribution element 704B per indicare che una result image 612B non è pertinente (input 706, FIG. 7A). Il sistema riceve result image selection information 628, rimuove le unità di testo associate al documento di quella immagine dal set di input, rielabora il set ridotto con il language model per generare una seconda unità di testo raffinata 630 (FIG. 6B, claims 28-29). La descrizione contempla anche la rimozione dell'attribution information associata (claim 29).\n\nPer la SEO, questo potrebbe significare che in contesti di ricerca multimodale con risposte generate, la pertinenza visiva tra immagini presenti in un documento e l'oggetto della query potrebbe condizionare l'estrazione e l'utilizzo del testo del documento per generare risposte. Un documento con immagini visivamente coerenti con la query image avrebbe maggiori probabilità di vedere il proprio testo utilizzato. L'attribution tramite link e thumbnail potrebbe rappresentare una forma di visibilità, anche se subordinata alla risposta generata. Il meccanismo di feedback negativo contemplato suggerirebbe che segnali di incoerenza visiva potrebbero ridurre il peso di un documento nelle iterazioni successive. Tuttavia, la descrizione non specifica criteri di ranking tra documenti né segnali di qualità del testo oltre alla prossimità all'immagine nel documento.",
+    "limits": [
+      "Il brevetto non dimostra che questo sistema sia attivo in Google Search o in altri prodotti. È una domanda concessa, ma l'implementazione resta non verificabile.",
+      "Non specifica criteri di ranking tra documenti sorgente quando più documenti contengono la stessa result image, né pesi assegnati a diversi segnali (qualità del testo, autorevolezza del documento, freschezza).",
+      "La selezione del testo dal documento è descritta con tecniche euristiche o modelli di classificazione non dettagliati: non è chiaro quali porzioni di un documento lungo vengano effettivamente utilizzate né con quale priorità.",
+      "Il brevetto copre query multimodali (immagine + testo), non la ricerca testuale tradizionale: l'applicabilità a scenari SEO classici è indiretta e condizionata all'adozione di interfacce multimodali."
+    ],
+    "implications": [
+      "Assicurarsi che le immagini presenti in un documento siano coerenti e pertinenti al contenuto testuale circostante: la prossimità testo-immagine è contemplata come criterio di selezione.",
+      "Mantenere una struttura documentale chiara in cui il testo rilevante sia posizionato vicino alle immagini correlate, facilitando l'estrazione automatica di contesto pertinente.",
+      "Fornire metadati accurati e attribution information chiara (titoli, autori, URL stabili) per documenti e immagini, poiché queste informazioni sono contemplate per l'identificazione delle fonti.",
+      "Considerare che in scenari di ricerca multimodale, la qualità e la pertinenza visiva delle immagini potrebbero influenzare indirettamente la visibilità del contenuto testuale associato, anche senza modifiche al ranking tradizionale."
+    ],
+    "key_terms": [
+      {
+        "term": "query image",
+        "explanation": "Immagine fornita dall'utente come parte di una query multimodale, utilizzata per recuperare immagini visivamente simili"
+      },
+      {
+        "term": "result image",
+        "explanation": "Immagine recuperata in base alla similarità visiva con la query image, inclusa in un documento sorgente da cui estrarre testo"
+      },
+      {
+        "term": "prompt",
+        "explanation": "Testo fornito dall'utente (o generato automaticamente) che accompagna la query image e guida la generazione della risposta"
+      },
+      {
+        "term": "first unit of text",
+        "explanation": "Porzione di contenuto testuale estratta dal documento sorgente che include la result image, selezionata con euristiche o modelli"
+      },
+      {
+        "term": "second unit of text",
+        "explanation": "Testo generato elaborando la prima unità di testo e il prompt con un modello linguistico, può includere testo derivato o una summarization"
+      },
+      {
+        "term": "attribution information",
+        "explanation": "Informazioni che identificano il documento sorgente (titolo, autore, URL, citazione) e permettono all'utente di accedervi o verificarlo"
+      },
+      {
+        "term": "source document",
+        "explanation": "Documento (pagina web, articolo, libro, trascrizione) che include la result image e il testo associato da cui estrarre informazioni"
+      },
+      {
+        "term": "embedding space",
+        "explanation": "Spazio vettoriale in cui le immagini sono rappresentate come embeddings, utilizzato per calcolare la similarità tramite distanza"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T09:58:55.380968Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.14253468000000002
+}

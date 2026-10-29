@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US10783156B1",
+    "title": "Scoring candidate answer passages",
+    "abstract": "Methods, systems, and apparatus, including computer programs encoded on a computer storage medium, for scoring candidate answer passages. In one aspect, a method includes receiving a query determined to be a question query that seeks an answer response and data identifying resources determined to be responsive to the query; for a subset of the resources: receiving candidate answer passages; determining, for each candidate answer passage, a query term match score that is a measure of similarity of the query terms to the candidate answer passage; determining, for each candidate answer passage, an answer term match score that is a measure of similarity of answer terms to the candidate answer passage; determining, for each candidate answer passage, a query dependent score based on the query term match score and the answer term match score; and generating an answer score that is a based on the query dependent score.",
+    "claims": [
+      "1. A method performed by data processing apparatus, the method comprising: receiving a query determined to be a question query that seeks an answer response and data identifying resources determined to be responsive to the query and ordered according to a ranking, the query having query terms; for each resource in a top-ranked subset of the resources: receiving candidate answer passages, each candidate answer passage selected from passage units from content of the resource and being eligible to be provided as an answer passage with search results that identify the resources determined to be responsive to the query and being separate and distinct from the search results; determining, for each candidate answer passage, a query dependent score that is proportional to a number of instances of matches of query terms to terms of the candidate answer passage; determining, for each candidate answer passage, a query independent score for the candidate answer passage, wherein the query independent score is independent of the query and query dependent score and based on features of the candidate answer passage; and generating an answer score that is a measure of answer quality for the answer response for the candidate answer passage based on the query dependent score and the query independent score.",
+      "2. The method of claim 1 , wherein determining the query dependent score comprises: generating a list of terms from terms included in the top-ranked subset of resources; and for each term in the list of terms, generating a term weight for the term.",
+      "3. The method of claim 2 , wherein, for each term in the list of terms, generating a term weight for the term comprises: determining a number of resources in the top-ranked subset of resource in which the term occurs; and multiplying the number of resources in the top-ranked subset of resource in which the term occurs by an inverse document frequency value for the term.",
+      "4. The method of claim 2 , wherein determining a query dependent score comprises: determining a number of times the term occurs in the candidate answer passage; and multiplying the number of resources the term occurs in the candidate answer passage by the term weight for the term.",
+      "5. The method of claim 1 , wherein determining the query dependent score comprises: determining an entity type for an answer response to the question query; identifying entities described in the candidate answer passage; and reducing the answer term match score if none of the identified entities match an entity of the entity type determined for the answer response.",
+      "6. The method of claim 1 , wherein determining the query independent score for the candidate answer passage comprises determining a score for the candidate answer passage based on a ranking score of the resource from which the candidate answer passage was created.",
+      "7. The method of claim 1 , wherein determining the query independent score for the candidate answer passage comprises determining a score for the candidate answer passage based on a reputation of the resource from which the candidate answer passage was created.",
+      "8. The method of claim 1 , wherein determining the query independent score for the candidate answer passage comprises determining a score for the candidate answer passage based on a site quality score of a site that hosts the resource from which the candidate answer passage was created.",
+      "9. The method of claim 1 , wherein determining the query independent score for the candidate answer passage comprises: determining in the candidate answer passage includes passage units from two different sections of the resource from which it was created; and reducing the query independent score if the candidate answer passage includes passage units from two different sections of the resource.",
+      "10. The method of claim 1 , wherein determining the query independent score for the candidate answer passage comprises: determining in the candidate answer passage begins with a discourse boundary term; and reducing the query independent score if the candidate answer passage beings with a discourse boundary term.",
+      "11. A system, comprising: a data processing apparatus; and a memory storage system in data communication with the data processing apparatus and storing instructions executable by the data processing apparatus and that upon such execution cause the data processing apparatus to perform operations comprising: receiving a query determined to be a question query that seeks an answer response and data identifying resources determined to be responsive to the query and ordered according to a ranking, the query having query terms; for each resource in a top-ranked subset of the resources: receiving candidate answer passages, each candidate answer passage selected from passage units from content of the resource and being eligible to be provided as an answer passage with search results that identify the resources determined to be responsive to the query and being separate and distinct from the search results; determining, for each candidate answer passage, a query dependent score that is proportional to a number of instances of matches of query terms to terms of the candidate answer passage; determining, for each candidate answer passage, a query independent score for the candidate answer passage, wherein the query independent score is independent of the query and query dependent score and based on features of the candidate answer passage; and generating an answer score that is a measure of answer quality for the answer response for the candidate answer passage based on the query dependent score and the query independent score.",
+      "12. The system of claim 11 , wherein determining the query dependent score comprises: generating a list of terms from terms included in the top-ranked subset of resources; and for each term in the list of terms, generating a term weight for the term.",
+      "13. The system of claim 12 , wherein, for each term in the list of terms, generating a term weight for the term comprises: determining a number of resources in the top-ranked subset of resource in which the term occurs; and multiplying the number of resources in the top-ranked subset of resource in which the term occurs by an inverse document frequency value for the term.",
+      "14. The system of claim 12 , wherein determining a query dependent score comprises: determining a number of times the term occurs in the candidate answer passage; and multiplying the number of resources the term occurs in the candidate answer passage by the term weight for the term.",
+      "15. The system of claim 10 , wherein determining the query dependent score comprises: determining an entity type for an answer response to the question query; identifying entities described in the candidate answer passage; and reducing the answer term match score if none of the identified entities match an entity of the entity type determined for the answer response.",
+      "16. The system of claim 10 , wherein determining the query independent score for the candidate answer passage comprises determining a score for the candidate answer passage based on a ranking score of the resource from which the candidate answer passage was created.",
+      "17. The system of claim 10 , wherein determining the query independent score for the candidate answer passage comprises determining a score for the candidate answer passage based on a reputation of the resource from which the candidate answer passage was created.",
+      "18. The system of claim 10 , wherein determining the query independent score for the candidate answer passage comprises determining a score for the candidate answer passage based on a site quality score of a site that hosts the resource from which the candidate answer passage was created.",
+      "19. The system of claim 10 , wherein determining the query independent score for the candidate answer passage comprises: determining in the candidate answer passage includes passage units from two different sections of the resource from which it was created; and reducing the query independent score if the candidate answer passage includes passage units from two different sections of the resource.",
+      "20. A memory storage system storing instructions executable by a data processing apparatus and that upon such execution cause the data processing apparatus to perform operations comprising: receiving a query determined to be a question query that seeks an answer response and data identifying resources determined to be responsive to the query and ordered according to a ranking, the query having query terms; for each resource in a top-ranked subset of the resources: receiving candidate answer passages, each candidate answer passage selected from passage units from content of the resource and being eligible to be provided as an answer passage with search results that identify the resources determined to be responsive to the query and being separate and distinct from the search results; determining, for each candidate answer passage, a query dependent score that is proportional to a number of instances of matches of query terms to terms of the candidate answer passage; determining, for each candidate answer passage, a query independent score for the candidate answer passage, wherein the query independent score is independent of the query and query dependent score and based on features of the candidate answer passage; and generating an answer score that is a measure of answer quality for the answer response for the candidate answer passage based on the query dependent score and the query independent score."
+    ],
+    "independent_claims": [
+      "1. A method performed by data processing apparatus, the method comprising: receiving a query determined to be a question query that seeks an answer response and data identifying resources determined to be responsive to the query and ordered according to a ranking, the query having query terms; for each resource in a top-ranked subset of the resources: receiving candidate answer passages, each candidate answer passage selected from passage units from content of the resource and being eligible to be provided as an answer passage with search results that identify the resources determined to be responsive to the query and being separate and distinct from the search results; determining, for each candidate answer passage, a query dependent score that is proportional to a number of instances of matches of query terms to terms of the candidate answer passage; determining, for each candidate answer passage, a query independent score for the candidate answer passage, wherein the query independent score is independent of the query and query dependent score and based on features of the candidate answer passage; and generating an answer score that is a measure of answer quality for the answer response for the candidate answer passage based on the query dependent score and the query independent score.",
+      "11. A system, comprising: a data processing apparatus; and a memory storage system in data communication with the data processing apparatus and storing instructions executable by the data processing apparatus and that upon such execution cause the data processing apparatus to perform operations comprising: receiving a query determined to be a question query that seeks an answer response and data identifying resources determined to be responsive to the query and ordered according to a ranking, the query having query terms; for each resource in a top-ranked subset of the resources: receiving candidate answer passages, each candidate answer passage selected from passage units from content of the resource and being eligible to be provided as an answer passage with search results that identify the resources determined to be responsive to the query and being separate and distinct from the search results; determining, for each candidate answer passage, a query dependent score that is proportional to a number of instances of matches of query terms to terms of the candidate answer passage; determining, for each candidate answer passage, a query independent score for the candidate answer passage, wherein the query independent score is independent of the query and query dependent score and based on features of the candidate answer passage; and generating an answer score that is a measure of answer quality for the answer response for the candidate answer passage based on the query dependent score and the query independent score.",
+      "20. A memory storage system storing instructions executable by a data processing apparatus and that upon such execution cause the data processing apparatus to perform operations comprising: receiving a query determined to be a question query that seeks an answer response and data identifying resources determined to be responsive to the query and ordered according to a ranking, the query having query terms; for each resource in a top-ranked subset of the resources: receiving candidate answer passages, each candidate answer passage selected from passage units from content of the resource and being eligible to be provided as an answer passage with search results that identify the resources determined to be responsive to the query and being separate and distinct from the search results; determining, for each candidate answer passage, a query dependent score that is proportional to a number of instances of matches of query terms to terms of the candidate answer passage; determining, for each candidate answer passage, a query independent score for the candidate answer passage, wherein the query independent score is independent of the query and query dependent score and based on features of the candidate answer passage; and generating an answer score that is a measure of answer quality for the answer response for the candidate answer passage based on the query dependent score and the query independent score."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Steven D. Baker",
+      "Srinivasan Venkatachary",
+      "Robert Andrew Brennan",
+      "Per Bjornsson",
+      "Yi Liu",
+      "Hadar Shemtov",
+      "Massimiliano Ciaramita",
+      "Ioannis Tsochantaridis"
+    ],
+    "priority_date": "2014-08-13",
+    "filing_date": "2018-02-22",
+    "publication_date": "2020-09-22",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9538",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2452",
+      "G06F16/24522",
+      "G06F16/2457",
+      "G06F16/24578",
+      "G06F16/9535"
+    ],
+    "family": [
+      {
+        "number": "US9940367B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Scoring candidate answer passages"
+      }
+    ],
+    "cited_by_count": 20
+  },
+  "analysis": {
+    "title_it": "Scoring di passaggi candidati come risposte",
+    "summary": "Il brevetto descrive un sistema per selezionare e valutare passaggi di testo estratti da risorse web da fornire come risposte dirette a query identificate come domande. Il metodo combina punteggi dipendenti dalla query (basati su corrispondenza di termini della query e termini di risposta attesi) e punteggi indipendenti dalla query (basati su caratteristiche della risorsa e del passaggio stesso).",
+    "theme": "passaggi_snippet",
+    "seo_relevance": 4,
+    "scope": "Google Search, risposte dirette a query-domanda",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che riceve una query identificata come question query e risorse responsive ordinate per ranking. Per ciascuna risorsa in un sottoinsieme top-ranked, il sistema riceve candidate answer passages selezionati da passage units del contenuto della risorsa, eligibili per essere forniti come answer passage con i risultati di ricerca ma separati e distinti da essi. Per ogni candidate answer passage, determina un query dependent score proporzionale al numero di istanze di corrispondenze tra query terms e termini del passaggio candidato. Determina inoltre un query independent score basato su caratteristiche del passaggio candidato, indipendente dalla query e dal query dependent score. Genera infine un answer score che misura la qualità della risposta basandosi su entrambi i punteggi.\n\nLe rivendicazioni dipendenti 2-4 specificano che il query dependent score può essere calcolato generando una lista di termini dalle risorse top-ranked, assegnando a ciascun termine un peso basato sul numero di risorse in cui compare moltiplicato per il valore inverse document frequency del termine, e moltiplicando il numero di occorrenze del termine nel passaggio candidato per il suo peso. La rivendicazione 5 contempla la riduzione dell'answer term match score se le entità identificate nel passaggio non corrispondono al tipo di entità atteso per la risposta.\n\nLe rivendicazioni 6-8 specificano che il query independent score può basarsi sul ranking score della risorsa da cui il passaggio è stato estratto (rivendicazione 6), sulla reputation della risorsa (rivendicazione 7), o su un site quality score del sito che ospita la risorsa (rivendicazione 8). La rivendicazione 9 prevede la riduzione del query independent score se il passaggio include passage units da due sezioni diverse della risorsa. La rivendicazione 10 prevede la riduzione del punteggio se il passaggio inizia con un discourse boundary term. Le rivendicazioni 11-20 replicano la struttura per system claims e computer-readable medium claims.",
+    "seo_reading": "La descrizione contempla un sistema articolato per generare e valutare answer passages. Il documento distingue tra structured content (tabelle, liste) e unstructured content (testo in prosa), applicando criteri di selezione differenziati. Per l'unstructured content, la descrizione menziona criteri come sentence score (completezza della frase), minimum number of words, visibility detection, boilerplate detection, alignment detection, subordinate text detection (solo testo subordinato a un particolare heading può essere incluso), image caption detection, e l'esclusione di anchor text. Per lo structured content, contempla incremental list generation (selezione iterativa da ciascun attributo relazionale), inclusion of all steps per liste di passaggi, superlative ordering per query che richiedono superlativi, informational question query detection per set informativi completi, entity attribute query detection, e key value pair detection.\n\nPer il query dependent scoring, la descrizione spiega che i term weights sono calcolati sulle top N risorse (non sull'intero corpus), moltiplicando il numero di risorse in cui il termine compare per il suo IDF. Questo approccio potrebbe favorire termini specifici del topic della query rispetto a termini generici. La descrizione contempla anche entity type matching: se il passaggio non contiene entità del tipo atteso per la risposta, il punteggio viene ridotto.\n\nPer il query independent scoring, la descrizione elenca passage unit position (posizione più alta nella risorsa = punteggio maggiore), language model score basato su tri-grammi confrontati con historical answer passages serviti in passato, section boundary score (penalizzazione se il testo attraversa confini di paragrafo o sezione), interrogative score (penalizzazione per passaggi contenenti domande), discourse boundary term position score (penalizzazione se inizia con termini come \"however\", \"conversely\"), e resource scores (ranking, reputation, site quality).\n\nPer la SEO, questo potrebbe significare che per query-domanda: contenuti strutturati ben formattati (liste ordinate, tabelle con relazioni chiare) potrebbero essere favoriti; testo posizionato in alto nella pagina avrebbe maggiori probabilità di selezione; passaggi che iniziano con frasi dichiarative complete sarebbero preferiti a quelli che iniziano con congiunzioni avversative o contengono domande; la presenza di entità del tipo corretto potrebbe essere determinante; segnali di qualità del sito e della pagina (ranking, reputation, site quality) influenzerebbero la selezione. Tuttavia, il brevetto descrive un sistema del 2014-2015, precedente alle AI Overviews attuali, e non specifica se o come questi criteri siano applicati oggi.",
+    "limits": [
+      "Il brevetto è del 2014 (priorità) e concesso nel 2020, quindi precede di anni le AI Overviews e le risposte generative attuali di Google. Non dimostra che questi criteri siano applicati oggi o in che misura.",
+      "La descrizione elenca molti criteri come opzioni (\"in some implementations\"), senza specificare quali siano effettivamente implementati o con quale peso relativo.",
+      "Il brevetto non specifica soglie numeriche, pesi relativi tra i diversi segnali, o esempi quantitativi di come i punteggi vengano combinati.",
+      "Non dimostra che i featured snippets attuali utilizzino questo sistema: potrebbero essere basati su algoritmi completamente diversi o su modelli di machine learning non descritti qui."
+    ],
+    "implications": [
+      "Strutturare contenuti informativi con heading chiari e testo subordinato ben organizzato facilita l'estrazione di passaggi coerenti, indipendentemente dall'algoritmo specifico.",
+      "Per contenuti che rispondono a domande comuni, posizionare le risposte più rilevanti in alto nella pagina e in frasi dichiarative complete migliora la leggibilità per utenti e sistemi di estrazione.",
+      "Liste e tabelle ben formate, con relazioni chiare tra attributi e valori completi, sono più facilmente processabili per l'estrazione di informazioni strutturate.",
+      "Evitare di iniziare paragrafi informativi con congiunzioni avversative o domande retoriche rende il contenuto più direttamente utilizzabile come risposta autonoma."
+    ],
+    "key_terms": [
+      {
+        "term": "candidate answer passage",
+        "explanation": "Passaggio di testo estratto da una risorsa, composto da passage units, eligibile per essere fornito come risposta diretta separata dai risultati di ricerca"
+      },
+      {
+        "term": "passage unit",
+        "explanation": "Unità minima di contenuto (frase completa, voce di lista, valore di cella in tabella) eligibile per inclusione in un candidate answer passage"
+      },
+      {
+        "term": "query dependent score",
+        "explanation": "Punteggio basato sulla corrispondenza tra termini della query e termini attesi nella risposta con il passaggio candidato"
+      },
+      {
+        "term": "query independent score",
+        "explanation": "Punteggio basato su caratteristiche del passaggio e della risorsa indipendenti dalla query specifica (posizione, qualità, struttura linguistica)"
+      },
+      {
+        "term": "structured content",
+        "explanation": "Contenuto visualizzato per enfatizzare relazioni tra attributi di dati, come tabelle e liste, distinto dal testo in prosa"
+      },
+      {
+        "term": "discourse boundary term",
+        "explanation": "Termine che introduce un'idea contraria o modificativa rispetto a quanto appena affermato (es. however, conversely, on the other hand)"
+      },
+      {
+        "term": "subordinate text",
+        "explanation": "Testo che nel document object model discende direttamente da un heading specifico, senza heading intermedi"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T09:56:59.410797Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07575372
+}

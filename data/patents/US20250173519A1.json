@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20250173519A1",
+    "title": "Query Intent Understanding and Search Result Generation",
+    "abstract": "Systems and methods for performing a search based on chat data can include determining search results for user queries by generating multi-turn aware queries with a generative language model to include additional details associated with a determined intent of the queries. The generative language model may receive a user query and multi-turn chat data indicative of a chat session of the user and determine an intent of the user query based on the user query and the multi-turn chat data. The generative language model may generate a multi-turn aware query by rewriting the user query to include details associated with the determined intent of the user query, and the multi-turn aware query may be utilized for search result determination. A generative language model may be leveraged to tune an embedding model that may be used for query intent determination.",
+    "claims": [
+      "1 . A computer-implemented method for generating a contextually aware query, the method comprising: obtaining, by a computing system comprising one or more computing devices, an input query; obtaining, by the computing system, multi-turn query data, wherein the multi-turn query data is descriptive of previous inputs obtained before the input query, wherein the previous inputs and the input query are associated with a particular multi-turn session; processing, by the computing system, the input query and the multi-turn query data to generate the contextually aware query, wherein the contextually aware query is descriptive of the input query and additional details, wherein the additional details are descriptive of a context of the input query associated with the multi-turn query data; processing, by the computing system, the contextually aware query with a machine-learned embedding model to generate a query embedding; determining, by the computing system, a query embedding cluster associated with the query embedding, wherein the query embedding cluster is associated with a plurality of other embeddings associated with a plurality of other queries; and determining, by the computing system, a plurality of search results based on the query embedding cluster.",
+      "2 . The computer-implemented method of claim 1 , wherein the machine-learned embedding model was trained to generate embeddings that map embeddings associated with similar query intents to a shared embedding cluster.",
+      "3 . The computer-implemented method of claim 1 , the method further comprising: determining, by the computing system and based on the query embedding cluster, one or more attributes associated with the query embedding, wherein the one or more attributes are descriptive of a particular topic associated with at least one of the input query or with the multi-turn query data.",
+      "4 . The computer-implemented method of claim 1 , wherein the query embedding is associated with a query-intent pair comprising the contextually aware query and a query intent, wherein the query intent is associated with an intent of the input query and the contextually aware query.",
+      "5 . The computer-implemented method of claim 4 , wherein determining a query embedding cluster associated with the query embedding comprises: mapping, by the computing system, the query-intent pair to an embedding space; and determining, by the computing system and based on at least one of the query embedding or an intent embedding, the query-intent pair is associated with a plurality of other embeddings associated with a node within a query graph.",
+      "6 . The computer-implemented method of claim 1 , wherein the query embedding cluster is associated with a learned intent graph, wherein the learned intent graph comprises: a plurality of nodes, wherein each node represents a cluster of queries with related query intents; and a plurality of edges, wherein the plurality of edges connects nodes with related node intents.",
+      "7 . The computer-implemented method of claim 1 , further comprising: determining, by the computing system, a plurality of media content items based on the query embedding cluster.",
+      "8 . The computer-implemented method of claim 1 , wherein the input query comprises multimodal data, wherein the multimodal data comprises two or more different types of data.",
+      "9 . The computer-implemented method of claim 8 , wherein the multimodal data comprises image data and text data, and wherein the contextually aware query is generated based on the image data, the text data, and the multi-turn query data.",
+      "10 . A computing system for generating a multi-turn aware query, the system comprising: one or more processors; and one or more non-transitory computer-readable media that collectively store instructions that, when executed by the one or more processors, cause the computing system to perform operations, the operations comprising: obtaining an input query; obtaining multi-turn query data, wherein the multi-turn query data is descriptive of previous inputs obtained before the input query, wherein the previous inputs and the input query are associated with a particular multi-turn session; processing the input query and the multi-turn query data with a machine-learned language model to generate the multi-turn aware query, wherein the multi-turn aware query is descriptive of the input query augmented with additional details determined based on the multi-turn query data; processing the multi-turn aware query with a machine-learned embedding model to generate a query embedding; determining a query embedding cluster associated with the query embedding; and determining a plurality of search results based on the query embedding cluster.",
+      "11 . The computing system of claim 10 , wherein the machine-learned language model comprises a generative language model pre-trained on a diverse variety of content and text to perform a plurality of different language processing tasks.",
+      "12 . The computing system of claim 10 , wherein the query embedding cluster is a cluster of embeddings associated with a plurality of different queries with a similar query intent to the multi-turn aware query, and wherein the query embedding cluster is associated with a node within a task graph, wherein the task graph comprises a plurality of learned nodes associated with a plurality of different query tasks.",
+      "13 . The computing system of claim 10 , wherein the query embedding cluster further comprises a plurality of different queries associated with one or more shared attributes, wherein the one or more shared attributes are associated with one or more query intents.",
+      "14 . One or more non-transitory computer-readable media that collectively store instructions that, when executed by a computing system, cause the computing system to perform operations, the operations comprising: obtaining input data, wherein the input data comprises a query; processing the query with an embedding model to generate a query embedding; processing the input data with a generative model to determine a query intent, wherein the query intent is descriptive of a type of information being requested; obtaining, based on the query intent, one or more second query embeddings associated with one or more second queries with one or more second query intents, wherein the one or more second query intents are associated with the query intent of the input data; evaluating a loss function that evaluates a difference between the query embedding and the one or more second query embeddings; and adjusting one or more parameters of the embedding model based at least in part on the loss function.",
+      "15 . The non-transitory computer-readable media of claim 14 , wherein the query comprises a rewritten query, wherein the rewritten query was generated by: obtaining an input query and multi-turn query data, wherein the multi-turn query data is descriptive of previous inputs obtained before the input query, wherein the previous inputs and the input query are associated with a particular multi-turn session; and processing the input query and the multi-turn query data with a language model to generate the rewritten query.",
+      "16 . The non-transitory computer-readable media of claim 14 , wherein the one or more second query embeddings are obtained from a query cluster of a data graph associated with a plurality of query clusters.",
+      "17 . The non-transitory computer-readable media of claim 14 , wherein the operations further comprise: determining an intent embedding is associated with the query intent; and wherein the one or more second query embeddings are obtained based on the intent embedding.",
+      "18 . The non-transitory computer-readable media of claim 14 , wherein the query intent and the one or more second query intents are associated with one or more particular topics, and wherein the type of information comprises additional details associated with the one or more particular topics.",
+      "19 . The non-transitory computer-readable media of claim 14 , wherein the operations further comprise: generating a remodeled data graph of query clusters based on the query embedding, the intent, and the one or more second query embeddings.",
+      "20 . The non-transitory computer-readable media of claim 19 , wherein the remodeled data graph of query clusters comprises one or more edges associated with tangential topics to the query intent."
+    ],
+    "independent_claims": [
+      "1 . A computer-implemented method for generating a contextually aware query, the method comprising: obtaining, by a computing system comprising one or more computing devices, an input query; obtaining, by the computing system, multi-turn query data, wherein the multi-turn query data is descriptive of previous inputs obtained before the input query, wherein the previous inputs and the input query are associated with a particular multi-turn session; processing, by the computing system, the input query and the multi-turn query data to generate the contextually aware query, wherein the contextually aware query is descriptive of the input query and additional details, wherein the additional details are descriptive of a context of the input query associated with the multi-turn query data; processing, by the computing system, the contextually aware query with a machine-learned embedding model to generate a query embedding; determining, by the computing system, a query embedding cluster associated with the query embedding, wherein the query embedding cluster is associated with a plurality of other embeddings associated with a plurality of other queries; and determining, by the computing system, a plurality of search results based on the query embedding cluster.",
+      "10 . A computing system for generating a multi-turn aware query, the system comprising: one or more processors; and one or more non-transitory computer-readable media that collectively store instructions that, when executed by the one or more processors, cause the computing system to perform operations, the operations comprising: obtaining an input query; obtaining multi-turn query data, wherein the multi-turn query data is descriptive of previous inputs obtained before the input query, wherein the previous inputs and the input query are associated with a particular multi-turn session; processing the input query and the multi-turn query data with a machine-learned language model to generate the multi-turn aware query, wherein the multi-turn aware query is descriptive of the input query augmented with additional details determined based on the multi-turn query data; processing the multi-turn aware query with a machine-learned embedding model to generate a query embedding; determining a query embedding cluster associated with the query embedding; and determining a plurality of search results based on the query embedding cluster.",
+      "14 . One or more non-transitory computer-readable media that collectively store instructions that, when executed by a computing system, cause the computing system to perform operations, the operations comprising: obtaining input data, wherein the input data comprises a query; processing the query with an embedding model to generate a query embedding; processing the input data with a generative model to determine a query intent, wherein the query intent is descriptive of a type of information being requested; obtaining, based on the query intent, one or more second query embeddings associated with one or more second queries with one or more second query intents, wherein the one or more second query intents are associated with the query intent of the input data; evaluating a loss function that evaluates a difference between the query embedding and the one or more second query embeddings; and adjusting one or more parameters of the embedding model based at least in part on the loss function."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Kai-Yang Chiang",
+      "Huiliang Ling",
+      "Gokhan Mergen",
+      "Gaurav Gupta"
+    ],
+    "priority_date": "2023-11-29",
+    "filing_date": "2023-11-29",
+    "publication_date": "2025-05-29",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/38",
+      "G06F16/383",
+      "G06F16/33",
+      "G06F16/3331",
+      "G06F16/334",
+      "G06F16/3344",
+      "G06F16/332",
+      "G06F16/3329",
+      "G06F40/00",
+      "G06F40/40"
+    ],
+    "family": [
+      {
+        "number": "CN119848227A",
+        "relation": null,
+        "direction": "priority",
+        "title": "Query intent understanding and search result generation"
+      }
+    ],
+    "cited_by_count": 11
+  },
+  "analysis": {
+    "title_it": "Comprensione dell'intento e riscrittura di query conversazionali",
+    "summary": "Il brevetto affronta la difficoltà di determinare l'intento di query in sessioni chat multi-turno, dove i messaggi dipendono dal contesto precedente. Utilizza un modello linguistico generativo per riscrivere la query corrente includendo dettagli dal contesto della sessione, poi mappa la query riscritta a cluster di embedding associati a intenti simili tramite un grafo di intenti, per determinare risultati di ricerca pertinenti.",
+    "theme": "ricerca_conversazionale",
+    "seo_relevance": 4,
+    "scope": "Interfacce di ricerca conversazionali e chat",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 10, 14) coprono tre metodi distinti. La rivendicazione 1 descrive un metodo per generare una query contestualmente consapevole: si ottiene una query di input e dati multi-turno (messaggi precedenti della stessa sessione), si processano insieme per generare una \"contextually aware query\" che include dettagli aggiuntivi dal contesto multi-turno, si processa questa query con un modello di embedding per generare un query embedding, si determina un cluster di query embedding associato (contenente embedding di altre query simili), e si determinano risultati di ricerca basati sul cluster. La rivendicazione 2 specifica che il modello di embedding può essere addestrato per mappare query con intenti simili allo stesso cluster. La rivendicazione 3 aggiunge la determinazione di attributi del query embedding (descrittivi di topic particolari). La rivendicazione 4 introduce la coppia query-intent, dove il query embedding è associato sia alla query contestuale che a un intento. La rivendicazione 5 descrive il mapping della coppia query-intent a uno spazio di embedding e l'associazione con un nodo in un query graph. La rivendicazione 6 definisce il cluster come parte di un \"learned intent graph\" con nodi (cluster di query con intenti correlati) ed edge (collegamenti tra nodi con intenti correlati). Le rivendicazioni 7-9 aggiungono: determinazione di media content items (7), supporto per dati multimodali nell'input query (8-9, inclusi immagini e testo). La rivendicazione 10 copre un sistema che implementa metodo simile ma specifica l'uso di un \"machine-learned language model\" per generare la \"multi-turn aware query\" processando input query e dati multi-turno. Le rivendicazioni 11-13 aggiungono: il language model può essere un modello generativo pre-addestrato su contenuti diversi (11), il cluster può essere associato a un nodo in un task graph (12), il cluster include query con attributi condivisi legati agli intenti (13). La rivendicazione 14 copre un metodo di training: si processa una query con un embedding model per generare query embedding, si processa con un generative model per determinare query intent, si ottengono embedding di altre query con intenti simili, si valuta una loss function confrontando il query embedding con gli altri embedding, si aggiustano parametri dell'embedding model. Le rivendicazioni 15-20 aggiungono dettagli sul training: la query può essere riscritta da input query e dati multi-turno (15), gli embedding possono provenire da cluster in un data graph (16), può includere determinazione di intent embedding (17), intenti associati a topic particolari (18), generazione di data graph rimodellato (19), con edge per topic tangenziali (20).",
+    "seo_reading": "La descrizione contempla un sistema che utilizza modelli linguistici generativi (LLM, blocco 206) per processare query da interfacce chat-style dove i messaggi dipendono da input precedenti. L'esempio fornito (blocco 402-408, FIG. 4) mostra una query \"How much does it cost?\" riscritta in \"How much does the new smartphone cost?\" dopo aver processato la cronologia della sessione che menzionava \"new smartphone\". La descrizione specifica che il generative model può essere pre-addestrato su molteplici task di natural language processing e può processare dati multimodali inclusi immagini e testo. Il query embedding model (blocco 306) mappa le query a uno spazio di embedding associato a un intent graph (blocco 308), descritto come struttura con nodi rappresentanti cluster di query con intenti correlati ed edge che collegano cluster con intenti o attributi simili (FIG. 5, blocco 510-512). La descrizione contempla training del query embedding model tramite due pipeline (FIG. 6): una confronta embedding di query simili (blocco 612), l'altra usa intent determination da un generative model per valutare loss function (blocco 630) e addestrare il modello a generare embedding simili per query e rispettivi intenti. La descrizione menziona determinazione di attributi degli intenti (FIG. 7, blocco 704) come \"commercial intent\", \"consumer-facing\", \"late-stage funnel\", o \"niche question\", che potrebbero essere utilizzati per targeting di content item. Gli edge del grafo potrebbero suggerire \"next steps\" (es. da ricerca prezzo a ricerca garanzia). La descrizione specifica che content item possono essere taggati e indicizzati in associazione con particolari cluster o nodi per surfacing uniforme. Per la SEO, questo potrebbe significare che in contesti conversazionali Google potrebbe riscrivere query ambigue aggiungendo contesto dalla sessione, mappare la query riscritta a cluster di intenti appresi, e determinare risultati basandosi su query simili già comprese nel cluster. I risultati potrebbero essere influenzati da attributi commerciali degli intenti determinati. Tuttavia, la descrizione non specifica quali segnali di ranking vengano applicati né come i content item vengano effettivamente selezionati oltre al mapping a cluster. Il sistema potrebbe favorire contenuti pre-indicizzati per specifici cluster di intenti, ma questo resta speculativo. L'approccio basato su cluster potrebbe ridurre la dipendenza da matching esatto di termini, spostando il focus verso comprensione semantica dell'intento attraverso sessioni multi-turno.",
+    "limits": [
+      "Il brevetto è una domanda pending (US20250173519A1), non ancora concessa, quindi non conferisce protezione legale e potrebbe essere modificata o respinta.",
+      "L'ambito è specificamente interfacce chat conversazionali, non ricerca web tradizionale one-shot, limitando l'applicabilità diretta alla SEO classica.",
+      "La descrizione non specifica quali segnali di ranking vengano applicati ai risultati dopo la mappatura a cluster, né come i content item vengano effettivamente selezionati o ordinati.",
+      "Non dimostra che questo sistema sia implementato in Google Search o in quale forma, né fornisce evidenza di impatto su ranking organico attuale."
+    ],
+    "implications": [
+      "Per contenuti destinati a contesti conversazionali (assistenti, chat), strutturare informazioni in modo che rispondano a intenti completi piuttosto che solo a frammenti di query isolati potrebbe migliorare la pertinenza.",
+      "Considerare che query ambigue in sessioni conversazionali potrebbero essere interpretate con contesto aggiunto automaticamente, quindi contenuti che rispondono a intenti più ampi e dettagliati mantengono valore.",
+      "Documentare chiaramente topic e intenti principali dei contenuti può facilitare associazioni semantiche indipendentemente dai meccanismi di clustering specifici.",
+      "Monitorare come le query degli utenti evolvono in sessioni multi-turno può informare la creazione di contenuti che anticipano progressioni naturali di intenti (es. da informazioni generali a dettagli d'acquisto)."
+    ],
+    "key_terms": [
+      {
+        "term": "contextually aware query",
+        "explanation": "Query riscritta che include la semantica della query originale più dettagli aggiuntivi determinati dal contesto della sessione multi-turno (cronologia chat)"
+      },
+      {
+        "term": "multi-turn query data",
+        "explanation": "Dati descrittivi di input precedenti (messaggi utente e risposte) ottenuti prima della query corrente nella stessa sessione conversazionale"
+      },
+      {
+        "term": "query embedding cluster",
+        "explanation": "Gruppo di embedding associati a query multiple con intenti simili, rappresentato come nodo in un grafo di intenti"
+      },
+      {
+        "term": "intent graph",
+        "explanation": "Struttura grafica con nodi (cluster di query con intenti correlati) ed edge (collegamenti tra cluster con intenti o attributi simili)"
+      },
+      {
+        "term": "query-intent pair",
+        "explanation": "Coppia composta dalla query contestuale e dal suo intento determinato, utilizzata per mapping nello spazio di embedding"
+      },
+      {
+        "term": "generative language model",
+        "explanation": "Modello linguistico generativo (es. LLM) pre-addestrato su varietà di contenuti per task di elaborazione linguistica, usato per riscrivere query e determinare intenti"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T09:59:22.218507Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.10452396
+}

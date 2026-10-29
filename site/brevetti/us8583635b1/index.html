@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8583635B1: Parole chiave associate a categorie di documenti — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per identificare parole chiave rilevanti per specifiche categorie di documenti analizzando la frequenza con cui termini compaiono sia nelle query di ricerca che in documenti classificati in determinate categorie. Il sistema calcola score basati su queste frequenze per " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8583635b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8583635B1: Parole chiave associate a categorie di documenti — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per identificare parole chiave rilevanti per specifiche categorie di documenti analizzando la frequenza con cui termini compaiono sia nelle query di ricerca che in documenti classificati in determinate categorie. Il sistema calcola score basati su queste frequenze per " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8583635b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8583635B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us8583635b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8583635B1: Parole chiave associate a categorie di documenti",
+  "description": "Il brevetto descrive un metodo per identificare parole chiave rilevanti per specifiche categorie di documenti analizzando la frequenza con cui termini compaiono sia nelle query di ricerca che in documenti classificati in determinate categorie. Il sistema calcola score basati su queste frequenze per determinare quali termini sono sufficientemente rappresentativi di una categoria da poter essere usati per migliorare il ranking dei documenti appartenenti a quella categoria.",
+  "articleBody": "Il brevetto descrive un metodo per identificare parole chiave rilevanti per specifiche categorie di documenti analizzando la frequenza con cui termini compaiono sia nelle query di ricerca che in documenti classificati in determinate categorie. Il sistema calcola score basati su queste frequenze per determinare quali termini sono sufficientemente rappresentativi di una categoria da poter essere usati per migliorare il ranking dei documenti appartenenti a quella categoria.\n\nLa rivendicazione indipendente 1 copre un metodo che identifica una prima parola (keyword candidate) presente in query precedentemente inviate, crea una coppia composta dalla prima parola e una seconda parola descrittiva di una categoria specifica, calcola un primo valore basato sulla frequenza con cui la prima parola appare nelle query precedenti, calcola un secondo valore basato sulla frequenza con cui la coppia appare in una collezione di documenti (dove i documenti sono classificati nella categoria in base alle occorrenze della seconda parola), determina se entrambi i valori superano rispettive soglie, e se entrambe le soglie sono superate, determina che la prima parola \u00e8 una keyword per quella categoria e la associa ai documenti pertinenti.\n\nLa rivendicazione 2 specifica che l\u0027associazione pu\u00f2 includere l\u0027indicizzazione dei documenti con riferimento alla keyword. La rivendicazione 3 aggiunge che l\u0027identificazione della keyword pu\u00f2 avvenire quando almeno un numero particolare di selezioni utente di risultati di ricerca, in risposta alle query precedenti, si riferiscono alla categoria specifica. La rivendicazione 4 introduce un terzo valore basato sulla frequenza della parola nell\u0027intera collezione di documenti, determinando la keyword anche in base al fatto che questo terzo valore non superi una terza soglia. La rivendicazione 5 contempla il calcolo di uno score per la prima parola e la determinazione della keyword in base al superamento di una soglia di score. Le rivendicazioni 7 e 8 coprono l\u0027applicazione pratica: ricevere una query contenente una forma della keyword identificata e aumentare il ranking di un documento associato alla categoria pertinente nella lista ordinata dei risultati.\n\nLe rivendicazioni 9-15 e 16-23 ripetono sostanzialmente le stesse limitazioni in forma di medium leggibile da computer e sistema rispettivamente, senza aggiungere elementi sostanzialmente nuovi per la SEO.\n\nLa descrizione contempla un sistema applicato specificamente alle local search queries e ai business listings (paragrafi introduttivi e FIG. 5), dove le keyword candidates sono termini usati in query locali e trovati in documenti associati a informazioni commerciali specifiche come nome, indirizzo e numero di telefono. Il brevetto descrive nel dettaglio (FIG. 6 e paragrafi correlati) come il frequency calculator 620 calcoli sia la frequenza delle keyword candidates nelle query memorizzate, sia la frequenza delle coppie keyword-informazione nei documenti.\n\nIl keyword/category calculator 650 contempla due approcci distinti. Il primo usa soglie multiple: una soglia \"within\" per correlazione forte all\u0027interno della categoria, una soglia \"between\" per correlazione debole tra categorie diverse, e una soglia \"significant\" per termini di ricerca significativi. Il secondo approccio, descritto pi\u00f9 dettagliatamente, calcola uno score F-measure usando la formula F-measure(keyword,category) = P(keyword,category)/(a\u00b7P(keyword)+(1-a)\u00b7P(category)), dove \"a\" \u00e8 una costante tra 0 e 1, P(keyword) \u00e8 la probabilit\u00e0 della keyword nelle query, P(category) \u00e8 la probabilit\u00e0 della categoria nei documenti, e P(keyword,category) \u00e8 la probabilit\u00e0 congiunta. La descrizione suggerisce che \"a\" sia scelto empiricamente, quasi ma non uguale a 1.\n\nLa Tabella 1 fornisce esempi concreti di score: per la categoria \"attorneys\", \"immigration lawyers\" ottiene 0.5213, \"law offices\" 0.291; per \"restaurant japanese\", \"sushi bar\" ottiene 0.0222. Questi score potrebbero indicare soglie operative reali, anche se il brevetto non specifica valori di cutoff precisi.\n\nPer la SEO, questo potrebbe significare che documenti correttamente categorizzati potrebbero beneficiare di un ranking superiore quando le query contengono keyword fortemente associate a quella categoria, anche se la keyword non appare letteralmente nel documento. Tuttavia, l\u0027applicazione pratica descritta (FIGS. 7A-7B) si limita a esempi di local search con business listings, un contesto specifico che potrebbe non estendersi alla ricerca web generale. Il condizionale \u00e8 d\u0027obbligo perch\u00e9 il brevetto risale al 2006-2007 e risulta scaduto per mancato pagamento delle tasse.",
+  "wordCount": 651,
+  "datePublished": "2026-10-29T10:03:11.186529+00:00",
+  "dateModified": "2026-10-29T10:03:11.186529+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8583635b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Keywords associated with document categories",
+    "identifier": "US8583635B1",
+    "url": "https://patents.google.com/patent/US8583635B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8583635B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8583635B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Parole chiave associate a categorie di documenti</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Keywords associated with document categories</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per identificare parole chiave rilevanti per specifiche categorie di documenti analizzando la frequenza con cui termini compaiono sia nelle query di ricerca che in documenti classificati in determinate categorie. Il sistema calcola score basati su queste frequenze per determinare quali termini sono sufficientemente rappresentativi di una categoria da poter essere usati per migliorare il ranking dei documenti appartenenti a quella categoria.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking di documenti per categoria</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">12 Novembre 2013</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2006-09-29</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Link e ranking</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">23</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che identifica una prima parola (keyword candidate) presente in query precedentemente inviate, crea una coppia composta dalla prima parola e una seconda parola descrittiva di una categoria specifica, calcola un primo valore basato sulla frequenza con cui la prima parola appare nelle query precedenti, calcola un secondo valore basato sulla frequenza con cui la coppia appare in una collezione di documenti (dove i documenti sono classificati nella categoria in base alle occorrenze della seconda parola), determina se entrambi i valori superano rispettive soglie, e se entrambe le soglie sono superate, determina che la prima parola è una keyword per quella categoria e la associa ai documenti pertinenti.</p>
+      <p>La rivendicazione 2 specifica che l&#39;associazione può includere l&#39;indicizzazione dei documenti con riferimento alla keyword. La rivendicazione 3 aggiunge che l&#39;identificazione della keyword può avvenire quando almeno un numero particolare di selezioni utente di risultati di ricerca, in risposta alle query precedenti, si riferiscono alla categoria specifica. La rivendicazione 4 introduce un terzo valore basato sulla frequenza della parola nell&#39;intera collezione di documenti, determinando la keyword anche in base al fatto che questo terzo valore non superi una terza soglia. La rivendicazione 5 contempla il calcolo di uno score per la prima parola e la determinazione della keyword in base al superamento di una soglia di score. Le rivendicazioni 7 e 8 coprono l&#39;applicazione pratica: ricevere una query contenente una forma della keyword identificata e aumentare il ranking di un documento associato alla categoria pertinente nella lista ordinata dei risultati.</p>
+      <p>Le rivendicazioni 9-15 e 16-23 ripetono sostanzialmente le stesse limitazioni in forma di medium leggibile da computer e sistema rispettivamente, senza aggiungere elementi sostanzialmente nuovi per la SEO.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema applicato specificamente alle local search queries e ai business listings (paragrafi introduttivi e FIG. 5), dove le keyword candidates sono termini usati in query locali e trovati in documenti associati a informazioni commerciali specifiche come nome, indirizzo e numero di telefono. Il brevetto descrive nel dettaglio (FIG. 6 e paragrafi correlati) come il frequency calculator 620 calcoli sia la frequenza delle keyword candidates nelle query memorizzate, sia la frequenza delle coppie keyword-informazione nei documenti.</p>
+      <p>Il keyword/category calculator 650 contempla due approcci distinti. Il primo usa soglie multiple: una soglia &#34;within&#34; per correlazione forte all&#39;interno della categoria, una soglia &#34;between&#34; per correlazione debole tra categorie diverse, e una soglia &#34;significant&#34; per termini di ricerca significativi. Il secondo approccio, descritto più dettagliatamente, calcola uno score F-measure usando la formula F-measure(keyword,category) = P(keyword,category)/(a·P(keyword)+(1-a)·P(category)), dove &#34;a&#34; è una costante tra 0 e 1, P(keyword) è la probabilità della keyword nelle query, P(category) è la probabilità della categoria nei documenti, e P(keyword,category) è la probabilità congiunta. La descrizione suggerisce che &#34;a&#34; sia scelto empiricamente, quasi ma non uguale a 1.</p>
+      <p>La Tabella 1 fornisce esempi concreti di score: per la categoria &#34;attorneys&#34;, &#34;immigration lawyers&#34; ottiene 0.5213, &#34;law offices&#34; 0.291; per &#34;restaurant japanese&#34;, &#34;sushi bar&#34; ottiene 0.0222. Questi score potrebbero indicare soglie operative reali, anche se il brevetto non specifica valori di cutoff precisi.</p>
+      <p>Per la SEO, questo potrebbe significare che documenti correttamente categorizzati potrebbero beneficiare di un ranking superiore quando le query contengono keyword fortemente associate a quella categoria, anche se la keyword non appare letteralmente nel documento. Tuttavia, l&#39;applicazione pratica descritta (FIGS. 7A-7B) si limita a esempi di local search con business listings, un contesto specifico che potrebbe non estendersi alla ricerca web generale. Il condizionale è d&#39;obbligo perché il brevetto risale al 2006-2007 e risulta scaduto per mancato pagamento delle tasse.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related) dal 2013, quindi non fornisce protezione attiva e non costituisce prova di implementazione corrente in Google Search.</li>
+      <li>L&#39;ambito descritto è specificamente orientato alle local search queries e ai business listings, non alla ricerca web generale, limitando la generalizzabilità delle conclusioni.</li>
+      <li>Il brevetto descrive cosa Google voleva proteggere nel 2006-2007, un&#39;epoca pre-machine learning moderno, e non dimostra che questi meccanismi siano mai stati implementati o siano ancora in uso.</li>
+      <li>Non viene specificato come vengano determinate le soglie operative né i valori concreti di cutoff per gli score, rendendo impossibile valutare l&#39;impatto pratico del sistema.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i documenti contengano segnali chiari di appartenenza a categorie specifiche, specialmente per contenuti locali o di business, attraverso informazioni strutturate coerenti.</li>
+      <li class="pl-2">Per contenuti categorizzabili, utilizzare terminologia che rifletta sia il linguaggio delle query degli utenti sia i termini descrittivi standard della categoria di riferimento.</li>
+      <li class="pl-2">Mantenere coerenza tra le informazioni di business (nome, indirizzo, telefono) e la categoria dichiarata o implicita del contenuto, evitando segnali contrastanti.</li>
+      <li class="pl-2">Considerare che l&#39;associazione tra termini di query frequenti e categorie di documenti potrebbe influenzare la visibilità, indipendentemente dalla presenza letterale di quei termini nel contenuto.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">keyword candidate</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Termine o frase estratto da query precedenti e trovato in documenti associati a informazioni specifiche, candidato a diventare keyword per una categoria</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">pair</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Coppia formata da una keyword candidate e informazioni associate al documento (es. business listing) o da una keyword candidate e una categoria di documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">frequency calculator</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Componente che calcola quante volte una keyword candidate appare nelle query e quante volte le coppie keyword-informazione appaiono nei documenti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">F-measure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Score statistico che combina la probabilità di una keyword nelle query con la probabilità di una categoria nei documenti per determinare l&#39;associazione keyword-categoria</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">within category correlation</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura di quanto fortemente una keyword sia associata a documenti all&#39;interno di una specifica categoria</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">between category correlation</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura di quanto debolmente una keyword sia associata a documenti di categorie diverse da quella target</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US7996393B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7996393B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Keywords associated with document categories</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8583635B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

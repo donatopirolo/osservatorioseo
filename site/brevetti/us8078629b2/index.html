@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8078629B2: Rilevamento di spam tramite analisi delle frasi correlate — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema di information retrieval basato su frasi che identifica documenti spam confrontando il numero effettivo di frasi correlate presenti in un documento con il numero atteso di tali frasi. Un documento viene classificato come spam quando contiene un numero statisticamente " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8078629b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8078629B2: Rilevamento di spam tramite analisi delle frasi correlate — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema di information retrieval basato su frasi che identifica documenti spam confrontando il numero effettivo di frasi correlate presenti in un documento con il numero atteso di tali frasi. Un documento viene classificato come spam quando contiene un numero statisticamente " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8078629b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8078629B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8078629b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8078629B2: Rilevamento di spam tramite analisi delle frasi correlate",
+  "description": "Il brevetto descrive un sistema di information retrieval basato su frasi che identifica documenti spam confrontando il numero effettivo di frasi correlate presenti in un documento con il numero atteso di tali frasi. Un documento viene classificato come spam quando contiene un numero statisticamente anomalo di frasi correlate tra loro.",
+  "articleBody": "Il brevetto descrive un sistema di information retrieval basato su frasi che identifica documenti spam confrontando il numero effettivo di frasi correlate presenti in un documento con il numero atteso di tali frasi. Un documento viene classificato come spam quando contiene un numero statisticamente anomalo di frasi correlate tra loro.\n\nLe rivendicazioni indipendenti (1, 16, 19, 34) proteggono un metodo implementato via software per identificare documenti spam in un sistema di information retrieval basato su frasi. Il metodo richiede: determinare per un documento contenente una prima frase il numero atteso di frasi correlate (related phrases) che ci si aspetta siano presenti nel documento; determinare il numero effettivo di frasi correlate presenti nel documento; identificare il documento come spam confrontando il numero effettivo con quello atteso. Il calcolo del numero atteso avviene attraversando un indice di documenti, determinando per ciascuno l\u0027insieme di frasi presenti e per ogni frase il numero di frasi correlate presenti, quindi calcolando il numero atteso sulla base dei valori osservati nell\u0027intero corpus.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il numero atteso pu\u00f2 essere calcolato come mediana dei valori osservati. Le rivendicazioni 3, 17, 21 e 35 estendono l\u0027analisi a pi\u00f9 frasi (seconda e terza frase) nel documento, identificando spam quando il numero effettivo eccede quello atteso per almeno una di esse. Le rivendicazioni 4 e 22 introducono l\u0027uso della deviazione standard: un documento \u00e8 spam quando il numero effettivo eccede quello atteso di almeno un multiplo della deviazione standard. La rivendicazione 5 usa un multiplo del numero atteso stesso come soglia. Le rivendicazioni 6, 18, 24 e 36 richiedono che tutte le frasi analizzate (prima, seconda, terza) mostrino eccesso per identificare spam. Le rivendicazioni 8, 9, 26 e 27 specificano che le frasi da analizzare sono le pi\u00f9 significative (most significant phrases) del documento. Le rivendicazioni 10, 11, 28 e 29 coprono l\u0027aggiunta del documento a una spam list, organizzata per frase. Le rivendicazioni 16 e 34 proteggono l\u0027applicazione in fase di ricerca: ricevere una query, recuperare documenti con relevance score, determinare se sono spam, ridurre (down-weight) lo score dei documenti spam, e organizzare i risultati secondo gli score modificati.\n\nLa descrizione contempla un sistema di indicizzazione basato su frasi che identifica good phrases attraverso analisi statistica del corpus, determinando quali frasi predicono la presenza di altre frasi tramite information gain (rapporto tra co-occorrenza effettiva e attesa). Per ogni frase vengono identificate le related phrases, ossia frasi che co-occorrono con frequenza statisticamente significativa, tipicamente con information gain superiore a 100 (blocco relativo alla sezione \"Identification of Related Phrases and Clusters\"). La descrizione specifica che un documento normale contiene tipicamente tra 8 e 20 frasi correlate, mentre un documento spam ne contiene tra 100 e 1000 (sezione \"Identifying Spam Documents\").\n\nIl metodo contemplato attraversa l\u0027indice calcolando per ogni frase il numero mediano di frasi correlate presenti nei documenti che la contengono, usando questo valore come numero atteso E. Per ogni documento viene calcolato il numero effettivo N di frasi correlate per ciascuna good phrase presente. La descrizione contempla diversi test: N eccede significativamente E se supera di almeno cinque deviazioni standard, oppure se N maggiore di 2E, oppure se N supera una soglia predeterminata come 100. Il documento \u00e8 identificato come spam se questa condizione si verifica per un numero minimo di good phrases, che pu\u00f2 essere anche una sola frase o tre frasi (sezione IV). La descrizione contempla anche l\u0027analisi delle frasi pi\u00f9 significative (top N most significant phrases), identificate tramite i bit pi\u00f9 significativi nei related phrase bit vectors, che corrispondono alle frasi correlate con information gain pi\u00f9 alto.\n\nPer la SEO, questo approccio potrebbe significare che l\u0027accumulo eccessivo di termini semanticamente correlati in un documento potrebbe essere interpretato come segnale di spam. Un documento che cerca di coprire artificialmente tutti i termini correlati a un topic principale, invece di trattare naturalmente un sottoinsieme coerente di essi, potrebbe essere penalizzato. Tuttavia la descrizione non specifica come vengono pesate le diverse tipologie di contenuto (body text, anchor text, sidebar) nel conteggio delle frasi correlate, n\u00e9 come vengono gestiti documenti legittimamente enciclopedici o hub page che naturalmente trattano molti aspetti correlati di un argomento. Il metodo si basa su deviazioni statistiche rispetto alla norma del corpus, quindi la sua efficacia dipenderebbe dalla qualit\u00e0 della baseline statistica e dalla capacit\u00e0 di distinguere densit\u00e0 semantica artificiale da trattazione naturalmente completa.",
+  "wordCount": 725,
+  "datePublished": "2026-10-29T10:00:35.028250+00:00",
+  "dateModified": "2026-10-29T10:00:35.028250+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8078629b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Detecting spam documents in a phrase based information retrieval system",
+    "identifier": "US8078629B2",
+    "url": "https://patents.google.com/patent/US8078629B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8078629B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8078629B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Rilevamento di spam tramite analisi delle frasi correlate</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Detecting spam documents in a phrase based information retrieval system</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema di information retrieval basato su frasi che identifica documenti spam confrontando il numero effettivo di frasi correlate presenti in un documento con il numero atteso di tali frasi. Un documento viene classificato come spam quando contiene un numero statisticamente anomalo di frasi correlate tra loro.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Ricerca web, indicizzazione basata su frasi</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">13 Dicembre 2011</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2004-07-26</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Lifetime</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Spam e manipolazione del ranking</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">36</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 16, 19, 34) proteggono un metodo implementato via software per identificare documenti spam in un sistema di information retrieval basato su frasi. Il metodo richiede: determinare per un documento contenente una prima frase il numero atteso di frasi correlate (related phrases) che ci si aspetta siano presenti nel documento; determinare il numero effettivo di frasi correlate presenti nel documento; identificare il documento come spam confrontando il numero effettivo con quello atteso. Il calcolo del numero atteso avviene attraversando un indice di documenti, determinando per ciascuno l&#39;insieme di frasi presenti e per ogni frase il numero di frasi correlate presenti, quindi calcolando il numero atteso sulla base dei valori osservati nell&#39;intero corpus.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il numero atteso può essere calcolato come mediana dei valori osservati. Le rivendicazioni 3, 17, 21 e 35 estendono l&#39;analisi a più frasi (seconda e terza frase) nel documento, identificando spam quando il numero effettivo eccede quello atteso per almeno una di esse. Le rivendicazioni 4 e 22 introducono l&#39;uso della deviazione standard: un documento è spam quando il numero effettivo eccede quello atteso di almeno un multiplo della deviazione standard. La rivendicazione 5 usa un multiplo del numero atteso stesso come soglia. Le rivendicazioni 6, 18, 24 e 36 richiedono che tutte le frasi analizzate (prima, seconda, terza) mostrino eccesso per identificare spam. Le rivendicazioni 8, 9, 26 e 27 specificano che le frasi da analizzare sono le più significative (most significant phrases) del documento. Le rivendicazioni 10, 11, 28 e 29 coprono l&#39;aggiunta del documento a una spam list, organizzata per frase. Le rivendicazioni 16 e 34 proteggono l&#39;applicazione in fase di ricerca: ricevere una query, recuperare documenti con relevance score, determinare se sono spam, ridurre (down-weight) lo score dei documenti spam, e organizzare i risultati secondo gli score modificati.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema di indicizzazione basato su frasi che identifica good phrases attraverso analisi statistica del corpus, determinando quali frasi predicono la presenza di altre frasi tramite information gain (rapporto tra co-occorrenza effettiva e attesa). Per ogni frase vengono identificate le related phrases, ossia frasi che co-occorrono con frequenza statisticamente significativa, tipicamente con information gain superiore a 100 (blocco relativo alla sezione &#34;Identification of Related Phrases and Clusters&#34;). La descrizione specifica che un documento normale contiene tipicamente tra 8 e 20 frasi correlate, mentre un documento spam ne contiene tra 100 e 1000 (sezione &#34;Identifying Spam Documents&#34;).</p>
+      <p>Il metodo contemplato attraversa l&#39;indice calcolando per ogni frase il numero mediano di frasi correlate presenti nei documenti che la contengono, usando questo valore come numero atteso E. Per ogni documento viene calcolato il numero effettivo N di frasi correlate per ciascuna good phrase presente. La descrizione contempla diversi test: N eccede significativamente E se supera di almeno cinque deviazioni standard, oppure se N maggiore di 2E, oppure se N supera una soglia predeterminata come 100. Il documento è identificato come spam se questa condizione si verifica per un numero minimo di good phrases, che può essere anche una sola frase o tre frasi (sezione IV). La descrizione contempla anche l&#39;analisi delle frasi più significative (top N most significant phrases), identificate tramite i bit più significativi nei related phrase bit vectors, che corrispondono alle frasi correlate con information gain più alto.</p>
+      <p>Per la SEO, questo approccio potrebbe significare che l&#39;accumulo eccessivo di termini semanticamente correlati in un documento potrebbe essere interpretato come segnale di spam. Un documento che cerca di coprire artificialmente tutti i termini correlati a un topic principale, invece di trattare naturalmente un sottoinsieme coerente di essi, potrebbe essere penalizzato. Tuttavia la descrizione non specifica come vengono pesate le diverse tipologie di contenuto (body text, anchor text, sidebar) nel conteggio delle frasi correlate, né come vengono gestiti documenti legittimamente enciclopedici o hub page che naturalmente trattano molti aspetti correlati di un argomento. Il metodo si basa su deviazioni statistiche rispetto alla norma del corpus, quindi la sua efficacia dipenderebbe dalla qualità della baseline statistica e dalla capacità di distinguere densità semantica artificiale da trattazione naturalmente completa.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Lifetime) quindi non fornisce indicazioni su tecniche anti-spam attualmente in uso da Google.</li>
+      <li>La descrizione non dimostra che questo metodo sia mai stato implementato in produzione, né fornisce dati sulla sua efficacia nel distinguere spam da contenuti legittimamente completi su un argomento.</li>
+      <li>Il metodo si basa su un sistema di indicizzazione per frasi che richiede infrastruttura specifica (good phrase list, co-occurrence matrix, related phrase bit vectors) di cui non è nota l&#39;adozione effettiva.</li>
+      <li>Non viene specificato come il sistema gestisce contenuti multilingua, documenti tecnici specialistici, o pagine che legittimamente fungono da hub informativi con alta densità di termini correlati.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Evitare l&#39;accumulo artificiale di tutti i termini semanticamente correlati a un topic principale in un singolo documento, privilegiando trattazioni naturali e focalizzate su aspetti specifici dell&#39;argomento.</li>
+      <li class="pl-2">Mantenere una densità semantica coerente con documenti autorevoli dello stesso settore, evitando sia l&#39;eccesso di keyword stuffing semantico sia la povertà di contenuto correlato.</li>
+      <li class="pl-2">Strutturare contenuti complessi su più pagine specializzate piuttosto che concentrare artificialmente tutte le varianti semantiche di un argomento in una singola pagina.</li>
+      <li class="pl-2">Monitorare che le pagine hub o pillar mantengano un equilibrio tra completezza informativa e naturalezza nella copertura dei sotto-argomenti correlati.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">related phrases</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Frasi che co-occorrono in documenti con frequenza statisticamente superiore all&#39;atteso, identificate tramite information gain</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">information gain</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Rapporto tra la frequenza effettiva di co-occorrenza di due frasi e la frequenza attesa se fossero indipendenti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">good phrases</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Frasi che appaiono con frequenza sufficiente nel corpus e predicono la presenza di altre frasi con information gain significativo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">expected number of related phrases</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Numero mediano di frasi correlate presenti nei documenti del corpus per una data frase, usato come baseline per identificare anomalie</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">most significant phrases</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Frasi in un documento le cui frasi correlate hanno l&#39;information gain più alto, identificate dai bit più significativi nei related phrase bit vectors</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US7603345B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7603345B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Detecting spam documents in a phrase based information retrieval system</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8078629B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

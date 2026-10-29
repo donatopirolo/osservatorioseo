@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8224827B2",
+    "title": "Document ranking based on document classification",
+    "abstract": "A system may determine an extent to which a document is selected when the document is included in a set of search results, generate a score for the document based, at least in part, on the extent to which the document is selected when the document is included in a set of search results; and rank the document with regard to at least one other document based, at least in part, on the score.",
+    "claims": [
+      "1. A method performed by one or more devices, the method comprising: determining, by at least one of the one or more devices, a first average amount of time that a first set of users spent accessing a document during a first time period; determining, by at least one of the one or more devices, a second average amount of time that a second set of users spent accessing the same document during a second time period, the second time period occurring after the first time period; comparing, by at least one of the one or more devices, the first average amount of time to the second average amount of time determining, by at least one of the one or more devices and based on the comparing, that the first average amount of time is different from the second average amount of time classifying, by at least one of the one or more devices, the document as stale or fresh based on determining that the first average amount of time is different from the second average amount of time, the classifying including: classifying the document as stale when the first average amount of time is greater than the second average amount of time, and classifying the document as fresh when the first average amount of time is less than the second average amount of time generating, by at least one of the one or more devices, a score for the document based on classifying the document as stale or fresh; and ranking, by at least one of the one or more devices, the document with regard to at least one other document based on the generated score.",
+      "2. The method of claim 1 , further comprising: determining a quantity of times that the document is selected out of a plurality of documents, and where generating the score includes generating the score further based on the determined quantity of times that the document is selected out of the plurality of documents.",
+      "3. The method of claim 1 , further comprising: lowering a ranking of the document, with regard to the at least one other document, when the document is classified as stale.",
+      "4. The method of claim 1 , further comprising: increasing a ranking of the document, with regard to the at least one other document, when the document is classified as fresh.",
+      "5. The method of claim 1 , where the generated score is a first score, the method further comprising: generating a second score, for the document, that is based on a relevance of the document to a search query; and combining the first and second scores to generate an overall score, where ranking the document includes ranking the document with regard to the at least one other document based on the overall score.",
+      "6. A system, comprising: one or more devices to: determine a first average amount of time that a first set of users spent accessing a document during a first time period; determine a second average amount of time that a second set of users spent accessing the same document during a second time period, the second time period occurring after the first time period; compare the first average amount of time to the second average amount of time; determine, based on the comparing, that the first average amount of time is different from the second average amount of time classify the document as stale or fresh based on determining that the first average amount of time is different from the second average amount of time, when classifying the document, at least one of the one or more devices further being to: classify the document as stale when the first average amount of time is greater than the second average amount of time, and classify the document as fresh when the first average amount of time is less than the second average amount of time generate a score for the document based on classifying the document as stale or fresh; and rank the document with regard to at least one other document based on the generated score.",
+      "7. The system of claim 6 , where the one or more devices are further to: determine a quantity of times that the document is selected out of a plurality of documents, and where when generating the score, the one or more devices are to generate the score further based on the determined quantity of times that the document is selected out of the plurality of documents.",
+      "8. The system of claim 6 , where the one or more devices are further to: lower a ranking of the document, with regard to the at least one other document, when the document is classified as stale.",
+      "9. The system of claim 6 , where the one or more devices are further to: increase a ranking of the document, with regard to the at least one other document, when the document is classified as fresh.",
+      "10. The system of claim 6 , where the generated score is a first score, where the one or more devices are further to: generate a second score, for the document, that is based on a relevance of the document to a search query; and combine the first and second scores to generate an overall score, where when ranking the document, the one or more devices are to rank the document with regard to the at least one other document based on the overall score.",
+      "11. A computer-readable memory device, comprising: a plurality of computer-executable instructions, which, when executed by one or more processors, cause the one or more processors to: determine a first average amount of time that a first set of users spent accessing a document during a first time period; determine a second average amount of time that a second set of users spent accessing the same document during a second time period, the second time period occurring after the first time period; compare the first average amount of time to the second average amount of time determine, based on the comparing, that the first average amount of time is different from the second average amount of time classify the document as stale or fresh based on determining that the first average amount of time is different from the second average amount of time, when classifying the document, the one or more devices further being to: classify the document as stale when determining that the first average amount of time is greater than the second average amount of time, and classify the document as fresh when determining that the first average amount of time is less than the second average amount of time generate a score for the document based on classifying the document as stale or fresh; and rank the document with regard to at least one other document based on the generated score.",
+      "12. The computer-readable memory device of claim 11 , where the plurality of computer-executable instructions further cause the one or more processors to: determine a quantity of times that the document is selected out of a plurality of documents, and where the computer-executable instructions, which cause the one or more processors to generate the score, further cause the one or more processors to generate the score further based on the determined quantity of times that the document is selected out of the plurality of documents.",
+      "13. The computer-readable memory device of claim 11 , where the plurality computer-executable instructions further cause the one or more processors to: lower a ranking of the document, with regard to the at least one other document, when the document is classified as stale.",
+      "14. The computer-readable memory device of claim 11 , where the plurality of computer-executable instructions further cause the one or more processors to: increase a ranking of the document, with regard to the at least one other document, when the document is classified as fresh.",
+      "15. The computer-readable memory device of claim 11 , where the generated score is a first score, where the plurality computer-executable instructions further cause the one or more processors to: generate a second score, for the document, that is based on a relevance of the document to a search query; and combine the first and second scores to generate an overall score, where the plurality of computer-executable instructions, which cause the one or more processors to rank the document, further cause the one or more processors to rank the document with regard to the at least one other document based on the overall score."
+    ],
+    "independent_claims": [
+      "1. A method performed by one or more devices, the method comprising: determining, by at least one of the one or more devices, a first average amount of time that a first set of users spent accessing a document during a first time period; determining, by at least one of the one or more devices, a second average amount of time that a second set of users spent accessing the same document during a second time period, the second time period occurring after the first time period; comparing, by at least one of the one or more devices, the first average amount of time to the second average amount of time determining, by at least one of the one or more devices and based on the comparing, that the first average amount of time is different from the second average amount of time classifying, by at least one of the one or more devices, the document as stale or fresh based on determining that the first average amount of time is different from the second average amount of time, the classifying including: classifying the document as stale when the first average amount of time is greater than the second average amount of time, and classifying the document as fresh when the first average amount of time is less than the second average amount of time generating, by at least one of the one or more devices, a score for the document based on classifying the document as stale or fresh; and ranking, by at least one of the one or more devices, the document with regard to at least one other document based on the generated score.",
+      "6. A system, comprising: one or more devices to: determine a first average amount of time that a first set of users spent accessing a document during a first time period; determine a second average amount of time that a second set of users spent accessing the same document during a second time period, the second time period occurring after the first time period; compare the first average amount of time to the second average amount of time; determine, based on the comparing, that the first average amount of time is different from the second average amount of time classify the document as stale or fresh based on determining that the first average amount of time is different from the second average amount of time, when classifying the document, at least one of the one or more devices further being to: classify the document as stale when the first average amount of time is greater than the second average amount of time, and classify the document as fresh when the first average amount of time is less than the second average amount of time generate a score for the document based on classifying the document as stale or fresh; and rank the document with regard to at least one other document based on the generated score.",
+      "11. A computer-readable memory device, comprising: a plurality of computer-executable instructions, which, when executed by one or more processors, cause the one or more processors to: determine a first average amount of time that a first set of users spent accessing a document during a first time period; determine a second average amount of time that a second set of users spent accessing the same document during a second time period, the second time period occurring after the first time period; compare the first average amount of time to the second average amount of time determine, based on the comparing, that the first average amount of time is different from the second average amount of time classify the document as stale or fresh based on determining that the first average amount of time is different from the second average amount of time, when classifying the document, the one or more devices further being to: classify the document as stale when determining that the first average amount of time is greater than the second average amount of time, and classify the document as fresh when determining that the first average amount of time is less than the second average amount of time generate a score for the document based on classifying the document as stale or fresh; and rank the document with regard to at least one other document based on the generated score."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Jeffrey Dean",
+      "Paul Haahr",
+      "Monika Henzinger",
+      "Steve Lawrence",
+      "Karl Pfleger",
+      "Olcan Sercinoglu",
+      "Simon Tong"
+    ],
+    "priority_date": "2003-09-30",
+    "filing_date": "2011-09-26",
+    "publication_date": "2012-07-17",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06Q30/00",
+      "G06Q30/02",
+      "G06Q30/0241",
+      "G06Q30/0242",
+      "G06Q30/0246",
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/951",
+      "G06F16/953",
+      "Y10S707/00",
+      "Y10S707/99931",
+      "Y10S707/99933"
+    ],
+    "family": [
+      {
+        "number": "US8051071B2",
+        "relation": "Division",
+        "direction": "parent",
+        "title": "Document scoring based on query analysis"
+      }
+    ],
+    "cited_by_count": 552
+  },
+  "analysis": {
+    "title_it": "Classificazione dei documenti come stale o fresh in base al tempo di permanenza",
+    "summary": "Il brevetto descrive un metodo per classificare documenti come stale (obsoleti) o fresh (freschi) confrontando il tempo medio che gli utenti trascorrono su un documento in periodi diversi. Se il tempo medio diminuisce, il documento viene classificato come stale e può ricevere un punteggio inferiore; se aumenta, viene classificato come fresh e può ricevere un punteggio superiore.",
+    "theme": "segnali_utente",
+    "seo_relevance": 4,
+    "scope": "Google Search, ranking documenti web",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che determina il tempo medio che un primo gruppo di utenti ha trascorso accedendo a un documento durante un primo periodo, determina il tempo medio che un secondo gruppo di utenti ha trascorso accedendo allo stesso documento durante un secondo periodo successivo, confronta i due tempi medi e classifica il documento come stale quando il primo tempo medio è maggiore del secondo, o come fresh quando il primo tempo medio è minore del secondo. Il metodo genera poi un punteggio per il documento basato su questa classificazione e lo usa per posizionare il documento rispetto ad altri documenti.\n\nLe rivendicazioni 2, 7 e 12 aggiungono che il punteggio può essere generato anche in base alla quantità di volte che il documento viene selezionato da una pluralità di documenti. Le rivendicazioni 3, 8 e 13 specificano che il ranking del documento può essere abbassato quando è classificato come stale. Le rivendicazioni 4, 9 e 14 specificano che il ranking può essere aumentato quando il documento è classificato come fresh. Le rivendicazioni 5, 10 e 15 contemplano la combinazione del punteggio basato sulla classificazione stale/fresh con un secondo punteggio basato sulla rilevanza del documento rispetto a una query di ricerca, per generare un punteggio complessivo.\n\nLe rivendicazioni 6-10 e 11-15 coprono rispettivamente implementazioni come sistema e come dispositivo di memoria leggibile da computer, con gli stessi passaggi e varianti della rivendicazione di metodo.",
+    "seo_reading": "La descrizione contempla un sistema molto più ampio di quello protetto dalle rivendicazioni concesse. Mentre le rivendicazioni si concentrano esclusivamente sul tempo di permanenza degli utenti per classificare documenti come stale o fresh, la descrizione elenca numerosi altri segnali che potrebbero essere utilizzati per il ranking, tra cui: document inception date (data di creazione del documento), content updates (aggiornamenti dei contenuti), selection rate (tasso di selezione dai risultati di ricerca), link growth rate (tasso di crescita dei link), anchor text changes (cambiamenti nel testo di ancoraggio), traffic patterns (pattern di traffico), user bookmarks (segnalibri degli utenti), domain age (età del dominio), ranking history (storico delle posizioni), e document topics (argomenti del documento).\n\nLa descrizione contempla specificamente che un documento con un calo nel tempo medio di permanenza degli utenti potrebbe indicare contenuti obsoleti. L'esempio citato riguarda una query \"Riverview swimming schedule\" dove gli utenti trascorrevano 30 secondi sul documento ma successivamente solo pochi secondi, segnalando che il calendario è datato. La descrizione contempla anche che la \"selection rate\" (quante volte un documento viene cliccato quando appare nei risultati) possa essere monitorata nel tempo come segnale di qualità.\n\nPer la SEO, questo brevetto potrebbe significare che metriche comportamentali aggregate nel tempo potrebbero influenzare il ranking. Se gli utenti trascorressero progressivamente meno tempo su una pagina che appare per determinate query, questo potrebbe segnalare contenuti che non soddisfano più l'intento di ricerca. Tuttavia, la descrizione riconosce che per alcune query i documenti più vecchi potrebbero essere preferibili, suggerendo che il sistema dovrebbe considerare il contesto della query.\n\nÈ importante notare che il brevetto è scaduto (Expired - Fee Related dal 2012), quindi anche se fosse stato implementato, non vi è alcuna protezione attuale. La descrizione contempla molti segnali che sono diventati parte del dibattito SEO (dwell time, pogo-sticking), ma il brevetto stesso copre solo il confronto temporale del tempo di permanenza medio.",
+    "limits": [
+      "Il brevetto è scaduto dal 2012 (Expired - Fee Related), quindi non fornisce indicazioni su cosa Google utilizzi attualmente nei suoi sistemi di ranking.",
+      "Le rivendicazioni coprono solo il tempo di permanenza degli utenti confrontato tra periodi diversi, non gli altri numerosi segnali descritti nella sezione descrittiva che non sono protetti.",
+      "Il brevetto non specifica soglie, finestre temporali o pesi specifici per determinare quando una differenza nel tempo di permanenza sia significativa.",
+      "Non dimostra che Google abbia mai implementato questo sistema o che il tempo di permanenza sia effettivamente utilizzato come fattore di ranking in produzione."
+    ],
+    "implications": [
+      "Mantenere i contenuti aggiornati e pertinenti all'intento di ricerca rimane fondamentale indipendentemente dai segnali comportamentali, poiché contenuti obsoleti tendono naturalmente a soddisfare meno gli utenti.",
+      "Monitorare nel tempo le metriche di engagement disponibili in Search Console e Analytics può aiutare a identificare contenuti che potrebbero non soddisfare più adeguatamente l'intento degli utenti.",
+      "Per contenuti time-sensitive (calendari, orari, eventi), assicurarsi che le informazioni siano costantemente aggiornate per evitare che gli utenti abbandonino rapidamente la pagina dopo aver verificato l'obsolescenza.",
+      "Considerare che la qualità percepita di una pagina dipende dalla sua capacità di soddisfare l'intento nel tempo, non solo al momento della pubblicazione."
+    ],
+    "key_terms": [
+      {
+        "term": "stale document",
+        "explanation": "Documento classificato come obsoleto quando il tempo medio che gli utenti trascorrono su di esso diminuisce nel tempo rispetto a un periodo precedente"
+      },
+      {
+        "term": "fresh document",
+        "explanation": "Documento classificato come fresco quando il tempo medio che gli utenti trascorrono su di esso aumenta nel tempo rispetto a un periodo precedente"
+      },
+      {
+        "term": "selection rate",
+        "explanation": "La misura di quanto spesso un documento viene selezionato quando appare in un insieme di risultati di ricerca"
+      },
+      {
+        "term": "average amount of time",
+        "explanation": "Il tempo medio che un gruppo di utenti trascorre accedendo a un documento durante un determinato periodo temporale"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:01:00.008173Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07220988
+}

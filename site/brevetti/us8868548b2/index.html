@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8868548B2: Identificazione dell&#39;intento utente da pattern di query — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di inferire l&#39;intento di ricerca dell&#39;utente analizzando i pattern di raffinamento delle query in una sessione. Il sistema identifica termini che gli utenti aggiungono frequentemente a query diverse (refining terms), li associa a intenti, e modifica il ranking dei do" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8868548b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8868548B2: Identificazione dell&#39;intento utente da pattern di query — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di inferire l&#39;intento di ricerca dell&#39;utente analizzando i pattern di raffinamento delle query in una sessione. Il sistema identifica termini che gli utenti aggiungono frequentemente a query diverse (refining terms), li associa a intenti, e modifica il ranking dei do" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8868548b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8868548B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8868548b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8868548B2: Identificazione dell\u0027intento utente da pattern di query",
+  "description": "Il brevetto affronta il problema di inferire l\u0027intento di ricerca dell\u0027utente analizzando i pattern di raffinamento delle query in una sessione. Il sistema identifica termini che gli utenti aggiungono frequentemente a query diverse (refining terms), li associa a intenti, e modifica il ranking dei documenti in base alla frequenza con cui vengono selezionati in sessioni precedenti con lo stesso intento.",
+  "articleBody": "Il brevetto affronta il problema di inferire l\u0027intento di ricerca dell\u0027utente analizzando i pattern di raffinamento delle query in una sessione. Il sistema identifica termini che gli utenti aggiungono frequentemente a query diverse (refining terms), li associa a intenti, e modifica il ranking dei documenti in base alla frequenza con cui vengono selezionati in sessioni precedenti con lo stesso intento.\n\nLa rivendicazione indipendente 1 copre un metodo che identifica una query in una sessione e ottiene risultati di ricerca, ciascuno associato a un punteggio di rilevanza. Il metodo associa una pluralit\u00e0 di intenti alla sessione basandosi su termini di query che includono un \"intent refining query term\", dove questo termine era stato precedentemente sottomesso con una pluralit\u00e0 di query diverse in una quantit\u00e0 che supera una soglia. Il metodo identifica documenti che erano stati selezionati dagli utenti in sessioni precedenti associate ad almeno uno degli intenti con frequenza maggiore o minore rispetto a quando lo stesso documento era selezionato in sessioni non associate a quell\u0027intento. Per ciascun documento identificato, il metodo: identifica per ogni intento un \"intent boost\" che rappresenta un aggiustamento del punteggio basato sull\u0027intento; determina per ogni intento un \"confidence value\" basato sulla quantit\u00e0 di sessioni associate all\u0027intento; modifica il punteggio del documento basandosi su un \"document boost factor\" che \u00e8 funzione dell\u0027intent boost e del confidence value per ciascuno degli intenti. Infine, il metodo classifica i risultati in base ai punteggi modificati.\n\nLa rivendicazione 2 contempla l\u0027associazione di un intento aggiuntivo diverso basato su un secondo intent refining query term. La rivendicazione 3 estende questo scenario identificando secondi documenti selezionati con frequenza diversa in sessioni associate all\u0027intento aggiuntivo e modificandone i punteggi in base a un secondo confidence value. La rivendicazione 4 specifica che modificare il punteggio comprende aumentarlo se il documento era selezionato con frequenza maggiore nelle sessioni associate all\u0027intento, e diminuirlo se era selezionato con frequenza minore. La rivendicazione 5 indica che la soglia \u00e8 basata su una distribuzione di un insieme di query secondo la quantit\u00e0 di volte che ciascuna query \u00e8 stata sottomessa in una pluralit\u00e0 di sessioni. La rivendicazione 6 definisce che ogni sessione \u00e8 definita da un periodo di tempo. La rivendicazione 7 specifica che la soglia pu\u00f2 essere basata su una deviazione standard. Le rivendicazioni 8-21 replicano le stesse caratteristiche in forma di computer storage device e system.\n\nLa descrizione contempla un sistema che analizza le sessioni di ricerca storiche per identificare i \"query refinements\", ossia modifiche che gli utenti apportano alle query per ottenere risultati pi\u00f9 accurati (paragrafo che inizia con \"A query refinement is a change\"). Il sistema determina quali termini di raffinamento sono applicati a un ampio sottoinsieme di query diverse, classificandoli come \"intent refining query terms\" (paragrafo \"Query refinements are then processed\"). La descrizione fornisce esempi concreti: il termine \"pictures\" applicato a query diverse come \"Paris, France\", \"chicken recipe\", \"labradoodle\" viene identificato come intent refining term, mentre \"meltdown\" applicato solo a \"nuclear\" e \"toddler\" non lo \u00e8 (paragrafo con esempi di Chernobyl).\n\nLa descrizione contempla che la determinazione di un intent refining query term possa basarsi sul confronto del numero di query uniche con un valore soglia, ad esempio cento query uniche, oppure usando una funzione di distribuzione in cui solo i termini con un numero di query uniche superiore a una deviazione standard dalla media sono considerati intent refining query terms (paragrafo \"In some embodiments, determining a query refinement\"). La descrizione menziona che il confidence value pu\u00f2 essere basato sulla quantit\u00e0 di sessioni precedenti associate all\u0027intento (rivendicazione 3 e paragrafo correlato). Viene fornita una formula specifica per calcolare il DocumentBoost come somma pesata degli IntentBoost per ciascun intento, ponderati per i rispettivi Confidence value (formula nel paragrafo \"In some implementations, the effect of the intent\").\n\nLa descrizione contempla che le caratteristiche dell\u0027utente come lingua e posizione possano essere utilizzate in associazione con i dati di raffinamento e interazione (paragrafo \"In some implementations, user characteristics data\"). Gli esempi illustrano scenari in cui un utente che cerca \"jaguar\" e poi raffina con \"cat\" porta il sistema a identificare un intento relativo ai felini, che viene poi applicato a query successive come \"cougar\" anche senza il termine raffinante (FIGS. 4A-C).\n\nPer la SEO, questo brevetto potrebbe suggerire che Google consideri il contesto della sessione di ricerca per interpretare query ambigue. Se un utente ha mostrato un pattern di raffinamento coerente, i risultati successivi potrebbero essere influenzati da questo intento inferito anche se la query successiva non contiene esplicitamente i termini raffinanti. Potrebbe significare che documenti selezionati frequentemente in sessioni con determinati intenti riceverebbero un boost per utenti con intenti simili. Tuttavia, la descrizione non specifica quanto peso avrebbe questo segnale rispetto ad altri fattori di ranking, n\u00e9 conferma che questo sistema sia attivo in produzione.",
+  "wordCount": 787,
+  "datePublished": "2026-10-29T10:04:46.665586+00:00",
+  "dateModified": "2026-10-29T10:04:46.665586+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8868548b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Determining user intent from query patterns",
+    "identifier": "US8868548B2",
+    "url": "https://patents.google.com/patent/US8868548B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8868548B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8868548B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Identificazione dell&#39;intento utente da pattern di query</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Determining user intent from query patterns</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di inferire l&#39;intento di ricerca dell&#39;utente analizzando i pattern di raffinamento delle query in una sessione. Il sistema identifica termini che gli utenti aggiungono frequentemente a query diverse (refining terms), li associa a intenti, e modifica il ranking dei documenti in base alla frequenza con cui vengono selezionati in sessioni precedenti con lo stesso intento.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking basato su sessioni</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">21 Ottobre 2014</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2010-07-22</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Comprensione e riscrittura delle query</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">21</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che identifica una query in una sessione e ottiene risultati di ricerca, ciascuno associato a un punteggio di rilevanza. Il metodo associa una pluralità di intenti alla sessione basandosi su termini di query che includono un &#34;intent refining query term&#34;, dove questo termine era stato precedentemente sottomesso con una pluralità di query diverse in una quantità che supera una soglia. Il metodo identifica documenti che erano stati selezionati dagli utenti in sessioni precedenti associate ad almeno uno degli intenti con frequenza maggiore o minore rispetto a quando lo stesso documento era selezionato in sessioni non associate a quell&#39;intento. Per ciascun documento identificato, il metodo: identifica per ogni intento un &#34;intent boost&#34; che rappresenta un aggiustamento del punteggio basato sull&#39;intento; determina per ogni intento un &#34;confidence value&#34; basato sulla quantità di sessioni associate all&#39;intento; modifica il punteggio del documento basandosi su un &#34;document boost factor&#34; che è funzione dell&#39;intent boost e del confidence value per ciascuno degli intenti. Infine, il metodo classifica i risultati in base ai punteggi modificati.</p>
+      <p>La rivendicazione 2 contempla l&#39;associazione di un intento aggiuntivo diverso basato su un secondo intent refining query term. La rivendicazione 3 estende questo scenario identificando secondi documenti selezionati con frequenza diversa in sessioni associate all&#39;intento aggiuntivo e modificandone i punteggi in base a un secondo confidence value. La rivendicazione 4 specifica che modificare il punteggio comprende aumentarlo se il documento era selezionato con frequenza maggiore nelle sessioni associate all&#39;intento, e diminuirlo se era selezionato con frequenza minore. La rivendicazione 5 indica che la soglia è basata su una distribuzione di un insieme di query secondo la quantità di volte che ciascuna query è stata sottomessa in una pluralità di sessioni. La rivendicazione 6 definisce che ogni sessione è definita da un periodo di tempo. La rivendicazione 7 specifica che la soglia può essere basata su una deviazione standard. Le rivendicazioni 8-21 replicano le stesse caratteristiche in forma di computer storage device e system.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema che analizza le sessioni di ricerca storiche per identificare i &#34;query refinements&#34;, ossia modifiche che gli utenti apportano alle query per ottenere risultati più accurati (paragrafo che inizia con &#34;A query refinement is a change&#34;). Il sistema determina quali termini di raffinamento sono applicati a un ampio sottoinsieme di query diverse, classificandoli come &#34;intent refining query terms&#34; (paragrafo &#34;Query refinements are then processed&#34;). La descrizione fornisce esempi concreti: il termine &#34;pictures&#34; applicato a query diverse come &#34;Paris, France&#34;, &#34;chicken recipe&#34;, &#34;labradoodle&#34; viene identificato come intent refining term, mentre &#34;meltdown&#34; applicato solo a &#34;nuclear&#34; e &#34;toddler&#34; non lo è (paragrafo con esempi di Chernobyl).</p>
+      <p>La descrizione contempla che la determinazione di un intent refining query term possa basarsi sul confronto del numero di query uniche con un valore soglia, ad esempio cento query uniche, oppure usando una funzione di distribuzione in cui solo i termini con un numero di query uniche superiore a una deviazione standard dalla media sono considerati intent refining query terms (paragrafo &#34;In some embodiments, determining a query refinement&#34;). La descrizione menziona che il confidence value può essere basato sulla quantità di sessioni precedenti associate all&#39;intento (rivendicazione 3 e paragrafo correlato). Viene fornita una formula specifica per calcolare il DocumentBoost come somma pesata degli IntentBoost per ciascun intento, ponderati per i rispettivi Confidence value (formula nel paragrafo &#34;In some implementations, the effect of the intent&#34;).</p>
+      <p>La descrizione contempla che le caratteristiche dell&#39;utente come lingua e posizione possano essere utilizzate in associazione con i dati di raffinamento e interazione (paragrafo &#34;In some implementations, user characteristics data&#34;). Gli esempi illustrano scenari in cui un utente che cerca &#34;jaguar&#34; e poi raffina con &#34;cat&#34; porta il sistema a identificare un intento relativo ai felini, che viene poi applicato a query successive come &#34;cougar&#34; anche senza il termine raffinante (FIGS. 4A-C).</p>
+      <p>Per la SEO, questo brevetto potrebbe suggerire che Google consideri il contesto della sessione di ricerca per interpretare query ambigue. Se un utente ha mostrato un pattern di raffinamento coerente, i risultati successivi potrebbero essere influenzati da questo intento inferito anche se la query successiva non contiene esplicitamente i termini raffinanti. Potrebbe significare che documenti selezionati frequentemente in sessioni con determinati intenti riceverebbero un boost per utenti con intenti simili. Tuttavia, la descrizione non specifica quanto peso avrebbe questo segnale rispetto ad altri fattori di ranking, né conferma che questo sistema sia attivo in produzione.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema di identificazione degli intenti basato su session pattern sia attualmente implementato in Google Search, né fornisce indicazioni sulla sua eventuale rilevanza rispetto ad altri fattori di ranking.</li>
+      <li>La descrizione non specifica come vengano gestiti conflitti tra intenti multipli identificati nella stessa sessione quando producono aggiustamenti di ranking contrastanti, oltre alla formula generica di somma pesata.</li>
+      <li>Il brevetto non chiarisce per quanto tempo un intento identificato rimanga associato a un utente (solo per la sessione corrente o attraverso sessioni multiple) né come vengano gestiti gli intenti in conflitto tra sessioni diverse dello stesso utente.</li>
+      <li>Non viene specificato come il sistema distingua tra raffinamenti genuini che indicano intento e semplici esplorazioni o errori dell&#39;utente, né quale sia la soglia minima di sessioni necessarie per identificare un pattern affidabile.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Creare contenuti che rispondano chiaramente a intenti specifici e non ambigui può aiutare a posizionarsi meglio per utenti con quel particolare intento, indipendentemente da questo brevetto.</li>
+      <li class="pl-2">Considerare che query apparentemente generiche potrebbero essere interpretate in modo diverso in base al contesto della sessione dell&#39;utente, quindi ottimizzare per diverse interpretazioni della stessa query può essere prudente.</li>
+      <li class="pl-2">Monitorare i pattern di raffinamento delle query nel proprio settore (tramite Search Console o analytics) può fornire insight sugli intenti comuni degli utenti, utili per la strategia di contenuto.</li>
+      <li class="pl-2">Strutturare i contenuti in modo che rispondano sia a query generiche che a varianti raffinate della stessa query può coprire utenti in diverse fasi della loro sessione di ricerca.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">intent refining query term</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Termine che gli utenti aggiungono frequentemente a query diverse per raffinare la ricerca, identificato quando supera una soglia di applicazione a query uniche diverse</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">intent boost</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Aggiustamento del punteggio di un documento basato su un intento specifico, derivato dalla frequenza di selezione in sessioni associate a quell&#39;intento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">confidence value</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Valore che rappresenta il grado di certezza che un particolare intento si applichi al risultato, basato sulla quantità di sessioni precedenti associate all&#39;intento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">document boost factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore di aggiustamento finale del punteggio di un documento, calcolato come funzione degli intent boost e dei confidence value per tutti gli intenti associati alla sessione</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query refinement</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modifica che un utente apporta a una query per raffinarla e ottenere risultati più accurati, come l&#39;aggiunta o rimozione di termini</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8868548B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

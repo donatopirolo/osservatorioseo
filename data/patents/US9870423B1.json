@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US9870423B1",
+    "title": "Associating an entity with a search query",
+    "abstract": "Methods and apparatus for associating an entity with at least one search query. Some implementations are directed to methods and apparatus for identifying multiple queries associated with an entity and identifying one or more of the queries as an entity search query that provides desired search results for the entity. Some implementations are directed to methods and apparatus for identifying a particular entity and, in response to identifying the particular entity, identifying an entity search query corresponding to the particular entity.",
+    "claims": [
+      "1. A method implemented by one or more processors, comprising: identifying a particular entity, the particular entity being a particular person, place, or thing; identifying a plurality of search queries that are each associated with the particular entity; determining a query score for each of the search queries, wherein the query score for a search query of the search queries is based on entity ambiguity of the search query, wherein the entity ambiguity of the search query is based on a comparison of a quantity of search result documents, for the search query, that describe the particular entity to a quantity of the search result documents, for the search query, that do not describe the particular entity; assigning a particular search query of the search queries to the particular entity based on the determined query scores; receiving input, the input being provided via a user interface input device of a client computing device; determining that the particular entity is associated with the input; providing, for presentation via a user interface output device of the client computing device, content that includes a name of the particular entity and one or more additional properties of the particular entity, wherein providing the content is in response to the input and is in response to determining that the particular entity is associated with the input; and in response to selection of the content at the client computing device, submitting the particular search query to a search engine based on the particular search query being assigned to the particular entity.",
+      "2. The method of claim 1 , wherein the input is a partial search query and the content is a query suggestion for the partial search query.",
+      "3. The method of claim 1 , wherein the input is a submitted search query.",
+      "4. The method of claim 3 , wherein the content is an entity summary provided for presentation in a distinct manner from other search results that are responsive to the submitted search query.",
+      "5. The method of claim 1 , wherein the query score for the search query is further based on a similarity measure between the query and at least one property of the particular entity.",
+      "6. The method of claim 5 , wherein the at least one property of the particular entity includes a trusted name of the particular entity.",
+      "7. The method of claim 1 , wherein the query score for the search query is further based on search result document quality for the search result documents that are associated with the particular entity, and wherein the search result document quality is based on a document centric signal of the search result documents that are associated with the particular entity.",
+      "8. The method of claim 1 , wherein the query score for the search query is further based on at least one of: popularity of the search query, and search result document quality for the search result documents, for the search query, that are associated with the particular entity.",
+      "9. The method of claim 1 , wherein the query score for the search query is further based on popularity of the search query, and search result document quality for the search result documents, for the search query, that are associated with the particular entity.",
+      "10. A system, comprising: one or more non-transitory computer readable media storing instructions; one or more processors operable to execute the instructions, wherein the instructions include instructions to: identify a particular entity, the particular entity being a particular person, place, or thing; identify a plurality of search queries that are each associated with the particular entity; determine a query score for each of the search queries, wherein the query score for a search query of the search queries is based on search result document quality for search result documents, for the search query, that are associated with the particular entity, wherein the search result document quality is based on a document centric signal of the search result documents that are associated with the particular entity; assign a particular search query of the search queries to the particular entity based on the determined query scores; receive input, the input being provided via a user interface input device of a client computing device; determine that the particular entity is associated with the input; provide, for presentation via a user interface output device of the client computing device, content that includes a name of the particular entity and one or more additional properties of the particular entity, wherein providing the content is in response to the input and is in response to determining that the particular entity is associated with the input; and submit, in response to selection of the content at the client computing device, the particular search query to a search engine based on the particular search query being assigned to the particular entity.",
+      "11. The system of claim 10 , wherein the input is a partial search query and the content is a query suggestion for the partial search query.",
+      "12. The system of claim 10 , wherein the input is a submitted search query.",
+      "13. The system of claim 12 , wherein the content is an entity summary provided for presentation in a distinct manner from other search results that are responsive to the submitted search query.",
+      "14. The system of claim 10 , wherein the query score for the search query is further based on a similarity measure between the query and at least one property of the particular entity.",
+      "15. The system of claim 14 , wherein the at least one property of the particular entity includes a trusted name of the particular entity.",
+      "16. The system of claim 10 , wherein the query score for the search query is further based on entity ambiguity of the search query and wherein the entity ambiguity is based on a comparison of a quantity of the search result documents, for the search query, that describe the particular entity to a quantity of the search result documents, for the search query, that do not describe the particular entity.",
+      "17. The system of claim 10 , wherein the query score for the search query is further based on entity ambiguity of the search query and popularity of the search query.",
+      "18. At least one non-transitory computer readable storage medium storing computer instructions executable by a processor to perform a method comprising: identifying a particular entity, the particular entity being a particular person, place, or thing; identifying a plurality of search queries that are each associated with the particular entity; determining a query score for each of the search queries, wherein the query score for a search query of the search queries is based on entity ambiguity of the search query, wherein the entity ambiguity of the search query is based on a comparison of a quantity of search result documents, for the search query, that describe the particular entity to a quantity of the search result documents, for the search query, that do not describe the particular entity; assigning a particular search query of the search queries to the particular entity based on the determined query scores; receiving input, the input being provided via a user interface input device of a client computing device; determining that the particular entity is associated with the input; providing, for presentation via a user interface output device of the client computing device, content that includes a name of the particular entity and one or more additional properties of the particular entity, wherein providing the content is in response to the input and is in response to determining that the particular entity is associated with the input; and in response to selection of the content at the client computing device, submitting the particular search query to a search engine based on the particular search query being assigned to the particular entity."
+    ],
+    "independent_claims": [
+      "1. A method implemented by one or more processors, comprising: identifying a particular entity, the particular entity being a particular person, place, or thing; identifying a plurality of search queries that are each associated with the particular entity; determining a query score for each of the search queries, wherein the query score for a search query of the search queries is based on entity ambiguity of the search query, wherein the entity ambiguity of the search query is based on a comparison of a quantity of search result documents, for the search query, that describe the particular entity to a quantity of the search result documents, for the search query, that do not describe the particular entity; assigning a particular search query of the search queries to the particular entity based on the determined query scores; receiving input, the input being provided via a user interface input device of a client computing device; determining that the particular entity is associated with the input; providing, for presentation via a user interface output device of the client computing device, content that includes a name of the particular entity and one or more additional properties of the particular entity, wherein providing the content is in response to the input and is in response to determining that the particular entity is associated with the input; and in response to selection of the content at the client computing device, submitting the particular search query to a search engine based on the particular search query being assigned to the particular entity.",
+      "10. A system, comprising: one or more non-transitory computer readable media storing instructions; one or more processors operable to execute the instructions, wherein the instructions include instructions to: identify a particular entity, the particular entity being a particular person, place, or thing; identify a plurality of search queries that are each associated with the particular entity; determine a query score for each of the search queries, wherein the query score for a search query of the search queries is based on search result document quality for search result documents, for the search query, that are associated with the particular entity, wherein the search result document quality is based on a document centric signal of the search result documents that are associated with the particular entity; assign a particular search query of the search queries to the particular entity based on the determined query scores; receive input, the input being provided via a user interface input device of a client computing device; determine that the particular entity is associated with the input; provide, for presentation via a user interface output device of the client computing device, content that includes a name of the particular entity and one or more additional properties of the particular entity, wherein providing the content is in response to the input and is in response to determining that the particular entity is associated with the input; and submit, in response to selection of the content at the client computing device, the particular search query to a search engine based on the particular search query being assigned to the particular entity.",
+      "18. At least one non-transitory computer readable storage medium storing computer instructions executable by a processor to perform a method comprising: identifying a particular entity, the particular entity being a particular person, place, or thing; identifying a plurality of search queries that are each associated with the particular entity; determining a query score for each of the search queries, wherein the query score for a search query of the search queries is based on entity ambiguity of the search query, wherein the entity ambiguity of the search query is based on a comparison of a quantity of search result documents, for the search query, that describe the particular entity to a quantity of the search result documents, for the search query, that do not describe the particular entity; assigning a particular search query of the search queries to the particular entity based on the determined query scores; receiving input, the input being provided via a user interface input device of a client computing device; determining that the particular entity is associated with the input; providing, for presentation via a user interface output device of the client computing device, content that includes a name of the particular entity and one or more additional properties of the particular entity, wherein providing the content is in response to the input and is in response to determining that the particular entity is associated with the input; and in response to selection of the content at the client computing device, submitting the particular search query to a search engine based on the particular search query being assigned to the particular entity."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Olivier Jean Andre Bousquet",
+      "Oskar SANDBERG",
+      "Sylvain Gelly",
+      "Randolph Gregory Brown"
+    ],
+    "priority_date": "2013-03-13",
+    "filing_date": "2016-04-13",
+    "publication_date": "2018-01-16",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F17/30864",
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9538",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24578",
+      "G06F16/248",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/332",
+      "G06F16/3322",
+      "G06F16/40",
+      "G06F16/48",
+      "G06F16/951",
+      "G06F17/3053"
+    ],
+    "family": [
+      {
+        "number": "US10789309B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Associating an entity with a search query"
+      },
+      {
+        "number": "US9336211B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Associating an entity with a search query"
+      },
+      {
+        "number": "US11294970B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Associating an entity with a search query"
+      }
+    ],
+    "cited_by_count": 49
+  },
+  "analysis": {
+    "title_it": "Associazione di query di ricerca specifiche alle entità",
+    "summary": "Il brevetto descrive metodi per identificare, tra le molteplici query associate a un'entità, quella che restituisce i risultati più desiderabili per quell'entità. Il sistema assegna un punteggio a ciascuna query candidata e associa la query con il punteggio migliore all'entità, per poi utilizzarla quando l'utente seleziona l'entità da un riepilogo o da un suggerimento di ricerca.",
+    "theme": "entita_knowledge_graph",
+    "seo_relevance": 3,
+    "scope": "Google Search, entità e query suggestion",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 10, 18) coprono un metodo implementato da processori che identifica un'entità particolare (persona, luogo o cosa), identifica una pluralità di query di ricerca associate a quell'entità, e determina un punteggio per ciascuna query. Il punteggio si basa su \"entity ambiguity\" della query, definita come il confronto tra la quantità di documenti risultanti che descrivono l'entità particolare e la quantità di documenti che non la descrivono (rivendicazione 1). Il metodo assegna poi una query specifica all'entità in base ai punteggi determinati. Quando il sistema riceve un input tramite interfaccia utente e determina che l'entità particolare è associata a quell'input, fornisce contenuto che include il nome dell'entità e proprietà aggiuntive. In risposta alla selezione di tale contenuto, il sistema sottomette la query specifica assegnata a un motore di ricerca.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che l'input può essere una query parziale e il contenuto un suggerimento di query. La rivendicazione 3 indica che l'input può essere una query sottomessa. La rivendicazione 4 precisa che il contenuto può essere un riepilogo dell'entità presentato in modo distinto dagli altri risultati. La rivendicazione 5 aggiunge che il punteggio può basarsi anche su una misura di similarità tra la query e almeno una proprietà dell'entità. La rivendicazione 6 specifica che tale proprietà può includere un \"trusted name\" dell'entità. La rivendicazione 7 introduce che il punteggio può considerare la qualità dei documenti risultanti associati all'entità, basata su un \"document centric signal\". Le rivendicazioni 8 e 9 aggiungono che il punteggio può includere la popolarità della query e la qualità dei documenti risultanti. La rivendicazione 10 presenta una variante del sistema in cui il punteggio si basa principalmente sulla qualità dei documenti risultanti. Le rivendicazioni da 16 a 17 confermano che entity ambiguity e popolarità della query possono essere fattori aggiuntivi del punteggio.",
+    "seo_reading": "La descrizione contempla diversi segnali per calcolare il \"query score\" che determina quale query associare a un'entità. Al blocco 310, la descrizione elenca quattro fattori principali: entity ambiguity, popolarità della query, qualità dei documenti risultanti associati all'entità, e misura di similarità tra query ed entità. L'entity ambiguity può essere determinata confrontando gli entity score di diverse entità mappate alla stessa query nel database query-to-entity, oppure contando quante entità aggiuntive sono associate alla query. La descrizione menziona anche che l'ambiguità può basarsi sulla percentuale di documenti nei top risultati che sono principalmente associati all'entità identificata (ad esempio, se l'80% dei top 20 documenti riguarda principalmente quell'entità). La qualità dei documenti può basarsi su \"document centric signal\" come il numero di utenti che navigano verso quei risultati quando presentati. La similarità può utilizzare l'edit distance tra un \"trusted alias\" dell'entità e la query.\n\nLa descrizione contempla che il peso relativo di questi fattori potrebbe variare in base all'applicazione prevista (blocco 310). Per query da mostrare agli utenti, la similarità e la popolarità potrebbero pesare di più per sembrare naturali. Per query destinate a estrarre fatti sull'entità (\"fact mining\"), l'entity ambiguity potrebbe essere privilegiata per ottenere risultati più focalizzati. La descrizione fornisce esempi concreti: per l'entità del cantante Sting, \"sting musician\" potrebbe essere preferita per mostrare risultati popolari agli utenti, mentre \"sting gordon sumner\" potrebbe essere migliore per il fact mining perché più specifica.\n\nPer la SEO, questo potrebbe significare che Google potrebbe utilizzare query diverse dalla formulazione letterale dell'utente quando questi seleziona un'entità da un riepilogo o suggerimento. Un sito ottimizzato per una formulazione specifica dell'entità (ad esempio il \"trusted name\" o combinazioni con proprietà distintive) potrebbe beneficiare di maggiore visibilità quando gli utenti cercano quell'entità attraverso questi meccanismi. Tuttavia, la descrizione non afferma che questo sistema sia attivo in Search, e la ponderazione dei fattori resta ipotetica. I segnali di qualità documento menzionati (click-through, ranking signals generici) sono già noti, quindi l'aspetto distintivo riguarda principalmente la selezione automatica di una query \"canonica\" per entità.",
+    "limits": [
+      "Il brevetto non dimostra che Google utilizzi effettivamente questo sistema per riscrivere le query quando gli utenti selezionano entità dai riepiloghi o dai suggerimenti di ricerca.",
+      "La descrizione contempla molteplici varianti di ponderazione dei segnali per applicazioni diverse, ma non specifica quale combinazione sia effettivamente implementata o preferita.",
+      "Il brevetto fa parte di una famiglia con tre continuation (US10789309B1, US9336211B1, US11294970B1), quindi non rappresenta protezione indipendente ma sviluppo iterativo dello stesso concetto.",
+      "Non viene specificato come il sistema gestisca entità emergenti o di nicchia per le quali i dati storici di query e documenti potrebbero essere insufficienti per calcolare punteggi affidabili."
+    ],
+    "implications": [
+      "Assicurarsi che le pagine dedicate a entità specifiche utilizzino denominazioni chiare e non ambigue, includendo proprietà distintive dell'entità nel title e nei contenuti principali, indipendentemente dal fatto che questo brevetto sia in uso.",
+      "Per entità con nomi ambigui, includere nel contenuto proprietà disambiguanti riconoscibili (tipo di entità, localizzazione, date rilevanti) che potrebbero essere utilizzate come trusted names o proprietà di confronto.",
+      "Mantenere segnali di qualità documento solidi (engagement, autorevolezza) per pagine su entità specifiche, dato che questi potrebbero influenzare la selezione di query associate all'entità.",
+      "Considerare che la visibilità per ricerche su entità potrebbe dipendere non solo dall'ottimizzazione per la query letterale dell'utente, ma anche per formulazioni alternative che il sistema potrebbe considerare più rappresentative dell'entità."
+    ],
+    "key_terms": [
+      {
+        "term": "entity ambiguity",
+        "explanation": "Misura di quanto una query sia specifica per un'entità, basata sul confronto tra documenti risultanti che descrivono quell'entità e documenti che descrivono altre entità"
+      },
+      {
+        "term": "entity search query",
+        "explanation": "Query specifica assegnata a un'entità che fornisce i risultati di ricerca più desiderabili per quell'entità, selezionata tra le molteplici query associate all'entità"
+      },
+      {
+        "term": "query score",
+        "explanation": "Punteggio assegnato a ciascuna query candidata per un'entità, basato su fattori come entity ambiguity, popolarità della query, qualità dei documenti risultanti e similarità con le proprietà dell'entità"
+      },
+      {
+        "term": "trusted name",
+        "explanation": "Nome o alias affidabile di un'entità, utilizzato per calcolare la similarità tra query ed entità e potenzialmente memorizzato nel database delle proprietà delle entità"
+      },
+      {
+        "term": "document centric signal",
+        "explanation": "Segnale basato sulle caratteristiche intrinseche del documento, come qualità complessiva o metriche di engagement degli utenti, utilizzato per valutare la qualità dei risultati di ricerca"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:08:30.365641Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.10396092
+}

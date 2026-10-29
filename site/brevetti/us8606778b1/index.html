@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8606778B1: Ranking basato sulla distanza semantica tra termini — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema della misurazione della vicinanza tra termini di ricerca in un documento HTML. Propone di rilevare strutture semantiche implicite (come liste non marcate con tag formali) e di calcolare metriche di distanza che tengano conto della struttura semantica del documento, n" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8606778b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8606778B1: Ranking basato sulla distanza semantica tra termini — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema della misurazione della vicinanza tra termini di ricerca in un documento HTML. Propone di rilevare strutture semantiche implicite (come liste non marcate con tag formali) e di calcolare metriche di distanza che tengano conto della struttura semantica del documento, n" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8606778b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8606778B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us8606778b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8606778B1: Ranking basato sulla distanza semantica tra termini",
+  "description": "Il brevetto affronta il problema della misurazione della vicinanza tra termini di ricerca in un documento HTML. Propone di rilevare strutture semantiche implicite (come liste non marcate con tag formali) e di calcolare metriche di distanza che tengano conto della struttura semantica del documento, non solo della distanza visiva o del conteggio delle parole, per generare punteggi di ranking.",
+  "articleBody": "Il brevetto affronta il problema della misurazione della vicinanza tra termini di ricerca in un documento HTML. Propone di rilevare strutture semantiche implicite (come liste non marcate con tag formali) e di calcolare metriche di distanza che tengano conto della struttura semantica del documento, non solo della distanza visiva o del conteggio delle parole, per generare punteggi di ranking.\n\nLa rivendicazione indipendente 1 copre un metodo che identifica un documento sulla base di due o pi\u00f9 termini di ricerca, forma una struttura ad albero dal documento contenente una pluralit\u00e0 di elementi, analizza la ripetizione di uno o pi\u00f9 tag nella struttura ad albero, e determina, sulla base di tale ripetizione, che gli elementi sono associati a una lista non definita da un tag di lista formale. La lista include un\u0027intestazione e ciascun elemento contiene pi\u00f9 parole che descrivono l\u0027elemento. Il metodo annota la struttura ad albero per indicare la presenza della lista, quindi determina una metrica associata ai termini di ricerca in tre modalit\u00e0 diverse: in un primo modo quando entrambi i termini appaiono nello stesso elemento della lista; in un secondo modo quando i termini appaiono in elementi diversi della lista; in un terzo modo quando un termine appare nell\u0027intestazione e l\u0027altro in un elemento della lista. Il metodo calcola un punteggio per il documento basato sulla metrica e classifica il documento rispetto ad almeno un altro documento.\n\nLe rivendicazioni dipendenti 2-7 specificano che la struttura ad albero include la struttura gerarchica dei tag HTML (rivendicazione 2), che i tag possono includere line break e bold ripetuti per ciascun elemento (rivendicazione 3), o tag come divide, font, line break, bold (rivendicazione 4). La rivendicazione 5 specifica che l\u0027analisi pu\u00f2 riguardare set di due o pi\u00f9 tag ripetuti. La rivendicazione 6 aggiunge che la struttura ad albero pu\u00f2 essere usata per rilevare intestazioni o titoli. La rivendicazione 7 copre la determinazione dell\u0027esistenza di testo sotto un\u0027intestazione o titolo e l\u0027attribuzione di quel testo all\u0027intestazione o titolo. Le rivendicazioni 8-14 e 15-20 replicano le stesse protezioni per implementazioni come sistema e come medium non transitorio.\n\nLa descrizione contempla l\u0027uso di strutture semantiche implicite per calcolare distanze tra termini. Il paragrafo relativo all\u0027atto 602 e alla figura 7 spiega che il sistema cerca set di due o pi\u00f9 comandi di formattazione del testo ripetuti, inclusi tag HTML come div, br, p o tag relativi a tabelle. La figura 9 e il testo associato (atto 803) illustrano tre regole per generare metriche di distanza: se entrambi i termini appaiono nello stesso elemento di lista sono considerati vicini; se un termine appare in un elemento e l\u0027altro nell\u0027intestazione, la distanza \u00e8 intermedia; se i termini appaiono in elementi diversi della lista sono considerati pi\u00f9 lontani, anche se il conteggio delle parole tra loro \u00e8 basso. La descrizione contempla anche che un termine nel titolo di un documento possa essere considerato vicino a ogni altro termine nel documento indipendentemente dal conteggio delle parole, e che un termine in un\u0027intestazione sia considerato molto vicino ad altri termini sotto quell\u0027intestazione nella struttura ad albero.\n\nPer la SEO, questo potrebbe significare che la struttura HTML di una pagina, in particolare l\u0027uso di liste (anche implicite) e di intestazioni, potrebbe influenzare il modo in cui un motore di ricerca valuta la rilevanza di una pagina per query multi-termine. Pagine in cui i termini di ricerca appaiono nello stesso elemento di lista o sotto la stessa intestazione potrebbero essere considerate pi\u00f9 rilevanti rispetto a pagine in cui i termini sono dispersi in elementi strutturalmente separati. Questo suggerirebbe un vantaggio per contenuti ben strutturati semanticamente, dove termini correlati sono raggruppati in liste o sotto intestazioni comuni. Tuttavia, la descrizione menziona anche (atto 804) che altri fattori come l\u0027inverse document frequency e misure di qualit\u00e0 basate sulla struttura dei link o sulla qualit\u00e0 predeterminata di siti/domini possono essere integrati nel punteggio finale, il che relativizza il peso della sola distanza semantica.",
+  "wordCount": 649,
+  "datePublished": "2026-10-29T10:03:08.350359+00:00",
+  "dateModified": "2026-10-29T10:03:08.350359+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8606778b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Document ranking based on semantic distance between terms in a document",
+    "identifier": "US8606778B1",
+    "url": "https://patents.google.com/patent/US8606778B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8606778B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8606778B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking basato sulla distanza semantica tra termini</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Document ranking based on semantic distance between terms in a document</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema della misurazione della vicinanza tra termini di ricerca in un documento HTML. Propone di rilevare strutture semantiche implicite (come liste non marcate con tag formali) e di calcolare metriche di distanza che tengano conto della struttura semantica del documento, non solo della distanza visiva o del conteggio delle parole, per generare punteggi di ranking.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Ranking documenti web in Google Search</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">10 Dicembre 2013</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2004-03-31</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Passaggi, risposte dirette e snippet</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che identifica un documento sulla base di due o più termini di ricerca, forma una struttura ad albero dal documento contenente una pluralità di elementi, analizza la ripetizione di uno o più tag nella struttura ad albero, e determina, sulla base di tale ripetizione, che gli elementi sono associati a una lista non definita da un tag di lista formale. La lista include un&#39;intestazione e ciascun elemento contiene più parole che descrivono l&#39;elemento. Il metodo annota la struttura ad albero per indicare la presenza della lista, quindi determina una metrica associata ai termini di ricerca in tre modalità diverse: in un primo modo quando entrambi i termini appaiono nello stesso elemento della lista; in un secondo modo quando i termini appaiono in elementi diversi della lista; in un terzo modo quando un termine appare nell&#39;intestazione e l&#39;altro in un elemento della lista. Il metodo calcola un punteggio per il documento basato sulla metrica e classifica il documento rispetto ad almeno un altro documento.</p>
+      <p>Le rivendicazioni dipendenti 2-7 specificano che la struttura ad albero include la struttura gerarchica dei tag HTML (rivendicazione 2), che i tag possono includere line break e bold ripetuti per ciascun elemento (rivendicazione 3), o tag come divide, font, line break, bold (rivendicazione 4). La rivendicazione 5 specifica che l&#39;analisi può riguardare set di due o più tag ripetuti. La rivendicazione 6 aggiunge che la struttura ad albero può essere usata per rilevare intestazioni o titoli. La rivendicazione 7 copre la determinazione dell&#39;esistenza di testo sotto un&#39;intestazione o titolo e l&#39;attribuzione di quel testo all&#39;intestazione o titolo. Le rivendicazioni 8-14 e 15-20 replicano le stesse protezioni per implementazioni come sistema e come medium non transitorio.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla l&#39;uso di strutture semantiche implicite per calcolare distanze tra termini. Il paragrafo relativo all&#39;atto 602 e alla figura 7 spiega che il sistema cerca set di due o più comandi di formattazione del testo ripetuti, inclusi tag HTML come div, br, p o tag relativi a tabelle. La figura 9 e il testo associato (atto 803) illustrano tre regole per generare metriche di distanza: se entrambi i termini appaiono nello stesso elemento di lista sono considerati vicini; se un termine appare in un elemento e l&#39;altro nell&#39;intestazione, la distanza è intermedia; se i termini appaiono in elementi diversi della lista sono considerati più lontani, anche se il conteggio delle parole tra loro è basso. La descrizione contempla anche che un termine nel titolo di un documento possa essere considerato vicino a ogni altro termine nel documento indipendentemente dal conteggio delle parole, e che un termine in un&#39;intestazione sia considerato molto vicino ad altri termini sotto quell&#39;intestazione nella struttura ad albero.</p>
+      <p>Per la SEO, questo potrebbe significare che la struttura HTML di una pagina, in particolare l&#39;uso di liste (anche implicite) e di intestazioni, potrebbe influenzare il modo in cui un motore di ricerca valuta la rilevanza di una pagina per query multi-termine. Pagine in cui i termini di ricerca appaiono nello stesso elemento di lista o sotto la stessa intestazione potrebbero essere considerate più rilevanti rispetto a pagine in cui i termini sono dispersi in elementi strutturalmente separati. Questo suggerirebbe un vantaggio per contenuti ben strutturati semanticamente, dove termini correlati sono raggruppati in liste o sotto intestazioni comuni. Tuttavia, la descrizione menziona anche (atto 804) che altri fattori come l&#39;inverse document frequency e misure di qualità basate sulla struttura dei link o sulla qualità predeterminata di siti/domini possono essere integrati nel punteggio finale, il che relativizza il peso della sola distanza semantica.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2013), quindi non è più in vigore e non costituisce protezione attiva per Google.</li>
+      <li>Il brevetto non dimostra che Google abbia mai implementato questo sistema in produzione, né fornisce evidenze sull&#39;eventuale peso di questo segnale rispetto ad altri fattori di ranking.</li>
+      <li>La descrizione contempla l&#39;uso di metriche di distanza semantica ma non specifica soglie, pesi relativi o modalità di combinazione con altri segnali, rendendo impossibile quantificare l&#39;impatto pratico.</li>
+      <li>Il brevetto risale al 2004 (data di priorità) e riguarda tecniche di analisi HTML che potrebbero essere superate da approcci più moderni basati su machine learning o elaborazione del linguaggio naturale.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Organizzare i contenuti in liste HTML ben formate (anche senza tag formali ul/ol, ma con strutture ripetitive coerenti) e sotto intestazioni semanticamente rilevanti resta una buona pratica per la leggibilità e l&#39;accessibilità, indipendentemente da questo brevetto.</li>
+      <li class="pl-2">Raggruppare termini correlati e concetti sotto la stessa intestazione o nello stesso elemento di lista migliora la comprensibilità del contenuto per utenti e crawler, principio valido a prescindere dall&#39;implementazione di metriche di distanza semantica.</li>
+      <li class="pl-2">Evitare di disperdere termini chiave correlati in sezioni strutturalmente separate del documento favorisce la coerenza tematica, un principio generale di content design.</li>
+      <li class="pl-2">Utilizzare correttamente i tag HTML semantici (headings, liste) supporta la corretta interpretazione della gerarchia informativa della pagina, valore indipendente da qualsiasi algoritmo specifico.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">implicit list</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Lista non definita da tag HTML formali come ul o ol, ma creata tramite ripetizione di altri tag come br, b, div o tabelle.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">tree structure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Struttura gerarchica ad albero che rappresenta la marcatura HTML di un documento, usata per analizzare la ripetizione di tag e rilevare strutture semantiche.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">distance metric</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Metrica che misura la distanza tra coppie di termini in un documento, calcolata non solo sul conteggio delle parole ma sulla vicinanza semantica determinata dalla struttura del documento.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">semantic closeness</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Concetto di vicinanza tra termini basato sulla struttura semantica del documento (es. termini nello stesso elemento di lista o sotto la stessa intestazione) piuttosto che sulla distanza visiva o testuale.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US8060501B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8060501B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Document ranking based on semantic distance between terms in a document</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8606778B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

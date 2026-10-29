@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US9477714B1",
+    "title": "Methods and apparatus for ranking documents",
+    "abstract": "Methods and apparatus are described for scoring documents in response, in part, to parameters related to the document, source, and/or cluster score. Methods and apparatus are also described for scoring a cluster in response, in part, to parameters related to documents within the cluster and/or sources corresponding to the documents within the cluster. In one embodiment, the invention may detect at least one document within the cluster; analyze a parameter corresponding to the document; and compute a cluster score based, in part, on the parameter, wherein the cluster score corresponds with at least one document within the cluster.",
+    "claims": [
+      "1. A method performed by one or more server devices, the method comprising: identifying, by the one or more server devices, a document; analyzing, by the one or more server devices, a measure of originality of the document, the measure of originality based upon a similarity of text of the document to one or more other documents; analyzing, by the one or more server devices, a recency of coverage associated with the document, the recency of coverage being based on a time of publication of the document electronically via a network; analyzing, by the one or more server devices, a freshness of the document, the freshness of the document being a difference between the time of publication of the document and a time of an event which is a subject of the document; determining, by the one or more server devices, a score for the document based on analyzing the measure of originality, analyzing the freshness of the document, and analyzing the recency of coverage, the score for the document based upon a cluster score for a cluster that includes the document, the cluster score from a weighting factor associated with the particular period of time, and a quantity of the document and the one or more particular documents in the cluster; and ranking, by the one or more server devices and based on the score, the document relative to the one or more other documents, the document being included among documents to be provided for display based on a search query when the score exceeds a threshold, the threshold being based on a subject matter of the search query.",
+      "2. The method of claim 1 , where the network includes the Internet, the method further comprising: receiving the search query; and including, based on the score, the document among the documents to be provided for display based on the search query, the documents being identified based on the search query.",
+      "3. The method of claim 2 , where including the document in the documents includes: determining that the score exceeds the threshold, where the threshold is based on a measure of popularity of the subject matter; and including the document among the documents based on determining that the score exceeds the threshold.",
+      "4. The method of claim 1 , further comprising: analyzing at least one of a measure of importance of a source of the document or a measure of quality of the source, where determining the score for the document includes: determining the score for the document further based on analyzing the at least one of the measure of importance of the source or the measure of quality of the source.",
+      "5. The method of claim 1 , further comprising: including the document with one or more particular documents based on the time of publication, the time of publication being associated with a particular period of time, and a time of publication, of the one or more particular documents, being associated with the particular period of the time.",
+      "6. The method of claim 1 , further comprising: determining whether content of the document is associated with a topic of the particular cluster of a plurality of clusters; and including the document in the particular cluster when the content of the document is associated with the topic of the particular cluster, the score, for the document, being determined based on the cluster score for the particular cluster.",
+      "7. A non-transitory computer-readable medium storing instructions, the instructions comprising: one or more instructions which, when executed by one or more processors, cause the one or more processors to: identify a document; analyze a measure of originality of the document, the measure of originality based upon a similarity of text of the document to one or more other documents; analyze a recency of coverage of the document, the recency of coverage being based on a time of publication of the document via the Internet; analyze a freshness of the document the freshness of the document being a difference between the time of publication of the document and a time of an event which is subject of the document; determine a score for the document based on analyzing the measure of originality, analyzing the freshness of the document and analyzing the recency of coverage, the score for the document based upon a cluster score for a cluster that includes the document, the cluster score from a weighting factor associated with the particular period of time, and a quantity of the document and the one or more particular documents in the cluster; and rank, based on the score, the document relative to one or more other documents, the document being included in documents to be provided for display based on a search Query when the score exceeds a threshold, the threshold being based on a subject matter of the search query.",
+      "8. The non-transitory computer-readable medium of claim 7 , where the one or more instructions to identify the document include one or more instructions to identify the document based on the search query, and where the instructions further comprise: one or more instructions to determine whether to include, based on the score, the document among the documents to be provided for display based on the search query, the documents being identified based on the search query.",
+      "9. The non-transitory computer-readable medium of claim 8 , where the one or more instructions to determine whether to include the document among the documents include: one or more instructions to include the document among the documents when the score exceeds the threshold, the threshold being based on a measure of popularity of the subject matter of the search query, the document being excluded from the documents to be provided for display when the score does not exceed the threshold.",
+      "10. The non-transitory computer-readable medium of claim 7 , the instructions further comprising: one or more instructions to assign the document to a particular bin based on the time of publication, the time of publication being associated with a particular period of time, and a time of publication, of one or more documents assigned to the bin, being associated with the particular period of the time.",
+      "11. The non-transitory computer-readable medium of claim 7 , where the weighting factor is based on the particular period of the time.",
+      "12. The non-transitory computer-readable medium of claim 7 , where the instructions further comprise: one or more instructions to analyze at least one of a measure of quality of a source of the document, a measure of expertise of the source, or a measure of importance of the source, where the one or more instructions to determine the score for the document include: one or more instructions to determine the score for the document further based on analyzing the at least one of the measure of quality of the source, the measure of expertise of the source, or the measure of importance of the source.",
+      "13. A system comprising: one or more server devices to: identify a document; analyze a measure of originality of the document, the measure of originality based upon a similarity of text of the document to one or more other documents; analyze a recency of coverage of the document, the recency of coverage being based on a time of publication of the document via a network; analyze a freshness of the document the freshness of the document being a difference between the time of publication of the document and a time of an event which is subject of the document; determine a score for the document based on analyzing the measure of originality, analyzing the recency of coverage, and analyzing the freshness of the document, the score for the document based upon a cluster score for a cluster that includes the document, the cluster score from a weighting factor associated with the particular period of time, and a quantity of the document and the one or more particular documents in the cluster; and rank, based on the score; the document relative to one or more other documents.",
+      "14. The system of claim 13 , where the one or more server devices are further to: assign the document to a particular bin based on the time of publication, the time of publication being associated with a particular period of time, and a time of publication, of one or more documents assigned to the bin, being associated with the particular period of the time.",
+      "15. The system of claim 13 , where the one or more server devices are further to: analyze a plurality of documents; identify a topic associated with the plurality of documents; define the cluster based on the topic; determine that content of the document is related to the topic; and include the document in the cluster based on determining that content of the document is related to the topic.",
+      "16. The system of claim 13 , where the weighting factor is based on the particular period of the time.",
+      "17. The system of claim 13 , where the one or more server devices are further to: analyze at least one of a measure of quality of the source or a measure of importance of the source, where, when determining the score for the document, the one or more server devices are to: determine the score for the document further based on analyzing the at least one of the measure of quality of the source or the measure of importance of the source."
+    ],
+    "independent_claims": [
+      "1. A method performed by one or more server devices, the method comprising: identifying, by the one or more server devices, a document; analyzing, by the one or more server devices, a measure of originality of the document, the measure of originality based upon a similarity of text of the document to one or more other documents; analyzing, by the one or more server devices, a recency of coverage associated with the document, the recency of coverage being based on a time of publication of the document electronically via a network; analyzing, by the one or more server devices, a freshness of the document, the freshness of the document being a difference between the time of publication of the document and a time of an event which is a subject of the document; determining, by the one or more server devices, a score for the document based on analyzing the measure of originality, analyzing the freshness of the document, and analyzing the recency of coverage, the score for the document based upon a cluster score for a cluster that includes the document, the cluster score from a weighting factor associated with the particular period of time, and a quantity of the document and the one or more particular documents in the cluster; and ranking, by the one or more server devices and based on the score, the document relative to the one or more other documents, the document being included among documents to be provided for display based on a search query when the score exceeds a threshold, the threshold being based on a subject matter of the search query.",
+      "7. A non-transitory computer-readable medium storing instructions, the instructions comprising: one or more instructions which, when executed by one or more processors, cause the one or more processors to: identify a document; analyze a measure of originality of the document, the measure of originality based upon a similarity of text of the document to one or more other documents; analyze a recency of coverage of the document, the recency of coverage being based on a time of publication of the document via the Internet; analyze a freshness of the document the freshness of the document being a difference between the time of publication of the document and a time of an event which is subject of the document; determine a score for the document based on analyzing the measure of originality, analyzing the freshness of the document and analyzing the recency of coverage, the score for the document based upon a cluster score for a cluster that includes the document, the cluster score from a weighting factor associated with the particular period of time, and a quantity of the document and the one or more particular documents in the cluster; and rank, based on the score, the document relative to one or more other documents, the document being included in documents to be provided for display based on a search Query when the score exceeds a threshold, the threshold being based on a subject matter of the search query.",
+      "13. A system comprising: one or more server devices to: identify a document; analyze a measure of originality of the document, the measure of originality based upon a similarity of text of the document to one or more other documents; analyze a recency of coverage of the document, the recency of coverage being based on a time of publication of the document via a network; analyze a freshness of the document the freshness of the document being a difference between the time of publication of the document and a time of an event which is subject of the document; determine a score for the document based on analyzing the measure of originality, analyzing the recency of coverage, and analyzing the freshness of the document, the score for the document based upon a cluster score for a cluster that includes the document, the cluster score from a weighting factor associated with the particular period of time, and a quantity of the document and the one or more particular documents in the cluster; and rank, based on the score; the document relative to one or more other documents."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Krishna Bharat",
+      "Jeffrey A. Dean",
+      "Michael Curtiss",
+      "Amitabh Singhal",
+      "Michael Schmitt"
+    ],
+    "priority_date": "2002-09-20",
+    "filing_date": "2014-09-17",
+    "publication_date": "2016-10-25",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/35",
+      "G06F16/355",
+      "G06F17/3053",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24578",
+      "G06F16/28",
+      "G06F16/284",
+      "G06F16/285",
+      "G06F16/33",
+      "G06F16/3331",
+      "G06F16/334",
+      "G06F16/90",
+      "G06F16/93",
+      "G06F16/95",
+      "G06F16/953"
+    ],
+    "family": [
+      {
+        "number": "US10496652B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Methods and apparatus for ranking documents"
+      },
+      {
+        "number": "US8843479B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Methods and apparatus for ranking documents"
+      }
+    ],
+    "cited_by_count": 84
+  },
+  "analysis": {
+    "title_it": "Ranking di documenti basato su cluster e freschezza",
+    "summary": "Il brevetto descrive un sistema per assegnare un punteggio ai documenti in risposta a una query, basandosi su parametri del documento stesso, della fonte e di un cluster tematico a cui appartiene. Il sistema raggruppa documenti simili in cluster, calcola uno score per il cluster e lo utilizza per influenzare il ranking dei singoli documenti.",
+    "theme": "ranking_link",
+    "seo_relevance": 3,
+    "scope": "Google Search, ranking documenti news",
+    "what_it_claims": "La rivendicazione indipendente 1 descrive un metodo eseguito da server che identifica un documento e ne analizza tre parametri temporali: una misura di originalità basata sulla similarità testuale con altri documenti, la recency of coverage basata sul tempo di pubblicazione elettronica, e la freshness calcolata come differenza tra il tempo di pubblicazione e il tempo dell'evento oggetto del documento. Il metodo determina uno score per il documento basato su questi tre parametri e su un cluster score del cluster che contiene il documento. Il cluster score deriva da un weighting factor associato a un periodo temporale specifico e dalla quantità di documenti nel cluster. Il documento viene quindi rankato rispetto ad altri documenti e incluso nei risultati di ricerca se lo score supera una soglia basata sul subject matter della query.\n\nLe rivendicazioni dipendenti aggiungono dettagli operativi. La rivendicazione 3 specifica che la soglia è basata su una misura di popolarità del subject matter. La rivendicazione 4 contempla l'analisi di una misura di importanza o qualità della fonte. La rivendicazione 5 descrive il raggruppamento di documenti in base al tempo di pubblicazione associato a un periodo temporale specifico. La rivendicazione 6 introduce la determinazione se il contenuto del documento è associato al topic di un particolare cluster e l'inclusione del documento in quel cluster, con lo score determinato dal cluster score. Le rivendicazioni 7-17 replicano sostanzialmente la stessa struttura in forma di medium non transitorio e sistema, con la rivendicazione 12 che aggiunge esplicitamente una misura di expertise della fonte tra i parametri analizzabili.",
+    "seo_reading": "La descrizione contempla un sistema articolato per il ranking di documenti news-like. Nel blocco 410 viene descritto come l'importanza delle fonti possa essere organizzata in tier (CNN e New York Times nel top tier, fonti locali nel terzo tier) e come questa classificazione possa variare in base al subject matter della query: una fonte locale può essere elevata al top tier per eventi geograficamente rilevanti. Il blocco 420 definisce la freshness come differenza tra pubblicazione e tempo dell'evento, con esempi: documenti entro un giorno per news generiche, entro cinque minuti per argomenti time-sensitive come i prezzi azionari.\n\nIl blocco 430 tratta l'originalità identificando il documento originale tramite timestamp quando più documenti hanno testo simile. Il blocco 440 contempla la qualità della fonte misurata tramite premi ricevuti o ranking di terze parti. Il blocco 450 introduce il source term vector, un vettore pesato di termini che descrive il tipo di documenti pubblicati dalla fonte: nell'esempio, per la query \"49er\" le fonti ESPN e San Francisco Chronicle avrebbero score elevato per focus topico e regionale rispettivamente.\n\nLa figura 5B e il blocco 530 descrivono un meccanismo di binning temporale per calcolare la recency of coverage del cluster: documenti sotto i 60 minuti ricevono weighting factor 24, tra 60 minuti e 2 ore ricevono 20, tra 2 e 4 ore ricevono 15, tra 4 e 24 ore ricevono 3, oltre 24 ore ricevono -1. Il cluster score si calcola moltiplicando il numero di documenti per bin per il rispettivo weighting factor e sommando i risultati (Equation 1). Il blocco 510 contempla la diversity of sources come parametro: più fonti da paesi diversi aumentano il cluster score. Il blocco 540 considera la diversity of documents pesando maggiormente gli originali rispetto ai duplicati.\n\nIl blocco 620 e la figura 7 descrivono la selezione di \"golden sources\" basata sul numero di documenti originali, recency e relevancy. Queste fonti selezionate definiscono i subject cluster (blocco 640): un cluster si forma quando si raggiunge una soglia predeterminata di X documenti e Y fonti su un particolare topic. Il centroid del cluster (blocco 680) viene calcolato mediando i term vector dei documenti contenuti e può evolvere nel tempo.\n\nPer la SEO, questo brevetto suggerirebbe che per contenuti news o time-sensitive potrebbero contare: la velocità di pubblicazione rispetto all'evento (freshness), l'originalità del contenuto rispetto ad altri articoli sullo stesso tema, l'appartenenza a una fonte riconosciuta come autorevole in un determinato settore (source term vector), e l'inserimento in cluster tematici popolati da fonti diverse e autorevoli. Il meccanismo di binning temporale implicherebbe una forte penalizzazione per contenuti oltre le 24 ore in contesti news. Tuttavia, il focus esplicito su \"breaking news\", \"news story\" e pubblicazione elettronica via Internet nella descrizione suggerisce un ambito specifico per contenuti di attualità, non necessariamente estendibile a tutto il web search.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Fee Related) dal 2016 e ha data di priorità 2002: descrive tecnologie di vent'anni fa, potenzialmente superate da sistemi più moderni basati su machine learning e neural ranking.",
+      "L'ambito applicativo descritto è esplicitamente orientato a documenti news e breaking news pubblicati elettronicamente, non a contenuti web generici o evergreen: l'applicabilità a settori non-news è speculativa.",
+      "La descrizione fornisce esempi di weighting factor e soglie (es. 24 per documenti sotto 60 minuti) ma questi sono illustrativi di una possibile implementazione, non necessariamente i valori utilizzati in produzione.",
+      "Il brevetto fa parte di una famiglia con continuation (US10496652B1, US8843479B1) che potrebbero contenere claim diversi o più ampi, ma non costituiscono evidenza indipendente di implementazione."
+    ],
+    "implications": [
+      "Per contenuti di attualità o news, pubblicare rapidamente dopo l'evento e prima di altre fonti rimane una best practice indipendentemente da questo brevetto, per massimizzare la probabilità di essere considerati fonte originale.",
+      "Costruire autorevolezza tematica in una nicchia specifica (il source term vector del brevetto) attraverso pubblicazione consistente di contenuti originali su quel tema è una strategia difendibile a prescindere dall'implementazione di questo sistema.",
+      "Per contenuti time-sensitive, aggiornare regolarmente gli articoli esistenti o pubblicare follow-up mantiene la recency of coverage, principio valido indipendentemente dai meccanismi di ranking specifici.",
+      "Evitare duplicazione testuale e produrre contenuti originali con angolazioni uniche resta fondamentale per differenziarsi in cluster tematici affollati, indipendentemente da come i motori calcolano l'originalità."
+    ],
+    "key_terms": [
+      {
+        "term": "freshness",
+        "explanation": "Differenza temporale tra il momento di pubblicazione del documento e il momento in cui si è verificato l'evento oggetto del documento"
+      },
+      {
+        "term": "recency of coverage",
+        "explanation": "Quanto recentemente è stato pubblicato un documento, basato sul tempo di pubblicazione elettronica via network"
+      },
+      {
+        "term": "cluster score",
+        "explanation": "Punteggio assegnato a un cluster di documenti tematicamente correlati, basato su parametri come diversity of sources, recency e numero di documenti, che influenza lo score dei singoli documenti contenuti"
+      },
+      {
+        "term": "source term vector",
+        "explanation": "Vettore pesato di termini che descrive il tipo di documenti tipicamente pubblicati da una fonte, utilizzato per determinare l'expertise della fonte rispetto a una query specifica"
+      },
+      {
+        "term": "golden sources",
+        "explanation": "Fonti selezionate considerate premier e trusted, scelte in base al numero di documenti originali, recency of coverage e relevancy, utilizzate per definire i subject cluster"
+      },
+      {
+        "term": "weighting factor",
+        "explanation": "Fattore di ponderazione associato a un periodo temporale specifico, utilizzato nel calcolo del cluster score per dare maggior peso a documenti più recenti"
+      },
+      {
+        "term": "centroid",
+        "explanation": "Rappresentazione del topic di un cluster calcolata mediando i term vector dei documenti contenuti, utilizzata per determinare l'expertise del cluster rispetto a una query"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:07:13.158087Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.062111040000000006
+}

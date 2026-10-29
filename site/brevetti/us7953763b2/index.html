@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US7953763B2: Rilevamento dello spam di link tramite derivata della funzione di importanza — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per identificare nodi il cui ranking potrebbe essere stato artificialmente gonfiato tramite link spam (link farm o web ring). Il sistema calcola la derivata di una funzione di importanza dei nodi rispetto a un fattore di accoppiamento dei link e normalizza tale derivat" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us7953763b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US7953763B2: Rilevamento dello spam di link tramite derivata della funzione di importanza — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per identificare nodi il cui ranking potrebbe essere stato artificialmente gonfiato tramite link spam (link farm o web ring). Il sistema calcola la derivata di una funzione di importanza dei nodi rispetto a un fattore di accoppiamento dei link e normalizza tale derivat" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us7953763b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US7953763B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us7953763b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US7953763B2: Rilevamento dello spam di link tramite derivata della funzione di importanza",
+  "description": "Il brevetto descrive un metodo per identificare nodi il cui ranking potrebbe essere stato artificialmente gonfiato tramite link spam (link farm o web ring). Il sistema calcola la derivata di una funzione di importanza dei nodi rispetto a un fattore di accoppiamento dei link e normalizza tale derivata per identificare strutture sospette.",
+  "articleBody": "Il brevetto descrive un metodo per identificare nodi il cui ranking potrebbe essere stato artificialmente gonfiato tramite link spam (link farm o web ring). Il sistema calcola la derivata di una funzione di importanza dei nodi rispetto a un fattore di accoppiamento dei link e normalizza tale derivata per identificare strutture sospette.\n\nLa rivendicazione indipendente 1 copre un metodo implementato su computer per identificare nodi beneficiari di link che gonfiano artificialmente l\u0027importanza in un grafo diretto di nodi collegati, dove i nodi corrispondono a documenti in un database collegato. Il metodo prevede il calcolo, per ciascun nodo di almeno un sottoinsieme, di una quantit\u00e0 corrispondente a una derivata matematica di una funzione di importanza del nodo. Per ciascun nodo del sottoinsieme, la quantit\u00e0 calcolata viene confrontata con una soglia. I nodi per cui il confronto produce un risultato predefinito vengono identificati come beneficiari di link che gonfiano l\u0027importanza, e su tali nodi viene eseguita un\u0027azione correttiva.\n\nLa rivendicazione 2 specifica che l\u0027azione correttiva pu\u00f2 consistere nella rimozione dei nodi identificati dal grafo. La rivendicazione 3 contempla la normalizzazione della quantit\u00e0 calcolata in base al rank del nodo. La rivendicazione 4 precisa che la derivata matematica viene calcolata rispetto a un fattore di accoppiamento (coupling factor). La rivendicazione 5 descrive il calcolo di almeno due quantit\u00e0 intermediarie della derivata usando valori diversi del fattore di accoppiamento, poi mediate per produrre la quantit\u00e0 finale. Le rivendicazioni 6 e 7 chiariscono che il fattore di accoppiamento rappresenta quanto strettamente accoppiati sono i nodi collegati nel grafo ed \u00e8 inversamente correlato alla probabilit\u00e0 che un utente attraversi casualmente il grafo.\n\nLe rivendicazioni 8 e 9 contemplano la generazione di un\u0027importanza aggiustata per almeno un nodo della porzione identificata, dove l\u0027aggiustamento \u00e8 proporzionale alla quantit\u00e0 calcolata. La rivendicazione 10 fornisce dettagli implementativi: calcolo di una matrice A(c) che rappresenta il grafo diretto come funzione di un coefficiente di accoppiamento dei link c, calcolo dell\u0027autovettore principale di A(c) denotato x(c), calcolo della derivata matematica rispetto a c di x(c) denotata x\u0027(c), e calcolo da x\u0027(c) e dal rank del nodo di un valore di probabilit\u00e0 di inflazione S. La rivendicazione 11 aggiunge il confronto di S con un valore di soglia predeterminato.\n\nLe rivendicazioni 12-19 coprono supporti di memorizzazione leggibili da computer e sistemi che implementano metodi analoghi. Le rivendicazioni indipendenti 20 e 24 coprono metodi e sistemi per eseguire servizi di motore di ricerca usando un grafo diretto di nodi collegati, dove la quantit\u00e0 corrispondente alla derivata della funzione di importanza viene utilizzata per ordinare un sottoinsieme di nodi in risposta a una query di ricerca, restituendo risultati ordinati in base a tali quantit\u00e0.\n\nLa descrizione contempla l\u0027uso del metodo per rilevare due tipi specifici di spam di link: le link farm e i clique attack (web ring). Nelle link farm (figura 3), molti nodi dummy puntano a un singolo nodo centrale per gonfiarne artificialmente il rank. Nei web ring (figura 4), un insieme di nodi si linkano prevalentemente tra loro per dare una falsa apparenza di autorit\u00e0. La descrizione spiega che nelle link farm i nodi che puntano al nodo centrale tendono ad avere tutti rank relativamente basso, mentre in strutture naturali autentiche alcuni nodi linkanti hanno rank elevato.\n\nLa descrizione contempla che la matrice A(c) sia definita come [cP+(1-c)E]^T, dove P \u00e8 una matrice stocastica per righe che rappresenta le probabilit\u00e0 di transizione tra nodi quando esistono link, ed E rappresenta le probabilit\u00e0 di salto casuale. Il parametro c varia inclusivamente da 0 a 1: quando c=0 i nodi sono completamente disaccoppiati con salti completamente casuali e tutti i nodi hanno rank uguale; quando c=1 i nodi sono completamente accoppiati senza salti casuali. La descrizione contempla che la funzione di importanza possa essere determinata calcolando l\u0027autovettore x(c) e l\u0027autovalore di A(c), e che la derivata x\u0027(c) possa essere calcolata come (I-cP^T)^-1(P-E)^Tx(c).\n\nLa descrizione contempla l\u0027uso di tecniche di rilassamento Jacobi o Gauss-Seidel per risolvere il sistema lineare Mx\u0027(c)=b dove M=I-cP^T. Viene fornito uno pseudocodice specifico per l\u0027algoritmo Jacobi che converge con tasso r=c, descritto come molto veloce per valori di c tra 0 e 0.98. La descrizione contempla il calcolo di valori derivati multipli usando valori diversi di c e la loro media per ottenere un valore derivato finale, poich\u00e9 la funzione derivata potrebbe non essere uniforme su tutti i valori. Nel caso speciale in cui il valore derivato \u00e8 normalizzato dallo stesso rank x(c) di cui x\u0027(c) \u00e8 la derivata, la media di x\u0027(c)/x(c) su un intervallo [a,b] \u00e8 uguale a log[x(b)/x(a)]/(b-a).\n\nLa descrizione contempla vari metodi per identificare nodi spam candidati usando il valore derivato normalizzato: selezionare una percentuale predeterminata di nodi con i valori derivati normalizzati pi\u00f9 bassi (link farm) o pi\u00f9 alti (web ring), oppure selezionare nodi il cui valore derivato normalizzato \u00e8 inferiore o superiore a una soglia. Per identificare entrambi i tipi simultaneamente, la descrizione contempla la selezione di nodi con le maggiori magnitudini del valore derivato normalizzato (|valore derivato normalizzato|) o nodi dove tale magnitudine supera una soglia. La descrizione contempla che un umano o un algoritmo supplementare possa esaminare i possibili nodi spam per una determinazione finale.\n\nCome contromisure, la descrizione contempla l\u0027eliminazione del nodo dal grafo oppure la riduzione della sua importanza di una penalit\u00e0 predeterminata o di un importo calcolato proporzionale alla magnitudine del valore derivato normalizzato. La descrizione contempla che l\u0027aggiustamento dell\u0027importanza possa essere applicato contro un ranking determinato da tecniche diverse da schemi basati su link o in combinazione con essi. La descrizione contempla inoltre che la magnitudine del valore derivato di un nodo possa essere usata indipendentemente come stima dell\u0027importanza di un nodo per assegnare un rank e ordinare risultati di ricerca, indipendentemente da considerazioni di spam.\n\nPer la SEO, questo brevetto potrebbe indicare che Google disponesse gi\u00e0 nel 2003 di metodi matematici sofisticati per distinguere pattern di link naturali da tentativi di manipolazione. Il metodo descritto sfrutterebbe la differenza nel comportamento della funzione di importanza al variare del parametro di accoppiamento: le link farm mostrerebbero derivate normalizzate fortemente negative (perch\u00e9 i nodi linkanti hanno tutti basso rank), mentre i web ring mostrerebbero derivate normalizzate fortemente positive (perch\u00e9 l\u0027importanza si rinforza all\u0027interno del ring senza dissiparsi verso l\u0027esterno). Strutture naturali simili non mostrerebbero variazioni cos\u00ec estreme. Tuttavia, la descrizione non afferma che questo metodo specifico sia mai stato implementato in produzione o che sia tuttora in uso.",
+  "wordCount": 1057,
+  "datePublished": "2026-10-29T10:00:18.746408+00:00",
+  "dateModified": "2026-10-29T10:00:18.746408+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us7953763b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Method for detecting link spam in hyperlinked databases",
+    "identifier": "US7953763B2",
+    "url": "https://patents.google.com/patent/US7953763B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US7953763B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US7953763B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Rilevamento dello spam di link tramite derivata della funzione di importanza</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Method for detecting link spam in hyperlinked databases</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per identificare nodi il cui ranking potrebbe essere stato artificialmente gonfiato tramite link spam (link farm o web ring). Il sistema calcola la derivata di una funzione di importanza dei nodi rispetto a un fattore di accoppiamento dei link e normalizza tale derivata per identificare strutture sospette.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Grafi di link in database collegati, inclusa la ricerca web</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">31 Maggio 2011</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2003-08-18</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Lifetime</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Spam e manipolazione del ranking</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">25</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo implementato su computer per identificare nodi beneficiari di link che gonfiano artificialmente l&#39;importanza in un grafo diretto di nodi collegati, dove i nodi corrispondono a documenti in un database collegato. Il metodo prevede il calcolo, per ciascun nodo di almeno un sottoinsieme, di una quantità corrispondente a una derivata matematica di una funzione di importanza del nodo. Per ciascun nodo del sottoinsieme, la quantità calcolata viene confrontata con una soglia. I nodi per cui il confronto produce un risultato predefinito vengono identificati come beneficiari di link che gonfiano l&#39;importanza, e su tali nodi viene eseguita un&#39;azione correttiva.</p>
+      <p>La rivendicazione 2 specifica che l&#39;azione correttiva può consistere nella rimozione dei nodi identificati dal grafo. La rivendicazione 3 contempla la normalizzazione della quantità calcolata in base al rank del nodo. La rivendicazione 4 precisa che la derivata matematica viene calcolata rispetto a un fattore di accoppiamento (coupling factor). La rivendicazione 5 descrive il calcolo di almeno due quantità intermediarie della derivata usando valori diversi del fattore di accoppiamento, poi mediate per produrre la quantità finale. Le rivendicazioni 6 e 7 chiariscono che il fattore di accoppiamento rappresenta quanto strettamente accoppiati sono i nodi collegati nel grafo ed è inversamente correlato alla probabilità che un utente attraversi casualmente il grafo.</p>
+      <p>Le rivendicazioni 8 e 9 contemplano la generazione di un&#39;importanza aggiustata per almeno un nodo della porzione identificata, dove l&#39;aggiustamento è proporzionale alla quantità calcolata. La rivendicazione 10 fornisce dettagli implementativi: calcolo di una matrice A(c) che rappresenta il grafo diretto come funzione di un coefficiente di accoppiamento dei link c, calcolo dell&#39;autovettore principale di A(c) denotato x(c), calcolo della derivata matematica rispetto a c di x(c) denotata x&#39;(c), e calcolo da x&#39;(c) e dal rank del nodo di un valore di probabilità di inflazione S. La rivendicazione 11 aggiunge il confronto di S con un valore di soglia predeterminato.</p>
+      <p>Le rivendicazioni 12-19 coprono supporti di memorizzazione leggibili da computer e sistemi che implementano metodi analoghi. Le rivendicazioni indipendenti 20 e 24 coprono metodi e sistemi per eseguire servizi di motore di ricerca usando un grafo diretto di nodi collegati, dove la quantità corrispondente alla derivata della funzione di importanza viene utilizzata per ordinare un sottoinsieme di nodi in risposta a una query di ricerca, restituendo risultati ordinati in base a tali quantità.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla l&#39;uso del metodo per rilevare due tipi specifici di spam di link: le link farm e i clique attack (web ring). Nelle link farm (figura 3), molti nodi dummy puntano a un singolo nodo centrale per gonfiarne artificialmente il rank. Nei web ring (figura 4), un insieme di nodi si linkano prevalentemente tra loro per dare una falsa apparenza di autorità. La descrizione spiega che nelle link farm i nodi che puntano al nodo centrale tendono ad avere tutti rank relativamente basso, mentre in strutture naturali autentiche alcuni nodi linkanti hanno rank elevato.</p>
+      <p>La descrizione contempla che la matrice A(c) sia definita come [cP+(1-c)E]^T, dove P è una matrice stocastica per righe che rappresenta le probabilità di transizione tra nodi quando esistono link, ed E rappresenta le probabilità di salto casuale. Il parametro c varia inclusivamente da 0 a 1: quando c=0 i nodi sono completamente disaccoppiati con salti completamente casuali e tutti i nodi hanno rank uguale; quando c=1 i nodi sono completamente accoppiati senza salti casuali. La descrizione contempla che la funzione di importanza possa essere determinata calcolando l&#39;autovettore x(c) e l&#39;autovalore di A(c), e che la derivata x&#39;(c) possa essere calcolata come (I-cP^T)^-1(P-E)^Tx(c).</p>
+      <p>La descrizione contempla l&#39;uso di tecniche di rilassamento Jacobi o Gauss-Seidel per risolvere il sistema lineare Mx&#39;(c)=b dove M=I-cP^T. Viene fornito uno pseudocodice specifico per l&#39;algoritmo Jacobi che converge con tasso r=c, descritto come molto veloce per valori di c tra 0 e 0.98. La descrizione contempla il calcolo di valori derivati multipli usando valori diversi di c e la loro media per ottenere un valore derivato finale, poiché la funzione derivata potrebbe non essere uniforme su tutti i valori. Nel caso speciale in cui il valore derivato è normalizzato dallo stesso rank x(c) di cui x&#39;(c) è la derivata, la media di x&#39;(c)/x(c) su un intervallo [a,b] è uguale a log[x(b)/x(a)]/(b-a).</p>
+      <p>La descrizione contempla vari metodi per identificare nodi spam candidati usando il valore derivato normalizzato: selezionare una percentuale predeterminata di nodi con i valori derivati normalizzati più bassi (link farm) o più alti (web ring), oppure selezionare nodi il cui valore derivato normalizzato è inferiore o superiore a una soglia. Per identificare entrambi i tipi simultaneamente, la descrizione contempla la selezione di nodi con le maggiori magnitudini del valore derivato normalizzato (|valore derivato normalizzato|) o nodi dove tale magnitudine supera una soglia. La descrizione contempla che un umano o un algoritmo supplementare possa esaminare i possibili nodi spam per una determinazione finale.</p>
+      <p>Come contromisure, la descrizione contempla l&#39;eliminazione del nodo dal grafo oppure la riduzione della sua importanza di una penalità predeterminata o di un importo calcolato proporzionale alla magnitudine del valore derivato normalizzato. La descrizione contempla che l&#39;aggiustamento dell&#39;importanza possa essere applicato contro un ranking determinato da tecniche diverse da schemi basati su link o in combinazione con essi. La descrizione contempla inoltre che la magnitudine del valore derivato di un nodo possa essere usata indipendentemente come stima dell&#39;importanza di un nodo per assegnare un rank e ordinare risultati di ricerca, indipendentemente da considerazioni di spam.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google disponesse già nel 2003 di metodi matematici sofisticati per distinguere pattern di link naturali da tentativi di manipolazione. Il metodo descritto sfrutterebbe la differenza nel comportamento della funzione di importanza al variare del parametro di accoppiamento: le link farm mostrerebbero derivate normalizzate fortemente negative (perché i nodi linkanti hanno tutti basso rank), mentre i web ring mostrerebbero derivate normalizzate fortemente positive (perché l&#39;importanza si rinforza all&#39;interno del ring senza dissiparsi verso l&#39;esterno). Strutture naturali simili non mostrerebbero variazioni così estreme. Tuttavia, la descrizione non afferma che questo metodo specifico sia mai stato implementato in produzione o che sia tuttora in uso.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Lifetime) e appartiene a una famiglia con continuation (US8250114B2, US7509344B1), quindi rappresenta sviluppi iterativi della stessa idea di base piuttosto che evidenze indipendenti.</li>
+      <li>La descrizione non afferma che questo metodo specifico sia mai stato implementato in Google Search o che sia tuttora in uso; descrive solo cosa l&#39;azienda voleva proteggere nel 2003.</li>
+      <li>Il metodo descritto richiede calcoli computazionalmente intensivi (autovettori, derivate, iterazioni Jacobi) su grafi di miliardi di nodi; la descrizione non dimostra che fosse praticabile su scala web reale all&#39;epoca o che lo sia oggi.</li>
+      <li>La descrizione contempla che un umano o algoritmo supplementare possa fare una determinazione finale sui nodi candidati, suggerendo che il metodo matematico da solo potrebbe non essere sufficiente per decisioni definitive.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Evitare schemi di link artificiali come network di siti che si linkano reciprocamente senza valore editoriale o pagine create solo per linkare a un sito target, indipendentemente dai metodi di rilevamento specifici usati dai motori.</li>
+      <li class="pl-2">Costruire profili di link naturali dove i siti linkanti hanno essi stessi autorità e link in uscita diversificati verso molteplici destinazioni rilevanti, non concentrati su un singolo beneficiario.</li>
+      <li class="pl-2">Considerare che metodi matematici sofisticati per l&#39;analisi dei grafi di link potrebbero essere stati disponibili a Google già vent&#39;anni fa, rendendo improbabile che schemi di manipolazione semplici siano mai stati efficaci a lungo termine.</li>
+      <li class="pl-2">Concentrarsi su metriche di qualità dei link (rilevanza tematica, autorità della fonte, contesto editoriale) piuttosto che su tattiche quantitative, poiché i sistemi di rilevamento potrebbero analizzare pattern strutturali nel grafo dei link oltre al semplice conteggio.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">coupling factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Parametro c (da 0 a 1) che rappresenta quanto strettamente accoppiati sono i nodi nel grafo; inversamente correlato alla probabilità di salto casuale tra nodi.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">link farm</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Insieme di nodi dove molti nodi puntano a un singolo nodo per dare la falsa impressione che il nodo singolo sia importante.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">clique attack / web ring</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Insieme di nodi che puntano prevalentemente l&#39;uno all&#39;altro per dare una falsa apparenza di autorità o importanza.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">normalized derivative value</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Derivata della funzione di importanza rispetto al coupling factor, normalizzata per il rank del nodo; usata per identificare inflazione artificiale.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">node importance function</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Funzione che calcola l&#39;importanza dei nodi considerando la struttura dei link; nella descrizione contempla l&#39;uso di PageRank o altre tecniche basate su link.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US7509344B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7509344B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Method for detecting link spam in hyperlinked databases</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8250114B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8250114B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Method for detecting link spam in hyperlinked databases</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US7953763B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US9646050B1",
+    "title": "Methods, systems, and media for interpreting queries",
+    "abstract": "Mechanisms for interpreting queries are provided. In some implementations, a method for interpreting queries is provided, comprising: receiving a search query in a search domain; determining search terms based on the search query; determining, for each of the search terms, whether a search term corresponds to an entity name, wherein the entity name is derived from metadata associated with the search domain; in response to determining that entity names correspond to a portion of the search terms, determining an entity type and an entity score associated with each of the corresponding entity names; determining a remaining portion of the entity names by removing at least one of the matching entity names based on the entity score and contextual information in the search query; and performing a search in the search domain with the remaining portion of entity names, wherein each entity name in the remaining portion of entity names is searched corresponding to the associated entity type.",
+    "claims": [
+      "1. A method for interpreting queries, the method comprising: receiving, using a hardware processor, a search query that includes a plurality of search terms; determining, for at least a portion of the plurality of search terms, whether a search term corresponds to an entity name, wherein the entity name is associated with a plurality of entity types; determining, for the search term and each of the plurality of entity types, an entity score that indicates relatedness of the entity name to a corresponding entity type; removing at least one of the entity names based on the entity score to generate a remaining portion of entity names; and performing a search with the remaining portion of entity names, wherein each entity name in the remaining portion of entity names is searched corresponding to the associated entity type.",
+      "2. The method of claim 1 , wherein the entity score is based at least in part on popularity of the entity name in a search domain.",
+      "3. The method of claim 1 , wherein the entity score associated with the entity name is based at least in part on user feedback information.",
+      "4. The method of claim 1 , further comprising; retrieving metadata corresponding to a search domain; extracting entity names based on the retrieved metadata; determining, for each of the entity names, the entity type and the entity score associated with the entity name; and generating an entity table that includes, for each of the entity names, the entity name and the associated entity type and entity score.",
+      "5. The method of claim 4 , further comprising supplementing the entity names in the generated entity table with curated entity information, wherein the curated entity information includes ignored terms in the search query.",
+      "6. The method of claim 4 , further comprising: determining the search domain from a plurality of search domains based on the received search query; and accessing the entity table from a plurality of entity tables based on the determined search domain.",
+      "7. The method of claim 4 , further comprising: storing the entity table; determining whether a predetermined amount of time has elapsed since the entity table was stored; in response to determining that the predetermined amount of time has elapsed, retrieving updated metadata corresponding to the search domain; and updating the entity table that includes entity names, entity types, and entity scores based on the updated metadata.",
+      "8. A system for interpreting queries, the system comprising: a storage device for storing entity information, wherein the entity information is derived from metadata associated with a search domain; and a processor that is configured to: receive a search query that includes a plurality of search terms; determine, for at least a portion of the plurality of search terms, whether a search term corresponds to an entity name, wherein the entity name is associated with a plurality of entity types; determine, for the search term and each of the plurality of entity types, an entity score that indicates relatedness of the entity name to a corresponding entity type; remove at least one of the entity names based on the entity score to generate a remaining portion of entity names; and perform a search with the remaining portion of entity names, wherein each entity name in the remaining portion of entity names is searched corresponding to the associated entity type.",
+      "9. The system of claim 8 , wherein the entity score is based at least in part on popularity of the entity name in the search domain.",
+      "10. The system of claim 8 , wherein the entity score associated with the entity name is based at least in part on user feedback information.",
+      "11. The system of claim 8 , wherein the processor is further configured to: retrieve metadata corresponding to the search domain; extract entity names based on the retrieved metadata; determine, for each of the entity names, the entity type and the entity score associated with the entity name; and generate an entity table that includes, for each of the entity names, the entity name and the associated entity type and entity score.",
+      "12. The system of claim 11 , wherein the processor is further configured to supplement the entity names in the generated entity table with curated entity information, wherein the curated entity information includes ignored terms in the search query.",
+      "13. The system of claim 11 , wherein the processor is further configured to: determine the search domain from a plurality of search domains based on the received search query; and access the entity table from a plurality of entity tables based on the determined search domain.",
+      "14. The system of claim 11 , wherein the processor is further configured to: store the entity table in the storage device; determine whether a predetermined amount of time has elapsed since the entity table was stored; in response to determining that the predetermined amount of time has elapsed, retrieve updated metadata corresponding to the search domain; and update the entity table that includes entity names, entity types, and entity scores based on the updated metadata.",
+      "15. A non-transitory computer-readable medium containing computer-executable instructions that, when executed by a processor, cause the processor to perform a method for interpreting queries, the method comprising: receiving a search query that includes a plurality of search terms; determining, for at least a portion of the plurality of search terms, whether a search term corresponds to an entity name, wherein the entity name is associated with a plurality of entity types; determining, for the search term and each of the plurality of entity types, an entity score that indicates relatedness of the entity name to a corresponding entity type; removing at least one of the entity names based on the entity score to generate a remaining portion of entity names; and performing a search with the remaining portion of entity names, wherein each entity name in the remaining portion of entity names is searched corresponding to the associated entity type.",
+      "16. The non-transitory computer-readable medium of claim 15 , wherein the entity score is based at least in part on popularity of the entity name in a search domain.",
+      "17. The non-transitory computer-readable medium of claim 15 , wherein the entity score associated with the entity name is based at least in part on user feedback information.",
+      "18. The non-transitory computer-readable medium of claim 15 , wherein the method further comprises: retrieving metadata corresponding to a search domain; extracting entity names based on the retrieved metadata; determining, for each of the entity names, the entity type and the entity score associated with the entity name; and generating an entity table that includes, for each of the entity names, the entity name and the associated entity type and entity score.",
+      "19. The non-transitory computer-readable medium of claim 18 , wherein the method further comprises supplementing the entity names in the generated entity table with curated entity information, wherein the curated entity information includes ignored terms in the search query.",
+      "20. The non-transitory computer-readable medium of claim 18 , wherein the method further comprises: determining the search domain from a plurality of search domains based on the received search query; and accessing the entity table from a plurality of entity tables based on the determined search domain.",
+      "21. The non-transitory computer-readable medium of claim 18 , wherein the method further comprises: storing the entity table; determining whether a predetermined amount of time has elapsed since the entity table was stored; in response to determining that the predetermined amount of time has elapsed, retrieving updated metadata corresponding to the search domain; and updating the entity table that include entity names, entity types, and entity scores based on the updated metadata."
+    ],
+    "independent_claims": [
+      "1. A method for interpreting queries, the method comprising: receiving, using a hardware processor, a search query that includes a plurality of search terms; determining, for at least a portion of the plurality of search terms, whether a search term corresponds to an entity name, wherein the entity name is associated with a plurality of entity types; determining, for the search term and each of the plurality of entity types, an entity score that indicates relatedness of the entity name to a corresponding entity type; removing at least one of the entity names based on the entity score to generate a remaining portion of entity names; and performing a search with the remaining portion of entity names, wherein each entity name in the remaining portion of entity names is searched corresponding to the associated entity type.",
+      "8. A system for interpreting queries, the system comprising: a storage device for storing entity information, wherein the entity information is derived from metadata associated with a search domain; and a processor that is configured to: receive a search query that includes a plurality of search terms; determine, for at least a portion of the plurality of search terms, whether a search term corresponds to an entity name, wherein the entity name is associated with a plurality of entity types; determine, for the search term and each of the plurality of entity types, an entity score that indicates relatedness of the entity name to a corresponding entity type; remove at least one of the entity names based on the entity score to generate a remaining portion of entity names; and perform a search with the remaining portion of entity names, wherein each entity name in the remaining portion of entity names is searched corresponding to the associated entity type.",
+      "15. A non-transitory computer-readable medium containing computer-executable instructions that, when executed by a processor, cause the processor to perform a method for interpreting queries, the method comprising: receiving a search query that includes a plurality of search terms; determining, for at least a portion of the plurality of search terms, whether a search term corresponds to an entity name, wherein the entity name is associated with a plurality of entity types; determining, for the search term and each of the plurality of entity types, an entity score that indicates relatedness of the entity name to a corresponding entity type; removing at least one of the entity names based on the entity score to generate a remaining portion of entity names; and performing a search with the remaining portion of entity names, wherein each entity name in the remaining portion of entity names is searched corresponding to the associated entity type."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Yongsung Kim"
+    ],
+    "priority_date": "2012-11-14",
+    "filing_date": "2015-08-03",
+    "publication_date": "2017-05-09",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F17/3046",
+      "G06F16/00",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2453",
+      "G06F16/24534",
+      "G06F16/2454",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/332",
+      "G06F16/3322",
+      "G06F16/22",
+      "G06F16/2282",
+      "G06F16/23",
+      "G06F16/2365",
+      "G06F16/24549",
+      "G06F16/2457",
+      "G06F16/24575",
+      "G06F16/29"
+    ],
+    "family": [
+      {
+        "number": "US11210289B2",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Methods, systems, and media for interpreting queries"
+      },
+      {
+        "number": "US9116918B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Methods, systems, and media for interpreting queries"
+      },
+      {
+        "number": "US12001429B2",
+        "relation": null,
+        "direction": "priority",
+        "title": "Methods, systems, and media for interpreting queries"
+      },
+      {
+        "number": "US12499112B2",
+        "relation": null,
+        "direction": "priority",
+        "title": "Methods, systems, and media for interpreting voice queries"
+      }
+    ],
+    "cited_by_count": 36
+  },
+  "analysis": {
+    "title_it": "Interpretazione delle query basata su entità e punteggi",
+    "summary": "Il brevetto descrive un metodo per interpretare query di ricerca in un dominio specifico (es. contenuti media, prodotti, musica) identificando termini che corrispondono a nomi di entità estratti da metadati del dominio. Ogni entità ha un tipo e un punteggio (entity score) basato su popolarità o feedback utente. Il sistema rimuove entità improbabili in base a punteggi e contesto della query, poi esegue la ricerca con le entità rimanenti associate ai rispettivi tipi.",
+    "theme": "entita_knowledge_graph",
+    "seo_relevance": 3,
+    "scope": "Domini di ricerca verticali (media, prodotti, musica, libri)",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che riceve una query contenente più termini di ricerca, determina per almeno una porzione dei termini se corrispondono a un nome di entità associato a più tipi di entità, calcola per ciascun tipo un entity score che indica la relazione tra il nome e il tipo, rimuove almeno uno dei nomi di entità in base all'entity score per generare una porzione rimanente, ed esegue la ricerca con la porzione rimanente dove ogni entità è cercata secondo il tipo associato.\n\nLe rivendicazioni dipendenti 2 e 3 specificano che l'entity score può basarsi sulla popolarità dell'entità nel dominio di ricerca o su informazioni di feedback utente. La rivendicazione 4 descrive la generazione di una tabella di entità: si recuperano metadati del dominio, si estraggono nomi di entità, si determinano tipo e punteggio per ciascuna, e si genera una tabella che include nome, tipo e score. La rivendicazione 5 prevede l'integrazione con informazioni curate manualmente, inclusi termini da ignorare nella query. La rivendicazione 6 copre la selezione del dominio di ricerca tra più domini in base alla query ricevuta e l'accesso alla tabella corrispondente. La rivendicazione 7 riguarda l'aggiornamento periodico della tabella: si memorizza, si verifica se è trascorso un tempo predeterminato, si recuperano metadati aggiornati e si aggiorna la tabella.\n\nLe rivendicazioni 8-14 coprono un sistema con dispositivo di storage per informazioni di entità derivate da metadati e processore configurato per eseguire le stesse operazioni del metodo. Le rivendicazioni 15-21 coprono un mezzo leggibile da computer con istruzioni per eseguire il metodo.",
+    "seo_reading": "La descrizione contempla l'applicazione in domini verticali come ricerca di contenuti media (programmi TV, film), prodotti (nome prodotto, produttore, prezzo, categoria), musica (titolo canzone, artista, album, genere) e libri (titolo, autore, editore, genere). Per il dominio media, la descrizione menziona l'estrazione di entità da metadati che includono titoli di serie TV, titoli di film, nomi di attori, produttori, personaggi, generi (paragrafi relativi al processo 200).\n\nL'entity score, secondo i paragrafi che descrivono il blocco 240, potrebbe essere calcolato in base a criteri di popolarità: valutazioni utente, numero di ricerche del nome, numero di accessi al contenuto associato. La descrizione contempla entity score aggregati: per un attore come \"tom cruise\" lo score potrebbe essere la media dei punteggi dei contenuti in cui appare, con possibili pesi basati su data di rilascio (contenuti recenti pesano di più). Per un canale TV lo score potrebbe essere la media dei programmi trasmessi.\n\nLa descrizione menziona l'uso di click log (con opt-out utente) per aggiornare entity score in base a quante volte gli utenti hanno cercato o selezionato un'entità, e l'integrazione con informazioni curate manualmente che includono termini comuni da ignorare (\"with\", \"the\", \"a\", \"and\") e caratteri da ignorare (apostrofi, trattini).\n\nPer la rimozione di entità improbabili, la descrizione contempla diversi criteri: rimozione di termini sovrapposti (\"tom\" quando è presente \"tom cruise\"), rimozione basata su contesto della query (il termine \"2012\" in \"action movie 2012\" avrebbe maggiore probabilità di essere RELEASE_DATE che MOVIE per via della posizione e degli altri termini), rimozione di entità con score più basso quando esistono omonime più popolari (\"house\" come SERIES con score alto vs \"house\" come MOVIE con score basso).\n\nPer la SEO, questo potrebbe significare che, in contesti di ricerca verticale o specializzata, Google potrebbe interpretare query ambigue privilegiando entità più popolari o contestualmente coerenti. Se applicato, potrebbe influenzare come vengono interpretate query in domini come Google Shopping, YouTube, Google Books. Tuttavia la descrizione si concentra su domini chiusi con metadati strutturati, non sulla ricerca web generica. L'approccio descritto sarebbe più rilevante per piattaforme di e-commerce, cataloghi di contenuti, database verticali che per il ranking organico tradizionale.",
+    "limits": [
+      "Il brevetto non dimostra che questo sistema sia utilizzato in Google Search web: gli esempi riguardano ricerca di contenuti media su dispositivi di riproduzione, prodotti, musica e libri in domini verticali con metadati strutturati.",
+      "Non specifica come gli entity score influenzino il ranking dei risultati finali, solo come vengano usati per disambiguare l'interpretazione della query e rimuovere entità improbabili.",
+      "La descrizione menziona click log e feedback utente come possibili fonti per entity score ma non quantifica il loro peso né garantisce che siano implementati in produzione.",
+      "Il brevetto fa parte di una famiglia con continuation (US11210289B2, US9116918B1, US12001429B2, US12499112B2) che condividono la stessa priorità 2012: non sono evidenze indipendenti ma variazioni dello stesso concetto."
+    ],
+    "implications": [
+      "In contesti di ricerca verticale o cataloghi strutturati, assicurarsi che i metadati delle entità (nomi prodotti, titoli, autori, categorie) siano accurati e completi, poiché potrebbero alimentare sistemi di interpretazione delle query.",
+      "Per contenuti in domini specializzati, la popolarità e il feedback utente potrebbero influenzare come vengono interpretate query ambigue: mantenere segnali di engagement positivi (recensioni, interazioni) potrebbe rafforzare la rilevanza dell'entità.",
+      "Quando si ottimizzano contenuti per piattaforme verticali (e-commerce, video, musica), considerare che termini ambigui potrebbero essere interpretati in base al contesto: fornire segnali chiari di tipo e categoria aiuta la disambiguazione.",
+      "Evitare sovrapposizioni confuse tra nomi di entità e termini generici nei titoli e nelle descrizioni, specialmente in domini con metadati strutturati dove l'interpretazione automatica potrebbe privilegiare entità più popolari."
+    ],
+    "key_terms": [
+      {
+        "term": "entity name",
+        "explanation": "Nome di un'entità estratto da metadati del dominio di ricerca, come titolo di un film, nome di un attore, nome di un prodotto"
+      },
+      {
+        "term": "entity type",
+        "explanation": "Tipo associato a un'entità che ne definisce la categoria, come SERIES, MOVIE, ACTOR, GENRE, PRODUCT_NAME"
+      },
+      {
+        "term": "entity score",
+        "explanation": "Punteggio che indica la relazione tra il nome dell'entità e il suo tipo, basato su popolarità nel dominio o feedback utente"
+      },
+      {
+        "term": "entity table",
+        "explanation": "Tabella generata da metadati del dominio che contiene nomi di entità con i rispettivi tipi e punteggi, usata per interpretare le query"
+      },
+      {
+        "term": "contextual information",
+        "explanation": "Informazioni derivate dal contesto della query (posizione dei termini, altri termini presenti) usate per rimuovere entità improbabili"
+      },
+      {
+        "term": "search domain",
+        "explanation": "Dominio specifico di ricerca come contenuti media, prodotti, musica o libri, ciascuno con propri metadati ed entità"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T10:07:49.791805Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07438476000000001
+}

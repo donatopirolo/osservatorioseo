@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8661029B1: Modifica del ranking basata su feedback implicito degli utenti — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per modificare il ranking dei risultati di ricerca utilizzando il tempo di permanenza degli utenti sui documenti cliccati. Il sistema calcola una misura di rilevanza basata sul rapporto tra visualizzazioni lunghe e totale delle visualizzazioni per una coppia query-docu" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8661029b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8661029B1: Modifica del ranking basata su feedback implicito degli utenti — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per modificare il ranking dei risultati di ricerca utilizzando il tempo di permanenza degli utenti sui documenti cliccati. Il sistema calcola una misura di rilevanza basata sul rapporto tra visualizzazioni lunghe e totale delle visualizzazioni per una coppia query-docu" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8661029b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8661029B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us8661029b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8661029B1: Modifica del ranking basata su feedback implicito degli utenti",
+  "description": "Il brevetto descrive un metodo per modificare il ranking dei risultati di ricerca utilizzando il tempo di permanenza degli utenti sui documenti cliccati. Il sistema calcola una misura di rilevanza basata sul rapporto tra visualizzazioni lunghe e totale delle visualizzazioni per una coppia query-documento, producendo una frazione (LC|C) che pu\u00f2 essere usata per riordinare i risultati futuri.",
+  "articleBody": "Il brevetto descrive un metodo per modificare il ranking dei risultati di ricerca utilizzando il tempo di permanenza degli utenti sui documenti cliccati. Il sistema calcola una misura di rilevanza basata sul rapporto tra visualizzazioni lunghe e totale delle visualizzazioni per una coppia query-documento, producendo una frazione (LC|C) che pu\u00f2 essere usata per riordinare i risultati futuri.\n\nLe rivendicazioni indipendenti (1, 11, 21) coprono un metodo implementato su computer che ottiene una misura di rilevanza per un documento referenziato da un risultato di ricerca. La misura si basa su un primo numero in relazione a un secondo numero: il primo corrisponde a un sottoinsieme del conteggio delle visualizzazioni del documento dopo selezioni del risultato (quando fornito in risposta a una query), il secondo corrisponde al conteggio totale delle visualizzazioni. La misura viene fornita a un ranking engine per il riordino dei risultati.\n\nLa rivendicazione 2 specifica che la misura pu\u00f2 essere calcolata dividendo il primo numero per il secondo. La rivendicazione 3 introduce che il primo numero pu\u00f2 essere una combinazione ponderata delle visualizzazioni, dove ciascuna visualizzazione riceve un peso basato almeno in parte sulla durata di visualizzazione del documento. La rivendicazione 4 definisce esplicitamente il primo numero come totale di long clicks e il secondo come totale di clicks sul risultato.\n\nLe rivendicazioni dipendenti aggiungono dettagli sul sistema di ponderazione. La rivendicazione 5 contempla funzioni continue della durata di visualizzazione, mentre la rivendicazione 6 funzioni discontinue. La rivendicazione 7 specifica la classificazione della durata in categorie temporali e l\u0027assegnazione di pesi basati su tali categorie. Le rivendicazioni 8-10 introducono viewing length differentiators: la rivendicazione 9 contempla fattori governati dalla categoria della query determinata, la rivendicazione 10 fattori governati dal tipo di utente determinato. Le rivendicazioni 11-30 replicano la struttura per computer-readable medium e system.\n\nLa descrizione contempla un sistema dettagliato per trasformare i dati di click in segnali di ranking. Il documento introduce il concetto di long click versus short click, dove la durata di permanenza su una pagina dopo il click viene tracciata tramite JavaScript embedded, browser tag o toolbar software (paragrafi relativi al tracking component 2050 e FIG. 2). Per ogni click vengono registrati query (Q), documento (D), tempo (T), lingua (L) e paese (C), pi\u00f9 aspetti addizionali di utente e sessione.\n\nLa descrizione contempla esplicitamente la frazione LC|C (Long Click given Click) calcolata come numero di click ponderati diviso numero totale di click pi\u00f9 un fattore di smoothing S0. Vengono fornite formule specifiche: LCC_BASE=[#WC(Q,D)]/[#C(Q,D)+S0], con varianti per lingua e paese (LCC_LANG, LCC_COUNTRY) che incorporano smoothing gerarchico. La descrizione contempla anche pesi specifici per categorie di click: short click con peso negativo (es. -0.1), medium click con peso moderato (es. 0.5), long click con peso pieno (es. 1.0), last click con peso alto (es. 0.9) che pu\u00f2 essere ridotto (es. 0.3) se preceduto da altri click.\n\nLa descrizione contempla viewing length differentiators basati su categoria di query (navigational versus informational, paragrafi FIG. 4E) e tipo di utente. Per query navigational versus informational, le soglie temporali potrebbero essere aggiustate: una query informational-quick come \"George Washington\u0027s Birthday\" richiederebbe meno tempo per costituire un long click rispetto a \"Hilbert transform tutorial\". Per tipo di utente, la descrizione contempla clustering basato su velocit\u00e0 di click e comportamento, con utenti esperti che cliccano pi\u00f9 velocemente.\n\nLa descrizione contempla trasformazioni della frazione LC|C in boost per l\u0027IR score, con formule esplicite: IRBoost=1+M/(1+e^(X*(LC|C-0.5))) con costanti esempio (M,X)=(100,-100) o forme lineari ed esponenziali alternative. Vengono contemplati anche safeguard anti-spam: modelli di comportamento utente per identificare pattern anomali, rimozione di click sospetti, democrazia nei voti (un voto per cookie/IP per coppia query-URL).\n\nPer la SEO, questo potrebbe significare che il tempo di permanenza degli utenti sui documenti dopo il click costituirebbe un segnale di ranking query-specifico, indipendente dalla posizione o da altri risultati per quella query. La frazione LC|C sarebbe progettata per ridurre il presentation bias, poich\u00e9 confronta il comportamento degli utenti su uno stesso documento con se stesso piuttosto che con altri risultati. Questo potrebbe premiare documenti che soddisfano l\u0027intento anche se posizionati pi\u00f9 in basso o con snippet meno attraenti. Tuttavia, la ponderazione basata su categoria di query e tipo di utente suggerirebbe che non esisterebbe una soglia universale per ci\u00f2 che costituisce engagement positivo.",
+  "wordCount": 701,
+  "datePublished": "2026-10-29T10:03:59.778173+00:00",
+  "dateModified": "2026-10-29T10:03:59.778173+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8661029b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Modifying search result ranking based on implicit user feedback",
+    "identifier": "US8661029B1",
+    "url": "https://patents.google.com/patent/US8661029B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8661029B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8661029B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Modifica del ranking basata su feedback implicito degli utenti</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Modifying search result ranking based on implicit user feedback</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per modificare il ranking dei risultati di ricerca utilizzando il tempo di permanenza degli utenti sui documenti cliccati. Il sistema calcola una misura di rilevanza basata sul rapporto tra visualizzazioni lunghe e totale delle visualizzazioni per una coppia query-documento, producendo una frazione (LC|C) che può essere usata per riordinare i risultati futuri.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking dei risultati organici</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">25 Febbraio 2014</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2006-11-02</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Segnali di comportamento degli utenti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★★</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">30</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 11, 21) coprono un metodo implementato su computer che ottiene una misura di rilevanza per un documento referenziato da un risultato di ricerca. La misura si basa su un primo numero in relazione a un secondo numero: il primo corrisponde a un sottoinsieme del conteggio delle visualizzazioni del documento dopo selezioni del risultato (quando fornito in risposta a una query), il secondo corrisponde al conteggio totale delle visualizzazioni. La misura viene fornita a un ranking engine per il riordino dei risultati.</p>
+      <p>La rivendicazione 2 specifica che la misura può essere calcolata dividendo il primo numero per il secondo. La rivendicazione 3 introduce che il primo numero può essere una combinazione ponderata delle visualizzazioni, dove ciascuna visualizzazione riceve un peso basato almeno in parte sulla durata di visualizzazione del documento. La rivendicazione 4 definisce esplicitamente il primo numero come totale di long clicks e il secondo come totale di clicks sul risultato.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli sul sistema di ponderazione. La rivendicazione 5 contempla funzioni continue della durata di visualizzazione, mentre la rivendicazione 6 funzioni discontinue. La rivendicazione 7 specifica la classificazione della durata in categorie temporali e l&#39;assegnazione di pesi basati su tali categorie. Le rivendicazioni 8-10 introducono viewing length differentiators: la rivendicazione 9 contempla fattori governati dalla categoria della query determinata, la rivendicazione 10 fattori governati dal tipo di utente determinato. Le rivendicazioni 11-30 replicano la struttura per computer-readable medium e system.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema dettagliato per trasformare i dati di click in segnali di ranking. Il documento introduce il concetto di long click versus short click, dove la durata di permanenza su una pagina dopo il click viene tracciata tramite JavaScript embedded, browser tag o toolbar software (paragrafi relativi al tracking component 2050 e FIG. 2). Per ogni click vengono registrati query (Q), documento (D), tempo (T), lingua (L) e paese (C), più aspetti addizionali di utente e sessione.</p>
+      <p>La descrizione contempla esplicitamente la frazione LC|C (Long Click given Click) calcolata come numero di click ponderati diviso numero totale di click più un fattore di smoothing S0. Vengono fornite formule specifiche: LCC_BASE=[#WC(Q,D)]/[#C(Q,D)+S0], con varianti per lingua e paese (LCC_LANG, LCC_COUNTRY) che incorporano smoothing gerarchico. La descrizione contempla anche pesi specifici per categorie di click: short click con peso negativo (es. -0.1), medium click con peso moderato (es. 0.5), long click con peso pieno (es. 1.0), last click con peso alto (es. 0.9) che può essere ridotto (es. 0.3) se preceduto da altri click.</p>
+      <p>La descrizione contempla viewing length differentiators basati su categoria di query (navigational versus informational, paragrafi FIG. 4E) e tipo di utente. Per query navigational versus informational, le soglie temporali potrebbero essere aggiustate: una query informational-quick come &#34;George Washington&#39;s Birthday&#34; richiederebbe meno tempo per costituire un long click rispetto a &#34;Hilbert transform tutorial&#34;. Per tipo di utente, la descrizione contempla clustering basato su velocità di click e comportamento, con utenti esperti che cliccano più velocemente.</p>
+      <p>La descrizione contempla trasformazioni della frazione LC|C in boost per l&#39;IR score, con formule esplicite: IRBoost=1+M/(1+e^(X*(LC|C-0.5))) con costanti esempio (M,X)=(100,-100) o forme lineari ed esponenziali alternative. Vengono contemplati anche safeguard anti-spam: modelli di comportamento utente per identificare pattern anomali, rimozione di click sospetti, democrazia nei voti (un voto per cookie/IP per coppia query-URL).</p>
+      <p>Per la SEO, questo potrebbe significare che il tempo di permanenza degli utenti sui documenti dopo il click costituirebbe un segnale di ranking query-specifico, indipendente dalla posizione o da altri risultati per quella query. La frazione LC|C sarebbe progettata per ridurre il presentation bias, poiché confronta il comportamento degli utenti su uno stesso documento con se stesso piuttosto che con altri risultati. Questo potrebbe premiare documenti che soddisfano l&#39;intento anche se posizionati più in basso o con snippet meno attraenti. Tuttavia, la ponderazione basata su categoria di query e tipo di utente suggerirebbe che non esisterebbe una soglia universale per ciò che costituisce engagement positivo.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che Google applichi attualmente questo sistema in produzione, né specifica quale peso abbia la frazione LC|C rispetto ad altri segnali di ranking.</li>
+      <li>La descrizione non chiarisce come vengano determinate concretamente le categorie di query o i tipi di utente in un sistema reale, limitandosi a esempi generici (navigational/informational).</li>
+      <li>Il documento fa parte di una famiglia con cinque continuation (US9235627B1, US9811566B1, US10229166B1, US11188544B1, US11816114B1), tutte con la stessa data di priorità 2006, il che non costituisce validazione indipendente ma protezione continuata della stessa invenzione.</li>
+      <li>Il brevetto non specifica soglie temporali concrete per distinguere short, medium e long click, indicando solo che andrebbero determinate confrontando dati storici con valutazioni umane esplicite.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Concentrarsi sulla soddisfazione dell&#39;intento di ricerca piuttosto che sull&#39;ottimizzazione per il click iniziale: contenuti che trattengono gli utenti e rispondono compiutamente alle loro domande restano fondamentali indipendentemente dai meccanismi di misurazione.</li>
+      <li class="pl-2">Considerare che utenti diversi potrebbero avere aspettative temporali diverse: contenuti informativi complessi potrebbero richiedere legittimamente più tempo di consultazione rispetto a risposte rapide a query fattuali.</li>
+      <li class="pl-2">Evitare tattiche che artificialmente prolunghino la permanenza senza fornire valore (es. contenuti dispersivi, navigazione confusa): i safeguard anti-spam descritti contemplano l&#39;identificazione di pattern comportamentali anomali.</li>
+      <li class="pl-2">Mantenere coerenza tra snippet/titolo e contenuto effettivo della pagina: la riduzione del presentation bias suggerirebbe che discrepanze tra promessa e contenuto potrebbero emergere attraverso pattern di click brevi.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">long click</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Click su un risultato di ricerca seguito da una visualizzazione prolungata del documento, interpretato come segnale di rilevanza positiva</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">short click</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Click seguito da visualizzazione breve, interpretato come segnale che il documento non soddisfa l&#39;intento dell&#39;utente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">LC|C fraction</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Long Click given Click fraction, rapporto tra click ponderati per durata e totale dei click per una coppia query-documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">presentation bias</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Distorsione nei click causata da fattori di presentazione come posizione nel ranking o qualità dello snippet, indipendentemente dalla rilevanza effettiva</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">viewing length differentiator</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore che modifica la ponderazione della durata di visualizzazione basandosi su categoria della query o tipo di utente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">smoothing factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Parametro aggiunto alle formule per ridurre il rumore quando i dati disponibili per una query sono limitati, facendo tendere la frazione verso zero</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US9235627B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9235627B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Modifying search result ranking based on implicit user feedback</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US10229166B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US10229166B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Modifying search result ranking based on implicit user feedback</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US11188544B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11188544B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Modifying search result ranking based on implicit user feedback</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US11816114B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11816114B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Modifying search result ranking based on implicit user feedback</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US9811566B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9811566B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Modifying search result ranking based on implicit user feedback</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8661029B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

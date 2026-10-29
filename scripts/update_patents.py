@@ -60,6 +60,11 @@ PATENTS_DIR = REPO_ROOT / "data" / "patents"
 STATE_PATH = REPO_ROOT / "data" / "state" / "patents_discovery.json"
 CONFIG_PATH = REPO_ROOT / "config" / "patents.yml"
 
+FROM_HTML_CONCURRENCY = 3
+CONFIG: dict[str, Any] = (
+    yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8")) if CONFIG_PATH.exists() else {}
+)
+
 # Il classificatore legge titolo e snippet: un modello economico basta.
 CLASSIFIER_MODEL = "anthropic/claude-haiku-4.5"
 
@@ -129,6 +134,16 @@ async def write_patent(writer: PremiumWriter, doc: PatentDoc, origin: str) -> Pa
         patent = await analyze(writer, doc, origin)  # type: ignore[arg-type]
     except PatentAnalysisError as e:
         print(f"  WARN {e}")
+        return None
+    # Secondo filtro per la discovery: il classificatore vede solo titolo e
+    # snippet, l'analisi legge tutto il documento. Se dopo la lettura completa
+    # la rilevanza crolla, la scheda non si pubblica (i seed passano sempre).
+    min_final = int(CONFIG.get("min_final_relevance", 3))
+    if origin != "seed" and patent.analysis.seo_relevance < min_final:
+        print(
+            f"  SKIP {doc.number}: rilevanza {patent.analysis.seo_relevance} dopo la lettura "
+            f"completa ({patent.analysis.scope})"
+        )
         return None
     save_patent(patent)
     print(
@@ -205,17 +220,65 @@ async def discover(
             }
 
 
+def _invention_key(doc: PatentDoc) -> tuple[str, object]:
+    return (doc.title.strip().lower(), doc.priority_date)
+
+
+def family_duplicates(docs: list[PatentDoc], have: list[PatentDoc]) -> dict[str, str]:
+    """``{numero: parente}`` per i doc della stessa invenzione di uno gia' schedato o scelto.
+
+    Due criteri, perche' nessuno dei due basta da solo:
+    - famiglia: la pagina di Google Patents elenca solo genitore e figli
+      diretti, non tutta la catena di continuation;
+    - stesso titolo e stessa data di priorita': e' il caso tipico delle
+      continuation, anche lontane nella catena.
+    I doc vanno passati in ordine di priorita' (il primo di una famiglia vince).
+    """
+    taken_numbers = {d.number for d in have}
+    taken_keys = {_invention_key(d): d.number for d in have}
+    dupes: dict[str, str] = {}
+    for doc in docs:
+        relatives = {m.number for m in doc.family} & taken_numbers
+        hit = min(relatives) if relatives else taken_keys.get(_invention_key(doc))
+        if hit:
+            dupes[doc.number] = hit
+            continue
+        taken_numbers.add(doc.number)
+        taken_keys.setdefault(_invention_key(doc), doc.number)
+    return dupes
+
+
 async def run_from_html(
     writer: PremiumWriter, html_dir: Path, seeds: list[str], force: bool
 ) -> None:
     have = existing_numbers()
+    docs: list[PatentDoc] = []
     for path in sorted(html_dir.glob("*.html")):
-        number = path.stem
-        if number in have and not force:
-            print(f"  {number}: scheda gia' presente, salto")
+        if path.stem in have and not force:
+            print(f"  {path.stem}: scheda gia' presente, salto")
             continue
-        doc = parse_patent_page(number, path.read_text(encoding="utf-8"))
-        await write_patent(writer, doc, "seed" if number in seeds else "discovery")
+        docs.append(parse_patent_page(path.stem, path.read_text(encoding="utf-8")))
+    # I seed passano sempre; gli altri saltano se la loro invenzione e' gia' coperta,
+    # da una scheda esistente o da un seed dello stesso lotto.
+    published = [
+        Patent.model_validate_json(p.read_text(encoding="utf-8")).doc
+        for p in PATENTS_DIR.glob("*.json")
+    ]
+    seed_docs = [d for d in docs if d.number in seeds]
+    dupes = family_duplicates([d for d in docs if d.number not in seeds], published + seed_docs)
+    for number, relative in dupes.items():
+        print(f"  {number}: stessa invenzione di {relative}, salto")
+    todo = [d for d in docs if d.number not in dupes]
+
+    # Qualche analisi in parallelo: con decine di brevetti in sequenza il
+    # recupero storico durerebbe ore. Oltre si va a sbattere sui 429.
+    sem = asyncio.Semaphore(FROM_HTML_CONCURRENCY)
+
+    async def one(doc: PatentDoc) -> None:
+        async with sem:
+            await write_patent(writer, doc, "seed" if doc.number in seeds else "discovery")
+
+    await asyncio.gather(*(one(d) for d in todo))
 
 
 async def main() -> int:
