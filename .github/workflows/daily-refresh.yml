@@ -17,7 +17,9 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    # Fissato a 24.04: ubuntu-latest e' passato a 26.04 (ottobre 2026) e Playwright
+    # 1.60 non sa installare chromium li' ("does not support chromium on ubuntu26.04").
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     permissions:
       contents: write
