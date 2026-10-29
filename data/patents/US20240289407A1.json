@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20240289407A1",
+    "title": "Search with stateful chat",
+    "abstract": "Implementations are described herein for augmenting a traditional search session with stateful chat—via what will be referred to as a “generative companion”—to facilitate more interactive searching. In various implementations, a query may be received, e.g., from a client device operated by a user. Contextual information associated with the user or the client device may be retrieved. Generative model (GM) output may be generated based on processing, using a generative model, data indicative of the query and the contextual information. Synthetic queries may be generated using the GM output, and search result documents (SRDs) may be selected. State data indicative of: the query, contextual information, one or more of the synthetic queries, and the set of search result documents, may be processed to identify a classification of the query. Based on the classification downstream GM(s) may be selected and used to generate one or more additional GM outputs.",
+    "claims": [
+      "1 . A method implemented by one or more processors during a search session of a user, the method comprising: receiving a query associated with a client device operated by the user; retrieving contextual information associated with the user or the client device; generating generative model (GM) output based on processing, using an GM, data indicative of the query and the contextual information; generating one or more synthetic queries using the GM output; selecting a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query and the one or more synthetic queries; processing state data indicative of the query, contextual information, one or more of the synthetic queries, and the set of search result documents to identify a classification of the query; based on the classification of the query, selecting one or more downstream GMs; generating one or more additional GM outputs based on processing, using the selected one or more downstream GMs, at least some of the state data; and causing content responsive to the query to be rendered at the client device.",
+      "2 . The method of claim 1 , wherein the contextual information associated with the user or the client device includes one or more prior queries issued by the user during the search session.",
+      "3 . The method of claim 1 , wherein the contextual information associated with the user or the client device includes data extracted from one or more search results pages returned in response to one or more prior queries issued by the user during the search session.",
+      "4 . The method of claim 1 , wherein the contextual information associated with the user or the client device includes data extracted from one or more prior-query-responsive search result documents returned in response to one or more prior queries issued by the user during the search session.",
+      "5 . The method of claim 1 , wherein the contextual information associated with the user or the client device includes information about a schedule of the user.",
+      "6 . The method of claim 5 , wherein the information about the schedule of the user is retrieved from one or more of an electronic calendar of the user, electronic correspondence of the user, an electronic calendar of another user, or electronic correspondence of another user.",
+      "7 . The method of claim 1 , wherein the contextual information associated with the user or the client device includes position coordinates of the user.",
+      "8 . The method of claim 1 , wherein the state data comprises an aggregate embedding generated from two or more of the query, contextual information, one or more of the synthetic queries, and the set of search result documents.",
+      "9 . The method of claim 1 , wherein the state data comprises data extracted from one or more search results pages returned in response to one or more of the synthetic queries.",
+      "10 . The method of claim 1 , wherein the state data comprises data indicative of one or more actions performed by the user subsequent to issuing the query.",
+      "11 . The method of claim 10 , wherein the data indicative of one or more actions comprises data extracted from one or more of the query-responsive search result documents accessed by the user.",
+      "12 . The method of claim 1 , wherein one or more of the downstream GMs comprises a creative GM trained to generate creative natural language (NL).",
+      "13 . The method of claim 1 , wherein one or more of the downstream GMs comprises an ambient GM trained to generate a summary of a document accessed by the user subsequent to issuing the query.",
+      "14 . The method of claim 1 , wherein one or more of the downstream GMs comprises a search results GM trained to generate summaries of search results pages.",
+      "15 . The method of claim 1 , wherein the content responsive to the query is included in subsequent contextual information retrieved during one or more subsequent turns of the search session of the user.",
+      "16 . The method of claim 1 , wherein the contextual information comprises prior content responsive to a prior query issued by the user during the search session.",
+      "17 . A system comprising one or more processors and memory storing instructions that, in response to execution by the one or more processors, cause the one or more processors to: receive a query associated with a client device operated by the user; retrieve contextual information associated with the user or the client device; generate generative model (GM) output based on processing, using an GM, data indicative of the query and the contextual information; generate one or more synthetic queries using the GM output; select a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query and the one or more synthetic queries; process state data indicative of the query, contextual information, one or more of the synthetic queries, and the set of search result documents to identify a classification of the query; based on the classification of the query, select one or more downstream GMs; generate one or more additional GM outputs based on processing, using the selected one or more downstream GMs, at least some of the state data; and cause content responsive to the query to be rendered at the client device.",
+      "18 . The system of claim 17 , wherein the contextual information associated with the user or the client device includes one or more prior queries issued by the user during the search session.",
+      "19 . The system of claim 17 , wherein the contextual information associated with the user or the client device includes data extracted from one or more search results pages returned in response to one or more prior queries issued by the user during the search session.",
+      "20 . At least one non-transitory computer-readable medium comprising instructions that, when executed by one or more processors, cause the one or more processors to: receive a query associated with a client device operated by the user; retrieve contextual information associated with the user or the client device; generate generative model (GM) output based on processing, using an GM, data indicative of the query and the contextual information; generate one or more synthetic queries using the GM output; select a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query and the one or more synthetic queries; process state data indicative of the query, contextual information, one or more of the synthetic queries, and the set of search result documents to identify a classification of the query; based on the classification of the query, select one or more downstream GMs; generate one or more additional GM outputs based on processing, using the selected one or more downstream GMs, at least some of the state data; and cause content responsive to the query to be rendered at the client device."
+    ],
+    "independent_claims": [
+      "1 . A method implemented by one or more processors during a search session of a user, the method comprising: receiving a query associated with a client device operated by the user; retrieving contextual information associated with the user or the client device; generating generative model (GM) output based on processing, using an GM, data indicative of the query and the contextual information; generating one or more synthetic queries using the GM output; selecting a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query and the one or more synthetic queries; processing state data indicative of the query, contextual information, one or more of the synthetic queries, and the set of search result documents to identify a classification of the query; based on the classification of the query, selecting one or more downstream GMs; generating one or more additional GM outputs based on processing, using the selected one or more downstream GMs, at least some of the state data; and causing content responsive to the query to be rendered at the client device.",
+      "17 . A system comprising one or more processors and memory storing instructions that, in response to execution by the one or more processors, cause the one or more processors to: receive a query associated with a client device operated by the user; retrieve contextual information associated with the user or the client device; generate generative model (GM) output based on processing, using an GM, data indicative of the query and the contextual information; generate one or more synthetic queries using the GM output; select a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query and the one or more synthetic queries; process state data indicative of the query, contextual information, one or more of the synthetic queries, and the set of search result documents to identify a classification of the query; based on the classification of the query, select one or more downstream GMs; generate one or more additional GM outputs based on processing, using the selected one or more downstream GMs, at least some of the state data; and cause content responsive to the query to be rendered at the client device.",
+      "20 . At least one non-transitory computer-readable medium comprising instructions that, when executed by one or more processors, cause the one or more processors to: receive a query associated with a client device operated by the user; retrieve contextual information associated with the user or the client device; generate generative model (GM) output based on processing, using an GM, data indicative of the query and the contextual information; generate one or more synthetic queries using the GM output; select a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query and the one or more synthetic queries; process state data indicative of the query, contextual information, one or more of the synthetic queries, and the set of search result documents to identify a classification of the query; based on the classification of the query, select one or more downstream GMs; generate one or more additional GM outputs based on processing, using the selected one or more downstream GMs, at least some of the state data; and cause content responsive to the query to be rendered at the client device."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Mahsan Rofouei",
+      "Anand Shukla",
+      "Qing Wei",
+      "Chi Tang",
+      "Ryan Brown",
+      "Enrique Piqueras"
+    ],
+    "priority_date": "2023-02-28",
+    "filing_date": "2024-02-27",
+    "publication_date": "2024-08-29",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/335",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/957",
+      "G06F16/9577",
+      "G06F16/3331",
+      "G06F16/3332",
+      "G06F16/3338",
+      "G06F16/953",
+      "G06F16/9532",
+      "G06F16/9535",
+      "G06F16/9537",
+      "G06F40/00",
+      "G06F40/30",
+      "G06F40/35",
+      "G06F40/40",
+      "G06F40/20"
+    ],
+    "family": [],
+    "cited_by_count": 45
+  },
+  "analysis": {
+    "title_it": "Ricerca conversazionale con stato persistente tra i turni",
+    "summary": "Il brevetto descrive un sistema per affiancare una sessione di ricerca tradizionale con una chat dotata di stato persistente (\"generative companion\") che mantiene e aggiorna il contesto dell'utente attraverso più turni. A ogni turno, il sistema classifica la query e lo stato dell'utente per selezionare zero, uno o più modelli generativi downstream (creativi, di sintesi, di chiarimento) e generare risposte personalizzate che tengono conto dell'intera traiettoria della sessione.",
+    "theme": "ricerca_conversazionale",
+    "seo_relevance": 4,
+    "scope": "Google Search, sessioni di ricerca conversazionale con stato",
+    "what_it_claims": "La rivendicazione indipendente 1 descrive un metodo implementato durante una sessione di ricerca di un utente che comprende: ricevere una query associata a un client device; recuperare informazioni contestuali associate all'utente o al dispositivo; generare output di un modello generativo (GM) processando, tramite un GM, dati indicativi della query e delle informazioni contestuali; generare una o più query sintetiche utilizzando l'output del GM; selezionare un set di documenti di risultati di ricerca (SRD), includendo nel set una pluralità di SRD query-responsive che rispondono sia alla query che alle query sintetiche; processare dati di stato indicativi della query, delle informazioni contestuali, delle query sintetiche e del set di SRD per identificare una classificazione della query; in base alla classificazione, selezionare uno o più GM downstream; generare uno o più output GM aggiuntivi processando, tramite i GM downstream selezionati, almeno parte dei dati di stato; e causare la renderizzazione di contenuto responsive alla query sul client device.\n\nLe rivendicazioni dipendenti 2-16 specificano che le informazioni contestuali possono includere: query precedenti emesse durante la sessione (rivendicazione 2); dati estratti da pagine di risultati restituite in risposta a query precedenti (rivendicazione 3); dati estratti da SRD responsive a query precedenti (rivendicazione 4); informazioni sulla pianificazione dell'utente (rivendicazione 5), recuperate da calendari elettronici o corrispondenza dell'utente o di altri (rivendicazione 6); coordinate di posizione dell'utente (rivendicazione 7). I dati di stato possono essere un embedding aggregato generato da query, informazioni contestuali, query sintetiche e set di SRD (rivendicazione 8), o includere dati estratti da SRP restituite in risposta alle query sintetiche (rivendicazione 9), o dati indicativi di azioni eseguite dall'utente dopo l'emissione della query (rivendicazione 10), inclusi dati estratti da SRD accessati dall'utente (rivendicazione 11). I GM downstream possono includere: un GM creativo addestrato a generare linguaggio naturale creativo (rivendicazione 12); un GM ambient addestrato a generare sintesi di documenti accessati dall'utente dopo l'emissione della query (rivendicazione 13); un GM di risultati di ricerca addestrato a generare sintesi di pagine di risultati (rivendicazione 14). Il contenuto responsive alla query può essere incluso nelle informazioni contestuali recuperate durante turni successivi della sessione (rivendicazione 15), e le informazioni contestuali possono includere contenuto responsive precedente a una query precedente emessa durante la sessione (rivendicazione 16). Le rivendicazioni 17-20 sono rispettivamente una rivendicazione di sistema e di supporto leggibile da computer che replicano sostanzialmente la rivendicazione 1.",
+    "seo_reading": "La descrizione contempla un sistema chiamato \"generative companion\" che mantiene uno stato dell'utente (\"user state\", paragrafi relativi a FIG. 8 e blocco 871) attraverso più turni di una sessione di ricerca. Questo stato può essere rappresentato come embedding semanticamente ricchi o come strutture dati contenenti query precedenti, token, keyword (paragrafi su user state 871). Il sistema può recuperare informazioni contestuali da calendari elettronici, corrispondenza, posizione GPS, attività corrente rilevata da accelerometro/giroscopio, applicazioni in primo piano, e contenuto di SRP e SRD precedenti (paragrafi su context engine 113 e user state 871).\n\nLa descrizione contempla l'uso di un primo LLM (blocco 150, context engine 113) per generare query sintetiche o \"riformulate\" che possono essere query alternative, query supplementari, versioni riscritte della query dell'utente o query di drill-down (paragrafi su synthetic queries). Queste query sintetiche vengono eseguite da un motore di ricerca per ottenere SRD (blocco 960, search system 160). I dati di stato vengono poi processati, utilizzando uno o più modelli di machine learning o classifier (blocco 152), per classificare la query in una delle diverse categorie candidate (blocco 962). La descrizione elenca esempi di classificazioni: \"needs creative text generation\", \"needs creative media generation\", \"can benefit from ambient generative summarization\", \"can benefit from SRP summarization\", \"would benefit from suggested next step query\", \"needs clarification\", \"do not interfere\" (paragrafi su LLM selection engine 132 e FIG. 8).\n\nIn base alla classificazione, vengono selezionati uno o più LLM downstream (blocco 964, elementi 872A-F in FIG. 8). La descrizione contempla: creative text LLM (872A) addestrati a generare testo creativo come poesie o saggi; creative media generative models (872B) come modelli di diffusione per immagini, che possono incorporare contenuto personale dell'utente se autorizzato; ambient generative LLM (872C) addestrati a sintetizzare un documento specifico accessato dall'utente, con grounding e verifica degli attributi dal documento stesso; SRP generative LLM (872D) addestrati a sintetizzare SRP includendo passaggi di testo e immagini estratte o generate, potenzialmente con linkificazione come in FIG. 3; next step LLM (872E) addestrati a generare suggerimenti per query successive che guidano la sessione, inclusi suggerimenti per drill-down categorico o raccomandazioni di contenuti digitali; clarification LLM (872F) addestrati a generare domande di chiarimento quando termini ambigui non possono essere risolti tramite lo stato dell'utente (paragrafi su downstream LLMs e FIG. 8).\n\nLa descrizione contempla che l'output generato (blocco 968, current output 874) venga reso all'utente e che questo output venga incorporato nello stato dell'utente per i turni successivi (freccia da current output 874 a user state 871 in FIG. 8), creando un ciclo di feedback. La descrizione contempla anche che lo stato dell'utente possa essere salvato come \"footprint\" o \"journey\" di una sessione di ricerca, che può essere ripresa successivamente dall'utente o condivisa con altri (paragrafi su saving user state). La descrizione contempla che sessioni precedenti possano essere riprese esplicitamente o automaticamente in base alla similarità tra query corrente/stato corrente e stati di sessioni precedenti (paragrafi su resuming sessions).\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacità di ricerca conversazionale che mantengono contesto attraverso più interazioni. Se implementato, potrebbe significare che i contenuti dovrebbero essere ottimizzati non solo per query singole ma per traiettorie di ricerca multi-turno. La capacità di generare query sintetiche potrebbe influenzare quali documenti vengono selezionati per sintesi, suggerendo che documenti responsive a variazioni e riformulazioni di una query potrebbero avere maggiore visibilità. La classificazione automatica delle query in categorie che richiedono diversi tipi di output generativo potrebbe significare che alcuni tipi di query riceverebbero sintesi testuali mentre altri riceverebbero output creativi o richieste di chiarimento, influenzando quali risultati vengono mostrati e come.",
+    "limits": [
+      "Il brevetto è una domanda (A1) non ancora concessa e non dimostra che Google abbia implementato o implementerà questo sistema in Search.",
+      "Non specifica quali metriche o soglie vengano utilizzate dai classifier per assegnare le classificazioni delle query, né come vengano bilanciati i diversi segnali contestuali nello stato dell'utente.",
+      "Non dimostra che il mantenimento dello stato attraverso più turni migliori effettivamente la soddisfazione dell'utente o l'efficienza della ricerca rispetto a sessioni di ricerca tradizionali.",
+      "La descrizione contempla molteplici implementazioni opzionali (\"in some implementations\") senza indicare quali sarebbero effettivamente utilizzate in produzione."
+    ],
+    "implications": [
+      "Ottimizzare i contenuti per rispondere a variazioni e riformulazioni di query principali, non solo alla query esatta, dato che query sintetiche potrebbero essere generate e utilizzate per selezionare documenti.",
+      "Strutturare i contenuti in modo che possano essere facilmente sintetizzati e verificati, con sezioni chiare e affermazioni supportate da evidenze, dato il focus su grounding e linkificazione.",
+      "Considerare l'intero percorso informativo dell'utente su un argomento, non solo singole query isolate, nella pianificazione dei contenuti e della struttura del sito.",
+      "Mantenere contenuti aggiornati e di alta qualità che possano essere considerati affidabili per sintesi automatiche, dato che trustworthiness e freshness sono menzionati come misure per la selezione di SRD."
+    ],
+    "key_terms": [
+      {
+        "term": "generative companion",
+        "explanation": "Sistema che affianca una sessione di ricerca tradizionale con chat dotata di stato persistente per facilitare ricerca interattiva"
+      },
+      {
+        "term": "user state",
+        "explanation": "Stato contestuale dell'utente mantenuto attraverso più turni di una sessione di ricerca, che include query precedenti, documenti accessati, informazioni contestuali e output precedenti"
+      },
+      {
+        "term": "synthetic queries",
+        "explanation": "Query generate automaticamente da un modello generativo basandosi sulla query dell'utente e sul contesto, che possono essere riformulazioni, query supplementari o query di drill-down"
+      },
+      {
+        "term": "downstream GMs",
+        "explanation": "Modelli generativi selezionati in base alla classificazione della query per generare tipi specifici di output (creativi, sintesi, chiarimenti, suggerimenti)"
+      },
+      {
+        "term": "ambient generative summarization",
+        "explanation": "Sintesi generativa di un documento specifico accessato dall'utente durante la sessione di ricerca"
+      },
+      {
+        "term": "SRP summarization",
+        "explanation": "Sintesi generativa di una pagina di risultati di ricerca, includendo passaggi di testo e potenzialmente immagini estratte dai risultati"
+      }
+    ]
+  },
+  "origin": "seed",
+  "generated_at": "2026-10-29T08:51:46.897018Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.14125956
+}

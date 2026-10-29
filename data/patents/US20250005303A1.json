@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20250005303A1",
+    "title": "Generative summaries for search results",
+    "abstract": "At least selectively utilizing a large language model (LLM) in generating a natural language (NL) based summary to be rendered in response to a query. In some implementations, in generating the NL based summary additional content is processed using the LLM. The additional content is in addition to query content of the query itself and, in generating the NL based summary, can be processed using the LLM and along with the query content—or even independent of the query content. Processing the additional content can, for example, mitigate occurrences of the NL based summary including inaccuracies and/or can mitigate occurrences of the NL based summary being over-specified and/or under-specified.",
+    "claims": [
+      "1 . A method implemented by one or more processors, the method comprising: receiving a query formulated based on user interface input at a client device; selecting, from a plurality of candidate generative models, a particular subset of the candidate generative models to utilize in generating one or more responses to render responsive to receiving the query, wherein selecting the particular subset is based on processing the query and/or processing search result documents that are responsive to the query; in response to a given generative model being included in the particular subset: causing a given response, that is generated based on the query and using the given generative model in response to the given generative model being included in the particular subset, to be rendered in response to receiving the query.",
+      "2 . The method of claim 1 , wherein the candidate generative models include a larger size generative model and a smaller size generative model, wherein the larger size generative model requires more computational resource to utilize than does the smaller size generative model, and wherein the particular subset includes one of the larger size generative model and the smaller size generative model and omits the other of the larger size generative model and the smaller size generative model.",
+      "3 . The method of claim 2 , wherein the particular subset includes the smaller size generative model and omits the larger size generative model.",
+      "4 . The method of claim 3 , wherein the particular subset includes only the smaller size generative model.",
+      "5 . The method of claim 1 , further comprising: receiving an additional query formulated based on additional user interface input at an additional client device; determining to use none of the plurality of candidate generative models in generating one or more additional responses to render responsive to receiving the additional query, wherein determining to use none of the plurality of candidate generative models is based on processing the additional query and/or processing additional search result documents that are responsive to the additional query; in response to determining to use none of the plurality of candidate generative models: causing an additional response, generated independent of the plurality of candidate generative models, to be rendered in response to receiving the additional query.",
+      "6 . The method of claim 1 , wherein selecting the particular subset comprises: processing the query using a classifier to generate classifier output; determining that the classifier output indicates the particular subset; and selecting the particular subset based on determining that the classifier output indicates the particular subset.",
+      "7 . The method of claim 1 , wherein selecting the particular subset comprises: determining that the query includes or omits one or more terms; determining that the inclusion or the omission of the one or more terms indicates the particular subset; and selecting the particular subset based on determining that the inclusion or the omission of the one or more terms indicates the particular subset.",
+      "8 . The method of claim 1 , wherein the candidate generative models include an informational large language model (LLM) fine-tuned based on an information summarization prompt and a creative LLM fine-tuned based on a creative generation prompt, and wherein the particular subset includes one of the informational LLM and the creative LLM and omits the other of the informational LLM and the creative LLM.",
+      "9 . The method of claim 1 , wherein the candidate generative models include: a given large language model (LLM) paired with a first prompt to be used in response generation, and the given LLM paired with a second prompt to be used in response generation; and wherein the particular subset includes one of the given LLM paired with the first prompt and the given LLM paired with the second prompt and omits the other of the given LLM paired with the first prompt and the given LLM paired with the second prompt.",
+      "10 . The method of claim 1 , further comprising: in response to an additional given generative model being included in the particular subset: causing an additional given response, that is generated based on the query and using the additional given generative model in response to the additional given generative model being included in the particular subset, to be rendered in response to receiving the query and to be rendered along with the given response.",
+      "11 . The method of claim 1 , further comprising: generating, based on the query and using the given generative model, the given response.",
+      "12 . The method of claim 11 , wherein generating the given response based on the query comprises generating the given response based on content of one or more search result documents determined to be responsive to the query.",
+      "13 . The method of claim 1 , wherein the candidate generative models include a large language model (LLM) and a text-to-image model.",
+      "14 . The method of claim 13 , wherein the candidate generative models include an additional LLM.",
+      "15 . A system, comprising: memory storing instructions; one or more processors operable to execute the instruction to: receive a query formulated based on user interface input at a client device; select, from a plurality of candidate generative models, a particular subset of the candidate generative models to utilize in generating one or more responses to render responsive to receiving the query, wherein selecting the particular subset is based on processing the query and/or processing search result documents that are responsive to the query; in response to a given generative model being included in the particular subset: cause a given response, that is generated based on the query and using the given generative model in response to the given generative model being included in the particular subset, to be rendered in response to receiving the query.",
+      "16 . The system of claim 15 , wherein the candidate generative models include a larger size generative model and a smaller size generative model, wherein the larger size generative model requires more computational resource to utilize than does the smaller size generative model, and wherein the particular subset includes one of the larger size generative model and the smaller size generative model and omits the other of the larger size generative model and the smaller size generative model.",
+      "17 . The system of claim 15 , wherein one or more of the processors are further operable to execute the instructions to: receive an additional query formulated based on additional user interface input at an additional client device; determine to use none of the plurality of candidate generative models in generating one or more additional responses to render responsive to receiving the additional query, wherein determining to use none of the plurality of candidate generative models is based on processing the additional query and/or processing additional search result documents that are responsive to the additional query; in response to determining to use none of the plurality of candidate generative models: cause an additional response, generated independent of the plurality of candidate generative models, to be rendered in response to receiving the additional query.",
+      "18 . The system of claim 15 , wherein in selecting the particular subset one or more of the processors are to: process the query using a classifier to generate classifier output; determine that the classifier output indicates the particular subset; and select the particular subset based on determining that the classifier output indicates the particular subset.",
+      "19 . The system of claim 15 , wherein in selecting the particular subset one or more of the processors are to: determine that the query includes or omits one or more terms; determine that the inclusion or the omission of the one or more terms indicates the particular subset; and select the particular subset based on determining that the inclusion or the omission of the one or more terms indicates the particular subset.",
+      "20 . The system of claim 15 , wherein the candidate generative models include: a given large language model (LLM) paired with a first prompt to be used in response generation, and the given LLM paired with a second prompt to be used in response generation; and wherein the particular subset includes one of the given LLM paired with the first prompt and the given LLM paired with the second prompt and omits the other of the given LLM paired with the first prompt and the given LLM paired with the second prompt."
+    ],
+    "independent_claims": [
+      "1 . A method implemented by one or more processors, the method comprising: receiving a query formulated based on user interface input at a client device; selecting, from a plurality of candidate generative models, a particular subset of the candidate generative models to utilize in generating one or more responses to render responsive to receiving the query, wherein selecting the particular subset is based on processing the query and/or processing search result documents that are responsive to the query; in response to a given generative model being included in the particular subset: causing a given response, that is generated based on the query and using the given generative model in response to the given generative model being included in the particular subset, to be rendered in response to receiving the query.",
+      "15 . A system, comprising: memory storing instructions; one or more processors operable to execute the instruction to: receive a query formulated based on user interface input at a client device; select, from a plurality of candidate generative models, a particular subset of the candidate generative models to utilize in generating one or more responses to render responsive to receiving the query, wherein selecting the particular subset is based on processing the query and/or processing search result documents that are responsive to the query; in response to a given generative model being included in the particular subset: cause a given response, that is generated based on the query and using the given generative model in response to the given generative model being included in the particular subset, to be rendered in response to receiving the query."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Matthew K. Gray",
+      "John Blitzer",
+      "Corinn Herrick",
+      "Srinivasan Venkatachary",
+      "Jayant Madhavan",
+      "Sam Oates",
+      "Phiroze Parakh",
+      "Aditya Shah",
+      "Mahsan Rofouei",
+      "Ibrahim Badr"
+    ],
+    "priority_date": "2022-12-30",
+    "filing_date": "2024-09-10",
+    "publication_date": "2025-01-02",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F40/00",
+      "G06F40/40",
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/332",
+      "G06F16/3325",
+      "G06F16/3326",
+      "G06F16/3328",
+      "G06F16/3329",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9535",
+      "G06F16/9538",
+      "G06F40/55",
+      "G06F40/56"
+    ],
+    "family": [
+      {
+        "number": "US12118325B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Generative summaries for search results"
+      }
+    ],
+    "cited_by_count": 9
+  },
+  "analysis": {
+    "title_it": "Selezione dinamica di modelli generativi per le risposte alle query",
+    "summary": "Il brevetto descrive un sistema che seleziona dinamicamente, tra più modelli generativi candidati (LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image), quale utilizzare per generare risposte a una query. La selezione avviene analizzando la query stessa e/o i documenti di risultato, utilizzando classificatori o regole, e può portare a non utilizzare alcun modello, utilizzarne uno solo o combinarne più di uno.",
+    "theme": "selezione_fonti_ai",
+    "seo_relevance": 3,
+    "scope": "Google Search, risposte generative a query",
+    "what_it_claims": "La rivendicazione indipendente 1 protegge un metodo che riceve una query formulata in base a input utente da un client device, seleziona un sottoinsieme particolare di modelli generativi candidati da utilizzare per generare una o più risposte da rendere in risposta alla query, dove la selezione si basa sull'elaborazione della query e/o dei documenti di risultato che rispondono alla query. Se un dato modello generativo è incluso nel sottoinsieme particolare, il metodo causa il rendering di una data risposta generata in base alla query e utilizzando quel modello generativo. La rivendicazione 2 specifica che i modelli candidati includono un modello generativo di dimensioni maggiori e uno di dimensioni minori, dove quello maggiore richiede più risorse computazionali, e il sottoinsieme particolare include uno dei due ed esclude l'altro. La rivendicazione 3 precisa che il sottoinsieme può includere il modello più piccolo ed escludere quello più grande. La rivendicazione 5 contempla la possibilità di determinare di non utilizzare alcuno dei modelli generativi candidati per una query aggiuntiva, in base all'elaborazione di quella query e/o dei suoi documenti di risultato, causando il rendering di una risposta aggiuntiva generata indipendentemente dai modelli generativi. La rivendicazione 6 descrive che la selezione può avvenire elaborando la query con un classificatore per generare output del classificatore e determinando che tale output indica il sottoinsieme particolare. La rivendicazione 7 prevede che la selezione possa basarsi sulla presenza o assenza di uno o più termini nella query. La rivendicazione 8 specifica che i modelli candidati possono includere un LLM informativo fine-tuned su un prompt di sintesi informativa e un LLM creativo fine-tuned su un prompt di generazione creativa, con il sottoinsieme che include uno ed esclude l'altro. La rivendicazione 9 contempla che i modelli candidati possano includere lo stesso LLM abbinato a prompt diversi, con il sottoinsieme che include una coppia LLM-prompt ed esclude l'altra. La rivendicazione 10 prevede che più modelli generativi possano essere inclusi nel sottoinsieme, generando risposte multiple da rendere insieme. La rivendicazione 12 specifica che la generazione della risposta può basarsi sul contenuto di uno o più documenti di risultato determinati come responsivi alla query. Le rivendicazioni 13 e 14 indicano che i modelli candidati possono includere un LLM, un modello text-to-image e/o LLM aggiuntivi.",
+    "seo_reading": "La descrizione contempla che la selezione tra modelli generativi candidati possa avvenire utilizzando un classificatore che elabora il contenuto della query per classificarla tra i modelli generativi (ad esempio come informativa, creativa o per immagine sintetica), oppure utilizzando regole che specificano classificazioni in base alla presenza o assenza di determinate parole (blocco 554A1). La descrizione menziona che le caratteristiche vocali di una query vocale potrebbero essere utilizzate per classificare la query tra i modelli generativi. Viene contemplato l'uso di documenti di risultato responsivi alla query per la classificazione: se i primi N risultati includono certi tipi di risultati o contenuti, il sistema potrebbe determinare di usare un LLM informativo, mentre per altri tipi potrebbe selezionare un LLM creativo e un modello text-to-image. La descrizione contempla che la qualità e l'affidabilità dei documenti di risultato possano essere considerate nella selezione. Per casi limite (ad esempio basati su output del classificatore) o in altre situazioni, il sistema potrebbe selezionare più modelli generativi corrispondenti ai casi limite, oppure per casi limite e/o in altre situazioni (ad esempio quando i risultati di ricerca per la query sono di alta qualità) potrebbe determinare di non selezionare alcun modello generativo per generare risposte. La descrizione contempla che i modelli candidati possano includere un LLM di dimensioni maggiori e uno di dimensioni minori, dove quello maggiore è più robusto e/o accurato ma richiede più risorse computazionali (memoria e/o processore). Adattando dinamicamente la selezione dell'LLM in base al compito, la descrizione suggerisce che l'uso delle risorse computazionali possa essere ottimizzato, ad esempio favorendo LLM più piccoli se un LLM più grande non è richiesto per soddisfare una specifica di requisito di un dato compito. La descrizione contempla l'uso in parallelo di più LLM per generare sintesi candidate NL per una query, selezionandone poi solo una per l'uso (ad esempio per il rendering in risposta alla query), in base a criteri come similarità con altre sintesi candidate, presenza o assenza di certi contenuti, punteggio del modello linguistico o altre caratteristiche. Questo potrebbe mitigare occorrenze in cui la sintesi selezionata sia difficile da analizzare, imprecisa o non risonante con l'utente. Per la SEO, questo potrebbe significare che Google potrebbe utilizzare architetture di selezione dinamica per decidere se e quale tipo di risposta generativa fornire, potenzialmente riducendo la visibilità dei risultati organici tradizionali quando un modello generativo viene selezionato, oppure preservandola quando nessun modello viene selezionato. La selezione basata su qualità e affidabilità dei documenti di risultato potrebbe premiare contenuti di alta qualità come fonti per risposte generative o, paradossalmente, portare a non generare risposte generative se i risultati tradizionali sono già sufficientemente buoni. L'uso di modelli più piccoli per query semplici e modelli più grandi per query complesse suggerirebbe un'ottimizzazione delle risorse che non ha implicazioni SEO dirette ma indica una strategia di efficienza.",
+    "limits": [
+      "Il brevetto è una domanda (US20250005303A1) non ancora concessa e fa parte di una famiglia con continuation (US12118325B2), quindi non costituisce prova indipendente di implementazione.",
+      "Il brevetto non dimostra che Google utilizzi effettivamente questa selezione dinamica tra modelli generativi in produzione, né specifica quali classificatori o regole siano impiegati in pratica.",
+      "Non viene specificato come la selezione tra modelli impatti la visibilità dei risultati organici tradizionali o se la selezione di nessun modello generativo corrisponda a una maggiore enfasi sui risultati tradizionali.",
+      "La descrizione non chiarisce se e come i segnali di qualità dei documenti di risultato (query-dependent, query-independent, user-dependent) influenzino concretamente la decisione di utilizzare o meno un modello generativo."
+    ],
+    "implications": [
+      "Produrre contenuti di alta qualità, affidabili e aggiornati resta prioritario, poiché la descrizione contempla che qualità e affidabilità dei documenti di risultato possano influenzare la selezione dei modelli generativi e quindi la modalità di presentazione delle risposte.",
+      "Strutturare i contenuti in modo che rispondano chiaramente a intenti informativi o creativi può essere utile, dato che la descrizione contempla classificazioni delle query in base a tali intenti per selezionare modelli appropriati.",
+      "Monitorare l'evoluzione delle SERP per identificare quando vengono presentate risposte generative rispetto a risultati tradizionali, per comprendere quali tipi di query attivano quali modalità di risposta, indipendentemente dall'implementazione di questo brevetto."
+    ],
+    "key_terms": [
+      {
+        "term": "candidate generative models",
+        "explanation": "Insieme di modelli generativi tra cui il sistema seleziona dinamicamente quale utilizzare per generare risposte a una query, che possono includere LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image, o lo stesso LLM abbinato a prompt diversi."
+      },
+      {
+        "term": "particular subset",
+        "explanation": "Il sottoinsieme specifico di modelli generativi candidati selezionato per generare risposte a una data query, che può includere nessuno, uno o più modelli, in base all'elaborazione della query e/o dei documenti di risultato."
+      },
+      {
+        "term": "larger size generative model / smaller size generative model",
+        "explanation": "Modelli generativi di dimensioni diverse, dove quello più grande è più robusto e accurato ma richiede più risorse computazionali (memoria, processore) rispetto a quello più piccolo."
+      },
+      {
+        "term": "informational LLM / creative LLM",
+        "explanation": "LLM specializzati tramite fine-tuning: l'informational LLM è ottimizzato per prompt di sintesi informativa, mentre il creative LLM è ottimizzato per prompt di generazione creativa (poesie, saggi, prosa)."
+      },
+      {
+        "term": "classifier",
+        "explanation": "Modello di machine learning utilizzato per elaborare il contenuto della query e classificarla tra i modelli generativi candidati, generando un output che indica quale sottoinsieme di modelli è più appropriato per quella query."
+      }
+    ]
+  },
+  "origin": "seed",
+  "generated_at": "2026-10-29T08:52:36.513417Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.13520136000000002
+}

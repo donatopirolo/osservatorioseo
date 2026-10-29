@@ -1,0 +1,64 @@
+# Sezione Brevetti (/brevetti/), aggiornata dal workflow patents-weekly.
+#
+# Ogni brevetto diventa una scheda /brevetti/<numero>/ generata dal testo del
+# brevetto su Google Patents (abstract, rivendicazioni, famiglia). Una scheda
+# esistente non viene rigenerata: per rifarla lancia lo script con
+# --number <NUMERO> --force.
+#
+# I brevetti arrivano da due strade:
+#   - `seed`: elenco fisso, sempre pubblicato (anche se il titolare non e'
+#     Google, es. PageRank e' di Stanford);
+#   - `discovery`: una ricerca su Google Patents per run, a rotazione tra le
+#     query. I risultati nuovi passano da un classificatore LLM: con rilevanza
+#     SEO >= `min_relevance` entrano in coda e vengono pubblicati nei run
+#     successivi, gli scartati finiscono in data/state/patents_discovery.json
+#     e non vengono riesaminati.
+
+seed:
+  # Risposte AI e ricerca generativa (2023-2026)
+  - US11769017B1  # Generative summaries for search results
+  - US20250005303A1  # continuation di US11769017B1
+  - US20240289407A1  # Search with stateful chat
+  - US12158907B1  # Thematic search
+  - US20260119564A1  # continuation di US12158907B1
+  - US20250156456A1  # LLM adaptation for grounding
+  - US12346366B2  # Generative answers with citations (cloud storage)
+  - US12536233B1  # AI-generated content page tailored to a user
+  # Classici della SEO
+  - US6285999B1  # PageRank (Stanford)
+  - US7716225B1  # Reasonable surfer
+  - US7346839B2  # Information retrieval based on historical data
+  - US11354342B2  # Contextual estimation of link information gain
+  - US8682892B1  # Ranking search results (Panda)
+  - US8661029B1  # Implicit user feedback
+  - US7603350B1  # Search result ranking based on trust
+  - US9031929B1  # Site quality score
+
+discovery:
+  # Query string di patents.google.com (quello che c'e' dopo il "?" nella
+  # barra degli indirizzi). Lo script aggiunge da solo after=publication:...
+  # e l'ordinamento per data.
+  queries:
+    - q=("large language model")&q=(search)&assignee=Google+Llc&country=US
+    - q=("search results")&q=(ranking)&assignee=Google+Llc&country=US
+    - q=("search result documents")&assignee=Google+Llc&country=US
+    - q=(citation OR attribution OR grounding)&q=(search)&assignee=Google+Llc&country=US
+    - q=("query")&q=(rewriting OR "fan-out" OR "related queries")&assignee=Google+Llc&country=US
+  # Al primo run (senza stato) quanto indietro guardare.
+  initial_lookback_days: 180
+  # Google Patents indicizza le pubblicazioni con qualche settimana di
+  # ritardo: ogni run ricontrolla anche questo margine prima dell'ultimo run.
+  overlap_days: 45
+  min_relevance: 4
+  # Quanti candidati di una ricerca passano dal classificatore (costo LLM,
+  # nessuna richiesta a Google Patents).
+  max_classify_per_run: 40
+
+# Google Patents blocca i runner di GitHub dopo ~4 richieste (test del
+# 29/10/2026): ogni run giornaliero ne fa al massimo queste, il resto lo
+# riprende il giorno dopo.
+max_requests_per_run: 3
+request_delay_s: 20
+# Dopo questi run bloccati di fila lo script esce con errore e il workflow
+# apre una issue.
+max_blocked_streak: 3

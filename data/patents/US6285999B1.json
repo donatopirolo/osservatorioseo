@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US6285999B1",
+    "title": "Method for node ranking in a linked database",
+    "abstract": "A method assigns importance ranks to nodes in a linked database, such as any database of documents containing citations, the world wide web or any other hypermedia database. The rank assigned to a document is calculated from the ranks of documents citing it. In addition, the rank of a document is calculated from a constant representing the probability that a browser through the database will randomly jump to the document. The method is particularly useful in enhancing the performance of search engine results for hypermedia databases, such as the world wide web, whose documents have a large variation in quality.",
+    "claims": [
+      "1. A computer implemented method of scoring a plurality of linked documents, comprising: obtaining a plurality of documents, at least some of the documents being linked documents, at least some of the documents being linking documents, and at least some of the documents being both linked documents and linking documents, each of the linked documents being pointed to by a link in one or more of the linking documents; assigning a score to each of the linked documents based on scores of the one or more linking documents and processing the linked documents according to their scores.",
+      "2. The method of claim 1 , wherein the assigning includes: identifying a weighting factor for each of the linking documents, the weighting factor being dependent on the number of links to the one or more linking documents, and adjusting the score of each of the one or more linking documents based on the identified weighting factor.",
+      "3. The method of claim 1 , wherein the assigning includes: identifying a weighting factor for each of the linking documents, the weighting factor being dependent on an estimation of a probability that a linking document will be accessed, and adjusting the score of each of the one or more linking documents based on the identified weighting factor.",
+      "4. The method of claim 1 , wherein the assigning includes: identifying a weighting factor for each of the linking documents, the weighting factor being dependent on the URL, host, domain, author, institution, or last update time of the one or more linking documents, and adjusting the score of each of the one or more linking documents based on the identified weighting factor.",
+      "5. The method of claim 1 , wherein the assigning includes: identifying a weighting factor for each of the linking documents, the weighting factor being dependent on whether the one or more linking documents are selected documents or roots, and adjusting the score of each of the one or more linking documents based on the identified weighting factor.",
+      "6. The method of claim 1 , wherein the assigning includes: identifying a weighting factor for each of the linking documents, the weighting factor being dependent on the importance, visibility or textual emphasis of the links in the one or more linking documents, and adjusting the score of each of the one or more linking documents based on the identified weighting factor.",
+      "7. The method of claim 1 , wherein the assigning includes: identifying a weighting factor for each of the linking documents, the weighting factor being dependent on a particular user's preferences, the rate at which users access the one or more linking documents, or the importance of the one or more linking documents, and adjusting the score of each of the one or more linking documents based on the identified weighting factor.",
+      "8. A computer implemented method of determining a score for a plurality of linked documents, comprising: obtaining a plurality of linked documents; selecting one of the linked documents; assigning a score to the selected document that is dependent on scores of documents that link to the selected document; and processing the linked documents according to their scores.",
+      "9. A computer implemented method of ranking a plurality of linked documents, comprising: obtaining a plurality of documents, at least some of the documents being linked documents and at least some of the documents being linking documents, at least some of the linking documents also being linked documents, each of the linked documents being pointed to by a link in one or more of the linking documents; generating an initial estimate of a rank for each of the linked documents; updating the estimate of the rank for each of the linked documents using ranks for the one or more linking documents; and processing the linked documents according to their updated ranks.",
+      "10. A computer implemented method of ranking a plurality of linked documents, comprising: automatically performing a random traversal of a plurality of linked documents, the random traversal including selecting a random link to traverse in a current linked document; for each linked document that is traversed, assigning a rank to the linked document that is dependent on the number of times the linked document has been traversed; and processing the plurality of linked documents according to their rank.",
+      "11. The method of claim 10 , wherein there is a predetermined probability that the next linked document to be traversed will be a random one according to a distribution of the plurality of linked documents.",
+      "12. The method of claim 1 , wherein the processing includes: displaying links to the linked documents as a directory listing.",
+      "13. The method of claim 1 , wherein the processing includes: displaying links to the linked documents, and displaying annotations representing the score of each of the linked documents.",
+      "14. The method of claim 13 , wherein the annotations are bars, icons, or text.",
+      "15. The method of claim 1 , further comprising: processing the linked documents based on textual matching.",
+      "16. The method of claim 15 , wherein the textual matching includes matching anchor text associated with the links.",
+      "17. The method of claim 1 , further comprising: processing the linked documents based on groupings of the linked documents.",
+      "18. A computer-readable medium that stores instructions executable by one or more processing devices to perform a method for determining scores for a plurality of linked documents, comprising: instructions for obtaining a plurality of documents, at least some of the documents being linked documents, at least some of the documents being linking documents, and at least some of the documents being both linked documents and linking documents, each of the linked documents being pointed to by a link in one or more of the linking documents; instructions for determining a score for each of the linked documents based on scores for the one or more linking documents; and instructions for processing the linked documents according to their scores.",
+      "19. A computer-readable medium that stores instructions executable by one or more processors to perform a method for scoring documents, comprising: instructions for searching a plurality of documents, at least some of the documents being linked documents and at least some of the documents being linking documents, at least some of the linking documents also being linked documents, each of the linked documents being pointed to by a link in one or more of the linking documents; instructions for scoring each of the linked documents based on scores for the one or more linking documents; and instructions for providing the linked documents based on their scores.",
+      "20. The method of claim 1 , wherein the assigning a score includes: determining the score based on (1) a number of the linking documents that link to the linked document and (2) an importance of the linking documents.",
+      "21. The method of claim 20 , wherein the importance of the linking documents is based on a number of documents that link to the linking documents.",
+      "22. The method of claim 1 , wherein the assigning a score includes: associating one or more backlinks with each of the linked documents, each of the backlinks corresponding to one of the linking documents that links to the linked document, assigning a weight to each of the backlinks, and determining a score for each of the linked documents based on a number of backlinks for the linked document and the weights assigned to the backlinks.",
+      "23. The method of claim 22 , wherein the processing of the linked documents includes: organizing the linked documents based on the determined scores.",
+      "24. The method of claim 22 , wherein the assigning a weight includes: assigning different weights to at least some of the backlinks associated with at least one of the linked documents.",
+      "25. The method of claim 1 , wherein the assigning a score includes: associating one or more backlinks with each of the linked documents, each of the backlinks corresponding to one of the linking documents that links to the linked document, assigning a weight to each of the backlinks, and determining a score for each of the linked documents based on a sum of the weights assigned to the backlinks associated with the linked document.",
+      "26. The method of claim 25 , wherein the weights assigned to each of the backlinks are independent of text of the corresponding linking documents.",
+      "27. The method of claim 1 , wherein the assigning a score includes: determining the score primarily based on linking information.",
+      "28. The method of claim 1 , wherein the assigning a score includes: determining the score substantially independent of user-query content.",
+      "29. The method of claim 1 , wherein the assigning a score includes: iteratively determining the score for a linked document, the score being primarily based on document-linking information and substantially independent of user-query content."
+    ],
+    "independent_claims": [
+      "1. A computer implemented method of scoring a plurality of linked documents, comprising: obtaining a plurality of documents, at least some of the documents being linked documents, at least some of the documents being linking documents, and at least some of the documents being both linked documents and linking documents, each of the linked documents being pointed to by a link in one or more of the linking documents; assigning a score to each of the linked documents based on scores of the one or more linking documents and processing the linked documents according to their scores.",
+      "8. A computer implemented method of determining a score for a plurality of linked documents, comprising: obtaining a plurality of linked documents; selecting one of the linked documents; assigning a score to the selected document that is dependent on scores of documents that link to the selected document; and processing the linked documents according to their scores.",
+      "9. A computer implemented method of ranking a plurality of linked documents, comprising: obtaining a plurality of documents, at least some of the documents being linked documents and at least some of the documents being linking documents, at least some of the linking documents also being linked documents, each of the linked documents being pointed to by a link in one or more of the linking documents; generating an initial estimate of a rank for each of the linked documents; updating the estimate of the rank for each of the linked documents using ranks for the one or more linking documents; and processing the linked documents according to their updated ranks.",
+      "10. A computer implemented method of ranking a plurality of linked documents, comprising: automatically performing a random traversal of a plurality of linked documents, the random traversal including selecting a random link to traverse in a current linked document; for each linked document that is traversed, assigning a rank to the linked document that is dependent on the number of times the linked document has been traversed; and processing the plurality of linked documents according to their rank.",
+      "18. A computer-readable medium that stores instructions executable by one or more processing devices to perform a method for determining scores for a plurality of linked documents, comprising: instructions for obtaining a plurality of documents, at least some of the documents being linked documents, at least some of the documents being linking documents, and at least some of the documents being both linked documents and linking documents, each of the linked documents being pointed to by a link in one or more of the linking documents; instructions for determining a score for each of the linked documents based on scores for the one or more linking documents; and instructions for processing the linked documents according to their scores.",
+      "19. A computer-readable medium that stores instructions executable by one or more processors to perform a method for scoring documents, comprising: instructions for searching a plurality of documents, at least some of the documents being linked documents and at least some of the documents being linking documents, at least some of the linking documents also being linked documents, each of the linked documents being pointed to by a link in one or more of the linking documents; instructions for scoring each of the linked documents based on scores for the one or more linking documents; and instructions for providing the linked documents based on their scores."
+    ],
+    "assignees": [
+      "Leland Stanford Junior University"
+    ],
+    "inventors": [
+      "Lawrence Page"
+    ],
+    "priority_date": "1997-01-10",
+    "filing_date": "1998-01-09",
+    "publication_date": "2001-09-04",
+    "status": "Expired - Lifetime",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/951",
+      "G06F16/30",
+      "G06F16/38",
+      "G06F16/382",
+      "Y10S707/00",
+      "Y10S707/99931",
+      "Y10S707/99933",
+      "Y10S707/99935",
+      "Y10S707/99937"
+    ],
+    "family": [
+      {
+        "number": "US7058628B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Method for node ranking in a linked database"
+      },
+      {
+        "number": "US6799176B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Method for scoring documents in a linked database"
+      },
+      {
+        "number": "US7363291B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Methods and apparatus for increasing efficiency of electronic document delivery to users"
+      },
+      {
+        "number": "US7437351B2",
+        "relation": null,
+        "direction": "priority",
+        "title": "Method for searching media"
+      },
+      {
+        "number": "US7269587B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Scoring documents in a linked database"
+      },
+      {
+        "number": "US7908277B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Annotating links in a document based on the ranks of documents pointed to by the links"
+      },
+      {
+        "number": "US8131717B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Scoring documents in a database"
+      },
+      {
+        "number": "US8131715B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Scoring documents in a database"
+      },
+      {
+        "number": "US8126884B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Scoring documents in a linked database"
+      },
+      {
+        "number": "US8195651B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Scoring documents in a linked database"
+      },
+      {
+        "number": "US8521730B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Scoring documents in a linked database"
+      },
+      {
+        "number": "US8725726B1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Scoring documents in a linked database"
+      }
+    ],
+    "cited_by_count": 936
+  },
+  "analysis": {
+    "title_it": "Ranking dei nodi in un database collegato tramite link",
+    "summary": "Il brevetto descrive un metodo per assegnare un punteggio di importanza ai documenti in un database collegato (come il web) basandosi sulla struttura dei link. Il rank di un documento viene calcolato ricorsivamente dai rank dei documenti che lo citano, ponderati per il numero di link in uscita da ciascuno, più una probabilità costante di salto casuale.",
+    "theme": "ranking_link",
+    "seo_relevance": 5,
+    "scope": "Database collegati tramite link, incluso il web",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo implementato al computer per assegnare uno score a documenti collegati, comprendente: ottenere una pluralità di documenti, alcuni dei quali sono linked documents (puntati da link), alcuni linking documents (contenenti link), e alcuni entrambi; assegnare uno score a ciascun linked document basato sugli score dei linking documents che lo puntano; processare i documenti secondo i loro score. La rivendicazione 2 specifica che l'assegnazione include un weighting factor dipendente dal numero di link ai linking documents, aggiustando lo score in base a tale fattore. La rivendicazione 3 contempla un weighting factor basato sulla stima della probabilità che un linking document venga acceduto. La rivendicazione 4 introduce fattori di ponderazione dipendenti da URL, host, domain, author, institution o last update time dei linking documents. La rivendicazione 5 prevede ponderazioni basate sul fatto che i linking documents siano selected documents o roots. La rivendicazione 6 considera l'importance, visibility o textual emphasis dei link nei linking documents. La rivendicazione 7 contempla fattori dipendenti dalle preferenze dell'utente, dal rate di accesso degli utenti o dall'importanza dei linking documents. La rivendicazione 9 descrive un metodo iterativo: generare una stima iniziale del rank per ciascun linked document, aggiornare la stima usando i rank dei linking documents, processare i documenti secondo i rank aggiornati. La rivendicazione 10 copre un metodo basato su random traversal: attraversare casualmente i documenti seguendo link casuali, assegnare un rank basato sul numero di volte che un documento è stato attraversato. La rivendicazione 20 specifica che lo score si basa su numero di linking documents e loro importanza. La rivendicazione 22 introduce il concetto di backlinks: associare backlinks a ciascun linked document, assegnare un peso a ciascun backlink, determinare lo score basandosi sul numero di backlinks e i loro pesi. Le rivendicazioni 27-29 specificano che lo score è determinato primarily based on linking information e substantially independent of user-query content.",
+    "seo_reading": "La descrizione contempla una formula specifica per il calcolo del rank, presentata nella sezione DETAILED DESCRIPTION: r(A) = α/N + (1-α)(r(B1)/|B1| + ... + r(Bn)/|Bn|), dove B1...Bn sono i backlink di A, r(Bi) sono i loro rank, |Bi| il numero di forward links, α una costante nell'intervallo [0,1] (tipicamente circa 0.1 o 0.5 negli esempi, con un valore tipico menzionato di circa 15%), e N il numero totale di pagine. La descrizione spiega che questo corrisponde al principal eigenvector della normalized link matrix del web e può essere calcolato iterativamente, con convergenza tipica in circa 100 iterazioni per milioni di documenti. La descrizione contempla esplicitamente l'applicazione a search engines: il metodo potrebbe essere integrato per ordinare i risultati combinando objective ranking e textual matching, includendo anchor text dei backlink e testo nelle immediate vicinanze degli anchor. La descrizione menziona che gli anchor spesso forniscono descrizioni più accurate delle pagine stesse. Vengono contemplati diversi aggiustamenti: ignorare link locali tra documenti considerando solo link tra domini separati per evitare manipolazioni; pesare meno i link dallo stesso server; aumentare il rank per documenti i cui backlink sono mantenuti da istituzioni e autori diversi in varie località geografiche; dare più peso a link da posizioni web importanti come root page di un dominio; pesare link per importanza relativa nel documento (visibilità, posizione, dimensione font); assegnare valore maggiore a link da pagine modificate recentemente. La descrizione contempla personalizzazione: dare importanza iniziale alta alla homepage e/o bookmark dell'utente per addestrare il sistema a riconoscere pagine correlate agli interessi della persona. Per la SEO, questo potrebbe significare che la struttura dei link in entrata conterebbe non solo numericamente ma qualitativamente, con peso dipendente dall'importanza ricorsiva delle pagine linkanti e dal loro numero di link in uscita. La posizione e visibilità dei link all'interno delle pagine, la diversità geografica e istituzionale dei backlink, la freschezza delle pagine linkanti potrebbero tutti essere fattori di ponderazione. L'indipendenza sostanziale dal contenuto delle query (rivendicazioni 28-29) suggerirebbe un segnale di ranking query-independent, calcolabile offline.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Lifetime) e risale al 1997, quindi non protegge più alcuna implementazione corrente.",
+      "La descrizione contempla molte varianti e fattori di ponderazione come opzioni (\"can be\", \"could be\"), ma non specifica quali siano effettivamente implementate in alcun sistema reale.",
+      "L'applicazione ai search engines è descritta come possibile embodiment, non come implementazione confermata, e il brevetto è intestato a Stanford University, non a Google.",
+      "La famiglia di continuation e brevetti correlati indica sviluppi successivi, ma questo documento da solo non dimostra quali aspetti siano stati effettivamente adottati o come siano evoluti."
+    ],
+    "implications": [
+      "Costruire un profilo di backlink diversificato per dominio, istituzione e geografia rimane una pratica solida indipendentemente dall'implementazione specifica di questo brevetto.",
+      "La qualità e l'autorità delle pagine linkanti conta più del numero assoluto di link, principio valido in qualsiasi sistema basato su grafi di link.",
+      "Il contesto e la prominenza dei link all'interno delle pagine (posizione, visibilità) potrebbero avere peso, quindi ottenere link editoriali ben integrati nel contenuto è preferibile a link marginali.",
+      "La freschezza delle pagine linkanti e la manutenzione attiva dei backlink potrebbero essere fattori di qualità, suggerendo l'utilità di relazioni continuative con siti che linkano."
+    ],
+    "key_terms": [
+      {
+        "term": "backlink",
+        "explanation": "Documento che contiene un link verso il documento corrente, utilizzato per calcolare il rank in modo ricorsivo"
+      },
+      {
+        "term": "forward link",
+        "explanation": "Link in uscita da un documento, il cui numero viene usato per normalizzare il contributo di rank trasmesso ai documenti puntati"
+      },
+      {
+        "term": "weighting factor",
+        "explanation": "Fattore di ponderazione applicato ai backlink basato su varie caratteristiche (dominio, istituzione, visibilità, freschezza)"
+      },
+      {
+        "term": "random jump",
+        "explanation": "Probabilità costante α che un utente salti casualmente a un documento invece di seguire un link, usata per garantire convergenza del calcolo iterativo"
+      },
+      {
+        "term": "anchor text",
+        "explanation": "Testo associato a un link, contemplato come descrittore del documento puntato e utilizzabile per matching testuale nelle ricerche"
+      },
+      {
+        "term": "steady-state probability",
+        "explanation": "Distribuzione di probabilità a cui converge il modello di random surfer dopo molte iterazioni, corrispondente al rank dei documenti"
+      }
+    ]
+  },
+  "origin": "seed",
+  "generated_at": "2026-10-29T08:58:03.785967Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.053728920000000006
+}

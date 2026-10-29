@@ -1,0 +1,119 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% include "partials/_jsonld_patent.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+{% set a = patent.analysis %}
+{% set d = patent.doc %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">{{ d.number }}</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; {{ "BREVETTO CONCESSO" if is_grant else "DOMANDA DI BREVETTO" }} · {{ d.number }}</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">{{ a.title_it }}</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">{{ d.title }}</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">{{ a.summary }}</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">{{ d.assignees | join(", ") or "—" }}</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">{{ a.scope }}</dd></div>
+      {% if publication_label %}<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">{{ publication_label }}</dd></div>{% endif %}
+      {% if d.priority_date %}<div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">{{ d.priority_date }}</dd></div>{% endif %}
+      {% if d.status %}<div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">{{ d.status }}</dd></div>{% endif %}
+      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">{{ theme_label }}</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">{{ stars }}</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">{{ d.claims | length }}</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      {% for para in a.what_it_claims.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      {% for para in a.seo_reading.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if a.limits %}
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      {% for l in a.limits %}
+      <li>{{ l }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if a.implications %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      {% for i in a.implications %}
+      <li class="pl-2">{{ i }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {% if a.key_terms %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      {% for t in a.key_terms %}
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">{{ t.term }}</dt>
+        <dd class="text-on-surface-variant leading-relaxed">{{ t.explanation }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endif %}
+
+  {% if family %}
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      {% for f in family %}
+      <a href="{% if f.internal %}/brevetti/{{ f.slug }}/{% else %}https://patents.google.com/patent/{{ f.number }}/en{% endif %}"{% if not f.internal %} rel="nofollow noopener" target="_blank"{% endif %} class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">{{ f.number }}</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">{{ f.title_it or "" }}</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">{{ f.relation or ("scheda" if f.internal else "Google Patents") }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% if family_more %}
+    <p class="text-xs text-outline font-mono mt-3">e altre {{ family_more }} pubblicazioni: elenco completo su <a href="{{ google_patents_url }}" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.</p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="{{ google_patents_url }}" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: {{ updated_label }}.
+    </p>
+  </section>
+</article>
+{% endblock %}

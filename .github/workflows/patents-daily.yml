@@ -1,0 +1,115 @@
+name: Patents daily update
+
+on:
+  schedule:
+    # Ogni giorno alle 10:30 UTC, lontano dal daily refresh (07:00 Europe/Rome)
+    # e dagli altri job, per non sovrapporre i commit su main. Giornaliero
+    # perche' ogni run fa al massimo 3 richieste a Google Patents (vedi
+    # config/patents.yml): pochi brevetti al giorno, ma senza farsi bloccare.
+    - cron: "30 10 * * *"
+  workflow_dispatch:
+    inputs:
+      no_discovery:
+        description: "Solo i brevetti in seed, senza ricerca automatica"
+        type: boolean
+        default: false
+
+concurrency:
+  group: patents-daily
+  cancel-in-progress: false
+
+jobs:
+  update-patents:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v10.0.1
+        with:
+          enable-cache: true
+
+      - name: Setup Node (for Tailwind CLI)
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Install Python deps
+        run: |
+          uv sync
+
+      - name: Install Node deps (Tailwind CLI)
+        run: npm install
+
+      - name: Update patents
+        id: update
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        # L'exit code si salva e si controlla in fondo: anche un run bloccato
+        # deve committare lo stato (contatore dei blocchi, coda), altrimenti
+        # il contatore non arriverebbe mai alla soglia che apre la issue.
+        run: |
+          set +e
+          uv run python scripts/update_patents.py ${{ inputs.no_discovery && '--no-discovery' || '' }}
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild Tailwind CSS
+        run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
+
+      - name: Rebuild SSG HTML
+        run: uv run python scripts/rebuild_seo_html.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Tutto site/: la voce BREVETTI nel menu e la sitemap stanno in ogni pagina.
+          git add data/patents data/state/patents_discovery.json site
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(patents): update $(date -u +'%Y-%m-%d')"
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase origin main
+            done
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx --yes wrangler@4 pages deploy ./site \
+            --project-name=osservatorioseo \
+            --branch=main \
+            --commit-hash="$(git rev-parse HEAD)" \
+            --commit-message="patents daily update" \
+            --commit-dirty=true
+
+      - name: Fail if update failed
+        if: steps.update.outputs.code != '0'
+        run: |
+          echo "::error::update_patents.py e' uscito con codice ${{ steps.update.outputs.code }}"
+          exit 1
+
+      - name: Open issue on failure
+        if: failure()
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[osservatorioseo] Brevetti: workflow fallito ${date}`,
+              body: `Il workflow dei brevetti e' fallito il ${date} (exit 2 = Google Patents blocca da piu' run di fila).\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['bug', 'automated']
+            });

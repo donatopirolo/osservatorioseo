@@ -16,6 +16,7 @@ L'output viene salvato come :class:`DeepAnalysis` e attaccato all'``Item``.
 
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 import re
@@ -44,6 +45,8 @@ PREMIUM_PRICING: dict[str, tuple[float, float]] = {
     "anthropic/claude-haiku-4.5": (1.0, 5.0),
 }
 USD_TO_EUR = 0.92
+# Attesa dopo un 429 di OpenRouter quando la risposta non porta Retry-After.
+RATE_LIMIT_WAIT_S = 30.0
 
 
 PROMPT = """Sei un SEO senior italiano con 15 anni di esperienza che scrive per un \
@@ -427,6 +430,15 @@ class PremiumWriter:
             }
         )
 
+    async def complete_json(self, prompt: str) -> tuple[dict[str, Any], str, float]:
+        """Prompt libero con la stessa catena di fallback: ``(json, modello, costo_eur)``.
+
+        Per chi ha un proprio prompt e un proprio modello di output (es. la
+        sezione brevetti) e non deve duplicare chiamata, retry e parsing.
+        """
+        result = await self._call_with_fallback(prompt)
+        return result.parsed, result.model, result.cost_eur
+
     async def _call_with_fallback(self, prompt: str) -> _RawResult:
         models = [self._primary, *self._fallbacks]
         last_error: Exception | None = None
@@ -463,6 +475,14 @@ class PremiumWriter:
                     if attempt < self._max_retries - 1:
                         continue
                     raise PremiumWriterError(f"server error {resp.status_code}")
+                # 429: limite di frequenza del provider. Passare subito al
+                # fallback scambierebbe un'attesa di pochi secondi con un modello
+                # piu' debole (successo coi prompt lunghi dei brevetti).
+                if resp.status_code == 429 and attempt < self._max_retries - 1:
+                    wait = float(resp.headers.get("retry-after") or RATE_LIMIT_WAIT_S)
+                    logger.warning("rate limit on %s, retrying in %.0fs", model, wait)
+                    await asyncio.sleep(min(wait, 120))
+                    continue
                 resp.raise_for_status()
                 data = resp.json()
                 try:

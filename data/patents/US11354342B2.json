@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US11354342B2",
+    "title": "Contextual estimation of link information gain",
+    "abstract": "Techniques are described herein for determining an information gain score for one or more documents of interest to the user and present information from the documents based on the information gain score. An information gain score for a given document is indicative of additional information that is included in the document beyond information contained in documents that were previously viewed by the user. In some implementations, the information gain score may be determined for one or more documents by applying data from the documents across a machine learning model to generate an information gain score. Based on the information gain scores of a set of documents, the documents can be provided to the user in a manner that reflects the likely information gain that can be attained by the user if the user were to view the documents.",
+    "claims": [
+      "1. A method implemented using one or more processors, comprising: identifying a first set of one or more documents that share a topic, wherein information extracted from each document of the first set was previously presented to a user, in response to free form natural language input from the user, by an automated assistant executing at least in part on one or more computing devices operated by the user; identifying a second set of multiple new documents that also share the topic, wherein the automated assistant has not yet presented information contained in each new document of the second set for presentation to the user; determining, for each new document of the second set, an information gain score, wherein the information gain score for a given new document of the second set is based on a quantity of new information included in the given new document of the second set that differs from the information extracted from each document of the first set if the new information contained in the given new document were extracted and presented to the user; selecting a new document from the second set based on the information gain scores; and presenting information extracted from the selected new document to the user via one or more of the computing devices.",
+      "2. The method of claim 1 , further comprising ranking the second set of new documents based on the information gain scores, wherein the selecting is based on the ranking.",
+      "3. The method of claim 1 , wherein determining the information gain score for the given new document comprises: applying first data indicative of the information extracted from the first set of documents and second data indicative of information extracted from the given new document across a machine learning model to generate output, wherein the information gain score is determined based on the output.",
+      "4. The method of claim 3 , where the first data comprises a semantic feature vector generated from the information extracted from the first set of documents, and the second data comprises a semantic feature vector generated from the information extracted from the given new document.",
+      "5. A method implemented using one or more processors, comprising: identifying a first set of one or more documents that share a topic, wherein each document of the first set was accessed by a user on one or more computing devices operated by the user; identifying a second set of multiple new documents that also share the topic, wherein the user has not previously accessed the multiple new documents of the second set; determining, for each new document of the second set, an information gain score, wherein the information gain score for a given new document of the second set is based on a quantity of new information included in the given new document of the second set that differs from the information extracted from each document of the first set, if the user accessed the given new document; and presenting the new information from one or more of the new documents of the second set to the user via one or more of the computing devices, wherein the new information of one or more of the new documents of the second set is presented in a manner that is selected based on the information gain stores.",
+      "6. The method of claim 5 , further presenting a ranked list of the second set of new documents, wherein the list is ranked based on the information gain scores.",
+      "7. The method of claim 5 , wherein identifying the first set comprises: rendering, as part of a search results interface that is presented to the user in response to a query that includes the topic, references to one or more documents of the first set; receiving user input that that indicates selection of a reference to a particular document of the first set from the search results interface, wherein at least part of the particular document is provided to the user in response to the selection; receiving user input indicative of a command to return to the search results interface; in response to receiving the user input indicative of the command to return to the search results interface, rendering, as part of the search results interface, references to one or more documents of the second set.",
+      "8. The method of claim 7 , wherein rendering the references to one or more documents of the second set includes excluding, from the search results interface, at least the reference to the particular document of the first set.",
+      "9. The method of claim 5 , wherein determining the information gain score for the given new document comprises: applying first data indicative of the first set of documents and second data indicative of the given new document across a machine learning model to generate output, wherein the information gain score is determined based on the output.",
+      "10. A system comprising one or more processors and memory operably coupled with the one or more processors, wherein the memory stores instructions that, in response to execution of the instructions by one or more processors, cause the one or more processors to perform the following operations: identifying a first set of one or more documents that share a topic, wherein each document of the first set was accessed by a user on one or more computing devices operated by the user; identifying a second set of multiple new documents that also share the topic, wherein the user has not previously accessed the multiple new documents of the second set; determining, for each new document of the second set, an information gain score, wherein the information gain score for a given new document of the second set is based on a quantity of new information included in the given new document of the second set that differs from the information extracted from each document of the first set, if the user accessed the given new document; selecting a new document from the second set based on the information gain scores; and presenting the new information from one or more of the new documents of the second set to the user via one or more of the computing devices, wherein the new information of one or more of the new documents of the second set is presented in a manner that is selected based on the information gain stores.",
+      "11. The system of claim 10 , further presenting a ranked list of the second set of new documents, wherein the list is ranked based on the information gain scores.",
+      "12. The system of claim 10 , wherein identifying the first set comprises: rendering, as part of a search results interface that is presented to the user in response to a query that includes the topic, references to one or more documents of the first set; receiving user input that that indicates selection of a reference to a particular document of the first set from the search results interface, wherein at least part of the particular document is provided to the user in response to the selection; receiving user input indicative of a command to return to the search results interface; in response to receiving the user input indicative of the command to return to the search results interface, rendering, as part of the search results interface, references to one or more documents of the second set.",
+      "13. The system of claim 12 , wherein rendering the references to one or more documents of the second set includes excluding, from the search results interface, at least the reference to the particular document of the first set.",
+      "14. The system of claim 10 , wherein determining the information gain score for the given new document comprises: applying first data indicative of the first set of documents and second data indicative of the given new document across a machine learning model to generate output, wherein the information gain score is determined based on the output.",
+      "15. The system of claim 14 , wherein the machine learning model comprises a neural network.",
+      "16. The system of claim 14 , wherein the first data indicative of the first set of documents comprises one or more semantic representations generated from the first set of documents, and the second data indicative of the second data indicative of the given new document comprises a semantic representation generated from the given new document."
+    ],
+    "independent_claims": [
+      "1. A method implemented using one or more processors, comprising: identifying a first set of one or more documents that share a topic, wherein information extracted from each document of the first set was previously presented to a user, in response to free form natural language input from the user, by an automated assistant executing at least in part on one or more computing devices operated by the user; identifying a second set of multiple new documents that also share the topic, wherein the automated assistant has not yet presented information contained in each new document of the second set for presentation to the user; determining, for each new document of the second set, an information gain score, wherein the information gain score for a given new document of the second set is based on a quantity of new information included in the given new document of the second set that differs from the information extracted from each document of the first set if the new information contained in the given new document were extracted and presented to the user; selecting a new document from the second set based on the information gain scores; and presenting information extracted from the selected new document to the user via one or more of the computing devices.",
+      "5. A method implemented using one or more processors, comprising: identifying a first set of one or more documents that share a topic, wherein each document of the first set was accessed by a user on one or more computing devices operated by the user; identifying a second set of multiple new documents that also share the topic, wherein the user has not previously accessed the multiple new documents of the second set; determining, for each new document of the second set, an information gain score, wherein the information gain score for a given new document of the second set is based on a quantity of new information included in the given new document of the second set that differs from the information extracted from each document of the first set, if the user accessed the given new document; and presenting the new information from one or more of the new documents of the second set to the user via one or more of the computing devices, wherein the new information of one or more of the new documents of the second set is presented in a manner that is selected based on the information gain stores.",
+      "10. A system comprising one or more processors and memory operably coupled with the one or more processors, wherein the memory stores instructions that, in response to execution of the instructions by one or more processors, cause the one or more processors to perform the following operations: identifying a first set of one or more documents that share a topic, wherein each document of the first set was accessed by a user on one or more computing devices operated by the user; identifying a second set of multiple new documents that also share the topic, wherein the user has not previously accessed the multiple new documents of the second set; determining, for each new document of the second set, an information gain score, wherein the information gain score for a given new document of the second set is based on a quantity of new information included in the given new document of the second set that differs from the information extracted from each document of the first set, if the user accessed the given new document; selecting a new document from the second set based on the information gain scores; and presenting the new information from one or more of the new documents of the second set to the user via one or more of the computing devices, wherein the new information of one or more of the new documents of the second set is presented in a manner that is selected based on the information gain stores."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Victor Carbune",
+      "Pedro Gonnet Anders"
+    ],
+    "priority_date": "2018-10-18",
+    "filing_date": "2018-10-18",
+    "publication_date": "2022-06-07",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/3331",
+      "G06F16/334",
+      "G06F16/3344",
+      "G06F16/332",
+      "G06F16/3329",
+      "G06F16/3347",
+      "G06F16/338",
+      "G06F16/90",
+      "G06F16/93",
+      "G06F40/00",
+      "G06F40/40",
+      "G06V30/00",
+      "G06V30/40",
+      "G06V30/41",
+      "G06V30/418",
+      "H04L51/00",
+      "H04L51/02"
+    ],
+    "family": [
+      {
+        "number": "US11720613B2",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Contextual estimation of link information gain"
+      },
+      {
+        "number": "WO2020081082A1",
+        "relation": "A-371-Of-International",
+        "direction": "parent",
+        "title": "Contextual estimation of link information gain"
+      }
+    ],
+    "cited_by_count": 15
+  },
+  "analysis": {
+    "title_it": "Punteggio di guadagno informativo per documenti correlati",
+    "summary": "Il brevetto descrive un metodo per calcolare un punteggio di guadagno informativo (information gain score) per documenti non ancora visti dall'utente, in base a quanto contenuto nuovo offrono rispetto ai documenti già consultati sullo stesso argomento. I documenti possono essere selezionati e presentati (o riordinati) in base a questi punteggi, per ridurre la ridondanza e aumentare la densità informativa delle risposte.",
+    "theme": "selezione_fonti_ai",
+    "seo_relevance": 3,
+    "scope": "Assistente automatico, interfacce di ricerca",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che identifica un primo set di documenti che condividono un argomento e da cui sono state estratte informazioni già presentate all'utente da un assistente automatico in risposta a input in linguaggio naturale. Viene poi identificato un secondo set di documenti nuovi sullo stesso argomento, non ancora presentati. Per ciascun documento nuovo si determina un information gain score basato sulla quantità di informazioni nuove contenute nel documento rispetto alle informazioni già estratte dal primo set. Un documento viene selezionato dal secondo set in base agli information gain scores e le informazioni estratte vengono presentate all'utente tramite i dispositivi.\n\nLa rivendicazione 2 aggiunge che il secondo set può essere classificato (ranked) in base agli information gain scores e la selezione si basa su questa classifica. La rivendicazione 3 specifica che il punteggio può essere determinato applicando primi dati indicativi delle informazioni estratte dal primo set e secondi dati indicativi delle informazioni estratte dal documento nuovo attraverso un modello di machine learning per generare output da cui si ricava il punteggio. La rivendicazione 4 precisa che i primi e secondi dati possono comprendere vettori di caratteristiche semantiche (semantic feature vectors) generati dalle informazioni estratte.\n\nLa rivendicazione indipendente 5 copre un metodo simile ma più generale: identifica un primo set di documenti accessati dall'utente su dispositivi, identifica un secondo set di documenti nuovi non accessati, determina information gain scores per ciascun nuovo documento in base alla quantità di informazioni nuove rispetto al primo set, e presenta le nuove informazioni in una modalità selezionata in base agli information gain scores. La rivendicazione 7 specifica un'implementazione in cui il primo set viene identificato tramite un'interfaccia di risultati di ricerca: vengono renderizzati riferimenti a documenti del primo set, si riceve input dell'utente che seleziona un riferimento, si riceve input per tornare all'interfaccia di ricerca, e in risposta si renderizzano riferimenti a documenti del secondo set. La rivendicazione 8 aggiunge che il rendering dei riferimenti al secondo set può escludere dall'interfaccia almeno il riferimento al documento particolare già visto del primo set. Le rivendicazioni 15 e 16 specificano che il modello di machine learning può comprendere una rete neurale e che i dati possono essere rappresentazioni semantiche (semantic representations) generate dai documenti.",
+    "seo_reading": "La descrizione contempla diversi scenari applicativi. Nel contesto di un assistente automatico (paragrafi relativi a FIG. 2), l'utente può chiedere aiuto su un argomento e ricevere informazioni estratte da documenti in turni di dialogo successivi. Nel contesto di un'interfaccia di ricerca (FIG. 3), l'utente vede riferimenti a documenti che possono essere riordinati dinamicamente man mano che ne consulta alcuni. La descrizione menziona esplicitamente che quando l'utente torna all'interfaccia di ricerca dopo aver visto un documento, i riferimenti possono essere aggiornati: alcuni documenti possono essere esclusi o significativamente retrocessi se hanno un information gain score basso, ad esempio se contengono informazioni identiche a quelle già viste.\n\nLa descrizione contempla l'uso di vettori semantici (semantic vectors, semantic feature vectors, embeddings) generati da modelli come word2vec come input per il modello di machine learning che calcola gli information gain scores. Viene menzionato che il training del modello può avvenire con coppie di documenti <d1, d2> etichettate manualmente da curatori umani o tramite feedback degli utenti durante sessioni di ricerca reali (ad esempio pop-up che chiedono se un documento è stato utile o ridondante). Gli information gain scores possono essere valori tra 0.00 e 1.00, dove 0.00 indica nessun guadagno informativo e 1.00 indica guadagno totale.\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia esplorando modi per diversificare i risultati presentati in base al comportamento di navigazione dell'utente all'interno di una sessione di ricerca. Se implementato, un sistema del genere potrebbe premiare documenti che offrono prospettive o informazioni complementari rispetto a quelli già cliccati, piuttosto che duplicare contenuti simili. Potrebbe significare che in una SERP dinamica, dopo che l'utente ha visitato un risultato e torna indietro, i risultati rimanenti potrebbero essere riordinati o filtrati per massimizzare la novità informativa. Questo sarebbe particolarmente rilevante per query informazionali dove esistono molti documenti con contenuti sovrapposti. Tuttavia, la descrizione non fornisce dettagli su come questo si integrerebbe con altri segnali di ranking tradizionali né su soglie specifiche di information gain score che determinerebbero promozioni o esclusioni.",
+    "limits": [
+      "Il brevetto non dimostra che questo sistema sia attivo in Google Search. L'ambito principale descritto è un assistente automatico che risponde a input vocale, non necessariamente la ricerca web tradizionale.",
+      "Non specifica come gli information gain scores si combinerebbero con altri fattori di ranking consolidati (rilevanza, autorità, freschezza) né quale peso relativo avrebbero.",
+      "Non chiarisce se il ricalcolo degli scores e il riordino dei risultati avverrebbero in tempo reale per ogni utente (con implicazioni di scalabilità) o solo in contesti limitati come sessioni di assistente.",
+      "La descrizione menziona che i riferimenti ai documenti in user document database possono essere conservati dopo la fine di una sessione o essere indipendenti per ogni nuovo argomento, ma non specifica quale approccio sarebbe preferito in produzione."
+    ],
+    "implications": [
+      "Diversificare i contenuti pubblicati su argomenti popolari: se molti siti coprono lo stesso tema con informazioni simili, offrire angolazioni, dettagli o approfondimenti unici potrebbe aumentare il valore percepito del documento in scenari di confronto.",
+      "Strutturare i contenuti in modo che le informazioni distintive siano facilmente identificabili ed estraibili, ad esempio con sezioni chiare, markup semantico e riassunti che evidenzino cosa rende unico quel contenuto rispetto ad altri sulla stessa query.",
+      "Monitorare quali aspetti di un argomento sono già ampiamente coperti dalla concorrenza e investire nella creazione di contenuti che colmino lacune informative, aumentando la probabilità di essere selezionati come fonte complementare."
+    ],
+    "key_terms": [
+      {
+        "term": "information gain score",
+        "explanation": "Punteggio che indica la quantità di informazioni aggiuntive contenute in un documento rispetto a documenti già visti dall'utente sullo stesso argomento."
+      },
+      {
+        "term": "semantic feature vector",
+        "explanation": "Rappresentazione numerica vettoriale di un documento generata da modelli di machine learning, utilizzata per confrontare la similarità semantica tra documenti."
+      },
+      {
+        "term": "first set / second set",
+        "explanation": "Il primo set comprende documenti già presentati all'utente; il secondo set comprende documenti nuovi non ancora visti, per i quali si calcola l'information gain score."
+      },
+      {
+        "term": "automated assistant",
+        "explanation": "Software che interagisce con l'utente tramite linguaggio naturale (vocale o testuale) per fornire informazioni estratte da documenti in turni di dialogo."
+      }
+    ]
+  },
+  "origin": "seed",
+  "generated_at": "2026-10-29T08:49:07.167148Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07563228000000001
+}

@@ -77,5 +77,11 @@ class HtmlRenderer:
     def render_dossier_index(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/dossier_index.html.jinja", context)
 
+    def render_patents_index(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/patents_index.html.jinja", context)
+
+    def render_patent(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/patent.html.jinja", context)
+
     def render_tracker(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/tracker.html.jinja", context)

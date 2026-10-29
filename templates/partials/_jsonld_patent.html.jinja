@@ -1,0 +1,45 @@
+{# Context: patent, article_url (absolute), updated_iso — per la scheda brevetto #}
+{%- set _a = patent.analysis -%}
+{%- set _body = _a.summary ~ '\n\n' ~ _a.what_it_claims ~ '\n\n' ~ _a.seo_reading -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ (patent.doc.number ~ ": " ~ _a.title_it) | tojson }},
+  "description": {{ _a.summary | tojson }},
+  "articleBody": {{ _body | tojson }},
+  "wordCount": {{ _body.split() | length }},
+  "datePublished": "{{ updated_iso }}",
+  "dateModified": "{{ updated_iso }}",
+  "image": ["{{ site_url }}/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "{{ site_url }}/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "{{ site_url }}/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site_url }}/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ article_url }}"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": {{ patent.doc.title | tojson }},
+    "identifier": {{ patent.doc.number | tojson }},
+    "url": "https://patents.google.com/patent/{{ patent.doc.number }}/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>

@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US11769017B1",
+    "title": "Generative summaries for search results",
+    "abstract": "At least selectively utilizing a large language model (LLM) in generating a natural language (NL) based summary to be rendered in response to a query. In some implementations, in generating the NL based summary additional content is processed using the LLM. The additional content is in addition to query content of the query itself and, in generating the NL based summary, can be processed using the LLM and along with the query content—or even independent of the query content. Processing the additional content can, for example, mitigate occurrences of the NL based summary including inaccuracies and/or can mitigate occurrences of the NL based summary being over-specified and/or under-specified.",
+    "claims": [
+      "1. A method implemented by one or more processors, the method comprising: receiving a query associated with a client device; generating large language model (LLM) output based on processing input using an LLM, the input being based on the query and/or corresponding content from one or more search result documents that are responsive to the query; generating a natural language (NL) based summary using the LLM output; causing the NL based summary to be rendered, at the client device, along with corresponding links to one or more of the search result documents that are responsive to the query; determining, subsequent to the NL based summary being rendered at the client device, occurrence of an interaction with a given search result document of the search result documents; based on determining the occurrence of the interaction with the given search result document: generating revised LLM output based on processing revised input using the LLM or an additional LLM, the revised input reflecting occurrence of the interaction with the given search result document, and the input not reflecting the occurrence of the interaction with the given search result document; generating a revised NL based summary using the revised LLM output; and causing the revised NL based summary to be rendered at the client device.",
+      "2. The method of claim 1 , wherein the interaction with the given search result document includes viewing of at least part of the given search result document.",
+      "3. The method of claim 2 , wherein the interaction with the given search result document includes viewing of at least part of the given search result document for at least a threshold duration of time.",
+      "4. The method of claim 2 , wherein causing the revised NL based summary to be rendered at the client device comprises causing the revised NL based summary to, after rendering of at least part of the given search result document at the client device, supplant the NL based summary in a graphical interface that initially rendered the NL based summary.",
+      "5. The method of claim 2 , wherein the NL based summary is rendered, along with the search result document, during at least an initial duration of the interaction with the given search result document, and wherein causing the revised NL based summary to be rendered at the client device comprises causing the revised NL based summary to, after at least the initial duration of the interaction with the given search result document, supplant the NL based summary.",
+      "6. The method of claim 2 , wherein causing the revised NL based summary to be rendered at the client device comprises causing the revised NL based summary to be rendered responsive to receiving, after rendering of at least part of the given search result document on the client device, another occurrence of the query in association with the client device.",
+      "7. The method of claim 2 , wherein causing the revised NL based summary to be rendered at the client device comprises causing the revised NL based summary to be rendered responsive to receiving, after the viewing of at least part of the given search result document, an additional query that is formulated based on user interface input at the client device and that is determined to be similar to the query.",
+      "8. The method of claim 1 , wherein generating the revised LLM output comprises processing the revised input using the LLM, wherein the revised input comprises a revised prompt that reflects familiarity with given content of the given search result document; and wherein the input, processed using the LLM to generate the LLM output, lacks any prompt that reflects familiarity with given content of the given search result document.",
+      "9. The method of claim 1 , wherein generating the revised LLM output comprises processing the revised input using the additional LLM, wherein the additional LLM is fine-tuned based on a prompt that reflects familiarity with content; and wherein the LLM is not fine-tuned based on any prompt that reflects familiarity with content.",
+      "10. The method of claim 1 , wherein the input, processed using the LLM in generating the LLM output, is based on the corresponding content from the one or more search result documents that are responsive to the query.",
+      "11. The method of claim 10 , further comprising: selecting the one or more search result documents, wherein selecting the one or more search result documents including selecting, for inclusion among the one or more search result documents, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query.",
+      "12. The method of claim 11 , wherein selecting the one or more search result documents including selecting, for inclusion among the one or more search result documents, a related-query-responsive search result document based on the related-query-responsive search result document being responsive to a related query determined to have a correlation to the query.",
+      "13. A method implemented by one or more processors, the method comprising: receiving a query associated with a client device; selecting a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query; generating large language model (LLM) output based on processing, using an LLM, corresponding content from each of the search result documents of the set; and generating a natural language (NL) based summary using the LLM output; generating a confidence measure for a portion of the NL based summary; and causing the NL based summary to be rendered at the client device in response to the query, including causing the portion of the NL based summary to be rendered with a given confidence annotation, of a plurality of candidate annotations, based on the given confidence annotation corresponding to the confidence measure for the portion of the NL based summary.",
+      "14. The method of claim 13 , wherein selecting, for inclusion in the set, the query-responsive search result documents includes selecting the query-responsive search result documents from a superset of search result documents that are responsive to the query, and based on one or more corresponding features of each of the query-responsive search result documents.",
+      "15. The method of claim 14 , wherein the one or more corresponding features of each of the query-responsive search result documents include one or more query-dependent measures for the query-responsive search result document, one or more query-independent measures for the query-responsive search result document, and/or one or more user-dependent measures for the query-responsive search result document.",
+      "16. The method of claim 14 , wherein selecting the set of search result documents further comprises: selecting, for inclusion in the set, a related-query-responsive search result document based on the related-query-responsive search result document being responsive to a related query determined to have a correlation to the query.",
+      "17. The method of claim 16 , wherein selecting the related-query-responsive search result document is based on determining that a magnitude of the correlation satisfies a threshold.",
+      "18. The method of claim 13 , further comprising: causing a selectable link, to a given document of the search result documents of the set, to be rendered at the client device along with rendering of the NL based summary.",
+      "19. The method of claim 18 , wherein the selectable link is rendered as part of the NL based summary and is rendered as corresponding to the portion of content, of the NL based summary, based on determining that the portion of content is verifiable based on document content of the given document.",
+      "20. The method of claim 19 , further comprising: determining that the portion of content, of the NL based summary, is verifiable based on document content of the given document.",
+      "21. The method of claim 13 , wherein the LLM output is generated without any processing, using the LLM, of the query or of any rewrite of the query.",
+      "22. The method of claim 13 , wherein the query is an implied query that is automatically formulated and automatically submitted."
+    ],
+    "independent_claims": [
+      "1. A method implemented by one or more processors, the method comprising: receiving a query associated with a client device; generating large language model (LLM) output based on processing input using an LLM, the input being based on the query and/or corresponding content from one or more search result documents that are responsive to the query; generating a natural language (NL) based summary using the LLM output; causing the NL based summary to be rendered, at the client device, along with corresponding links to one or more of the search result documents that are responsive to the query; determining, subsequent to the NL based summary being rendered at the client device, occurrence of an interaction with a given search result document of the search result documents; based on determining the occurrence of the interaction with the given search result document: generating revised LLM output based on processing revised input using the LLM or an additional LLM, the revised input reflecting occurrence of the interaction with the given search result document, and the input not reflecting the occurrence of the interaction with the given search result document; generating a revised NL based summary using the revised LLM output; and causing the revised NL based summary to be rendered at the client device.",
+      "13. A method implemented by one or more processors, the method comprising: receiving a query associated with a client device; selecting a set of search result documents, selecting the set of search result documents including selecting, for inclusion in the set, a plurality of query-responsive search result documents based on the query-responsive search result documents being responsive to the query; generating large language model (LLM) output based on processing, using an LLM, corresponding content from each of the search result documents of the set; and generating a natural language (NL) based summary using the LLM output; generating a confidence measure for a portion of the NL based summary; and causing the NL based summary to be rendered at the client device in response to the query, including causing the portion of the NL based summary to be rendered with a given confidence annotation, of a plurality of candidate annotations, based on the given confidence annotation corresponding to the confidence measure for the portion of the NL based summary."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Matthew K. Gray",
+      "John Blitzer",
+      "Corinn Herrick",
+      "Srinivasan Venkatachary",
+      "Jayant Madhavan",
+      "Sam Oates",
+      "Phiroze Parakh",
+      "Aditya Shah",
+      "Mahsan Rofouei",
+      "Ibrahim Badr"
+    ],
+    "priority_date": "2022-12-30",
+    "filing_date": "2023-03-20",
+    "publication_date": "2023-09-26",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F40/00",
+      "G06F40/40",
+      "G06F40/55",
+      "G06F40/56",
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/332",
+      "G06F16/3325",
+      "G06F16/3326",
+      "G06F16/3328",
+      "G06F16/3331",
+      "G06F16/334",
+      "G06F16/3344",
+      "G06F16/34",
+      "G06F16/345",
+      "G06N20/00",
+      "G06N3/00",
+      "G06N3/02",
+      "G06N3/04"
+    ],
+    "family": [
+      {
+        "number": "US11900068B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Generative summaries for search results"
+      },
+      {
+        "number": "US12118325B2",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Generative summaries for search results"
+      },
+      {
+        "number": "US11886828B1",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Generative summaries for search results"
+      },
+      {
+        "number": "WO2024145537A1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Generative summaries for search results"
+      },
+      {
+        "number": "EP4627452A1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Generative summaries for search results"
+      },
+      {
+        "number": "US20250005303A1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Generative summaries for search results"
+      }
+    ],
+    "cited_by_count": 122
+  },
+  "analysis": {
+    "title_it": "Sintesi generative per risultati di ricerca",
+    "summary": "Il brevetto descrive un sistema per generare sintesi in linguaggio naturale in risposta a query utilizzando un large language model (LLM). Il sistema processa contenuti da documenti di risultati di ricerca selezionati (non solo la query) per generare la sintesi, con l'obiettivo di ridurre imprecisioni e rendere le sintesi più appropriate al contesto specifico della ricerca.",
+    "theme": "selezione_fonti_ai",
+    "seo_relevance": 5,
+    "scope": "Google Search, sintesi generative in risposta a query",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che riceve una query associata a un client device, genera output LLM processando input basato sulla query e/o contenuti da search result documents (SRD) responsivi alla query, genera una sintesi in linguaggio naturale (NL based summary) usando l'output LLM, e causa il rendering della sintesi insieme a link agli SRD. Il metodo include poi il monitoraggio di interazioni con gli SRD e, quando rileva un'interazione con un dato SRD, genera output LLM rivisto processando input rivisto che riflette l'occorrenza dell'interazione (mentre l'input originale non la rifletteva), genera una sintesi NL rivista usando l'output rivisto, e causa il rendering della sintesi rivista.\n\nLe rivendicazioni dipendenti 2-3 specificano che l'interazione può includere la visualizzazione di almeno parte dell'SRD, opzionalmente per almeno una durata soglia. Le rivendicazioni 4-7 specificano diverse modalità di rendering della sintesi rivista: sostituendo la sintesi originale nell'interfaccia (rivendicazione 4), sostituendola dopo una durata iniziale di interazione (rivendicazione 5), in risposta a una nuova occorrenza della query (rivendicazione 6), o in risposta a una query aggiuntiva simile (rivendicazione 7). Le rivendicazioni 8-9 specificano modalità alternative per generare l'output rivisto: usando lo stesso LLM con un prompt rivisto che riflette familiarità con il contenuto dell'SRD (rivendicazione 8), o usando un LLM aggiuntivo fine-tuned su prompt che riflettono familiarità (rivendicazione 9). Le rivendicazioni 10-12 specificano che l'input può essere basato su contenuti da SRD responsivi alla query, selezionati tra SRD query-responsive e opzionalmente includendo SRD responsivi a related queries correlate.\n\nLa rivendicazione indipendente 13 copre un metodo alternativo che riceve una query, seleziona un set di SRD includendo SRD query-responsive, genera output LLM processando contenuti da ciascun SRD del set, genera una sintesi NL, genera una confidence measure per una porzione della sintesi, e causa il rendering della sintesi con una confidence annotation corrispondente alla confidence measure. Le rivendicazioni 14-17 specificano criteri di selezione degli SRD basati su query-dependent measures, query-independent measures, user-dependent measures (rivendicazione 15), e inclusione di SRD responsivi a related queries con correlazione che soddisfa una soglia (rivendicazioni 16-17). Le rivendicazioni 18-20 specificano il rendering di link selezionabili agli SRD, resi come parte della sintesi e corrispondenti a porzioni verificabili (rivendicazione 19-20). La rivendicazione 21 specifica che l'output LLM può essere generato senza processare la query stessa. La rivendicazione 22 specifica che la query può essere una implied query formulata e sottomessa automaticamente.",
+    "seo_reading": "La descrizione contempla numerosi dettagli operativi. Il blocco 254A (metodo 200) specifica che la selezione degli SRD può basarsi su query-dependent measures (positional ranking, selection rate per la query, locality measure basata su location della query e dell'SRD, language measure), query-independent measures (selection rate aggregata, trustworthiness measure, overall popularity, freshness measure che riflette recency di creazione o aggiornamento), e user-dependent measures (basate su attributi del profilo utente, query recenti, interazioni recenti non-query). Il blocco 256 contempla la selezione di related-query-responsive SRDs, dove la related query ha una correlazione con la query originale, con magnitude della correlazione basata su quantity di occorrenze delle due query emesse in temporal proximity da device o account corrispondenti. Il blocco 258 contempla la selezione di recent-query-responsive SRDs da query recenti dell'utente. Il blocco 259 contempla la selezione di implied-query-responsive SRDs da implied queries generate automaticamente da contesto e/o profile data.\n\nIl blocco 260A1 contempla che il contenuto da un SRD può includere text content, image content (con recognized text, auto-generated caption, descriptor di oggetti rilevati), video content (con transcription dell'audio). Il blocco 260A1 contempla anche l'inclusione di source identifier unici per ciascun SRD nel contenuto processato dall'LLM, che potrebbero consentire all'output LLM di riflettere quali porzioni della sintesi sono supportate da quali SRD. Il blocco 262A contempla il rendering della sintesi con link agli SRD che verificano porzioni, con link resi come parte della sintesi (linkified portions) o come search results separati. Il blocco 262B contempla confidence annotations per porzioni o per l'intera sintesi. Il blocco 262C contempla la determinazione di quali SRD verificano porzioni comparando embeddings (content embedding della porzione vs document content embedding) e determinando distance measures, oppure usando source identifiers nell'output LLM.\n\nIl metodo 400 (blocco 460A) contempla la generazione di sintesi riviste usando prompt rivisti che riflettono familiarità con contenuto già visto (es. \"create a summary assuming the user already knows X\"). Il metodo 600 (blocco 654A) contempla la determinazione di familiarità dell'utente con certi contenuti comparando profile data alla query e/o agli SRD. La descrizione contempla anche (paragrafo relativo a parallel LLMs) l'uso di multiple LLMs in parallelo per generare candidate summaries, selezionandone una basata su similarity ad altre candidate, presence/absence di certi termini, language model scores, o altre features.\n\nPer la SEO, questi dettagli potrebbero suggerire che le sintesi generative potrebbero essere influenzate da: freshness e trustworthiness degli SRD selezionati, locality e language match con la query, selection rates degli SRD, user profile e query history, presenza di contenuti multimediali descrittivi (immagini con caption, video con transcript). La selezione di SRD da related queries e recent queries potrebbe favorire contenuti che appaiono in cluster tematici o in query sequences. La generazione di sintesi riviste in base a interazioni potrebbe premiare contenuti che l'utente effettivamente consulta. Tuttavia, nulla di ciò dimostra che Google applichi questi criteri in produzione: la descrizione elenca opzioni possibili (\"in some implementations\", \"can include\", \"optionally\").",
+    "limits": [
+      "Il brevetto non dimostra che Google utilizzi LLM per generare sintesi in Search: descrive un metodo possibile, non un'implementazione confermata in produzione.",
+      "La descrizione elenca numerosi segnali e misure come opzioni (\"in some implementations\", \"can include\", \"optionally\"), senza indicare quali siano effettivamente utilizzati o con quale peso.",
+      "Il brevetto non specifica soglie, pesi relativi dei segnali, o dettagli algoritmici sufficienti a replicare il sistema o a inferire strategie SEO precise.",
+      "La famiglia include continuation e domande non ancora concesse: il brevetto è parte di una strategia di protezione ampia, non una conferma indipendente di deployment."
+    ],
+    "implications": [
+      "Assicurarsi che i contenuti siano aggiornati, accurati e verificabili: freshness, trustworthiness e verifiability sono criteri contemplati per la selezione degli SRD e per confidence measures, indipendentemente dall'uso di LLM.",
+      "Fornire contenuti multimodali ben descritti (immagini con alt text significativi, video con transcript): la descrizione contempla l'estrazione di image content e video content dagli SRD, il che rafforza pratiche SEO consolidate.",
+      "Mantenere coerenza tematica e autorevolezza nel dominio: la selezione di SRD da related queries e l'uso di trustworthiness measures suggeriscono che contenuti autorevoli e tematicamente coerenti restano rilevanti.",
+      "Monitorare metriche di engagement (selection rate, dwell time): la descrizione contempla selection rate e interazioni con SRD come segnali, coerentemente con best practice SEO orientate all'utente."
+    ],
+    "key_terms": [
+      {
+        "term": "LLM (Large Language Model)",
+        "explanation": "Modello di linguaggio di grandi dimensioni (almeno centinaia di milioni di parametri, spesso miliardi) utilizzato per processare contenuti in linguaggio naturale e generare output generativo."
+      },
+      {
+        "term": "NL based summary",
+        "explanation": "Sintesi in linguaggio naturale generata utilizzando l'output di un LLM, resa in risposta a una query."
+      },
+      {
+        "term": "search result document (SRD)",
+        "explanation": "Documento di risultato di ricerca responsivo a una query, da cui vengono estratti contenuti da processare con l'LLM."
+      },
+      {
+        "term": "query-dependent measure",
+        "explanation": "Misura dipendente dalla query specifica, come positional ranking, selection rate per quella query, locality measure, language measure."
+      },
+      {
+        "term": "query-independent measure",
+        "explanation": "Misura indipendente dalla query, come selection rate aggregata, trustworthiness, overall popularity, freshness dell'SRD."
+      },
+      {
+        "term": "user-dependent measure",
+        "explanation": "Misura dipendente dall'utente, basata su profilo utente, query recenti, interazioni recenti non-query."
+      },
+      {
+        "term": "related query",
+        "explanation": "Query correlata alla query originale, determinata avere una correlazione (es. co-occorrenza in temporal proximity tra utenti)."
+      },
+      {
+        "term": "implied query",
+        "explanation": "Query generata e sottomessa automaticamente, indipendentemente da input utente esplicito, basata su contesto, profilo o altre informazioni."
+      }
+    ]
+  },
+  "origin": "seed",
+  "generated_at": "2026-10-29T08:57:18.628179Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.14329920000000002
+}

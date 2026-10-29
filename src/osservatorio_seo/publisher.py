@@ -14,6 +14,7 @@ from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 from osservatorio_seo.models import Feed, Item, Pillar, Source
+from osservatorio_seo.patents.models import THEMES, Patent
 from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.renderer import HtmlRenderer
 from osservatorio_seo.seo import (
@@ -133,6 +134,10 @@ def _meta_description(text: str, max_len: int = 155) -> str:
     if last_space > 0:
         truncated = truncated[:last_space]
     return truncated.rstrip(" ,;:.") + "…"
+
+
+# Righe massime della famiglia brevettuale nella scheda /brevetti/<numero>/.
+FAMILY_MAX_ROWS = 12
 
 
 def _stars(importance: int) -> str:
@@ -508,6 +513,7 @@ class Publisher:
         self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
+        self._ssg_patents(renderer, site_dir, allow_indexing)
         self._ssg_tracker(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
@@ -586,6 +592,7 @@ class Publisher:
         self._ssg_category_tag_hubs(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
+        self._ssg_patents(renderer, site_dir, allow_indexing)
         self._ssg_tracker(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
@@ -1307,6 +1314,155 @@ class Publisher:
             html = renderer.render_dossier(ctx)
             (target / "index.html").write_text(html, encoding="utf-8")
 
+    # --- Brevetti ---
+
+    def _load_patents(self) -> list[Patent]:
+        """Carica le schede da ``data/patents/*.json``, piu' recenti prima."""
+        patents_dir = self._data_dir / "patents"
+        if not patents_dir.exists():
+            return []
+        patents: list[Patent] = []
+        for path in sorted(patents_dir.glob("*.json")):
+            try:
+                patents.append(Patent.model_validate_json(path.read_text(encoding="utf-8")))
+            except Exception:  # noqa: BLE001
+                continue
+        patents.sort(key=lambda p: p.doc.publication_date or datetime.min.date(), reverse=True)
+        return patents
+
+    def _ssg_patents(
+        self,
+        renderer: HtmlRenderer,
+        site_dir: Path,
+        allow_indexing: bool,
+    ) -> None:
+        patents = self._load_patents()
+        target_root = site_dir / "brevetti"
+        # Come per l'archivio: una scheda rimossa da data/patents non deve
+        # restare online come pagina orfana.
+        shutil.rmtree(target_root, ignore_errors=True)
+        if not patents:
+            return
+        by_number = {p.doc.number: p for p in patents}
+
+        rows = [
+            {
+                "slug": p.slug,
+                "number": p.doc.number,
+                "year": p.doc.publication_date.year if p.doc.publication_date else "",
+                "title_it": p.analysis.title_it,
+                "theme": p.analysis.theme,
+                "theme_label": THEMES.get(p.analysis.theme, p.analysis.theme),
+                "stars": _stars(p.analysis.seo_relevance),
+                "is_grant": p.doc.is_grant,
+            }
+            for p in patents
+        ]
+        theme_counts: dict[str, int] = defaultdict(int)
+        for r in rows:
+            theme_counts[r["theme"]] += 1
+        themes = [
+            {"key": k, "label": label, "count": theme_counts[k]}
+            for k, label in THEMES.items()
+            if theme_counts.get(k)
+        ]
+
+        index_url = canonical("/brevetti/")
+        target_root.mkdir(parents=True, exist_ok=True)
+        index_ctx = {
+            "page_title": "Brevetti Google per la SEO — Osservatorio SEO",
+            "page_description": (
+                "I brevetti di Google che contano per la SEO, letti dal testo originale: "
+                "cosa rivendicano, cosa potrebbero significare e cosa non dimostrano."
+            ),
+            "canonical_url": index_url,
+            "active_nav": "brevetti",
+            "noindex": not allow_indexing,
+            "rows": rows,
+            "themes": themes,
+            "breadcrumbs": [
+                {"name": "Home", "url": canonical("/")},
+                {"name": "Brevetti", "url": index_url},
+            ],
+        }
+        (target_root / "index.html").write_text(
+            renderer.render_patents_index(index_ctx), encoding="utf-8"
+        )
+
+        for patent in patents:
+            doc = patent.doc
+            # Parenti gia' schedati: link interno; gli altri vanno a Google Patents.
+            # La relazione si guarda da entrambi i lati, perche' la pagina della
+            # continuation non sempre elenca l'originale come "parent".
+            family = []
+            for member in doc.family:
+                family.append(
+                    {
+                        "number": member.number,
+                        "relation": member.relation,
+                        "direction": member.direction,
+                        "internal": member.number in by_number,
+                        "slug": member.number.lower(),
+                        "title_it": by_number[member.number].analysis.title_it
+                        if member.number in by_number
+                        else member.title,
+                    }
+                )
+            listed = {f["number"] for f in family}
+            for other in patents:
+                if other.doc.number in listed or other is patent:
+                    continue
+                if any(m.number == doc.number for m in other.doc.family):
+                    family.append(
+                        {
+                            "number": other.doc.number,
+                            "relation": None,
+                            "direction": "priority",
+                            "internal": True,
+                            "slug": other.slug,
+                            "title_it": other.analysis.title_it,
+                        }
+                    )
+            # Prima le schede interne, poi le relazioni dichiarate (Continuation,
+            # Division...), poi le altre: alcune famiglie storiche superano le
+            # 40 pubblicazioni e una lista cosi' non serve a nessuno.
+            family.sort(key=lambda f: (not f["internal"], f["relation"] is None, f["number"]))
+            family_more = max(0, len(family) - FAMILY_MAX_ROWS)
+            family = family[:FAMILY_MAX_ROWS]
+
+            page_url = canonical(f"/brevetti/{patent.slug}/")
+            target = target_root / patent.slug
+            target.mkdir(parents=True, exist_ok=True)
+            ctx = {
+                "page_title": f"{doc.number}: {patent.analysis.title_it} — Brevetti Google",
+                "page_description": patent.analysis.summary[:300],
+                "canonical_url": page_url,
+                "active_nav": "brevetti",
+                "noindex": not allow_indexing,
+                "og_type": "article",
+                "patent": patent.model_dump(mode="json"),
+                "is_grant": doc.is_grant,
+                "google_patents_url": doc.url,
+                "theme_label": THEMES.get(patent.analysis.theme, patent.analysis.theme),
+                "stars": _stars(patent.analysis.seo_relevance),
+                "family": family,
+                "family_more": family_more,
+                "publication_label": format_date_it(
+                    datetime.combine(doc.publication_date, datetime.min.time()), "%d %B %Y"
+                )
+                if doc.publication_date
+                else None,
+                "updated_iso": patent.generated_at.isoformat(),
+                "updated_label": format_date_it(patent.generated_at, "%d %B %Y"),
+                "article_url": page_url,
+                "breadcrumbs": [
+                    {"name": "Home", "url": canonical("/"), "site_path": "/"},
+                    {"name": "Brevetti", "url": index_url, "site_path": "/brevetti/"},
+                    {"name": doc.number, "url": page_url, "site_path": ""},
+                ],
+            }
+            (target / "index.html").write_text(renderer.render_patent(ctx), encoding="utf-8")
+
     # --- Tracker dashboard ---
 
     def _ssg_tracker(
@@ -1593,6 +1749,26 @@ class Publisher:
                     "lastmod": pillar.generated_at.strftime("%Y-%m-%d"),
                     "priority": "0.9",
                     "changefreq": "weekly",
+                }
+            )
+
+        patents = self._load_patents()
+        if patents:
+            urls.append(
+                {
+                    "loc": canonical("/brevetti/"),
+                    "lastmod": max(p.generated_at for p in patents).strftime("%Y-%m-%d"),
+                    "priority": "0.8",
+                    "changefreq": "weekly",
+                }
+            )
+        for patent in patents:
+            urls.append(
+                {
+                    "loc": canonical(f"/brevetti/{patent.slug}/"),
+                    "lastmod": patent.generated_at.strftime("%Y-%m-%d"),
+                    "priority": "0.7",
+                    "changefreq": "monthly",
                 }
             )
 
