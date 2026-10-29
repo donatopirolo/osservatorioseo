@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US10275434B1: Identificazione della versione primaria di un documento — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di documenti presenti in più versioni online (es. articoli accademici su repository diversi). Descrive un metodo per identificare una versione primaria tra le diverse versioni dello stesso documento, basandosi su regole di priorità legate alla fonte e su misure di co" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us10275434b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US10275434B1: Identificazione della versione primaria di un documento — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di documenti presenti in più versioni online (es. articoli accademici su repository diversi). Descrive un metodo per identificare una versione primaria tra le diverse versioni dello stesso documento, basandosi su regole di priorità legate alla fonte e su misure di co" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us10275434b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US10275434B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us10275434b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US10275434B1: Identificazione della versione primaria di un documento",
+  "description": "Il brevetto affronta il problema di documenti presenti in pi\u00f9 versioni online (es. articoli accademici su repository diversi). Descrive un metodo per identificare una versione primaria tra le diverse versioni dello stesso documento, basandosi su regole di priorit\u00e0 legate alla fonte e su misure di completezza del contenuto.",
+  "articleBody": "Il brevetto affronta il problema di documenti presenti in pi\u00f9 versioni online (es. articoli accademici su repository diversi). Descrive un metodo per identificare una versione primaria tra le diverse versioni dello stesso documento, basandosi su regole di priorit\u00e0 legate alla fonte e su misure di completezza del contenuto.\n\nLe rivendicazioni indipendenti (1, 8, 14) coprono un metodo per la visualizzazione dei risultati di ricerca quando esistono versioni multiple dello stesso documento. Il sistema riceve una query, ottiene risultati dal server e genera un display che include: un primo hyperlink che referenzia una prima versione del documento (la versione primaria), informazioni di pubblicazione relative a quella versione (diverse dall\u0027hyperlink stesso), uno snippet dalla prima versione, e un secondo hyperlink che referenzia un set di documenti citanti, dove ogni documento citante include una citazione ad almeno una versione del documento.\n\nLa rivendicazione 2 specifica che la determinazione della versione primaria avviene \"based at least in part on the source of the document\". La rivendicazione 3 descrive che quando esistono versioni multiple, il sistema ottiene il titolo della prima versione per usarlo come anchor text del primo hyperlink. La rivendicazione 4 aggiunge che il display pu\u00f2 includere un hyperlink il cui anchor text contiene il conteggio delle versioni multiple identificate. La rivendicazione 5 specifica che le informazioni di pubblicazione comprendono uno o pi\u00f9 elementi tra: nome del primo autore, anno di pubblicazione, nome dell\u0027editore. La rivendicazione 6 copre l\u0027evidenziazione di parole nel display che corrispondono a termini della query. La rivendicazione 7 stabilisce che l\u0027anchor text dell\u0027hyperlink ai documenti citanti include il conteggio dei documenti che citano almeno una versione del documento.\n\nLe rivendicazioni sono formulate come metodo di presentazione lato client: il focus \u00e8 su cosa viene renderizzato sul display del dispositivo utente, non sui criteri di selezione della versione primaria in s\u00e9, che viene menzionata solo come input gi\u00e0 determinato dal server.\n\nLa descrizione contempla criteri specifici per identificare la versione primaria tra versioni multiple. Il paragrafo relativo alla FIG. 2 e la tabella degli esempi illustrano un processo in due fasi: prima si assegna una \"priority of authority\" a ciascuna versione basata su una \"priority rule\" e sui metadati del documento; poi si determina se esistono versioni con sia priorit\u00e0 qualificata che lunghezza qualificata.\n\nLa descrizione contempla diverse modalit\u00e0 per determinare la priorit\u00e0. Una si basa su una \"source-priority list\" editorialmente curata che assegna priorit\u00e0 numeriche alle fonti (es. www.website2.net ha priorit\u00e0 3, www.website3.com ha priorit\u00e0 2). Un\u0027altra modalit\u00e0 considera il tipo di diritto di pubblicazione: versioni da fonti con \"exclusive publication right\" ricevono priorit\u00e0 alta, quelle con \"licensing rights\" priorit\u00e0 inferiore, altre fonti priorit\u00e0 ancora pi\u00f9 basse. La \"length measure\" distingue versioni full-text da abstract confrontando la lunghezza con una soglia minima (nell\u0027esempio, 3.000 bytes), oppure verificando metadati che descrivono la versione come \"full-text or unabridged\".\n\nSe nessuna versione ha sia priorit\u00e0 che lunghezza qualificate, la descrizione contempla una selezione basata su \"information measure\": lunghezza totale, reference count (numero di documenti citati nella versione), citation count tra le versioni con lunghezza qualificata, data di ultima modifica, o page rank. La descrizione menziona anche il calcolo di un citation count totale sommando i citation count di tutte le versioni.\n\nPer la SEO, questo potrebbe significare che in contesti dove esistono versioni multiple dello stesso contenuto (es. paper accademici, white paper aziendali, guide tecniche replicate), Google potrebbe preferire versioni da fonti con maggiore autorit\u00e0 editoriale o diritti esclusivi, e privilegiare versioni complete rispetto ad abstract. Tuttavia la formulazione delle rivendicazioni come metodo di presentazione suggerisce che il brevetto protegge principalmente l\u0027interfaccia utente, non l\u0027algoritmo di ranking. I criteri nella descrizione (source priority, publication rights, length) restano opzioni implementative non protette.",
+  "wordCount": 609,
+  "datePublished": "2026-10-29T17:18:45.971561+00:00",
+  "dateModified": "2026-10-29T17:18:45.971561+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us10275434b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Identifying a primary version of a document",
+    "identifier": "US10275434B1",
+    "url": "https://patents.google.com/patent/US10275434B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US10275434B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US10275434B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Identificazione della versione primaria di un documento</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Identifying a primary version of a document</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di documenti presenti in più versioni online (es. articoli accademici su repository diversi). Descrive un metodo per identificare una versione primaria tra le diverse versioni dello stesso documento, basandosi su regole di priorità legate alla fonte e su misure di completezza del contenuto.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, documenti accademici e versioni multiple</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">30 Aprile 2019</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2005-11-18</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Lifetime</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Contenuti duplicati e canonicalizzazione</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 8, 14) coprono un metodo per la visualizzazione dei risultati di ricerca quando esistono versioni multiple dello stesso documento. Il sistema riceve una query, ottiene risultati dal server e genera un display che include: un primo hyperlink che referenzia una prima versione del documento (la versione primaria), informazioni di pubblicazione relative a quella versione (diverse dall&#39;hyperlink stesso), uno snippet dalla prima versione, e un secondo hyperlink che referenzia un set di documenti citanti, dove ogni documento citante include una citazione ad almeno una versione del documento.</p>
+      <p>La rivendicazione 2 specifica che la determinazione della versione primaria avviene &#34;based at least in part on the source of the document&#34;. La rivendicazione 3 descrive che quando esistono versioni multiple, il sistema ottiene il titolo della prima versione per usarlo come anchor text del primo hyperlink. La rivendicazione 4 aggiunge che il display può includere un hyperlink il cui anchor text contiene il conteggio delle versioni multiple identificate. La rivendicazione 5 specifica che le informazioni di pubblicazione comprendono uno o più elementi tra: nome del primo autore, anno di pubblicazione, nome dell&#39;editore. La rivendicazione 6 copre l&#39;evidenziazione di parole nel display che corrispondono a termini della query. La rivendicazione 7 stabilisce che l&#39;anchor text dell&#39;hyperlink ai documenti citanti include il conteggio dei documenti che citano almeno una versione del documento.</p>
+      <p>Le rivendicazioni sono formulate come metodo di presentazione lato client: il focus è su cosa viene renderizzato sul display del dispositivo utente, non sui criteri di selezione della versione primaria in sé, che viene menzionata solo come input già determinato dal server.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla criteri specifici per identificare la versione primaria tra versioni multiple. Il paragrafo relativo alla FIG. 2 e la tabella degli esempi illustrano un processo in due fasi: prima si assegna una &#34;priority of authority&#34; a ciascuna versione basata su una &#34;priority rule&#34; e sui metadati del documento; poi si determina se esistono versioni con sia priorità qualificata che lunghezza qualificata.</p>
+      <p>La descrizione contempla diverse modalità per determinare la priorità. Una si basa su una &#34;source-priority list&#34; editorialmente curata che assegna priorità numeriche alle fonti (es. www.website2.net ha priorità 3, www.website3.com ha priorità 2). Un&#39;altra modalità considera il tipo di diritto di pubblicazione: versioni da fonti con &#34;exclusive publication right&#34; ricevono priorità alta, quelle con &#34;licensing rights&#34; priorità inferiore, altre fonti priorità ancora più basse. La &#34;length measure&#34; distingue versioni full-text da abstract confrontando la lunghezza con una soglia minima (nell&#39;esempio, 3.000 bytes), oppure verificando metadati che descrivono la versione come &#34;full-text or unabridged&#34;.</p>
+      <p>Se nessuna versione ha sia priorità che lunghezza qualificate, la descrizione contempla una selezione basata su &#34;information measure&#34;: lunghezza totale, reference count (numero di documenti citati nella versione), citation count tra le versioni con lunghezza qualificata, data di ultima modifica, o page rank. La descrizione menziona anche il calcolo di un citation count totale sommando i citation count di tutte le versioni.</p>
+      <p>Per la SEO, questo potrebbe significare che in contesti dove esistono versioni multiple dello stesso contenuto (es. paper accademici, white paper aziendali, guide tecniche replicate), Google potrebbe preferire versioni da fonti con maggiore autorità editoriale o diritti esclusivi, e privilegiare versioni complete rispetto ad abstract. Tuttavia la formulazione delle rivendicazioni come metodo di presentazione suggerisce che il brevetto protegge principalmente l&#39;interfaccia utente, non l&#39;algoritmo di ranking. I criteri nella descrizione (source priority, publication rights, length) restano opzioni implementative non protette.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Lifetime) e non fornisce protezione attuale. La data di priorità risale al 2005, in un contesto pre-Panda e pre-moderni sistemi di canonicalizzazione.</li>
+      <li>Le rivendicazioni coprono la presentazione dei risultati (rendering lato client), non i criteri di selezione della versione primaria o il loro impatto sul ranking. La determinazione della versione primaria è menzionata solo come input già calcolato.</li>
+      <li>La descrizione è focalizzata su documenti accademici con metadati strutturati (autore, anno, editore, citation count). Non dimostra applicabilità a contenuti web generici o pagine duplicate senza metadati formali.</li>
+      <li>Il brevetto fa parte di una famiglia con continuation (US9779072B1), quindi non rappresenta protezione indipendente ma iterazioni successive della stessa invenzione originale del 2005.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Per contenuti disponibili su repository multipli (es. ricerche, white paper, guide tecniche), pubblicare su fonti con maggiore autorità editoriale o diritti esclusivi resta una pratica solida indipendentemente da questo brevetto.</li>
+      <li class="pl-2">Fornire versioni complete e sostanziali di documenti, piuttosto che solo abstract o estratti brevi, è consigliabile per massimizzare la probabilità di essere considerati versione di riferimento.</li>
+      <li class="pl-2">Quando si replica contenuto su più domini (es. syndication, partnership editoriali), utilizzare canonical tag e strutture di citazione chiare aiuta i motori a identificare la fonte primaria, principio valido a prescindere da questo specifico brevetto.</li>
+      <li class="pl-2">Per contenuti accademici o tecnici, includere metadati strutturati (autore, data, editore, DOI) facilita l&#39;identificazione della versione autorevole, pratica che resta valida indipendentemente dall&#39;implementazione di questo brevetto.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">primary version</dt>
+        <dd class="text-on-surface-variant leading-relaxed">La versione di un documento considerata più autorevole, completa o preferibile tra versioni multiple dello stesso contenuto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">priority of authority</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Valore numerico assegnato a una versione di documento per riflettere la sua autorevolezza, completezza o accessibilità, basato su regole di priorità</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">priority rule</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Regola che determina la priorità di autorità basandosi su metadati come fonte, diritti di pubblicazione, o altri fattori editoriali</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">length measure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Criterio per determinare se una versione è completa (full-text) o parziale (abstract), confrontando la lunghezza con una soglia minima o verificando metadati</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">information measure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Metrica per selezionare la versione con più informazioni quando nessuna ha sia priorità che lunghezza qualificate, basata su lunghezza, citation count, reference count, page rank o data di modifica</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">citation count</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Numero di documenti che citano una specifica versione o, in forma aggregata, tutte le versioni di un documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">reference count</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Numero di altri documenti citati all&#39;interno di una versione specifica del documento</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US9779072B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9779072B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Identifying a primary version of a document</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US10275434B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

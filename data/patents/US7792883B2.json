@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US7792883B2",
+    "title": "Viewport-relative scoring for location search queries",
+    "abstract": "A method for performing a location search includes receiving a location search query, identifying one or more geographical features that satisfy the location search query, ranking the identified geographical features in accordance with a score that is based, at least in part, on proximity of the geographical features to a geographical viewport region of a client system, to produce a set of ranked geographical features, and providing results, in accordance with the ranked documents, that identify at least one geographic feature corresponding to the at least one of the ranked geographical features.",
+    "claims": [
+      "1. A computer-implemented method for performing a location search, comprising: at a computer system including one or more processors and memory storing one or more programs, the one or more processors executing the one or more programs to perform the operations of: receiving a location search query; identifying geographical feature documents that satisfy the location search query, wherein each of the geographical feature documents correspond to a geographical feature; and ranking the identified geographical feature documents in accordance with a score that is based, at least in part, on proximity of the geographical features corresponding to the identified geographical feature documents to a geographical viewport region of a client system, to produce a set of ranked geographical feature documents; and providing results, in accordance with the ranked geographical feature documents, that identify at least one geographic feature corresponding to the at least one of the ranked geographical feature documents.",
+      "2. The method of claim 1 , wherein the geographical viewport region corresponds to a geographical region displayed on the client system.",
+      "3. The method of claim 1 , wherein the geographical viewport region corresponds to a geographical region displayed on the client system in response to a prior location search query.",
+      "4. The method of claim 1 , wherein the geographical viewport region comprises a circular geographical region that encompasses a rectangular geographical region displayed on the client system.",
+      "5. The method of claim 4 , where the geographical viewport region has a size corresponding to a size of the rectangular geographical region displayed on the client system.",
+      "6. The method of claim 1 , including determining key words corresponding to the location search query, and identifying geographical feature documents that match the key words in the location search query; wherein the determining of the key words includes removing punctuation marks and non-location terms from the location search query.",
+      "7. The method of claim 1 , including determining key words corresponding to the location search query, and identifying geographical feature documents that match the key words in the location search query; wherein the key words include one or more synonyms for one or more terms in the location search query.",
+      "8. The method of claim 1 , including determining key words corresponding to the location search query, and identifying geographical feature documents that match the key words in the location search query; wherein identifying the geographical feature documents includes determining a canonical expression corresponding to the key words.",
+      "9. The method of claim 1 , wherein the geographical feature documents are in an index that includes a plurality of geographical feature documents that correspond to geographic features.",
+      "10. The method of claim 9 , wherein the plurality of geographical feature documents include reference coordinates corresponding to the geographic features.",
+      "11. The method of claim 1 , wherein the identifying of the geographical feature documents includes determining a score for each of the geographical feature documents.",
+      "12. The method of claim 11 , wherein providing results includes providing a single geographical feature or location if a best score for a corresponding geographical feature document is greater than a pre-determined multiple of a next best score for a next geographical feature document in a top-N ranking of the geographical feature documents.",
+      "13. The method of claim 1 , wherein the providing includes providing a map image corresponding to at least the one geographical feature.",
+      "14. A search engine system, comprising: one or more central processing units to execute programs; memory; and one or more programs stored in the memory and executed by the processor, the one or more programs including: instructions for receiving a location search query; instructions for identifying geographical feature documents that satisfy the location search query, wherein each of the geographical feature documents correspond to a geographical feature; instructions for ranking the identified geographical feature documents in accordance with a score that is based, at least in part, on proximity of the geographical features corresponding to the identified geographical feature documents to a geographical viewport region of a client system, to produce a set of ranked geographical feature documents; and instructions for providing results, in accordance with the ranked geographical feature documents, that identify at least one geographic feature corresponding to the at least one of the ranked geographical feature documents.",
+      "15. A computer-implemented method for performing a location search, comprising: at a computer system including one or more processors and memory storing one or more programs, the one or more processors executing the one or more programs to perform the operations of: receiving a location search query; identifying geographical features that satisfy the location search query; ranking the identified geographical features in accordance with a score that is based, at least in part, on proximity of the geographical features to a geographical viewport region of a client system, to produce a set of ranked geographical features; and providing results, in accordance with the ranked geographical features, that identify at least one geographic feature corresponding to the at least one of the ranked geographical features.",
+      "16. The method of claim 15 , wherein the geographical viewport region corresponds to a geographical region displayed on the client system.",
+      "17. The method of claim 15 , wherein the geographical viewport region corresponds to a geographical region displayed on the client system in response to a prior location search query.",
+      "18. The method of claim 15 , wherein the geographical viewport region comprises a circular geographical region that encompasses a rectangular geographical region displayed on the client system.",
+      "19. The method of claim 18 , where the geographical viewport region has a size corresponding to a size of the rectangular geographical region displayed on the client system.",
+      "20. The method of claim 15 , including: determining key words corresponding to the location search query; and identifying geographical features that match the key words in the location search query.",
+      "21. The method of claim 20 , wherein the determining of the key words includes any removing punctuation marks and any non-location terms from the location search query.",
+      "22. The method of claim 20 , wherein the key words include one or more synonyms for one or more terms in the location search query.",
+      "23. A search engine system, comprising: one or more central processing units to execute programs; memory; and one or more programs stored in the memory and executed by the processor, the one or more programs including: instructions for receiving a location search query; instructions for identifying geographical features that satisfy the location search query; instructions for ranking the identified geographical features in accordance with a score that is based, at least in part, on proximity of the geographical features to a geographical viewport region of a client system, to produce a set of ranked geographical features; and instructions for providing results, in accordance with the ranked geographical features, that identify at least one geographic feature corresponding to the at least one of the ranked geographical features."
+    ],
+    "independent_claims": [
+      "1. A computer-implemented method for performing a location search, comprising: at a computer system including one or more processors and memory storing one or more programs, the one or more processors executing the one or more programs to perform the operations of: receiving a location search query; identifying geographical feature documents that satisfy the location search query, wherein each of the geographical feature documents correspond to a geographical feature; and ranking the identified geographical feature documents in accordance with a score that is based, at least in part, on proximity of the geographical features corresponding to the identified geographical feature documents to a geographical viewport region of a client system, to produce a set of ranked geographical feature documents; and providing results, in accordance with the ranked geographical feature documents, that identify at least one geographic feature corresponding to the at least one of the ranked geographical feature documents.",
+      "14. A search engine system, comprising: one or more central processing units to execute programs; memory; and one or more programs stored in the memory and executed by the processor, the one or more programs including: instructions for receiving a location search query; instructions for identifying geographical feature documents that satisfy the location search query, wherein each of the geographical feature documents correspond to a geographical feature; instructions for ranking the identified geographical feature documents in accordance with a score that is based, at least in part, on proximity of the geographical features corresponding to the identified geographical feature documents to a geographical viewport region of a client system, to produce a set of ranked geographical feature documents; and instructions for providing results, in accordance with the ranked geographical feature documents, that identify at least one geographic feature corresponding to the at least one of the ranked geographical feature documents.",
+      "15. A computer-implemented method for performing a location search, comprising: at a computer system including one or more processors and memory storing one or more programs, the one or more processors executing the one or more programs to perform the operations of: receiving a location search query; identifying geographical features that satisfy the location search query; ranking the identified geographical features in accordance with a score that is based, at least in part, on proximity of the geographical features to a geographical viewport region of a client system, to produce a set of ranked geographical features; and providing results, in accordance with the ranked geographical features, that identify at least one geographic feature corresponding to the at least one of the ranked geographical features.",
+      "23. A search engine system, comprising: one or more central processing units to execute programs; memory; and one or more programs stored in the memory and executed by the processor, the one or more programs including: instructions for receiving a location search query; instructions for identifying geographical features that satisfy the location search query; instructions for ranking the identified geographical features in accordance with a score that is based, at least in part, on proximity of the geographical features to a geographical viewport region of a client system, to produce a set of ranked geographical features; and instructions for providing results, in accordance with the ranked geographical features, that identify at least one geographic feature corresponding to the at least one of the ranked geographical features."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Florian Michel Buron",
+      "Ramesh Balakrishnan",
+      "James Christopher Norris",
+      "James Robert Muller",
+      "Thai Tran",
+      "Lars Eilstrup Rasmussen"
+    ],
+    "priority_date": "2006-12-11",
+    "filing_date": "2007-12-10",
+    "publication_date": "2010-09-07",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9537",
+      "G06F16/20",
+      "G06F16/29",
+      "Y10S707/00",
+      "Y10S707/912",
+      "Y10S707/918"
+    ],
+    "family": [
+      {
+        "number": "AU2007333558B2",
+        "relation": null,
+        "direction": "priority",
+        "title": "Viewport-relative scoring for location search queries"
+      },
+      {
+        "number": "WO2008073502A2",
+        "relation": null,
+        "direction": "priority",
+        "title": "Viewport-relative scoring for location search queries"
+      }
+    ],
+    "cited_by_count": 49
+  },
+  "analysis": {
+    "title_it": "Scoring basato sul viewport per query di ricerca locale",
+    "summary": "Il brevetto affronta il problema del ranking dei risultati nelle ricerche di luoghi geografici quando l'utente ha già visualizzato una mappa. Propone di assegnare punteggi più alti ai luoghi che ricadono nella regione geografica attualmente mostrata (viewport) o nelle sue vicinanze, attenuando progressivamente il punteggio per luoghi più distanti.",
+    "theme": "local",
+    "seo_relevance": 3,
+    "scope": "Ricerca locale, mappe geografiche (Google Maps o servizi simili)",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 14, 15, 23) coprono un metodo implementato su computer per eseguire ricerche di luoghi geografici. Il metodo prevede di ricevere una query di ricerca locale, identificare documenti di caratteristiche geografiche (geographical feature documents) che soddisfano la query, dove ciascun documento corrisponde a una caratteristica geografica. I documenti identificati vengono poi classificati in base a uno score che si basa, almeno in parte, sulla prossimità delle caratteristiche geografiche a una regione geografica del viewport di un sistema client, producendo un insieme di documenti classificati. Infine, vengono forniti risultati che identificano almeno una caratteristica geografica corrispondente ai documenti classificati.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la regione del viewport corrisponde a una regione geografica visualizzata sul sistema client. La rivendicazione 3 contempla che il viewport possa corrispondere alla regione mostrata in risposta a una query di ricerca locale precedente. La rivendicazione 4 prevede che il viewport possa essere una regione geografica circolare che racchiude una regione rettangolare mostrata sul client. Le rivendicazioni 6, 7 e 8 riguardano la determinazione delle parole chiave: la 6 prevede la rimozione di segni di punteggiatura e termini non-location dalla query; la 7 contempla l'inclusione di sinonimi per uno o più termini; la 8 prevede la determinazione di un'espressione canonica corrispondente alle parole chiave. La rivendicazione 9 specifica che i documenti di caratteristiche geografiche sono in un indice che include una pluralità di tali documenti. La rivendicazione 10 aggiunge che i documenti includono coordinate di riferimento corrispondenti alle caratteristiche geografiche. La rivendicazione 11 prevede che l'identificazione dei documenti includa la determinazione di uno score per ciascun documento. La rivendicazione 12 introduce un criterio di selezione: fornire una singola caratteristica geografica se il miglior score è maggiore di un multiplo predeterminato del secondo miglior score in un ranking top-N. La rivendicazione 13 prevede che i risultati possano includere un'immagine di mappa corrispondente alla caratteristica geografica.",
+    "seo_reading": "La descrizione contempla un sistema di scoring articolato che combina più fattori. Il punteggio base per un documento candidato viene calcolato secondo la formula (blocco corrispondente alle equazioni nella descrizione): 1/E × [somma degli IRi] × FR × SAF, dove IRi è il query match score per ciascun termine della query, FR è il feature rank che indica l'importanza della caratteristica geografica, E è un valore di normalizzazione e SAF è un fattore di attenuazione del punteggio.\n\nIl valore IRi per una parola chiave include il prodotto di pesi: token mass (che varia in base al tipo di termine: stop words, street affix keywords, numeri, sinonimi hanno masse diverse, con un valore predefinito di 1 per le parole chiave ordinarie), relevance score (che varia in base al grado di corrispondenza testuale) ed element mass (che varia in funzione della dimensione o tipo della caratteristica geografica e del tipo di elemento informativo che corrisponde alla parola chiave). Il feature rank FR può basarsi sulla document frequency o sulla dimensione geografica della caratteristica, con caratteristiche più grandi che ricevono valori più alti.\n\nIl fattore SAF (Score Attenuation Factor) è il cuore del brevetto. La descrizione contempla (FIGS. 11-15) che SAF sia pari a 1 per caratteristiche geografiche che intersecano la regione del viewport corrente. Per caratteristiche nella viewport skirt region (una regione anello attorno al viewport), SAF viene calcolato come MinScore - e^(-K)/(1 - e^(-K)) + (1 - MinScore) × e^(-K×X)/(1 - e^(-K)), dove X è il rapporto tra la distanza della caratteristica dal viewport e la larghezza della skirt region. Per caratteristiche al di fuori della skirt region, SAF è pari a MinScore (esempio: 0.2). La dimensione della skirt region dipende dalla dimensione del viewport secondo una funzione esponenziale (FIG. 14).\n\nPer la SEO locale, questo potrebbe significare che quando un utente esegue ricerche successive in un'applicazione di mappe, i risultati geograficamente vicini alla mappa attualmente visualizzata potrebbero ricevere un boost significativo nel ranking. Un luogo che ricade nel viewport corrente potrebbe essere favorito di un fattore 5x rispetto a uno al di fuori della skirt region (se MinScore=0.2). Questo condizionale suggerirebbe che la prossimità geografica al contesto di ricerca precedente dell'utente potrebbe influenzare fortemente quali risultati vengono mostrati per query ambigue. Tuttavia, sarebbe una forzatura estendere questo meccanismo alla ricerca web organica tradizionale, dove non esiste un viewport geografico esplicito.",
+    "limits": [
+      "Il brevetto è specifico per ricerche di luoghi geografici in contesti con viewport (mappe), non dimostra che meccanismi simili si applichino alla ricerca web organica tradizionale o alla Local Search nei risultati SERP standard.",
+      "La descrizione contempla vari parametri configurabili (SkirtFactor, MinScore, K) ma non specifica quali valori siano effettivamente in uso in produzione, né se il sistema sia mai stato implementato.",
+      "Il brevetto risale al 2006 con concessione nel 2010: i sistemi di ranking locale di Google potrebbero essersi evoluti significativamente da allora, rendendo questi meccanismi obsoleti o sostituiti.",
+      "Non viene dimostrato come questo scoring interagisca con altri fattori di ranking locale come recensioni, prominenza, rilevanza testuale o segnali comportamentali degli utenti."
+    ],
+    "implications": [
+      "Per attività locali, mantenere informazioni geografiche precise e complete (coordinate, indirizzi completi) nei propri profili business resta fondamentale indipendentemente dai meccanismi di scoring specifici.",
+      "Ottimizzare la presenza per query locali non ambigue (includendo città, quartiere, punti di riferimento) riduce la dipendenza da meccanismi di disambiguazione basati sul contesto geografico dell'utente.",
+      "Considerare che utenti che navigano mappe potrebbero vedere risultati diversi da utenti che cercano da SERP tradizionale, anche per la stessa query: testare la visibilità in entrambi i contesti.",
+      "Documentare varianti del nome dell'attività, sinonimi locali e denominazioni alternative può aiutare il matching testuale indipendentemente dai fattori di prossimità geografica."
+    ],
+    "key_terms": [
+      {
+        "term": "viewport region",
+        "explanation": "La regione geografica attualmente visualizzata sul dispositivo dell'utente, tipicamente corrispondente alla mappa mostrata dopo una ricerca locale precedente"
+      },
+      {
+        "term": "viewport skirt region",
+        "explanation": "Una regione anello che circonda il viewport, la cui dimensione varia in funzione della dimensione del viewport stesso, usata per attenuare progressivamente i punteggi"
+      },
+      {
+        "term": "geographical feature document",
+        "explanation": "Un documento nell'indice che rappresenta una caratteristica geografica (strada, città, punto di interesse) con informazioni come parole chiave, sinonimi, coordinate e oggetti prossimi"
+      },
+      {
+        "term": "Score Attenuation Factor (SAF)",
+        "explanation": "Fattore moltiplicativo applicato allo score che vale 1 per luoghi nel viewport, decresce esponenzialmente nella skirt region e raggiunge un minimo per luoghi distanti"
+      },
+      {
+        "term": "canonical expression",
+        "explanation": "Forma normalizzata della query di ricerca locale, indipendente dall'ordine delle parole, ottenuta rimuovendo punteggiatura e termini non-location e includendo sinonimi"
+      },
+      {
+        "term": "feature rank (FR)",
+        "explanation": "Misura dell'importanza di una caratteristica geografica, basata sulla sua dimensione geografica, frequenza di riferimento o popolarità"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T17:18:50.322300Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07494228
+}

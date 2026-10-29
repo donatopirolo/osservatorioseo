@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US7912837B2",
+    "title": "Geographic coding for location search queries",
+    "abstract": "A method for performing a location search includes receiving a location search query, determining key words corresponding to the location search query, identifying one or more documents that correspond to the key words in the location search query, and providing to a client system information identifying at least one location corresponding to the one or more documents.",
+    "claims": [
+      "1. A computer-implemented method for performing a location search, comprising: at a server system including one or more processors and memory storing one or more programs, the one or more processors executing the one or more programs to perform the operations of: receiving, from a client system distinct from the server, a location search query for a desired geographical location; determining key words corresponding to the location search query, wherein at least a subset of the key words incorrectly describe the desired geographical location; searching for geographical locations corresponding to the key words, including searching an index of documents to identify one or more documents that correspond to the key words in the location search query, wherein each of the identified documents corresponds to a geographical feature at a geographical location and includes terms matching the key words of the location search query, and wherein the terms matching the key words of the location search query include terms that incorrectly describe the geographical feature; and providing, to the client system, a map to be displayed at the client system, the map including one or more location tags at the one or more geographical locations corresponding to the one or more identified documents.",
+      "2. The method of claim 1 , wherein the terms that incorrectly describe the geographical feature are selected from the group consisting of: misspellings of terms that describe the geographical feature; cities adjacent or proximate to a city that includes the geographical feature; landmarks adjacent or proximate to the geographical feature; and geographical locations adjacent or proximate to the geographical feature.",
+      "3. The method of claim 1 , wherein each document of the one or more identified documents has tokens corresponding to the determined key words of the search query.",
+      "4. The method of claim 1 , wherein the determining of the key words includes removing punctuation marks and non-location terms from the location search query.",
+      "5. The method of claim 1 , wherein the key words include one or more synonyms for one or more terms in the location search query.",
+      "6. The method of claim 1 , wherein the identifying of the one or more identified documents includes determining a canonical expression corresponding to the key words.",
+      "7. The method of claim 1 , wherein the one or more identified documents are in the index that includes a plurality of documents that correspond to geographic features.",
+      "8. The method of claim 7 , wherein the plurality of documents includes geographical reference coordinates corresponding to the geographic features.",
+      "9. The method of claim 1 , wherein the searching includes determining a score for each of the one or more identified documents.",
+      "10. The method of claim 9 , wherein a respective score is in accordance with a frequency of the key words in a plurality of documents, matches between one or more words in a respective document with one or more of the key words and sizes of geographic features corresponding to the key words.",
+      "11. The method of claim 9 , wherein the providing includes providing one geographical location if a best score for a corresponding document is greater than a pre-determined multiple of a next best score for a next document in a top-N ranking of the one or more documents.",
+      "12. The method of claim 9 , wherein the providing includes providing a top-N ranking of geographical locations corresponding to the one or more documents, and wherein the top-N ranking includes documents having scores within a pre-determined range.",
+      "13. The method of claim 12 , wherein each of the geographical locations in the top-N ranking includes a location identifier.",
+      "14. The method of claim 12 , wherein each of the geographical locations in the top-N ranking includes a corresponding link to a geographical map image.",
+      "15. The method of claim 1 , wherein the providing includes providing a geographical map image corresponding to the one or more geographical locations.",
+      "16. The method of claim 15 , wherein the geographical map image is centered on the one or more geographical locations and includes a region less than a pre-determined size around the one or more geographical locations.",
+      "17. The method of claim 16 , wherein the one or more geographical locations include two or more distinct geographical locations in a region having all the key words in common, and wherein the geographical map image includes tags corresponding to the two or more geographical locations.",
+      "18. The method of claim 1 , wherein the searching of an index of documents to identify the one or more identified documents is independent of an order of the key words.",
+      "19. A search engine system, comprising: one or more central processing units to execute programs; memory; and a program, stored in the memory and executed by the one or more central processing units, the program including: instructions for receiving, from a client system distinct from the search engine system, a location search query for a desired geographical location; instructions for determining key words corresponding to the location search query, wherein at least a subset of the key words incorrectly describe the desired geographical location; instructions for searching an index of documents to identify one or more documents that correspond to the key words in the location search query, wherein each of the identified documents corresponds to a geographical feature at a geographical location and includes terms matching the key words of the location search query, and wherein the terms matching the key words of the location search query include terms that incorrectly describe the geographical feature; and instructions for providing, to a client system, a map to be displayed at the client system, the map including one or more location tags at one or more geographical locations corresponding to the one or more identified documents.",
+      "20. The search engine system of claim 19 , wherein the terms that incorrectly describe the geographical feature are selected from the group consisting of: misspellings of terms that describe the geographical feature; cities adjacent or proximate to a city that includes including the geographical feature; landmarks adjacent or proximate to the geographical feature; and geographical locations adjacent or proximate to the geographical feature.",
+      "21. A non-transitory computer readable storage medium storing one or more programs for execution by one of more processors of a computer system, the one or more programs comprising: instructions for receiving, from a client system distinct from the computer system, a location search query for a desired geographical location; instructions for determining key words corresponding to the location search query, wherein at least a subset of the key words incorrectly describe the desired geographical location; instructions for searching an index of documents to identify one or more documents that correspond to the key words in the location search query, wherein each of the identified documents corresponds to a geographical feature at a geographical location and includes terms matching the key words of the location search query, and wherein the terms matching the key words of the location search query include terms that incorrectly describe the geographical feature; and instructions for providing, to a client system, a map to be displayed at the client system, the map including one or more location tags at one or more geographical locations corresponding to the one or more identified documents.",
+      "22. The computer readable storage medium of claim 21 , wherein the terms that incorrectly describe the geographical feature are selected from the group consisting of: misspellings of terms that describe the geographical feature; cities adjacent or proximate to a city that includes the geographical feature; landmarks adjacent or proximate to the geographical feature; and geographical locations adjacent or proximate to the geographical feature.",
+      "23. A data structure stored in a non-transitory memory of a server, the data structure for use in performing location search queries received from a client system distinct from the server, comprising: a plurality of documents that includes information relating to geographic features, wherein a respective document in the plurality of documents corresponds to a geographical feature at a geographical location and includes geographical location information and supplemental information relating to the geographical location of the corresponding geographical feature, the geographical location information including key words corresponding to one or more geographical locations, one or more regions associated with the one or more geographical locations, synonyms for the key words, and key words that incorrectly describe the geographical feature, and wherein the supplemental information includes reference coordinates corresponding to the one or more geographical locations.",
+      "24. The data structure of claim 23 , wherein the key words that incorrectly describe the geographical feature are selected from the group consisting of: misspellings of terms that describe the geographical feature; cities adjacent or proximate to a city that includes the geographical feature; landmarks adjacent or proximate to the geographical feature; and geographical locations adjacent or proximate to the geographical feature.",
+      "25. The data structure of claim 23 , wherein the reference coordinates include latitude and longitude for the one or more geographical locations.",
+      "26. The data structure of claim 23 , wherein the reference coordinates include regions surrounding the one or more geographical locations, and wherein the regions are less than a pre-determined size.",
+      "27. The data structure of claim 23 , wherein the data structure is compatible with a hypertext markup language (HTML).",
+      "28. The data structure of claim 23 , wherein the geographical location information in the respective document is insensitive to an order of terms in a location search query."
+    ],
+    "independent_claims": [
+      "1. A computer-implemented method for performing a location search, comprising: at a server system including one or more processors and memory storing one or more programs, the one or more processors executing the one or more programs to perform the operations of: receiving, from a client system distinct from the server, a location search query for a desired geographical location; determining key words corresponding to the location search query, wherein at least a subset of the key words incorrectly describe the desired geographical location; searching for geographical locations corresponding to the key words, including searching an index of documents to identify one or more documents that correspond to the key words in the location search query, wherein each of the identified documents corresponds to a geographical feature at a geographical location and includes terms matching the key words of the location search query, and wherein the terms matching the key words of the location search query include terms that incorrectly describe the geographical feature; and providing, to the client system, a map to be displayed at the client system, the map including one or more location tags at the one or more geographical locations corresponding to the one or more identified documents.",
+      "19. A search engine system, comprising: one or more central processing units to execute programs; memory; and a program, stored in the memory and executed by the one or more central processing units, the program including: instructions for receiving, from a client system distinct from the search engine system, a location search query for a desired geographical location; instructions for determining key words corresponding to the location search query, wherein at least a subset of the key words incorrectly describe the desired geographical location; instructions for searching an index of documents to identify one or more documents that correspond to the key words in the location search query, wherein each of the identified documents corresponds to a geographical feature at a geographical location and includes terms matching the key words of the location search query, and wherein the terms matching the key words of the location search query include terms that incorrectly describe the geographical feature; and instructions for providing, to a client system, a map to be displayed at the client system, the map including one or more location tags at one or more geographical locations corresponding to the one or more identified documents.",
+      "21. A non-transitory computer readable storage medium storing one or more programs for execution by one of more processors of a computer system, the one or more programs comprising: instructions for receiving, from a client system distinct from the computer system, a location search query for a desired geographical location; instructions for determining key words corresponding to the location search query, wherein at least a subset of the key words incorrectly describe the desired geographical location; instructions for searching an index of documents to identify one or more documents that correspond to the key words in the location search query, wherein each of the identified documents corresponds to a geographical feature at a geographical location and includes terms matching the key words of the location search query, and wherein the terms matching the key words of the location search query include terms that incorrectly describe the geographical feature; and instructions for providing, to a client system, a map to be displayed at the client system, the map including one or more location tags at one or more geographical locations corresponding to the one or more identified documents.",
+      "23. A data structure stored in a non-transitory memory of a server, the data structure for use in performing location search queries received from a client system distinct from the server, comprising: a plurality of documents that includes information relating to geographic features, wherein a respective document in the plurality of documents corresponds to a geographical feature at a geographical location and includes geographical location information and supplemental information relating to the geographical location of the corresponding geographical feature, the geographical location information including key words corresponding to one or more geographical locations, one or more regions associated with the one or more geographical locations, synonyms for the key words, and key words that incorrectly describe the geographical feature, and wherein the supplemental information includes reference coordinates corresponding to the one or more geographical locations."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Florian Michel Buron",
+      "Ramesh Balakrishnan",
+      "James Christopher Norris",
+      "James Robert Muller",
+      "Thai Tran",
+      "Lars Eilstrup Rasmussen"
+    ],
+    "priority_date": "2006-01-27",
+    "filing_date": "2010-06-21",
+    "publication_date": "2011-03-22",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9537",
+      "Y10S707/00",
+      "Y10S707/912",
+      "Y10S707/918",
+      "Y10S707/919",
+      "Y10S707/921"
+    ],
+    "family": [
+      {
+        "number": "US7747598B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Geographic coding for location search queries"
+      }
+    ],
+    "cited_by_count": 249
+  },
+  "analysis": {
+    "title_it": "Geocodifica per query di ricerca locale",
+    "summary": "Il brevetto affronta il problema delle query di localizzazione (indirizzi, luoghi) che non seguono formati rigidi o contengono errori. Descrive un sistema che estrae parole chiave, le espande con sinonimi e termini prossimi, cerca in un indice di documenti geografici distribuito e restituisce risultati (mappe, elenchi) anche quando la query è ambigua o imprecisa.",
+    "theme": "local",
+    "seo_relevance": 3,
+    "scope": "Ricerca locale, mappe e query geografiche",
+    "what_it_claims": "La rivendicazione indipendente 1 protegge un metodo per eseguire una ricerca di localizzazione che riceve una query per una posizione geografica desiderata, determina parole chiave corrispondenti alla query (anche quando un sottoinsieme delle parole chiave descrive in modo errato la posizione desiderata), cerca in un indice di documenti per identificare uno o più documenti che corrispondono alle parole chiave, dove ciascun documento identificato corrisponde a una caratteristica geografica e include termini che corrispondono alle parole chiave (inclusi termini che descrivono in modo errato la caratteristica geografica), e fornisce al sistema client una mappa con tag di localizzazione nelle posizioni geografiche corrispondenti ai documenti identificati.\n\nLa rivendicazione 2 specifica che i termini che descrivono in modo errato la caratteristica geografica includono errori di ortografia, città adiacenti o prossime, punti di riferimento adiacenti o prossimi e posizioni geografiche adiacenti o prossime. La rivendicazione 4 indica che la determinazione delle parole chiave include la rimozione di segni di punteggiatura e termini non geografici dalla query. La rivendicazione 5 aggiunge che le parole chiave possono includere sinonimi per uno o più termini nella query. La rivendicazione 6 contempla la determinazione di un'espressione canonica corrispondente alle parole chiave. La rivendicazione 9 protegge la determinazione di un punteggio per ciascuno dei documenti identificati. La rivendicazione 10 specifica che il punteggio è in accordo con la frequenza delle parole chiave in una pluralità di documenti, corrispondenze tra parole nel documento e parole chiave, e dimensioni delle caratteristiche geografiche corrispondenti alle parole chiave. La rivendicazione 11 prevede di fornire una sola posizione geografica se il miglior punteggio per un documento è maggiore di un multiplo predeterminato del punteggio successivo migliore in una classifica top-N. La rivendicazione 18 stabilisce che la ricerca nell'indice è indipendente dall'ordine delle parole chiave.\n\nLe rivendicazioni 19-22 proteggono un sistema di motore di ricerca con istruzioni per eseguire le operazioni descritte. Le rivendicazioni 23-28 proteggono una struttura dati memorizzata in memoria che include una pluralità di documenti con informazioni relative a caratteristiche geografiche, dove ciascun documento include informazioni sulla posizione geografica (parole chiave, regioni associate, sinonimi, parole chiave che descrivono in modo errato la caratteristica) e informazioni supplementari (coordinate di riferimento).",
+    "seo_reading": "La descrizione contempla un sistema per gestire query di localizzazione flessibili che non seguono formati rigidi. Il documento spiega che le query vengono elaborate rimuovendo punteggiatura e termini non geografici (blocco 114), convertendo la query in forma canonica e generando un'espressione booleana (blocco 116) che può includere sinonimi, abbreviazioni espanse e correzioni di errori di ortografia comuni. L'espressione risultante è indipendente dall'ordine originale dei termini nella query.\n\nLa descrizione contempla un indice di documenti geografici distribuito su più computer (figura 3), dove ciascun documento (figura 4) include tag HTML/XML con nome esplicito della caratteristica, parole chiave associate, sinonimi (inclusi termini in lingue straniere, abbreviazioni, errori comuni), oggetti o regioni vicine, e informazioni supplementari come coordinate di latitudine/longitudine e intervalli di numeri civici. I documenti vengono distribuiti casualmente o pseudo-casualmente sugli indici usando funzioni hash e modulo per bilanciare il carico.\n\nIl sistema di punteggio contemplato nella descrizione (sezione relativa ai punteggi) include una formula complessa che considera la \"token mass\" (peso del tipo di termine: parole comuni, sinonimi, affissi di strada hanno pesi diversi), il \"relevance score\" (grado di corrispondenza testuale), l'\"element mass\" (basato sulla dimensione o tipo di caratteristica geografica e sul tipo di elemento informativo che corrisponde), e il \"feature rank\" (basato su frequenza del documento, dimensione della caratteristica o importanza/popolarità). La descrizione contempla anche un fattore di attenuazione del punteggio (SAF, sezione viewport-relative scoring) che favorisce risultati all'interno o vicini alla viewport corrente dell'utente, usando distanze angolari normalizzate e funzioni esponenziali.\n\nLa descrizione contempla diverse modalità di presentazione dei risultati: se il miglior punteggio supera un multiplo predeterminato del secondo miglior punteggio, viene fornita una sola posizione con mappa centrata (figura 5A); se più posizioni distinte hanno punteggi simili e condividono tutte le parole chiave, vengono mostrate con tag multipli su una mappa (figura 5B); altrimenti viene fornito un elenco di risultati top-N con mappe piccole per ciascuno (figura 6).\n\nPer la SEO locale, questo brevetto potrebbe suggerire che i sistemi di ricerca geografica potrebbero tollerare variazioni significative nelle query (ordine dei termini, errori, formati alternativi) e potrebbero utilizzare segnali di prossimità geografica e contesto della viewport per influenzare il ranking. Potrebbe indicare che le informazioni strutturate sulle località (coordinate, sinonimi, oggetti vicini) potrebbero essere rilevanti per la scoperta. Tuttavia, il brevetto descrive specificamente un sistema di geocodifica per mappe, non necessariamente il ranking organico generale di Google Search.",
+    "limits": [
+      "Il brevetto non dimostra che questo sistema sia utilizzato in Google Search organico: descrive esplicitamente un sistema per query di localizzazione in un contesto di mappe e geocodifica, non per il ranking generale dei risultati web.",
+      "Il brevetto non specifica quali segnali tra quelli contemplati siano effettivamente implementati o con quali pesi: la descrizione elenca molte opzioni (token mass, element mass, feature rank, SAF) senza indicare configurazioni operative concrete.",
+      "Il brevetto non dimostra che le tecniche di punteggio basate sulla viewport siano applicate al di fuori del contesto delle mappe: il fattore SAF è esplicitamente legato alla viewport corrente in un'applicazione di mappatura.",
+      "Essendo parte di una famiglia con continuation (US7747598B2), le rivendicazioni potrebbero sovrapporsi e non costituiscono prove indipendenti di implementazioni multiple."
+    ],
+    "implications": [
+      "Assicurarsi che le informazioni di localizzazione (NAP: nome, indirizzo, telefono) siano coerenti, complete e presenti in formati strutturati (schema.org LocalBusiness) per facilitare l'estrazione e l'indicizzazione corretta.",
+      "Includere varianti naturali e sinonimi dei nomi di località nelle descrizioni testuali, senza forzature, per coprire possibili variazioni nelle query degli utenti.",
+      "Fornire coordinate geografiche esplicite (latitudine/longitudine) tramite markup strutturato quando appropriato, per ridurre ambiguità nella localizzazione.",
+      "Considerare che i sistemi di ricerca locale potrebbero valutare la prossimità a punti di riferimento noti o località vicine: menzionare contesti geografici rilevanti in modo naturale può essere utile."
+    ],
+    "key_terms": [
+      {
+        "term": "canonical expression",
+        "explanation": "Forma normalizzata della query di localizzazione ottenuta rimuovendo punteggiatura, termini non geografici e rendendo la query indipendente dall'ordine delle parole"
+      },
+      {
+        "term": "token mass",
+        "explanation": "Peso assegnato a un tipo di termine (parola comune, sinonimo, affisso di strada) nella formula di punteggio, con valori predefiniti per ciascun tipo"
+      },
+      {
+        "term": "element mass",
+        "explanation": "Peso basato sulla dimensione o tipo di caratteristica geografica (paese, città, strada) e sul tipo di elemento informativo (nome esplicito, contesto, caratteristica vicina) che corrisponde alla query"
+      },
+      {
+        "term": "feature rank",
+        "explanation": "Indicatore di importanza di una caratteristica geografica, basato su frequenza del documento, dimensione geografica o popolarità della caratteristica"
+      },
+      {
+        "term": "score attenuation factor (SAF)",
+        "explanation": "Fattore che riduce il punteggio di risultati geografici in base alla loro distanza dalla viewport corrente dell'utente, favorendo risultati visibili o vicini"
+      },
+      {
+        "term": "viewport skirt region",
+        "explanation": "Regione anulare che circonda la viewport corrente, usata per attenuare gradualmente i punteggi di caratteristiche geografiche in base alla distanza dalla viewport"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T17:19:38.554156Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.08296008
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US9720933B2: Indicazione dello stato di apertura delle attività commerciali — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per determinare e indicare se le attività commerciali sono aperte al momento della ricerca o al momento dell&#39;arrivo stimato dell&#39;utente. Il sistema riceve una query, la posizione del dispositivo e l&#39;orario corrente, identifica risultati commerciali con orari di apertu" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us9720933b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US9720933B2: Indicazione dello stato di apertura delle attività commerciali — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per determinare e indicare se le attività commerciali sono aperte al momento della ricerca o al momento dell&#39;arrivo stimato dell&#39;utente. Il sistema riceve una query, la posizione del dispositivo e l&#39;orario corrente, identifica risultati commerciali con orari di apertu" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us9720933b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US9720933B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us9720933b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US9720933B2: Indicazione dello stato di apertura delle attivit\u00e0 commerciali",
+  "description": "Il brevetto descrive un sistema per determinare e indicare se le attivit\u00e0 commerciali sono aperte al momento della ricerca o al momento dell\u0027arrivo stimato dell\u0027utente. Il sistema riceve una query, la posizione del dispositivo e l\u0027orario corrente, identifica risultati commerciali con orari di apertura, calcola i tempi di viaggio e seleziona come \u0027aperte\u0027 solo le attivit\u00e0 che l\u0027utente pu\u00f2 raggiungere durante gli orari di apertura.",
+  "articleBody": "Il brevetto descrive un sistema per determinare e indicare se le attivit\u00e0 commerciali sono aperte al momento della ricerca o al momento dell\u0027arrivo stimato dell\u0027utente. Il sistema riceve una query, la posizione del dispositivo e l\u0027orario corrente, identifica risultati commerciali con orari di apertura, calcola i tempi di viaggio e seleziona come \u0027aperte\u0027 solo le attivit\u00e0 che l\u0027utente pu\u00f2 raggiungere durante gli orari di apertura.\n\nLa rivendicazione indipendente 1 copre un metodo implementato su computer che riceve una query da un dispositivo utente, l\u0027orario corrente e la posizione del dispositivo. Il sistema identifica risultati responsivi alla query, inclusi uno o pi\u00f9 risultati commerciali associati ciascuno a una posizione fisica e orari di apertura. Il metodo seleziona un sottoinsieme di risultati commerciali come \u0027open results\u0027 basandosi sugli orari di apertura, l\u0027orario corrente e i tempi di viaggio dalla posizione del dispositivo alle rispettive posizioni commerciali. La selezione include l\u0027identificazione della fonte degli orari di apertura per ciascun risultato, la determinazione di un punteggio di affidabilit\u00e0 per ciascuna fonte, la generazione di una misura di confidenza basata sul punteggio di affidabilit\u00e0 della fonte, e la selezione del sottoinsieme basata sulle misure di confidenza. Il sistema genera e fornisce dati per una pagina dei risultati che designa il sottoinsieme come risultati aperti, includendo un controllo che permette di alternare la visualizzazione dei risultati in base al loro stato di apertura in risposta all\u0027interazione dell\u0027utente.\n\nLa rivendicazione 2 specifica che la selezione include determinare un orario di arrivo per ciascun risultato commerciale aggiungendo all\u0027orario corrente il tempo di viaggio, e determinare che l\u0027orario di arrivo cade tra l\u0027inizio e la fine degli orari di apertura. La rivendicazione 3 descrive la fornitura di un\u0027etichetta sulla pagina dei risultati che designa almeno un sottoinsieme come \u0027open now results\u0027. La rivendicazione 4 copre il rilevamento dell\u0027interazione dell\u0027utente con il controllo e la fornitura di una seconda pagina che mostra solo i risultati aperti. La rivendicazione 5 aggiunge la determinazione che il numero di risultati aperti supera una soglia predeterminata prima di fornire il controllo. La rivendicazione 6 specifica la generazione di un punteggio di confidenza per ciascun risultato indicante la probabilit\u00e0 che la posizione commerciale sia aperta, selezionando i risultati con punteggio sopra una soglia. La rivendicazione 7 contempla l\u0027accesso a dati di check-in degli utenti presso una particolare posizione commerciale per determinare gli orari di apertura. La rivendicazione 8 aggiunge la ponderazione di ciascun punteggio di confidenza in base alla distanza tra la posizione del dispositivo e la rispettiva posizione commerciale. Le rivendicazioni 9-14 e 15-20 replicano il metodo in forma di sistema e supporto di memorizzazione non transitorio.\n\nLa descrizione contempla diversi segnali e meccanismi per determinare lo stato di apertura. Il paragrafo relativo alla figura 2 descrive l\u0027uso di \u0027confidence scores\u0027 (punteggi di confidenza 220) che indicano la probabilit\u00e0 che un risultato commerciale sia aperto all\u0027orario corrente, e \u0027arrival confidence scores\u0027 (punteggi di confidenza di arrivo 270) che indicano la probabilit\u00e0 che sia aperto quando l\u0027utente arriva. La descrizione menziona che le fonti di informazioni sugli orari di apertura possono avere diversi livelli di affidabilit\u00e0, con \u0027reliability scores\u0027 assegnati a ciascuna fonte. Le fonti affidabili possono essere incluse in una whitelist, mentre quelle inaffidabili in una blacklist. La descrizione contempla l\u0027uso di dati di check-in degli utenti, timestamp di fotografie scattate presso una posizione, e feedback degli utenti per determinare o verificare gli orari di apertura.\n\nLa descrizione specifica che i punteggi di confidenza possono essere basati sulla prossimit\u00e0 dell\u0027orario corrente ai confini degli orari di apertura: pi\u00f9 l\u0027orario \u00e8 vicino all\u0027apertura o chiusura, minore \u00e8 la confidenza. Viene menzionata una soglia di trenta minuti come esempio. I \u0027composite scores\u0027 (punteggi compositi 280) combinano i punteggi di confidenza con fattori come la distanza, applicando fattori di ponderazione: maggiore \u00e8 la distanza, minore \u00e8 il punteggio composito. La descrizione contempla una soglia di distanza massima oltre la quale i risultati non vengono designati come aperti. Il sistema potrebbe calcolare i tempi di viaggio usando dati di mappe, considerando velocit\u00e0 medie, condizioni di traffico correnti o previste, e diversi modi di trasporto (a piedi, auto, trasporto pubblico). I tempi di viaggio possono essere rappresentati come funzioni di distribuzione di probabilit\u00e0 (PDF) con varianza che dipende dal modo di trasporto e dall\u0027orario.\n\nPer la SEO locale, questo brevetto potrebbe significare che la visibilit\u00e0 nei risultati \u0027open now\u0027 dipenda non solo dagli orari dichiarati, ma anche dalla loro affidabilit\u00e0 e coerenza tra fonti diverse. Le attivit\u00e0 con orari verificati da pi\u00f9 fonti o da fonti affidabili potrebbero avere maggiore probabilit\u00e0 di essere mostrate come aperte. La distanza dell\u0027utente e i tempi di viaggio stimati potrebbero influenzare quali attivit\u00e0 vengono designate come aperte, anche se tecnicamente lo sono. Un\u0027attivit\u00e0 che sta per chiudere potrebbe non essere mostrata come aperta se l\u0027utente \u00e8 troppo lontano per arrivarci in tempo. La descrizione contempla la presentazione selettiva del controllo filtro basata sul numero di risultati aperti e sul numero totale di risultati, suggerendo che la funzionalit\u00e0 venga attivata solo quando \u00e8 ritenuta utile.",
+  "wordCount": 831,
+  "datePublished": "2026-10-29T17:23:07.351394+00:00",
+  "dateModified": "2026-10-29T17:23:07.351394+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us9720933b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Indicating location status",
+    "identifier": "US9720933B2",
+    "url": "https://patents.google.com/patent/US9720933B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US9720933B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US9720933B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Indicazione dello stato di apertura delle attività commerciali</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Indicating location status</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per determinare e indicare se le attività commerciali sono aperte al momento della ricerca o al momento dell&#39;arrivo stimato dell&#39;utente. Il sistema riceve una query, la posizione del dispositivo e l&#39;orario corrente, identifica risultati commerciali con orari di apertura, calcola i tempi di viaggio e seleziona come &#39;aperte&#39; solo le attività che l&#39;utente può raggiungere durante gli orari di apertura.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, risultati di ricerca locale per attività commerciali</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">01 Agosto 2017</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2011-10-26</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Ricerca locale</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo implementato su computer che riceve una query da un dispositivo utente, l&#39;orario corrente e la posizione del dispositivo. Il sistema identifica risultati responsivi alla query, inclusi uno o più risultati commerciali associati ciascuno a una posizione fisica e orari di apertura. Il metodo seleziona un sottoinsieme di risultati commerciali come &#39;open results&#39; basandosi sugli orari di apertura, l&#39;orario corrente e i tempi di viaggio dalla posizione del dispositivo alle rispettive posizioni commerciali. La selezione include l&#39;identificazione della fonte degli orari di apertura per ciascun risultato, la determinazione di un punteggio di affidabilità per ciascuna fonte, la generazione di una misura di confidenza basata sul punteggio di affidabilità della fonte, e la selezione del sottoinsieme basata sulle misure di confidenza. Il sistema genera e fornisce dati per una pagina dei risultati che designa il sottoinsieme come risultati aperti, includendo un controllo che permette di alternare la visualizzazione dei risultati in base al loro stato di apertura in risposta all&#39;interazione dell&#39;utente.</p>
+      <p>La rivendicazione 2 specifica che la selezione include determinare un orario di arrivo per ciascun risultato commerciale aggiungendo all&#39;orario corrente il tempo di viaggio, e determinare che l&#39;orario di arrivo cade tra l&#39;inizio e la fine degli orari di apertura. La rivendicazione 3 descrive la fornitura di un&#39;etichetta sulla pagina dei risultati che designa almeno un sottoinsieme come &#39;open now results&#39;. La rivendicazione 4 copre il rilevamento dell&#39;interazione dell&#39;utente con il controllo e la fornitura di una seconda pagina che mostra solo i risultati aperti. La rivendicazione 5 aggiunge la determinazione che il numero di risultati aperti supera una soglia predeterminata prima di fornire il controllo. La rivendicazione 6 specifica la generazione di un punteggio di confidenza per ciascun risultato indicante la probabilità che la posizione commerciale sia aperta, selezionando i risultati con punteggio sopra una soglia. La rivendicazione 7 contempla l&#39;accesso a dati di check-in degli utenti presso una particolare posizione commerciale per determinare gli orari di apertura. La rivendicazione 8 aggiunge la ponderazione di ciascun punteggio di confidenza in base alla distanza tra la posizione del dispositivo e la rispettiva posizione commerciale. Le rivendicazioni 9-14 e 15-20 replicano il metodo in forma di sistema e supporto di memorizzazione non transitorio.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi segnali e meccanismi per determinare lo stato di apertura. Il paragrafo relativo alla figura 2 descrive l&#39;uso di &#39;confidence scores&#39; (punteggi di confidenza 220) che indicano la probabilità che un risultato commerciale sia aperto all&#39;orario corrente, e &#39;arrival confidence scores&#39; (punteggi di confidenza di arrivo 270) che indicano la probabilità che sia aperto quando l&#39;utente arriva. La descrizione menziona che le fonti di informazioni sugli orari di apertura possono avere diversi livelli di affidabilità, con &#39;reliability scores&#39; assegnati a ciascuna fonte. Le fonti affidabili possono essere incluse in una whitelist, mentre quelle inaffidabili in una blacklist. La descrizione contempla l&#39;uso di dati di check-in degli utenti, timestamp di fotografie scattate presso una posizione, e feedback degli utenti per determinare o verificare gli orari di apertura.</p>
+      <p>La descrizione specifica che i punteggi di confidenza possono essere basati sulla prossimità dell&#39;orario corrente ai confini degli orari di apertura: più l&#39;orario è vicino all&#39;apertura o chiusura, minore è la confidenza. Viene menzionata una soglia di trenta minuti come esempio. I &#39;composite scores&#39; (punteggi compositi 280) combinano i punteggi di confidenza con fattori come la distanza, applicando fattori di ponderazione: maggiore è la distanza, minore è il punteggio composito. La descrizione contempla una soglia di distanza massima oltre la quale i risultati non vengono designati come aperti. Il sistema potrebbe calcolare i tempi di viaggio usando dati di mappe, considerando velocità medie, condizioni di traffico correnti o previste, e diversi modi di trasporto (a piedi, auto, trasporto pubblico). I tempi di viaggio possono essere rappresentati come funzioni di distribuzione di probabilità (PDF) con varianza che dipende dal modo di trasporto e dall&#39;orario.</p>
+      <p>Per la SEO locale, questo brevetto potrebbe significare che la visibilità nei risultati &#39;open now&#39; dipenda non solo dagli orari dichiarati, ma anche dalla loro affidabilità e coerenza tra fonti diverse. Le attività con orari verificati da più fonti o da fonti affidabili potrebbero avere maggiore probabilità di essere mostrate come aperte. La distanza dell&#39;utente e i tempi di viaggio stimati potrebbero influenzare quali attività vengono designate come aperte, anche se tecnicamente lo sono. Un&#39;attività che sta per chiudere potrebbe non essere mostrata come aperta se l&#39;utente è troppo lontano per arrivarci in tempo. La descrizione contempla la presentazione selettiva del controllo filtro basata sul numero di risultati aperti e sul numero totale di risultati, suggerendo che la funzionalità venga attivata solo quando è ritenuta utile.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che Google applichi questi meccanismi in produzione, né che i punteggi di affidabilità delle fonti o i composite scores descritti siano effettivamente utilizzati nel ranking dei risultati locali.</li>
+      <li>Non specifica quali fonti siano considerate affidabili o come vengano calcolati esattamente i punteggi di affidabilità, né fornisce soglie numeriche concrete per la selezione dei risultati aperti.</li>
+      <li>La descrizione contempla l&#39;uso di dati di check-in e altre informazioni degli utenti solo quando questi hanno dato il consenso esplicito, ma non chiarisce quanto questi dati influenzino effettivamente la determinazione degli orari rispetto ad altre fonti.</li>
+      <li>Il brevetto riguarda la presentazione dello stato di apertura nei risultati, non il ranking organico generale: essere designati come &#39;aperti&#39; non implica necessariamente una posizione più alta nei risultati non filtrati.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Mantenere gli orari di apertura aggiornati e coerenti su tutte le piattaforme (Google Business Profile, sito web, directory) per massimizzare l&#39;affidabilità delle informazioni e ridurre discrepanze tra fonti.</li>
+      <li class="pl-2">Verificare regolarmente che gli orari dichiarati su Google Business Profile siano corretti, specialmente in prossimità di festività o eventi speciali, poiché la prossimità agli orari di chiusura potrebbe ridurre la confidenza del sistema.</li>
+      <li class="pl-2">Considerare che la distanza degli utenti e i tempi di viaggio potrebbero influenzare la visibilità come &#39;aperto ora&#39;, rendendo particolarmente importante l&#39;accuratezza degli orari per attività in zone meno centrali o più difficili da raggiungere.</li>
+      <li class="pl-2">Monitorare e rispondere ai feedback degli utenti sugli orari di apertura, poiché la descrizione contempla l&#39;uso di segnalazioni degli utenti per aggiornare le informazioni sugli orari.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">open results</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sottoinsieme di risultati commerciali selezionati come aperti al momento della ricerca o al momento dell&#39;arrivo stimato dell&#39;utente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">confidence score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio che indica la probabilità che una posizione commerciale sia effettivamente aperta in un determinato momento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">arrival confidence score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio che indica la probabilità che una posizione commerciale sia aperta quando l&#39;utente vi arriva, basato sui tempi di viaggio stimati</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">reliability score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio assegnato a ciascuna fonte di informazioni sugli orari di apertura per indicarne l&#39;affidabilità</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">composite score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio combinato che integra confidence scores con altri fattori come distanza e tempi di viaggio per determinare se designare un risultato come aperto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">operating hours</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Orari di apertura associati a ciascuna attività commerciale, che indicano quando la posizione è accessibile o i servizi sono disponibili</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">estimated arrival time</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Orario stimato in cui l&#39;utente può arrivare presso una posizione commerciale, calcolato aggiungendo il tempo di viaggio all&#39;orario corrente</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US10268770B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US10268770B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Indicating location status</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US9460218B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9460218B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Indicating location status</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US11487830B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11487830B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Indicating location status</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US11921803B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11921803B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Indicating location status</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US12332957B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12332957B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Indicating location status</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US9720933B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

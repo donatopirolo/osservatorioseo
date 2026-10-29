@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US9189496B2: Indicizzazione di documenti per rilevanza geografica — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per indicizzare documenti georelevanti associando a ciascuno non solo l&#39;identificatore della propria area geografica, ma anche gli identificatori delle aree circostanti entro un raggio predefinito. Quando un utente esegue una ricerca locale, il motore può recuperare i " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us9189496b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US9189496B2: Indicizzazione di documenti per rilevanza geografica — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per indicizzare documenti georelevanti associando a ciascuno non solo l&#39;identificatore della propria area geografica, ma anche gli identificatori delle aree circostanti entro un raggio predefinito. Quando un utente esegue una ricerca locale, il motore può recuperare i " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us9189496b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US9189496B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us9189496b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US9189496B2: Indicizzazione di documenti per rilevanza geografica",
+  "description": "Il brevetto descrive un metodo per indicizzare documenti georelevanti associando a ciascuno non solo l\u0027identificatore della propria area geografica, ma anche gli identificatori delle aree circostanti entro un raggio predefinito. Quando un utente esegue una ricerca locale, il motore pu\u00f2 recuperare i documenti rilevanti semplicemente aggiungendo l\u0027identificatore geografico alla query, senza dover calcolare distanze in tempo reale.",
+  "articleBody": "Il brevetto descrive un metodo per indicizzare documenti georelevanti associando a ciascuno non solo l\u0027identificatore della propria area geografica, ma anche gli identificatori delle aree circostanti entro un raggio predefinito. Quando un utente esegue una ricerca locale, il motore pu\u00f2 recuperare i documenti rilevanti semplicemente aggiungendo l\u0027identificatore geografico alla query, senza dover calcolare distanze in tempo reale.\n\nLa rivendicazione indipendente 1 descrive un metodo che prevede l\u0027indicizzazione di una pluralit\u00e0 di documenti estraendo da ciascuno una posizione geografica, identificando un\u0027area geografica particolare associata a tale posizione, determinando una pluralit\u00e0 di aree geografiche entro un primo raggio dall\u0027area particolare (aree che non sono associate al documento), e aggiungendo all\u0027indice una pluralit\u00e0 di riferimenti che referenziano il documento sia tramite l\u0027area particolare sia tramite le aree circostanti. Il metodo include poi la ricezione di una query contenente termini geograficamente descrittivi, la determinazione di una regione di ricerca basata su tali termini, e l\u0027identificazione di documenti nell\u0027indice in base alla regione di ricerca.\n\nLa rivendicazione 3 specifica che l\u0027area geografica particolare e le aree circostanti possono essere associate a una mesh triangolare (triangular mesh), e i riferimenti nell\u0027indice sono associati ad aree in tale mesh. La rivendicazione 4 aggiunge che i riferimenti possono essere formati determinando coppie latitudine-longitudine associate all\u0027area particolare e alle aree circostanti.\n\nLa rivendicazione indipendente 5 descrive un dispositivo che estrae informazioni identificanti una posizione geografica da un documento, identifica una particolare regione geografica in cui tale posizione si trova, determina altre regioni geografiche almeno parzialmente entro un cerchio di un particolare raggio dalla regione particolare (regioni non associate al documento), aggiunge riferimenti multipli al documento nell\u0027indice referenziandolo tramite la regione particolare e le altre regioni, riceve una query di ricerca, determina un identificatore di posizione di ricerca basato sulla query, e identifica il documento dall\u0027indice basandosi su tale identificatore.\n\nLe rivendicazioni 6-8 specificano che l\u0027identificatore di posizione di ricerca pu\u00f2 essere determinato basandosi su una porzione della mesh triangolare gerarchica associata alla query (rivendicazione 6), su una posizione associata alla query (rivendicazione 7), o su una posizione e una distanza di ricerca associate alla query (rivendicazione 8). La rivendicazione 10 contempla la determinazione di altre aree geografiche situate al di fuori del primo raggio e l\u0027aggiunta di riferimenti aggiuntivi al documento per tali aree.\n\nLa descrizione contempla l\u0027uso di un modello di superficie terrestre basato su griglie gerarchiche, specificamente il Hierarchical Triangular Mesh (HTM), per suddividere la superficie terrestre in triangoli sferici a livelli successivi di dettaglio (paragrafi relativi a FIGS. 3A e 3B). Ogni suddivisione riceve un identificatore (ad esempio N201102) che pu\u00f2 fungere da location identifier associato a documenti georelevanti in database 135.\n\nLa descrizione fornisce esempi concreti di indicizzazione. Nel paragrafo relativo a FIG. 5, si descrive un documento associato a un\u0027attivit\u00e0 commerciale 505 nella regione triangolare 510. Assumendo un raggio predefinito di un miglio (circle 530), le regioni 520-1 attraverso 520-12 cadono almeno parzialmente entro tale raggio. Il documento viene quindi indicizzato con gli identificatori HTM di tutte queste regioni (510 e 520-1 attraverso 520-12), come illustrato nell\u0027atto 404 di FIG. 4.\n\nLa FIG. 6A mostra un business listing 605 per un ristorante ipotetico indicizzato con category information 610 e location identifiers 615, dove il primo identificatore (HTM region N201301) si riferisce alla regione specifica dell\u0027attivit\u00e0 e i rimanenti agli identificatori delle regioni circostanti. La FIG. 6B mostra una pagina web 620 contenente una recensione dello stesso ristorante, anch\u0027essa associata agli stessi identificatori geografici 625. La descrizione contempla anche l\u0027indicizzazione con pi\u00f9 set di location identifiers basati su raggi predefiniti diversi (FIG. 7), ad esempio un set per un miglio (location identifiers 710 con label \":1\") e uno per cinque miglia (location identifiers 720 con label \":5\").\n\nPer quanto riguarda l\u0027elaborazione delle query, la descrizione contempla (FIG. 8, atto 802) l\u0027aggiunta dell\u0027identificatore di posizione alla query di ricerca. Ad esempio, la query \"coffee shops\" con identificatore N03013 diventa \"coffee shops N03013\", e se si cerca entro cinque miglia diventa \"coffee shops N03013:5\". La FIG. 9 descrive un approccio alternativo quando il raggio di ricerca scelto dall\u0027utente non corrisponde a un raggio pre-indicizzato: si determina il raggio pre-indicizzato pi\u00f9 vicino ma non superiore (atto 902), si localizzano le regioni entro la differenza di raggio (atto 903), e si modifica la query aggiungendo gli identificatori come operazione OR logica (atto 904).\n\nPer la SEO, questo brevetto potrebbe suggerire che Google Local Search valorizzi documenti che hanno segnali geografici chiari e specifici. La tecnica di indicizzazione multipla potrebbe spiegare come documenti situati appena fuori da un\u0027area di ricerca specificata possano comunque apparire nei risultati locali. Tuttavia, il brevetto si concentra sull\u0027efficienza computazionale dell\u0027indicizzazione e del recupero, non sui fattori di ranking. Non fornisce indicazioni su come i documenti georelevanti vengano ordinati nei risultati o su quali segnali determinino la rilevanza geografica iniziale di un documento (oltre agli indirizzi postali menzionati genericamente).",
+  "wordCount": 803,
+  "datePublished": "2026-10-29T17:21:44.914909+00:00",
+  "dateModified": "2026-10-29T17:21:44.914909+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us9189496b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Indexing documents according to geographical relevance",
+    "identifier": "US9189496B2",
+    "url": "https://patents.google.com/patent/US9189496B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US9189496B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US9189496B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Indicizzazione di documenti per rilevanza geografica</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Indexing documents according to geographical relevance</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per indicizzare documenti georelevanti associando a ciascuno non solo l&#39;identificatore della propria area geografica, ma anche gli identificatori delle aree circostanti entro un raggio predefinito. Quando un utente esegue una ricerca locale, il motore può recuperare i documenti rilevanti semplicemente aggiungendo l&#39;identificatore geografico alla query, senza dover calcolare distanze in tempo reale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Ricerca locale, business listing e documenti georelevanti</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">17 Novembre 2015</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2004-12-30</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Ricerca locale</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">11</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 descrive un metodo che prevede l&#39;indicizzazione di una pluralità di documenti estraendo da ciascuno una posizione geografica, identificando un&#39;area geografica particolare associata a tale posizione, determinando una pluralità di aree geografiche entro un primo raggio dall&#39;area particolare (aree che non sono associate al documento), e aggiungendo all&#39;indice una pluralità di riferimenti che referenziano il documento sia tramite l&#39;area particolare sia tramite le aree circostanti. Il metodo include poi la ricezione di una query contenente termini geograficamente descrittivi, la determinazione di una regione di ricerca basata su tali termini, e l&#39;identificazione di documenti nell&#39;indice in base alla regione di ricerca.</p>
+      <p>La rivendicazione 3 specifica che l&#39;area geografica particolare e le aree circostanti possono essere associate a una mesh triangolare (triangular mesh), e i riferimenti nell&#39;indice sono associati ad aree in tale mesh. La rivendicazione 4 aggiunge che i riferimenti possono essere formati determinando coppie latitudine-longitudine associate all&#39;area particolare e alle aree circostanti.</p>
+      <p>La rivendicazione indipendente 5 descrive un dispositivo che estrae informazioni identificanti una posizione geografica da un documento, identifica una particolare regione geografica in cui tale posizione si trova, determina altre regioni geografiche almeno parzialmente entro un cerchio di un particolare raggio dalla regione particolare (regioni non associate al documento), aggiunge riferimenti multipli al documento nell&#39;indice referenziandolo tramite la regione particolare e le altre regioni, riceve una query di ricerca, determina un identificatore di posizione di ricerca basato sulla query, e identifica il documento dall&#39;indice basandosi su tale identificatore.</p>
+      <p>Le rivendicazioni 6-8 specificano che l&#39;identificatore di posizione di ricerca può essere determinato basandosi su una porzione della mesh triangolare gerarchica associata alla query (rivendicazione 6), su una posizione associata alla query (rivendicazione 7), o su una posizione e una distanza di ricerca associate alla query (rivendicazione 8). La rivendicazione 10 contempla la determinazione di altre aree geografiche situate al di fuori del primo raggio e l&#39;aggiunta di riferimenti aggiuntivi al documento per tali aree.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla l&#39;uso di un modello di superficie terrestre basato su griglie gerarchiche, specificamente il Hierarchical Triangular Mesh (HTM), per suddividere la superficie terrestre in triangoli sferici a livelli successivi di dettaglio (paragrafi relativi a FIGS. 3A e 3B). Ogni suddivisione riceve un identificatore (ad esempio N201102) che può fungere da location identifier associato a documenti georelevanti in database 135.</p>
+      <p>La descrizione fornisce esempi concreti di indicizzazione. Nel paragrafo relativo a FIG. 5, si descrive un documento associato a un&#39;attività commerciale 505 nella regione triangolare 510. Assumendo un raggio predefinito di un miglio (circle 530), le regioni 520-1 attraverso 520-12 cadono almeno parzialmente entro tale raggio. Il documento viene quindi indicizzato con gli identificatori HTM di tutte queste regioni (510 e 520-1 attraverso 520-12), come illustrato nell&#39;atto 404 di FIG. 4.</p>
+      <p>La FIG. 6A mostra un business listing 605 per un ristorante ipotetico indicizzato con category information 610 e location identifiers 615, dove il primo identificatore (HTM region N201301) si riferisce alla regione specifica dell&#39;attività e i rimanenti agli identificatori delle regioni circostanti. La FIG. 6B mostra una pagina web 620 contenente una recensione dello stesso ristorante, anch&#39;essa associata agli stessi identificatori geografici 625. La descrizione contempla anche l&#39;indicizzazione con più set di location identifiers basati su raggi predefiniti diversi (FIG. 7), ad esempio un set per un miglio (location identifiers 710 con label &#34;:1&#34;) e uno per cinque miglia (location identifiers 720 con label &#34;:5&#34;).</p>
+      <p>Per quanto riguarda l&#39;elaborazione delle query, la descrizione contempla (FIG. 8, atto 802) l&#39;aggiunta dell&#39;identificatore di posizione alla query di ricerca. Ad esempio, la query &#34;coffee shops&#34; con identificatore N03013 diventa &#34;coffee shops N03013&#34;, e se si cerca entro cinque miglia diventa &#34;coffee shops N03013:5&#34;. La FIG. 9 descrive un approccio alternativo quando il raggio di ricerca scelto dall&#39;utente non corrisponde a un raggio pre-indicizzato: si determina il raggio pre-indicizzato più vicino ma non superiore (atto 902), si localizzano le regioni entro la differenza di raggio (atto 903), e si modifica la query aggiungendo gli identificatori come operazione OR logica (atto 904).</p>
+      <p>Per la SEO, questo brevetto potrebbe suggerire che Google Local Search valorizzi documenti che hanno segnali geografici chiari e specifici. La tecnica di indicizzazione multipla potrebbe spiegare come documenti situati appena fuori da un&#39;area di ricerca specificata possano comunque apparire nei risultati locali. Tuttavia, il brevetto si concentra sull&#39;efficienza computazionale dell&#39;indicizzazione e del recupero, non sui fattori di ranking. Non fornisce indicazioni su come i documenti georelevanti vengano ordinati nei risultati o su quali segnali determinino la rilevanza geografica iniziale di un documento (oltre agli indirizzi postali menzionati genericamente).</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non specifica come venga determinata inizialmente la rilevanza geografica di un documento web (oltre ai business listing con indirizzo), né quali segnali geografici vengano estratti dal contenuto.</li>
+      <li>Non descrive fattori di ranking o criteri di ordinamento dei risultati locali, concentrandosi esclusivamente sulla tecnica di indicizzazione e recupero.</li>
+      <li>La data di priorità è il 2004 e il contesto tecnologico è molto precedente all&#39;introduzione di funzionalità moderne come il local pack o l&#39;integrazione con Maps; non è chiaro quanto dell&#39;implementazione originale sia ancora in uso.</li>
+      <li>Il brevetto non dimostra che questa specifica tecnica di indicizzazione basata su HTM sia attualmente utilizzata in Google Search, né esclude l&#39;uso di tecniche alternative o complementari.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i segnali geografici nei documenti siano espliciti e coerenti: indirizzi completi strutturati, coordinate quando pertinenti, menzioni geografiche chiare nel contenuto.</li>
+      <li class="pl-2">Per attività locali, mantenere la coerenza delle informazioni geografiche (NAP: Name, Address, Phone) tra il sito web e i business listing esterni.</li>
+      <li class="pl-2">Considerare che la rilevanza geografica di un documento potrebbe estendersi oltre la posizione esatta, includendo aree circostanti; contenuti locali dovrebbero essere pertinenti per l&#39;intera area di servizio.</li>
+      <li class="pl-2">Documenti che menzionano o recensiscono attività locali potrebbero essere trattati come georelevanti anche se non sono direttamente associati all&#39;attività; citazioni e menzioni locali mantengono valore informativo.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">location identifier</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Identificatore che rappresenta un&#39;area geografica specifica, derivato da modelli come HTM, usato per indicizzare e recuperare documenti georelevanti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">Hierarchical Triangular Mesh (HTM)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Schema di partizionamento gerarchico che divide la superficie terrestre in triangoli sferici a livelli successivi di dettaglio, usato per generare location identifier</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">geographically relevant document</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documento che ha particolare rilevanza per una posizione geografica, come business listing o pagine web che trattano attività o argomenti locali</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">predetermined range</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Raggio predefinito (ad esempio un miglio o cinque miglia) usato per determinare quali aree geografiche circostanti associare a un documento durante l&#39;indicizzazione</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US7801897B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7801897B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Indexing documents according to geographical relevance</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US9189496B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

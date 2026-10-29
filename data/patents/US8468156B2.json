@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8468156B2",
+    "title": "Determining a geographic location relevant to a web page",
+    "abstract": "One embodiment of the present invention provides a system that facilitates searching through content which is accessible though web-based forms. During operation, the system receives a query containing keywords. Next, the system analyzes the query to create a structured query. The system then performs a lookup based on the structured query in a database containing entries describing the web-based forms. Next, the system ranks forms returned by the lookup, and uses the rankings and associated database entries to facilitate a search through content which is accessible through the forms.",
+    "claims": [
+      "1. A method of determining a geographic location most relevant to a web page, the method comprising: computing, by one or more processors, a geographic location score for each geographic location, of a plurality of geographic locations, and for each word, of a plurality of words, in a web page, the geographic location score for a geographic location and word estimating a relevance of the word to the geographic location; generating, by one or more processors, a total geographic location score for each geographic location of the plurality of geographic locations, the total geographic location score for a geographic location being derived from the geographic location scores for the geographic location; and selecting, by one or more processors, a geographic location from the plurality of geographic locations as the geographic location most relevant to the web page based on the total geographic location scores.",
+      "2. The method of claim 1 , wherein the selected geographic location most relevant to the web page has a total geographic location score that satisfies a particular threshold.",
+      "3. The method of claim 1 , wherein generating the total geographic location score for each of the plurality of geographic locations comprises summing the geographic location scores for each of the plurality of geographic locations.",
+      "4. The method of claim 1 , wherein the selected geographic location most relevant to the web page has a greatest total geographic location score of the total geographic location scores.",
+      "5. The method of claim 1 , wherein, when a word in the web page is a state name associated with a geographic location, the geographic location score for the geographic location and the word is proportional to an inverse document frequency of the word.",
+      "6. The method of claim 1 , wherein, when a word in the web page is a city name associated with a geographic location, the geographic location score for the geographic location and the word is based on an inverse document frequency of the word and a population of the city.",
+      "7. The method of claim 1 , wherein, when a word in the web page is a zip code associated with a geographic location, the geographic location score for the geographic location and the word is based on an inverse document frequency of the word and the population of a city represented by the zip code.",
+      "8. The method of claim 1 , wherein each geographic location, of the plurality of geographic locations, comprises a country.",
+      "9. The method of claim 1 , wherein each geographic location, of the plurality of geographic locations, comprises a state.",
+      "10. The method of claim 1 , wherein each geographic location, of the plurality of geographic locations, comprises a city.",
+      "11. A system comprising: one or more computers and one or more storage devices storing instructions that, when executed by the one or more computers, cause the one or more computers to: compute a geographic location score for each geographic location, of a plurality of geographic locations, and for each word of a plurality of words in a web page, the computed geographic location score for a geographic location and word estimating a relevance of the word to the geographic location; generate a total geographic location score for each geographic location of the plurality of geographic locations, the total geographic location score for a geographic location being derived from the geographic location scores for the geographic location; and select a geographic location from the plurality of geographic locations as a geographic location most relevant to the web page based on the total geographic location scores.",
+      "12. The system of claim 11 , wherein the selected geographic location most relevant to the web page has a total geographic location score that satisfies a particular threshold.",
+      "13. The system of claim 11 , wherein, when generating the total geographic location score for each of the plurality of geographic locations, at least one of the one or more computers is to sum the geographic location scores for each of the plurality of geographic locations.",
+      "14. The system of claim 11 , wherein the selected geographic location most relevant to the web page has a greatest total geographic location score of the total geographic location scores.",
+      "15. The system of claim 11 , wherein, when a word in the web page is a state name associated with a geographic location, the geographic location score for the geographic location and the word is proportional to an inverse document frequency of the word.",
+      "16. The system of claim 11 , wherein, when a word in the web page is a city name associated with a geographic location, the geographic location score for the geographic location and the word is based on an inverse document frequency of the word and a population of the city.",
+      "17. The system of claim 11 , wherein, when a word in the web page is a zip code associated with a geographic location, the geographic location score for the geographic location represented by the zip code is based on an inverse document frequency of the word and a population of a city represented by the zip code.",
+      "18. The system of claim 11 , wherein each geographic location, of the plurality of geographic locations, comprises a country.",
+      "19. The system of claim 11 , wherein each geographic location, of the plurality of geographic locations, comprises a state.",
+      "20. The system of claim 11 , wherein each geographic location, of the plurality of geographic locations, comprises a city."
+    ],
+    "independent_claims": [
+      "1. A method of determining a geographic location most relevant to a web page, the method comprising: computing, by one or more processors, a geographic location score for each geographic location, of a plurality of geographic locations, and for each word, of a plurality of words, in a web page, the geographic location score for a geographic location and word estimating a relevance of the word to the geographic location; generating, by one or more processors, a total geographic location score for each geographic location of the plurality of geographic locations, the total geographic location score for a geographic location being derived from the geographic location scores for the geographic location; and selecting, by one or more processors, a geographic location from the plurality of geographic locations as the geographic location most relevant to the web page based on the total geographic location scores.",
+      "11. A system comprising: one or more computers and one or more storage devices storing instructions that, when executed by the one or more computers, cause the one or more computers to: compute a geographic location score for each geographic location, of a plurality of geographic locations, and for each word of a plurality of words in a web page, the computed geographic location score for a geographic location and word estimating a relevance of the word to the geographic location; generate a total geographic location score for each geographic location of the plurality of geographic locations, the total geographic location score for a geographic location being derived from the geographic location scores for the geographic location; and select a geographic location from the plurality of geographic locations as a geographic location most relevant to the web page based on the total geographic location scores."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Alon Y. Halevy",
+      "Jayant Madhavan",
+      "David H. Ko"
+    ],
+    "priority_date": "2005-04-06",
+    "filing_date": "2012-03-19",
+    "publication_date": "2013-06-18",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/3331",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/951",
+      "G06F16/953",
+      "G06F40/00",
+      "G06F40/10",
+      "G06F40/166",
+      "G06F40/174"
+    ],
+    "family": [
+      {
+        "number": "US20120173507A1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Searching through content which is accesible through web-based forms"
+      }
+    ],
+    "cited_by_count": 92
+  },
+  "analysis": {
+    "title_it": "Determinazione della località geografica rilevante per una pagina web",
+    "summary": "Il brevetto affronta il problema di assegnare automaticamente una località geografica (paese, stato, città) a una pagina web analizzando le parole presenti nel testo. Il sistema calcola punteggi di rilevanza geografica per ciascuna parola e località, sommandoli per identificare la località più pertinente alla pagina.",
+    "theme": "local",
+    "seo_relevance": 4,
+    "scope": "Assegnazione geografica a pagine web, applicabile a Search",
+    "what_it_claims": "Le rivendicazioni indipendenti (claim 1 e 11) proteggono un metodo e un sistema per determinare la località geografica più rilevante per una pagina web. Il processo prevede tre passaggi fondamentali: calcolare un \"geographic location score\" per ogni località di una pluralità di località e per ogni parola di una pluralità di parole nella pagina web, dove il punteggio stima la rilevanza della parola rispetto alla località; generare un \"total geographic location score\" per ciascuna località derivato dai punteggi individuali; selezionare la località più rilevante in base ai punteggi totali.\n\nLe rivendicazioni dipendenti aggiungono dettagli significativi sul calcolo dei punteggi. La claim 2 specifica che la località selezionata deve soddisfare una soglia particolare. La claim 3 indica che il punteggio totale può essere ottenuto sommando i punteggi individuali. La claim 4 precisa che la località selezionata ha il punteggio totale maggiore. Le claims 5-7 definiscono come calcolare i punteggi per diversi tipi di entità geografiche: quando una parola è un nome di stato, il punteggio è proporzionale all'\"inverse document frequency\" (IDF) della parola (claim 5); quando è un nome di città, il punteggio si basa sull'IDF e sulla popolazione della città (claim 6); quando è un codice postale, il punteggio considera l'IDF e la popolazione della città rappresentata dal codice (claim 7). Le claims 8-10 e 18-20 specificano che le località possono essere paesi, stati o città.",
+    "seo_reading": "La descrizione contempla un sistema di scoring articolato che combina diversi fattori. Nel paragrafo sulla \"Location Prediction\", il brevetto descrive una gerarchia a due livelli: il primo include tutti i paesi del mondo (eccetto gli USA) e gli stati USA, il secondo include le città. Il sistema assume che i nomi delle città siano univoci all'interno di ciascun paese o stato USA.\n\nIl calcolo del punteggio di località per uno stato si basa sulla formula L(si) che somma i contributi Ls(wj, si) di ciascuna parola. La descrizione contempla tre modalità di calcolo: per i nomi di stato (o abbreviazioni), il contributo è Cstate × idf(wj); per i nomi di città, è Ccity × idf(wj) × popl(wj, si) dove popl dipende dalla popolazione; per i codici postali, è Czip × idf(wj) × popl(wj, si). Il punteggio di popolazione è definito come 1 + log(max(population, 10000)/10000) per le città, o 2 altrimenti. L'IDF è calcolato come 1.5 × log(5)/log(5 + count(w)), variando da 1.5 a 0 in base alla frequenza.\n\nLa descrizione contempla anche un processo iterativo di \"probabilistic labeling\" per disambiguare località con nomi identici, usando feature come popolazione, IDF e co-localizzazione di candidati. Il sistema potrebbe quindi favorire pagine che menzionano località specifiche con maggiore popolazione o minore frequenza documentale, e potrebbe penalizzare menzioni ambigue o generiche. Per la SEO locale, questo suggerirebbe che la specificità geografica (città con popolazione significativa, codici postali) potrebbe pesare più di menzioni generiche di stati, e che la coerenza tra segnali geografici multipli nella stessa pagina potrebbe rafforzare l'assegnazione.\n\nTuttavia, il brevetto si concentra sull'assegnazione di località a pagine, non esplicitamente sul ranking locale. L'applicazione al ranking richiederebbe ulteriori passaggi non descritti nelle rivendicazioni.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Fee Related dal 2013), quindi non rappresenta più una protezione attiva e non può essere usato per inferire pratiche correnti di Google.",
+      "Le rivendicazioni proteggono l'assegnazione di una località a una pagina, non il suo utilizzo nel ranking o nella selezione dei risultati per query locali.",
+      "La descrizione menziona un contesto più ampio (ricerca attraverso web form e deep web) che non è coperto dalle rivendicazioni finali concesse, che si limitano alla geolocalizzazione.",
+      "Non viene specificato come i punteggi geografici interagiscano con altri segnali di ranking o come vengano utilizzati per servire risultati localizzati."
+    ],
+    "implications": [
+      "Assicurarsi che i segnali geografici nelle pagine siano coerenti e specifici: nomi di città con popolazione rilevante, codici postali e nomi di stato dovrebbero convergere verso la stessa località.",
+      "Evitare menzioni geografiche ambigue o contraddittorie nella stessa pagina, che potrebbero diluire i segnali di località o rendere difficile l'assegnazione geografica.",
+      "Per contenuti locali, privilegiare la specificità: menzionare città e codici postali oltre agli stati, poiché questi elementi ricevono pesi differenziati nel calcolo.",
+      "Considerare che termini geografici molto comuni (alta document frequency) potrebbero contribuire meno all'assegnazione geografica rispetto a località meno frequentemente menzionate."
+    ],
+    "key_terms": [
+      {
+        "term": "geographic location score",
+        "explanation": "Punteggio che stima la rilevanza di una singola parola rispetto a una specifica località geografica"
+      },
+      {
+        "term": "total geographic location score",
+        "explanation": "Punteggio complessivo per una località, derivato sommando i punteggi individuali delle parole"
+      },
+      {
+        "term": "inverse document frequency (IDF)",
+        "explanation": "Misura della rarità di una parola nel corpus, usata per pesare il contributo dei termini geografici"
+      },
+      {
+        "term": "population score",
+        "explanation": "Fattore basato sulla popolazione di una città, usato per pesare la rilevanza di nomi di città e codici postali"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T17:20:56.786390Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.06921804
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8260781B2",
+    "title": "Representative document selection for sets of duplicate documents in a web crawler system",
+    "abstract": "Duplicate documents are detected in a web crawler system. Upon receiving a newly crawled document, a set of documents, if any, sharing the same content as the newly crawled document is identified. Information identifying the newly crawled document and the selected set of documents is merged into information identifying a new set of documents. Duplicate documents are included and excluded from the new set of documents based on a query independent metric for each such document. A single representative document for the new set of documents is identified in accordance with a set of predefined conditions.",
+    "claims": [
+      "1. A method of detecting duplicate documents, comprising: at a server having one or more processors and memory: receiving documents from one or more databases of documents, wherein each received document is associated with a respective query independent score; generating a document content identifier for each received document, each document content identifier comprising an identifier of a respective document's content; indexing at least a subset of the received documents to produce an document index that maps terms to documents in the one or more databases of documents; and while performing the indexing, identifying respective sets of received documents having the same content identifier, selecting a single document in each respective set of documents, in accordance with the query independent scores associated with the documents in the respective set of documents, as a representative document for the respective set of received documents, indexing the representative document, and with respect to each respective set of received documents, including only the representative document in the document index.",
+      "2. The method of claim 1 , wherein the document content identifier for a respective document comprises a fixed length fingerprint of document content of the respective document.",
+      "3. The method of claim 1 , including computing respective scores for respective received documents, including a respective score for each document in a respective set of documents having the same content identifier, and selecting the representative document in accordance with at least the scores for the documents in the respective set of documents.",
+      "4. The method of claim 1 , further including performing a data processing operation, with respect to each respective set of received documents, on only the representative document for the respective set of received documents.",
+      "5. The method of claim 1 , wherein the query independent score associated with a respective document indicates the respective document's importance or popularity.",
+      "6. A system for detecting duplicated documents, comprising: one or more processors; memory storing one or more programs executable by the one or more processors, the one or more programs comprising instructions to: receive documents from one or more databases of documents, wherein each received document is associated with a respective query independent score; obtain a document content identifier for each received document, each document content identifier comprising an identifier of a respective document's content; index at least a subset of the received documents to produce an document index that maps terms to documents in the one or more databases of documents; and while performing the indexing, identify respective sets of received documents having the same content identifier, select a single document in each respective set of documents, in accordance with the query independent scores associated with the documents in the respective set of documents, as a representative document for the respective set of received documents, index the representative document, and with respect to each respective set of received documents, include only the representative document in the document index.",
+      "7. The system of claim 6 , wherein the document content identifier for a respective document comprises a fixed length fingerprint of document content of the respective document.",
+      "8. The system of claim 6 , wherein the one or more programs further comprise instructions to: compute respective scores for respective received documents, including a respective score for each document in a respective set of documents having the same content identifier; and select the representative document in accordance with at least the scores for the documents in the respective set of documents.",
+      "9. The system of claim 6 , wherein the one or more programs further comprise instructions that, when executed by the one or more processors, cause the system to perform a data processing operation, with respect to each respective set of received documents, on only the representative document for the respective set of received documents.",
+      "10. The system of claim 6 , wherein the query independent score associated with a respective document indicates the respective document's importance or popularity.",
+      "11. A non-transitory computer readable storage medium storing one or more programs that when executed by one or more processors of a computer system cause the computer system to: receive documents from one or more databases of documents, wherein each received document is associated with a respective query independent score; obtain a document content identifier for each received document, each document content identifier comprising an identifier of a respective document's content; index at least a subset of the received documents to produce an document index that maps terms to documents in the one or more databases of documents; and while performing the indexing, identify respective sets of received documents having the same content identifier; select a single document in each respective set of documents, in accordance with the query independent scores associated with the documents in the respective set of documents, as a representative document for the respective set of received documents; index the representative document; and with respect to each respective set of received documents, include only the representative document in the document index.",
+      "12. The non-transitory computer readable medium of claim 11 , wherein the document content identifier for a respective document comprises a fixed length fingerprint of document content of the respective document.",
+      "13. The non-transitory computer readable medium of claim 11 , wherein the one or more programs further comprising instructions that when executed by the one or more processors cause the computer system to: compute respective scores for respective received documents, including a respective score for each document in a respective set of documents having the same content identifier, and select the representative document for the respective set of documents in accordance with at least the computed scores for the documents in the respective set of documents.",
+      "14. The non-transitory computer readable medium of claim 11 , wherein the one or more programs further comprising instructions that when executed by the one or more processors cause the computer system to: perform a data processing operation, with respect to each respective set of received documents, on only the representative document for the respective set of received documents.",
+      "15. The non-transitory computer readable medium of claim 11 , wherein the query independent score associated with a respective document indicates the respective document's importance or popularity."
+    ],
+    "independent_claims": [
+      "1. A method of detecting duplicate documents, comprising: at a server having one or more processors and memory: receiving documents from one or more databases of documents, wherein each received document is associated with a respective query independent score; generating a document content identifier for each received document, each document content identifier comprising an identifier of a respective document's content; indexing at least a subset of the received documents to produce an document index that maps terms to documents in the one or more databases of documents; and while performing the indexing, identifying respective sets of received documents having the same content identifier, selecting a single document in each respective set of documents, in accordance with the query independent scores associated with the documents in the respective set of documents, as a representative document for the respective set of received documents, indexing the representative document, and with respect to each respective set of received documents, including only the representative document in the document index.",
+      "6. A system for detecting duplicated documents, comprising: one or more processors; memory storing one or more programs executable by the one or more processors, the one or more programs comprising instructions to: receive documents from one or more databases of documents, wherein each received document is associated with a respective query independent score; obtain a document content identifier for each received document, each document content identifier comprising an identifier of a respective document's content; index at least a subset of the received documents to produce an document index that maps terms to documents in the one or more databases of documents; and while performing the indexing, identify respective sets of received documents having the same content identifier, select a single document in each respective set of documents, in accordance with the query independent scores associated with the documents in the respective set of documents, as a representative document for the respective set of received documents, index the representative document, and with respect to each respective set of received documents, include only the representative document in the document index.",
+      "11. A non-transitory computer readable storage medium storing one or more programs that when executed by one or more processors of a computer system cause the computer system to: receive documents from one or more databases of documents, wherein each received document is associated with a respective query independent score; obtain a document content identifier for each received document, each document content identifier comprising an identifier of a respective document's content; index at least a subset of the received documents to produce an document index that maps terms to documents in the one or more databases of documents; and while performing the indexing, identify respective sets of received documents having the same content identifier; select a single document in each respective set of documents, in accordance with the query independent scores associated with the documents in the respective set of documents, as a representative document for the respective set of received documents; index the representative document; and with respect to each respective set of received documents, include only the representative document in the document index."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Daniel Dulitz",
+      "Alexandre A. Verstak",
+      "Sanjay Ghemawat",
+      "Jeffrey A. Dean"
+    ],
+    "priority_date": "2003-07-03",
+    "filing_date": "2011-07-19",
+    "publication_date": "2012-09-04",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9535",
+      "G06F16/951",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24578",
+      "G06F16/9538",
+      "G06F16/30",
+      "G06F16/35",
+      "G06F16/355",
+      "Y10S707/00",
+      "Y10S707/99931",
+      "Y10S707/99932",
+      "Y10S707/99933",
+      "Y10S707/99935"
+    ],
+    "family": [
+      {
+        "number": "US8868559B2",
+        "relation": "Continuation",
+        "direction": "child",
+        "title": "Representative document selection for a set of duplicate documents"
+      },
+      {
+        "number": "US7984054B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Representative document selection for sets of duplicate documents in a web crawler system"
+      },
+      {
+        "number": "US20150026170A1",
+        "relation": null,
+        "direction": "priority",
+        "title": "Representative Document Selection for a Set of Duplicate Documents"
+      }
+    ],
+    "cited_by_count": 91
+  },
+  "analysis": {
+    "title_it": "Selezione del documento rappresentativo per duplicati nel crawler",
+    "summary": "Il brevetto affronta il problema dei contenuti duplicati durante la fase di crawling e indicizzazione. Il sistema identifica documenti con contenuto identico tramite fingerprint, li raggruppa in classi di equivalenza e seleziona un unico documento rappresentativo (canonical) da includere nell'indice, basandosi su un punteggio query-independent e criteri di isteresi per evitare cambi frequenti.",
+    "theme": "duplicati_canonical",
+    "seo_relevance": 4,
+    "scope": "Web crawler e sistema di indicizzazione di Google Search",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 6, 11) coprono un metodo e sistema per rilevare documenti duplicati in fase di crawling. Il metodo prevede di ricevere documenti da uno o più database, ciascuno associato a un query independent score. Per ogni documento ricevuto viene generato un document content identifier che identifica il contenuto del documento. Durante l'indicizzazione dei documenti per produrre un indice che mappa termini a documenti, il sistema identifica insiemi di documenti ricevuti aventi lo stesso content identifier. Per ciascun insieme viene selezionato un singolo documento come representative document in base ai query independent score associati ai documenti nell'insieme. Solo il documento rappresentativo viene indicizzato e incluso nell'indice.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il document content identifier è un fingerprint a lunghezza fissa del contenuto del documento. La rivendicazione 3 contempla il calcolo di punteggi rispettivi per i documenti ricevuti, incluso un punteggio per ciascun documento nell'insieme avente lo stesso content identifier, e la selezione del documento rappresentativo in base almeno a tali punteggi. La rivendicazione 4 prevede l'esecuzione di operazioni di elaborazione dati solo sul documento rappresentativo per ciascun insieme. La rivendicazione 5 chiarisce che il query independent score associato a un documento indica l'importanza o la popolarità del documento. Le rivendicazioni 6-15 replicano la struttura per sistemi e supporti di memorizzazione non transitori.",
+    "seo_reading": "La descrizione contempla un sistema articolato per gestire duplicati durante il crawling. Il documento content identifier è descritto come un fingerprint a 64 bit del contenuto normalizzato del documento, generato tramite una funzione one-way simile a un hash. Analogamente, viene generato un URL fingerprint per identificare gli indirizzi dei documenti.\n\nLa descrizione distingue tre categorie di pagine: permanent redirect (con source URL e target URL ma senza contenuto), temporary redirect (con source URL, target URL e contenuto della pagina target), e pagine regolari. I duplicati sono identificati in tre scenari: due pagine con stesso contenuto ma URL diversi, due temporary redirect con stesso target URL ma source URL diversi, e una pagina regolare con URL uguale al target URL di un temporary redirect o con stesso contenuto.\n\nIl sistema mantiene tre strutture dati (paragrafi relativi a FIG. 4): Content Fingerprint Table (CFT) che mappa content fingerprint a classi di equivalenza, URL Fingerprint Table (UFT) per temporary redirect con stesso target URL, e Permanent Redirect Table (PRT) che mappa source URL fingerprint a target URL fingerprint. Ogni classe di equivalenza può contenere fino a K entry (descritto come valore predefinito tra 2 e 6, con esempio di 4 nelle figure), ciascuna con URL fingerprint, score e flag canonical.\n\nLa selezione del canonical avviene tramite un hysteresis test (step 1470-60, 1480-60) che previene cambi frequenti. Un nuovo documento diventa canonical solo se soddisfa due condizioni: (S_new - S_original) > H_arithmetic e S_new / S_original > H_multiplicative, dove S_new è il page rank del challenger e S_original quello del canonical corrente. Questo potrebbe significare che Google privilegia la stabilità dei risultati rispetto a piccole variazioni di popolarità, riducendo il churn nell'indice.\n\nLa descrizione contempla che il sistema operi su N segmenti dell'address space di Internet, processando un segmento per epoch (definito come un giorno in un'implementazione). Il sistema mantiene N+1 set di strutture dati, uno per ciascun segmento precedente più quello corrente (FIG. 11A). Durante un lookup, vengono eseguite N+1 ricerche che producono classi di equivalenza incomplete, poi unite in una classe completa. Un'implementazione alternativa (FIG. 11B) prevede il merge preventivo dei dati dei segmenti precedenti per ridurre le operazioni di lookup in tempo reale.\n\nPer la SEO, questo potrebbe significare che la scelta del documento da indicizzare tra duplicati dipende primariamente da un query independent score (descritto come page rank o metrica di importanza/popolarità nella rivendicazione 5), ma con una soglia di isteresi che rende difficile sostituire un canonical già stabilito. La descrizione contempla anche che l'anchor text dei link verso pagine non-canonical venga indicizzato come associato al canonical (step 1470-90), ampliando potenzialmente il contesto linguistico e tematico del documento indicizzato.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Fee Related dal 2012), quindi non vincola più Google né altri operatori e non fornisce indicazioni su cosa sia attualmente in uso.",
+      "La descrizione si riferisce a un'architettura di crawling segmentata con epoch giornalieri che potrebbe essere stata superata da sistemi più moderni di indicizzazione continua.",
+      "Il brevetto non specifica i valori concreti dei parametri H_arithmetic e H_multiplicative del test di isteresi, né il valore di K per il limite di entry per classe di equivalenza oltre agli esempi.",
+      "Non viene dimostrato come il sistema gestisca duplicati near-duplicate o contenuti sostanzialmente simili ma non identici, limitandosi a fingerprint di contenuto identico."
+    ],
+    "implications": [
+      "Consolidare contenuti duplicati su un unico URL preferenziale resta fondamentale: anche se il brevetto è scaduto, la logica di selezionare un rappresentante per duplicati è una necessità tecnica di qualsiasi motore di ricerca.",
+      "Mantenere stabile l'URL canonico nel tempo ha valore: cambi frequenti di URL per lo stesso contenuto potrebbero essere penalizzanti indipendentemente dall'applicazione di questo specifico brevetto.",
+      "L'anchor text di link verso varianti duplicate potrebbe contribuire al contesto del documento canonico: curare la diversità e qualità dei link verso tutte le versioni di un contenuto può avere senso.",
+      "Gestire correttamente i redirect permanenti (301) è critico: la descrizione mostra come questi vengano usati per sostituire URL obsoleti nelle strutture interne, un principio valido indipendentemente dal brevetto."
+    ],
+    "key_terms": [
+      {
+        "term": "document content identifier",
+        "explanation": "Identificatore del contenuto di un documento, tipicamente un fingerprint a lunghezza fissa generato dal contenuto normalizzato"
+      },
+      {
+        "term": "query independent score",
+        "explanation": "Punteggio assegnato a un documento indipendentemente dalla query, indicativo della sua importanza o popolarità (es. page rank)"
+      },
+      {
+        "term": "representative document",
+        "explanation": "Documento singolo selezionato da un insieme di duplicati per essere incluso nell'indice, chiamato anche canonical"
+      },
+      {
+        "term": "equivalence class",
+        "explanation": "Insieme di documenti che condividono lo stesso content identifier o target URL, quindi considerati duplicati"
+      },
+      {
+        "term": "hysteresis test",
+        "explanation": "Test che richiede un margine significativo (additivo e moltiplicativo) prima di sostituire il documento canonical di una classe di equivalenza"
+      },
+      {
+        "term": "fingerprint",
+        "explanation": "Valore a lunghezza fissa generato tramite funzione one-way che identifica univocamente contenuto o URL di un documento"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T17:20:20.437132Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07586136
+}

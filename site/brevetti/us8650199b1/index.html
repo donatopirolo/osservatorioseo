@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8650199B1: Rilevamento di similarità tra documenti tramite coppie ordinate di termini — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per rilevare documenti simili o quasi duplicati caratterizzando ciascun documento come un cluster composto da coppie ordinate di termini. Un documento viene considerato simile a un altro se condivide un numero sufficiente di coppie di termini con il cluster che rappres" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8650199b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8650199B1: Rilevamento di similarità tra documenti tramite coppie ordinate di termini — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per rilevare documenti simili o quasi duplicati caratterizzando ciascun documento come un cluster composto da coppie ordinate di termini. Un documento viene considerato simile a un altro se condivide un numero sufficiente di coppie di termini con il cluster che rappres" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8650199b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8650199B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us8650199b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8650199B1: Rilevamento di similarit\u00e0 tra documenti tramite coppie ordinate di termini",
+  "description": "Il brevetto descrive un metodo per rilevare documenti simili o quasi duplicati caratterizzando ciascun documento come un cluster composto da coppie ordinate di termini. Un documento viene considerato simile a un altro se condivide un numero sufficiente di coppie di termini con il cluster che rappresenta quel documento, preservando l\u0027informazione sull\u0027ordine relativo dei termini.",
+  "articleBody": "Il brevetto descrive un metodo per rilevare documenti simili o quasi duplicati caratterizzando ciascun documento come un cluster composto da coppie ordinate di termini. Un documento viene considerato simile a un altro se condivide un numero sufficiente di coppie di termini con il cluster che rappresenta quel documento, preservando l\u0027informazione sull\u0027ordine relativo dei termini.\n\nLe rivendicazioni indipendenti (1, 9, 17) proteggono un metodo e un sistema per determinare la similarit\u00e0 tra documenti. Il metodo riceve un documento e seleziona termini da esso per formare una pluralit\u00e0 di gruppi di termini (rivendicazione 1). Ogni gruppo di termini \u00e8 associato a un\u0027indicazione che un primo termine del gruppo occorre prima di un secondo termine all\u0027interno del documento ricevuto. Il sistema identifica, da un indice invertito di gruppi di termini, uno o pi\u00f9 cluster di una pluralit\u00e0 di cluster, dove ciascun cluster comprende un insieme di gruppi di termini per un rispettivo altro documento, con la stessa indicazione di ordinamento. Il metodo determina misure di similarit\u00e0 tra i gruppi di termini del documento ricevuto e quelli di ciascun cluster identificato, e sulla base di queste misure determina se il documento ricevuto \u00e8 simile all\u0027altro documento.\n\nLe rivendicazioni dipendenti aggiungono dettagli operativi rilevanti. La rivendicazione 2 contempla la memorizzazione di un valore che indica la quantit\u00e0 di gruppi di termini inclusi in ciascun cluster, basata sulla lunghezza del documento. La rivendicazione 3 introduce un campionamento con bias tale che i termini che occorrono in una particolare sezione del documento siano preferiti rispetto ad altri. La rivendicazione 4 specifica che il campionamento pu\u00f2 ignorare termini che appaiono nella porzione superiore e inferiore del documento. La rivendicazione 5 descrive la struttura dell\u0027indice invertito, che include informazioni sul cluster e una lista dei cluster che includono un particolare gruppo di termini. La rivendicazione 6 contempla la selezione di cluster che occorrono pi\u00f9 di una soglia e la determinazione di una metrica di similarit\u00e0. La rivendicazione 7 specifica che il primo e secondo termine di un gruppo possono essere non consecutivi in almeno alcuni gruppi. La rivendicazione 8 descrive la creazione dei gruppi di termini enumerando i possibili gruppi all\u0027interno del documento ricevuto e determinando la quantit\u00e0 di corrispondenze con i gruppi di termini del cluster.\n\nLa descrizione contempla diverse implementazioni che potrebbero essere rilevanti per comprendere come Google potrebbe gestire i contenuti duplicati. Il documento descrive l\u0027applicazione del metodo sia per il rilevamento di spam email (paragrafi relativi a FIG. 1) sia esplicitamente per motori di ricerca web (paragrafi relativi a FIG. 2), dove si afferma che \"duplicate documents can often be undesirable\" e che memorizzare duplicati influisce sia sull\u0027accuratezza che sull\u0027efficienza del motore di ricerca.\n\nLa descrizione contempla varie tecniche di campionamento per creare i cluster. Nel paragrafo relativo all\u0027Act 802, si menziona che il campionamento pu\u00f2 essere casuale ma con bias verso termini pi\u00f9 vicini tra loro, e che il numero di coppie pu\u00f2 essere basato sulla lunghezza del documento. Si contempla inoltre un bias verso termini meno frequenti nel corpus, evitando per\u00f2 termini molto rari come \"random sequences of symbols used by spammers\". Significativamente, la descrizione menziona che i termini all\u0027interno di tag HTML possono essere ignorati durante il campionamento.\n\nUn dettaglio interessante emerge nella discussione delle variazioni: la descrizione contempla un bias verso coppie che occorrono nella \"upper middle section\" del documento, con la motivazione esplicita che gli spammer potrebbero inserire termini \"junk\" all\u0027inizio o alla fine ma non nella sezione centrale superiore per non rendere l\u0027email illeggibile.\n\nPer la SEO, questo potrebbe significare che Google dispone di tecnologia per rilevare contenuti duplicati o quasi duplicati preservando l\u0027informazione sull\u0027ordine dei termini, rendendola pi\u00f9 robusta rispetto al metodo \"shingle\" tradizionale. Il sistema potrebbe essere resistente a manipolazioni come la sostituzione di sinonimi o lo scambio di aggettivi consecutivi, tecniche che la descrizione menziona esplicitamente come problematiche per altri metodi. La menzione specifica dell\u0027applicazione ai motori di ricerca suggerisce che questa tecnologia potrebbe essere stata considerata per identificare pagine duplicate nei risultati di ricerca o nell\u0027indicizzazione.",
+  "wordCount": 661,
+  "datePublished": "2026-10-29T17:21:35.307730+00:00",
+  "dateModified": "2026-10-29T17:21:35.307730+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8650199b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Document similarity detection",
+    "identifier": "US8650199B1",
+    "url": "https://patents.google.com/patent/US8650199B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8650199B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8650199B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Rilevamento di similarità tra documenti tramite coppie ordinate di termini</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Document similarity detection</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per rilevare documenti simili o quasi duplicati caratterizzando ciascun documento come un cluster composto da coppie ordinate di termini. Un documento viene considerato simile a un altro se condivide un numero sufficiente di coppie di termini con il cluster che rappresenta quel documento, preservando l&#39;informazione sull&#39;ordine relativo dei termini.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Rilevamento duplicati, applicabile a Search e spam email</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">11 Febbraio 2014</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2003-06-17</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Contenuti duplicati e canonicalizzazione</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 9, 17) proteggono un metodo e un sistema per determinare la similarità tra documenti. Il metodo riceve un documento e seleziona termini da esso per formare una pluralità di gruppi di termini (rivendicazione 1). Ogni gruppo di termini è associato a un&#39;indicazione che un primo termine del gruppo occorre prima di un secondo termine all&#39;interno del documento ricevuto. Il sistema identifica, da un indice invertito di gruppi di termini, uno o più cluster di una pluralità di cluster, dove ciascun cluster comprende un insieme di gruppi di termini per un rispettivo altro documento, con la stessa indicazione di ordinamento. Il metodo determina misure di similarità tra i gruppi di termini del documento ricevuto e quelli di ciascun cluster identificato, e sulla base di queste misure determina se il documento ricevuto è simile all&#39;altro documento.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli operativi rilevanti. La rivendicazione 2 contempla la memorizzazione di un valore che indica la quantità di gruppi di termini inclusi in ciascun cluster, basata sulla lunghezza del documento. La rivendicazione 3 introduce un campionamento con bias tale che i termini che occorrono in una particolare sezione del documento siano preferiti rispetto ad altri. La rivendicazione 4 specifica che il campionamento può ignorare termini che appaiono nella porzione superiore e inferiore del documento. La rivendicazione 5 descrive la struttura dell&#39;indice invertito, che include informazioni sul cluster e una lista dei cluster che includono un particolare gruppo di termini. La rivendicazione 6 contempla la selezione di cluster che occorrono più di una soglia e la determinazione di una metrica di similarità. La rivendicazione 7 specifica che il primo e secondo termine di un gruppo possono essere non consecutivi in almeno alcuni gruppi. La rivendicazione 8 descrive la creazione dei gruppi di termini enumerando i possibili gruppi all&#39;interno del documento ricevuto e determinando la quantità di corrispondenze con i gruppi di termini del cluster.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diverse implementazioni che potrebbero essere rilevanti per comprendere come Google potrebbe gestire i contenuti duplicati. Il documento descrive l&#39;applicazione del metodo sia per il rilevamento di spam email (paragrafi relativi a FIG. 1) sia esplicitamente per motori di ricerca web (paragrafi relativi a FIG. 2), dove si afferma che &#34;duplicate documents can often be undesirable&#34; e che memorizzare duplicati influisce sia sull&#39;accuratezza che sull&#39;efficienza del motore di ricerca.</p>
+      <p>La descrizione contempla varie tecniche di campionamento per creare i cluster. Nel paragrafo relativo all&#39;Act 802, si menziona che il campionamento può essere casuale ma con bias verso termini più vicini tra loro, e che il numero di coppie può essere basato sulla lunghezza del documento. Si contempla inoltre un bias verso termini meno frequenti nel corpus, evitando però termini molto rari come &#34;random sequences of symbols used by spammers&#34;. Significativamente, la descrizione menziona che i termini all&#39;interno di tag HTML possono essere ignorati durante il campionamento.</p>
+      <p>Un dettaglio interessante emerge nella discussione delle variazioni: la descrizione contempla un bias verso coppie che occorrono nella &#34;upper middle section&#34; del documento, con la motivazione esplicita che gli spammer potrebbero inserire termini &#34;junk&#34; all&#39;inizio o alla fine ma non nella sezione centrale superiore per non rendere l&#39;email illeggibile.</p>
+      <p>Per la SEO, questo potrebbe significare che Google dispone di tecnologia per rilevare contenuti duplicati o quasi duplicati preservando l&#39;informazione sull&#39;ordine dei termini, rendendola più robusta rispetto al metodo &#34;shingle&#34; tradizionale. Il sistema potrebbe essere resistente a manipolazioni come la sostituzione di sinonimi o lo scambio di aggettivi consecutivi, tecniche che la descrizione menziona esplicitamente come problematiche per altri metodi. La menzione specifica dell&#39;applicazione ai motori di ricerca suggerisce che questa tecnologia potrebbe essere stata considerata per identificare pagine duplicate nei risultati di ricerca o nell&#39;indicizzazione.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2014), quindi non fornisce indicazioni su tecnologie attualmente in uso o protette.</li>
+      <li>La descrizione menziona applicazioni sia per spam email sia per motori di ricerca, ma non specifica se o come questa tecnologia sia stata implementata in Google Search.</li>
+      <li>Il brevetto descrive un metodo di rilevamento ma non specifica quali azioni vengano intraprese sui duplicati rilevati (esclusione dall&#39;indice, canonicalizzazione, penalizzazioni).</li>
+      <li>La data di priorità è del 2003, quindi la tecnologia descritta precede di molto le attuali implementazioni di machine learning e potrebbe essere stata superata da approcci più moderni.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Mantenere contenuti originali con struttura e ordinamento dei termini distintivi resta fondamentale, indipendentemente dai metodi specifici di rilevamento duplicati.</li>
+      <li class="pl-2">Evitare tecniche di manipolazione superficiale del testo (sostituzione di sinonimi, riordino di aggettivi) che non cambiano sostanzialmente il contenuto, poiché sistemi avanzati potrebbero comunque rilevare la similarità.</li>
+      <li class="pl-2">Per contenuti legittimamente simili su più pagine, utilizzare segnali di canonicalizzazione espliciti piuttosto che affidarsi solo alla differenziazione del testo.</li>
+      <li class="pl-2">La qualità e l&#39;unicità del contenuto nella parte centrale superiore delle pagine potrebbe avere particolare rilevanza per la differenziazione, secondo la logica descritta nel brevetto.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">cluster</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un insieme di coppie ordinate di termini che caratterizza un documento nel modello di similarità</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">term groups</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Gruppi di termini (tipicamente coppie) dove il primo termine occorre prima del secondo nel documento, anche se non consecutivamente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">inverted index</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Struttura dati che elenca, per ogni coppia di termini, i cluster che contengono quella coppia</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">similarity metric</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura che descrive il grado di similarità tra documenti, calcolata in base al numero o percentuale di coppie di termini condivise</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">shingle method</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Metodo tradizionale di rilevamento duplicati basato su sequenze consecutive di parole, che il brevetto considera vulnerabile a manipolazioni</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US8209339B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8209339B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Document similarity detection</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8650199B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

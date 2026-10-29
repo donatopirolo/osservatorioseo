@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US7792883B2: Scoring basato sul viewport per query di ricerca locale — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema del ranking dei risultati nelle ricerche di luoghi geografici quando l&#39;utente ha già visualizzato una mappa. Propone di assegnare punteggi più alti ai luoghi che ricadono nella regione geografica attualmente mostrata (viewport) o nelle sue vicinanze, attenuando progr" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us7792883b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US7792883B2: Scoring basato sul viewport per query di ricerca locale — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema del ranking dei risultati nelle ricerche di luoghi geografici quando l&#39;utente ha già visualizzato una mappa. Propone di assegnare punteggi più alti ai luoghi che ricadono nella regione geografica attualmente mostrata (viewport) o nelle sue vicinanze, attenuando progr" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us7792883b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US7792883B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us7792883b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US7792883B2: Scoring basato sul viewport per query di ricerca locale",
+  "description": "Il brevetto affronta il problema del ranking dei risultati nelle ricerche di luoghi geografici quando l\u0027utente ha gi\u00e0 visualizzato una mappa. Propone di assegnare punteggi pi\u00f9 alti ai luoghi che ricadono nella regione geografica attualmente mostrata (viewport) o nelle sue vicinanze, attenuando progressivamente il punteggio per luoghi pi\u00f9 distanti.",
+  "articleBody": "Il brevetto affronta il problema del ranking dei risultati nelle ricerche di luoghi geografici quando l\u0027utente ha gi\u00e0 visualizzato una mappa. Propone di assegnare punteggi pi\u00f9 alti ai luoghi che ricadono nella regione geografica attualmente mostrata (viewport) o nelle sue vicinanze, attenuando progressivamente il punteggio per luoghi pi\u00f9 distanti.\n\nLe rivendicazioni indipendenti (1, 14, 15, 23) coprono un metodo implementato su computer per eseguire ricerche di luoghi geografici. Il metodo prevede di ricevere una query di ricerca locale, identificare documenti di caratteristiche geografiche (geographical feature documents) che soddisfano la query, dove ciascun documento corrisponde a una caratteristica geografica. I documenti identificati vengono poi classificati in base a uno score che si basa, almeno in parte, sulla prossimit\u00e0 delle caratteristiche geografiche a una regione geografica del viewport di un sistema client, producendo un insieme di documenti classificati. Infine, vengono forniti risultati che identificano almeno una caratteristica geografica corrispondente ai documenti classificati.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la regione del viewport corrisponde a una regione geografica visualizzata sul sistema client. La rivendicazione 3 contempla che il viewport possa corrispondere alla regione mostrata in risposta a una query di ricerca locale precedente. La rivendicazione 4 prevede che il viewport possa essere una regione geografica circolare che racchiude una regione rettangolare mostrata sul client. Le rivendicazioni 6, 7 e 8 riguardano la determinazione delle parole chiave: la 6 prevede la rimozione di segni di punteggiatura e termini non-location dalla query; la 7 contempla l\u0027inclusione di sinonimi per uno o pi\u00f9 termini; la 8 prevede la determinazione di un\u0027espressione canonica corrispondente alle parole chiave. La rivendicazione 9 specifica che i documenti di caratteristiche geografiche sono in un indice che include una pluralit\u00e0 di tali documenti. La rivendicazione 10 aggiunge che i documenti includono coordinate di riferimento corrispondenti alle caratteristiche geografiche. La rivendicazione 11 prevede che l\u0027identificazione dei documenti includa la determinazione di uno score per ciascun documento. La rivendicazione 12 introduce un criterio di selezione: fornire una singola caratteristica geografica se il miglior score \u00e8 maggiore di un multiplo predeterminato del secondo miglior score in un ranking top-N. La rivendicazione 13 prevede che i risultati possano includere un\u0027immagine di mappa corrispondente alla caratteristica geografica.\n\nLa descrizione contempla un sistema di scoring articolato che combina pi\u00f9 fattori. Il punteggio base per un documento candidato viene calcolato secondo la formula (blocco corrispondente alle equazioni nella descrizione): 1/E \u00d7 [somma degli IRi] \u00d7 FR \u00d7 SAF, dove IRi \u00e8 il query match score per ciascun termine della query, FR \u00e8 il feature rank che indica l\u0027importanza della caratteristica geografica, E \u00e8 un valore di normalizzazione e SAF \u00e8 un fattore di attenuazione del punteggio.\n\nIl valore IRi per una parola chiave include il prodotto di pesi: token mass (che varia in base al tipo di termine: stop words, street affix keywords, numeri, sinonimi hanno masse diverse, con un valore predefinito di 1 per le parole chiave ordinarie), relevance score (che varia in base al grado di corrispondenza testuale) ed element mass (che varia in funzione della dimensione o tipo della caratteristica geografica e del tipo di elemento informativo che corrisponde alla parola chiave). Il feature rank FR pu\u00f2 basarsi sulla document frequency o sulla dimensione geografica della caratteristica, con caratteristiche pi\u00f9 grandi che ricevono valori pi\u00f9 alti.\n\nIl fattore SAF (Score Attenuation Factor) \u00e8 il cuore del brevetto. La descrizione contempla (FIGS. 11-15) che SAF sia pari a 1 per caratteristiche geografiche che intersecano la regione del viewport corrente. Per caratteristiche nella viewport skirt region (una regione anello attorno al viewport), SAF viene calcolato come MinScore - e^(-K)/(1 - e^(-K)) + (1 - MinScore) \u00d7 e^(-K\u00d7X)/(1 - e^(-K)), dove X \u00e8 il rapporto tra la distanza della caratteristica dal viewport e la larghezza della skirt region. Per caratteristiche al di fuori della skirt region, SAF \u00e8 pari a MinScore (esempio: 0.2). La dimensione della skirt region dipende dalla dimensione del viewport secondo una funzione esponenziale (FIG. 14).\n\nPer la SEO locale, questo potrebbe significare che quando un utente esegue ricerche successive in un\u0027applicazione di mappe, i risultati geograficamente vicini alla mappa attualmente visualizzata potrebbero ricevere un boost significativo nel ranking. Un luogo che ricade nel viewport corrente potrebbe essere favorito di un fattore 5x rispetto a uno al di fuori della skirt region (se MinScore=0.2). Questo condizionale suggerirebbe che la prossimit\u00e0 geografica al contesto di ricerca precedente dell\u0027utente potrebbe influenzare fortemente quali risultati vengono mostrati per query ambigue. Tuttavia, sarebbe una forzatura estendere questo meccanismo alla ricerca web organica tradizionale, dove non esiste un viewport geografico esplicito.",
+  "wordCount": 755,
+  "datePublished": "2026-10-29T17:18:50.322300+00:00",
+  "dateModified": "2026-10-29T17:18:50.322300+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us7792883b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Viewport-relative scoring for location search queries",
+    "identifier": "US7792883B2",
+    "url": "https://patents.google.com/patent/US7792883B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US7792883B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US7792883B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Scoring basato sul viewport per query di ricerca locale</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Viewport-relative scoring for location search queries</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema del ranking dei risultati nelle ricerche di luoghi geografici quando l&#39;utente ha già visualizzato una mappa. Propone di assegnare punteggi più alti ai luoghi che ricadono nella regione geografica attualmente mostrata (viewport) o nelle sue vicinanze, attenuando progressivamente il punteggio per luoghi più distanti.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Ricerca locale, mappe geografiche (Google Maps o servizi simili)</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">07 Settembre 2010</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2006-12-11</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Ricerca locale</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">23</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 14, 15, 23) coprono un metodo implementato su computer per eseguire ricerche di luoghi geografici. Il metodo prevede di ricevere una query di ricerca locale, identificare documenti di caratteristiche geografiche (geographical feature documents) che soddisfano la query, dove ciascun documento corrisponde a una caratteristica geografica. I documenti identificati vengono poi classificati in base a uno score che si basa, almeno in parte, sulla prossimità delle caratteristiche geografiche a una regione geografica del viewport di un sistema client, producendo un insieme di documenti classificati. Infine, vengono forniti risultati che identificano almeno una caratteristica geografica corrispondente ai documenti classificati.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la regione del viewport corrisponde a una regione geografica visualizzata sul sistema client. La rivendicazione 3 contempla che il viewport possa corrispondere alla regione mostrata in risposta a una query di ricerca locale precedente. La rivendicazione 4 prevede che il viewport possa essere una regione geografica circolare che racchiude una regione rettangolare mostrata sul client. Le rivendicazioni 6, 7 e 8 riguardano la determinazione delle parole chiave: la 6 prevede la rimozione di segni di punteggiatura e termini non-location dalla query; la 7 contempla l&#39;inclusione di sinonimi per uno o più termini; la 8 prevede la determinazione di un&#39;espressione canonica corrispondente alle parole chiave. La rivendicazione 9 specifica che i documenti di caratteristiche geografiche sono in un indice che include una pluralità di tali documenti. La rivendicazione 10 aggiunge che i documenti includono coordinate di riferimento corrispondenti alle caratteristiche geografiche. La rivendicazione 11 prevede che l&#39;identificazione dei documenti includa la determinazione di uno score per ciascun documento. La rivendicazione 12 introduce un criterio di selezione: fornire una singola caratteristica geografica se il miglior score è maggiore di un multiplo predeterminato del secondo miglior score in un ranking top-N. La rivendicazione 13 prevede che i risultati possano includere un&#39;immagine di mappa corrispondente alla caratteristica geografica.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema di scoring articolato che combina più fattori. Il punteggio base per un documento candidato viene calcolato secondo la formula (blocco corrispondente alle equazioni nella descrizione): 1/E × [somma degli IRi] × FR × SAF, dove IRi è il query match score per ciascun termine della query, FR è il feature rank che indica l&#39;importanza della caratteristica geografica, E è un valore di normalizzazione e SAF è un fattore di attenuazione del punteggio.</p>
+      <p>Il valore IRi per una parola chiave include il prodotto di pesi: token mass (che varia in base al tipo di termine: stop words, street affix keywords, numeri, sinonimi hanno masse diverse, con un valore predefinito di 1 per le parole chiave ordinarie), relevance score (che varia in base al grado di corrispondenza testuale) ed element mass (che varia in funzione della dimensione o tipo della caratteristica geografica e del tipo di elemento informativo che corrisponde alla parola chiave). Il feature rank FR può basarsi sulla document frequency o sulla dimensione geografica della caratteristica, con caratteristiche più grandi che ricevono valori più alti.</p>
+      <p>Il fattore SAF (Score Attenuation Factor) è il cuore del brevetto. La descrizione contempla (FIGS. 11-15) che SAF sia pari a 1 per caratteristiche geografiche che intersecano la regione del viewport corrente. Per caratteristiche nella viewport skirt region (una regione anello attorno al viewport), SAF viene calcolato come MinScore - e^(-K)/(1 - e^(-K)) + (1 - MinScore) × e^(-K×X)/(1 - e^(-K)), dove X è il rapporto tra la distanza della caratteristica dal viewport e la larghezza della skirt region. Per caratteristiche al di fuori della skirt region, SAF è pari a MinScore (esempio: 0.2). La dimensione della skirt region dipende dalla dimensione del viewport secondo una funzione esponenziale (FIG. 14).</p>
+      <p>Per la SEO locale, questo potrebbe significare che quando un utente esegue ricerche successive in un&#39;applicazione di mappe, i risultati geograficamente vicini alla mappa attualmente visualizzata potrebbero ricevere un boost significativo nel ranking. Un luogo che ricade nel viewport corrente potrebbe essere favorito di un fattore 5x rispetto a uno al di fuori della skirt region (se MinScore=0.2). Questo condizionale suggerirebbe che la prossimità geografica al contesto di ricerca precedente dell&#39;utente potrebbe influenzare fortemente quali risultati vengono mostrati per query ambigue. Tuttavia, sarebbe una forzatura estendere questo meccanismo alla ricerca web organica tradizionale, dove non esiste un viewport geografico esplicito.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è specifico per ricerche di luoghi geografici in contesti con viewport (mappe), non dimostra che meccanismi simili si applichino alla ricerca web organica tradizionale o alla Local Search nei risultati SERP standard.</li>
+      <li>La descrizione contempla vari parametri configurabili (SkirtFactor, MinScore, K) ma non specifica quali valori siano effettivamente in uso in produzione, né se il sistema sia mai stato implementato.</li>
+      <li>Il brevetto risale al 2006 con concessione nel 2010: i sistemi di ranking locale di Google potrebbero essersi evoluti significativamente da allora, rendendo questi meccanismi obsoleti o sostituiti.</li>
+      <li>Non viene dimostrato come questo scoring interagisca con altri fattori di ranking locale come recensioni, prominenza, rilevanza testuale o segnali comportamentali degli utenti.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Per attività locali, mantenere informazioni geografiche precise e complete (coordinate, indirizzi completi) nei propri profili business resta fondamentale indipendentemente dai meccanismi di scoring specifici.</li>
+      <li class="pl-2">Ottimizzare la presenza per query locali non ambigue (includendo città, quartiere, punti di riferimento) riduce la dipendenza da meccanismi di disambiguazione basati sul contesto geografico dell&#39;utente.</li>
+      <li class="pl-2">Considerare che utenti che navigano mappe potrebbero vedere risultati diversi da utenti che cercano da SERP tradizionale, anche per la stessa query: testare la visibilità in entrambi i contesti.</li>
+      <li class="pl-2">Documentare varianti del nome dell&#39;attività, sinonimi locali e denominazioni alternative può aiutare il matching testuale indipendentemente dai fattori di prossimità geografica.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">viewport region</dt>
+        <dd class="text-on-surface-variant leading-relaxed">La regione geografica attualmente visualizzata sul dispositivo dell&#39;utente, tipicamente corrispondente alla mappa mostrata dopo una ricerca locale precedente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">viewport skirt region</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una regione anello che circonda il viewport, la cui dimensione varia in funzione della dimensione del viewport stesso, usata per attenuare progressivamente i punteggi</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">geographical feature document</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un documento nell&#39;indice che rappresenta una caratteristica geografica (strada, città, punto di interesse) con informazioni come parole chiave, sinonimi, coordinate e oggetti prossimi</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">Score Attenuation Factor (SAF)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore moltiplicativo applicato allo score che vale 1 per luoghi nel viewport, decresce esponenzialmente nella skirt region e raggiunge un minimo per luoghi distanti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">canonical expression</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Forma normalizzata della query di ricerca locale, indipendente dall&#39;ordine delle parole, ottenuta rimuovendo punteggiatura e termini non-location e includendo sinonimi</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">feature rank (FR)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura dell&#39;importanza di una caratteristica geografica, basata sulla sua dimensione geografica, frequenza di riferimento o popolarità</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/AU2007333558B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">AU2007333558B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Viewport-relative scoring for location search queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/WO2008073502A2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">WO2008073502A2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Viewport-relative scoring for location search queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US7792883B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US10275434B1",
+    "title": "Identifying a primary version of a document",
+    "abstract": "A system and method identifies a primary version out of different versions of the same document. The system selects a priority of authority for each document version based on a priority rule and information associated with the document version, and selects a primary version based on the priority of authority and information associated with the document version.",
+    "claims": [
+      "1. A method comprising: providing, to a server, a search query; receiving, by a user device and from the server, a set of search results that includes one or more respective search results that are each associated with a document; generating a search result display for each particular search result in the set of search results, wherein generating the search result display includes: rendering, on a display of the user device, a first hyperlink that references a first version of the document that is associated with the particular search result; rendering, on the display of the user device, publishing information related to the first version of the document, wherein the publishing information is different from the first hyperlink that references the first version of the document; rendering, on the display of the user device, a snippet from the first version of the document; and rendering, on the display of the user device, a second hyperlink that references a set of citing documents, wherein each citing document in the set of citing documents includes a citation to at least one version of the document.",
+      "2. The method of claim 1 , further comprising: determining a primary version of the document that is associated with the particular search result based at least in part on the source of the document, wherein the first version of the document is the primary version of the document.",
+      "3. The method of claim 1 , wherein rendering, on a display of the user device, the first hyperlink that references the first version of the document that is associated with the particular search result comprises: determining that there are multiple different versions of the document that are associated with the particular search result; and in response to determining that there are multiple different versions of the document that are associated with the particular search result, obtaining the title of the first version of the document for use as at least a portion of the anchor text for the first hyperlink.",
+      "4. The method of claim 3 , wherein generating a search result display further comprises: rendering, on a display of the user device, a hyperlink whose anchor text includes a count of the multiple different version of the document that were identified based on the search query.",
+      "5. The method of claim 1 , wherein rendering, on the display of the user device, publishing information related to the first version of the document comprises: obtaining one or more of a name of a first author, a year of publishing, a name of a publisher, or a combination thereof, for output on the display on the user device.",
+      "6. The method of claim 1 , further comprising: adjusting one or more characteristics of one or more words of the search result display that correspond to a word in the search query.",
+      "7. The method of claim 1 , wherein anchor text of the hyperlink that references the set of citing documents includes a count of the number of documents citing at least one version of the document.",
+      "8. A system comprising: one or more computers and one or more storage devices storing instructions that are operable, when executed by one or more computers, to cause the one or more computers to perform the operations comprising: providing, to a server, a search query; receiving, by a user device and from the server, a set of search results that includes one or more respective search results that are each associated with a document; generating a search result display for each particular search result in the set of search results, wherein generating the search result display includes: rendering, on a display of the user device, a first hyperlink that references a first version of the document that is associated with the particular search result; rendering, on the display of the user device, publishing information related to the first version of the document, wherein the publishing information is different from the first hyperlink that references the first version of the document; rendering, on the display of the user device, a snippet from the first version of the document; and rendering, on the display of the user device, a second hyperlink that references a set of citing documents, wherein each citing document in the set of citing documents includes a citation to at least one version of the document.",
+      "9. The system of claim 8 , the operations further comprising: determining a primary version of the document that is associated with the particular search result based at least in part on the source of the document, wherein the first version of the document is the primary version of the document.",
+      "10. The system of claim 8 , wherein rendering, on a display of the user device, a first hyperlink that references the first version of the document that is associated with the particular search result comprises: determining that there are multiple different versions of the document that are associated with the particular search result; and in response to determining that there are multiple different versions of the document that are associated with the particular search result, obtaining the title of the first version of the document for use as at least a portion of the anchor text for the first hyperlink.",
+      "11. The system of claim 10 , wherein generating a search result display further comprises: rendering, on a display of the user device, a hyperlink whose anchor text includes a count of the multiple different versions of the document that were identified based on the search query.",
+      "12. The system of claim 8 , wherein rendering, on the display of the user device, publishing information related to the first version of the document comprises: obtaining one or more of a name of a first author, a year of publishing, a name of a publisher, or a combination thereof, for output on the display on the user device.",
+      "13. The system of claim 8 , the operations further comprising: adjusting one or more characteristics of one or more words of the search result display that correspond to a word in the search query.",
+      "14. A non-transitory computer-readable storage device having stored thereon instructions, which, when executed by data processing apparatus, cause the data processing apparatus to perform operations comprising: providing, to a server, a search query; receiving, by a user device and from the server, a set of search results that includes one or more respective search results that are each associated with a document; generating a search result display for each particular search result in the set of search results, wherein generating the search result display includes: rendering, on a display of the user device, a first hyperlink that references a first version of the document that is associated with the particular search result; rendering, on the display of the user device, publishing information related to the first version of the document, wherein the publishing information is different from the first hyperlink that references the first version of the document; rendering, on the display of the user device, a snippet from the first version of the document; and rendering, on the display of the user device, a second hyperlink that references a set of citing documents, wherein each citing document in the set of citing documents includes a citation to at least one version of the document.",
+      "15. The non-transitory computer-readable storage device of claim 14 , the operations further comprising: determining a primary version of the document that is associated with the particular search result based at least in part on the source of the document, wherein the first version of the document is the primary version of the document.",
+      "16. The non-transitory computer-readable storage device of claim 14 , wherein rendering, on a display of the user device, the first hyperlink that references the first version of the document that is associated with the particular search result comprises: determining that there are multiple different versions of the document that are associated with the particular search result; and in response to determining that there are multiple different versions of the document that are associated with the particular search result, obtaining the title of the first version of the document for use as at least a portion of the anchor text for the first hyperlink.",
+      "17. The non-transitory computer-readable storage device of claim 14 , wherein rendering, on the display of the user device, publishing information related to the first version of the document comprises: obtaining one or more of a name of a first author, a year of publishing, a name of a publisher, or a combination thereof, for output on the display on the user device.",
+      "18. The non-transitory computer-readable storage device of claim 14 , the operations further comprising: adjusting one or more characteristics of one or more words of the search result display that correspond to a word in the search query.",
+      "19. The non-transitory computer-readable storage device of claim 14 , wherein generating a search result display further comprises: rendering, on a display of the user device, a hyperlink whose anchor text includes a count of the multiple different versions of the document that were identified based on the search query.",
+      "20. The non-transitory computer-readable storage device of claim 14 , wherein anchor text of the hyperlink that references the set of citing documents includes a count of the number of documents citing at least one version of the document."
+    ],
+    "independent_claims": [
+      "1. A method comprising: providing, to a server, a search query; receiving, by a user device and from the server, a set of search results that includes one or more respective search results that are each associated with a document; generating a search result display for each particular search result in the set of search results, wherein generating the search result display includes: rendering, on a display of the user device, a first hyperlink that references a first version of the document that is associated with the particular search result; rendering, on the display of the user device, publishing information related to the first version of the document, wherein the publishing information is different from the first hyperlink that references the first version of the document; rendering, on the display of the user device, a snippet from the first version of the document; and rendering, on the display of the user device, a second hyperlink that references a set of citing documents, wherein each citing document in the set of citing documents includes a citation to at least one version of the document.",
+      "8. A system comprising: one or more computers and one or more storage devices storing instructions that are operable, when executed by one or more computers, to cause the one or more computers to perform the operations comprising: providing, to a server, a search query; receiving, by a user device and from the server, a set of search results that includes one or more respective search results that are each associated with a document; generating a search result display for each particular search result in the set of search results, wherein generating the search result display includes: rendering, on a display of the user device, a first hyperlink that references a first version of the document that is associated with the particular search result; rendering, on the display of the user device, publishing information related to the first version of the document, wherein the publishing information is different from the first hyperlink that references the first version of the document; rendering, on the display of the user device, a snippet from the first version of the document; and rendering, on the display of the user device, a second hyperlink that references a set of citing documents, wherein each citing document in the set of citing documents includes a citation to at least one version of the document.",
+      "14. A non-transitory computer-readable storage device having stored thereon instructions, which, when executed by data processing apparatus, cause the data processing apparatus to perform operations comprising: providing, to a server, a search query; receiving, by a user device and from the server, a set of search results that includes one or more respective search results that are each associated with a document; generating a search result display for each particular search result in the set of search results, wherein generating the search result display includes: rendering, on a display of the user device, a first hyperlink that references a first version of the document that is associated with the particular search result; rendering, on the display of the user device, publishing information related to the first version of the document, wherein the publishing information is different from the first hyperlink that references the first version of the document; rendering, on the display of the user device, a snippet from the first version of the document; and rendering, on the display of the user device, a second hyperlink that references a set of citing documents, wherein each citing document in the set of citing documents includes a citation to at least one version of the document."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Alexandre A. Verstak",
+      "Anurag Acharya"
+    ],
+    "priority_date": "2005-11-18",
+    "filing_date": "2017-09-01",
+    "publication_date": "2019-04-30",
+    "status": "Expired - Lifetime",
+    "cpc_codes": [
+      "G06F17/2288",
+      "G06F40/00",
+      "G06F40/10",
+      "G06F40/197",
+      "G06F16/00",
+      "G06F16/10",
+      "G06F16/18",
+      "G06F16/1873",
+      "G06F16/20",
+      "G06F16/21",
+      "G06F16/219",
+      "G06F16/24",
+      "G06F16/245",
+      "G06F16/2458",
+      "G06F16/2474",
+      "G06F17/30067",
+      "G06F17/3023",
+      "G06F17/30309",
+      "G06F17/30548",
+      "G06F40/194"
+    ],
+    "family": [
+      {
+        "number": "US9779072B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Identifying a primary version of a document"
+      }
+    ],
+    "cited_by_count": 25
+  },
+  "analysis": {
+    "title_it": "Identificazione della versione primaria di un documento",
+    "summary": "Il brevetto affronta il problema di documenti presenti in più versioni online (es. articoli accademici su repository diversi). Descrive un metodo per identificare una versione primaria tra le diverse versioni dello stesso documento, basandosi su regole di priorità legate alla fonte e su misure di completezza del contenuto.",
+    "theme": "duplicati_canonical",
+    "seo_relevance": 3,
+    "scope": "Google Search, documenti accademici e versioni multiple",
+    "what_it_claims": "Le rivendicazioni indipendenti (1, 8, 14) coprono un metodo per la visualizzazione dei risultati di ricerca quando esistono versioni multiple dello stesso documento. Il sistema riceve una query, ottiene risultati dal server e genera un display che include: un primo hyperlink che referenzia una prima versione del documento (la versione primaria), informazioni di pubblicazione relative a quella versione (diverse dall'hyperlink stesso), uno snippet dalla prima versione, e un secondo hyperlink che referenzia un set di documenti citanti, dove ogni documento citante include una citazione ad almeno una versione del documento.\n\nLa rivendicazione 2 specifica che la determinazione della versione primaria avviene \"based at least in part on the source of the document\". La rivendicazione 3 descrive che quando esistono versioni multiple, il sistema ottiene il titolo della prima versione per usarlo come anchor text del primo hyperlink. La rivendicazione 4 aggiunge che il display può includere un hyperlink il cui anchor text contiene il conteggio delle versioni multiple identificate. La rivendicazione 5 specifica che le informazioni di pubblicazione comprendono uno o più elementi tra: nome del primo autore, anno di pubblicazione, nome dell'editore. La rivendicazione 6 copre l'evidenziazione di parole nel display che corrispondono a termini della query. La rivendicazione 7 stabilisce che l'anchor text dell'hyperlink ai documenti citanti include il conteggio dei documenti che citano almeno una versione del documento.\n\nLe rivendicazioni sono formulate come metodo di presentazione lato client: il focus è su cosa viene renderizzato sul display del dispositivo utente, non sui criteri di selezione della versione primaria in sé, che viene menzionata solo come input già determinato dal server.",
+    "seo_reading": "La descrizione contempla criteri specifici per identificare la versione primaria tra versioni multiple. Il paragrafo relativo alla FIG. 2 e la tabella degli esempi illustrano un processo in due fasi: prima si assegna una \"priority of authority\" a ciascuna versione basata su una \"priority rule\" e sui metadati del documento; poi si determina se esistono versioni con sia priorità qualificata che lunghezza qualificata.\n\nLa descrizione contempla diverse modalità per determinare la priorità. Una si basa su una \"source-priority list\" editorialmente curata che assegna priorità numeriche alle fonti (es. www.website2.net ha priorità 3, www.website3.com ha priorità 2). Un'altra modalità considera il tipo di diritto di pubblicazione: versioni da fonti con \"exclusive publication right\" ricevono priorità alta, quelle con \"licensing rights\" priorità inferiore, altre fonti priorità ancora più basse. La \"length measure\" distingue versioni full-text da abstract confrontando la lunghezza con una soglia minima (nell'esempio, 3.000 bytes), oppure verificando metadati che descrivono la versione come \"full-text or unabridged\".\n\nSe nessuna versione ha sia priorità che lunghezza qualificate, la descrizione contempla una selezione basata su \"information measure\": lunghezza totale, reference count (numero di documenti citati nella versione), citation count tra le versioni con lunghezza qualificata, data di ultima modifica, o page rank. La descrizione menziona anche il calcolo di un citation count totale sommando i citation count di tutte le versioni.\n\nPer la SEO, questo potrebbe significare che in contesti dove esistono versioni multiple dello stesso contenuto (es. paper accademici, white paper aziendali, guide tecniche replicate), Google potrebbe preferire versioni da fonti con maggiore autorità editoriale o diritti esclusivi, e privilegiare versioni complete rispetto ad abstract. Tuttavia la formulazione delle rivendicazioni come metodo di presentazione suggerisce che il brevetto protegge principalmente l'interfaccia utente, non l'algoritmo di ranking. I criteri nella descrizione (source priority, publication rights, length) restano opzioni implementative non protette.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Lifetime) e non fornisce protezione attuale. La data di priorità risale al 2005, in un contesto pre-Panda e pre-moderni sistemi di canonicalizzazione.",
+      "Le rivendicazioni coprono la presentazione dei risultati (rendering lato client), non i criteri di selezione della versione primaria o il loro impatto sul ranking. La determinazione della versione primaria è menzionata solo come input già calcolato.",
+      "La descrizione è focalizzata su documenti accademici con metadati strutturati (autore, anno, editore, citation count). Non dimostra applicabilità a contenuti web generici o pagine duplicate senza metadati formali.",
+      "Il brevetto fa parte di una famiglia con continuation (US9779072B1), quindi non rappresenta protezione indipendente ma iterazioni successive della stessa invenzione originale del 2005."
+    ],
+    "implications": [
+      "Per contenuti disponibili su repository multipli (es. ricerche, white paper, guide tecniche), pubblicare su fonti con maggiore autorità editoriale o diritti esclusivi resta una pratica solida indipendentemente da questo brevetto.",
+      "Fornire versioni complete e sostanziali di documenti, piuttosto che solo abstract o estratti brevi, è consigliabile per massimizzare la probabilità di essere considerati versione di riferimento.",
+      "Quando si replica contenuto su più domini (es. syndication, partnership editoriali), utilizzare canonical tag e strutture di citazione chiare aiuta i motori a identificare la fonte primaria, principio valido a prescindere da questo specifico brevetto.",
+      "Per contenuti accademici o tecnici, includere metadati strutturati (autore, data, editore, DOI) facilita l'identificazione della versione autorevole, pratica che resta valida indipendentemente dall'implementazione di questo brevetto."
+    ],
+    "key_terms": [
+      {
+        "term": "primary version",
+        "explanation": "La versione di un documento considerata più autorevole, completa o preferibile tra versioni multiple dello stesso contenuto"
+      },
+      {
+        "term": "priority of authority",
+        "explanation": "Valore numerico assegnato a una versione di documento per riflettere la sua autorevolezza, completezza o accessibilità, basato su regole di priorità"
+      },
+      {
+        "term": "priority rule",
+        "explanation": "Regola che determina la priorità di autorità basandosi su metadati come fonte, diritti di pubblicazione, o altri fattori editoriali"
+      },
+      {
+        "term": "length measure",
+        "explanation": "Criterio per determinare se una versione è completa (full-text) o parziale (abstract), confrontando la lunghezza con una soglia minima o verificando metadati"
+      },
+      {
+        "term": "information measure",
+        "explanation": "Metrica per selezionare la versione con più informazioni quando nessuna ha sia priorità che lunghezza qualificate, basata su lunghezza, citation count, reference count, page rank o data di modifica"
+      },
+      {
+        "term": "citation count",
+        "explanation": "Numero di documenti che citano una specifica versione o, in forma aggregata, tutte le versioni di un documento"
+      },
+      {
+        "term": "reference count",
+        "explanation": "Numero di altri documenti citati all'interno di una versione specifica del documento"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T17:18:45.971561Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.053455680000000005
+}

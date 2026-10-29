@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US7917490B2: Interpretazione delle query di ricerca locale — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di interpretare query di ricerca locale inserite in un singolo campo di testo, senza distinzione esplicita tra cosa cercare e dove. Il sistema genera molteplici interpretazioni possibili della query, suddividendola in partizioni associate a diversi repository di rice" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us7917490b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US7917490B2: Interpretazione delle query di ricerca locale — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di interpretare query di ricerca locale inserite in un singolo campo di testo, senza distinzione esplicita tra cosa cercare e dove. Il sistema genera molteplici interpretazioni possibili della query, suddividendola in partizioni associate a diversi repository di rice" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us7917490b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US7917490B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us7917490b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US7917490B2: Interpretazione delle query di ricerca locale",
+  "description": "Il brevetto affronta il problema di interpretare query di ricerca locale inserite in un singolo campo di testo, senza distinzione esplicita tra cosa cercare e dove. Il sistema genera molteplici interpretazioni possibili della query, suddividendola in partizioni associate a diversi repository di ricerca (mappe, business locali, ecc.), valuta ciascuna interpretazione in parallelo tramite confidence score basati sui risultati restituiti, e seleziona l\u0027interpretazione ottimale da presentare all\u0027utente.",
+  "articleBody": "Il brevetto affronta il problema di interpretare query di ricerca locale inserite in un singolo campo di testo, senza distinzione esplicita tra cosa cercare e dove. Il sistema genera molteplici interpretazioni possibili della query, suddividendola in partizioni associate a diversi repository di ricerca (mappe, business locali, ecc.), valuta ciascuna interpretazione in parallelo tramite confidence score basati sui risultati restituiti, e seleziona l\u0027interpretazione ottimale da presentare all\u0027utente.\n\nLa rivendicazione indipendente 1 descrive un metodo che riceve una query di ricerca contenente pi\u00f9 termini, forma molteplici interpretazioni possibili suddividendo la query in partizioni (ciascuna contenente uno o pi\u00f9 termini), associa ogni partizione a uno dei repository disponibili, e per ciascuna interpretazione ottiene un combined confidence score. Questo punteggio combinato si ottiene cercando nei repository in base alle partizioni associate, ricevendo risultati da ciascun repository, e combinando i confidence score di ogni partizione. Ogni confidence score \u00e8 generato in base ai risultati ricevuti dal rispettivo repository e fornisce una misura di confidenza associata a quei risultati. Il metodo seleziona una delle interpretazioni possibili in base ai combined confidence score, genera risultati di ricerca locale basati sui risultati ricevuti dai repository per l\u0027interpretazione selezionata, e trasmette tali risultati all\u0027utente.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti: la rivendicazione 2 specifica che le ricerche nei repository possono essere eseguite in parallelo. La rivendicazione 7 contempla l\u0027espansione di una partizione associata al repository di mappe in sotto-partizioni quando i risultati identificano molteplici localit\u00e0 geografiche, aggiungendo termini di ricerca addizionali non inclusi nella partizione originale. La rivendicazione 8 indica che le partizioni possono sovrapporsi. Le rivendicazioni 9 e 10 descrivono l\u0027integrazione della query con termini addizionali basati su informazioni contestuali dell\u0027utente, derivate da indirizzo IP, profilo utente, cronologia di ricerca, lingua della query o hostname. La rivendicazione 11 elenca repository possibili: mappe, ricerca locale, informazioni sul traffico, eventi in un\u0027area, immobili, indicazioni stradali, coupon. Le rivendicazioni 14 e 15 specificano che una prima partizione pu\u00f2 definire un\u0027area geografica mentre una seconda pu\u00f2 essere interpretata come rilevante per pagine web o business listing. La rivendicazione 13 menziona l\u0027uso di un modello statistico per predire le partizioni.\n\nLa descrizione contempla un sistema per local search engine che utilizza un approccio basato su tree structure per esplorare interpretazioni di query (FIG. 6, paragrafi relativi a tree structure 600). Ogni nodo foglia della struttura ad albero rappresenta una partizione della query associata a un repository specifico, come local search data repository 430-1 o maps data repository 430-2. Il sistema calcola confidence score per ciascuna interpretazione sommando o mediando i relevance score dei risultati restituiti, ad esempio come media dei cinque risultati pi\u00f9 rilevanti o come il punteggio normalizzato pi\u00f9 alto.\n\nLa descrizione contempla la gestione di ambiguit\u00e0 geografiche: quando una localit\u00e0 restituisce risultati multipli (esempio: Springfield pu\u00f2 riferirsi a pi\u00f9 citt\u00e0), il sistema pu\u00f2 espandere la partizione ambigua in molteplici query non ambigue sottoposte in parallelo ai repository (paragrafo relativo alla disambiguazione di Springfield). Contempla inoltre partizioni sovrapposte: per \"Newark airport\", l\u0027interpretazione ottimale potrebbe usare \"Newark airport\" come what e \"Newark\" come where, con il termine Newark presente in entrambe le partizioni.\n\nIl sistema potrebbe utilizzare informazioni contestuali per integrare le interpretazioni: se l\u0027utente sta visualizzando una mappa di New York City e cerca \"Hilton\", il sistema potrebbe interpretare automaticamente la localit\u00e0 come New York City (paragrafo sul context information). La descrizione menziona l\u0027uso di modelli statistici per ordinare le interpretazioni per probabilit\u00e0, riducendo potenzialmente il carico computazionale esplorando prima le interpretazioni pi\u00f9 promettenti e fermandosi quando un\u0027interpretazione supera una soglia predeterminata.\n\nPer la SEO locale, questo approccio suggerirebbe che i segnali di rilevanza nei repository locali conterebbero nella selezione dell\u0027interpretazione ottimale. Tuttavia, il brevetto descrive un sistema di disambiguazione delle query, non necessariamente fattori di ranking dei singoli risultati. La capacit\u00e0 di gestire query ambigue e sovrapposte potrebbe significare che contenuti ottimizzati sia per nome dell\u0027attivit\u00e0 che per localit\u00e0 (con ripetizioni naturali) potrebbero performare meglio in scenari ambigui, ma questa resta un\u0027interpretazione speculativa.",
+  "wordCount": 652,
+  "datePublished": "2026-10-29T17:19:32.304707+00:00",
+  "dateModified": "2026-10-29T17:19:32.304707+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us7917490b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Interpreting local search queries",
+    "identifier": "US7917490B2",
+    "url": "https://patents.google.com/patent/US7917490B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US7917490B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US7917490B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Interpretazione delle query di ricerca locale</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Interpreting local search queries</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di interpretare query di ricerca locale inserite in un singolo campo di testo, senza distinzione esplicita tra cosa cercare e dove. Il sistema genera molteplici interpretazioni possibili della query, suddividendola in partizioni associate a diversi repository di ricerca (mappe, business locali, ecc.), valuta ciascuna interpretazione in parallelo tramite confidence score basati sui risultati restituiti, e seleziona l&#39;interpretazione ottimale da presentare all&#39;utente.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Local Search, query geografiche</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">29 Marzo 2011</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2007-07-09</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Ricerca locale</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">31</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 descrive un metodo che riceve una query di ricerca contenente più termini, forma molteplici interpretazioni possibili suddividendo la query in partizioni (ciascuna contenente uno o più termini), associa ogni partizione a uno dei repository disponibili, e per ciascuna interpretazione ottiene un combined confidence score. Questo punteggio combinato si ottiene cercando nei repository in base alle partizioni associate, ricevendo risultati da ciascun repository, e combinando i confidence score di ogni partizione. Ogni confidence score è generato in base ai risultati ricevuti dal rispettivo repository e fornisce una misura di confidenza associata a quei risultati. Il metodo seleziona una delle interpretazioni possibili in base ai combined confidence score, genera risultati di ricerca locale basati sui risultati ricevuti dai repository per l&#39;interpretazione selezionata, e trasmette tali risultati all&#39;utente.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti: la rivendicazione 2 specifica che le ricerche nei repository possono essere eseguite in parallelo. La rivendicazione 7 contempla l&#39;espansione di una partizione associata al repository di mappe in sotto-partizioni quando i risultati identificano molteplici località geografiche, aggiungendo termini di ricerca addizionali non inclusi nella partizione originale. La rivendicazione 8 indica che le partizioni possono sovrapporsi. Le rivendicazioni 9 e 10 descrivono l&#39;integrazione della query con termini addizionali basati su informazioni contestuali dell&#39;utente, derivate da indirizzo IP, profilo utente, cronologia di ricerca, lingua della query o hostname. La rivendicazione 11 elenca repository possibili: mappe, ricerca locale, informazioni sul traffico, eventi in un&#39;area, immobili, indicazioni stradali, coupon. Le rivendicazioni 14 e 15 specificano che una prima partizione può definire un&#39;area geografica mentre una seconda può essere interpretata come rilevante per pagine web o business listing. La rivendicazione 13 menziona l&#39;uso di un modello statistico per predire le partizioni.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema per local search engine che utilizza un approccio basato su tree structure per esplorare interpretazioni di query (FIG. 6, paragrafi relativi a tree structure 600). Ogni nodo foglia della struttura ad albero rappresenta una partizione della query associata a un repository specifico, come local search data repository 430-1 o maps data repository 430-2. Il sistema calcola confidence score per ciascuna interpretazione sommando o mediando i relevance score dei risultati restituiti, ad esempio come media dei cinque risultati più rilevanti o come il punteggio normalizzato più alto.</p>
+      <p>La descrizione contempla la gestione di ambiguità geografiche: quando una località restituisce risultati multipli (esempio: Springfield può riferirsi a più città), il sistema può espandere la partizione ambigua in molteplici query non ambigue sottoposte in parallelo ai repository (paragrafo relativo alla disambiguazione di Springfield). Contempla inoltre partizioni sovrapposte: per &#34;Newark airport&#34;, l&#39;interpretazione ottimale potrebbe usare &#34;Newark airport&#34; come what e &#34;Newark&#34; come where, con il termine Newark presente in entrambe le partizioni.</p>
+      <p>Il sistema potrebbe utilizzare informazioni contestuali per integrare le interpretazioni: se l&#39;utente sta visualizzando una mappa di New York City e cerca &#34;Hilton&#34;, il sistema potrebbe interpretare automaticamente la località come New York City (paragrafo sul context information). La descrizione menziona l&#39;uso di modelli statistici per ordinare le interpretazioni per probabilità, riducendo potenzialmente il carico computazionale esplorando prima le interpretazioni più promettenti e fermandosi quando un&#39;interpretazione supera una soglia predeterminata.</p>
+      <p>Per la SEO locale, questo approccio suggerirebbe che i segnali di rilevanza nei repository locali conterebbero nella selezione dell&#39;interpretazione ottimale. Tuttavia, il brevetto descrive un sistema di disambiguazione delle query, non necessariamente fattori di ranking dei singoli risultati. La capacità di gestire query ambigue e sovrapposte potrebbe significare che contenuti ottimizzati sia per nome dell&#39;attività che per località (con ripetizioni naturali) potrebbero performare meglio in scenari ambigui, ma questa resta un&#39;interpretazione speculativa.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia attualmente in uso in Google Search o Google Maps: descrive un metodo per interpretare query locali, non l&#39;implementazione effettiva nei prodotti.</li>
+      <li>Non specifica come vengono calcolati i relevance score dei singoli risultati restituiti dai repository, né quali fattori di ranking determinano la qualità dei business listing o delle pagine web nei risultati locali.</li>
+      <li>La data di priorità 2007 e la concessione 2011 collocano il brevetto in un&#39;era pre-mobile e pre-AI generativa: le implementazioni attuali di local search potrebbero utilizzare approcci completamente diversi basati su machine learning moderno.</li>
+      <li>Il brevetto copre l&#39;interpretazione della query e la selezione tra interpretazioni multiple, non i criteri con cui i singoli risultati locali vengono ordinati all&#39;interno dell&#39;interpretazione selezionata.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che le informazioni NAP (Name, Address, Phone) siano coerenti e complete in tutti i profili locali, poiché sistemi di disambiguazione potrebbero fare affidamento su dati strutturati chiari per associare correttamente attività a località.</li>
+      <li class="pl-2">Ottimizzare contenuti locali includendo naturalmente sia il nome dell&#39;attività che riferimenti geografici espliciti, facilitando l&#39;associazione corretta tra entità commerciale e località anche in contesti ambigui.</li>
+      <li class="pl-2">Considerare che query locali inserite in un unico campo potrebbero essere interpretate in modi diversi: testare varianti della propria query target per verificare quale interpretazione prevalga nei risultati effettivi.</li>
+      <li class="pl-2">Mantenere informazioni contestuali coerenti (hostname, lingua, geolocalizzazione) nei propri asset digitali, dato che il brevetto contempla l&#39;uso di questi segnali per integrare l&#39;interpretazione delle query.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">confidence score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio che indica il livello di confidenza di un repository nei risultati restituiti per una specifica interpretazione della query, calcolato aggregando i relevance score dei risultati.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">partitions</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Suddivisioni della query di ricerca in sottoinsiemi di termini, ciascuno associato a un repository specifico (es. mappe, business locali).</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">combined confidence score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio ottenuto combinando i confidence score di tutte le partizioni associate a una specifica interpretazione della query, usato per selezionare l&#39;interpretazione ottimale.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">tree structure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Struttura ad albero usata per rappresentare ed esplorare le molteplici interpretazioni possibili di una query, con nodi foglia che rappresentano partizioni associate a repository specifici.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">context information</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Informazioni associate all&#39;utente (IP, profilo, cronologia, lingua, hostname) utilizzate per integrare o disambiguare l&#39;interpretazione della query di ricerca.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US8156099B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8156099B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Interpreting local search queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/CN101785002B/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">CN101785002B</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Interpreting local search queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/EP2186024A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">EP2186024A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Interpreting local search queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/WO2009009518A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">WO2009009518A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Interpreting local search queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US7917490B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

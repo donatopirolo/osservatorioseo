@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US9275143B2: Rilevamento di documenti duplicati e quasi-duplicati — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema di identificare documenti duplicati o quasi-duplicati in grandi collezioni. Il metodo genera più fingerprint per ciascun documento estraendo parti (parole, frasi) e assegnandole a liste predeterminate tramite hashing, poi confronta i fingerprint: se due documenti con" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us9275143b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US9275143B2: Rilevamento di documenti duplicati e quasi-duplicati — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema di identificare documenti duplicati o quasi-duplicati in grandi collezioni. Il metodo genera più fingerprint per ciascun documento estraendo parti (parole, frasi) e assegnandole a liste predeterminate tramite hashing, poi confronta i fingerprint: se due documenti con" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us9275143b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US9275143B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us9275143b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US9275143B2: Rilevamento di documenti duplicati e quasi-duplicati",
+  "description": "Il brevetto affronta il problema di identificare documenti duplicati o quasi-duplicati in grandi collezioni. Il metodo genera pi\u00f9 fingerprint per ciascun documento estraendo parti (parole, frasi) e assegnandole a liste predeterminate tramite hashing, poi confronta i fingerprint: se due documenti condividono anche un solo fingerprint, vengono considerati quasi-duplicati.",
+  "articleBody": "Il brevetto affronta il problema di identificare documenti duplicati o quasi-duplicati in grandi collezioni. Il metodo genera pi\u00f9 fingerprint per ciascun documento estraendo parti (parole, frasi) e assegnandole a liste predeterminate tramite hashing, poi confronta i fingerprint: se due documenti condividono anche un solo fingerprint, vengono considerati quasi-duplicati.\n\nLe rivendicazioni indipendenti (1, 2, 23, 37) coprono un metodo e un sistema per determinare se due documenti sono quasi-duplicati. Il metodo prevede di accedere ad almeno due fingerprint diversi generati dal contenuto di un primo documento e almeno due fingerprint diversi generati dal contenuto di un secondo documento. Ogni fingerprint \u00e8 generato da un sottoinsieme diverso del contenuto del documento, ciascun sottoinsieme include porzioni non contigue del contenuto e omette almeno parte del contenuto tra tali porzioni non contigue. Il metodo determina se uno dei fingerprint del primo documento corrisponde a uno dei fingerprint del secondo documento e, in caso affermativo, conclude che i due documenti sono quasi-duplicati. La rivendicazione 1 specifica che questa determinazione viene utilizzata in almeno una delle seguenti operazioni: servire risultati di ricerca, crawling di documenti, indicizzazione dei documenti o correzione di un link rotto.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 3 specifica che nel servire i risultati di ricerca, il metodo filtra uno dei due documenti quasi-duplicati da un insieme di documenti. La rivendicazione 4 aggiunge che si determina una qualit\u00e0 rispettiva per ciascun documento e si filtra quello con qualit\u00e0 inferiore. La rivendicazione 5 riguarda il crawling: dopo aver determinato che due documenti sono quasi-duplicati, si decide di non effettuare il crawl di uno dei due. La rivendicazione 6 copre l\u0027indicizzazione: si indicizza solo uno dei due documenti quasi-duplicati. La rivendicazione 7 riguarda la correzione di link rotti: se un link al primo documento \u00e8 rotto, viene sostituito con un link al secondo documento sulla base della determinazione di quasi-duplicazione. La rivendicazione 9 descrive la generazione dei fingerprint: si estraggono parti da un documento, si effettua l\u0027hashing di ciascuna parte per ottenere un hash value, si determina per ogni parte estratta a quale lista di un gruppo di liste debba essere associata in base all\u0027hash value, e si genera un fingerprint per ciascuna lista del gruppo. La rivendicazione 10 specifica che ogni parte pu\u00f2 essere una parola, un termine, un numero, una sezione, un paragrafo, una frase o un carattere del documento. La rivendicazione 11 contempla il caso di duplicati esatti: se ogni fingerprint del primo documento corrisponde a un rispettivo fingerprint del secondo documento e viceversa, i documenti sono considerati duplicati esatti. La rivendicazione 38 specifica che i diversi sottoinsieme di contenuto possono sovrapporsi parzialmente tra loro.\n\nLa descrizione contempla diverse implementazioni e dettagli tecnici. Nel paragrafo \u00a74.3.1, la descrizione illustra un\u0027operazione di estrazione (340) che estrae parti dai documenti, un\u0027operazione di popolazione di liste (350) che assegna le parti estratte a una delle liste predeterminate tramite hashing, e un\u0027operazione di generazione di fingerprint (360) che genera un fingerprint per ciascuna lista. Il numero di liste \u00e8 un parametro configurabile: la descrizione menziona che nel contesto del confronto di testi di pagine web, da tre a otto liste producono buoni risultati, con risultati positivi ottenuti usando tre o quattro liste (paragrafo dopo il blocco 350 in \u00a74.3.1).\n\nLa descrizione contempla un\u0027operazione di preprocessing dei fingerprint (372) che elimina i fingerprint che compaiono in un solo documento, lasciando solo quelli che compaiono in pi\u00f9 documenti (374), riducendo cos\u00ec la dimensione della collezione da processare (\u00a74.3.1.1). Nel paragrafo \u00a74.3.1.2, la descrizione contempla l\u0027estensione del concetto di quasi-duplicato con propriet\u00e0 transitiva: se il documento A \u00e8 quasi-duplicato di B e B \u00e8 quasi-duplicato di C, allora A \u00e8 considerato quasi-duplicato di C. Un\u0027operazione di determinazione dei cluster (382) pu\u00f2 definire cluster di documenti in questo modo, con una struttura dati (383) che associa ciascun documento a un cluster. Nel contesto di una ricerca, se i risultati includono due documenti dello stesso cluster che corrispondono alla query in modo uguale, viene mantenuto solo il documento di qualit\u00e0 superiore (pi\u00f9 recente, PageRank pi\u00f9 alto, pi\u00f9 rilevante), eliminando l\u0027altro (operazione 384).\n\nLa descrizione contempla diverse applicazioni pratiche. Nel crawling (rivendicazione 5 e paragrafo \u00a74.2), il metodo potrebbe essere usato per non effettuare il crawl di pagine quasi-duplicate identificate in un crawl precedente, risparmiando banda e velocizzando l\u0027operazione. Nell\u0027indicizzazione (rivendicazione 6), si potrebbe indicizzare solo uno dei documenti quasi-duplicati, riducendo i requisiti di storage. Nei risultati di ricerca (rivendicazioni 3-4 e \u00a74.3.1.2), si potrebbero filtrare i quasi-duplicati per non annoiare l\u0027utente con contenuti ridondanti. La descrizione fornisce esempi concreti nelle figure 13-18: cinque pagine web che differiscono solo per la data di recupero, la categoria o il titolo, ma hanno contenuto sostanzialmente identico.\n\nPer la SEO, questo brevetto potrebbe significare che Google dispone di meccanismi per identificare contenuti quasi-duplicati anche quando non sono identici byte per byte. Il sistema potrebbe penalizzare o escludere dai risultati pagine con contenuto sostanzialmente simile ad altre gi\u00e0 indicizzate, mantenendo quella considerata di qualit\u00e0 superiore. La menzione esplicita di PageRank come criterio di selezione (rivendicazione 4, figura 2, \u00a74.3.1.2) suggerirebbe che, tra quasi-duplicati, potrebbe prevalere la pagina con segnali di autorit\u00e0 pi\u00f9 forti. Tuttavia, la descrizione non afferma che Google applichi effettivamente questo brevetto in produzione.",
+  "wordCount": 862,
+  "datePublished": "2026-10-29T17:22:22.521163+00:00",
+  "dateModified": "2026-10-29T17:22:22.521163+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us9275143b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Detecting duplicate and near-duplicate files",
+    "identifier": "US9275143B2",
+    "url": "https://patents.google.com/patent/US9275143B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US9275143B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US9275143B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Rilevamento di documenti duplicati e quasi-duplicati</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Detecting duplicate and near-duplicate files</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema di identificare documenti duplicati o quasi-duplicati in grandi collezioni. Il metodo genera più fingerprint per ciascun documento estraendo parti (parole, frasi) e assegnandole a liste predeterminate tramite hashing, poi confronta i fingerprint: se due documenti condividono anche un solo fingerprint, vengono considerati quasi-duplicati.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, crawling, indicizzazione, risultati di ricerca</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">01 Marzo 2016</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2001-01-24</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Contenuti duplicati e canonicalizzazione</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">41</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 2, 23, 37) coprono un metodo e un sistema per determinare se due documenti sono quasi-duplicati. Il metodo prevede di accedere ad almeno due fingerprint diversi generati dal contenuto di un primo documento e almeno due fingerprint diversi generati dal contenuto di un secondo documento. Ogni fingerprint è generato da un sottoinsieme diverso del contenuto del documento, ciascun sottoinsieme include porzioni non contigue del contenuto e omette almeno parte del contenuto tra tali porzioni non contigue. Il metodo determina se uno dei fingerprint del primo documento corrisponde a uno dei fingerprint del secondo documento e, in caso affermativo, conclude che i due documenti sono quasi-duplicati. La rivendicazione 1 specifica che questa determinazione viene utilizzata in almeno una delle seguenti operazioni: servire risultati di ricerca, crawling di documenti, indicizzazione dei documenti o correzione di un link rotto.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 3 specifica che nel servire i risultati di ricerca, il metodo filtra uno dei due documenti quasi-duplicati da un insieme di documenti. La rivendicazione 4 aggiunge che si determina una qualità rispettiva per ciascun documento e si filtra quello con qualità inferiore. La rivendicazione 5 riguarda il crawling: dopo aver determinato che due documenti sono quasi-duplicati, si decide di non effettuare il crawl di uno dei due. La rivendicazione 6 copre l&#39;indicizzazione: si indicizza solo uno dei due documenti quasi-duplicati. La rivendicazione 7 riguarda la correzione di link rotti: se un link al primo documento è rotto, viene sostituito con un link al secondo documento sulla base della determinazione di quasi-duplicazione. La rivendicazione 9 descrive la generazione dei fingerprint: si estraggono parti da un documento, si effettua l&#39;hashing di ciascuna parte per ottenere un hash value, si determina per ogni parte estratta a quale lista di un gruppo di liste debba essere associata in base all&#39;hash value, e si genera un fingerprint per ciascuna lista del gruppo. La rivendicazione 10 specifica che ogni parte può essere una parola, un termine, un numero, una sezione, un paragrafo, una frase o un carattere del documento. La rivendicazione 11 contempla il caso di duplicati esatti: se ogni fingerprint del primo documento corrisponde a un rispettivo fingerprint del secondo documento e viceversa, i documenti sono considerati duplicati esatti. La rivendicazione 38 specifica che i diversi sottoinsieme di contenuto possono sovrapporsi parzialmente tra loro.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diverse implementazioni e dettagli tecnici. Nel paragrafo §4.3.1, la descrizione illustra un&#39;operazione di estrazione (340) che estrae parti dai documenti, un&#39;operazione di popolazione di liste (350) che assegna le parti estratte a una delle liste predeterminate tramite hashing, e un&#39;operazione di generazione di fingerprint (360) che genera un fingerprint per ciascuna lista. Il numero di liste è un parametro configurabile: la descrizione menziona che nel contesto del confronto di testi di pagine web, da tre a otto liste producono buoni risultati, con risultati positivi ottenuti usando tre o quattro liste (paragrafo dopo il blocco 350 in §4.3.1).</p>
+      <p>La descrizione contempla un&#39;operazione di preprocessing dei fingerprint (372) che elimina i fingerprint che compaiono in un solo documento, lasciando solo quelli che compaiono in più documenti (374), riducendo così la dimensione della collezione da processare (§4.3.1.1). Nel paragrafo §4.3.1.2, la descrizione contempla l&#39;estensione del concetto di quasi-duplicato con proprietà transitiva: se il documento A è quasi-duplicato di B e B è quasi-duplicato di C, allora A è considerato quasi-duplicato di C. Un&#39;operazione di determinazione dei cluster (382) può definire cluster di documenti in questo modo, con una struttura dati (383) che associa ciascun documento a un cluster. Nel contesto di una ricerca, se i risultati includono due documenti dello stesso cluster che corrispondono alla query in modo uguale, viene mantenuto solo il documento di qualità superiore (più recente, PageRank più alto, più rilevante), eliminando l&#39;altro (operazione 384).</p>
+      <p>La descrizione contempla diverse applicazioni pratiche. Nel crawling (rivendicazione 5 e paragrafo §4.2), il metodo potrebbe essere usato per non effettuare il crawl di pagine quasi-duplicate identificate in un crawl precedente, risparmiando banda e velocizzando l&#39;operazione. Nell&#39;indicizzazione (rivendicazione 6), si potrebbe indicizzare solo uno dei documenti quasi-duplicati, riducendo i requisiti di storage. Nei risultati di ricerca (rivendicazioni 3-4 e §4.3.1.2), si potrebbero filtrare i quasi-duplicati per non annoiare l&#39;utente con contenuti ridondanti. La descrizione fornisce esempi concreti nelle figure 13-18: cinque pagine web che differiscono solo per la data di recupero, la categoria o il titolo, ma hanno contenuto sostanzialmente identico.</p>
+      <p>Per la SEO, questo brevetto potrebbe significare che Google dispone di meccanismi per identificare contenuti quasi-duplicati anche quando non sono identici byte per byte. Il sistema potrebbe penalizzare o escludere dai risultati pagine con contenuto sostanzialmente simile ad altre già indicizzate, mantenendo quella considerata di qualità superiore. La menzione esplicita di PageRank come criterio di selezione (rivendicazione 4, figura 2, §4.3.1.2) suggerirebbe che, tra quasi-duplicati, potrebbe prevalere la pagina con segnali di autorità più forti. Tuttavia, la descrizione non afferma che Google applichi effettivamente questo brevetto in produzione.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2016), quindi non è più in vigore e Google non ha obblighi di mantenerlo attivo o utilizzarlo.</li>
+      <li>Il brevetto descrive tecniche sviluppate tra il 2001 e il 2003, quindi precedenti a molte evoluzioni dell&#39;indicizzazione web e potenzialmente superate da approcci più recenti non descritti qui.</li>
+      <li>La descrizione non specifica soglie, pesi o parametri concreti utilizzati in produzione per determinare la qualità relativa tra quasi-duplicati, né conferma che il sistema descritto sia mai stato implementato in Google Search.</li>
+      <li>Il brevetto non dimostra come il sistema gestisca casi complessi come contenuti sindacati legittimamente, traduzioni, o varianti regionali di contenuti simili ma non duplicati.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Evitare di pubblicare varianti multiple dello stesso contenuto con modifiche minime (solo data, categoria, titolo) su URL diversi, poiché sistemi di rilevamento duplicati potrebbero comunque identificarle come quasi-identiche indipendentemente da questo brevetto.</li>
+      <li class="pl-2">Se si gestiscono contenuti sindacati o mirror legittimi, differenziarli sostanzialmente o utilizzare canonical tag e altri segnali per indicare la versione preferita, prassi valida a prescindere dalle tecniche specifiche di rilevamento duplicati.</li>
+      <li class="pl-2">Concentrare gli sforzi SEO sulla versione più autorevole e recente di un contenuto, consolidando segnali di qualità su un&#39;unica URL piuttosto che distribuirli su varianti quasi-identiche.</li>
+      <li class="pl-2">Monitorare il proprio sito per identificare e risolvere duplicazioni interne non intenzionali (pagine di stampa, versioni archiviate, parametri URL che generano contenuti identici) che potrebbero essere rilevate da qualsiasi sistema di deduplicazione.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">fingerprint</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un valore hash generato da un sottoinsieme del contenuto di un documento, usato per confrontare documenti in modo efficiente senza analizzare l&#39;intero testo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">near-duplicate</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documenti che condividono almeno un fingerprint in comune, quindi hanno contenuto sostanzialmente simile anche se non identico</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">list population</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Processo di assegnazione delle parti estratte da un documento a liste predeterminate tramite hashing, da cui vengono poi generati i fingerprint</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">cluster</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Insieme di documenti considerati quasi-duplicati tra loro per proprietà transitiva, dove tutti i membri del cluster sono trattati come varianti dello stesso contenuto</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US20120078871A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US20120078871A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Detecting duplicate and near-duplicate files</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US7366718B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7366718B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Detecting duplicate and near-duplicate files</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US9275143B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

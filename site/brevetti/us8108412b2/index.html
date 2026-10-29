@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8108412B2: Rilevamento di documenti duplicati basato su frasi — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per identificare e rimuovere documenti duplicati dai risultati di ricerca utilizzando descrizioni di documenti generate da frasi correlate. Invece di confrontare l&#39;intero contenuto, il sistema seleziona le frasi più significative di ciascun documento e le confronta per" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8108412b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8108412B2: Rilevamento di documenti duplicati basato su frasi — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per identificare e rimuovere documenti duplicati dai risultati di ricerca utilizzando descrizioni di documenti generate da frasi correlate. Invece di confrontare l&#39;intero contenuto, il sistema seleziona le frasi più significative di ciascun documento e le confronta per" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8108412b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8108412B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8108412b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8108412B2: Rilevamento di documenti duplicati basato su frasi",
+  "description": "Il brevetto descrive un metodo per identificare e rimuovere documenti duplicati dai risultati di ricerca utilizzando descrizioni di documenti generate da frasi correlate. Invece di confrontare l\u0027intero contenuto, il sistema seleziona le frasi pi\u00f9 significative di ciascun documento e le confronta per determinare la duplicazione.",
+  "articleBody": "Il brevetto descrive un metodo per identificare e rimuovere documenti duplicati dai risultati di ricerca utilizzando descrizioni di documenti generate da frasi correlate. Invece di confrontare l\u0027intero contenuto, il sistema seleziona le frasi pi\u00f9 significative di ciascun documento e le confronta per determinare la duplicazione.\n\nLe rivendicazioni indipendenti (1, 11, 20, 30) coprono un metodo per rilevare documenti duplicati nei risultati di ricerca che opera come segue. Il sistema riceve una query contenente almeno una frase e recupera documenti responsivi dalla collezione. Per ciascun documento recuperato, genera una descrizione composta da frasi selezionate del documento, dove queste frasi sono ordinate in funzione del numero di \"related phrases\" presenti in ciascuna frase. Una frase g_j \u00e8 considerata \"related phrase\" di un\u0027altra frase g_k quando l\u0027information gain di g_j rispetto a g_k supera una soglia predeterminata. Quando le descrizioni di almeno due documenti corrispondono, il sistema scarta almeno uno dei due documenti dai risultati di ricerca.\n\nLe rivendicazioni dipendenti aggiungono dettagli operativi rilevanti. La rivendicazione 2 specifica che l\u0027information gain \u00e8 funzione sia dei tassi di co-occorrenza effettivi che attesi delle frasi nel set di documenti. La rivendicazione 3 indica che la corrispondenza tra descrizioni pu\u00f2 essere determinata confrontando i valori hash delle descrizioni. Le rivendicazioni 4 e 23 descrivono il processo di concatenazione delle frasi selezionate, calcolo dell\u0027hash e confronto degli hash per determinare la corrispondenza. La rivendicazione 5 stabilisce che il documento scartato ha una misura di significativit\u00e0 inferiore rispetto al documento mantenuto, e la rivendicazione 6 specifica che questa misura pu\u00f2 includere il page rank. Le rivendicazioni 7 e 8 chiariscono che le related phrases nelle frasi selezionate possono essere correlate ad altre frasi dello stesso documento o dell\u0027intero set di documenti. Le rivendicazioni 9 e 10 specificano che il numero N di frasi selezionate per la descrizione \u00e8 identico per entrambi i documenti confrontati, e che N \u00e8 preferibilmente tra 5 e 10. La rivendicazione 11 descrive una variante in cui le descrizioni dei documenti sono pre-calcolate e recuperate da uno storage anzich\u00e9 generate al momento della query.\n\nLa descrizione del brevetto contempla un sistema di indicizzazione basato su frasi che identifica \"good phrases\" nel corpus in base alla loro frequenza e capacit\u00e0 predittiva (sezione II.1). Il sistema mantiene una matrice di co-occorrenza che traccia quante volte le frasi appaiono insieme in una finestra secondaria di circa 30 parole (figura 3, blocco 212). L\u0027information gain viene calcolato come rapporto tra il tasso di co-occorrenza effettivo A(j,k) e quello atteso E(j,k), dove E \u00e8 il prodotto delle probabilit\u00e0 individuali. Una soglia di information gain di 100 viene utilizzata per identificare \"related phrases\" fortemente correlate (sezione III.2).\n\nPer la generazione delle descrizioni dei documenti, la descrizione contempla il ranking delle frasi in base al numero di related phrases presenti (sezione IV.2). Il sistema conta per ogni frase del documento quante related phrases della query appaiono, ordinando le frasi secondo questi conteggi. Le prime N frasi (tipicamente 5-10) vengono selezionate come descrizione rappresentativa del documento. Questa descrizione viene poi concatenata e sottoposta a hashing per il confronto con altri documenti. Se due documenti producono lo stesso hash, vengono considerati duplicati e il sistema mantiene quello con page rank superiore (sezione IV.3).\n\nQuesto approccio potrebbe significare per la SEO che Google valuta la similarit\u00e0 semantica dei contenuti piuttosto che la semplice corrispondenza testuale. Documenti che trattano lo stesso argomento usando frasi correlate simili potrebbero essere considerati duplicati anche con testi differenti. Il sistema potrebbe privilegiare documenti con segnali di autorit\u00e0 superiori (page rank) quando rileva contenuti semanticamente equivalenti. Tuttavia, l\u0027uso di sole 5-10 frasi per rappresentare un documento potrebbe creare falsi positivi, identificando come duplicati documenti che condividono solo alcune sezioni tematiche ma hanno contenuti complessivamente diversi. La descrizione non specifica come il sistema gestisce documenti di lunghezza molto diversa o con strutture complesse.",
+  "wordCount": 632,
+  "datePublished": "2026-10-29T17:19:33.844590+00:00",
+  "dateModified": "2026-10-29T17:19:33.844590+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8108412b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Phrase-based detection of duplicate documents in an information retrieval system",
+    "identifier": "US8108412B2",
+    "url": "https://patents.google.com/patent/US8108412B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8108412B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8108412B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Rilevamento di documenti duplicati basato su frasi</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Phrase-based detection of duplicate documents in an information retrieval system</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per identificare e rimuovere documenti duplicati dai risultati di ricerca utilizzando descrizioni di documenti generate da frasi correlate. Invece di confrontare l&#39;intero contenuto, il sistema seleziona le frasi più significative di ciascun documento e le confronta per determinare la duplicazione.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, eliminazione duplicati nei risultati</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">31 Gennaio 2012</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2004-07-26</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Contenuti duplicati e canonicalizzazione</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">38</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (1, 11, 20, 30) coprono un metodo per rilevare documenti duplicati nei risultati di ricerca che opera come segue. Il sistema riceve una query contenente almeno una frase e recupera documenti responsivi dalla collezione. Per ciascun documento recuperato, genera una descrizione composta da frasi selezionate del documento, dove queste frasi sono ordinate in funzione del numero di &#34;related phrases&#34; presenti in ciascuna frase. Una frase g_j è considerata &#34;related phrase&#34; di un&#39;altra frase g_k quando l&#39;information gain di g_j rispetto a g_k supera una soglia predeterminata. Quando le descrizioni di almeno due documenti corrispondono, il sistema scarta almeno uno dei due documenti dai risultati di ricerca.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli operativi rilevanti. La rivendicazione 2 specifica che l&#39;information gain è funzione sia dei tassi di co-occorrenza effettivi che attesi delle frasi nel set di documenti. La rivendicazione 3 indica che la corrispondenza tra descrizioni può essere determinata confrontando i valori hash delle descrizioni. Le rivendicazioni 4 e 23 descrivono il processo di concatenazione delle frasi selezionate, calcolo dell&#39;hash e confronto degli hash per determinare la corrispondenza. La rivendicazione 5 stabilisce che il documento scartato ha una misura di significatività inferiore rispetto al documento mantenuto, e la rivendicazione 6 specifica che questa misura può includere il page rank. Le rivendicazioni 7 e 8 chiariscono che le related phrases nelle frasi selezionate possono essere correlate ad altre frasi dello stesso documento o dell&#39;intero set di documenti. Le rivendicazioni 9 e 10 specificano che il numero N di frasi selezionate per la descrizione è identico per entrambi i documenti confrontati, e che N è preferibilmente tra 5 e 10. La rivendicazione 11 descrive una variante in cui le descrizioni dei documenti sono pre-calcolate e recuperate da uno storage anziché generate al momento della query.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione del brevetto contempla un sistema di indicizzazione basato su frasi che identifica &#34;good phrases&#34; nel corpus in base alla loro frequenza e capacità predittiva (sezione II.1). Il sistema mantiene una matrice di co-occorrenza che traccia quante volte le frasi appaiono insieme in una finestra secondaria di circa 30 parole (figura 3, blocco 212). L&#39;information gain viene calcolato come rapporto tra il tasso di co-occorrenza effettivo A(j,k) e quello atteso E(j,k), dove E è il prodotto delle probabilità individuali. Una soglia di information gain di 100 viene utilizzata per identificare &#34;related phrases&#34; fortemente correlate (sezione III.2).</p>
+      <p>Per la generazione delle descrizioni dei documenti, la descrizione contempla il ranking delle frasi in base al numero di related phrases presenti (sezione IV.2). Il sistema conta per ogni frase del documento quante related phrases della query appaiono, ordinando le frasi secondo questi conteggi. Le prime N frasi (tipicamente 5-10) vengono selezionate come descrizione rappresentativa del documento. Questa descrizione viene poi concatenata e sottoposta a hashing per il confronto con altri documenti. Se due documenti producono lo stesso hash, vengono considerati duplicati e il sistema mantiene quello con page rank superiore (sezione IV.3).</p>
+      <p>Questo approccio potrebbe significare per la SEO che Google valuta la similarità semantica dei contenuti piuttosto che la semplice corrispondenza testuale. Documenti che trattano lo stesso argomento usando frasi correlate simili potrebbero essere considerati duplicati anche con testi differenti. Il sistema potrebbe privilegiare documenti con segnali di autorità superiori (page rank) quando rileva contenuti semanticamente equivalenti. Tuttavia, l&#39;uso di sole 5-10 frasi per rappresentare un documento potrebbe creare falsi positivi, identificando come duplicati documenti che condividono solo alcune sezioni tematiche ma hanno contenuti complessivamente diversi. La descrizione non specifica come il sistema gestisce documenti di lunghezza molto diversa o con strutture complesse.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2012), quindi non fornisce indicazioni su cosa Google utilizzi attualmente nei suoi sistemi di rilevamento duplicati.</li>
+      <li>La descrizione non dimostra che questo metodo basato su frasi sia mai stato implementato in produzione, né fornisce dati sulla sua efficacia rispetto ad altri approcci.</li>
+      <li>Il sistema descritto opera sui risultati di ricerca già recuperati, ma non chiarisce se e come questo approccio venga applicato durante l&#39;indicizzazione per prevenire l&#39;inclusione di duplicati nell&#39;indice.</li>
+      <li>La famiglia di brevetti include multiple continuation (US8489628B2, US7711679B2, US9037573B2, US9569505B2, US9990421B2) che condividono la stessa data di priorità 2004, quindi non rappresentano validazioni indipendenti dell&#39;approccio.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Creare contenuti con una propria identità semantica distintiva, utilizzando combinazioni uniche di concetti correlati piuttosto che riformulare contenuti esistenti con sinonimi superficiali.</li>
+      <li class="pl-2">Quando si pubblicano contenuti su argomenti già trattati altrove, aggiungere prospettive, dati o approfondimenti sostanziali che modifichino le frasi chiave e i concetti correlati presenti nel testo.</li>
+      <li class="pl-2">Investire in segnali di autorità del dominio (che il brevetto chiama &#34;document significance measure&#34;) per aumentare la probabilità che la propria versione venga mantenuta in caso di contenuti simili.</li>
+      <li class="pl-2">Evitare la pratica di pubblicare lo stesso contenuto su più pagine o domini, poiché sistemi basati su frasi correlate potrebbero identificare la duplicazione anche con modifiche testuali minori.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">related phrase</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una frase g_j è related phrase di g_k quando l&#39;information gain di g_j rispetto a g_k supera una soglia, indicando che le due frasi co-occorrono più frequentemente del previsto statisticamente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">information gain</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Rapporto tra il tasso di co-occorrenza effettivo e quello atteso di due frasi, calcolato come A(j,k)/E(j,k), dove A è la frequenza osservata ed E il prodotto delle probabilità individuali</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">document description</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Insieme di N frasi selezionate da un documento (tipicamente 5-10) ordinate per numero di related phrases presenti, utilizzate per rappresentare il contenuto del documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">phrase window</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Finestra scorrevole di n termini (tipicamente 4-5 parole) utilizzata per attraversare il documento e identificare sequenze di parole candidate a essere frasi significative</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">secondary window</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Finestra più ampia (tipicamente ±30 parole) centrata sulla posizione corrente, utilizzata per calcolare le co-occorrenze tra frasi e determinare le relazioni semantiche</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US7711679B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7711679B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Phrase-based detection of duplicate documents in an information retrieval system</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Division</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8489628B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8489628B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Phrase-based detection of duplicate documents in an information retrieval system</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US9037573B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9037573B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Phase-based personalization of searches in an information retrieval system</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US9569505B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9569505B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Phrase-based searching in an information retrieval system</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US9990421B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US9990421B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Phrase-based searching in an information retrieval system</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8108412B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

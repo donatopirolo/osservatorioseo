@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US9189496B2",
+    "title": "Indexing documents according to geographical relevance",
+    "abstract": "A local search engine efficiently indexes documents relevant to a geographical area by indexing, for each document, multiple location identifiers that collectively define an aggregate geographic region. When creating the index, the search engine may determine a set of geographical areas surrounding a geographical area relevant to a document and associate references to the set of geographical areas with the document index.",
+    "claims": [
+      "1. A method comprising: indexing, by one or more processors in one or more computer devices, a plurality of documents in a document index, where indexing each document, of the plurality of documents, includes: extracting, from each document, a geographic location associated with the document, identifying a particular geographic area associated with the geographic location, determining a plurality of geographic areas within a first range of the particular geographic area associated with the document, where the plurality of geographic areas are not associated with the document, and adding a plurality of references to the document to the document index, wherein the plurality of added references respectively reference the document by the particular geographic area and the plurality of geographic areas; receiving, by one or more processors in the one or more computer devices, a search query that includes one or more geographically descriptive terms; determining a search region based on the one or more geographically descriptive terms included in the search query; and identifying one or more documents in the document index based on the search region.",
+      "2. The method of claim 1 , further comprising: transmitting information regarding the one or more identified documents to a user device from which the search query was received.",
+      "3. The method of claim 1 , where the particular geographic area and the plurality of geographic areas are associated with a triangular mesh, and where the plurality of references to each document in the document index are associated with areas in the triangular mesh.",
+      "4. The method of claim 1 , where adding a plurality of references to each document in the document index includes: determining latitude and longitude pairs associated with the particular geographic area associated with each document and the plurality of geographic areas within a first range of the particular geographic area, and forming the plurality of references to each document added to the document index based on the latitude and longitude pairs.",
+      "5. A device comprising: one or more memories to store instructions, and one or more processors to execute the instructions to: extract, from a document, information identifying a geographic location; identify a particular geographic region in which the geographic location is located, determine other geographic regions that are at least partially within a circle of a particular radius from the particular geographic region in which the geographic location is located, where the other geographic regions are not associated with the document, add a plurality of references to the document to a document index, where the plurality of added references respectively reference the document by the particular geographic region and the other geographic regions, receive a search query, determine, based on the search query, a search location identifier, and identify the document from the document index based on the search location identifier.",
+      "6. The device of claim 5 , where the particular geographic region and the other geographic regions are associated with a hierarchical triangular mesh, and where the processor, when determining the search location identifier, is further to: determine the search location identifier based on a portion of the hierarchical triangular mesh associated with the search query.",
+      "7. The device of claim 5 , where the processor, when determining the search location identifier, is further to: identify a location associated with the search query, and determine the search location identifier based on the location associated with the search query.",
+      "8. The device of claim 5 , where the processor, when determining the search location identifier, is further to: identify a location associated with the search query, determine a search distance associated with the search query, and determine the search location identifier based on the location and the search distance associated with the search query.",
+      "9. A memory device comprising one or more instructions which, when executed by a processor, cause the processor to: extract, from a document, information identifying a geographic location associated with the document; determine a particular geographic area associated with the geographic location; determine a plurality of geographic areas within a first range of the particular geographic location associated with the document, where the plurality of geographic areas are not associated with the document; add a plurality of references to the document to a document index, where the plurality of added references respectively reference the document by the particular geographic area and the plurality of geographic areas; receive a search query that includes one or more geographically descriptive terms; determine a search region based on the one or more geographically descriptive terms included in the search query; and identify the document from the document index based on the search region.",
+      "10. The memory device of claim 9 , further comprising one or more instructions which, when executed by a processor, cause the processor to: determine other geographic areas to associate with the document, the other geographic areas being located outside of the first range and within from the geographic location associated with the document; and add a plurality of additional references to the document to the document index, where the plurality of additional references respectively reference the document by the geographic areas in the second range.",
+      "11. The memory device of claim 9 , where the one or more instructions which, when executed by a processor, cause the processor to add a plurality of references to the document to a document index include one or more instructions to: identify latitude and longitude pairs associated, respectively, with the particular geographic area and the plurality of geographic areas, and form, based on the latitude and longitude pairs, the plurality of references to the particular geographic area and the plurality of geographic areas."
+    ],
+    "independent_claims": [
+      "1. A method comprising: indexing, by one or more processors in one or more computer devices, a plurality of documents in a document index, where indexing each document, of the plurality of documents, includes: extracting, from each document, a geographic location associated with the document, identifying a particular geographic area associated with the geographic location, determining a plurality of geographic areas within a first range of the particular geographic area associated with the document, where the plurality of geographic areas are not associated with the document, and adding a plurality of references to the document to the document index, wherein the plurality of added references respectively reference the document by the particular geographic area and the plurality of geographic areas; receiving, by one or more processors in the one or more computer devices, a search query that includes one or more geographically descriptive terms; determining a search region based on the one or more geographically descriptive terms included in the search query; and identifying one or more documents in the document index based on the search region.",
+      "5. A device comprising: one or more memories to store instructions, and one or more processors to execute the instructions to: extract, from a document, information identifying a geographic location; identify a particular geographic region in which the geographic location is located, determine other geographic regions that are at least partially within a circle of a particular radius from the particular geographic region in which the geographic location is located, where the other geographic regions are not associated with the document, add a plurality of references to the document to a document index, where the plurality of added references respectively reference the document by the particular geographic region and the other geographic regions, receive a search query, determine, based on the search query, a search location identifier, and identify the document from the document index based on the search location identifier.",
+      "9. A memory device comprising one or more instructions which, when executed by a processor, cause the processor to: extract, from a document, information identifying a geographic location associated with the document; determine a particular geographic area associated with the geographic location; determine a plurality of geographic areas within a first range of the particular geographic location associated with the document, where the plurality of geographic areas are not associated with the document; add a plurality of references to the document to a document index, where the plurality of added references respectively reference the document by the particular geographic area and the plurality of geographic areas; receive a search query that includes one or more geographically descriptive terms; determine a search region based on the one or more geographically descriptive terms included in the search query; and identify the document from the document index based on the search region."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Daniel Egnor"
+    ],
+    "priority_date": "2004-12-30",
+    "filing_date": "2010-06-15",
+    "publication_date": "2015-11-17",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/20",
+      "G06F16/29",
+      "G06F17/30241",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9537",
+      "G06F17/00",
+      "G06F17/3087"
+    ],
+    "family": [
+      {
+        "number": "US7801897B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Indexing documents according to geographical relevance"
+      }
+    ],
+    "cited_by_count": 65
+  },
+  "analysis": {
+    "title_it": "Indicizzazione di documenti per rilevanza geografica",
+    "summary": "Il brevetto descrive un metodo per indicizzare documenti georelevanti associando a ciascuno non solo l'identificatore della propria area geografica, ma anche gli identificatori delle aree circostanti entro un raggio predefinito. Quando un utente esegue una ricerca locale, il motore può recuperare i documenti rilevanti semplicemente aggiungendo l'identificatore geografico alla query, senza dover calcolare distanze in tempo reale.",
+    "theme": "local",
+    "seo_relevance": 3,
+    "scope": "Ricerca locale, business listing e documenti georelevanti",
+    "what_it_claims": "La rivendicazione indipendente 1 descrive un metodo che prevede l'indicizzazione di una pluralità di documenti estraendo da ciascuno una posizione geografica, identificando un'area geografica particolare associata a tale posizione, determinando una pluralità di aree geografiche entro un primo raggio dall'area particolare (aree che non sono associate al documento), e aggiungendo all'indice una pluralità di riferimenti che referenziano il documento sia tramite l'area particolare sia tramite le aree circostanti. Il metodo include poi la ricezione di una query contenente termini geograficamente descrittivi, la determinazione di una regione di ricerca basata su tali termini, e l'identificazione di documenti nell'indice in base alla regione di ricerca.\n\nLa rivendicazione 3 specifica che l'area geografica particolare e le aree circostanti possono essere associate a una mesh triangolare (triangular mesh), e i riferimenti nell'indice sono associati ad aree in tale mesh. La rivendicazione 4 aggiunge che i riferimenti possono essere formati determinando coppie latitudine-longitudine associate all'area particolare e alle aree circostanti.\n\nLa rivendicazione indipendente 5 descrive un dispositivo che estrae informazioni identificanti una posizione geografica da un documento, identifica una particolare regione geografica in cui tale posizione si trova, determina altre regioni geografiche almeno parzialmente entro un cerchio di un particolare raggio dalla regione particolare (regioni non associate al documento), aggiunge riferimenti multipli al documento nell'indice referenziandolo tramite la regione particolare e le altre regioni, riceve una query di ricerca, determina un identificatore di posizione di ricerca basato sulla query, e identifica il documento dall'indice basandosi su tale identificatore.\n\nLe rivendicazioni 6-8 specificano che l'identificatore di posizione di ricerca può essere determinato basandosi su una porzione della mesh triangolare gerarchica associata alla query (rivendicazione 6), su una posizione associata alla query (rivendicazione 7), o su una posizione e una distanza di ricerca associate alla query (rivendicazione 8). La rivendicazione 10 contempla la determinazione di altre aree geografiche situate al di fuori del primo raggio e l'aggiunta di riferimenti aggiuntivi al documento per tali aree.",
+    "seo_reading": "La descrizione contempla l'uso di un modello di superficie terrestre basato su griglie gerarchiche, specificamente il Hierarchical Triangular Mesh (HTM), per suddividere la superficie terrestre in triangoli sferici a livelli successivi di dettaglio (paragrafi relativi a FIGS. 3A e 3B). Ogni suddivisione riceve un identificatore (ad esempio N201102) che può fungere da location identifier associato a documenti georelevanti in database 135.\n\nLa descrizione fornisce esempi concreti di indicizzazione. Nel paragrafo relativo a FIG. 5, si descrive un documento associato a un'attività commerciale 505 nella regione triangolare 510. Assumendo un raggio predefinito di un miglio (circle 530), le regioni 520-1 attraverso 520-12 cadono almeno parzialmente entro tale raggio. Il documento viene quindi indicizzato con gli identificatori HTM di tutte queste regioni (510 e 520-1 attraverso 520-12), come illustrato nell'atto 404 di FIG. 4.\n\nLa FIG. 6A mostra un business listing 605 per un ristorante ipotetico indicizzato con category information 610 e location identifiers 615, dove il primo identificatore (HTM region N201301) si riferisce alla regione specifica dell'attività e i rimanenti agli identificatori delle regioni circostanti. La FIG. 6B mostra una pagina web 620 contenente una recensione dello stesso ristorante, anch'essa associata agli stessi identificatori geografici 625. La descrizione contempla anche l'indicizzazione con più set di location identifiers basati su raggi predefiniti diversi (FIG. 7), ad esempio un set per un miglio (location identifiers 710 con label \":1\") e uno per cinque miglia (location identifiers 720 con label \":5\").\n\nPer quanto riguarda l'elaborazione delle query, la descrizione contempla (FIG. 8, atto 802) l'aggiunta dell'identificatore di posizione alla query di ricerca. Ad esempio, la query \"coffee shops\" con identificatore N03013 diventa \"coffee shops N03013\", e se si cerca entro cinque miglia diventa \"coffee shops N03013:5\". La FIG. 9 descrive un approccio alternativo quando il raggio di ricerca scelto dall'utente non corrisponde a un raggio pre-indicizzato: si determina il raggio pre-indicizzato più vicino ma non superiore (atto 902), si localizzano le regioni entro la differenza di raggio (atto 903), e si modifica la query aggiungendo gli identificatori come operazione OR logica (atto 904).\n\nPer la SEO, questo brevetto potrebbe suggerire che Google Local Search valorizzi documenti che hanno segnali geografici chiari e specifici. La tecnica di indicizzazione multipla potrebbe spiegare come documenti situati appena fuori da un'area di ricerca specificata possano comunque apparire nei risultati locali. Tuttavia, il brevetto si concentra sull'efficienza computazionale dell'indicizzazione e del recupero, non sui fattori di ranking. Non fornisce indicazioni su come i documenti georelevanti vengano ordinati nei risultati o su quali segnali determinino la rilevanza geografica iniziale di un documento (oltre agli indirizzi postali menzionati genericamente).",
+    "limits": [
+      "Il brevetto non specifica come venga determinata inizialmente la rilevanza geografica di un documento web (oltre ai business listing con indirizzo), né quali segnali geografici vengano estratti dal contenuto.",
+      "Non descrive fattori di ranking o criteri di ordinamento dei risultati locali, concentrandosi esclusivamente sulla tecnica di indicizzazione e recupero.",
+      "La data di priorità è il 2004 e il contesto tecnologico è molto precedente all'introduzione di funzionalità moderne come il local pack o l'integrazione con Maps; non è chiaro quanto dell'implementazione originale sia ancora in uso.",
+      "Il brevetto non dimostra che questa specifica tecnica di indicizzazione basata su HTM sia attualmente utilizzata in Google Search, né esclude l'uso di tecniche alternative o complementari."
+    ],
+    "implications": [
+      "Assicurarsi che i segnali geografici nei documenti siano espliciti e coerenti: indirizzi completi strutturati, coordinate quando pertinenti, menzioni geografiche chiare nel contenuto.",
+      "Per attività locali, mantenere la coerenza delle informazioni geografiche (NAP: Name, Address, Phone) tra il sito web e i business listing esterni.",
+      "Considerare che la rilevanza geografica di un documento potrebbe estendersi oltre la posizione esatta, includendo aree circostanti; contenuti locali dovrebbero essere pertinenti per l'intera area di servizio.",
+      "Documenti che menzionano o recensiscono attività locali potrebbero essere trattati come georelevanti anche se non sono direttamente associati all'attività; citazioni e menzioni locali mantengono valore informativo."
+    ],
+    "key_terms": [
+      {
+        "term": "location identifier",
+        "explanation": "Identificatore che rappresenta un'area geografica specifica, derivato da modelli come HTM, usato per indicizzare e recuperare documenti georelevanti"
+      },
+      {
+        "term": "Hierarchical Triangular Mesh (HTM)",
+        "explanation": "Schema di partizionamento gerarchico che divide la superficie terrestre in triangoli sferici a livelli successivi di dettaglio, usato per generare location identifier"
+      },
+      {
+        "term": "geographically relevant document",
+        "explanation": "Documento che ha particolare rilevanza per una posizione geografica, come business listing o pagine web che trattano attività o argomenti locali"
+      },
+      {
+        "term": "predetermined range",
+        "explanation": "Raggio predefinito (ad esempio un miglio o cinque miglia) usato per determinare quali aree geografiche circostanti associare a un documento durante l'indicizzazione"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T17:21:44.914909Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.05845128000000001
+}

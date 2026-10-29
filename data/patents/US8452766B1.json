@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US8452766B1",
+    "title": "Detecting query-specific duplicate documents",
+    "abstract": "An improved duplicate detection technique that uses query-relevant information to limit the portion(s) of documents to be compared for similarity is described. Before comparing two documents for similarity, the content of these documents may be condensed based on the query. In one embodiment, query-relevant information or text (also referred to as “snippets”) is extracted from the documents and only the extracted snippets, rather than the entire documents, are compared for purposes of determining similarity.",
+    "claims": [
+      "1. A computer-implemented method comprising: receiving a plurality of search results responsive to a query, wherein the query includes one or more words, wherein each search result identifies a respective document that comprises a plurality of segments, wherein each segment is a distinct sequence of consecutive characters in the respective document; identifying the plurality of segments for each document by sliding a fixed-length window over content of the document, wherein the content of the document encompassed by the window starting at a particular position in the document defines a particular segment in the document, wherein sliding the fixed-length window over the content of the document comprises skipping space characters and characters that would result in a last character of the window splitting a word; for each of the plurality of segments in each of the documents, determining a respective count of occurrences of the one or more words of the query that occur in the segment; for each of the documents, ranking the segments of the document based on the respective counts of the segments; and identifying one or more highest ranked segments for each of the documents as a query-relevant part of the document.",
+      "2. The method of claim 1 , further comprising sending the search results that identify the documents and the query-relevant parts of the documents to a computing device in a response to the query.",
+      "3. The method of claim 1 wherein each segment is a sentence or a paragraph.",
+      "4. The method of claim 1 wherein sliding the fixed-length window over the content of the document comprises sliding a fixed-length window over content of the document a character at a time.",
+      "5. The method of claim 1 , further comprising determining that a pair of the documents are duplicates based on a comparison of the respective query-relevant parts of the pair of documents.",
+      "6. The method of claim 5 wherein the respective query-relevant parts of the pair of documents are identical.",
+      "7. The method of claim 5 wherein the respective query-relevant parts of the pair of documents are similar.",
+      "8. The method of claim 1 wherein determining a respective count of occurrences of the one or more words of the query that occur in the segment comprises counting each occurrence of any of the one or more words of the query that occur in the segment.",
+      "9. The method of claim 1 wherein determining a respective count of occurrences of the one or more words of the query that occur in the segment comprises counting only a first occurrence of any of the one or more words of the query that occur in the segment.",
+      "10. A system comprising: one or more computers comprising one or more processors programmed to perform operations comprising: receiving a plurality of search results responsive to a query, wherein the query includes one or more words, wherein each search result identifies a respective document that comprises a plurality of segments, wherein each segment is a distinct sequence of consecutive characters in the respective document; identifying the plurality of segments for each document by sliding a fixed-length window over content of the document, wherein the content of the document encompassed by the window starting at a particular position in the document defines a particular segment in the document, wherein sliding the fixed-length window over the content of the document comprises skipping space characters and characters that would result in a last character of the window splitting a word; for each of the plurality of segments in each of the documents, determining a respective count of occurrences of the one or more words of the query that occur in the segment; for each of the documents, ranking the segments of the document based on the respective counts of the segments; and identifying one or more highest ranked segments for each of the documents as a query-relevant part of the document.",
+      "11. The system of claim 10 , wherein the operations further comprise sending the search results that identify the documents and the query-relevant parts of the documents to a computing device in a response to the query.",
+      "12. The system of claim 10 wherein each segment is a sentence or a paragraph.",
+      "13. The system of claim 10 wherein sliding the fixed-length window over the content of the document comprises sliding a fixed-length window over content of the document a character at a time.",
+      "14. The system of claim 10 wherein determining a respective count of occurrences of the one or more words of the query that occur in the segment comprises counting each occurrence of any of the one or more words of the query that occur in the segment.",
+      "15. The system of claim 10 wherein determining a respective count of occurrences of the one or more words of the query that occur in the segment comprises counting only a first occurrence of any of the one or more words of the query that occur in the segment.",
+      "16. A non-transitory storage medium having instructions stored thereon that, when executed by one or more computers, cause the one or more computers to perform operations comprising: receiving a plurality of search results responsive to a query, wherein the query includes one or more words, wherein each search result identifies a respective document that comprises a plurality of segments, wherein each segment is a distinct sequence of consecutive characters in the respective document; identifying the plurality of segments for each document by sliding a fixed-length window over content of the document, wherein the content of the document encompassed by the window starting at a particular position in the document defines a particular segment in the document, wherein sliding the fixed-length window over the content of the document comprises skipping space characters and characters that would result in a last character of the window splitting a word; for each of the plurality of segments in each of the documents, determining a respective count of occurrences of the one or more words of the query that occur in the segment; for each of the documents, ranking the segments of the document based on the respective counts of the segments; and identifying one or more highest ranked segments for each of the documents as a query-relevant part of the document."
+    ],
+    "independent_claims": [
+      "1. A computer-implemented method comprising: receiving a plurality of search results responsive to a query, wherein the query includes one or more words, wherein each search result identifies a respective document that comprises a plurality of segments, wherein each segment is a distinct sequence of consecutive characters in the respective document; identifying the plurality of segments for each document by sliding a fixed-length window over content of the document, wherein the content of the document encompassed by the window starting at a particular position in the document defines a particular segment in the document, wherein sliding the fixed-length window over the content of the document comprises skipping space characters and characters that would result in a last character of the window splitting a word; for each of the plurality of segments in each of the documents, determining a respective count of occurrences of the one or more words of the query that occur in the segment; for each of the documents, ranking the segments of the document based on the respective counts of the segments; and identifying one or more highest ranked segments for each of the documents as a query-relevant part of the document.",
+      "10. A system comprising: one or more computers comprising one or more processors programmed to perform operations comprising: receiving a plurality of search results responsive to a query, wherein the query includes one or more words, wherein each search result identifies a respective document that comprises a plurality of segments, wherein each segment is a distinct sequence of consecutive characters in the respective document; identifying the plurality of segments for each document by sliding a fixed-length window over content of the document, wherein the content of the document encompassed by the window starting at a particular position in the document defines a particular segment in the document, wherein sliding the fixed-length window over the content of the document comprises skipping space characters and characters that would result in a last character of the window splitting a word; for each of the plurality of segments in each of the documents, determining a respective count of occurrences of the one or more words of the query that occur in the segment; for each of the documents, ranking the segments of the document based on the respective counts of the segments; and identifying one or more highest ranked segments for each of the documents as a query-relevant part of the document.",
+      "16. A non-transitory storage medium having instructions stored thereon that, when executed by one or more computers, cause the one or more computers to perform operations comprising: receiving a plurality of search results responsive to a query, wherein the query includes one or more words, wherein each search result identifies a respective document that comprises a plurality of segments, wherein each segment is a distinct sequence of consecutive characters in the respective document; identifying the plurality of segments for each document by sliding a fixed-length window over content of the document, wherein the content of the document encompassed by the window starting at a particular position in the document defines a particular segment in the document, wherein sliding the fixed-length window over the content of the document comprises skipping space characters and characters that would result in a last character of the window splitting a word; for each of the plurality of segments in each of the documents, determining a respective count of occurrences of the one or more words of the query that occur in the segment; for each of the documents, ranking the segments of the document based on the respective counts of the segments; and identifying one or more highest ranked segments for each of the documents as a query-relevant part of the document."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Benedict A. Gomes",
+      "Benjamin T. Smith"
+    ],
+    "priority_date": "2000-02-22",
+    "filing_date": "2012-07-02",
+    "publication_date": "2013-05-28",
+    "status": "Expired - Fee Related",
+    "cpc_codes": [
+      "G06F17/30696",
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/338",
+      "G06F16/38",
+      "G06F17/30722",
+      "G06F17/2725",
+      "G06F17/273",
+      "G06F40/00",
+      "G06F40/20",
+      "G06F40/205",
+      "G06F40/226",
+      "G06F40/232",
+      "Y10S707/00",
+      "Y10S707/99931",
+      "Y10S707/99933",
+      "Y10S707/99935",
+      "Y10S707/99936",
+      "Y10S707/99937"
+    ],
+    "family": [
+      {
+        "number": "US8214359B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Detecting query-specific duplicate documents"
+      }
+    ],
+    "cited_by_count": 286
+  },
+  "analysis": {
+    "title_it": "Rilevamento di duplicati query-specific nei risultati di ricerca",
+    "summary": "Il brevetto affronta il problema dei contenuti duplicati nei risultati di ricerca confrontando solo le parti dei documenti rilevanti per la query specifica, anziché i documenti interi. Prima di determinare se due documenti sono duplicati, estrae da ciascuno i segmenti che contengono i termini della query (snippet) e confronta solo questi frammenti per stabilire la similarità.",
+    "theme": "duplicati_canonical",
+    "seo_relevance": 4,
+    "scope": "Google Search, risultati organici",
+    "what_it_claims": "La rivendicazione indipendente 1 protegge un metodo che riceve una pluralità di risultati di ricerca in risposta a una query contenente una o più parole. Ogni risultato identifica un documento composto da segmenti, dove ciascun segmento è una sequenza distinta di caratteri consecutivi. Il metodo identifica i segmenti facendo scorrere una finestra di lunghezza fissa sul contenuto del documento, saltando gli spazi e i caratteri che dividerebbero una parola. Per ciascun segmento di ciascun documento, determina un conteggio delle occorrenze delle parole della query presenti nel segmento. Quindi classifica i segmenti di ogni documento in base a questi conteggi e identifica uno o più segmenti con ranking più alto come parte query-relevant del documento.\n\nLa rivendicazione 2 aggiunge l'invio dei risultati e delle parti query-relevant a un dispositivo client. La rivendicazione 3 specifica che ogni segmento può essere una frase o un paragrafo. La rivendicazione 4 precisa che la finestra può scorrere carattere per carattere. La rivendicazione 5 introduce la determinazione che una coppia di documenti sono duplicati basandosi sul confronto delle rispettive parti query-relevant. Le rivendicazioni 6 e 7 specificano che le parti query-relevant possono essere identiche o simili. Le rivendicazioni 8 e 9 descrivono due modalità di conteggio: contare ogni occorrenza di qualsiasi parola della query nel segmento, oppure contare solo la prima occorrenza. Le rivendicazioni 10-16 replicano le stesse protezioni per un sistema e per un supporto di memorizzazione non transitorio.",
+    "seo_reading": "La descrizione contempla diversi metodi per estrarre le parti query-relevant. Un primo metodo (blocchi 1105-1170, FIG. 11) utilizza finestre di circa 100 caratteri che scorrono sul documento, contando per ciascuna finestra quante keyword della query contiene, quindi seleziona le due finestre con più occorrenze come snippet. Un secondo metodo (blocchi 1201-1270, FIG. 12) segmenta il documento in frasi o paragrafi e include nella parte query-relevant ogni segmento che contiene almeno un numero predeterminato di keyword. La descrizione menziona anche l'uso di tecniche di natural language processing per identificare frasi semanticamente correlate alla query, non solo quelle con keyword esatte.\n\nPer determinare la similarità tra parti query-relevant, la descrizione contempla diverse opzioni: uguaglianza esatta, edit distance, cosine distance tra feature vector di frequenze delle parole, o il metodo Broder basato su shingling. Il parametro di soglia per la similarità è descritto come tunable (parametro 933). La descrizione specifica che il confronto avviene solo tra la parte query-relevant del documento candidato corrente e quelle dei documenti già aggiunti al set finale, evitando rimozioni per similarità transitiva.\n\nPer la SEO, questo potrebbe significare che Google confronterebbe i contenuti duplicati non sull'intero documento ma solo sulle porzioni che rispondono alla query specifica. Un documento con molto contenuto unico ma che include una sezione identica a quella di un altro documento potrebbe essere filtrato come duplicato per quella specifica query, anche se i due documenti nel complesso sono molto diversi. Il sistema potrebbe spiegare perché contenuti aggregati o mirror con header/footer diversi vengono comunque riconosciuti come duplicati quando la parte centrale rilevante per la query è identica. La descrizione fornisce esempi espliciti (FIGG. 15-16) dove documenti con stesso contenuto ma diversi \"last update\" date o \"BASE HREF\" tag vengono identificati come duplicati.",
+    "limits": [
+      "Il brevetto è scaduto (Expired - Fee Related dal 2013), quindi non vincola più nessuno e non dimostra che Google applichi attualmente questa tecnica.",
+      "Non specifica se e come questo metodo interagisca con la canonicalizzazione o altri segnali di duplicazione, limitandosi al confronto post-query dei risultati candidati.",
+      "Non chiarisce come vengano gestiti i duplicati parziali quando solo alcune sezioni query-relevant coincidono ma altre no, né fornisce soglie numeriche specifiche per i parametri tunable.",
+      "Fa parte di una famiglia di continuation (US8214359B1) che condivide la stessa data di priorità, quindi non rappresenta sviluppi indipendenti successivi."
+    ],
+    "implications": [
+      "Evitare di pubblicare contenuti che differiscano da altri solo per elementi marginali (date, contatori, header/footer) se le sezioni centrali che rispondono alle query target sono identiche.",
+      "Quando si aggregano o si ripubblicano contenuti altrui, aggiungere sostanziale valore editoriale nelle sezioni che conterranno i termini delle query principali, non solo nei contorni del documento.",
+      "Se si mantengono versioni multiple dello stesso contenuto (HTML/testo, mirror), usare canonical e altri segnali standard per indicare la versione preferita, indipendentemente da questo brevetto.",
+      "Considerare che la duplicazione potrebbe essere valutata in modo query-specific: contenuti simili potrebbero competere per alcune query ma non per altre, a seconda di quali sezioni contengono i termini cercati."
+    ],
+    "key_terms": [
+      {
+        "term": "query-relevant part",
+        "explanation": "La porzione di un documento che contiene occorrenze dei termini della query, estratta e utilizzata per il confronto di similarità invece dell'intero documento"
+      },
+      {
+        "term": "snippet",
+        "explanation": "Frammento di testo estratto dal documento che mostra il contesto attorno alle keyword della query, tipicamente di circa 100 caratteri"
+      },
+      {
+        "term": "fixed-length window",
+        "explanation": "Finestra di dimensione predeterminata (caratteri o parole) che scorre sul contenuto del documento per identificare i segmenti da analizzare"
+      },
+      {
+        "term": "segment",
+        "explanation": "Sequenza distinta di caratteri consecutivi nel documento, definita dalla finestra o da unità linguistiche come frasi o paragrafi"
+      },
+      {
+        "term": "candidate results",
+        "explanation": "L'insieme dei risultati di ricerca iniziali, prima della rimozione dei duplicati query-specific"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-29T17:21:00.069828Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07197804000000001
+}

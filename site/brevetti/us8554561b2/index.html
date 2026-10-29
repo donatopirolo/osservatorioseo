@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8554561B2: Indicizzazione efficiente di documenti con contenuto simile — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema dell&#39;indicizzazione di grandi quantità di documenti che condividono porzioni di contenuto (boilerplate, versioni simili, pagine dello stesso dominio). Invece di eliminare i duplicati, il sistema raggruppa i documenti in cluster, comprime le sequenze di token eliminan" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8554561b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8554561B2: Indicizzazione efficiente di documenti con contenuto simile — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema dell&#39;indicizzazione di grandi quantità di documenti che condividono porzioni di contenuto (boilerplate, versioni simili, pagine dello stesso dominio). Invece di eliminare i duplicati, il sistema raggruppa i documenti in cluster, comprime le sequenze di token eliminan" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8554561b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8554561B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us8554561b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8554561B2: Indicizzazione efficiente di documenti con contenuto simile",
+  "description": "Il brevetto affronta il problema dell\u0027indicizzazione di grandi quantit\u00e0 di documenti che condividono porzioni di contenuto (boilerplate, versioni simili, pagine dello stesso dominio). Invece di eliminare i duplicati, il sistema raggruppa i documenti in cluster, comprime le sequenze di token eliminando le ripetizioni interne ai cluster e indicizza solo la versione compressa, mantenendo istruzioni per ricostruire i documenti originali.",
+  "articleBody": "Il brevetto affronta il problema dell\u0027indicizzazione di grandi quantit\u00e0 di documenti che condividono porzioni di contenuto (boilerplate, versioni simili, pagine dello stesso dominio). Invece di eliminare i duplicati, il sistema raggruppa i documenti in cluster, comprime le sequenze di token eliminando le ripetizioni interne ai cluster e indicizza solo la versione compressa, mantenendo istruzioni per ricostruire i documenti originali.\n\nLa rivendicazione indipendente 1 copre un metodo che raggruppa un insieme di documenti in una pluralit\u00e0 di cluster, dove ciascun cluster include uno o pi\u00f9 documenti e un cluster contiene dati corrispondenti a pi\u00f9 documenti inclusi un primo e un secondo documento. Il sistema determina che il secondo documento include dati duplicati rispetto al primo documento, identifica un sottoinsieme dei dati del cluster che esclude almeno una parte dei dati duplicati e genera un indice di questo sottoinsieme.\n\nLa rivendicazione 2 specifica che i cluster possono essere distribuiti su sistemi informatici diversi. La rivendicazione 3 introduce identificatori multipli per i documenti: un identificatore globale rispetto all\u0027intero repository e un identificatore locale rispetto a una porzione del repository. La rivendicazione 4 chiarisce che la generazione dell\u0027indice esclude l\u0027indicizzazione dei dati duplicati.\n\nLe rivendicazioni 5-9 aggiungono dettagli sulla compressione. La rivendicazione 5 specifica che l\u0027identificazione del sottoinsieme include la generazione di dati compressi del cluster che non includono almeno una parte dei dati duplicati. La rivendicazione 6 introduce un riordinamento: i cluster a documento singolo precedono i cluster multi-documento nella sequenza. La rivendicazione 7 descrive la rappresentazione dei documenti come sequenza di token e introduce i \"document reconstruction data\" per ricostruire i documenti dai dati compressi, utilizzati per identificare documenti che corrispondono a una query basandosi sulle posizioni dei token.\n\nLa rivendicazione 8 copre un processo di query in cui il sistema cerca attraverso i dati compressi dei cluster per occorrenze dei token della query: se un cluster compresso include tutti i token della query, il sistema determina se contiene un documento corrispondente; altrimenti elimina i documenti di quel cluster da ulteriore considerazione. La rivendicazione 9 aggiunge che per query con sequenze specifiche di token, il sistema determina se i token appaiono nella sequenza richiesta usando i document reconstruction data.\n\nLe rivendicazioni 10-13 specificano criteri di clustering. La rivendicazione 10 copre il raggruppamento basato sull\u0027analisi del contenuto. La rivendicazione 11 copre il raggruppamento basato sui resource locator (URL). La rivendicazione 12 specifica l\u0027ordinamento dei documenti secondo i resource locator e la selezione di documenti consecutivi dall\u0027ordinamento per formare cluster. La rivendicazione 13 descrive la modifica degli URL prima dell\u0027ordinamento: i domini vengono invertiti e l\u0027indicatore di protocollo spostato alla fine (es. \"http://www.yahoo.com/index.html\" diventa \"com.yahoo.www/index.html:http\").\n\nLa rivendicazione 14 copre l\u0027applicazione a archivi storici: un cluster pu\u00f2 includere diverse versioni dello stesso documento da tempi diversi. Le rivendicazioni 15-29 replicano le stesse protezioni per implementazioni come sistema informatico e computer readable storage medium.\n\nLa descrizione contempla un sistema di compressione basato sul metodo Bentley-McIlroy o varianti simili (blocchi 306, 1002-1032, Figure 8-10). I documenti vengono rappresentati come sequenze di token di lunghezza fissa, tipicamente 32 bit (blocco 106, memoria 206). La descrizione specifica che token ripetuti vengono elisi dalla memorizzazione solo se la sequenza ripetuta supera una lunghezza minima predefinita N, che in alcune implementazioni \u00e8 di venti token (blocco 306).\n\nIl clustering basato su URL invertiti (rivendicazione 13, blocco 304) \u00e8 descritto come metodo per raggruppare documenti dallo stesso sotto-dominio, che tendono ad avere sequenze di token comuni come testo boilerplate. La descrizione contempla che K documenti consecutivi dall\u0027ordinamento formino un cluster, dove K pu\u00f2 essere 10 in alcune implementazioni (blocco 304). Il posizionamento dei cluster a documento singolo prima dei cluster multi-documento (rivendicazione 6, Figura 7) allinea le posizioni dei token nello spazio compresso e non compresso per quei documenti.\n\nLa descrizione introduce una \"compressed-uncompressed map\" (elemento 226) che mappa posizioni nella sequenza compressa a una o pi\u00f9 posizioni nella sequenza non compressa, creando mappature uno-a-molti quando un token compresso corrisponde a pi\u00f9 istanze nel non compresso. I \"document reconstruction data\" (elemento 224) includono codici Add (sequenze di token letterali) e codici Copy (che specificano range di posizioni da duplicare), con i codici Copy che possono includere posizione di inizio e lunghezza (blocchi 608, 830).\n\nPer le query, la descrizione contempla un processo a due fasi (Figura 4): prima si identificano cluster che contengono i token della query (blocco 404), eliminando cluster che non possono soddisfare la query senza decodificare; poi si identificano documenti effettivi all\u0027interno dei cluster selezionati (blocco 406). Per query con operatore AND, solo i cluster contenenti tutti i token vengono considerati (blocco 508). Per query di frase esatta, la descrizione contempla l\u0027accorciamento dei codici Copy di alcuni token alle estremit\u00e0 durante la codifica, fino a separatori di frase come punteggiatura (blocco 512), per ridurre casi in cui frasi corrispondenti attraversano transizioni Add-Copy.\n\nPer la SEO, questo potrebbe significare che Google avrebbe potuto sviluppare sistemi di indicizzazione che non eliminano completamente i duplicati ma li comprimono mantenendoli accessibili. Il clustering per dominio inverso suggerirebbe che contenuti boilerplate comuni su un sito potrebbero essere gestiti in modo pi\u00f9 efficiente senza penalizzare ogni pagina. La soglia di venti token per l\u0027elision potrebbe indicare che ripetizioni molto brevi non vengono considerate duplicazione significativa. Tuttavia, questo riguarda l\u0027architettura di indicizzazione interna, non necessariamente i criteri di ranking o la selezione di URL canonici mostrati agli utenti.",
+  "wordCount": 882,
+  "datePublished": "2026-10-29T17:21:30.331432+00:00",
+  "dateModified": "2026-10-29T17:21:30.331432+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8554561b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Efficient indexing of documents with similar content",
+    "identifier": "US8554561B2",
+    "url": "https://patents.google.com/patent/US8554561B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8554561B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8554561B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Indicizzazione efficiente di documenti con contenuto simile</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Efficient indexing of documents with similar content</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema dell&#39;indicizzazione di grandi quantità di documenti che condividono porzioni di contenuto (boilerplate, versioni simili, pagine dello stesso dominio). Invece di eliminare i duplicati, il sistema raggruppa i documenti in cluster, comprime le sequenze di token eliminando le ripetizioni interne ai cluster e indicizza solo la versione compressa, mantenendo istruzioni per ricostruire i documenti originali.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Indicizzazione di documenti web e archivi storici</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">08 Ottobre 2013</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2006-05-19</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Contenuti duplicati e canonicalizzazione</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">29</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che raggruppa un insieme di documenti in una pluralità di cluster, dove ciascun cluster include uno o più documenti e un cluster contiene dati corrispondenti a più documenti inclusi un primo e un secondo documento. Il sistema determina che il secondo documento include dati duplicati rispetto al primo documento, identifica un sottoinsieme dei dati del cluster che esclude almeno una parte dei dati duplicati e genera un indice di questo sottoinsieme.</p>
+      <p>La rivendicazione 2 specifica che i cluster possono essere distribuiti su sistemi informatici diversi. La rivendicazione 3 introduce identificatori multipli per i documenti: un identificatore globale rispetto all&#39;intero repository e un identificatore locale rispetto a una porzione del repository. La rivendicazione 4 chiarisce che la generazione dell&#39;indice esclude l&#39;indicizzazione dei dati duplicati.</p>
+      <p>Le rivendicazioni 5-9 aggiungono dettagli sulla compressione. La rivendicazione 5 specifica che l&#39;identificazione del sottoinsieme include la generazione di dati compressi del cluster che non includono almeno una parte dei dati duplicati. La rivendicazione 6 introduce un riordinamento: i cluster a documento singolo precedono i cluster multi-documento nella sequenza. La rivendicazione 7 descrive la rappresentazione dei documenti come sequenza di token e introduce i &#34;document reconstruction data&#34; per ricostruire i documenti dai dati compressi, utilizzati per identificare documenti che corrispondono a una query basandosi sulle posizioni dei token.</p>
+      <p>La rivendicazione 8 copre un processo di query in cui il sistema cerca attraverso i dati compressi dei cluster per occorrenze dei token della query: se un cluster compresso include tutti i token della query, il sistema determina se contiene un documento corrispondente; altrimenti elimina i documenti di quel cluster da ulteriore considerazione. La rivendicazione 9 aggiunge che per query con sequenze specifiche di token, il sistema determina se i token appaiono nella sequenza richiesta usando i document reconstruction data.</p>
+      <p>Le rivendicazioni 10-13 specificano criteri di clustering. La rivendicazione 10 copre il raggruppamento basato sull&#39;analisi del contenuto. La rivendicazione 11 copre il raggruppamento basato sui resource locator (URL). La rivendicazione 12 specifica l&#39;ordinamento dei documenti secondo i resource locator e la selezione di documenti consecutivi dall&#39;ordinamento per formare cluster. La rivendicazione 13 descrive la modifica degli URL prima dell&#39;ordinamento: i domini vengono invertiti e l&#39;indicatore di protocollo spostato alla fine (es. &#34;http://www.yahoo.com/index.html&#34; diventa &#34;com.yahoo.www/index.html:http&#34;).</p>
+      <p>La rivendicazione 14 copre l&#39;applicazione a archivi storici: un cluster può includere diverse versioni dello stesso documento da tempi diversi. Le rivendicazioni 15-29 replicano le stesse protezioni per implementazioni come sistema informatico e computer readable storage medium.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema di compressione basato sul metodo Bentley-McIlroy o varianti simili (blocchi 306, 1002-1032, Figure 8-10). I documenti vengono rappresentati come sequenze di token di lunghezza fissa, tipicamente 32 bit (blocco 106, memoria 206). La descrizione specifica che token ripetuti vengono elisi dalla memorizzazione solo se la sequenza ripetuta supera una lunghezza minima predefinita N, che in alcune implementazioni è di venti token (blocco 306).</p>
+      <p>Il clustering basato su URL invertiti (rivendicazione 13, blocco 304) è descritto come metodo per raggruppare documenti dallo stesso sotto-dominio, che tendono ad avere sequenze di token comuni come testo boilerplate. La descrizione contempla che K documenti consecutivi dall&#39;ordinamento formino un cluster, dove K può essere 10 in alcune implementazioni (blocco 304). Il posizionamento dei cluster a documento singolo prima dei cluster multi-documento (rivendicazione 6, Figura 7) allinea le posizioni dei token nello spazio compresso e non compresso per quei documenti.</p>
+      <p>La descrizione introduce una &#34;compressed-uncompressed map&#34; (elemento 226) che mappa posizioni nella sequenza compressa a una o più posizioni nella sequenza non compressa, creando mappature uno-a-molti quando un token compresso corrisponde a più istanze nel non compresso. I &#34;document reconstruction data&#34; (elemento 224) includono codici Add (sequenze di token letterali) e codici Copy (che specificano range di posizioni da duplicare), con i codici Copy che possono includere posizione di inizio e lunghezza (blocchi 608, 830).</p>
+      <p>Per le query, la descrizione contempla un processo a due fasi (Figura 4): prima si identificano cluster che contengono i token della query (blocco 404), eliminando cluster che non possono soddisfare la query senza decodificare; poi si identificano documenti effettivi all&#39;interno dei cluster selezionati (blocco 406). Per query con operatore AND, solo i cluster contenenti tutti i token vengono considerati (blocco 508). Per query di frase esatta, la descrizione contempla l&#39;accorciamento dei codici Copy di alcuni token alle estremità durante la codifica, fino a separatori di frase come punteggiatura (blocco 512), per ridurre casi in cui frasi corrispondenti attraversano transizioni Add-Copy.</p>
+      <p>Per la SEO, questo potrebbe significare che Google avrebbe potuto sviluppare sistemi di indicizzazione che non eliminano completamente i duplicati ma li comprimono mantenendoli accessibili. Il clustering per dominio inverso suggerirebbe che contenuti boilerplate comuni su un sito potrebbero essere gestiti in modo più efficiente senza penalizzare ogni pagina. La soglia di venti token per l&#39;elision potrebbe indicare che ripetizioni molto brevi non vengono considerate duplicazione significativa. Tuttavia, questo riguarda l&#39;architettura di indicizzazione interna, non necessariamente i criteri di ranking o la selezione di URL canonici mostrati agli utenti.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related dal 2013) e descrive tecniche di indicizzazione interna, non criteri di ranking o selezione di URL da mostrare nei risultati di ricerca.</li>
+      <li>Non specifica come i documenti duplicati o simili vengano trattati nella SERP, quali vengano scelti come canonici per gli utenti, o come questo influenzi il posizionamento.</li>
+      <li>La descrizione riguarda efficienza di storage e recupero, non segnali di qualità: il fatto che documenti simili siano compressi insieme non implica penalizzazioni o vantaggi di ranking.</li>
+      <li>L&#39;applicazione a &#34;archivi storici&#34; (rivendicazione 14) suggerisce usi oltre la ricerca web corrente, e la data di priorità 2006 precede molte evoluzioni successive dei sistemi di Google.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Contenuti boilerplate estesi (header, footer, sidebar identici) su molte pagine di un sito sono tecnicamente gestibili dai motori senza necessariamente penalizzare ogni pagina, ma differenziare i contenuti unici resta buona pratica per l&#39;utente.</li>
+      <li class="pl-2">Versioni multiple dello stesso contenuto con URL diversi potrebbero essere tecnicamente indicizzabili tutte, ma la scelta di quale mostrare dipende da altri fattori non coperti da questo brevetto: continuare a usare canonical e redirect appropriati.</li>
+      <li class="pl-2">La soglia di lunghezza minima per considerare ripetizioni (venti token nella descrizione) suggerisce che frasi brevi ripetute non costituiscono necessariamente duplicazione problematica dal punto di vista tecnico.</li>
+      <li class="pl-2">Documenti con contenuto sostanzialmente identico ma timestamp e URL diversi possono coesistere nei sistemi di indicizzazione: concentrarsi sulla differenziazione del valore per l&#39;utente piuttosto che su micro-ottimizzazioni di duplicazione.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">cluster</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Raggruppamento di uno o più documenti con contenuto correlato o simile, processati insieme per identificare ed elidere dati duplicati</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">token</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Oggetto di lunghezza fissa (es. 32 bit) che rappresenta un termine, parola, simbolo di punteggiatura o tag HTML nel documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">compressed sequence of tokens</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sequenza di token in cui alcune ripetizioni sono state elise dalla memorizzazione, mantenendo solo occorrenze uniche e istruzioni per ricostruire le ripetizioni</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">document reconstruction data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Istruzioni (codici Add e Copy) che permettono di ricostruire i documenti originali dalla sequenza compressa di token</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">Copy code</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Istruzione che specifica un range di posizioni nella sequenza compressa da duplicare per ricostruire una porzione di documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">Add code</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Istruzione che include una sequenza di token letterali o riferisce a una sequenza di token nella sequenza compressa</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">compressed-uncompressed map</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Mappatura tra posizioni dei token nella sequenza compressa e le corrispondenti posizioni (una o più) nella sequenza non compressa</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US8244530B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8244530B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Efficient indexing of documents with similar content</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8554561B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
