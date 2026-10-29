@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20250156456A1: Adattamento di LLM per il grounding tramite citazioni — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per addestrare un modello linguistico di grandi dimensioni (LLM) a generare risposte con citazioni verificabili a passaggi di supporto in un corpus documentale. Durante l&#39;addestramento, il sistema raccoglie risposte dal LLM base, valuta la qualità del grounding tramite" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20250156456a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20250156456A1: Adattamento di LLM per il grounding tramite citazioni — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per addestrare un modello linguistico di grandi dimensioni (LLM) a generare risposte con citazioni verificabili a passaggi di supporto in un corpus documentale. Durante l&#39;addestramento, il sistema raccoglie risposte dal LLM base, valuta la qualità del grounding tramite" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20250156456a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20250156456A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20250156456a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20250156456A1: Adattamento di LLM per il grounding tramite citazioni",
+  "description": "Il brevetto descrive un metodo per addestrare un modello linguistico di grandi dimensioni (LLM) a generare risposte con citazioni verificabili a passaggi di supporto in un corpus documentale. Durante l\u0027addestramento, il sistema raccoglie risposte dal LLM base, valuta la qualit\u00e0 del grounding tramite un modello di attribuzione e riaddestra il LLM affinch\u00e9 generi autonomamente citazioni e identifichi affermazioni non supportate. In fase di inferenza, un processo iterativo consente al modello adattato di cercare informazioni aggiuntive per le affermazioni prive di supporto.",
+  "articleBody": "Il brevetto descrive un metodo per addestrare un modello linguistico di grandi dimensioni (LLM) a generare risposte con citazioni verificabili a passaggi di supporto in un corpus documentale. Durante l\u0027addestramento, il sistema raccoglie risposte dal LLM base, valuta la qualit\u00e0 del grounding tramite un modello di attribuzione e riaddestra il LLM affinch\u00e9 generi autonomamente citazioni e identifichi affermazioni non supportate. In fase di inferenza, un processo iterativo consente al modello adattato di cercare informazioni aggiuntive per le affermazioni prive di supporto.\n\nLa rivendicazione indipendente 1 copre un metodo che accede a risposte da un LLM, ciascuna composta da una query Q, una risposta A contenente uno o pi\u00f9 statement s, e citazioni C che collegano ogni statement a un evidence passage E in un corpus D. Il metodo determina una grounding quality G della risposta basandosi sugli evidence passages e sugli statements tramite un attribution evaluation model, dove la grounding quality quantifica l\u0027attribuzione degli statements al corpus documentale. Infine, il metodo effettua il tuning del LLM per ottenere un adapted LLM che soddisfa un grounding constraint basato su un grounding quality score.\n\nLa rivendicazione dipendente 2 aggiunge un processo iterativo in cui l\u0027adapted LLM processa una query inizialmente per ottenere una risposta e citazioni, poi in ogni iterazione successiva determina quali passages non sono supportati da citazioni, aggiunge i passages supportati a una lista di relevant passages, e se esistono passages non supportati processa ciascuno per generare una risposta successiva e citazioni, altrimenti processa la query per ottenere una risposta successiva basata sui passages e citazioni. La rivendicazione 3 specifica che il processo iterativo continua finch\u00e9 un inference budget non \u00e8 esaurito. La rivendicazione 4 indica che il processing dei passages non supportati avviene tramite un retriever model che genera supplemental passages da processare con l\u0027adapted LLM.\n\nLa rivendicazione 5 specifica che determinare la grounding quality comprende calcolare una somma degli output dell\u0027attribution evaluation model, ciascuno basato su un evidence passage e statement forniti come input. La rivendicazione 6 formalizza matematicamente il tuning affinch\u00e9 le risposte generate dall\u0027adapted LLM massimizzino gli score rispetto al LLM base, soggetto al vincolo che la grounding quality sia maggiore o uguale a una soglia. Le rivendicazioni 7-12 e 13-18 replicano le stesse funzionalit\u00e0 rispettivamente come system claims e computer storage medium claims.\n\nLa descrizione contempla un processo di training automatico che non richiede campioni etichettati dal dominio target. Il sistema campiona risposte dal base LLM usando instruction following, segmenta ciascuna risposta in sentences s1...sn e per ogni sentence si determina il maximally supported passage ei tramite un language model \u03c6 che assegna uno score \u03c6(ei, si). Un pairing viene creato se \u03c6(ei, si) supera una prima soglia \u03c4, altrimenti la sentence si viene aggiunta a un set U di unsupported statements. Il sistema seleziona la best response A* basandosi sul grounding score massimo e costruisce training data nella forma di tuple query-passages-responses con citazioni, come descritto nei paragrafi relativi a FIG. 1A e 1B.\n\nLa descrizione contempla una verbalization template (Table 1) in formato instruction following che include la query, i search results indicizzati, e richiede al modello di generare una risposta con citazioni in stile [n] e di elencare le sentences non supportate. Il tuning avviene massimizzando la log probability di generare la best-grounded answer A*, come formalizzato nell\u0027Equation 2. In alcuni implementation viene usato low-rank adaptation che congela i pesi del modello pre-addestrato e inietta trainable rank decomposition matrices in ogni layer dell\u0027architettura transformer.\n\nPer l\u0027inferenza, la descrizione contempla un retrieval augmented generation framework (FIG. 3A, 3B) in cui l\u0027adapted LLM costruisce iterativamente un set di relevant passages. Il retriever iniziale pu\u00f2 essere un large dual encoders model come Generalizable T5-based dense Retriever (GTR). A ogni iterazione il modello genera una risposta, aggiunge citazioni e identifica unsupported statements. Se esistono unsupported statements, il retriever recupera additional information basandosi su questi; altrimenti, se il budget B non \u00e8 esaurito, il retriever acquisisce additional information basandosi sulla query originale. I working passages vengono aggiornati con supplementing passages non presentati in iterazioni precedenti, come indicato nelle lines 15, 17, 20-21 di FIG. 3B.\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacit\u00e0 per ridurre le allucinazioni nei sistemi generativi attraverso un meccanismo di self-grounding. Se applicato a risposte AI in Search, potrebbe significare che i contenuti citati come evidence passages avrebbero maggiore visibilit\u00e0 nelle risposte generate. Il processo iterativo di ricerca di supporto per affermazioni non verificate potrebbe premiare contenuti che forniscono informazioni verificabili e ben strutturate. Tuttavia, il brevetto descrive un metodo di training generico applicabile a qualsiasi corpus documentale, senza specificare che il corpus sia l\u0027indice web di Google Search.",
+  "wordCount": 770,
+  "datePublished": "2026-10-29T08:53:26.590085+00:00",
+  "dateModified": "2026-10-29T08:53:26.590085+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20250156456a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Large language model adaptation for grounding",
+    "identifier": "US20250156456A1",
+    "url": "https://patents.google.com/patent/US20250156456A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20250156456A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20250156456A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Adattamento di LLM per il grounding tramite citazioni</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Large language model adaptation for grounding</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per addestrare un modello linguistico di grandi dimensioni (LLM) a generare risposte con citazioni verificabili a passaggi di supporto in un corpus documentale. Durante l&#39;addestramento, il sistema raccoglie risposte dal LLM base, valuta la qualità del grounding tramite un modello di attribuzione e riaddestra il LLM affinché generi autonomamente citazioni e identifichi affermazioni non supportate. In fase di inferenza, un processo iterativo consente al modello adattato di cercare informazioni aggiuntive per le affermazioni prive di supporto.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Risposte generate da LLM con citazioni a corpus</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">15 Maggio 2025</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2023-11-15</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Grounding, attribuzione e citazioni</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">18</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che accede a risposte da un LLM, ciascuna composta da una query Q, una risposta A contenente uno o più statement s, e citazioni C che collegano ogni statement a un evidence passage E in un corpus D. Il metodo determina una grounding quality G della risposta basandosi sugli evidence passages e sugli statements tramite un attribution evaluation model, dove la grounding quality quantifica l&#39;attribuzione degli statements al corpus documentale. Infine, il metodo effettua il tuning del LLM per ottenere un adapted LLM che soddisfa un grounding constraint basato su un grounding quality score.</p>
+      <p>La rivendicazione dipendente 2 aggiunge un processo iterativo in cui l&#39;adapted LLM processa una query inizialmente per ottenere una risposta e citazioni, poi in ogni iterazione successiva determina quali passages non sono supportati da citazioni, aggiunge i passages supportati a una lista di relevant passages, e se esistono passages non supportati processa ciascuno per generare una risposta successiva e citazioni, altrimenti processa la query per ottenere una risposta successiva basata sui passages e citazioni. La rivendicazione 3 specifica che il processo iterativo continua finché un inference budget non è esaurito. La rivendicazione 4 indica che il processing dei passages non supportati avviene tramite un retriever model che genera supplemental passages da processare con l&#39;adapted LLM.</p>
+      <p>La rivendicazione 5 specifica che determinare la grounding quality comprende calcolare una somma degli output dell&#39;attribution evaluation model, ciascuno basato su un evidence passage e statement forniti come input. La rivendicazione 6 formalizza matematicamente il tuning affinché le risposte generate dall&#39;adapted LLM massimizzino gli score rispetto al LLM base, soggetto al vincolo che la grounding quality sia maggiore o uguale a una soglia. Le rivendicazioni 7-12 e 13-18 replicano le stesse funzionalità rispettivamente come system claims e computer storage medium claims.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un processo di training automatico che non richiede campioni etichettati dal dominio target. Il sistema campiona risposte dal base LLM usando instruction following, segmenta ciascuna risposta in sentences s1...sn e per ogni sentence si determina il maximally supported passage ei tramite un language model φ che assegna uno score φ(ei, si). Un pairing viene creato se φ(ei, si) supera una prima soglia τ, altrimenti la sentence si viene aggiunta a un set U di unsupported statements. Il sistema seleziona la best response A* basandosi sul grounding score massimo e costruisce training data nella forma di tuple query-passages-responses con citazioni, come descritto nei paragrafi relativi a FIG. 1A e 1B.</p>
+      <p>La descrizione contempla una verbalization template (Table 1) in formato instruction following che include la query, i search results indicizzati, e richiede al modello di generare una risposta con citazioni in stile [n] e di elencare le sentences non supportate. Il tuning avviene massimizzando la log probability di generare la best-grounded answer A*, come formalizzato nell&#39;Equation 2. In alcuni implementation viene usato low-rank adaptation che congela i pesi del modello pre-addestrato e inietta trainable rank decomposition matrices in ogni layer dell&#39;architettura transformer.</p>
+      <p>Per l&#39;inferenza, la descrizione contempla un retrieval augmented generation framework (FIG. 3A, 3B) in cui l&#39;adapted LLM costruisce iterativamente un set di relevant passages. Il retriever iniziale può essere un large dual encoders model come Generalizable T5-based dense Retriever (GTR). A ogni iterazione il modello genera una risposta, aggiunge citazioni e identifica unsupported statements. Se esistono unsupported statements, il retriever recupera additional information basandosi su questi; altrimenti, se il budget B non è esaurito, il retriever acquisisce additional information basandosi sulla query originale. I working passages vengono aggiornati con supplementing passages non presentati in iterazioni precedenti, come indicato nelle lines 15, 17, 20-21 di FIG. 3B.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacità per ridurre le allucinazioni nei sistemi generativi attraverso un meccanismo di self-grounding. Se applicato a risposte AI in Search, potrebbe significare che i contenuti citati come evidence passages avrebbero maggiore visibilità nelle risposte generate. Il processo iterativo di ricerca di supporto per affermazioni non verificate potrebbe premiare contenuti che forniscono informazioni verificabili e ben strutturate. Tuttavia, il brevetto descrive un metodo di training generico applicabile a qualsiasi corpus documentale, senza specificare che il corpus sia l&#39;indice web di Google Search.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è una domanda pending (US20250156456A1), non un brevetto concesso, e non ha pubblicazioni collegate in famiglia: la protezione non è ancora definitiva.</li>
+      <li>La descrizione non specifica che il corpus D sia l&#39;indice web di Google Search né che il sistema sia destinato a Google Search: potrebbe applicarsi a documenti interni, knowledge bases o altri contesti.</li>
+      <li>Il brevetto descrive un metodo di training e inferenza per LLM generici, non dimostra che Google utilizzi questo approccio per le AI Overviews o altre funzionalità di ricerca in produzione.</li>
+      <li>Non viene specificato come il sistema determini quali contenuti includere nel corpus D né quali segnali influenzino la selezione degli evidence passages da parte del retriever model.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Strutturare i contenuti in affermazioni verificabili con evidenze chiare facilita l&#39;uso come fonte di supporto in sistemi di attribuzione automatica, indipendentemente dall&#39;applicazione di questo brevetto.</li>
+      <li class="pl-2">Fornire informazioni fattuali ben documentate con fonti esplicite migliora la capacità di un contenuto di fungere da evidence passage in architetture retrieval-augmented, a prescindere dal sistema specifico in uso.</li>
+      <li class="pl-2">Mantenere coerenza tra titoli, snippet e corpo del contenuto riduce il rischio che un passaggio venga recuperato ma poi valutato come non supportivo rispetto a uno statement specifico.</li>
+      <li class="pl-2">Evitare affermazioni non verificabili o prive di supporto documentale resta una best practice generale per contenuti destinati a essere processati da sistemi automatici di valutazione dell&#39;attribuzione.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">grounding quality</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Quantificazione del grado di attribuzione degli statements in una risposta a passaggi di supporto in un corpus documentale, calcolata come media degli score di supporto per ciascuna sentence.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">attribution evaluation model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello linguistico φ che valuta se un evidence passage concat(Ei) supporta uno statement si, assegnando uno score utilizzato per determinare la grounding quality.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">unsupported statements</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sentences in una risposta per le quali non è stata trovata una citazione a un evidence passage con score φ(ei, si) superiore alla soglia τ, raccolte nel set U.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">adapted LLM</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello linguistico ottenuto tramite tuning del base LLM per generare autonomamente citazioni a evidence passages e identificare unsupported statements nelle proprie risposte.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">inference budget</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Limite B che definisce il numero massimo di chiamate al LLM durante il processo iterativo di self-grounding, utilizzato come cessation condition per terminare le iterazioni.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">retriever model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello che recupera supplemental passages dal corpus basandosi su unsupported statements o sulla query originale, ad esempio un large dual encoders model come GTR.</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20250156456A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

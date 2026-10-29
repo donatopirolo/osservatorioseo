@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US11769017B1: Sintesi generative per risultati di ricerca — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per generare sintesi in linguaggio naturale in risposta a query utilizzando un large language model (LLM). Il sistema processa contenuti da documenti di risultati di ricerca selezionati (non solo la query) per generare la sintesi, con l&#39;obiettivo di ridurre imprecisio" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us11769017b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US11769017B1: Sintesi generative per risultati di ricerca — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per generare sintesi in linguaggio naturale in risposta a query utilizzando un large language model (LLM). Il sistema processa contenuti da documenti di risultati di ricerca selezionati (non solo la query) per generare la sintesi, con l&#39;obiettivo di ridurre imprecisio" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us11769017b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US11769017B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us11769017b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US11769017B1: Sintesi generative per risultati di ricerca",
+  "description": "Il brevetto descrive un sistema per generare sintesi in linguaggio naturale in risposta a query utilizzando un large language model (LLM). Il sistema processa contenuti da documenti di risultati di ricerca selezionati (non solo la query) per generare la sintesi, con l\u0027obiettivo di ridurre imprecisioni e rendere le sintesi pi\u00f9 appropriate al contesto specifico della ricerca.",
+  "articleBody": "Il brevetto descrive un sistema per generare sintesi in linguaggio naturale in risposta a query utilizzando un large language model (LLM). Il sistema processa contenuti da documenti di risultati di ricerca selezionati (non solo la query) per generare la sintesi, con l\u0027obiettivo di ridurre imprecisioni e rendere le sintesi pi\u00f9 appropriate al contesto specifico della ricerca.\n\nLa rivendicazione indipendente 1 copre un metodo che riceve una query associata a un client device, genera output LLM processando input basato sulla query e/o contenuti da search result documents (SRD) responsivi alla query, genera una sintesi in linguaggio naturale (NL based summary) usando l\u0027output LLM, e causa il rendering della sintesi insieme a link agli SRD. Il metodo include poi il monitoraggio di interazioni con gli SRD e, quando rileva un\u0027interazione con un dato SRD, genera output LLM rivisto processando input rivisto che riflette l\u0027occorrenza dell\u0027interazione (mentre l\u0027input originale non la rifletteva), genera una sintesi NL rivista usando l\u0027output rivisto, e causa il rendering della sintesi rivista.\n\nLe rivendicazioni dipendenti 2-3 specificano che l\u0027interazione pu\u00f2 includere la visualizzazione di almeno parte dell\u0027SRD, opzionalmente per almeno una durata soglia. Le rivendicazioni 4-7 specificano diverse modalit\u00e0 di rendering della sintesi rivista: sostituendo la sintesi originale nell\u0027interfaccia (rivendicazione 4), sostituendola dopo una durata iniziale di interazione (rivendicazione 5), in risposta a una nuova occorrenza della query (rivendicazione 6), o in risposta a una query aggiuntiva simile (rivendicazione 7). Le rivendicazioni 8-9 specificano modalit\u00e0 alternative per generare l\u0027output rivisto: usando lo stesso LLM con un prompt rivisto che riflette familiarit\u00e0 con il contenuto dell\u0027SRD (rivendicazione 8), o usando un LLM aggiuntivo fine-tuned su prompt che riflettono familiarit\u00e0 (rivendicazione 9). Le rivendicazioni 10-12 specificano che l\u0027input pu\u00f2 essere basato su contenuti da SRD responsivi alla query, selezionati tra SRD query-responsive e opzionalmente includendo SRD responsivi a related queries correlate.\n\nLa rivendicazione indipendente 13 copre un metodo alternativo che riceve una query, seleziona un set di SRD includendo SRD query-responsive, genera output LLM processando contenuti da ciascun SRD del set, genera una sintesi NL, genera una confidence measure per una porzione della sintesi, e causa il rendering della sintesi con una confidence annotation corrispondente alla confidence measure. Le rivendicazioni 14-17 specificano criteri di selezione degli SRD basati su query-dependent measures, query-independent measures, user-dependent measures (rivendicazione 15), e inclusione di SRD responsivi a related queries con correlazione che soddisfa una soglia (rivendicazioni 16-17). Le rivendicazioni 18-20 specificano il rendering di link selezionabili agli SRD, resi come parte della sintesi e corrispondenti a porzioni verificabili (rivendicazione 19-20). La rivendicazione 21 specifica che l\u0027output LLM pu\u00f2 essere generato senza processare la query stessa. La rivendicazione 22 specifica che la query pu\u00f2 essere una implied query formulata e sottomessa automaticamente.\n\nLa descrizione contempla numerosi dettagli operativi. Il blocco 254A (metodo 200) specifica che la selezione degli SRD pu\u00f2 basarsi su query-dependent measures (positional ranking, selection rate per la query, locality measure basata su location della query e dell\u0027SRD, language measure), query-independent measures (selection rate aggregata, trustworthiness measure, overall popularity, freshness measure che riflette recency di creazione o aggiornamento), e user-dependent measures (basate su attributi del profilo utente, query recenti, interazioni recenti non-query). Il blocco 256 contempla la selezione di related-query-responsive SRDs, dove la related query ha una correlazione con la query originale, con magnitude della correlazione basata su quantity di occorrenze delle due query emesse in temporal proximity da device o account corrispondenti. Il blocco 258 contempla la selezione di recent-query-responsive SRDs da query recenti dell\u0027utente. Il blocco 259 contempla la selezione di implied-query-responsive SRDs da implied queries generate automaticamente da contesto e/o profile data.\n\nIl blocco 260A1 contempla che il contenuto da un SRD pu\u00f2 includere text content, image content (con recognized text, auto-generated caption, descriptor di oggetti rilevati), video content (con transcription dell\u0027audio). Il blocco 260A1 contempla anche l\u0027inclusione di source identifier unici per ciascun SRD nel contenuto processato dall\u0027LLM, che potrebbero consentire all\u0027output LLM di riflettere quali porzioni della sintesi sono supportate da quali SRD. Il blocco 262A contempla il rendering della sintesi con link agli SRD che verificano porzioni, con link resi come parte della sintesi (linkified portions) o come search results separati. Il blocco 262B contempla confidence annotations per porzioni o per l\u0027intera sintesi. Il blocco 262C contempla la determinazione di quali SRD verificano porzioni comparando embeddings (content embedding della porzione vs document content embedding) e determinando distance measures, oppure usando source identifiers nell\u0027output LLM.\n\nIl metodo 400 (blocco 460A) contempla la generazione di sintesi riviste usando prompt rivisti che riflettono familiarit\u00e0 con contenuto gi\u00e0 visto (es. \"create a summary assuming the user already knows X\"). Il metodo 600 (blocco 654A) contempla la determinazione di familiarit\u00e0 dell\u0027utente con certi contenuti comparando profile data alla query e/o agli SRD. La descrizione contempla anche (paragrafo relativo a parallel LLMs) l\u0027uso di multiple LLMs in parallelo per generare candidate summaries, selezionandone una basata su similarity ad altre candidate, presence/absence di certi termini, language model scores, o altre features.\n\nPer la SEO, questi dettagli potrebbero suggerire che le sintesi generative potrebbero essere influenzate da: freshness e trustworthiness degli SRD selezionati, locality e language match con la query, selection rates degli SRD, user profile e query history, presenza di contenuti multimediali descrittivi (immagini con caption, video con transcript). La selezione di SRD da related queries e recent queries potrebbe favorire contenuti che appaiono in cluster tematici o in query sequences. La generazione di sintesi riviste in base a interazioni potrebbe premiare contenuti che l\u0027utente effettivamente consulta. Tuttavia, nulla di ci\u00f2 dimostra che Google applichi questi criteri in produzione: la descrizione elenca opzioni possibili (\"in some implementations\", \"can include\", \"optionally\").",
+  "wordCount": 926,
+  "datePublished": "2026-10-29T08:57:18.628179+00:00",
+  "dateModified": "2026-10-29T08:57:18.628179+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us11769017b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Generative summaries for search results",
+    "identifier": "US11769017B1",
+    "url": "https://patents.google.com/patent/US11769017B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US11769017B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US11769017B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Sintesi generative per risultati di ricerca</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Generative summaries for search results</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per generare sintesi in linguaggio naturale in risposta a query utilizzando un large language model (LLM). Il sistema processa contenuti da documenti di risultati di ricerca selezionati (non solo la query) per generare la sintesi, con l&#39;obiettivo di ridurre imprecisioni e rendere le sintesi più appropriate al contesto specifico della ricerca.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, sintesi generative in risposta a query</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">26 Settembre 2023</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2022-12-30</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★★</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">22</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che riceve una query associata a un client device, genera output LLM processando input basato sulla query e/o contenuti da search result documents (SRD) responsivi alla query, genera una sintesi in linguaggio naturale (NL based summary) usando l&#39;output LLM, e causa il rendering della sintesi insieme a link agli SRD. Il metodo include poi il monitoraggio di interazioni con gli SRD e, quando rileva un&#39;interazione con un dato SRD, genera output LLM rivisto processando input rivisto che riflette l&#39;occorrenza dell&#39;interazione (mentre l&#39;input originale non la rifletteva), genera una sintesi NL rivista usando l&#39;output rivisto, e causa il rendering della sintesi rivista.</p>
+      <p>Le rivendicazioni dipendenti 2-3 specificano che l&#39;interazione può includere la visualizzazione di almeno parte dell&#39;SRD, opzionalmente per almeno una durata soglia. Le rivendicazioni 4-7 specificano diverse modalità di rendering della sintesi rivista: sostituendo la sintesi originale nell&#39;interfaccia (rivendicazione 4), sostituendola dopo una durata iniziale di interazione (rivendicazione 5), in risposta a una nuova occorrenza della query (rivendicazione 6), o in risposta a una query aggiuntiva simile (rivendicazione 7). Le rivendicazioni 8-9 specificano modalità alternative per generare l&#39;output rivisto: usando lo stesso LLM con un prompt rivisto che riflette familiarità con il contenuto dell&#39;SRD (rivendicazione 8), o usando un LLM aggiuntivo fine-tuned su prompt che riflettono familiarità (rivendicazione 9). Le rivendicazioni 10-12 specificano che l&#39;input può essere basato su contenuti da SRD responsivi alla query, selezionati tra SRD query-responsive e opzionalmente includendo SRD responsivi a related queries correlate.</p>
+      <p>La rivendicazione indipendente 13 copre un metodo alternativo che riceve una query, seleziona un set di SRD includendo SRD query-responsive, genera output LLM processando contenuti da ciascun SRD del set, genera una sintesi NL, genera una confidence measure per una porzione della sintesi, e causa il rendering della sintesi con una confidence annotation corrispondente alla confidence measure. Le rivendicazioni 14-17 specificano criteri di selezione degli SRD basati su query-dependent measures, query-independent measures, user-dependent measures (rivendicazione 15), e inclusione di SRD responsivi a related queries con correlazione che soddisfa una soglia (rivendicazioni 16-17). Le rivendicazioni 18-20 specificano il rendering di link selezionabili agli SRD, resi come parte della sintesi e corrispondenti a porzioni verificabili (rivendicazione 19-20). La rivendicazione 21 specifica che l&#39;output LLM può essere generato senza processare la query stessa. La rivendicazione 22 specifica che la query può essere una implied query formulata e sottomessa automaticamente.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla numerosi dettagli operativi. Il blocco 254A (metodo 200) specifica che la selezione degli SRD può basarsi su query-dependent measures (positional ranking, selection rate per la query, locality measure basata su location della query e dell&#39;SRD, language measure), query-independent measures (selection rate aggregata, trustworthiness measure, overall popularity, freshness measure che riflette recency di creazione o aggiornamento), e user-dependent measures (basate su attributi del profilo utente, query recenti, interazioni recenti non-query). Il blocco 256 contempla la selezione di related-query-responsive SRDs, dove la related query ha una correlazione con la query originale, con magnitude della correlazione basata su quantity di occorrenze delle due query emesse in temporal proximity da device o account corrispondenti. Il blocco 258 contempla la selezione di recent-query-responsive SRDs da query recenti dell&#39;utente. Il blocco 259 contempla la selezione di implied-query-responsive SRDs da implied queries generate automaticamente da contesto e/o profile data.</p>
+      <p>Il blocco 260A1 contempla che il contenuto da un SRD può includere text content, image content (con recognized text, auto-generated caption, descriptor di oggetti rilevati), video content (con transcription dell&#39;audio). Il blocco 260A1 contempla anche l&#39;inclusione di source identifier unici per ciascun SRD nel contenuto processato dall&#39;LLM, che potrebbero consentire all&#39;output LLM di riflettere quali porzioni della sintesi sono supportate da quali SRD. Il blocco 262A contempla il rendering della sintesi con link agli SRD che verificano porzioni, con link resi come parte della sintesi (linkified portions) o come search results separati. Il blocco 262B contempla confidence annotations per porzioni o per l&#39;intera sintesi. Il blocco 262C contempla la determinazione di quali SRD verificano porzioni comparando embeddings (content embedding della porzione vs document content embedding) e determinando distance measures, oppure usando source identifiers nell&#39;output LLM.</p>
+      <p>Il metodo 400 (blocco 460A) contempla la generazione di sintesi riviste usando prompt rivisti che riflettono familiarità con contenuto già visto (es. &#34;create a summary assuming the user already knows X&#34;). Il metodo 600 (blocco 654A) contempla la determinazione di familiarità dell&#39;utente con certi contenuti comparando profile data alla query e/o agli SRD. La descrizione contempla anche (paragrafo relativo a parallel LLMs) l&#39;uso di multiple LLMs in parallelo per generare candidate summaries, selezionandone una basata su similarity ad altre candidate, presence/absence di certi termini, language model scores, o altre features.</p>
+      <p>Per la SEO, questi dettagli potrebbero suggerire che le sintesi generative potrebbero essere influenzate da: freshness e trustworthiness degli SRD selezionati, locality e language match con la query, selection rates degli SRD, user profile e query history, presenza di contenuti multimediali descrittivi (immagini con caption, video con transcript). La selezione di SRD da related queries e recent queries potrebbe favorire contenuti che appaiono in cluster tematici o in query sequences. La generazione di sintesi riviste in base a interazioni potrebbe premiare contenuti che l&#39;utente effettivamente consulta. Tuttavia, nulla di ciò dimostra che Google applichi questi criteri in produzione: la descrizione elenca opzioni possibili (&#34;in some implementations&#34;, &#34;can include&#34;, &#34;optionally&#34;).</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che Google utilizzi LLM per generare sintesi in Search: descrive un metodo possibile, non un&#39;implementazione confermata in produzione.</li>
+      <li>La descrizione elenca numerosi segnali e misure come opzioni (&#34;in some implementations&#34;, &#34;can include&#34;, &#34;optionally&#34;), senza indicare quali siano effettivamente utilizzati o con quale peso.</li>
+      <li>Il brevetto non specifica soglie, pesi relativi dei segnali, o dettagli algoritmici sufficienti a replicare il sistema o a inferire strategie SEO precise.</li>
+      <li>La famiglia include continuation e domande non ancora concesse: il brevetto è parte di una strategia di protezione ampia, non una conferma indipendente di deployment.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i contenuti siano aggiornati, accurati e verificabili: freshness, trustworthiness e verifiability sono criteri contemplati per la selezione degli SRD e per confidence measures, indipendentemente dall&#39;uso di LLM.</li>
+      <li class="pl-2">Fornire contenuti multimodali ben descritti (immagini con alt text significativi, video con transcript): la descrizione contempla l&#39;estrazione di image content e video content dagli SRD, il che rafforza pratiche SEO consolidate.</li>
+      <li class="pl-2">Mantenere coerenza tematica e autorevolezza nel dominio: la selezione di SRD da related queries e l&#39;uso di trustworthiness measures suggeriscono che contenuti autorevoli e tematicamente coerenti restano rilevanti.</li>
+      <li class="pl-2">Monitorare metriche di engagement (selection rate, dwell time): la descrizione contempla selection rate e interazioni con SRD come segnali, coerentemente con best practice SEO orientate all&#39;utente.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">LLM (Large Language Model)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello di linguaggio di grandi dimensioni (almeno centinaia di milioni di parametri, spesso miliardi) utilizzato per processare contenuti in linguaggio naturale e generare output generativo.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">NL based summary</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sintesi in linguaggio naturale generata utilizzando l&#39;output di un LLM, resa in risposta a una query.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">search result document (SRD)</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documento di risultato di ricerca responsivo a una query, da cui vengono estratti contenuti da processare con l&#39;LLM.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query-dependent measure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura dipendente dalla query specifica, come positional ranking, selection rate per quella query, locality measure, language measure.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query-independent measure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura indipendente dalla query, come selection rate aggregata, trustworthiness, overall popularity, freshness dell&#39;SRD.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">user-dependent measure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Misura dipendente dall&#39;utente, basata su profilo utente, query recenti, interazioni recenti non-query.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">related query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query correlata alla query originale, determinata avere una correlazione (es. co-occorrenza in temporal proximity tra utenti).</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">implied query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query generata e sottomessa automaticamente, indipendentemente da input utente esplicito, basata su contesto, profilo o altre informazioni.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="/brevetti/us20250005303a1/" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US20250005303A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Selezione dinamica di modelli generativi per le risposte alle query</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">scheda</span>
+      </a>
+      <a href="https://patents.google.com/patent/US11886828B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11886828B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Generative summaries for search results</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US11900068B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11900068B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Generative summaries for search results</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US12118325B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12118325B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Generative summaries for search results</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/EP4627452A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">EP4627452A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Generative summaries for search results</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/WO2024145537A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">WO2024145537A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Generative summaries for search results</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US11769017B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

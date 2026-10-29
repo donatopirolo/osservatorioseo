@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US11354342B2: Punteggio di guadagno informativo per documenti correlati — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per calcolare un punteggio di guadagno informativo (information gain score) per documenti non ancora visti dall&#39;utente, in base a quanto contenuto nuovo offrono rispetto ai documenti già consultati sullo stesso argomento. I documenti possono essere selezionati e presen" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us11354342b2/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US11354342B2: Punteggio di guadagno informativo per documenti correlati — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per calcolare un punteggio di guadagno informativo (information gain score) per documenti non ancora visti dall&#39;utente, in base a quanto contenuto nuovo offrono rispetto ai documenti già consultati sullo stesso argomento. I documenti possono essere selezionati e presen" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us11354342b2/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US11354342B2",
+      "item": "https://www.osservatorioseo.com/brevetti/us11354342b2/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US11354342B2: Punteggio di guadagno informativo per documenti correlati",
+  "description": "Il brevetto descrive un metodo per calcolare un punteggio di guadagno informativo (information gain score) per documenti non ancora visti dall\u0027utente, in base a quanto contenuto nuovo offrono rispetto ai documenti gi\u00e0 consultati sullo stesso argomento. I documenti possono essere selezionati e presentati (o riordinati) in base a questi punteggi, per ridurre la ridondanza e aumentare la densit\u00e0 informativa delle risposte.",
+  "articleBody": "Il brevetto descrive un metodo per calcolare un punteggio di guadagno informativo (information gain score) per documenti non ancora visti dall\u0027utente, in base a quanto contenuto nuovo offrono rispetto ai documenti gi\u00e0 consultati sullo stesso argomento. I documenti possono essere selezionati e presentati (o riordinati) in base a questi punteggi, per ridurre la ridondanza e aumentare la densit\u00e0 informativa delle risposte.\n\nLa rivendicazione indipendente 1 copre un metodo che identifica un primo set di documenti che condividono un argomento e da cui sono state estratte informazioni gi\u00e0 presentate all\u0027utente da un assistente automatico in risposta a input in linguaggio naturale. Viene poi identificato un secondo set di documenti nuovi sullo stesso argomento, non ancora presentati. Per ciascun documento nuovo si determina un information gain score basato sulla quantit\u00e0 di informazioni nuove contenute nel documento rispetto alle informazioni gi\u00e0 estratte dal primo set. Un documento viene selezionato dal secondo set in base agli information gain scores e le informazioni estratte vengono presentate all\u0027utente tramite i dispositivi.\n\nLa rivendicazione 2 aggiunge che il secondo set pu\u00f2 essere classificato (ranked) in base agli information gain scores e la selezione si basa su questa classifica. La rivendicazione 3 specifica che il punteggio pu\u00f2 essere determinato applicando primi dati indicativi delle informazioni estratte dal primo set e secondi dati indicativi delle informazioni estratte dal documento nuovo attraverso un modello di machine learning per generare output da cui si ricava il punteggio. La rivendicazione 4 precisa che i primi e secondi dati possono comprendere vettori di caratteristiche semantiche (semantic feature vectors) generati dalle informazioni estratte.\n\nLa rivendicazione indipendente 5 copre un metodo simile ma pi\u00f9 generale: identifica un primo set di documenti accessati dall\u0027utente su dispositivi, identifica un secondo set di documenti nuovi non accessati, determina information gain scores per ciascun nuovo documento in base alla quantit\u00e0 di informazioni nuove rispetto al primo set, e presenta le nuove informazioni in una modalit\u00e0 selezionata in base agli information gain scores. La rivendicazione 7 specifica un\u0027implementazione in cui il primo set viene identificato tramite un\u0027interfaccia di risultati di ricerca: vengono renderizzati riferimenti a documenti del primo set, si riceve input dell\u0027utente che seleziona un riferimento, si riceve input per tornare all\u0027interfaccia di ricerca, e in risposta si renderizzano riferimenti a documenti del secondo set. La rivendicazione 8 aggiunge che il rendering dei riferimenti al secondo set pu\u00f2 escludere dall\u0027interfaccia almeno il riferimento al documento particolare gi\u00e0 visto del primo set. Le rivendicazioni 15 e 16 specificano che il modello di machine learning pu\u00f2 comprendere una rete neurale e che i dati possono essere rappresentazioni semantiche (semantic representations) generate dai documenti.\n\nLa descrizione contempla diversi scenari applicativi. Nel contesto di un assistente automatico (paragrafi relativi a FIG. 2), l\u0027utente pu\u00f2 chiedere aiuto su un argomento e ricevere informazioni estratte da documenti in turni di dialogo successivi. Nel contesto di un\u0027interfaccia di ricerca (FIG. 3), l\u0027utente vede riferimenti a documenti che possono essere riordinati dinamicamente man mano che ne consulta alcuni. La descrizione menziona esplicitamente che quando l\u0027utente torna all\u0027interfaccia di ricerca dopo aver visto un documento, i riferimenti possono essere aggiornati: alcuni documenti possono essere esclusi o significativamente retrocessi se hanno un information gain score basso, ad esempio se contengono informazioni identiche a quelle gi\u00e0 viste.\n\nLa descrizione contempla l\u0027uso di vettori semantici (semantic vectors, semantic feature vectors, embeddings) generati da modelli come word2vec come input per il modello di machine learning che calcola gli information gain scores. Viene menzionato che il training del modello pu\u00f2 avvenire con coppie di documenti \u003cd1, d2\u003e etichettate manualmente da curatori umani o tramite feedback degli utenti durante sessioni di ricerca reali (ad esempio pop-up che chiedono se un documento \u00e8 stato utile o ridondante). Gli information gain scores possono essere valori tra 0.00 e 1.00, dove 0.00 indica nessun guadagno informativo e 1.00 indica guadagno totale.\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia esplorando modi per diversificare i risultati presentati in base al comportamento di navigazione dell\u0027utente all\u0027interno di una sessione di ricerca. Se implementato, un sistema del genere potrebbe premiare documenti che offrono prospettive o informazioni complementari rispetto a quelli gi\u00e0 cliccati, piuttosto che duplicare contenuti simili. Potrebbe significare che in una SERP dinamica, dopo che l\u0027utente ha visitato un risultato e torna indietro, i risultati rimanenti potrebbero essere riordinati o filtrati per massimizzare la novit\u00e0 informativa. Questo sarebbe particolarmente rilevante per query informazionali dove esistono molti documenti con contenuti sovrapposti. Tuttavia, la descrizione non fornisce dettagli su come questo si integrerebbe con altri segnali di ranking tradizionali n\u00e9 su soglie specifiche di information gain score che determinerebbero promozioni o esclusioni.",
+  "wordCount": 763,
+  "datePublished": "2026-10-29T08:49:07.167148+00:00",
+  "dateModified": "2026-10-29T08:49:07.167148+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us11354342b2/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Contextual estimation of link information gain",
+    "identifier": "US11354342B2",
+    "url": "https://patents.google.com/patent/US11354342B2/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US11354342B2</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US11354342B2</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Punteggio di guadagno informativo per documenti correlati</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Contextual estimation of link information gain</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per calcolare un punteggio di guadagno informativo (information gain score) per documenti non ancora visti dall&#39;utente, in base a quanto contenuto nuovo offrono rispetto ai documenti già consultati sullo stesso argomento. I documenti possono essere selezionati e presentati (o riordinati) in base a questi punteggi, per ridurre la ridondanza e aumentare la densità informativa delle risposte.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Assistente automatico, interfacce di ricerca</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">07 Giugno 2022</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2018-10-18</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">16</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che identifica un primo set di documenti che condividono un argomento e da cui sono state estratte informazioni già presentate all&#39;utente da un assistente automatico in risposta a input in linguaggio naturale. Viene poi identificato un secondo set di documenti nuovi sullo stesso argomento, non ancora presentati. Per ciascun documento nuovo si determina un information gain score basato sulla quantità di informazioni nuove contenute nel documento rispetto alle informazioni già estratte dal primo set. Un documento viene selezionato dal secondo set in base agli information gain scores e le informazioni estratte vengono presentate all&#39;utente tramite i dispositivi.</p>
+      <p>La rivendicazione 2 aggiunge che il secondo set può essere classificato (ranked) in base agli information gain scores e la selezione si basa su questa classifica. La rivendicazione 3 specifica che il punteggio può essere determinato applicando primi dati indicativi delle informazioni estratte dal primo set e secondi dati indicativi delle informazioni estratte dal documento nuovo attraverso un modello di machine learning per generare output da cui si ricava il punteggio. La rivendicazione 4 precisa che i primi e secondi dati possono comprendere vettori di caratteristiche semantiche (semantic feature vectors) generati dalle informazioni estratte.</p>
+      <p>La rivendicazione indipendente 5 copre un metodo simile ma più generale: identifica un primo set di documenti accessati dall&#39;utente su dispositivi, identifica un secondo set di documenti nuovi non accessati, determina information gain scores per ciascun nuovo documento in base alla quantità di informazioni nuove rispetto al primo set, e presenta le nuove informazioni in una modalità selezionata in base agli information gain scores. La rivendicazione 7 specifica un&#39;implementazione in cui il primo set viene identificato tramite un&#39;interfaccia di risultati di ricerca: vengono renderizzati riferimenti a documenti del primo set, si riceve input dell&#39;utente che seleziona un riferimento, si riceve input per tornare all&#39;interfaccia di ricerca, e in risposta si renderizzano riferimenti a documenti del secondo set. La rivendicazione 8 aggiunge che il rendering dei riferimenti al secondo set può escludere dall&#39;interfaccia almeno il riferimento al documento particolare già visto del primo set. Le rivendicazioni 15 e 16 specificano che il modello di machine learning può comprendere una rete neurale e che i dati possono essere rappresentazioni semantiche (semantic representations) generate dai documenti.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi scenari applicativi. Nel contesto di un assistente automatico (paragrafi relativi a FIG. 2), l&#39;utente può chiedere aiuto su un argomento e ricevere informazioni estratte da documenti in turni di dialogo successivi. Nel contesto di un&#39;interfaccia di ricerca (FIG. 3), l&#39;utente vede riferimenti a documenti che possono essere riordinati dinamicamente man mano che ne consulta alcuni. La descrizione menziona esplicitamente che quando l&#39;utente torna all&#39;interfaccia di ricerca dopo aver visto un documento, i riferimenti possono essere aggiornati: alcuni documenti possono essere esclusi o significativamente retrocessi se hanno un information gain score basso, ad esempio se contengono informazioni identiche a quelle già viste.</p>
+      <p>La descrizione contempla l&#39;uso di vettori semantici (semantic vectors, semantic feature vectors, embeddings) generati da modelli come word2vec come input per il modello di machine learning che calcola gli information gain scores. Viene menzionato che il training del modello può avvenire con coppie di documenti &lt;d1, d2&gt; etichettate manualmente da curatori umani o tramite feedback degli utenti durante sessioni di ricerca reali (ad esempio pop-up che chiedono se un documento è stato utile o ridondante). Gli information gain scores possono essere valori tra 0.00 e 1.00, dove 0.00 indica nessun guadagno informativo e 1.00 indica guadagno totale.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google stia esplorando modi per diversificare i risultati presentati in base al comportamento di navigazione dell&#39;utente all&#39;interno di una sessione di ricerca. Se implementato, un sistema del genere potrebbe premiare documenti che offrono prospettive o informazioni complementari rispetto a quelli già cliccati, piuttosto che duplicare contenuti simili. Potrebbe significare che in una SERP dinamica, dopo che l&#39;utente ha visitato un risultato e torna indietro, i risultati rimanenti potrebbero essere riordinati o filtrati per massimizzare la novità informativa. Questo sarebbe particolarmente rilevante per query informazionali dove esistono molti documenti con contenuti sovrapposti. Tuttavia, la descrizione non fornisce dettagli su come questo si integrerebbe con altri segnali di ranking tradizionali né su soglie specifiche di information gain score che determinerebbero promozioni o esclusioni.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia attivo in Google Search. L&#39;ambito principale descritto è un assistente automatico che risponde a input vocale, non necessariamente la ricerca web tradizionale.</li>
+      <li>Non specifica come gli information gain scores si combinerebbero con altri fattori di ranking consolidati (rilevanza, autorità, freschezza) né quale peso relativo avrebbero.</li>
+      <li>Non chiarisce se il ricalcolo degli scores e il riordino dei risultati avverrebbero in tempo reale per ogni utente (con implicazioni di scalabilità) o solo in contesti limitati come sessioni di assistente.</li>
+      <li>La descrizione menziona che i riferimenti ai documenti in user document database possono essere conservati dopo la fine di una sessione o essere indipendenti per ogni nuovo argomento, ma non specifica quale approccio sarebbe preferito in produzione.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Diversificare i contenuti pubblicati su argomenti popolari: se molti siti coprono lo stesso tema con informazioni simili, offrire angolazioni, dettagli o approfondimenti unici potrebbe aumentare il valore percepito del documento in scenari di confronto.</li>
+      <li class="pl-2">Strutturare i contenuti in modo che le informazioni distintive siano facilmente identificabili ed estraibili, ad esempio con sezioni chiare, markup semantico e riassunti che evidenzino cosa rende unico quel contenuto rispetto ad altri sulla stessa query.</li>
+      <li class="pl-2">Monitorare quali aspetti di un argomento sono già ampiamente coperti dalla concorrenza e investire nella creazione di contenuti che colmino lacune informative, aumentando la probabilità di essere selezionati come fonte complementare.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">information gain score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio che indica la quantità di informazioni aggiuntive contenute in un documento rispetto a documenti già visti dall&#39;utente sullo stesso argomento.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">semantic feature vector</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Rappresentazione numerica vettoriale di un documento generata da modelli di machine learning, utilizzata per confrontare la similarità semantica tra documenti.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">first set / second set</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Il primo set comprende documenti già presentati all&#39;utente; il secondo set comprende documenti nuovi non ancora visti, per i quali si calcola l&#39;information gain score.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">automated assistant</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Software che interagisce con l&#39;utente tramite linguaggio naturale (vocale o testuale) per fornire informazioni estratte da documenti in turni di dialogo.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US11720613B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11720613B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Contextual estimation of link information gain</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/WO2020081082A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">WO2020081082A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Contextual estimation of link information gain</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">A-371-Of-International</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US11354342B2/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

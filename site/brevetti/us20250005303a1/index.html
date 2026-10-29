@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20250005303A1: Selezione dinamica di modelli generativi per le risposte alle query — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema che seleziona dinamicamente, tra più modelli generativi candidati (LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image), quale utilizzare per generare risposte a una query. La selezione avviene analizzando la query stessa e/o i documenti di r" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20250005303a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20250005303A1: Selezione dinamica di modelli generativi per le risposte alle query — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema che seleziona dinamicamente, tra più modelli generativi candidati (LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image), quale utilizzare per generare risposte a una query. La selezione avviene analizzando la query stessa e/o i documenti di r" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20250005303a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20250005303A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20250005303a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20250005303A1: Selezione dinamica di modelli generativi per le risposte alle query",
+  "description": "Il brevetto descrive un sistema che seleziona dinamicamente, tra pi\u00f9 modelli generativi candidati (LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image), quale utilizzare per generare risposte a una query. La selezione avviene analizzando la query stessa e/o i documenti di risultato, utilizzando classificatori o regole, e pu\u00f2 portare a non utilizzare alcun modello, utilizzarne uno solo o combinarne pi\u00f9 di uno.",
+  "articleBody": "Il brevetto descrive un sistema che seleziona dinamicamente, tra pi\u00f9 modelli generativi candidati (LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image), quale utilizzare per generare risposte a una query. La selezione avviene analizzando la query stessa e/o i documenti di risultato, utilizzando classificatori o regole, e pu\u00f2 portare a non utilizzare alcun modello, utilizzarne uno solo o combinarne pi\u00f9 di uno.\n\nLa rivendicazione indipendente 1 protegge un metodo che riceve una query formulata in base a input utente da un client device, seleziona un sottoinsieme particolare di modelli generativi candidati da utilizzare per generare una o pi\u00f9 risposte da rendere in risposta alla query, dove la selezione si basa sull\u0027elaborazione della query e/o dei documenti di risultato che rispondono alla query. Se un dato modello generativo \u00e8 incluso nel sottoinsieme particolare, il metodo causa il rendering di una data risposta generata in base alla query e utilizzando quel modello generativo. La rivendicazione 2 specifica che i modelli candidati includono un modello generativo di dimensioni maggiori e uno di dimensioni minori, dove quello maggiore richiede pi\u00f9 risorse computazionali, e il sottoinsieme particolare include uno dei due ed esclude l\u0027altro. La rivendicazione 3 precisa che il sottoinsieme pu\u00f2 includere il modello pi\u00f9 piccolo ed escludere quello pi\u00f9 grande. La rivendicazione 5 contempla la possibilit\u00e0 di determinare di non utilizzare alcuno dei modelli generativi candidati per una query aggiuntiva, in base all\u0027elaborazione di quella query e/o dei suoi documenti di risultato, causando il rendering di una risposta aggiuntiva generata indipendentemente dai modelli generativi. La rivendicazione 6 descrive che la selezione pu\u00f2 avvenire elaborando la query con un classificatore per generare output del classificatore e determinando che tale output indica il sottoinsieme particolare. La rivendicazione 7 prevede che la selezione possa basarsi sulla presenza o assenza di uno o pi\u00f9 termini nella query. La rivendicazione 8 specifica che i modelli candidati possono includere un LLM informativo fine-tuned su un prompt di sintesi informativa e un LLM creativo fine-tuned su un prompt di generazione creativa, con il sottoinsieme che include uno ed esclude l\u0027altro. La rivendicazione 9 contempla che i modelli candidati possano includere lo stesso LLM abbinato a prompt diversi, con il sottoinsieme che include una coppia LLM-prompt ed esclude l\u0027altra. La rivendicazione 10 prevede che pi\u00f9 modelli generativi possano essere inclusi nel sottoinsieme, generando risposte multiple da rendere insieme. La rivendicazione 12 specifica che la generazione della risposta pu\u00f2 basarsi sul contenuto di uno o pi\u00f9 documenti di risultato determinati come responsivi alla query. Le rivendicazioni 13 e 14 indicano che i modelli candidati possono includere un LLM, un modello text-to-image e/o LLM aggiuntivi.\n\nLa descrizione contempla che la selezione tra modelli generativi candidati possa avvenire utilizzando un classificatore che elabora il contenuto della query per classificarla tra i modelli generativi (ad esempio come informativa, creativa o per immagine sintetica), oppure utilizzando regole che specificano classificazioni in base alla presenza o assenza di determinate parole (blocco 554A1). La descrizione menziona che le caratteristiche vocali di una query vocale potrebbero essere utilizzate per classificare la query tra i modelli generativi. Viene contemplato l\u0027uso di documenti di risultato responsivi alla query per la classificazione: se i primi N risultati includono certi tipi di risultati o contenuti, il sistema potrebbe determinare di usare un LLM informativo, mentre per altri tipi potrebbe selezionare un LLM creativo e un modello text-to-image. La descrizione contempla che la qualit\u00e0 e l\u0027affidabilit\u00e0 dei documenti di risultato possano essere considerate nella selezione. Per casi limite (ad esempio basati su output del classificatore) o in altre situazioni, il sistema potrebbe selezionare pi\u00f9 modelli generativi corrispondenti ai casi limite, oppure per casi limite e/o in altre situazioni (ad esempio quando i risultati di ricerca per la query sono di alta qualit\u00e0) potrebbe determinare di non selezionare alcun modello generativo per generare risposte. La descrizione contempla che i modelli candidati possano includere un LLM di dimensioni maggiori e uno di dimensioni minori, dove quello maggiore \u00e8 pi\u00f9 robusto e/o accurato ma richiede pi\u00f9 risorse computazionali (memoria e/o processore). Adattando dinamicamente la selezione dell\u0027LLM in base al compito, la descrizione suggerisce che l\u0027uso delle risorse computazionali possa essere ottimizzato, ad esempio favorendo LLM pi\u00f9 piccoli se un LLM pi\u00f9 grande non \u00e8 richiesto per soddisfare una specifica di requisito di un dato compito. La descrizione contempla l\u0027uso in parallelo di pi\u00f9 LLM per generare sintesi candidate NL per una query, selezionandone poi solo una per l\u0027uso (ad esempio per il rendering in risposta alla query), in base a criteri come similarit\u00e0 con altre sintesi candidate, presenza o assenza di certi contenuti, punteggio del modello linguistico o altre caratteristiche. Questo potrebbe mitigare occorrenze in cui la sintesi selezionata sia difficile da analizzare, imprecisa o non risonante con l\u0027utente. Per la SEO, questo potrebbe significare che Google potrebbe utilizzare architetture di selezione dinamica per decidere se e quale tipo di risposta generativa fornire, potenzialmente riducendo la visibilit\u00e0 dei risultati organici tradizionali quando un modello generativo viene selezionato, oppure preservandola quando nessun modello viene selezionato. La selezione basata su qualit\u00e0 e affidabilit\u00e0 dei documenti di risultato potrebbe premiare contenuti di alta qualit\u00e0 come fonti per risposte generative o, paradossalmente, portare a non generare risposte generative se i risultati tradizionali sono gi\u00e0 sufficientemente buoni. L\u0027uso di modelli pi\u00f9 piccoli per query semplici e modelli pi\u00f9 grandi per query complesse suggerirebbe un\u0027ottimizzazione delle risorse che non ha implicazioni SEO dirette ma indica una strategia di efficienza.",
+  "wordCount": 897,
+  "datePublished": "2026-10-29T08:52:36.513417+00:00",
+  "dateModified": "2026-10-29T08:52:36.513417+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20250005303a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Generative summaries for search results",
+    "identifier": "US20250005303A1",
+    "url": "https://patents.google.com/patent/US20250005303A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20250005303A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20250005303A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Selezione dinamica di modelli generativi per le risposte alle query</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Generative summaries for search results</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema che seleziona dinamicamente, tra più modelli generativi candidati (LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image), quale utilizzare per generare risposte a una query. La selezione avviene analizzando la query stessa e/o i documenti di risultato, utilizzando classificatori o regole, e può portare a non utilizzare alcun modello, utilizzarne uno solo o combinarne più di uno.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, risposte generative a query</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">02 Gennaio 2025</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2022-12-30</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 protegge un metodo che riceve una query formulata in base a input utente da un client device, seleziona un sottoinsieme particolare di modelli generativi candidati da utilizzare per generare una o più risposte da rendere in risposta alla query, dove la selezione si basa sull&#39;elaborazione della query e/o dei documenti di risultato che rispondono alla query. Se un dato modello generativo è incluso nel sottoinsieme particolare, il metodo causa il rendering di una data risposta generata in base alla query e utilizzando quel modello generativo. La rivendicazione 2 specifica che i modelli candidati includono un modello generativo di dimensioni maggiori e uno di dimensioni minori, dove quello maggiore richiede più risorse computazionali, e il sottoinsieme particolare include uno dei due ed esclude l&#39;altro. La rivendicazione 3 precisa che il sottoinsieme può includere il modello più piccolo ed escludere quello più grande. La rivendicazione 5 contempla la possibilità di determinare di non utilizzare alcuno dei modelli generativi candidati per una query aggiuntiva, in base all&#39;elaborazione di quella query e/o dei suoi documenti di risultato, causando il rendering di una risposta aggiuntiva generata indipendentemente dai modelli generativi. La rivendicazione 6 descrive che la selezione può avvenire elaborando la query con un classificatore per generare output del classificatore e determinando che tale output indica il sottoinsieme particolare. La rivendicazione 7 prevede che la selezione possa basarsi sulla presenza o assenza di uno o più termini nella query. La rivendicazione 8 specifica che i modelli candidati possono includere un LLM informativo fine-tuned su un prompt di sintesi informativa e un LLM creativo fine-tuned su un prompt di generazione creativa, con il sottoinsieme che include uno ed esclude l&#39;altro. La rivendicazione 9 contempla che i modelli candidati possano includere lo stesso LLM abbinato a prompt diversi, con il sottoinsieme che include una coppia LLM-prompt ed esclude l&#39;altra. La rivendicazione 10 prevede che più modelli generativi possano essere inclusi nel sottoinsieme, generando risposte multiple da rendere insieme. La rivendicazione 12 specifica che la generazione della risposta può basarsi sul contenuto di uno o più documenti di risultato determinati come responsivi alla query. Le rivendicazioni 13 e 14 indicano che i modelli candidati possono includere un LLM, un modello text-to-image e/o LLM aggiuntivi.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla che la selezione tra modelli generativi candidati possa avvenire utilizzando un classificatore che elabora il contenuto della query per classificarla tra i modelli generativi (ad esempio come informativa, creativa o per immagine sintetica), oppure utilizzando regole che specificano classificazioni in base alla presenza o assenza di determinate parole (blocco 554A1). La descrizione menziona che le caratteristiche vocali di una query vocale potrebbero essere utilizzate per classificare la query tra i modelli generativi. Viene contemplato l&#39;uso di documenti di risultato responsivi alla query per la classificazione: se i primi N risultati includono certi tipi di risultati o contenuti, il sistema potrebbe determinare di usare un LLM informativo, mentre per altri tipi potrebbe selezionare un LLM creativo e un modello text-to-image. La descrizione contempla che la qualità e l&#39;affidabilità dei documenti di risultato possano essere considerate nella selezione. Per casi limite (ad esempio basati su output del classificatore) o in altre situazioni, il sistema potrebbe selezionare più modelli generativi corrispondenti ai casi limite, oppure per casi limite e/o in altre situazioni (ad esempio quando i risultati di ricerca per la query sono di alta qualità) potrebbe determinare di non selezionare alcun modello generativo per generare risposte. La descrizione contempla che i modelli candidati possano includere un LLM di dimensioni maggiori e uno di dimensioni minori, dove quello maggiore è più robusto e/o accurato ma richiede più risorse computazionali (memoria e/o processore). Adattando dinamicamente la selezione dell&#39;LLM in base al compito, la descrizione suggerisce che l&#39;uso delle risorse computazionali possa essere ottimizzato, ad esempio favorendo LLM più piccoli se un LLM più grande non è richiesto per soddisfare una specifica di requisito di un dato compito. La descrizione contempla l&#39;uso in parallelo di più LLM per generare sintesi candidate NL per una query, selezionandone poi solo una per l&#39;uso (ad esempio per il rendering in risposta alla query), in base a criteri come similarità con altre sintesi candidate, presenza o assenza di certi contenuti, punteggio del modello linguistico o altre caratteristiche. Questo potrebbe mitigare occorrenze in cui la sintesi selezionata sia difficile da analizzare, imprecisa o non risonante con l&#39;utente. Per la SEO, questo potrebbe significare che Google potrebbe utilizzare architetture di selezione dinamica per decidere se e quale tipo di risposta generativa fornire, potenzialmente riducendo la visibilità dei risultati organici tradizionali quando un modello generativo viene selezionato, oppure preservandola quando nessun modello viene selezionato. La selezione basata su qualità e affidabilità dei documenti di risultato potrebbe premiare contenuti di alta qualità come fonti per risposte generative o, paradossalmente, portare a non generare risposte generative se i risultati tradizionali sono già sufficientemente buoni. L&#39;uso di modelli più piccoli per query semplici e modelli più grandi per query complesse suggerirebbe un&#39;ottimizzazione delle risorse che non ha implicazioni SEO dirette ma indica una strategia di efficienza.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è una domanda (US20250005303A1) non ancora concessa e fa parte di una famiglia con continuation (US12118325B2), quindi non costituisce prova indipendente di implementazione.</li>
+      <li>Il brevetto non dimostra che Google utilizzi effettivamente questa selezione dinamica tra modelli generativi in produzione, né specifica quali classificatori o regole siano impiegati in pratica.</li>
+      <li>Non viene specificato come la selezione tra modelli impatti la visibilità dei risultati organici tradizionali o se la selezione di nessun modello generativo corrisponda a una maggiore enfasi sui risultati tradizionali.</li>
+      <li>La descrizione non chiarisce se e come i segnali di qualità dei documenti di risultato (query-dependent, query-independent, user-dependent) influenzino concretamente la decisione di utilizzare o meno un modello generativo.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Produrre contenuti di alta qualità, affidabili e aggiornati resta prioritario, poiché la descrizione contempla che qualità e affidabilità dei documenti di risultato possano influenzare la selezione dei modelli generativi e quindi la modalità di presentazione delle risposte.</li>
+      <li class="pl-2">Strutturare i contenuti in modo che rispondano chiaramente a intenti informativi o creativi può essere utile, dato che la descrizione contempla classificazioni delle query in base a tali intenti per selezionare modelli appropriati.</li>
+      <li class="pl-2">Monitorare l&#39;evoluzione delle SERP per identificare quando vengono presentate risposte generative rispetto a risultati tradizionali, per comprendere quali tipi di query attivano quali modalità di risposta, indipendentemente dall&#39;implementazione di questo brevetto.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">candidate generative models</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Insieme di modelli generativi tra cui il sistema seleziona dinamicamente quale utilizzare per generare risposte a una query, che possono includere LLM di diverse dimensioni, LLM informativi vs creativi, modelli text-to-image, o lo stesso LLM abbinato a prompt diversi.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">particular subset</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Il sottoinsieme specifico di modelli generativi candidati selezionato per generare risposte a una data query, che può includere nessuno, uno o più modelli, in base all&#39;elaborazione della query e/o dei documenti di risultato.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">larger size generative model / smaller size generative model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modelli generativi di dimensioni diverse, dove quello più grande è più robusto e accurato ma richiede più risorse computazionali (memoria, processore) rispetto a quello più piccolo.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">informational LLM / creative LLM</dt>
+        <dd class="text-on-surface-variant leading-relaxed">LLM specializzati tramite fine-tuning: l&#39;informational LLM è ottimizzato per prompt di sintesi informativa, mentre il creative LLM è ottimizzato per prompt di generazione creativa (poesie, saggi, prosa).</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">classifier</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello di machine learning utilizzato per elaborare il contenuto della query e classificarla tra i modelli generativi candidati, generando un output che indica quale sottoinsieme di modelli è più appropriato per quella query.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="/brevetti/us11769017b1/" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US11769017B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Sintesi generative per risultati di ricerca</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">scheda</span>
+      </a>
+      <a href="https://patents.google.com/patent/US12118325B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12118325B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Generative summaries for search results</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20250005303A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

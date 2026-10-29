@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20240289407A1: Ricerca conversazionale con stato persistente tra i turni — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per affiancare una sessione di ricerca tradizionale con una chat dotata di stato persistente (&#34;generative companion&#34;) che mantiene e aggiorna il contesto dell&#39;utente attraverso più turni. A ogni turno, il sistema classifica la query e lo stato dell&#39;utente per selezion" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20240289407a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20240289407A1: Ricerca conversazionale con stato persistente tra i turni — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per affiancare una sessione di ricerca tradizionale con una chat dotata di stato persistente (&#34;generative companion&#34;) che mantiene e aggiorna il contesto dell&#39;utente attraverso più turni. A ogni turno, il sistema classifica la query e lo stato dell&#39;utente per selezion" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20240289407a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20240289407A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20240289407a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20240289407A1: Ricerca conversazionale con stato persistente tra i turni",
+  "description": "Il brevetto descrive un sistema per affiancare una sessione di ricerca tradizionale con una chat dotata di stato persistente (\"generative companion\") che mantiene e aggiorna il contesto dell\u0027utente attraverso pi\u00f9 turni. A ogni turno, il sistema classifica la query e lo stato dell\u0027utente per selezionare zero, uno o pi\u00f9 modelli generativi downstream (creativi, di sintesi, di chiarimento) e generare risposte personalizzate che tengono conto dell\u0027intera traiettoria della sessione.",
+  "articleBody": "Il brevetto descrive un sistema per affiancare una sessione di ricerca tradizionale con una chat dotata di stato persistente (\"generative companion\") che mantiene e aggiorna il contesto dell\u0027utente attraverso pi\u00f9 turni. A ogni turno, il sistema classifica la query e lo stato dell\u0027utente per selezionare zero, uno o pi\u00f9 modelli generativi downstream (creativi, di sintesi, di chiarimento) e generare risposte personalizzate che tengono conto dell\u0027intera traiettoria della sessione.\n\nLa rivendicazione indipendente 1 descrive un metodo implementato durante una sessione di ricerca di un utente che comprende: ricevere una query associata a un client device; recuperare informazioni contestuali associate all\u0027utente o al dispositivo; generare output di un modello generativo (GM) processando, tramite un GM, dati indicativi della query e delle informazioni contestuali; generare una o pi\u00f9 query sintetiche utilizzando l\u0027output del GM; selezionare un set di documenti di risultati di ricerca (SRD), includendo nel set una pluralit\u00e0 di SRD query-responsive che rispondono sia alla query che alle query sintetiche; processare dati di stato indicativi della query, delle informazioni contestuali, delle query sintetiche e del set di SRD per identificare una classificazione della query; in base alla classificazione, selezionare uno o pi\u00f9 GM downstream; generare uno o pi\u00f9 output GM aggiuntivi processando, tramite i GM downstream selezionati, almeno parte dei dati di stato; e causare la renderizzazione di contenuto responsive alla query sul client device.\n\nLe rivendicazioni dipendenti 2-16 specificano che le informazioni contestuali possono includere: query precedenti emesse durante la sessione (rivendicazione 2); dati estratti da pagine di risultati restituite in risposta a query precedenti (rivendicazione 3); dati estratti da SRD responsive a query precedenti (rivendicazione 4); informazioni sulla pianificazione dell\u0027utente (rivendicazione 5), recuperate da calendari elettronici o corrispondenza dell\u0027utente o di altri (rivendicazione 6); coordinate di posizione dell\u0027utente (rivendicazione 7). I dati di stato possono essere un embedding aggregato generato da query, informazioni contestuali, query sintetiche e set di SRD (rivendicazione 8), o includere dati estratti da SRP restituite in risposta alle query sintetiche (rivendicazione 9), o dati indicativi di azioni eseguite dall\u0027utente dopo l\u0027emissione della query (rivendicazione 10), inclusi dati estratti da SRD accessati dall\u0027utente (rivendicazione 11). I GM downstream possono includere: un GM creativo addestrato a generare linguaggio naturale creativo (rivendicazione 12); un GM ambient addestrato a generare sintesi di documenti accessati dall\u0027utente dopo l\u0027emissione della query (rivendicazione 13); un GM di risultati di ricerca addestrato a generare sintesi di pagine di risultati (rivendicazione 14). Il contenuto responsive alla query pu\u00f2 essere incluso nelle informazioni contestuali recuperate durante turni successivi della sessione (rivendicazione 15), e le informazioni contestuali possono includere contenuto responsive precedente a una query precedente emessa durante la sessione (rivendicazione 16). Le rivendicazioni 17-20 sono rispettivamente una rivendicazione di sistema e di supporto leggibile da computer che replicano sostanzialmente la rivendicazione 1.\n\nLa descrizione contempla un sistema chiamato \"generative companion\" che mantiene uno stato dell\u0027utente (\"user state\", paragrafi relativi a FIG. 8 e blocco 871) attraverso pi\u00f9 turni di una sessione di ricerca. Questo stato pu\u00f2 essere rappresentato come embedding semanticamente ricchi o come strutture dati contenenti query precedenti, token, keyword (paragrafi su user state 871). Il sistema pu\u00f2 recuperare informazioni contestuali da calendari elettronici, corrispondenza, posizione GPS, attivit\u00e0 corrente rilevata da accelerometro/giroscopio, applicazioni in primo piano, e contenuto di SRP e SRD precedenti (paragrafi su context engine 113 e user state 871).\n\nLa descrizione contempla l\u0027uso di un primo LLM (blocco 150, context engine 113) per generare query sintetiche o \"riformulate\" che possono essere query alternative, query supplementari, versioni riscritte della query dell\u0027utente o query di drill-down (paragrafi su synthetic queries). Queste query sintetiche vengono eseguite da un motore di ricerca per ottenere SRD (blocco 960, search system 160). I dati di stato vengono poi processati, utilizzando uno o pi\u00f9 modelli di machine learning o classifier (blocco 152), per classificare la query in una delle diverse categorie candidate (blocco 962). La descrizione elenca esempi di classificazioni: \"needs creative text generation\", \"needs creative media generation\", \"can benefit from ambient generative summarization\", \"can benefit from SRP summarization\", \"would benefit from suggested next step query\", \"needs clarification\", \"do not interfere\" (paragrafi su LLM selection engine 132 e FIG. 8).\n\nIn base alla classificazione, vengono selezionati uno o pi\u00f9 LLM downstream (blocco 964, elementi 872A-F in FIG. 8). La descrizione contempla: creative text LLM (872A) addestrati a generare testo creativo come poesie o saggi; creative media generative models (872B) come modelli di diffusione per immagini, che possono incorporare contenuto personale dell\u0027utente se autorizzato; ambient generative LLM (872C) addestrati a sintetizzare un documento specifico accessato dall\u0027utente, con grounding e verifica degli attributi dal documento stesso; SRP generative LLM (872D) addestrati a sintetizzare SRP includendo passaggi di testo e immagini estratte o generate, potenzialmente con linkificazione come in FIG. 3; next step LLM (872E) addestrati a generare suggerimenti per query successive che guidano la sessione, inclusi suggerimenti per drill-down categorico o raccomandazioni di contenuti digitali; clarification LLM (872F) addestrati a generare domande di chiarimento quando termini ambigui non possono essere risolti tramite lo stato dell\u0027utente (paragrafi su downstream LLMs e FIG. 8).\n\nLa descrizione contempla che l\u0027output generato (blocco 968, current output 874) venga reso all\u0027utente e che questo output venga incorporato nello stato dell\u0027utente per i turni successivi (freccia da current output 874 a user state 871 in FIG. 8), creando un ciclo di feedback. La descrizione contempla anche che lo stato dell\u0027utente possa essere salvato come \"footprint\" o \"journey\" di una sessione di ricerca, che pu\u00f2 essere ripresa successivamente dall\u0027utente o condivisa con altri (paragrafi su saving user state). La descrizione contempla che sessioni precedenti possano essere riprese esplicitamente o automaticamente in base alla similarit\u00e0 tra query corrente/stato corrente e stati di sessioni precedenti (paragrafi su resuming sessions).\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacit\u00e0 di ricerca conversazionale che mantengono contesto attraverso pi\u00f9 interazioni. Se implementato, potrebbe significare che i contenuti dovrebbero essere ottimizzati non solo per query singole ma per traiettorie di ricerca multi-turno. La capacit\u00e0 di generare query sintetiche potrebbe influenzare quali documenti vengono selezionati per sintesi, suggerendo che documenti responsive a variazioni e riformulazioni di una query potrebbero avere maggiore visibilit\u00e0. La classificazione automatica delle query in categorie che richiedono diversi tipi di output generativo potrebbe significare che alcuni tipi di query riceverebbero sintesi testuali mentre altri riceverebbero output creativi o richieste di chiarimento, influenzando quali risultati vengono mostrati e come.",
+  "wordCount": 1050,
+  "datePublished": "2026-10-29T08:51:46.897018+00:00",
+  "dateModified": "2026-10-29T08:51:46.897018+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20240289407a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Search with stateful chat",
+    "identifier": "US20240289407A1",
+    "url": "https://patents.google.com/patent/US20240289407A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20240289407A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20240289407A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ricerca conversazionale con stato persistente tra i turni</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Search with stateful chat</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per affiancare una sessione di ricerca tradizionale con una chat dotata di stato persistente (&#34;generative companion&#34;) che mantiene e aggiorna il contesto dell&#39;utente attraverso più turni. A ogni turno, il sistema classifica la query e lo stato dell&#39;utente per selezionare zero, uno o più modelli generativi downstream (creativi, di sintesi, di chiarimento) e generare risposte personalizzate che tengono conto dell&#39;intera traiettoria della sessione.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, sessioni di ricerca conversazionale con stato</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">29 Agosto 2024</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2023-02-28</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Ricerca conversazionale e contesto</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 descrive un metodo implementato durante una sessione di ricerca di un utente che comprende: ricevere una query associata a un client device; recuperare informazioni contestuali associate all&#39;utente o al dispositivo; generare output di un modello generativo (GM) processando, tramite un GM, dati indicativi della query e delle informazioni contestuali; generare una o più query sintetiche utilizzando l&#39;output del GM; selezionare un set di documenti di risultati di ricerca (SRD), includendo nel set una pluralità di SRD query-responsive che rispondono sia alla query che alle query sintetiche; processare dati di stato indicativi della query, delle informazioni contestuali, delle query sintetiche e del set di SRD per identificare una classificazione della query; in base alla classificazione, selezionare uno o più GM downstream; generare uno o più output GM aggiuntivi processando, tramite i GM downstream selezionati, almeno parte dei dati di stato; e causare la renderizzazione di contenuto responsive alla query sul client device.</p>
+      <p>Le rivendicazioni dipendenti 2-16 specificano che le informazioni contestuali possono includere: query precedenti emesse durante la sessione (rivendicazione 2); dati estratti da pagine di risultati restituite in risposta a query precedenti (rivendicazione 3); dati estratti da SRD responsive a query precedenti (rivendicazione 4); informazioni sulla pianificazione dell&#39;utente (rivendicazione 5), recuperate da calendari elettronici o corrispondenza dell&#39;utente o di altri (rivendicazione 6); coordinate di posizione dell&#39;utente (rivendicazione 7). I dati di stato possono essere un embedding aggregato generato da query, informazioni contestuali, query sintetiche e set di SRD (rivendicazione 8), o includere dati estratti da SRP restituite in risposta alle query sintetiche (rivendicazione 9), o dati indicativi di azioni eseguite dall&#39;utente dopo l&#39;emissione della query (rivendicazione 10), inclusi dati estratti da SRD accessati dall&#39;utente (rivendicazione 11). I GM downstream possono includere: un GM creativo addestrato a generare linguaggio naturale creativo (rivendicazione 12); un GM ambient addestrato a generare sintesi di documenti accessati dall&#39;utente dopo l&#39;emissione della query (rivendicazione 13); un GM di risultati di ricerca addestrato a generare sintesi di pagine di risultati (rivendicazione 14). Il contenuto responsive alla query può essere incluso nelle informazioni contestuali recuperate durante turni successivi della sessione (rivendicazione 15), e le informazioni contestuali possono includere contenuto responsive precedente a una query precedente emessa durante la sessione (rivendicazione 16). Le rivendicazioni 17-20 sono rispettivamente una rivendicazione di sistema e di supporto leggibile da computer che replicano sostanzialmente la rivendicazione 1.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema chiamato &#34;generative companion&#34; che mantiene uno stato dell&#39;utente (&#34;user state&#34;, paragrafi relativi a FIG. 8 e blocco 871) attraverso più turni di una sessione di ricerca. Questo stato può essere rappresentato come embedding semanticamente ricchi o come strutture dati contenenti query precedenti, token, keyword (paragrafi su user state 871). Il sistema può recuperare informazioni contestuali da calendari elettronici, corrispondenza, posizione GPS, attività corrente rilevata da accelerometro/giroscopio, applicazioni in primo piano, e contenuto di SRP e SRD precedenti (paragrafi su context engine 113 e user state 871).</p>
+      <p>La descrizione contempla l&#39;uso di un primo LLM (blocco 150, context engine 113) per generare query sintetiche o &#34;riformulate&#34; che possono essere query alternative, query supplementari, versioni riscritte della query dell&#39;utente o query di drill-down (paragrafi su synthetic queries). Queste query sintetiche vengono eseguite da un motore di ricerca per ottenere SRD (blocco 960, search system 160). I dati di stato vengono poi processati, utilizzando uno o più modelli di machine learning o classifier (blocco 152), per classificare la query in una delle diverse categorie candidate (blocco 962). La descrizione elenca esempi di classificazioni: &#34;needs creative text generation&#34;, &#34;needs creative media generation&#34;, &#34;can benefit from ambient generative summarization&#34;, &#34;can benefit from SRP summarization&#34;, &#34;would benefit from suggested next step query&#34;, &#34;needs clarification&#34;, &#34;do not interfere&#34; (paragrafi su LLM selection engine 132 e FIG. 8).</p>
+      <p>In base alla classificazione, vengono selezionati uno o più LLM downstream (blocco 964, elementi 872A-F in FIG. 8). La descrizione contempla: creative text LLM (872A) addestrati a generare testo creativo come poesie o saggi; creative media generative models (872B) come modelli di diffusione per immagini, che possono incorporare contenuto personale dell&#39;utente se autorizzato; ambient generative LLM (872C) addestrati a sintetizzare un documento specifico accessato dall&#39;utente, con grounding e verifica degli attributi dal documento stesso; SRP generative LLM (872D) addestrati a sintetizzare SRP includendo passaggi di testo e immagini estratte o generate, potenzialmente con linkificazione come in FIG. 3; next step LLM (872E) addestrati a generare suggerimenti per query successive che guidano la sessione, inclusi suggerimenti per drill-down categorico o raccomandazioni di contenuti digitali; clarification LLM (872F) addestrati a generare domande di chiarimento quando termini ambigui non possono essere risolti tramite lo stato dell&#39;utente (paragrafi su downstream LLMs e FIG. 8).</p>
+      <p>La descrizione contempla che l&#39;output generato (blocco 968, current output 874) venga reso all&#39;utente e che questo output venga incorporato nello stato dell&#39;utente per i turni successivi (freccia da current output 874 a user state 871 in FIG. 8), creando un ciclo di feedback. La descrizione contempla anche che lo stato dell&#39;utente possa essere salvato come &#34;footprint&#34; o &#34;journey&#34; di una sessione di ricerca, che può essere ripresa successivamente dall&#39;utente o condivisa con altri (paragrafi su saving user state). La descrizione contempla che sessioni precedenti possano essere riprese esplicitamente o automaticamente in base alla similarità tra query corrente/stato corrente e stati di sessioni precedenti (paragrafi su resuming sessions).</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacità di ricerca conversazionale che mantengono contesto attraverso più interazioni. Se implementato, potrebbe significare che i contenuti dovrebbero essere ottimizzati non solo per query singole ma per traiettorie di ricerca multi-turno. La capacità di generare query sintetiche potrebbe influenzare quali documenti vengono selezionati per sintesi, suggerendo che documenti responsive a variazioni e riformulazioni di una query potrebbero avere maggiore visibilità. La classificazione automatica delle query in categorie che richiedono diversi tipi di output generativo potrebbe significare che alcuni tipi di query riceverebbero sintesi testuali mentre altri riceverebbero output creativi o richieste di chiarimento, influenzando quali risultati vengono mostrati e come.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è una domanda (A1) non ancora concessa e non dimostra che Google abbia implementato o implementerà questo sistema in Search.</li>
+      <li>Non specifica quali metriche o soglie vengano utilizzate dai classifier per assegnare le classificazioni delle query, né come vengano bilanciati i diversi segnali contestuali nello stato dell&#39;utente.</li>
+      <li>Non dimostra che il mantenimento dello stato attraverso più turni migliori effettivamente la soddisfazione dell&#39;utente o l&#39;efficienza della ricerca rispetto a sessioni di ricerca tradizionali.</li>
+      <li>La descrizione contempla molteplici implementazioni opzionali (&#34;in some implementations&#34;) senza indicare quali sarebbero effettivamente utilizzate in produzione.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Ottimizzare i contenuti per rispondere a variazioni e riformulazioni di query principali, non solo alla query esatta, dato che query sintetiche potrebbero essere generate e utilizzate per selezionare documenti.</li>
+      <li class="pl-2">Strutturare i contenuti in modo che possano essere facilmente sintetizzati e verificati, con sezioni chiare e affermazioni supportate da evidenze, dato il focus su grounding e linkificazione.</li>
+      <li class="pl-2">Considerare l&#39;intero percorso informativo dell&#39;utente su un argomento, non solo singole query isolate, nella pianificazione dei contenuti e della struttura del sito.</li>
+      <li class="pl-2">Mantenere contenuti aggiornati e di alta qualità che possano essere considerati affidabili per sintesi automatiche, dato che trustworthiness e freshness sono menzionati come misure per la selezione di SRD.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">generative companion</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sistema che affianca una sessione di ricerca tradizionale con chat dotata di stato persistente per facilitare ricerca interattiva</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">user state</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Stato contestuale dell&#39;utente mantenuto attraverso più turni di una sessione di ricerca, che include query precedenti, documenti accessati, informazioni contestuali e output precedenti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">synthetic queries</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query generate automaticamente da un modello generativo basandosi sulla query dell&#39;utente e sul contesto, che possono essere riformulazioni, query supplementari o query di drill-down</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">downstream GMs</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modelli generativi selezionati in base alla classificazione della query per generare tipi specifici di output (creativi, sintesi, chiarimenti, suggerimenti)</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">ambient generative summarization</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sintesi generativa di un documento specifico accessato dall&#39;utente durante la sessione di ricerca</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">SRP summarization</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sintesi generativa di una pagina di risultati di ricerca, includendo passaggi di testo e potenzialmente immagini estratte dai risultati</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20240289407A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US12158907B1: Organizzazione dei risultati di ricerca per temi generati automaticamente — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema che estrae temi comuni dai documenti nei risultati di ricerca e organizza i risultati secondo questi temi. Per ogni query, un motore tematico analizza i contenuti dei documenti più rilevanti, genera descrizioni sintetiche dei passaggi tramite un modello linguistico, r" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us12158907b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US12158907B1: Organizzazione dei risultati di ricerca per temi generati automaticamente — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema che estrae temi comuni dai documenti nei risultati di ricerca e organizza i risultati secondo questi temi. Per ogni query, un motore tematico analizza i contenuti dei documenti più rilevanti, genera descrizioni sintetiche dei passaggi tramite un modello linguistico, r" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us12158907b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US12158907B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us12158907b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US12158907B1: Organizzazione dei risultati di ricerca per temi generati automaticamente",
+  "description": "Il brevetto descrive un sistema che estrae temi comuni dai documenti nei risultati di ricerca e organizza i risultati secondo questi temi. Per ogni query, un motore tematico analizza i contenuti dei documenti pi\u00f9 rilevanti, genera descrizioni sintetiche dei passaggi tramite un modello linguistico, raggruppa le descrizioni simili in cluster e identifica frasi che rappresentano temi ricorrenti, mostrandoli come elementi selezionabili nella SERP.",
+  "articleBody": "Il brevetto descrive un sistema che estrae temi comuni dai documenti nei risultati di ricerca e organizza i risultati secondo questi temi. Per ogni query, un motore tematico analizza i contenuti dei documenti pi\u00f9 rilevanti, genera descrizioni sintetiche dei passaggi tramite un modello linguistico, raggruppa le descrizioni simili in cluster e identifica frasi che rappresentano temi ricorrenti, mostrandoli come elementi selezionabili nella SERP.\n\nLa rivendicazione indipendente 1 copre un metodo che, in risposta a una query di ricerca, ottiene risultati di ricerca rilevanti contenenti un insieme di documenti responsivi, genera una pluralit\u00e0 di temi dal contenuto di questi documenti (dove ogni tema include una frase che lo descrive), e fornisce dati tematici a un\u0027applicazione browser. La generazione dei temi avviene generando descrizioni sintetiche per una pluralit\u00e0 di passaggi inclusi nei documenti responsivi tramite un modello, e generando i temi basandosi su queste descrizioni sintetiche. I dati tematici includono i temi e i risultati di ricerca tematici (almeno una porzione dei risultati organizzati secondo i temi) e sono configurati per far visualizzare i temi nella pagina dei risultati.\n\nLa rivendicazione 2 specifica che la generazione delle descrizioni sintetiche pu\u00f2 includere la generazione di una descrizione per un passaggio basandosi sul passaggio stesso e su uno o pi\u00f9 passaggi vicini dello stesso documento. La rivendicazione 3 dettaglia che la generazione dei temi pu\u00f2 avvenire tramite un clustering engine che crea gruppi di cluster di descrizioni sintetiche, dove ogni cluster corrisponde a un tema separato, e genera la frase per ogni tema basandosi su una o pi\u00f9 descrizioni sintetiche all\u0027interno del cluster. La rivendicazione 4 aggiunge che la frase pu\u00f2 essere generata dalla descrizione sintetica pi\u00f9 vicina al centroide del cluster.\n\nLe rivendicazioni 5 e 6 coprono l\u0027identificazione di porzioni dei risultati tematici come relative a specifici temi basandosi su informazioni dai cluster groups, e la generazione di un ordine di ranking per i temi secondo almeno un segnale di ranking. La rivendicazione 7 specifica che il segnale di ranking pu\u00f2 includere il numero di documenti distinti dall\u0027insieme che menzionano un rispettivo tema. Le rivendicazioni 8-10 coprono aspetti di visualizzazione: mostrare la frase del tema con una porzione dei risultati tematici, visualizzare i temi come elementi UI selezionabili, e mostrare i risultati tematici in risposta alla selezione.\n\nLa rivendicazione indipendente 11 copre un flusso interattivo: in risposta alla selezione di un elemento UI corrispondente a un tema, genera una seconda query di ricerca che include la frase del tema e informazioni dalla prima query, e fornisce nuovi risultati relativi al tema. La rivendicazione 12 estende questo permettendo la generazione di sub-temi dai nuovi risultati. Le rivendicazioni indipendenti 14 e 17 coprono rispettivamente un apparato e un computer-readable medium con funzionalit\u00e0 analoghe.\n\nLa descrizione contempla un sistema di ricerca tematica che analizza i contenuti dei documenti responsivi per estrarre temi comuni. Il summary generator (blocco 164, Figure 1E-1F) utilizza un language model per generare summary descriptions per ciascun passaggio dei documenti. La descrizione specifica che un passaggio pu\u00f2 essere una porzione di documento, un paragrafo, o una sezione associata a un header. Il modello pu\u00f2 ricevere come input il passaggio stesso pi\u00f9 informazioni contestuali: titolo del documento, metadata, passaggi vicini, o tutti gli altri passaggi dello stesso documento.\n\nIl clustering engine (blocchi 170-172, Figure 1G-1H) raggruppa le summary descriptions in cluster groups secondo algoritmi di clustering. Ogni cluster group corrisponde a un tema separato. La descrizione contempla che la frase rappresentativa del tema possa essere la summary description pi\u00f9 vicina al centroide del cluster o quella con il punteggio di similarit\u00e0 pi\u00f9 alto all\u0027interno del cluster. Il result data associato a ogni cluster identifica quali documenti responsivi menzionano quali summary descriptions, permettendo di mappare i risultati ai temi.\n\nIl ranking dei temi contempla diversi segnali (blocco 136, Figure 1I): un unique result signal che rappresenta il numero di documenti distinti che menzionano un tema, query relevance signal, quality signal, authority signal, e popularity signal. La descrizione indica che potrebbero essere usati segnali simili a quelli del motore di ricerca principale (qualit\u00e0, unicit\u00e0 del contenuto, backlink, esperienza utente, segnali social, rilevanza, autorevolezza, uso di keyword, freschezza).\n\nLa descrizione contempla modalit\u00e0 di visualizzazione multiple (Figure 2-28): temi come lista verticale o orizzontale, come UI cards espandibili, in pannelli laterali, con mappe interattive per temi geografici, con immagini per temi relativi a prodotti. Contempla anche l\u0027integrazione con answer modules e query suggestions correlate ai temi selezionati. La descrizione specifica che i thematic search results possono avere aspetti visivi differenti dai risultati normali.\n\nPer la SEO, questo potrebbe significare che Google potrebbe organizzare i risultati non solo per rilevanza globale ma anche per appartenenza a sotto-argomenti specifici. Un documento che copre chiaramente un sotto-tema specifico di una query ampia potrebbe essere selezionato come rappresentativo di quel tema, anche se non \u00e8 il primo risultato assoluto. La struttura del contenuto con header chiari e passaggi ben definiti potrebbe facilitare l\u0027estrazione di summary descriptions accurate. La copertura di temi specifici menzionati da molti altri documenti autorevoli potrebbe aumentare le probabilit\u00e0 di essere inclusi nei risultati tematici.\n\nTuttavia, la descrizione non specifica soglie, pesi relativi dei segnali, o criteri precisi per determinare quando attivare la ricerca tematica. Non chiarisce se i thematic search results sostituiscono o affiancano i risultati tradizionali nel ranking.",
+  "wordCount": 871,
+  "datePublished": "2026-10-29T08:50:51.146015+00:00",
+  "dateModified": "2026-10-29T08:50:51.146015+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us12158907b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Thematic search",
+    "identifier": "US12158907B1",
+    "url": "https://patents.google.com/patent/US12158907B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US12158907B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US12158907B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Organizzazione dei risultati di ricerca per temi generati automaticamente</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Thematic search</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema che estrae temi comuni dai documenti nei risultati di ricerca e organizza i risultati secondo questi temi. Per ogni query, un motore tematico analizza i contenuti dei documenti più rilevanti, genera descrizioni sintetiche dei passaggi tramite un modello linguistico, raggruppa le descrizioni simili in cluster e identifica frasi che rappresentano temi ricorrenti, mostrandoli come elementi selezionabili nella SERP.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, organizzazione risultati web</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">03 Dicembre 2024</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2023-05-16</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Organizzazione dei risultati per temi</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che, in risposta a una query di ricerca, ottiene risultati di ricerca rilevanti contenenti un insieme di documenti responsivi, genera una pluralità di temi dal contenuto di questi documenti (dove ogni tema include una frase che lo descrive), e fornisce dati tematici a un&#39;applicazione browser. La generazione dei temi avviene generando descrizioni sintetiche per una pluralità di passaggi inclusi nei documenti responsivi tramite un modello, e generando i temi basandosi su queste descrizioni sintetiche. I dati tematici includono i temi e i risultati di ricerca tematici (almeno una porzione dei risultati organizzati secondo i temi) e sono configurati per far visualizzare i temi nella pagina dei risultati.</p>
+      <p>La rivendicazione 2 specifica che la generazione delle descrizioni sintetiche può includere la generazione di una descrizione per un passaggio basandosi sul passaggio stesso e su uno o più passaggi vicini dello stesso documento. La rivendicazione 3 dettaglia che la generazione dei temi può avvenire tramite un clustering engine che crea gruppi di cluster di descrizioni sintetiche, dove ogni cluster corrisponde a un tema separato, e genera la frase per ogni tema basandosi su una o più descrizioni sintetiche all&#39;interno del cluster. La rivendicazione 4 aggiunge che la frase può essere generata dalla descrizione sintetica più vicina al centroide del cluster.</p>
+      <p>Le rivendicazioni 5 e 6 coprono l&#39;identificazione di porzioni dei risultati tematici come relative a specifici temi basandosi su informazioni dai cluster groups, e la generazione di un ordine di ranking per i temi secondo almeno un segnale di ranking. La rivendicazione 7 specifica che il segnale di ranking può includere il numero di documenti distinti dall&#39;insieme che menzionano un rispettivo tema. Le rivendicazioni 8-10 coprono aspetti di visualizzazione: mostrare la frase del tema con una porzione dei risultati tematici, visualizzare i temi come elementi UI selezionabili, e mostrare i risultati tematici in risposta alla selezione.</p>
+      <p>La rivendicazione indipendente 11 copre un flusso interattivo: in risposta alla selezione di un elemento UI corrispondente a un tema, genera una seconda query di ricerca che include la frase del tema e informazioni dalla prima query, e fornisce nuovi risultati relativi al tema. La rivendicazione 12 estende questo permettendo la generazione di sub-temi dai nuovi risultati. Le rivendicazioni indipendenti 14 e 17 coprono rispettivamente un apparato e un computer-readable medium con funzionalità analoghe.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema di ricerca tematica che analizza i contenuti dei documenti responsivi per estrarre temi comuni. Il summary generator (blocco 164, Figure 1E-1F) utilizza un language model per generare summary descriptions per ciascun passaggio dei documenti. La descrizione specifica che un passaggio può essere una porzione di documento, un paragrafo, o una sezione associata a un header. Il modello può ricevere come input il passaggio stesso più informazioni contestuali: titolo del documento, metadata, passaggi vicini, o tutti gli altri passaggi dello stesso documento.</p>
+      <p>Il clustering engine (blocchi 170-172, Figure 1G-1H) raggruppa le summary descriptions in cluster groups secondo algoritmi di clustering. Ogni cluster group corrisponde a un tema separato. La descrizione contempla che la frase rappresentativa del tema possa essere la summary description più vicina al centroide del cluster o quella con il punteggio di similarità più alto all&#39;interno del cluster. Il result data associato a ogni cluster identifica quali documenti responsivi menzionano quali summary descriptions, permettendo di mappare i risultati ai temi.</p>
+      <p>Il ranking dei temi contempla diversi segnali (blocco 136, Figure 1I): un unique result signal che rappresenta il numero di documenti distinti che menzionano un tema, query relevance signal, quality signal, authority signal, e popularity signal. La descrizione indica che potrebbero essere usati segnali simili a quelli del motore di ricerca principale (qualità, unicità del contenuto, backlink, esperienza utente, segnali social, rilevanza, autorevolezza, uso di keyword, freschezza).</p>
+      <p>La descrizione contempla modalità di visualizzazione multiple (Figure 2-28): temi come lista verticale o orizzontale, come UI cards espandibili, in pannelli laterali, con mappe interattive per temi geografici, con immagini per temi relativi a prodotti. Contempla anche l&#39;integrazione con answer modules e query suggestions correlate ai temi selezionati. La descrizione specifica che i thematic search results possono avere aspetti visivi differenti dai risultati normali.</p>
+      <p>Per la SEO, questo potrebbe significare che Google potrebbe organizzare i risultati non solo per rilevanza globale ma anche per appartenenza a sotto-argomenti specifici. Un documento che copre chiaramente un sotto-tema specifico di una query ampia potrebbe essere selezionato come rappresentativo di quel tema, anche se non è il primo risultato assoluto. La struttura del contenuto con header chiari e passaggi ben definiti potrebbe facilitare l&#39;estrazione di summary descriptions accurate. La copertura di temi specifici menzionati da molti altri documenti autorevoli potrebbe aumentare le probabilità di essere inclusi nei risultati tematici.</p>
+      <p>Tuttavia, la descrizione non specifica soglie, pesi relativi dei segnali, o criteri precisi per determinare quando attivare la ricerca tematica. Non chiarisce se i thematic search results sostituiscono o affiancano i risultati tradizionali nel ranking.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia attivo in produzione su Google Search, né fornisce evidenze di test o deployment.</li>
+      <li>Non specifica quali tipi di query attivano la ricerca tematica, quali soglie di breadth value vengono usate, o quanti temi devono essere rilevati per mostrare l&#39;interfaccia tematica.</li>
+      <li>Non chiarisce i pesi relativi dei diversi ranking signals per i temi, né come i thematic search results interagiscono con il ranking tradizionale dei risultati.</li>
+      <li>La descrizione contempla la generazione di summary descriptions durante l&#39;indicizzazione come opzione, ma non specifica se e quando questo avvenga realmente.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Strutturare i contenuti con sezioni chiare, header descrittivi e passaggi ben definiti facilita l&#39;estrazione automatica di sotto-argomenti, indipendentemente da questo brevetto.</li>
+      <li class="pl-2">Coprire in modo approfondito sotto-temi specifici di argomenti ampi, con trattazioni che possano essere sintetizzate in frasi chiare, migliora la rilevanza tematica del contenuto.</li>
+      <li class="pl-2">Analizzare quali sotto-temi emergono frequentemente nei risultati per query ampie del proprio settore aiuta a identificare gap di contenuto da coprire.</li>
+      <li class="pl-2">Mantenere coerenza tra titoli di sezione, contenuto dei paragrafi e metadata facilita l&#39;interpretazione semantica del contenuto da parte di sistemi automatici.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">theme</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un tema è un argomento o categoria comune rilevato nei documenti responsivi, rappresentato da una frase generata dal sistema che descrive il tema</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">summary description</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una descrizione sintetica generata da un modello linguistico per riassumere il contenuto di un passaggio di un documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">passage</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una porzione di un documento responsivo, che può essere un paragrafo, una sezione con header, o altra unità di contenuto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">cluster group</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un raggruppamento di summary descriptions simili ottenuto tramite algoritmi di clustering, dove ogni cluster corrisponde a un tema separato</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">thematic search results</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Risultati di ricerca organizzati e presentati secondo i temi rilevati, mappando quali documenti menzionano quali temi</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">centroid</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Il punto centrale di un cluster group, usato per identificare la summary description più rappresentativa del tema</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">unique result signal</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Segnale di ranking che rappresenta il numero di documenti distinti che menzionano un determinato tema</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="/brevetti/us20260119564a1/" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US20260119564A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Organizzazione dei risultati di ricerca per temi generati da modello linguistico</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US12158907B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US6285999B1: Ranking dei nodi in un database collegato tramite link — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per assegnare un punteggio di importanza ai documenti in un database collegato (come il web) basandosi sulla struttura dei link. Il rank di un documento viene calcolato ricorsivamente dai rank dei documenti che lo citano, ponderati per il numero di link in uscita da ci" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us6285999b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US6285999B1: Ranking dei nodi in un database collegato tramite link — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per assegnare un punteggio di importanza ai documenti in un database collegato (come il web) basandosi sulla struttura dei link. Il rank di un documento viene calcolato ricorsivamente dai rank dei documenti che lo citano, ponderati per il numero di link in uscita da ci" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us6285999b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US6285999B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us6285999b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US6285999B1: Ranking dei nodi in un database collegato tramite link",
+  "description": "Il brevetto descrive un metodo per assegnare un punteggio di importanza ai documenti in un database collegato (come il web) basandosi sulla struttura dei link. Il rank di un documento viene calcolato ricorsivamente dai rank dei documenti che lo citano, ponderati per il numero di link in uscita da ciascuno, pi\u00f9 una probabilit\u00e0 costante di salto casuale.",
+  "articleBody": "Il brevetto descrive un metodo per assegnare un punteggio di importanza ai documenti in un database collegato (come il web) basandosi sulla struttura dei link. Il rank di un documento viene calcolato ricorsivamente dai rank dei documenti che lo citano, ponderati per il numero di link in uscita da ciascuno, pi\u00f9 una probabilit\u00e0 costante di salto casuale.\n\nLa rivendicazione indipendente 1 copre un metodo implementato al computer per assegnare uno score a documenti collegati, comprendente: ottenere una pluralit\u00e0 di documenti, alcuni dei quali sono linked documents (puntati da link), alcuni linking documents (contenenti link), e alcuni entrambi; assegnare uno score a ciascun linked document basato sugli score dei linking documents che lo puntano; processare i documenti secondo i loro score. La rivendicazione 2 specifica che l\u0027assegnazione include un weighting factor dipendente dal numero di link ai linking documents, aggiustando lo score in base a tale fattore. La rivendicazione 3 contempla un weighting factor basato sulla stima della probabilit\u00e0 che un linking document venga acceduto. La rivendicazione 4 introduce fattori di ponderazione dipendenti da URL, host, domain, author, institution o last update time dei linking documents. La rivendicazione 5 prevede ponderazioni basate sul fatto che i linking documents siano selected documents o roots. La rivendicazione 6 considera l\u0027importance, visibility o textual emphasis dei link nei linking documents. La rivendicazione 7 contempla fattori dipendenti dalle preferenze dell\u0027utente, dal rate di accesso degli utenti o dall\u0027importanza dei linking documents. La rivendicazione 9 descrive un metodo iterativo: generare una stima iniziale del rank per ciascun linked document, aggiornare la stima usando i rank dei linking documents, processare i documenti secondo i rank aggiornati. La rivendicazione 10 copre un metodo basato su random traversal: attraversare casualmente i documenti seguendo link casuali, assegnare un rank basato sul numero di volte che un documento \u00e8 stato attraversato. La rivendicazione 20 specifica che lo score si basa su numero di linking documents e loro importanza. La rivendicazione 22 introduce il concetto di backlinks: associare backlinks a ciascun linked document, assegnare un peso a ciascun backlink, determinare lo score basandosi sul numero di backlinks e i loro pesi. Le rivendicazioni 27-29 specificano che lo score \u00e8 determinato primarily based on linking information e substantially independent of user-query content.\n\nLa descrizione contempla una formula specifica per il calcolo del rank, presentata nella sezione DETAILED DESCRIPTION: r(A) = \u03b1/N + (1-\u03b1)(r(B1)/|B1| + ... + r(Bn)/|Bn|), dove B1...Bn sono i backlink di A, r(Bi) sono i loro rank, |Bi| il numero di forward links, \u03b1 una costante nell\u0027intervallo [0,1] (tipicamente circa 0.1 o 0.5 negli esempi, con un valore tipico menzionato di circa 15%), e N il numero totale di pagine. La descrizione spiega che questo corrisponde al principal eigenvector della normalized link matrix del web e pu\u00f2 essere calcolato iterativamente, con convergenza tipica in circa 100 iterazioni per milioni di documenti. La descrizione contempla esplicitamente l\u0027applicazione a search engines: il metodo potrebbe essere integrato per ordinare i risultati combinando objective ranking e textual matching, includendo anchor text dei backlink e testo nelle immediate vicinanze degli anchor. La descrizione menziona che gli anchor spesso forniscono descrizioni pi\u00f9 accurate delle pagine stesse. Vengono contemplati diversi aggiustamenti: ignorare link locali tra documenti considerando solo link tra domini separati per evitare manipolazioni; pesare meno i link dallo stesso server; aumentare il rank per documenti i cui backlink sono mantenuti da istituzioni e autori diversi in varie localit\u00e0 geografiche; dare pi\u00f9 peso a link da posizioni web importanti come root page di un dominio; pesare link per importanza relativa nel documento (visibilit\u00e0, posizione, dimensione font); assegnare valore maggiore a link da pagine modificate recentemente. La descrizione contempla personalizzazione: dare importanza iniziale alta alla homepage e/o bookmark dell\u0027utente per addestrare il sistema a riconoscere pagine correlate agli interessi della persona. Per la SEO, questo potrebbe significare che la struttura dei link in entrata conterebbe non solo numericamente ma qualitativamente, con peso dipendente dall\u0027importanza ricorsiva delle pagine linkanti e dal loro numero di link in uscita. La posizione e visibilit\u00e0 dei link all\u0027interno delle pagine, la diversit\u00e0 geografica e istituzionale dei backlink, la freschezza delle pagine linkanti potrebbero tutti essere fattori di ponderazione. L\u0027indipendenza sostanziale dal contenuto delle query (rivendicazioni 28-29) suggerirebbe un segnale di ranking query-independent, calcolabile offline.",
+  "wordCount": 701,
+  "datePublished": "2026-10-29T08:58:03.785967+00:00",
+  "dateModified": "2026-10-29T08:58:03.785967+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us6285999b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Method for node ranking in a linked database",
+    "identifier": "US6285999B1",
+    "url": "https://patents.google.com/patent/US6285999B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US6285999B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US6285999B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Ranking dei nodi in un database collegato tramite link</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Method for node ranking in a linked database</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per assegnare un punteggio di importanza ai documenti in un database collegato (come il web) basandosi sulla struttura dei link. Il rank di un documento viene calcolato ricorsivamente dai rank dei documenti che lo citano, ponderati per il numero di link in uscita da ciascuno, più una probabilità costante di salto casuale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Leland Stanford Junior University</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Database collegati tramite link, incluso il web</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">04 Settembre 2001</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">1997-01-10</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Lifetime</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Link e ranking</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★★</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">29</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo implementato al computer per assegnare uno score a documenti collegati, comprendente: ottenere una pluralità di documenti, alcuni dei quali sono linked documents (puntati da link), alcuni linking documents (contenenti link), e alcuni entrambi; assegnare uno score a ciascun linked document basato sugli score dei linking documents che lo puntano; processare i documenti secondo i loro score. La rivendicazione 2 specifica che l&#39;assegnazione include un weighting factor dipendente dal numero di link ai linking documents, aggiustando lo score in base a tale fattore. La rivendicazione 3 contempla un weighting factor basato sulla stima della probabilità che un linking document venga acceduto. La rivendicazione 4 introduce fattori di ponderazione dipendenti da URL, host, domain, author, institution o last update time dei linking documents. La rivendicazione 5 prevede ponderazioni basate sul fatto che i linking documents siano selected documents o roots. La rivendicazione 6 considera l&#39;importance, visibility o textual emphasis dei link nei linking documents. La rivendicazione 7 contempla fattori dipendenti dalle preferenze dell&#39;utente, dal rate di accesso degli utenti o dall&#39;importanza dei linking documents. La rivendicazione 9 descrive un metodo iterativo: generare una stima iniziale del rank per ciascun linked document, aggiornare la stima usando i rank dei linking documents, processare i documenti secondo i rank aggiornati. La rivendicazione 10 copre un metodo basato su random traversal: attraversare casualmente i documenti seguendo link casuali, assegnare un rank basato sul numero di volte che un documento è stato attraversato. La rivendicazione 20 specifica che lo score si basa su numero di linking documents e loro importanza. La rivendicazione 22 introduce il concetto di backlinks: associare backlinks a ciascun linked document, assegnare un peso a ciascun backlink, determinare lo score basandosi sul numero di backlinks e i loro pesi. Le rivendicazioni 27-29 specificano che lo score è determinato primarily based on linking information e substantially independent of user-query content.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla una formula specifica per il calcolo del rank, presentata nella sezione DETAILED DESCRIPTION: r(A) = α/N + (1-α)(r(B1)/|B1| + ... + r(Bn)/|Bn|), dove B1...Bn sono i backlink di A, r(Bi) sono i loro rank, |Bi| il numero di forward links, α una costante nell&#39;intervallo [0,1] (tipicamente circa 0.1 o 0.5 negli esempi, con un valore tipico menzionato di circa 15%), e N il numero totale di pagine. La descrizione spiega che questo corrisponde al principal eigenvector della normalized link matrix del web e può essere calcolato iterativamente, con convergenza tipica in circa 100 iterazioni per milioni di documenti. La descrizione contempla esplicitamente l&#39;applicazione a search engines: il metodo potrebbe essere integrato per ordinare i risultati combinando objective ranking e textual matching, includendo anchor text dei backlink e testo nelle immediate vicinanze degli anchor. La descrizione menziona che gli anchor spesso forniscono descrizioni più accurate delle pagine stesse. Vengono contemplati diversi aggiustamenti: ignorare link locali tra documenti considerando solo link tra domini separati per evitare manipolazioni; pesare meno i link dallo stesso server; aumentare il rank per documenti i cui backlink sono mantenuti da istituzioni e autori diversi in varie località geografiche; dare più peso a link da posizioni web importanti come root page di un dominio; pesare link per importanza relativa nel documento (visibilità, posizione, dimensione font); assegnare valore maggiore a link da pagine modificate recentemente. La descrizione contempla personalizzazione: dare importanza iniziale alta alla homepage e/o bookmark dell&#39;utente per addestrare il sistema a riconoscere pagine correlate agli interessi della persona. Per la SEO, questo potrebbe significare che la struttura dei link in entrata conterebbe non solo numericamente ma qualitativamente, con peso dipendente dall&#39;importanza ricorsiva delle pagine linkanti e dal loro numero di link in uscita. La posizione e visibilità dei link all&#39;interno delle pagine, la diversità geografica e istituzionale dei backlink, la freschezza delle pagine linkanti potrebbero tutti essere fattori di ponderazione. L&#39;indipendenza sostanziale dal contenuto delle query (rivendicazioni 28-29) suggerirebbe un segnale di ranking query-independent, calcolabile offline.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Lifetime) e risale al 1997, quindi non protegge più alcuna implementazione corrente.</li>
+      <li>La descrizione contempla molte varianti e fattori di ponderazione come opzioni (&#34;can be&#34;, &#34;could be&#34;), ma non specifica quali siano effettivamente implementate in alcun sistema reale.</li>
+      <li>L&#39;applicazione ai search engines è descritta come possibile embodiment, non come implementazione confermata, e il brevetto è intestato a Stanford University, non a Google.</li>
+      <li>La famiglia di continuation e brevetti correlati indica sviluppi successivi, ma questo documento da solo non dimostra quali aspetti siano stati effettivamente adottati o come siano evoluti.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Costruire un profilo di backlink diversificato per dominio, istituzione e geografia rimane una pratica solida indipendentemente dall&#39;implementazione specifica di questo brevetto.</li>
+      <li class="pl-2">La qualità e l&#39;autorità delle pagine linkanti conta più del numero assoluto di link, principio valido in qualsiasi sistema basato su grafi di link.</li>
+      <li class="pl-2">Il contesto e la prominenza dei link all&#39;interno delle pagine (posizione, visibilità) potrebbero avere peso, quindi ottenere link editoriali ben integrati nel contenuto è preferibile a link marginali.</li>
+      <li class="pl-2">La freschezza delle pagine linkanti e la manutenzione attiva dei backlink potrebbero essere fattori di qualità, suggerendo l&#39;utilità di relazioni continuative con siti che linkano.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">backlink</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Documento che contiene un link verso il documento corrente, utilizzato per calcolare il rank in modo ricorsivo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">forward link</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Link in uscita da un documento, il cui numero viene usato per normalizzare il contributo di rank trasmesso ai documenti puntati</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">weighting factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore di ponderazione applicato ai backlink basato su varie caratteristiche (dominio, istituzione, visibilità, freschezza)</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">random jump</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Probabilità costante α che un utente salti casualmente a un documento invece di seguire un link, usata per garantire convergenza del calcolo iterativo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">anchor text</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Testo associato a un link, contemplato come descrittore del documento puntato e utilizzabile per matching testuale nelle ricerche</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">steady-state probability</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Distribuzione di probabilità a cui converge il modello di random surfer dopo molte iterazioni, corrispondente al rank dei documenti</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US6799176B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US6799176B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Method for scoring documents in a linked database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US7058628B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7058628B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Method for node ranking in a linked database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US7363291B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7363291B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Methods and apparatus for increasing efficiency of electronic document delivery to users</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+      <a href="https://patents.google.com/patent/US7269587B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7269587B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Scoring documents in a linked database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US7437351B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7437351B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Method for searching media</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US7908277B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US7908277B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Annotating links in a document based on the ranks of documents pointed to by the links</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8126884B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8126884B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Scoring documents in a linked database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8131715B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8131715B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Scoring documents in a database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8131717B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8131717B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Scoring documents in a database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8195651B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8195651B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Scoring documents in a linked database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8521730B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8521730B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Scoring documents in a linked database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+      <a href="https://patents.google.com/patent/US8725726B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US8725726B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Scoring documents in a linked database</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US6285999B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

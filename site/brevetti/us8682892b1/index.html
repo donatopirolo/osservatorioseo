@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US8682892B1: Fattori di modifica basati su link e query di riferimento — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per modificare gli score iniziali delle risorse nei risultati di ricerca. Per ogni gruppo di risorse (ad esempio un dominio o un host), il sistema calcola un fattore di modifica basato sul rapporto tra link indipendenti in ingresso e query di riferimento. Questo fattor" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us8682892b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US8682892B1: Fattori di modifica basati su link e query di riferimento — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per modificare gli score iniziali delle risorse nei risultati di ricerca. Per ogni gruppo di risorse (ad esempio un dominio o un host), il sistema calcola un fattore di modifica basato sul rapporto tra link indipendenti in ingresso e query di riferimento. Questo fattor" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us8682892b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US8682892B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us8682892b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US8682892B1: Fattori di modifica basati su link e query di riferimento",
+  "description": "Il brevetto descrive un metodo per modificare gli score iniziali delle risorse nei risultati di ricerca. Per ogni gruppo di risorse (ad esempio un dominio o un host), il sistema calcola un fattore di modifica basato sul rapporto tra link indipendenti in ingresso e query di riferimento. Questo fattore viene poi applicato agli score iniziali per generare ranking finali.",
+  "articleBody": "Il brevetto descrive un metodo per modificare gli score iniziali delle risorse nei risultati di ricerca. Per ogni gruppo di risorse (ad esempio un dominio o un host), il sistema calcola un fattore di modifica basato sul rapporto tra link indipendenti in ingresso e query di riferimento. Questo fattore viene poi applicato agli score iniziali per generare ranking finali.\n\nLa rivendicazione indipendente 1 copre un metodo che determina, per ciascun gruppo di risorse, un conteggio di link indipendenti in ingresso e un conteggio di query di riferimento. Da questi due conteggi viene calcolato un fattore di modifica specifico per gruppo, che viene poi associato al gruppo stesso per modificare gli score iniziali delle risorse appartenenti a quel gruppo quando vengono restituite come risultati di ricerca.\n\nLa rivendicazione 2 specifica che, ricevuta una query, il sistema identifica a quale gruppo appartiene ciascuna risorsa nei risultati e aggiusta lo score iniziale in base al fattore di modifica del gruppo, generando un secondo score. La rivendicazione 5 precisa che l\u0027identificazione del gruppo avviene in base all\u0027indirizzo Internet della risorsa.\n\nLe rivendicazioni 6 e 7 dettagliano che il sistema genera un fattore di modifica specifico per risorsa basato sul fattore di gruppo, e lo applica moltiplicando lo score iniziale per questo fattore.\n\nLe rivendicazioni da 8 a 14 introducono logiche condizionali: se la query \u00e8 navigazionale verso la risorsa (rivendicazione 8), il fattore non modifica lo score. Se lo score iniziale non supera una prima soglia T1 (rivendicazione 10), il fattore rimane neutro. Per score tra T1 e una seconda soglia T2 (rivendicazione 11), si applica la formula f1=T1+(IS-T1)\u00b7M/IS. Per score sopra T2 (rivendicazioni 12-14), si usa f2=f3/logT2(IS)\u00b7g(f3), dove g \u00e8 una funzione di smoothing che riduce l\u0027effetto del fattore per certi range di valori.\n\nLe rivendicazioni da 15 a 18 definiscono cosa sia un link indipendente: un link da una risorsa sorgente a una target, dove le due risorse sono state determinate indipendenti. L\u0027indipendenza pu\u00f2 essere stabilita verificando che appartengano a gruppi diversi (rivendicazione 16), che i gruppi non siano probabilmente correlati (rivendicazione 17), o che la sorgente non sia probabilmente un duplicato del target (rivendicazione 18).\n\nLe rivendicazioni 19-20 definiscono una query di riferimento come una query precedentemente sottomessa che \u00e8 stata categorizzata come riferita a una risorsa nel gruppo, ad esempio perch\u00e9 contiene termini riconosciuti come riferimenti a quella risorsa.\n\nLe rivendicazioni 21-22 specificano che il fattore di modifica iniziale per un gruppo \u00e8 il rapporto IL/RQ (link indipendenti diviso query di riferimento), e che questo pu\u00f2 essere normalizzato partizionando i gruppi in base al conteggio di query di riferimento e normalizzando all\u0027interno di ciascuna partizione.\n\nLa descrizione contempla diversi dettagli implementativi rilevanti. Al paragrafo che definisce i link indipendenti, si specifica che possono essere sia express link (hyperlink) che implied link (citazioni senza link cliccabile). Il sistema considera vari fattori per determinare l\u0027indipendenza: se le risorse sono nello stesso gruppo, se i gruppi sono probabilmente correlati (owned, hosted o creati dalla stessa entit\u00e0), o se le risorse hanno contenuto, immagini o CSS simili. In alcune implementazioni, il sistema conta al massimo un link da ciascun gruppo sorgente verso un gruppo target, oppure usa una funzione non decrescente del numero totale, come il logaritmo.\n\nPer le query di riferimento, la descrizione contempla che un termine possa essere riconosciuto come riferimento a una risorsa se \u00e8 parte dell\u0027URL (esempio: \"example.com\" per http://www.example.com) o se i dati indicano che gli utenti usano comunemente quel termine per riferirsi alla risorsa (esempio: \"example sf\" o \"esf\" per http://www.sf.example.com). In alcune implementazioni, vengono contate solo query da utenti unici, identificati tramite cookie o login identifier: una sola query per cookie viene contata come unica per il gruppo.\n\nLa descrizione contempla che il fattore di modifica base sia M=IL/RQ, e che possa essere normalizzato calcolando una misura statistica (media aritmetica, geometrica, armonica, mediana, moda, massimo o minimo) dei fattori nella stessa partizione, con formula NM=(M-m)/m.\n\nPer la SEO, questo brevetto potrebbe suggerire che Google valuti la qualit\u00e0 di un sito confrontando quanti link indipendenti riceve rispetto a quante ricerche navigazionali o branded riceve. Un sito con molte query di riferimento ma pochi link indipendenti potrebbe essere penalizzato, mentre uno con molti link rispetto alle query potrebbe essere premiato. Il meccanismo di soglie (T1 e T2) potrebbe indicare che l\u0027effetto si applica principalmente a risorse con score intermedi o alti, risparmiando quelle con score gi\u00e0 bassi. La protezione delle query navigazionali suggerisce che Google non vorrebbe penalizzare un sito quando l\u0027utente cerca esplicitamente quel sito, anche se il rapporto link/query fosse sfavorevole.\n\nTuttavia, si tratta di interpretazioni: il brevetto descrive un possibile meccanismo, non conferma che sia in uso. Il concetto di \"link indipendenti\" \u00e8 particolarmente interessante perch\u00e9 esclude link da siti correlati o duplicati, suggerendo un focus sulla diversit\u00e0 delle fonti.",
+  "wordCount": 794,
+  "datePublished": "2026-10-29T08:55:36.204404+00:00",
+  "dateModified": "2026-10-29T08:55:36.204404+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us8682892b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Ranking search results",
+    "identifier": "US8682892B1",
+    "url": "https://patents.google.com/patent/US8682892B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US8682892B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US8682892B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Fattori di modifica basati su link e query di riferimento</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Ranking search results</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per modificare gli score iniziali delle risorse nei risultati di ricerca. Per ogni gruppo di risorse (ad esempio un dominio o un host), il sistema calcola un fattore di modifica basato sul rapporto tra link indipendenti in ingresso e query di riferimento. Questo fattore viene poi applicato agli score iniziali per generare ranking finali.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, ranking dei risultati organici</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">25 Marzo 2014</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2012-09-28</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Expired - Fee Related</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Link e ranking</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">46</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che determina, per ciascun gruppo di risorse, un conteggio di link indipendenti in ingresso e un conteggio di query di riferimento. Da questi due conteggi viene calcolato un fattore di modifica specifico per gruppo, che viene poi associato al gruppo stesso per modificare gli score iniziali delle risorse appartenenti a quel gruppo quando vengono restituite come risultati di ricerca.</p>
+      <p>La rivendicazione 2 specifica che, ricevuta una query, il sistema identifica a quale gruppo appartiene ciascuna risorsa nei risultati e aggiusta lo score iniziale in base al fattore di modifica del gruppo, generando un secondo score. La rivendicazione 5 precisa che l&#39;identificazione del gruppo avviene in base all&#39;indirizzo Internet della risorsa.</p>
+      <p>Le rivendicazioni 6 e 7 dettagliano che il sistema genera un fattore di modifica specifico per risorsa basato sul fattore di gruppo, e lo applica moltiplicando lo score iniziale per questo fattore.</p>
+      <p>Le rivendicazioni da 8 a 14 introducono logiche condizionali: se la query è navigazionale verso la risorsa (rivendicazione 8), il fattore non modifica lo score. Se lo score iniziale non supera una prima soglia T1 (rivendicazione 10), il fattore rimane neutro. Per score tra T1 e una seconda soglia T2 (rivendicazione 11), si applica la formula f1=T1+(IS-T1)·M/IS. Per score sopra T2 (rivendicazioni 12-14), si usa f2=f3/logT2(IS)·g(f3), dove g è una funzione di smoothing che riduce l&#39;effetto del fattore per certi range di valori.</p>
+      <p>Le rivendicazioni da 15 a 18 definiscono cosa sia un link indipendente: un link da una risorsa sorgente a una target, dove le due risorse sono state determinate indipendenti. L&#39;indipendenza può essere stabilita verificando che appartengano a gruppi diversi (rivendicazione 16), che i gruppi non siano probabilmente correlati (rivendicazione 17), o che la sorgente non sia probabilmente un duplicato del target (rivendicazione 18).</p>
+      <p>Le rivendicazioni 19-20 definiscono una query di riferimento come una query precedentemente sottomessa che è stata categorizzata come riferita a una risorsa nel gruppo, ad esempio perché contiene termini riconosciuti come riferimenti a quella risorsa.</p>
+      <p>Le rivendicazioni 21-22 specificano che il fattore di modifica iniziale per un gruppo è il rapporto IL/RQ (link indipendenti diviso query di riferimento), e che questo può essere normalizzato partizionando i gruppi in base al conteggio di query di riferimento e normalizzando all&#39;interno di ciascuna partizione.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi dettagli implementativi rilevanti. Al paragrafo che definisce i link indipendenti, si specifica che possono essere sia express link (hyperlink) che implied link (citazioni senza link cliccabile). Il sistema considera vari fattori per determinare l&#39;indipendenza: se le risorse sono nello stesso gruppo, se i gruppi sono probabilmente correlati (owned, hosted o creati dalla stessa entità), o se le risorse hanno contenuto, immagini o CSS simili. In alcune implementazioni, il sistema conta al massimo un link da ciascun gruppo sorgente verso un gruppo target, oppure usa una funzione non decrescente del numero totale, come il logaritmo.</p>
+      <p>Per le query di riferimento, la descrizione contempla che un termine possa essere riconosciuto come riferimento a una risorsa se è parte dell&#39;URL (esempio: &#34;example.com&#34; per http://www.example.com) o se i dati indicano che gli utenti usano comunemente quel termine per riferirsi alla risorsa (esempio: &#34;example sf&#34; o &#34;esf&#34; per http://www.sf.example.com). In alcune implementazioni, vengono contate solo query da utenti unici, identificati tramite cookie o login identifier: una sola query per cookie viene contata come unica per il gruppo.</p>
+      <p>La descrizione contempla che il fattore di modifica base sia M=IL/RQ, e che possa essere normalizzato calcolando una misura statistica (media aritmetica, geometrica, armonica, mediana, moda, massimo o minimo) dei fattori nella stessa partizione, con formula NM=(M-m)/m.</p>
+      <p>Per la SEO, questo brevetto potrebbe suggerire che Google valuti la qualità di un sito confrontando quanti link indipendenti riceve rispetto a quante ricerche navigazionali o branded riceve. Un sito con molte query di riferimento ma pochi link indipendenti potrebbe essere penalizzato, mentre uno con molti link rispetto alle query potrebbe essere premiato. Il meccanismo di soglie (T1 e T2) potrebbe indicare che l&#39;effetto si applica principalmente a risorse con score intermedi o alti, risparmiando quelle con score già bassi. La protezione delle query navigazionali suggerisce che Google non vorrebbe penalizzare un sito quando l&#39;utente cerca esplicitamente quel sito, anche se il rapporto link/query fosse sfavorevole.</p>
+      <p>Tuttavia, si tratta di interpretazioni: il brevetto descrive un possibile meccanismo, non conferma che sia in uso. Il concetto di &#34;link indipendenti&#34; è particolarmente interessante perché esclude link da siti correlati o duplicati, suggerendo un focus sulla diversità delle fonti.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è scaduto (Expired - Fee Related), quindi non è più in vigore e non vi è obbligo per Google di utilizzarlo attualmente.</li>
+      <li>Non dimostra che questo specifico rapporto link/query sia mai stato implementato in produzione o che abbia un peso significativo nel ranking attuale.</li>
+      <li>Non specifica come vengano determinati concretamente i gruppi &#34;probabilmente correlati&#34; o le soglie T1 e T2, lasciando ampi margini implementativi.</li>
+      <li>La descrizione contempla molte varianti (conteggio al massimo uno, uso di logaritmi, diverse funzioni di smoothing) senza indicare quale sia preferita o efficace.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Diversificare il profilo di link ottenendo collegamenti da domini realmente indipendenti e non correlati tra loro, evitando reti di siti collegati o contenuti duplicati.</li>
+      <li class="pl-2">Costruire un brand riconoscibile che generi query di riferimento naturali, bilanciando la visibilità organica con la notorietà diretta del marchio.</li>
+      <li class="pl-2">Monitorare la coerenza tra la popolarità percepita (ricerche branded) e l&#39;autorità effettiva (link da fonti diverse), poiché uno squilibrio potrebbe essere un segnale di qualità.</li>
+      <li class="pl-2">Evitare schemi di link che coinvolgano siti dello stesso proprietario, host condivisi o contenuti simili, dato che potrebbero non essere contati come indipendenti.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">independent incoming links</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Link in ingresso verso risorse di un gruppo, dove la risorsa sorgente e quella target sono state determinate indipendenti (diversi gruppi, non correlati, non duplicati)</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">reference queries</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query precedentemente sottoposte che sono state categorizzate come riferite a una risorsa nel gruppo, tipicamente query navigazionali o che contengono termini branded</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">group-specific modification factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore di modifica calcolato per un gruppo di risorse, basato sul rapporto tra link indipendenti e query di riferimento, usato per aggiustare gli score iniziali</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">resource-specific modification factor</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Fattore derivato dal fattore di gruppo ma adattato alla singola risorsa in base a parametri query-specific, come se la query è navigazionale o dove si colloca lo score iniziale rispetto alle soglie</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">navigational query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query sottomessa con l&#39;intento di raggiungere un sito o una pagina specifica di una particolare entità, per la quale il fattore di modifica non viene applicato</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US8682892B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 29 Ottobre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
