@@ -291,3 +291,21 @@ def test_render_sitemap_robots_feed() -> None:
     )
     assert "<title>Test</title>" in feed
     assert '<category term="seo"' in feed
+
+
+def test_asset_url_versions_by_content(tmp_path: Path) -> None:
+    """Regressione: dopo un deploy il browser teneva in cache il tailwind.css
+    vecchio per ore e le pagine nuove (es. /brevetti/) apparivano rotte."""
+    (tmp_path / "tailwind.css").write_text(".a{}")
+    renderer = HtmlRenderer(templates_dir=Path("templates"), static_dir=tmp_path)
+    v1 = renderer.asset_url("/tailwind.css")
+    assert v1.startswith("/tailwind.css?v=")
+
+    (tmp_path / "tailwind.css").write_text(".a{}.b{}")
+    v2 = HtmlRenderer(templates_dir=Path("templates"), static_dir=tmp_path).asset_url(
+        "/tailwind.css"
+    )
+    assert v2 != v1
+    # File assente o renderer senza static_dir: URL invariato.
+    assert renderer.asset_url("/missing.js") == "/missing.js"
+    assert HtmlRenderer(templates_dir=Path("templates")).asset_url("/app.js") == "/app.js"

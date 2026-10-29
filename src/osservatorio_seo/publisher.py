@@ -500,7 +500,7 @@ class Publisher:
         rigenerare l'intero archivio (molti feed, un solo stato globale
         finale) usa quei due metodi separatamente — vedi scripts/rebuild_seo_html.py.
         """
-        renderer = HtmlRenderer(templates_dir)
+        renderer = HtmlRenderer(templates_dir, static_dir=site_dir)
         site_dir.mkdir(parents=True, exist_ok=True)
 
         day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
@@ -554,7 +554,7 @@ class Publisher:
         lo snapshot e gli articoli di un giorno sono permanenti e vanno
         scritti una volta per ciascun giorno archiviato.
         """
-        renderer = HtmlRenderer(templates_dir)
+        renderer = HtmlRenderer(templates_dir, static_dir=site_dir)
         site_dir.mkdir(parents=True, exist_ok=True)
         day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
         item_slugs = self._compute_item_slugs(feed, day_iso)
@@ -582,7 +582,7 @@ class Publisher:
         dimensione dell'archivio (vedi scripts/rebuild_seo_html.py, dove
         prima girava dentro il loop di ``publish_ssg``).
         """
-        renderer = HtmlRenderer(templates_dir)
+        renderer = HtmlRenderer(templates_dir, static_dir=site_dir)
         site_dir.mkdir(parents=True, exist_ok=True)
         day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
         item_slugs = self._compute_item_slugs(feed, day_iso)

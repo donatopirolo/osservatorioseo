@@ -473,5 +473,5 @@
 
 {% block extra_scripts %}
 <script>window.__TRACKER_DATA__ = {{ tracker_json|safe }};</script>
-<script src="/tracker/tracker-charts.js"></script>
+<script src="{{ asset_url('/tracker/tracker-charts.js') }}"></script>
 {% endblock %}

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 from typing import Any
 
@@ -11,7 +12,9 @@ from osservatorio_seo.seo import SITE_URL
 
 
 class HtmlRenderer:
-    def __init__(self, templates_dir: Path) -> None:
+    def __init__(self, templates_dir: Path, static_dir: Path | None = None) -> None:
+        self._static_dir = static_dir
+        self._asset_versions: dict[str, str] = {}
         self._env = Environment(
             loader=FileSystemLoader(str(templates_dir)),
             autoescape=select_autoescape(["html", "jinja"]),
@@ -20,6 +23,25 @@ class HtmlRenderer:
             keep_trailing_newline=True,
         )
         self._env.globals["site_url"] = SITE_URL
+        self._env.globals["asset_url"] = self.asset_url
+
+    def asset_url(self, path: str) -> str:
+        """URL di un asset statico con la versione del contenuto, es. ``/tailwind.css?v=3f9a1c0b2d``.
+
+        Senza versione il browser (e la cache di Cloudflare) servono il CSS
+        vecchio per ore dopo un deploy, e le pagine nuove appaiono rotte.
+        Il file va gia' compilato quando si genera l'HTML: nei workflow il
+        build di Tailwind gira prima del rendering.
+        """
+        if self._static_dir is None:
+            return path
+        if path not in self._asset_versions:
+            file = self._static_dir / path.lstrip("/")
+            if not file.is_file():
+                return path
+            digest = hashlib.sha256(file.read_bytes()).hexdigest()[:10]
+            self._asset_versions[path] = f"{path}?v={digest}"
+        return self._asset_versions[path]
 
     def render_raw(self, template_name: str, context: dict[str, Any]) -> str:
         """Render a template file to a string."""
