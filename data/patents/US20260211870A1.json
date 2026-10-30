@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20260211870A1",
+    "title": "Generating query variants using a trained generative model",
+    "abstract": "Systems, methods, and computer readable media related to generating query variants for a submitted query. In many implementations, the query variants are generated utilizing a generative model. A generative model is productive, in that it can be utilized to actively generate a variant of a query based on application of tokens of the query to the generative model, and optionally based on application of additional input features to the generative model.",
+    "claims": [
+      "1 . A method implemented by one or more processors, the method comprising: receiving an original query, the original query generated based on user interface input of a user via a client device; applying, to a trained generative model: a location of the user, one or more attributes of the user that are determined based on one or more query submissions received prior to the receiving of the original query, and the original query; generating, based on application of the location of the user, application of the original query, and application of the one or more attributes of the user, to the trained generative model, generative output; subsequent to generating the generative output: generating, based on application of further input to the trained generative model, further generative output, wherein the further input is based on the generative output; generating an output based on the further generative output; and providing, in response to the original query, the output for presentation via the client device.",
+      "2 . The method of claim 1 , further comprising: applying, along with the location of the user, the one or more attributes of the user, and the original query, to the trained generative model: content recently viewed by the user at the client device; wherein generating the generative output is further based on application of the content to the trained generative model.",
+      "3 . The method of claim 2 , further comprising: selecting the trained generative model from a plurality of candidate generative models; wherein applying the location of the user, the one or more attributes of the user, and the original query, to the trained generative model, is in response to selecting the trained generative model from the plurality of candidate generative models.",
+      "4 . The method of claim 3 , wherein selecting the trained generative model from the plurality of candidate generative models is based on the one or more user attributes of the user that generated the original query.",
+      "5 . The method of claim 3 , wherein selecting the trained generative model from the plurality of candidate generative models is based on a task currently engaged in by the user.",
+      "6 . The method of claim 3 , wherein the further input includes the generative output.",
+      "7 . The method of claim 3 , wherein the further input includes further search system responses that are responsive to the generative output.",
+      "8 . The method of claim 1 , further comprising: selecting the trained generative model from a plurality of candidate generative models; wherein applying the location of the user, the one or more attributes of the user, and the original query, to the trained generative model is in response to selecting the trained generative model from the plurality of candidate generative models.",
+      "9 . The method of claim 1 , wherein the further input includes the generative output.",
+      "10 . The method of claim 1 , wherein the further input includes further search system responses that are responsive to the generative output.",
+      "11 . The method of claim 1 , wherein the location of the user, applied to the trained generative model, includes a city.",
+      "12 . The method of claim 1 , wherein the location of the user, applied to the trained generative model, includes a state.",
+      "13 . The method of claim 1 , wherein the location of the user, applied to the trained generative model, includes a region.",
+      "14 . A system comprising: one or more storage devices storing instructions; and one or more processors operable to execute the instructions to: receive an original query, the original query generated based on user interface input of a user via a client device; apply, to a trained generative model: a location of the user, one or more attributes of the user that are determined based on one or more query submissions received prior to the receiving of the original query, and the original query; generate, based on application of the location of the user, application of the original query, and application of the one or more attributes of the user, to the trained generative model, generative output; subsequent to generating the generative output: generate, based on application of further input to the trained generative model, further generative output, wherein the further input is based on the generative output; generate an output based on the further generative output; and provide, in response to the original query, the output for presentation via the client device.",
+      "15 . The system of claim 14 , wherein one or more of the processors are further operable to execute the instructions to: apply, along with the location of the user, the one or more attributes of the user, and the original query, to the trained generative model: content recently viewed by the user at the client device; wherein in generating the generative output one or more of the processors are to generate the generative output further based on application of the content to the trained generative model.",
+      "16 . The system of claim 15 , wherein one or more of the processors are further operable to execute the instructions to: select the trained generative model from a plurality of candidate generative models; wherein applying the location of the user, the one or more attributes of the user, and the original query, to the trained generative model, is in response to selecting the trained generative model from the plurality of candidate generative models.",
+      "17 . The system of claim 16 , wherein in selecting the trained generative model from the plurality of candidate generative models one or more of the processors are to select the trained generative model based on the one or more user attributes of the user that generated the original query.",
+      "18 . The system of claim 16 , wherein in selecting the trained generative model from the plurality of candidate generative models one or more of the processors are to select the trained generative model based on a task currently engaged in by the user.",
+      "19 . The system of claim 16 , wherein the further input includes the generative output and includes further search system responses that are responsive to the generative output.",
+      "20 . The system of claim 14 , wherein one or more of the processors are further operable to execute the instructions to: select the trained generative model from a plurality of candidate generative models; wherein applying the location of the user, the one or more attributes of the user, and the original query, to the trained generative model is in response to selecting the trained generative model from the plurality of candidate generative models."
+    ],
+    "independent_claims": [
+      "1 . A method implemented by one or more processors, the method comprising: receiving an original query, the original query generated based on user interface input of a user via a client device; applying, to a trained generative model: a location of the user, one or more attributes of the user that are determined based on one or more query submissions received prior to the receiving of the original query, and the original query; generating, based on application of the location of the user, application of the original query, and application of the one or more attributes of the user, to the trained generative model, generative output; subsequent to generating the generative output: generating, based on application of further input to the trained generative model, further generative output, wherein the further input is based on the generative output; generating an output based on the further generative output; and providing, in response to the original query, the output for presentation via the client device.",
+      "14 . A system comprising: one or more storage devices storing instructions; and one or more processors operable to execute the instructions to: receive an original query, the original query generated based on user interface input of a user via a client device; apply, to a trained generative model: a location of the user, one or more attributes of the user that are determined based on one or more query submissions received prior to the receiving of the original query, and the original query; generate, based on application of the location of the user, application of the original query, and application of the one or more attributes of the user, to the trained generative model, generative output; subsequent to generating the generative output: generate, based on application of further input to the trained generative model, further generative output, wherein the further input is based on the generative output; generate an output based on the further generative output; and provide, in response to the original query, the output for presentation via the client device."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Jyrki Alakuijala",
+      "Christian Buck",
+      "Jannis Bulian",
+      "Massimiliano Ciaramita",
+      "Wojciech Gajewski",
+      "Andrea Gesmundo",
+      "Neil Houlsby",
+      "Wei Wang"
+    ],
+    "priority_date": "2017-04-29",
+    "filing_date": "2026-03-16",
+    "publication_date": "2026-07-23",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/20",
+      "G06F16/24",
+      "G06F16/242",
+      "G06F16/3331",
+      "G06F16/3332",
+      "G06F16/3338",
+      "G06N3/00",
+      "G06N3/02",
+      "G06N3/04",
+      "G06N3/044",
+      "G06N3/0442",
+      "G06N3/045",
+      "G06N3/0455",
+      "G06N3/047",
+      "G06N3/0475",
+      "G06N3/08",
+      "G06N3/09"
+    ],
+    "family": [
+      {
+        "number": "US12579133B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Generating query variants using a trained generative model"
+      }
+    ],
+    "cited_by_count": 49
+  },
+  "analysis": {
+    "title_it": "Generazione di varianti di query tramite modello generativo",
+    "summary": "Il brevetto descrive un sistema per generare varianti di una query originale utilizzando un modello generativo addestrato (tipicamente sequence-to-sequence con layer di memoria come LSTM). Le varianti possono essere di diversi tipi (equivalenti, follow-up, generalizzazioni, canonicalizzazioni) e vengono generate applicando al modello i token della query originale insieme ad attributi dell'utente, contesto temporale e, opzionalmente, risposte del sistema di ricerca a varianti precedenti.",
+    "theme": "query_comprensione",
+    "seo_relevance": 3,
+    "scope": "Ricerca web, generazione varianti query",
+    "what_it_claims": "Le rivendicazioni indipendenti (claim 1 e 14) coprono un metodo e un sistema che ricevono una query originale generata da input utente tramite client device e applicano a un modello generativo addestrato tre elementi: la posizione dell'utente (location), uno o più attributi dell'utente determinati in base a query submissions precedenti, e la query originale stessa. Il sistema genera un output generativo basato su questa applicazione, quindi applica ulteriore input al modello (basato sull'output generativo appena prodotto) per generare ulteriore output generativo. Infine, genera un output basato su quest'ultimo output generativo e lo fornisce al client device in risposta alla query originale.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La claim 2 contempla l'applicazione al modello anche di contenuti recentemente visualizzati dall'utente sul client device. Le claim 3-5 e 8 coprono la selezione del modello generativo addestrato da una pluralità di modelli candidati, dove la selezione può basarsi sugli attributi utente (claim 4) o su un task attualmente svolto dall'utente (claim 5). Le claim 6-7, 9-10 e 19 specificano che l'ulteriore input può includere l'output generativo stesso (claim 6, 9) oppure ulteriori risposte del sistema di ricerca che sono responsive all'output generativo (claim 7, 10, 19). Le claim 11-13 dettagliano che la posizione dell'utente applicata al modello può includere una città (claim 11), uno stato (claim 12) o una regione (claim 13). Le rivendicazioni 14-20 replicano la struttura per un sistema anziché un metodo.",
+    "seo_reading": "La descrizione contempla un sistema di generazione varianti significativamente più articolato delle rivendicazioni. Il modello generativo descritto è tipicamente una rete neurale sequence-to-sequence con memory layer (LSTM o GRU), simile architetturalmente ai modelli di traduzione automatica neurale ma addestrato su dati specifici per varianti di query (paragrafi relativi a \"sequence to sequence model\" e \"memory layers\"). La descrizione contempla training basato su coppie di query con click sugli stessi documenti (per varianti equivalenti), coppie di query successive (per follow-up), e coppie query originale-canonica (per canonicalizzazione).\n\nIl documento contempla modelli multitask addestrati per generare diversi tipi di varianti: equivalenti, follow-up, generalizzazioni, canonicalizzazioni, traduzioni linguistiche, entailment, specificazioni e chiarificazioni (sezione \"multitask model\"). Il tipo di variante da generare potrebbe essere indicato da un type value applicato come input al modello. La descrizione contempla anche l'addestramento di modelli separati per gruppi di utenti con attributi comuni o per task specifici (es. shopping online, viaggio verso una location), con selezione del modello appropriato a runtime in base agli attributi utente o al task predetto (sezioni su \"multiple generative models\").\n\nUn aspetto rilevante è l'iterazione controllata: la descrizione contempla un control model separato (potenzialmente una rete feedforward o RNN) che agisce come \"critic\" mentre il generative model è l'\"actor\" in un ambiente actor-critic (sezione \"control model\" e FIG. 4). Il control model riceverebbe come input feature dello stato corrente (query originale, varianti già generate, risposte del search system) e determinerebbe se generare ulteriori varianti o fermarsi. La descrizione contempla training tramite reinforcement learning dove le reward sono proporzionali alla qualità delle risposte fornite dal search system, con approccio Monte-Carlo Q-learning (sezione \"reinforcement learning\").\n\nPer la SEO, questo brevetto potrebbe indicare che Google esplora internamente varianti di una query per verificare, arricchire o sostituire i risultati della query originale. Le varianti follow-up potrebbero servire a verificare la correttezza di una risposta (esempio in FIG. 8B: query \"did michelangelo paint the mona lisa\" genera risposta \"yes\" ma varianti follow-up non trovano conferme, quindi viene fornito \"no\"). Le varianti equivalenti o di generalizzazione potrebbero servire a trovare risultati quando la query originale non ne produce. La personalizzazione tramite attributi utente (location, task, contenuti recentemente visualizzati) suggerirebbe che query identiche di utenti diversi potrebbero essere elaborate diversamente. Tuttavia, la complessità del sistema descritto (iterazioni multiple, control model, reinforcement learning con interazione live col search system) renderebbe l'implementazione in produzione computazionalmente costosa, specialmente per query ad alto volume.",
+    "limits": [
+      "Si tratta di una domanda di brevetto (A1), non ancora concessa, e fa parte di una famiglia con continuation (US12579133B2), quindi non rappresenta protezione indipendente.",
+      "Il brevetto non dimostra che Google utilizzi questo sistema in produzione per Search. La complessità computazionale descritta (iterazioni multiple con chiamate al search system, control model separato, reinforcement learning) suggerirebbe costi elevati per deployment su larga scala.",
+      "Non specifica quali segnali di ranking vengano utilizzati dal search system per valutare le risposte alle varianti, né come le risposte alle varianti influenzino concretamente il ranking dei risultati mostrati all'utente.",
+      "La descrizione contempla utilizzi anche per advertising (fornire ads assegnati a varianti generate) e per utenti con difficoltà di formulazione query, ambiti che esulano dal ranking organico tradizionale."
+    ],
+    "implications": [
+      "Assicurarsi che i contenuti rispondano non solo alla query letterale ma anche a varianti semanticamente correlate (riformulazioni, follow-up naturali, generalizzazioni) per massimizzare la copertura tematica.",
+      "Considerare che query apparentemente identiche potrebbero essere elaborate diversamente in base al contesto utente (location, dispositivo, cronologia), quindi testare le SERP in condizioni diverse quando possibile.",
+      "Per contenuti che forniscono risposte dirette, verificare la coerenza delle informazioni con possibili domande di approfondimento o verifica, poiché risposte contraddittorie a query correlate potrebbero segnalare inaffidabilità.",
+      "Prestare attenzione alla struttura informativa dei contenuti in modo che rispondano a intent multipli correlati, non solo alla keyword target isolata, facilitando il recupero per varianti semantiche della query."
+    ],
+    "key_terms": [
+      {
+        "term": "generative model",
+        "explanation": "Modello neurale (tipicamente sequence-to-sequence con LSTM/GRU) addestrato a produrre attivamente varianti di una query applicando i token della query e feature aggiuntive come input"
+      },
+      {
+        "term": "query variant",
+        "explanation": "Riformulazione della query originale generata dal modello, che può essere di diversi tipi: equivalente, follow-up, generalizzazione, canonicalizzazione, traduzione, entailment, specificazione o chiarificazione"
+      },
+      {
+        "term": "multitask model",
+        "explanation": "Modello generativo addestrato per produrre varianti di tipi diversi, dove il tipo desiderato viene indicato tramite un type value applicato come input al modello"
+      },
+      {
+        "term": "control model",
+        "explanation": "Modello separato che agisce come critic in un ambiente actor-critic, determinando se generare ulteriori varianti o fermarsi in base allo stato corrente (varianti già generate e relative risposte)"
+      },
+      {
+        "term": "reinforcement learning",
+        "explanation": "Approccio di training dove il modello viene addestrato tramite reward proporzionali alla qualità delle risposte fornite dal search system alle varianti generate, con approccio Monte-Carlo Q-learning"
+      },
+      {
+        "term": "user attributes",
+        "explanation": "Caratteristiche dell'utente applicate come input al modello per personalizzare la generazione di varianti, includendo location, task corrente, attributi demografici, contenuti recentemente visualizzati"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-10-30T16:48:55.677519Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.08696208
+}
