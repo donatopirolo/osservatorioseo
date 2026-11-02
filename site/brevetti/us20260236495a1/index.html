@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260236495A1: Streaming di output generato da LLM per ridurre la latenza — Brevetti Google</title>
+<meta name="description" content="Il brevetto affronta il problema della latenza nella generazione e nel rendering di output in linguaggio naturale prodotto da large language model (LLM). Il sistema genera l&#39;output come flusso di segmenti, selezionando ciascun segmento mentre i successivi sono ancora in fase di generazione, e opzion" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260236495a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260236495A1: Streaming di output generato da LLM per ridurre la latenza — Brevetti Google" />
+<meta property="og:description" content="Il brevetto affronta il problema della latenza nella generazione e nel rendering di output in linguaggio naturale prodotto da large language model (LLM). Il sistema genera l&#39;output come flusso di segmenti, selezionando ciascun segmento mentre i successivi sono ancora in fase di generazione, e opzion" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260236495a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260236495A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260236495a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260236495A1: Streaming di output generato da LLM per ridurre la latenza",
+  "description": "Il brevetto affronta il problema della latenza nella generazione e nel rendering di output in linguaggio naturale prodotto da large language model (LLM). Il sistema genera l\u0027output come flusso di segmenti, selezionando ciascun segmento mentre i successivi sono ancora in fase di generazione, e opzionalmente rendendoli in streaming prima del completamento dell\u0027intero output.",
+  "articleBody": "Il brevetto affronta il problema della latenza nella generazione e nel rendering di output in linguaggio naturale prodotto da large language model (LLM). Il sistema genera l\u0027output come flusso di segmenti, selezionando ciascun segmento mentre i successivi sono ancora in fase di generazione, e opzionalmente rendendoli in streaming prima del completamento dell\u0027intero output.\n\nLe rivendicazioni indipendenti 1 e 12 coprono un metodo per ridurre la latenza nell\u0027output generato da LLM. Il sistema riceve input in linguaggio naturale da un client device e genera un flusso di output NL processando l\u0027input con un LLM. La rivendicazione 1 descrive la generazione segmento per segmento: il sistema processa l\u0027input usando il LLM per generare LLM output, determina una pluralit\u00e0 di primi segmenti candidati per il primo segmento del flusso, seleziona un dato primo segmento candidato come primo segmento, processa nuovamente l\u0027input usando il LLM basandosi sul primo segmento per generare ulteriore LLM output, determina una pluralit\u00e0 di secondi segmenti candidati per il secondo segmento, seleziona un dato secondo segmento candidato come secondo segmento, e causa il rendering del flusso di output NL al client device. La rivendicazione 12 aggiunge che il rendering avviene in streaming manner: il primo segmento viene reso al client device immediatamente dopo la selezione, mentre il secondo segmento \u00e8 ancora in fase di generazione.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che l\u0027LLM output comprende una distribuzione di probabilit\u00e0 su una sequenza di parole, utilizzata per determinare i segmenti candidati. La rivendicazione 3 introduce criteri di ranking per la selezione dei segmenti. La rivendicazione 4 elenca criteri specifici: assurance criterion, accuracy criterion, quality criterion. La rivendicazione 7 aggiunge il coherency criterion per i segmenti successivi al primo. La rivendicazione 11 descrive come l\u0027input NL viene aumentato con il primo segmento per generare l\u0027output LLM addizionale. Le rivendicazioni 8-10 e 17-19 estendono il processo a un terzo segmento e successivi. Le rivendicazioni indipendenti 13 e 20 coprono varianti implementate come sistema e con augmented NL based input anzich\u00e9 aggiornamento dello stato del LLM.\n\nLa descrizione contempla due modalit\u00e0 principali di generazione dell\u0027output. Nella prima modalit\u00e0, descritta nei blocchi 260-262 del metodo 200, il sistema aggiorna lo stato del LLM fornendo un\u0027indicazione del segmento selezionato, e il LLM continua a processare l\u0027input con questo stato aggiornato. La probabilit\u00e0 distribution viene continuamente aggiornata rispetto ai segmenti precedentemente selezionati. Nella seconda modalit\u00e0, descritta nei blocchi 460-464 del metodo 400, il sistema augmenta l\u0027input NL con i segmenti gi\u00e0 selezionati e riprocessa l\u0027augmented input, generando nuove distribuzioni di probabilit\u00e0 senza necessariamente aggiornare lo stato del LLM.\n\nLa descrizione contempla rendering in due forme. Nel metodo 200 (blocco 270), i segmenti possono essere pre-fetched dal client device man mano che vengono selezionati, ma il rendering completo avviene solo quando il flusso \u00e8 completato. Questo approccio potrebbe essere utilizzato per NL based input sensibili (politics, religion, o altri temi potenzialmente controversi, come indicato nella descrizione). Nel metodo 300 (blocchi 360, 368), ogni segmento viene reso immediatamente dopo la selezione in streaming manner, riducendo ulteriormente la latenza percepita.\n\nLa descrizione contempla un halt streaming selectable element (blocco 656 in FIG. 6A) che, quando selezionato, causa l\u0027arresto del processing e/o rendering. L\u0027esempio illustra un caso in cui l\u0027utente realizza che Louisville \u00e8 stato interpretato come Louisville Kentucky invece di Louisville Colorado, e pu\u00f2 fermare lo streaming per raffinare l\u0027input. La descrizione contempla anche che segmenti gi\u00e0 resi possano essere annullati (undone) in streaming manner se risultano inadeguati.\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacit\u00e0 di generare risposte AI in modo pi\u00f9 efficiente, riducendo i tempi di attesa. Il chunked decoding descritto potrebbe consentire di mostrare porzioni di risposta mentre altre sono ancora in elaborazione. Tuttavia, il brevetto non specifica se questo si applichi a Google Search o ad altri prodotti. La possibilit\u00e0 di pre-fetch dei segmenti potrebbe suggerire un\u0027architettura in cui il sistema valuta la qualit\u00e0 dell\u0027output completo prima del rendering, applicando assurance, accuracy e quality criteria. I criteri di ranking menzionati (rivendicazioni 4, 7, 15, 16) potrebbero riflettere filtri di qualit\u00e0 applicati alle risposte generate, ma non \u00e8 chiaro se e come questi influenzerebbero la selezione delle fonti mostrate agli utenti.",
+  "wordCount": 692,
+  "datePublished": "2026-11-02T20:29:25.802728+00:00",
+  "dateModified": "2026-11-02T20:29:25.802728+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260236495a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Streaming of natural language (nl) based output generated using a large language model (llm) to reduce latency in rendering thereof",
+    "identifier": "US20260236495A1",
+    "url": "https://patents.google.com/patent/US20260236495A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260236495A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260236495A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Streaming di output generato da LLM per ridurre la latenza</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Streaming of natural language (nl) based output generated using a large language model (llm) to reduce latency in rendering thereof</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto affronta il problema della latenza nella generazione e nel rendering di output in linguaggio naturale prodotto da large language model (LLM). Il sistema genera l&#39;output come flusso di segmenti, selezionando ciascun segmento mentre i successivi sono ancora in fase di generazione, e opzionalmente rendendoli in streaming prima del completamento dell&#39;intero output.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Output generativo da LLM, non necessariamente Search web</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">13 Agosto 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2023-03-13</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti 1 e 12 coprono un metodo per ridurre la latenza nell&#39;output generato da LLM. Il sistema riceve input in linguaggio naturale da un client device e genera un flusso di output NL processando l&#39;input con un LLM. La rivendicazione 1 descrive la generazione segmento per segmento: il sistema processa l&#39;input usando il LLM per generare LLM output, determina una pluralità di primi segmenti candidati per il primo segmento del flusso, seleziona un dato primo segmento candidato come primo segmento, processa nuovamente l&#39;input usando il LLM basandosi sul primo segmento per generare ulteriore LLM output, determina una pluralità di secondi segmenti candidati per il secondo segmento, seleziona un dato secondo segmento candidato come secondo segmento, e causa il rendering del flusso di output NL al client device. La rivendicazione 12 aggiunge che il rendering avviene in streaming manner: il primo segmento viene reso al client device immediatamente dopo la selezione, mentre il secondo segmento è ancora in fase di generazione.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che l&#39;LLM output comprende una distribuzione di probabilità su una sequenza di parole, utilizzata per determinare i segmenti candidati. La rivendicazione 3 introduce criteri di ranking per la selezione dei segmenti. La rivendicazione 4 elenca criteri specifici: assurance criterion, accuracy criterion, quality criterion. La rivendicazione 7 aggiunge il coherency criterion per i segmenti successivi al primo. La rivendicazione 11 descrive come l&#39;input NL viene aumentato con il primo segmento per generare l&#39;output LLM addizionale. Le rivendicazioni 8-10 e 17-19 estendono il processo a un terzo segmento e successivi. Le rivendicazioni indipendenti 13 e 20 coprono varianti implementate come sistema e con augmented NL based input anziché aggiornamento dello stato del LLM.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla due modalità principali di generazione dell&#39;output. Nella prima modalità, descritta nei blocchi 260-262 del metodo 200, il sistema aggiorna lo stato del LLM fornendo un&#39;indicazione del segmento selezionato, e il LLM continua a processare l&#39;input con questo stato aggiornato. La probabilità distribution viene continuamente aggiornata rispetto ai segmenti precedentemente selezionati. Nella seconda modalità, descritta nei blocchi 460-464 del metodo 400, il sistema augmenta l&#39;input NL con i segmenti già selezionati e riprocessa l&#39;augmented input, generando nuove distribuzioni di probabilità senza necessariamente aggiornare lo stato del LLM.</p>
+      <p>La descrizione contempla rendering in due forme. Nel metodo 200 (blocco 270), i segmenti possono essere pre-fetched dal client device man mano che vengono selezionati, ma il rendering completo avviene solo quando il flusso è completato. Questo approccio potrebbe essere utilizzato per NL based input sensibili (politics, religion, o altri temi potenzialmente controversi, come indicato nella descrizione). Nel metodo 300 (blocchi 360, 368), ogni segmento viene reso immediatamente dopo la selezione in streaming manner, riducendo ulteriormente la latenza percepita.</p>
+      <p>La descrizione contempla un halt streaming selectable element (blocco 656 in FIG. 6A) che, quando selezionato, causa l&#39;arresto del processing e/o rendering. L&#39;esempio illustra un caso in cui l&#39;utente realizza che Louisville è stato interpretato come Louisville Kentucky invece di Louisville Colorado, e può fermare lo streaming per raffinare l&#39;input. La descrizione contempla anche che segmenti già resi possano essere annullati (undone) in streaming manner se risultano inadeguati.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacità di generare risposte AI in modo più efficiente, riducendo i tempi di attesa. Il chunked decoding descritto potrebbe consentire di mostrare porzioni di risposta mentre altre sono ancora in elaborazione. Tuttavia, il brevetto non specifica se questo si applichi a Google Search o ad altri prodotti. La possibilità di pre-fetch dei segmenti potrebbe suggerire un&#39;architettura in cui il sistema valuta la qualità dell&#39;output completo prima del rendering, applicando assurance, accuracy e quality criteria. I criteri di ranking menzionati (rivendicazioni 4, 7, 15, 16) potrebbero riflettere filtri di qualità applicati alle risposte generate, ma non è chiaro se e come questi influenzerebbero la selezione delle fonti mostrate agli utenti.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questa tecnologia sia utilizzata in Google Search o in AI Overviews. L&#39;ambito dichiarato è generico (NL based output da LLM) e potrebbe applicarsi a qualsiasi prodotto che utilizza LLM, inclusi assistenti, chatbot o strumenti interni.</li>
+      <li>Il brevetto non descrive come i segmenti generati si relazionino a fonti web specifiche o a documenti indicizzati. Non c&#39;è connessione esplicita tra i segmenti dell&#39;output e il ranking di pagine web nei risultati di ricerca.</li>
+      <li>I criteri di ranking menzionati (assurance, accuracy, quality, coherency) sono descritti in modo generico senza specificare metriche, soglie o implementazioni concrete. Non è possibile dedurre quali segnali specifici vengano utilizzati per valutare questi criteri.</li>
+      <li>Il brevetto è una domanda pendente (US20260236495A1) pubblicata nel 2026 con priorità 2023, parte di una famiglia con continuation. Non è ancora concesso e potrebbe subire modifiche o non essere mai concesso.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Concentrarsi sulla creazione di contenuti che rispondano in modo completo e coerente a query specifiche, poiché sistemi di generazione potrebbero privilegiare fonti che forniscono informazioni strutturate e logicamente connesse.</li>
+      <li class="pl-2">Mantenere elevati standard di accuratezza e affidabilità delle informazioni pubblicate, dato che i criteri di accuracy e assurance potrebbero essere applicati nella selezione di contenuti da cui generare risposte.</li>
+      <li class="pl-2">Considerare che interfacce generative potrebbero mostrare risposte parziali prima del completamento, rendendo ancora più importante che le prime informazioni fornite da una pagina siano accurate e pertinenti alla query.</li>
+      <li class="pl-2">Monitorare l&#39;evoluzione delle interfacce di ricerca che potrebbero integrare output generativi con meccanismi di halt o refinement, suggerendo l&#39;importanza di fornire contenuti che rispondano precisamente all&#39;intento dell&#39;utente per evitare abbandoni precoci.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">stream of NL based output</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Output in linguaggio naturale generato come flusso di segmenti multipli, prodotto su base segmento-per-segmento anziché come risposta completa unica</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">chunked decoding</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tecnica di decodifica che genera l&#39;output in porzioni (chunk/segmenti), selezionando ciascun segmento mentre i successivi sono ancora in fase di generazione</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">probability distribution over a sequence of words</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Distribuzione di probabilità su una sequenza di parole o frasi predette come responsive all&#39;input, generata dal LLM e utilizzata per determinare i segmenti candidati</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">assurance criterion</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Criterio di ranking che riflette il livello di assurance o safety associato a ciascun segmento candidato per l&#39;utente del client device</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">accuracy criterion</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Criterio di ranking che riflette il livello di accuratezza o trustworthiness dei segmenti candidati quando contengono informazioni fattuali</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">coherency criterion</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Criterio di ranking che riflette la coerenza di ciascun segmento candidato rispetto ai segmenti precedentemente selezionati nel flusso di output</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">streaming manner</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modalità di rendering in cui ciascun segmento viene mostrato al client device immediatamente dopo la selezione, prima che l&#39;intero output sia completato</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">augmented NL based input</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Input in linguaggio naturale aumentato con segmenti già selezionati, utilizzato per generare ulteriore output LLM con contesto dei segmenti precedenti</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US12602408B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12602408B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Streaming of natural language (NL) based output generated using a large language model (LLM) to reduce latency in rendering thereof</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260236495A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 02 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
