@@ -1,85 +1,35 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-01T06:01:50.026711Z",
-  "generated_at_local": "2026-11-01T07:01:50.026711+01:00",
+  "generated_at": "2026-11-02T06:01:41.472401Z",
+  "generated_at_local": "2026-11-02T07:01:41.472401+01:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-11-01-0701",
+  "run_id": "2026-11-02-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2485,
-    "items_after_dedup": 48,
+    "items_after_dedup": 31,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0041,
-    "summarize_attempted": 5,
+    "ai_cost_eur": 0.0009,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-11-01_005",
-    "item_2026-11-01_004",
-    "item_2026-11-01_001",
-    "item_2026-11-01_002",
-    "item_2026-11-01_003"
+    "item_2026-11-02_001"
   ],
   "categories": {
-    "industry_news": [
-      "item_2026-11-01_005",
-      "item_2026-11-01_003"
-    ],
-    "google_updates": [
-      "item_2026-11-01_004"
-    ],
-    "ai_models": [
-      "item_2026-11-01_001"
-    ],
     "ai_overviews_llm_seo": [
-      "item_2026-11-01_002"
+      "item_2026-11-02_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-11-01_001",
-      "title_original": "Google Opens Connected Apps Preview For AI Mode & Gemini",
-      "title_it": "Google apre la preview delle app connesse per la modalità AI e Gemini",
-      "summary_it": "Google ha lanciato una preview della sua piattaforma Connected Apps, permettendo agli sviluppatori di candidare le proprie applicazioni per l'integrazione in AI Mode di Search e nell'app Gemini. Le app approvate potranno interagire con i modelli AI tramite il protocollo Model Context Protocol (MCP). Il processo di registrazione avviene tramite la Google Connected Console, dove gli sviluppatori devono specificare categoria e funzionalità dell'app, oltre a fornire account di test per la revisione di Google.",
-      "url": "https://www.searchenginejournal.com/google-connected-apps-preview-ai-mode-gemini/595268",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "google_gemini",
-        "ai_mode",
-        "connected_app",
-        "developer_tool"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-31T07:00:00Z",
-      "fetched_at": "2026-11-01T06:03:08.078452Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:59d108b6b0e184d0",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-01_002",
-      "title_original": "Big Brands Dominate AI Search But Leave Openings For Smaller Sites",
-      "title_it": "I grandi brand dominano la ricerca AI, ma lasciano opportunità per i siti più piccoli",
-      "summary_it": "Una ricerca di BrightEdge evidenzia come i grandi brand del settore viaggi dominino le classifiche sia in ChatGPT che nelle AI Overviews di Google. Sebbene i marchi consolidati abbiano una forte visibilità, la leadership varia a seconda della nicchia specifica del settore. I dati suggeriscono che le piattaforme di prenotazione sono particolarmente presenti nelle risposte AI relative a termini come \"economico\" o \"offerta\", indicando un'area competitiva per i siti più piccoli.",
-      "url": "https://www.searchenginejournal.com/big-brands-dominate-ai-search-but-leave-openings-for-smaller-sites/595397",
+      "id": "item_2026-11-02_001",
+      "title_original": "Google, Microsoft & OpenAI Plan To Honor Shared AI Training Opt-Out",
+      "title_it": "Google, Microsoft e OpenAI intendono rispettare un'opzione di esclusione condivisa per l'addestramento dell'IA",
+      "summary_it": "Google, Microsoft e OpenAI hanno annunciato l'intenzione di supportare una direttiva robots.txt condivisa per la gestione delle preferenze di addestramento dell'IA. Questa direttiva, proposta in una bozza IETF, permetterebbe ai siti web di specificare una singola preferenza di opt-out per tutti i provider aderenti, semplificando la gestione. Attualmente, nessuna delle tre aziende supporta ancora la direttiva, ma sono previste implementazioni future con alcune differenze nel modo in cui ciascuna la interpreterà.",
+      "url": "https://www.searchenginejournal.com/google-microsoft-openai-shared-ai-training-opt-out/595387",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -94,127 +44,19 @@
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "ai_search",
-        "brand_visibility",
-        "google_ai_overview",
-        "chatgpt"
-      ],
-      "importance": 3,
-      "published_at": "2026-10-31T08:15:08Z",
-      "fetched_at": "2026-11-01T06:03:09.649044Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:4c1268ac60a82938",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-01_003",
-      "title_original": "Shopify CEO: Peer Ratings On AI Use ‘Didn’t Matter’",
-      "title_it": "Il CEO di Shopify afferma che le valutazioni tra pari sull'uso dell'IA sono irrilevanti",
-      "summary_it": "Il CEO di Shopify ha dichiarato che le valutazioni interne sull'uso dell'intelligenza artificiale da parte dei dipendenti non hanno avuto un impatto significativo sulle decisioni aziendali o sull'efficacia delle implementazioni AI. Questa affermazione suggerisce una prospettiva pragmatica sull'adozione dell'IA, focalizzata più sui risultati concreti che sulle percezioni interne. La notizia evidenzia come alcune aziende possano dare priorità all'impatto reale dell'AI rispetto alle metriche di valutazione interne. Questo approccio potrebbe influenzare le strategie di integrazione dell'AI in contesti aziendali.",
-      "url": "https://www.searchenginejournal.com/shopify-ceo-ai-peer-review-ratings/595379",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "shopify",
-        "ai_adoption",
-        "business_strategy",
-        "ai_evaluation"
-      ],
-      "importance": 2,
-      "published_at": "2026-10-31T09:00:00Z",
-      "fetched_at": "2026-11-01T06:03:11.456720Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:6b65ff75ad358227",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-01_004",
-      "title_original": "Spam Guide Update, Restaurant Controls & AI Mode Revenue – SEO Pulse",
-      "title_it": "Aggiornamento della guida antispam di Google, controlli per ristoranti e ricavi dalla modalità AI",
-      "summary_it": "Google ha aggiornato la sua guida antispam, raccomandando di applicare noindex o bloccare il crawling per le pagine create per la condivisione diretta e non destinate alla scoperta tramite ricerca. Inoltre, i ristoranti hanno ora un controllo diretto sui fornitori di servizi di ordinazione. John Mueller ha chiarito che i report sull'indicizzazione delle pagine potrebbero non aggiornarsi in tempo reale, suggerendo di considerare la data dei dati.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-spam-guide-restaurant-controls-ai-mode-revenue/595031",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_spam_guide",
-        "noindex",
+        "ai_training",
         "robots_txt",
-        "local_seo"
+        "data_privacy",
+        "content_control"
       ],
       "importance": 3,
-      "published_at": "2026-10-31T12:00:00Z",
-      "fetched_at": "2026-11-01T06:03:13.043708Z",
+      "published_at": "2026-11-01T08:00:00Z",
+      "fetched_at": "2026-11-02T06:02:57.022045Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:55e272ec72c51873",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-01_005",
-      "title_original": "Hackers Hijacked DebugBear’s DNS To Serve Malicious JavaScript",
-      "title_it": "Attacco DNS a DebugBear: JavaScript malevolo servito tramite script di monitoraggio",
-      "summary_it": "DebugBear, uno strumento di monitoraggio Real User Monitoring (RUM) utilizzato da professionisti SEO, ha subito un attacco DNS che ha permesso agli hacker di servire JavaScript malevolo tramite il suo script. L'azienda ha consigliato ai propri clienti di rimuovere immediatamente lo script RUM dai loro siti web. I team SEO dovrebbero collaborare con gli sviluppatori e il personale di sicurezza per verificare accessi non autorizzati e modifiche malevole. L'attacco ha compromesso i record DNS tramite il registrar di dominio, ma DebugBear non ha rilevato compromissioni dei propri sistemi interni.",
-      "url": "https://www.searchenginejournal.com/debugbear-rum-attack-seo-site-owner-actions/595412",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "security_breach",
-        "dns_hijacking",
-        "real_user_monitoring",
-        "website_security"
-      ],
-      "importance": 4,
-      "published_at": "2026-10-31T21:11:41Z",
-      "fetched_at": "2026-11-01T06:03:14.785501Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:442b2f484cde3adf",
+      "raw_hash": "sha256:850ced0b37b59878",
       "deep_analysis": null,
       "also_in": []
     }
@@ -222,82 +64,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-11-01T06:01:51.670942Z",
+      "last_checked": "2026-11-02T06:01:43.829865Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-11-01T06:01:52.652648Z",
+      "last_checked": "2026-11-02T06:01:44.419962Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-11-01T06:01:54.282767Z",
+      "last_checked": "2026-11-02T06:01:45.986677Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-11-01T06:01:57.773911Z",
+      "last_checked": "2026-11-02T06:01:50.182284Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-11-01T06:02:16.106142Z",
+      "last_checked": "2026-11-02T06:02:11.046224Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-11-01T06:02:16.891016Z",
+      "last_checked": "2026-11-02T06:02:11.329597Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-11-01T06:02:18.321752Z",
+      "last_checked": "2026-11-02T06:02:12.788570Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-11-01T06:02:19.706392Z",
+      "last_checked": "2026-11-02T06:02:15.180258Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-11-01T06:02:20.852312Z",
+      "last_checked": "2026-11-02T06:02:16.208004Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-11-01T06:02:21.107498Z",
+      "last_checked": "2026-11-02T06:02:16.488224Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-11-01T06:02:23.050971Z",
+      "last_checked": "2026-11-02T06:02:18.102056Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-11-01T06:02:23.827008Z",
+      "last_checked": "2026-11-02T06:02:19.701826Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-11-01T06:02:25.287658Z",
+      "last_checked": "2026-11-02T06:02:20.668441Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-11-01T06:02:27.270357Z",
+      "last_checked": "2026-11-02T06:02:22.729005Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-11-01T06:02:28.124812Z",
+      "last_checked": "2026-11-02T06:02:23.518166Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-11-01T06:02:30.059231Z",
+      "last_checked": "2026-11-02T06:02:24.736660Z",
       "changed": false
     }
   ],
