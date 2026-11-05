@@ -61,7 +61,7 @@ async def test_run_stops_at_request_budget(up, monkeypatch: pytest.MonkeyPatch) 
     client = FakeClient()
     monkeypatch.setattr(up, "GooglePatentsClient", lambda **kw: client)
 
-    async def fake_write(writer, doc, origin):
+    async def fake_write(writer, doc, origin, rejected=None):
         return object()
 
     monkeypatch.setattr(up, "write_patent", fake_write)
@@ -87,7 +87,7 @@ async def test_successful_run_resets_streak(up, monkeypatch: pytest.MonkeyPatch)
     up.STATE_PATH.write_text(json.dumps({"blocked_streak": 1}))
     monkeypatch.setattr(up, "GooglePatentsClient", lambda **kw: FakeClient())
 
-    async def fake_write(writer, doc, origin):
+    async def fake_write(writer, doc, origin, rejected=None):
         return object()
 
     monkeypatch.setattr(up, "write_patent", fake_write)
@@ -149,3 +149,55 @@ async def test_write_patent_drops_discovery_with_low_final_relevance(
     # Un seed scelto a mano si pubblica comunque.
     assert await up.write_patent(None, low.doc, "seed") is low
     assert (up.PATENTS_DIR / "US1B1.json").exists()
+
+
+class DocClient(FakeClient):
+    """Come FakeClient, ma restituisce un PatentDoc vero (serve al write_patent reale)."""
+
+    async def fetch(self, number: str):
+        from tests.test_patents import _mk_patent
+
+        self.fetched.append(number)
+        return _mk_patent(number).doc
+
+
+def _seed_already_published(up) -> None:
+    up.PATENTS_DIR.mkdir()
+    for number in ("US1B1", "US2B1", "US3B1", "US4B1"):
+        (up.PATENTS_DIR / f"{number}.json").write_text("{}")
+
+
+async def test_low_relevance_leaves_queue_for_good(up, monkeypatch: pytest.MonkeyPatch) -> None:
+    from tests.test_patents import _mk_patent
+
+    _seed_already_published(up)
+    up.STATE_PATH.write_text(json.dumps({"pending": ["US9A1"]}))
+    client = DocClient()
+    monkeypatch.setattr(up, "GooglePatentsClient", lambda **kw: client)
+
+    async def fake_analyze(writer, doc, origin):
+        low = _mk_patent(doc.number)
+        low.analysis.seo_relevance = 2
+        return low
+
+    monkeypatch.setattr(up, "analyze", fake_analyze)
+    assert await up.main() == 0
+    state = json.loads(up.STATE_PATH.read_text())
+    assert state["pending"] == []
+    assert state["rejected"]["US9A1"]["seo_relevance"] == 2
+    assert not (up.PATENTS_DIR / "US9A1.json").exists()
+
+
+async def test_analysis_error_stays_in_queue(up, monkeypatch: pytest.MonkeyPatch) -> None:
+    _seed_already_published(up)
+    up.STATE_PATH.write_text(json.dumps({"pending": ["US9A1"]}))
+    monkeypatch.setattr(up, "GooglePatentsClient", lambda **kw: DocClient())
+
+    async def fake_analyze(writer, doc, origin):
+        raise up.PatentAnalysisError("scheda non valida")
+
+    monkeypatch.setattr(up, "analyze", fake_analyze)
+    assert await up.main() == 0
+    state = json.loads(up.STATE_PATH.read_text())
+    assert state["pending"] == ["US9A1"]
+    assert state["rejected"] == {}

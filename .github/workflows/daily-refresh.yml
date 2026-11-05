@@ -78,7 +78,9 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
           TZ: Europe/Rome
-        run: uv run python -m osservatorio_seo refresh
+        # shell: bash attiva pipefail, cosi' tee non nasconde l'exit code del refresh.
+        shell: bash
+        run: uv run python -m osservatorio_seo refresh 2>&1 | tee "$RUNNER_TEMP/refresh.log"
 
       - name: Commit and push
         if: steps.timecheck.outputs.run == 'true'
@@ -140,16 +142,31 @@ jobs:
           echo "::error::La homepage non contiene nessuna scheda articolo dopo il deploy."
           exit 1
 
+      # Sotto il 50% di riassunti falliti feed_health considera sano il run: il
+      # 2026-11-04 il credito e' finito a meta' run e nessuno e' stato avvisato.
+      # Il controllo sta dopo il deploy: l'edizione parziale si pubblica comunque.
+      - name: Avvisa se manca credito OpenRouter
+        id: credit
+        if: steps.timecheck.outputs.run == 'true'
+        run: |
+          if grep -q "402 Payment Required" "$RUNNER_TEMP/refresh.log"; then
+            echo "::error::OpenRouter ha risposto 402: credito finito o quasi. Ricarica."
+            exit 1
+          fi
+
       - name: Open issue on failure
         if: failure()
         uses: actions/github-script@v9
         with:
           script: |
             const date = new Date().toISOString().split('T')[0];
+            const hint = '${{ steps.credit.outcome }}' === 'failure'
+              ? "\n\nCredito OpenRouter finito o quasi (HTTP 402): ricarica. L'edizione e' stata pubblicata, ma con meno articoli."
+              : '';
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `[osservatorioseo] Workflow failed ${date}`,
-              body: `Daily refresh failed on ${date}.\n\nSee run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              body: `Daily refresh failed on ${date}.${hint}\n\nSee run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               labels: ['bug', 'automated']
             });
