@@ -129,7 +129,12 @@ def build_query(base: str, since: date) -> str:
     return f"{q}&after=publication:{since:%Y%m%d}&sort=new&num=100"
 
 
-async def write_patent(writer: PremiumWriter, doc: PatentDoc, origin: str) -> Patent | None:
+async def write_patent(
+    writer: PremiumWriter,
+    doc: PatentDoc,
+    origin: str,
+    rejected: dict[str, Any] | None = None,
+) -> Patent | None:
     try:
         patent = await analyze(writer, doc, origin)  # type: ignore[arg-type]
     except PatentAnalysisError as e:
@@ -144,6 +149,13 @@ async def write_patent(writer: PremiumWriter, doc: PatentDoc, origin: str) -> Pa
             f"  SKIP {doc.number}: rilevanza {patent.analysis.seo_relevance} dopo la lettura "
             f"completa ({patent.analysis.scope})"
         )
+        if rejected is not None:
+            rejected[doc.number] = {
+                "title": doc.title,
+                "seo_relevance": patent.analysis.seo_relevance,
+                "reason": patent.analysis.scope,
+                "checked_at": datetime.now(UTC).date().isoformat(),
+            }
         return None
     save_patent(patent)
     print(
@@ -155,9 +167,13 @@ async def write_patent(writer: PremiumWriter, doc: PatentDoc, origin: str) -> Pa
 
 
 async def fetch_and_write(
-    client: BudgetedClient, writer: PremiumWriter, number: str, origin: str
+    client: BudgetedClient,
+    writer: PremiumWriter,
+    number: str,
+    origin: str,
+    rejected: dict[str, Any] | None = None,
 ) -> bool:
-    """True se il brevetto e' stato gestito (scheda scritta o non recuperabile)."""
+    """True se il brevetto e' stato gestito (scheda scritta, scartata o non recuperabile)."""
     try:
         doc = await client.fetch(number)
     except PatentNotFoundError:
@@ -165,7 +181,10 @@ async def fetch_and_write(
         return True
     # Una scheda non valida si ritenta al prossimo run: la richiesta e' spesa,
     # ma un errore del modello non deve far perdere il brevetto.
-    return await write_patent(writer, doc, origin) is not None
+    # Uno scarto per bassa rilevanza invece e' definitivo: ritentarlo sprecherebbe
+    # ogni giorno il tetto di richieste, finche' il punteggio non supera la soglia.
+    written = await write_patent(writer, doc, origin, rejected)
+    return written is not None or (rejected is not None and number in rejected)
 
 
 async def discover(
@@ -326,7 +345,7 @@ async def main() -> int:
             for n in todo_seed:
                 await fetch_and_write(client, writer, n, "seed")
             for n in list(state["pending"]):
-                if await fetch_and_write(client, writer, n, "discovery"):
+                if await fetch_and_write(client, writer, n, "discovery", state["rejected"]):
                     state["pending"].remove(n)
             if not args.no_discovery:
                 await discover(client, classifier, cfg["discovery"], state)

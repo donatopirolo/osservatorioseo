@@ -106,10 +106,16 @@ jobs:
         with:
           script: |
             const date = new Date().toISOString().split('T')[0];
+            const code = '${{ steps.update.outputs.code }}';
+            const cause = code === '2'
+              ? "Google Patents blocca da piu' run di fila (exit 2)"
+              : code && code !== '0'
+                ? `update_patents.py e' uscito con codice ${code}: la causa e' nel log dello step "Update patents"`
+                : "e' fallito uno step del workflow, non lo script: la causa e' nel log";
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `[osservatorioseo] Brevetti: workflow fallito ${date}`,
-              body: `Il workflow dei brevetti e' fallito il ${date} (exit 2 = Google Patents blocca da piu' run di fila).\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              body: `Il workflow dei brevetti e' fallito il ${date}. ${cause}.\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               labels: ['bug', 'automated']
             });
