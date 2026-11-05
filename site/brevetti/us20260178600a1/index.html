@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260178600A1: Organizzazione dinamica dei risultati per temi tramite modello generativo — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema che usa un modello generativo (dynamic result model) per rispondere a una query utente generando più topic object, ciascuno dei quali accoppia una query raffinata (topic query) a un servizio di ricerca tematico specializzato (places, video, forum, ricette, ecc.). Il s" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260178600a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260178600A1: Organizzazione dinamica dei risultati per temi tramite modello generativo — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema che usa un modello generativo (dynamic result model) per rispondere a una query utente generando più topic object, ciascuno dei quali accoppia una query raffinata (topic query) a un servizio di ricerca tematico specializzato (places, video, forum, ricette, ecc.). Il s" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260178600a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260178600A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260178600a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260178600A1: Organizzazione dinamica dei risultati per temi tramite modello generativo",
+  "description": "Il brevetto descrive un sistema che usa un modello generativo (dynamic result model) per rispondere a una query utente generando pi\u00f9 topic object, ciascuno dei quali accoppia una query raffinata (topic query) a un servizio di ricerca tematico specializzato (places, video, forum, ricette, ecc.). Il sistema ottiene risultati da questi servizi e li organizza in rich result listing nella pagina dei risultati.",
+  "articleBody": "Il brevetto descrive un sistema che usa un modello generativo (dynamic result model) per rispondere a una query utente generando pi\u00f9 topic object, ciascuno dei quali accoppia una query raffinata (topic query) a un servizio di ricerca tematico specializzato (places, video, forum, ricette, ecc.). Il sistema ottiene risultati da questi servizi e li organizza in rich result listing nella pagina dei risultati.\n\nLa rivendicazione indipendente 1 copre un metodo che, in risposta a una user query, fornisce la query e attributi sulla query come input a un modello generativo addestrato a generare una pluralit\u00e0 di topic object. Ogni topic object accoppia una topic query con un topical search service. Per ciascun topic object in un sottoinsieme della pluralit\u00e0, il metodo ottiene rispettivi search results inviando la topic query al topical search service corrispondente. Infine, fornisce una search result page che include rich result listing per i rispettivi search results dei topic object nel sottoinsieme.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il topic object pu\u00f2 includere un title generato per la topic query, visualizzato come parte del rich result listing. La rivendicazione 3 contempla che almeno un topic object possa includere una short description relativa alla topic query, visualizzata nel rich result listing. La rivendicazione 4 prevede che almeno un topic object possa includere una justification relativa alla topic query, anch\u0027essa visualizzata. La rivendicazione 5 indica che gli attributi della query possono includere interessi da un profilo associato all\u0027utente che fornisce la query. La rivendicazione 6 copre l\u0027emissione concorrente delle topic query ai rispettivi topical search service. La rivendicazione 7 specifica l\u0027ordinamento dei search results nella search result page secondo l\u0027ordine in cui i topic object sono stati forniti dal modello generativo. La rivendicazione 8 copre la determinazione di un confidence score generato dal modello generativo per ciascun topic object e la selezione dei topic object per il sottoinsieme in base al confidence score che soddisfa una soglia predeterminata. La rivendicazione 9 riguarda il ricevere una selezione di un search result associato a un particolare topic object e il raffinamento del modello generativo usando il search result, la user query e gli attributi sulla query nel reinforcement learning. La rivendicazione 10 copre la determinazione che la user query soddisfa una popularity threshold e il salvataggio dei rich result listing come pre-computed listing per la query. La rivendicazione 11 estende questo concetto a una seconda query che corrisponde alla prima, fornendo una seconda search result page che include il pre-computed listing. Le rivendicazioni 12 e 20 coprono rispettivamente un sistema e un mezzo non transitorio che implementano il metodo descritto.\n\nLa descrizione contempla che il dynamic result model sia un modello generativo basato su architettura transformer, addestrato per il compito specifico di generare topic object data una user query e attributi sulla query (paragrafi che descrivono il modello). Gli attributi della query possono includere ora del giorno, indicazione di prossimit\u00e0 a festivit\u00e0 o eventi, informazioni meteo, localizzazione generalizzata e, con permesso utente, cronologia delle query e preferenze dell\u0027utente (paragrafi su query features 210). La descrizione contempla che il modello possa essere addestrato con meno di 100 esempi, in alcuni casi meno di 50, che mostrano come funzionano diversi topical search service (paragrafo sull\u0027addestramento del modello).\n\nI topic object generati includono un type che identifica il topical search service e una topic query raffinata per quel servizio (paragrafi su topic objects 240). La descrizione contempla che il modello possa generare pi\u00f9 topic object dello stesso tipo ma con topic query diverse, aumentando la diversit\u00e0 dei risultati (esempio con due places type). Ogni topic object pu\u00f2 includere un title, una short description e/o una justification, tutti generati dal modello (descrizione dei componenti del topic object). La descrizione contempla esempi di topical search service come places, video, restaurant, recipe, forums, events (paragrafi sui topical search services 150).\n\nLa descrizione contempla che il sistema possa filtrare topic object che non soddisfano criteri di rilevanza, come un confidence score sotto una soglia predeterminata o una similarity measure con la user query sotto una similarity threshold (step 402 di FIG. 4). La descrizione contempla l\u0027emissione concorrente delle topic query per ridurre la latenza (step 404) e la possibilit\u00e0 di fornire rich result listing iniziali entro un tempo limite specificato, aggiornando la pagina successivamente con risultati arrivati dopo (step 412, clause 8).\n\nPer la SEO, questo potrebbe significare che query aperte o con intento ambiguo potrebbero attivare questo sistema, generando rich result listing tematici che occupano spazio nella SERP. Le risorse potrebbero apparire in questi listing se sono indicizzate dai topical search service rilevanti e se rispondono alle topic query raffinate generate dal modello. Il sistema potrebbe favorire risultati diversificati che coprono aspetti multipli della query originale, potenzialmente riducendo la visibilit\u00e0 di risultati organici tradizionali. La personalizzazione basata su attributi della query e, con permesso, del profilo utente, potrebbe significare che gli stessi contenuti appaiono in modi diversi per utenti diversi. Il reinforcement learning basato su selezioni utente potrebbe progressivamente ottimizzare quali topic object e quali topical search service vengono privilegiati per determinate query.\n\nTuttavia, la descrizione non specifica quali segnali di ranking usano i singoli topical search service per ordinare i propri risultati. Non \u00e8 chiaro quali tipi di query attiverebbero questo sistema rispetto al sistema convenzionale. La descrizione contempla che query fattuali potrebbero non usare il dynamic result model (paragrafo su step 302), ma non definisce precisamente il confine.",
+  "wordCount": 897,
+  "datePublished": "2026-11-05T07:54:09.583799+00:00",
+  "dateModified": "2026-11-05T07:54:09.583799+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260178600a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Dynamic organization of search results",
+    "identifier": "US20260178600A1",
+    "url": "https://patents.google.com/patent/US20260178600A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260178600A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260178600A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Organizzazione dinamica dei risultati per temi tramite modello generativo</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Dynamic organization of search results</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema che usa un modello generativo (dynamic result model) per rispondere a una query utente generando più topic object, ciascuno dei quali accoppia una query raffinata (topic query) a un servizio di ricerca tematico specializzato (places, video, forum, ricette, ecc.). Il sistema ottiene risultati da questi servizi e li organizza in rich result listing nella pagina dei risultati.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, organizzazione risultati per servizi tematici</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">25 Giugno 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2024-12-19</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Organizzazione dei risultati per temi</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che, in risposta a una user query, fornisce la query e attributi sulla query come input a un modello generativo addestrato a generare una pluralità di topic object. Ogni topic object accoppia una topic query con un topical search service. Per ciascun topic object in un sottoinsieme della pluralità, il metodo ottiene rispettivi search results inviando la topic query al topical search service corrispondente. Infine, fornisce una search result page che include rich result listing per i rispettivi search results dei topic object nel sottoinsieme.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che il topic object può includere un title generato per la topic query, visualizzato come parte del rich result listing. La rivendicazione 3 contempla che almeno un topic object possa includere una short description relativa alla topic query, visualizzata nel rich result listing. La rivendicazione 4 prevede che almeno un topic object possa includere una justification relativa alla topic query, anch&#39;essa visualizzata. La rivendicazione 5 indica che gli attributi della query possono includere interessi da un profilo associato all&#39;utente che fornisce la query. La rivendicazione 6 copre l&#39;emissione concorrente delle topic query ai rispettivi topical search service. La rivendicazione 7 specifica l&#39;ordinamento dei search results nella search result page secondo l&#39;ordine in cui i topic object sono stati forniti dal modello generativo. La rivendicazione 8 copre la determinazione di un confidence score generato dal modello generativo per ciascun topic object e la selezione dei topic object per il sottoinsieme in base al confidence score che soddisfa una soglia predeterminata. La rivendicazione 9 riguarda il ricevere una selezione di un search result associato a un particolare topic object e il raffinamento del modello generativo usando il search result, la user query e gli attributi sulla query nel reinforcement learning. La rivendicazione 10 copre la determinazione che la user query soddisfa una popularity threshold e il salvataggio dei rich result listing come pre-computed listing per la query. La rivendicazione 11 estende questo concetto a una seconda query che corrisponde alla prima, fornendo una seconda search result page che include il pre-computed listing. Le rivendicazioni 12 e 20 coprono rispettivamente un sistema e un mezzo non transitorio che implementano il metodo descritto.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla che il dynamic result model sia un modello generativo basato su architettura transformer, addestrato per il compito specifico di generare topic object data una user query e attributi sulla query (paragrafi che descrivono il modello). Gli attributi della query possono includere ora del giorno, indicazione di prossimità a festività o eventi, informazioni meteo, localizzazione generalizzata e, con permesso utente, cronologia delle query e preferenze dell&#39;utente (paragrafi su query features 210). La descrizione contempla che il modello possa essere addestrato con meno di 100 esempi, in alcuni casi meno di 50, che mostrano come funzionano diversi topical search service (paragrafo sull&#39;addestramento del modello).</p>
+      <p>I topic object generati includono un type che identifica il topical search service e una topic query raffinata per quel servizio (paragrafi su topic objects 240). La descrizione contempla che il modello possa generare più topic object dello stesso tipo ma con topic query diverse, aumentando la diversità dei risultati (esempio con due places type). Ogni topic object può includere un title, una short description e/o una justification, tutti generati dal modello (descrizione dei componenti del topic object). La descrizione contempla esempi di topical search service come places, video, restaurant, recipe, forums, events (paragrafi sui topical search services 150).</p>
+      <p>La descrizione contempla che il sistema possa filtrare topic object che non soddisfano criteri di rilevanza, come un confidence score sotto una soglia predeterminata o una similarity measure con la user query sotto una similarity threshold (step 402 di FIG. 4). La descrizione contempla l&#39;emissione concorrente delle topic query per ridurre la latenza (step 404) e la possibilità di fornire rich result listing iniziali entro un tempo limite specificato, aggiornando la pagina successivamente con risultati arrivati dopo (step 412, clause 8).</p>
+      <p>Per la SEO, questo potrebbe significare che query aperte o con intento ambiguo potrebbero attivare questo sistema, generando rich result listing tematici che occupano spazio nella SERP. Le risorse potrebbero apparire in questi listing se sono indicizzate dai topical search service rilevanti e se rispondono alle topic query raffinate generate dal modello. Il sistema potrebbe favorire risultati diversificati che coprono aspetti multipli della query originale, potenzialmente riducendo la visibilità di risultati organici tradizionali. La personalizzazione basata su attributi della query e, con permesso, del profilo utente, potrebbe significare che gli stessi contenuti appaiono in modi diversi per utenti diversi. Il reinforcement learning basato su selezioni utente potrebbe progressivamente ottimizzare quali topic object e quali topical search service vengono privilegiati per determinate query.</p>
+      <p>Tuttavia, la descrizione non specifica quali segnali di ranking usano i singoli topical search service per ordinare i propri risultati. Non è chiaro quali tipi di query attiverebbero questo sistema rispetto al sistema convenzionale. La descrizione contempla che query fattuali potrebbero non usare il dynamic result model (paragrafo su step 302), ma non definisce precisamente il confine.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Questo è un brevetto in attesa di concessione (US20260178600A1), non ancora concesso, e fa parte di una famiglia con continuation (US12579158B1), quindi non rappresenta una prova indipendente di implementazione.</li>
+      <li>Il brevetto non dimostra che questo sistema sia attivo in Google Search né specifica per quali percentuali o tipi di query verrebbe applicato.</li>
+      <li>La descrizione non spiega come i singoli topical search service rankano i propri risultati né quali segnali on-page o off-page contano per apparire nei rich result listing generati.</li>
+      <li>Non è specificato come il sistema distingua query fattuali da query aperte/ambigue né quali classifier o soglie vengano usati per decidere se attivare il dynamic result model.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i contenuti siano indicizzabili e accessibili ai servizi di ricerca tematici rilevanti per il proprio settore (places, video, forum, ricette, eventi, ecc.), non solo al crawl web generale.</li>
+      <li class="pl-2">Per query che coprono aspetti multipli o intenti sfumati, considerare la creazione di contenuti che rispondano a sotto-aspetti specifici e chiaramente definiti, facilitando il matching con topic query raffinate.</li>
+      <li class="pl-2">Monitorare la SERP per query rilevanti al proprio business per identificare quali rich result listing tematici appaiono e quali servizi vengono privilegiati, adattando la strategia di presenza su quei canali.</li>
+      <li class="pl-2">Mantenere coerenza e completezza delle informazioni strutturate e dei metadati che i topical search service utilizzano, poiché questi potrebbero diventare fonti primarie per rich result listing generati dinamicamente.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">dynamic result model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello generativo basato su transformer addestrato per generare topic object data una user query e attributi sulla query, con latenza sub-secondo.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">topic object</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Oggetto che accoppia una topic query raffinata con un topical search service specifico, può includere title, description e justification generati dal modello.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">topic query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query raffinata generata dal dynamic result model per un topical search service specifico, basata sulla user query e attributi contestuali.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">topical search service</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Servizio di ricerca specializzato in un tipo particolare di contenuto o entità (es. places, video, forum, ricette, eventi).</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">rich result listing</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Porzione della search result page dedicata ai search results ottenuti da un topical search service per una topic query, con title e eventualmente description/justification.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query attributes</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Attributi sulla query come ora del giorno, localizzazione, prossimità a eventi, meteo e, con permesso utente, cronologia e preferenze.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">confidence score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio generato dal dynamic result model per ciascun topic object, usato per selezionare quali topic object includere nel sottoinsieme da usare.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">reinforcement learning</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tecnica usata per raffinare il dynamic result model basandosi su feedback delle selezioni utente sui search results nei rich result listing.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US12579158B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12579158B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Dynamic organization of search results</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260178600A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 05 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
