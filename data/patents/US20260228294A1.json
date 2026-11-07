@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20260228294A1",
+    "title": "Question answering using entity references in unstructured data",
+    "abstract": "Methods, systems, and computer-readable media are provided for collective reconciliation. In some implementations, a query is received, wherein the query is associated at least in part with a type of entity. Top-ranked search results are caused to be generated based at least in part on the query. An entity of the type of entity is identified in the top-ranked results and a response to the query is generated from the top-ranked results, the response including a reference to the entity that includes text distinct from the terms of the query.",
+    "claims": [
+      "1 . A method comprising: receiving a question query, wherein the question query is associated with a type of entity requested in the question query; generating a set of search results based on the question query, wherein each search result in the set contains unstructured text content; retrieving previously generated data associated with top-ranked search results in the set, wherein the previously generated data includes entity references found within the unstructured text content of the respective top-ranked search results, the entity references corresponding to entities of the type of entity; and generating and providing a natural language answer to the question query, wherein the natural language answer includes at least one term from the question query and text identifying an entity reference determined from the previously generated data of the top-ranked search results.",
+      "2 . The method of claim 1 , wherein generating the natural language answer includes incorporating, from the content of the top-ranked search results, an image corresponding to the entity reference.",
+      "3 . The method of claim 1 , wherein the previously generated data associates a unique identifier with the entity reference, the unique identifier used to disambiguate entity references in the unstructured text content.",
+      "4 . The method of claim 3 , wherein identifying the entity reference includes scoring an entity associated with the unique identifier based on a relationship between the entity reference and the unstructured text content within which the entity reference appears.",
+      "5 . The method of claim 1 , wherein the natural language answer is generated using at least some terms of the question query.",
+      "6 . The method of claim 1 , further comprising providing the natural language answer for display along with, but visually distinguished from, references to the top-ranked search results.",
+      "7 . The method of claim 1 , wherein an entity corresponding to the entity reference is a most frequently occurring entity in the top-ranked search results.",
+      "8 . The method of claim 1 , wherein generating the natural language answer includes: determining a topicality score for each entity reference, wherein the topicality score is based on a relationship between the respective entity reference and the unstructured text content in which the entity reference appears; and using the topicality score to select the text identifying the entity reference.",
+      "9 . The method of claim 1 , wherein generating the set of search results includes: determining that the entity reference fails to meet a degree of confidence; and in response to determining that the entity reference fails to meet the degree of confidence, adding previously generated data from lower-ordered search results to the top-ranked search results until the entity reference meets the degree of confidence.",
+      "10 . A system comprising: at least one processor; and memory storing instructions that, when executed by the at least one processor, cause the system to perform operations including: receiving a question query, wherein the question query is associated with a type of entity requested in the question query; generating a set of search results based on the question query, wherein each search result in the set contains unstructured text content; retrieving previously generated data associated with top-ranked search results in the set, wherein the previously generated data includes entity references found within the unstructured text content of the respective top-ranked search results, the entity references corresponding to entities of the type of entity; and generating and providing a natural language answer to the question query, wherein the natural language answer includes at least one term from the question query and text identifying an entity reference determined from the previously generated data of the top-ranked search results.",
+      "11 . The system of claim 10 , wherein generating the natural language answer includes incorporating, from the content of the top-ranked search results, an image corresponding to the entity reference.",
+      "12 . The system of claim 10 , wherein the previously generated data associates a unique identifier with the entity reference, the unique identifier used to disambiguate entity references in the unstructured text content.",
+      "13 . The system of claim 12 , wherein identifying the entity reference includes scoring an entity associated with the unique identifier based on a relationship between the entity reference and the unstructured text content within which the entity reference appears.",
+      "14 . The system of claim 10 , wherein the natural language answer is generated using at least some terms of the question query.",
+      "15 . The system of claim 10 , wherein the operations further include providing the natural language answer for display along with, but visually distinguished from, references to the top-ranked search results.",
+      "16 . The system of claim 10 , wherein an entity corresponding to the entity reference is a most frequently occurring entity in the top-ranked search results.",
+      "17 . The system of claim 10 , wherein generating the natural language answer includes: determining a topicality score for each entity reference, wherein the topicality score is based on a relationship between the respective entity reference and the unstructured text content in which the entity reference appears; and using the topicality score to select the text identifying the entity reference.",
+      "18 . The system of claim 10 , wherein generating the set of search results includes: determining that the entity reference fails to meet a degree of confidence; and in response to determining that the entity reference fails to meet the degree of confidence, adding previously generated data from lower-ordered search results to the top-ranked search results until the entity reference meets the degree of confidence.",
+      "19 . A non-transitory computer-readable medium storing instructions that, when executed by at least one processor of a computing system, cause the computing system to perform operations comprising: receiving a question query, wherein the question query is associated with a type of entity requested in the question query; generating a set of search results based on the question query, wherein each search result in the set contains unstructured text content; retrieving previously generated data associated with top-ranked search results in the set, wherein the previously generated data includes entity references found within the unstructured text content of the respective top-ranked search results, the entity references corresponding to entities of the type of entity; and generating and providing a natural language answer to the question query, wherein the natural language answer includes at least one term from the question query and text identifying an entity reference determined from the previously generated data of the top-ranked search results.",
+      "20 . The non-transitory computer-readable medium of claim 19 , wherein the previously generated data associates a unique identifier with the entity reference, the unique identifier used to disambiguate entity references in the unstructured text content."
+    ],
+    "independent_claims": [
+      "1 . A method comprising: receiving a question query, wherein the question query is associated with a type of entity requested in the question query; generating a set of search results based on the question query, wherein each search result in the set contains unstructured text content; retrieving previously generated data associated with top-ranked search results in the set, wherein the previously generated data includes entity references found within the unstructured text content of the respective top-ranked search results, the entity references corresponding to entities of the type of entity; and generating and providing a natural language answer to the question query, wherein the natural language answer includes at least one term from the question query and text identifying an entity reference determined from the previously generated data of the top-ranked search results.",
+      "10 . A system comprising: at least one processor; and memory storing instructions that, when executed by the at least one processor, cause the system to perform operations including: receiving a question query, wherein the question query is associated with a type of entity requested in the question query; generating a set of search results based on the question query, wherein each search result in the set contains unstructured text content; retrieving previously generated data associated with top-ranked search results in the set, wherein the previously generated data includes entity references found within the unstructured text content of the respective top-ranked search results, the entity references corresponding to entities of the type of entity; and generating and providing a natural language answer to the question query, wherein the natural language answer includes at least one term from the question query and text identifying an entity reference determined from the previously generated data of the top-ranked search results.",
+      "19 . A non-transitory computer-readable medium storing instructions that, when executed by at least one processor of a computing system, cause the computing system to perform operations comprising: receiving a question query, wherein the question query is associated with a type of entity requested in the question query; generating a set of search results based on the question query, wherein each search result in the set contains unstructured text content; retrieving previously generated data associated with top-ranked search results in the set, wherein the previously generated data includes entity references found within the unstructured text content of the respective top-ranked search results, the entity references corresponding to entities of the type of entity; and generating and providing a natural language answer to the question query, wherein the natural language answer includes at least one term from the question query and text identifying an entity reference determined from the previously generated data of the top-ranked search results."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Dvir Keysar",
+      "Tomer Shmiel"
+    ],
+    "priority_date": "2013-03-15",
+    "filing_date": "2026-03-30",
+    "publication_date": "2026-08-06",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9538",
+      "G06F16/30",
+      "G06F16/36",
+      "G06F16/951",
+      "G06F16/9535"
+    ],
+    "family": [
+      {
+        "number": "US12591629B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Question answering using entity references in unstructured data"
+      }
+    ],
+    "cited_by_count": 37
+  },
+  "analysis": {
+    "title_it": "Risposte a domande usando riferimenti a entità in testi non strutturati",
+    "summary": "Il brevetto affronta il problema di rispondere a query in linguaggio naturale (es. domande 'chi', 'cosa', 'dove') estraendo riferimenti a entità da contenuti non strutturati presenti nei risultati di ricerca. Il sistema genera risultati di ricerca, recupera dati pre-elaborati contenenti riferimenti a entità (es. nomi di persone) presenti nei top-ranked results, li classifica e seleziona l'entità più rilevante per costruire una risposta in linguaggio naturale.",
+    "theme": "passaggi_snippet",
+    "seo_relevance": 3,
+    "scope": "Google Search, risposte dirette a query in linguaggio naturale",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che riceve una question query associata a un tipo di entità richiesto nella domanda, genera un set di risultati di ricerca contenenti unstructured text content, recupera previously generated data associati ai top-ranked search results che includono entity references trovati nel testo non strutturato corrispondenti al tipo di entità, e genera e fornisce una natural language answer che include almeno un termine dalla query e testo che identifica un entity reference determinato dai dati pre-generati dei top-ranked results. Le rivendicazioni dipendenti aggiungono dettagli rilevanti: la rivendicazione 2 contempla l'incorporazione di un'immagine corrispondente all'entity reference dal contenuto dei top-ranked results. La rivendicazione 3 specifica che i dati pre-generati associano un unique identifier all'entity reference per disambiguare i riferimenti nel testo non strutturato. La rivendicazione 4 indica che l'identificazione include lo scoring di un'entità basato sulla relazione tra l'entity reference e l'unstructured text content in cui appare. La rivendicazione 6 copre la presentazione della risposta in linguaggio naturale visivamente distinta dai riferimenti ai top-ranked search results. La rivendicazione 7 specifica che l'entità corrispondente può essere quella più frequentemente occorrente nei top-ranked results. La rivendicazione 8 descrive la determinazione di un topicality score per ciascun entity reference basato sulla relazione tra il riferimento e il contenuto non strutturato, usato per selezionare il testo identificativo. La rivendicazione 9 copre un meccanismo di espansione: se l'entity reference non raggiunge un degree of confidence, il sistema aggiunge previously generated data da lower-ordered search results fino al raggiungimento della confidence richiesta. Le rivendicazioni 10-20 replicano la struttura per system claims e computer-readable medium claims.",
+    "seo_reading": "La descrizione contempla diversi segnali e meccanismi per la selezione delle entità. Il paragrafo relativo allo step 308 del flow diagram (FIG. 3) indica che il ranking degli entity references può basarsi su ranking signals che includono frequency of occurrence e topicality score. La frequency of occurrence corrisponde al numero totale di volte in cui un entity reference appare in un documento, eventualmente normalizzata per la lunghezza del documento. Il topicality score include freshness, age of the document, numero di link da e verso il documento, numero di selezioni del documento in precedenti risultati di ricerca, strength of the relationship tra documento e query. La descrizione specifica che il topicality score dipende dalla relazione tra l'entity reference e il contenuto in cui appare: l'esempio fornito indica che George Washington potrebbe avere un topicality score più alto su una webpage di storia che su una di news correnti, mentre Barack Obama potrebbe averlo più alto su un sito di politica che su uno di law school. La descrizione contempla l'uso di un knowledge graph (FIGS. 4-6) per disambiguare entity references attraverso unique identifiers e relazioni tra nodi, sebbene non sia chiaro se questo sia necessario per l'implementazione base. Il sistema potrebbe utilizzare il numero di risultati top-ranked in modo dinamico: la descrizione menziona che se l'entity reference non raggiunge un grado di confidenza sufficiente, il sistema aggiunge dati da lower-ordered results fino al raggiungimento della confidence. L'esempio illustrativo (FIG. 2) mostra l'aggregazione di entity references dai top 3 risultati, con Juan Carlos I che appare 7 volte totali e viene selezionato come risposta. La descrizione contempla che i previously generated data siano elaborati offline, recuperati al momento della ricerca, sebbene menzioni anche la possibilità di elaborazione real-time. Per la SEO, questo potrebbe significare che la presenza di entity references chiari e disambiguati nel contenuto non strutturato, la loro frequenza e la loro relazione topica con il contenuto circostante potrebbero influenzare la selezione per risposte dirette. Tuttavia, il peso relativo di frequency versus topicality non è specificato, né sono fornite soglie quantitative. La descrizione non chiarisce come vengano identificati gli entity references nel testo non strutturato oltre al confronto con liste di nomi noti e tecniche di clustering per identificare nuovi riferimenti basati su frequency of occurrence.",
+    "limits": [
+      "Si tratta di una domanda di brevetto (A1) non ancora concessa, parte di una lunga catena di continuation dal 2013: non dimostra implementazione attuale in Google Search.",
+      "Il brevetto non specifica pesi relativi tra frequency of occurrence e topicality score, né fornisce soglie quantitative per il degree of confidence o per il numero ottimale di top-ranked results da analizzare.",
+      "La descrizione non chiarisce se e come il sistema distingua tra menzioni centrali e periferiche di un'entità nel contenuto, né come gestisca contesti negativi o controversi.",
+      "Non viene dimostrato che questo meccanismo sia utilizzato per le attuali AI Overviews o featured snippets: la data di priorità (2013) precede l'era delle risposte generative moderne."
+    ],
+    "implications": [
+      "Assicurarsi che le entità rilevanti per rispondere a domande comuni nel proprio settore siano menzionate in modo chiaro e non ambiguo nel contenuto, preferibilmente con il nome completo alla prima occorrenza.",
+      "Costruire contenuto in cui la relazione tra entity references e topic principale sia esplicita e forte, evitando menzioni sparse o decontestualizzate di entità non centrali.",
+      "Per contenuti che mirano a rispondere a domande specifiche, concentrare le menzioni dell'entità-risposta nelle sezioni più rilevanti topicamente, non solo distribuirle per frequenza.",
+      "Considerare che la disambiguazione delle entità attraverso contesto e relazioni con altre entità menzionate può essere rilevante per l'identificazione corretta, specialmente per nomi comuni o ambigui."
+    ],
+    "key_terms": [
+      {
+        "term": "entity reference",
+        "explanation": "Un riferimento testuale (es. una stringa di testo) che si riferisce a un'entità specifica, come un nome di persona, luogo o concetto, presente nel contenuto non strutturato."
+      },
+      {
+        "term": "previously generated data",
+        "explanation": "Dati pre-elaborati associati a una webpage che includono liste di entity references identificati nel contenuto, potenzialmente con metadati come frequenza e unique identifiers, recuperati al momento della ricerca."
+      },
+      {
+        "term": "topicality score",
+        "explanation": "Un punteggio che misura la relazione tra un entity reference e il contenuto non strutturato in cui appare, considerando fattori come freshness, link, e rilevanza contestuale."
+      },
+      {
+        "term": "unstructured text content",
+        "explanation": "Contenuto testuale non organizzato in formati strutturati o database, come il testo di una webpage, da cui vengono estratti gli entity references."
+      },
+      {
+        "term": "degree of confidence",
+        "explanation": "Una soglia di confidenza che determina se l'entity reference selezionato è sufficientemente affidabile come risposta, altrimenti il sistema espande l'analisi a più risultati di ricerca."
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-11-07T16:37:03.471818Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.08132616000000001
+}
