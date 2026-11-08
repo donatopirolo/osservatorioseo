@@ -1,500 +1,35 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-07T06:01:43.626752Z",
-  "generated_at_local": "2026-11-07T07:01:43.626752+01:00",
+  "generated_at": "2026-11-08T06:01:14.934498Z",
+  "generated_at_local": "2026-11-08T07:01:14.934498+01:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-11-07-0701",
+  "run_id": "2026-11-08-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
     "items_collected": 2517,
-    "items_after_dedup": 59,
+    "items_after_dedup": 39,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0135,
-    "summarize_attempted": 17,
+    "ai_cost_eur": 0.0008,
+    "summarize_attempted": 1,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-11-07_004",
-    "item_2026-11-07_005",
-    "item_2026-11-07_009",
-    "item_2026-11-07_003",
-    "item_2026-11-07_006",
-    "item_2026-11-07_014",
-    "item_2026-11-07_002",
-    "item_2026-11-07_012",
-    "item_2026-11-07_017",
-    "item_2026-11-07_001"
+    "item_2026-11-08_001"
   ],
   "categories": {
     "google_updates": [
-      "item_2026-11-07_004",
-      "item_2026-11-07_005",
-      "item_2026-11-07_009",
-      "item_2026-11-07_010"
-    ],
-    "ai_models": [
-      "item_2026-11-07_003",
-      "item_2026-11-07_006",
-      "item_2026-11-07_014",
-      "item_2026-11-07_002",
-      "item_2026-11-07_012",
-      "item_2026-11-07_017",
-      "item_2026-11-07_001"
-    ],
-    "ai_overviews_llm_seo": [
-      "item_2026-11-07_007",
-      "item_2026-11-07_013",
-      "item_2026-11-07_016"
-    ],
-    "industry_news": [
-      "item_2026-11-07_008",
-      "item_2026-11-07_011"
-    ],
-    "tools_platforms": [
-      "item_2026-11-07_015"
+      "item_2026-11-08_001"
     ]
   },
   "items": [
     {
-      "id": "item_2026-11-07_001",
-      "title_original": "Egyptian and Nigerian English join the Open ASR Leaderboard",
-      "title_it": "L'inglese egiziano e nigeriano si aggiungono alla classifica Open ASR",
-      "summary_it": "Hugging Face ha annunciato l'aggiunta di nuovi set di dati privati per l'inglese con accento egiziano e nigeriano alla Open ASR Leaderboard. Questa espansione mira a migliorare la rappresentazione e l'affidabilità delle valutazioni dei modelli di Automatic Speech Recognition (ASR). La piattaforma ora offre una suddivisione più dettagliata degli accenti, distinguendo tra diverse categorie basate sui 'Tre Cerchi dell'Inglese' di Kachru, per fornire metriche più precise sulle prestazioni dei modelli ASR.",
-      "url": "https://huggingface.co/blog/open-asr-leaderboard-liva",
-      "source": {
-        "id": "huggingface_blog",
-        "name": "Hugging Face Blog",
-        "authority": 8,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://huggingface.co/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "asr",
-        "hugging_face",
-        "speech_recognition",
-        "ai_evaluation"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T00:00:00Z",
-      "fetched_at": "2026-11-07T06:03:13.660834Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:81982bd1d542ee71",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_002",
-      "title_original": "Measuring how AI agents handle everyday wet-lab science",
-      "title_it": "Misurare le capacità degli agenti AI nella scienza di laboratorio quotidiana",
-      "summary_it": "OpenAI ha introdotto BioBasicsBench, un nuovo benchmark sviluppato con Ligo, per valutare la capacità degli agenti AI di interpretare dati sperimentali grezzi e gestire le ambiguità tipiche del lavoro di laboratorio. Questo benchmark, composto da 100 task basati su dati reali, mira a misurare l'affidabilità degli agenti nell'analisi di routine, identificazione di errori e riconoscimento di conclusioni non supportate dall'evidenza. I test iniziali mostrano che GPT-6 Astra ha ottenuto un punteggio medio del 66.7%, superando GPT-5.6 Sol, evidenziando progressi ma anche margini di miglioramento nell'interpretazione di immagini e contesti sperimentali.",
-      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "ai_agent",
-        "benchmarking",
-        "scientific_research",
-        "openai"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T00:00:00Z",
-      "fetched_at": "2026-11-07T06:03:15.617777Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:acb045d757fe504c",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_003",
-      "title_original": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
-      "title_it": "OpenAI collabora con Hacktron per identificare vulnerabilità nei propri sistemi",
-      "summary_it": "OpenAI ha annunciato una partnership con Hacktron, azienda specializzata in sicurezza informatica, per individuare e risolvere vulnerabilità nei propri sistemi, con un focus sull'interazione con servizi di terze parti. Questa collaborazione prevede l'accesso esteso di Hacktron ai modelli frontier di OpenAI e si inserisce in una serie di iniziative volte a rafforzare la sicurezza, inclusi l'aumento delle ricompense per il programma di bug bounty e sprint di sicurezza interni. L'obiettivo è sfruttare l'esperienza di Hacktron nella ricerca di vulnerabilità tramite agenti AI per migliorare le difese di OpenAI.",
-      "url": "https://openai.com/index/partnering-with-hacktron",
-      "source": {
-        "id": "openai_blog",
-        "name": "OpenAI Blog",
-        "authority": 10,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://openai.com/blog/rss.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "security",
-        "vulnerability_research",
-        "ai_safety"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T08:00:00Z",
-      "fetched_at": "2026-11-07T06:03:17.351986Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:10372a16c981de96",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_004",
-      "title_original": "Google Expands Business Messaging To Google Maps On iOS & Android",
-      "title_it": "Google estende la messaggistica aziendale a Google Maps su iOS e Android",
-      "summary_it": "Google ha ampliato la funzionalità di messaggistica per le attività commerciali su Google Maps, rendendo il pulsante \"Messaggio\" più visibile e accessibile sia su dispositivi iOS che Android. Ora posizionato accanto al pulsante \"Chiama\", permette ai clienti di contattare direttamente le aziende tramite WhatsApp o SMS. Questa integrazione mira a migliorare l'esperienza utente e la gestione dei contatti per le attività, offrendo un canale di comunicazione unificato tra Ricerca e Maps.",
-      "url": "https://www.seroundtable.com/google-maps-messaging-android-ios-42472.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_map",
-        "google_business_profile",
-        "local_seo",
-        "business_messaging"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T12:11:00Z",
-      "fetched_at": "2026-11-07T06:03:18.924419Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a16eff11771a3d03",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_005",
-      "title_original": "Google Confirms Issues With Merchant Center, API & Feeds",
-      "title_it": "Google conferma problemi con Merchant Center, API e feed di prodotto",
-      "summary_it": "Google ha riconosciuto l'esistenza di problemi che stanno interessando il Merchant Center, le relative API e i feed di prodotto. Questi disservizi possono impattare la gestione e l'aggiornamento delle informazioni sui prodotti per gli e-commerce. Gli utenti potrebbero riscontrare difficoltà nella sincronizzazione dei dati e nella pubblicazione degli annunci Shopping. Google sta lavorando per risolvere le anomalie.",
-      "url": "https://www.seroundtable.com/google-confirms-issues-with-merchant-center-42473.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_merchant_center",
-        "google_shopping",
-        "api_issue",
-        "data_feed"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T12:16:00Z",
-      "fetched_at": "2026-11-07T06:03:20.353367Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:c654526d46a40d57",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_006",
-      "title_original": "Bing Search AI Visual Summary Snippet",
-      "title_it": "Bing introduce snippet di riepilogo visivo generati dall'AI nella ricerca",
-      "summary_it": "Bing sta testando una nuova funzionalità che mostra snippet di riepilogo visivo generati dall'intelligenza artificiale nei risultati di ricerca. Questi riassunti includono immagini e testo per fornire una panoramica più completa e immediata delle informazioni. La novità mira a migliorare l'esperienza utente offrendo risposte più ricche e visivamente accattivanti direttamente nella SERP.",
-      "url": "https://www.seroundtable.com/bing-search-ai-visual-summary-42455.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "bing_ai",
-        "visual_search",
-        "serp_feature",
-        "ai_summarization"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T12:21:00Z",
-      "fetched_at": "2026-11-07T06:03:21.871756Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0a0daf07fe3fb6f5",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_007",
-      "title_original": "Google Pushing AI Mode Users To Opt In To Personal Intelligence",
-      "title_it": "Google incoraggia gli utenti della modalità AI ad attivare la Personal Intelligence",
-      "summary_it": "Google sta mostrando agli utenti della modalità AI un popup che li invita ad attivare la funzione 'Personal Intelligence'. Questa funzionalità permette a Google di utilizzare le informazioni personali dell'utente per fornire risposte più pertinenti e personalizzate. L'obiettivo è migliorare l'esperienza utente all'interno delle interazioni con l'intelligenza artificiale di Google.",
-      "url": "https://www.seroundtable.com/google-personal-intelligence-popup-42468.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_ai",
-        "personalization",
-        "user_experience",
-        "opt_in"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T12:31:00Z",
-      "fetched_at": "2026-11-07T06:03:23.479308Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:acd494a5b1b792ca",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_008",
-      "title_original": "Google Shopping Dominating The European Product Search Results",
-      "title_it": "Google Shopping domina i risultati di ricerca dei prodotti in Europa",
-      "summary_it": "Un'analisi recente evidenzia come Google Shopping mantenga una posizione dominante nei risultati di ricerca per i prodotti all'interno del mercato europeo. Questo avviene nonostante le normative del Digital Markets Act (DMA) mirino a promuovere una maggiore concorrenza. La persistenza di questa dominanza solleva interrogativi sull'efficacia delle attuali misure regolatorie nel settore della ricerca e dell'e-commerce.",
-      "url": "https://www.seroundtable.com/google-shopping-eu-dma-42456.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_shopping",
-        "eu_dma",
-        "product_search",
-        "market_dominance"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T12:41:00Z",
-      "fetched_at": "2026-11-07T06:03:24.787890Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:69157dd40a9e9a3c",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_009",
-      "title_original": "Google AI Mode Asking Searchers To Continue With This Search",
-      "title_it": "Google AI Mode chiede agli utenti di 'continuare con questa ricerca'",
-      "summary_it": "Google ha introdotto una nuova richiesta \"Continue with this search\" nella sua modalità AI. Questa funzionalità appare prima che l'utente possa eseguire una ricerca in AI Mode, mostrando anche un avviso su query potenzialmente dannose. Si ipotizza che l'obiettivo sia incentivare ulteriori ricerche o, più probabilmente, fungere da meccanismo anti-bot e anti-scraper per proteggere la modalità AI da utilizzi impropri.",
-      "url": "https://www.seroundtable.com/google-ai-mode-continue-with-this-search-42475.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_ai",
-        "search_feature",
-        "anti_bot",
-        "user_experience"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T12:42:00Z",
-      "fetched_at": "2026-11-07T06:03:26.611701Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:9f84797ecde14753",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_010",
-      "title_original": "Google Business Profiles Manage Offers Help Document",
-      "title_it": "Google pubblica un nuovo documento di aiuto per la gestione delle offerte nei profili aziendali",
-      "summary_it": "Google ha rilasciato un nuovo documento di supporto intitolato \"Gestire le offerte sul tuo profilo dell'attività\". Questo documento spiega come funzionano le offerte visualizzate sui profili Google Business Profile, dove i clienti possono trovarle e come vengono aggiunte, inclusa la possibilità di rimuovere offerte di terze parti non autorizzate o imprecise. La funzionalità è disponibile solo in regioni e lingue selezionate.",
-      "url": "https://www.seroundtable.com/google-business-profiles-manage-offers-42471.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "google_updates",
-      "tags": [
-        "google_business_profile",
-        "local_seo",
-        "offer",
-        "help_document"
-      ],
-      "importance": 2,
-      "published_at": "2026-11-06T12:51:00Z",
-      "fetched_at": "2026-11-07T06:03:27.998138Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f9d5da819577fcf6",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_011",
-      "title_original": "Search News Buzz Video Recap: Google Scaled Content Abuse From Facebook, ChatGPT Search 20% Of Google & More SEO, PPC & Local",
-      "title_it": "Riepilogo Notizie di Ricerca: Contenuti Scalati su Facebook, ChatGPT e Altro",
-      "summary_it": "Google ha affrontato la questione dei contenuti scalati generati da AI su Facebook, potenzialmente soggetti alla policy sull'abuso di contenuti. È stato evidenziato che ChatGPT detiene circa il 20% del volume di ricerca di Google. Sono stati segnalati aggiornamenti alla documentazione di Google Search Console e modifiche alle policy sull'abuso della reputazione del sito nell'EEA. Google sta anche testando diverse integrazioni e posizionamenti per le funzionalità AI in Search e Ads.",
-      "url": "https://www.seroundtable.com/video-11-06-2026-42469.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "google_update",
-        "ai_in_search",
-        "content_abuse",
-        "chatgpt_impact"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T13:01:00Z",
-      "fetched_at": "2026-11-07T06:03:29.537826Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:f422000db126778b",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_012",
-      "title_original": "ToyBlocks: A controlled world for robot learning and evaluation",
-      "title_it": "ToyBlocks: Un ambiente controllato per l'apprendimento e la valutazione dei robot",
-      "summary_it": "Hugging Face e AllenAI hanno introdotto ToyBlocks, un framework di simulazione open-source progettato per l'apprendimento e la valutazione dei robot. Questo ambiente controllato, basato su un braccio robotico e blocchi, permette ai ricercatori di generare automaticamente dimostrazioni e variare i dati di addestramento. L'obiettivo è studiare come i modelli robotici migliorano con più dati e come combinare il ragionamento di alto livello con il controllo fisico preciso.",
-      "url": "https://huggingface.co/blog/allenai/toyblocks",
-      "source": {
-        "id": "huggingface_blog",
-        "name": "Hugging Face Blog",
-        "authority": 8,
-        "type": "official",
-        "fetcher": "rss",
-        "feed_url": "https://huggingface.co/blog/feed.xml",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "ai_models",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "robotic",
-        "simulation",
-        "ai_training",
-        "open_source"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T14:00:48Z",
-      "fetched_at": "2026-11-07T06:03:30.952584Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:3d9b287c86017f13",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_013",
-      "title_original": "AI Visibility Isn’t A Sham – Most Ways Of Measuring It Are",
-      "title_it": "La visibilità AI non è una truffa, ma la maggior parte dei metodi per misurarla lo sono",
-      "summary_it": "L'articolo analizza le attuali metriche di misurazione della visibilità AI, evidenziando come i dati disponibili mostrino un traffico diretto dagli assistenti AI ancora limitato rispetto a Google. Vengono citati studi che indicano una scarsa correlazione tra visibilità AI e traffico diretto o ricerche brandizzate. Sebbene alcuni dati mostrino tassi di conversione elevati per il traffico proveniente da ChatGPT, il volume complessivo rimane marginale.",
-      "url": "https://www.searchenginejournal.com/ai-visibility-isnt-a-sham-most-ways-of-measuring-it-are/594405",
+      "id": "item_2026-11-08_001",
+      "title_original": "Google Rank Data Issues, Lighthouse Update & AI Opt-Out – SEO Pulse",
+      "title_it": "Problemi con i dati di ranking di Google, aggiornamento Lighthouse e opzione di esclusione dall'addestramento AI",
+      "summary_it": "Sono stati segnalati problemi nei dati di ranking di Google che possono influenzare l'accuratezza dei report degli strumenti di tracciamento, inclusi risultati non correlati e URL di reindirizzamento non risolti. Questi inconvenienti possono portare a una rappresentazione errata delle posizioni in SERP. Si consiglia di verificare i dati di Search Console per confrontare le URL tracciate e quelle effettive. Inoltre, è stato introdotto un meccanismo per limitare la risoluzione dei link 'goto' da una singola pagina di risultati.",
+      "url": "https://www.searchenginejournal.com/seo-pulse-rank-data-problems-pagespeed-scores-ai-training-opt-out/596104",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -507,165 +42,21 @@
         "category_hint": "industry_news",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "google_updates",
       "tags": [
-        "ai_visibility",
-        "measurement_metric",
-        "traffic_analysi",
-        "llm_impact"
+        "rank_tracking",
+        "serp_data",
+        "google_algorithm",
+        "data_accuracy"
       ],
       "importance": 3,
-      "published_at": "2026-11-06T15:00:32Z",
-      "fetched_at": "2026-11-07T06:03:32.701759Z",
+      "published_at": "2026-11-07T13:00:00Z",
+      "fetched_at": "2026-11-08T06:02:28.906809Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:14c92f11c2b1dac1",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_014",
-      "title_original": "OpenAI Working On ChatGPT Tools For Business For Analytics & Citations",
-      "title_it": "OpenAI sta sviluppando strumenti per aziende su ChatGPT per analytics e citazioni",
-      "summary_it": "OpenAI sta lavorando a uno strumento simile a Google Search Console per le aziende, che permetterà di gestire e monitorare la propria presenza su ChatGPT. Le funzionalità includeranno il tracciamento delle menzioni del business nelle conversazioni, la possibilità di aggiornare informazioni e prodotti, e di fornire risposte contestualizzate tramite un agente aziendale. Lo strumento misurerà impressioni e click sui link al sito, ma non fornirà dati sui prompt o benchmark competitivi.",
-      "url": "https://www.seroundtable.com/chatgpt-tools-for-business-42476.html",
-      "source": {
-        "id": "search_engine_roundtable",
-        "name": "Search Engine Roundtable",
-        "authority": 9,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://feeds.feedburner.com/seroundtable",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "google_updates",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "openai",
-        "chatgpt",
-        "business_tool",
-        "analytics"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T15:32:00Z",
-      "fetched_at": "2026-11-07T06:03:34.530688Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:dd8ddb1b9ae197d2",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_015",
-      "title_original": "TikTok Search Ads Are Becoming Real Search Advertising",
-      "title_it": "Le Search Ads di TikTok si evolvono in una vera e propria pubblicità di ricerca",
-      "summary_it": "TikTok sta potenziando le sue funzionalità di Search Ads, introducendo metriche di impression share e pacchetti di parole chiave predefiniti per gli inserzionisti. Questa evoluzione mira a rendere la piattaforma più simile ai sistemi di search advertising tradizionali, come Google Ads, offrendo strumenti più avanzati per la gestione delle campagne. La piattaforma ha gradualmente sviluppato le sue offerte di annunci di ricerca, partendo da una beta nel 2022 e lanciando campagne basate su parole chiave negli Stati Uniti nel 2024. L'obiettivo è capitalizzare il crescente volume di ricerche interne alla piattaforma.",
-      "url": "https://www.searchenginejournal.com/tiktok-search-ads-are-becoming-real-search-advertising/596016",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "tools_platforms",
-      "tags": [
-        "tiktok_ad",
-        "search_advertising",
-        "paid_search",
-        "keyword_targeting"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T15:35:29Z",
-      "fetched_at": "2026-11-07T06:03:36.163142Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:2d40f77d4fe21c30",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_016",
-      "title_original": "Google Gemini Business Profile Tools Are Coming To Workspace",
-      "title_it": "Gli strumenti Gemini per i profili aziendali di Google arrivano su Workspace",
-      "summary_it": "Google sta implementando l'accesso agli strumenti Gemini per la gestione dei Profili Aziendali tramite account Google Workspace. Questa integrazione permetterà alle aziende di utilizzare email aziendali per collegare e gestire i propri profili, superando la precedente limitazione agli account Gmail personali. La funzionalità include la possibilità di caricare foto e video direttamente in Gemini per aggiornare il profilo o creare nuovi post. Sebbene l'annuncio indichi un rollout in corso, le pagine di supporto di Google mostrano ancora alcune discrepanze riguardo la disponibilità effettiva per gli account Workspace.",
-      "url": "https://www.searchenginejournal.com/google-gemini-business-profile-workspace-2/596120",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_overviews_llm_seo",
-      "tags": [
-        "google_gemini",
-        "google_business_profile",
-        "google_workspace",
-        "local_seo"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T17:18:34Z",
-      "fetched_at": "2026-11-07T06:03:37.835298Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:e75f7357927b0d6f",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-07_017",
-      "title_original": "Brave Sells Its Search Index To AI, And Your Website Is Probably In It",
-      "title_it": "Brave vende il suo indice di ricerca a società di intelligenza artificiale, e il tuo sito web è probabilmente incluso",
-      "summary_it": "Brave ha venduto l'accesso al suo indice di ricerca, contenente oltre 30 miliardi di pagine web, a diverse aziende di intelligenza artificiale come Cohere, Mistral e Perplexity. Il New York Times ha citato in giudizio Brave, accusandola di aver copiato contenuti senza identificare il proprio crawler o fornire meccanismi di blocco. Brave ha dichiarato che il suo indice è utilizzato per fornire dati recenti alle assistenti AI, permettendo loro di cercare informazioni senza dover scansionare direttamente il web.",
-      "url": "https://www.searchenginejournal.com/brave-sells-its-search-index-to-ai-and-your-website-is-probably-in-it/595829",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "ai_models",
-      "tags": [
-        "brave_search",
-        "ai_index",
-        "content_scraping",
-        "copyright_issue"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-06T20:00:19Z",
-      "fetched_at": "2026-11-07T06:03:39.597370Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:705dd357ebceba8f",
+      "raw_hash": "sha256:f625a00cfbfe27a8",
       "deep_analysis": null,
       "also_in": []
     }
@@ -673,82 +64,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-11-07T06:01:44.786490Z",
+      "last_checked": "2026-11-08T06:01:16.302649Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-11-07T06:01:46.096145Z",
+      "last_checked": "2026-11-08T06:01:18.871511Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-11-07T06:01:47.621369Z",
+      "last_checked": "2026-11-08T06:01:19.417296Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-11-07T06:01:51.193667Z",
+      "last_checked": "2026-11-08T06:01:23.344309Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-11-07T06:02:07.110099Z",
+      "last_checked": "2026-11-08T06:01:42.235017Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-11-07T06:02:07.345602Z",
+      "last_checked": "2026-11-08T06:01:42.815987Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-11-07T06:02:09.852203Z",
+      "last_checked": "2026-11-08T06:01:43.960359Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-11-07T06:02:10.812400Z",
+      "last_checked": "2026-11-08T06:01:45.251154Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-11-07T06:02:12.605845Z",
+      "last_checked": "2026-11-08T06:01:46.604198Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-11-07T06:02:19.898691Z",
+      "last_checked": "2026-11-08T06:01:55.158858Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-11-07T06:02:20.600737Z",
+      "last_checked": "2026-11-08T06:01:55.715260Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-11-07T06:02:21.993308Z",
+      "last_checked": "2026-11-08T06:01:57.289042Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-11-07T06:02:23.632008Z",
+      "last_checked": "2026-11-08T06:01:58.317358Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-11-07T06:02:24.744892Z",
+      "last_checked": "2026-11-08T06:01:59.914512Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-11-07T06:02:26.097310Z",
+      "last_checked": "2026-11-08T06:02:01.301003Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-11-07T06:02:27.871177Z",
+      "last_checked": "2026-11-08T06:02:02.360952Z",
       "changed": false
     }
   ],
