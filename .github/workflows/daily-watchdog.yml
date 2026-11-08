@@ -1,0 +1,56 @@
+name: Daily watchdog
+
+# Daily Refresh parte solo quando lo sveglia il Cloudflare Worker
+# (workers/cron-trigger): se il Worker si ferma, il workflow non parte e
+# quindi non puo' nemmeno aprire la sua issue di errore. Questo controllo gira
+# col cron di GitHub, indipendente dal Worker, e apre una issue se oggi nessun
+# run di Daily Refresh ha eseguito davvero il refresh (i run scartati dal
+# controllo dell'ora non contano).
+
+on:
+  schedule:
+    # 10:00 UTC = 11:00/12:00 a Roma. I cron di GitHub partono spesso con ore
+    # di ritardo: va bene, basta che giri dopo le 07:00 e prima di mezzanotte.
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Verifica che oggi il refresh sia partito
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          TODAY=$(TZ=Europe/Rome date +%Y-%m-%d)
+          # Mezzanotte di Roma in UTC, per filtrare i run creati oggi.
+          SINCE=$(date -u -d "$(TZ=Europe/Rome date -d "$TODAY 00:00" --iso-8601=seconds)" +%Y-%m-%dT%H:%M:%SZ)
+          RUNS=$(gh api "repos/$REPO/actions/workflows/daily-refresh.yml/runs?created=>=$SINCE&per_page=20" \
+            --jq '.workflow_runs[].id')
+          STARTED=0
+          for id in $RUNS; do
+            # Il refresh e' partito se lo step "Run refresh" non e' stato saltato.
+            STEP=$(gh api "repos/$REPO/actions/runs/$id/jobs" \
+              --jq '[.jobs[].steps[] | select(.name == "Run refresh") | .conclusion] | first // "none"')
+            echo "run $id: Run refresh = $STEP"
+            [ "$STEP" != "skipped" ] && [ "$STEP" != "none" ] && STARTED=1
+          done
+          if [ "$STARTED" = "1" ]; then
+            echo "::notice::Il refresh di oggi ($TODAY) e' partito."
+            exit 0
+          fi
+          echo "::error::Oggi ($TODAY) Daily Refresh non e' partito: controlla il Cloudflare Worker."
+          TITLE="[osservatorioseo] Refresh non partito $TODAY"
+          if gh issue list --repo "$REPO" --state open --search "\"$TITLE\" in:title" --json number --jq 'length' | grep -qx 0; then
+            gh issue create --repo "$REPO" --label bug --label automated --title "$TITLE" \
+              --body "Oggi nessun run di Daily Refresh ha eseguito il refresh. Il workflow parte solo quando lo sveglia il Cloudflare Worker (workers/cron-trigger): controlla che il Worker sia attivo, poi rilancia con \`gh workflow run \"Daily Refresh\" -f force=true\`.
+
+          Run del controllo: $GITHUB_SERVER_URL/$REPO/actions/runs/$GITHUB_RUN_ID"
+          fi
+          exit 1

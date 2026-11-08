@@ -103,6 +103,7 @@ def load_state() -> dict[str, Any]:
     state.setdefault("next_query", 0)
     state.setdefault("query_last_run", {})
     state.setdefault("blocked_streak", 0)
+    state.setdefault("failed_attempts", {})
     return state
 
 
@@ -172,6 +173,8 @@ async def fetch_and_write(
     number: str,
     origin: str,
     rejected: dict[str, Any] | None = None,
+    failed_attempts: dict[str, int] | None = None,
+    max_attempts: int = 3,
 ) -> bool:
     """True se il brevetto e' stato gestito (scheda scritta, scartata o non recuperabile)."""
     try:
@@ -184,7 +187,31 @@ async def fetch_and_write(
     # Uno scarto per bassa rilevanza invece e' definitivo: ritentarlo sprecherebbe
     # ogni giorno il tetto di richieste, finche' il punteggio non supera la soglia.
     written = await write_patent(writer, doc, origin, rejected)
-    return written is not None or (rejected is not None and number in rejected)
+    if written is not None or (rejected is not None and number in rejected):
+        if failed_attempts is not None:
+            failed_attempts.pop(number, None)
+        return True
+    if rejected is None or failed_attempts is None:
+        return False
+    # Analisi non valida: si ritenta, ma non per sempre. Se il modello sbaglia
+    # sempre allo stesso modo il brevetto occuperebbe ogni giorno una delle
+    # poche richieste a Google Patents. Gli errori di OpenRouter (es. 402) non
+    # arrivano qui: interrompono il run prima e non consumano tentativi.
+    failed_attempts[number] = failed_attempts.get(number, 0) + 1
+    if failed_attempts[number] < max_attempts:
+        return False
+    print(f"  SCARTO {number}: analisi non valida per {max_attempts} run, esce dalla coda")
+    rejected[number] = {
+        "title": doc.title,
+        "seo_relevance": None,
+        "reason": (
+            f"analisi non valida per {max_attempts} run di fila; "
+            "rigenerabile con --number <NUMERO> --force"
+        ),
+        "checked_at": datetime.now(UTC).date().isoformat(),
+    }
+    failed_attempts.pop(number)
+    return True
 
 
 async def discover(
@@ -345,7 +372,16 @@ async def main() -> int:
             for n in todo_seed:
                 await fetch_and_write(client, writer, n, "seed")
             for n in list(state["pending"]):
-                if await fetch_and_write(client, writer, n, "discovery", state["rejected"]):
+                handled = await fetch_and_write(
+                    client,
+                    writer,
+                    n,
+                    "discovery",
+                    state["rejected"],
+                    state["failed_attempts"],
+                    int(cfg.get("max_failed_attempts", 3)),
+                )
+                if handled:
                     state["pending"].remove(n)
             if not args.no_discovery:
                 await discover(client, classifier, cfg["discovery"], state)

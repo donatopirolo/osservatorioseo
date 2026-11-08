@@ -99,6 +99,20 @@ class DocChangeSummary(BaseModel):
     cost_eur: float
 
 
+def describe_http_error(resp: httpx.Response, model: str) -> str:
+    """Status e motivo di un 4xx di OpenRouter, ad es. ``402 Payment Required ... Insufficient credits``.
+
+    ``raise_for_status`` scarta il corpo della risposta, che e' l'unico punto in
+    cui OpenRouter spiega il rifiuto (credito finito, limite della chiave, ...).
+    """
+    try:
+        detail = resp.json()["error"]["message"]
+    except (ValueError, KeyError, TypeError):
+        detail = resp.text
+    detail = " ".join(str(detail).split())[:300]
+    return f"{resp.status_code} {resp.reason_phrase} da {model}: {detail}"
+
+
 class SummarizerError(Exception):
     pass
 
@@ -239,7 +253,8 @@ class Summarizer:
                     logger.warning("rate limit da %s, riprovo tra %.1fs", model, delay)
                     await asyncio.sleep(delay)
                     continue
-                resp.raise_for_status()  # altri 4xx: definitivi, non transitori
+                if resp.status_code >= 400:  # altri 4xx: definitivi, non transitori
+                    raise SummarizerError(describe_http_error(resp, model))
                 data = resp.json()
                 try:
                     content = data["choices"][0]["message"]["content"]
