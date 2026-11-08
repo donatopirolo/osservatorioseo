@@ -201,3 +201,46 @@ async def test_analysis_error_stays_in_queue(up, monkeypatch: pytest.MonkeyPatch
     state = json.loads(up.STATE_PATH.read_text())
     assert state["pending"] == ["US9A1"]
     assert state["rejected"] == {}
+    assert state["failed_attempts"] == {"US9A1": 1}
+
+
+async def test_invalid_analysis_leaves_queue_after_max_attempts(
+    up, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    _seed_already_published(up)
+    up.STATE_PATH.write_text(json.dumps({"pending": ["US9A1"]}))
+    monkeypatch.setattr(up, "GooglePatentsClient", lambda **kw: DocClient())
+
+    async def fake_analyze(writer, doc, origin):
+        raise up.PatentAnalysisError("'what_it_claims' troppo corto")
+
+    monkeypatch.setattr(up, "analyze", fake_analyze)
+    # Default 3 tentativi: i primi due run lo lasciano in coda.
+    for attempt in (1, 2):
+        assert await up.main() == 0
+        state = json.loads(up.STATE_PATH.read_text())
+        assert state["pending"] == ["US9A1"]
+        assert state["failed_attempts"] == {"US9A1": attempt}
+    assert await up.main() == 0
+    state = json.loads(up.STATE_PATH.read_text())
+    assert state["pending"] == []
+    assert state["failed_attempts"] == {}
+    assert "3 run" in state["rejected"]["US9A1"]["reason"]
+
+
+async def test_success_clears_failed_attempts(up, monkeypatch: pytest.MonkeyPatch) -> None:
+    from tests.test_patents import _mk_patent
+
+    _seed_already_published(up)
+    up.STATE_PATH.write_text(json.dumps({"pending": ["US9A1"], "failed_attempts": {"US9A1": 2}}))
+    monkeypatch.setattr(up, "GooglePatentsClient", lambda **kw: DocClient())
+
+    async def fake_analyze(writer, doc, origin):
+        return _mk_patent(doc.number)
+
+    monkeypatch.setattr(up, "analyze", fake_analyze)
+    assert await up.main() == 0
+    state = json.loads(up.STATE_PATH.read_text())
+    assert state["pending"] == []
+    assert state["failed_attempts"] == {}
+    assert (up.PATENTS_DIR / "US9A1.json").exists()

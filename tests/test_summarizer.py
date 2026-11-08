@@ -271,3 +271,17 @@ def test_parse_json_loose_with_prefix_text() -> None:
 def test_parse_json_loose_raises_on_no_json() -> None:
     with pytest.raises(ValueError, match="no JSON"):
         _parse_json_loose("just plain text no braces at all")
+
+
+async def test_payment_error_keeps_openrouter_reason(httpx_mock: HTTPXMock) -> None:
+    # Il corpo del 402 e' l'unico punto in cui OpenRouter dice perche' rifiuta
+    # (credito finito o limite della chiave): deve arrivare nel log.
+    httpx_mock.add_response(
+        url=OPENROUTER_URL,
+        status_code=402,
+        json={"error": {"code": 402, "message": "Insufficient credits. Add more."}},
+        is_reusable=True,
+    )
+    summarizer = Summarizer(api_key="sk-test")
+    with pytest.raises(Exception, match=r"402 Payment Required .*Insufficient credits"):
+        await summarizer.summarize_item(mk_raw(), mk_source())

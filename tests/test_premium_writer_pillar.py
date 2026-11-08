@@ -128,3 +128,15 @@ async def test_update_pillar_timeline_requires_new_items():
     existing = mk_pillar()
     with pytest.raises(PremiumWriterError):
         await writer.update_pillar_timeline(existing, [])
+
+
+async def test_payment_error_keeps_openrouter_reason(httpx_mock):
+    httpx_mock.add_response(
+        url="https://openrouter.ai/api/v1/chat/completions",
+        status_code=402,
+        json={"error": {"code": 402, "message": "Key limit exceeded"}},
+        is_reusable=True,
+    )
+    writer = PremiumWriter(api_key="test")
+    with pytest.raises(PremiumWriterError, match=r"402 Payment Required .*Key limit exceeded"):
+        await writer.complete_json("prompt")

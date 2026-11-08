@@ -33,6 +33,7 @@ from osservatorio_seo.models import (
     Pillar,
     PillarTakeaway,
 )
+from osservatorio_seo.summarizer import describe_http_error
 
 logger = logging.getLogger(__name__)
 
@@ -483,7 +484,8 @@ class PremiumWriter:
                     logger.warning("rate limit on %s, retrying in %.0fs", model, wait)
                     await asyncio.sleep(min(wait, 120))
                     continue
-                resp.raise_for_status()
+                if resp.status_code >= 400:
+                    raise PremiumWriterError(describe_http_error(resp, model))
                 data = resp.json()
                 try:
                     content = data["choices"][0]["message"]["content"]

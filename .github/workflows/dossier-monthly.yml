@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update-dossiers:
@@ -45,11 +46,18 @@ jobs:
       - name: Install Node deps (Tailwind CLI)
         run: npm install
 
+      # L'exit code si controlla in fondo: se un dossier fallisce, quelli
+      # riusciti si committano e si pubblicano comunque.
       - name: Update dossiers
+        id: update
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        shell: bash
         run: |
-          uv run python scripts/update_pillars.py ${{ inputs.force && '--force' || '' }}
+          set +e
+          uv run python scripts/update_pillars.py ${{ inputs.force && '--force' || '' }} 2>&1 \
+            | tee "$RUNNER_TEMP/update.log"
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
 
       - name: Rebuild Tailwind CSS
         run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
@@ -84,3 +92,26 @@ jobs:
             --commit-hash="$(git rev-parse HEAD)" \
             --commit-message="dossier monthly update" \
             --commit-dirty=true
+
+      - name: Fail if update failed
+        if: steps.update.outputs.code != '0'
+        run: |
+          if grep -q "402 Payment Required" "$RUNNER_TEMP/update.log"; then
+            echo "::error::OpenRouter ha risposto 402: credito finito o limite della chiave."
+          fi
+          echo "::error::update_pillars.py e' uscito con codice ${{ steps.update.outputs.code }}"
+          exit 1
+
+      - name: Open issue on failure
+        if: failure()
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const month = new Date().toISOString().slice(0, 7);
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[osservatorioseo] Dossier: workflow fallito ${month}`,
+              body: `L'aggiornamento mensile dei dossier e' fallito. Se il log riporta 402, e' OpenRouter (credito o limite della chiave).\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['bug', 'automated']
+            });

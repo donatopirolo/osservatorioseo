@@ -72,3 +72,7 @@ request_delay_s: 20
 # Dopo questi run bloccati di fila lo script esce con errore e il workflow
 # apre una issue.
 max_blocked_streak: 3
+# Un brevetto in coda la cui analisi risulta non valida per questi run (anche
+# non consecutivi) passa tra gli scartati, per non occupare ogni giorno una
+# richiesta. Si rigenera a mano con --number <NUMERO> --force.
+max_failed_attempts: 3
