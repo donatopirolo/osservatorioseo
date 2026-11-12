@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260147800A1: Risposta a domande visive con recupero multimodale aumentato — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per rispondere a domande su immagini (visual question answering) che combina input multimodali (immagine e testo) con ricerca aumentata. Il sistema genera un embedding multimodale, lo usa per cercare contenuti rilevanti in database di conoscenza, riordina i risultati " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260147800a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260147800A1: Risposta a domande visive con recupero multimodale aumentato — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per rispondere a domande su immagini (visual question answering) che combina input multimodali (immagine e testo) con ricerca aumentata. Il sistema genera un embedding multimodale, lo usa per cercare contenuti rilevanti in database di conoscenza, riordina i risultati " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260147800a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260147800A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260147800a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260147800A1: Risposta a domande visive con recupero multimodale aumentato",
+  "description": "Il brevetto descrive un sistema per rispondere a domande su immagini (visual question answering) che combina input multimodali (immagine e testo) con ricerca aumentata. Il sistema genera un embedding multimodale, lo usa per cercare contenuti rilevanti in database di conoscenza, riordina i risultati e seleziona passaggi specifici da processare con un modello generativo per produrre la risposta finale.",
+  "articleBody": "Il brevetto descrive un sistema per rispondere a domande su immagini (visual question answering) che combina input multimodali (immagine e testo) con ricerca aumentata. Il sistema genera un embedding multimodale, lo usa per cercare contenuti rilevanti in database di conoscenza, riordina i risultati e seleziona passaggi specifici da processare con un modello generativo per produrre la risposta finale.\n\nLa rivendicazione indipendente 1 copre un metodo che prevede: ottenere un input multimodale composto da un\u0027immagine e testo descrittivo di una richiesta di informazioni su caratteristiche nell\u0027immagine; processare l\u0027input multimodale con un decoder model di un multimodal generative language model per generare un multimodal embedding descrittivo dell\u0027immagine e del testo; determinare, tramite database call, una pluralit\u00e0 di search results basati sul multimodal embedding, dove i risultati comprendono content items; determinare, in base all\u0027input multimodale, un particular relevant passage all\u0027interno di un particolare search result, dove il passaggio \u00e8 una porzione del content item determinata associata all\u0027input multimodale; processare l\u0027input multimodale e il particular relevant passage con il multimodal generative language model per generare una model-generated response.\n\nLa rivendicazione 2 specifica che determinare il particular relevant passage pu\u00f2 includere: determinare un subset dei search results da rankare con il multimodal generative language model; processare l\u0027input multimodale e il subset con il modello per rankare i risultati; determinare il particular relevant passage in base all\u0027input multimodale e al ranking del subset. Le rivendicazioni 3-4 dettagliano che processare l\u0027input multimodale per generare il multimodal embedding pu\u00f2 includere l\u0027uso di un vision transformer che genera una pluralit\u00e0 di tokens, dove almeno un subset dei tokens comprende contextual data associati a token generati precedentemente, e processare un end token per generare il multimodal embedding.\n\nLa rivendicazione 5 specifica che determinare i search results pu\u00f2 includere: processare un corpus di content items con il multimodal generative language model per generare content item embeddings; determinare che un subset dei content item embeddings sono associati al multimodal embedding; determinare che i content items sono associati al subset degli embeddings. La rivendicazione 6 indica che questa determinazione pu\u00f2 includere top-k embedding retrieval. La rivendicazione 7 contempla che il multimodal generative language model possa includere pesi che sono stati fine-tuned per multimodal embedding based knowledge retrieval mentre i remaining weights del modello erano frozen. La rivendicazione 8 indica che il modello pu\u00f2 essere stato addestrato via distillation learning con un teacher model e via quantization.\n\nLa rivendicazione 9 specifica che il relevant passage pu\u00f2 comprendere un text passage e un image passage determinati avere un higher responsiveness score all\u0027input multimodale rispetto ad altre porzioni del content item. La rivendicazione 10 contempla che l\u0027input image possa raffigurare un particular object e l\u0027input text possa essere descrittivo di una domanda associata a dettagli del particular object che non sono raffigurati nell\u0027immagine.\n\nLe rivendicazioni indipendenti 11 e 17 coprono rispettivamente un computing system e computer-readable media che implementano varianti dello stesso metodo, con dettagli aggiuntivi: la rivendicazione 12 specifica che il multimodal embedding pu\u00f2 comprendere un multimodal joint feature embedding generato basato su un end-of-sequence token; la rivendicazione 13 che il modello pu\u00f2 comprendere un fine-tuned multilayer perceptron; la rivendicazione 14 che determinare il particular relevant passage pu\u00f2 includere performing multimodal query-knowledge alignment basato sul comparare il multimodal embedding con search result embeddings associati a un corpus di search results encoded con un feature encoder; le rivendicazioni 15-16 specificano che il decoder model e il feature encoder possono essere modelli separati e possono essere stati jointly fine-tuned. La rivendicazione 18 contempla che processare l\u0027input multimodale e il subset dei search results per rankarli possa includere encoding dei content items e determinazione di cosine similarities tra il multimodal embedding e i content item embeddings. La rivendicazione 20 indica che il multimodal generative language model pu\u00f2 comprendere un vision language model e pu\u00f2 essere communicatively connected con external tools e databases.\n\nLa descrizione contempla un framework di multimodal retrieval augmented visual question answering (blocco 400, figura 4) che ottiene una multimodal query 402 e content items da un knowledge database 406, processati con un embedding model 404 per eseguire multimodal query-knowledge alignment 408. La descrizione contempla che l\u0027allineamento possa includere generare embeddings per la query multimodale e i content items del database, e che gli embeddings possano essere leveraged per allineare content item passages con la multimodal query per determinare relevant information. La descrizione contempla un top-k retrieval 410 basato sugli embeddings e sull\u0027allineamento, seguito da search result re-selection 412 (o re-ranking) per determinare un particular relevant passage 414.\n\nLa descrizione contempla (blocco 500, figura 5) che un multimodal generative language embedding model possa includere una pluralit\u00e0 di blocks che generano un multimodal embedding 514 basato su un multimodal input pre-processato in image tokens 502, text tokens 504 e end-of-sequence tokens 506. La descrizione contempla che i parametri degli adaptive blocks 512, del multilayer perceptron 508 e dei linear blocks possano essere fine-tuned, mentre i parametri del pre-trained generative model, del contrastive language-image model e del tokenizer-and-embedding block 510 rimangono fixed. La descrizione contempla che gli adaptive blocks 512, il multilayer perceptron 508 e i linear blocks possano essere tuned per il multimodal embedding task, mentre gli altri modelli possano essere leveraged senza fine-tuning.\n\nLa descrizione contempla (paragrafi associati alla figura 6) esempi di performance comparativa tra un vanilla model 608 (il multimodal generative language model senza retrieval augmented generation), un MLLM-RAG model 610 (con retrieval augmented generation) e un MLLM RAG-refinement model 612 (con retrieval augmented generation con search result refinement prima della response generation). La descrizione contempla che il vanilla model possa non avere abbastanza informazioni per rispondere al multimodal input, che l\u0027MLLM-RAG model possa performare bene per alcuni inputs ma possa struggle quando i search results hanno mixed answers, e che l\u0027MLLM RAG-refinement model possa outperform gli altri due modelli.\n\nLa descrizione contempla che il sistema possa utilizzare contrastive learning per allineare la query con la knowledge, con una contrastive loss definita nell\u0027equazione 1. La descrizione contempla che il retrieval possa essere eseguito calcolando cosine similarity tra il feature della query e quelli dell\u0027intero knowledge database, recuperando le top-k nearest knowledge entries. La descrizione contempla che quando k\u003e1, il sistema possa applicare un additional re-selection step usando un MLLM. La descrizione contempla che il sistema possa utilizzare il dataset Encyclopedic VQA per training e sperimentazione, con 221k unique question-answer pairs, e che il knowledge database possa includere l\u0027intero WikiWeb2M dataset con circa 2 milioni di Wikipedia articles.\n\nPer la SEO, questo brevetto potrebbe significare che Google stia sviluppando capacit\u00e0 di risposta a query multimodali (immagine + testo) che combinano comprensione visiva e testuale per cercare in database di conoscenza e generare risposte sintetiche. Il sistema potrebbe essere rilevante per funzionalit\u00e0 tipo Google Lens combinate con ricerca testuale, o per future implementazioni di AI Overview che processano input multimodali. Il focus sul re-ranking dei risultati e sulla selezione di passaggi specifici potrebbe indicare che la selezione delle fonti per risposte AI potrebbe basarsi non solo su embedding similarity ma anche su un secondo passaggio di raffinamento con un modello generativo. La descrizione contempla che il sistema possa ridurre hallucinations fornendo un increased pool of knowledge per il MLLM, il che potrebbe significare maggiore affidabilit\u00e0 delle risposte generate. Il fatto che la descrizione contempli l\u0027uso di curated, vetted databases di trusted resources potrebbe indicare attenzione alla qualit\u00e0 delle fonti per le risposte generate.",
+  "wordCount": 1217,
+  "datePublished": "2026-11-12T18:33:27.305069+00:00",
+  "dateModified": "2026-11-12T18:33:27.305069+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260147800a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Multimodal Retrieval Augmented Visual Question Answering",
+    "identifier": "US20260147800A1",
+    "url": "https://patents.google.com/patent/US20260147800A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260147800A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260147800A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Risposta a domande visive con recupero multimodale aumentato</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Multimodal Retrieval Augmented Visual Question Answering</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per rispondere a domande su immagini (visual question answering) che combina input multimodali (immagine e testo) con ricerca aumentata. Il sistema genera un embedding multimodale, lo usa per cercare contenuti rilevanti in database di conoscenza, riordina i risultati e seleziona passaggi specifici da processare con un modello generativo per produrre la risposta finale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Risposta a domande visive, potenzialmente Google Search con funzionalità multimodali</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">28 Maggio 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2024-11-26</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che prevede: ottenere un input multimodale composto da un&#39;immagine e testo descrittivo di una richiesta di informazioni su caratteristiche nell&#39;immagine; processare l&#39;input multimodale con un decoder model di un multimodal generative language model per generare un multimodal embedding descrittivo dell&#39;immagine e del testo; determinare, tramite database call, una pluralità di search results basati sul multimodal embedding, dove i risultati comprendono content items; determinare, in base all&#39;input multimodale, un particular relevant passage all&#39;interno di un particolare search result, dove il passaggio è una porzione del content item determinata associata all&#39;input multimodale; processare l&#39;input multimodale e il particular relevant passage con il multimodal generative language model per generare una model-generated response.</p>
+      <p>La rivendicazione 2 specifica che determinare il particular relevant passage può includere: determinare un subset dei search results da rankare con il multimodal generative language model; processare l&#39;input multimodale e il subset con il modello per rankare i risultati; determinare il particular relevant passage in base all&#39;input multimodale e al ranking del subset. Le rivendicazioni 3-4 dettagliano che processare l&#39;input multimodale per generare il multimodal embedding può includere l&#39;uso di un vision transformer che genera una pluralità di tokens, dove almeno un subset dei tokens comprende contextual data associati a token generati precedentemente, e processare un end token per generare il multimodal embedding.</p>
+      <p>La rivendicazione 5 specifica che determinare i search results può includere: processare un corpus di content items con il multimodal generative language model per generare content item embeddings; determinare che un subset dei content item embeddings sono associati al multimodal embedding; determinare che i content items sono associati al subset degli embeddings. La rivendicazione 6 indica che questa determinazione può includere top-k embedding retrieval. La rivendicazione 7 contempla che il multimodal generative language model possa includere pesi che sono stati fine-tuned per multimodal embedding based knowledge retrieval mentre i remaining weights del modello erano frozen. La rivendicazione 8 indica che il modello può essere stato addestrato via distillation learning con un teacher model e via quantization.</p>
+      <p>La rivendicazione 9 specifica che il relevant passage può comprendere un text passage e un image passage determinati avere un higher responsiveness score all&#39;input multimodale rispetto ad altre porzioni del content item. La rivendicazione 10 contempla che l&#39;input image possa raffigurare un particular object e l&#39;input text possa essere descrittivo di una domanda associata a dettagli del particular object che non sono raffigurati nell&#39;immagine.</p>
+      <p>Le rivendicazioni indipendenti 11 e 17 coprono rispettivamente un computing system e computer-readable media che implementano varianti dello stesso metodo, con dettagli aggiuntivi: la rivendicazione 12 specifica che il multimodal embedding può comprendere un multimodal joint feature embedding generato basato su un end-of-sequence token; la rivendicazione 13 che il modello può comprendere un fine-tuned multilayer perceptron; la rivendicazione 14 che determinare il particular relevant passage può includere performing multimodal query-knowledge alignment basato sul comparare il multimodal embedding con search result embeddings associati a un corpus di search results encoded con un feature encoder; le rivendicazioni 15-16 specificano che il decoder model e il feature encoder possono essere modelli separati e possono essere stati jointly fine-tuned. La rivendicazione 18 contempla che processare l&#39;input multimodale e il subset dei search results per rankarli possa includere encoding dei content items e determinazione di cosine similarities tra il multimodal embedding e i content item embeddings. La rivendicazione 20 indica che il multimodal generative language model può comprendere un vision language model e può essere communicatively connected con external tools e databases.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un framework di multimodal retrieval augmented visual question answering (blocco 400, figura 4) che ottiene una multimodal query 402 e content items da un knowledge database 406, processati con un embedding model 404 per eseguire multimodal query-knowledge alignment 408. La descrizione contempla che l&#39;allineamento possa includere generare embeddings per la query multimodale e i content items del database, e che gli embeddings possano essere leveraged per allineare content item passages con la multimodal query per determinare relevant information. La descrizione contempla un top-k retrieval 410 basato sugli embeddings e sull&#39;allineamento, seguito da search result re-selection 412 (o re-ranking) per determinare un particular relevant passage 414.</p>
+      <p>La descrizione contempla (blocco 500, figura 5) che un multimodal generative language embedding model possa includere una pluralità di blocks che generano un multimodal embedding 514 basato su un multimodal input pre-processato in image tokens 502, text tokens 504 e end-of-sequence tokens 506. La descrizione contempla che i parametri degli adaptive blocks 512, del multilayer perceptron 508 e dei linear blocks possano essere fine-tuned, mentre i parametri del pre-trained generative model, del contrastive language-image model e del tokenizer-and-embedding block 510 rimangono fixed. La descrizione contempla che gli adaptive blocks 512, il multilayer perceptron 508 e i linear blocks possano essere tuned per il multimodal embedding task, mentre gli altri modelli possano essere leveraged senza fine-tuning.</p>
+      <p>La descrizione contempla (paragrafi associati alla figura 6) esempi di performance comparativa tra un vanilla model 608 (il multimodal generative language model senza retrieval augmented generation), un MLLM-RAG model 610 (con retrieval augmented generation) e un MLLM RAG-refinement model 612 (con retrieval augmented generation con search result refinement prima della response generation). La descrizione contempla che il vanilla model possa non avere abbastanza informazioni per rispondere al multimodal input, che l&#39;MLLM-RAG model possa performare bene per alcuni inputs ma possa struggle quando i search results hanno mixed answers, e che l&#39;MLLM RAG-refinement model possa outperform gli altri due modelli.</p>
+      <p>La descrizione contempla che il sistema possa utilizzare contrastive learning per allineare la query con la knowledge, con una contrastive loss definita nell&#39;equazione 1. La descrizione contempla che il retrieval possa essere eseguito calcolando cosine similarity tra il feature della query e quelli dell&#39;intero knowledge database, recuperando le top-k nearest knowledge entries. La descrizione contempla che quando k&gt;1, il sistema possa applicare un additional re-selection step usando un MLLM. La descrizione contempla che il sistema possa utilizzare il dataset Encyclopedic VQA per training e sperimentazione, con 221k unique question-answer pairs, e che il knowledge database possa includere l&#39;intero WikiWeb2M dataset con circa 2 milioni di Wikipedia articles.</p>
+      <p>Per la SEO, questo brevetto potrebbe significare che Google stia sviluppando capacità di risposta a query multimodali (immagine + testo) che combinano comprensione visiva e testuale per cercare in database di conoscenza e generare risposte sintetiche. Il sistema potrebbe essere rilevante per funzionalità tipo Google Lens combinate con ricerca testuale, o per future implementazioni di AI Overview che processano input multimodali. Il focus sul re-ranking dei risultati e sulla selezione di passaggi specifici potrebbe indicare che la selezione delle fonti per risposte AI potrebbe basarsi non solo su embedding similarity ma anche su un secondo passaggio di raffinamento con un modello generativo. La descrizione contempla che il sistema possa ridurre hallucinations fornendo un increased pool of knowledge per il MLLM, il che potrebbe significare maggiore affidabilità delle risposte generate. Il fatto che la descrizione contempli l&#39;uso di curated, vetted databases di trusted resources potrebbe indicare attenzione alla qualità delle fonti per le risposte generate.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è una domanda (A1) non ancora concessa, quindi non rappresenta tecnologia validata dall&#39;ufficio brevetti e potrebbe essere modificata o rigettata.</li>
+      <li>La descrizione non afferma che il sistema sia implementato in Google Search o in prodotti specifici; contempla applicazioni generiche per visual question answering, chatbots generativi, search interfaces e virtual assistants.</li>
+      <li>Il brevetto non dimostra che i segnali di ranking contemplati (embedding similarity, cosine similarity, responsiveness score) siano utilizzati per il ranking organico di pagine web; il focus è sulla selezione di passaggi da content items per generare risposte.</li>
+      <li>La descrizione contempla l&#39;uso di knowledge databases come WikiWeb2M per esperimenti, ma non specifica quali database sarebbero utilizzati in produzione o come i contenuti web pubblici sarebbero integrati nel sistema.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i contenuti siano strutturati in modo che passaggi specifici possano essere estratti e compresi autonomamente, con informazioni contestuali chiare anche quando isolati dal resto della pagina.</li>
+      <li class="pl-2">Ottimizzare per query multimodali considerando che utenti potrebbero combinare immagini con domande testuali; fornire contenuti che rispondano a domande su oggetti, luoghi o concetti raffigurati in immagini.</li>
+      <li class="pl-2">Mantenere contenuti informativi di alta qualità che possano fungere da fonti affidabili per risposte generate, con informazioni fattuali verificabili e ben organizzate in sezioni tematiche.</li>
+      <li class="pl-2">Considerare che la rilevanza potrebbe essere valutata sia a livello di documento che di passaggio specifico; strutturare contenuti con sezioni tematicamente coerenti che affrontano aspetti specifici di un argomento.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">multimodal embedding</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Rappresentazione vettoriale che codifica congiuntamente informazioni da più modalità (immagine e testo) in uno spazio di embedding condiviso, utilizzata per cercare contenuti rilevanti.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">relevant passage</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Porzione specifica di un content item (che può includere testo e immagini) determinata avere un higher responsiveness score rispetto ad altre porzioni dello stesso item in relazione all&#39;input multimodale.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">multimodal query-knowledge alignment</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Processo di allineamento tra una query multimodale e contenuti di conoscenza basato sul confronto di embeddings, utilizzando tecniche come contrastive learning per mappare query e knowledge in uno spazio condiviso.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">top-k retrieval</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tecnica di recupero che seleziona i k elementi più rilevanti (nearest neighbors) da un corpus basandosi su misure di similarità tra embeddings, come cosine similarity.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">vision transformer</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Architettura di modello che processa immagini trattando image embeddings come tokens, utilizzando meccanismi di attention per generare rappresentazioni contestuali.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">end-of-sequence token</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Token speciale aggiunto alla fine di una sequenza di input che, nell&#39;architettura decoder-only, può attendere all&#39;intera sequenza e la cui rappresentazione output viene utilizzata come joint embedding multimodale.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">contrastive learning</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tecnica di addestramento che allinea positive feature pairs (query e knowledge corrispondenti) in uno spazio di embedding minimizzando la distanza tra coppie positive e massimizzando la distanza da esempi negativi.</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260147800A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 12 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

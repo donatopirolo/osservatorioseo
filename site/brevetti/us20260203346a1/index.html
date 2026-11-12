@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260203346A1: Generazione di risposte a ricerche visive basate su intent — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per ricerca visiva che determina l&#39;intent di una query basata su immagini (anche senza testo), seleziona un prompt specifico da una libreria in base all&#39;intent rilevato, recupera risultati di ricerca visiva e genera una risposta con un modello generativo condizionato " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260203346a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260203346A1: Generazione di risposte a ricerche visive basate su intent — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per ricerca visiva che determina l&#39;intent di una query basata su immagini (anche senza testo), seleziona un prompt specifico da una libreria in base all&#39;intent rilevato, recupera risultati di ricerca visiva e genera una risposta con un modello generativo condizionato " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260203346a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260203346A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260203346a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260203346A1: Generazione di risposte a ricerche visive basate su intent",
+  "description": "Il brevetto descrive un sistema per ricerca visiva che determina l\u0027intent di una query basata su immagini (anche senza testo), seleziona un prompt specifico da una libreria in base all\u0027intent rilevato, recupera risultati di ricerca visiva e genera una risposta con un modello generativo condizionato dal prompt scelto. L\u0027obiettivo \u00e8 fornire risposte formattate diversamente a seconda dell\u0027intento (es. risoluzione compiti, identificazione oggetti, contesto di una scena).",
+  "articleBody": "Il brevetto descrive un sistema per ricerca visiva che determina l\u0027intent di una query basata su immagini (anche senza testo), seleziona un prompt specifico da una libreria in base all\u0027intent rilevato, recupera risultati di ricerca visiva e genera una risposta con un modello generativo condizionato dal prompt scelto. L\u0027obiettivo \u00e8 fornire risposte formattate diversamente a seconda dell\u0027intento (es. risoluzione compiti, identificazione oggetti, contesto di una scena).\n\nLa rivendicazione 1 protegge un sistema che ottiene una query immagine raffigurante pi\u00f9 feature, la elabora con un modello addestrato per determinare un intent di ricerca predetto dell\u0027utente, determina un prompt particolare associato a quell\u0027intent da una libreria di prompt, identifica una pluralit\u00e0 di content item tramite visual match, e processa il prompt e almeno un sottoinsieme dei content item con un modello linguistico generativo per generare una risposta il cui formato \u00e8 basato sull\u0027intent e i cui dettagli derivano dai content item.\n\nLa rivendicazione 2 specifica che il prompt pu\u00f2 essere selezionato generando un intent embedding e cercando nella libreria. La rivendicazione 3 indica che i diversi prompt sono associati a diversi tipi di search intent. La rivendicazione 4 elenca tipi di intent specifici: homework solver, context search, identification search, detailed breakdown search. La rivendicazione 5 precisa che la query pu\u00f2 essere unimodale. La rivendicazione 6 descrive il prompt come una richiesta di formato e stile particolari per la risposta. La rivendicazione 7 contempla che il prompt possa essere un soft prompt (set di pesi pre-tuned per un task specifico). Le rivendicazioni 8-10 descrivono l\u0027acquisizione dell\u0027immagine tramite viewfinder di un\u0027app di ricerca e la visualizzazione della risposta con i risultati e parte del viewfinder.\n\nLa rivendicazione 11 (metodo indipendente) protegge l\u0027elaborazione della query con un modello di object recognition per generare label, poi con un semantic understanding model per generare output semantico (relazioni tra oggetti), determinazione di content item via search engine, e generazione della risposta processando label, output semantico e content item con il modello generativo. La rivendicazione 12 specifica che l\u0027output semantico pu\u00f2 includere classificazione dell\u0027immagine e identificazione di oggetti di interesse. La rivendicazione 13 contempla il caso di frame di film/show con risposta strutturata in sezioni. La rivendicazione 14 indica che l\u0027output semantico pu\u00f2 includere un intent determination. La rivendicazione 15 descrive un generative orchestrator model che coordina i modelli di recognition e semantic understanding. La rivendicazione 16 dettaglia la selezione di un sottoinsieme di label associate all\u0027intent e di un prompt per generare la risposta.\n\nLa rivendicazione 17 (media non transitori) copre l\u0027ottenimento della query via viewfinder, determinazione dell\u0027intent (basata su oggetti e classificazione immagine), selezione del prompt, ricerca di content item, generazione della risposta e visualizzazione con i risultati. La rivendicazione 18 specifica l\u0027homework solver intent (problemi non risolti nella regione focale). La rivendicazione 19 descrive l\u0027identification intent (feature set nella regione focale). La rivendicazione 20 indica che l\u0027identification intent pu\u00f2 essere determinato anche in base a contesto utente (location, search/browsing history, preferenze, occupazione).\n\nLa descrizione contempla diversi segnali e meccanismi. Il sistema pu\u00f2 utilizzare un machine-learned model addestrato a processare immagini e determinare query intent (blocco 104, 204, rivendicazione 1). La descrizione menziona tipi di intent specifici: homework solver search intent, context search intent, identification search intent, detailed breakdown search intent (rivendicazione 4, FIG. 6 con classificazioni 602-608). Per il homework intent, la descrizione contempla il riconoscimento di problemi non risolti in una focal region (rivendicazione 18). Per l\u0027identification intent, si considerano feature set nella focal region e contesto utente come location, search history, browsing history, preferenze, occupazione (rivendicazioni 19-20).\n\nLa descrizione contempla una prompt library con diversi prompt associati a diversi search intent types (rivendicazione 3). Il prompt pu\u00f2 essere selezionato generando un intent embedding e cercando nella libreria (rivendicazione 2). I prompt possono essere soft prompt, cio\u00e8 set di pesi pre-tuned per task specifici (rivendicazione 7). La descrizione menziona object recognition model e semantic understanding model che possono essere coordinati da un generative orchestrator model (rivendicazione 15). L\u0027output semantico pu\u00f2 includere image classification, identificazione di oggetti di interesse, relazioni tra oggetti (rivendicazioni 11-12). Per frame di film/show, la risposta potrebbe includere sezioni con dettagli di contesto diversi (rivendicazione 13, FIG. 5A con esempio 508).\n\nI content item sono determinati tramite visual match (rivendicazione 1), che la descrizione associa a embedding-based search, feature matching, label-based search. La risposta generata include un formato basato sull\u0027intent e dettagli dai content item (rivendicazione 1). Gli esempi nelle figure (FIG. 4-5B, 10, 14-15) mostrano interfacce con risposte strutturate diversamente: identificazione con dettagli (FIG. 4), contesto di scena cinematografica con sezioni (FIG. 5A), identificazione e contesto DIY (FIG. 5B).\n\nPer la SEO, questo potrebbe significare che Google potrebbe differenziare le risposte generate in base all\u0027intent rilevato da un\u0027immagine. Un sito che fornisce contenuti strutturati per diversi intent (tutorial passo-passo per problemi, schede informative per identificazione, contesto dettagliato per media) potrebbe essere favorito come fonte per le risposte generate. La presenza di visual match (immagini simili indicizzate) resterebbe un segnale di partenza per il retrieval. Il contesto utente (cronologia, preferenze) potrebbe influenzare la classificazione dell\u0027intent, suggerendo una certa personalizzazione. Tuttavia, la descrizione non afferma che questo sistema sia in produzione in Google Search: contempla applicazioni in search application, viewfinder interface, ma anche scenari generici di visual query response.",
+  "wordCount": 866,
+  "datePublished": "2026-11-12T18:31:28.633441+00:00",
+  "dateModified": "2026-11-12T18:31:28.633441+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260203346a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Intent Determination-Based Visual Search Response Generation",
+    "identifier": "US20260203346A1",
+    "url": "https://patents.google.com/patent/US20260203346A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260203346A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260203346A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Generazione di risposte a ricerche visive basate su intent</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Intent Determination-Based Visual Search Response Generation</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per ricerca visiva che determina l&#39;intent di una query basata su immagini (anche senza testo), seleziona un prompt specifico da una libreria in base all&#39;intent rilevato, recupera risultati di ricerca visiva e genera una risposta con un modello generativo condizionato dal prompt scelto. L&#39;obiettivo è fornire risposte formattate diversamente a seconda dell&#39;intento (es. risoluzione compiti, identificazione oggetti, contesto di una scena).</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Ricerca visiva unimodale, interfacce viewfinder in applicazioni di ricerca</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">16 Luglio 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2025-01-15</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione 1 protegge un sistema che ottiene una query immagine raffigurante più feature, la elabora con un modello addestrato per determinare un intent di ricerca predetto dell&#39;utente, determina un prompt particolare associato a quell&#39;intent da una libreria di prompt, identifica una pluralità di content item tramite visual match, e processa il prompt e almeno un sottoinsieme dei content item con un modello linguistico generativo per generare una risposta il cui formato è basato sull&#39;intent e i cui dettagli derivano dai content item.</p>
+      <p>La rivendicazione 2 specifica che il prompt può essere selezionato generando un intent embedding e cercando nella libreria. La rivendicazione 3 indica che i diversi prompt sono associati a diversi tipi di search intent. La rivendicazione 4 elenca tipi di intent specifici: homework solver, context search, identification search, detailed breakdown search. La rivendicazione 5 precisa che la query può essere unimodale. La rivendicazione 6 descrive il prompt come una richiesta di formato e stile particolari per la risposta. La rivendicazione 7 contempla che il prompt possa essere un soft prompt (set di pesi pre-tuned per un task specifico). Le rivendicazioni 8-10 descrivono l&#39;acquisizione dell&#39;immagine tramite viewfinder di un&#39;app di ricerca e la visualizzazione della risposta con i risultati e parte del viewfinder.</p>
+      <p>La rivendicazione 11 (metodo indipendente) protegge l&#39;elaborazione della query con un modello di object recognition per generare label, poi con un semantic understanding model per generare output semantico (relazioni tra oggetti), determinazione di content item via search engine, e generazione della risposta processando label, output semantico e content item con il modello generativo. La rivendicazione 12 specifica che l&#39;output semantico può includere classificazione dell&#39;immagine e identificazione di oggetti di interesse. La rivendicazione 13 contempla il caso di frame di film/show con risposta strutturata in sezioni. La rivendicazione 14 indica che l&#39;output semantico può includere un intent determination. La rivendicazione 15 descrive un generative orchestrator model che coordina i modelli di recognition e semantic understanding. La rivendicazione 16 dettaglia la selezione di un sottoinsieme di label associate all&#39;intent e di un prompt per generare la risposta.</p>
+      <p>La rivendicazione 17 (media non transitori) copre l&#39;ottenimento della query via viewfinder, determinazione dell&#39;intent (basata su oggetti e classificazione immagine), selezione del prompt, ricerca di content item, generazione della risposta e visualizzazione con i risultati. La rivendicazione 18 specifica l&#39;homework solver intent (problemi non risolti nella regione focale). La rivendicazione 19 descrive l&#39;identification intent (feature set nella regione focale). La rivendicazione 20 indica che l&#39;identification intent può essere determinato anche in base a contesto utente (location, search/browsing history, preferenze, occupazione).</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi segnali e meccanismi. Il sistema può utilizzare un machine-learned model addestrato a processare immagini e determinare query intent (blocco 104, 204, rivendicazione 1). La descrizione menziona tipi di intent specifici: homework solver search intent, context search intent, identification search intent, detailed breakdown search intent (rivendicazione 4, FIG. 6 con classificazioni 602-608). Per il homework intent, la descrizione contempla il riconoscimento di problemi non risolti in una focal region (rivendicazione 18). Per l&#39;identification intent, si considerano feature set nella focal region e contesto utente come location, search history, browsing history, preferenze, occupazione (rivendicazioni 19-20).</p>
+      <p>La descrizione contempla una prompt library con diversi prompt associati a diversi search intent types (rivendicazione 3). Il prompt può essere selezionato generando un intent embedding e cercando nella libreria (rivendicazione 2). I prompt possono essere soft prompt, cioè set di pesi pre-tuned per task specifici (rivendicazione 7). La descrizione menziona object recognition model e semantic understanding model che possono essere coordinati da un generative orchestrator model (rivendicazione 15). L&#39;output semantico può includere image classification, identificazione di oggetti di interesse, relazioni tra oggetti (rivendicazioni 11-12). Per frame di film/show, la risposta potrebbe includere sezioni con dettagli di contesto diversi (rivendicazione 13, FIG. 5A con esempio 508).</p>
+      <p>I content item sono determinati tramite visual match (rivendicazione 1), che la descrizione associa a embedding-based search, feature matching, label-based search. La risposta generata include un formato basato sull&#39;intent e dettagli dai content item (rivendicazione 1). Gli esempi nelle figure (FIG. 4-5B, 10, 14-15) mostrano interfacce con risposte strutturate diversamente: identificazione con dettagli (FIG. 4), contesto di scena cinematografica con sezioni (FIG. 5A), identificazione e contesto DIY (FIG. 5B).</p>
+      <p>Per la SEO, questo potrebbe significare che Google potrebbe differenziare le risposte generate in base all&#39;intent rilevato da un&#39;immagine. Un sito che fornisce contenuti strutturati per diversi intent (tutorial passo-passo per problemi, schede informative per identificazione, contesto dettagliato per media) potrebbe essere favorito come fonte per le risposte generate. La presenza di visual match (immagini simili indicizzate) resterebbe un segnale di partenza per il retrieval. Il contesto utente (cronologia, preferenze) potrebbe influenzare la classificazione dell&#39;intent, suggerendo una certa personalizzazione. Tuttavia, la descrizione non afferma che questo sistema sia in produzione in Google Search: contempla applicazioni in search application, viewfinder interface, ma anche scenari generici di visual query response.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è una domanda (A1), non ancora concessa, e non dimostra che Google applichi questo sistema in Search o in quale misura.</li>
+      <li>La descrizione contempla intent types e prompt selection, ma non specifica quali segnali di ranking dei content item siano utilizzati né come i contenuti vengano selezionati per inclusion nella risposta oltre ai visual match generici.</li>
+      <li>Il brevetto non dimostra che i soft prompt o la prompt library siano attualmente utilizzati, né fornisce dettagli su come i prompt siano costruiti o mantenuti.</li>
+      <li>L&#39;ambito è la ricerca visiva unimodale in applicazioni di ricerca (incluso viewfinder), non necessariamente la ricerca web tradizionale; alcuni esempi (homework solver, frame identification) sono casi d&#39;uso specifici che potrebbero non applicarsi a tutti i verticali SEO.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Fornire contenuti che rispondano a diversi intent di ricerca visiva (identificazione, contesto, how-to) in modo strutturato e dettagliato, anche se il brevetto non fosse applicato, migliora l&#39;utilità per utenti che cercano informazioni su immagini.</li>
+      <li class="pl-2">Includere immagini di qualità e descrittive nei contenuti facilita il visual matching e il retrieval da parte di motori di ricerca visiva, indipendentemente da questo brevetto.</li>
+      <li class="pl-2">Strutturare i contenuti con sezioni chiare (es. panoramica, dettagli tecnici, istruzioni passo-passo) può aiutare modelli generativi a estrarre informazioni rilevanti, a prescindere dall&#39;uso di prompt specifici.</li>
+      <li class="pl-2">Considerare che le ricerche visive possono provenire da utenti con contesti diversi (principianti vs esperti, intenti diversi) e offrire contenuti adatti a più livelli di approfondimento resta una buona pratica editoriale.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">intent determination</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Output di un modello che descrive l&#39;intento di ricerca predetto dell&#39;utente basato sull&#39;immagine della query, utilizzato per selezionare il prompt e il formato della risposta.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">prompt library</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Raccolta di prompt (testuali o soft prompt) associati a diversi tipi di search intent, da cui il sistema seleziona il prompt particolare per condizionare il modello generativo.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">soft prompt</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Set di pesi machine-learned pre-tuned per un task specifico, utilizzato come input al modello generativo al posto di (o insieme a) prompt testuali, per condizionare la generazione.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">visual match</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Immagini o content item identificati come visivamente simili all&#39;immagine della query, utilizzati come base per determinare i content item da cui estrarre dettagli per la risposta.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">generative orchestrator model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello generativo che coordina e istruisce altri modelli (object recognition, semantic understanding) per processare la query immagine in modo orchestrato.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">semantic understanding output</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Output che descrive le relazioni tra oggetti nell&#39;immagine, può includere classificazione dell&#39;immagine, identificazione di oggetti di interesse e intent determination.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">unimodal search query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query composta da una sola modalità di input (solo immagine, senza testo), che pone sfide maggiori per determinare l&#39;intent rispetto a query multimodali.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/CN122112297A/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">CN122112297A</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Visual search response generation based on intent determination</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260203346A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 12 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
