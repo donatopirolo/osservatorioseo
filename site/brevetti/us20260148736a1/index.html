@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260148736A1: Risposte multimodali con ragionamento multi-step per query complesse — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema che riceve query multimodali (testo e immagini), ne valuta la complessità e, se necessario, attiva un processo di ragionamento multi-step. Un sistema di orchestrazione genera un piano di azioni (analisi dell&#39;immagine, estrazione di oggetti, generazione di sottoquery)," />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260148736a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260148736A1: Risposte multimodali con ragionamento multi-step per query complesse — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema che riceve query multimodali (testo e immagini), ne valuta la complessità e, se necessario, attiva un processo di ragionamento multi-step. Un sistema di orchestrazione genera un piano di azioni (analisi dell&#39;immagine, estrazione di oggetti, generazione di sottoquery)," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260148736a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260148736A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260148736a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260148736A1: Risposte multimodali con ragionamento multi-step per query complesse",
+  "description": "Il brevetto descrive un sistema che riceve query multimodali (testo e immagini), ne valuta la complessit\u00e0 e, se necessario, attiva un processo di ragionamento multi-step. Un sistema di orchestrazione genera un piano di azioni (analisi dell\u0027immagine, estrazione di oggetti, generazione di sottoquery), esegue i passaggi, valuta se i dati raccolti sono sufficienti e, in caso contrario, ripete il ciclo. I dati intermedi vengono poi forniti a un modello generativo che produce una risposta in linguaggio naturale.",
+  "articleBody": "Il brevetto descrive un sistema che riceve query multimodali (testo e immagini), ne valuta la complessit\u00e0 e, se necessario, attiva un processo di ragionamento multi-step. Un sistema di orchestrazione genera un piano di azioni (analisi dell\u0027immagine, estrazione di oggetti, generazione di sottoquery), esegue i passaggi, valuta se i dati raccolti sono sufficienti e, in caso contrario, ripete il ciclo. I dati intermedi vengono poi forniti a un modello generativo che produce una risposta in linguaggio naturale.\n\nLa rivendicazione indipendente 1 copre un metodo implementato da un sistema con uno o pi\u00f9 processori per rispondere a una query multimodale con un modello linguistico di grandi dimensioni usando un processo di ragionamento multi-step. Il metodo prevede la ricezione di una query multimodale che include contenuto immagine. Il sistema determina che la query supera una soglia di complessit\u00e0 usando un modello di classificazione delle query. In risposta a questa determinazione, il sistema genera una pluralit\u00e0 di passaggi di elaborazione per rispondere alla query, dove i passaggi includono l\u0027esecuzione di almeno una sottoquery basata sulla query multimodale. Il sistema esegue i passaggi per generare dati intermedi, genera un input basato sui dati intermedi, lo elabora con un modello di risposta per generare un output e trasmette l\u0027output per la visualizzazione su un dispositivo utente.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la query multimodale pu\u00f2 includere contenuto testuale o vocale. La rivendicazione 3 indica che i passaggi possono essere rappresentati come una lista, e la 4 che ogni passaggio pu\u00f2 essere rappresentato come un\u0027istruzione computazionale. La rivendicazione 5 introduce un ciclo iterativo: prima di sintetizzare i dati intermedi, il sistema determina se sono sufficienti per rispondere alla query e, se non lo sono, un modello di orchestrazione genera passaggi aggiuntivi, li esegue per ottenere dati intermedi aggiornati e continua fino a quando i dati sono sufficienti. La rivendicazione 6 elenca i tipi di passaggi: riconoscimento di oggetti, recupero dati, esecuzione di sottoquery e sintesi dei dati. Le rivendicazioni 7-9 dettagliano questi passaggi: il riconoscimento di oggetti fornisce l\u0027immagine a un modello addestrato che restituisce una lista di oggetti rilevati; l\u0027esecuzione di sottoquery genera almeno una sottoquery basata sulla query originale e su almeno un oggetto rilevato, la fornisce a un sistema di ricerca e riceve risultati; la sintesi aggrega i risultati di ricerca in dati combinati e genera una sottoquery usando questi dati. La rivendicazione 10 spiega la classificazione della complessit\u00e0: la query viene fornita al modello di classificazione che restituisce un punteggio di complessit\u00e0, confrontato con la soglia. Le rivendicazioni 11-12 specificano che il modello di classificazione pu\u00f2 essere un modello machine-learned addestrato per questo scopo o un large vision language model. La rivendicazione 13 indica che l\u0027output pu\u00f2 comprendere una risposta in linguaggio naturale. Le rivendicazioni 14-15 menzionano che l\u0027input o l\u0027output del modello possono includere dati di citazione. Le rivendicazioni 16-17 specificano che l\u0027output pu\u00f2 essere visualizzato in una pagina di risultati di ricerca, potenzialmente multimodali. Le rivendicazioni 18-20 coprono il sistema e i supporti non transitori che implementano lo stesso metodo.\n\nLa descrizione contempla diversi elementi che potrebbero avere rilevanza per la SEO. Il sistema include un orchestration system con accesso a uno o pi\u00f9 large language model (paragrafo introduttivo della descrizione). Questo sistema pu\u00f2 determinare se una query multimodale \u00e8 associata a una query complessa e, in caso affermativo, generare un piano che specifica una serie di passaggi per rispondere. La descrizione fornisce esempi concreti: se un\u0027immagine include una serie di libri e la query chiede una raccomandazione per il libro con il rating pi\u00f9 alto, il sistema pu\u00f2 determinare un processo in tre fasi: analizzare l\u0027immagine per estrarre oggetti (libri), riscrivere il contenuto testuale della query basandosi sugli oggetti estratti generando sottoquery per ciascun oggetto (ad esempio \"qual \u00e8 il rating di qualit\u00e0 per [nome del libro identificato]?\"), e una volta identificati i libri e recuperati i rating, fornire queste informazioni a un modello generativo per preparare una risposta in linguaggio naturale (paragrafo dell\u0027esempio dei libri).\n\nLa descrizione contempla che il sistema possa includere un code generation system 104 che prende una query multimodale come input e restituisce una serie di passaggi per rispondere, rappresentati come istruzioni eseguibili (codice o pseudocodice) che un code execution module 112 pu\u00f2 eseguire (FIG. 1 e relativa descrizione). Un evaluation system 108 pu\u00f2 determinare se i passaggi gi\u00e0 eseguiti hanno fornito informazioni sufficienti per risolvere la query, usando un modello machine-learned che restituisce un valore di confidenza confrontato con una soglia predeterminata. Se insufficiente, i materiali raccolti possono essere restituiti al planning module 110 per determinare ulteriori passaggi necessari, creando un loop iterativo (descrizione di FIG. 1). Una volta che l\u0027evaluation system determina che le informazioni sono sufficienti, queste possono essere fornite a un summarization system 106 che include un modello machine-learned per generare una risposta in linguaggio naturale (descrizione di FIG. 1).\n\nLa descrizione contempla che il model output possa essere trasmesso a un dispositivo utente associato all\u0027utente che ha inviato la query multimodale e visualizzato su una pagina web insieme a una pluralit\u00e0 di risultati di ricerca, ad esempio in un elemento di interfaccia sopra gli altri risultati (descrizione di FIG. 2). Il model output pu\u00f2 includere informazioni sulla fonte di ciascun elemento particolare incluso, permettendo all\u0027utente di verificare l\u0027accuratezza delle informazioni (descrizione di FIG. 3). La descrizione menziona che il model input o output possono includere citation data (rivendicazioni 14-15 e relativa descrizione).\n\nPer la SEO, questo potrebbe significare che Google stia sviluppando capacit\u00e0 per gestire query complesse che richiedono ragionamento multi-step, specialmente quando includono elementi visivi. Se implementato, un sistema del genere potrebbe favorire contenuti che forniscono informazioni strutturate e verificabili su oggetti specifici identificabili visivamente, dato che il sistema contempla l\u0027estrazione di oggetti dalle immagini e la generazione di sottoquery per recuperare informazioni su ciascun oggetto. I siti che forniscono dati strutturati su prodotti, luoghi o entit\u00e0 visivamente identificabili potrebbero essere pi\u00f9 facilmente utilizzati come fonti per le sottoquery generate dal sistema. La menzione di citation data suggerisce che il sistema potrebbe attribuire le fonti delle informazioni utilizzate nella risposta generativa, il che potrebbe rappresentare un\u0027opportunit\u00e0 di visibilit\u00e0 per i contenuti citati.\n\nTuttavia, la descrizione non specifica quali segnali determinano la selezione delle fonti per le sottoquery oltre alla rilevanza rispetto agli oggetti identificati e alle query generate. Non viene dettagliato come il sistema valuti la qualit\u00e0 o l\u0027affidabilit\u00e0 delle fonti utilizzate per rispondere alle sottoquery. La descrizione contempla l\u0027uso di un search system per eseguire le sottoquery (rivendicazione 8), ma non specifica se questo sia il sistema di ricerca web di Google o un sistema diverso.",
+  "wordCount": 1094,
+  "datePublished": "2026-11-13T18:00:09.402060+00:00",
+  "dateModified": "2026-11-13T18:00:09.402060+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260148736a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "System For Generating Response To Multimodal Queries Using Multi-Step Reasoning",
+    "identifier": "US20260148736A1",
+    "url": "https://patents.google.com/patent/US20260148736A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260148736A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260148736A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Risposte multimodali con ragionamento multi-step per query complesse</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">System For Generating Response To Multimodal Queries Using Multi-Step Reasoning</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema che riceve query multimodali (testo e immagini), ne valuta la complessità e, se necessario, attiva un processo di ragionamento multi-step. Un sistema di orchestrazione genera un piano di azioni (analisi dell&#39;immagine, estrazione di oggetti, generazione di sottoquery), esegue i passaggi, valuta se i dati raccolti sono sufficienti e, in caso contrario, ripete il ciclo. I dati intermedi vengono poi forniti a un modello generativo che produce una risposta in linguaggio naturale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Risposte generative a query multimodali, non specificato se Search web</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">28 Maggio 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2024-11-22</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo implementato da un sistema con uno o più processori per rispondere a una query multimodale con un modello linguistico di grandi dimensioni usando un processo di ragionamento multi-step. Il metodo prevede la ricezione di una query multimodale che include contenuto immagine. Il sistema determina che la query supera una soglia di complessità usando un modello di classificazione delle query. In risposta a questa determinazione, il sistema genera una pluralità di passaggi di elaborazione per rispondere alla query, dove i passaggi includono l&#39;esecuzione di almeno una sottoquery basata sulla query multimodale. Il sistema esegue i passaggi per generare dati intermedi, genera un input basato sui dati intermedi, lo elabora con un modello di risposta per generare un output e trasmette l&#39;output per la visualizzazione su un dispositivo utente.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la query multimodale può includere contenuto testuale o vocale. La rivendicazione 3 indica che i passaggi possono essere rappresentati come una lista, e la 4 che ogni passaggio può essere rappresentato come un&#39;istruzione computazionale. La rivendicazione 5 introduce un ciclo iterativo: prima di sintetizzare i dati intermedi, il sistema determina se sono sufficienti per rispondere alla query e, se non lo sono, un modello di orchestrazione genera passaggi aggiuntivi, li esegue per ottenere dati intermedi aggiornati e continua fino a quando i dati sono sufficienti. La rivendicazione 6 elenca i tipi di passaggi: riconoscimento di oggetti, recupero dati, esecuzione di sottoquery e sintesi dei dati. Le rivendicazioni 7-9 dettagliano questi passaggi: il riconoscimento di oggetti fornisce l&#39;immagine a un modello addestrato che restituisce una lista di oggetti rilevati; l&#39;esecuzione di sottoquery genera almeno una sottoquery basata sulla query originale e su almeno un oggetto rilevato, la fornisce a un sistema di ricerca e riceve risultati; la sintesi aggrega i risultati di ricerca in dati combinati e genera una sottoquery usando questi dati. La rivendicazione 10 spiega la classificazione della complessità: la query viene fornita al modello di classificazione che restituisce un punteggio di complessità, confrontato con la soglia. Le rivendicazioni 11-12 specificano che il modello di classificazione può essere un modello machine-learned addestrato per questo scopo o un large vision language model. La rivendicazione 13 indica che l&#39;output può comprendere una risposta in linguaggio naturale. Le rivendicazioni 14-15 menzionano che l&#39;input o l&#39;output del modello possono includere dati di citazione. Le rivendicazioni 16-17 specificano che l&#39;output può essere visualizzato in una pagina di risultati di ricerca, potenzialmente multimodali. Le rivendicazioni 18-20 coprono il sistema e i supporti non transitori che implementano lo stesso metodo.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diversi elementi che potrebbero avere rilevanza per la SEO. Il sistema include un orchestration system con accesso a uno o più large language model (paragrafo introduttivo della descrizione). Questo sistema può determinare se una query multimodale è associata a una query complessa e, in caso affermativo, generare un piano che specifica una serie di passaggi per rispondere. La descrizione fornisce esempi concreti: se un&#39;immagine include una serie di libri e la query chiede una raccomandazione per il libro con il rating più alto, il sistema può determinare un processo in tre fasi: analizzare l&#39;immagine per estrarre oggetti (libri), riscrivere il contenuto testuale della query basandosi sugli oggetti estratti generando sottoquery per ciascun oggetto (ad esempio &#34;qual è il rating di qualità per [nome del libro identificato]?&#34;), e una volta identificati i libri e recuperati i rating, fornire queste informazioni a un modello generativo per preparare una risposta in linguaggio naturale (paragrafo dell&#39;esempio dei libri).</p>
+      <p>La descrizione contempla che il sistema possa includere un code generation system 104 che prende una query multimodale come input e restituisce una serie di passaggi per rispondere, rappresentati come istruzioni eseguibili (codice o pseudocodice) che un code execution module 112 può eseguire (FIG. 1 e relativa descrizione). Un evaluation system 108 può determinare se i passaggi già eseguiti hanno fornito informazioni sufficienti per risolvere la query, usando un modello machine-learned che restituisce un valore di confidenza confrontato con una soglia predeterminata. Se insufficiente, i materiali raccolti possono essere restituiti al planning module 110 per determinare ulteriori passaggi necessari, creando un loop iterativo (descrizione di FIG. 1). Una volta che l&#39;evaluation system determina che le informazioni sono sufficienti, queste possono essere fornite a un summarization system 106 che include un modello machine-learned per generare una risposta in linguaggio naturale (descrizione di FIG. 1).</p>
+      <p>La descrizione contempla che il model output possa essere trasmesso a un dispositivo utente associato all&#39;utente che ha inviato la query multimodale e visualizzato su una pagina web insieme a una pluralità di risultati di ricerca, ad esempio in un elemento di interfaccia sopra gli altri risultati (descrizione di FIG. 2). Il model output può includere informazioni sulla fonte di ciascun elemento particolare incluso, permettendo all&#39;utente di verificare l&#39;accuratezza delle informazioni (descrizione di FIG. 3). La descrizione menziona che il model input o output possono includere citation data (rivendicazioni 14-15 e relativa descrizione).</p>
+      <p>Per la SEO, questo potrebbe significare che Google stia sviluppando capacità per gestire query complesse che richiedono ragionamento multi-step, specialmente quando includono elementi visivi. Se implementato, un sistema del genere potrebbe favorire contenuti che forniscono informazioni strutturate e verificabili su oggetti specifici identificabili visivamente, dato che il sistema contempla l&#39;estrazione di oggetti dalle immagini e la generazione di sottoquery per recuperare informazioni su ciascun oggetto. I siti che forniscono dati strutturati su prodotti, luoghi o entità visivamente identificabili potrebbero essere più facilmente utilizzati come fonti per le sottoquery generate dal sistema. La menzione di citation data suggerisce che il sistema potrebbe attribuire le fonti delle informazioni utilizzate nella risposta generativa, il che potrebbe rappresentare un&#39;opportunità di visibilità per i contenuti citati.</p>
+      <p>Tuttavia, la descrizione non specifica quali segnali determinano la selezione delle fonti per le sottoquery oltre alla rilevanza rispetto agli oggetti identificati e alle query generate. Non viene dettagliato come il sistema valuti la qualità o l&#39;affidabilità delle fonti utilizzate per rispondere alle sottoquery. La descrizione contempla l&#39;uso di un search system per eseguire le sottoquery (rivendicazione 8), ma non specifica se questo sia il sistema di ricerca web di Google o un sistema diverso.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è una domanda (A1) non ancora concessa e non dimostra che il sistema sia in uso in Google Search o in qualsiasi prodotto Google.</li>
+      <li>La descrizione non specifica quali segnali di ranking o criteri di selezione determinano quali fonti vengono utilizzate per rispondere alle sottoquery generate dal sistema di orchestrazione.</li>
+      <li>Non viene chiarito se il sistema si applica alla ricerca web pubblica o ad altri contesti come documenti in cloud, assistenti o altri prodotti Google che gestiscono query multimodali.</li>
+      <li>La descrizione non fornisce dettagli su come il sistema valuti la qualità, l&#39;affidabilità o l&#39;autorevolezza delle fonti utilizzate per generare le risposte, limitandosi a menzionare la generazione di citation data.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Fornire contenuti strutturati e verificabili su entità, prodotti o concetti che possono essere identificati visivamente, facilitando l&#39;uso come fonti per sistemi che potrebbero scomporre query complesse in sottoquery specifiche.</li>
+      <li class="pl-2">Mantenere informazioni chiare e citabili con attribuzioni esplicite, dato che il brevetto contempla l&#39;inclusione di citation data nelle risposte generate.</li>
+      <li class="pl-2">Ottimizzare per la risposta a domande specifiche e fattuali su oggetti o entità, dato che il sistema contempla la generazione di sottoquery mirate basate su oggetti identificati nelle immagini.</li>
+      <li class="pl-2">Considerare che query multimodali complesse potrebbero essere scomposte in componenti più semplici, quindi strutturare i contenuti per rispondere efficacemente sia a query ampie che a domande specifiche su elementi individuali.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">multimodal input query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una query che include almeno due tipi di contenuto, come testo e immagini, video, audio o contenuto interattivo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">threshold complexity value</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una soglia predeterminata che determina se una query è sufficientemente complessa da richiedere un processo di ragionamento multi-step</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">orchestration system</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un sistema che include o ha accesso a un large language model e può determinare se una query è complessa e generare una serie di passaggi per rispondervi</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">planning system</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un sistema che prende una query multimodale come input e genera un piano che specifica una serie di passaggi per rispondere alla query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">intermediate data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Dati generati durante l&#39;esecuzione dei passaggi di elaborazione, che vengono valutati per determinare se sono sufficienti per rispondere alla query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">evaluation system</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Un sistema che determina se le informazioni raccolte durante l&#39;esecuzione dei passaggi sono sufficienti per generare una risposta adeguata alla query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">subquery</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Una query più specifica generata dal sistema basandosi sulla query multimodale originale e sugli oggetti identificati nell&#39;immagine</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">citation data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Informazioni che descrivono la fonte di ciascun elemento di informazione incluso nella risposta del modello, permettendo la verifica</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260148736A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 13 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

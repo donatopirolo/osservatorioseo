@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260147768A1: Estrazione di passaggi rilevanti per query multimodali — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema che riceve query multimodali (testo + immagine) e seleziona passaggi testuali rilevanti da risultati di ricerca per fornirli come contesto a un modello generativo. Un modello di scoring valuta la rilevanza di ciascun passaggio rispetto alla query multimodale, i passag" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260147768a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260147768A1: Estrazione di passaggi rilevanti per query multimodali — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema che riceve query multimodali (testo + immagine) e seleziona passaggi testuali rilevanti da risultati di ricerca per fornirli come contesto a un modello generativo. Un modello di scoring valuta la rilevanza di ciascun passaggio rispetto alla query multimodale, i passag" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260147768a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260147768A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260147768a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260147768A1: Estrazione di passaggi rilevanti per query multimodali",
+  "description": "Il brevetto descrive un sistema che riceve query multimodali (testo + immagine) e seleziona passaggi testuali rilevanti da risultati di ricerca per fornirli come contesto a un modello generativo. Un modello di scoring valuta la rilevanza di ciascun passaggio rispetto alla query multimodale, i passaggi pi\u00f9 rilevanti vengono selezionati e forniti a un modello di generazione di risposte che produce una risposta in linguaggio naturale.",
+  "articleBody": "Il brevetto descrive un sistema che riceve query multimodali (testo + immagine) e seleziona passaggi testuali rilevanti da risultati di ricerca per fornirli come contesto a un modello generativo. Un modello di scoring valuta la rilevanza di ciascun passaggio rispetto alla query multimodale, i passaggi pi\u00f9 rilevanti vengono selezionati e forniti a un modello di generazione di risposte che produce una risposta in linguaggio naturale.\n\nLa rivendicazione indipendente 1 copre un metodo implementato da computer per processare query multimodali. Il sistema riceve una query multimodale che include contenuto immagine. Riceve una pluralit\u00e0 di risultati di ricerca da un motore di ricerca basati sulla query multimodale. Processa la query multimodale e i risultati di ricerca con un \"passage-scoring model\" per generare un punteggio di risultato per ciascun risultato, dove il modello \u00e8 un modello multimodale machine-learned configurato per processare simultaneamente sia il contenuto immagine dalla query sia il contenuto testuale da ciascun risultato. Seleziona un sottoinsieme di risultati basandosi sui punteggi. Genera un input per il modello che comprende la query multimodale e il sottoinsieme selezionato come contesto. Processa questo input con un \"response generation model\" per generare un output che comprende una risposta in linguaggio naturale. Trasmette la risposta per la visualizzazione.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la query multimodale pu\u00f2 includere contenuto testuale o vocale. La rivendicazione 3 descrive che il sistema pu\u00f2 fornire la query a una pluralit\u00e0 di sistemi di ricerca, ricevere risultati preliminari da ciascuno e combinarli. La rivendicazione 4 indica che i risultati sono classificati e il sistema seleziona un numero predeterminato da fornire al passage-scoring model basandosi almeno in parte sul ranking. La rivendicazione 5 specifica che i sistemi di ricerca possono comprendere un image search system, un multimodal search system e un text-based search system.\n\nLe rivendicazioni 6-9 descrivono il funzionamento dell\u0027image search system: genera un embedding dell\u0027immagine dalla query, accede a un database di immagini embedded, genera punteggi di similarit\u00e0 per ciascuna immagine embedded, seleziona risultati basandosi sui punteggi. La rivendicazione 7 descrive il multimodal search system che genera embedding sia per immagine sia per testo. La rivendicazione 8-9 descrivono il text-based search system che genera una rappresentazione testuale dell\u0027immagine tramite un description generation model.\n\nLa rivendicazione 10 specifica che il passage-scoring model pu\u00f2 essere un \"large vision language model\". La rivendicazione 12-13 indicano che l\u0027input e l\u0027output del modello possono includere dati di citazione per ciascun risultato. La rivendicazione 16 \u00e8 particolarmente rilevante: descrive che per ciascun risultato il sistema pu\u00f2 segmentare il risultato in uno o pi\u00f9 passaggi, determinare un punteggio di rilevanza per ciascun passaggio e aggiungere passaggi al sottoinsieme basandosi sul punteggio. La rivendicazione 17 specifica che il numero di risultati nel sottoinsieme \u00e8 determinato almeno in parte basandosi su un limite di dimensione per l\u0027input al response generation model.\n\nLa descrizione contempla un sistema articolato per gestire query che includono sia testo sia immagini. Quando il sistema riceve una query multimodale, la descrizione contempla l\u0027accesso a diversi sottosistemi di ricerca. L\u0027image search system (paragrafo che descrive la rivendicazione 6) genera un embedding dell\u0027immagine e lo confronta con immagini embedded in un database, identificando documenti che contengono immagini simili. Il text-based search system pu\u00f2 utilizzare un machine-learned model per generare una descrizione testuale dell\u0027immagine (rivendicazione 9) e cercare documenti basandosi su questa descrizione e sul testo della query. Un multimodal search system pu\u00f2 processare contemporaneamente entrambi i tipi di contenuto.\n\nLa descrizione contempla che i risultati da questi sistemi vengano combinati e classificati. Il ranking potrebbe basarsi sul grado di corrispondenza dell\u0027immagine e sulla prominenza dell\u0027immagine all\u0027interno del documento (sezione che descrive l\u0027image search system 202 in FIG. 2). Il sistema estrae passaggi dai risultati selezionati. La descrizione contempla diverse modalit\u00e0 di estrazione: passaggi di lunghezza fissa, stepping attraverso il documento, o estrazione basata sulla posizione di immagini rilevanti nel documento (passage extraction system 142 in FIG. 2).\n\nIl passage-scoring model valuta ciascun passaggio considerando il contenuto del passaggio, il grado di corrispondenza con la query multimodale, la prossimit\u00e0 del passaggio a immagini rilevanti nel documento e la qualit\u00e0 della corrispondenza tra query e documento (descrizione del passage scoring model 110). La descrizione contempla che il sistema possa selezionare passaggi che coprono una variet\u00e0 di argomenti diversi, evitando di selezionare multipli passaggi con le stesse informazioni (passage evaluation system 332 in FIG. 3). Il numero di passaggi selezionati potrebbe essere determinato dalla dimensione della finestra di input del response generation model.\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacit\u00e0 di processare query con immagini in modo pi\u00f9 sofisticato. Se implementato, il sistema potrebbe favorire documenti che contengono immagini rilevanti posizionate in modo prominente, con testo descrittivo nelle vicinanze. I passaggi estratti vicino a immagini rilevanti potrebbero ricevere punteggi pi\u00f9 alti, suggerendo che la struttura del contenuto attorno alle immagini potrebbe diventare un fattore. La capacit\u00e0 di combinare risultati da ricerche per immagini e testo potrebbe significare che documenti ottimizzati sia per ricerca testuale sia per ricerca visuale avrebbero maggiori opportunit\u00e0 di essere selezionati come fonti.\n\nTuttavia, la descrizione non specifica soglie, pesi o parametri concreti. Non \u00e8 chiaro quanto peso avrebbe la prossimit\u00e0 del testo alle immagini rispetto ad altri fattori. Il sistema contemplato \u00e8 complesso e computazionalmente costoso, il che potrebbe limitarne l\u0027applicazione a query specifiche piuttosto che a tutte le ricerche.",
+  "wordCount": 885,
+  "datePublished": "2026-11-13T17:59:02.078163+00:00",
+  "dateModified": "2026-11-13T17:59:02.078163+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260147768a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "System For Extracting Relevant Passages As Context For Multimodal Queries",
+    "identifier": "US20260147768A1",
+    "url": "https://patents.google.com/patent/US20260147768A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260147768A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260147768A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Estrazione di passaggi rilevanti per query multimodali</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">System For Extracting Relevant Passages As Context For Multimodal Queries</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema che riceve query multimodali (testo + immagine) e seleziona passaggi testuali rilevanti da risultati di ricerca per fornirli come contesto a un modello generativo. Un modello di scoring valuta la rilevanza di ciascun passaggio rispetto alla query multimodale, i passaggi più rilevanti vengono selezionati e forniti a un modello di generazione di risposte che produce una risposta in linguaggio naturale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Risposte generative a query multimodali in Search</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">28 Maggio 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2024-11-25</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo implementato da computer per processare query multimodali. Il sistema riceve una query multimodale che include contenuto immagine. Riceve una pluralità di risultati di ricerca da un motore di ricerca basati sulla query multimodale. Processa la query multimodale e i risultati di ricerca con un &#34;passage-scoring model&#34; per generare un punteggio di risultato per ciascun risultato, dove il modello è un modello multimodale machine-learned configurato per processare simultaneamente sia il contenuto immagine dalla query sia il contenuto testuale da ciascun risultato. Seleziona un sottoinsieme di risultati basandosi sui punteggi. Genera un input per il modello che comprende la query multimodale e il sottoinsieme selezionato come contesto. Processa questo input con un &#34;response generation model&#34; per generare un output che comprende una risposta in linguaggio naturale. Trasmette la risposta per la visualizzazione.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 2 specifica che la query multimodale può includere contenuto testuale o vocale. La rivendicazione 3 descrive che il sistema può fornire la query a una pluralità di sistemi di ricerca, ricevere risultati preliminari da ciascuno e combinarli. La rivendicazione 4 indica che i risultati sono classificati e il sistema seleziona un numero predeterminato da fornire al passage-scoring model basandosi almeno in parte sul ranking. La rivendicazione 5 specifica che i sistemi di ricerca possono comprendere un image search system, un multimodal search system e un text-based search system.</p>
+      <p>Le rivendicazioni 6-9 descrivono il funzionamento dell&#39;image search system: genera un embedding dell&#39;immagine dalla query, accede a un database di immagini embedded, genera punteggi di similarità per ciascuna immagine embedded, seleziona risultati basandosi sui punteggi. La rivendicazione 7 descrive il multimodal search system che genera embedding sia per immagine sia per testo. La rivendicazione 8-9 descrivono il text-based search system che genera una rappresentazione testuale dell&#39;immagine tramite un description generation model.</p>
+      <p>La rivendicazione 10 specifica che il passage-scoring model può essere un &#34;large vision language model&#34;. La rivendicazione 12-13 indicano che l&#39;input e l&#39;output del modello possono includere dati di citazione per ciascun risultato. La rivendicazione 16 è particolarmente rilevante: descrive che per ciascun risultato il sistema può segmentare il risultato in uno o più passaggi, determinare un punteggio di rilevanza per ciascun passaggio e aggiungere passaggi al sottoinsieme basandosi sul punteggio. La rivendicazione 17 specifica che il numero di risultati nel sottoinsieme è determinato almeno in parte basandosi su un limite di dimensione per l&#39;input al response generation model.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema articolato per gestire query che includono sia testo sia immagini. Quando il sistema riceve una query multimodale, la descrizione contempla l&#39;accesso a diversi sottosistemi di ricerca. L&#39;image search system (paragrafo che descrive la rivendicazione 6) genera un embedding dell&#39;immagine e lo confronta con immagini embedded in un database, identificando documenti che contengono immagini simili. Il text-based search system può utilizzare un machine-learned model per generare una descrizione testuale dell&#39;immagine (rivendicazione 9) e cercare documenti basandosi su questa descrizione e sul testo della query. Un multimodal search system può processare contemporaneamente entrambi i tipi di contenuto.</p>
+      <p>La descrizione contempla che i risultati da questi sistemi vengano combinati e classificati. Il ranking potrebbe basarsi sul grado di corrispondenza dell&#39;immagine e sulla prominenza dell&#39;immagine all&#39;interno del documento (sezione che descrive l&#39;image search system 202 in FIG. 2). Il sistema estrae passaggi dai risultati selezionati. La descrizione contempla diverse modalità di estrazione: passaggi di lunghezza fissa, stepping attraverso il documento, o estrazione basata sulla posizione di immagini rilevanti nel documento (passage extraction system 142 in FIG. 2).</p>
+      <p>Il passage-scoring model valuta ciascun passaggio considerando il contenuto del passaggio, il grado di corrispondenza con la query multimodale, la prossimità del passaggio a immagini rilevanti nel documento e la qualità della corrispondenza tra query e documento (descrizione del passage scoring model 110). La descrizione contempla che il sistema possa selezionare passaggi che coprono una varietà di argomenti diversi, evitando di selezionare multipli passaggi con le stesse informazioni (passage evaluation system 332 in FIG. 3). Il numero di passaggi selezionati potrebbe essere determinato dalla dimensione della finestra di input del response generation model.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google stia sviluppando capacità di processare query con immagini in modo più sofisticato. Se implementato, il sistema potrebbe favorire documenti che contengono immagini rilevanti posizionate in modo prominente, con testo descrittivo nelle vicinanze. I passaggi estratti vicino a immagini rilevanti potrebbero ricevere punteggi più alti, suggerendo che la struttura del contenuto attorno alle immagini potrebbe diventare un fattore. La capacità di combinare risultati da ricerche per immagini e testo potrebbe significare che documenti ottimizzati sia per ricerca testuale sia per ricerca visuale avrebbero maggiori opportunità di essere selezionati come fonti.</p>
+      <p>Tuttavia, la descrizione non specifica soglie, pesi o parametri concreti. Non è chiaro quanto peso avrebbe la prossimità del testo alle immagini rispetto ad altri fattori. Il sistema contemplato è complesso e computazionalmente costoso, il che potrebbe limitarne l&#39;applicazione a query specifiche piuttosto che a tutte le ricerche.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Questo è una domanda di brevetto (A1) depositata nel 2024, non un brevetto concesso. Non dimostra che Google abbia implementato o stia utilizzando questo sistema in produzione.</li>
+      <li>Il brevetto non specifica quali segnali abbiano priorità nel ranking dei passaggi, né fornisce soglie o pesi concreti per i vari fattori di scoring contemplati.</li>
+      <li>Non è chiaro se e come questo sistema si integrerebbe con i sistemi di ranking tradizionali o con altre funzionalità di ricerca esistenti.</li>
+      <li>La descrizione contempla un sistema computazionalmente complesso che richiede multipli modelli machine-learned, il che potrebbe limitarne l&#39;applicazione pratica a sottoinsiemi specifici di query piuttosto che a tutte le ricerche.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che le immagini nei contenuti siano contestualizzate con testo descrittivo pertinente nelle immediate vicinanze, poiché questo facilita l&#39;estrazione di passaggi rilevanti indipendentemente dai sistemi di ranking.</li>
+      <li class="pl-2">Strutturare i documenti in modo che le informazioni chiave siano raggruppate logicamente attorno a elementi visivi pertinenti, migliorando la coerenza semantica tra diversi tipi di contenuto.</li>
+      <li class="pl-2">Ottimizzare i contenuti sia per ricerca testuale sia per ricerca visuale, garantendo che immagini e testo siano complementari e forniscano informazioni coerenti sullo stesso argomento.</li>
+      <li class="pl-2">Evitare ridondanza informativa: se il brevetto contempla la penalizzazione di passaggi con informazioni duplicate, contenuti che coprono diversi aspetti di un argomento potrebbero essere preferiti a contenuti ripetitivi.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">passage-scoring model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello machine-learned multimodale che valuta la rilevanza di un passaggio testuale rispetto a una query multimodale, processando simultaneamente contenuto immagine e testo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">multimodal input query</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Query che include due o più tipi di contenuto, tipicamente testo e immagini, ma potenzialmente anche video, audio o altri media</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">response generation model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello generativo (sequence processing model) che produce risposte in linguaggio naturale basandosi sulla query multimodale e sui passaggi selezionati come contesto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">embedding</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Rappresentazione vettoriale di contenuti (immagini o testo) in uno spazio multidimensionale che permette di calcolare similarità tra elementi di diversi tipi</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">passage extraction</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Processo di segmentazione dei documenti in blocchi di testo di dimensione fissa o variabile, potenzialmente basato sulla posizione di immagini rilevanti nel documento</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/WO2026112557A1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">WO2026112557A1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">System for extracting relevant passages as context for multimodal queries</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Google Patents</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260147768A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 13 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
