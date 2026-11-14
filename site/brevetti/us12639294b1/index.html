@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US12639294B1: Raffinamento delle query usando dati di ricerca sequenziali — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per generare e selezionare raffinamenti di query quando un utente invia due query consecutive nella stessa sessione. Il sistema analizza entrambe le query, identifica raffinamenti candidati che contengono n-grammi simili a entrambe le query, li valuta e può sostituire" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us12639294b1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US12639294B1: Raffinamento delle query usando dati di ricerca sequenziali — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per generare e selezionare raffinamenti di query quando un utente invia due query consecutive nella stessa sessione. Il sistema analizza entrambe le query, identifica raffinamenti candidati che contengono n-grammi simili a entrambe le query, li valuta e può sostituire" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us12639294b1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US12639294B1",
+      "item": "https://www.osservatorioseo.com/brevetti/us12639294b1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US12639294B1: Raffinamento delle query usando dati di ricerca sequenziali",
+  "description": "Il brevetto descrive un sistema per generare e selezionare raffinamenti di query quando un utente invia due query consecutive nella stessa sessione. Il sistema analizza entrambe le query, identifica raffinamenti candidati che contengono n-grammi simili a entrambe le query, li valuta e pu\u00f2 sostituire automaticamente la seconda query con il raffinamento pi\u00f9 probabile, restituendo risultati per quest\u0027ultimo anzich\u00e9 per la query originale.",
+  "articleBody": "Il brevetto descrive un sistema per generare e selezionare raffinamenti di query quando un utente invia due query consecutive nella stessa sessione. Il sistema analizza entrambe le query, identifica raffinamenti candidati che contengono n-grammi simili a entrambe le query, li valuta e pu\u00f2 sostituire automaticamente la seconda query con il raffinamento pi\u00f9 probabile, restituendo risultati per quest\u0027ultimo anzich\u00e9 per la query originale.\n\nLe rivendicazioni indipendenti (claim 1, 8, 14) coprono un sistema, un supporto di memorizzazione e un metodo che ricevono una prima query per una sessione utente generata da un primo input, poi una seconda query diversa dalla prima, successiva senza query intermedie, generata da un secondo input. Il sistema determina due o pi\u00f9 raffinamenti di query basati sulla prima e sulla seconda query, assegna punteggi ai raffinamenti, seleziona il raffinamento con punteggio pi\u00f9 alto e, in risposta alla selezione, fa s\u00ec che un primo risultato di ricerca responsivo al raffinamento selezionato venga fornito al dispositivo utente. Il sistema riceve poi un\u0027indicazione utente che il raffinamento selezionato \u00e8 incorretto, indicazione basata su un terzo input che \u00e8 input verbale dell\u0027utente.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La claim 2 specifica che, in risposta all\u0027indicazione che il raffinamento \u00e8 incorretto, il sistema fa s\u00ec che un risultato alternativo venga fornito al dispositivo. La claim 3 precisa che il risultato alternativo \u00e8 responsivo alla seconda query. La claim 4 indica che lo scoring di ciascun raffinamento usa dati storici (historical data). La claim 5 contempla che il primo input dell\u0027utente sia input verbale. La claim 6 specifica che la selezione del raffinamento con punteggio pi\u00f9 alto avviene in risposta al fatto che il punteggio pi\u00f9 alto soddisfa una soglia (threshold score). La claim 7 definisce che i punteggi associati ai raffinamenti riflettono le rispettive probabilit\u00e0 (likelihoods) che i raffinamenti saranno ricevuti da un motore di ricerca dopo che il motore ha ricevuto la prima query. Le claim 9-13 e 15-20 replicano questi dettagli per le forme di realizzazione come supporto di memorizzazione e metodo.\n\nLa descrizione contempla un flusso operativo dettagliato. Il sistema riceve una prima query Q1 (es. \"Restaurants in San Francisco\") e fornisce risultati SR1. Quando riceve una seconda query Q2 nella stessa sessione (es. \"Italian restaurants\"), un \"refinement generator\" recupera dai query log un primo insieme di raffinamenti Rm per Q1, che include query ricevute dopo Q1 in sessioni precedenti (paragrafo che descrive il tempo t4). Da Rm, il sistema seleziona un secondo insieme Rn dove ogni raffinamento contiene almeno un n-gramma simile a Q1 e almeno un n-gramma simile a Q2 (tempo t5). La descrizione contempla un ulteriore filtraggio a un sottoinsieme Ro dove ogni n-gramma del raffinamento \u00e8 simile a un n-gramma di Q1 o Q2 (tempo t9), escludendo raffinamenti con n-grammi estranei come \"New York\" o \"French\" se non presenti nelle query originali.\n\nIl \"refinement scoring system\" assegna punteggi a ciascun raffinamento. La descrizione contempla che n-grammi simili a Q2 possano essere associati a valori di peso maggiori rispetto a quelli simili solo a Q1, che n-grammi non comuni abbiano peso maggiore, che n-grammi presenti in entrambe le query abbiano peso superiore. Contempla anche l\u0027uso della posizione del dispositivo utente e della cronologia di ricerca dell\u0027utente nello scoring. I punteggi potrebbero riflettere la probabilit\u00e0 che un raffinamento sia ricevuto sequenzialmente dopo Q1 o che sia l\u0027ultima query della sessione (sezione \u00a7 3.1). Il \"refinement selector\" sceglie il raffinamento con punteggio pi\u00f9 alto come terza query, a condizione che il punteggio superi una soglia; altrimenti seleziona Q2 (processo 300, FIG. 3).\n\nLa descrizione contempla pattern di query base con variabili semantiche (es. \"restaurants in $city\") per generalizzare i raffinamenti a query simili anche senza dati storici specifici. Contempla la creazione di raffinamenti non presenti nei log combinando n-grammi di Q1 e Q2. Contempla che il sistema possa selezionare pi\u00f9 raffinamenti se superano la soglia e presentarli insieme, o fornire un\u0027opzione per visualizzare risultati per Q2 se l\u0027utente rifiuta il raffinamento proposto.\n\nPer la SEO, questo potrebbe significare che quando un sito compare nei risultati per sequenze di query frequenti (es. \"ristoranti San Francisco\" seguito da \"italiani\"), la sua visibilit\u00e0 potrebbe dipendere dalla capacit\u00e0 di rispondere a raffinamenti impliciti come \"ristoranti italiani a San Francisco\". Tuttavia, il brevetto descrive un sistema di riscrittura lato motore, non un segnale di ranking: il sistema sostituisce la query dell\u0027utente con un raffinamento e restituisce risultati per quest\u0027ultimo. Non \u00e8 chiaro se e come questo influenzi il ranking dei singoli documenti, n\u00e9 se il sistema sia attivo in produzione o limitato a contesti specifici come ricerca vocale o conversazionale.",
+  "wordCount": 758,
+  "datePublished": "2026-11-14T16:42:21.463082+00:00",
+  "dateModified": "2026-11-14T16:42:21.463082+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us12639294b1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Query refinements using search data",
+    "identifier": "US12639294B1",
+    "url": "https://patents.google.com/patent/US12639294B1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US12639294B1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; BREVETTO CONCESSO · US12639294B1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Raffinamento delle query usando dati di ricerca sequenziali</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Query refinements using search data</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per generare e selezionare raffinamenti di query quando un utente invia due query consecutive nella stessa sessione. Il sistema analizza entrambe le query, identifica raffinamenti candidati che contengono n-grammi simili a entrambe le query, li valuta e può sostituire automaticamente la seconda query con il raffinamento più probabile, restituendo risultati per quest&#39;ultimo anziché per la query originale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Google Search, query consecutive in sessione</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">26 Maggio 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2013-05-31</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Active</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Comprensione e riscrittura delle query</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>Le rivendicazioni indipendenti (claim 1, 8, 14) coprono un sistema, un supporto di memorizzazione e un metodo che ricevono una prima query per una sessione utente generata da un primo input, poi una seconda query diversa dalla prima, successiva senza query intermedie, generata da un secondo input. Il sistema determina due o più raffinamenti di query basati sulla prima e sulla seconda query, assegna punteggi ai raffinamenti, seleziona il raffinamento con punteggio più alto e, in risposta alla selezione, fa sì che un primo risultato di ricerca responsivo al raffinamento selezionato venga fornito al dispositivo utente. Il sistema riceve poi un&#39;indicazione utente che il raffinamento selezionato è incorretto, indicazione basata su un terzo input che è input verbale dell&#39;utente.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La claim 2 specifica che, in risposta all&#39;indicazione che il raffinamento è incorretto, il sistema fa sì che un risultato alternativo venga fornito al dispositivo. La claim 3 precisa che il risultato alternativo è responsivo alla seconda query. La claim 4 indica che lo scoring di ciascun raffinamento usa dati storici (historical data). La claim 5 contempla che il primo input dell&#39;utente sia input verbale. La claim 6 specifica che la selezione del raffinamento con punteggio più alto avviene in risposta al fatto che il punteggio più alto soddisfa una soglia (threshold score). La claim 7 definisce che i punteggi associati ai raffinamenti riflettono le rispettive probabilità (likelihoods) che i raffinamenti saranno ricevuti da un motore di ricerca dopo che il motore ha ricevuto la prima query. Le claim 9-13 e 15-20 replicano questi dettagli per le forme di realizzazione come supporto di memorizzazione e metodo.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un flusso operativo dettagliato. Il sistema riceve una prima query Q1 (es. &#34;Restaurants in San Francisco&#34;) e fornisce risultati SR1. Quando riceve una seconda query Q2 nella stessa sessione (es. &#34;Italian restaurants&#34;), un &#34;refinement generator&#34; recupera dai query log un primo insieme di raffinamenti Rm per Q1, che include query ricevute dopo Q1 in sessioni precedenti (paragrafo che descrive il tempo t4). Da Rm, il sistema seleziona un secondo insieme Rn dove ogni raffinamento contiene almeno un n-gramma simile a Q1 e almeno un n-gramma simile a Q2 (tempo t5). La descrizione contempla un ulteriore filtraggio a un sottoinsieme Ro dove ogni n-gramma del raffinamento è simile a un n-gramma di Q1 o Q2 (tempo t9), escludendo raffinamenti con n-grammi estranei come &#34;New York&#34; o &#34;French&#34; se non presenti nelle query originali.</p>
+      <p>Il &#34;refinement scoring system&#34; assegna punteggi a ciascun raffinamento. La descrizione contempla che n-grammi simili a Q2 possano essere associati a valori di peso maggiori rispetto a quelli simili solo a Q1, che n-grammi non comuni abbiano peso maggiore, che n-grammi presenti in entrambe le query abbiano peso superiore. Contempla anche l&#39;uso della posizione del dispositivo utente e della cronologia di ricerca dell&#39;utente nello scoring. I punteggi potrebbero riflettere la probabilità che un raffinamento sia ricevuto sequenzialmente dopo Q1 o che sia l&#39;ultima query della sessione (sezione § 3.1). Il &#34;refinement selector&#34; sceglie il raffinamento con punteggio più alto come terza query, a condizione che il punteggio superi una soglia; altrimenti seleziona Q2 (processo 300, FIG. 3).</p>
+      <p>La descrizione contempla pattern di query base con variabili semantiche (es. &#34;restaurants in $city&#34;) per generalizzare i raffinamenti a query simili anche senza dati storici specifici. Contempla la creazione di raffinamenti non presenti nei log combinando n-grammi di Q1 e Q2. Contempla che il sistema possa selezionare più raffinamenti se superano la soglia e presentarli insieme, o fornire un&#39;opzione per visualizzare risultati per Q2 se l&#39;utente rifiuta il raffinamento proposto.</p>
+      <p>Per la SEO, questo potrebbe significare che quando un sito compare nei risultati per sequenze di query frequenti (es. &#34;ristoranti San Francisco&#34; seguito da &#34;italiani&#34;), la sua visibilità potrebbe dipendere dalla capacità di rispondere a raffinamenti impliciti come &#34;ristoranti italiani a San Francisco&#34;. Tuttavia, il brevetto descrive un sistema di riscrittura lato motore, non un segnale di ranking: il sistema sostituisce la query dell&#39;utente con un raffinamento e restituisce risultati per quest&#39;ultimo. Non è chiaro se e come questo influenzi il ranking dei singoli documenti, né se il sistema sia attivo in produzione o limitato a contesti specifici come ricerca vocale o conversazionale.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto non dimostra che questo sistema sia attivo in Google Search per tutte le query o per query testuali standard: molti esempi nella descrizione riguardano input verbale e interfacce conversazionali.</li>
+      <li>Non specifica come i punteggi dei raffinamenti influenzino il ranking dei documenti: il sistema seleziona una query diversa e restituisce risultati per quella, ma non descrive segnali di qualità o rilevanza dei singoli risultati.</li>
+      <li>Non dimostra che la presenza di un sito nei log di raffinamento conferisca un vantaggio diretto: i raffinamenti sono estratti da sequenze di query storiche, non da contenuti o segnali on-page.</li>
+      <li>È un brevetto concesso (B1) ma fa parte di una famiglia con continuation (US12141132B1), quindi le rivendicazioni potrebbero sovrapporsi o essere state suddivise in più brevetti correlati.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Ottimizza i contenuti per rispondere a intenti compositi e sequenze di query plausibili nel tuo dominio, non solo per singole parole chiave isolate: gli utenti potrebbero cercare in modo incrementale.</li>
+      <li class="pl-2">Monitora le query di ricerca interna e i pattern di ricerca sequenziale sul tuo sito per identificare lacune informative che gli utenti cercano di colmare con query successive.</li>
+      <li class="pl-2">Assicurati che le pagine chiave rispondano a varianti semantiche e combinazioni di termini (es. località + categoria + attributo) anche se il brevetto non fosse mai applicato, perché gli utenti cercano comunque in questo modo.</li>
+      <li class="pl-2">Non fare affidamento su tattiche che presuppongono la riscrittura automatica delle query da parte di Google: progetta contenuti che soddisfino l&#39;intento anche quando l&#39;utente formula query parziali o ambigue.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query refinement</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modifica o variante di una query di ricerca, spesso derivata da sequenze di query storiche in sessioni precedenti, che il sistema può sostituire alla query originale dell&#39;utente.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">n-gram</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sequenza contigua di uno o più termini in una query, usata per confrontare e identificare similarità tra query e raffinamenti.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">user session</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sequenza di interazioni di ricerca di un utente senza interruzioni significative, identificata tramite cookie o identificatore di account.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">threshold score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio minimo che un raffinamento deve raggiungere per essere selezionato al posto della query originale; se nessun raffinamento supera la soglia, il sistema usa la seconda query.</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">historical data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Dati storici di ricerca (query log e selection log) usati per identificare sequenze di query frequenti e calcolare probabilità che un raffinamento segua una data query.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US12141132B1/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12141132B1</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Query refinements using search data</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US12639294B1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 14 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

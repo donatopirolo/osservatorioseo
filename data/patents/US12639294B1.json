@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US12639294B1",
+    "title": "Query refinements using search data",
+    "abstract": "Methods, systems, and apparatus, including computer programs encoded on a computer storage medium, for determining query refinements using search data. In one aspect, a method includes receiving a first query and a second query each comprising one or more n-grams for a user session, determining a first set of query refinements for the first query, determining a second set of query refinements from the first set of query refinements, each query refinement in the second set of query refinements including at least one n-gram that is similar to an n-gram from the first query and at least on n-gram that is similar to an n-gram from the second query, scoring each query refinement in the second set of query refinements, selecting a third query from a group consisting of the second set of query refinements and the second query, and providing the third query as input to a search operation.",
+    "claims": [
+      "1 . A system comprising: one or more memory devices storing instructions; and one or more processors that are operable to execute the instructions to: receive a first query for a user session, the first query being generated based on first input of a user at a user device; receive a second query for the user session, the second query being different from the first query, the second query being subsequent to the first query in the user session without an intervening query, and the second query being generated based on second input of the user at the user device; determine, based on the first query and the second query, two or more query refinements; select, based on scores associated with the two or more query refinements, a highest scored query refinement from the two or more query refinements; cause, in response to selecting the highest scored query refinement, a first search result, that is responsive to the highest scored query refinement, to be provided at the user device; and receive, responsive to the first search result being provided at the user device, a user indication that the highest scored query refinement is incorrect, the user indication being based on third input that is verbal input of the user at the user device.",
+      "2 . The system according to claim 1 , wherein one or more of the processors are further operable to execute the instructions to: responsive to receiving the user indication that the highest scored query refinement is incorrect: cause an alternate search result to be provided at the user device.",
+      "3 . The system according to claim 2 , wherein the alternate search result is responsive to the second query.",
+      "4 . The system according to claim 1 , wherein in scoring each query refinement one or more of the processors are to score each query refinement using historical data.",
+      "5 . The system according to claim 1 , wherein the first input of the user is verbal input.",
+      "6 . The system according to claim 1 , wherein in selecting, based on scores associated with the two or more query refinements, the highest scored query refinement, one or more of the processors are to select the highest scored query refinement in response to a highest score, of the scores and for the highest scored query refinement, satisfying a threshold score.",
+      "7 . The system according to claim 1 , wherein the scores associated with the two or more query refinements reflect respective likelihoods that the query refinements will be received by a search engine after the search engine receives the first query.",
+      "8 . A non-transitory computer storage medium encoded with instructions that, when executed by one or more computers, cause the one or more computers to: receive a first query for a user session, the first query being generated based on first input of a user at a user device; receive a second query for the user session, the second query being different from the first query, the second query being subsequent to the first query in the user session without an intervening query, and the second query being generated based on second input of the user at the user device; determine, based on the first query and the second query, two or more query refinements; select, based on scores associated with the two or more query refinements, a highest scored query refinement from the two or more query refinements; cause, in response to selecting the highest scored query refinement, a first search result, that is responsive to the highest scored query refinement, to be provided at the user device; and receive, responsive to the first search result being provided at the user device, a user indication that the highest scored query refinement is incorrect, the user indication being based on third input that is verbal input of the user at the user device.",
+      "9 . The non-transitory computer storage medium according to claim 8 , wherein the instructions, when executed by the one or more computers, further cause one or more of the computers to: responsive to receiving the user indication that the highest scored query refinement is incorrect: cause an alternate search result to be provided at the user device.",
+      "10 . The non-transitory computer storage medium according to claim 9 , wherein the alternate search result is responsive to the second query.",
+      "11 . The non-transitory computer storage medium according to claim 8 , wherein in scoring each query refinement one or more of the computers are to score each query refinement using historical data.",
+      "12 . The non-transitory computer storage medium according to claim 8 , wherein the first input of the user is verbal input.",
+      "13 . The non-transitory computer storage medium according to claim 8 , wherein in selecting, based on scores associated with the two or more query refinements, the highest scored query refinement, one or more of the computers are to select the highest scored query refinement in response to a highest score, of the scores and for the highest scored query refinement, satisfying a threshold score.",
+      "14 . A method implemented by one or more processors, the method comprising: receiving a first query for a user session, the first query being generated based on first input of a user at a user device; receiving a second query for the user session, the second query being different from the first query, the second query being subsequent to the first query in the user session without an intervening query, and the second query being generated based on second input of the user at the user device; determining, based on the first query and the second query, two or more query refinements; selecting, based on scores associated with the two or more query refinements, a highest scored query refinement from the two or more query refinements; causing, in response to selecting the highest scored query refinement, a first search result, that is responsive to the highest scored query refinement, to be provided at the user device; and receiving, responsive to the first search result being provided at the user device, a user indication that the highest scored query refinement is incorrect, the user indication being based on third input that is verbal input of the user at the user device.",
+      "15 . The method according to claim 14 , further comprising: responsive to receiving the user indication that the highest scored query refinement is incorrect: causing an alternate search result to be provided at the user device.",
+      "16 . The method according to claim 15 , wherein the alternate search result is responsive to the second query.",
+      "17 . The method according to claim 14 , wherein scoring each query refinement comprises using historical data.",
+      "18 . The method according to claim 14 , wherein the first input of the user is verbal input.",
+      "19 . The method according to claim 14 , wherein selecting, based on scores associated with the two or more query refinements, the highest scored query refinement, comprises selecting the highest scored query refinement in response to a highest score, of the scores and for the highest scored query refinement, satisfying a threshold score.",
+      "20 . The method according to claim 14 , wherein the scores associated with the two or more query refinements reflect respective likelihoods that the query refinements will be received by a search engine after the search engine receives the first query."
+    ],
+    "independent_claims": [
+      "1 . A system comprising: one or more memory devices storing instructions; and one or more processors that are operable to execute the instructions to: receive a first query for a user session, the first query being generated based on first input of a user at a user device; receive a second query for the user session, the second query being different from the first query, the second query being subsequent to the first query in the user session without an intervening query, and the second query being generated based on second input of the user at the user device; determine, based on the first query and the second query, two or more query refinements; select, based on scores associated with the two or more query refinements, a highest scored query refinement from the two or more query refinements; cause, in response to selecting the highest scored query refinement, a first search result, that is responsive to the highest scored query refinement, to be provided at the user device; and receive, responsive to the first search result being provided at the user device, a user indication that the highest scored query refinement is incorrect, the user indication being based on third input that is verbal input of the user at the user device.",
+      "8 . A non-transitory computer storage medium encoded with instructions that, when executed by one or more computers, cause the one or more computers to: receive a first query for a user session, the first query being generated based on first input of a user at a user device; receive a second query for the user session, the second query being different from the first query, the second query being subsequent to the first query in the user session without an intervening query, and the second query being generated based on second input of the user at the user device; determine, based on the first query and the second query, two or more query refinements; select, based on scores associated with the two or more query refinements, a highest scored query refinement from the two or more query refinements; cause, in response to selecting the highest scored query refinement, a first search result, that is responsive to the highest scored query refinement, to be provided at the user device; and receive, responsive to the first search result being provided at the user device, a user indication that the highest scored query refinement is incorrect, the user indication being based on third input that is verbal input of the user at the user device.",
+      "14 . A method implemented by one or more processors, the method comprising: receiving a first query for a user session, the first query being generated based on first input of a user at a user device; receiving a second query for the user session, the second query being different from the first query, the second query being subsequent to the first query in the user session without an intervening query, and the second query being generated based on second input of the user at the user device; determining, based on the first query and the second query, two or more query refinements; selecting, based on scores associated with the two or more query refinements, a highest scored query refinement from the two or more query refinements; causing, in response to selecting the highest scored query refinement, a first search result, that is responsive to the highest scored query refinement, to be provided at the user device; and receiving, responsive to the first search result being provided at the user device, a user indication that the highest scored query refinement is incorrect, the user indication being based on third input that is verbal input of the user at the user device."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Matthias Heiler",
+      "Behshad Behzadi",
+      "Evgeny A. Cherepanov",
+      "Nils Grimsmo",
+      "Aurélien Boffy",
+      "Alessandro Agostini",
+      "Karoly Csalogany",
+      "Fredrik Bergenlid",
+      "Marcin M. Nowak-Przygodzki"
+    ],
+    "priority_date": "2013-05-31",
+    "filing_date": "2024-10-28",
+    "publication_date": "2026-05-26",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/20",
+      "G06F16/23",
+      "G06F16/24",
+      "G06F16/242",
+      "G06F16/2425",
+      "G06F16/243",
+      "G06F16/245",
+      "G06F16/2457",
+      "G06F16/24575",
+      "G06F16/248",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/3331",
+      "G06F16/3332",
+      "G06F16/3338",
+      "G06F16/90",
+      "G06F16/903",
+      "G06F16/9032",
+      "G06F16/90324"
+    ],
+    "family": [
+      {
+        "number": "US12141132B1",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Query refinements using search data"
+      }
+    ],
+    "cited_by_count": 22
+  },
+  "analysis": {
+    "title_it": "Raffinamento delle query usando dati di ricerca sequenziali",
+    "summary": "Il brevetto descrive un sistema per generare e selezionare raffinamenti di query quando un utente invia due query consecutive nella stessa sessione. Il sistema analizza entrambe le query, identifica raffinamenti candidati che contengono n-grammi simili a entrambe le query, li valuta e può sostituire automaticamente la seconda query con il raffinamento più probabile, restituendo risultati per quest'ultimo anziché per la query originale.",
+    "theme": "query_comprensione",
+    "seo_relevance": 3,
+    "scope": "Google Search, query consecutive in sessione",
+    "what_it_claims": "Le rivendicazioni indipendenti (claim 1, 8, 14) coprono un sistema, un supporto di memorizzazione e un metodo che ricevono una prima query per una sessione utente generata da un primo input, poi una seconda query diversa dalla prima, successiva senza query intermedie, generata da un secondo input. Il sistema determina due o più raffinamenti di query basati sulla prima e sulla seconda query, assegna punteggi ai raffinamenti, seleziona il raffinamento con punteggio più alto e, in risposta alla selezione, fa sì che un primo risultato di ricerca responsivo al raffinamento selezionato venga fornito al dispositivo utente. Il sistema riceve poi un'indicazione utente che il raffinamento selezionato è incorretto, indicazione basata su un terzo input che è input verbale dell'utente.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La claim 2 specifica che, in risposta all'indicazione che il raffinamento è incorretto, il sistema fa sì che un risultato alternativo venga fornito al dispositivo. La claim 3 precisa che il risultato alternativo è responsivo alla seconda query. La claim 4 indica che lo scoring di ciascun raffinamento usa dati storici (historical data). La claim 5 contempla che il primo input dell'utente sia input verbale. La claim 6 specifica che la selezione del raffinamento con punteggio più alto avviene in risposta al fatto che il punteggio più alto soddisfa una soglia (threshold score). La claim 7 definisce che i punteggi associati ai raffinamenti riflettono le rispettive probabilità (likelihoods) che i raffinamenti saranno ricevuti da un motore di ricerca dopo che il motore ha ricevuto la prima query. Le claim 9-13 e 15-20 replicano questi dettagli per le forme di realizzazione come supporto di memorizzazione e metodo.",
+    "seo_reading": "La descrizione contempla un flusso operativo dettagliato. Il sistema riceve una prima query Q1 (es. \"Restaurants in San Francisco\") e fornisce risultati SR1. Quando riceve una seconda query Q2 nella stessa sessione (es. \"Italian restaurants\"), un \"refinement generator\" recupera dai query log un primo insieme di raffinamenti Rm per Q1, che include query ricevute dopo Q1 in sessioni precedenti (paragrafo che descrive il tempo t4). Da Rm, il sistema seleziona un secondo insieme Rn dove ogni raffinamento contiene almeno un n-gramma simile a Q1 e almeno un n-gramma simile a Q2 (tempo t5). La descrizione contempla un ulteriore filtraggio a un sottoinsieme Ro dove ogni n-gramma del raffinamento è simile a un n-gramma di Q1 o Q2 (tempo t9), escludendo raffinamenti con n-grammi estranei come \"New York\" o \"French\" se non presenti nelle query originali.\n\nIl \"refinement scoring system\" assegna punteggi a ciascun raffinamento. La descrizione contempla che n-grammi simili a Q2 possano essere associati a valori di peso maggiori rispetto a quelli simili solo a Q1, che n-grammi non comuni abbiano peso maggiore, che n-grammi presenti in entrambe le query abbiano peso superiore. Contempla anche l'uso della posizione del dispositivo utente e della cronologia di ricerca dell'utente nello scoring. I punteggi potrebbero riflettere la probabilità che un raffinamento sia ricevuto sequenzialmente dopo Q1 o che sia l'ultima query della sessione (sezione § 3.1). Il \"refinement selector\" sceglie il raffinamento con punteggio più alto come terza query, a condizione che il punteggio superi una soglia; altrimenti seleziona Q2 (processo 300, FIG. 3).\n\nLa descrizione contempla pattern di query base con variabili semantiche (es. \"restaurants in $city\") per generalizzare i raffinamenti a query simili anche senza dati storici specifici. Contempla la creazione di raffinamenti non presenti nei log combinando n-grammi di Q1 e Q2. Contempla che il sistema possa selezionare più raffinamenti se superano la soglia e presentarli insieme, o fornire un'opzione per visualizzare risultati per Q2 se l'utente rifiuta il raffinamento proposto.\n\nPer la SEO, questo potrebbe significare che quando un sito compare nei risultati per sequenze di query frequenti (es. \"ristoranti San Francisco\" seguito da \"italiani\"), la sua visibilità potrebbe dipendere dalla capacità di rispondere a raffinamenti impliciti come \"ristoranti italiani a San Francisco\". Tuttavia, il brevetto descrive un sistema di riscrittura lato motore, non un segnale di ranking: il sistema sostituisce la query dell'utente con un raffinamento e restituisce risultati per quest'ultimo. Non è chiaro se e come questo influenzi il ranking dei singoli documenti, né se il sistema sia attivo in produzione o limitato a contesti specifici come ricerca vocale o conversazionale.",
+    "limits": [
+      "Il brevetto non dimostra che questo sistema sia attivo in Google Search per tutte le query o per query testuali standard: molti esempi nella descrizione riguardano input verbale e interfacce conversazionali.",
+      "Non specifica come i punteggi dei raffinamenti influenzino il ranking dei documenti: il sistema seleziona una query diversa e restituisce risultati per quella, ma non descrive segnali di qualità o rilevanza dei singoli risultati.",
+      "Non dimostra che la presenza di un sito nei log di raffinamento conferisca un vantaggio diretto: i raffinamenti sono estratti da sequenze di query storiche, non da contenuti o segnali on-page.",
+      "È un brevetto concesso (B1) ma fa parte di una famiglia con continuation (US12141132B1), quindi le rivendicazioni potrebbero sovrapporsi o essere state suddivise in più brevetti correlati."
+    ],
+    "implications": [
+      "Ottimizza i contenuti per rispondere a intenti compositi e sequenze di query plausibili nel tuo dominio, non solo per singole parole chiave isolate: gli utenti potrebbero cercare in modo incrementale.",
+      "Monitora le query di ricerca interna e i pattern di ricerca sequenziale sul tuo sito per identificare lacune informative che gli utenti cercano di colmare con query successive.",
+      "Assicurati che le pagine chiave rispondano a varianti semantiche e combinazioni di termini (es. località + categoria + attributo) anche se il brevetto non fosse mai applicato, perché gli utenti cercano comunque in questo modo.",
+      "Non fare affidamento su tattiche che presuppongono la riscrittura automatica delle query da parte di Google: progetta contenuti che soddisfino l'intento anche quando l'utente formula query parziali o ambigue."
+    ],
+    "key_terms": [
+      {
+        "term": "query refinement",
+        "explanation": "Modifica o variante di una query di ricerca, spesso derivata da sequenze di query storiche in sessioni precedenti, che il sistema può sostituire alla query originale dell'utente."
+      },
+      {
+        "term": "n-gram",
+        "explanation": "Sequenza contigua di uno o più termini in una query, usata per confrontare e identificare similarità tra query e raffinamenti."
+      },
+      {
+        "term": "user session",
+        "explanation": "Sequenza di interazioni di ricerca di un utente senza interruzioni significative, identificata tramite cookie o identificatore di account."
+      },
+      {
+        "term": "threshold score",
+        "explanation": "Punteggio minimo che un raffinamento deve raggiungere per essere selezionato al posto della query originale; se nessun raffinamento supera la soglia, il sistema usa la seconda query."
+      },
+      {
+        "term": "historical data",
+        "explanation": "Dati storici di ricerca (query log e selection log) usati per identificare sequenze di query frequenti e calcolare probabilità che un raffinamento segua una data query."
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-11-14T16:42:21.463082Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07397076000000001
+}
