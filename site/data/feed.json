@@ -1,41 +1,47 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-15T06:00:57.600816Z",
-  "generated_at_local": "2026-11-15T07:00:57.600816+01:00",
+  "generated_at": "2026-11-16T06:01:56.519627Z",
+  "generated_at_local": "2026-11-16T07:01:56.519627+01:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-11-15-0700",
+  "run_id": "2026-11-16-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
-    "items_collected": 2544,
-    "items_after_dedup": 46,
+    "items_collected": 2546,
+    "items_after_dedup": 30,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0023,
-    "summarize_attempted": 3,
+    "ai_cost_eur": 0.003,
+    "summarize_attempted": 4,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-11-15_003",
-    "item_2026-11-15_001",
-    "item_2026-11-15_002"
+    "item_2026-11-16_003",
+    "item_2026-11-16_001",
+    "item_2026-11-16_002",
+    "item_2026-11-16_004"
   ],
   "categories": {
-    "industry_news": [
-      "item_2026-11-15_003",
-      "item_2026-11-15_002"
-    ],
     "ai_overviews_llm_seo": [
-      "item_2026-11-15_001"
+      "item_2026-11-16_003"
+    ],
+    "tools_platforms": [
+      "item_2026-11-16_001"
+    ],
+    "industry_news": [
+      "item_2026-11-16_002"
+    ],
+    "ai_models": [
+      "item_2026-11-16_004"
     ]
   },
   "items": [
     {
-      "id": "item_2026-11-15_001",
-      "title_original": "Meta’s Muse Now Sends Most AI Agent Requests One Security Firm Sees",
-      "title_it": "Meta Muse domina le richieste degli agenti AI, superando OpenAI",
-      "summary_it": "Un recente rapporto di HUMAN Security rivela che gli agenti AI di Meta e OpenAI generano quasi il 90% delle richieste verso siti e app protetti. In particolare, Meta Muse ha rappresentato il 59% di queste richieste a ottobre, superando significativamente ChatGPT Agent. Il volume totale delle richieste degli agenti è aumentato di otto volte rispetto ad agosto, con la maggior parte delle interazioni dirette verso contenuti di prodotto e ricerca.",
-      "url": "https://www.searchenginejournal.com/meta-muse-ai-agent-requests-human-security/597388",
+      "id": "item_2026-11-16_001",
+      "title_original": "YouTube’s Clips Tool Turns Podcast Episodes Into Shorts",
+      "title_it": "Lo strumento Clips di YouTube trasforma gli episodi di podcast in Shorts",
+      "summary_it": "YouTube ha esteso lo strumento Clips in YouTube Studio, permettendo ai creator di convertire segmenti di video lunghi, come episodi di podcast, in Shorts verticali. Questa funzionalità include un link automatico al video originale, facilitando il reindirizzamento degli spettatori. I creator possono selezionare segmenti tramite timestamp o testo della trascrizione, con suggerimenti generati dall'AI per identificare momenti chiave.",
+      "url": "https://www.searchenginejournal.com/youtube-studio-clips-podcast-episodes-shorts/597408",
       "source": {
         "id": "search_engine_journal",
         "name": "Search Engine Journal",
@@ -46,95 +52,131 @@
         "target_url": null,
         "selectors": null,
         "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "youtube_short",
+        "video_marketing",
+        "content_repurposing",
+        "ai_feature"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-15T10:00:48Z",
+      "fetched_at": "2026-11-16T06:02:55.688303Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0cf35d0cf8b61e9b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-16_002",
+      "title_original": "Higher Spend Came With Pricier Clicks For 14 B2B Google Advertisers",
+      "title_it": "Aumento della spesa e del costo per clic per gli inserzionisti B2B su Google Ads",
+      "summary_it": "Un'analisi condotta da Grey Matter su 14 inserzionisti B2B ha rilevato un aumento medio del 21% nel costo per clic (CPC) per le stesse parole chiave non brandizzate su Google Ads, confrontando il periodo aprile-settembre con l'anno precedente. Questo incremento è stato osservato anche dopo aver controllato variabili come la spesa, la posizione dell'annuncio e il Quality Score. Lo studio suggerisce inoltre una correlazione tra l'aumento della spesa in campagna e un ulteriore incremento del CPC.",
+      "url": "https://www.searchenginejournal.com/b2b-google-ads-keywords-cost-more-agency-data/597426",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_ad",
+        "b2b_marketing",
+        "cpc_trend",
+        "paid_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-15T11:30:33Z",
+      "fetched_at": "2026-11-16T06:02:57.476278Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:12d5dc5337f45967",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-16_003",
+      "title_original": "Our new blog for science",
+      "title_it": "OpenAI lancia un nuovo blog dedicato alla scienza",
+      "summary_it": "OpenAI ha inaugurato un blog scientifico per condividere scoperte e metodologie nell'uso dell'IA in ambito accademico e di ricerca. La piattaforma pubblicherà risultati di ricerca, guide pratiche sull'applicazione dei modelli AI e prospettive dalla comunità scientifica. L'iniziativa mira ad accelerare la scoperta scientifica, in linea con la missione di OpenAI di garantire che l'AGI benefici l'umanità.",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
         "enabled": true
       },
       "category": "ai_overviews_llm_seo",
       "tags": [
-        "ai_agent",
-        "meta_muse",
         "openai",
-        "ai_traffic"
+        "scientific_research",
+        "ai_application",
+        "knowledge_sharing"
       ],
       "importance": 3,
-      "published_at": "2026-11-14T08:00:52Z",
-      "fetched_at": "2026-11-15T06:02:19.223450Z",
+      "published_at": "2026-11-15T22:00:00Z",
+      "fetched_at": "2026-11-16T06:02:59.648465Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:3789dcd9b4c0643e",
+      "raw_hash": "sha256:9f701b9ab3d4b8c3",
       "deep_analysis": null,
       "also_in": []
     },
     {
-      "id": "item_2026-11-15_002",
-      "title_original": "United Lets Search Engines Index Its Site, Makes AI Agents Ask First",
-      "title_it": "United Airlines consente l'indicizzazione ai motori di ricerca ma richiede autorizzazione per gli agenti AI",
-      "summary_it": "United Airlines ha aggiornato i suoi termini di servizio, permettendo ai motori di ricerca di indicizzare le pagine pubbliche del sito. Tuttavia, qualsiasi agente AI che effettui ricerche, prenotazioni o acquisti sul sito o sull'app necessita di un'autorizzazione scritta. La compagnia vieta inoltre l'uso dei propri dati per addestrare o sviluppare modelli AI, citando rischi per la sicurezza dei dati dei clienti e potenziali violazioni normative.",
-      "url": "https://www.searchenginejournal.com/united-ai-agents-permission-search-indexing/597418",
+      "id": "item_2026-11-16_004",
+      "title_original": "A step toward defining the Standard Model on a lattice",
+      "title_it": "Un passo verso la definizione del Modello Standard su reticolo",
+      "summary_it": "OpenAI ha pubblicato un preprint che propone una definizione non perturbativa del Modello Standard della fisica delle particelle su un reticolo, con il supporto di GPT-6 Astra. Questo approccio mira a superare i limiti della teoria perturbativa, che non riesce a spiegare fenomeni come la massa del protone. La ricerca rappresenta un avanzamento nella comprensione delle interazioni fondamentali e nella modellazione della fisica teorica.",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://openai.com/blog/rss.xml",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "ai_models",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "ai_models",
       "tags": [
-        "ai_agent",
-        "robots_txt",
-        "data_privacy",
-        "terms_of_service"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-14T10:00:14Z",
-      "fetched_at": "2026-11-15T06:02:20.982297Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:a398e3294189fd82",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-15_003",
-      "title_original": "Core Update, ChatGPT Business Hub & AI Mode’s New Model – SEO Pulse",
-      "title_it": "Aggiornamento Core di Google, Business Hub di ChatGPT e Nuovo Modello di AI Mode",
-      "summary_it": "Google ha avviato il rollout del suo aggiornamento core di novembre 2026, il terzo dell'anno, che si prevede durerà fino a due settimane. Contemporaneamente, OpenAI ha lanciato in beta il Business Hub di ChatGPT, permettendo alle aziende di monitorare menzioni e click generati da ChatGPT verso i loro siti. Inoltre, AI Mode ha modificato il modello predefinito utilizzato.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-core-update-chatgpt-business-hub-ai-modes-new-model/597135",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
-      },
-      "category": "industry_news",
-      "tags": [
-        "core_update",
-        "chatgpt_business_hub",
         "openai",
-        "ai_mode"
+        "gpt_6_astra",
+        "standard_model",
+        "theoretical_physic"
       ],
-      "importance": 4,
-      "published_at": "2026-11-14T13:00:00Z",
-      "fetched_at": "2026-11-15T06:02:22.511951Z",
+      "importance": 2,
+      "published_at": "2026-11-15T22:00:01Z",
+      "fetched_at": "2026-11-16T06:03:01.271940Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:b1b85b1f067e67f7",
+      "raw_hash": "sha256:227fd422ab1ade9b",
       "deep_analysis": null,
       "also_in": []
     }
@@ -142,82 +184,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-11-15T06:00:59.176502Z",
+      "last_checked": "2026-11-16T06:01:57.683511Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-11-15T06:00:59.671052Z",
+      "last_checked": "2026-11-16T06:01:58.898113Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-11-15T06:01:02.015576Z",
+      "last_checked": "2026-11-16T06:01:59.958101Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-11-15T06:01:05.778567Z",
+      "last_checked": "2026-11-16T06:02:02.901216Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-11-15T06:01:27.481118Z",
+      "last_checked": "2026-11-16T06:02:15.811566Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-11-15T06:01:28.178867Z",
+      "last_checked": "2026-11-16T06:02:16.098262Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-11-15T06:01:29.008442Z",
+      "last_checked": "2026-11-16T06:02:17.755496Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-11-15T06:01:30.453961Z",
+      "last_checked": "2026-11-16T06:02:19.902412Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-11-15T06:01:31.485685Z",
+      "last_checked": "2026-11-16T06:02:21.068166Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-11-15T06:01:40.657380Z",
+      "last_checked": "2026-11-16T06:02:27.253475Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-11-15T06:01:41.124842Z",
+      "last_checked": "2026-11-16T06:02:27.731529Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-11-15T06:01:42.315985Z",
+      "last_checked": "2026-11-16T06:02:28.960562Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-11-15T06:01:43.698306Z",
+      "last_checked": "2026-11-16T06:02:30.489002Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-11-15T06:01:45.596021Z",
+      "last_checked": "2026-11-16T06:02:32.258378Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-11-15T06:01:47.163062Z",
+      "last_checked": "2026-11-16T06:02:34.086897Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-11-15T06:01:48.904851Z",
+      "last_checked": "2026-11-16T06:02:35.953829Z",
       "changed": false
     }
   ],
