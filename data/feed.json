@@ -1,119 +1,194 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-16T06:01:56.519627Z",
-  "generated_at_local": "2026-11-16T07:01:56.519627+01:00",
+  "generated_at": "2026-11-17T06:01:33.182868Z",
+  "generated_at_local": "2026-11-17T07:01:33.182868+01:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-11-16-0701",
+  "run_id": "2026-11-17-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
-    "items_collected": 2546,
-    "items_after_dedup": 30,
+    "items_collected": 2556,
+    "items_after_dedup": 34,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.003,
-    "summarize_attempted": 4,
+    "ai_cost_eur": 0.0589,
+    "summarize_attempted": 26,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-11-16_003",
-    "item_2026-11-16_001",
-    "item_2026-11-16_002",
-    "item_2026-11-16_004"
+    "item_2026-11-17_002",
+    "item_2026-11-17_018",
+    "item_2026-11-17_009",
+    "item_2026-11-17_020",
+    "item_2026-11-17_026",
+    "item_2026-11-17_007",
+    "item_2026-11-17_022",
+    "item_2026-11-17_023",
+    "item_2026-11-17_013",
+    "item_2026-11-17_014"
   ],
   "categories": {
-    "ai_overviews_llm_seo": [
-      "item_2026-11-16_003"
-    ],
     "tools_platforms": [
-      "item_2026-11-16_001"
+      "item_2026-11-17_002",
+      "item_2026-11-17_020",
+      "item_2026-11-17_025",
+      "item_2026-11-17_010"
     ],
-    "industry_news": [
-      "item_2026-11-16_002"
+    "google_updates": [
+      "item_2026-11-17_018"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-11-17_009",
+      "item_2026-11-17_008",
+      "item_2026-11-17_011",
+      "item_2026-11-17_019",
+      "item_2026-11-17_015"
     ],
     "ai_models": [
-      "item_2026-11-16_004"
+      "item_2026-11-17_026",
+      "item_2026-11-17_007",
+      "item_2026-11-17_022",
+      "item_2026-11-17_023",
+      "item_2026-11-17_013",
+      "item_2026-11-17_014",
+      "item_2026-11-17_016",
+      "item_2026-11-17_017",
+      "item_2026-11-17_004",
+      "item_2026-11-17_005",
+      "item_2026-11-17_006",
+      "item_2026-11-17_001"
+    ],
+    "industry_news": [
+      "item_2026-11-17_012",
+      "item_2026-11-17_024",
+      "item_2026-11-17_003"
+    ],
+    "technical_seo": [
+      "item_2026-11-17_021"
     ]
   },
   "items": [
     {
-      "id": "item_2026-11-16_001",
-      "title_original": "YouTube’s Clips Tool Turns Podcast Episodes Into Shorts",
-      "title_it": "Lo strumento Clips di YouTube trasforma gli episodi di podcast in Shorts",
-      "summary_it": "YouTube ha esteso lo strumento Clips in YouTube Studio, permettendo ai creator di convertire segmenti di video lunghi, come episodi di podcast, in Shorts verticali. Questa funzionalità include un link automatico al video originale, facilitando il reindirizzamento degli spettatori. I creator possono selezionare segmenti tramite timestamp o testo della trascrizione, con suggerimenti generati dall'AI per identificare momenti chiave.",
-      "url": "https://www.searchenginejournal.com/youtube-studio-clips-podcast-episodes-shorts/597408",
+      "id": "item_2026-11-17_001",
+      "title_original": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+      "title_it": "Hugging Face e OpenRouter collaborano per semplificare l'esecuzione dei modelli open-weight",
+      "summary_it": "Hugging Face e OpenRouter hanno stretto una partnership per facilitare l'esecuzione dei modelli open-weight. La collaborazione prevede che Hugging Face utilizzi il router di OpenRouter per le richieste ai modelli linguistici, selezionando il provider migliore in base a prezzo, velocità e affidabilità. Questo consente agli utenti di accedere ai modelli open-weight tramite un'unica API e il proprio token Hugging Face, mantenendo la compatibilità con le API di OpenAI e Anthropic. La mossa riflette la crescente adozione dei modelli open-weight, che hanno visto un aumento significativo nell'utilizzo su OpenRouter.",
+      "url": "https://huggingface.co/blog/openrouter",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
         "authority": 8,
-        "type": "media",
+        "type": "official",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "hugging_face",
+        "openrouter",
+        "open_weight_model",
+        "llm_inference"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T00:00:00Z",
+      "fetched_at": "2026-11-17T06:03:28.384507Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0de15dd7ee1f836f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_002",
+      "title_original": "New filtering and reporting capabilities in the Search Analytics API",
+      "title_it": "Nuove funzionalità di filtro e reporting nell'API Search Analytics",
+      "summary_it": "Google ha introdotto nuove capacità di filtro e reporting nell'API Search Analytics. Questo aggiornamento consente agli sviluppatori e agli strumenti SEO di accedere a dati più granulari. Le modifiche migliorano l'analisi delle performance di ricerca, offrendo maggiori dettagli sulle query e sui risultati.",
+      "url": "https://developers.google.com/search/blog/2026/11/search-analytics-api-update",
+      "source": {
+        "id": "google_search_central_blog",
+        "name": "Google Search Central Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://developers.google.com/search/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
         "enabled": true
       },
       "category": "tools_platforms",
       "tags": [
-        "youtube_short",
-        "video_marketing",
-        "content_repurposing",
-        "ai_feature"
+        "search_analytics_api",
+        "google_search_console",
+        "data_analysi",
+        "api_update"
       ],
-      "importance": 3,
-      "published_at": "2026-11-15T10:00:48Z",
-      "fetched_at": "2026-11-16T06:02:55.688303Z",
+      "importance": 5,
+      "published_at": "2026-11-16T00:00:00Z",
+      "fetched_at": "2026-11-17T06:03:29.630355Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:0cf35d0cf8b61e9b",
-      "deep_analysis": null,
-      "also_in": []
-    },
-    {
-      "id": "item_2026-11-16_002",
-      "title_original": "Higher Spend Came With Pricier Clicks For 14 B2B Google Advertisers",
-      "title_it": "Aumento della spesa e del costo per clic per gli inserzionisti B2B su Google Ads",
-      "summary_it": "Un'analisi condotta da Grey Matter su 14 inserzionisti B2B ha rilevato un aumento medio del 21% nel costo per clic (CPC) per le stesse parole chiave non brandizzate su Google Ads, confrontando il periodo aprile-settembre con l'anno precedente. Questo incremento è stato osservato anche dopo aver controllato variabili come la spesa, la posizione dell'annuncio e il Quality Score. Lo studio suggerisce inoltre una correlazione tra l'aumento della spesa in campagna e un ulteriore incremento del CPC.",
-      "url": "https://www.searchenginejournal.com/b2b-google-ads-keywords-cost-more-agency-data/597426",
-      "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
-        "type": "media",
-        "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
-        "target_url": null,
-        "selectors": null,
-        "category_hint": "industry_news",
-        "enabled": true
+      "raw_hash": "sha256:e94da81a4b9923dd",
+      "deep_analysis": {
+        "detailed_description": "L'API Search Analytics di Google Search Console riceve un aggiornamento che porta le funzionalità di filtro e reporting già disponibili nell'interfaccia web anche agli sviluppatori e ai tool di terze parti. Dopo un anno di rilasci progressivi nella UI — filtro per query branded, reporting per ricerche web multimodali, filtri multi-paese e multi-device — queste capacità diventano accessibili via API.\n\nL'impatto principale riguarda chi costruisce dashboard personalizzate, strumenti di analisi SEO o sistemi di monitoraggio automatizzati. Fino ad oggi, molte analisi avanzate richiedevano export manuali da GSC o workaround per segmentare i dati. Con i nuovi endpoint, diventa possibile automatizzare completamente l'estrazione di metriche granulari senza passare dall'interfaccia web.\n\nIl filtro per query branded, in particolare, risolve un problema storico: separare programmaticamente il traffico di brand awareness da quello di discovery. Prima era necessario costruire regex complesse o liste di esclusione manuali per approssimare questa distinzione. Ora Google fornisce la classificazione direttamente, riducendo margine di errore e tempo di elaborazione.\n\nIl reporting per ricerche web multimodali aggiunge visibilità su un segmento di traffico in crescita: query che combinano testo, immagini e altri formati. Per e-commerce, editori visuali e siti con forte componente grafica, questo dato diventa cruciale per capire come gli utenti trovano i contenuti attraverso modalità di ricerca ibride.\n\nI filtri multi-paese e multi-device permettono segmentazioni incrociate più sofisticate. Un esempio: isolare le performance mobile per il mercato tedesco vs quello italiano, o confrontare desktop vs mobile per specifiche categorie di prodotto. Operazioni che prima richiedevano export multipli e join manuali in fogli di calcolo o database esterni.\n\nL'aggiornamento non introduce nuovi dati rispetto a quanto già visibile in GSC, ma democratizza l'accesso programmatico. Per agenzie che gestiscono decine di proprietà o in-house SEO con stack analytics complessi, questo significa riduzione drastica del lavoro manuale e possibilità di costruire alerting automatici su segmenti specifici.\n\nLa documentazione API aggiornata include esempi di chiamate per ciascun nuovo filtro, con parametri e limiti di rate chiaramente specificati. Chi ha già integrazioni attive con l'API Search Analytics può estendere le query esistenti senza breaking changes: i nuovi filtri sono opzionali e retrocompatibili.",
+        "implications": [
+          "Gli strumenti SEO di terze parti potranno offrire analisi più granulari senza richiedere export manuali da GSC, riducendo il gap funzionale con l'interfaccia nativa.",
+          "Dashboard personalizzate e sistemi di reporting automatizzati possono ora segmentare traffico branded vs non-branded via API, eliminando la necessità di regex complesse o classificazioni manuali.",
+          "Per chi gestisce siti multi-mercato o con forte componente visual, diventa possibile monitorare automaticamente performance per paese, device e modalità di ricerca multimodale senza aggregazioni manuali.",
+          "L'assenza di nuovi dati rispetto all'interfaccia web significa che l'aggiornamento è puramente infrastrutturale: nessun vantaggio competitivo per chi già estrae e processa i dati manualmente, ma forte risparmio di tempo operativo.",
+          "Agenzie e consulenti che vendono reporting avanzato devono aggiornare i propri tool o rischiano di essere superati da competitor che automatizzano le stesse analisi a costo marginale inferiore."
+        ],
+        "examples": [
+          "Un e-commerce multi-paese può costruire un alert automatico che notifica quando il traffico mobile da query non-branded cala oltre il 10% in Germania rispetto alla settimana precedente, isolando il segnale da fluttuazioni di traffico branded o da altri mercati. Prima richiedeva export settimanali e script custom; ora è una chiamata API con tre filtri combinati.",
+          "Evitare di ricostruire da zero sistemi di classificazione branded/non-branded se già implementati: il filtro Google potrebbe usare logiche diverse (es. varianti di brand, misspelling) e creare discrepanze nei report storici. Meglio testare in parallelo per alcune settimane prima di sostituire completamente la logica esistente.",
+          "Un publisher con forte traffico da Google Discover e ricerche visuali può ora correlare automaticamente cali di impression multimodali con modifiche editoriali (es. cambio formato immagini, aspect ratio), costruendo un dataset per A/B test su elementi visual senza dover segmentare manualmente i dati ogni volta."
+        ],
+        "testing_steps": [
+          "Accedi alla documentazione API Search Analytics aggiornata e identifica i nuovi parametri di filtro disponibili (branded, multimodal, multi-country, multi-device).",
+          "Esegui una chiamata API di test su una proprietà GSC con filtro branded attivo e confronta i risultati con l'interfaccia web GSC per verificare coerenza dei dati.",
+          "Se usi già tool di terze parti (SEMrush, Ahrefs, Sistrix, etc.), verifica se hanno già integrato i nuovi filtri o se è necessario attendere un loro aggiornamento.",
+          "Estrai dati multimodali per le ultime 4 settimane e incrocia con Google Analytics 4 per identificare eventuali pattern di conversione specifici per questo tipo di traffico.",
+          "Costruisci una query API che combina almeno due filtri (es. mobile + Germania + non-branded) e misura il tempo di risposta per valutare se il rate limiting impatta i tuoi volumi di richieste.",
+          "Documenta eventuali discrepanze tra classificazione branded Google e logiche custom esistenti, preparando una strategia di transizione graduale se necessario."
+        ],
+        "faqs": [
+          {
+            "question": "I dati estratti via API con i nuovi filtri sono retroattivi o partono dalla data di rilascio?",
+            "answer": "Google non ha specificato limiti temporali nell'annuncio, ma storicamente i filtri GSC sono retroattivi fino ai 16 mesi di retention standard. Testare con una chiamata API su date passate è l'unico modo per verificare la disponibilità effettiva per la propria proprietà, dato che alcuni filtri (es. multimodal) potrebbero avere dati solo da quando la funzionalità è stata introdotta nell'interfaccia web."
+          },
+          {
+            "question": "Il filtro branded di Google usa la stessa logica per tutti i siti o è personalizzato per proprietà?",
+            "answer": "Google non ha pubblicato la logica di classificazione, ma è ragionevole aspettarsi un sistema ibrido: nome del brand dichiarato in GSC più varianti algoritmiche (misspelling, abbreviazioni). Per brand complessi o multi-brand, testare su un campione di query è essenziale prima di fidarsi ciecamente della classificazione automatica."
+          },
+          {
+            "question": "Questi filtri API cambiano i limiti di rate o le quote giornaliere delle chiamate?",
+            "answer": "L'annuncio non menziona modifiche ai limiti di rate. Le quote API Search Analytics restano quelle standard (600 query al minuto per progetto). Filtri più complessi potrebbero aumentare il tempo di elaborazione lato server, ma non dovrebbero impattare i limiti di chiamata. Monitorare eventuali errori 429 (rate limit exceeded) nelle prime settimane è comunque consigliato."
+          },
+          {
+            "question": "Vale la pena riscrivere dashboard esistenti per integrare subito questi filtri?",
+            "answer": "Dipende dal volume di lavoro manuale attuale. Se già estrai e segmenti dati branded o multi-device con script custom che funzionano, il ROI di una riscrittura immediata è basso. Se invece il processo è manuale o richiede export settimanali, l'automazione via API ripaga l'investimento in poche settimane, soprattutto per agenzie con molte proprietà."
+          }
+        ],
+        "editorial_commentary": "Questo aggiornamento è pura infrastruttura: nessun nuovo dato, solo accesso programmatico a funzionalità già esistenti. Per chi lavora su scala o vende reporting, è un cambio operativo rilevante. Per chi gestisce uno o due siti e usa l'interfaccia GSC manualmente, l'impatto è nullo.\n\nLa vera domanda è quanto fidarsi della classificazione branded automatica di Google. Senza documentazione sulla logica sottostante, chi ha già sistemi custom deve testare in parallelo per settimane prima di sostituire completamente le proprie logiche. Le discrepanze potrebbero rompere serie storiche o KPI consolidati.\n\nSe vendi servizi di analisi SEO, questo è il momento per automatizzare segmentazioni che prima richiedevano ore di lavoro manuale. Chi non si muove ora vedrà competitor offrire gli stessi insight a costo inferiore entro sei mesi. L'API non dà vantaggio competitivo sui dati, ma su velocità e scala di elaborazione.",
+        "premium_model_used": "anthropic/claude-sonnet-4.5",
+        "cost_eur": 0.03808248
       },
-      "category": "industry_news",
-      "tags": [
-        "google_ad",
-        "b2b_marketing",
-        "cpc_trend",
-        "paid_search"
-      ],
-      "importance": 3,
-      "published_at": "2026-11-15T11:30:33Z",
-      "fetched_at": "2026-11-16T06:02:57.476278Z",
-      "is_doc_change": false,
-      "doc_change": null,
-      "language_original": "en",
-      "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:12d5dc5337f45967",
-      "deep_analysis": null,
       "also_in": []
     },
     {
-      "id": "item_2026-11-16_003",
-      "title_original": "Our new blog for science",
-      "title_it": "OpenAI lancia un nuovo blog dedicato alla scienza",
-      "summary_it": "OpenAI ha inaugurato un blog scientifico per condividere scoperte e metodologie nell'uso dell'IA in ambito accademico e di ricerca. La piattaforma pubblicherà risultati di ricerca, guide pratiche sull'applicazione dei modelli AI e prospettive dalla comunità scientifica. L'iniziativa mira ad accelerare la scoperta scientifica, in linea con la missione di OpenAI di garantire che l'AGI benefici l'umanità.",
-      "url": "https://openai.com/index/our-new-blog-for-science",
+      "id": "item_2026-11-17_003",
+      "title_original": "The King’s Trust and OpenAI launch £1m partnership",
+      "title_it": "The King's Trust e OpenAI avviano una partnership da 1 milione di sterline",
+      "summary_it": "OpenAI ha annunciato una partnership da 1 milione di sterline con The King's Trust, un'organizzazione benefica per i giovani. L'iniziativa mira a fornire competenze in intelligenza artificiale a circa 25.000 giovani nel Regno Unito, con un focus su coloro che non studiano, non lavorano o non sono in formazione. Il programma include qualifiche AI riconosciute a livello nazionale per prepararli al mercato del lavoro in evoluzione.",
+      "url": "https://openai.com/index/the-kings-trust-and-openai",
       "source": {
         "id": "openai_blog",
         "name": "OpenAI Blog",
@@ -126,30 +201,66 @@
         "category_hint": "ai_models",
         "enabled": true
       },
-      "category": "ai_overviews_llm_seo",
+      "category": "industry_news",
       "tags": [
         "openai",
-        "scientific_research",
-        "ai_application",
-        "knowledge_sharing"
+        "ai_skill",
+        "youth_employment",
+        "charity_partnership"
       ],
-      "importance": 3,
-      "published_at": "2026-11-15T22:00:00Z",
-      "fetched_at": "2026-11-16T06:02:59.648465Z",
+      "importance": 2,
+      "published_at": "2026-11-16T00:00:00Z",
+      "fetched_at": "2026-11-17T06:03:31.207593Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:9f701b9ab3d4b8c3",
+      "raw_hash": "sha256:557177b10bcade17",
       "deep_analysis": null,
       "also_in": []
     },
     {
-      "id": "item_2026-11-16_004",
-      "title_original": "A step toward defining the Standard Model on a lattice",
-      "title_it": "Un passo verso la definizione del Modello Standard su reticolo",
-      "summary_it": "OpenAI ha pubblicato un preprint che propone una definizione non perturbativa del Modello Standard della fisica delle particelle su un reticolo, con il supporto di GPT-6 Astra. Questo approccio mira a superare i limiti della teoria perturbativa, che non riesce a spiegare fenomeni come la massa del protone. La ricerca rappresenta un avanzamento nella comprensione delle interazioni fondamentali e nella modellazione della fisica teorica.",
-      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "id": "item_2026-11-17_004",
+      "title_original": "At Holiday Extras, dots get to work before anyone asks",
+      "title_it": "Holiday Extras utilizza gli 'dots' di OpenAI per automatizzare i report e migliorare la produttività",
+      "summary_it": "Holiday Extras, un'azienda di tecnologia per i viaggi, sta implementando gli 'dots' di OpenAI, assistenti AI personalizzati, per automatizzare la generazione di report e la gestione delle informazioni. Questi assistenti proattivi, come 'Beast' e 'Brian', recuperano dati, segnalano problemi e organizzano le comunicazioni senza un'esplicita richiesta. L'obiettivo è ridurre il carico di lavoro manuale e permettere ai dipendenti di concentrarsi su attività a maggior valore aggiunto, migliorando l'efficienza operativa.",
+      "url": "https://openai.com/business/customer-stories/holiday-extras-dots",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai_dot",
+        "ai_assistant",
+        "business_automation",
+        "productivity_tool"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T00:00:00Z",
+      "fetched_at": "2026-11-17T06:03:33.148807Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:31a5dfc36e36bf35",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_005",
+      "title_original": "Advancing computer-use agents for healthcare teams",
+      "title_it": "OpenAI presenta agenti AI per l'automazione dei flussi di lavoro sanitari",
+      "summary_it": "OpenAI ha introdotto agenti AI capaci di automatizzare flussi di lavoro complessi nel settore sanitario, come la gestione delle autorizzazioni e la pianificazione delle dimissioni. Questi agenti interagiscono con i sistemi software esistenti, simulando l'uso del computer per trasferire informazioni tra diverse piattaforme. I test hanno mostrato un'elevata sicurezza e utilità clinica, con il 99% delle attività valutate come sicure e il 93% come molto o estremamente utili. Le funzionalità sono disponibili tramite API OpenAI, ChatGPT for Healthcare e ChatGPT for Clinicians, supportando flussi di lavoro conformi a HIPAA.",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
       "source": {
         "id": "openai_blog",
         "name": "OpenAI Blog",
@@ -165,18 +276,774 @@
       "category": "ai_models",
       "tags": [
         "openai",
-        "gpt_6_astra",
-        "standard_model",
-        "theoretical_physic"
+        "ai_agent",
+        "healthcare_automation",
+        "workflow_optimization"
       ],
-      "importance": 2,
-      "published_at": "2026-11-15T22:00:01Z",
-      "fetched_at": "2026-11-16T06:03:01.271940Z",
+      "importance": 3,
+      "published_at": "2026-11-16T06:00:00Z",
+      "fetched_at": "2026-11-17T06:03:34.782321Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:227fd422ab1ade9b",
+      "raw_hash": "sha256:247eb18e34ae96e4",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_006",
+      "title_original": "More ways to move care forward with ChatGPT for Healthcare",
+      "title_it": "Nuove funzionalità di ChatGPT per il settore sanitario",
+      "summary_it": "OpenAI ha introdotto nuove funzionalità per ChatGPT dedicate al settore sanitario. Queste includono agenti per l'uso del computer, risposte cliniche migliorate e nuovi plugin specifici per l'integrazione con software sanitari. L'obiettivo è facilitare l'interazione e l'automazione dei flussi di lavoro all'interno degli ecosistemi sanitari.",
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "healthcare_ai",
+        "ai_application"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T06:00:00Z",
+      "fetched_at": "2026-11-17T06:03:35.962573Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e01e672bc9cde34b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_007",
+      "title_original": "Our first phase of embedded assessments",
+      "title_it": "OpenAI avvia la prima fase di valutazioni indipendenti sui propri modelli",
+      "summary_it": "OpenAI ha siglato accordi con quattro valutatori indipendenti (Apollo Research, METR, Transluce, Goodfire) per la prima fase di 'embedded assessments'. Questi esperti avranno accesso approfondito ai modelli e sistemi interni di OpenAI per valutare l'allineamento e l'efficacia delle misure di sicurezza. L'obiettivo è aumentare la trasparenza e la gestione dei rischi legati all'avanzamento delle capacità dell'IA, contribuendo a standard condivisi nel settore.",
+      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "ai_safety",
+        "independent_assessment",
+        "llm_ethic"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T08:00:00Z",
+      "fetched_at": "2026-11-17T06:03:37.462473Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b93cfe1403077314",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_008",
+      "title_original": "LVMH’s Media Division announces strategic partnership with OpenAI",
+      "title_it": "La divisione media di LVMH annuncia una partnership strategica con OpenAI",
+      "summary_it": "La divisione media del gruppo LVMH ha siglato un accordo strategico con OpenAI per integrare l'intelligenza artificiale nelle proprie pubblicazioni. L'obiettivo è supportare i giornalisti in attività come ricerca e traduzione, permettendo loro di concentrarsi su indagini e analisi. La partnership mira anche a migliorare la personalizzazione dei contenuti e la presenza degli articoli della divisione in ChatGPT, con riassunti e link diretti alle fonti originali.",
+      "url": "https://openai.com/index/lvmh-media-division-partnership",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "openai_partnership",
+        "ai_in_journalism",
+        "content_personalization",
+        "chatgpt_enterprise"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T09:00:00Z",
+      "fetched_at": "2026-11-17T06:03:38.919900Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f805289697bebb94",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_009",
+      "title_original": "AI Search Meta Analysis - Q4 2026",
+      "title_it": "Analisi Meta della Ricerca AI - Q4 2026",
+      "summary_it": "L'articolo presenta un'analisi approfondita delle tendenze e degli sviluppi nella ricerca basata sull'intelligenza artificiale per il quarto trimestre del 2026. Vengono esaminati i cambiamenti nel comportamento degli utenti e l'impatto degli algoritmi AI sui risultati di ricerca. L'analisi offre spunti su come i professionisti SEO possono adattarsi a questo panorama in evoluzione.",
+      "url": "https://www.growth-memo.com/p/ai-search-meta-analysis-q4-2026",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_search",
+        "search_trend",
+        "seo_strategy",
+        "llm_impact"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-16T10:00:32Z",
+      "fetched_at": "2026-11-17T06:03:40.396989Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:3b55be001bc81d4b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_010",
+      "title_original": "8 AI Rank Tracking Tools to Try in 2027 (Cost per Prompt, Key Features)",
+      "title_it": "8 Strumenti di Monitoraggio del Posizionamento AI da Provare nel 2027 (Costo per Prompt, Funzionalità Chiave)",
+      "summary_it": "L'articolo confronta otto strumenti di monitoraggio della visibilità AI, evidenziando come questi analizzino le menzioni del brand e il posizionamento nelle risposte generate da piattaforme come ChatGPT, Gemini e Google AI Overviews. Vengono esaminate le diverse metodologie di tracciamento, i modelli di prezzo e le funzionalità specifiche di ciascun tool. La guida sottolinea l'importanza di monitorare le menzioni del brand oltre al semplice posizionamento per una comprensione completa della visibilità AI.",
+      "url": "https://ahrefs.com/blog/ai-rank-tracking",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "ai_rank_tracking",
+        "ai_visibility",
+        "brand_mention",
+        "seo_tool"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T11:49:51Z",
+      "fetched_at": "2026-11-17T06:03:41.966934Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f7264a193101ab96",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_011",
+      "title_original": "Science at the Frontier: How scientists use ChatGPT",
+      "title_it": "La scienza alla frontiera: come gli scienziati usano ChatGPT",
+      "summary_it": "Uno studio di OpenAI ha analizzato l'uso di ChatGPT da parte di 1.819 scienziati, rivelando che l'AI viene impiegata in tutte le fasi del processo di ricerca, dalla revisione della letteratura all'analisi dei dati e allo sviluppo di idee. I partecipanti hanno stimato che l'uso di ChatGPT ha ridotto i tempi di lavoro di quasi la metà, mantenendo la stessa qualità. Il 98% degli scienziati intervistati prevede che l'AI accelererà significativamente le scoperte nel loro campo. OpenAI ha garantito la privacy dei dati utilizzando classificatori automatici per categorizzare i messaggi senza leggerne il contenuto.",
+      "url": "https://openai.com/index/science-at-the-frontier",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "scientific_research",
+        "ai_adoption"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T12:00:00Z",
+      "fetched_at": "2026-11-17T06:03:43.542149Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7ca0ba4efd8e33a5",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_012",
+      "title_original": "Bing Tests Web Mode Tab To Show Only Web Page Results",
+      "title_it": "Bing testa una modalità web per mostrare solo risultati da pagine web",
+      "summary_it": "Bing sta sperimentando una nuova funzionalità che introduce una scheda 'Web Mode' nei risultati di ricerca. Questa modalità è progettata per filtrare i risultati, mostrando esclusivamente pagine web e escludendo contenuti generati dall'AI o altri formati. L'obiettivo è offrire agli utenti un'opzione per visualizzare unicamente i risultati tradizionali basati su pagine web.",
+      "url": "https://www.seroundtable.com/bing-web-mode-42535.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "bing_search",
+        "search_feature",
+        "web_mode",
+        "serp_change"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T12:11:00Z",
+      "fetched_at": "2026-11-17T06:03:44.821114Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:04238e68f3e782fd",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_013",
+      "title_original": "Google AI Mode Start Temporary Thread",
+      "title_it": "Google introduce thread temporanei nella modalità AI",
+      "summary_it": "Google ha implementato una funzionalità che consente agli utenti di avviare thread temporanei all'interno della modalità AI della ricerca. Questi thread sono progettati per sessioni di conversazione brevi e non persistenti. La novità mira a migliorare l'interazione utente con le funzionalità AI, offrendo un ambiente di prova o di consultazione rapida senza salvare lo storico delle conversazioni.",
+      "url": "https://www.seroundtable.com/google-ai-mode-temporary-thread-42539.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_ai",
+        "search_feature",
+        "user_experience",
+        "ai_interaction"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T12:21:00Z",
+      "fetched_at": "2026-11-17T06:03:46.171513Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b4599eb76a0a8825",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_014",
+      "title_original": "OpenAI ChatGPT Business Agent - First Look",
+      "title_it": "Prime osservazioni sull'agente aziendale di ChatGPT di OpenAI",
+      "summary_it": "OpenAI sta implementando gradualmente la funzionalità di agente aziendale all'interno del ChatGPT Business Hub. Alcuni utenti hanno già avuto accesso, mostrando la possibilità per le aziende di creare agenti AI personalizzati con un badge di verifica. Le prime interazioni rivelano un pulsante \"Start chat\" dedicato e la privacy delle conversazioni utente, sebbene un test iniziale con l'agente di Chewy non abbia fornito risultati diretti per la ricerca di prodotti.",
+      "url": "https://www.seroundtable.com/openai-chatgpt-business-agent-42536.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "business_agent",
+        "ai_feature"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T12:31:00Z",
+      "fetched_at": "2026-11-17T06:03:47.500865Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:b6defe29a8e413d1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_015",
+      "title_original": "What is citation core? A guide to AI search visibility",
+      "title_it": "Cos'è il Citation Core? Una guida alla visibilità nella ricerca AI",
+      "summary_it": "Il concetto di 'Citation Core' si riferisce a un gruppo ristretto di siti web che le piattaforme di intelligenza artificiale tendono a citare ripetutamente. Comprendere e identificare questi siti può essere rilevante per migliorare la visibilità dei contenuti nell'era della ricerca basata sull'AI. La strategia suggerisce di analizzare le fonti privilegiate dagli algoritmi AI per allineare la propria produzione di contenuti.",
+      "url": "https://www.semrush.com/blog/citation-core",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_search",
+        "citation_core",
+        "content_strategy",
+        "semrush"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T12:38:00Z",
+      "fetched_at": "2026-11-17T06:03:49.030508Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:c7544c2dab1fc4c7",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_016",
+      "title_original": "ChatGPT Tests Web Results, See More & Other Search Results Formats",
+      "title_it": "ChatGPT testa risultati web e nuovi formati di ricerca",
+      "summary_it": "ChatGPT sta sperimentando l'integrazione di risultati di ricerca web diretti nelle sue risposte, insieme a formati come 'Vedi altro' per espandere i contenuti. Questi test indicano un'evoluzione verso una funzionalità più simile a un motore di ricerca tradizionale, potenzialmente influenzando il modo in cui gli utenti interagiscono con le informazioni generate dall'AI. L'obiettivo sembra essere quello di fornire risposte più complete e contestualizzate, attingendo direttamente dal web.",
+      "url": "https://www.seroundtable.com/chatgpt-search-result-tests-42537.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt",
+        "search_result",
+        "ai_search",
+        "openai"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T12:41:00Z",
+      "fetched_at": "2026-11-17T06:03:50.757302Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8eef47aa46a1aa6f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_017",
+      "title_original": "Google AI Mode Drops Gemini Label & Rolls Out Gemini 4 Carbon To Pro Subs",
+      "title_it": "Google rimuove l'etichetta Gemini dalla modalità AI e estende Gemini 4 Carbon agli abbonati Pro",
+      "summary_it": "Google ha rimosso l'indicazione del modello Gemini utilizzato nell'interfaccia della modalità AI. Contestualmente, il modello Gemini 4 Carbon, precedentemente disponibile solo per gli abbonati Ultra, è stato esteso anche agli abbonati Pro. Queste modifiche sono state confermate da Rajan Patel, VP Engineering per Search di Google, sebbene sia in valutazione il ripristino di un indicatore per il modello selezionato.",
+      "url": "https://www.seroundtable.com/google-ai-mode-drops-gemini-label-42540.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_ai_mode",
+        "gemini_4_carbon",
+        "ai_subscription",
+        "google_update"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T12:51:00Z",
+      "fetched_at": "2026-11-17T06:03:52.470655Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:4bd5820ce85132fb",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_018",
+      "title_original": "Google November 2026 Core Update Ranking Flux - What We're Seeing",
+      "title_it": "Volatilità del ranking dopo il Google Core Update di Novembre 2026: le prime osservazioni",
+      "summary_it": "Il Google Core Update di Novembre 2026, iniziato il 10 novembre, sta mostrando una volatilità di ranking meno evidente rispetto agli aggiornamenti precedenti, in parte a causa delle difficoltà degli strumenti di tracciamento di terze parti. Nonostante ciò, si registrano segnalazioni di cali di traffico e conversioni, con un aumento del \"rumore\" nella community SEO a partire da sabato 14 novembre. L'aggiornamento dovrebbe concludersi entro due settimane dall'inizio del rollout.",
+      "url": "https://www.seroundtable.com/google-november-2026-core-update-ranking-volatility-42543.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "core_update",
+        "ranking_volatility",
+        "seo_chatter",
+        "tracking_tool"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-16T12:55:00Z",
+      "fetched_at": "2026-11-17T06:03:54.071960Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6fceebe3ab04eec3",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_019",
+      "title_original": "ChatGPT Ads Vs. Google Search Ads: What Early Data Shows",
+      "title_it": "ChatGPT Ads vs. Google Search Ads: i primi dati comparativi",
+      "summary_it": "Un'analisi preliminare confronta le performance di ChatGPT Ads e Google Search Ads, evidenziando che un click da ChatGPT Ads genera circa un terzo del ricavo rispetto a un click da ricerca a pagamento su Google, per il traffico statunitense. Uno studio suggerisce che per ogni dollaro speso su ChatGPT Ads si ottengono 0,52 dollari di ricavo, contro i 3,40 dollari per Google Ads. Nonostante la crescita di ChatGPT Ads, non ci sono indicazioni chiare su quanto budget sia stato sottratto a Google Search Ads.",
+      "url": "https://www.searchenginejournal.com/chatgpt-ads-vs-google-search-ads-early-data/597125",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "chatgpt_ad",
+        "google_search_ad",
+        "paid_search",
+        "ad_performance"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T13:00:58Z",
+      "fetched_at": "2026-11-17T06:03:55.683615Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7f6693fd6ee3b0b1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_020",
+      "title_original": "Google Search Analytics API Adds Branded Queries, Multimodal & Country/Devices Filters",
+      "title_it": "L'API Google Search Analytics introduce filtri per query brandizzate, multimodali e per paese/dispositivo",
+      "summary_it": "L'API Google Search Analytics è stata aggiornata con nuove funzionalità che permettono di filtrare i dati per query brandizzate, ricerche multimodali e combinazioni di paese/dispositivo. Questi nuovi filtri offrono ai professionisti SEO una maggiore granularità nell'analisi delle performance di ricerca. L'introduzione di queste opzioni migliora la capacità di segmentare e comprendere il traffico organico. Ciò consente un'analisi più approfondita delle strategie SEO e delle tendenze di ricerca.",
+      "url": "https://www.seroundtable.com/google-search-analytics-api-addition-42544.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_search_console",
+        "api_update",
+        "data_analysi",
+        "seo_tool"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-16T14:40:00Z",
+      "fetched_at": "2026-11-17T06:03:57.412106Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2bc4ba66b1735713",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_021",
+      "title_original": "When The WordPress Plugin Update Is The Security Risk: Why SEOs Should Pay Attention",
+      "title_it": "Quando l'aggiornamento di un plugin WordPress diventa un rischio per la sicurezza: perché gli specialisti SEO dovrebbero prestare attenzione",
+      "summary_it": "L'articolo evidenzia come gli aggiornamenti dei plugin WordPress, solitamente considerati una pratica di sicurezza, possano talvolta rappresentare un rischio se compromessi. Vengono citati recenti incidenti in cui aggiornamenti malevoli hanno introdotto spam SEO, creato account amministratore non autorizzati o esfiltrato dati. Per i professionisti SEO, ciò significa che problemi apparentemente tecnici potrebbero in realtà derivare da compromissioni della sicurezza, influenzando indicizzazione, reindirizzamenti e contenuti.",
+      "url": "https://www.searchenginejournal.com/when-the-wordpress-plugin-update-is-the-security-risk-why-seos-should-pay-attention/595622",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "wordpress_security",
+        "plugin_vulnerabilitie",
+        "seo_spam",
+        "website_security"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T15:00:34Z",
+      "fetched_at": "2026-11-17T06:03:59.007913Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e0fb9267d1f062f6",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_022",
+      "title_original": "Broadening access to AI for scientists",
+      "title_it": "OpenAI estende l'accesso a ChatGPT per i ricercatori scientifici",
+      "summary_it": "OpenAI sta ampliando il programma \"ChatGPT for Academic Researchers\", offrendo accesso gratuito a ChatGPT Plus a un massimo di 200.000 ricercatori in tutto il mondo. La prossima fase prevede l'assegnazione di 50.000 nuove borse su base \"first-come, first-served\", ciascuna per il beneficiario e fino a due collaboratori. Il programma mira a supportare la ricerca scientifica, con dati che indicano un raddoppio dell'efficienza grazie all'uso dell'AI. I dati condivisi tramite il programma non vengono utilizzati per l'addestramento dei modelli di OpenAI.",
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "ai_research",
+        "academic_access"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T17:00:00Z",
+      "fetched_at": "2026-11-17T06:04:00.654406Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0dc23d28753c88e7",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_023",
+      "title_original": "Strengthening the fight against online child sexual abuse with new tools and support",
+      "title_it": "OpenAI rafforza la lotta contro l'abuso sessuale minorile online con nuovi strumenti e supporto",
+      "summary_it": "OpenAI ha rilasciato un nuovo strumento per rilevare materiale pedopornografico (CSAM), incluse immagini generate da AI, e ha implementato interventi per interrompere comportamenti dannosi. L'azienda offre accesso gratuito a questo classificatore tramite API ad organizzazioni verificate, rendendo il rilevamento CSAM più accessibile. Queste iniziative si inseriscono in un più ampio sforzo di collaborazione con l'industria e le forze dell'ordine per la sicurezza online dei minori.",
+      "url": "https://openai.com/index/strengthening-online-child-safety",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "ai_safety",
+        "csam_detection",
+        "api_access"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T17:00:00Z",
+      "fetched_at": "2026-11-17T06:04:02.086983Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e4e0d5b61931b2a4",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_024",
+      "title_original": "CMS Market Share Trends: Top Content Management Systems (Nov 2026)",
+      "title_it": "Andamento delle quote di mercato dei CMS: i principali sistemi di gestione dei contenuti (Novembre 2026)",
+      "summary_it": "A novembre 2026, WordPress mantiene la leadership nel mercato dei CMS con il 57,9% della quota, sebbene abbia registrato un calo rispetto al picco del 2022. Shopify, Wix e Squarespace continuano la loro crescita, mentre Joomla e Drupal mostrano un declino. Il report evidenzia che la maggior parte dei CMS, ad eccezione di alcuni, ha aumentato la propria quota, suggerendo un trasferimento di utenti da WordPress ad altre piattaforme.",
+      "url": "https://www.searchenginejournal.com/cms-market-share-trends-top-content-management-systems-nov-2026/596729",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "cms_market_share",
+        "wordpress",
+        "shopify",
+        "wix"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T20:00:27Z",
+      "fetched_at": "2026-11-17T06:04:03.564318Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:25452b590622717f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_025",
+      "title_original": "Google Business Profiles Now Lets You Add Facebook Messenger Number",
+      "title_it": "Google Business Profile ora permette di aggiungere il numero di Facebook Messenger",
+      "summary_it": "Google Business Profile ha introdotto la possibilità per le aziende di aggiungere un numero di Facebook Messenger ai loro profili. Questa funzionalità consente ai clienti di contattare direttamente le attività tramite Messenger, migliorando le opzioni di comunicazione. L'aggiornamento mira a integrare ulteriormente i canali di messaggistica nelle schede di Google My Business.",
+      "url": "https://www.seroundtable.com/google-business-profiles-facebook-messenger-42549.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_business_profile",
+        "facebook_messenger",
+        "local_seo",
+        "customer_communication"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-16T21:12:00Z",
+      "fetched_at": "2026-11-17T06:04:04.979331Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:aa21ed5822c0e205",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-17_026",
+      "title_original": "Google’s Ask Maps Starts Finding Appointments & Calling Businesses",
+      "title_it": "Ask Maps di Google inizia a trovare appuntamenti e a chiamare le attività commerciali",
+      "summary_it": "Google ha introdotto nuove funzionalità in Ask Maps, la chat AI di Google Maps, che permettono di trovare appuntamenti disponibili per servizi come bellezza, cura degli animali, auto e riparazioni domestiche. La funzione può cercare online e, in alcuni casi, chiamare direttamente le attività commerciali per conto dell'utente. Questa novità si basa su capacità di chiamata automatizzata già esistenti in Google Business Profile, ma non è specificato se le chiamate di Ask Maps seguano le stesse impostazioni. Il rollout è iniziato negli Stati Uniti su Android e iOS.",
+      "url": "https://www.searchenginejournal.com/google-ask-maps-appointments-business-calls/597678",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_map",
+        "ask_map",
+        "local_seo",
+        "ai_feature"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-17T01:13:51Z",
+      "fetched_at": "2026-11-17T06:04:06.415501Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6282bbb2efb5f9e1",
       "deep_analysis": null,
       "also_in": []
     }
@@ -184,82 +1051,82 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-11-16T06:01:57.683511Z",
+      "last_checked": "2026-11-17T06:01:34.750144Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-11-16T06:01:58.898113Z",
+      "last_checked": "2026-11-17T06:01:35.414225Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-11-16T06:01:59.958101Z",
+      "last_checked": "2026-11-17T06:01:36.805107Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines",
-      "last_checked": "2026-11-16T06:02:02.901216Z",
+      "last_checked": "2026-11-17T06:01:40.627342Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-11-16T06:02:15.811566Z",
+      "last_checked": "2026-11-17T06:02:01.123527Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-11-16T06:02:16.098262Z",
+      "last_checked": "2026-11-17T06:02:01.459427Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-11-16T06:02:17.755496Z",
+      "last_checked": "2026-11-17T06:02:03.336605Z",
       "changed": false
     },
     {
       "page_id": "structured_data_docs",
-      "last_checked": "2026-11-16T06:02:19.902412Z",
+      "last_checked": "2026-11-17T06:02:05.579073Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-11-16T06:02:21.068166Z",
+      "last_checked": "2026-11-17T06:02:07.050098Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-11-16T06:02:27.253475Z",
+      "last_checked": "2026-11-17T06:02:16.093259Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-11-16T06:02:27.731529Z",
+      "last_checked": "2026-11-17T06:02:17.255006Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-11-16T06:02:28.960562Z",
+      "last_checked": "2026-11-17T06:02:18.040451Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-11-16T06:02:30.489002Z",
+      "last_checked": "2026-11-17T06:02:19.882718Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-11-16T06:02:32.258378Z",
+      "last_checked": "2026-11-17T06:02:20.994318Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-11-16T06:02:34.086897Z",
+      "last_checked": "2026-11-17T06:02:22.122892Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-11-16T06:02:35.953829Z",
+      "last_checked": "2026-11-17T06:02:23.950634Z",
       "changed": false
     }
   ],

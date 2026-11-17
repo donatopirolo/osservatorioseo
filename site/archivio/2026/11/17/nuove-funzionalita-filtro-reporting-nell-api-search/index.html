@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>Nuove funzionalità di filtro e reporting nell&#39;API Search Analytics — Osservatorio SEO</title>
+<meta name="description" content="Google ha introdotto nuove capacità di filtro e reporting nell&#39;API Search Analytics. Questo aggiornamento consente agli sviluppatori e agli strumenti SEO…" />
+<link rel="canonical" href="https://www.osservatorioseo.com/archivio/2026/11/17/nuove-funzionalita-filtro-reporting-nell-api-search/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="Nuove funzionalità di filtro e reporting nell&#39;API Search Analytics — Osservatorio SEO" />
+<meta property="og:description" content="Google ha introdotto nuove capacità di filtro e reporting nell&#39;API Search Analytics. Questo aggiornamento consente agli sviluppatori e agli strumenti SEO…" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/archivio/2026/11/17/nuove-funzionalita-filtro-reporting-nell-api-search/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Nuove funzionalit\u00e0 di filtro e reporting nell\u0027API Search Analytics",
+  "description": "Google ha introdotto nuove capacit\u00e0 di filtro e reporting nell\u0027API Search Analytics. Questo aggiornamento consente agli sviluppatori e agli strumenti SEO di accedere a dati pi\u00f9 granulari. Le modifiche migliorano l\u0027analisi delle performance di ricerca, offrendo maggiori dettagli sulle query e sui risultati.",
+  "articleBody": "L\u0027API Search Analytics di Google Search Console riceve un aggiornamento che porta le funzionalit\u00e0 di filtro e reporting gi\u00e0 disponibili nell\u0027interfaccia web anche agli sviluppatori e ai tool di terze parti. Dopo un anno di rilasci progressivi nella UI \u2014 filtro per query branded, reporting per ricerche web multimodali, filtri multi-paese e multi-device \u2014 queste capacit\u00e0 diventano accessibili via API.\n\nL\u0027impatto principale riguarda chi costruisce dashboard personalizzate, strumenti di analisi SEO o sistemi di monitoraggio automatizzati. Fino ad oggi, molte analisi avanzate richiedevano export manuali da GSC o workaround per segmentare i dati. Con i nuovi endpoint, diventa possibile automatizzare completamente l\u0027estrazione di metriche granulari senza passare dall\u0027interfaccia web.\n\nIl filtro per query branded, in particolare, risolve un problema storico: separare programmaticamente il traffico di brand awareness da quello di discovery. Prima era necessario costruire regex complesse o liste di esclusione manuali per approssimare questa distinzione. Ora Google fornisce la classificazione direttamente, riducendo margine di errore e tempo di elaborazione.\n\nIl reporting per ricerche web multimodali aggiunge visibilit\u00e0 su un segmento di traffico in crescita: query che combinano testo, immagini e altri formati. Per e-commerce, editori visuali e siti con forte componente grafica, questo dato diventa cruciale per capire come gli utenti trovano i contenuti attraverso modalit\u00e0 di ricerca ibride.\n\nI filtri multi-paese e multi-device permettono segmentazioni incrociate pi\u00f9 sofisticate. Un esempio: isolare le performance mobile per il mercato tedesco vs quello italiano, o confrontare desktop vs mobile per specifiche categorie di prodotto. Operazioni che prima richiedevano export multipli e join manuali in fogli di calcolo o database esterni.\n\nL\u0027aggiornamento non introduce nuovi dati rispetto a quanto gi\u00e0 visibile in GSC, ma democratizza l\u0027accesso programmatico. Per agenzie che gestiscono decine di propriet\u00e0 o in-house SEO con stack analytics complessi, questo significa riduzione drastica del lavoro manuale e possibilit\u00e0 di costruire alerting automatici su segmenti specifici.\n\nLa documentazione API aggiornata include esempi di chiamate per ciascun nuovo filtro, con parametri e limiti di rate chiaramente specificati. Chi ha gi\u00e0 integrazioni attive con l\u0027API Search Analytics pu\u00f2 estendere le query esistenti senza breaking changes: i nuovi filtri sono opzionali e retrocompatibili.",
+  "wordCount": 349,
+  "datePublished": "2026-11-17T06:01:33.182868+00:00",
+  "dateModified": "2026-11-17T06:01:33.182868+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "jobTitle": "SEO tecnico",
+    "url": "https://donatopirolo.dev/chi-sono/",
+    "sameAs": [
+      "https://donatopirolo.dev/",
+      "https://www.linkedin.com/in/donatopirolo",
+      "https://www.instagram.com/donatopirolo",
+      "https://github.com/donatopirolo"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/archivio/2026/11/17/nuove-funzionalita-filtro-reporting-nell-api-search/"
+  },
+  "articleSection": "Tools \u0026 Platforms",
+  "inLanguage": "it-IT",
+  "isBasedOn": "https://developers.google.com/search/blog/2026/11/search-analytics-api-update",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "article > section.prose p"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Archivio",
+      "item": "https://www.osservatorioseo.com/archivio/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "2026",
+      "item": "https://www.osservatorioseo.com/archivio/2026/"
+    },    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Novembre",
+      "item": "https://www.osservatorioseo.com/archivio/2026/11/"
+    },    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "17 novembre",
+      "item": "https://www.osservatorioseo.com/archivio/2026/11/17/"
+    },    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Nuove funzionalit\u00e0 di filtro e reporting nell\u0027API Search Analytics",
+      "item": "https://www.osservatorioseo.com/archivio/2026/11/17/nuove-funzionalita-filtro-reporting-nell-api-search/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [    {
+      "@type": "Question",
+      "name": "I dati estratti via API con i nuovi filtri sono retroattivi o partono dalla data di rilascio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google non ha specificato limiti temporali nell\u0027annuncio, ma storicamente i filtri GSC sono retroattivi fino ai 16 mesi di retention standard. Testare con una chiamata API su date passate \u00e8 l\u0027unico modo per verificare la disponibilit\u00e0 effettiva per la propria propriet\u00e0, dato che alcuni filtri (es. multimodal) potrebbero avere dati solo da quando la funzionalit\u00e0 \u00e8 stata introdotta nell\u0027interfaccia web."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Il filtro branded di Google usa la stessa logica per tutti i siti o \u00e8 personalizzato per propriet\u00e0?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google non ha pubblicato la logica di classificazione, ma \u00e8 ragionevole aspettarsi un sistema ibrido: nome del brand dichiarato in GSC pi\u00f9 varianti algoritmiche (misspelling, abbreviazioni). Per brand complessi o multi-brand, testare su un campione di query \u00e8 essenziale prima di fidarsi ciecamente della classificazione automatica."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Questi filtri API cambiano i limiti di rate o le quote giornaliere delle chiamate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L\u0027annuncio non menziona modifiche ai limiti di rate. Le quote API Search Analytics restano quelle standard (600 query al minuto per progetto). Filtri pi\u00f9 complessi potrebbero aumentare il tempo di elaborazione lato server, ma non dovrebbero impattare i limiti di chiamata. Monitorare eventuali errori 429 (rate limit exceeded) nelle prime settimane \u00e8 comunque consigliato."
+      }
+    },    {
+      "@type": "Question",
+      "name": "Vale la pena riscrivere dashboard esistenti per integrare subito questi filtri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dipende dal volume di lavoro manuale attuale. Se gi\u00e0 estrai e segmenti dati branded o multi-device con script custom che funzionano, il ROI di una riscrittura immediata \u00e8 basso. Se invece il processo \u00e8 manuale o richiede export settimanali, l\u0027automazione via API ripaga l\u0027investimento in poche settimane, soprattutto per agenzie con molte propriet\u00e0."
+      }
+    }  ]
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+    <a href="/" class="hover:text-primary-container">Home</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/" class="hover:text-primary-container">Archivio</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/" class="hover:text-primary-container">2026</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/11/" class="hover:text-primary-container">Novembre</a>
+    <span class="text-outline-variant">/</span>
+    <a href="/archivio/2026/11/17/" class="hover:text-primary-container">17 novembre</a>
+    <span class="text-outline-variant">/</span>
+    <span class="text-primary-container">Nuove funzionalità di filtro e reporting nell&#39;API Search Analytics</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-8">
+    <p class="text-[10px] text-outline uppercase font-mono mb-2">
+      <a href="/categoria/tools-platforms/" class="text-primary-container hover:underline">Tools &amp; Platforms</a>
+      · <span class="text-[#f5a623]">★★★★★</span>
+      · <time datetime="2026-11-16T00:00:00Z">Lunedì 16 Novembre 2026, 01:00</time>
+    </p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Nuove funzionalità di filtro e reporting nell&#39;API Search Analytics</h1>
+    <p class="text-sm text-outline font-mono uppercase">Fonte: <a class="text-primary-container hover:underline" href="https://developers.google.com/search/blog/2026/11/search-analytics-api-update" target="_blank" rel="noopener">Google Search Central Blog</a></p>  </header>
+
+  <section class="prose prose-invert mb-10">
+    <p class="text-lg leading-relaxed text-on-surface">Google ha introdotto nuove capacità di filtro e reporting nell&#39;API Search Analytics. Questo aggiornamento consente agli sviluppatori e agli strumenti SEO di accedere a dati più granulari. Le modifiche migliorano l&#39;analisi delle performance di ricerca, offrendo maggiori dettagli sulle query e sui risultati.</p>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ANALISI APPROFONDITA</h2>
+    <div class="prose prose-invert max-w-none text-on-surface leading-relaxed space-y-4">
+      <p>L&#39;API Search Analytics di Google Search Console riceve un aggiornamento che porta le funzionalità di filtro e reporting già disponibili nell&#39;interfaccia web anche agli sviluppatori e ai tool di terze parti. Dopo un anno di rilasci progressivi nella UI — filtro per query branded, reporting per ricerche web multimodali, filtri multi-paese e multi-device — queste capacità diventano accessibili via API.</p>
+      <p>L&#39;impatto principale riguarda chi costruisce dashboard personalizzate, strumenti di analisi SEO o sistemi di monitoraggio automatizzati. Fino ad oggi, molte analisi avanzate richiedevano export manuali da GSC o workaround per segmentare i dati. Con i nuovi endpoint, diventa possibile automatizzare completamente l&#39;estrazione di metriche granulari senza passare dall&#39;interfaccia web.</p>
+      <p>Il filtro per query branded, in particolare, risolve un problema storico: separare programmaticamente il traffico di brand awareness da quello di discovery. Prima era necessario costruire regex complesse o liste di esclusione manuali per approssimare questa distinzione. Ora Google fornisce la classificazione direttamente, riducendo margine di errore e tempo di elaborazione.</p>
+      <p>Il reporting per ricerche web multimodali aggiunge visibilità su un segmento di traffico in crescita: query che combinano testo, immagini e altri formati. Per e-commerce, editori visuali e siti con forte componente grafica, questo dato diventa cruciale per capire come gli utenti trovano i contenuti attraverso modalità di ricerca ibride.</p>
+      <p>I filtri multi-paese e multi-device permettono segmentazioni incrociate più sofisticate. Un esempio: isolare le performance mobile per il mercato tedesco vs quello italiano, o confrontare desktop vs mobile per specifiche categorie di prodotto. Operazioni che prima richiedevano export multipli e join manuali in fogli di calcolo o database esterni.</p>
+      <p>L&#39;aggiornamento non introduce nuovi dati rispetto a quanto già visibile in GSC, ma democratizza l&#39;accesso programmatico. Per agenzie che gestiscono decine di proprietà o in-house SEO con stack analytics complessi, questo significa riduzione drastica del lavoro manuale e possibilità di costruire alerting automatici su segmenti specifici.</p>
+      <p>La documentazione API aggiornata include esempi di chiamate per ciascun nuovo filtro, con parametri e limiti di rate chiaramente specificati. Chi ha già integrazioni attive con l&#39;API Search Analytics può estendere le query esistenti senza breaking changes: i nuovi filtri sono opzionali e retrocompatibili.</p>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA CAMBIA PER TE</h2>
+    <ul class="space-y-3">
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Gli strumenti SEO di terze parti potranno offrire analisi più granulari senza richiedere export manuali da GSC, riducendo il gap funzionale con l&#39;interfaccia nativa.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Dashboard personalizzate e sistemi di reporting automatizzati possono ora segmentare traffico branded vs non-branded via API, eliminando la necessità di regex complesse o classificazioni manuali.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Per chi gestisce siti multi-mercato o con forte componente visual, diventa possibile monitorare automaticamente performance per paese, device e modalità di ricerca multimodale senza aggregazioni manuali.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>L&#39;assenza di nuovi dati rispetto all&#39;interfaccia web significa che l&#39;aggiornamento è puramente infrastrutturale: nessun vantaggio competitivo per chi già estrae e processa i dati manualmente, ma forte risparmio di tempo operativo.</span>
+      </li>
+      <li class="flex gap-3 text-on-surface leading-relaxed">
+        <span class="text-primary-container font-mono shrink-0">▸</span>
+        <span>Agenzie e consulenti che vendono reporting avanzato devono aggiornare i propri tool o rischiano di essere superati da competitor che automatizzano le stesse analisi a costo marginale inferiore.</span>
+      </li>
+    </ul>
+  </section>
+
+<section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; ESEMPI CONCRETI</h2>
+    <div class="space-y-4">
+<div class="p-5 border-l-4 bg-[#0e0e0e] border-primary-container">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA FARE</p>
+        <p class="text-on-surface leading-relaxed">Un e-commerce multi-paese può costruire un alert automatico che notifica quando il traffico mobile da query non-branded cala oltre il 10% in Germania rispetto alla settimana precedente, isolando il segnale da fluttuazioni di traffico branded o da altri mercati. Prima richiedeva export settimanali e script custom; ora è una chiamata API con tre filtri combinati.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1b1b1b] border-[#f5a623]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">COSA EVITARE</p>
+        <p class="text-on-surface leading-relaxed">Evitare di ricostruire da zero sistemi di classificazione branded/non-branded se già implementati: il filtro Google potrebbe usare logiche diverse (es. varianti di brand, misspelling) e creare discrepanze nei report storici. Meglio testare in parallelo per alcune settimane prima di sostituire completamente la logica esistente.</p>
+      </div>
+<div class="p-5 border-l-4 bg-[#1f1f1f] border-[#919191]">
+        <p class="text-[10px] text-outline uppercase font-mono tracking-widest mb-2">SCENARIO</p>
+        <p class="text-on-surface leading-relaxed">Un publisher con forte traffico da Google Discover e ricerche visuali può ora correlare automaticamente cali di impression multimodali con modifiche editoriali (es. cambio formato immagini, aspect ratio), costruendo un dataset per A/B test su elementi visual senza dover segmentare manualmente i dati ogni volta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COME TESTARE L'IMPATTO</h2>
+    <ol class="space-y-2 list-decimal list-inside text-on-surface leading-relaxed marker:text-primary-container marker:font-mono">
+      <li class="pl-2">Accedi alla documentazione API Search Analytics aggiornata e identifica i nuovi parametri di filtro disponibili (branded, multimodal, multi-country, multi-device).</li>
+      <li class="pl-2">Esegui una chiamata API di test su una proprietà GSC con filtro branded attivo e confronta i risultati con l&#39;interfaccia web GSC per verificare coerenza dei dati.</li>
+      <li class="pl-2">Se usi già tool di terze parti (SEMrush, Ahrefs, Sistrix, etc.), verifica se hanno già integrato i nuovi filtri o se è necessario attendere un loro aggiornamento.</li>
+      <li class="pl-2">Estrai dati multimodali per le ultime 4 settimane e incrocia con Google Analytics 4 per identificare eventuali pattern di conversione specifici per questo tipo di traffico.</li>
+      <li class="pl-2">Costruisci una query API che combina almeno due filtri (es. mobile + Germania + non-branded) e misura il tempo di risposta per valutare se il rate limiting impatta i tuoi volumi di richieste.</li>
+      <li class="pl-2">Documenta eventuali discrepanze tra classificazione branded Google e logiche custom esistenti, preparando una strategia di transizione graduale se necessario.</li>
+    </ol>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; DOMANDE FREQUENTI</h2>
+    <div class="divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">I dati estratti via API con i nuovi filtri sono retroattivi o partono dalla data di rilascio?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Google non ha specificato limiti temporali nell&#39;annuncio, ma storicamente i filtri GSC sono retroattivi fino ai 16 mesi di retention standard. Testare con una chiamata API su date passate è l&#39;unico modo per verificare la disponibilità effettiva per la propria proprietà, dato che alcuni filtri (es. multimodal) potrebbero avere dati solo da quando la funzionalità è stata introdotta nell&#39;interfaccia web.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Il filtro branded di Google usa la stessa logica per tutti i siti o è personalizzato per proprietà?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Google non ha pubblicato la logica di classificazione, ma è ragionevole aspettarsi un sistema ibrido: nome del brand dichiarato in GSC più varianti algoritmiche (misspelling, abbreviazioni). Per brand complessi o multi-brand, testare su un campione di query è essenziale prima di fidarsi ciecamente della classificazione automatica.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Questi filtri API cambiano i limiti di rate o le quote giornaliere delle chiamate?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">L&#39;annuncio non menziona modifiche ai limiti di rate. Le quote API Search Analytics restano quelle standard (600 query al minuto per progetto). Filtri più complessi potrebbero aumentare il tempo di elaborazione lato server, ma non dovrebbero impattare i limiti di chiamata. Monitorare eventuali errori 429 (rate limit exceeded) nelle prime settimane è comunque consigliato.</p>
+        </div>
+      </details>
+      <details class="group faq-item">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:text-primary-container transition-colors">
+          <h3 class="text-base font-bold text-white group-hover:text-primary-container flex-1">Vale la pena riscrivere dashboard esistenti per integrare subito questi filtri?</h3>
+          <span class="text-primary-container font-mono text-lg shrink-0 select-none faq-marker">+</span>
+        </summary>
+        <div class="pb-5 pr-8">
+          <p class="text-on-surface-variant leading-relaxed">Dipende dal volume di lavoro manuale attuale. Se già estrai e segmenti dati branded o multi-device con script custom che funzionano, il ROI di una riscrittura immediata è basso. Se invece il processo è manuale o richiede export settimanali, l&#39;automazione via API ripaga l&#39;investimento in poche settimane, soprattutto per agenzie con molte proprietà.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="mb-10 p-6 bg-surface-container-low border-l-2 border-primary-container">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; IL PUNTO DELLA REDAZIONE</h2>
+    <p class="text-on-surface leading-relaxed italic">Questo aggiornamento è pura infrastruttura: nessun nuovo dato, solo accesso programmatico a funzionalità già esistenti. Per chi lavora su scala o vende reporting, è un cambio operativo rilevante. Per chi gestisce uno o due siti e usa l&#39;interfaccia GSC manualmente, l&#39;impatto è nullo.
+
+La vera domanda è quanto fidarsi della classificazione branded automatica di Google. Senza documentazione sulla logica sottostante, chi ha già sistemi custom deve testare in parallelo per settimane prima di sostituire completamente le proprie logiche. Le discrepanze potrebbero rompere serie storiche o KPI consolidati.
+
+Se vendi servizi di analisi SEO, questo è il momento per automatizzare segmentazioni che prima richiedevano ore di lavoro manuale. Chi non si muove ora vedrà competitor offrire gli stessi insight a costo inferiore entro sei mesi. L&#39;API non dà vantaggio competitivo sui dati, ma su velocità e scala di elaborazione.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; TAGS</h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#search_analytics_api</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#google_search_console</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#data_analysi</span>
+      <span class="text-xs uppercase tracking-wider px-3 py-1 border border-outline-variant text-outline font-mono">#api_update</span>
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; CORRELATI</h2>
+    <div class="flex flex-col gap-2">
+      <a href="/archivio/2026/11/17/l-api-google-search-analytics-introduce-filtri-query/" class="text-sm text-on-surface-variant hover:text-primary-container transition-colors">→ L&#39;API Google Search Analytics introduce filtri per query brandizzate, multimodali e per paese/dispositivo</a>
+      <a href="/archivio/2026/11/13/13-rilevazioni-dati-ranking-google-search-console/" class="text-sm text-on-surface-variant hover:text-primary-container transition-colors">→ 13 Rilevazioni dai Dati di Ranking di Google Search Console</a>
+      <a href="/archivio/2026/11/05/openai-presenta-images-2-6-generazione-immagini-piu-veloce/" class="text-sm text-on-surface-variant hover:text-primary-container transition-colors">→ OpenAI presenta Images 2.6: generazione di immagini più veloce e GIF animate</a>
+      <a href="/archivio/2026/10/29/ga4-ha-mancato-66-ordini-festivi-rivenditore-verifica-tuoi/" class="text-sm text-on-surface-variant hover:text-primary-container transition-colors">→ GA4 ha mancato il 66% degli ordini festivi di un rivenditore: verifica i tuoi dati prima dell&#39;alta stagione</a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-low border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Questo articolo include un <strong class="text-white">riassunto</strong> della notizia originale e, per gli item critici (5/5), una <strong class="text-white">analisi editoriale</strong> prodotta da Osservatorio SEO.
+      Sintesi assistita da AI, fonte in calce.
+      Per il testo completo e l'attribuzione della notizia, consulta la fonte originale.
+    </p>
+    <a class="inline-block mt-4 text-xs border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container transition-all uppercase tracking-wider" href="https://developers.google.com/search/blog/2026/11/search-analytics-api-update" target="_blank" rel="noopener">LEGGI L'ORIGINALE →</a>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; ALTRI DAL GIORNO</h2>
+    <p class="text-xs text-outline font-mono uppercase">
+      <a href="/archivio/2026/11/17/" class="text-primary-container hover:underline">Vedi tutti gli articoli del Martedì 17 Novembre 2026</a>
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
