@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260244629A1: Recupero di documenti rilevanti tramite token vettoriali contestualizzati — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per identificare documenti rilevanti rispetto a una query utilizzando solo un sottoinsieme recuperato di token vettoriali dei documenti candidati, anziché tutti i token vettoriali del documento. Query e documenti vengono processati da reti neurali encoder per generare " />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260244629a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260244629A1: Recupero di documenti rilevanti tramite token vettoriali contestualizzati — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per identificare documenti rilevanti rispetto a una query utilizzando solo un sottoinsieme recuperato di token vettoriali dei documenti candidati, anziché tutti i token vettoriali del documento. Query e documenti vengono processati da reti neurali encoder per generare " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260244629a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260244629A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260244629a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260244629A1: Recupero di documenti rilevanti tramite token vettoriali contestualizzati",
+  "description": "Il brevetto descrive un metodo per identificare documenti rilevanti rispetto a una query utilizzando solo un sottoinsieme recuperato di token vettoriali dei documenti candidati, anzich\u00e9 tutti i token vettoriali del documento. Query e documenti vengono processati da reti neurali encoder per generare token vettoriali; per ogni token della query si identificano i token documentali pi\u00f9 simili, si selezionano documenti candidati e si calcola un punteggio di rilevanza usando solo i token documentali gi\u00e0 recuperati, con valori imputati per i token mancanti.",
+  "articleBody": "Il brevetto descrive un metodo per identificare documenti rilevanti rispetto a una query utilizzando solo un sottoinsieme recuperato di token vettoriali dei documenti candidati, anzich\u00e9 tutti i token vettoriali del documento. Query e documenti vengono processati da reti neurali encoder per generare token vettoriali; per ogni token della query si identificano i token documentali pi\u00f9 simili, si selezionano documenti candidati e si calcola un punteggio di rilevanza usando solo i token documentali gi\u00e0 recuperati, con valori imputati per i token mancanti.\n\nLa rivendicazione indipendente 21 copre un metodo per identificare in modo efficiente documenti rilevanti rispetto a una query. Il sistema mantiene dati che associano ciascun documento a una pluralit\u00e0 di document token vectors che lo rappresentano. Ricevuta la query, la processa con un query encoder neural network per generare una pluralit\u00e0 di query token vectors. Per ciascun query token vector, identifica un insieme di document token vectors pi\u00f9 simili secondo una misura di similarit\u00e0. Identifica quindi un insieme di candidate documents che include ogni documento rappresentato da uno o pi\u00f9 document token vectors provenienti dagli insiemi identificati per i query token vectors. Per ciascun candidate document, genera un relevance score identificando un retrieved subset di document token vectors del candidato, ovvero quelli inclusi negli insiemi pi\u00f9 simili ai query token vectors, dove il retrieved subset contiene meno di tutti i document token vectors del documento. Determina uno o pi\u00f9 query scores basati su valori di similarit\u00e0 tra il retrieved subset e i corrispondenti query token vectors, combina i query scores per generare il relevance score, seleziona come documenti rilevanti un sottoinsieme dei candidati usando i relevance scores e fornisce in risposta dati che identificano i documenti rilevanti.\n\nLe rivendicazioni dipendenti aggiungono dettagli operativi. La rivendicazione 22 specifica che ogni documento viene processato da un document encoder neural network per generare i document token vectors. La rivendicazione 23 contempla che query encoder e document encoder possano essere la stessa rete neurale. La rivendicazione 24 definisce che determinare i query scores comporta impostare il query score per un dato query token vector al greatest similarity measure value tra quel query token e qualsiasi document token vector nel retrieved subset pi\u00f9 simile. Le rivendicazioni 25-26 coprono il caso in cui un particolare query token vector non abbia un corrispondente document token vector nel retrieved subset: il query score viene impostato a un imputed value, che pu\u00f2 essere il least similarity measure value tra quel query token e qualsiasi document token vector pi\u00f9 simile. La rivendicazione 27 specifica che la misura di similarit\u00e0 pu\u00f2 essere la cosine similarity. La rivendicazione 28 definisce che combinare i query scores comporta sommarli e dividere per il numero di query scores. La rivendicazione 29 copre la selezione dei candidati con i largest relevance scores. La rivendicazione 30 copre il processo di training con training batches contenenti training query e training documents, usando un objective function sui relevance scores. Le rivendicazioni 35-40 replicano il metodo come sistema e come storage media.\n\nLa descrizione contempla che il metodo si applichi a diversi tipi di contenuto elettronico: text documents, text segments, images, videos, web pages, audio data, multi-modal documents (paragrafo che inizia con \u0027Furthermore, the documents 116 can be any appropriate electronic content\u0027). Le query possono essere natural language queries, image queries, multi-modal queries o structured data format (paragrafo che inizia con \u0027Generally, the query 102 represents\u0027). La descrizione fornisce esempi concreti: query con keywords come \u0027gladiators in ancient Rome\u0027 per recuperare articoli archeologici, domande come \u0027How does one train a dog to rollover?\u0027 per guide testuali, richieste di short stories, query audio con comandi vocali o snippet musicali, query immagine di landmark per recuperare foto correlate.\n\nLa descrizione contempla che i document encoder e query encoder neural networks possano avere architetture come BERT, T5 o Gemini (paragrafo \u0027For example, the document encoder neural network can have the architecture\u0027). La similarity measure pu\u00f2 essere cosine similarity, Euclidean distance o dot product (paragrafo \u0027The similarity measure can be any appropriate similarity measure\u0027). La descrizione specifica che il sistema pu\u00f2 usare hardware parallelo (GPUs, TPUs, ASICs) e framework software come MapReduce, librerie SIMD, BLAS/LAPACK o Faiss per ottimizzare le operazioni (paragrafo \u0027In some implementations, the system performs step 208 in parallel\u0027).\n\nPer la SEO, questo potrebbe significare che Google potrebbe valutare la rilevanza di pagine web processando sia query che contenuti delle pagine come sequenze di token vettoriali, confrontando solo sottoinsiemi selezionati di token anzich\u00e9 l\u0027intero contenuto. Il metodo potrebbe applicarsi al recupero di passaggi o snippet: la descrizione cita esplicitamente \u0027retrieving passages given a question\u0027 nel contesto del dataset MS MARCO (FIG. 6). L\u0027uso di imputed values durante inference ma non durante training (paragrafo \u0027Using imputed values for query scores during inference\u0027) suggerisce che documenti con pochi token nel retrieved subset non vengano penalizzati arbitrariamente. La figura 6 mostra performance su task di information retrieval diversificati (fact-checking, question-answering, bio-medical retrieval, news retrieval) con metriche nDCG@10, indicando applicabilit\u00e0 a scenari di ricerca generalisti. Tuttavia, la descrizione non afferma mai esplicitamente che il sistema sia in uso in Google Search: gli esempi restano generici (\u0027a system that receives a query\u0027, \u0027from a user interface on an end-user device\u0027).",
+  "wordCount": 855,
+  "datePublished": "2026-11-17T19:18:14.259495+00:00",
+  "dateModified": "2026-11-17T19:18:14.259495+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260244629a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Contextualized token retriever",
+    "identifier": "US20260244629A1",
+    "url": "https://patents.google.com/patent/US20260244629A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260244629A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260244629A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Recupero di documenti rilevanti tramite token vettoriali contestualizzati</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Contextualized token retriever</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per identificare documenti rilevanti rispetto a una query utilizzando solo un sottoinsieme recuperato di token vettoriali dei documenti candidati, anziché tutti i token vettoriali del documento. Query e documenti vengono processati da reti neurali encoder per generare token vettoriali; per ogni token della query si identificano i token documentali più simili, si selezionano documenti candidati e si calcola un punteggio di rilevanza usando solo i token documentali già recuperati, con valori imputati per i token mancanti.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Recupero di documenti generici, non specificato se Search web</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">20 Agosto 2026</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Passaggi, risposte dirette e snippet</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">21</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 21 copre un metodo per identificare in modo efficiente documenti rilevanti rispetto a una query. Il sistema mantiene dati che associano ciascun documento a una pluralità di document token vectors che lo rappresentano. Ricevuta la query, la processa con un query encoder neural network per generare una pluralità di query token vectors. Per ciascun query token vector, identifica un insieme di document token vectors più simili secondo una misura di similarità. Identifica quindi un insieme di candidate documents che include ogni documento rappresentato da uno o più document token vectors provenienti dagli insiemi identificati per i query token vectors. Per ciascun candidate document, genera un relevance score identificando un retrieved subset di document token vectors del candidato, ovvero quelli inclusi negli insiemi più simili ai query token vectors, dove il retrieved subset contiene meno di tutti i document token vectors del documento. Determina uno o più query scores basati su valori di similarità tra il retrieved subset e i corrispondenti query token vectors, combina i query scores per generare il relevance score, seleziona come documenti rilevanti un sottoinsieme dei candidati usando i relevance scores e fornisce in risposta dati che identificano i documenti rilevanti.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli operativi. La rivendicazione 22 specifica che ogni documento viene processato da un document encoder neural network per generare i document token vectors. La rivendicazione 23 contempla che query encoder e document encoder possano essere la stessa rete neurale. La rivendicazione 24 definisce che determinare i query scores comporta impostare il query score per un dato query token vector al greatest similarity measure value tra quel query token e qualsiasi document token vector nel retrieved subset più simile. Le rivendicazioni 25-26 coprono il caso in cui un particolare query token vector non abbia un corrispondente document token vector nel retrieved subset: il query score viene impostato a un imputed value, che può essere il least similarity measure value tra quel query token e qualsiasi document token vector più simile. La rivendicazione 27 specifica che la misura di similarità può essere la cosine similarity. La rivendicazione 28 definisce che combinare i query scores comporta sommarli e dividere per il numero di query scores. La rivendicazione 29 copre la selezione dei candidati con i largest relevance scores. La rivendicazione 30 copre il processo di training con training batches contenenti training query e training documents, usando un objective function sui relevance scores. Le rivendicazioni 35-40 replicano il metodo come sistema e come storage media.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla che il metodo si applichi a diversi tipi di contenuto elettronico: text documents, text segments, images, videos, web pages, audio data, multi-modal documents (paragrafo che inizia con &#39;Furthermore, the documents 116 can be any appropriate electronic content&#39;). Le query possono essere natural language queries, image queries, multi-modal queries o structured data format (paragrafo che inizia con &#39;Generally, the query 102 represents&#39;). La descrizione fornisce esempi concreti: query con keywords come &#39;gladiators in ancient Rome&#39; per recuperare articoli archeologici, domande come &#39;How does one train a dog to rollover?&#39; per guide testuali, richieste di short stories, query audio con comandi vocali o snippet musicali, query immagine di landmark per recuperare foto correlate.</p>
+      <p>La descrizione contempla che i document encoder e query encoder neural networks possano avere architetture come BERT, T5 o Gemini (paragrafo &#39;For example, the document encoder neural network can have the architecture&#39;). La similarity measure può essere cosine similarity, Euclidean distance o dot product (paragrafo &#39;The similarity measure can be any appropriate similarity measure&#39;). La descrizione specifica che il sistema può usare hardware parallelo (GPUs, TPUs, ASICs) e framework software come MapReduce, librerie SIMD, BLAS/LAPACK o Faiss per ottimizzare le operazioni (paragrafo &#39;In some implementations, the system performs step 208 in parallel&#39;).</p>
+      <p>Per la SEO, questo potrebbe significare che Google potrebbe valutare la rilevanza di pagine web processando sia query che contenuti delle pagine come sequenze di token vettoriali, confrontando solo sottoinsiemi selezionati di token anziché l&#39;intero contenuto. Il metodo potrebbe applicarsi al recupero di passaggi o snippet: la descrizione cita esplicitamente &#39;retrieving passages given a question&#39; nel contesto del dataset MS MARCO (FIG. 6). L&#39;uso di imputed values durante inference ma non durante training (paragrafo &#39;Using imputed values for query scores during inference&#39;) suggerisce che documenti con pochi token nel retrieved subset non vengano penalizzati arbitrariamente. La figura 6 mostra performance su task di information retrieval diversificati (fact-checking, question-answering, bio-medical retrieval, news retrieval) con metriche nDCG@10, indicando applicabilità a scenari di ricerca generalisti. Tuttavia, la descrizione non afferma mai esplicitamente che il sistema sia in uso in Google Search: gli esempi restano generici (&#39;a system that receives a query&#39;, &#39;from a user interface on an end-user device&#39;).</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>È una domanda di brevetto (US20260244629A1) non ancora concessa, parte di una famiglia con continuation US12632457B2: non costituisce prova indipendente di implementazione.</li>
+      <li>La descrizione non specifica se il metodo sia applicato a Google Search web: gli esempi coprono recupero di documenti generici, con menzioni di &#39;web pages&#39; tra i tipi di documento ma senza dichiarare deployment in produzione.</li>
+      <li>Il brevetto descrive un metodo di recupero efficiente ma non dimostra che questo metodo determini il ranking finale dei risultati di ricerca: potrebbe essere uno stadio di pre-selezione seguito da altri sistemi di ranking.</li>
+      <li>La figura 6 mostra performance su dataset di benchmark (MS MARCO, BEIR, LoTTE) ma non fornisce evidenza di metriche di qualità in ambiente di produzione o su query reali di utenti.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Strutturare i contenuti in modo che informazioni rilevanti siano distribuite in passaggi semanticamente densi e auto-contenuti, facilitando il matching token-level anche con sottoinsiemi ridotti di rappresentazioni.</li>
+      <li class="pl-2">Mantenere coerenza semantica tra titoli, sottotitoli e corpo del testo: se il sistema confronta token vettoriali di query e documento, la ripetizione di concetti chiave in posizioni diverse aumenta la probabilità che token documentali rilevanti rientrino nei retrieved subsets.</li>
+      <li class="pl-2">Evitare contenuti eccessivamente frammentati o con informazioni sparse: documenti con pochi token semanticamente rilevanti potrebbero generare relevance scores basati su imputed values, riducendo la competitività rispetto a documenti più densi.</li>
+      <li class="pl-2">Considerare che sistemi di recupero basati su token vettoriali potrebbero favorire contenuti che rispondono direttamente a domande o richieste esplicite, come suggerito dagli esempi di query nella descrizione (domande dirette, keyword specifiche).</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query token vectors</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Rappresentazioni vettoriali (embeddings) dei token che compongono la query, generate da un query encoder neural network</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">document token vectors</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Rappresentazioni vettoriali (embeddings) dei token che compongono un documento, generate da un document encoder neural network</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">retrieved subset</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sottoinsieme dei document token vectors di un documento candidato che sono stati identificati come più simili ai query token vectors, usato per calcolare il relevance score senza recuperare tutti i token del documento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio calcolato per ciascun query token vector rispetto a un documento candidato, basato sulla massima similarità con i document token vectors nel retrieved subset o su un imputed value se nessun token è presente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">imputed value</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Valore assegnato al query score quando nessun document token vector del candidato è presente nel set di token più simili al query token vector, per evitare bias nei relevance scores durante inference</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">relevance score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio di rilevanza complessivo di un documento candidato rispetto alla query, ottenuto combinando (es. mediando) i query scores di tutti i query token vectors</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">similarity measure</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Metrica usata per determinare quanto un document token vector sia simile a un query token vector, ad esempio cosine similarity o Euclidean distance</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; FAMIGLIA BREVETTUALE</h2>
+    <p class="text-sm text-on-surface-variant mb-4">Pubblicazioni collegate per priorità. Una continuation estende la tutela dello stesso trovato: non è una prova indipendente.</p>
+    <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+      <a href="https://patents.google.com/patent/US12632457B2/en" rel="nofollow noopener" target="_blank" class="py-3 flex items-baseline gap-4 group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-sm font-mono text-white shrink-0 w-44">US12632457B2</span>
+        <span class="flex-1 text-sm text-on-surface-variant group-hover:text-primary-container">Contextualized token retriever</span>
+        <span class="text-[10px] font-mono uppercase text-outline shrink-0">Continuation</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260244629A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 17 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
