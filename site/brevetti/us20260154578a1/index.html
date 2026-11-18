@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260154578A1: Rilevamento e correzione in tempo reale delle allucinazioni nei modelli linguistici — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per identificare e correggere automaticamente informazioni potenzialmente false generate da modelli linguistici di grandi dimensioni (LLM). Il sistema estrae frammenti testuali dall&#39;output generativo, li sottopone ad analisi di entailment testuale confrontandoli con d" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260154578a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260154578A1: Rilevamento e correzione in tempo reale delle allucinazioni nei modelli linguistici — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per identificare e correggere automaticamente informazioni potenzialmente false generate da modelli linguistici di grandi dimensioni (LLM). Il sistema estrae frammenti testuali dall&#39;output generativo, li sottopone ad analisi di entailment testuale confrontandoli con d" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260154578a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260154578A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260154578a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260154578A1: Rilevamento e correzione in tempo reale delle allucinazioni nei modelli linguistici",
+  "description": "Il brevetto descrive un sistema per identificare e correggere automaticamente informazioni potenzialmente false generate da modelli linguistici di grandi dimensioni (LLM). Il sistema estrae frammenti testuali dall\u0027output generativo, li sottopone ad analisi di entailment testuale confrontandoli con documenti recuperati tramite query di ricerca, e riscrive in tempo reale le porzioni contraddette prima o dopo la loro visualizzazione.",
+  "articleBody": "Il brevetto descrive un sistema per identificare e correggere automaticamente informazioni potenzialmente false generate da modelli linguistici di grandi dimensioni (LLM). Il sistema estrae frammenti testuali dall\u0027output generativo, li sottopone ad analisi di entailment testuale confrontandoli con documenti recuperati tramite query di ricerca, e riscrive in tempo reale le porzioni contraddette prima o dopo la loro visualizzazione.\n\nLa rivendicazione indipendente 1 copre un metodo che riceve una query associata a un client device, genera output di un modello generativo processando dati indicativi della query, estrae una pluralit\u00e0 di frammenti testuali dall\u0027output generativo, classifica un sottoinsieme di frammenti come adatti all\u0027analisi di entailment testuale (incluso almeno un primo frammento testuale), esegue individualmente l\u0027analisi di entailment su ciascun frammento del sottoinsieme, e determina che almeno una porzione dell\u0027output generativo contenente il primo frammento deve essere riscritta. L\u0027analisi di entailment include per ciascun frammento: formulare una search query basata sul frammento, recuperare almeno un documento responsivo alla query, e processare il frammento e il documento usando modelli di machine learning per generare predizioni sul fatto che il documento corrobori o contraddica il frammento.\n\nLa rivendicazione 2 specifica che per il primo frammento le predizioni soddisfano una soglia indicativa del fatto che il documento contraddice il frammento. La rivendicazione 3 contempla la ricezione dell\u0027output generativo in segmenti e il rendering di ciascun segmento al client device in risposta alla ricezione. Le rivendicazioni 4-9 aggiungono dettagli sul processo di riscrittura: la rivendicazione 4 copre la generazione di output generativo rivisto basato su dati indicativi della query, della porzione di output attualmente renderizzata, e del primo frammento. La rivendicazione 5 specifica che la generazione pu\u00f2 basarsi anche sul documento recuperato. Le rivendicazioni 6-7 distinguono tra scenari in cui la porzione da riscrivere non \u00e8 ancora stata renderizzata (causando il client device a astenersi dal rendering) o \u00e8 gi\u00e0 stata renderizzata (causando la rimozione dal display). Le rivendicazioni 8-9 coprono il rendering di una UI affordance che indica la riscrittura e opzionalmente fornisce indicazione del documento contraddittorio.\n\nLa rivendicazione 10 specifica che i modelli di entailment possono includere un modello di corroborazione e/o un modello di contraddizione. La rivendicazione 12 copre la classificazione dei frammenti come adatti all\u0027analisi usando un modello di regressione addestrato a predire punteggi di idoneit\u00e0. La rivendicazione 13 contempla l\u0027esecuzione parallela dell\u0027analisi su pi\u00f9 frammenti. Le rivendicazioni 15-19 ripetono gli elementi principali in forma di sistema anzich\u00e9 metodo.\n\nLa descrizione contempla un sistema per affrontare le allucinazioni degli LLM attraverso valutazione di entailment in tempo reale. Il documento spiega che gli LLM occasionalmente producono informazioni false che erodono la fiducia degli utenti. Il sistema descritto estrae frammenti testuali significativi dall\u0027output generativo (paragrafo che descrive fragment extraction engine 130), come statements, facts, clauses. Non tutti i frammenti sono adatti alla verifica: ad esempio \"Hello!\" non contiene materiale fattuale verificabile, mentre \"Mars has two moons\" s\u00ec.\n\nLa descrizione contempla l\u0027uso di un regression machine learning model per classificare i frammenti come adatti all\u0027analisi di entailment, predendo entailment suitability scores. I modelli di entailment possono includere sia un corroboration machine learning model che genera output indicativo di corroborazione, sia un contradiction machine learning model per la contraddizione (paragrafo relativo a entailment evaluation engine 134). La descrizione menziona il calcolo di un incorrectness score come media ponderata tra maximum contradiction score e maximum corroboration score, con formula specifica e soglie (0.75, 0.9) per determinare se un frammento \u00e8 contraddetto, debolmente contraddetto, corroborato o debolmente corroborato (FIG. 4).\n\nL\u0027esempio concreto fornito riguarda una query su Big Ben: l\u0027output generativo iniziale afferma \"The clock tower is called Big Ben\", ma i documenti recuperati indicano che si chiama \"Elizabeth Tower\". Il sistema identifica la contraddizione e genera output rivisto che corregge l\u0027errore spiegando che Elizabeth Tower \u00e8 il nome ufficiale mentre Big Ben \u00e8 il nome della campana (FIG. 3A-3B). La descrizione contempla che il processo possa avvenire in parallelo su pi\u00f9 frammenti per ridurre la latenza.\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia sviluppando meccanismi per validare le risposte generative confrontandole con documenti indicizzati. I siti che forniscono informazioni fattuali verificabili potrebbero essere utilizzati come fonti di corroborazione o contraddizione. Il sistema contempla l\u0027uso di search queries formulate dai frammenti testuali e il recupero di documenti responsivi, suggerendo che la qualit\u00e0 e credibilit\u00e0 delle fonti potrebbero influenzare il processo. La descrizione menziona responsive content quality metrics sia query-dependent che query-independent, e che contenuti di qualit\u00e0 insufficiente potrebbero non essere considerati per corroborare o contraddire. Tuttavia, il brevetto non specifica se questo sistema sia destinato a Google Search o ad altri prodotti Google con capacit\u00e0 generative.",
+  "wordCount": 759,
+  "datePublished": "2026-11-18T18:58:56.185799+00:00",
+  "dateModified": "2026-11-18T18:58:56.185799+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260154578a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Real-time hallucination detection and correction for large language model(s)",
+    "identifier": "US20260154578A1",
+    "url": "https://patents.google.com/patent/US20260154578A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260154578A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260154578A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Rilevamento e correzione in tempo reale delle allucinazioni nei modelli linguistici</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Real-time hallucination detection and correction for large language model(s)</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per identificare e correggere automaticamente informazioni potenzialmente false generate da modelli linguistici di grandi dimensioni (LLM). Il sistema estrae frammenti testuali dall&#39;output generativo, li sottopone ad analisi di entailment testuale confrontandoli con documenti recuperati tramite query di ricerca, e riscrive in tempo reale le porzioni contraddette prima o dopo la loro visualizzazione.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Output generativo di LLM, potenzialmente Google Search</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">04 Giugno 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2024-12-02</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Risposte AI in Search: sintesi e scelta delle fonti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★★☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">19</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo che riceve una query associata a un client device, genera output di un modello generativo processando dati indicativi della query, estrae una pluralità di frammenti testuali dall&#39;output generativo, classifica un sottoinsieme di frammenti come adatti all&#39;analisi di entailment testuale (incluso almeno un primo frammento testuale), esegue individualmente l&#39;analisi di entailment su ciascun frammento del sottoinsieme, e determina che almeno una porzione dell&#39;output generativo contenente il primo frammento deve essere riscritta. L&#39;analisi di entailment include per ciascun frammento: formulare una search query basata sul frammento, recuperare almeno un documento responsivo alla query, e processare il frammento e il documento usando modelli di machine learning per generare predizioni sul fatto che il documento corrobori o contraddica il frammento.</p>
+      <p>La rivendicazione 2 specifica che per il primo frammento le predizioni soddisfano una soglia indicativa del fatto che il documento contraddice il frammento. La rivendicazione 3 contempla la ricezione dell&#39;output generativo in segmenti e il rendering di ciascun segmento al client device in risposta alla ricezione. Le rivendicazioni 4-9 aggiungono dettagli sul processo di riscrittura: la rivendicazione 4 copre la generazione di output generativo rivisto basato su dati indicativi della query, della porzione di output attualmente renderizzata, e del primo frammento. La rivendicazione 5 specifica che la generazione può basarsi anche sul documento recuperato. Le rivendicazioni 6-7 distinguono tra scenari in cui la porzione da riscrivere non è ancora stata renderizzata (causando il client device a astenersi dal rendering) o è già stata renderizzata (causando la rimozione dal display). Le rivendicazioni 8-9 coprono il rendering di una UI affordance che indica la riscrittura e opzionalmente fornisce indicazione del documento contraddittorio.</p>
+      <p>La rivendicazione 10 specifica che i modelli di entailment possono includere un modello di corroborazione e/o un modello di contraddizione. La rivendicazione 12 copre la classificazione dei frammenti come adatti all&#39;analisi usando un modello di regressione addestrato a predire punteggi di idoneità. La rivendicazione 13 contempla l&#39;esecuzione parallela dell&#39;analisi su più frammenti. Le rivendicazioni 15-19 ripetono gli elementi principali in forma di sistema anziché metodo.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema per affrontare le allucinazioni degli LLM attraverso valutazione di entailment in tempo reale. Il documento spiega che gli LLM occasionalmente producono informazioni false che erodono la fiducia degli utenti. Il sistema descritto estrae frammenti testuali significativi dall&#39;output generativo (paragrafo che descrive fragment extraction engine 130), come statements, facts, clauses. Non tutti i frammenti sono adatti alla verifica: ad esempio &#34;Hello!&#34; non contiene materiale fattuale verificabile, mentre &#34;Mars has two moons&#34; sì.</p>
+      <p>La descrizione contempla l&#39;uso di un regression machine learning model per classificare i frammenti come adatti all&#39;analisi di entailment, predendo entailment suitability scores. I modelli di entailment possono includere sia un corroboration machine learning model che genera output indicativo di corroborazione, sia un contradiction machine learning model per la contraddizione (paragrafo relativo a entailment evaluation engine 134). La descrizione menziona il calcolo di un incorrectness score come media ponderata tra maximum contradiction score e maximum corroboration score, con formula specifica e soglie (0.75, 0.9) per determinare se un frammento è contraddetto, debolmente contraddetto, corroborato o debolmente corroborato (FIG. 4).</p>
+      <p>L&#39;esempio concreto fornito riguarda una query su Big Ben: l&#39;output generativo iniziale afferma &#34;The clock tower is called Big Ben&#34;, ma i documenti recuperati indicano che si chiama &#34;Elizabeth Tower&#34;. Il sistema identifica la contraddizione e genera output rivisto che corregge l&#39;errore spiegando che Elizabeth Tower è il nome ufficiale mentre Big Ben è il nome della campana (FIG. 3A-3B). La descrizione contempla che il processo possa avvenire in parallelo su più frammenti per ridurre la latenza.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google stia sviluppando meccanismi per validare le risposte generative confrontandole con documenti indicizzati. I siti che forniscono informazioni fattuali verificabili potrebbero essere utilizzati come fonti di corroborazione o contraddizione. Il sistema contempla l&#39;uso di search queries formulate dai frammenti testuali e il recupero di documenti responsivi, suggerendo che la qualità e credibilità delle fonti potrebbero influenzare il processo. La descrizione menziona responsive content quality metrics sia query-dependent che query-independent, e che contenuti di qualità insufficiente potrebbero non essere considerati per corroborare o contraddire. Tuttavia, il brevetto non specifica se questo sistema sia destinato a Google Search o ad altri prodotti Google con capacità generative.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Si tratta di una domanda di brevetto (A1) non ancora concessa, senza pubblicazioni collegate in famiglia, quindi non rappresenta protezione consolidata né prova di implementazione.</li>
+      <li>Il brevetto non dichiara esplicitamente che il sistema sia applicato a Google Search: potrebbe riguardare altri prodotti Google con output generativo come assistenti o chatbot.</li>
+      <li>Non specifica quali segnali di qualità o ranking dei documenti recuperati vengano utilizzati per determinare se una fonte è sufficientemente autorevole per corroborare o contraddire un frammento.</li>
+      <li>Non dimostra che i siti utilizzati come fonti di corroborazione ricevano benefici di visibilità o ranking, né che la capacità di corroborare influenzi la selezione delle fonti nelle risposte generative.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Assicurarsi che i contenuti fattuali siano accurati, verificabili e supportati da fonti autorevoli, indipendentemente dall&#39;uso di questo brevetto, poiché l&#39;accuratezza fattuale è un principio fondamentale di qualità.</li>
+      <li class="pl-2">Strutturare le informazioni fattuali in modo chiaro e atomico (statements verificabili singolarmente) facilita la verifica automatica e umana, migliorando l&#39;utilità del contenuto.</li>
+      <li class="pl-2">Mantenere coerenza tra affermazioni fattuali presenti su diverse pagine del sito evita contraddizioni interne che potrebbero emergere in processi di validazione automatica.</li>
+      <li class="pl-2">Documentare le fonti delle affermazioni fattuali e fornire riferimenti espliciti aumenta la credibilità del contenuto per utenti e sistemi di valutazione della qualità.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">textual entailment analysis</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Analisi che determina se un documento corrobora o contraddice un frammento testuale, processando entrambi con modelli di machine learning addestrati a rilevare relazioni di implicazione logica</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">hallucination</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Informazione falsa o non supportata da fatti generata da un modello linguistico, che erode la fiducia degli utenti nell&#39;output generativo</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">corroboration machine learning model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello addestrato a generare output indicativo del fatto che un documento corrobora (supporta, conferma) un frammento testuale</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">contradiction machine learning model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello addestrato a generare output indicativo del fatto che un documento contraddice (smentisce) un frammento testuale</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">incorrectness score</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Punteggio calcolato come media ponderata tra il punteggio di contraddizione e quello di corroborazione, usato per determinare se un frammento deve essere riscritto</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">revised generative model output</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Output generativo riscritto che corregge porzioni contraddette, generato processando la query originale, le porzioni già renderizzate e i documenti contraddittori</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260154578A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 18 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>

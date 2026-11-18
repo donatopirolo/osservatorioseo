@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20260154578A1",
+    "title": "Real-time hallucination detection and correction for large language model(s)",
+    "abstract": "Implementations are described herein for automatically identifying and correcting potentially false information in generative model output by performing entailment evaluation of generative model output. In various implementations, data indicative of a query may be processed to generate generative model output. Textual fragments may be extracted from the generative model output, and a subset of the textual fragments may be classified as being suitable for textual entailment analysis. Textual entailment analysis may be performed on each textual fragment of the subset, including formulating a search query based on the textual fragment, retrieving document(s) responsive to the search query, and processing the textual fragment and the document(s) using entailment machine learning model(s) to generate prediction(s) of whether the at least one document corroborates or contradicts the textual fragment. Based on the textual entailment analysis, at least a portion of the generative model output which is to be rewritten is determined.",
+    "claims": [
+      "1 . A method implemented by one or more processors, the method comprising: receiving a query associated with a client device operated by a user; generating generative model output by processing, using a generative model, data indicative of the query; extracting a plurality of textual fragments from the generative model output; classifying a subset of the textual fragments as being suitable for textual entailment analysis, the subset comprising at least a first textual fragment; individually performing textual entailment analysis on each textual fragment of the subset, wherein the textual entailment analysis includes, for each textual fragment of the subset: formulating a search query based on the textual fragment, retrieving at least one document that is responsive to the search query, and processing the textual fragment and the at least one document using one or more entailment machine learning models to generate one or more predictions of whether the at least one document corroborates or contradicts the textual fragment; and determining, based on the textual entailment analysis of the first textual fragment, that at least a portion of the generative model output comprising the first textual fragment is to be rewritten.",
+      "2 . The method of claim 1 , wherein, for the first textual fragment, the one or more predictions satisfy a threshold indicative of the at least one document contradicting the first textual fragment.",
+      "3 . The method of claim 1 , further comprising: receiving, in one or more segments, the generative model output; and for each of the one or more segments: in response to receiving the segment, causing the segment of the generative model output to be rendered for display at the client device.",
+      "4 . The method of claim 1 further comprising: in response to determining that at least the portion of the generative model output comprising the first textual fragment is to be rewritten, generating revised generative model output based on processing, using the generative model, data indicative of the query, data indicative of a portion of the generative model output currently rendered for display at the client device, and data indicative of the first textual fragment.",
+      "5 . The method of claim 4 , wherein generating the revised generative model output is further based on processing, using the generative model, the at least one document retrieved responsive to the search query formulated for the first textual fragment.",
+      "6 . The method of claim 4 , wherein the portion of the generative model output currently rendered for display at the client device does not comprise the portion of the generative model output comprising the first textual fragment, the method further comprising: in response to determining that at least the portion of the generative model output comprising the first textual fragment is to be rewritten: causing the client device to refrain from rendering at least the portion of the generative model output comprising the first textual fragment for display; and causing the revised generative model output to be rendered for display at the client device.",
+      "7 . The method of claim 4 , wherein the portion of the generative model output currently rendered for display at the client device comprises the portion of the generative model output comprising the first textual fragment, the method further comprising: in response to determining that at least the portion of the generative model output comprising the first textual fragment is to be rewritten: causing the client device to remove at least the portion of the generative model output comprising the first textual fragment from display; and causing the revised generative model output to be rendered for display at the client device.",
+      "8 . The method of claim 7 , further comprising: causing a user interface (UI) affordance to be rendered for display at the client device, the UI affordance indicating that at least the portion of the generative model output comprising the first textual fragment has been removed from display and rewritten.",
+      "9 . The method of claim 8 , wherein the UI affordance provides an indication of the at least one document retrieved responsive to the search query formulated for the first textual fragment.",
+      "10 . The method of claim 1 , wherein the one or more entailment machine learning models comprise: a corroboration machine learning model trained to generate first output indicative of whether a document corroborates a textual fragment; and/or a contradiction machine learning model trained to generate second output indicative of whether a document contradicts a textual fragment.",
+      "11 . The method of claim 10 , wherein, for each textual fragment of the subset, the one or more of the predictions are determined based on a comparison of the first and second outputs.",
+      "12 . The method of claim 1 , wherein each textual fragment of the subset is classified as suitable for textual entailment analysis based on an entailment score predicted for the textual fragment using a regression machine learning model that is trained to predict textual entailment analysis suitability scores for textual fragments.",
+      "13 . The method of claim 1 , wherein the subset of the textual fragments includes a plurality of textual fragments, and wherein the textual entailment analysis is performed for the plurality of textual fragments in parallel.",
+      "14 . The method of claim 1 , wherein the one or more entailment machine learning models comprise both: a corroboration machine learning model trained to generate first output indicative of whether a document corroborates a textual fragment; and a contradiction machine learning model trained to generate second output indicative of whether a document contradicts a textual fragment.",
+      "15 . A system comprising: memory storing instructions; and one or more processors operable to execute the instructions to: receive a query associated with a client device; cause generative model output to be generated based on processing, using a generative model, of data indicative of the query; extract a plurality of textual fragments from the generative model output; classify a subset of the textual fragments as being suitable for textual entailment analysis, the subset comprising at least a first textual fragment; individually perform textual entailment analysis on each textual fragment of the subset, wherein in performing the textual entailment analysis one or more of the processors are to, for each textual fragment of the subset: formulate a search query based on the textual fragment, retrieve at least one document that is responsive to the search query, and process the textual fragment and the at least one document using one or more entailment machine learning models to generate one or more predictions of whether the at least one document corroborates or contradicts the textual fragment; and determine, based on the textual entailment analysis of the first textual fragment, that at least a portion of the generative model output comprising the first textual fragment is to be rewritten.",
+      "16 . The system of claim 15 , wherein, for the first textual fragment, the one or more predictions satisfy a threshold indicative of the at least one document contradicting the first textual fragment.",
+      "17 . The system of claim 15 , wherein one or more of the processors are further operable to execute the instructions to: receive, in one or more segments, the generative model output; and for each of the one or more segments: in response to receiving the segment, cause the segment of the generative model output to be rendered for display at the client device.",
+      "18 . The system of claim 15 , wherein one or more of the processors are further operable to execute the instructions to: in response to determining that at least the portion of the generative model output comprising the first textual fragment is to be rewritten, cause revised generative model output to be generated based on processing, using the generative model, data indicative of the query, data indicative of a portion of the generative model output currently rendered for display at the client device, and data indicative of the first textual fragment.",
+      "19 . The system of claim 18 , wherein generating the revised generative model output is further based on processing, using the generative model, the at least one document retrieved responsive to the search query formulated for the first textual fragment."
+    ],
+    "independent_claims": [
+      "1 . A method implemented by one or more processors, the method comprising: receiving a query associated with a client device operated by a user; generating generative model output by processing, using a generative model, data indicative of the query; extracting a plurality of textual fragments from the generative model output; classifying a subset of the textual fragments as being suitable for textual entailment analysis, the subset comprising at least a first textual fragment; individually performing textual entailment analysis on each textual fragment of the subset, wherein the textual entailment analysis includes, for each textual fragment of the subset: formulating a search query based on the textual fragment, retrieving at least one document that is responsive to the search query, and processing the textual fragment and the at least one document using one or more entailment machine learning models to generate one or more predictions of whether the at least one document corroborates or contradicts the textual fragment; and determining, based on the textual entailment analysis of the first textual fragment, that at least a portion of the generative model output comprising the first textual fragment is to be rewritten.",
+      "15 . A system comprising: memory storing instructions; and one or more processors operable to execute the instructions to: receive a query associated with a client device; cause generative model output to be generated based on processing, using a generative model, of data indicative of the query; extract a plurality of textual fragments from the generative model output; classify a subset of the textual fragments as being suitable for textual entailment analysis, the subset comprising at least a first textual fragment; individually perform textual entailment analysis on each textual fragment of the subset, wherein in performing the textual entailment analysis one or more of the processors are to, for each textual fragment of the subset: formulate a search query based on the textual fragment, retrieve at least one document that is responsive to the search query, and process the textual fragment and the at least one document using one or more entailment machine learning models to generate one or more predictions of whether the at least one document corroborates or contradicts the textual fragment; and determine, based on the textual entailment analysis of the first textual fragment, that at least a portion of the generative model output comprising the first textual fragment is to be rewritten."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Sasha Zykova",
+      "Tej Toor",
+      "Jan van de Kerkhof",
+      "Stefano Spigler",
+      "Marcin Pikus",
+      "Eyal Ben-David",
+      "Eran Ofek",
+      "Alex Fabrikant",
+      "Krunoslav Zaher",
+      "Mathias Carlen",
+      "Jeremy COLE",
+      "Kelvin Gu",
+      "Teghan Tracy"
+    ],
+    "priority_date": "2024-12-02",
+    "filing_date": "2025-12-01",
+    "publication_date": "2026-06-04",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F18/00",
+      "G06F18/20",
+      "G06F18/27",
+      "G06N5/00",
+      "G06N5/04",
+      "G06F16/00",
+      "G06F16/30",
+      "G06F16/33",
+      "G06F16/332",
+      "G06F16/3329",
+      "G06F16/3331",
+      "G06F16/334",
+      "G06F16/3344",
+      "G06F16/34",
+      "G06F40/00",
+      "G06F40/10",
+      "G06F40/166",
+      "G06F40/20",
+      "G06F40/205",
+      "G06F40/216"
+    ],
+    "family": [],
+    "cited_by_count": 0
+  },
+  "analysis": {
+    "title_it": "Rilevamento e correzione in tempo reale delle allucinazioni nei modelli linguistici",
+    "summary": "Il brevetto descrive un sistema per identificare e correggere automaticamente informazioni potenzialmente false generate da modelli linguistici di grandi dimensioni (LLM). Il sistema estrae frammenti testuali dall'output generativo, li sottopone ad analisi di entailment testuale confrontandoli con documenti recuperati tramite query di ricerca, e riscrive in tempo reale le porzioni contraddette prima o dopo la loro visualizzazione.",
+    "theme": "selezione_fonti_ai",
+    "seo_relevance": 4,
+    "scope": "Output generativo di LLM, potenzialmente Google Search",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo che riceve una query associata a un client device, genera output di un modello generativo processando dati indicativi della query, estrae una pluralità di frammenti testuali dall'output generativo, classifica un sottoinsieme di frammenti come adatti all'analisi di entailment testuale (incluso almeno un primo frammento testuale), esegue individualmente l'analisi di entailment su ciascun frammento del sottoinsieme, e determina che almeno una porzione dell'output generativo contenente il primo frammento deve essere riscritta. L'analisi di entailment include per ciascun frammento: formulare una search query basata sul frammento, recuperare almeno un documento responsivo alla query, e processare il frammento e il documento usando modelli di machine learning per generare predizioni sul fatto che il documento corrobori o contraddica il frammento.\n\nLa rivendicazione 2 specifica che per il primo frammento le predizioni soddisfano una soglia indicativa del fatto che il documento contraddice il frammento. La rivendicazione 3 contempla la ricezione dell'output generativo in segmenti e il rendering di ciascun segmento al client device in risposta alla ricezione. Le rivendicazioni 4-9 aggiungono dettagli sul processo di riscrittura: la rivendicazione 4 copre la generazione di output generativo rivisto basato su dati indicativi della query, della porzione di output attualmente renderizzata, e del primo frammento. La rivendicazione 5 specifica che la generazione può basarsi anche sul documento recuperato. Le rivendicazioni 6-7 distinguono tra scenari in cui la porzione da riscrivere non è ancora stata renderizzata (causando il client device a astenersi dal rendering) o è già stata renderizzata (causando la rimozione dal display). Le rivendicazioni 8-9 coprono il rendering di una UI affordance che indica la riscrittura e opzionalmente fornisce indicazione del documento contraddittorio.\n\nLa rivendicazione 10 specifica che i modelli di entailment possono includere un modello di corroborazione e/o un modello di contraddizione. La rivendicazione 12 copre la classificazione dei frammenti come adatti all'analisi usando un modello di regressione addestrato a predire punteggi di idoneità. La rivendicazione 13 contempla l'esecuzione parallela dell'analisi su più frammenti. Le rivendicazioni 15-19 ripetono gli elementi principali in forma di sistema anziché metodo.",
+    "seo_reading": "La descrizione contempla un sistema per affrontare le allucinazioni degli LLM attraverso valutazione di entailment in tempo reale. Il documento spiega che gli LLM occasionalmente producono informazioni false che erodono la fiducia degli utenti. Il sistema descritto estrae frammenti testuali significativi dall'output generativo (paragrafo che descrive fragment extraction engine 130), come statements, facts, clauses. Non tutti i frammenti sono adatti alla verifica: ad esempio \"Hello!\" non contiene materiale fattuale verificabile, mentre \"Mars has two moons\" sì.\n\nLa descrizione contempla l'uso di un regression machine learning model per classificare i frammenti come adatti all'analisi di entailment, predendo entailment suitability scores. I modelli di entailment possono includere sia un corroboration machine learning model che genera output indicativo di corroborazione, sia un contradiction machine learning model per la contraddizione (paragrafo relativo a entailment evaluation engine 134). La descrizione menziona il calcolo di un incorrectness score come media ponderata tra maximum contradiction score e maximum corroboration score, con formula specifica e soglie (0.75, 0.9) per determinare se un frammento è contraddetto, debolmente contraddetto, corroborato o debolmente corroborato (FIG. 4).\n\nL'esempio concreto fornito riguarda una query su Big Ben: l'output generativo iniziale afferma \"The clock tower is called Big Ben\", ma i documenti recuperati indicano che si chiama \"Elizabeth Tower\". Il sistema identifica la contraddizione e genera output rivisto che corregge l'errore spiegando che Elizabeth Tower è il nome ufficiale mentre Big Ben è il nome della campana (FIG. 3A-3B). La descrizione contempla che il processo possa avvenire in parallelo su più frammenti per ridurre la latenza.\n\nPer la SEO, questo brevetto potrebbe indicare che Google stia sviluppando meccanismi per validare le risposte generative confrontandole con documenti indicizzati. I siti che forniscono informazioni fattuali verificabili potrebbero essere utilizzati come fonti di corroborazione o contraddizione. Il sistema contempla l'uso di search queries formulate dai frammenti testuali e il recupero di documenti responsivi, suggerendo che la qualità e credibilità delle fonti potrebbero influenzare il processo. La descrizione menziona responsive content quality metrics sia query-dependent che query-independent, e che contenuti di qualità insufficiente potrebbero non essere considerati per corroborare o contraddire. Tuttavia, il brevetto non specifica se questo sistema sia destinato a Google Search o ad altri prodotti Google con capacità generative.",
+    "limits": [
+      "Si tratta di una domanda di brevetto (A1) non ancora concessa, senza pubblicazioni collegate in famiglia, quindi non rappresenta protezione consolidata né prova di implementazione.",
+      "Il brevetto non dichiara esplicitamente che il sistema sia applicato a Google Search: potrebbe riguardare altri prodotti Google con output generativo come assistenti o chatbot.",
+      "Non specifica quali segnali di qualità o ranking dei documenti recuperati vengano utilizzati per determinare se una fonte è sufficientemente autorevole per corroborare o contraddire un frammento.",
+      "Non dimostra che i siti utilizzati come fonti di corroborazione ricevano benefici di visibilità o ranking, né che la capacità di corroborare influenzi la selezione delle fonti nelle risposte generative."
+    ],
+    "implications": [
+      "Assicurarsi che i contenuti fattuali siano accurati, verificabili e supportati da fonti autorevoli, indipendentemente dall'uso di questo brevetto, poiché l'accuratezza fattuale è un principio fondamentale di qualità.",
+      "Strutturare le informazioni fattuali in modo chiaro e atomico (statements verificabili singolarmente) facilita la verifica automatica e umana, migliorando l'utilità del contenuto.",
+      "Mantenere coerenza tra affermazioni fattuali presenti su diverse pagine del sito evita contraddizioni interne che potrebbero emergere in processi di validazione automatica.",
+      "Documentare le fonti delle affermazioni fattuali e fornire riferimenti espliciti aumenta la credibilità del contenuto per utenti e sistemi di valutazione della qualità."
+    ],
+    "key_terms": [
+      {
+        "term": "textual entailment analysis",
+        "explanation": "Analisi che determina se un documento corrobora o contraddice un frammento testuale, processando entrambi con modelli di machine learning addestrati a rilevare relazioni di implicazione logica"
+      },
+      {
+        "term": "hallucination",
+        "explanation": "Informazione falsa o non supportata da fatti generata da un modello linguistico, che erode la fiducia degli utenti nell'output generativo"
+      },
+      {
+        "term": "corroboration machine learning model",
+        "explanation": "Modello addestrato a generare output indicativo del fatto che un documento corrobora (supporta, conferma) un frammento testuale"
+      },
+      {
+        "term": "contradiction machine learning model",
+        "explanation": "Modello addestrato a generare output indicativo del fatto che un documento contraddice (smentisce) un frammento testuale"
+      },
+      {
+        "term": "incorrectness score",
+        "explanation": "Punteggio calcolato come media ponderata tra il punteggio di contraddizione e quello di corroborazione, usato per determinare se un frammento deve essere riscritto"
+      },
+      {
+        "term": "revised generative model output",
+        "explanation": "Output generativo riscritto che corregge porzioni contraddette, generato processando la query originale, le porzioni già renderizzate e i documenti contraddittori"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-11-18T18:58:56.185799Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.08793084
+}
