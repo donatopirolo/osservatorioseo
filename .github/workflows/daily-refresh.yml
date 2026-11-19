@@ -120,6 +120,62 @@ jobs:
             --commit-hash="$GITHUB_SHA" \
             --commit-message="refresh $(TZ=Europe/Rome date +%Y-%m-%d)"
 
+      # Una pagina sorvegliata che non si legge (403, selettore rotto, pagina
+      # anti-bot) prima finiva solo nel log: la policy OpenAI e schema.org
+      # sono rimaste cieche per mesi. La pipeline conta i giorni di guasto in
+      # _health.json; qui si apre (o aggiorna) un'unica issue dopo 3 giorni e
+      # la si chiude quando tutto torna leggibile. Non fa fallire il run.
+      - name: Avvisa se il Doc Watcher non legge delle pagine
+        if: always() && steps.timecheck.outputs.run == 'true'
+        continue-on-error: true
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'data/state/doc_watcher/_health.json';
+            if (!fs.existsSync(path)) return;
+            const health = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const alerts = Object.entries(health.pages || {}).filter(([, v]) => v.alert);
+            const { owner, repo } = context.repo;
+            const title = '[doc-watcher] Pagine sorvegliate non leggibili';
+            const open = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'open', labels: 'doc-watcher',
+            });
+            const existing = open.find(i => i.title === title);
+            const run = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+            if (alerts.length === 0) {
+              if (existing) {
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: existing.number,
+                  body: `Tutte le pagine sorvegliate sono di nuovo leggibili. Run: ${run}`,
+                });
+                await github.rest.issues.update({
+                  owner, repo, issue_number: existing.number, state: 'closed',
+                });
+              }
+              return;
+            }
+            const rows = alerts.map(([id, v]) =>
+              `| \`${id}\` | ${v.failing_since} | ${v.failing_days} | ${String(v.last_error).replace(/\|/g, '\\|')} |`);
+            const body = [
+              `Il Doc Watcher non riesce a leggere queste pagine da almeno ${health.alert_after_days} giorni: finche' non si sistemano, una loro modifica non verrebbe vista.`,
+              '',
+              '| Pagina | Guasta dal | Giorni | Ultimo errore |',
+              '|---|---|---|---|',
+              ...rows,
+              '',
+              'Di solito: selettore da aggiornare o URL cambiato in `config/doc_watcher.yml`, oppure la fonte blocca i bot (in quel caso `alert: false` se non vale la pena forzarla).',
+              '',
+              `Ultimo run: ${run}`,
+            ].join('\n');
+            if (existing) {
+              await github.rest.issues.update({ owner, repo, issue_number: existing.number, body });
+            } else {
+              await github.rest.issues.create({
+                owner, repo, title, body, labels: ['doc-watcher', 'automated'],
+              });
+            }
+
       # La homepage e' renderizzata dal feed corrente: un feed vuoto la
       # lascia senza articoli, e nessun controllo se ne accorgerebbe
       # (feed_health considera sano un run con zero riassunti, e tutte le

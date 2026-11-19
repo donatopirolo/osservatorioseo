@@ -31,9 +31,15 @@ pages:
     category: google_docs_change
     importance: 5
 
-  - id: google_quality_rater_guidelines
-    name: "Google Quality Rater Guidelines (PDF, IT)"
-    url: https://static.googleusercontent.com/media/guidelines.raterhub.com/it//searchqualityevaluatorguidelines.pdf
+  # Il PDF completo delle Quality Rater Guidelines e' piu' sotto
+  # (google_quality_rater_guidelines_en). Non esiste una versione italiana:
+  # i percorsi /it/, /de/, /fr/... servono tutti lo stesso PDF inglese
+  # (verificato il 2026-11-19), per questo la vecchia voce "IT" e' stata tolta.
+  # Questo e' il documento di sintesi che Google linka dalla pagina
+  # "How Search Works > Rigorous testing" accanto al PDF completo.
+  - id: google_quality_rater_overview
+    name: "Google Quality Rater Guidelines: An Overview (PDF)"
+    url: https://services.google.com/fh/files/misc/hsw-sqrg.pdf
     type: pdf
     category: google_docs_change
     importance: 5
@@ -56,20 +62,24 @@ pages:
 
   - id: google_crawlers_overview
     name: "Overview of Google Crawlers"
-    url: https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/overview-google-crawlers
     selector: "main article, main"
     type: html
     category: google_docs_change
     importance: 4
 
-  - id: structured_data_docs
-    name: "Google Structured Data Supported"
-    url: https://developers.google.com/search/docs/appearance/structured-data
+  # Prima puntava a /appearance/structured-data, che e' la pagina degli
+  # strumenti di test: la gallery e' l'elenco dei rich result supportati.
+  - id: google_structured_data_gallery
+    name: "Google Structured Data Search Gallery"
+    url: https://developers.google.com/search/docs/appearance/structured-data/search-gallery
     selector: "main article, main"
     type: html
     category: google_docs_change
     importance: 3
 
+  # openai.com risponde 403 ai client non-browser: la pagina non viene
+  # letta. Lasciata cosi' per scelta (fonte poco rilevante), senza allarme.
   - id: openai_usage_policies
     name: "OpenAI Usage Policies"
     url: https://openai.com/policies/usage-policies/
@@ -77,6 +87,7 @@ pages:
     type: html
     category: google_docs_change
     importance: 3
+    alert: false
 
   - id: anthropic_usage_policies
     name: "Anthropic Usage Policy"
@@ -88,14 +99,16 @@ pages:
 
   - id: google_robots_txt
     name: "Google robots.txt Specification"
-    url: https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt
+    url: https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec
     selector: "main article, main"
     type: html
     category: google_docs_change
     importance: 5
 
   - id: google_robots_meta
-    name: "Google robots Meta Tag & X-Robots-Tag"
+    # special-tags e' "Meta tag e attributi supportati da Google"; la
+    # specifica del robots meta tag e' google_robots_meta_tag piu' sotto.
+    name: "Google: meta tag e attributi supportati"
     url: https://developers.google.com/search/docs/crawling-indexing/special-tags
     selector: "main article, main"
     type: html
@@ -144,7 +157,624 @@ pages:
   - id: schema_org_releases
     name: "Schema.org Releases"
     url: https://schema.org/docs/releases.html
+    # Il sito non ha piu' <main> (selettore rotto almeno da novembre 2026).
+    selector: "#mainContent"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  # --- Aggiunte il 2026-11-19 -------------------------------------------
+  # Priorita' alta: come Google valuta i siti e chi scansiona cosa.
+  - id: google_search_essentials
+    name: "Google Search Essentials"
+    url: https://developers.google.com/search/docs/essentials
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_ranking_systems_guide
+    name: "Google Ranking Systems Guide"
+    url: https://developers.google.com/search/docs/appearance/ranking-systems-guide
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_gen_ai_content
+    name: "Google: contenuti generati con l'AI"
+    url: https://developers.google.com/search/docs/fundamentals/using-gen-ai-content
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_common_crawlers
+    name: "Google Common Crawlers (incl. Google-Extended)"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_user_triggered_fetchers
+    name: "Google User-Triggered Fetchers"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_structured_data_policies
+    name: "Google Structured Data General Guidelines"
+    url: https://developers.google.com/search/docs/appearance/structured-data/sd-policies
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  # Priorita' media.
+  - id: google_page_experience
+    name: "Google Page Experience"
+    url: https://developers.google.com/search/docs/appearance/page-experience
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_core_web_vitals
+    name: "Google Core Web Vitals"
+    url: https://developers.google.com/search/docs/appearance/core-web-vitals
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_discover
+    name: "Google Discover"
+    url: https://developers.google.com/search/docs/appearance/google-discover
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_canonicalization
+    name: "Google: URL duplicati e canonical"
+    url: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_technical_requirements
+    name: "Google Search Technical Requirements"
+    url: https://developers.google.com/search/docs/essentials/technical
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_site_names
+    name: "Google Site Names"
+    url: https://developers.google.com/search/docs/appearance/site-names
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_crawl_budget
+    name: "Google Crawl Budget (siti grandi)"
+    url: https://developers.google.com/crawling/docs/crawl-budget
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  # --- Aggiunte il 2026-11-19, seconda tornata: priorita' alta ---------
+
+  - id: google_crawling_changelog
+    name: "Google Crawling Infrastructure — Changelog"
+    url: https://developers.google.com/crawling/docs/changelog
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_ai_optimization_guide
+    name: "Google AI Optimization Guide"
+    url: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_core_updates
+    name: "Google Core Updates"
+    url: https://developers.google.com/search/docs/appearance/core-updates
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_spam_updates
+    name: "Google Spam Updates"
+    url: https://developers.google.com/search/docs/appearance/spam-updates
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_reviews_system
+    name: "Google Reviews System"
+    url: https://developers.google.com/search/docs/appearance/reviews-system
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_preferred_sources
+    name: "Google Preferred Sources"
+    url: https://developers.google.com/search/docs/appearance/preferred-sources
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_publication_dates
+    name: "Google: date di pubblicazione"
+    url: https://developers.google.com/search/docs/appearance/publication-dates
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_special_case_crawlers
+    name: "Google Special-Case Crawlers"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_verify_requests
+    name: "Google: verificare le richieste Google"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_web_bot_auth
+    name: "Google Web Bot Auth"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_http_status_codes
+    name: "Google: codici di stato HTTP"
+    url: https://developers.google.com/crawling/docs/troubleshooting/http-status-codes
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_dns_network_errors
+    name: "Google: errori DNS e di rete"
+    url: https://developers.google.com/crawling/docs/troubleshooting/dns-network-errors
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_robots_meta_tag
+    name: "Google Robots Meta Tag"
+    url: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_canonicalization_how
+    name: "Google: come sceglie il canonical"
+    url: https://developers.google.com/search/docs/crawling-indexing/canonicalization
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_links_crawlable
+    name: "Google: link scansionabili"
+    url: https://developers.google.com/search/docs/crawling-indexing/links-crawlable
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_qualify_outbound_links
+    name: "Google: qualificare i link in uscita"
+    url: https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_mobile_first_indexing
+    name: "Google Mobile-First Indexing"
+    url: https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_javascript_seo
+    name: "Google JavaScript SEO Basics"
+    url: https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_how_search_works
+    name: "Google: come funziona la Ricerca"
+    url: https://developers.google.com/search/docs/fundamentals/how-search-works
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_seo_starter_guide
+    name: "Google SEO Starter Guide"
+    url: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  # --- Priorita' media: SEO tecnica, e-commerce, migrazioni ------------
+
+  - id: google_sd_article
+    name: "Dati strutturati: Article"
+    url: https://developers.google.com/search/docs/appearance/structured-data/article
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sd_product
+    name: "Dati strutturati: Product"
+    url: https://developers.google.com/search/docs/appearance/structured-data/product
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sd_merchant_listing
+    name: "Dati strutturati: Merchant listing"
+    url: https://developers.google.com/search/docs/appearance/structured-data/merchant-listing
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sd_review_snippet
+    name: "Dati strutturati: Review snippet"
+    url: https://developers.google.com/search/docs/appearance/structured-data/review-snippet
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sd_organization
+    name: "Dati strutturati: Organization"
+    url: https://developers.google.com/search/docs/appearance/structured-data/organization
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sd_local_business
+    name: "Dati strutturati: Local business"
+    url: https://developers.google.com/search/docs/appearance/structured-data/local-business
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sd_breadcrumb
+    name: "Dati strutturati: Breadcrumb"
+    url: https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sd_discussion_forum
+    name: "Dati strutturati: Discussion forum"
+    url: https://developers.google.com/search/docs/appearance/structured-data/discussion-forum
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_sitelinks
+    name: "Google Sitelinks"
+    url: https://developers.google.com/search/docs/appearance/sitelinks
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_favicon
+    name: "Google: favicon nei risultati"
+    url: https://developers.google.com/search/docs/appearance/favicon-in-search
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_intrusive_interstitials
+    name: "Google: interstitial intrusivi"
+    url: https://developers.google.com/search/docs/appearance/avoid-intrusive-interstitials
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_images
+    name: "Google Images SEO"
+    url: https://developers.google.com/search/docs/appearance/google-images
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_video
+    name: "Google Video SEO"
+    url: https://developers.google.com/search/docs/appearance/video
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_search_profiles
+    name: "Google Search Profiles"
+    url: https://developers.google.com/search/docs/appearance/search-profiles
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_business_details
+    name: "Google: dettagli dell'attività"
+    url: https://developers.google.com/search/docs/appearance/establish-business-details
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_site_move_url_changes
+    name: "Google: migrazione con cambio URL"
+    url: https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_site_move_no_url_changes
+    name: "Google: migrazione senza cambio URL"
+    url: https://developers.google.com/search/docs/crawling-indexing/site-move-no-url-changes
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_redirects
+    name: "Google: redirect"
+    url: https://developers.google.com/search/docs/crawling-indexing/301-redirects
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_faceted_navigation
+    name: "Google: navigazione a faccette"
+    url: https://developers.google.com/crawling/docs/faceted-navigation
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_crawling_myths
+    name: "Google: miti sulla scansione"
+    url: https://developers.google.com/crawling/docs/myths-about-crawling
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_traffic_drops
+    name: "Google: analizzare i cali di traffico"
+    url: https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_identify_search_traffic
+    name: "Google: identificare il traffico da Search"
+    url: https://developers.google.com/search/docs/monitor-debug/identify-google-search-traffic
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_ecommerce
+    name: "Google: guida e-commerce"
+    url: https://developers.google.com/search/docs/specialty/ecommerce
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_localized_versions
+    name: "Google: versioni localizzate (hreflang)"
+    url: https://developers.google.com/search/docs/specialty/international/localized-versions
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_multi_regional
+    name: "Google: siti multi-regionali"
+    url: https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  # --- AI: agenti e crawler, guide su AI Overviews / AI Mode ---------------
+  # Aggiunte il 2026-11-19. Fuori da developers.google.com il diff si mostra
+  # solo come estratto (vedi doc_changes.py), anche per support.google.com.
+  - id: google_agent
+    name: "Google-Agent: consentire il traffico dell'agente AI"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/allow-google-agent
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_help_ai_overviews
+    name: "Google Help: AI Overviews"
+    url: https://support.google.com/websearch/answer/14901683?hl=en
+    selector: ".article-content-container"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_help_ai_mode
+    name: "Google Help: AI Mode"
+    url: https://support.google.com/websearch/answer/16011537?hl=en
+    selector: ".article-content-container"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_apis_user_agent
+    name: "Google: user agent APIs-Google"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/apis-user-agent
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 2
+
+  - id: google_read_aloud_user_agent
+    name: "Google: user agent Read Aloud"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/read-aloud-user-agent
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 2
+
+  - id: openai_crawlers
+    name: "OpenAI Crawlers (GPTBot, OAI-SearchBot, ChatGPT-User)"
+    url: https://platform.openai.com/docs/bots
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: anthropic_crawlers
+    name: "Anthropic: crawler di Claude e come bloccarli"
+    url: https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: perplexity_crawlers
+    name: "Perplexity Crawlers"
+    url: https://docs.perplexity.ai/guides/bots
     selector: "main"
     type: html
     category: google_docs_change
     importance: 4
+
+  - id: mistral_crawlers
+    name: "Mistral Crawlers"
+    url: https://docs.mistral.ai/robots
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: apple_applebot
+    name: "Apple: Applebot e Applebot-Extended"
+    url: https://support.apple.com/en-us/119829
+    selector: "#content"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: amazon_amazonbot
+    name: "Amazon: Amazonbot"
+    url: https://developer.amazon.com/amazonbot
+    selector: "#content"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: duckduckgo_duckassistbot
+    name: "DuckDuckGo: DuckAssistBot"
+    url: https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  # La pagina non ha un contenitore del testo: si legge tutto il body.
+  - id: commoncrawl_ccbot
+    name: "Common Crawl: CCBot"
+    url: https://commoncrawl.org/ccbot
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: cloudflare_ai_crawl_control
+    name: "Cloudflare AI Crawl Control"
+    url: https://developers.cloudflare.com/ai-crawl-control/
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: cloudflare_verified_bots
+    name: "Cloudflare: bot verificati"
+    url: https://developers.cloudflare.com/bots/concepts/bot/verified-bots/
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  # Proposta di standard su un sito personale: puo' cambiare host o sparire,
+  # quindi niente issue se smette di rispondere.
+  - id: llms_txt_spec
+    name: "Specifica llms.txt"
+    url: https://llmstxt.org/
+    selector: "main"
+    type: html
+    category: google_docs_change
+    importance: 3
+    alert: false
+
+  # Il testo e' caricato via JavaScript: senza render la pagina e' vuota.
+  # Copre ricerca Bing, Copilot e risultati di "grounding" delle API.
+  - id: bing_webmaster_guidelines
+    name: "Bing Webmaster Guidelines"
+    url: https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a
+    selector: ".helpContent"
+    render: true
+    type: html
+    category: google_docs_change
+    importance: 5

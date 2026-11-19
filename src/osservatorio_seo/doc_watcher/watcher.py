@@ -5,6 +5,7 @@ from __future__ import annotations
 import difflib
 import hashlib
 import re
+from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 
@@ -17,6 +18,23 @@ from osservatorio_seo.http_client import HttpClient
 
 MAX_DIFF_CHARS = 50_000
 MIN_CHANGED_CHARS = 80
+# Sotto questa lunghezza il testo estratto non e' la pagina vera (selettore
+# che prende solo un frammento, pagina vuota): la pipeline la passa al
+# costruttore, i test unitari con testi brevi la lasciano a 0.
+MIN_TEXT_CHARS = 300
+# Pagine di blocco servite al posto del contenuto (Cloudflare, Akamai...).
+# Solo su testi brevi: una pagina vera che parla di CAPTCHA non va scartata.
+_BLOCK_PAGE_RE = re.compile(
+    r"enable javascript and cookies|just a moment\.\.\.|checking your browser|"
+    r"access denied|verify you are human|attention required",
+    re.IGNORECASE,
+)
+_BLOCK_PAGE_MAX_CHARS = 3_000
+
+
+# (url, selettore da aspettare) -> HTML renderizzato. In produzione e'
+# PlaywrightFetcher.render; iniettato per non legare il watcher a Playwright.
+Renderer = Callable[[str, str | None], Awaitable[str]]
 
 
 class DocExtractError(RuntimeError):
@@ -42,10 +60,14 @@ class DocWatcher:
         http: HttpClient,
         state: StateStore,
         min_changed_chars: int = MIN_CHANGED_CHARS,
+        min_text_chars: int = 0,
+        renderer: Renderer | None = None,
     ) -> None:
+        self._renderer = renderer
         self._http = http
         self._state = state
         self._min_changed_chars = min_changed_chars
+        self._min_text_chars = min_text_chars
         self._h2t = html2text.HTML2Text()
         self._h2t.ignore_links = True
         self._h2t.ignore_images = True
@@ -55,10 +77,16 @@ class DocWatcher:
         now = datetime.now(UTC)
         if page.type == "pdf":
             raw_text = await self._fetch_pdf(page.url)
+        elif page.render:
+            raw_text = await self._render_html(page.url, page.selector)
         else:
             raw_text = await self._fetch_html(page.url, page.selector)
 
         new_text = self._normalize(raw_text, page.noise_patterns)
+        # Prima di toccare lo state: una pagina di blocco o un frammento non
+        # devono mai diventare la baseline (e' successo con OpenAI, rimasta
+        # per mesi "sorvegliata" su "Enable JavaScript and cookies").
+        self._check_plausible(page, new_text)
         current_hash = "sha256:" + hashlib.sha256(new_text.encode("utf-8")).hexdigest()
         previous_hash = self._state.load_hash(page.id)
         previous_text = self._state.load_text(page.id)
@@ -141,10 +169,28 @@ class DocWatcher:
             new_text=new_text,
         )
 
+    def _check_plausible(self, page: DocWatcherPage, text: str) -> None:
+        if len(text) <= _BLOCK_PAGE_MAX_CHARS and _BLOCK_PAGE_RE.search(text):
+            raise DocExtractError(f"{page.url}: pagina di blocco anti-bot al posto del contenuto")
+        if len(text) < self._min_text_chars:
+            raise DocExtractError(
+                f"{page.url}: testo estratto troppo corto ({len(text)} caratteri), "
+                "selettore sbagliato o pagina vuota"
+            )
+
     async def _fetch_html(self, url: str, selector: str | None) -> str:
         # HttpClient.get() solleva gia' su status != 200 (vedi http_client.py).
         resp = await self._http.get(url)
-        tree = HTMLParser(resp.text)
+        return self._extract(resp.text, url, selector)
+
+    async def _render_html(self, url: str, selector: str | None) -> str:
+        if self._renderer is None:
+            raise DocExtractError(f"{url}: render richiesto ma nessun renderer configurato")
+        html = await self._renderer(url, selector)
+        return self._extract(html, url, selector)
+
+    def _extract(self, html: str, url: str, selector: str | None) -> str:
+        tree = HTMLParser(html)
         root = tree.css_first(selector) if selector else tree.body
         if root is None:
             raise DocExtractError(f"{url}: selector {selector!r} matched nothing")
