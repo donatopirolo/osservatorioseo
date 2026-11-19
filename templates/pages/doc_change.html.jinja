@@ -1,0 +1,100 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/modifiche/" class="hover:text-primary-container">MODIFICHE</a>
+  <span class="text-outline-variant">/</span>
+  <a href="{{ doc_path }}" class="hover:text-primary-container">{{ page_name }}</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">{{ day_label }}</span>
+</nav>
+
+<article class="max-w-4xl mx-auto">
+  <header class="mb-10 max-w-3xl">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; MODIFICA RILEVATA · <time datetime="{{ day_iso }}">{{ day_label }}</time></p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-white">{{ title }}</h1>
+    {% if summary %}
+    <div class="text-lg text-on-surface-variant leading-relaxed space-y-4">
+      {% for para in summary.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Documento:</dt> <dd class="inline"><a href="{{ doc_path }}" class="text-white hover:text-primary-container underline">{{ page_name }}</a></dd></div>
+      <div><dt class="inline text-outline uppercase">Righe:</dt> <dd class="inline"><span class="text-[#8dffa8]">+{{ lines_added }}</span> <span class="text-[#ffb4ab]">&minus;{{ lines_removed }}</span></dd></div>
+      {% if stars %}<div><dt class="inline text-outline uppercase">Importanza:</dt> <dd class="inline text-[#f5a623]">{{ stars }}</dd></div>{% endif %}
+      <div><dt class="inline text-outline uppercase">Edizione:</dt> <dd class="inline"><a href="{{ day_path }}" class="text-white hover:text-primary-container underline">feed del {{ day_label }}</a></dd></div>
+    </dl>
+    <p class="mt-6 flex flex-wrap gap-3 text-xs font-mono uppercase">
+      {% if page_url %}<a href="{{ page_url }}" target="_blank" rel="noopener" class="border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container">Pagina originale &rarr;</a>{% endif %}
+      {% if wayback_url %}<a href="{{ wayback_url }}" target="_blank" rel="noopener nofollow" class="border border-outline px-3 py-1 hover:border-primary-container hover:text-primary-container">Versioni su Wayback Machine &rarr;</a>{% endif %}
+    </p>
+  </header>
+
+  <section class="mb-10">
+    <div class="flex items-center gap-4 mb-4">
+      <h2 class="text-xs text-outline uppercase font-mono tracking-widest">&gt; {{ "PRIMA E DOPO" if diff.mode == "full" else "ESTRATTO DELLE RIGHE CAMBIATE" }}</h2>
+      <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+    </div>
+    <p class="text-xs text-outline font-mono mb-4">
+      <ins class="bg-[#0f3a1a] text-[#8dffa8] no-underline px-1">testo aggiunto</ins>
+      <del class="bg-[#4a1c1c] text-[#ffb4ab] line-through px-1 ml-2">testo tolto</del>
+      {% if diff.mode == "full" %}<span class="ml-2">in grigio il contesto invariato</span>{% endif %}
+    </p>
+
+    {% for h in diff.hunks %}
+    <div class="mb-4 border border-outline-variant bg-surface-container-lowest">
+      <div class="px-4 py-1 text-[10px] font-mono uppercase text-outline border-b border-outline-variant">riga {{ h.new_line }}</div>
+      <div class="font-mono text-[13px] leading-relaxed">
+        {% for row in h.rows %}
+        <div class="px-4 py-1 whitespace-pre-wrap break-words {% if row.kind == 'ctx' %}text-outline{% elif row.kind == 'add' %}border-l-2 border-[#8dffa8] text-on-surface{% elif row.kind == 'del' %}border-l-2 border-[#ffb4ab] text-on-surface{% else %}border-l-2 border-[#f5a623] text-on-surface{% endif %}">{% if row.html|string|trim %}{{ row.html }}{% else %}&nbsp;{% endif %}</div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    {% if diff.truncated %}
+    <p class="text-sm text-on-surface-variant font-mono mt-4">
+      {% if diff.hidden_hunks %}Altri {{ diff.hidden_hunks }} blocchi di modifiche non mostrati. {% endif %}Il confronto qui sopra è parziale: il testo completo è sulla
+      {% if page_url %}<a href="{{ page_url }}" target="_blank" rel="noopener" class="text-primary-container underline">pagina originale</a>{% else %}pagina originale{% endif %}.
+    </p>
+    {% endif %}
+  </section>
+
+  {% if newer or older %}
+  <nav class="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs" aria-label="Altre modifiche allo stesso documento">
+    {% if older %}
+    <a href="{{ older.path }}" class="p-4 border border-outline-variant hover:border-primary-container group">
+      <span class="block text-outline uppercase mb-1">&larr; Modifica precedente · {{ older.day_label }}</span>
+      <span class="block text-white group-hover:text-primary-container text-sm">{{ older.title }}</span>
+    </a>
+    {% else %}<span></span>{% endif %}
+    {% if newer %}
+    <a href="{{ newer.path }}" class="p-4 border border-outline-variant hover:border-primary-container group sm:text-right">
+      <span class="block text-outline uppercase mb-1">Modifica successiva · {{ newer.day_label }} &rarr;</span>
+      <span class="block text-white group-hover:text-primary-container text-sm">{{ newer.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      {% if diff.mode == "full" %}
+      Il testo nel confronto è tratto da <a href="{{ page_url }}" target="_blank" rel="noopener" class="text-primary-container underline">{{ hostname }}</a>, pubblicato da Google in licenza <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener license" class="text-primary-container underline">CC BY 4.0</a>, convertito in testo semplice.
+      {% else %}
+      Il confronto mostra solo brevi estratti delle righe cambiate. Il testo è di proprietà dell'autore: la versione completa è su {% if page_url %}<a href="{{ page_url }}" target="_blank" rel="noopener" class="text-primary-container underline">{{ hostname }}</a>{% else %}la pagina originale{% endif %}.
+      {% endif %}
+      Il riassunto è generato con l'AI a partire dal diff e non è rivisto editorialmente.
+    </p>
+  </section>
+</article>
+{% endblock %}

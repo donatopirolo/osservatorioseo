@@ -105,5 +105,14 @@ class HtmlRenderer:
     def render_patent(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/patent.html.jinja", context)
 
+    def render_doc_changes_index(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/doc_changes_index.html.jinja", context)
+
+    def render_doc_changes_doc(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/doc_changes_doc.html.jinja", context)
+
+    def render_doc_change(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/doc_change.html.jinja", context)
+
     def render_tracker(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/tracker.html.jinja", context)

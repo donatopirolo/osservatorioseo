@@ -1,0 +1,43 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/modifiche/" class="hover:text-primary-container">MODIFICHE</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">{{ page_name }}</span>
+</nav>
+
+<section class="mb-10 max-w-3xl">
+  <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; STORICO DEL DOCUMENTO</p>
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-white">{{ page_name }}</h1>
+  <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+    {% if page_url %}<div><dt class="inline text-outline uppercase">Pagina:</dt> <dd class="inline"><a href="{{ page_url }}" target="_blank" rel="noopener" class="text-primary-container underline break-all">{{ hostname }}</a></dd></div>{% endif %}
+    <div><dt class="inline text-outline uppercase">Modifiche rilevate:</dt> <dd class="inline text-white">{{ rows | length }}</dd></div>
+    <div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">{{ "sorvegliato ogni giorno" if watched else "non più sorvegliato" }}</dd></div>
+  </dl>
+</section>
+
+<section class="max-w-5xl">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; MODIFICHE</h2>
+  <ol class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+    {% for r in rows %}
+    <li>
+      <a href="{{ r.path }}" class="py-4 grid grid-cols-1 sm:grid-cols-[9.5rem_1fr_auto] gap-x-4 gap-y-1 items-baseline group hover:bg-surface-container-lowest transition-colors">
+        <span class="text-xs font-mono font-bold text-primary-container uppercase"><time datetime="{{ r.day }}">{{ r.day_label }}</time></span>
+        <span class="text-base text-white group-hover:text-primary-container">{{ r.title }}</span>
+        <span class="text-xs font-mono whitespace-nowrap">
+          <span class="text-[#8dffa8]">+{{ r.lines_added }}</span>
+          <span class="text-[#ffb4ab]">&minus;{{ r.lines_removed }}</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endblock %}

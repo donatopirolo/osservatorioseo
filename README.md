@@ -10,6 +10,7 @@ L'output è un `feed.json` pubblico consumabile anche da altri tool AI, e una pa
 - 🌐 **Fonti multi-tipo**: RSS, HTML scraping, Playwright per anti-bot
 - 🇮🇹 **Riassunti in italiano** tono asciutto, no hype
 - ⚠️ **Doc Watcher**: rileva modifiche a pagine Google (Spam Policies, Helpful Content, QRG PDF, ecc.)
+- 🔍 **Pagine `/modifiche/`**: per ogni modifica rilevata dal Doc Watcher, riassunto in italiano e prima/dopo evidenziato per parola. Diff completo per i docs Google (CC BY 4.0), solo estratti brevi per le altre fonti
 - 📊 **Top 10 del giorno** + tutto categorizzato (8 categorie)
 - 💰 **Costo < €3/mese** grazie a GitHub Actions gratis + Gemini 2.0 Flash economico
 - 📁 **Zero database**: tutto è committato in git, archivio storico versionato gratis
