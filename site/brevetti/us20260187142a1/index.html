@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260187142A1: Sessioni di risposta live con domande di chiarimento — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un sistema per condurre sessioni di risposta live a query multimodali (testo, audio, video). Un modello di orchestrazione analizza la query, determina se servono informazioni aggiuntive e, se necessario, pone domande di chiarimento all&#39;utente in tempo reale o esegue ricerche web" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260187142a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260187142A1: Sessioni di risposta live con domande di chiarimento — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un sistema per condurre sessioni di risposta live a query multimodali (testo, audio, video). Un modello di orchestrazione analizza la query, determina se servono informazioni aggiuntive e, se necessario, pone domande di chiarimento all&#39;utente in tempo reale o esegue ricerche web" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260187142a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=607452460e" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260187142A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260187142a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260187142A1: Sessioni di risposta live con domande di chiarimento",
+  "description": "Il brevetto descrive un sistema per condurre sessioni di risposta live a query multimodali (testo, audio, video). Un modello di orchestrazione analizza la query, determina se servono informazioni aggiuntive e, se necessario, pone domande di chiarimento all\u0027utente in tempo reale o esegue ricerche web prima di generare una risposta tramite un modello di elaborazione sequenziale.",
+  "articleBody": "Il brevetto descrive un sistema per condurre sessioni di risposta live a query multimodali (testo, audio, video). Un modello di orchestrazione analizza la query, determina se servono informazioni aggiuntive e, se necessario, pone domande di chiarimento all\u0027utente in tempo reale o esegue ricerche web prima di generare una risposta tramite un modello di elaborazione sequenziale.\n\nLa rivendicazione indipendente 1 copre un metodo per fornire una sessione di risposta live. Il sistema avvia una sessione con un dispositivo utente e riceve una query multimodale che include contenuto video. Un modello di orchestrazione determina uno o pi\u00f9 passaggi di recupero informazioni per acquisire informazioni aggiuntive associate alla query multimodale, dove questi passaggi includono una domanda di chiarimento che richiede informazioni aggiuntive all\u0027utente. Il sistema fornisce la domanda di chiarimento al dispositivo utente, riceve la risposta dell\u0027utente in tempo reale, genera un input per il modello basato sulla query multimodale e sulla risposta utente, elabora questo input con un modello di risposta per generare un output, e trasmette l\u0027output al dispositivo utente. Il metodo include anche la ricezione di contenuto audio dal dispositivo utente e la determinazione che tale audio contiene feedback dell\u0027utente rispetto alla query multimodale.\n\nLa rivendicazione 2 specifica che determinare i passaggi di recupero informazioni comprende identificare uno o pi\u00f9 pezzi di dati mancanti dalla query multimodale necessari per generare un output del modello. La rivendicazione 3 definisce i tipi di dati come user specific data, query specific data e web query data. La rivendicazione 4 stabilisce che se un pezzo di dati ha tipo web query, il sistema genera ed esegue una query di ricerca per recuperare il dato da un database di ricerca web. La rivendicazione 5 prevede che se un dato ha tipo user specific o query specific, il sistema genera una query di chiarimento e la trasmette al dispositivo utente.\n\nLe rivendicazioni 6-8 riguardano l\u0027analisi del contenuto video: il sistema analizza i dati video per determinare caratteristiche delle immagini per ciascun frame (chiarezza, messa a fuoco, posizione e orientamento della camera) e determina le porzioni rilevanti del video basandosi su queste caratteristiche. La rivendicazione 9 specifica che la query multimodale pu\u00f2 includere contenuto testuale o vocale. Le rivendicazioni 10-12 descrivono che il modello di orchestrazione determina una pluralit\u00e0 di passaggi di elaborazione rappresentati come istruzioni computazionali, traccia lo stato corrente del processo di risposta e aggiorna tale stato dopo ogni passaggio completato.\n\nLa rivendicazione 13 stabilisce che l\u0027output del modello pu\u00f2 comprendere immagini visive e contenuto audio, formattato per far s\u00ec che il dispositivo utente visualizzi le immagini mentre presenta l\u0027audio. La rivendicazione 14 specifica che le immagini visive possono contenere contenuto diverso da quello presentato nell\u0027audio. Le rivendicazioni 16-18 coprono il monitoraggio continuo dell\u0027input utente: mentre presenta l\u0027output del modello, il sistema riceve dati audio catturati dal sensore audio del dispositivo utente, analizza se l\u0027audio rappresenta input vocale rilevante per la query multimodale, e se determinato rilevante, aggiorna l\u0027input del modello per includere questo ulteriore feedback e pu\u00f2 interrompere la presentazione dell\u0027output corrente.\n\nLa descrizione contempla un sistema di orchestrazione che coordina l\u0027interazione conversazionale tra utente e modello. Il sistema pu\u00f2 determinare se una query multimodale contiene informazioni sufficienti per generare una risposta adeguata utilizzando un modello di classificazione che genera un punteggio di confidenza o analizzando se una risposta provvisoria coprirebbe tutti i topic attesi. Se le informazioni sono insufficienti, un planning model determina il tipo di dati mancanti tra tre categorie: user specific data (preferenze, esperienze, storia dell\u0027utente), query specific data (contesto specifico della query, informazioni su oggetti o luoghi raffigurati), e web query data (informazioni specialistiche recuperabili tramite ricerca web).\n\nIl sistema contempla l\u0027analisi dei frame video basata su caratteristiche delle immagini come clarity, focus, e informazioni sulla posizione e orientamento della camera al momento della cattura, per determinare quali porzioni del video sono rilevanti e quali possono essere scartate come rumore. La descrizione menziona che il modello di orchestrazione pu\u00f2 essere tuned per porre pi\u00f9 o meno domande di chiarimento in base alle preferenze dell\u0027utente: alcuni utenti potrebbero preferire meno interruzioni, altri potrebbero trovare le domande di chiarimento utili.\n\nL\u0027output del modello pu\u00f2 essere multimodale con componenti visive e audio sincronizzate ma con contenuto diverso: le componenti visive possono includere diagrammi ed esempi, mentre l\u0027audio pu\u00f2 fornire spiegazioni di ci\u00f2 che \u00e8 visualizzato, con evidenziazione o sottolineatura delle porzioni rilevanti del display quando l\u0027audio le discute. Il sistema contempla dati di sincronizzazione che permettono di coordinare la presentazione di audio e video al momento appropriato.\n\nPer la SEO, questo brevetto potrebbe indicare un\u0027evoluzione verso interfacce di ricerca pi\u00f9 conversazionali e multimodali. Se implementato in Search, potrebbe significare che i contenuti ottimizzati per rispondere a domande specifiche e fornire informazioni strutturate potrebbero essere favoriti come fonti per alimentare queste sessioni conversazionali. La capacit\u00e0 del sistema di distinguere tra informazioni recuperabili via web search e informazioni user-specific suggerisce che i contenuti web potrebbero essere utilizzati selettivamente quando il sistema determina che servono dati generali non disponibili al modello. Tuttavia, l\u0027ambito applicativo descritto sembra pi\u00f9 orientato a sessioni di assistenza live (esempi includono problemi con giradischi, domande su glucosio, problemi matematici) piuttosto che alla ricerca web tradizionale, il che limiterebbe l\u0027impatto diretto sulla SEO classica.",
+  "wordCount": 861,
+  "datePublished": "2026-11-19T19:07:18.917695+00:00",
+  "dateModified": "2026-11-19T19:07:18.917695+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260187142a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "System and Methods for Providing a Live Query Response Session",
+    "identifier": "US20260187142A1",
+    "url": "https://patents.google.com/patent/US20260187142A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260187142A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260187142A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Sessioni di risposta live con domande di chiarimento</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">System and Methods for Providing a Live Query Response Session</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un sistema per condurre sessioni di risposta live a query multimodali (testo, audio, video). Un modello di orchestrazione analizza la query, determina se servono informazioni aggiuntive e, se necessario, pone domande di chiarimento all&#39;utente in tempo reale o esegue ricerche web prima di generare una risposta tramite un modello di elaborazione sequenziale.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Sessioni conversazionali live, non necessariamente Search web tradizionale</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">02 Luglio 2026</dd></div><div><dt class="inline text-outline uppercase">Priorità:</dt> <dd class="inline text-white">2024-12-27</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Ricerca conversazionale e contesto</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">20</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione indipendente 1 copre un metodo per fornire una sessione di risposta live. Il sistema avvia una sessione con un dispositivo utente e riceve una query multimodale che include contenuto video. Un modello di orchestrazione determina uno o più passaggi di recupero informazioni per acquisire informazioni aggiuntive associate alla query multimodale, dove questi passaggi includono una domanda di chiarimento che richiede informazioni aggiuntive all&#39;utente. Il sistema fornisce la domanda di chiarimento al dispositivo utente, riceve la risposta dell&#39;utente in tempo reale, genera un input per il modello basato sulla query multimodale e sulla risposta utente, elabora questo input con un modello di risposta per generare un output, e trasmette l&#39;output al dispositivo utente. Il metodo include anche la ricezione di contenuto audio dal dispositivo utente e la determinazione che tale audio contiene feedback dell&#39;utente rispetto alla query multimodale.</p>
+      <p>La rivendicazione 2 specifica che determinare i passaggi di recupero informazioni comprende identificare uno o più pezzi di dati mancanti dalla query multimodale necessari per generare un output del modello. La rivendicazione 3 definisce i tipi di dati come user specific data, query specific data e web query data. La rivendicazione 4 stabilisce che se un pezzo di dati ha tipo web query, il sistema genera ed esegue una query di ricerca per recuperare il dato da un database di ricerca web. La rivendicazione 5 prevede che se un dato ha tipo user specific o query specific, il sistema genera una query di chiarimento e la trasmette al dispositivo utente.</p>
+      <p>Le rivendicazioni 6-8 riguardano l&#39;analisi del contenuto video: il sistema analizza i dati video per determinare caratteristiche delle immagini per ciascun frame (chiarezza, messa a fuoco, posizione e orientamento della camera) e determina le porzioni rilevanti del video basandosi su queste caratteristiche. La rivendicazione 9 specifica che la query multimodale può includere contenuto testuale o vocale. Le rivendicazioni 10-12 descrivono che il modello di orchestrazione determina una pluralità di passaggi di elaborazione rappresentati come istruzioni computazionali, traccia lo stato corrente del processo di risposta e aggiorna tale stato dopo ogni passaggio completato.</p>
+      <p>La rivendicazione 13 stabilisce che l&#39;output del modello può comprendere immagini visive e contenuto audio, formattato per far sì che il dispositivo utente visualizzi le immagini mentre presenta l&#39;audio. La rivendicazione 14 specifica che le immagini visive possono contenere contenuto diverso da quello presentato nell&#39;audio. Le rivendicazioni 16-18 coprono il monitoraggio continuo dell&#39;input utente: mentre presenta l&#39;output del modello, il sistema riceve dati audio catturati dal sensore audio del dispositivo utente, analizza se l&#39;audio rappresenta input vocale rilevante per la query multimodale, e se determinato rilevante, aggiorna l&#39;input del modello per includere questo ulteriore feedback e può interrompere la presentazione dell&#39;output corrente.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla un sistema di orchestrazione che coordina l&#39;interazione conversazionale tra utente e modello. Il sistema può determinare se una query multimodale contiene informazioni sufficienti per generare una risposta adeguata utilizzando un modello di classificazione che genera un punteggio di confidenza o analizzando se una risposta provvisoria coprirebbe tutti i topic attesi. Se le informazioni sono insufficienti, un planning model determina il tipo di dati mancanti tra tre categorie: user specific data (preferenze, esperienze, storia dell&#39;utente), query specific data (contesto specifico della query, informazioni su oggetti o luoghi raffigurati), e web query data (informazioni specialistiche recuperabili tramite ricerca web).</p>
+      <p>Il sistema contempla l&#39;analisi dei frame video basata su caratteristiche delle immagini come clarity, focus, e informazioni sulla posizione e orientamento della camera al momento della cattura, per determinare quali porzioni del video sono rilevanti e quali possono essere scartate come rumore. La descrizione menziona che il modello di orchestrazione può essere tuned per porre più o meno domande di chiarimento in base alle preferenze dell&#39;utente: alcuni utenti potrebbero preferire meno interruzioni, altri potrebbero trovare le domande di chiarimento utili.</p>
+      <p>L&#39;output del modello può essere multimodale con componenti visive e audio sincronizzate ma con contenuto diverso: le componenti visive possono includere diagrammi ed esempi, mentre l&#39;audio può fornire spiegazioni di ciò che è visualizzato, con evidenziazione o sottolineatura delle porzioni rilevanti del display quando l&#39;audio le discute. Il sistema contempla dati di sincronizzazione che permettono di coordinare la presentazione di audio e video al momento appropriato.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare un&#39;evoluzione verso interfacce di ricerca più conversazionali e multimodali. Se implementato in Search, potrebbe significare che i contenuti ottimizzati per rispondere a domande specifiche e fornire informazioni strutturate potrebbero essere favoriti come fonti per alimentare queste sessioni conversazionali. La capacità del sistema di distinguere tra informazioni recuperabili via web search e informazioni user-specific suggerisce che i contenuti web potrebbero essere utilizzati selettivamente quando il sistema determina che servono dati generali non disponibili al modello. Tuttavia, l&#39;ambito applicativo descritto sembra più orientato a sessioni di assistenza live (esempi includono problemi con giradischi, domande su glucosio, problemi matematici) piuttosto che alla ricerca web tradizionale, il che limiterebbe l&#39;impatto diretto sulla SEO classica.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Il brevetto è una domanda pendente (A1), non un brevetto concesso, quindi non ha ancora superato l&#39;esame dell&#39;ufficio brevetti e potrebbe essere modificato o respinto.</li>
+      <li>L&#39;ambito applicativo descritto negli esempi riguarda principalmente sessioni di assistenza conversazionale live con applicazioni di cattura immagini, non necessariamente la ricerca web tradizionale di Google Search.</li>
+      <li>Il brevetto non dimostra che Google stia usando o intenda usare questo sistema in Search: descrive cosa l&#39;azienda vuole proteggere come invenzione, non cosa è in produzione.</li>
+      <li>Non fornisce evidenze su come o se i contenuti web vengano selezionati, classificati o rankati quando il sistema esegue web search per recuperare informazioni mancanti.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Strutturare i contenuti per rispondere a domande specifiche in modo chiaro e completo può renderli più utili come fonti per sistemi conversazionali, indipendentemente dall&#39;implementazione di questo brevetto.</li>
+      <li class="pl-2">Fornire informazioni fattuali verificabili e ben organizzate aumenta la probabilità che i contenuti siano utili per sistemi che devono integrare conoscenza generale da fonti web.</li>
+      <li class="pl-2">Considerare che le interfacce di ricerca potrebbero evolvere verso modalità più conversazionali e multimodali, rendendo importante l&#39;accessibilità e la chiarezza dei contenuti anche per sistemi di elaborazione automatica.</li>
+      <li class="pl-2">Mantenere contenuti aggiornati e specifici su argomenti specialistici può renderli fonti preziose per sistemi che cercano informazioni non disponibili nei modelli generali.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">live query response session</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sessione interattiva in tempo reale in cui l&#39;utente può sottomettere query multimodali e ricevere risposte conversazionali, con possibilità di interruzioni e feedback continui</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">orchestration model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Modello che analizza la query multimodale, determina se servono informazioni aggiuntive, coordina i passaggi per recuperarle e gestisce il flusso conversazionale</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">clarifying question</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Domanda generata dal sistema per ottenere informazioni aggiuntive dall&#39;utente necessarie a produrre una risposta adeguata alla query originale</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">user specific data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tipo di dato associato specificamente all&#39;utente (preferenze, esperienze, storia) che è meglio ottenere direttamente dall&#39;utente piuttosto che da altre fonti</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">query specific data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tipo di dato specifico al contesto della query corrente, come informazioni su oggetti o luoghi raffigurati o menzionati nella query</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">web query data</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tipo di dato di natura generale che può essere recuperato tramite ricerca web o database di conoscenza specializzati</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">planning model</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Componente del sistema di orchestrazione che determina i passaggi necessari per recuperare informazioni mancanti e generare una risposta adeguata</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260187142A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 19 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
