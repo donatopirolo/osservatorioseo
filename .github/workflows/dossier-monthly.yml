@@ -97,7 +97,10 @@ jobs:
         if: steps.update.outputs.code != '0'
         run: |
           if grep -q "402 Payment Required" "$RUNNER_TEMP/update.log"; then
-            echo "::error::OpenRouter ha risposto 402: credito finito o limite della chiave."
+            echo "::error::OpenRouter ha risposto 402: credito dell'account finito."
+          fi
+          if grep -q "Key limit exceeded" "$RUNNER_TEMP/update.log"; then
+            echo "::error::OpenRouter: raggiunto il limite di spesa della chiave (403 Key limit exceeded)."
           fi
           echo "::error::update_pillars.py e' uscito con codice ${{ steps.update.outputs.code }}"
           exit 1
@@ -112,6 +115,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `[osservatorioseo] Dossier: workflow fallito ${month}`,
-              body: `L'aggiornamento mensile dei dossier e' fallito. Se il log riporta 402, e' OpenRouter (credito o limite della chiave).\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              body: `L'aggiornamento mensile dei dossier e' fallito. Se il log riporta 402 o 403 \"Key limit exceeded\", e' OpenRouter (credito dell'account o limite della chiave).\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               labels: ['bug', 'automated']
             });
