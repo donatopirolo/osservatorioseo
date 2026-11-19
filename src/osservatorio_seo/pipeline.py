@@ -16,8 +16,9 @@ from osservatorio_seo.config import (
     load_sources,
 )
 from osservatorio_seo.doc_changes import change_path
+from osservatorio_seo.doc_watcher.health import HEALTH_FILE, WatchHealth
 from osservatorio_seo.doc_watcher.state import StateStore
-from osservatorio_seo.doc_watcher.watcher import DocChangeResult, DocWatcher
+from osservatorio_seo.doc_watcher.watcher import MIN_TEXT_CHARS, DocChangeResult, DocWatcher
 from osservatorio_seo.fetchers.base import Fetcher
 from osservatorio_seo.fetchers.playwright_fetcher import PlaywrightFetcher
 from osservatorio_seo.fetchers.rss import RSSFetcher
@@ -81,7 +82,7 @@ class Pipeline:
             raw_items, failed_sources, empty_sources = await self._fetch_all(sources, fetchers)
 
             state = StateStore(self._settings.state_dir)
-            doc_watcher = DocWatcher(http=http, state=state)
+            doc_watcher = DocWatcher(http=http, state=state, min_text_chars=MIN_TEXT_CHARS)
             doc_results, doc_statuses = await self._check_doc_pages(doc_pages, doc_watcher)
 
         # Con Jina attivo il filtro sul contenuto corto si sposta a valle
@@ -276,6 +277,8 @@ class Pipeline:
     ) -> tuple[list[DocChangeResult], list[DocWatcherStatus]]:
         results: list[DocChangeResult] = []
         statuses: list[DocWatcherStatus] = []
+        health = WatchHealth(Path(self._settings.state_dir) / HEALTH_FILE)
+        today = datetime.now(ROME_TZ).strftime("%Y-%m-%d")
         for page in pages:
             try:
                 r = await watcher.check(page)
@@ -283,8 +286,20 @@ class Pipeline:
                 statuses.append(
                     DocWatcherStatus(page_id=page.id, last_checked=r.checked_at, changed=r.changed)
                 )
+                health.record_success(page.id)
             except Exception as e:  # noqa: BLE001
                 logger.warning("doc page %s failed: %s", page.id, e)
+                health.record_failure(page.id, str(e), today, alert_enabled=page.alert)
+        health.prune({p.id for p in pages})
+        health.save()
+        for page_id, h in health.alerts().items():
+            logger.error(
+                "doc page %s non leggibile da %d giorni (dal %s): %s",
+                page_id,
+                h.failing_days,
+                h.failing_since,
+                h.last_error,
+            )
         return results, statuses
 
     async def _summarize_all(

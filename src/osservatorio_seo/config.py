@@ -23,6 +23,9 @@ class DocWatcherPage(BaseModel):
     category: CategoryId = "google_docs_change"
     importance: int = Field(ge=1, le=5)
     noise_patterns: list[str] = Field(default_factory=list)
+    # False: la pagina si continua a provare, ma un suo guasto non apre
+    # issue (es. una fonte che blocca i bot e che non vale la pena forzare).
+    alert: bool = True
 
 
 class Settings(BaseModel):
