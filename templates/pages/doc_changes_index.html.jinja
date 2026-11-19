@@ -1,0 +1,75 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant"> / </span>
+  <span class="text-primary-container">MODIFICHE</span>
+</nav>
+
+<section class="mb-10 max-w-3xl">
+  <div class="flex items-center gap-4 mb-4">
+    <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; MODIFICHE ALLA DOCUMENTAZIONE</h1>
+    <div class="flex-grow h-px bg-outline-variant border-dashed border-t"></div>
+  </div>
+  <p class="text-on-surface-variant leading-relaxed mb-4">
+    Ogni mattina il Doc Watcher rilegge le pagine ufficiali di Google Search (linee guida, specifiche tecniche, changelog della documentazione) e le policy dei principali servizi AI. Quando il testo cambia, qui trovi cosa è cambiato: il prima e dopo evidenziato e un riassunto in italiano.
+  </p>
+  <p class="text-on-surface-variant leading-relaxed mb-4">
+    Google spesso aggiorna queste pagine senza annunciarlo. Le modifiche puramente estetiche (spazi, impaginazione) vengono ignorate.
+  </p>
+  <p class="text-[10px] text-outline uppercase font-mono">
+    {{ rows | length }} MODIFICHE // {{ docs | length }} DOCUMENTI SORVEGLIATI // CONTROLLO OGNI GIORNO ALLE 07:00
+  </p>
+</section>
+
+<section class="mb-14 max-w-5xl">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; ULTIME MODIFICHE</h2>
+  {% if rows %}
+  <div class="flex flex-col divide-y divide-outline-variant border-t border-b border-outline-variant">
+    {% for r in rows %}
+    <a href="{{ r.path }}" class="py-4 grid grid-cols-1 sm:grid-cols-[9.5rem_1fr_auto] gap-x-4 gap-y-1 items-baseline group hover:bg-surface-container-lowest transition-colors">
+      <span class="text-xs font-mono font-bold text-primary-container uppercase"><time datetime="{{ r.day }}">{{ r.day_label }}</time></span>
+      <span>
+        <span class="block text-base text-white group-hover:text-primary-container">{{ r.title }}</span>
+        <span class="block text-[10px] text-outline font-mono uppercase mt-1">{{ r.page_name }}</span>
+      </span>
+      <span class="text-xs font-mono whitespace-nowrap">
+        <span class="text-[#8dffa8]">+{{ r.lines_added }}</span>
+        <span class="text-[#ffb4ab]">&minus;{{ r.lines_removed }}</span>
+        {% if r.stars %}<span class="text-[#f5a623] ml-2" title="Importanza">{{ r.stars }}</span>{% endif %}
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="text-on-surface-variant font-mono text-sm">Nessuna modifica rilevata finora.</p>
+  {% endif %}
+</section>
+
+<section class="max-w-5xl">
+  <h2 class="text-xs text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOCUMENTI SORVEGLIATI</h2>
+  <div class="flex flex-col gap-1">
+    {% for d in docs %}
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+      <div class="flex items-center gap-3 flex-wrap">
+        {% if d.path %}
+        <a href="{{ d.path }}" class="text-white hover:text-primary-container">{{ d.name }}</a>
+        <span class="text-outline text-[10px] uppercase">{{ d.count }} {{ "modifica" if d.count == 1 else "modifiche" }} · ultima {{ d.last_label }}</span>
+        {% else %}
+        <span class="text-white">{{ d.name }}</span>
+        <span class="text-outline text-[10px] uppercase">nessuna modifica rilevata</span>
+        {% endif %}
+      </div>
+      {% if d.url %}
+      <a href="{{ d.url }}" target="_blank" rel="noopener" class="text-outline text-[10px] uppercase hover:text-primary-container">{{ d.hostname }} &rarr;</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

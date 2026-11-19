@@ -13,6 +13,7 @@ from typing import TYPE_CHECKING, Any
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
+from osservatorio_seo import doc_changes as dc
 from osservatorio_seo.models import Feed, Item, Pillar, Source
 from osservatorio_seo.patents.models import THEMES, Patent
 from osservatorio_seo.ranker import Ranker
@@ -193,9 +194,14 @@ def _resolve_article_link(
     item_idx: dict[str, dict[str, Any]],
     item_slugs: dict[str, str],
     day_iso: str,
+    doc_links: dict[str, str] | None = None,
 ) -> tuple[str, bool]:
     """URL e flag "e' interna" per un item, indipendentemente da quale
     giorno dell'archivio provenga.
+
+    Le modifiche del Doc Watcher (``doc_links``) vanno sempre alla loro pagina
+    in /modifiche/, che ha riassunto e diff: condividono tutte l'URL della
+    pagina sorvegliata, quindi non hanno una pagina articolo propria.
 
     Prima cerca in ``item_idx`` (da ``_build_item_index()``, copre tutto
     l'archivio): senza questo, un item pubblicato in un giorno diverso da
@@ -205,6 +211,8 @@ def _resolve_article_link(
     ancora il file di oggi (es. nei test che chiamano publish_ssg senza
     prima scrivere l'archivio).
     """
+    if doc_links and item.id in doc_links:
+        return doc_links[item.id], True
     meta = item_idx.get(item.id)
     if meta:
         return meta["site_path"], True
@@ -354,6 +362,19 @@ def _write_tracker_csv(snapshot: Any, path: Path) -> None:
 # ============================================================================
 
 
+def _day_label(day_iso: str) -> str:
+    """``2026-11-19`` -> ``19 novembre 2026``."""
+    y, m, d = day_iso.split("-")
+    return f"{int(d)} {_MONTH_LABELS[int(m)].lower()} {y}"
+
+
+def _doc_change_title(r: dc.DocChangeRecord) -> str:
+    """Titolo della modifica, senza il prefisso ⚠️ del feed."""
+    if r.item and r.item.title_it:
+        return r.item.title_it.lstrip("⚠️").strip() or r.page_name
+    return f"Modifica a {r.page_name}"
+
+
 class Publisher:
     def __init__(
         self,
@@ -364,6 +385,8 @@ class Publisher:
         self._data_dir = Path(data_dir)
         self._archive_dir = Path(archive_dir)
         self._site_data_dir = Path(site_data_dir) if site_data_dir else None
+        self._doc_change_cache: list[dc.DocChangeRecord] | None = None
+        self._doc_page_names: dict[str, tuple[str, str]] = {}
 
     def publish(self, feed: Feed) -> Feed:
         self._data_dir.mkdir(parents=True, exist_ok=True)
@@ -502,6 +525,7 @@ class Publisher:
         """
         renderer = HtmlRenderer(templates_dir, static_dir=site_dir)
         site_dir.mkdir(parents=True, exist_ok=True)
+        self._set_doc_pages(doc_pages)
 
         day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
         item_slugs = self._compute_item_slugs(feed, day_iso)
@@ -514,6 +538,7 @@ class Publisher:
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
         self._ssg_patents(renderer, site_dir, allow_indexing)
+        self._ssg_doc_changes(renderer, doc_pages, site_dir, allow_indexing)
         self._ssg_tracker(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
@@ -584,6 +609,7 @@ class Publisher:
         """
         renderer = HtmlRenderer(templates_dir, static_dir=site_dir)
         site_dir.mkdir(parents=True, exist_ok=True)
+        self._set_doc_pages(doc_pages)
         day_iso = feed.generated_at_local.strftime("%Y-%m-%d")
         item_slugs = self._compute_item_slugs(feed, day_iso)
 
@@ -593,6 +619,7 @@ class Publisher:
         self._ssg_docs_and_about(renderer, sources, doc_pages, site_dir, allow_indexing)
         self._ssg_dossiers(renderer, site_dir, allow_indexing)
         self._ssg_patents(renderer, site_dir, allow_indexing)
+        self._ssg_doc_changes(renderer, doc_pages, site_dir, allow_indexing)
         self._ssg_tracker(renderer, site_dir, allow_indexing)
         self._ssg_seo_assets(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
         self._ssg_top_week(renderer, feed, site_dir, allow_indexing, item_slugs, day_iso)
@@ -603,7 +630,11 @@ class Publisher:
         self, item: Item, day_iso: str, item_slugs: dict[str, str]
     ) -> dict[str, Any]:
         y, m, d = day_iso.split("-")
-        if is_indexable(item) and item.id in item_slugs:
+        doc_links = self._doc_change_links()
+        if item.id in doc_links:
+            article_url = doc_links[item.id]
+            is_internal = True
+        elif is_indexable(item) and item.id in item_slugs:
             article_url = f"/archivio/{y}/{m}/{d}/{item_slugs[item.id]}/"
             is_internal = True
         else:
@@ -783,11 +814,15 @@ class Publisher:
                 continue
             slug = item_slugs[item.id]
             article_url = canonical(f"/archivio/{y}/{m}/{d}/{slug}/")
+            # Una modifica del Doc Watcher ha la sua pagina in /modifiche/,
+            # con il diff: e' quella la versione da indicizzare.
+            doc_link = self._doc_change_links().get(item.id)
+            canonical_url = canonical(doc_link) if doc_link else article_url
             related = _related_articles(item_idx, item.id, item.category, item.tags, day_iso)
             ctx = {
                 "page_title": f"{item.title_it} — Osservatorio SEO",
                 "page_description": _meta_description(item.summary_it),
-                "canonical_url": article_url,
+                "canonical_url": canonical_url,
                 "active_nav": "archive",
                 "tag_to_dossier": tag_to_dossier,
                 "related_articles": related,
@@ -1020,7 +1055,9 @@ class Publisher:
                 items_by_tag[tag].append(item)
 
         def build_teaser(item: Item) -> str:
-            article_url, is_internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
+            article_url, is_internal = _resolve_article_link(
+                item, item_idx, item_slugs, day_iso, self._doc_change_links()
+            )
             if not is_internal and item.id in item_day:
                 # Nessuna pagina propria: si va allo snapshot del giorno in cui
                 # la notizia e' comparsa. E' interno, pertinente, e da' un
@@ -1463,6 +1500,193 @@ class Publisher:
             }
             (target / "index.html").write_text(renderer.render_patent(ctx), encoding="utf-8")
 
+    # --- Modifiche del Doc Watcher (/modifiche/) ---
+
+    def _set_doc_pages(self, doc_pages: list[DocWatcherPage]) -> None:
+        names = {p.id: (p.name, p.url) for p in doc_pages}
+        if names != self._doc_page_names:
+            self._doc_page_names = names
+            self._doc_change_cache = None
+
+    def _doc_change_records(self) -> list[dc.DocChangeRecord]:
+        """Storico delle modifiche (diff salvati + item d'archivio), letto una volta."""
+        if self._doc_change_cache is None:
+            self._doc_change_cache = dc.load_doc_changes(
+                self._data_dir / "state" / "doc_watcher",
+                self._archive_dir,
+                self._doc_page_names,
+            )
+        return self._doc_change_cache
+
+    def _doc_change_links(self) -> dict[str, str]:
+        return dc.doc_change_links(self._doc_change_records())
+
+    def _ssg_doc_changes(
+        self,
+        renderer: HtmlRenderer,
+        doc_pages: list[DocWatcherPage],
+        site_dir: Path,
+        allow_indexing: bool,
+    ) -> None:
+        records = self._doc_change_records()
+        target_root = site_dir / dc.BASE_PATH.strip("/")
+        # Rigenerata per intero a ogni run: una modifica rimossa dallo state
+        # non deve restare online come pagina orfana.
+        shutil.rmtree(target_root, ignore_errors=True)
+        target_root.mkdir(parents=True, exist_ok=True)
+
+        index_url = canonical(dc.BASE_PATH)
+        importance_by_page = {p.id: p.importance for p in doc_pages}
+        by_page: dict[str, list[dc.DocChangeRecord]] = defaultdict(list)
+        for r in records:
+            by_page[r.page_id].append(r)
+
+        def row(r: dc.DocChangeRecord) -> dict[str, Any]:
+            return {
+                "path": r.path,
+                "day": r.day,
+                "day_label": _day_label(r.day),
+                "page_name": r.page_name,
+                "doc_path": dc.doc_path(r.page_id),
+                "title": _doc_change_title(r),
+                "stars": _stars(r.item.importance) if r.item else "",
+                "lines_added": r.lines_added,
+                "lines_removed": r.lines_removed,
+            }
+
+        # Documenti: prima quelli sorvegliati oggi (in ordine di importanza),
+        # poi quelli non piu' in config ma con uno storico.
+        docs: list[dict[str, Any]] = []
+        seen: set[str] = set()
+        for p in sorted(doc_pages, key=lambda p: -p.importance):
+            changes = by_page.get(p.id, [])
+            docs.append(
+                {
+                    "id": p.id,
+                    "name": p.name,
+                    "url": p.url,
+                    "hostname": _safe_hostname(p.url),
+                    "path": dc.doc_path(p.id) if changes else None,
+                    "count": len(changes),
+                    "last_label": _day_label(changes[0].day) if changes else None,
+                }
+            )
+            seen.add(p.id)
+        for page_id, changes in by_page.items():
+            if page_id in seen:
+                continue
+            docs.append(
+                {
+                    "id": page_id,
+                    "name": changes[0].page_name,
+                    "url": changes[0].page_url,
+                    "hostname": _safe_hostname(changes[0].page_url),
+                    "path": dc.doc_path(page_id),
+                    "count": len(changes),
+                    "last_label": _day_label(changes[0].day),
+                }
+            )
+
+        index_ctx = {
+            "page_title": "Modifiche alla documentazione Google — Osservatorio SEO",
+            "page_description": (
+                "Ogni modifica rilevata alle pagine ufficiali di Google Search e alle policy "
+                "dei servizi AI, con il prima e dopo evidenziato e un riassunto in italiano."
+            ),
+            "canonical_url": index_url,
+            "active_nav": "modifiche",
+            "noindex": not allow_indexing,
+            "rows": [row(r) for r in records],
+            "docs": docs,
+            "breadcrumbs": [
+                {"name": "Home", "url": canonical("/")},
+                {"name": "Modifiche", "url": index_url},
+            ],
+        }
+        (target_root / "index.html").write_text(
+            renderer.render_doc_changes_index(index_ctx), encoding="utf-8"
+        )
+
+        for page_id, changes in by_page.items():
+            first = changes[0]
+            doc_url = canonical(dc.doc_path(page_id))
+            doc_dir = target_root / dc.doc_slug(page_id)
+            doc_dir.mkdir(parents=True, exist_ok=True)
+            doc_ctx = {
+                "page_title": f"{first.page_name}: storico delle modifiche — Osservatorio SEO",
+                "page_description": _meta_description(
+                    f"Tutte le modifiche rilevate a {first.page_name} ({len(changes)}), "
+                    "con data, riassunto in italiano e confronto prima/dopo."
+                ),
+                "canonical_url": doc_url,
+                "active_nav": "modifiche",
+                "noindex": not allow_indexing,
+                "page_name": first.page_name,
+                "page_url": first.page_url,
+                "hostname": _safe_hostname(first.page_url),
+                "importance": importance_by_page.get(page_id),
+                "watched": page_id in importance_by_page,
+                "rows": [row(r) for r in changes],
+                "breadcrumbs": [
+                    {"name": "Home", "url": canonical("/")},
+                    {"name": "Modifiche", "url": index_url},
+                    {"name": first.page_name, "url": doc_url},
+                ],
+            }
+            (doc_dir / "index.html").write_text(
+                renderer.render_doc_changes_doc(doc_ctx), encoding="utf-8"
+            )
+
+            for i, r in enumerate(changes):
+                newer = changes[i - 1] if i > 0 else None
+                older = changes[i + 1] if i + 1 < len(changes) else None
+                mode = dc.display_mode(r.page_url)
+                rendered = dc.render_diff(r.diff, mode)
+                page_url = canonical(r.path)
+                title = _doc_change_title(r)
+                summary = r.item.summary_it if r.item else ""
+                ctx = {
+                    "page_title": f"{title} — Modifiche Osservatorio SEO",
+                    "page_description": _meta_description(
+                        summary or f"Modifica rilevata a {r.page_name} il {_day_label(r.day)}."
+                    ),
+                    "canonical_url": page_url,
+                    "active_nav": "modifiche",
+                    "noindex": not allow_indexing,
+                    "og_type": "article",
+                    "title": title,
+                    "summary": summary,
+                    "tags": r.item.tags if r.item else [],
+                    "stars": _stars(r.item.importance) if r.item else "",
+                    "page_name": r.page_name,
+                    "page_url": r.page_url,
+                    "hostname": _safe_hostname(r.page_url),
+                    "doc_path": dc.doc_path(page_id),
+                    "day_label": _day_label(r.day),
+                    "day_iso": r.day,
+                    "day_path": "/archivio/{}/{}/{}/".format(*r.day.split("-")),
+                    "lines_added": r.lines_added,
+                    "lines_removed": r.lines_removed,
+                    "diff": rendered,
+                    "wayback_url": f"https://web.archive.org/web/*/{r.page_url}"
+                    if r.page_url
+                    else None,
+                    "newer": row(newer) if newer else None,
+                    "older": row(older) if older else None,
+                    "article_url": page_url,
+                    "breadcrumbs": [
+                        {"name": "Home", "url": canonical("/")},
+                        {"name": "Modifiche", "url": index_url},
+                        {"name": r.page_name, "url": doc_url},
+                        {"name": _day_label(r.day), "url": page_url},
+                    ],
+                }
+                target = doc_dir / r.day
+                target.mkdir(parents=True, exist_ok=True)
+                (target / "index.html").write_text(
+                    renderer.render_doc_change(ctx), encoding="utf-8"
+                )
+
     # --- Tracker dashboard ---
 
     def _ssg_tracker(
@@ -1772,6 +1996,25 @@ class Publisher:
                 }
             )
 
+        doc_records = self._doc_change_records()
+        if doc_records:
+            urls.append(
+                {
+                    "loc": canonical(dc.BASE_PATH),
+                    "lastmod": doc_records[0].day,
+                    "priority": "0.8",
+                    "changefreq": "daily",
+                }
+            )
+            last_by_page: dict[str, str] = {}
+            for r in doc_records:
+                last_by_page.setdefault(r.page_id, r.day)
+                urls.append({"loc": canonical(r.path), "lastmod": r.day, "priority": "0.7"})
+            for page_id, last in last_by_page.items():
+                urls.append(
+                    {"loc": canonical(dc.doc_path(page_id)), "lastmod": last, "priority": "0.6"}
+                )
+
         (site_dir / "sitemap.xml").write_text(
             renderer.render_sitemap({"urls": urls}), encoding="utf-8"
         )
@@ -1938,7 +2181,9 @@ class Publisher:
         item_idx = self._build_item_index()
 
         def resolve_link(item: Item) -> tuple[str, bool]:
-            url, internal = _resolve_article_link(item, item_idx, item_slugs, day_iso)
+            url, internal = _resolve_article_link(
+                item, item_idx, item_slugs, day_iso, self._doc_change_links()
+            )
             if not internal and item.id in item_day:
                 dy, dm, dd = item_day[item.id].split("-")
                 return f"/archivio/{dy}/{dm}/{dd}/", True

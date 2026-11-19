@@ -15,6 +15,7 @@ from osservatorio_seo.config import (
     load_doc_watcher,
     load_sources,
 )
+from osservatorio_seo.doc_changes import change_path
 from osservatorio_seo.doc_watcher.state import StateStore
 from osservatorio_seo.doc_watcher.watcher import DocChangeResult, DocWatcher
 from osservatorio_seo.fetchers.base import Fetcher
@@ -38,6 +39,7 @@ from osservatorio_seo.premium_writer import PremiumWriter
 from osservatorio_seo.publisher import Publisher
 from osservatorio_seo.ranker import Ranker
 from osservatorio_seo.seen_urls import SeenUrlStore
+from osservatorio_seo.seo import canonical
 from osservatorio_seo.sources import is_event_item, override_importance
 from osservatorio_seo.summarizer import Summarizer, SummarizerBudgetExceededError
 from osservatorio_seo.tags import normalize_tags
@@ -422,10 +424,11 @@ class Pipeline:
                 continue
             # Summary OK: ora possiamo committare lo state in modo che la
             # modifica risulti "consumata" solo se l'item e' davvero stato pubblicato.
-            date_str = r.checked_at.strftime("%Y-%m-%d")
+            # Diff e item con la stessa data (quella di Roma, del giorno
+            # d'archivio): la pagina /modifiche/<doc>/<data>/ li abbina cosi'.
+            date_str = datetime.now(ROME_TZ).strftime("%Y-%m-%d")
             state.save_diff(page.id, date_str, r.diff)
             state.save(page.id, r.current_hash, r.new_text)
-            date_str = datetime.now(ROME_TZ).strftime("%Y-%m-%d")
             items.append(
                 Item(
                     id=f"doc_{date_str}_{idx:03d}",
@@ -452,6 +455,7 @@ class Pipeline:
                         current_hash=r.current_hash,
                         lines_added=r.lines_added,
                         lines_removed=r.lines_removed,
+                        diff_url=canonical(change_path(page.id, date_str)),
                     ),
                     summarizer_model=summary.model_used,
                     raw_hash=r.current_hash,
