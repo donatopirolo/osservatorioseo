@@ -62,7 +62,7 @@ pages:
 
   - id: google_crawlers_overview
     name: "Overview of Google Crawlers"
-    url: https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/overview-google-crawlers
     selector: "main article, main"
     type: html
     category: google_docs_change
@@ -99,7 +99,7 @@ pages:
 
   - id: google_robots_txt
     name: "Google robots.txt Specification"
-    url: https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt
+    url: https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec
     selector: "main article, main"
     type: html
     category: google_docs_change
@@ -160,3 +160,110 @@ pages:
     type: html
     category: google_docs_change
     importance: 4
+
+  # --- Aggiunte il 2026-11-19 -------------------------------------------
+  # Priorita' alta: come Google valuta i siti e chi scansiona cosa.
+  - id: google_search_essentials
+    name: "Google Search Essentials"
+    url: https://developers.google.com/search/docs/essentials
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_ranking_systems_guide
+    name: "Google Ranking Systems Guide"
+    url: https://developers.google.com/search/docs/appearance/ranking-systems-guide
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_gen_ai_content
+    name: "Google: contenuti generati con l'AI"
+    url: https://developers.google.com/search/docs/fundamentals/using-gen-ai-content
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_common_crawlers
+    name: "Google Common Crawlers (incl. Google-Extended)"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_user_triggered_fetchers
+    name: "Google User-Triggered Fetchers"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_structured_data_policies
+    name: "Google Structured Data General Guidelines"
+    url: https://developers.google.com/search/docs/appearance/structured-data/sd-policies
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  # Priorita' media.
+  - id: google_page_experience
+    name: "Google Page Experience"
+    url: https://developers.google.com/search/docs/appearance/page-experience
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_core_web_vitals
+    name: "Google Core Web Vitals"
+    url: https://developers.google.com/search/docs/appearance/core-web-vitals
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_discover
+    name: "Google Discover"
+    url: https://developers.google.com/search/docs/appearance/google-discover
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_canonicalization
+    name: "Google: URL duplicati e canonical"
+    url: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_technical_requirements
+    name: "Google Search Technical Requirements"
+    url: https://developers.google.com/search/docs/essentials/technical
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_site_names
+    name: "Google Site Names"
+    url: https://developers.google.com/search/docs/appearance/site-names
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: google_crawl_budget
+    name: "Google Crawl Budget (siti grandi)"
+    url: https://developers.google.com/crawling/docs/crawl-budget
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
