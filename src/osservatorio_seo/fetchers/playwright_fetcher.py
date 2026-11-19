@@ -28,6 +28,15 @@ class PlaywrightFetcher:
         return self._parse_html(html, source)
 
     async def _render_page(self, url: str) -> str:
+        return await self.render(url)
+
+    async def render(self, url: str, wait_for: str | None = None) -> str:
+        """HTML della pagina dopo il JavaScript.
+
+        ``wait_for``: selettore CSS da aspettare (fino al timeout) prima di
+        leggere l'HTML, per le pagine che caricano il contenuto dopo il DOM.
+        Usato anche dal Doc Watcher per le pagine con ``render: true``.
+        """
         from playwright.async_api import async_playwright
 
         async with async_playwright() as pw:
@@ -39,7 +48,11 @@ class PlaywrightFetcher:
                     locale="en-US",
                 )
                 page = await context.new_page()
-                await page.goto(url, timeout=self._timeout_ms, wait_until="domcontentloaded")
+                resp = await page.goto(url, timeout=self._timeout_ms, wait_until="domcontentloaded")
+                if resp is not None and resp.status >= 400:
+                    raise RuntimeError(f"unexpected status {resp.status} for {url}")
+                if wait_for:
+                    await page.wait_for_selector(wait_for, timeout=self._timeout_ms)
                 await page.wait_for_timeout(2500)  # let JS render
                 return await page.content()
             finally:

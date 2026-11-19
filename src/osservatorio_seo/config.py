@@ -26,6 +26,9 @@ class DocWatcherPage(BaseModel):
     # False: la pagina si continua a provare, ma un suo guasto non apre
     # issue (es. una fonte che blocca i bot e che non vale la pena forzare).
     alert: bool = True
+    # True: la pagina carica il testo via JavaScript e va aperta con
+    # Playwright (es. Bing Webmaster Guidelines), non con una richiesta HTTP.
+    render: bool = False
 
 
 class Settings(BaseModel):

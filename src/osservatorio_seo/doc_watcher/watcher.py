@@ -5,6 +5,7 @@ from __future__ import annotations
 import difflib
 import hashlib
 import re
+from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 
@@ -31,6 +32,11 @@ _BLOCK_PAGE_RE = re.compile(
 _BLOCK_PAGE_MAX_CHARS = 3_000
 
 
+# (url, selettore da aspettare) -> HTML renderizzato. In produzione e'
+# PlaywrightFetcher.render; iniettato per non legare il watcher a Playwright.
+Renderer = Callable[[str, str | None], Awaitable[str]]
+
+
 class DocExtractError(RuntimeError):
     """Il selettore configurato non trova nulla nella pagina scaricata."""
 
@@ -55,7 +61,9 @@ class DocWatcher:
         state: StateStore,
         min_changed_chars: int = MIN_CHANGED_CHARS,
         min_text_chars: int = 0,
+        renderer: Renderer | None = None,
     ) -> None:
+        self._renderer = renderer
         self._http = http
         self._state = state
         self._min_changed_chars = min_changed_chars
@@ -69,6 +77,8 @@ class DocWatcher:
         now = datetime.now(UTC)
         if page.type == "pdf":
             raw_text = await self._fetch_pdf(page.url)
+        elif page.render:
+            raw_text = await self._render_html(page.url, page.selector)
         else:
             raw_text = await self._fetch_html(page.url, page.selector)
 
@@ -171,7 +181,16 @@ class DocWatcher:
     async def _fetch_html(self, url: str, selector: str | None) -> str:
         # HttpClient.get() solleva gia' su status != 200 (vedi http_client.py).
         resp = await self._http.get(url)
-        tree = HTMLParser(resp.text)
+        return self._extract(resp.text, url, selector)
+
+    async def _render_html(self, url: str, selector: str | None) -> str:
+        if self._renderer is None:
+            raise DocExtractError(f"{url}: render richiesto ma nessun renderer configurato")
+        html = await self._renderer(url, selector)
+        return self._extract(html, url, selector)
+
+    def _extract(self, html: str, url: str, selector: str | None) -> str:
+        tree = HTMLParser(html)
         root = tree.css_first(selector) if selector else tree.body
         if root is None:
             raise DocExtractError(f"{url}: selector {selector!r} matched nothing")

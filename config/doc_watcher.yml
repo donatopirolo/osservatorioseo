@@ -633,3 +633,148 @@ pages:
     type: html
     category: google_docs_change
     importance: 3
+
+  # --- AI: agenti e crawler, guide su AI Overviews / AI Mode ---------------
+  # Aggiunte il 2026-11-19. Fuori da developers.google.com il diff si mostra
+  # solo come estratto (vedi doc_changes.py), anche per support.google.com.
+  - id: google_agent
+    name: "Google-Agent: consentire il traffico dell'agente AI"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/allow-google-agent
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: google_help_ai_overviews
+    name: "Google Help: AI Overviews"
+    url: https://support.google.com/websearch/answer/14901683?hl=en
+    selector: ".article-content-container"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_help_ai_mode
+    name: "Google Help: AI Mode"
+    url: https://support.google.com/websearch/answer/16011537?hl=en
+    selector: ".article-content-container"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: google_apis_user_agent
+    name: "Google: user agent APIs-Google"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/apis-user-agent
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 2
+
+  - id: google_read_aloud_user_agent
+    name: "Google: user agent Read Aloud"
+    url: https://developers.google.com/crawling/docs/crawlers-fetchers/read-aloud-user-agent
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 2
+
+  - id: openai_crawlers
+    name: "OpenAI Crawlers (GPTBot, OAI-SearchBot, ChatGPT-User)"
+    url: https://platform.openai.com/docs/bots
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: anthropic_crawlers
+    name: "Anthropic: crawler di Claude e come bloccarli"
+    url: https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 5
+
+  - id: perplexity_crawlers
+    name: "Perplexity Crawlers"
+    url: https://docs.perplexity.ai/guides/bots
+    selector: "main"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: mistral_crawlers
+    name: "Mistral Crawlers"
+    url: https://docs.mistral.ai/robots
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: apple_applebot
+    name: "Apple: Applebot e Applebot-Extended"
+    url: https://support.apple.com/en-us/119829
+    selector: "#content"
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: amazon_amazonbot
+    name: "Amazon: Amazonbot"
+    url: https://developer.amazon.com/amazonbot
+    selector: "#content"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: duckduckgo_duckassistbot
+    name: "DuckDuckGo: DuckAssistBot"
+    url: https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  # La pagina non ha un contenitore del testo: si legge tutto il body.
+  - id: commoncrawl_ccbot
+    name: "Common Crawl: CCBot"
+    url: https://commoncrawl.org/ccbot
+    type: html
+    category: google_docs_change
+    importance: 4
+
+  - id: cloudflare_ai_crawl_control
+    name: "Cloudflare AI Crawl Control"
+    url: https://developers.cloudflare.com/ai-crawl-control/
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  - id: cloudflare_verified_bots
+    name: "Cloudflare: bot verificati"
+    url: https://developers.cloudflare.com/bots/concepts/bot/verified-bots/
+    selector: "main article, main"
+    type: html
+    category: google_docs_change
+    importance: 3
+
+  # Proposta di standard su un sito personale: puo' cambiare host o sparire,
+  # quindi niente issue se smette di rispondere.
+  - id: llms_txt_spec
+    name: "Specifica llms.txt"
+    url: https://llmstxt.org/
+    selector: "main"
+    type: html
+    category: google_docs_change
+    importance: 3
+    alert: false
+
+  # Il testo e' caricato via JavaScript: senza render la pagina e' vuota.
+  # Copre ricerca Bing, Copilot e risultati di "grounding" delle API.
+  - id: bing_webmaster_guidelines
+    name: "Bing Webmaster Guidelines"
+    url: https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a
+    selector: ".helpContent"
+    render: true
+    type: html
+    category: google_docs_change
+    importance: 5

@@ -134,3 +134,34 @@ def test_real_config_is_valid() -> None:
     assert len(ids) == len(set(ids))
     assert "google_quality_rater_guidelines_en" in ids
     assert "google_quality_rater_guidelines" not in ids  # il finto PDF "IT"
+
+
+# --- pagine renderizzate con Playwright ------------------------------------------
+
+
+async def test_render_page_uses_renderer_and_selector(tmp_path: Path) -> None:
+    body = "Bing Webmaster Guidelines. " * 40
+    calls: list[tuple[str, str | None]] = []
+
+    async def fake_render(url: str, wait_for: str | None) -> str:
+        calls.append((url, wait_for))
+        return f"<html><body><nav>menu</nav><div class='helpContent'>{body}</div></body></html>"
+
+    page = DocWatcherPage(
+        id="bing", name="Bing", url=URL, selector=".helpContent", importance=5, render=True
+    )
+    state = StateStore(tmp_path)
+    async with HttpClient() as client:
+        watcher = DocWatcher(http=client, state=state, min_text_chars=300, renderer=fake_render)
+        result = await watcher.check(page)
+    assert calls == [(URL, ".helpContent")]
+    assert "menu" not in result.new_text
+    assert "Bing Webmaster Guidelines" in result.new_text
+
+
+async def test_render_page_without_renderer_fails_cleanly(tmp_path: Path) -> None:
+    page = DocWatcherPage(id="bing", name="Bing", url=URL, importance=5, render=True)
+    async with HttpClient() as client:
+        watcher = DocWatcher(http=client, state=StateStore(tmp_path))
+        with pytest.raises(DocExtractError, match="renderer"):
+            await watcher.check(page)

@@ -82,7 +82,14 @@ class Pipeline:
             raw_items, failed_sources, empty_sources = await self._fetch_all(sources, fetchers)
 
             state = StateStore(self._settings.state_dir)
-            doc_watcher = DocWatcher(http=http, state=state, min_text_chars=MIN_TEXT_CHARS)
+            playwright = fetchers["playwright"]
+            assert isinstance(playwright, PlaywrightFetcher)
+            doc_watcher = DocWatcher(
+                http=http,
+                state=state,
+                min_text_chars=MIN_TEXT_CHARS,
+                renderer=playwright.render,
+            )
             doc_results, doc_statuses = await self._check_doc_pages(doc_pages, doc_watcher)
 
         # Con Jina attivo il filtro sul contenuto corto si sposta a valle
