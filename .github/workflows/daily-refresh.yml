@@ -73,6 +73,7 @@ jobs:
         run: npx @tailwindcss/cli -i ./tailwind_input.css -o ./site/tailwind.css --minify
 
       - name: Run refresh
+        id: refresh
         if: steps.timecheck.outputs.run == 'true'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -145,12 +146,24 @@ jobs:
       # Sotto il 50% di riassunti falliti feed_health considera sano il run: il
       # 2026-11-04 il credito e' finito a meta' run e nessuno e' stato avvisato.
       # Il controllo sta dopo il deploy: l'edizione parziale si pubblica comunque.
+      # always(): deve girare anche quando il refresh e' fallito, altrimenti
+      # l'issue non dice il motivo (2026-11-19: tetto mensile della chiave).
+      # OpenRouter usa due codici: 402 = credito dell'account finito,
+      # 403 "Key limit exceeded" = raggiunto il limite di spesa della chiave.
       - name: Avvisa se manca credito OpenRouter
         id: credit
-        if: steps.timecheck.outputs.run == 'true'
+        if: always() && steps.timecheck.outputs.run == 'true'
         run: |
-          if grep -q "402 Payment Required" "$RUNNER_TEMP/refresh.log"; then
-            echo "::error::OpenRouter ha risposto 402: credito finito o quasi. Ricarica."
+          LOG="$RUNNER_TEMP/refresh.log"
+          [ -f "$LOG" ] || exit 0
+          if grep -q "402 Payment Required" "$LOG"; then
+            echo "::error::OpenRouter ha risposto 402: credito dell'account finito o quasi. Ricarica."
+            echo "reason=credit" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+          if grep -q "Key limit exceeded" "$LOG"; then
+            echo "::error::OpenRouter ha risposto 403: raggiunto il limite di spesa della chiave. Alzalo in Settings > Keys."
+            echo "reason=keylimit" >> "$GITHUB_OUTPUT"
             exit 1
           fi
 
@@ -160,8 +173,14 @@ jobs:
         with:
           script: |
             const date = new Date().toISOString().split('T')[0];
-            const hint = '${{ steps.credit.outcome }}' === 'failure'
-              ? "\n\nCredito OpenRouter finito o quasi (HTTP 402): ricarica. L'edizione e' stata pubblicata, ma con meno articoli."
+            const reason = '${{ steps.credit.outputs.reason }}';
+            const published = '${{ steps.refresh.outcome }}' === 'success'
+              ? "L'edizione e' stata pubblicata, ma con meno articoli."
+              : "L'edizione NON e' stata pubblicata.";
+            const hint = reason === 'credit'
+              ? `\n\nCredito OpenRouter dell'account finito o quasi (HTTP 402): ricarica. ${published}`
+              : reason === 'keylimit'
+              ? `\n\nRaggiunto il limite di spesa della chiave OpenRouter (HTTP 403 "Key limit exceeded"): alzalo in Settings > Keys. ${published}`
               : '';
             github.rest.issues.create({
               owner: context.repo.owner,
