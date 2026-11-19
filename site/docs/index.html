@@ -32,11 +32,12 @@
 <header class="fixed top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
   <div class="flex items-center justify-between gap-4 flex-wrap">
     <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
-    <nav class="flex gap-4 sm:gap-6 items-center text-xs sm:text-sm">
+    <nav class="flex flex-wrap gap-x-4 gap-y-2 sm:gap-x-6 lg:gap-x-4 2xl:gap-x-6 items-center text-xs sm:text-sm">
       <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
       <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
       <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
       <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/modifiche/">MODIFICHE</a>
       <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/brevetti/">BREVETTI</a>
       <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
       <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/docs/">DOCS</a>
@@ -47,7 +48,7 @@
       type="search"
       id="search"
       placeholder="SEARCH_DB..."
-      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 uppercase placeholder:text-outline" />
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 xl:w-40 2xl:w-56 uppercase placeholder:text-outline" />
     <label class="flex items-center gap-2 cursor-pointer group">
       <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
       <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
@@ -55,7 +56,7 @@
   </div>
 </header>
 
-<main class="flex-grow pt-44 sm:pt-36 lg:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<main class="flex-grow pt-48 lg:pt-28 xl:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
 <section class="mb-16">
   <div class="flex items-center gap-4 mb-8">
     <h1 class="text-2xl font-bold tracking-tight uppercase">&gt; DOCS // COME FUNZIONA</h1>
@@ -100,6 +101,10 @@
     <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
       <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ ARTICOLO ] <code>/archivio/AAAA/MM/GG/slug/</code></div>
       <p class="text-on-surface-variant">Pagina dedicata per le notizie con importanza &ge; 4. Include JSON-LD NewsArticle per Google Discover.</p>
+    </div>
+    <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+      <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ MODIFICHE ] <a href="/modifiche/"><code>/modifiche/</code></a></div>
+      <p class="text-on-surface-variant">Lo storico delle modifiche rilevate dal Doc Watcher alle pagine ufficiali di Google e alle policy dei servizi AI: per ogni modifica, riassunto in italiano e prima/dopo evidenziato.</p>
     </div>
     <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
       <div class="text-primary-container uppercase tracking-widest text-xs mb-2">[ FEED ] <code>/feed.xml</code></div>
@@ -310,7 +315,7 @@
     Queste pagine vengono controllate ad ogni aggiornamento e confrontate con la versione precedente. Se il testo cambia in modo
     significativo, viene generato un item speciale nel feed con badge &#x26A0; e un diff leggibile.
   </p>
-  <p class="text-[10px] text-outline uppercase font-mono mb-6">18 PAGINE SORVEGLIATE</p>
+  <p class="text-[10px] text-outline uppercase font-mono mb-6">93 PAGINE SORVEGLIATE</p>
   <div class="flex flex-col gap-1">
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
@@ -339,10 +344,10 @@
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
       <span class="text-[#f5a623]">★★★★★</span>
-      <span class="text-white">Google Quality Rater Guidelines (PDF, IT)</span>
+      <span class="text-white">Google Quality Rater Guidelines: An Overview (PDF)</span>
       <span class="text-outline text-[10px] uppercase">[pdf]</span>
     </div>
-    <a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/it//searchqualityevaluatorguidelines.pdf" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">static.googleusercontent.com &rarr;</a>
+    <a href="https://services.google.com/fh/files/misc/hsw-sqrg.pdf" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">services.google.com &rarr;</a>
   </div>
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
@@ -350,7 +355,7 @@
       <span class="text-white">Google robots.txt Specification</span>
       <span class="text-outline text-[10px] uppercase">[html]</span>
     </div>
-    <a href="https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+    <a href="https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
   </div>
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
@@ -359,6 +364,94 @@
       <span class="text-outline text-[10px] uppercase">[pdf]</span>
     </div>
     <a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">static.googleusercontent.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Search Essentials</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Ranking Systems Guide</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/ranking-systems-guide" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google: contenuti generati con l&#39;AI</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/fundamentals/using-gen-ai-content" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Crawling Infrastructure — Changelog</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/changelog" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google AI Optimization Guide</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Core Updates</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/core-updates" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google Spam Updates</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/spam-updates" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Google-Agent: consentire il traffico dell&#39;agente AI</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/allow-google-agent" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">OpenAI Crawlers (GPTBot, OAI-SearchBot, ChatGPT-User)</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://platform.openai.com/docs/bots" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">platform.openai.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Anthropic: crawler di Claude e come bloccarli</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">support.claude.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★★</span>
+      <span class="text-white">Bing Webmaster Guidelines</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">www.bing.com &rarr;</a>
   </div>
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
@@ -374,12 +467,12 @@
       <span class="text-white">Overview of Google Crawlers</span>
       <span class="text-outline text-[10px] uppercase">[html]</span>
     </div>
-    <a href="https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/overview-google-crawlers" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
   </div>
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
       <span class="text-[#f5a623]">★★★★</span>
-      <span class="text-white">Google robots Meta Tag &amp; X-Robots-Tag</span>
+      <span class="text-white">Google: meta tag e attributi supportati</span>
       <span class="text-outline text-[10px] uppercase">[html]</span>
     </div>
     <a href="https://developers.google.com/search/docs/crawling-indexing/special-tags" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
@@ -418,6 +511,190 @@
   </div>
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Common Crawlers (incl. Google-Extended)</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google User-Triggered Fetchers</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Structured Data General Guidelines</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Discover</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/google-discover" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google: URL duplicati e canonical</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Search Technical Requirements</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/essentials/technical" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Reviews System</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/reviews-system" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Preferred Sources</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/preferred-sources" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google: date di pubblicazione</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/publication-dates" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Special-Case Crawlers</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Web Bot Auth</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google: codici di stato HTTP</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/troubleshooting/http-status-codes" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Robots Meta Tag</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google: come sceglie il canonical</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/canonicalization" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google: link scansionabili</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google: qualificare i link in uscita</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google: come funziona la Ricerca</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/fundamentals/how-search-works" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google SEO Starter Guide</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Help: AI Overviews</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://support.google.com/websearch/answer/14901683?hl=en" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">support.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Google Help: AI Mode</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://support.google.com/websearch/answer/16011537?hl=en" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">support.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Perplexity Crawlers</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://docs.perplexity.ai/guides/bots" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">docs.perplexity.ai &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Apple: Applebot e Applebot-Extended</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://support.apple.com/en-us/119829" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">support.apple.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★★</span>
+      <span class="text-white">Common Crawl: CCBot</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://commoncrawl.org/ccbot" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">commoncrawl.org &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
       <span class="text-[#f5a623]">★★★</span>
       <span class="text-white">Googlebot Documentation</span>
       <span class="text-outline text-[10px] uppercase">[html]</span>
@@ -427,10 +704,10 @@
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
       <span class="text-[#f5a623]">★★★</span>
-      <span class="text-white">Google Structured Data Supported</span>
+      <span class="text-white">Google Structured Data Search Gallery</span>
       <span class="text-outline text-[10px] uppercase">[html]</span>
     </div>
-    <a href="https://developers.google.com/search/docs/appearance/structured-data" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
   </div>
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
     <div class="flex items-center gap-3 flex-wrap">
@@ -455,6 +732,334 @@
       <span class="text-outline text-[10px] uppercase">[html]</span>
     </div>
     <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Page Experience</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Core Web Vitals</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Site Names</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/site-names" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Crawl Budget (siti grandi)</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawl-budget" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: verificare le richieste Google</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: errori DNS e di rete</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/troubleshooting/dns-network-errors" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Mobile-First Indexing</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google JavaScript SEO Basics</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Article</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/article" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Product</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/product" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Merchant listing</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/merchant-listing" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Review snippet</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/review-snippet" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Organization</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/organization" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Local business</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/local-business" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Breadcrumb</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/breadcrumb" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Dati strutturati: Discussion forum</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/structured-data/discussion-forum" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Sitelinks</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/sitelinks" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: favicon nei risultati</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/favicon-in-search" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: interstitial intrusivi</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/avoid-intrusive-interstitials" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Images SEO</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/google-images" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Video SEO</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/video" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google Search Profiles</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/search-profiles" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: dettagli dell&#39;attività</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/appearance/establish-business-details" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: migrazione con cambio URL</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: migrazione senza cambio URL</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-no-url-changes" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: redirect</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: navigazione a faccette</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/faceted-navigation" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: miti sulla scansione</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/myths-about-crawling" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: analizzare i cali di traffico</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: identificare il traffico da Search</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/monitor-debug/identify-google-search-traffic" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: guida e-commerce</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/specialty/ecommerce" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: versioni localizzate (hreflang)</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Google: siti multi-regionali</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Mistral Crawlers</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://docs.mistral.ai/robots" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">docs.mistral.ai &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Amazon: Amazonbot</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developer.amazon.com/amazonbot" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developer.amazon.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">DuckDuckGo: DuckAssistBot</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">duckduckgo.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Cloudflare AI Crawl Control</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.cloudflare.com/ai-crawl-control/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.cloudflare.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Cloudflare: bot verificati</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.cloudflare.com/bots/concepts/bot/verified-bots/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.cloudflare.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★★</span>
+      <span class="text-white">Specifica llms.txt</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://llmstxt.org/" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">llmstxt.org &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★</span>
+      <span class="text-white">Google: user agent APIs-Google</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/apis-user-agent" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 py-2 border border-outline-variant bg-surface-container-lowest font-mono text-xs">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-[#f5a623]">★★</span>
+      <span class="text-white">Google: user agent Read Aloud</span>
+      <span class="text-outline text-[10px] uppercase">[html]</span>
+    </div>
+    <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/read-aloud-user-agent" target="_blank" rel="noopener" class="text-outline hover:text-primary-container text-[10px] uppercase">developers.google.com &rarr;</a>
   </div>
   </div>
 </section>
