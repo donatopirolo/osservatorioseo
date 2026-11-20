@@ -1,0 +1,135 @@
+Resources
+
+# Perplexity Crawlers
+
+Copy pageCopy page
+
+We strive to improve our service every day by delivering the best search experience possible. To achieve this, we collect data using web crawlers (“robots”) and user agents that gather and index information from the internet, operating either automatically or in response to user requests. Webmasters can use the following robots.txt tags to manage how their sites and content interact with Perplexity. Each setting works independently, and it may take up to 24 hours for our systems to reflect changes.
+
+Copy pageCopy page
+
+User Agent| Description 
+---|--- 
+PerplexityBot| `PerplexityBot` is designed to surface and link websites in search results on Perplexity. It is not used to crawl content for AI foundation models. To ensure your site appears in search results, we recommend allowing `PerplexityBot` in your site’s `robots.txt` file and permitting requests from our published IP ranges listed below. 
+ 
+Example user-agent string (the version number may change): `Mozilla/5.0 (compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)` 
+ 
+Published IP addresses: https://www.perplexity.ai/perplexitybot.json 
+Perplexity‑User| `Perplexity-User` supports user actions within Perplexity. When users ask Perplexity a question, it might visit a web page to help provide an accurate answer and include a link to the page in its response. `Perplexity-User` controls which sites these user requests can access. It is not used for web crawling or to collect content for training AI foundation models. 
+ 
+Example user-agent string (the version number may change): `Mozilla/5.0 (compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)` 
+ 
+Published IP addresses: https://www.perplexity.ai/perplexity-user.json 
+ 
+Since a user requested the fetch, this fetcher generally ignores robots.txt rules. 
+ 
+## WAF Configuration
+
+If you’re using a Web Application Firewall (WAF) to protect your site, you may need to explicitly allow Perplexity’s bots to ensure they can access your content. Below are configuration guidelines for popular WAF providers.
+
+### Cloudflare WAF
+
+To configure Cloudflare WAF to allow Perplexity bots:
+
+1
+
+Navigate to security rules
+
+In your Cloudflare dashboard, go to **Security** → **Security rules**.
+
+2
+
+Create a new rule
+
+Select **Create rule** → **Custom rules**.
+
+3
+
+Configure rule conditions
+
+Each bot has its own IP ranges, so match each User-Agent against its own IP ranges. Select **Edit expression** and enter:
+ 
+ 
+ (http.user_agent contains "PerplexityBot" and ip.src in {<PerplexityBot IP ranges>})
+ or (http.user_agent contains "Perplexity-User" and ip.src in {<Perplexity-User IP ranges>})
+ 
+
+Replace each placeholder with the current ranges from the official endpoints listed below, separated by spaces, for example `{192.0.2.0/24 198.51.100.7/32}`. When the published ranges change, update them in this rule.On paid plans, you can instead store each bot’s ranges in an IP list and reference it, for example `ip.src in $perplexitybot`. You then update the lists rather than the rule. Free plans allow only one custom list, which isn’t enough for both bots.
+
+4
+
+Set rule action
+
+Set the action to **Skip** and select the security features these requests should bypass, such as **All remaining custom rules** , **All managed rules** , **All rate limiting rules** , or **All Super Bot Fight Mode rules**.
+
+5
+
+Order the rule
+
+Place this rule above any custom rules that block or challenge requests. A Skip rule only bypasses rules that run after it.
+
+Cloudflare’s Bot Fight Mode can’t be skipped with WAF custom rules. If Bot Fight Mode is enabled, it can still challenge Perplexity bots that match this rule.
+
+### AWS WAF
+
+For AWS WAF configuration, create IP sets and rules that match them together with the User-Agent header:
+
+1
+
+Create IP sets
+
+In the AWS WAF console, create an IP set for PerplexityBot and one for Perplexity-User using the IP addresses from the official endpoints listed below.
+
+2
+
+Create allow rules
+
+For each bot, create a rule with an **AND** statement that combines:
+
+ * An IP set match statement that uses the bot’s IP set
+ * A string match statement on the `User-Agent` header that contains `PerplexityBot` or `Perplexity-User`
+
+Set the rule action to **Allow**.
+
+3
+
+Add the rules to your web ACL
+
+Add these rules to your web ACL and give them lower priority numbers than your blocking rules, so AWS WAF evaluates them first.
+
+### IP Address Sources
+
+Always use the most current IP ranges from the official JSON endpoints. These addresses are updated regularly and should be the source of truth for your WAF configurations.
+
+ * **PerplexityBot IP addresses** : https://www.perplexity.ai/perplexitybot.json
+ * **Perplexity-User IP addresses** : https://www.perplexity.ai/perplexity-user.json
+
+Set up automated processes to periodically fetch and update your WAF rules with the latest IP ranges from these endpoints to ensure continuous access for Perplexity bots.
+
+### Best Practices
+
+When configuring WAF rules for Perplexity bots, combine both User-Agent string matching and IP address verification for enhanced security while ensuring legitimate bot traffic can access your content.
+
+Changes to WAF configurations may take some time to propagate. Monitor your logs to ensure the rules are working as expected and that legitimate Perplexity bot traffic is being allowed through.
+
+Was this page helpful?
+
+YesNo
+
+Get in Touch
+
+Previous
+
+⌘I
+
+xdiscordwebsite
+
+## On this page
+
+Back to top
+
+ * WAF Configuration
+ * Cloudflare WAF
+ * AWS WAF
+ * IP Address Sources
+ * Best Practices

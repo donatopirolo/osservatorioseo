@@ -1,0 +1,49 @@
+* Home 
+ * Crawling infrastructure 
+ * Docs 
+
+Send feedback Stay organized with collections Save and categorize content based on your preferences. 
+
+# Debug network and DNS errors for Google's crawlers
+
+Network and DNS errors have quick, negative effects on whether Google is able to successfully crawl a URL. Google treats network timeouts, connection reset, and DNS errors similarly to `5xx` server errors. In case of network errors, crawling immediately starts slowing down, as a network error is a sign that the server may not be able to handle the serving load. Since Google couldn't reach the server hosting the site, Google also hasn't received any content from the server. 
+
+For Google Search, the lack of content means that Google can't index the crawled URLs, and already indexed URLs that are unreachable will be removed from Google's index within days. Search Console may generate errors for each respective error. 
+
+If you're not hosting your website yourself, ask your hosting or CDN provider for help. 
+
+## Debug network errors
+
+These errors happen before Google starts crawling a URL or while Google is crawling the URL. Since the errors may occur before the server can respond and so there's no status code that can hint at issues, diagnosing these errors can be more challenging. To debug timeout and connection reset errors: 
+
+ * **Look at your firewall settings and logs**. There may be an overly-broad blocking rule set. Make sure that Google IP addresses are not blocked by any firewall rule. 
+ * **Look at the network traffic**. Use tools like tcpdump and Wireshark to capture and analyze TCP packets, and look for anomalies that point to a specific network component or server module. 
+ * **If you can't find anything suspicious, contact your hosting company**. 
+
+The error may be in any server component that handles network traffic. For example, overloaded network interfaces may drop packets leading to timeouts (inability to establish a connection) and reset connections (`RST` packet sent because a port was mistakenly closed). 
+
+## Debug DNS errors
+
+DNS errors are most commonly caused by misconfiguration, but they may be also caused by a firewall rule that's blocking Google DNS queries. To debug DNS errors, do the following: 
+
+ * **Inspect your firewall rules**. Make sure that none of Google's IPs are blocked by any firewall rule, and that both `UDP` and `TCP` requests are allowed. 
+ * **Look at your DNS records**. Double check that your `A` and `CNAME` records are pointing to the right IP addresses and hostname, respectively. For example: 
+ 
+ dig +nocmd example.com a +noall +answer
+ 
+ dig +nocmd www.example.com cname +noall +answer
+
+ * **Check that all your name servers are pointing to the correct IP addresses of your site**. For example: 
+ 
+ dig +nocmd example.com ns +noall +answer
+ example.com. 86400 IN NS a.iana-servers.net.
+ example.com. 86400 IN NS b.iana-servers.net.
+ dig +nocmd @a.iana-servers.net example.com +noall +answer
+ example.com. 86400 IN A 93.184.216.34
+ dig +nocmd @b.iana-servers.net example.com +noall +answer
+ ...
+
+ * **If you've made changes to your DNS configuration within the last 72 hours** , you may need to wait for your changes to propagate across the global DNS network. To speed up propagation, you can flush Google's Public DNS cache. 
+ * **If you're running your own DNS server** , make sure it's healthy and that it's not overloaded. 
+
+Send feedback

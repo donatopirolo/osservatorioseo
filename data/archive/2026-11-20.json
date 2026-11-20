@@ -1,0 +1,1288 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-20T06:05:35.280803Z",
+  "generated_at_local": "2026-11-20T07:05:35.280803+01:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-11-20-0705",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 0,
+    "sources_empty": 0,
+    "items_collected": 2581,
+    "items_after_dedup": 66,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.0167,
+    "summarize_attempted": 21,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "item_2026-11-20_019",
+    "item_2026-11-20_008",
+    "item_2026-11-20_011",
+    "item_2026-11-20_016",
+    "item_2026-11-20_020",
+    "item_2026-11-20_005",
+    "item_2026-11-20_009",
+    "item_2026-11-20_013",
+    "item_2026-11-20_012",
+    "item_2026-11-20_018"
+  ],
+  "categories": {
+    "ai_models": [
+      "item_2026-11-20_019",
+      "item_2026-11-20_005",
+      "item_2026-11-20_009",
+      "item_2026-11-20_013",
+      "item_2026-11-20_001",
+      "item_2026-11-20_002"
+    ],
+    "google_updates": [
+      "item_2026-11-20_008",
+      "item_2026-11-20_011",
+      "item_2026-11-20_016",
+      "item_2026-11-20_020"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-11-20_012",
+      "item_2026-11-20_018",
+      "item_2026-11-20_007"
+    ],
+    "tools_platforms": [
+      "item_2026-11-20_003",
+      "item_2026-11-20_010",
+      "item_2026-11-20_004"
+    ],
+    "technical_seo": [
+      "item_2026-11-20_014",
+      "item_2026-11-20_015",
+      "item_2026-11-20_017"
+    ],
+    "content_eeat": [
+      "item_2026-11-20_006"
+    ],
+    "industry_news": [
+      "item_2026-11-20_021"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-11-20_001",
+      "title_original": "Deploying Daybreak Red",
+      "title_it": "Implementazione di Daybreak Red",
+      "summary_it": "OpenAI ha pubblicato una guida di riferimento per l'implementazione di Daybreak Red, un'architettura progettata per indagini di sicurezza supervisionate. Il documento illustra come configurare un ambiente isolato, i controlli di sicurezza, la configurazione dell'ambiente e le procedure per eseguire e monitorare un'indagine. Questa risorsa è rivolta a professionisti che necessitano di gestire in modo sicuro e controllato le indagini basate su sistemi AI.",
+      "url": "https://openai.com/business/learn/deploying-daybreak-red",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "daybreak_red",
+        "security_investigation",
+        "ai_architecture"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-19T00:00:00Z",
+      "fetched_at": "2026-11-20T06:08:36.365483Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:48816e19e6abed42",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_002",
+      "title_original": "See PR scans in action",
+      "title_it": "OpenAI presenta una demo delle scansioni di sicurezza per le pull request",
+      "summary_it": "OpenAI ha pubblicato una demo video che illustra il funzionamento delle scansioni di sicurezza per le pull request. Il video mostra come i risultati delle scansioni vengano revisionati all'interno di un flusso di lavoro di sviluppo. L'obiettivo è dimostrare l'integrazione e l'efficacia di questi controlli di sicurezza nel processo di sviluppo software.",
+      "url": "https://openai.com/business/learn/pr-scans-demo",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "security_scan",
+        "pull_request",
+        "developer_tool"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-19T00:00:00Z",
+      "fetched_at": "2026-11-20T06:08:37.542530Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:8b8bae78b9cec0eb",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_003",
+      "title_original": "Explore the Codex Security Plugin",
+      "title_it": "Esplora il Plugin di Sicurezza Codex di OpenAI",
+      "summary_it": "OpenAI ha pubblicato una demo del suo plugin di sicurezza Codex, mostrando il flusso di lavoro per l'esecuzione di scansioni e la revisione dei risultati. Il video illustra come iniziare a utilizzare il plugin e le sue funzionalità. Questo strumento è progettato per migliorare la sicurezza nello sviluppo software.",
+      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "openai",
+        "codex",
+        "security_plugin",
+        "developer_tool"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T00:00:00Z",
+      "fetched_at": "2026-11-20T06:08:38.910247Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:307fecf9d5e5df9c",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_004",
+      "title_original": "Get started with Daybreak Blue",
+      "title_it": "Guida introduttiva a Daybreak Blue",
+      "summary_it": "OpenAI ha pubblicato un video dimostrativo per guidare gli utenti attraverso il processo di onboarding e configurazione di Daybreak Blue. Il walkthrough illustra come richiedere e abilitare la piattaforma, fornendo una panoramica dell'esperienza iniziale. Questo aggiornamento mira a facilitare l'adozione e l'utilizzo del nuovo prodotto da parte degli utenti.",
+      "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "openai",
+        "daybreak_blue",
+        "onboarding",
+        "product_demo"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-19T00:00:00Z",
+      "fetched_at": "2026-11-20T06:08:40.114930Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f264590033b46678",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_005",
+      "title_original": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "title_it": "Come la 'Performance Factory' di OpenAI mantiene ChatGPT veloce",
+      "summary_it": "OpenAI ha sviluppato la 'Performance Factory', un sistema autonomo basato su agenti AI (Codex) per identificare e risolvere regressioni di performance in ChatGPT. Questo sistema automatizza l'intero processo di indagine, proposta di fix e verifica, gestendo oltre 1.700 indagini e identificando la causa di più di 600 problemi in tre mesi. L'obiettivo è mantenere la velocità del servizio nonostante il rapido sviluppo di nuove funzionalità, trasformando il lavoro di performance engineering da manuale a completamente automatizzato.",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "performance_optimization",
+        "ai_agent"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T08:00:00Z",
+      "fetched_at": "2026-11-20T06:08:41.530380Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5eb5e69f19d336a5",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_006",
+      "title_original": "What is topical authority in SEO? A forward-looking guide for 2027",
+      "title_it": "Cos'è l'autorità tematica nella SEO? Una guida prospettica per il 2027",
+      "summary_it": "L'autorità tematica (topical authority) è definita come la forza con cui motori di ricerca e sistemi AI associano un brand a un argomento specifico, in relazione ai suoi competitor. Questo concetto, sebbene non nuovo, si è evoluto con l'integrazione degli LLM, richiedendo un approccio che copra l'intero percorso dell'utente tra Google e strumenti AI. La costruzione di tale autorità mira a mantenere la visibilità del brand durante le diverse fasi di ricerca e decisione dell'utente.",
+      "url": "https://www.semrush.com/blog/topical-authority",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "topical_authority",
+        "ai_search",
+        "content_strategy",
+        "brand_visibility"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T11:00:00Z",
+      "fetched_at": "2026-11-20T06:08:43.123486Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:987bce2fdeff8068",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_007",
+      "title_original": "5 ways AI is replacing SEO (and 4 things that aren’t changing)",
+      "title_it": "Cinque modi in cui l'IA sta trasformando la SEO (e quattro aspetti che rimangono invariati)",
+      "summary_it": "L'intelligenza artificiale sta modificando il panorama SEO espandendo la ricerca oltre Google, riducendo i click per i publisher e automatizzando compiti routinari. Si evidenzia la crescente importanza di essere citati dagli assistenti AI, oltre al posizionamento sui motori di ricerca tradizionali. Tuttavia, alcuni fondamentali della SEO, come la comprensione dell'intento di ricerca e la creazione di contenuti di qualità, rimangono centrali. L'articolo suggerisce di adattare le strategie per includere l'ottimizzazione per la ricerca AI, pur mantenendo l'attenzione su Google.",
+      "url": "https://www.semrush.com/blog/will-ai-replace-seo",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_impact",
+        "seo_future",
+        "search_behavior",
+        "content_strategy"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T11:14:00Z",
+      "fetched_at": "2026-11-20T06:08:44.968801Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e782d0d604cf92e9",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_008",
+      "title_original": "Google AdSense Unifying Policies Into AdSense For Search Publishers Policy",
+      "title_it": "Google AdSense unifica le policy per gli editori di AdSense per la ricerca",
+      "summary_it": "Google ha annunciato l'unificazione delle policy di AdSense per la Ricerca (AFS) e delle policy per gli annunci di ricerca in un unico set di regole per gli editori AFS. Questa modifica, che entrerà in vigore il 17 gennaio 2027, mira a semplificare la struttura delle policy e ad aggiornare i requisiti. L'obiettivo è migliorare la chiarezza e la trasparenza per gli editori che utilizzano i servizi di AdSense per la Ricerca.",
+      "url": "https://www.seroundtable.com/google-adsense-for-search-publishers-policy-42573.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_adsense",
+        "publisher_policie",
+        "ad_monetization",
+        "search_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T12:05:00Z",
+      "fetched_at": "2026-11-20T06:08:46.365081Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:faa52234c950e0eb",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_009",
+      "title_original": "Google Images Results With Lens To AI Mode Feature",
+      "title_it": "Google Immagini introduce la funzionalità Lens in modalità AI",
+      "summary_it": "Google sta implementando una nuova funzionalità che integra la modalità AI direttamente nei risultati di Google Immagini tramite Lens. Questa novità permette agli utenti di accedere a capacità di intelligenza artificiale direttamente dalle immagini visualizzate. L'obiettivo è migliorare l'interazione e l'analisi visiva all'interno della ricerca di immagini.",
+      "url": "https://www.seroundtable.com/google-images-lens-to-ai-mode-42570.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_image",
+        "google_len",
+        "ai_integration",
+        "visual_search"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T12:11:00Z",
+      "fetched_at": "2026-11-20T06:08:47.748348Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f1af67e5911967b7",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_010",
+      "title_original": "Google Data Feed Validation Tool Has Been Turned Down",
+      "title_it": "Google ha disattivato lo strumento di validazione dei data feed",
+      "summary_it": "Google ha rimosso lo strumento di validazione dei data feed, precedentemente disponibile per il controllo della correttezza dei feed di dati. Questa funzionalità era utile per gli sviluppatori e i professionisti SEO che gestivano feed per Google Merchant Center o altri servizi. La disattivazione implica che non sarà più possibile utilizzare questo tool specifico per la verifica pre-caricamento dei feed.",
+      "url": "https://www.seroundtable.com/google-data-feed-validation-tool-gone-42572.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_tool",
+        "data_feed",
+        "merchant_center",
+        "tool_deprecation"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-19T12:21:00Z",
+      "fetched_at": "2026-11-20T06:08:48.960273Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:af3e6e3d43d2e75b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_011",
+      "title_original": "Google Search Tests \"Show Original Results\" Button",
+      "title_it": "Google Search testa il pulsante \"Mostra risultati originali\"",
+      "summary_it": "Google sta sperimentando un nuovo pulsante nella SERP denominato \"Show Original Results\". Questa funzionalità permetterebbe agli utenti di visualizzare i risultati di ricerca non filtrati o non modificati da eventuali personalizzazioni o integrazioni AI. L'introduzione di tale opzione potrebbe offrire maggiore trasparenza sull'impatto dell'AI e della personalizzazione sui risultati di ricerca.",
+      "url": "https://www.seroundtable.com/google-search-show-original-results-button-42574.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search",
+        "serp_feature",
+        "ai_impact",
+        "search_transparency"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T12:31:00Z",
+      "fetched_at": "2026-11-20T06:08:50.222830Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:81bd9aa814c5bdb1",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_012",
+      "title_original": "Google Hotel Search Listings With Continue On Google To Book",
+      "title_it": "Google spinge le prenotazioni alberghiere dirette tramite la modalità AI in Ricerca",
+      "summary_it": "Google sta implementando una funzionalità che indirizza gli utenti dalla Ricerca Google alla prenotazione di hotel direttamente tramite la sua \"Modalità AI\". Questa modalità, già introdotta ad agosto per le prenotazioni alberghiere, ora viene promossa attivamente con un pulsante \"Continua su Google\". Alcuni report indicano che questa integrazione potrebbe nascondere opzioni di prezzo più convenienti offerte direttamente dai siti degli hotel, favorendo le prenotazioni tramite partner come Expedia all'interno dell'ecosistema Google.",
+      "url": "https://www.seroundtable.com/google-hotel-continue-on-google-42568.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "google_hotel",
+        "ai_mode",
+        "travel_seo",
+        "user_experience"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T12:41:00Z",
+      "fetched_at": "2026-11-20T06:08:51.802889Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:c4ffe655e3764317",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_013",
+      "title_original": "Google Search What People Are Saying AI-Generated Emojis",
+      "title_it": "Emoji generate dall'IA nella sezione 'Cosa dicono le persone' di Google Search",
+      "summary_it": "Google sta testando l'integrazione di emoji generate dall'intelligenza artificiale all'interno della funzionalità 'What People Are Saying' (Cosa dicono le persone) nei risultati di ricerca. Questa novità è stata notata da alcuni utenti e segnalata dalla comunità SEO. L'introduzione di elementi visivi generati dall'IA potrebbe influenzare la percezione e l'interazione degli utenti con i contenuti riassunti da Google.",
+      "url": "https://www.seroundtable.com/google-ai-generated-emojis-42569.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_search",
+        "ai_generated_content",
+        "serp_feature",
+        "user_experience"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T12:51:00Z",
+      "fetched_at": "2026-11-20T06:08:53.151703Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:919a1bfc717f393b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_014",
+      "title_original": "WordPress 7.2 Arrives Dec. 8 – Last-Minute Changes Still Being Made",
+      "title_it": "WordPress 7.2 in arrivo l'8 dicembre con modifiche dell'ultimo minuto",
+      "summary_it": "WordPress 7.2, previsto per l'8 dicembre, introdurrà una nuova funzionalità '/random/' che reindirizza a un post pubblicato casuale, attiva di default e disattivabile solo tramite codice. La versione include strumenti AI per sviluppatori e plugin, ma nessuna funzionalità AI visibile agli utenti finali. La Secrets API è stata rimossa dalla release. Sono ancora in corso modifiche prima del rilascio finale.",
+      "url": "https://www.searchenginejournal.com/wordpress-7-2-seo-ai-changes/597616",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "wordpress_update",
+        "random_redirect",
+        "technical_seo",
+        "ai_for_developer"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T13:00:50Z",
+      "fetched_at": "2026-11-20T06:08:54.536941Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:1a2ca0e38f296dd2",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_015",
+      "title_original": "WordPress 7.1.5 Security Release Fixes 18 Vulnerabilities",
+      "title_it": "Rilasciata la versione di sicurezza WordPress 7.1.5 con 18 correzioni di vulnerabilità",
+      "summary_it": "WordPress ha rilasciato la versione 7.1.5, un aggiornamento di sicurezza che risolve 18 vulnerabilità. Questo aggiornamento è cruciale per mantenere la sicurezza dei siti web basati su WordPress. Si raccomanda agli utenti di aggiornare tempestivamente per proteggersi da potenziali exploit.",
+      "url": "https://www.searchenginejournal.com/wordpress-7-1-5-security-release-fixes-18-vulnerabilities/598080",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "wordpress",
+        "security_update",
+        "vulnerabilitie",
+        "cms_security"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T14:40:05Z",
+      "fetched_at": "2026-11-20T06:08:55.649319Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:96045a7e2c4a1c41",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_016",
+      "title_original": "Daily Search Forum Recap: November 19, 2026",
+      "title_it": "Riepilogo giornaliero del forum di ricerca: 19 novembre 2026",
+      "summary_it": "Google sta testando nuove funzionalità nella ricerca, inclusa la prenotazione di hotel direttamente tramite un pulsante \"Continua su Google\" e l'integrazione di emoji generate dall'IA nella sezione \"Cosa dicono le persone\". È stato notato anche un test per un pulsante \"Mostra risultati originali\" e l'introduzione di un pulsante Google Lens nei risultati di ricerca immagini per query di follow-up basate sull'IA. Parallelamente, Google ha dismesso il suo strumento di validazione dei feed di dati.",
+      "url": "https://www.seroundtable.com/recap-11-19-2026-42575.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search",
+        "ai_feature",
+        "hotel_booking",
+        "data_feed_tool"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T15:00:00Z",
+      "fetched_at": "2026-11-20T06:08:57.325363Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0469cfd88a3c0f70",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_017",
+      "title_original": "Your WordPress Sitemap Isn’t Broken – Chrome 158 Has Dropped XSLT",
+      "title_it": "La tua Sitemap WordPress non è rotta: Chrome 158 ha rimosso il supporto XSLT",
+      "summary_it": "Chrome 158 ha interrotto il supporto per XSLT lato client, causando la visualizzazione delle sitemap XML di WordPress (e di plugin SEO come Yoast, Rank Math) come codice grezzo nel browser. Questo cambiamento non influisce sul modo in cui i motori di ricerca come Googlebot leggono e indicizzano le sitemap, poiché essi processano direttamente il file XML senza utilizzare fogli di stile. La funzionalità delle sitemap per i crawler rimane intatta, ma gli utenti che le visualizzano manualmente vedranno un formato non stilizzato. È possibile verificare la corretta lettura delle sitemap tramite Google Search Console.",
+      "url": "https://www.searchenginejournal.com/your-wordpress-sitemap-isnt-broken-chrome-158-has-dropped-xslt/597549",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "chrome_update",
+        "xml_sitemap",
+        "xslt_deprecation",
+        "wordpress_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T15:00:06Z",
+      "fetched_at": "2026-11-20T06:08:58.980880Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:a06a17459c0f66f5",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_018",
+      "title_original": "Microsoft Confirms Ads Are In AI Overviews On Bing Search",
+      "title_it": "Microsoft conferma la presenza di annunci nelle panoramiche AI di Bing Search",
+      "summary_it": "Microsoft ha ufficialmente confermato l'integrazione di annunci pubblicitari all'interno delle AI Overviews di Bing Search. Gli annunci vengono visualizzati accanto alle risposte generate dall'intelligenza artificiale quando le offerte sono pertinenti alla query dell'utente. Non è richiesta alcuna configurazione aggiuntiva per le campagne esistenti, inclusi i formati Performance Max e AI Max, che vengono automaticamente estesi a queste nuove posizioni. Questa funzionalità è ora disponibile in tutti i mercati, ad eccezione della Cina.",
+      "url": "https://www.seroundtable.com/microsoft-ads-in-ai-overviews-on-bing-42578.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "bing_ad",
+        "ai_overviews",
+        "microsoft_advertising",
+        "search_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T15:24:00Z",
+      "fetched_at": "2026-11-20T06:09:00.625014Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ed9684fb8fb410a6",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_019",
+      "title_original": "Google’s Next Update Won’t Touch The Index, And Nobody Will Announce It",
+      "title_it": "Il prossimo aggiornamento di Google non influenzerà l'indice e non sarà annunciato",
+      "summary_it": "Google Research ha pubblicato il framework 'sleep', un metodo che permette ai modelli linguistici di consolidare nuove conoscenze in una fase offline programmata. Questo sistema consente ai modelli di aggiornare le proprie informazioni in un ciclo continuo, anziché essere limitati da un cutoff di dati fisso. Se implementato, ciò implicherebbe aggiornamenti costanti delle conoscenze interne ai modelli di Google, senza annunci pubblici, modificando il modo in cui le informazioni vengono assimilate e utilizzate.",
+      "url": "https://www.searchenginejournal.com/googles-next-update-wont-touch-the-index-and-nobody-will-announce-it/597481",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_research",
+        "llm_update",
+        "knowledge_retention",
+        "unannounced_update"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-19T18:00:31Z",
+      "fetched_at": "2026-11-20T06:09:02.141373Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0ab8baecc261c71f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_020",
+      "title_original": "Google Search Officially Rolls Out Collapsible Sidebar",
+      "title_it": "Google Search implementa ufficialmente la barra laterale a scomparsa",
+      "summary_it": "Google ha ufficialmente rilasciato una barra laterale a scomparsa nella sua interfaccia di ricerca. Questa funzionalità, precedentemente testata, è ora disponibile per un pubblico più ampio. La barra laterale include una modalità AI e offre opzioni per interagire con i risultati di ricerca in modo più dinamico. L'introduzione mira a migliorare l'esperienza utente e l'accessibilità delle funzionalità AI.",
+      "url": "https://www.seroundtable.com/google-search-rolls-out-ai-mode-sidebar-42580.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_search",
+        "ui_update",
+        "ai_feature",
+        "user_experience"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-19T19:38:00Z",
+      "fetched_at": "2026-11-20T06:09:03.596580Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7fc55b3d8db8b49f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-20_021",
+      "title_original": "21 Alternative Search Engines You Can Use Instead of Google",
+      "title_it": "21 Motori di Ricerca Alternativi a Google",
+      "summary_it": "L'articolo presenta 21 motori di ricerca e strumenti alternativi a Google, evidenziando come diverse piattaforme possano essere più adatte per specifiche esigenze, come la ricerca di immagini riutilizzabili, pagine web scomparse o una maggiore privacy. Vengono esplorate opzioni che offrono controllo su privacy e ranking, aggregazione di fonti in conversazioni, collezioni specialistiche o esplorazione di contenuti specifici per paese. Per i professionisti SEO, queste alternative rappresentano opportunità per estendere la visibilità oltre il dominio di Google.",
+      "url": "https://www.searchenginejournal.com/21-alternative-search-engines-you-can-use-instead-of-google/596605",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "alternative_search_engine",
+        "search_engine_market_share",
+        "privacy_search",
+        "ai_search"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-19T20:00:05Z",
+      "fetched_at": "2026-11-20T06:09:05.264876Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:93db7c7b59688389",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-11-20T06:05:36.485871Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-11-20T06:05:37.102992Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-11-20T06:05:38.366099Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_overview",
+      "last_checked": "2026-11-20T06:05:41.557992Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-11-20T06:05:43.027367Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-11-20T06:05:43.520520Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-11-20T06:05:44.905023Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_gallery",
+      "last_checked": "2026-11-20T06:05:46.773196Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-11-20T06:05:48.228093Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-11-20T06:05:54.523575Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-11-20T06:05:54.826135Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-11-20T06:05:56.419942Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-11-20T06:05:57.599095Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-11-20T06:05:58.761217Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-11-20T06:06:00.480450Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-11-20T06:06:01.606951Z",
+      "changed": false
+    },
+    {
+      "page_id": "schema_org_releases",
+      "last_checked": "2026-11-20T06:06:14.804203Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_essentials",
+      "last_checked": "2026-11-20T06:06:14.995792Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ranking_systems_guide",
+      "last_checked": "2026-11-20T06:06:15.328178Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_gen_ai_content",
+      "last_checked": "2026-11-20T06:06:16.937633Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_common_crawlers",
+      "last_checked": "2026-11-20T06:06:18.050253Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_user_triggered_fetchers",
+      "last_checked": "2026-11-20T06:06:19.968210Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_policies",
+      "last_checked": "2026-11-20T06:06:21.482315Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_page_experience",
+      "last_checked": "2026-11-20T06:06:22.677334Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_web_vitals",
+      "last_checked": "2026-11-20T06:06:23.864184Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_discover",
+      "last_checked": "2026-11-20T06:06:24.937568Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization",
+      "last_checked": "2026-11-20T06:06:26.509765Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_technical_requirements",
+      "last_checked": "2026-11-20T06:06:27.703948Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_names",
+      "last_checked": "2026-11-20T06:06:29.289628Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawl_budget",
+      "last_checked": "2026-11-20T06:06:30.564968Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_changelog",
+      "last_checked": "2026-11-20T06:06:32.064394Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_optimization_guide",
+      "last_checked": "2026-11-20T06:06:33.676761Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_updates",
+      "last_checked": "2026-11-20T06:06:35.401893Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_updates",
+      "last_checked": "2026-11-20T06:06:36.792201Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_reviews_system",
+      "last_checked": "2026-11-20T06:06:38.777327Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_preferred_sources",
+      "last_checked": "2026-11-20T06:06:39.547834Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_publication_dates",
+      "last_checked": "2026-11-20T06:06:41.073770Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_special_case_crawlers",
+      "last_checked": "2026-11-20T06:06:43.674242Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_verify_requests",
+      "last_checked": "2026-11-20T06:06:44.970356Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_web_bot_auth",
+      "last_checked": "2026-11-20T06:06:46.415372Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_http_status_codes",
+      "last_checked": "2026-11-20T06:06:47.615336Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_dns_network_errors",
+      "last_checked": "2026-11-20T06:06:48.905002Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta_tag",
+      "last_checked": "2026-11-20T06:06:50.623781Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization_how",
+      "last_checked": "2026-11-20T06:06:52.404269Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_links_crawlable",
+      "last_checked": "2026-11-20T06:06:53.680616Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_qualify_outbound_links",
+      "last_checked": "2026-11-20T06:06:54.915741Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_mobile_first_indexing",
+      "last_checked": "2026-11-20T06:06:56.136473Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_javascript_seo",
+      "last_checked": "2026-11-20T06:06:57.614649Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_how_search_works",
+      "last_checked": "2026-11-20T06:06:58.654381Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_seo_starter_guide",
+      "last_checked": "2026-11-20T06:06:59.778531Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_article",
+      "last_checked": "2026-11-20T06:07:01.436775Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_product",
+      "last_checked": "2026-11-20T06:07:03.111976Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_merchant_listing",
+      "last_checked": "2026-11-20T06:07:03.716303Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_review_snippet",
+      "last_checked": "2026-11-20T06:07:05.817349Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_organization",
+      "last_checked": "2026-11-20T06:07:07.727338Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_local_business",
+      "last_checked": "2026-11-20T06:07:09.224806Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_breadcrumb",
+      "last_checked": "2026-11-20T06:07:11.310884Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_discussion_forum",
+      "last_checked": "2026-11-20T06:07:12.964931Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitelinks",
+      "last_checked": "2026-11-20T06:07:14.207966Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_favicon",
+      "last_checked": "2026-11-20T06:07:15.774299Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_intrusive_interstitials",
+      "last_checked": "2026-11-20T06:07:17.004351Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_images",
+      "last_checked": "2026-11-20T06:07:18.749677Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_video",
+      "last_checked": "2026-11-20T06:07:19.986402Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_profiles",
+      "last_checked": "2026-11-20T06:07:21.240977Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_business_details",
+      "last_checked": "2026-11-20T06:07:22.829449Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_url_changes",
+      "last_checked": "2026-11-20T06:07:24.897385Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_no_url_changes",
+      "last_checked": "2026-11-20T06:07:26.272990Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_redirects",
+      "last_checked": "2026-11-20T06:07:28.320297Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_faceted_navigation",
+      "last_checked": "2026-11-20T06:07:29.578819Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_myths",
+      "last_checked": "2026-11-20T06:07:31.345018Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_traffic_drops",
+      "last_checked": "2026-11-20T06:07:32.859608Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_identify_search_traffic",
+      "last_checked": "2026-11-20T06:07:34.543384Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ecommerce",
+      "last_checked": "2026-11-20T06:07:36.757972Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_localized_versions",
+      "last_checked": "2026-11-20T06:07:37.686323Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_multi_regional",
+      "last_checked": "2026-11-20T06:07:38.747173Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_agent",
+      "last_checked": "2026-11-20T06:07:40.367792Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_overviews",
+      "last_checked": "2026-11-20T06:07:41.240979Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_mode",
+      "last_checked": "2026-11-20T06:07:42.034753Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_apis_user_agent",
+      "last_checked": "2026-11-20T06:07:43.622076Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_read_aloud_user_agent",
+      "last_checked": "2026-11-20T06:07:44.273191Z",
+      "changed": false
+    },
+    {
+      "page_id": "openai_crawlers",
+      "last_checked": "2026-11-20T06:07:45.791315Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_crawlers",
+      "last_checked": "2026-11-20T06:07:45.997074Z",
+      "changed": false
+    },
+    {
+      "page_id": "perplexity_crawlers",
+      "last_checked": "2026-11-20T06:07:46.390357Z",
+      "changed": false
+    },
+    {
+      "page_id": "mistral_crawlers",
+      "last_checked": "2026-11-20T06:07:46.999889Z",
+      "changed": false
+    },
+    {
+      "page_id": "apple_applebot",
+      "last_checked": "2026-11-20T06:07:47.312243Z",
+      "changed": false
+    },
+    {
+      "page_id": "amazon_amazonbot",
+      "last_checked": "2026-11-20T06:07:47.681581Z",
+      "changed": false
+    },
+    {
+      "page_id": "duckduckgo_duckassistbot",
+      "last_checked": "2026-11-20T06:07:49.091253Z",
+      "changed": false
+    },
+    {
+      "page_id": "commoncrawl_ccbot",
+      "last_checked": "2026-11-20T06:07:49.564433Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_ai_crawl_control",
+      "last_checked": "2026-11-20T06:07:49.641775Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_verified_bots",
+      "last_checked": "2026-11-20T06:07:49.716692Z",
+      "changed": false
+    },
+    {
+      "page_id": "llms_txt_spec",
+      "last_checked": "2026-11-20T06:07:50.771826Z",
+      "changed": false
+    },
+    {
+      "page_id": "bing_webmaster_guidelines",
+      "last_checked": "2026-11-20T06:07:50.896205Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": []
+}

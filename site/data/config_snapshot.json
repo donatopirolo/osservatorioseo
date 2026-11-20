@@ -177,9 +177,9 @@
       "category": "google_docs_change"
     },
     {
-      "id": "google_quality_rater_guidelines",
-      "name": "Google Quality Rater Guidelines (PDF, IT)",
-      "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/it//searchqualityevaluatorguidelines.pdf",
+      "id": "google_quality_rater_overview",
+      "name": "Google Quality Rater Guidelines: An Overview (PDF)",
+      "url": "https://services.google.com/fh/files/misc/hsw-sqrg.pdf",
       "type": "pdf",
       "importance": 5,
       "category": "google_docs_change"
@@ -203,15 +203,15 @@
     {
       "id": "google_crawlers_overview",
       "name": "Overview of Google Crawlers",
-      "url": "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/overview-google-crawlers",
       "type": "html",
       "importance": 4,
       "category": "google_docs_change"
     },
     {
-      "id": "structured_data_docs",
-      "name": "Google Structured Data Supported",
-      "url": "https://developers.google.com/search/docs/appearance/structured-data",
+      "id": "google_structured_data_gallery",
+      "name": "Google Structured Data Search Gallery",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/search-gallery",
       "type": "html",
       "importance": 3,
       "category": "google_docs_change"
@@ -235,14 +235,14 @@
     {
       "id": "google_robots_txt",
       "name": "Google robots.txt Specification",
-      "url": "https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt",
+      "url": "https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec",
       "type": "html",
       "importance": 5,
       "category": "google_docs_change"
     },
     {
       "id": "google_robots_meta",
-      "name": "Google robots Meta Tag & X-Robots-Tag",
+      "name": "Google: meta tag e attributi supportati",
       "url": "https://developers.google.com/search/docs/crawling-indexing/special-tags",
       "type": "html",
       "importance": 4,
@@ -294,6 +294,606 @@
       "url": "https://schema.org/docs/releases.html",
       "type": "html",
       "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_search_essentials",
+      "name": "Google Search Essentials",
+      "url": "https://developers.google.com/search/docs/essentials",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_ranking_systems_guide",
+      "name": "Google Ranking Systems Guide",
+      "url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_gen_ai_content",
+      "name": "Google: contenuti generati con l'AI",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_common_crawlers",
+      "name": "Google Common Crawlers (incl. Google-Extended)",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_user_triggered_fetchers",
+      "name": "Google User-Triggered Fetchers",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_structured_data_policies",
+      "name": "Google Structured Data General Guidelines",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_page_experience",
+      "name": "Google Page Experience",
+      "url": "https://developers.google.com/search/docs/appearance/page-experience",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_core_web_vitals",
+      "name": "Google Core Web Vitals",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_discover",
+      "name": "Google Discover",
+      "url": "https://developers.google.com/search/docs/appearance/google-discover",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_canonicalization",
+      "name": "Google: URL duplicati e canonical",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_technical_requirements",
+      "name": "Google Search Technical Requirements",
+      "url": "https://developers.google.com/search/docs/essentials/technical",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_site_names",
+      "name": "Google Site Names",
+      "url": "https://developers.google.com/search/docs/appearance/site-names",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_crawl_budget",
+      "name": "Google Crawl Budget (siti grandi)",
+      "url": "https://developers.google.com/crawling/docs/crawl-budget",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_crawling_changelog",
+      "name": "Google Crawling Infrastructure \u2014 Changelog",
+      "url": "https://developers.google.com/crawling/docs/changelog",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_ai_optimization_guide",
+      "name": "Google AI Optimization Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_core_updates",
+      "name": "Google Core Updates",
+      "url": "https://developers.google.com/search/docs/appearance/core-updates",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_spam_updates",
+      "name": "Google Spam Updates",
+      "url": "https://developers.google.com/search/docs/appearance/spam-updates",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_reviews_system",
+      "name": "Google Reviews System",
+      "url": "https://developers.google.com/search/docs/appearance/reviews-system",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_preferred_sources",
+      "name": "Google Preferred Sources",
+      "url": "https://developers.google.com/search/docs/appearance/preferred-sources",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_publication_dates",
+      "name": "Google: date di pubblicazione",
+      "url": "https://developers.google.com/search/docs/appearance/publication-dates",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_special_case_crawlers",
+      "name": "Google Special-Case Crawlers",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_verify_requests",
+      "name": "Google: verificare le richieste Google",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_web_bot_auth",
+      "name": "Google Web Bot Auth",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_http_status_codes",
+      "name": "Google: codici di stato HTTP",
+      "url": "https://developers.google.com/crawling/docs/troubleshooting/http-status-codes",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_dns_network_errors",
+      "name": "Google: errori DNS e di rete",
+      "url": "https://developers.google.com/crawling/docs/troubleshooting/dns-network-errors",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_robots_meta_tag",
+      "name": "Google Robots Meta Tag",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_canonicalization_how",
+      "name": "Google: come sceglie il canonical",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/canonicalization",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_links_crawlable",
+      "name": "Google: link scansionabili",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_qualify_outbound_links",
+      "name": "Google: qualificare i link in uscita",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_mobile_first_indexing",
+      "name": "Google Mobile-First Indexing",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_javascript_seo",
+      "name": "Google JavaScript SEO Basics",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_how_search_works",
+      "name": "Google: come funziona la Ricerca",
+      "url": "https://developers.google.com/search/docs/fundamentals/how-search-works",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_seo_starter_guide",
+      "name": "Google SEO Starter Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_article",
+      "name": "Dati strutturati: Article",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/article",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_product",
+      "name": "Dati strutturati: Product",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/product",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_merchant_listing",
+      "name": "Dati strutturati: Merchant listing",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_review_snippet",
+      "name": "Dati strutturati: Review snippet",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_organization",
+      "name": "Dati strutturati: Organization",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_local_business",
+      "name": "Dati strutturati: Local business",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_breadcrumb",
+      "name": "Dati strutturati: Breadcrumb",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sd_discussion_forum",
+      "name": "Dati strutturati: Discussion forum",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/discussion-forum",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_sitelinks",
+      "name": "Google Sitelinks",
+      "url": "https://developers.google.com/search/docs/appearance/sitelinks",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_favicon",
+      "name": "Google: favicon nei risultati",
+      "url": "https://developers.google.com/search/docs/appearance/favicon-in-search",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_intrusive_interstitials",
+      "name": "Google: interstitial intrusivi",
+      "url": "https://developers.google.com/search/docs/appearance/avoid-intrusive-interstitials",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_images",
+      "name": "Google Images SEO",
+      "url": "https://developers.google.com/search/docs/appearance/google-images",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_video",
+      "name": "Google Video SEO",
+      "url": "https://developers.google.com/search/docs/appearance/video",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_search_profiles",
+      "name": "Google Search Profiles",
+      "url": "https://developers.google.com/search/docs/appearance/search-profiles",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_business_details",
+      "name": "Google: dettagli dell'attivit\u00e0",
+      "url": "https://developers.google.com/search/docs/appearance/establish-business-details",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_site_move_url_changes",
+      "name": "Google: migrazione con cambio URL",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_site_move_no_url_changes",
+      "name": "Google: migrazione senza cambio URL",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-no-url-changes",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_redirects",
+      "name": "Google: redirect",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_faceted_navigation",
+      "name": "Google: navigazione a faccette",
+      "url": "https://developers.google.com/crawling/docs/faceted-navigation",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_crawling_myths",
+      "name": "Google: miti sulla scansione",
+      "url": "https://developers.google.com/crawling/docs/myths-about-crawling",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_traffic_drops",
+      "name": "Google: analizzare i cali di traffico",
+      "url": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_identify_search_traffic",
+      "name": "Google: identificare il traffico da Search",
+      "url": "https://developers.google.com/search/docs/monitor-debug/identify-google-search-traffic",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_ecommerce",
+      "name": "Google: guida e-commerce",
+      "url": "https://developers.google.com/search/docs/specialty/ecommerce",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_localized_versions",
+      "name": "Google: versioni localizzate (hreflang)",
+      "url": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_multi_regional",
+      "name": "Google: siti multi-regionali",
+      "url": "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_agent",
+      "name": "Google-Agent: consentire il traffico dell'agente AI",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/allow-google-agent",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_help_ai_overviews",
+      "name": "Google Help: AI Overviews",
+      "url": "https://support.google.com/websearch/answer/14901683?hl=en",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_help_ai_mode",
+      "name": "Google Help: AI Mode",
+      "url": "https://support.google.com/websearch/answer/16011537?hl=en",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_apis_user_agent",
+      "name": "Google: user agent APIs-Google",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/apis-user-agent",
+      "type": "html",
+      "importance": 2,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "google_read_aloud_user_agent",
+      "name": "Google: user agent Read Aloud",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/read-aloud-user-agent",
+      "type": "html",
+      "importance": 2,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "openai_crawlers",
+      "name": "OpenAI Crawlers (GPTBot, OAI-SearchBot, ChatGPT-User)",
+      "url": "https://platform.openai.com/docs/bots",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "anthropic_crawlers",
+      "name": "Anthropic: crawler di Claude e come bloccarli",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "type": "html",
+      "importance": 5,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "perplexity_crawlers",
+      "name": "Perplexity Crawlers",
+      "url": "https://docs.perplexity.ai/guides/bots",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "mistral_crawlers",
+      "name": "Mistral Crawlers",
+      "url": "https://docs.mistral.ai/robots",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "apple_applebot",
+      "name": "Apple: Applebot e Applebot-Extended",
+      "url": "https://support.apple.com/en-us/119829",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "amazon_amazonbot",
+      "name": "Amazon: Amazonbot",
+      "url": "https://developer.amazon.com/amazonbot",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "duckduckgo_duckassistbot",
+      "name": "DuckDuckGo: DuckAssistBot",
+      "url": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "commoncrawl_ccbot",
+      "name": "Common Crawl: CCBot",
+      "url": "https://commoncrawl.org/ccbot",
+      "type": "html",
+      "importance": 4,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "cloudflare_ai_crawl_control",
+      "name": "Cloudflare AI Crawl Control",
+      "url": "https://developers.cloudflare.com/ai-crawl-control/",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "cloudflare_verified_bots",
+      "name": "Cloudflare: bot verificati",
+      "url": "https://developers.cloudflare.com/bots/concepts/bot/verified-bots/",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "llms_txt_spec",
+      "name": "Specifica llms.txt",
+      "url": "https://llmstxt.org/",
+      "type": "html",
+      "importance": 3,
+      "category": "google_docs_change"
+    },
+    {
+      "id": "bing_webmaster_guidelines",
+      "name": "Bing Webmaster Guidelines",
+      "url": "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a",
+      "type": "html",
+      "importance": 5,
       "category": "google_docs_change"
     }
   ]

@@ -1,0 +1,259 @@
+* Home 
+ * Crawling infrastructure 
+ * Docs 
+
+Send feedback Stay organized with collections Save and categorize content based on your preferences. 
+
+# Changelog
+
+This page details the latest major updates made to Google's crawling documentation. 
+
+To get the latest crawling documentation updates delivered to you, add the URL of this page to your feed reader, or add the feed URL directly: `https://developers.google.com/crawling/docs/changelog/crawling_docs_updates.rss`. 
+
+## November 2026
+
+November 17
+ 
+
+### Added guidance on allowing `Google-Agent`
+
+**What** : Published a technical guide on how to ensure that `Google-Agent` has access to your website. 
+
+**Why** : To help publishers that want to enable `Google-Agent` for their website. 
+
+## October 2026
+
+October 30
+ 
+
+### Updated common crawlers page to mention future AI training control support
+
+**What** : Added a note about Google's intention to support the shared machine-readable training preference signal. 
+
+**Why** : Learn more in our blog post. 
+
+October 23
+ 
+
+### Updated guidance on robots.txt specifications
+
+**What** : Updated the how Google interprets the robots.txt specification to add recommendation for percent-encoding in rule paths. 
+
+**Why** : To synchronize the documentation with the episodes of "The Non-Canonical Cabinet" video series. 
+
+October 6
+ 
+
+### Added `Retry-After` HTTP header details to the reduce crawl rate documentation
+
+**What** : Restructured the emergency crawl rate reduction section and added information and examples about the `Retry-After` HTTP header to the Reduce the Google crawl rate documentation. 
+
+**Why** : Support for the `Retry-After` HTTP header is not new (it was already documented in Temporarily pause or disable a website), and adding it directly to the crawl rate reduction guide makes it easier to find and understand when urgently reducing crawler traffic. 
+
+## September 2026
+
+September 17
+ 
+
+### Generalized the `Mediapartners-Google` crawler documentation
+
+**What** : Updated the `Mediapartners-Google` documentation to clarify that it affects various ad-related Google products (not just AdSense), and renamed the section heading from AdSense to `Mediapartners-Google`. 
+
+**Why** : Crawling preferences addressed to the `Mediapartners-Google` user agent affect multiple ad-related Google products (for example, Google AdSense and Google Ad Manager). 
+
+## July 2026
+
+July 22
+ 
+
+### Polished and clarified the crawl budget guide
+
+**What** : Polished and clarified the Optimize your crawl budget page to improve clarity, terminology consistency, and flow. 
+
+**Why** : To make the documentation easier to understand and ensure technical terms (like _crawl capacity limit_) are used consistently throughout. 
+
+July 16
+ 
+
+### Updating the NotebookLM user agent
+
+**What** : Updated the NotebookLM user agent to be `Google-GeminiNotebook`. If you hardcoded the old value in your code, update the string to avoid potential bugs. We will continue to support the old value to allow for a smooth transition. 
+
+**Why** : NotebookLM is now Gemini Notebook. 
+
+July 14
+ 
+
+### Corrected the user agent string for `Google-InspectionTool` user agent
+
+**What** : Updated the `Google-InspectionTool` user agent string. 
+
+**Why** : The user agent string for `Google-InspectionTool` mistakenly included a semicolon, which didn't match the actual user agent string in production. This is now corrected in our documentation. 
+
+## May 2026
+
+May 4
+ 
+
+### Adding Web Bot Auth documentation
+
+**What** : Added documentation on how to authenticate requests with Web Bot Auth. 
+
+**Why** : To provide site owners with instructions on how to verify requests with Web Bot Auth during the experimental phase, as some Google user agents are now starting to use Web Bot Auth. 
+
+## March 2026
+
+March 20
+ 
+
+### Added the Google-Agent user agent
+
+**What** : Added the Google-Agent user agent and added the IP ranges for user triggered agents to the documentation on verifying requests from Google crawlers and fetchers. 
+
+**Why** : The Google-Agent user agent is rolling out over the next few weeks, and will be used by Google agents hosted on Google infrastructure to navigate the web and perform actions upon user request. 
+
+March 3
+ 
+
+### Added an overview page about Google's web crawling
+
+**What** : Added a new page about how Google's crawling works. 
+
+**Why** : Based on questions we've received over the years, we've put together a resource page with basic educational information about crawling to better highlight various resources about crawling that are available to site owners. 
+
+## February 2026
+
+February 11
+ 
+
+### Updated the location of Google's IP ranges for common crawlers, special crawlers, and user-triggered fetchers
+
+**What** : Updated the location of Google's IP ranges for common crawlers, special crawlers, and user-triggered fetchers to the `/crawling/ipranges` directory. The old location will continue to work for the time being, but we recommend updating your links to the new location. 
+
+**Why** : Their previous location in `/search/apis/ipranges` was not the most logical place, as these IP ranges are used by many Google products (not just Search). 
+
+February 3
+ 
+
+### Added information about the default file size limits for Google's crawlers and fetchers
+
+**What** : Moved the information about the default file size limits of Google's crawlers and fetchers from the Googlebot documentation to the crawling documentation. 
+
+**Why** : The original location of this information was not the most logical place as it applies to all of Google's crawlers and fetchers, and so we moved it to the crawler infrastructure documentation. 
+
+## January 2026
+
+January 21
+ 
+
+### Added Google Messages to the list of user-triggered fetchers
+
+**What** : Added the Google Messages fetcher to the list of user-triggered fetchers. 
+
+**Why** : To help site owners identify traffic from Google Messages when it generates link previews for URLs sent in chat messages. 
+
+## December 2025
+
+December 18
+ 
+
+### Migrated more documentation to the Google crawling documentation site
+
+**What** : Migrated the following documentation to Google's crawling infrastructure site. The functionality hasn't changed, only the location of the documentation and some minor wording changes to clarify that some guidance applies to both Google Search and other Google products. 
+
+ * Managing crawling of faceted navigation URLs
+ * Optimize your crawl budget
+ * How HTTP status codes affect Google's crawlers
+ * Debug DNS and network errors
+
+**Why** : This documentation is more relevant to many Google products that use Google's crawlers, not just Search. 
+
+December 2
+ 
+
+### Updated Google Read Aloud user agent page
+
+**What** : Updated the Google Read Aloud user agent page to provide additional details on how it functions, in particular that it uses stateless rendering, and that it needs to access the page to see the meta tags used on the page. 
+
+**Why** : We received feedback through the help community that more information would be helpful. 
+
+## November 2025
+
+November 20
+ 
+
+### Migrated documentation to the new Google crawling documentation site
+
+**What** : Migrated crawling documentation from the Google Search Central to a new Google crawling documentation site. The content hasn't changed, only the location. Notable moves include: 
+
+ * Overview of Google crawlers and fetchers
+ * Verify requests from Google crawlers and fetchers
+ * Reduce the Google crawl rate
+ * Google common crawlers
+ * How Google interprets the robots.txt specification
+
+**Why** : Google's crawling infrastructure is shared across a variety of Google products beyond Search, including Google Shopping, News, Gemini, AdSense, and more. The new site is a more logical home for this documentation and makes it easier to document new features and updates that are relevant to all of these products. 
+
+November 12
+ 
+
+### Added the `Google-Pinpoint` fetcher
+
+**What** : We added the `Google-Pinpoint` fetcher to the list of user-triggered fetchers. 
+
+**Why** : The `Google-Pinpoint` fetcher is used by the Pinpoint research tool. 
+
+November 3
+ 
+
+### Added a new user-triggered fetcher
+
+**What** : Based on feedback, we added the `Google-CWS` fetcher to the list of user-triggered fetchers. 
+
+## October 2025
+
+October 15
+ 
+
+### Updated the list of Google products that use the Read Aloud service
+
+**What** : Update the documentation on Google Read Aloud with an updated list of Google products that use the Read Aloud service. 
+
+**Why** : Other Google products can now use the Google Read Aloud service. 
+
+October 9
+ 
+
+### Added `Google-NotebookLM` to the list of user-triggered fetchers
+
+**What** : Based on feedback, we added `Google-NotebookLM` to the list of user-triggered fetchers. 
+
+## July 2025
+
+July 1
+ 
+
+### Updated the Google Read Aloud user agent
+
+**What** : Updated Google Read Aloud user agent in HTTP requests with newer browser versions. 
+
+**Why** : To accommodate sites which don't support old browser versions. 
+
+## April 2025
+
+April 25
+ 
+
+### Updated the description of the Google-Extended product token
+
+**What** : Based on publisher feedback, we updated the Google-Extended product token description to provide additional specificity and clarity. 
+
+ 
+
+### Corrected the description of the crawler preferences addressed to the `Googlebot-News` user agent
+
+**What** : Updated the `Googlebot-News` user agent description. 
+
+**Why** : The description for how crawling preferences addressed to `Googlebot-News` mistakenly stated that they'd affect the News tab on Google, which is not the case. 
+
+Send feedback

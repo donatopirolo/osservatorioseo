@@ -1,0 +1,388 @@
+# Bing Webmaster Guidelines
+
+These guidelines describe how Bing discovers, crawls, indexes, evaluates, and surfaces content across Bing search experiences, Copilot, and grounding API results. 
+
+**Following these guidelines helps ensure your URLs are eligible for:** 
+
+ * Indexing and ranking 
+ * Grounding results and citations 
+ * Sustained visibility and qualified traffic 
+
+Failure to follow these guidelines may result in reduced visibility in Bing search, reduced eligibility for grounding experiences, or delisting from the Bing index. 
+
+# 
+
+# 1\. SEO Fundamentals Still Apply to Grounding and AI Experiences
+
+ 
+Bing and Copilot search experiences rely on the same core crawling, indexing, and ranking foundation as traditional search. SEO best practices that support discovery, indexing accuracy, and content clarity also support eligibility for AI-generated experiences, grounding results, and citations. 
+Practices that support: 
+
+ * * Crawl efficiency
+ * Indexing accuracy 
+ * URL consolidation 
+ * Content clarity and structure 
+ * Authority and trust signals 
+
+Also support: 
+
+ * Eligibility for grounding results 
+ * Long‑term visibility across Bing, Copilot, and AI‑powered search experiences. 
+
+Content that is discoverable, accurate, well-structured, and created for users performs best across all search experiences. 
+ 
+
+## 2\. Make URLs Easy for Bing and Copilot to Discover 
+
+Bing relies on clear discovery and crawl signals to find, render, and index content accurately. Strong discovery practices help keep indexed content fresh, reliable, and eligible across Bing search and grounding experiences. Ensure Bing can reliably discover your URLs using: 
+
+ * IndexNow URL submission
+ * XML sitemaps 
+ * Crawlable internal links 
+ * External links from relevant websites 
+
+Clear discovery signals improve crawl efficiency, indexing accuracy, and grounding eligibility. 
+
+## 3\. Use Sitemaps to Signal Importance and Freshness 
+
+Use XML sitemaps to indicate which URLs matter and when content changes. 
+Sitemaps should: 
+
+ * List only canonical URLs 
+ * Reflect current site structure 
+ * Remove deleted or redirected URLs promptly 
+ * Include freshness signals (such as lastmod) where applicable 
+
+Proper sitemap usage helps Bing maintain accurate, up‑to‑date indexing and reliable grounding eligibility. Sitemaps do not guarantee visibility, but they significantly improve accuracy and freshness across Bing search experiences. Additionally, freshness signals like accurate lastmod values and HTTP validation headers such as ETags help Bing detect content changes more reliably. 
+ 
+
+## 4\. Notify Bing and Copilot quickly when URLs Change
+
+Use IndexNow to notify Bing when: 
+
+ * URLs are added 
+ * Content is updated 
+ * URLs are removed 
+
+Timely notifications help Bing refresh the index and reduce outdated or incorrect URL references in Copilot responses and grounding results. Avoid batch submissions when possible. Streaming submissions provide faster updates, reduce server load, and improve indexing accuracy. 
+ 
+
+## 5\. Use Links to Establish Structure and Authority
+
+Ensure each important URL is reachable through crawlable internal links. 
+Links should: 
+
+ * Use standard <a href> links 
+ * Include relevant anchor text or image alt attributes 
+
+Strong internal and external linking supports discovery, authority evaluation, and grounding eligibility. 
+ 
+
+## 6. Consolidate Duplicate URLs 
+
+Avoid serving the same content across multiple URLs. 
+
+ * Duplicate URLs dilute signals and reduce Bing’s confidence in selecting a URL for grounding results or citations. 
+ * Use canonical URLs, parameter controls, and consistent URL structures to consolidate signals and improve grounding visibility.
+
+ 
+
+## 7. Handle URL Moves with Proper Redirects
+
+When content moves: 
+
+ * Use 301 redirects for permanent URL changes 
+ * Use 302 redirects only for very short-term changes (less than 2 days) 
+ * Use redirects instead of canonical tags 
+
+Proper redirects preserve visibility, traffic, and grounding continuity. 
+
+ 
+
+ 
+
+## 8. Allow Efficient Crawling and Rendering
+
+Allow Bingbot to crawl and render content efficiently. 
+
+ 
+
+Avoid: 
+
+ * Blocking important URLs unnecessarily 
+ * Hiding critical content behind client-side rendering 
+ * Excessive or unnecessary HTTP requests to render the content 
+ * Outputting excessive or low‑value URLs, such as duplicate content or URLs with numerous parameters 
+ * Blocking Bingbot in your robots.txt file 
+
+Content that cannot be reliably rendered may not be indexed or selected for grounding results. 
+
+ 
+
+ 
+
+## 9. Remove URLs Cleanly When Content is Deleted
+
+When content is permanently removed: 
+
+ * Return a 404 status code 
+ * Use Bing’s Content Removal tools when appropriate 
+ * Update deleted or changed URLs via IndexNow 
+
+Proper removal prevents outdated URLs from appearing in search or being referenced in grounding results. 
+
+ 
+
+ 
+
+## 
+
+## 10. Use robots.txt and Meta Directives Correctly 
+
+ * robots.txt controls crawl access, not indexing. 
+ * Use NOINDEX when a URL should NOT appear in Bing search, Copilot experiences, or grounding API results.
+
+ 
+
+Important display considerations: 
+
+ * DATA-NOSNIPPET and NOSNIPPET prevent Bing from displaying captions and may limit Copilot citation quality. 
+ * To control the text Bing may display or cite, use the data-snippet attribute to specify allowed content. 
+
+ 
+
+Important grounding considerations: 
+
+ * NOARCHIVE prevents content from being used in Copilot responses and grounding results. 
+ * NOCACHE limits Copilot to using only the URL, title, and snippet, reducing citation depth and answer quality. 
+ * To allow richer citations and answers, avoid using NOCACHE on content intended for Copilot or grounding experiences. 
+
+ 
+
+## 
+
+## 11. Create Content that is Clear, Focused, and Useful 
+
+ * * 
+Grounded answers and citations depend on content that Bing can clearly interpret and verify. Well‑structured, accurate, and focused content improves retrieval quality, grounding reliability, and citation accuracy. 
+ 
+**Content should** : 
+
+ * Fully satisfy user intent
+ * Be original and authoritative
+ * Be easy to understand without external context 
+
+Thin, ad heavy, or affiliate-only URLs may lose ranking eligibility and grounding visibility. 
+
+ 
+
+ 
+
+## 12. Optimize Images and Video for Understanding
+
+ 
+
+ * * 
+
+Images and video should reinforce the primary text on the page and should not be the sole source of information required to understand the topic. Clear, accessible multimodal content improves grounding accuracy, citation quality, and reliability across Bing and Copilot experiences. 
+
+ 
+
+**To support understanding (rather than replace text), provide** : 
+
+ * * Descriptive file names 
+ * Alt text
+ * Captions, transcripts, or structured data
+
+ 
+
+## 
+13. Structure Content Clearly Using HTML 
+
+Use clear structure to improve comprehension. 
+
+## 
+
+Follow best practices for: 
+
+## 
+
+ * ## 
+
+<title> and meta descriptions
+
+ * Logical <H1> – <H6> heading hierarchy
+ * ## 
+
+Semantic HTML elements 
+
+Missing, duplicate, or overly short title tags and meta descriptions may reduce indexing reliability, ranking, and eligibility for grounding results and citations. 
+
+ * 
+
+ 
+
+## 14. 
+
+Use Structured Data Accurately 
+ 
+Structured data may support clearer grounding but does not guarantee visibility or grounding traffic. Markup must accurately reflect visible content. 
+ 
+
+ 
+ 
+
+## 15. 
+
+Ensure Content can be Verified Independently
+
+ 
+
+URLs are more likely to be selected for grounding queries and citations when content stands on its own. 
+
+ 
+
+Ensure: 
+
+ * Facts and definitions are explicit 
+ * Key statements do not rely on implied content 
+ * Important information is visible on the URL itself 
+
+ 
+
+ 
+
+## 16. 
+
+Define Entities Clearly and Consistently
+
+ 
+
+Use clear and consistent naming for people, organizations, products, and locations. 
+
+ * Avoid ambiguous references. 
+ * Clear entity definition improves grounding visibility and citation accuracy. 
+
+ 
+
+ 
+
+ 
+
+## 17. 
+
+Focus Each URL on a Single Topic
+
+ 
+
+URLs focused on a primary topic are more likely to be selected for grounding results. 
+
+ * Avoid mixing unrelated concepts on a single URL 
+ * Align titles, heading, and content intent 
+
+ 
+
+ 
+
+## 18. 
+
+Surface Key information early
+
+ 
+
+Place essential information near the top of the URL 
+
+ * Avoid long introductions before addressing the main topic. 
+ * Early clarity improves grounding visibility and reliability. 
+
+## 
+
+## 19. 
+
+Keep Content Accurate and Up to Date
+
+ 
+
+Update content when facts or guidance change. 
+
+ * Use freshness signals appropriately 
+ * Remove or revise outdated information to prevent incorrect information from surfacing. 
+ * Notify IndexNow when content is added, updated, or deleted. 
+
+ 
+
+20\. Preserve URL Stability Over Time 
+
+ 
+
+Avoid unnecessary URL changes. When changes are required: 
+
+ * Use proper redirects 
+ * Preserve meaning and intent 
+
+Stable URLs support long-term visibility and continuity. 
+
+ 
+
+ 
+
+ 
+
+21. Manage Crawl Efficiency and Reduce Crawl Waste
+
+ 
+Bing allocates crawl capacity based on site health, efficiency, signal quality, and crawl value. Excessive crawl waste, duplication, or low‑value URLs can directly limit indexing, delay discovery, and reduce grounding visibility for important content. 
+Excessive low-value URLs, duplication, or crawl waste can: 
+
+ * Delay indexing of important content 
+ * Reduce grounding visibility for priority URLs 
+
+Best Practices: 
+
+ * Eliminate duplicate or low-value URLs 
+ * Use canonicalization consistently 
+ * Block unnecessary crawl paths with robots.txt 
+ * Keep site structure logical and accessible 
+
+ 
+
+22\. Crawl Efficiency, Visibility, and Measuring Beyond Clicks
+
+ 
+
+Content may surface across Bing search experiences without a traditional click. Managing crawl efficiency and URL quality helps ensure important content remains indexed, retrievable, and visible as impressions, citations, or grounding references.
+
+ * Content may appear as impressions, citations, or grounding references in Copilot responses. 
+ * A decline in clicks does not always indicate a loss of visibility. 
+
+Monitor: 
+
+ * Impressions 
+ * Indexing status 
+ * Grounding and citation eligibility 
+
+# 
+
+# Abuse and Examples of Things to Avoid
+
+Search engine optimization (SEO) improves the technical quality, clarity, and accessibility of websites, helping Bing discover, understand, and evaluate content. SEO best practices support long‑term visibility across Bing, Copilot, and AI‑powered search experiences. Generative Engine Optimization (GEO) focuses on content eligibility for grounding and reference in AI responses. 
+
+SEO does not guarantee rankings or traffic, and GEO does not guarantee grounding or citations in AI experiences. When taken to extremes, some tactics can be abused. The practices below represent manipulative, misleading, or low‑quality behavior. 
+
+Sites that engage in these practices may experience reduced rankings, suppressed grounding visibility, loss of grounding eligibility, ignored structured data, or removal from the Bing index. Microsoft may take action against deceptive or abusive behavior. Site owners can contact support through Bing Webmaster Tools if action was taken in error, and users may report abuse using the feedback link on bing.com after performing a search. 
+
+> ****** 
+**The following practices reduce ranking eligibility and grounding visibility, across Bing and Copilot experiences: 
+CloakingShowing different content to search crawlers than to users is a manipulative practice that undermines trust and visibility. Sites should not rely on cloaking or serving materially different experiences to crawlers and visitors. 
+Link Schemes and Artificial Promotion Manipulating inbound links to inflate authority violates guidelines. This includes link buying, link spamming, private networks, and artificial social promotion schemes that simulate popularity. Links should be earned organically through high‑quality, useful content. 
+Duplicate Content Across Multiple URLs Publishing the same or substantially similar content across multiple URLs reduces confidence in selecting a preferred version. Address duplication at the source through proper URL management and structure. Canonical tags help signal preference but do not replace fixing underlying issues. 
+Scraped or Republished Content Without Added Value Copying content from other sites without adding original value offers little benefit to users and may violate copyright expectations. Modifying or lightly rewriting existing content without new insight or perspective is considered scraping. Create original, differentiated content. 
+Keyword Stuffing and Artificially Engineered Language Content should be created for users, not to manipulate ranking systems or trigger citations or AI responses. Excessive repetition, unnatural phrasing, or loading pages with irrelevant keywords can reduce visibility or lead to removal. 
+Automatically Generated Content at Scale Large‑scale content generated without oversight, quality control, or editorial review often lacks usefulness, accuracy, and originality, and may be excluded from indexing. 
+Affiliate Programs Without Sufficient Value Sites that primarily redirect users to retailers without providing original value such as unique reviews, comparisons, or analysis may experience reduced visibility or removal. 
+Malicious Behavior Sites that participate in phishing, malware distribution, or other harmful activities risk demotion or removal. Maintaining secure infrastructure and controlling publishing access is essential. 
+Misleading Structured Data Structured data must accurately represent visible content. Markup that is irrelevant, inaccurate, or misleading may be ignored and can affect trust and eligibility for enhanced features. 
+Prompt Injection and AI Manipulation Attempts to add content designed to manipulate or interfere with language models used by Bing or Copilot may result in reduced visibility or removal from search experiences. 
+These practices may result in reduced ranking, suppressed grounding visibility, or delisting from the Bing index. 
+ 
+_For information on how Bing ranks your content and on Bing's additional search experiences, please visit the How Bing delivers search results page._

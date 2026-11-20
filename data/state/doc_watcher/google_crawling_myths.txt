@@ -1,0 +1,141 @@
+* Home 
+ * Crawling infrastructure 
+ * Docs 
+
+Send feedback Stay organized with collections Save and categorize content based on your preferences. 
+
+# Myths and facts about crawling
+
+Test your knowledge on how Google crawls websites. 
+
+Compressing my sitemaps can increase my crawl budget.
+
+True
+
+False
+
+It won't. Zipped sitemaps still have to be fetched from the server, so you're not really saving much crawling time or effort on Google's part by sending compressed sitemaps.
+
+Google prefers fresher content, so I'd better keep tweaking my page.
+
+True
+
+False
+
+For Google Search, content is rated by quality, regardless of age. Create and update your content as necessary, but there's no additional value in making pages artificially appear to be fresh by making trivial changes and updating the page date.
+
+Google prefers old content (it has more weight) over fresh content.
+
+True
+
+False
+
+If your page is useful, it's useful, whether it's new or old.
+
+Google prefers clean URLs and doesn't like query parameters.
+
+True
+
+False
+
+We can crawl parameters.
+
+The faster your pages load and render, the more Google is able to crawl.
+
+True 
+
+True, in that our resources are limited by a combination of time and number of crawling bots. If you can serve us more pages in a limited time, we will be able to crawl more of them. However, we might devote more time crawling a site that has more important information, even if it is slower. It's probably more important for you to make your site faster for your users than to make it faster to increase your crawl coverage. It's much simpler to help Google crawl the right content than it is to crawl all your content every time. Note that crawling a site involves both retrieving and rendering the content. Time spent rendering the page counts as much as time spent requesting the page. So making your pages faster to render will also increase the crawl speed. 
+
+False
+
+Small sites aren't crawled as often as big ones.
+
+True 
+
+False
+
+If a site has important content that changes often, we crawl it often, regardless of the size. 
+
+The closer your content is to the home page the more important it is to Google.
+
+True
+
+Partly true 
+
+Your site's home page is often the most important page on your site, and so pages linked directly to the home page may be seen as more important, and therefore crawled more often. However, this doesn't mean that these pages will be ranked more highly than other pages on your site. 
+
+False
+
+URL versioning is a good way to encourage Google to recrawl my pages.
+
+True
+
+Partly true 
+
+Using a versioned URL for your page in order to entice Google to crawl it again sooner will probably work, but often this is not necessary, and will waste crawl resources if the page is not actually changed. If you do use versioned URLs to indicate new content, we recommend that you only change the URL when the page content has changed meaningfully. 
+
+False
+
+Site speed and errors affect my crawl budget.
+
+True 
+
+Making a site faster improves the users' experience while also increasing crawl rate. For Google's crawlers, a speedy site is a sign of healthy servers, so it can get more content over the same number of connections. On the flip side, a significant number of `5xx` HTTP response status codes (server errors) or connection timeouts signal the opposite, and crawling slows down. We recommend paying attention to the Crawl Stats report in Search Console and keeping the number of server errors low. 
+
+False
+
+Crawling is a ranking factor in Google Search.
+
+True 
+
+False
+
+Improving your crawl rate won't necessarily lead to better positions in Google Search results. Google uses many signals to rank the results, and while crawling is necessary for a page to be in search results, it's not a ranking signal. 
+
+Alternate URLs and embedded content count in the crawl budget.
+
+True 
+
+Generally, any URL that Googlebot crawls will count towards a site's crawl budget. Alternate URLs, like AMP or hreflang, as well as embedded content, such as CSS and JavaScript, including XHR fetches, may have to be crawled and will consume a site's crawl budget. 
+
+False
+
+I can control Google's crawlers with the "crawl-delay" rule.
+
+True 
+
+False
+
+The non-standard "crawl-delay" robots.txt rule is not processed by Google's crawlers. 
+
+The `nofollow` rule affects crawl budget.
+
+True
+
+Partly true 
+
+Any URL that is crawled affects crawl budget, so even if your page marks a URL as `nofollow`, it can still be crawled if another page on your site, or any page on the web, doesn't label the link as `nofollow`. 
+
+False
+
+I can use `noindex` to control crawl budget.
+
+True
+
+Partly true 
+
+Any URL that is crawled affects crawl budget, and Google has to crawl the page in order to find the `noindex` rule. 
+ 
+However, `noindex` is there to help you keep things out of the index. If you want to ensure that those pages don't end up in Google's index, continue using `noindex` and don't worry about crawl budget. It's also important to note that if you remove URLs from Google's index with `noindex` or otherwise, Google's crawlers can focus on other URLs on your site, which means `noindex` can indirectly free up some crawl budget for your site in the long run. 
+
+False
+
+Pages that serve `4xx` HTTP status codes are wasting crawl budget.
+
+True
+
+False
+
+Pages that serve `4xx` HTTP status codes (except `429`) don't waste crawl budget. Google attempted to crawl the page, but received a status code and no other content. 
+
+Send feedback

@@ -1,0 +1,55 @@
+* Home 
+ * Search Central 
+ * Documentation 
+
+Send feedback 
+
+# Identify Google Search traffic in your web analytics or server logs
+
+In addition to using Search Console, you can identify traffic from Google Search in your own web analytics system or server logs by inspecting the HTTP `Referer` header that's sent when a user clicks a link from Google Search to your site. This page explains which `Referer` values to look for, how to match them in your analytics and logs, and why the numbers might not match Search Console. 
+
+The `Referer` header doesn't include the search query that the user entered. To see which queries bring users to your site, use the Performance report in Search Console. 
+
+## How Google Search sets the `Referer` header
+
+When a user clicks a link in Google Search, the browser or app includes an HTTP `Referer` request header that indicates where the request came from. Google Search uses the `origin` referrer policy, which means that the `Referer` header contains only the scheme and host of the referring page, without the URL path or query parameters. 
+
+The following table lists the `Referer` values that Google Search sends, depending on where the user clicked the link. Traffic from Discover uses the same values as the surface where the user viewed Discover, such as the Google app or Google Search on the web. 
+
+`Referer` values by source 
+--- 
+Google Search on the web | `https://www.google.com/` or a local Google domain, such as `https://www.google.co.uk/` or `https://www.google.co.jp/` 
+Google app on Android | `android-app://com.google.android.googlequicksearchbox/https/www.google.com` (when the app opens the link in a browser tab) or `https://www.google.com/` (or a local Google domain) 
+Google app on iOS | `https://www.google.com/` (or a local Google domain) 
+ 
+Other Google services that are served from the same origins (for example, Google Images) send the same `Referer` values, so this traffic is also included when you match these patterns. 
+
+### Why the `Referer` is sometimes blank
+
+Even though Google Search sets its referrer policy to `origin`, the user's browser or operating system might still omit the `Referer` header (or block JavaScript access to `document.referrer`) for privacy and security reasons. This happens by default in several common scenarios, including: 
+
+ * Private browsing modes and anti-fingerprinting protections in the browser
+ * Opening search results in a new tab, in some browsers
+ * Moving from a native mobile search widget to an external browser
+ * Visits from users who have privacy extensions or strict browser settings turned on
+
+Additionally, JavaScript-based visitor tracking might not log all visits because of browser privacy settings, consent management, and ad blockers. 
+
+## Match the `Referer` header in your analytics or logs
+
+Most web analytics systems automatically recognize these `Referer` values and categorize the visits as organic search traffic from Google. If Google Search traffic is missing or shows up as referral or direct traffic, check whether custom channel rules, referral exclusions, or filters in your analytics configuration are reclassifying it. 
+
+If you use custom analytics or analyze server logs directly, match the `Referer` field against the `Referer` values for Google Search. The browser also sends a `Referer` header when it fetches resources such as images, CSS, and JavaScript files, but for those requests, the value is your own page's URL. To count visits from Google Search, only look at requests for the landing pages themselves. 
+
+## Why your data might not match Search Console
+
+Identifying Search traffic on your site using the `Referer` header isn't exact, and the data recorded in your web analytics system or server logs often doesn't match 1:1 with the clicks reported in Search Console. Common technical reasons for discrepancies include: 
+
+ * **Privacy settings and client configurations** : Browser privacy settings, extensions, ad blockers, or user consent choices can block analytics scripts, strip URL query parameters, or suppress the HTTP `Referer` header. 
+ * **Redirects on your site** : Client-side redirects (for example, JavaScript or `meta refresh` redirects) may replace the `Referer` with your own page's URL, and redirects that don't preserve the query string drop URL parameters such as `gclid` (which is commonly used for ad-tagging). A redirect that sends a stricter `Referrer-Policy` header can also remove the `Referer`. 
+ * **Different measurement methodologies** : Search Console records a click when a user selects a link in Google Search, whereas web analytics tools record a visit or session only after the destination page loads and executes the tracking code. 
+ * **Paid and organic traffic** : Search Console reports only organic clicks from Google Search and doesn't include clicks on Google Ads, whereas your web analytics system might include paid traffic in its totals, depending on how you configure it. 
+
+For more information about why analytics numbers differ from Search Console metrics, see Understanding data discrepancies between Google Analytics and Search Console. 
+
+Send feedback

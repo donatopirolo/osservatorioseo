@@ -1,0 +1,44 @@
+* Home 
+ * Crawling infrastructure 
+ * Docs 
+
+Send feedback Stay organized with collections Save and categorize content based on your preferences. 
+
+# Allow Google-Agent traffic
+
+`Google-Agent` is the name used by agents hosted on Google infrastructure to navigate the web and perform actions upon user request. Explicitly allowing `Google-Agent` traffic in your content delivery network (CDN), web application firewall (WAF), or bot-detection service helps prevent legitimate requests from being blocked while preserving your existing security controls. 
+
+## How Google-Agent identifies requests
+
+Each `Google-Agent` request includes a `User-Agent` HTTP request header containing "`Google-Agent`" (see Google user-triggered fetchers) and comes from an IP address from user-triggered-agents.json. 
+
+Google is also experimenting with the Web Bot Auth protocol using the `https://agent.bot.goog` identity. In this experiment, Google signs requests made by `Google-Agent` with the HTTP Message Signatures standard (RFC 9421). Participating requests include: 
+
+ * A `Signature-Agent` header set to `g="https://agent.bot.goog"`
+ * `Signature` and `Signature-Input` headers labeled as `g`
+
+The public key set for verifying these signatures is available at: https://agent.bot.goog/.well-known/http-message-signatures-directory
+
+## Allow traffic in your CDN, Firewall, or bot-detection service
+
+Some bot-detection services, CDNs, and Firewalls provide ways to verify requests made by the `Google-Agent` user agent and allow these requests; refer to your provider for the exact steps. 
+
+If your service doesn't automatically verify `Google-Agent` requests, you may be able to verify and allow requests using the following rules: 
+
+ * Confirm the `User-Agent` header contains `Google-Agent`.
+ * Confirm the IP address as being in user-triggered-agents.json. 
+ * If provided, confirm the signed request by verifying the `Signature` and `Signature-Input` headers for `Signature-Agent: g="https://agent.bot.goog"` according to Web Bot Auth. 
+ * For verified requests, skip bot challenges.
+
+## Troubleshooting
+
+If legitimate `Google-Agent` requests are still blocked after allowing these requests: 
+
+ * **Rule priority:** Confirm that your allow rule has higher priority than (and evaluates before) broad cloud or data center ASN blocks, managed bot rules, or category-level AI agent block policies that could override a verified bot setting. 
+ * **Interactive challenges:** Confirm that your rule skips interactive CAPTCHAs and JavaScript challenges in addition to HTTP blocks, including standalone in-page CAPTCHA widgets triggered on search or form submission. 
+ * **In-journey actions and APIs:** Confirm that allowing these requests covers actions beyond initial homepage loads, including on-site search, filtering, clicking into detail pages, add-to-cart, booking, and underlying XHR, GraphQL, or `api.*` endpoints. 
+ * **Shared-IP rate limits:** Confirm that per-IP rate-limiting rules account for or exempt verified `Google-Agent` IP ranges, as concurrent requests from multiple users share the same egress pool. 
+ * **IP range updates:** Confirm that IP-based rules stay synced with the latest ranges in user-triggered-agents.json. 
+ * **Proxy headers:** Confirm that load balancers and intermediate proxies preserve the original client IP, the `User-Agent` header, and (for signed requests) the `Signature`, `Signature-Input`, and `Signature-Agent` headers. 
+
+Send feedback
