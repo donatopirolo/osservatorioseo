@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US12651419B2",
+    "title": "Location-specific three-dimensional models responsive to location-related queries",
+    "abstract": "Generating a location-specific three-dimensional model in response to a location query can provide users with a better understanding of a location through providing better interactivity, better perspective, and better understanding of dimensionality. Generation of the models can be enabled by leveraging a three-dimensional asset database and segmentation methods. The location-specific models can provide further utility by further including situation specific simulated effects, such as simulated weather or traffic.",
+    "claims": [
+      "1 . A computer-implemented method, the method comprising: obtaining, by a computing system comprising one or more processors, a three-dimensional model that models a plurality of locations; generating, by the computing system and based on the three-dimensional model, one or more three-dimensional meshes of a particular location of the plurality of locations; processing, by the computing system, one or more images to generate one or more segmented images of the particular location; projecting, by the computing system, the one or more segmented images to the one or more three-dimensional meshes to generate a location-specific segment, wherein the location-specific segment comprises a reconstructed environment associated with the particular location; generating, by the computing system, the location-specific video of the particular location based on the location-specific segment, wherein the location-specific video comprises a plurality of different perspective views of the location-specific segment; storing, by the computing system, the location-specific video of the particular location in a three-dimensional asset database; and storing the location specific segment with the location-specific video in the three-dimensional asset database.",
+      "2 . The method of claim 1 , further comprising: augmenting, by the computing system, the reconstructed environment to remove one or more objects from the reconstructed environment to generate the location-specific segment, wherein the location-specific segment is descriptive of a three-dimensional representation of an augmented environment.",
+      "3 . The method of claim 1 , wherein generating, by the computing system, the location-specific video of the particular location based on the location-specific segment comprises: generating, by the computing system, a plurality of renderings of the location-specific segment; and generating, by the computing system, the location-specific video based on the plurality of renderings.",
+      "4 . The method of claim 1 , wherein the particular location is associated with a particular structure.",
+      "5 . The method of claim 1 , further comprising: obtaining, by the computing system, data associated with the particular location; and wherein the three-dimensional model is obtained based on the data associated with the particular location.",
+      "6 . The method of claim 1 , further comprising: obtaining, by the computing system, data associated with the particular location; and wherein the one or more three-dimensional meshes are generated based on the data associated with the particular location.",
+      "7 . The method of claim 1 , further comprising: obtaining, by the computing system, data associated with the particular location; obtaining, by the computing system, the one or more images based on the data associated with the particular location; and wherein the one or more segmented images are segmented based on the data associated with the particular location.",
+      "8 . The method of claim 1 , further comprising: obtaining, by the computing system, a search query associated with a user computing device; processing, by the computing system, the search query to determine the search query is associated with the particular location; obtaining, by the computing system, the location-specific video from the three-dimensional asset database based on the search query being associated with the particular location; and providing, by the computing system, the location-specific video for display.",
+      "9 . The method of claim 1 , wherein the three-dimensional model comprises lidar data generated with a light detection and ranging sensor.",
+      "10 . A computing system, the system comprising: one or more processors; and one or more non-transitory computer-readable media that collectively store instructions that, when executed by the one or more processors, cause the computing system to perform operations, the operations comprising: obtaining a three-dimensional model that models a plurality of locations; generating, based on the three-dimensional model, one or more three-dimensional meshes of a particular location of the plurality of locations; processing one or more images to generate one or more segmented images of the particular location; projecting the one or more segmented images to the one or more three-dimensional meshes to generate a location-specific segment, wherein the location-specific segment comprises a reconstructed environment associated with the particular location; generating the location-specific video of the particular location based on the location-specific segment, wherein the location-specific video comprises a plurality of different perspective views of the location-specific segment; storing the location-specific video of the particular location in a three-dimensional asset database; and storing the location specific segment with the location-specific video in the three-dimensional asset database.",
+      "11 . The system of claim 10 , wherein the particular location is associated with an architectural structure.",
+      "12 . The system of claim 11 , wherein the location-specific video comprises a plurality of different perspective views of the architectural structure.",
+      "13 . The system of claim 10 , wherein the three-dimensional model is generated based on geographic data, wherein the geographic data comprises vector data.",
+      "14 . The system of claim 13 , wherein the vector data comprises one or more vector representations of one or more buildings.",
+      "15 . The system of claim 10 , wherein the three-dimensional model is generated based on geographic data, wherein the geographic data comprises geographic imagery, vector data, and point of interest data.",
+      "16 . One or more non-transitory computer-readable media that collectively store instructions that, when executed by one or more computing devices, cause the one or more computing devices to perform operations, the operations comprising: obtaining a three-dimensional model that models a plurality of locations; generating, based on the three-dimensional model, one or more three-dimensional meshes of a particular location of the plurality of locations; processing one or more images to generate one or more segmented images of the particular location; projecting the one or more segmented images to the one or more three-dimensional meshes to generate a location-specific segment, wherein the location-specific segment comprises a reconstructed environment associated with the particular location; generating the location-specific video of the particular location based on the location-specific segment, wherein the location-specific video comprises a plurality of different perspective views of the location-specific segment; storing the location-specific video of the particular location in a three-dimensional asset database; and storing the location specific segment with the location-specific video in the three-dimensional asset database.",
+      "17 . The one or more non-transitory computer-readable media of claim 16 , wherein the one or more images comprise satellite imagery and street-level imagery.",
+      "18 . The one or more non-transitory computer-readable media of claim 16 , wherein the three-dimensional model spans a plurality of addresses.",
+      "19 . The one or more non-transitory computer-readable media of claim 16 , wherein the three-dimensional model spans a plurality of streets."
+    ],
+    "independent_claims": [
+      "1 . A computer-implemented method, the method comprising: obtaining, by a computing system comprising one or more processors, a three-dimensional model that models a plurality of locations; generating, by the computing system and based on the three-dimensional model, one or more three-dimensional meshes of a particular location of the plurality of locations; processing, by the computing system, one or more images to generate one or more segmented images of the particular location; projecting, by the computing system, the one or more segmented images to the one or more three-dimensional meshes to generate a location-specific segment, wherein the location-specific segment comprises a reconstructed environment associated with the particular location; generating, by the computing system, the location-specific video of the particular location based on the location-specific segment, wherein the location-specific video comprises a plurality of different perspective views of the location-specific segment; storing, by the computing system, the location-specific video of the particular location in a three-dimensional asset database; and storing the location specific segment with the location-specific video in the three-dimensional asset database.",
+      "10 . A computing system, the system comprising: one or more processors; and one or more non-transitory computer-readable media that collectively store instructions that, when executed by the one or more processors, cause the computing system to perform operations, the operations comprising: obtaining a three-dimensional model that models a plurality of locations; generating, based on the three-dimensional model, one or more three-dimensional meshes of a particular location of the plurality of locations; processing one or more images to generate one or more segmented images of the particular location; projecting the one or more segmented images to the one or more three-dimensional meshes to generate a location-specific segment, wherein the location-specific segment comprises a reconstructed environment associated with the particular location; generating the location-specific video of the particular location based on the location-specific segment, wherein the location-specific video comprises a plurality of different perspective views of the location-specific segment; storing the location-specific video of the particular location in a three-dimensional asset database; and storing the location specific segment with the location-specific video in the three-dimensional asset database.",
+      "16 . One or more non-transitory computer-readable media that collectively store instructions that, when executed by one or more computing devices, cause the one or more computing devices to perform operations, the operations comprising: obtaining a three-dimensional model that models a plurality of locations; generating, based on the three-dimensional model, one or more three-dimensional meshes of a particular location of the plurality of locations; processing one or more images to generate one or more segmented images of the particular location; projecting the one or more segmented images to the one or more three-dimensional meshes to generate a location-specific segment, wherein the location-specific segment comprises a reconstructed environment associated with the particular location; generating the location-specific video of the particular location based on the location-specific segment, wherein the location-specific video comprises a plurality of different perspective views of the location-specific segment; storing the location-specific video of the particular location in a three-dimensional asset database; and storing the location specific segment with the location-specific video in the three-dimensional asset database."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Ignacio Garcia Dorado",
+      "Charles Goran",
+      "Jordi Serrano Berbel",
+      "Luke Barrington",
+      "Bilawal Singh Sidhu",
+      "Thomas Windheuser",
+      "Thomas Robert Escobar",
+      "Jan Stria"
+    ],
+    "priority_date": "2021-04-12",
+    "filing_date": "2024-01-03",
+    "publication_date": "2026-06-09",
+    "status": "Active",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/95",
+      "G06F16/953",
+      "G06F16/9537",
+      "G06F16/40",
+      "G06F16/44",
+      "G06F16/444",
+      "G06T19/00",
+      "G06T19/003",
+      "G06T19/006",
+      "G06T7/00",
+      "G06T7/10",
+      "G06T7/11",
+      "G06T2210/00",
+      "G06T2210/64"
+    ],
+    "family": [
+      {
+        "number": "US11922582B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Location-specific three-dimensional models responsive to location-related queries"
+      }
+    ],
+    "cited_by_count": 4
+  },
+  "analysis": {
+    "title_it": "Modelli tridimensionali specifici per località in risposta a query locali",
+    "summary": "Il brevetto descrive un sistema per generare e fornire modelli tridimensionali specifici di una località (landmark, monumenti, edifici) in risposta a query legate a luoghi. Il sistema parte da modelli 3D generali che coprono ampie aree geografiche, li segmenta per isolare la località richiesta e fornisce il modello isolato all'utente, eventualmente arricchito con simulazioni contestuali come meteo o traffico in tempo reale.",
+    "theme": "local",
+    "seo_relevance": 3,
+    "scope": "Google Search, ricerca locale e mappe",
+    "what_it_claims": "La rivendicazione indipendente 1 protegge un metodo che prevede: ottenere un modello tridimensionale che rappresenta una pluralità di località; generare una o più mesh tridimensionali di una località specifica a partire dal modello generale; processare una o più immagini per generare immagini segmentate della località; proiettare le immagini segmentate sulle mesh tridimensionali per generare un segmento specifico della località (\"location-specific segment\"), che comprende un ambiente ricostruito associato alla località; generare un video specifico della località basato sul segmento, contenente diverse viste prospettiche del segmento; memorizzare il video e il segmento in un database di asset tridimensionali (\"three-dimensional asset database\").\n\nLa rivendicazione 2 aggiunge la possibilità di aumentare l'ambiente ricostruito rimuovendo uno o più oggetti per generare il segmento specifico, producendo una rappresentazione tridimensionale di un ambiente modificato. La rivendicazione 3 specifica che il video può essere generato creando una pluralità di rendering del segmento. La rivendicazione 4 indica che la località particolare può essere associata a una struttura specifica. Le rivendicazioni da 5 a 7 contemplano l'ottenimento di dati associati alla località per guidare l'ottenimento del modello, la generazione delle mesh e la segmentazione delle immagini.\n\nLa rivendicazione 8 introduce l'aspetto della ricerca: ottenere una query di ricerca associata a un dispositivo utente; processare la query per determinare che è associata alla località particolare; ottenere il video specifico dal database in base all'associazione; fornire il video per la visualizzazione. La rivendicazione 9 specifica che il modello tridimensionale può comprendere dati lidar generati con sensori di rilevamento laser. Le rivendicazioni 10-19 riformulano il metodo come sistema e come supporto leggibile da computer, aggiungendo dettagli: la località può essere una struttura architettonica (rivendicazioni 11-12); il modello può essere generato da dati geografici che comprendono dati vettoriali, rappresentazioni vettoriali di edifici, immagini geografiche e dati sui punti di interesse (rivendicazioni 13-15); le immagini possono includere immagini satellitari e a livello stradale (rivendicazione 17); il modello tridimensionale può coprire una pluralità di indirizzi o strade (rivendicazioni 18-19).",
+    "seo_reading": "La descrizione contempla un sistema che risponde a \"location queries\" di vario tipo: query di ricerca testuali o visive, richieste di navigazione, richieste di mappe, query meteo, richieste di recensioni (paragrafo SUMMARY). Il sistema accede a un database di asset tridimensionali contenente modelli 3D generali molto estesi che coprono porzioni significative della superficie terrestre, paesi o città, generati automaticamente da immagini disponibili come immagini satellitari e street-level (paragrafo SUMMARY). Per fornire un modello specifico, il sistema isola una località nel modello generale attraverso segmentazione tridimensionale, estraendo un \"location-specific segment\" che modella una o più località specifiche (paragrafo SUMMARY).\n\nLa descrizione contempla che la segmentazione possa utilizzare \"semantic manifolds\" per comprendere mesh e texture e trovare le strutture semantiche sottostanti dell'ambiente, con applicazione di algoritmi di graph cut per segmentare la mesh in parti (paragrafo relativo a FIG. 8, blocchi 806-808). Il processo può includere la rimozione di oggetti come alberi, strade, marciapiedi e altri edifici, manualmente o automaticamente (blocco 810, FIG. 8). La descrizione contempla l'uso di dati lidar o altri dati sensoriali per determinare cosa segmentare (paragrafo relativo alla generazione del database).\n\nIl modello specifico può essere fornito in vari contesti: come asset di realtà aumentata, in esperienze di realtà virtuale, in ambienti interattivi che includono mappe bidimensionali o tridimensionali, come video pre-renderizzato o set di video con diverse viste (paragrafi SUMMARY e descrizione di FIG. 5, 10, 11). La descrizione contempla l'arricchimento con dati situazionali specifici nel tempo: condizioni meteo, posizioni di veicoli, dimensioni della folla, traffico (FIG. 3, blocchi 312-314; FIG. 7, blocchi 708-714; FIG. 9B). Questi effetti simulati potrebbero essere recuperati da un \"simulation asset database\" e renderizzati insieme al modello della località.\n\nPer la SEO, questo potrebbe significare che Google potrebbe rispondere a query locali non solo con snippet, immagini o mappe bidimensionali, ma con modelli tridimensionali interattivi di landmark e monumenti, potenzialmente arricchiti con informazioni contestuali in tempo reale. Se implementato, potrebbe influenzare la visibilità di località turistiche, strutture architettoniche e punti di interesse nelle SERP locali, favorendo risultati che offrono esperienze visive più ricche. La descrizione suggerisce applicazioni in mappe (FIG. 12, route overlay), knowledge panel (FIG. 4, knowledge graph 410 con location-specific model 414) e risultati multimediali (FIG. 11). Tuttavia, l'ambito è chiaramente la rappresentazione visiva di località fisiche, non il ranking organico tradizionale di siti web.",
+    "limits": [
+      "Il brevetto non dimostra che Google utilizzi attualmente modelli tridimensionali segmentati nelle SERP o in Google Maps. Descrive una possibilità tecnica, non un'implementazione verificata in produzione.",
+      "Non fornisce indicazioni su quali località o tipologie di query attiverebbero la visualizzazione di modelli 3D, né su come questo influenzerebbe il ranking o la visibilità di risultati organici tradizionali.",
+      "L'ambito è limitato alla rappresentazione visiva di luoghi fisici (monumenti, edifici, strutture). Non riguarda il ranking di contenuti testuali o la valutazione della qualità dei siti web.",
+      "Fa parte di una famiglia con continuation (US11922582B2), quindi non rappresenta una protezione indipendente ma un'estensione di rivendicazioni precedenti."
+    ],
+    "implications": [
+      "Assicurarsi che le schede di attività locali (Google Business Profile) siano complete e accurate, con immagini di alta qualità da diverse angolazioni, poiché potrebbero alimentare o accompagnare rappresentazioni visive avanzate.",
+      "Per località di interesse turistico o architettonico, fornire contenuti che contestualizzano l'esperienza di visita (orari, condizioni meteo tipiche, affollamento) potrebbe rimanere rilevante anche se Google fornisse simulazioni visive.",
+      "Monitorare l'evoluzione delle SERP per query locali legate a landmark e monumenti, osservando se compaiono nuovi formati di risultato tridimensionali o interattivi che potrebbero modificare il comportamento di clic degli utenti.",
+      "Continuare a ottimizzare per la ricerca locale tradizionale (NAP consistency, recensioni, contenuti locali) poiché i modelli 3D, se implementati, sarebbero probabilmente complementari ai risultati esistenti, non sostitutivi."
+    ],
+    "key_terms": [
+      {
+        "term": "location-specific segment",
+        "explanation": "Porzione di un modello tridimensionale generale che rappresenta una singola località isolata, ottenuta segmentando il modello per rimuovere altre località e oggetti circostanti"
+      },
+      {
+        "term": "three-dimensional asset database",
+        "explanation": "Database che memorizza modelli tridimensionali di ampie aree geografiche e i segmenti specifici di località estratti da essi, utilizzabile per rispondere a query locali"
+      },
+      {
+        "term": "location query",
+        "explanation": "Query dell'utente relativa a una località, che può essere una ricerca testuale o visiva, una richiesta di navigazione, mappa, meteo o recensioni associate a un luogo specifico"
+      },
+      {
+        "term": "simulation asset",
+        "explanation": "Risorsa digitale che consente di renderizzare effetti situazionali specifici (meteo, traffico, folla) in un modello tridimensionale per creare simulazioni contestuali"
+      },
+      {
+        "term": "semantic manifolds",
+        "explanation": "Metodo contemplato per la segmentazione delle immagini che aiuta a comprendere le strutture semantiche sottostanti di un ambiente tridimensionale ricostruito"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-11-20T18:45:52.031271Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07497816
+}
