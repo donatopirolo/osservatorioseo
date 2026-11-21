@@ -1,0 +1,1144 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-21T06:01:40.486596Z",
+  "generated_at_local": "2026-11-21T07:01:40.486596+01:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-11-21-0701",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 0,
+    "sources_empty": 0,
+    "items_collected": 2586,
+    "items_after_dedup": 58,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.014,
+    "summarize_attempted": 17,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "item_2026-11-21_005",
+    "item_2026-11-21_001",
+    "item_2026-11-21_002",
+    "item_2026-11-21_012",
+    "item_2026-11-21_008",
+    "item_2026-11-21_003",
+    "item_2026-11-21_004",
+    "item_2026-11-21_007",
+    "item_2026-11-21_010",
+    "item_2026-11-21_011"
+  ],
+  "categories": {
+    "ai_models": [
+      "item_2026-11-21_005",
+      "item_2026-11-21_001",
+      "item_2026-11-21_002",
+      "item_2026-11-21_003",
+      "item_2026-11-21_004",
+      "item_2026-11-21_009"
+    ],
+    "industry_news": [
+      "item_2026-11-21_012",
+      "item_2026-11-21_006",
+      "item_2026-11-21_017"
+    ],
+    "google_updates": [
+      "item_2026-11-21_008"
+    ],
+    "tools_platforms": [
+      "item_2026-11-21_007"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-11-21_010",
+      "item_2026-11-21_011"
+    ],
+    "content_eeat": [
+      "item_2026-11-21_014",
+      "item_2026-11-21_015",
+      "item_2026-11-21_016",
+      "item_2026-11-21_013"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-11-21_001",
+      "title_original": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "title_it": "Presentato Inkling 2 Mini: prestazioni all'avanguardia per configurazioni locali",
+      "summary_it": "Hugging Face ha rilasciato Inkling 2 Mini, un nuovo modello transformer multimodale Mixture-of-Experts (MoE) ottimizzato per l'esecuzione locale. Il modello utilizza un'architettura a loop che riutilizza alcuni strati per aumentare la capacità effettiva, pur mantenendo un numero ridotto di parametri fisici (circa 26B totali, 3B attivi per token). Supporta un contesto di 1 milione di token e accetta input testuali e immagini, offrendo prestazioni paragonabili a modelli più grandi come Qwen 3.8 27B.",
+      "url": "https://huggingface.co/blog/inkling2mini",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "llm",
+        "mixture_of_expert",
+        "local_ai",
+        "multimodal"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-20T00:00:00Z",
+      "fetched_at": "2026-11-21T06:04:50.293958Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:44644a151bc62d2f",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_002",
+      "title_original": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+      "title_it": "Introduzione agli 'harness adapters' per ottimizzare modelli AI",
+      "summary_it": "Hugging Face ha introdotto gli 'harness adapters', un metodo per migliorare le prestazioni e l'efficienza dei modelli AI quando utilizzati con specifici 'harness' (framework di esecuzione) e distribuzioni di task. Attraverso l'addestramento con Reinforcement Learning (RL) e l'uso di adattatori LoRA, è possibile ottimizzare modelli pre-esistenti per compiti specifici, riducendo il consumo di token e aumentando l'accuratezza. Questo approccio permette di personalizzare i modelli per le esigenze reali, superando le limitazioni delle ottimizzazioni generiche.",
+      "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "hugging_face",
+        "ai_optimization",
+        "reinforcement_learning",
+        "model_adaptation"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-20T00:00:00Z",
+      "fetched_at": "2026-11-21T06:04:51.784687Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2dd583db7e08ff08",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_003",
+      "title_original": "Hebbia sees improvements in financial research with GPT-6 Astra",
+      "title_it": "Hebbia migliora la ricerca finanziaria con GPT-6 Astra",
+      "summary_it": "Hebbia ha testato GPT-6 Astra di OpenAI per ottimizzare la ricerca finanziaria, focalizzandosi sull'identificazione delle fonti e la creazione di presentazioni. I test hanno mostrato un miglioramento significativo nella copertura delle fonti e nella pertinenza delle citazioni, con un aumento di 13.6 punti percentuali rispetto ad altri modelli nella citazione di fonti rilevanti. Il 99.5% degli estratti citati da GPT-6 Astra è risultato pertinente alle domande poste, migliorando la tracciabilità e la fiducia degli utenti nelle decisioni basate sull'AI.",
+      "url": "https://openai.com/business/customer-stories/hebbia",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "gpt_6_astra",
+        "financial_research",
+        "openai_partnership",
+        "ai_accuracy"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T00:00:00Z",
+      "fetched_at": "2026-11-21T06:04:53.158930Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:34b959ff016aea9b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_004",
+      "title_original": "Can AI help scientists identify promising drug candidates?",
+      "title_it": "OpenAI introduce MedChemBench per valutare l'AI nella scoperta di farmaci",
+      "summary_it": "OpenAI ha lanciato MedChemBench, un nuovo benchmark per valutare le capacità dei modelli di intelligenza artificiale nei compiti di ragionamento legati alla chimica medicinale. Il benchmark testa l'abilità dei modelli di connettere la struttura molecolare con evidenze sperimentali, spiegare risultati, confrontare composti e prevederne le proprietà. GPT-6.2 Astra ha ottenuto un punteggio dell'84.5% in questo benchmark, dimostrando progressi nell'applicazione dell'AI alla ricerca farmaceutica.",
+      "url": "https://openai.com/index/introducing-medchembench",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "ai_benchmarking",
+        "drug_discovery",
+        "medicinal_chemistry"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T00:00:00Z",
+      "fetched_at": "2026-11-21T06:04:54.823696Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e29a6de952108d03",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_005",
+      "title_original": "Combatting adversarial distillation",
+      "title_it": "Contrastare la distillazione avversaria nei modelli AI",
+      "summary_it": "OpenAI ha implementato nuove strategie per rilevare e contrastare la distillazione avversaria, una tecnica che permette a malintenzionati di replicare le capacità dei modelli AI avanzati senza le relative misure di sicurezza. L'azienda si concentra sulla protezione del 'ragionamento protetto' (chain-of-thought) dei suoi modelli, come GPT-6.2 Astra e Sol, per prevenire l'estrazione di dati di training sensibili. Le nuove difese hanno ridotto significativamente il tasso di successo degli attacchi di estrazione del ragionamento protetto, passando dal 54% allo 0.2%.",
+      "url": "https://openai.com/index/combatting-adversarial-distillation",
+      "source": {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://openai.com/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai",
+        "ai_safety",
+        "model_security",
+        "adversarial_attack"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-20T10:00:00Z",
+      "fetched_at": "2026-11-21T06:04:56.429661Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:972d073219bb2334",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_006",
+      "title_original": "The .seo Top-Level Domain (TLD) May Be Coming Soon",
+      "title_it": "Il dominio di primo livello .seo potrebbe essere disponibile a breve",
+      "summary_it": "È stata confermata la potenziale introduzione del nuovo dominio di primo livello generico (gTLD) .seo, con la richiesta presentata da XYZ e inclusa nella lista finale di ICANN. Sebbene non ancora disponibile per la registrazione pubblica, il lancio è previsto non prima della fine del 2027, con registrazioni aperte realisticamente nel 2028. Google ha ribadito che i nuovi TLD non ricevono benefici speciali nel ranking rispetto ai TLD generici.",
+      "url": "https://www.seroundtable.com/seo-tld-42582.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "tld",
+        "domain_name",
+        "icann",
+        "google_ranking"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-20T12:11:00Z",
+      "fetched_at": "2026-11-21T06:04:57.743063Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ca98a3c23bc3ce9b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_007",
+      "title_original": "Bing & Microsoft Ads - Made With AI Label",
+      "title_it": "Bing e Microsoft Ads introducono l'etichetta 'Creato con AI'",
+      "summary_it": "Bing e Microsoft Ads stanno implementando un'etichetta 'Made With AI' per gli annunci generati o assistiti dall'intelligenza artificiale. Questa indicazione mira a fornire trasparenza agli utenti riguardo alla natura del contenuto pubblicitario. La funzionalità è in fase di test e potrebbe influenzare la percezione degli annunci da parte del pubblico.",
+      "url": "https://www.seroundtable.com/bing-ads-made-with-ai-label-42579.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "bing_ad",
+        "microsoft_ad",
+        "ai_generated_content",
+        "ad_transparency"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T12:21:00Z",
+      "fetched_at": "2026-11-21T06:04:58.808431Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:e9c05612a4eae01e",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_008",
+      "title_original": "Google Expands & Clarifies Sexual Content Advertising Policy Examples",
+      "title_it": "Google aggiorna e chiarisce le politiche pubblicitarie sui contenuti sessuali",
+      "summary_it": "Google ha nuovamente aggiornato la sua policy sui contenuti sessuali per Google Ads, aggiungendo esempi più dettagliati di contenuti proibiti e consentiti. Le modifiche riguardano nudità, nudità parziale, merchandise sessuale e intrattenimento sessuale. L'obiettivo è fornire maggiore chiarezza agli inserzionisti, senza alterare l'applicazione della policy.",
+      "url": "https://www.seroundtable.com/google-expands-sexual-content-advertising-policy-42548.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_ad",
+        "advertising_policy",
+        "content_guideline",
+        "sexual_content"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T12:31:00Z",
+      "fetched_at": "2026-11-21T06:04:59.915919Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ba508b83e1a5abc0",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_009",
+      "title_original": "ChatGPT Card Design",
+      "title_it": "Il nuovo design a schede di ChatGPT",
+      "summary_it": "ChatGPT sta testando un nuovo design dell'interfaccia utente che presenta i risultati in un formato a schede. Questa modifica mira a migliorare la leggibilità e l'organizzazione delle risposte generate dall'AI. L'aggiornamento è attualmente in fase di test e potrebbe essere rilasciato a breve per tutti gli utenti.",
+      "url": "https://www.seroundtable.com/card-design-on-chatgpt-42576.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt",
+        "ui_design",
+        "openai",
+        "ai_interface"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-20T12:41:00Z",
+      "fetched_at": "2026-11-21T06:05:01.021004Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:48c7e4f2915a2767",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_010",
+      "title_original": "Google, ChatGPT & Others AI Engines Provide Coupon Codes",
+      "title_it": "Motori AI come Google e ChatGPT mostrano codici sconto direttamente nelle risposte",
+      "summary_it": "I motori di ricerca e le piattaforme AI, inclusi Google AI Overviews e ChatGPT, stanno visualizzando direttamente codici sconto e promozionali nelle loro risposte. Questa funzionalità, già presente da tempo in Google tramite annunci e rich result, ora si estende alle interfacce AI. La visualizzazione diretta dei codici solleva preoccupazioni per i siti di coupon e affiliazione, il cui modello di business si basa sul click-through per l'ottenimento delle commissioni.",
+      "url": "https://www.seroundtable.com/google-chatgpt-coupon-codes-42581.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_overviews",
+        "coupon_code",
+        "affiliate_marketing",
+        "serp_feature"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T12:51:00Z",
+      "fetched_at": "2026-11-21T06:05:02.300800Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5a74e06c0b462b55",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_011",
+      "title_original": "AI Citations: What To Check Before Reacting To A Lost One",
+      "title_it": "Citazioni AI: cosa verificare prima di reagire a una perdita",
+      "summary_it": "Uno studio di Ahrefs ha rilevato che circa tre quarti delle citazioni AI perse sono temporanee, con molte che ritornano entro pochi giorni. La ricerca ha monitorato le citazioni in cinque prodotti AI per 20 giorni, evidenziando la volatilità di queste attribuzioni. Prima di apportare modifiche a una pagina web basandosi sulla scomparsa di una citazione, è consigliabile verificare la stabilità della citazione nel tempo. Questo suggerisce che le fluttuazioni nelle citazioni AI potrebbero non richiedere interventi immediati.",
+      "url": "https://www.searchenginejournal.com/ai-citations-what-to-check-before-reacting-to-a-lost-one/598166",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_citation",
+        "ahrefs_study",
+        "ai_overviews",
+        "citation_stability"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T13:00:00Z",
+      "fetched_at": "2026-11-21T06:05:03.649139Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:c75a835369c5094c",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_012",
+      "title_original": "Search News Buzz Video Recap: Google November Core Update Status, FBI Alert On SEO Poisoning, Bing & ChatGPT Web Only Links, Microsoft Ads Bid Upgrade",
+      "title_it": "Riepilogo Notizie di Ricerca: Aggiornamento Core di Novembre, Allerta FBI su SEO Poisoning, Link Web-Only di Bing e ChatGPT, Aggiornamento Offerte Microsoft Ads",
+      "summary_it": "Il riepilogo settimanale delle notizie SEO include aggiornamenti sullo stato del Google November 2026 Core Update e un'allerta dell'FBI riguardo attacchi di SEO poisoning che diffondono malware. Vengono segnalati test di Bing e ChatGPT per mostrare risultati solo web, e un importante aggiornamento ai modelli di offerta di Microsoft Advertising. Google Search Console ha aggiunto nuove funzionalità all'API Search Analytics, inclusi query brandizzate e filtri multimodali.",
+      "url": "https://www.seroundtable.com/video-11-20-2026-42577.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "core_update",
+        "seo_poisoning",
+        "bing_chatgpt",
+        "microsoft_ad",
+        "search_console_api"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-20T13:01:00Z",
+      "fetched_at": "2026-11-21T06:05:05.257851Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:210f6b780d8fe66d",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_013",
+      "title_original": "Ecommerce SEO: 8 steps to grow visibility in search and AI",
+      "title_it": "SEO per E-commerce: 8 Passi per Aumentare la Visibilità su Motori di Ricerca e AI",
+      "summary_it": "L'articolo di Semrush delinea otto passaggi fondamentali per ottimizzare la SEO di un e-commerce, considerando l'evoluzione delle modalità di ricerca degli utenti che includono ora anche piattaforme AI. Vengono trattati aspetti come l'architettura del sito, la ricerca di parole chiave e l'ottimizzazione on-page, con un focus specifico sulle pagine di prodotto e categoria. L'obiettivo è migliorare la reperibilità dei prodotti sia sui motori di ricerca tradizionali che sui nuovi strumenti basati sull'intelligenza artificiale.",
+      "url": "https://www.semrush.com/blog/ecommerce-seo",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "ecommerce_seo",
+        "site_architecture",
+        "keyword_research",
+        "ai_search_visibility"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T14:59:00Z",
+      "fetched_at": "2026-11-21T06:05:06.637773Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:d72ad3463b14411d",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_014",
+      "title_original": "A Charity Rescue Dog Outscored Amazon’s Christmas Ad – PPC Accounts Need A Story Before Cyber Week",
+      "title_it": "Un annuncio di beneficenza con un cane da salvataggio supera la pubblicità natalizia di Amazon: l'importanza dello storytelling nelle campagne PPC prima del Cyber Week",
+      "summary_it": "Un'analisi delle pubblicità natalizie nel Regno Unito ha rivelato che un annuncio di beneficenza con un cane ha superato in coinvolgimento emotivo le campagne di grandi brand come Amazon. Questo suggerisce che, in vista del Cyber Monday e del Natale, le campagne PPC, incluse quelle Performance Max e Demand Gen, dovrebbero focalizzarsi su contenuti che generano emozioni, piuttosto che solo su sconti e caroselli di prodotti. L'abbondanza di asset creativi generati dall'AI rende lo storytelling emotivo un fattore distintivo cruciale per il successo delle campagne pubblicitarie.",
+      "url": "https://www.searchenginejournal.com/a-charity-rescue-dog-outscored-amazons-christmas-ad-ppc-accounts-need-a-story-before-cyber-week/597789",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "ppc_strategy",
+        "creative_optimization",
+        "storytelling",
+        "performance_max"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T15:00:09Z",
+      "fetched_at": "2026-11-21T06:05:08.274468Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:1bfd6e8043392355",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_015",
+      "title_original": "Google’s ‘Top 10’ Line For CMOs Points At Generic Tips Posts",
+      "title_it": "Google suggerisce ai CMO di evitare i post generici con liste 'Top 10'",
+      "summary_it": "Google ha indicato ai Chief Marketing Officer (CMO) di allontanarsi dalla creazione di contenuti generici, in particolare i post con liste 'Top 10'. Questa indicazione suggerisce che tali formati potrebbero non essere più efficaci per la visibilità e la qualità percepita dai motori di ricerca. L'attenzione dovrebbe spostarsi verso contenuti più approfonditi e di valore. Questo riflette un'evoluzione nelle aspettative di Google riguardo alla qualità e all'utilità dei contenuti online.",
+      "url": "https://www.searchenginejournal.com/google-told-cmos-to-stop-top-10-listicles/598310",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "content_quality",
+        "google_guideline",
+        "content_strategy",
+        "e_e_a_t"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T16:17:43Z",
+      "fetched_at": "2026-11-21T06:05:09.637004Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7ab197a37116feb6",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_016",
+      "title_original": "Why Building Trust Through Real People Stands The Test Of Time In SEO & AI Search",
+      "title_it": "Perché costruire fiducia attraverso persone reali resiste alla prova del tempo in SEO e nella ricerca AI",
+      "summary_it": "L'articolo sottolinea come le tattiche SEO basate su \"trucchi\" o scorciatoie abbiano una data di scadenza, spesso portando a penalizzazioni a lungo termine. Viene evidenziato che l'investimento in esperti umani e la loro centralità nella strategia di marketing rappresentano l'approccio più resiliente e duraturo. Con l'avanzamento dell'AI che rende la produzione di contenuti generici quasi gratuita, l'autenticità e l'identificabilità degli esperti diventano un fattore distintivo cruciale. Questo approccio è presentato come l'antidoto alla proliferazione di contenuti generati automaticamente e di bassa qualità.",
+      "url": "https://www.searchenginejournal.com/why-building-trust-through-real-people-stands-the-test-of-time-in-seo-ai-search/598110",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "e_e_a_t",
+        "trust",
+        "ai_content",
+        "human_expertise"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-20T20:00:34Z",
+      "fetched_at": "2026-11-21T06:05:11.224209Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:a31bea6eef0f6d11",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-21_017",
+      "title_original": "Salesforce CEO Says ‘Goodbye SEO.’ Salesforce’s SEO Guide Disagrees",
+      "title_it": "Il CEO di Salesforce dichiara la fine della SEO, ma la guida SEO interna di Salesforce lo contraddice",
+      "summary_it": "Il CEO di Salesforce ha espresso una visione scettica sul futuro della SEO, suggerendo che la sua rilevanza stia diminuendo. Questa posizione contrasta con la guida SEO ufficiale di Salesforce, che continua a promuovere l'importanza delle strategie SEO per il marketing digitale. La discrepanza evidenzia un dibattito interno all'azienda riguardo al valore a lungo termine dell'ottimizzazione per i motori di ricerca.",
+      "url": "https://www.searchenginejournal.com/salesforce-ceo-goodbye-seo-salesforce-seo-guide/598343",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "seo_future",
+        "salesforce",
+        "ceo_statement",
+        "industry_trend"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-20T20:20:52Z",
+      "fetched_at": "2026-11-21T06:05:12.540422Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:29ad28183c68aa51",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-11-21T06:01:42.055042Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-11-21T06:01:42.749403Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-11-21T06:01:43.831566Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_overview",
+      "last_checked": "2026-11-21T06:01:47.562332Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-11-21T06:01:49.986262Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-11-21T06:01:50.851172Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-11-21T06:01:51.603487Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_gallery",
+      "last_checked": "2026-11-21T06:01:52.952887Z",
+      "changed": false
+    },
+    {
+      "page_id": "openai_usage_policies",
+      "last_checked": "2026-11-21T06:01:54.779715Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-11-21T06:01:55.037817Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-11-21T06:02:04.146036Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-11-21T06:02:04.447547Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-11-21T06:02:05.728340Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-11-21T06:02:07.227098Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-11-21T06:02:08.835995Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-11-21T06:02:10.409210Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-11-21T06:02:11.491072Z",
+      "changed": false
+    },
+    {
+      "page_id": "schema_org_releases",
+      "last_checked": "2026-11-21T06:02:32.159913Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_essentials",
+      "last_checked": "2026-11-21T06:02:32.453122Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ranking_systems_guide",
+      "last_checked": "2026-11-21T06:02:32.777612Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_gen_ai_content",
+      "last_checked": "2026-11-21T06:02:34.735431Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_common_crawlers",
+      "last_checked": "2026-11-21T06:02:37.266467Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_user_triggered_fetchers",
+      "last_checked": "2026-11-21T06:02:37.836201Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_policies",
+      "last_checked": "2026-11-21T06:02:39.571124Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_page_experience",
+      "last_checked": "2026-11-21T06:02:41.081787Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_web_vitals",
+      "last_checked": "2026-11-21T06:02:42.638773Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_discover",
+      "last_checked": "2026-11-21T06:02:44.476081Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization",
+      "last_checked": "2026-11-21T06:02:46.001789Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_technical_requirements",
+      "last_checked": "2026-11-21T06:02:47.865352Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_names",
+      "last_checked": "2026-11-21T06:02:49.453211Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawl_budget",
+      "last_checked": "2026-11-21T06:02:51.532008Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_changelog",
+      "last_checked": "2026-11-21T06:02:53.492662Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_optimization_guide",
+      "last_checked": "2026-11-21T06:02:54.167627Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_updates",
+      "last_checked": "2026-11-21T06:02:56.122006Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_updates",
+      "last_checked": "2026-11-21T06:02:57.234257Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_reviews_system",
+      "last_checked": "2026-11-21T06:02:58.548063Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_preferred_sources",
+      "last_checked": "2026-11-21T06:03:00.711287Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_publication_dates",
+      "last_checked": "2026-11-21T06:03:01.883365Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_special_case_crawlers",
+      "last_checked": "2026-11-21T06:03:03.877717Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_verify_requests",
+      "last_checked": "2026-11-21T06:03:05.181563Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_web_bot_auth",
+      "last_checked": "2026-11-21T06:03:06.488267Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_http_status_codes",
+      "last_checked": "2026-11-21T06:03:07.797522Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_dns_network_errors",
+      "last_checked": "2026-11-21T06:03:09.340605Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta_tag",
+      "last_checked": "2026-11-21T06:03:10.612959Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization_how",
+      "last_checked": "2026-11-21T06:03:12.610786Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_links_crawlable",
+      "last_checked": "2026-11-21T06:03:14.125548Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_qualify_outbound_links",
+      "last_checked": "2026-11-21T06:03:15.082838Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_mobile_first_indexing",
+      "last_checked": "2026-11-21T06:03:16.305443Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_javascript_seo",
+      "last_checked": "2026-11-21T06:03:18.260765Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_how_search_works",
+      "last_checked": "2026-11-21T06:03:19.718755Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_seo_starter_guide",
+      "last_checked": "2026-11-21T06:03:21.072766Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_article",
+      "last_checked": "2026-11-21T06:03:22.343891Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_product",
+      "last_checked": "2026-11-21T06:03:24.415385Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_merchant_listing",
+      "last_checked": "2026-11-21T06:03:25.721964Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_review_snippet",
+      "last_checked": "2026-11-21T06:03:26.851408Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_organization",
+      "last_checked": "2026-11-21T06:03:28.463500Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_local_business",
+      "last_checked": "2026-11-21T06:03:29.237845Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_breadcrumb",
+      "last_checked": "2026-11-21T06:03:30.900683Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_discussion_forum",
+      "last_checked": "2026-11-21T06:03:32.832441Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitelinks",
+      "last_checked": "2026-11-21T06:03:34.128625Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_favicon",
+      "last_checked": "2026-11-21T06:03:35.187220Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_intrusive_interstitials",
+      "last_checked": "2026-11-21T06:03:36.762624Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_images",
+      "last_checked": "2026-11-21T06:03:38.515649Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_video",
+      "last_checked": "2026-11-21T06:03:39.936976Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_profiles",
+      "last_checked": "2026-11-21T06:03:41.671627Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_business_details",
+      "last_checked": "2026-11-21T06:03:43.423690Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_url_changes",
+      "last_checked": "2026-11-21T06:03:45.157485Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_no_url_changes",
+      "last_checked": "2026-11-21T06:03:49.019079Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_redirects",
+      "last_checked": "2026-11-21T06:03:49.260273Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_faceted_navigation",
+      "last_checked": "2026-11-21T06:03:50.799472Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_myths",
+      "last_checked": "2026-11-21T06:03:52.477804Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_traffic_drops",
+      "last_checked": "2026-11-21T06:03:54.416795Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_identify_search_traffic",
+      "last_checked": "2026-11-21T06:03:56.014078Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ecommerce",
+      "last_checked": "2026-11-21T06:03:57.432993Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_localized_versions",
+      "last_checked": "2026-11-21T06:03:58.663369Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_multi_regional",
+      "last_checked": "2026-11-21T06:03:59.989430Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_agent",
+      "last_checked": "2026-11-21T06:04:01.303745Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_overviews",
+      "last_checked": "2026-11-21T06:04:03.127364Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_mode",
+      "last_checked": "2026-11-21T06:04:03.472781Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_apis_user_agent",
+      "last_checked": "2026-11-21T06:04:04.742252Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_read_aloud_user_agent",
+      "last_checked": "2026-11-21T06:04:05.047846Z",
+      "changed": false
+    },
+    {
+      "page_id": "openai_crawlers",
+      "last_checked": "2026-11-21T06:04:06.405899Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_crawlers",
+      "last_checked": "2026-11-21T06:04:06.535976Z",
+      "changed": false
+    },
+    {
+      "page_id": "perplexity_crawlers",
+      "last_checked": "2026-11-21T06:04:06.996232Z",
+      "changed": false
+    },
+    {
+      "page_id": "mistral_crawlers",
+      "last_checked": "2026-11-21T06:04:07.282049Z",
+      "changed": false
+    },
+    {
+      "page_id": "apple_applebot",
+      "last_checked": "2026-11-21T06:04:07.874534Z",
+      "changed": false
+    },
+    {
+      "page_id": "amazon_amazonbot",
+      "last_checked": "2026-11-21T06:04:08.039093Z",
+      "changed": false
+    },
+    {
+      "page_id": "duckduckgo_duckassistbot",
+      "last_checked": "2026-11-21T06:04:08.975804Z",
+      "changed": false
+    },
+    {
+      "page_id": "commoncrawl_ccbot",
+      "last_checked": "2026-11-21T06:04:09.257677Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_ai_crawl_control",
+      "last_checked": "2026-11-21T06:04:09.334298Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_verified_bots",
+      "last_checked": "2026-11-21T06:04:09.408293Z",
+      "changed": false
+    },
+    {
+      "page_id": "llms_txt_spec",
+      "last_checked": "2026-11-21T06:04:10.958481Z",
+      "changed": false
+    },
+    {
+      "page_id": "bing_webmaster_guidelines",
+      "last_checked": "2026-11-21T06:04:11.086294Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": []
+}
