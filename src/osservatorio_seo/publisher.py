@@ -14,6 +14,7 @@ from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 from osservatorio_seo import doc_changes as dc
+from osservatorio_seo import topic_pages as tp
 from osservatorio_seo.models import Feed, Item, Pillar, Source
 from osservatorio_seo.patents.models import THEMES, Patent
 from osservatorio_seo.ranker import Ranker
@@ -381,8 +382,13 @@ class Publisher:
         data_dir: Path,
         archive_dir: Path,
         site_data_dir: Path | None = None,
+        topics_dir: Path | None = None,
     ) -> None:
         self._data_dir = Path(data_dir)
+        # Pagine sui temi (guide scritte a mano): content/temi/ accanto a data/.
+        self._topics_dir = (
+            Path(topics_dir) if topics_dir else self._data_dir.parent / tp.CONTENT_DIR
+        )
         self._archive_dir = Path(archive_dir)
         self._site_data_dir = Path(site_data_dir) if site_data_dir else None
         self._doc_change_cache: list[dc.DocChangeRecord] | None = None
@@ -804,6 +810,11 @@ class Publisher:
         # contenuto vero (il dossier che lo tratta), non a un hub generico
         # (i tag hub sono disattivati, vedi nota in _ssg_category_tag_hubs).
         tag_to_dossier = {p.tag: p.slug for p in self._load_pillars()}
+        topic_guides: dict[str, dict[str, str]] = {}
+        for topic in self._load_topics().values():
+            for t in topic.tags:
+                tag_to_dossier[t] = topic.slug
+                topic_guides[t] = {"slug": topic.slug, "title": topic.title}
 
         # Pool per la sezione "Correlati": costruito una volta per tutto
         # l'archivio, poi filtrato per item in _related_articles().
@@ -825,6 +836,9 @@ class Publisher:
                 "canonical_url": canonical_url,
                 "active_nav": "archive",
                 "tag_to_dossier": tag_to_dossier,
+                "topic_guide": next(
+                    (topic_guides[t] for t in item.tags if t in topic_guides), None
+                ),
                 "related_articles": related,
                 "noindex": not allow_indexing or not is_indexable(item),
                 "og_type": "article",
@@ -1256,9 +1270,12 @@ class Publisher:
         allow_indexing: bool,
     ) -> None:
         pillars = self._load_pillars()
-        if not pillars:
+        topics = self._load_topics()
+        if not pillars and not topics:
             return
         item_idx = self._build_item_index()
+        # Una pagina sul tema prende il posto del dossier AI con lo stesso slug.
+        pillars = [p for p in pillars if p.slug not in topics]
 
         # Index page /dossier/
         index_entries = []
@@ -1276,6 +1293,22 @@ class Publisher:
                     "updated_label": format_date_it(p.generated_at, "%d %B %Y"),
                     "word_count": word_count,
                 }
+            )
+        topic_ctxs = {
+            slug: self._topic_ctx(topic, item_idx, allow_indexing) for slug, topic in topics.items()
+        }
+        for slug, tctx in topic_ctxs.items():
+            index_entries.insert(
+                0,
+                {
+                    "tag": topics[slug].tags[0],
+                    "slug": slug,
+                    "title_it": topics[slug].title,
+                    "subtitle_it": topics[slug].description,
+                    "refs_count": tctx["events_count"],
+                    "updated_label": tctx["updated_label"],
+                    "word_count": tctx["word_count"],
+                },
             )
         index_target = site_dir / "dossier"
         index_target.mkdir(parents=True, exist_ok=True)
@@ -1350,6 +1383,105 @@ class Publisher:
             }
             html = renderer.render_dossier(ctx)
             (target / "index.html").write_text(html, encoding="utf-8")
+
+        reviews = []
+        for slug, tctx in topic_ctxs.items():
+            target = site_dir / "dossier" / slug
+            target.mkdir(parents=True, exist_ok=True)
+            (target / "index.html").write_text(renderer.render_topic(tctx), encoding="utf-8")
+            rv = tp.review_needed(topics[slug], item_idx, self._doc_change_records())
+            if rv:
+                reviews.append(rv)
+        self._write_topic_reviews(reviews)
+
+    # --- Pagine sui temi ---
+
+    def _load_topics(self) -> dict[str, tp.Topic]:
+        return tp.load_topics(self._topics_dir)
+
+    def _write_topic_reviews(self, reviews: list[dict[str, Any]]) -> None:
+        """Scrive (o svuota) l'elenco delle guide da rileggere, letto dal workflow."""
+        out = self._data_dir / "state" / "temi" / tp.REVIEW_FILE
+        if not reviews and not out.exists():
+            return
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(reviews, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    def _topic_ctx(
+        self,
+        topic: tp.Topic,
+        item_idx: dict[str, dict[str, Any]],
+        allow_indexing: bool,
+    ) -> dict[str, Any]:
+        html, toc = tp.render_body(topic.body_md)
+        months = tp.timeline(topic, item_idx)
+        for m in months:
+            y, mo = m["month"].split("-")
+            m["label"] = format_date_it(datetime(int(y), int(mo), 1), "%B %Y")
+        doc_records = [r for r in self._doc_change_records() if r.page_id in topic.doc_watcher]
+        doc_changes = [
+            {
+                "day": r.day,
+                "day_label": _day_label(r.day),
+                "title": _doc_change_title(r),
+                "page_name": r.page_name,
+                "path": r.path,
+            }
+            for r in doc_records[:8]
+        ]
+        watched = [
+            {"name": self._doc_page_names.get(pid, (pid, ""))[0], "path": dc.doc_path(pid)}
+            for pid in topic.doc_watcher
+        ]
+        wanted = {n.upper() for n in topic.patents}
+        patents = [
+            {
+                "slug": p.slug,
+                "number": p.doc.number,
+                "title_it": p.analysis.title_it if p.analysis else p.doc.title,
+                "date": p.doc.publication_date.isoformat() if p.doc.publication_date else "",
+            }
+            for p in self._load_patents()
+            if p.doc.number.upper() in wanted
+        ]
+        last_dates = [topic.reviewed.isoformat()]
+        if months:
+            last_dates.append(months[0]["events"][0]["date"])
+        if doc_records:
+            last_dates.append(doc_records[0].day)
+        updated = max(last_dates)
+        article_url = canonical(f"/dossier/{topic.slug}/")
+        return {
+            "page_title": topic.page_title,
+            "page_description": topic.description,
+            "canonical_url": article_url,
+            "article_url": article_url,
+            "active_nav": "dossier",
+            "noindex": not allow_indexing,
+            "og_type": "article",
+            "topic": topic,
+            "parts": tp.split_dynamic(html),
+            "toc": toc,
+            "numbers": topic.numbers,
+            "months": months,
+            "events_count": sum(len(m["events"]) for m in months),
+            "doc_changes": doc_changes,
+            "watched_docs": watched,
+            "patents": patents,
+            "faq": tp.extract_faq(topic.body_md),
+            "word_count": tp.word_count(topic.body_md),
+            "reviewed_label": format_date_it(
+                datetime.combine(topic.reviewed, datetime.min.time()), "%d %B %Y"
+            ),
+            "reviewed_iso": topic.reviewed.isoformat(),
+            "updated_iso": updated,
+            "updated_label": _day_label(updated),
+            "breadcrumbs": [
+                {"name": "Home", "url": canonical("/"), "site_path": "/"},
+                {"name": "Dossier", "url": canonical("/dossier/"), "site_path": "/dossier/"},
+                {"name": topic.title, "url": article_url, "site_path": ""},
+            ],
+        }
 
     # --- Brevetti ---
 

@@ -176,6 +176,53 @@ jobs:
               });
             }
 
+      # Le guide sui temi (content/temi/) sono scritte a mano: quando arrivano
+      # notizie importanti o cambia la documentazione sorvegliata dopo la data
+      # di revisione, il publisher lo scrive in data/state/temi/review.json e
+      # qui si apre (o aggiorna) una issue per rileggerle.
+      - name: Avvisa se una guida sui temi va riletta
+        if: always() && steps.timecheck.outputs.run == 'true'
+        continue-on-error: true
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'data/state/temi/review.json';
+            if (!fs.existsSync(path)) return;
+            const reviews = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const { owner, repo } = context.repo;
+            const title = '[temi] Guide da rileggere';
+            const open = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'open', labels: 'temi',
+            });
+            const existing = open.find(i => i.title === title);
+            const site = 'https://www.osservatorioseo.com';
+            if (reviews.length === 0) {
+              if (existing) {
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: existing.number,
+                  body: 'Tutte le guide risultano rilette dopo le ultime novita\'.',
+                });
+                await github.rest.issues.update({ owner, repo, issue_number: existing.number, state: 'closed' });
+              }
+              return;
+            }
+            const blocks = reviews.map(r => [
+              `### [${r.slug}](${site}/dossier/${r.slug}/) — rivista il ${r.reviewed}`,
+              ...r.news.map(n => `- ${n.date} notizia: [${n.title}](${site}${n.path})`),
+              ...r.doc_changes.map(c => `- ${c.date} documentazione: [${c.title}](${site}${c.path})`),
+            ].join('\n'));
+            const body = [
+              'Dopo l\'ultima revisione di queste guide sono arrivate novita\' importanti. Rileggi la parte fissa in `content/temi/<slug>.md`, aggiorna i numeri in `<slug>.numbers.yml` se serve, e porta `reviewed:` alla data di oggi: la issue si chiude da sola al run successivo.',
+              '',
+              ...blocks,
+            ].join('\n');
+            if (existing) {
+              await github.rest.issues.update({ owner, repo, issue_number: existing.number, body });
+            } else {
+              await github.rest.issues.create({ owner, repo, title, body, labels: ['temi', 'automated'] });
+            }
+
       # La homepage e' renderizzata dal feed corrente: un feed vuoto la
       # lascia senza articoli, e nessun controllo se ne accorgerebbe
       # (feed_health considera sano un run con zero riassunti, e tutte le
