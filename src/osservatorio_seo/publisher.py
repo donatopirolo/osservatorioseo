@@ -1433,7 +1433,6 @@ class Publisher:
             {"name": self._doc_page_names.get(pid, (pid, ""))[0], "path": dc.doc_path(pid)}
             for pid in topic.doc_watcher
         ]
-        wanted = {n.upper() for n in topic.patents}
         patents = [
             {
                 "slug": p.slug,
@@ -1441,8 +1440,7 @@ class Publisher:
                 "title_it": p.analysis.title_it if p.analysis else p.doc.title,
                 "date": p.doc.publication_date.isoformat() if p.doc.publication_date else "",
             }
-            for p in self._load_patents()
-            if p.doc.number.upper() in wanted
+            for p in tp.select_patents(topic, self._load_patents())
         ]
         last_dates = [topic.reviewed.isoformat()]
         if months:

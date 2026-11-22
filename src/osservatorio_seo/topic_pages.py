@@ -27,6 +27,8 @@ from typing import Any
 import markdown
 import yaml
 
+from osservatorio_seo.patents.models import THEMES
+
 CONTENT_DIR = Path("content") / "temi"
 REVIEW_FILE = "review.json"
 PLACEHOLDER_RE = re.compile(r"<p>\[\[(numeri|cronologia|documentazione|brevetti)\]\]</p>")
@@ -58,6 +60,10 @@ class Topic:
     body_md: str
     doc_watcher: list[str] = field(default_factory=list)
     patents: list[str] = field(default_factory=list)
+    # Oltre alla lista fissa: i brevetti analizzati con uno di questi temi e
+    # rilevanza SEO almeno ``patent_min_relevance`` entrano da soli.
+    patent_themes: list[str] = field(default_factory=list)
+    patent_min_relevance: int = 4
     min_importance: int = 4
     review_importance: int = 5
     numbers: list[TopicNumber] = field(default_factory=list)
@@ -82,6 +88,10 @@ def load_topic(path: Path) -> Topic:
     reviewed = data["reviewed"]
     if isinstance(reviewed, str):
         reviewed = date.fromisoformat(reviewed)
+    themes = [str(x) for x in data.get("patent_themes") or []]
+    unknown = [t for t in themes if t not in THEMES]
+    if unknown:
+        raise ValueError(f"{path.name}: temi brevetti sconosciuti: {', '.join(unknown)}")
     numbers: list[TopicNumber] = []
     numbers_path = path.with_name(f"{data['slug']}.numbers.yml")
     if numbers_path.exists():
@@ -97,6 +107,8 @@ def load_topic(path: Path) -> Topic:
         body_md=body,
         doc_watcher=[str(x) for x in data.get("doc_watcher") or []],
         patents=[str(x) for x in data.get("patents") or []],
+        patent_themes=themes,
+        patent_min_relevance=int(data.get("patent_min_relevance", 4)),
         min_importance=int(data.get("min_importance", 4)),
         review_importance=int(data.get("review_importance", 5)),
         numbers=numbers,
@@ -161,6 +173,26 @@ def timeline(topic: Topic, item_index: dict[str, dict[str, Any]]) -> list[dict[s
     for ev in events:
         months.setdefault(ev["date"][:7], []).append(ev)
     return [{"month": k, "events": v} for k, v in months.items()]
+
+
+def select_patents(topic: Topic, patents: list[Any]) -> list[Any]:
+    """Brevetti della guida: la lista fissa più quelli dei temi scelti.
+
+    ``patents`` sono oggetti ``Patent`` (``doc.number``, ``analysis.theme``,
+    ``analysis.seo_relevance``); l'ordine in ingresso viene mantenuto.
+    """
+    wanted = {n.upper() for n in topic.patents}
+    themes = set(topic.patent_themes)
+    out = []
+    for p in patents:
+        a = p.analysis
+        if p.doc.number.upper() in wanted or (
+            a is not None
+            and a.theme in themes
+            and (a.seo_relevance or 0) >= topic.patent_min_relevance
+        ):
+            out.append(p)
+    return out
 
 
 def review_needed(
