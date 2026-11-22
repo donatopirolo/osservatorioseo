@@ -8,7 +8,9 @@ reviewed: 2026-11-22
 min_importance: 4
 review_importance: 5
 doc_watcher: [google_ai_features_guidance, google_help_ai_overviews]
-patents: [US11769017B1, US20250005303A1, US12639300B2, US20250156456A1, US20260211889A1, US20240289395A1, US20260154578A1]
+patents: [US11769017B1, US20250005303A1, US12639300B2, US20250156456A1, US20260211889A1, US20240289395A1, US20260154578A1, US20260212135A1, US12530398B2]
+patent_themes: [selezione_fonti_ai, grounding_citazioni]
+patent_min_relevance: 4
 ---
 
 ## In breve
@@ -178,7 +180,7 @@ Le pagine ufficiali di Google sugli AI Overview cambiano spesso, e a volte senza
 
 ## Brevetti collegati
 
-Alcuni brevetti di Google descrivono tecniche vicine a quelle degli AI Overview: riepiloghi generativi dei risultati, sottoquery multiple, citazioni delle fonti, controllo della fattualità. Un brevetto non prova che una tecnica sia in uso, ma aiuta a capire in che direzione lavora Google.
+Alcuni brevetti di Google descrivono tecniche vicine a quelle degli AI Overview: riepiloghi generativi dei risultati, sottoquery multiple, citazioni delle fonti, controllo della fattualità. Un brevetto non prova che una tecnica sia in uso, ma aiuta a capire in che direzione lavora Google. L'elenco si allarga da solo quando analizziamo un nuovo brevetto Google su questi temi.
 
 [[brevetti]]
 

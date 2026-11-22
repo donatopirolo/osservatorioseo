@@ -174,6 +174,34 @@ def test_review_not_needed(tmp_path):
     assert tp.review_needed(t, {}, []) is None
 
 
+def _pat(number, theme, rel):
+    from types import SimpleNamespace
+
+    return SimpleNamespace(
+        doc=SimpleNamespace(number=number), analysis=SimpleNamespace(theme=theme, seo_relevance=rel)
+    )
+
+
+def test_select_patents_list_plus_themes(tmp_path):
+    t = tp.load_topics(_write(tmp_path))["prova"]
+    t.patent_themes = ["selezione_fonti_ai"]
+    pats = [
+        _pat("US1", "local", 2),  # nella lista fissa
+        _pat("US2", "selezione_fonti_ai", 4),  # tema giusto, rilevanza sufficiente
+        _pat("US3", "selezione_fonti_ai", 3),  # rilevanza bassa
+        _pat("US4", "spam", 5),  # tema diverso
+    ]
+    assert [p.doc.number for p in tp.select_patents(t, pats)] == ["US1", "US2"]
+
+
+def test_unknown_patent_theme(tmp_path):
+    d = _write(tmp_path)
+    f = d / "prova.md"
+    f.write_text(f.read_text().replace("patents: [US1]", "patents: [US1]\npatent_themes: [boh]"))
+    with pytest.raises(ValueError, match="boh"):
+        tp.load_topics(d)
+
+
 def test_real_content_is_valid():
     """Le guide vere in content/temi/ si caricano e non lasciano segnaposti."""
     topics = tp.load_topics(REPO / tp.CONTENT_DIR)
