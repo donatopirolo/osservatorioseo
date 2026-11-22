@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20260154352A1",
+    "title": "Prioritized summarization of content items using language model neural networks",
+    "abstract": "Methods, systems, and apparatuses, including computer programs encoded on computer storage media, for generating a summary of a set of content items using a language model neural network. In particular, the described techniques include processing data characterizing a set of content items and the respective relative prominence data for each of the set of content items using a language model neural network to generate the summary of the set of content items. Because the relative prominence data is included in the input to the language model neural network, the summary will reflect the relative prominence represented for each of the content items.",
+    "claims": [
+      "1 . A method performed by one or more computers, the method comprising: obtaining a first set of content items; obtaining respective prominence data for each of the first set of content items that represents a relative prominence of the content item in a summary of the first set of content items, wherein the relative prominence of the content item in the summary characterizes a prominence of content referencing the content item in the summary relative to content referencing other content items in the first set; and processing data characterizing the first set of content items and the respective relative prominence data for each of the first set of content items using a language model neural network to generate the summary of the first set of content items.",
+      "2 . The method of claim 1 , wherein the first set of content items are content items that have been determined to be relevant to a query received from a user.",
+      "3 . The method of claim 2 , further comprising: providing the summary of the first set of content items for presentation to the user in response to the query.",
+      "4 . The method of claim 1 , wherein the prominence of the content referencing the content item is based on one or more of: an order of the content referencing the content item within the summary relative to content referencing other content items; an amount of content referencing the content item relative to the content referencing the other content item; or features of the content referencing the content item when the summary is presented to a user.",
+      "5 . The method of claim 1 , wherein the respective prominence data for each of the first set of content items comprises a ranking of the first set of content items.",
+      "6 . The method of claim 1 , wherein the respective prominence data for each of the first set of content items comprises a respective prominence score for each of the first set of content items.",
+      "7 . The method of claim 1 , further comprising: for each of the first set of content items, processing a first input comprising the respective prominence data for the content item using a selection prediction neural network to generate a likelihood score that represents a likelihood that a user will interact with the content item once the summary is presented to the user.",
+      "8 . The method of claim 7 , wherein the selection prediction neural network and the language model neural network have a shared embedding layer.",
+      "9 . The method of claim 1 , wherein the respective prominence data for the content items is determined by a content item allocation engine.",
+      "10 . A system comprising one or more computers and one or more storage devices storing instructions that when executed by the one or more computers cause the one more computers to perform operations, the operations comprising: obtaining a first set of content items; obtaining respective prominence data for each of the first set of content items that represents a relative prominence of the content item in a summary of the first set of content items, wherein the relative prominence of the content item in the summary characterizes a prominence of content referencing the content item in the summary relative to content referencing other content items in the first set; and processing data characterizing the first set of content items and the respective relative prominence data for each of the first set of content items using a language model neural network to generate the summary of the first set of content items.",
+      "11 . The system of claim 10 , wherein the first set of content items are content items that have been determined to be relevant to a query received from a user.",
+      "12 . The system of claim 11 , the operations further comprising: providing the summary of the first set of content items for presentation to the user in response to the query.",
+      "13 . The system of claim 10 , wherein the prominence of the content referencing the content item is based on one or more of: an order of the content referencing the content item within the summary relative to content referencing other content items; an amount of content referencing the content item relative to the content referencing the other content item; or features of the content referencing the content item when the summary is presented to a user.",
+      "14 . The system of claim 10 , wherein the respective prominence data for each of the first set of content items comprises a ranking of the first set of content items.",
+      "15 . The system of claim 10 , wherein the respective prominence data for each of the first set of content items comprises a respective prominence score for each of the first set of content items.",
+      "16 . The system of claim 10 , the operations further comprising: for each of the first set of content items, processing a first input comprising the respective prominence data for the content item using a selection prediction neural network to generate a likelihood score that represents a likelihood that a user will interact with the content item once the summary is presented to the user.",
+      "17 . The system of claim 16 , wherein the selection prediction neural network and the language model neural network have a shared embedding layer.",
+      "18 . The system of claim 10 , wherein the respective prominence data for the content items is determined by a content item allocation engine.",
+      "19 . One or more non-transitory computer storage media storing instructions that when executed by one or more computers cause the one more computers to perform operations, the operations comprising: obtaining a first set of content items; obtaining respective prominence data for each of the first set of content items that represents a relative prominence of the content item in a summary of the first set of content items, wherein the relative prominence of the content item in the summary characterizes a prominence of content referencing the content item in the summary relative to content referencing other content items in the first set; and processing data characterizing the first set of content items and the respective relative prominence data for each of the first set of content items using a language model neural network to generate the summary of the first set of content items.",
+      "20 . The non-transitory computer storage media of claim 19 , wherein the first set of content items are content items that have been determined to be relevant to a query received from a user."
+    ],
+    "independent_claims": [
+      "1 . A method performed by one or more computers, the method comprising: obtaining a first set of content items; obtaining respective prominence data for each of the first set of content items that represents a relative prominence of the content item in a summary of the first set of content items, wherein the relative prominence of the content item in the summary characterizes a prominence of content referencing the content item in the summary relative to content referencing other content items in the first set; and processing data characterizing the first set of content items and the respective relative prominence data for each of the first set of content items using a language model neural network to generate the summary of the first set of content items.",
+      "10 . A system comprising one or more computers and one or more storage devices storing instructions that when executed by the one or more computers cause the one more computers to perform operations, the operations comprising: obtaining a first set of content items; obtaining respective prominence data for each of the first set of content items that represents a relative prominence of the content item in a summary of the first set of content items, wherein the relative prominence of the content item in the summary characterizes a prominence of content referencing the content item in the summary relative to content referencing other content items in the first set; and processing data characterizing the first set of content items and the respective relative prominence data for each of the first set of content items using a language model neural network to generate the summary of the first set of content items.",
+      "19 . One or more non-transitory computer storage media storing instructions that when executed by one or more computers cause the one more computers to perform operations, the operations comprising: obtaining a first set of content items; obtaining respective prominence data for each of the first set of content items that represents a relative prominence of the content item in a summary of the first set of content items, wherein the relative prominence of the content item in the summary characterizes a prominence of content referencing the content item in the summary relative to content referencing other content items in the first set; and processing data characterizing the first set of content items and the respective relative prominence data for each of the first set of content items using a language model neural network to generate the summary of the first set of content items."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Zhe Feng",
+      "Aranyak Mehta",
+      "Kumar Avinava Dubey",
+      "Rahul Kidambi",
+      "Di Wang",
+      "Christopher Park Mah",
+      "Kshipra Uday Bhawalkar",
+      "Christopher Vui Liaw"
+    ],
+    "priority_date": "2024-07-26",
+    "filing_date": "2025-07-25",
+    "publication_date": "2026-06-04",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F16/00",
+      "G06F16/90",
+      "G06F16/904",
+      "G06F16/30",
+      "G06F16/34",
+      "G06F16/345"
+    ],
+    "family": [],
+    "cited_by_count": 0
+  },
+  "analysis": {
+    "title_it": "Riassunti prioritizzati di contenuti tramite LLM",
+    "summary": "Il brevetto descrive un metodo per generare riassunti di insiemi di contenuti utilizzando una rete neurale di tipo language model, incorporando nell'input dati di prominenza relativa per ciascun contenuto. La prominenza determina quanto spazio, ordine o enfasi riceve ciascun contenuto nel riassunto generato, permettendo di riflettere importanza, qualità o probabilità di interazione dell'utente.",
+    "theme": "selezione_fonti_ai",
+    "seo_relevance": 4,
+    "scope": "Google Search, risposte generative e riassunti",
+    "what_it_claims": "La rivendicazione indipendente 1 copre un metodo eseguito da uno o più computer che prevede tre passaggi fondamentali. Primo, ottenere un primo insieme di contenuti (claim 1). Secondo, ottenere dati di prominenza rispettivi per ciascun contenuto che rappresentano la prominenza relativa del contenuto in un riassunto dell'insieme, dove la prominenza relativa caratterizza la prominenza del contenuto che fa riferimento al contenuto nel riassunto rispetto al contenuto che fa riferimento ad altri contenuti nell'insieme (claim 1). Terzo, processare dati che caratterizzano l'insieme di contenuti e i rispettivi dati di prominenza usando una rete neurale language model per generare il riassunto dell'insieme di contenuti (claim 1).\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La claim 2 specifica che l'insieme di contenuti può essere costituito da contenuti determinati rilevanti per una query ricevuta da un utente. La claim 3 prevede la presentazione del riassunto all'utente in risposta alla query. La claim 4 definisce che la prominenza del contenuto può basarsi su uno o più elementi: ordine del contenuto nel riassunto rispetto ad altri contenuti, quantità di contenuto relativa ad altri contenuti, o caratteristiche del contenuto quando il riassunto viene presentato all'utente. La claim 5 specifica che i dati di prominenza possono comprendere un ranking dell'insieme di contenuti. La claim 6 indica che i dati di prominenza possono includere un punteggio di prominenza rispettivo per ciascun contenuto. La claim 7 introduce l'uso di una rete neurale di predizione della selezione che processa un input comprendente i dati di prominenza per generare un likelihood score che rappresenta la probabilità che un utente interagisca con il contenuto una volta presentato il riassunto. La claim 8 specifica che la rete di predizione della selezione e il language model possono condividere un embedding layer. La claim 9 indica che i dati di prominenza possono essere determinati da un content item allocation engine. Le claims 10-20 replicano le stesse funzionalità per sistemi e media di memorizzazione.",
+    "seo_reading": "La descrizione contempla diverse implementazioni dei dati di prominenza e del loro utilizzo. Il documento specifica che la prominenza può essere misurata attraverso tre componenti (descrizione, sezione relativa alla claim 4): ordine spaziale o temporale del contenuto nel riassunto (es. top-to-bottom, left-to-right per testo, sequenza temporale per audio/video), quantità di contenuto espressa come frazione o numero assoluto (es. percentuale di parole, tempo di riproduzione), e caratteristiche qualitative del contenuto quando presentato (es. umorismo, formalità, emotività).\n\nLa descrizione fornisce esempi concreti di come i dati di prominenza potrebbero essere determinati. Per recensioni di prodotti, il content item allocation engine potrebbe assegnare prominenza proporzionale ai quality score degli autori (descrizione, esempio delle recensioni). Per contenuti online rilevanti per una query, l'engine potrebbe ottimizzare un obiettivo di valore aggregato basato su likelihood di interazione dell'utente e valore del contenuto per il sistema, usando la formula aggregate value := Σi Li(promi) · vi (descrizione, sezione sull'allocation engine).\n\nLa selection prediction neural network contemplata nella descrizione processerebbe input includenti dati di prominenza e caratteristiche del contenuto per generare likelihood scores di interazione utente. Questa rete potrebbe condividere embedding layers con il language model, particolarmente per input testuali processati con tokenizer come BPE, WordPiece o SentencePiece (descrizione, sezione su shared embedding layer).\n\nPer la SEO, questo potrebbe significare che nei riassunti generativi Google potrebbe assegnare spazio e posizione alle fonti non solo in base alla rilevanza informativa ma anche considerando segnali di qualità, affidabilità o probabilità di clic. Un sito con contenuti di alta qualità potrebbe ricevere maggiore spazio o posizione prioritaria nel riassunto. Tuttavia, la descrizione chiarisce che il language model può essere uno qualsiasi della famiglia Gemini, Gemma o PaliGemma (descrizione, sezione sul language model), suggerendo applicazioni potenzialmente più ampie della sola Search. L'esempio 300 mostra summaries di advertisement con prominenza determinata da welfare atteso basato su bid values e click likelihood, indicando un possibile uso pubblicitario piuttosto che organico.",
+    "limits": [
+      "Si tratta di una domanda di brevetto (A1) non ancora concessa, senza pubblicazioni collegate in famiglia, quindi non rappresenta una protezione consolidata né una conferma di implementazione.",
+      "Il brevetto non dimostra che Google utilizzi questi meccanismi in Search organica: gli esempi nella descrizione riguardano principalmente advertisement allocation (esempio 300, esempio 400) e il documento menziona esplicitamente use case pubblicitari.",
+      "Non specifica quali segnali concreti determinerebbero la prominenza per contenuti web organici, né come questi si relazionerebbero a fattori di ranking tradizionali: la descrizione resta generica su quality scores e likelihood predictions.",
+      "Il brevetto copre la generazione di riassunti con prominenza controllata, non necessariamente l'uso di questi riassunti come interfaccia primaria di Search o la loro influenza sul traffico verso i siti sorgente."
+    ],
+    "implications": [
+      "Concentrarsi su segnali di qualità consolidati (autorevolezza, accuratezza, esperienza) che potrebbero influenzare sia il ranking tradizionale sia eventuali meccanismi di selezione per riassunti generativi.",
+      "Mantenere contenuti strutturati e facilmente estraibili che facilitino la comprensione da parte di sistemi di language model, indipendentemente da come vengano poi utilizzati per generare sintesi.",
+      "Monitorare metriche di engagement e interazione utente sui propri contenuti, dato che il brevetto contempla l'uso di likelihood di interazione come fattore per determinare prominenza.",
+      "Non ottimizzare tattiche specifiche per 'ottenere più spazio nei riassunti' in assenza di conferme che il sistema sia attivo: le best practice per contenuti di qualità restano valide a prescindere."
+    ],
+    "key_terms": [
+      {
+        "term": "prominence data",
+        "explanation": "Dati che rappresentano la prominenza relativa di un contenuto nel riassunto, determinando quanto spazio, quale posizione o quale enfasi riceve rispetto ad altri contenuti"
+      },
+      {
+        "term": "content item allocation engine",
+        "explanation": "Componente che determina i dati di prominenza per ciascun contenuto basandosi su fattori come qualità, importanza relativa, likelihood di interazione o obiettivi di ottimizzazione"
+      },
+      {
+        "term": "selection prediction neural network",
+        "explanation": "Rete neurale che processa dati di prominenza e caratteristiche del contenuto per generare un likelihood score che rappresenta la probabilità che un utente interagisca con il contenuto dopo aver visto il riassunto"
+      },
+      {
+        "term": "likelihood score",
+        "explanation": "Punteggio che rappresenta la probabilità stimata che un utente interagisca con (es. clicchi su) un contenuto una volta che il riassunto viene presentato"
+      },
+      {
+        "term": "shared embedding layer",
+        "explanation": "Layer di embedding condiviso tra la selection prediction neural network e il language model, che processa gli stessi input (es. testo tokenizzato) generando le stesse feature representations"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-11-22T18:00:26.266712Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.07311516
+}
