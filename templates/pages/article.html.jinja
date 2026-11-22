@@ -126,6 +126,13 @@
   {% endif %}
   {% endif %}
 
+  {% if topic_guide %}
+  <aside class="mb-10 p-5 border border-primary-container/60 bg-surface-container-lowest">
+    <p class="text-[10px] text-outline uppercase font-mono mb-2 tracking-widest">&gt; LA GUIDA SUL TEMA</p>
+    <a href="/dossier/{{ topic_guide.slug }}/" class="text-lg font-bold text-white hover:text-primary-container">{{ topic_guide.title }} →</a>
+  </aside>
+  {% endif %}
+
   {% if item.tags %}
   <section class="mb-8">
     <h2 class="text-sm text-outline uppercase font-mono mb-3">&gt; TAGS</h2>

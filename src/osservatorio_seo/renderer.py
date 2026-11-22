@@ -96,6 +96,9 @@ class HtmlRenderer:
     def render_dossier(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/dossier.html.jinja", context)
 
+    def render_topic(self, context: dict[str, Any]) -> str:
+        return self.render_raw("pages/topic.html.jinja", context)
+
     def render_dossier_index(self, context: dict[str, Any]) -> str:
         return self.render_raw("pages/dossier_index.html.jinja", context)
 

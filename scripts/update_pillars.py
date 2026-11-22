@@ -95,10 +95,21 @@ async def main() -> None:
     failed = 0
     total_cost = 0.0
 
+    from osservatorio_seo.topic_pages import CONTENT_DIR, load_topics
+
+    topic_slugs = set(load_topics(repo_root / CONTENT_DIR))
+
     for tag in tags:
         slug = tag.replace("_", "-")
         out = pillars_dir / f"{tag}.json"
         print(f"\n=== {tag} (/dossier/{slug}/) ===")
+
+        if slug in topic_slugs:
+            # La pagina sul tema (content/temi/) sostituisce il dossier AI:
+            # non si rigenera, niente costi.
+            print("  pagina sul tema scritta a mano in content/temi/: skip.")
+            skipped += 1
+            continue
 
         items = collect_items_by_tag(archive_dir, tag, min_importance=min_importance)
         current_ids = {it.id for it in items}

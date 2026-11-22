@@ -1,0 +1,147 @@
+{% extends "layout.html.jinja" %}
+
+{% block extra_head %}
+{% include "partials/_jsonld_breadcrumb.html.jinja" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ topic.title | tojson }},
+  "description": {{ topic.description | tojson }},
+  "wordCount": {{ word_count }},
+  "datePublished": "{{ reviewed_iso }}",
+  "dateModified": "{{ updated_iso }}",
+  "image": ["{{ site_url }}/logo-512.png"],
+  "author": {
+    "@type": "Organization",
+    "name": {{ topic.author | tojson }},
+    "url": "{{ site_url }}/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "{{ site_url }}/",
+    "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo-512.png", "width": "512", "height": "512"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "{{ article_url }}"},
+  "inLanguage": "it-IT",
+  "articleSection": "Guide"
+}
+</script>
+{% if faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for f in faq %}{"@type": "Question", "name": {{ f.question | tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.answer | tojson }}}}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/dossier/" class="hover:text-primary-container">DOSSIER</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">{{ topic.slug | upper }}</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-8">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; GUIDA · AGGIORNATA DI CONTINUO</p>
+    <h1 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4 text-white">{{ topic.title }}</h1>
+    <p class="text-lg text-on-surface-variant leading-relaxed">{{ topic.description }}</p>
+    <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] text-outline uppercase font-mono">
+      <span>{{ topic.author }}</span>
+      <span class="text-outline-variant">·</span>
+      <span>Guida rivista il <time datetime="{{ reviewed_iso }}">{{ reviewed_label }}</time></span>
+      <span class="text-outline-variant">·</span>
+      <span>Dati aggiornati al <time datetime="{{ updated_iso }}">{{ updated_label }}</time></span>
+    </div>
+  </header>
+
+  {% if toc %}
+  <nav aria-label="Indice" class="mb-10 border border-outline-variant bg-surface-container-lowest p-5">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; IN QUESTA GUIDA</p>
+    <ol class="grid sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm list-decimal list-inside marker:text-outline marker:font-mono">
+      {% for t in toc %}<li><a href="#{{ t.id }}" class="text-on-surface-variant hover:text-primary-container">{{ t.name }}</a></li>{% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+
+  <div class="guida">
+  {% for kind, value in parts %}
+    {% if kind == 'html' %}
+      {{ value | safe }}
+    {% elif value == 'numeri' and numbers %}
+      <ul class="sm:hidden !list-none !pl-0 !my-6 !space-y-0 border-t border-outline-variant">
+      {% for n in numbers %}
+        <li class="border-b border-outline-variant py-3">
+          <span class="font-mono font-bold text-primary-container text-lg">{{ n.valore }}</span>
+          <span class="block text-[15px] mt-1">{{ n.descrizione }}</span>
+          <span class="block text-xs text-outline mt-1 font-mono"><a href="{{ n.url }}"{% if not n.url.startswith('#') %} rel="noopener" target="_blank"{% endif %}>{{ n.fonte }}</a> · {{ n.data }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+      <div class="hidden sm:block">
+      <table>
+        <thead><tr><th>Dato</th><th>Cosa misura</th><th>Fonte</th><th>Quando</th></tr></thead>
+        <tbody>
+        {% for n in numbers %}
+          <tr>
+            <td class="font-mono font-bold text-primary-container whitespace-nowrap">{{ n.valore }}</td>
+            <td>{{ n.descrizione }}</td>
+            <td><a href="{{ n.url }}"{% if not n.url.startswith('#') %} rel="noopener" target="_blank"{% endif %}>{{ n.fonte }}</a></td>
+            <td class="font-mono text-xs text-outline whitespace-nowrap">{{ n.data }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      </div>
+    {% elif value == 'cronologia' and months %}
+      <div class="my-6 border-t border-outline-variant">
+      {% for m in months %}
+        <section class="border-b border-outline-variant py-4">
+          <h3 class="!mt-0 !mb-3 text-xs font-mono uppercase tracking-widest text-primary-container">{{ m.label }}</h3>
+          <ul class="!list-none !pl-0 !my-0 space-y-2">
+          {% for ev in m.events %}
+            <li class="flex gap-3 text-[15px]">
+              <span class="font-mono text-[11px] text-outline shrink-0 w-12 pt-0.5">{{ ev.date[8:10] }}/{{ ev.date[5:7] }}</span>
+              <span><a href="{{ ev.site_path }}" class="!no-underline !text-white hover:!text-primary-container">{{ ev.title }}</a>
+              <span class="text-[11px] font-mono text-outline uppercase"> · {{ ev.source }}</span></span>
+            </li>
+          {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+      </div>
+    {% elif value == 'documentazione' %}
+      {% if watched_docs %}
+      <p>Documenti ufficiali che sorvegliamo ogni giorno per questo tema:
+      {% for d in watched_docs %}<a href="{{ d.path }}">{{ d.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+      {% endif %}
+      {% if doc_changes %}
+      <ul>
+      {% for c in doc_changes %}
+        <li><span class="font-mono text-xs text-outline">{{ c.day_label }}</span> — <a href="{{ c.path }}">{{ c.title }}</a> <span class="text-xs text-outline">({{ c.page_name }})</span></li>
+      {% endfor %}
+      </ul>
+      {% else %}
+      <p class="text-on-surface-variant">Nessuna modifica rilevata finora su questi documenti.</p>
+      {% endif %}
+    {% elif value == 'brevetti' and patents %}
+      <ul>
+      {% for p in patents %}
+        <li><a href="/brevetti/{{ p.slug }}/">{{ p.title_it }}</a> <span class="font-mono text-xs text-outline">{{ p.number }}{% if p.date %} · {{ p.date[:4] }}{% endif %}</span></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+  </div>
+</article>
+{% endblock %}
