@@ -1,102 +1,179 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-22T06:01:50.742761Z",
-  "generated_at_local": "2026-11-22T07:01:50.742761+01:00",
+  "generated_at": "2026-11-23T06:01:21.303263Z",
+  "generated_at_local": "2026-11-23T07:01:21.303263+01:00",
   "timezone": "Europe/Rome",
-  "run_id": "2026-11-22-0701",
+  "run_id": "2026-11-23-0701",
   "stats": {
     "sources_checked": 15,
     "sources_failed": 0,
     "sources_empty": 0,
-    "items_collected": 2586,
-    "items_after_dedup": 35,
+    "items_collected": 2587,
+    "items_after_dedup": 20,
     "doc_changes_detected": 0,
-    "ai_cost_eur": 0.0016,
-    "summarize_attempted": 2,
+    "ai_cost_eur": 0.0031,
+    "summarize_attempted": 4,
     "summarize_failed": 0
   },
   "top10": [
-    "item_2026-11-22_002",
-    "item_2026-11-22_001"
+    "item_2026-11-23_004",
+    "item_2026-11-23_001",
+    "item_2026-11-23_002",
+    "item_2026-11-23_003"
   ],
   "categories": {
-    "industry_news": [
-      "item_2026-11-22_002"
+    "google_updates": [
+      "item_2026-11-23_004",
+      "item_2026-11-23_002"
     ],
-    "content_eeat": [
-      "item_2026-11-22_001"
+    "ai_models": [
+      "item_2026-11-23_001",
+      "item_2026-11-23_003"
     ]
   },
   "items": [
     {
-      "id": "item_2026-11-22_001",
-      "title_original": "Create High-Impact Content Using Backward Design — Whiteboard Friday",
-      "title_it": "Creare Contenuti di Impatto Utilizzando il Backward Design",
-      "summary_it": "L'articolo introduce il concetto di backward design applicato alla creazione di contenuti, un approccio che privilegia la definizione degli obiettivi di misurazione prima della produzione. Questo metodo, mutuato dall'instructional design, suggerisce di partire dagli outcome di business desiderati per poi definire le strategie di contenuto. L'obiettivo è ottimizzare i risultati di marketing evitando di lasciare al caso la valutazione dell'efficacia delle campagne.",
-      "url": "https://moz.com/blog/high-impact-content-using-backward-design-whiteboard-friday",
+      "id": "item_2026-11-23_001",
+      "title_original": "Perplexity and Intelligence",
+      "title_it": "Perplessità e Intelligenza nell'AI",
+      "summary_it": "OpenAI propone la perplessità (perplexity) come metrica chiave per tracciare i progressi nell'addestramento dei modelli AI, considerandola un indicatore fondamentale dell'intelligenza latente. L'azienda ha iniziato a pubblicare i propri dati interni sulla perplessità per promuovere standard di sicurezza condivisi e una base scientifica comune nel settore. Questo approccio mira a distinguere la fase di pre-addestramento del modello, che genera capacità emergenti, dalle successive tecniche di elicitation.",
+      "url": "https://openai.com/index/perplexity-and-intelligence",
       "source": {
-        "id": "moz_blog",
-        "name": "Moz Blog",
-        "authority": 8,
-        "type": "tool_vendor",
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "authority": 10,
+        "type": "official",
         "fetcher": "rss",
-        "feed_url": "https://moz.com/posts/rss/blog",
+        "feed_url": "https://openai.com/blog/rss.xml",
         "target_url": null,
         "selectors": null,
-        "category_hint": "technical_seo",
+        "category_hint": "ai_models",
         "enabled": true
       },
-      "category": "content_eeat",
+      "category": "ai_models",
       "tags": [
-        "content_strategy",
-        "content_marketing",
-        "measurement",
-        "backward_design"
+        "openai",
+        "perplexity",
+        "ai_metric",
+        "model_training"
       ],
-      "importance": 3,
-      "published_at": "2026-11-20T08:00:00Z",
-      "fetched_at": "2026-11-22T06:04:23.778443Z",
+      "importance": 4,
+      "published_at": "2026-11-22T00:00:00Z",
+      "fetched_at": "2026-11-23T06:04:43.141413Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:34bad2012f505c87",
+      "raw_hash": "sha256:68289fa3318612a0",
       "deep_analysis": null,
       "also_in": []
     },
     {
-      "id": "item_2026-11-22_002",
-      "title_original": "WordPress Random Redirects, Branded API Data & CDN Advice – SEO Pulse",
-      "title_it": "Aggiornamenti SEO: Redirect Casuali di WordPress, Dati Brandizzati nell'API di Search Console e Consigli sui CDN",
-      "summary_it": "WordPress 7.2 introdurrà un redirect /random/ attivo di default, che indirizzerà gli utenti a un post casuale con un 302 e un X-Robots-Tag: noindex, follow. È necessario intervenire a livello di codice per disabilitarlo o escludere specifici tipi di post. Google ha inoltre aggiunto la possibilità di segmentare i dati per query brandizzate nell'API di Search Console e ha fornito indicazioni sui valori referrer e sui potenziali blocchi di Googlebot in caso di migrazione CDN.",
-      "url": "https://www.searchenginejournal.com/seo-pulse-wordpress-random-redirects-branded-api-data-cdn-advice/598173",
+      "id": "item_2026-11-23_002",
+      "title_original": "Google Search Profiles Is Rolling Out Globally",
+      "title_it": "I Profili di Ricerca Google Vengono Lanciati a Livello Globale",
+      "summary_it": "Google sta implementando a livello globale la funzionalità dei Profili di Ricerca. Questa novità permette agli utenti di personalizzare la propria esperienza di ricerca e di gestire le preferenze direttamente all'interno di Google Search. L'introduzione di questa funzione potrebbe influenzare il modo in cui i contenuti vengono scoperti e presentati agli utenti individuali.",
+      "url": "https://www.seroundtable.com/google-search-profiles-global-42591.html",
       "source": {
-        "id": "search_engine_journal",
-        "name": "Search Engine Journal",
-        "authority": 8,
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
         "type": "media",
         "fetcher": "rss",
-        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
         "target_url": null,
         "selectors": null,
-        "category_hint": "industry_news",
+        "category_hint": "google_updates",
         "enabled": true
       },
-      "category": "industry_news",
+      "category": "google_updates",
       "tags": [
-        "wordpress",
-        "search_console_api",
-        "cdn",
-        "technical_seo"
+        "google_search",
+        "user_profile",
+        "personalization",
+        "search_feature"
       ],
       "importance": 3,
-      "published_at": "2026-11-21T13:00:00Z",
-      "fetched_at": "2026-11-22T06:04:25.790355Z",
+      "published_at": "2026-11-22T22:33:00Z",
+      "fetched_at": "2026-11-23T06:04:44.442252Z",
       "is_doc_change": false,
       "doc_change": null,
       "language_original": "en",
       "summarizer_model": "google/gemini-2.5-flash",
-      "raw_hash": "sha256:d1cde9a5162b3c7b",
+      "raw_hash": "sha256:295c7640d2a447e9",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-23_003",
+      "title_original": "You Can Connect ChatGPT Business Hub With ChatGPT Ad Account",
+      "title_it": "È possibile collegare l'account pubblicitario di ChatGPT al Business Hub",
+      "summary_it": "È stata introdotta la possibilità di collegare l'account pubblicitario di ChatGPT al nuovo ChatGPT Business Hub. Questa funzionalità permette di accedere al gestore annunci direttamente dal Business Hub. Al momento, il collegamento sembra fungere principalmente da scorciatoia per la console di ChatGPT Ads Manager.",
+      "url": "https://www.seroundtable.com/chatgpt-business-hub-ad-account-42592.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt",
+        "openai",
+        "ai_ad",
+        "business_hub"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-22T23:24:00Z",
+      "fetched_at": "2026-11-23T06:04:45.633673Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6e6d3a9e0adced7b",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-23_004",
+      "title_original": "Google StarSearch, AIGC, Zero-History Discovery, Feed Ranking & More",
+      "title_it": "Google cerca ingegneri per 'StarSearch', AIGC e scoperta di contenuti senza storico",
+      "summary_it": "Google ha pubblicato un annuncio di lavoro per un ingegnere software senior focalizzato sulle raccomandazioni del feed Discover. La posizione menziona lo sviluppo di 'StarSearch' come 'gatekeeper intelligente' per l'ecosistema di contenuti di Discover, con l'obiettivo di promuovere contenuti freschi, di nicchia e di creator. L'annuncio fa riferimento anche alla 'zero-history discovery' per contenuti generati da AI (AIGC) e notizie dell'ultima ora, suggerendo un focus sulla capacità di Discover di mostrare contenuti senza storico di traffico. Questo indica un'evoluzione nelle strategie di ranking e personalizzazione di Google Discover, specialmente per i contenuti emergenti e generati automaticamente.",
+      "url": "https://www.seroundtable.com/google-starsearch-42594.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_discover",
+        "starsearch",
+        "aigc",
+        "feed_ranking",
+        "zero_history_discovery"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-23T00:30:00Z",
+      "fetched_at": "2026-11-23T06:04:47.482993Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5775ae5ba3dbf0e7",
       "deep_analysis": null,
       "also_in": []
     }
@@ -104,467 +181,462 @@
   "doc_watcher_status": [
     {
       "page_id": "google_search_docs_changelog",
-      "last_checked": "2026-11-22T06:01:51.958846Z",
+      "last_checked": "2026-11-23T06:01:22.975400Z",
       "changed": false
     },
     {
       "page_id": "google_spam_policies",
-      "last_checked": "2026-11-22T06:01:52.713622Z",
+      "last_checked": "2026-11-23T06:01:23.709127Z",
       "changed": false
     },
     {
       "page_id": "google_helpful_content",
-      "last_checked": "2026-11-22T06:01:53.875443Z",
+      "last_checked": "2026-11-23T06:01:24.883505Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_overview",
-      "last_checked": "2026-11-22T06:01:57.558993Z",
+      "last_checked": "2026-11-23T06:01:27.908543Z",
       "changed": false
     },
     {
       "page_id": "google_ai_features_guidance",
-      "last_checked": "2026-11-22T06:01:59.065083Z",
+      "last_checked": "2026-11-23T06:01:29.392761Z",
       "changed": false
     },
     {
       "page_id": "googlebot_docs",
-      "last_checked": "2026-11-22T06:01:59.331169Z",
+      "last_checked": "2026-11-23T06:01:29.662474Z",
       "changed": false
     },
     {
       "page_id": "google_crawlers_overview",
-      "last_checked": "2026-11-22T06:02:01.102210Z",
+      "last_checked": "2026-11-23T06:01:31.003505Z",
       "changed": false
     },
     {
       "page_id": "google_structured_data_gallery",
-      "last_checked": "2026-11-22T06:02:02.346091Z",
+      "last_checked": "2026-11-23T06:01:32.971598Z",
       "changed": false
     },
     {
       "page_id": "openai_usage_policies",
-      "last_checked": "2026-11-22T06:02:03.603956Z",
+      "last_checked": "2026-11-23T06:01:34.634846Z",
       "changed": false
     },
     {
       "page_id": "anthropic_usage_policies",
-      "last_checked": "2026-11-22T06:02:03.882992Z",
+      "last_checked": "2026-11-23T06:01:34.944333Z",
       "changed": false
     },
     {
       "page_id": "google_robots_txt",
-      "last_checked": "2026-11-22T06:02:10.640561Z",
+      "last_checked": "2026-11-23T06:01:44.095447Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta",
-      "last_checked": "2026-11-22T06:02:10.916199Z",
+      "last_checked": "2026-11-23T06:01:44.628960Z",
       "changed": false
     },
     {
       "page_id": "google_sitemaps_overview",
-      "last_checked": "2026-11-22T06:02:12.353706Z",
+      "last_checked": "2026-11-23T06:01:45.958422Z",
       "changed": false
     },
     {
       "page_id": "google_featured_snippets",
-      "last_checked": "2026-11-22T06:02:13.991797Z",
+      "last_checked": "2026-11-23T06:01:47.640801Z",
       "changed": false
     },
     {
       "page_id": "google_title_link",
-      "last_checked": "2026-11-22T06:02:15.292141Z",
+      "last_checked": "2026-11-23T06:01:48.601072Z",
       "changed": false
     },
     {
       "page_id": "google_snippet",
-      "last_checked": "2026-11-22T06:02:17.362544Z",
+      "last_checked": "2026-11-23T06:01:50.431226Z",
       "changed": false
     },
     {
       "page_id": "google_quality_rater_guidelines_en",
-      "last_checked": "2026-11-22T06:02:18.018674Z",
+      "last_checked": "2026-11-23T06:01:51.828855Z",
       "changed": false
     },
     {
       "page_id": "schema_org_releases",
-      "last_checked": "2026-11-22T06:02:31.328603Z",
+      "last_checked": "2026-11-23T06:02:04.830753Z",
       "changed": false
     },
     {
       "page_id": "google_search_essentials",
-      "last_checked": "2026-11-22T06:02:31.508547Z",
+      "last_checked": "2026-11-23T06:02:05.036356Z",
       "changed": false
     },
     {
       "page_id": "google_ranking_systems_guide",
-      "last_checked": "2026-11-22T06:02:31.840679Z",
+      "last_checked": "2026-11-23T06:02:05.780949Z",
       "changed": false
     },
     {
       "page_id": "google_gen_ai_content",
-      "last_checked": "2026-11-22T06:02:33.503553Z",
+      "last_checked": "2026-11-23T06:02:06.651076Z",
       "changed": false
     },
     {
       "page_id": "google_common_crawlers",
-      "last_checked": "2026-11-22T06:02:34.912384Z",
+      "last_checked": "2026-11-23T06:02:08.554154Z",
       "changed": false
     },
     {
       "page_id": "google_user_triggered_fetchers",
-      "last_checked": "2026-11-22T06:02:36.109558Z",
+      "last_checked": "2026-11-23T06:02:10.203232Z",
       "changed": false
     },
     {
       "page_id": "google_structured_data_policies",
-      "last_checked": "2026-11-22T06:02:38.302337Z",
+      "last_checked": "2026-11-23T06:02:11.154509Z",
       "changed": false
     },
     {
       "page_id": "google_page_experience",
-      "last_checked": "2026-11-22T06:02:39.830321Z",
+      "last_checked": "2026-11-23T06:02:12.196968Z",
       "changed": false
     },
     {
       "page_id": "google_core_web_vitals",
-      "last_checked": "2026-11-22T06:02:41.312645Z",
+      "last_checked": "2026-11-23T06:02:13.215129Z",
       "changed": false
     },
     {
       "page_id": "google_discover",
-      "last_checked": "2026-11-22T06:02:42.265560Z",
+      "last_checked": "2026-11-23T06:02:14.771979Z",
       "changed": false
     },
     {
       "page_id": "google_canonicalization",
-      "last_checked": "2026-11-22T06:02:43.973768Z",
+      "last_checked": "2026-11-23T06:02:16.117058Z",
       "changed": false
     },
     {
       "page_id": "google_technical_requirements",
-      "last_checked": "2026-11-22T06:02:45.544456Z",
+      "last_checked": "2026-11-23T06:02:17.878187Z",
       "changed": false
     },
     {
       "page_id": "google_site_names",
-      "last_checked": "2026-11-22T06:02:47.041867Z",
+      "last_checked": "2026-11-23T06:02:19.124565Z",
       "changed": false
     },
     {
       "page_id": "google_crawl_budget",
-      "last_checked": "2026-11-22T06:02:49.064202Z",
+      "last_checked": "2026-11-23T06:02:20.413670Z",
       "changed": false
     },
     {
       "page_id": "google_crawling_changelog",
-      "last_checked": "2026-11-22T06:02:49.647909Z",
+      "last_checked": "2026-11-23T06:02:21.365265Z",
       "changed": false
     },
     {
       "page_id": "google_ai_optimization_guide",
-      "last_checked": "2026-11-22T06:02:51.143696Z",
+      "last_checked": "2026-11-23T06:02:23.491720Z",
       "changed": false
     },
     {
       "page_id": "google_core_updates",
-      "last_checked": "2026-11-22T06:02:52.577128Z",
+      "last_checked": "2026-11-23T06:02:23.964471Z",
       "changed": false
     },
     {
       "page_id": "google_spam_updates",
-      "last_checked": "2026-11-22T06:02:53.801725Z",
+      "last_checked": "2026-11-23T06:02:25.430364Z",
       "changed": false
     },
     {
       "page_id": "google_reviews_system",
-      "last_checked": "2026-11-22T06:02:55.585428Z",
+      "last_checked": "2026-11-23T06:02:27.531541Z",
       "changed": false
     },
     {
       "page_id": "google_preferred_sources",
-      "last_checked": "2026-11-22T06:02:57.156998Z",
+      "last_checked": "2026-11-23T06:02:28.658813Z",
       "changed": false
     },
     {
       "page_id": "google_publication_dates",
-      "last_checked": "2026-11-22T06:02:58.354963Z",
+      "last_checked": "2026-11-23T06:02:29.766160Z",
       "changed": false
     },
     {
       "page_id": "google_special_case_crawlers",
-      "last_checked": "2026-11-22T06:02:59.353186Z",
+      "last_checked": "2026-11-23T06:02:30.793119Z",
       "changed": false
     },
     {
       "page_id": "google_verify_requests",
-      "last_checked": "2026-11-22T06:03:00.754711Z",
+      "last_checked": "2026-11-23T06:02:32.108207Z",
       "changed": false
     },
     {
       "page_id": "google_web_bot_auth",
-      "last_checked": "2026-11-22T06:03:01.977457Z",
+      "last_checked": "2026-11-23T06:02:33.556177Z",
       "changed": false
     },
     {
       "page_id": "google_http_status_codes",
-      "last_checked": "2026-11-22T06:03:03.748682Z",
+      "last_checked": "2026-11-23T06:02:34.711632Z",
       "changed": false
     },
     {
       "page_id": "google_dns_network_errors",
-      "last_checked": "2026-11-22T06:03:05.447329Z",
+      "last_checked": "2026-11-23T06:02:36.564085Z",
       "changed": false
     },
     {
       "page_id": "google_robots_meta_tag",
-      "last_checked": "2026-11-22T06:03:07.073233Z",
+      "last_checked": "2026-11-23T06:02:37.890673Z",
       "changed": false
     },
     {
       "page_id": "google_canonicalization_how",
-      "last_checked": "2026-11-22T06:03:08.348898Z",
+      "last_checked": "2026-11-23T06:02:39.509447Z",
       "changed": false
     },
     {
       "page_id": "google_links_crawlable",
-      "last_checked": "2026-11-22T06:03:10.110440Z",
+      "last_checked": "2026-11-23T06:02:40.715377Z",
       "changed": false
     },
     {
       "page_id": "google_qualify_outbound_links",
-      "last_checked": "2026-11-22T06:03:11.261235Z",
+      "last_checked": "2026-11-23T06:02:41.978787Z",
       "changed": false
     },
     {
       "page_id": "google_mobile_first_indexing",
-      "last_checked": "2026-11-22T06:03:12.856223Z",
+      "last_checked": "2026-11-23T06:02:43.368078Z",
       "changed": false
     },
     {
       "page_id": "google_javascript_seo",
-      "last_checked": "2026-11-22T06:03:14.033965Z",
+      "last_checked": "2026-11-23T06:02:45.626408Z",
       "changed": false
     },
     {
       "page_id": "google_how_search_works",
-      "last_checked": "2026-11-22T06:03:15.339590Z",
+      "last_checked": "2026-11-23T06:02:47.404445Z",
       "changed": false
     },
     {
       "page_id": "google_seo_starter_guide",
-      "last_checked": "2026-11-22T06:03:17.047874Z",
+      "last_checked": "2026-11-23T06:02:49.944365Z",
       "changed": false
     },
     {
       "page_id": "google_sd_article",
-      "last_checked": "2026-11-22T06:03:18.766995Z",
+      "last_checked": "2026-11-23T06:02:50.962021Z",
       "changed": false
     },
     {
       "page_id": "google_sd_product",
-      "last_checked": "2026-11-22T06:03:20.346552Z",
+      "last_checked": "2026-11-23T06:02:52.259780Z",
       "changed": false
     },
     {
       "page_id": "google_sd_merchant_listing",
-      "last_checked": "2026-11-22T06:03:21.877606Z",
+      "last_checked": "2026-11-23T06:02:54.164007Z",
       "changed": false
     },
     {
       "page_id": "google_sd_review_snippet",
-      "last_checked": "2026-11-22T06:03:24.006760Z",
+      "last_checked": "2026-11-23T06:02:56.164412Z",
       "changed": false
     },
     {
       "page_id": "google_sd_organization",
-      "last_checked": "2026-11-22T06:03:25.838083Z",
+      "last_checked": "2026-11-23T06:02:56.542713Z",
       "changed": false
     },
     {
       "page_id": "google_sd_local_business",
-      "last_checked": "2026-11-22T06:03:27.500433Z",
+      "last_checked": "2026-11-23T06:02:58.565406Z",
       "changed": false
     },
     {
       "page_id": "google_sd_breadcrumb",
-      "last_checked": "2026-11-22T06:03:28.875241Z",
+      "last_checked": "2026-11-23T06:03:00.371653Z",
       "changed": false
     },
     {
       "page_id": "google_sd_discussion_forum",
-      "last_checked": "2026-11-22T06:03:30.818606Z",
+      "last_checked": "2026-11-23T06:03:02.372133Z",
       "changed": false
     },
     {
       "page_id": "google_sitelinks",
-      "last_checked": "2026-11-22T06:03:33.110151Z",
+      "last_checked": "2026-11-23T06:03:05.625699Z",
       "changed": false
     },
     {
       "page_id": "google_favicon",
-      "last_checked": "2026-11-22T06:03:34.424044Z",
+      "last_checked": "2026-11-23T06:03:05.852261Z",
       "changed": false
     },
     {
       "page_id": "google_intrusive_interstitials",
-      "last_checked": "2026-11-22T06:03:35.915818Z",
+      "last_checked": "2026-11-23T06:03:08.047862Z",
       "changed": false
     },
     {
       "page_id": "google_images",
-      "last_checked": "2026-11-22T06:03:37.675710Z",
+      "last_checked": "2026-11-23T06:03:09.649652Z",
       "changed": false
     },
     {
       "page_id": "google_video",
-      "last_checked": "2026-11-22T06:03:39.301627Z",
+      "last_checked": "2026-11-23T06:03:10.974924Z",
       "changed": false
     },
     {
       "page_id": "google_search_profiles",
-      "last_checked": "2026-11-22T06:03:40.515762Z",
+      "last_checked": "2026-11-23T06:03:12.141367Z",
       "changed": false
     },
     {
       "page_id": "google_business_details",
-      "last_checked": "2026-11-22T06:03:41.728496Z",
+      "last_checked": "2026-11-23T06:03:13.846808Z",
       "changed": false
     },
     {
       "page_id": "google_site_move_url_changes",
-      "last_checked": "2026-11-22T06:03:43.129219Z",
+      "last_checked": "2026-11-23T06:03:15.028963Z",
       "changed": false
     },
     {
       "page_id": "google_site_move_no_url_changes",
-      "last_checked": "2026-11-22T06:03:44.011207Z",
+      "last_checked": "2026-11-23T06:03:16.250399Z",
       "changed": false
     },
     {
       "page_id": "google_redirects",
-      "last_checked": "2026-11-22T06:03:45.709151Z",
+      "last_checked": "2026-11-23T06:03:18.121209Z",
       "changed": false
     },
     {
       "page_id": "google_faceted_navigation",
-      "last_checked": "2026-11-22T06:03:47.223167Z",
+      "last_checked": "2026-11-23T06:03:18.859754Z",
       "changed": false
     },
     {
       "page_id": "google_crawling_myths",
-      "last_checked": "2026-11-22T06:03:49.001192Z",
+      "last_checked": "2026-11-23T06:03:20.329768Z",
       "changed": false
     },
     {
       "page_id": "google_traffic_drops",
-      "last_checked": "2026-11-22T06:03:51.014797Z",
+      "last_checked": "2026-11-23T06:03:21.876102Z",
       "changed": false
     },
     {
       "page_id": "google_identify_search_traffic",
-      "last_checked": "2026-11-22T06:03:52.494027Z",
+      "last_checked": "2026-11-23T06:03:23.020869Z",
       "changed": false
     },
     {
       "page_id": "google_ecommerce",
-      "last_checked": "2026-11-22T06:03:53.856687Z",
+      "last_checked": "2026-11-23T06:03:24.000802Z",
       "changed": false
     },
     {
       "page_id": "google_localized_versions",
-      "last_checked": "2026-11-22T06:03:55.464149Z",
+      "last_checked": "2026-11-23T06:03:25.272542Z",
       "changed": false
     },
     {
       "page_id": "google_multi_regional",
-      "last_checked": "2026-11-22T06:03:57.411754Z",
+      "last_checked": "2026-11-23T06:03:27.368139Z",
       "changed": false
     },
     {
       "page_id": "google_agent",
-      "last_checked": "2026-11-22T06:03:58.908622Z",
+      "last_checked": "2026-11-23T06:03:28.240629Z",
       "changed": false
     },
     {
       "page_id": "google_help_ai_overviews",
-      "last_checked": "2026-11-22T06:04:00.652097Z",
+      "last_checked": "2026-11-23T06:03:29.329714Z",
       "changed": false
     },
     {
       "page_id": "google_help_ai_mode",
-      "last_checked": "2026-11-22T06:04:01.408462Z",
+      "last_checked": "2026-11-23T06:03:29.677963Z",
       "changed": false
     },
     {
       "page_id": "google_apis_user_agent",
-      "last_checked": "2026-11-22T06:04:02.269536Z",
+      "last_checked": "2026-11-23T06:03:31.397108Z",
       "changed": false
     },
     {
       "page_id": "google_read_aloud_user_agent",
-      "last_checked": "2026-11-22T06:04:02.596847Z",
+      "last_checked": "2026-11-23T06:03:31.644955Z",
       "changed": false
     },
     {
       "page_id": "openai_crawlers",
-      "last_checked": "2026-11-22T06:04:04.448493Z",
+      "last_checked": "2026-11-23T06:03:32.960766Z",
       "changed": false
     },
     {
       "page_id": "anthropic_crawlers",
-      "last_checked": "2026-11-22T06:04:04.569153Z",
+      "last_checked": "2026-11-23T06:03:33.081840Z",
       "changed": false
     },
     {
       "page_id": "perplexity_crawlers",
-      "last_checked": "2026-11-22T06:04:05.048271Z",
+      "last_checked": "2026-11-23T06:03:33.475612Z",
       "changed": false
     },
     {
       "page_id": "mistral_crawlers",
-      "last_checked": "2026-11-22T06:04:05.398161Z",
+      "last_checked": "2026-11-23T06:03:33.932428Z",
       "changed": false
     },
     {
       "page_id": "apple_applebot",
-      "last_checked": "2026-11-22T06:04:05.904905Z",
+      "last_checked": "2026-11-23T06:03:34.655958Z",
       "changed": false
     },
     {
       "page_id": "amazon_amazonbot",
-      "last_checked": "2026-11-22T06:04:06.572531Z",
-      "changed": false
-    },
-    {
-      "page_id": "duckduckgo_duckassistbot",
-      "last_checked": "2026-11-22T06:04:08.003544Z",
+      "last_checked": "2026-11-23T06:03:34.827756Z",
       "changed": false
     },
     {
       "page_id": "commoncrawl_ccbot",
-      "last_checked": "2026-11-22T06:04:08.482358Z",
+      "last_checked": "2026-11-23T06:04:24.064836Z",
       "changed": false
     },
     {
       "page_id": "cloudflare_ai_crawl_control",
-      "last_checked": "2026-11-22T06:04:08.554648Z",
+      "last_checked": "2026-11-23T06:04:24.119958Z",
       "changed": false
     },
     {
       "page_id": "cloudflare_verified_bots",
-      "last_checked": "2026-11-22T06:04:08.617565Z",
+      "last_checked": "2026-11-23T06:04:24.201286Z",
       "changed": false
     },
     {
       "page_id": "llms_txt_spec",
-      "last_checked": "2026-11-22T06:04:09.834396Z",
+      "last_checked": "2026-11-23T06:04:25.189163Z",
       "changed": false
     },
     {
       "page_id": "bing_webmaster_guidelines",
-      "last_checked": "2026-11-22T06:04:09.921576Z",
+      "last_checked": "2026-11-23T06:04:25.356779Z",
       "changed": false
     }
   ],
