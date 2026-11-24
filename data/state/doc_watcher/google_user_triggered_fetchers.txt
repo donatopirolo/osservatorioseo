@@ -14,6 +14,16 @@ The following list shows the user-triggered fetchers, their user agent strings a
 
 **Caution** : The user agent string can be spoofed. Learn how to verify if a request is from Google. 
 
+## APIs-Google
+
+ **User-Agent in HTTP requests** | 
+ 
+ 
+ APIs-Google; (+https://developers.google.com/webmasters/APIs-Google.html) 
+ 
+---|--- 
+**Associated products** | `APIs-Google` delivers webhook push notifications configured by developers in Google Cloud and Google Workspace APIs, such as Pub/Sub push subscriptions and Google Drive resource change notifications. 
+ 
 ## Chrome Web Store
 
  **User-Agent in HTTP requests** | 
@@ -66,6 +76,47 @@ Desktop agent |
 **Associated products** | Google-Agent is used by agents hosted on Google infrastructure to navigate the web and perform actions upon user request. It uses IP ranges from user-triggered-agents.json. 
 **Note** : Google is also experimenting with the Web Bot Auth protocol, using the `https://agent.bot.goog` identity. Learn more about how to authenticate requests with Web Bot Auth. 
 
+## Google App Engine
+
+ **User-Agent in HTTP requests** | 
+ 
+ 
+ AppEngine-Google; (+http://code.google.com/appengine; appid: APPID)
+
+Appended to any custom `User-Agent` set by the app. 
+---|--- 
+**Associated products** | Requests initiated by applications hosted on Google App Engine Standard Environment using the URL Fetch service, where `APPID` identifies the App Engine project. To report abusive requests from an App Engine app, use the Report suspected abuse on Google Cloud form and include the `appid` value (`https://APPID.appspot.com`, omitting any `s~` prefix), source IP address, and timestamp. 
+ 
+## Google Apps Script
+
+ **User-Agent in HTTP requests** | 
+ 
+ 
+ Mozilla/5.0 (compatible; Google-Apps-Script; beanserver; +https://script.google.com; id: SCRIPT_ID) 
+ 
+---|--- 
+**Associated products** | Google Apps Script fetches external URLs and APIs on behalf of user-created scripts calling the `UrlFetchApp` service across Google Workspace. To report abusive requests, use the Report suspected abuse on Google Cloud form and include the full `User-Agent` string (with `id: SCRIPT_ID`), source IP address, and timestamp. 
+ 
+## Google Cloud Tasks
+
+ **User-Agent in HTTP requests** | 
+ 
+ 
+ Google-Cloud-Tasks 
+ 
+---|--- 
+**Associated products** | Google Cloud Tasks dispatches asynchronous HTTP requests and scheduled webhooks to target endpoints configured by developers in Cloud Tasks HTTP target queues. 
+ 
+## Google Image Proxy
+
+ **User-Agent in HTTP requests** | 
+ 
+ 
+ Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy) 
+ 
+---|--- 
+**Associated products** | Google Image Proxy fetches external images embedded in emails and documents when a user opens them (for example, images in emails on Gmail to protect users from image-based security and privacy risks). 
+ 
 ## Google Messages
 
  **User-Agent in HTTP requests** | 
@@ -121,5 +172,30 @@ Former agent (deprecated) | `google-speakr`
  
 ---|--- 
 **Associated products** | Google Site Verifier fetches Search Console verification tokens. 
+ 
+## Google Web Preview
+
+ **User-Agent in HTTP requests** | 
+ 
+ 
+ Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/_W.X.Y.Z_ Safari/537.36 
+ 
+---|--- 
+**Associated products** | Google Web Preview fetches web pages on demand to generate link preview thumbnails when users attach or share URLs in Google products such as Google Classroom. 
+ 
+## PageSpeed Insights
+
+ **User-Agent in HTTP requests** | | Mobile agent | 
+ 
+ 
+ Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/_W.X.Y.Z_ Mobile Safari/537.36 Chrome-Lighthouse 
+ 
+---|--- 
+Desktop agent | 
+ 
+ 
+ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/_W.X.Y.Z_ Safari/537.36 Chrome-Lighthouse 
+ 
+**Associated products** | The PageSpeed Insights user agent fetches web pages and their subresources when a user runs a performance and quality audit in PageSpeed Insights (pagespeed.web.dev). 
  
 Send feedback
