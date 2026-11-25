@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "number": "US20260170243A1",
+    "title": "Computing numeric representations of words in a high-dimensional space",
+    "abstract": "Methods, systems, and apparatus, including computer programs encoded on computer storage media, for computing numeric representations of words. One of the methods includes obtaining a set of training data, wherein the set of training data comprises sequences of words; training a classifier and an embedding function on the set of training data, wherein training the embedding function comprises obtained trained values of the embedding function parameters; processing each word in the vocabulary using the embedding function in accordance with the trained values of the embedding function parameters to generate a respective numerical representation of each word in the vocabulary in the high-dimensional space; and associating each word in the vocabulary with the respective numeric representation of the word in the high-dimensional space.",
+    "claims": [
+      "1 . (canceled)",
+      "2 . A system comprising one or more computers and one or more storage devices storing instructions that when executed by the one or more computers cause the one or more computers to perform operations, the operations comprising: receiving a sequence of words; processing, using an embedding function that maps corresponding words into corresponding numeric representations in a high-dimensional space, the sequence of words to generate a numeric representation of the sequence of words; processing, using a ranking function, the numeric representation generated using the embedding function to determine a predicted word that is predicted to correspond to the sequence of words; and determining an answer, to the sequence of words, based on the predicted word.",
+      "3 . The system of claim 2 , wherein the corresponding numeric representations in the high-dimensional space reflect semantic similarities, syntactic similarities, or both, between the corresponding words represented by the corresponding numeric representations.",
+      "4 . The system of claim 2 , wherein the embedding function maps each of the plurality of words to a corresponding floating point vector.",
+      "5 . The system of claim 3 , wherein the embedding function outputs a single merged vector that is a combination of the corresponding floating point vectors.",
+      "6 . The system of claim 2 , wherein the ranking function is a pair-wise ranking function.",
+      "7 . The system of claim 6 , wherein the ranking function is a hinge-loss ranking function.",
+      "8 . The system of claim 2 , wherein the numeric representations are continuous representations represented using floating-point numbers.",
+      "9 . A method implemented by one or more processors, the method comprising: receiving a sequence of words; processing, using an embedding function that maps corresponding words into corresponding numeric representations in a high-dimensional space, the sequence of words to generate a numeric representation of the sequence of words; processing, using a ranking function, the numeric representation generated using the embedding function to determine a predicted word that is predicted to correspond to the sequence of words; and determining an answer, to the sequence of words, based on the predicted word.",
+      "10 . The method of claim 9 , wherein the corresponding numeric representations in the high-dimensional space reflect semantic similarities between the corresponding words represented by the corresponding numeric representations.",
+      "11 . The method of claim 9 , wherein the embedding function maps each of the plurality of words to a corresponding floating point vector.",
+      "12 . The method of claim 11 , wherein the embedding function outputs a single merged vector that is a combination of the corresponding floating point vectors.",
+      "13 . The method of claim 9 , wherein the ranking function is a pair-wise ranking function.",
+      "14 . The method of claim 13 , wherein the ranking function is a hinge-loss ranking function.",
+      "15 . The method of claim 9 , wherein the numeric representations are continuous representations represented using floating-point numbers.",
+      "16 . One or more non-transitory computer-readable storage media storing instructions that when executed by one or more computers cause the one or more computers to perform operations for assigning a respective point in a high-dimensional space to each word in a vocabulary of words, the operations comprising: receiving a sequence of words; processing, using an embedding function that maps corresponding words into corresponding numeric representations in a high-dimensional space, the sequence of words to generate a numeric representation of the sequence of words; processing, using a ranking function, the numeric representation generated using the embedding function to determine a predicted word that is predicted to correspond to the sequence of words; and determining an answer, to the sequence of words, based on the predicted word."
+    ],
+    "independent_claims": [
+      "1 . (canceled)",
+      "2 . A system comprising one or more computers and one or more storage devices storing instructions that when executed by the one or more computers cause the one or more computers to perform operations, the operations comprising: receiving a sequence of words; processing, using an embedding function that maps corresponding words into corresponding numeric representations in a high-dimensional space, the sequence of words to generate a numeric representation of the sequence of words; processing, using a ranking function, the numeric representation generated using the embedding function to determine a predicted word that is predicted to correspond to the sequence of words; and determining an answer, to the sequence of words, based on the predicted word.",
+      "9 . A method implemented by one or more processors, the method comprising: receiving a sequence of words; processing, using an embedding function that maps corresponding words into corresponding numeric representations in a high-dimensional space, the sequence of words to generate a numeric representation of the sequence of words; processing, using a ranking function, the numeric representation generated using the embedding function to determine a predicted word that is predicted to correspond to the sequence of words; and determining an answer, to the sequence of words, based on the predicted word.",
+      "16 . One or more non-transitory computer-readable storage media storing instructions that when executed by one or more computers cause the one or more computers to perform operations for assigning a respective point in a high-dimensional space to each word in a vocabulary of words, the operations comprising: receiving a sequence of words; processing, using an embedding function that maps corresponding words into corresponding numeric representations in a high-dimensional space, the sequence of words to generate a numeric representation of the sequence of words; processing, using a ranking function, the numeric representation generated using the embedding function to determine a predicted word that is predicted to correspond to the sequence of words; and determining an answer, to the sequence of words, based on the predicted word."
+    ],
+    "assignees": [
+      "Google LLC"
+    ],
+    "inventors": [
+      "Tomas Mikolov",
+      "Kai Chen",
+      "Gregory S. Corrado",
+      "Jeffrey A. Dean"
+    ],
+    "priority_date": "2013-01-15",
+    "filing_date": "2025-10-16",
+    "publication_date": "2026-06-18",
+    "status": "Pending",
+    "cpc_codes": [
+      "G06F40/00",
+      "G06F40/20",
+      "G06F40/279",
+      "G06F40/30",
+      "G06N20/00",
+      "G10L15/00",
+      "G10L15/06"
+    ],
+    "family": [
+      {
+        "number": "US12468886B2",
+        "relation": "Continuation",
+        "direction": "parent",
+        "title": "Computing numeric representations of words in a high-dimensional space"
+      }
+    ],
+    "cited_by_count": 118
+  },
+  "analysis": {
+    "title_it": "Rappresentazioni numeriche di parole in spazi ad alta dimensionalità",
+    "summary": "Il brevetto descrive metodi per generare rappresentazioni numeriche continue (vettori di numeri in virgola mobile) di parole in spazi ad alta dimensionalità. Queste rappresentazioni vengono addestrate tramite sistemi che predicono parole mancanti in sequenze, in modo che la posizione dei vettori nello spazio rifletta similarità semantiche e sintattiche tra le parole.",
+    "theme": "query_comprensione",
+    "seo_relevance": 3,
+    "scope": "Comprensione del linguaggio, non specificatamente Search web",
+    "what_it_claims": "Le rivendicazioni indipendenti (2, 9, 16) coprono un sistema e metodo che riceve una sequenza di parole, la processa usando una \"embedding function\" che mappa le parole in rappresentazioni numeriche in uno spazio ad alta dimensionalità, poi usa una \"ranking function\" per processare tale rappresentazione numerica e determinare una parola predetta che corrisponde alla sequenza, infine determina una risposta basata sulla parola predetta. La rivendicazione 2 specifica che il sistema include computer e dispositivi di storage con istruzioni che eseguono queste operazioni.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 3 specifica che le rappresentazioni numeriche nello spazio ad alta dimensionalità riflettono similarità semantiche, sintattiche o entrambe tra le parole corrispondenti. La rivendicazione 4 indica che l'embedding function mappa ciascuna parola a un corrispondente vettore in virgola mobile. La rivendicazione 5 contempla che l'embedding function produca un singolo vettore unito che è una combinazione dei vettori in virgola mobile corrispondenti. Le rivendicazioni 6 e 7 specificano che la ranking function può essere una \"pair-wise ranking function\" o una \"hinge-loss ranking function\". La rivendicazione 8 precisa che le rappresentazioni numeriche sono rappresentazioni continue usando numeri in virgola mobile.\n\nLa rivendicazione 1 risulta cancellata. Le rivendicazioni 9-15 e 16 riformulano sostanzialmente gli stessi concetti come metodo e come media di storage non transitorio.",
+    "seo_reading": "La descrizione contempla due architetture distinte per la predizione di parole. La prima (Figure 1-2) usa parole circostanti per predire una parola sconosciuta in posizione t: il sistema riceve parole alle posizioni t-N fino a t-1 e t+1 fino a t+N, le processa tramite una \"combining embedding function\" che mappa ciascuna parola a un vettore in virgola mobile e poi unisce questi vettori in un singolo vettore usando funzioni lineari come somma, media o combinazione lineare pesata, oppure funzioni non lineari come massimo per componente (paragrafo che descrive lo step 204). La seconda architettura (Figure 3-4) fa l'opposto: riceve una parola nota in posizione t e predice le parole circostanti usando classificatori separati per ciascuna posizione.\n\nLa descrizione contempla esplicitamente che le rappresentazioni numeriche generate possano codificare regolarità utili: le posizioni dei vettori nello spazio riflettono similarità sintattiche (parole simili a \"small\" includono \"smaller\", \"tiny\", \"smallest\") e semantiche (\"queen\" è simile a \"king\" e \"prince\"). Il testo menziona che operazioni vettoriali come sottrazione e addizione possono identificare relazioni tra parole: l'esempio vector(\"King\") - vector(\"Man\") + vector(\"Woman\") risulterebbe più vicino a vector(\"Queen\").\n\nLa descrizione contempla training su corpus molto grandi (\"on the order of 200 billion words\") e spazi ad altissima dimensionalità (\"on the order of 1000 dimensions\"), con parallelizzazione del training citando tecniche descritte in un paper del 2012. Il testo menziona tokenizzazione preventiva affinché composti noti come \"New York City\" siano trattati come singola parola.\n\nPer la SEO, questo brevetto potrebbe rappresentare tecnologia di base per la comprensione semantica delle query e dei contenuti. Se applicato, consentirebbe a un motore di ricerca di comprendere relazioni semantiche tra termini senza dipendere solo da corrispondenze esatte. Tuttavia, la descrizione non menziona mai esplicitamente l'applicazione a Google Search: gli esempi includono sistemi domanda-risposta generici e predizione di parole mancanti in frasi. La tecnologia descritta (word embeddings) è diventata standard nell'elaborazione del linguaggio naturale, ma questo specifico brevetto non dimostra come o se Google la usi per il ranking.",
+    "limits": [
+      "Il brevetto non dimostra che questa tecnologia sia applicata a Google Search o al ranking dei risultati: gli esempi riguardano predizione di parole e sistemi domanda-risposta generici.",
+      "Trattandosi di una domanda di brevetto (A1) parte di una lunga catena di continuation dal 2013, non è un brevetto concesso indipendente e la tecnologia descritta (word embeddings) è diventata standard nel settore.",
+      "Il brevetto copre la generazione di rappresentazioni numeriche di parole, non specifica criteri di qualità dei contenuti o segnali di ranking che un SEO possa ottimizzare.",
+      "La descrizione non fornisce dettagli su come queste rappresentazioni influenzerebbero la valutazione di pagine web specifiche o la loro posizione nei risultati di ricerca."
+    ],
+    "implications": [
+      "Concentrarsi su contenuti che usano variazioni semantiche naturali dei termini chiave, non solo ripetizioni esatte, poiché sistemi di comprensione semantica sono ormai standard nei motori di ricerca.",
+      "Strutturare contenuti che rispondano chiaramente a domande specifiche, dato che la tecnologia di word embeddings è fondamentale per sistemi domanda-risposta.",
+      "Utilizzare terminologia coerente e relazioni semantiche naturali tra concetti correlati, facilitando l'interpretazione semantica del contenuto indipendentemente dalla tecnologia specifica implementata."
+    ],
+    "key_terms": [
+      {
+        "term": "embedding function",
+        "explanation": "Funzione che trasforma parole in rappresentazioni numeriche continue (vettori di numeri in virgola mobile) in uno spazio ad alta dimensionalità"
+      },
+      {
+        "term": "high-dimensional space",
+        "explanation": "Spazio matematico con molte dimensioni (nell'ordine di 1000 secondo la descrizione) dove le parole sono rappresentate come vettori e la distanza riflette similarità semantiche"
+      },
+      {
+        "term": "combining embedding function",
+        "explanation": "Tipo di embedding function che mappa ciascuna parola a un vettore separato e poi unisce questi vettori in un singolo vettore tramite operazioni come somma o media"
+      },
+      {
+        "term": "ranking function",
+        "explanation": "Funzione che ordina parole candidate in base alla loro probabilità predetta di corrispondere a una posizione in una sequenza"
+      }
+    ]
+  },
+  "origin": "discovery",
+  "generated_at": "2026-11-25T20:04:30.756131Z",
+  "model_used": "anthropic/claude-sonnet-4.5",
+  "cost_eur": 0.0577806
+}
