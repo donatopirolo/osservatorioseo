@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="dark" lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="VAwkz9Wzm0MJwQ_1fboO-BkSqH9KVBcr0SGhP2z9Suc" />
+<title>US20260300752A1: Addestramento di reti neurali su dati di sessione utente — Brevetti Google</title>
+<meta name="description" content="Il brevetto descrive un metodo per addestrare reti neurali linguistiche utilizzando sequenze di addestramento generate da dati di sessione utente con motori di ricerca o altri sistemi di contenuti. Ogni sequenza include blocchi che rappresentano query, risultati forniti dal sistema e azioni dell&#39;ute" />
+<link rel="canonical" href="https://www.osservatorioseo.com/brevetti/us20260300752a1/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#131313" />
+<link rel="alternate" type="application/atom+xml" title="Osservatorio SEO" href="https://www.osservatorioseo.com/feed.xml" />
+<meta property="og:title" content="US20260300752A1: Addestramento di reti neurali su dati di sessione utente — Brevetti Google" />
+<meta property="og:description" content="Il brevetto descrive un metodo per addestrare reti neurali linguistiche utilizzando sequenze di addestramento generate da dati di sessione utente con motori di ricerca o altri sistemi di contenuti. Ogni sequenza include blocchi che rappresentano query, risultati forniti dal sistema e azioni dell&#39;ute" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.osservatorioseo.com/brevetti/us20260300752a1/" />
+<meta property="og:site_name" content="Osservatorio SEO" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osservatorioseo.com/logo-512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tailwind.css?v=698c6ea6a2" />
+<link rel="stylesheet" href="/styles.css?v=1e4e0a3482" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.osservatorioseo.com/"
+    },    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brevetti",
+      "item": "https://www.osservatorioseo.com/brevetti/"
+    },    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "US20260300752A1",
+      "item": "https://www.osservatorioseo.com/brevetti/us20260300752a1/"
+    }  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US20260300752A1: Addestramento di reti neurali su dati di sessione utente",
+  "description": "Il brevetto descrive un metodo per addestrare reti neurali linguistiche utilizzando sequenze di addestramento generate da dati di sessione utente con motori di ricerca o altri sistemi di contenuti. Ogni sequenza include blocchi che rappresentano query, risultati forniti dal sistema e azioni dell\u0027utente in risposta, organizzati in ordine temporale e convertiti in formato testuale tokenizzato.",
+  "articleBody": "Il brevetto descrive un metodo per addestrare reti neurali linguistiche utilizzando sequenze di addestramento generate da dati di sessione utente con motori di ricerca o altri sistemi di contenuti. Ogni sequenza include blocchi che rappresentano query, risultati forniti dal sistema e azioni dell\u0027utente in risposta, organizzati in ordine temporale e convertiti in formato testuale tokenizzato.\n\nLa rivendicazione 1 copre un metodo eseguito da uno o pi\u00f9 computer che prevede l\u0027ottenimento di dati di sessione che descrivono pi\u00f9 sessioni utente, ciascuna rappresentante un\u0027interazione tra un utente e un motore di ricerca durante un periodo di tempo. Il metodo genera, dai dati di sessione, una sequenza di addestramento per ciascuna sessione utente. Ogni sequenza comprende pi\u00f9 blocchi di sottosequenze disposti uno dopo l\u0027altro in un ordine predeterminato. Ciascun blocco include tre componenti: (i) una sottosequenza di query di ricerca che rappresenta una query sottomessa dall\u0027utente al motore di ricerca, (ii) una sottosequenza di risultati di ricerca che rappresenta una o pi\u00f9 risorse identificate dal motore di ricerca in base alla query, e (iii) una sottosequenza di azioni utente che rappresenta una o pi\u00f9 azioni eseguite dall\u0027utente in risposta alle risorse identificate. Il metodo addestra quindi una rete neurale, apprendendo i valori dei parametri della rete, utilizzando le sequenze di addestramento basandosi sull\u0027ottimizzazione di una funzione obiettivo di pre-addestramento.\n\nLe rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 3 specifica che ogni sottosequenza comprende un rispettivo token di testo in ciascuna di pi\u00f9 posizioni di input selezionate da un vocabolario predeterminato di token di testo. La rivendicazione 4 contempla l\u0027inclusione di una sottosequenza di metadati che rappresenta metadati associati alla sessione utente, che secondo la rivendicazione 5 pu\u00f2 comprendere una posizione geografica dell\u0027utente. La rivendicazione 6 prevede che la sottosequenza di query possa includere un timestamp che indica quando la query \u00e8 stata ricevuta. La rivendicazione 7 specifica che la sottosequenza di risultati pu\u00f2 includere, per ciascuna risorsa identificata, uno o pi\u00f9 tra: indirizzo della risorsa, titolo della risorsa o breve descrizione della risorsa. La rivendicazione 8 indica che le azioni dell\u0027utente possono comprendere una selezione di una delle risorse identificate, una navigazione di una delle risorse identificate, o entrambe. La rivendicazione 9 stabilisce che l\u0027ordine predeterminato \u00e8 un ordine temporale in cui le query rappresentate dai blocchi di sottosequenze sono state ricevute dal motore di ricerca.\n\nLe rivendicazioni 10, 11 e 12 descrivono tre diverse funzioni obiettivo di pre-addestramento. La rivendicazione 10 prevede l\u0027elaborazione di uno o pi\u00f9 blocchi che precedono un particolare blocco per generare una sottosequenza di query prevista, determinando un aggiornamento dei parametri basato sulla differenza tra la query prevista e quella effettiva. La rivendicazione 11 contempla l\u0027elaborazione delle sottosequenze di query in un particolare blocco per generare una sottosequenza di risultati prevista. La rivendicazione 12 prevede l\u0027elaborazione di una sottosequenza di query e risultati per generare una sottosequenza di azioni utente prevista. La rivendicazione 14 indica che dopo l\u0027addestramento, la rete pu\u00f2 essere adattata per compiti downstream tra cui: stima della rilevanza delle risorse, previsione della prossima query di ricerca o identificazione di risorse.\n\nLa descrizione contempla diverse implementazioni per proteggere la privacy degli utenti durante la generazione delle sequenze di addestramento. Il sistema pu\u00f2 rimuovere informazioni identificative dell\u0027utente dai dati di sessione (rivendicazione 17). La descrizione menziona l\u0027uso di tecniche di k-anonimato: la rivendicazione 18 prevede l\u0027identificazione di una query ricevuta da meno di un numero soglia di utenti e la rimozione di ogni blocco che include tale query; similmente, la rivendicazione 19 contempla la rimozione di risultati forniti a meno di un numero soglia di utenti. La rivendicazione 20 prevede la limitazione di ciascun blocco di sottosequenze a una porzione della sessione utente, mentre la rivendicazione 21 contempla la limitazione della sequenza di addestramento a un numero soglia di blocchi di sottosequenze.\n\nLa descrizione fornisce esempi dettagliati del formato delle sequenze. Ogni sottosequenza viene incapsulata da token predeterminati. Per esempio, una sottosequenza di query pu\u00f2 avere il formato \"\u003cQuery\u003e \u003cQuery Timestamp\u003e 2114 \u003c/Query Timestamp\u003e \u003cQuery String\u003e beach report Outer Banks \u003c/Query String\u003e \u003c/Query\u003e\". Una sottosequenza di risultati pu\u00f2 includere \"\u003cSearch Result\u003e \u003cPosition\u003e 1 \u003c/Position\u003e \u003cType\u003e doc \u003c/Type\u003e \u003cTitle\u003e... \u003c/Title\u003e \u003cUrl\u003e... \u003c/Url\u003e \u003cSnippet\u003e... \u003c/Snippet\u003e \u003c/Search Result\u003e\". Una sottosequenza di azioni pu\u00f2 includere \"\u003cInteraction\u003e \u003cType\u003e click \u003c/Type\u003e \u003cClick Timestamp\u003e 2643 \u003c/Click Timestamp\u003e \u003cTitle\u003e... \u003c/Title\u003e \u003cUrl\u003e... \u003c/Url\u003e \u003cDoc Content\u003e... \u003c/Doc Content\u003e \u003c/Interaction\u003e\".\n\nLa descrizione contempla che la rete neurale possa essere un modello linguistico basato su Transformer che include pi\u00f9 blocchi di attenzione. La rivendicazione 13 prevede la sostituzione di uno o pi\u00f9 token di testo con token maschera secondo una probabilit\u00e0 di mascheramento predeterminata. La rivendicazione 15 contempla l\u0027uso di distillazione della conoscenza, addestrando prima una rete neurale \"teacher\" e poi usando questa per addestrare una rete pi\u00f9 piccola usando sequenze troncate che escludono le sottosequenze di query.\n\nPer la SEO, questo brevetto potrebbe indicare che Google sta sviluppando modelli linguistici addestrati specificamente su comportamenti di ricerca reali. Se implementato, un tale sistema potrebbe migliorare la capacit\u00e0 di Google di prevedere l\u0027intento dell\u0027utente, selezionare risultati rilevanti e comprendere i pattern di ricerca. La descrizione menziona esplicitamente che la rete addestrata potrebbe essere usata per \"improve the quality of the search results\" e per \"facilitate additional search services, such as conversational search services\". Tuttavia, il brevetto copre un metodo di addestramento, non necessariamente i segnali di ranking utilizzati in produzione. La conversione dei dati di sessione in formato testuale strutturato potrebbe consentire a Google di sfruttare i progressi nei modelli linguistici di grandi dimensioni per compiti legati alla ricerca.",
+  "wordCount": 909,
+  "datePublished": "2026-11-26T19:47:13.567420+00:00",
+  "dateModified": "2026-11-26T19:47:13.567420+00:00",
+  "image": ["https://www.osservatorioseo.com/logo-512.png"],
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.osservatorioseo.com/#donato-pirolo",
+    "name": "Donato Pirolo",
+    "url": "https://donatopirolo.dev/chi-sono/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Osservatorio SEO",
+    "url": "https://www.osservatorioseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.osservatorioseo.com/logo-512.png",
+      "width": "512",
+      "height": "512"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.osservatorioseo.com/brevetti/us20260300752a1/"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Training neural networks on session data",
+    "identifier": "US20260300752A1",
+    "url": "https://patents.google.com/patent/US20260300752A1/en"
+  },
+  "inLanguage": "it-IT",
+  "articleSection": "Brevetti"
+}
+</script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-surface">
+<header class="relative lg:fixed lg:top-0 left-0 w-full z-50 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-0 px-4 sm:px-6 py-3 sm:py-4 bg-[#131313] border-b border-[#919191] border-dashed font-['Space_Grotesk'] tracking-[0.02em] uppercase text-sm">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <a href="/" class="text-lg sm:text-xl font-bold text-white before:content-['>_'] tracking-tighter terminal-glow">OSSERVATORIO_SEO</a>
+    <nav class="flex flex-wrap gap-x-4 gap-y-2 sm:gap-x-6 lg:gap-x-4 2xl:gap-x-6 items-center text-xs sm:text-sm">
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/">TODAY</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/top-settimana/">TOP_WEEK</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/archivio/">ARCHIVIO</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/dossier/">DOSSIER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/modifiche/">MODIFICHE</a>
+      <a class="text-[#00f63e] font-bold border-b-2 border-[#00f63e] pb-1" href="/brevetti/">BREVETTI</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/tracker/">AI_TRACKER</a>
+      <a class="text-[#919191] hover:text-white transition-colors duration-150" href="/docs/">DOCS</a>
+    </nav>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+    <input
+      type="search"
+      id="search"
+      placeholder="SEARCH_DB..."
+      class="bg-surface-container-lowest border border-outline-variant text-white text-xs px-3 py-2 focus:outline-none focus:border-primary-container w-full sm:w-56 xl:w-40 2xl:w-56 uppercase placeholder:text-outline" />
+    <label class="flex items-center gap-2 cursor-pointer group">
+      <input type="checkbox" id="search-archive-toggle" class="cursor-pointer" />
+      <span class="text-[10px] text-outline group-hover:text-primary-container transition-colors">CROSS_ARCHIVE // LAST 7 DAYS</span>
+    </label>
+  </div>
+</header>
+
+<main class="flex-grow pt-6 lg:pt-28 xl:pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+<nav aria-label="breadcrumb" class="text-[10px] text-outline uppercase font-mono mb-6 flex items-center gap-2 flex-wrap">
+  <a href="/" class="hover:text-primary-container">HOME</a>
+  <span class="text-outline-variant">/</span>
+  <a href="/brevetti/" class="hover:text-primary-container">BREVETTI</a>
+  <span class="text-outline-variant">/</span>
+  <span class="text-primary-container">US20260300752A1</span>
+</nav>
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-10">
+    <p class="text-[10px] text-outline uppercase font-mono mb-3 tracking-widest">&gt; DOMANDA DI BREVETTO · US20260300752A1</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">Addestramento di reti neurali su dati di sessione utente</h1>
+    <p class="text-sm text-outline font-mono mb-4">Titolo originale: <span lang="en">Training neural networks on session data</span></p>
+    <p class="text-lg text-on-surface-variant leading-relaxed">Il brevetto descrive un metodo per addestrare reti neurali linguistiche utilizzando sequenze di addestramento generate da dati di sessione utente con motori di ricerca o altri sistemi di contenuti. Ogni sequenza include blocchi che rappresentano query, risultati forniti dal sistema e azioni dell&#39;utente in risposta, organizzati in ordine temporale e convertiti in formato testuale tokenizzato.</p>
+
+    <dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono">
+      <div><dt class="inline text-outline uppercase">Titolare:</dt> <dd class="inline text-white">Google LLC</dd></div>
+      <div><dt class="inline text-outline uppercase">Ambito:</dt> <dd class="inline text-white">Addestramento di modelli linguistici su sessioni utente, applicabile a Search e altri sistemi di contenuti</dd></div>
+<div><dt class="inline text-outline uppercase">Pubblicato:</dt> <dd class="inline text-white">01 Ottobre 2026</dd></div><div><dt class="inline text-outline uppercase">Stato:</dt> <dd class="inline text-white">Pending</dd></div>      <div><dt class="inline text-outline uppercase">Filone:</dt> <dd class="inline text-white">Segnali di comportamento degli utenti</dd></div>
+      <div><dt class="inline text-outline uppercase">Rilevanza SEO:</dt> <dd class="inline text-[#f5a623]">★★★☆☆</dd></div>
+      <div><dt class="inline text-outline uppercase">Rivendicazioni:</dt> <dd class="inline text-white">25</dd></div>
+    </dl>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA RIVENDICA</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La rivendicazione 1 copre un metodo eseguito da uno o più computer che prevede l&#39;ottenimento di dati di sessione che descrivono più sessioni utente, ciascuna rappresentante un&#39;interazione tra un utente e un motore di ricerca durante un periodo di tempo. Il metodo genera, dai dati di sessione, una sequenza di addestramento per ciascuna sessione utente. Ogni sequenza comprende più blocchi di sottosequenze disposti uno dopo l&#39;altro in un ordine predeterminato. Ciascun blocco include tre componenti: (i) una sottosequenza di query di ricerca che rappresenta una query sottomessa dall&#39;utente al motore di ricerca, (ii) una sottosequenza di risultati di ricerca che rappresenta una o più risorse identificate dal motore di ricerca in base alla query, e (iii) una sottosequenza di azioni utente che rappresenta una o più azioni eseguite dall&#39;utente in risposta alle risorse identificate. Il metodo addestra quindi una rete neurale, apprendendo i valori dei parametri della rete, utilizzando le sequenze di addestramento basandosi sull&#39;ottimizzazione di una funzione obiettivo di pre-addestramento.</p>
+      <p>Le rivendicazioni dipendenti aggiungono dettagli rilevanti. La rivendicazione 3 specifica che ogni sottosequenza comprende un rispettivo token di testo in ciascuna di più posizioni di input selezionate da un vocabolario predeterminato di token di testo. La rivendicazione 4 contempla l&#39;inclusione di una sottosequenza di metadati che rappresenta metadati associati alla sessione utente, che secondo la rivendicazione 5 può comprendere una posizione geografica dell&#39;utente. La rivendicazione 6 prevede che la sottosequenza di query possa includere un timestamp che indica quando la query è stata ricevuta. La rivendicazione 7 specifica che la sottosequenza di risultati può includere, per ciascuna risorsa identificata, uno o più tra: indirizzo della risorsa, titolo della risorsa o breve descrizione della risorsa. La rivendicazione 8 indica che le azioni dell&#39;utente possono comprendere una selezione di una delle risorse identificate, una navigazione di una delle risorse identificate, o entrambe. La rivendicazione 9 stabilisce che l&#39;ordine predeterminato è un ordine temporale in cui le query rappresentate dai blocchi di sottosequenze sono state ricevute dal motore di ricerca.</p>
+      <p>Le rivendicazioni 10, 11 e 12 descrivono tre diverse funzioni obiettivo di pre-addestramento. La rivendicazione 10 prevede l&#39;elaborazione di uno o più blocchi che precedono un particolare blocco per generare una sottosequenza di query prevista, determinando un aggiornamento dei parametri basato sulla differenza tra la query prevista e quella effettiva. La rivendicazione 11 contempla l&#39;elaborazione delle sottosequenze di query in un particolare blocco per generare una sottosequenza di risultati prevista. La rivendicazione 12 prevede l&#39;elaborazione di una sottosequenza di query e risultati per generare una sottosequenza di azioni utente prevista. La rivendicazione 14 indica che dopo l&#39;addestramento, la rete può essere adattata per compiti downstream tra cui: stima della rilevanza delle risorse, previsione della prossima query di ricerca o identificazione di risorse.</p>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; LETTURA SEO (INTERPRETAZIONE)</h2>
+    <div class="text-on-surface leading-relaxed space-y-4">
+      <p>La descrizione contempla diverse implementazioni per proteggere la privacy degli utenti durante la generazione delle sequenze di addestramento. Il sistema può rimuovere informazioni identificative dell&#39;utente dai dati di sessione (rivendicazione 17). La descrizione menziona l&#39;uso di tecniche di k-anonimato: la rivendicazione 18 prevede l&#39;identificazione di una query ricevuta da meno di un numero soglia di utenti e la rimozione di ogni blocco che include tale query; similmente, la rivendicazione 19 contempla la rimozione di risultati forniti a meno di un numero soglia di utenti. La rivendicazione 20 prevede la limitazione di ciascun blocco di sottosequenze a una porzione della sessione utente, mentre la rivendicazione 21 contempla la limitazione della sequenza di addestramento a un numero soglia di blocchi di sottosequenze.</p>
+      <p>La descrizione fornisce esempi dettagliati del formato delle sequenze. Ogni sottosequenza viene incapsulata da token predeterminati. Per esempio, una sottosequenza di query può avere il formato &#34;&lt;Query&gt; &lt;Query Timestamp&gt; 2114 &lt;/Query Timestamp&gt; &lt;Query String&gt; beach report Outer Banks &lt;/Query String&gt; &lt;/Query&gt;&#34;. Una sottosequenza di risultati può includere &#34;&lt;Search Result&gt; &lt;Position&gt; 1 &lt;/Position&gt; &lt;Type&gt; doc &lt;/Type&gt; &lt;Title&gt;... &lt;/Title&gt; &lt;Url&gt;... &lt;/Url&gt; &lt;Snippet&gt;... &lt;/Snippet&gt; &lt;/Search Result&gt;&#34;. Una sottosequenza di azioni può includere &#34;&lt;Interaction&gt; &lt;Type&gt; click &lt;/Type&gt; &lt;Click Timestamp&gt; 2643 &lt;/Click Timestamp&gt; &lt;Title&gt;... &lt;/Title&gt; &lt;Url&gt;... &lt;/Url&gt; &lt;Doc Content&gt;... &lt;/Doc Content&gt; &lt;/Interaction&gt;&#34;.</p>
+      <p>La descrizione contempla che la rete neurale possa essere un modello linguistico basato su Transformer che include più blocchi di attenzione. La rivendicazione 13 prevede la sostituzione di uno o più token di testo con token maschera secondo una probabilità di mascheramento predeterminata. La rivendicazione 15 contempla l&#39;uso di distillazione della conoscenza, addestrando prima una rete neurale &#34;teacher&#34; e poi usando questa per addestrare una rete più piccola usando sequenze troncate che escludono le sottosequenze di query.</p>
+      <p>Per la SEO, questo brevetto potrebbe indicare che Google sta sviluppando modelli linguistici addestrati specificamente su comportamenti di ricerca reali. Se implementato, un tale sistema potrebbe migliorare la capacità di Google di prevedere l&#39;intento dell&#39;utente, selezionare risultati rilevanti e comprendere i pattern di ricerca. La descrizione menziona esplicitamente che la rete addestrata potrebbe essere usata per &#34;improve the quality of the search results&#34; e per &#34;facilitate additional search services, such as conversational search services&#34;. Tuttavia, il brevetto copre un metodo di addestramento, non necessariamente i segnali di ranking utilizzati in produzione. La conversione dei dati di sessione in formato testuale strutturato potrebbe consentire a Google di sfruttare i progressi nei modelli linguistici di grandi dimensioni per compiti legati alla ricerca.</p>
+    </div>
+  </section>
+
+  <section class="mb-12 p-6 bg-surface-container-low border-l-2 border-[#f5a623]">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA NON DIMOSTRA</h2>
+    <ul class="space-y-3 list-disc list-outside ml-5 text-on-surface-variant leading-relaxed">
+      <li>Questo è una domanda di brevetto (A1), non un brevetto concesso, e descrive un metodo di addestramento di reti neurali, non i sistemi di ranking attualmente in uso in Google Search.</li>
+      <li>Il brevetto non dimostra che Google utilizzi effettivamente questi modelli addestrati su dati di sessione per il ranking dei risultati di ricerca o per altri scopi in produzione.</li>
+      <li>La descrizione contempla molteplici applicazioni possibili (stima di rilevanza, previsione di query, identificazione di risorse, componenti digitali) ma non specifica quali siano prioritarie o implementate.</li>
+      <li>Le tecniche di privacy descritte (k-anonimato, rimozione di dati identificativi, limitazione delle sequenze) sono presentate come opzioni implementative, non come requisiti garantiti in ogni implementazione.</li>
+    </ul>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; COSA FARE COMUNQUE</h2>
+    <ol class="space-y-3 list-decimal list-outside ml-6 marker:text-primary-container marker:font-mono marker:font-bold text-on-surface-variant leading-relaxed">
+      <li class="pl-2">Concentrarsi sulla creazione di contenuti che soddisfino effettivamente l&#39;intento informativo degli utenti, poiché modelli addestrati su comportamenti reali potrebbero essere più efficaci nel riconoscere contenuti che rispondono alle esigenze degli utenti.</li>
+      <li class="pl-2">Ottimizzare per metriche di engagement genuine (tempo di permanenza significativo, completamento di task) piuttosto che per manipolazioni superficiali, dato che sistemi addestrati su sessioni complete potrebbero riconoscere pattern di soddisfazione dell&#39;utente.</li>
+      <li class="pl-2">Considerare il contesto delle query correlate e dei percorsi di ricerca tipici nel proprio settore, strutturando i contenuti per rispondere a sequenze logiche di domande che gli utenti potrebbero avere.</li>
+      <li class="pl-2">Mantenere la coerenza tra titoli, snippet e contenuto effettivo delle pagine, poiché modelli che apprendono da azioni utente post-clic potrebbero penalizzare discrepanze tra aspettative e realtà.</li>
+    </ol>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-xs text-outline uppercase font-mono mb-4 tracking-widest">&gt; TERMINI CHIAVE</h2>
+    <dl class="space-y-3">
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">training sequence</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Sequenza di addestramento generata dai dati di sessione, composta da blocchi di sottosequenze che rappresentano query, risultati e azioni utente in formato tokenizzato</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">subsequence block</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Blocco all&#39;interno di una sequenza di addestramento che contiene una query, i risultati forniti e le azioni dell&#39;utente in risposta, disposti in ordine predeterminato</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">pre-training objective function</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Funzione obiettivo utilizzata durante la fase di pre-addestramento della rete neurale, che può prevedere query successive, risultati o azioni utente</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">k-anonymity</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Tecnica di privacy che richiede che almeno k utenti abbiano eseguito un&#39;azione (es. visualizzato una risorsa) prima che i dati relativi vengano utilizzati per l&#39;addestramento</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-mono font-bold text-white" lang="en">downstream task</dt>
+        <dd class="text-on-surface-variant leading-relaxed">Compito specifico per cui la rete pre-addestrata viene adattata tramite fine-tuning, come stima di rilevanza, previsione di query o identificazione di risorse</dd>
+      </div>
+    </dl>
+  </section>
+
+
+  <section class="mb-8 p-6 bg-surface-container-lowest border-l-2 border-outline-variant">
+    <p class="text-sm text-on-surface-variant font-mono leading-relaxed">
+      Scheda generata con l'AI dal testo del brevetto (abstract, rivendicazioni e descrizione) pubblicato su Google Patents, senza fonti esterne. Il testo integrale è su
+      <a href="https://patents.google.com/patent/US20260300752A1/en" rel="noopener" target="_blank" class="text-primary-container underline">Google Patents</a>.
+      Aggiornata: 26 Novembre 2026.
+    </p>
+  </section>
+</article>
+</main>
+
+<footer class="w-full py-8 px-6 flex flex-col gap-4 bg-[#0e0e0e] border-t border-[#474747] border-dashed mt-auto font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+  <div class="flex flex-col md:flex-row justify-center md:justify-start gap-3 md:gap-6">
+    <span class="text-[#474747]">DOSSIER:</span>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/core-update/">CORE UPDATE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-overviews/">AI OVERVIEWS</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/ai-mode/">AI MODE</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/local-seo/">LOCAL SEO</a>
+    <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/dossier/technical-seo/">TECHNICAL SEO</a>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-[#919191]">
+      (C) 2026 OSSERVATORIO_SEO // AUTORE:
+      <a class="text-primary-container hover:underline" href="https://donatopirolo.dev" target="_blank" rel="noopener">donatopirolo.dev</a>
+    </div>
+    <div class="flex gap-6">
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/data/feed.json">FEED.JSON</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="/feed.xml">RSS</a>
+      <a class="text-[#919191] hover:text-[#00f63e] transition-opacity duration-200" href="https://github.com/donatopirolo/osservatorioseo" target="_blank" rel="noopener">GITHUB.SYS</a>
+    </div>
+    <div class="text-primary-container font-mono animate-pulse">SYSTEM_UPTIME: 99.998%</div>
+  </div>
+</footer>
+
+<div class="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_50%_0%,rgba(0,246,62,0.05)_0%,transparent_50%)]"></div>
+
+<script src="/app.js?v=f2f6f62e07"></script>
+</body>
+</html>
