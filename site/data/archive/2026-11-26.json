@@ -1,0 +1,1372 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-26T06:01:57.390083Z",
+  "generated_at_local": "2026-11-26T07:01:57.390083+01:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-11-26-0701",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 0,
+    "sources_empty": 0,
+    "items_collected": 2597,
+    "items_after_dedup": 59,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.057,
+    "summarize_attempted": 22,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "item_2026-11-26_001",
+    "item_2026-11-26_020",
+    "item_2026-11-26_021",
+    "item_2026-11-26_022",
+    "item_2026-11-26_009",
+    "item_2026-11-26_010",
+    "item_2026-11-26_004",
+    "item_2026-11-26_015",
+    "item_2026-11-26_018",
+    "item_2026-11-26_002"
+  ],
+  "categories": {
+    "ai_models": [
+      "item_2026-11-26_001",
+      "item_2026-11-26_021",
+      "item_2026-11-26_022",
+      "item_2026-11-26_009",
+      "item_2026-11-26_010",
+      "item_2026-11-26_004",
+      "item_2026-11-26_015",
+      "item_2026-11-26_018",
+      "item_2026-11-26_002"
+    ],
+    "google_updates": [
+      "item_2026-11-26_020"
+    ],
+    "industry_news": [
+      "item_2026-11-26_007",
+      "item_2026-11-26_016",
+      "item_2026-11-26_005"
+    ],
+    "technical_seo": [
+      "item_2026-11-26_008"
+    ],
+    "tools_platforms": [
+      "item_2026-11-26_011",
+      "item_2026-11-26_012",
+      "item_2026-11-26_019",
+      "item_2026-11-26_006"
+    ],
+    "ai_overviews_llm_seo": [
+      "item_2026-11-26_003",
+      "item_2026-11-26_013",
+      "item_2026-11-26_017"
+    ],
+    "content_eeat": [
+      "item_2026-11-26_014"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-11-26_001",
+      "title_original": "From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity",
+      "title_it": "Identificazione di molecole con Mass Spec Skills per Google Antigravity",
+      "summary_it": "Google DeepMind ha introdotto Mass Spec Skills, uno strumento che supporta gli scienziati nell'interpretazione degli spettri di massa tandem. Questo strumento, integrato con Google Antigravity, mira a superare i limiti attuali nell'identificazione delle strutture molecolari, che spesso rimangono sconosciute a causa della mancanza di spettri di riferimento. Mass Spec Skills automatizza il processo di analisi, permettendo di tradurre gli spettri di massa in strutture molecolari su larga scala, un compito che manualmente richiederebbe tempi proibitivi. L'obiettivo è ridurre la \"materia oscura\" della spettrometria di massa, ovvero le molecole non identificate.",
+      "url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity",
+      "source": {
+        "id": "google_deepmind_blog",
+        "name": "Google DeepMind Blog",
+        "authority": 10,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://deepmind.google/blog/rss.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "deepmind",
+        "ai_in_science",
+        "mass_spectrometry",
+        "google_antigravity"
+      ],
+      "importance": 5,
+      "published_at": "2026-11-24T13:07:53Z",
+      "fetched_at": "2026-11-26T06:04:56.856994Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:3ff4a0e191c6b4ba",
+      "deep_analysis": {
+        "detailed_description": "La spettrometria di massa tandem genera ogni anno miliardi di spettri che restano non interpretati: la maggior parte delle molecole rilevate non trova corrispondenza nei database di riferimento esistenti. Google DeepMind ha rilasciato Mass Spec Skills, uno strumento integrato in Google Antigravity che automatizza l'interpretazione degli spettri di massa e traduce i pattern di frammentazione molecolare in strutture chimiche identificabili.\n\nIl problema centrale è noto come \"materia oscura\" della spettrometria: gli spettri di riferimento coprono solo una frazione minima delle molecole esistenti, lasciando gli scienziati senza strumenti per identificare composti sconosciuti. L'analisi manuale di questi dati richiede competenze specialistiche e tempi incompatibili con i volumi di dati generati dai laboratori moderni. Mass Spec Skills interviene su questo collo di bottiglia, permettendo l'elaborazione su larga scala di spettri che altrimenti rimarrebbero inutilizzati.\n\nL'integrazione con Google Antigravity suggerisce un'architettura che sfrutta modelli di machine learning addestrati su dataset di spettri annotati per inferire strutture molecolari da pattern di frammentazione mai visti prima. Il sistema non si limita al matching con database esistenti, ma genera ipotesi strutturali basate su correlazioni apprese tra massa, carica e comportamento di frammentazione dei composti chimici.\n\nL'applicazione diretta riguarda ricerca farmaceutica, metabolomica, scoperta di nuovi composti naturali e analisi ambientale. In tutti questi ambiti, la capacità di identificare molecole sconosciute accelera il processo di discovery e riduce la dipendenza da librerie spettrali incomplete. La scalabilità dell'approccio automatizzato permette di processare dataset che prima richiedevano mesi di lavoro manuale.\n\nPer il settore SEO, l'impatto è indiretto ma rilevante: Google continua a investire in strumenti scientifici verticali che consolidano l'ecosistema Antigravity come piattaforma di riferimento per ricerca avanzata. Questo pattern di sviluppo prodotto-specifico per comunità scientifiche di nicchia riflette una strategia di posizionamento su query altamente specializzate, dove l'autorevolezza si costruisce attraverso tool proprietari che diventano standard di fatto.\n\nLa pubblicazione su DeepMind Blog, senza documentazione tecnica dettagliata accessibile, limita la valutazione dell'effettiva accuratezza del sistema rispetto ai metodi tradizionali. L'assenza di benchmark pubblici o confronti con software esistenti (come SIRIUS, MetFrag o altri tool open source per l'identificazione molecolare) rende difficile quantificare il reale vantaggio competitivo oltre alla narrativa di marketing.",
+        "implications": [
+          "Google rafforza il posizionamento di Antigravity come piattaforma verticale per ricerca scientifica, creando dipendenza da strumenti proprietari in nicchie ad alto valore dove l'alternativa open source esiste ma richiede competenze tecniche maggiori.",
+          "Il pattern di rilascio (annuncio blog senza documentazione tecnica completa) conferma l'approccio di Google alla visibilità organica su query scientifiche: autorevolezza costruita tramite tool esclusivi, non solo contenuti.",
+          "Per chi lavora su siti scientifici o editoriali di settore, la competizione si sposta: non basta più ottimizzare contenuti informativi, serve integrare o referenziare tool funzionali che Google stesso fornisce.",
+          "L'assenza di dati di benchmark pubblici limita la verificabilità delle claim, un segnale che l'obiettivo primario è il posizionamento di brand più che la trasparenza scientifica verso la comunità SEO o tech."
+        ],
+        "examples": [
+          "Un laboratorio farmaceutico che pubblica ricerche su nuovi metaboliti potrebbe iniziare a citare Mass Spec Skills come strumento di identificazione, generando backlink e menzioni verso l'ecosistema Google Antigravity. Questo crea un vantaggio di autorevolezza difficile da replicare per competitor che non dispongono di tool proprietari equivalenti.",
+          "Evitare di trattare questo rilascio come una novità tecnica rivoluzionaria senza verificare se esistono alternative open source (SIRIUS, CFM-ID, MS-FINDER) che offrono funzionalità simili. Il rischio è amplificare marketing di prodotto spacciandolo per breakthrough scientifico, perdendo credibilità presso lettori esperti del settore.",
+          "Un sito editoriale di chimica analitica che vuole mantenere rilevanza su query come \"mass spectrometry molecule identification\" deve ora considerare se linkare o integrare Mass Spec Skills nei propri contenuti, oppure rischia di perdere posizioni a favore di contenuti che includono riferimenti diretti al tool Google."
+        ],
+        "testing_steps": [
+          "Cerca su Google query scientifiche di nicchia tipo \"tandem mass spectrometry unknown molecule identification\" e verifica se risultati legati ad Antigravity o Mass Spec Skills compaiono in prima pagina.",
+          "Monitora su Ahrefs o SEMrush l'evoluzione dei backlink verso il dominio deepmind.google per identificare se laboratori o pubblicazioni scientifiche iniziano a citare Mass Spec Skills come riferimento.",
+          "Controlla su Google Scholar se paper recenti in metabolomica o chimica analitica menzionano Mass Spec Skills nei metodi, segnale di adozione reale vs solo hype di lancio.",
+          "Analizza la SERP per query branded tipo \"Google Antigravity mass spectrometry\" per capire se Google sta spingendo organicamente contenuti proprietari o se la visibilità dipende da paid o da copertura editoriale esterna.",
+          "Verifica se esistono API o documentazione pubblica di Mass Spec Skills: l'assenza indica un tool chiuso, il che limita l'integrazione da parte di terzi e concentra traffico solo su proprietà Google."
+        ],
+        "faqs": [
+          {
+            "question": "Mass Spec Skills è un tool accessibile pubblicamente o riservato a utenti enterprise di Antigravity?",
+            "answer": "Il comunicato non specifica modalità di accesso né pricing. L'integrazione con Google Antigravity suggerisce che sia parte di una piattaforma proprietaria, probabilmente non disponibile come servizio standalone gratuito. Senza documentazione pubblica, l'accesso è verosimilmente limitato a utenti registrati o partner commerciali di Google."
+          },
+          {
+            "question": "Esistono alternative open source a Mass Spec Skills per l'identificazione molecolare da spettri di massa?",
+            "answer": "Sì. SIRIUS, MetFrag, CFM-ID e MS-FINDER sono tool open source consolidati per l'interpretazione di spettri tandem e l'identificazione di strutture molecolari. La differenza principale sta nell'integrazione: Mass Spec Skills è embedded in un ecosistema proprietario, mentre le alternative richiedono setup tecnico ma offrono maggiore trasparenza e controllo sui dati."
+          },
+          {
+            "question": "Questo rilascio impatta direttamente la SEO di siti non scientifici?",
+            "answer": "No, l'impatto diretto è nullo per siti generalisti. L'effetto è rilevante solo per editori scientifici, laboratori, aziende pharma o siti che competono su query di nicchia in chimica analitica e metabolomica. Il pattern di rilascio è però significativo: mostra come Google costruisca autorevolezza verticale tramite tool proprietari, non solo contenuti."
+          },
+          {
+            "question": "Come si verifica se Mass Spec Skills sta realmente guadagnando trazione nella comunità scientifica?",
+            "answer": "Monitora citazioni su Google Scholar, menzioni in paper peer-reviewed e backlink verso deepmind.google da domini .edu o .org di laboratori. Se dopo 3-6 mesi le citazioni restano limitate a comunicati stampa o blog tech, è probabile che l'adozione reale sia marginale e l'impatto SEO sovrastimato."
+          }
+        ],
+        "editorial_commentary": "Questo rilascio conferma una strategia precisa: Google non compete più solo sui contenuti, ma costruisce autorevolezza verticale attraverso tool proprietari che diventano riferimento obbligato per nicchie scientifiche ad alto valore. Per chi gestisce siti editoriali di settore, il messaggio è chiaro: l'ottimizzazione di contenuti informativi non basta più se il competitor offre strumenti funzionali integrati.\n\nL'assenza di documentazione tecnica dettagliata, benchmark pubblici o confronti con alternative open source è un segnale. Non si tratta di un contributo alla comunità scientifica open, ma di marketing di prodotto mascherato da breakthrough tecnologico. Chi amplifica acriticamente questo tipo di annunci rischia di perdere credibilità presso lettori esperti.\n\nSe gestisci traffico su query scientifiche di nicchia, fermati prima di linkare o citare Mass Spec Skills come standard. Verifica prima se esistono alternative open source che offrono trasparenza maggiore e se l'adozione reale nella comunità scientifica giustifica il riferimento. Il rischio è trasformarsi in megafono involontario di una strategia di posizionamento proprietaria, senza vantaggio editoriale reale per il lettore.",
+        "premium_model_used": "anthropic/claude-sonnet-4.5",
+        "cost_eur": 0.03880008000000001
+      },
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_002",
+      "title_original": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+      "title_it": "Ottimizzazione dell'inferenza di Inkling 2 Mini su una singola RTX PRO 6000",
+      "summary_it": "Hugging Face ha condotto esperimenti per ottimizzare l'inferenza del modello Inkling 2 Mini, un MoE da 26B parametri, su una singola GPU NVIDIA RTX PRO 6000. Utilizzando un agente di codifica per l'ottimizzazione, sono riusciti ad aumentare la velocità di decodifica single-user del 40% e il throughput aggregato multi-utente del 26%. Questi miglioramenti sono stati ottenuti con vLLM nightly e decodifica speculativa DSpark, rendendo il modello più efficiente per l'uso su hardware modesto.",
+      "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "llm_inference",
+        "model_optimization",
+        "hugging_face",
+        "gpu_performance"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T00:00:00Z",
+      "fetched_at": "2026-11-26T06:04:58.451796Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:499a43c8a3201419",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_003",
+      "title_original": "AI Sentiment Analysis for Brands: How to Track and Improve What AI Says About You",
+      "title_it": "Analisi del sentiment AI per i brand: come monitorare e migliorare ciò che l'AI dice di te",
+      "summary_it": "L'analisi del sentiment AI permette di tracciare come assistenti AI come ChatGPT, Gemini e Copilot descrivono un brand, identificando se il tono è positivo, negativo o neutro. Questo strumento di ricerca di mercato aiuta a individuare obiezioni ricorrenti, analizzare i punti di forza dei competitor e migliorare prodotti o la loro comunicazione. L'obiettivo è ottenere una descrizione più accurata e bilanciata del brand nelle risposte generate dall'AI, integrando questi dati con il feedback dei clienti.",
+      "url": "https://ahrefs.com/blog/ai-sentiment-analysis",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_sentiment_analysi",
+        "brand_reputation",
+        "llm_visibility",
+        "market_research"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T08:18:04Z",
+      "fetched_at": "2026-11-26T06:05:00.200635Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f15161f909543813",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_004",
+      "title_original": "An Indic Voice Agent with CUGA",
+      "title_it": "Un agente vocale per lingue indiane basato su CUGA",
+      "summary_it": "IBM Research ha sviluppato un agente vocale multilingue che utilizza CUGA, un framework open-source, per facilitare l'accesso a informazioni in inglese per parlanti di lingue indiane. L'agente converte il parlato in testo, cerca in documenti in inglese e risponde vocalmente nella lingua originale dell'utente. Questo sistema è stato testato con un assistente agricolo, dimostrando la capacità di gestire la ricerca cross-lingua e fornire risposte pertinenti e basate su fonti specifiche.",
+      "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "voice_agent",
+        "multilingual_ai",
+        "information_retrieval",
+        "ibm_research"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T10:22:09Z",
+      "fetched_at": "2026-11-26T06:05:01.773321Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ebae46349ea7c0bf",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_005",
+      "title_original": "Google Snoopy Thanksgiving Prep 2026 Doodle",
+      "title_it": "Google celebra il Ringraziamento 2026 con un Doodle a tema Snoopy",
+      "summary_it": "Google ha rilasciato un nuovo Doodle animato con i personaggi di Snoopy per celebrare il Ringraziamento 2026 negli Stati Uniti. Cliccando sul Doodle, gli utenti vengono indirizzati a una pagina dei risultati di ricerca che include una panoramica AI e la scheda del Doodle. Questo segue l'introduzione di un easter egg a tema Ringraziamento in modalità AI e un'iniziativa simile da parte di Bing.",
+      "url": "https://www.seroundtable.com/google-thanksgiving-prep-2026-doodle-logo-42618.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_doodle",
+        "thanksgiving",
+        "ai_overviews",
+        "search_feature"
+      ],
+      "importance": 1,
+      "published_at": "2026-11-25T12:05:00Z",
+      "fetched_at": "2026-11-26T06:05:03.294145Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:eb7f53e564fd656e",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_006",
+      "title_original": "10 ways to use Semrush historical data (with examples)",
+      "title_it": "10 modi per utilizzare i dati storici di Semrush (con esempi)",
+      "summary_it": "L'articolo esplora dieci metodologie per sfruttare i dati storici di Semrush, essenziali per un'analisi SEO approfondita. Viene evidenziato come l'analisi storica permetta di distinguere tra cali di traffico dovuti a stagionalità, aggiornamenti di Google o cambiamenti nelle SERP, e problemi specifici del sito. La guida fornisce esempi pratici su come diagnosticare cali di traffico e analizzare l'evoluzione delle SERP, inclusa la comparsa degli AI Overviews.",
+      "url": "https://www.semrush.com/blog/semrush-historical-data",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "semrush",
+        "historical_data",
+        "seo_analysi",
+        "traffic_drop"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T12:07:00Z",
+      "fetched_at": "2026-11-26T06:05:04.891744Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:021c5761a6029aa2",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_007",
+      "title_original": "Google AdSense Opt-Out, Messaging & Privacy Updates",
+      "title_it": "Aggiornamenti AdSense su opt-out, messaggistica e privacy per nuove normative USA",
+      "summary_it": "Google AdSense ha introdotto aggiornamenti relativi alle normative sulla privacy negli Stati Uniti, in particolare per Louisiana, Vermont, Oklahoma e Alabama. Dal 1° gennaio 2027, questi stati avranno nuove leggi sulla privacy che influenzeranno la gestione dei dati utente. Google implementerà il Restricted Data Processing (RDP) in risposta ai segnali Global Privacy Control (GPC) e alle nuove leggi, disattivando la personalizzazione degli annunci. I publisher devono verificare le proprie impostazioni di messaggistica sulla privacy e consultare i propri team legali per garantire la conformità.",
+      "url": "https://www.seroundtable.com/google-adsense-updates-42550.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_adsense",
+        "privacy_regulation",
+        "data_processing",
+        "us_states_law"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T12:11:00Z",
+      "fetched_at": "2026-11-26T06:05:06.688295Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:74e269c87e4b63b8",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_008",
+      "title_original": "Google On Inventory Pages Per Geographic Region: Fewer Pages Better",
+      "title_it": "Google suggerisce meno pagine per la gestione dell'inventario geografico",
+      "summary_it": "John Mueller di Google ha consigliato di evitare la creazione di pagine separate per ogni combinazione prodotto-località per la gestione dell'inventario. Suggerisce invece di utilizzare una singola pagina prodotto che mostri i livelli di inventario disponibili nelle diverse località. Questo approccio semplifica la gestione per i motori di ricerca e riduce il rischio di problemi legati alla duplicazione dei contenuti, come il doorway spam.",
+      "url": "https://www.seroundtable.com/google-geographic-inventory-pages-42607.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "technical_seo",
+      "tags": [
+        "google_guidance",
+        "content_duplication",
+        "local_seo",
+        "ecommerce_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T12:21:00Z",
+      "fetched_at": "2026-11-26T06:05:08.299254Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:dc4b94e4ab7fdf9a",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_009",
+      "title_original": "Google Image Collections & Saved Items Adds Ask Anything AI Mode",
+      "title_it": "Google Immagini e Elementi Salvati introduce la modalità AI 'Chiedi Qualsiasi Cosa'",
+      "summary_it": "Google ha integrato una nuova funzionalità basata sull'intelligenza artificiale nelle sue Collezioni di Immagini e negli Elementi Salvati. Questa modalità, denominata 'Ask Anything', permette agli utenti di porre domande e ottenere risposte contestuali relative alle immagini salvate. L'obiettivo è migliorare l'interazione e la ricerca all'interno delle collezioni personali di immagini.",
+      "url": "https://www.seroundtable.com/google-image-collections-ask-anything-ai-mode-42595.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "google_image",
+        "ai_feature",
+        "user_experience",
+        "search_feature"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T12:31:00Z",
+      "fetched_at": "2026-11-26T06:05:09.813509Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:95fc82392e5a03ba",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_010",
+      "title_original": "Bing Image Search Ask Visual Search Button",
+      "title_it": "Bing introduce il pulsante 'Chiedi' per la ricerca visiva nelle immagini",
+      "summary_it": "Bing sta testando un nuovo pulsante 'Chiedi' nella sua ricerca per immagini, che consente agli utenti di avviare una ricerca visiva direttamente da un'immagine. Questa funzionalità mira a migliorare l'interazione e la pertinenza dei risultati per le query basate su elementi visivi. L'implementazione suggerisce un'evoluzione nelle capacità di ricerca di Bing, focalizzata sull'integrazione di AI per l'analisi delle immagini.",
+      "url": "https://www.seroundtable.com/bing-search-ask-visual-search-image-button-42590.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "bing_search",
+        "visual_search",
+        "ai_feature",
+        "image_recognition"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T12:41:00Z",
+      "fetched_at": "2026-11-26T06:05:11.400188Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:6aedcd9f25e90530",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_011",
+      "title_original": "Google Ads Encourages Dynamically Scoring Conversion Values Hack",
+      "title_it": "Google Ads incoraggia l'assegnazione dinamica dei valori di conversione, non è un 'hack'",
+      "summary_it": "Google Ads, tramite la liaison Ginny Marvin, ha chiarito che l'assegnazione dinamica dei valori di conversione non è considerata un 'hack', ma una pratica fortemente incoraggiata. Questa metodologia è descritta come il principio fondante del Value-Based Bidding (VBB), progettato per ottimizzare le campagne in base a risultati di business reali. L'obiettivo è alimentare il sistema con dati di prima parte ad alta fedeltà, come tappe CRM o margini di profitto, per guidare l'algoritmo verso ciò che l'inserzionista valuta di più.",
+      "url": "https://www.seroundtable.com/google-ads-dynamically-scoring-conversion-values-42609.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_ad",
+        "smart_bidding",
+        "conversion_value",
+        "value_based_bidding"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T12:51:00Z",
+      "fetched_at": "2026-11-26T06:05:13.093064Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:42920b8a9ce1d73d",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_012",
+      "title_original": "Premium email: Algo Scorer",
+      "title_it": "Algo Scorer: uno strumento per valutare l'impatto degli aggiornamenti di Google",
+      "summary_it": "Kevin Indig ha sviluppato un nuovo strumento chiamato \"Algo Scorer\" per aiutare i professionisti SEO a determinare se un calo di traffico sia dovuto a un aggiornamento dell'algoritmo di Google o ad altri fattori. Lo strumento è stato creato in risposta alla frequenza degli aggiornamenti di Google, come quelli di novembre e dicembre. L'obiettivo è fornire una valutazione più chiara dell'impatto degli update sul posizionamento.",
+      "url": "https://www.growth-memo.com/p/premium-email-algo-scorer",
+      "source": {
+        "id": "growth_memo_kevin_indig",
+        "name": "Growth Memo (Kevin Indig)",
+        "authority": 9,
+        "type": "independent",
+        "fetcher": "rss",
+        "feed_url": "https://www.growth-memo.com/feed",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_overviews_llm_seo",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "google_algorithm_update",
+        "seo_tool",
+        "rank_tracking",
+        "data_analysi"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T12:54:22Z",
+      "fetched_at": "2026-11-26T06:05:14.557794Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:05fe5a52c21b0f11",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_013",
+      "title_original": "Is GEO Visibility Delivering Business Value, Or Are We Measuring The Wrong Outcome?",
+      "title_it": "La visibilità GEO sta generando valore di business o stiamo misurando l'esito sbagliato?",
+      "summary_it": "L'articolo solleva dubbi sul valore commerciale della visibilità AI, suggerendo che l'attuale enfasi sulla misurazione delle menzioni e della share of voice potrebbe non tradursi direttamente in valore di business. Viene evidenziata la necessità di focalizzarsi sulle decisioni che i clienti cercano di prendere tramite i sistemi AI, piuttosto che sulle sole metriche di esposizione. Si sottolinea il rischio di sprecare l'attenzione e le risorse ottenute se non si dimostra un impatto concreto sul percorso del cliente.",
+      "url": "https://www.searchenginejournal.com/is-geo-visibility-delivering-business-value-or-are-we-measuring-the-wrong-outcome/594064",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "geo_visibility",
+        "ai_seo",
+        "measurement_metric",
+        "business_value"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T13:00:23Z",
+      "fetched_at": "2026-11-26T06:05:16.404388Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:93ee9420208a51a5",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_014",
+      "title_original": "10 tactics that actually work to get backlinks to your site in 2027",
+      "title_it": "10 tattiche efficaci per ottenere backlink nel 2027",
+      "summary_it": "L'articolo di Semrush esplora come i backlink continuino a essere rilevanti per il posizionamento e l'autorità, influenzando anche le risposte generate dall'IA. Vengono presentate dieci tattiche per costruire segnali di autorità sia per la ricerca Google che per le risposte AI. Viene evidenziato come l'IA abbia modificato il link building, spostando l'attenzione su menzioni e co-citazioni oltre ai link tradizionali. I criteri per un backlink di qualità si sono evoluti, enfatizzando rilevanza, fiducia, contesto e persistenza.",
+      "url": "https://www.semrush.com/blog/how-to-get-backlinks",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "backlink",
+        "link_building",
+        "ai_seo",
+        "authority_signal"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T14:58:00Z",
+      "fetched_at": "2026-11-26T06:05:18.074755Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:797bc7495da552c7",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_015",
+      "title_original": "ChatGPT Ads Are Growing Fast – But Are Advertisers Seeing Results?",
+      "title_it": "Gli annunci su ChatGPT sono in rapida crescita, ma gli inserzionisti stanno ottenendo risultati?",
+      "summary_it": "OpenAI ha dichiarato che oltre 100.000 inserzionisti hanno utilizzato gli annunci su ChatGPT, raggiungendo un tasso di ricavo annualizzato di 1 miliardo di dollari in meno di 200 giorni. Tuttavia, un rapporto di Business Insider e i dati di Adthena indicano che una parte significativa degli inserzionisti fatica a recuperare la spesa, mentre altri ottengono risultati paragonabili o superiori a Google Ads. Le prime esperienze degli inserzionisti evidenziano una variabilità nei risultati e la necessità di definire metriche di successo più chiare per la piattaforma.",
+      "url": "https://www.searchenginejournal.com/chatgpt-ads-are-growing-fast-but-are-advertisers-seeing-results/598052",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "chatgpt_ad",
+        "openai",
+        "advertising_roi",
+        "ai_marketing"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T15:00:31Z",
+      "fetched_at": "2026-11-26T06:05:19.850619Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:39a80ea22ddcbee3",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_016",
+      "title_original": "Top Publisher League Tables For U.S. & U.K.",
+      "title_it": "Classifiche dei principali editori per Stati Uniti e Regno Unito",
+      "summary_it": "L'articolo presenta le classifiche dei principali editori per i mercati di Stati Uniti e Regno Unito. Vengono analizzate le performance e la visibilità di diversi siti web in base a metriche specifiche. Questo tipo di analisi offre una panoramica sulle dinamiche competitive nel panorama editoriale online.",
+      "url": "https://www.searchenginejournal.com/top-publisher-league-tables-for-us-uk/598933",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "publisher_ranking",
+        "market_analysi",
+        "content_visibility",
+        "competitive_landscape"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-25T18:00:02Z",
+      "fetched_at": "2026-11-26T06:05:21.274848Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:92cc4a5f473c45fc",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_017",
+      "title_original": "Where scientists draw the line on AI agents",
+      "title_it": "Dove gli scienziati tracciano il confine per gli agenti AI",
+      "summary_it": "Un'analisi di Hugging Face e Allen Institute for AI esplora le aspettative e le preoccupazioni degli scienziati riguardo l'uso di agenti AI autonomi nella ricerca. Lo studio, basato su interviste a 17 scienziati, evidenzia la necessità di mantenere la responsabilità umana, garantire la verificabilità dei metodi e dei risultati, e rispettare le norme etiche e di sicurezza. Vengono sottolineate le esigenze di trasparenza, riproducibilità e protezione dei dati, oltre alla necessità di linee guida istituzionali chiare per l'integrazione dell'AI nel lavoro scientifico.",
+      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_agent",
+        "responsible_ai",
+        "scientific_research",
+        "ai_ethic"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T18:52:55Z",
+      "fetched_at": "2026-11-26T06:05:23.024360Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:17f17756497cde99",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_018",
+      "title_original": "AI Shopping Agents Bought A Fake Deal 37% Of The Time – Claude Opus Never Did",
+      "title_it": "Gli agenti di shopping basati su AI hanno acquistato offerte false nel 37% dei casi, mentre Claude Opus non l'ha mai fatto",
+      "summary_it": "Uno studio ha testato nove modelli AI di Anthropic, OpenAI e Google in 6.156 scenari di acquisto, includendo un'offerta palesemente falsa. In media, gli agenti AI hanno acquistato l'offerta fraudolenta nel 37% dei casi, anche quando esprimevano dubbi sulla sua autenticità. Claude Opus di Anthropic è stato l'unico modello a non cadere mai nella trappola, suggerendo una potenziale differenza nel suo addestramento per il riconoscimento di anomalie. Questo evidenzia le sfide nella capacità degli LLM di valutare criticamente le informazioni e la necessità di miglioramenti nella loro logica decisionale per compiti transazionali.",
+      "url": "https://www.searchenginejournal.com/ai-shopping-agents-bought-a-fake-deal-37-of-the-time-claude-opus-never-did/598682",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "ai_shopping_agent",
+        "llm_bia",
+        "claude_opus",
+        "ai_decision_making"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T20:00:32Z",
+      "fetched_at": "2026-11-26T06:05:25.108217Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:68e10d478b08782c",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_019",
+      "title_original": "ChatGPT Ads New Call-To-Actions, Business Agents Beyond US, More Audience Metrics & More",
+      "title_it": "ChatGPT Ads introduce nuove call-to-action, espansione degli agenti aziendali e metriche di audience avanzate",
+      "summary_it": "OpenAI ha rilasciato un aggiornamento per ChatGPT Ads che include l'introduzione di una nuova call-to-action \"Scopri di più\" per le single image ads. Gli agenti aziendali sono ora disponibili anche al di fuori degli Stati Uniti, ampliando la portata per le aziende. Sono state aggiunte nuove metriche di audience come Reach e Frequency nell'Ads Manager e nell'API, fornendo dati più dettagliati sulle performance delle campagne. L'aggiornamento include anche la possibilità di nascondere i prezzi in saldo e dettagli più specifici nel centro policy per la gestione delle approvazioni degli annunci.",
+      "url": "https://www.seroundtable.com/chatgpt-ads-updates-42623.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "tools_platforms",
+      "tags": [
+        "chatgpt_ad",
+        "openai_update",
+        "ad_metric",
+        "business_agent"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-25T22:40:00Z",
+      "fetched_at": "2026-11-26T06:05:26.827834Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:0779e954e3ed7bbb",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_020",
+      "title_original": "Google Adds Pageburst & 11 Other Existing Bots To Its Crawler Docs",
+      "title_it": "Google aggiorna la documentazione sui crawler, includendo Pageburst e altri 11 bot esistenti",
+      "summary_it": "Google ha aggiornato la sua documentazione sui crawler, aggiungendo Pageburst e altri 11 user agent già esistenti. Pageburst è un bot che valuta la qualità degli annunci Google Ads e la sicurezza delle landing page, operando indipendentemente dalle regole di robots.txt. Questi aggiornamenti mirano a fornire maggiore chiarezza sui bot che potrebbero apparire nei log dei server, pur non essendo nuovi.",
+      "url": "https://www.searchenginejournal.com/google-adds-pageburst-11-other-existing-bots-to-its-crawler-docs/599120",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "googlebot",
+        "crawler_documentation",
+        "robots_txt",
+        "google_ad"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T03:22:22Z",
+      "fetched_at": "2026-11-26T06:05:28.312251Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5191336df1b4841a",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_021",
+      "title_original": "OpenAI Isn’t Planning Prompt-Level Reports For ChatGPT Ads",
+      "title_it": "OpenAI non fornirà report a livello di prompt per gli annunci su ChatGPT",
+      "summary_it": "OpenAI ha dichiarato che non intende fornire agli inserzionisti di ChatGPT report dettagliati sui prompt o sull'intento inferito che generano la visualizzazione degli annunci. Gli inserzionisti riceveranno solo dati aggregati come impressioni e clic, senza visibilità sulle query di ricerca generate dall'AI interna di OpenAI per abbinare gli annunci. Il sistema pubblicitario di ChatGPT crea query basate sull'intento della conversazione, anche combinando elementi non esplicitamente collegati dall'utente.",
+      "url": "https://www.searchenginejournal.com/openai-isnt-planning-prompt-level-reports-for-chatgpt-ads/599126",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "openai_ad",
+        "chatgpt_advertising",
+        "ai_reporting",
+        "ad_transparency"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T04:15:54Z",
+      "fetched_at": "2026-11-26T06:05:29.963238Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:5f7429f52237f23d",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-26_022",
+      "title_original": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "title_it": "Sviluppi su Nemotron 3.5 Parse: Dati Aperti, Fine-Tuning e Inferenza più Veloce",
+      "summary_it": "NVIDIA ha rilasciato aggiornamenti per Nemotron 3.5 Parse, un modello compatto per la trasformazione di immagini di documenti in dati strutturati, utile per RAG e agenti. Gli sviluppi includono dataset sintetici per l'addestramento, una ricetta per il fine-tuning e un DFlash2 speculator per un'inferenza più rapida. Sono stati resi open-source tre dataset utilizzati per l'addestramento, focalizzati su grafici, tabelle e OCR multilingue sintetico. Questi miglioramenti estendono la capacità del modello di interpretare grafici e tabelle, anche in casi complessi.",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "nvidia",
+        "nemotron",
+        "document_ai",
+        "fine_tuning",
+        "open_data"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T05:05:36Z",
+      "fetched_at": "2026-11-26T06:05:31.742507Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:f163046acfda4fa7",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-11-26T06:01:58.783756Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-11-26T06:01:59.177323Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-11-26T06:02:00.370220Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_overview",
+      "last_checked": "2026-11-26T06:02:03.803975Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-11-26T06:02:05.393312Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-11-26T06:02:05.680414Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-11-26T06:02:07.006017Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_gallery",
+      "last_checked": "2026-11-26T06:02:08.403864Z",
+      "changed": false
+    },
+    {
+      "page_id": "openai_usage_policies",
+      "last_checked": "2026-11-26T06:02:10.379278Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-11-26T06:02:10.664426Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-11-26T06:02:16.822426Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-11-26T06:02:17.200829Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-11-26T06:02:18.639669Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-11-26T06:02:20.376246Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-11-26T06:02:21.439144Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-11-26T06:02:22.843309Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-11-26T06:02:25.059733Z",
+      "changed": false
+    },
+    {
+      "page_id": "schema_org_releases",
+      "last_checked": "2026-11-26T06:02:38.030527Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_essentials",
+      "last_checked": "2026-11-26T06:02:38.174738Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ranking_systems_guide",
+      "last_checked": "2026-11-26T06:02:38.538414Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_gen_ai_content",
+      "last_checked": "2026-11-26T06:02:39.641243Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_common_crawlers",
+      "last_checked": "2026-11-26T06:02:41.441758Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_user_triggered_fetchers",
+      "last_checked": "2026-11-26T06:02:42.849989Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_policies",
+      "last_checked": "2026-11-26T06:02:44.559428Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_page_experience",
+      "last_checked": "2026-11-26T06:02:46.404456Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_web_vitals",
+      "last_checked": "2026-11-26T06:02:47.267074Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_discover",
+      "last_checked": "2026-11-26T06:02:48.955049Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization",
+      "last_checked": "2026-11-26T06:02:50.212931Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_technical_requirements",
+      "last_checked": "2026-11-26T06:02:51.603682Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_names",
+      "last_checked": "2026-11-26T06:02:53.322916Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawl_budget",
+      "last_checked": "2026-11-26T06:02:54.755080Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_changelog",
+      "last_checked": "2026-11-26T06:02:55.775275Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_optimization_guide",
+      "last_checked": "2026-11-26T06:02:57.313308Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_updates",
+      "last_checked": "2026-11-26T06:02:58.771310Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_updates",
+      "last_checked": "2026-11-26T06:03:00.514336Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_reviews_system",
+      "last_checked": "2026-11-26T06:03:02.060639Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_preferred_sources",
+      "last_checked": "2026-11-26T06:03:03.705202Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_publication_dates",
+      "last_checked": "2026-11-26T06:03:05.383162Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_special_case_crawlers",
+      "last_checked": "2026-11-26T06:03:06.192242Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_verify_requests",
+      "last_checked": "2026-11-26T06:03:07.582384Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_web_bot_auth",
+      "last_checked": "2026-11-26T06:03:09.344106Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_http_status_codes",
+      "last_checked": "2026-11-26T06:03:10.751986Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_dns_network_errors",
+      "last_checked": "2026-11-26T06:03:12.390006Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta_tag",
+      "last_checked": "2026-11-26T06:03:14.292893Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization_how",
+      "last_checked": "2026-11-26T06:03:15.547973Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_links_crawlable",
+      "last_checked": "2026-11-26T06:03:16.851998Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_qualify_outbound_links",
+      "last_checked": "2026-11-26T06:03:18.625934Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_mobile_first_indexing",
+      "last_checked": "2026-11-26T06:03:19.883422Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_javascript_seo",
+      "last_checked": "2026-11-26T06:03:21.710963Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_how_search_works",
+      "last_checked": "2026-11-26T06:03:23.619051Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_seo_starter_guide",
+      "last_checked": "2026-11-26T06:03:24.580592Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_article",
+      "last_checked": "2026-11-26T06:03:25.434952Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_product",
+      "last_checked": "2026-11-26T06:03:27.351619Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_merchant_listing",
+      "last_checked": "2026-11-26T06:03:28.986595Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_review_snippet",
+      "last_checked": "2026-11-26T06:03:30.320686Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_organization",
+      "last_checked": "2026-11-26T06:03:32.198877Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_local_business",
+      "last_checked": "2026-11-26T06:03:33.174237Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_breadcrumb",
+      "last_checked": "2026-11-26T06:03:34.493243Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_discussion_forum",
+      "last_checked": "2026-11-26T06:03:35.530367Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitelinks",
+      "last_checked": "2026-11-26T06:03:36.740316Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_favicon",
+      "last_checked": "2026-11-26T06:03:37.954358Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_intrusive_interstitials",
+      "last_checked": "2026-11-26T06:03:39.778180Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_images",
+      "last_checked": "2026-11-26T06:03:41.324852Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_video",
+      "last_checked": "2026-11-26T06:03:42.582190Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_profiles",
+      "last_checked": "2026-11-26T06:03:44.034961Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_business_details",
+      "last_checked": "2026-11-26T06:03:45.707061Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_url_changes",
+      "last_checked": "2026-11-26T06:03:47.354164Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_no_url_changes",
+      "last_checked": "2026-11-26T06:03:49.935188Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_redirects",
+      "last_checked": "2026-11-26T06:03:50.616952Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_faceted_navigation",
+      "last_checked": "2026-11-26T06:03:52.426133Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_myths",
+      "last_checked": "2026-11-26T06:03:53.667230Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_traffic_drops",
+      "last_checked": "2026-11-26T06:03:54.819197Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_identify_search_traffic",
+      "last_checked": "2026-11-26T06:03:57.264078Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ecommerce",
+      "last_checked": "2026-11-26T06:03:58.276672Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_localized_versions",
+      "last_checked": "2026-11-26T06:04:00.166556Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_multi_regional",
+      "last_checked": "2026-11-26T06:04:01.927807Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_agent",
+      "last_checked": "2026-11-26T06:04:03.518916Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_overviews",
+      "last_checked": "2026-11-26T06:04:04.653256Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_mode",
+      "last_checked": "2026-11-26T06:04:05.267178Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_apis_user_agent",
+      "last_checked": "2026-11-26T06:04:07.024039Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_read_aloud_user_agent",
+      "last_checked": "2026-11-26T06:04:07.324106Z",
+      "changed": false
+    },
+    {
+      "page_id": "openai_crawlers",
+      "last_checked": "2026-11-26T06:04:08.948750Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_crawlers",
+      "last_checked": "2026-11-26T06:04:09.055014Z",
+      "changed": false
+    },
+    {
+      "page_id": "perplexity_crawlers",
+      "last_checked": "2026-11-26T06:04:09.756778Z",
+      "changed": false
+    },
+    {
+      "page_id": "mistral_crawlers",
+      "last_checked": "2026-11-26T06:04:10.226367Z",
+      "changed": false
+    },
+    {
+      "page_id": "apple_applebot",
+      "last_checked": "2026-11-26T06:04:10.470700Z",
+      "changed": false
+    },
+    {
+      "page_id": "amazon_amazonbot",
+      "last_checked": "2026-11-26T06:04:10.655192Z",
+      "changed": false
+    },
+    {
+      "page_id": "duckduckgo_duckassistbot",
+      "last_checked": "2026-11-26T06:04:11.519445Z",
+      "changed": false
+    },
+    {
+      "page_id": "commoncrawl_ccbot",
+      "last_checked": "2026-11-26T06:04:11.937265Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_ai_crawl_control",
+      "last_checked": "2026-11-26T06:04:11.995744Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_verified_bots",
+      "last_checked": "2026-11-26T06:04:12.052614Z",
+      "changed": false
+    },
+    {
+      "page_id": "llms_txt_spec",
+      "last_checked": "2026-11-26T06:04:13.630998Z",
+      "changed": false
+    },
+    {
+      "page_id": "bing_webmaster_guidelines",
+      "last_checked": "2026-11-26T06:04:13.740767Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": []
+}
