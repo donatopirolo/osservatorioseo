@@ -1,0 +1,843 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-27T06:01:21.059905Z",
+  "generated_at_local": "2026-11-27T07:01:21.059905+01:00",
+  "timezone": "Europe/Rome",
+  "run_id": "2026-11-27-0701",
+  "stats": {
+    "sources_checked": 15,
+    "sources_failed": 0,
+    "sources_empty": 0,
+    "items_collected": 2598,
+    "items_after_dedup": 48,
+    "doc_changes_detected": 0,
+    "ai_cost_eur": 0.0068,
+    "summarize_attempted": 9,
+    "summarize_failed": 0
+  },
+  "top10": [
+    "item_2026-11-27_002",
+    "item_2026-11-27_005",
+    "item_2026-11-27_003",
+    "item_2026-11-27_001",
+    "item_2026-11-27_006",
+    "item_2026-11-27_007",
+    "item_2026-11-27_004",
+    "item_2026-11-27_008",
+    "item_2026-11-27_009"
+  ],
+  "categories": {
+    "ai_overviews_llm_seo": [
+      "item_2026-11-27_002",
+      "item_2026-11-27_007"
+    ],
+    "google_updates": [
+      "item_2026-11-27_005"
+    ],
+    "ai_models": [
+      "item_2026-11-27_003",
+      "item_2026-11-27_001"
+    ],
+    "industry_news": [
+      "item_2026-11-27_006",
+      "item_2026-11-27_009"
+    ],
+    "content_eeat": [
+      "item_2026-11-27_004",
+      "item_2026-11-27_008"
+    ]
+  },
+  "items": [
+    {
+      "id": "item_2026-11-27_001",
+      "title_original": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "title_it": "Sistemi Multi-Agente: Costruzione, Addestramento e Valutazione di Swarm di Agenti AI",
+      "summary_it": "Hugging Face ha pubblicato il primo articolo di una serie dedicata alla costruzione, addestramento e valutazione di sistemi multi-agente (swarm). La serie mira a fornire una panoramica educativa e esempi pratici per sviluppare agenti AI che comunicano e collaborano. Il primo esempio illustra un sistema con quattro agenti e un linguaggio condiviso per un compito verificabile, evidenziando le sfide legate alla comunicazione e all'aggiornamento dei pesi in contesti multi-agente.",
+      "url": "https://huggingface.co/blog/training-swarms",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "multi_agent_system",
+        "ai_training",
+        "hugging_face",
+        "llm_agent"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T00:00:00Z",
+      "fetched_at": "2026-11-27T06:04:18.610692Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:7799d19f6c916cfa",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_002",
+      "title_original": "AI Overviews Cut CTR by −24.4% in France (3 Month Update)",
+      "title_it": "Le AI Overviews riducono il CTR del 24,4% in Francia (aggiornamento a 3 mesi)",
+      "summary_it": "Uno studio di Ahrefs ha analizzato l'impatto delle AI Overviews (AIO) sul Click-Through Rate (CTR) in Francia a tre mesi dal loro lancio. Le query che attivano un'AIO hanno registrato un calo del CTR del 24,4% rispetto a quelle senza. Questo effetto negativo si osserva su tutte le posizioni della SERP e per ogni intento di ricerca, mentre le query senza AIO hanno visto un leggero aumento del CTR. La ricerca evidenzia una significativa diminuzione dei clic organici a causa della presenza delle AIO.",
+      "url": "https://ahrefs.com/blog/ai-overviews-ctr-france",
+      "source": {
+        "id": "ahrefs_blog",
+        "name": "Ahrefs Blog",
+        "authority": 8,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://ahrefs.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "ai_overviews",
+        "ctr_impact",
+        "serp_analysi",
+        "google_ai"
+      ],
+      "importance": 4,
+      "published_at": "2026-11-26T11:04:41Z",
+      "fetched_at": "2026-11-27T06:04:20.445075Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:1da1b45a02e5d5af",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_003",
+      "title_original": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "title_it": "Presentata la dashboard di benchmark llama.cpp per hardware AMD Ryzen e Radeon",
+      "summary_it": "Hugging Face ha lanciato una dashboard di benchmark per llama.cpp, focalizzata sulle prestazioni di inferenza locale su hardware AMD Ryzen e Radeon. La piattaforma permette di monitorare le performance di elaborazione dei prompt e generazione di testo attraverso diverse build, modelli e quantizzazioni di llama.cpp. Gli utenti possono confrontare le metriche PP512 e TG128, analizzare la cronologia delle build e valutare lo scaling del contesto per ottimizzare l'inferenza locale.",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "source": {
+        "id": "huggingface_blog",
+        "name": "Hugging Face Blog",
+        "authority": 8,
+        "type": "official",
+        "fetcher": "rss",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "ai_models",
+        "enabled": true
+      },
+      "category": "ai_models",
+      "tags": [
+        "llama_cpp",
+        "amd_hardware",
+        "local_inference",
+        "llm_benchmarking"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T11:37:17Z",
+      "fetched_at": "2026-11-27T06:04:21.882721Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:deee9832a2e5f390",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_004",
+      "title_original": "14 Content marketing tips to improve your brand visibility",
+      "title_it": "14 Consigli di Content Marketing per Migliorare la Visibilità del Brand",
+      "summary_it": "L'articolo di Semrush propone 14 suggerimenti pratici per ottimizzare le strategie di content marketing. I consigli coprono le fasi di pianificazione, creazione, distribuzione e ottimizzazione dei contenuti. L'obiettivo è migliorare la reperibilità dei contenuti sia nelle ricerche tradizionali che nelle risposte generate dall'IA.",
+      "url": "https://www.semrush.com/blog/content-marketing-tips",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "content_marketing",
+        "brand_visibility",
+        "content_strategy",
+        "semrush"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-26T11:48:00Z",
+      "fetched_at": "2026-11-27T06:04:23.023897Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:2242b62375cd03af",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_005",
+      "title_original": "Google Local Pack No Reviews Bug",
+      "title_it": "Bug nel Local Pack di Google: recensioni non visualizzate",
+      "summary_it": "È stato rilevato un bug nel Local Pack di Google che impedisce la visualizzazione delle recensioni per alcune schede di attività commerciali, mostrando la dicitura \"Nessuna recensione\". Cliccando sulla scheda, le recensioni risultano invece presenti e visibili. Il problema è replicabile su diverse query e non sembra influenzare tutte le attività o tutte le visualizzazioni in modo consistente.",
+      "url": "https://www.seroundtable.com/google-local-pack-no-reviews-bug-42624.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "google_updates",
+      "tags": [
+        "google_local_pack",
+        "google_my_business",
+        "bug",
+        "local_seo"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T12:12:00Z",
+      "fetched_at": "2026-11-27T06:04:24.520459Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ac3e1467ac1b085a",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_006",
+      "title_original": "What SEOs Can Be Thankful For: 8 Wins To Celebrate In 2026",
+      "title_it": "8 Vantaggi SEO da celebrare nel 2026",
+      "summary_it": "L'articolo di Search Engine Journal elenca otto sviluppi positivi per i professionisti SEO nel 2026. Tra questi, spiccano i nuovi report di Google Search Console e Bing Webmaster Tools dedicati alle performance in AI Overview e nelle funzionalità generative. Questi strumenti offrono ora dati più granulari sulle impressioni e le citazioni generate dall'intelligenza artificiale, permettendo di monitorare l'impatto dei contenuti in questi nuovi contesti di ricerca.",
+      "url": "https://www.searchenginejournal.com/what-seos-can-be-thankful-for-2026/598921",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "google_search_console",
+        "bing_webmaster_tool",
+        "ai_overviews",
+        "seo_reporting"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T13:00:22Z",
+      "fetched_at": "2026-11-27T06:04:25.972719Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ae5d1f8d1b14a8f6",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_007",
+      "title_original": "The Missing Step In Prompt Tracking Was Written Down In 1995",
+      "title_it": "Il passo mancante nel tracciamento dei prompt era già stato documentato nel 1995",
+      "summary_it": "L'articolo evidenzia una lacuna nel tracciamento della visibilità AI: la mancanza di un metodo sistematico per selezionare i prompt e definire le risposte corrette. Viene suggerito che la soluzione risieda nelle 'competency questions', un approccio utilizzato nell'ingegneria della conoscenza fin dalla metà degli anni '90. La ricerca attuale mostra che molti studi sul tracciamento dei prompt non giustificano la scelta delle domande, portando a misurazioni della visibilità che potrebbero non riflettere la reale domanda del mercato.",
+      "url": "https://www.searchenginejournal.com/the-missing-step-in-prompt-tracking-was-written-down-in-1995/598461",
+      "source": {
+        "id": "search_engine_journal",
+        "name": "Search Engine Journal",
+        "authority": 8,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://www.searchenginejournal.com/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "industry_news",
+        "enabled": true
+      },
+      "category": "ai_overviews_llm_seo",
+      "tags": [
+        "prompt_engineering",
+        "ai_visibility",
+        "competency_question",
+        "llm_evaluation"
+      ],
+      "importance": 3,
+      "published_at": "2026-11-26T15:00:36Z",
+      "fetched_at": "2026-11-27T06:04:27.602670Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:3ba3e42aeba126be",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_008",
+      "title_original": "The marketing funnel: what it is and how to build one",
+      "title_it": "Il funnel di marketing: cos'è e come costruirlo",
+      "summary_it": "L'articolo di Semrush illustra il concetto di marketing funnel, modellando il percorso del cliente dall'awareness alla conversione. Vengono descritti i passaggi fondamentali per la creazione di un funnel efficace. La guida si concentra su come strutturare le diverse fasi per ottimizzare l'engagement e le conversioni.",
+      "url": "https://www.semrush.com/blog/marketing-funnel",
+      "source": {
+        "id": "semrush_blog",
+        "name": "Semrush Blog",
+        "authority": 7,
+        "type": "tool_vendor",
+        "fetcher": "rss",
+        "feed_url": "https://www.semrush.com/blog/feed/",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "tools_platforms",
+        "enabled": true
+      },
+      "category": "content_eeat",
+      "tags": [
+        "marketing_funnel",
+        "customer_journey",
+        "conversion_optimization"
+      ],
+      "importance": 2,
+      "published_at": "2026-11-26T15:08:00Z",
+      "fetched_at": "2026-11-27T06:04:29.072382Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:cd9b28d1dcff804c",
+      "deep_analysis": null,
+      "also_in": []
+    },
+    {
+      "id": "item_2026-11-27_009",
+      "title_original": "Ask Jeeves At Macy's Thanksgiving Day Parade (Old Photos)",
+      "title_it": "Ask Jeeves alla Parata del Giorno del Ringraziamento di Macy's (Vecchie Foto)",
+      "summary_it": "L'articolo ripercorre la presenza del motore di ricerca Ask Jeeves alla Parata del Giorno del Ringraziamento di Macy's, evidenziando il suo debutto con un carro nel 1999 e la successiva trasformazione in un pallone gigante dal 2000 al 2002. Vengono mostrate diverse immagini storiche che documentano la partecipazione di Jeeves all'evento. La notizia è un richiamo nostalgico a un'epoca precedente dei motori di ricerca.",
+      "url": "https://www.seroundtable.com/ask-jeeves-macys-thanksgiving-day-parade-42628.html",
+      "source": {
+        "id": "search_engine_roundtable",
+        "name": "Search Engine Roundtable",
+        "authority": 9,
+        "type": "media",
+        "fetcher": "rss",
+        "feed_url": "https://feeds.feedburner.com/seroundtable",
+        "target_url": null,
+        "selectors": null,
+        "category_hint": "google_updates",
+        "enabled": true
+      },
+      "category": "industry_news",
+      "tags": [
+        "ask_jeeve",
+        "search_engine_history",
+        "macys_parade",
+        "industry_nostalgia"
+      ],
+      "importance": 1,
+      "published_at": "2026-11-26T19:10:00Z",
+      "fetched_at": "2026-11-27T06:04:30.648185Z",
+      "is_doc_change": false,
+      "doc_change": null,
+      "language_original": "en",
+      "summarizer_model": "google/gemini-2.5-flash",
+      "raw_hash": "sha256:ba5c708f53b2e345",
+      "deep_analysis": null,
+      "also_in": []
+    }
+  ],
+  "doc_watcher_status": [
+    {
+      "page_id": "google_search_docs_changelog",
+      "last_checked": "2026-11-27T06:01:22.636107Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_policies",
+      "last_checked": "2026-11-27T06:01:23.683677Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_helpful_content",
+      "last_checked": "2026-11-27T06:01:25.346427Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_overview",
+      "last_checked": "2026-11-27T06:01:29.292597Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_features_guidance",
+      "last_checked": "2026-11-27T06:01:31.627134Z",
+      "changed": false
+    },
+    {
+      "page_id": "googlebot_docs",
+      "last_checked": "2026-11-27T06:01:35.382730Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawlers_overview",
+      "last_checked": "2026-11-27T06:01:35.828247Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_gallery",
+      "last_checked": "2026-11-27T06:01:36.872839Z",
+      "changed": false
+    },
+    {
+      "page_id": "openai_usage_policies",
+      "last_checked": "2026-11-27T06:01:38.512471Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_usage_policies",
+      "last_checked": "2026-11-27T06:01:38.788073Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_txt",
+      "last_checked": "2026-11-27T06:01:47.959124Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta",
+      "last_checked": "2026-11-27T06:01:48.393248Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitemaps_overview",
+      "last_checked": "2026-11-27T06:01:49.850952Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_featured_snippets",
+      "last_checked": "2026-11-27T06:01:51.049022Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_title_link",
+      "last_checked": "2026-11-27T06:01:52.124155Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_snippet",
+      "last_checked": "2026-11-27T06:01:54.117441Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_quality_rater_guidelines_en",
+      "last_checked": "2026-11-27T06:01:55.620885Z",
+      "changed": false
+    },
+    {
+      "page_id": "schema_org_releases",
+      "last_checked": "2026-11-27T06:02:16.080304Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_essentials",
+      "last_checked": "2026-11-27T06:02:16.421185Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ranking_systems_guide",
+      "last_checked": "2026-11-27T06:02:16.649892Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_gen_ai_content",
+      "last_checked": "2026-11-27T06:02:18.666852Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_common_crawlers",
+      "last_checked": "2026-11-27T06:02:19.936760Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_user_triggered_fetchers",
+      "last_checked": "2026-11-27T06:02:21.061795Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_structured_data_policies",
+      "last_checked": "2026-11-27T06:02:22.749537Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_page_experience",
+      "last_checked": "2026-11-27T06:02:24.075896Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_web_vitals",
+      "last_checked": "2026-11-27T06:02:25.490732Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_discover",
+      "last_checked": "2026-11-27T06:02:27.433963Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization",
+      "last_checked": "2026-11-27T06:02:29.039950Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_technical_requirements",
+      "last_checked": "2026-11-27T06:02:30.535493Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_names",
+      "last_checked": "2026-11-27T06:02:32.428300Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawl_budget",
+      "last_checked": "2026-11-27T06:02:34.520958Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_changelog",
+      "last_checked": "2026-11-27T06:02:36.189894Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ai_optimization_guide",
+      "last_checked": "2026-11-27T06:02:38.133804Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_core_updates",
+      "last_checked": "2026-11-27T06:02:39.843050Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_spam_updates",
+      "last_checked": "2026-11-27T06:02:40.905953Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_reviews_system",
+      "last_checked": "2026-11-27T06:02:42.053738Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_preferred_sources",
+      "last_checked": "2026-11-27T06:02:43.716923Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_publication_dates",
+      "last_checked": "2026-11-27T06:02:44.778067Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_special_case_crawlers",
+      "last_checked": "2026-11-27T06:02:46.107222Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_verify_requests",
+      "last_checked": "2026-11-27T06:02:47.878984Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_web_bot_auth",
+      "last_checked": "2026-11-27T06:02:49.642918Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_http_status_codes",
+      "last_checked": "2026-11-27T06:02:50.662027Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_dns_network_errors",
+      "last_checked": "2026-11-27T06:02:52.136080Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_robots_meta_tag",
+      "last_checked": "2026-11-27T06:02:53.596580Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_canonicalization_how",
+      "last_checked": "2026-11-27T06:02:54.752432Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_links_crawlable",
+      "last_checked": "2026-11-27T06:02:56.054912Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_qualify_outbound_links",
+      "last_checked": "2026-11-27T06:02:57.241068Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_mobile_first_indexing",
+      "last_checked": "2026-11-27T06:02:58.833589Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_javascript_seo",
+      "last_checked": "2026-11-27T06:03:01.155257Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_how_search_works",
+      "last_checked": "2026-11-27T06:03:02.290476Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_seo_starter_guide",
+      "last_checked": "2026-11-27T06:03:03.889511Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_article",
+      "last_checked": "2026-11-27T06:03:04.976093Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_product",
+      "last_checked": "2026-11-27T06:03:06.610383Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_merchant_listing",
+      "last_checked": "2026-11-27T06:03:07.688796Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_review_snippet",
+      "last_checked": "2026-11-27T06:03:09.924668Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_organization",
+      "last_checked": "2026-11-27T06:03:10.378381Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_local_business",
+      "last_checked": "2026-11-27T06:03:11.531857Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_breadcrumb",
+      "last_checked": "2026-11-27T06:03:12.892467Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sd_discussion_forum",
+      "last_checked": "2026-11-27T06:03:14.207887Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_sitelinks",
+      "last_checked": "2026-11-27T06:03:15.643230Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_favicon",
+      "last_checked": "2026-11-27T06:03:17.025985Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_intrusive_interstitials",
+      "last_checked": "2026-11-27T06:03:18.974931Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_images",
+      "last_checked": "2026-11-27T06:03:19.734316Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_video",
+      "last_checked": "2026-11-27T06:03:21.365013Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_search_profiles",
+      "last_checked": "2026-11-27T06:03:22.647735Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_business_details",
+      "last_checked": "2026-11-27T06:03:23.827498Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_url_changes",
+      "last_checked": "2026-11-27T06:03:26.137771Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_site_move_no_url_changes",
+      "last_checked": "2026-11-27T06:03:27.099737Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_redirects",
+      "last_checked": "2026-11-27T06:03:28.305674Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_faceted_navigation",
+      "last_checked": "2026-11-27T06:03:29.906035Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_crawling_myths",
+      "last_checked": "2026-11-27T06:03:30.913389Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_traffic_drops",
+      "last_checked": "2026-11-27T06:03:32.278208Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_identify_search_traffic",
+      "last_checked": "2026-11-27T06:03:34.367296Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_ecommerce",
+      "last_checked": "2026-11-27T06:03:36.609742Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_localized_versions",
+      "last_checked": "2026-11-27T06:03:37.398937Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_multi_regional",
+      "last_checked": "2026-11-27T06:03:38.636161Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_agent",
+      "last_checked": "2026-11-27T06:03:39.976291Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_overviews",
+      "last_checked": "2026-11-27T06:03:41.395404Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_help_ai_mode",
+      "last_checked": "2026-11-27T06:03:41.671507Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_apis_user_agent",
+      "last_checked": "2026-11-27T06:03:43.624888Z",
+      "changed": false
+    },
+    {
+      "page_id": "google_read_aloud_user_agent",
+      "last_checked": "2026-11-27T06:03:43.922066Z",
+      "changed": false
+    },
+    {
+      "page_id": "openai_crawlers",
+      "last_checked": "2026-11-27T06:03:46.121077Z",
+      "changed": false
+    },
+    {
+      "page_id": "anthropic_crawlers",
+      "last_checked": "2026-11-27T06:03:46.239440Z",
+      "changed": false
+    },
+    {
+      "page_id": "perplexity_crawlers",
+      "last_checked": "2026-11-27T06:03:46.468999Z",
+      "changed": false
+    },
+    {
+      "page_id": "mistral_crawlers",
+      "last_checked": "2026-11-27T06:03:46.878295Z",
+      "changed": false
+    },
+    {
+      "page_id": "apple_applebot",
+      "last_checked": "2026-11-27T06:03:46.975998Z",
+      "changed": false
+    },
+    {
+      "page_id": "amazon_amazonbot",
+      "last_checked": "2026-11-27T06:03:47.037464Z",
+      "changed": false
+    },
+    {
+      "page_id": "duckduckgo_duckassistbot",
+      "last_checked": "2026-11-27T06:03:47.529398Z",
+      "changed": false
+    },
+    {
+      "page_id": "commoncrawl_ccbot",
+      "last_checked": "2026-11-27T06:03:47.596013Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_ai_crawl_control",
+      "last_checked": "2026-11-27T06:03:47.815775Z",
+      "changed": false
+    },
+    {
+      "page_id": "cloudflare_verified_bots",
+      "last_checked": "2026-11-27T06:03:47.865779Z",
+      "changed": false
+    },
+    {
+      "page_id": "llms_txt_spec",
+      "last_checked": "2026-11-27T06:03:49.486537Z",
+      "changed": false
+    },
+    {
+      "page_id": "bing_webmaster_guidelines",
+      "last_checked": "2026-11-27T06:03:49.735711Z",
+      "changed": false
+    }
+  ],
+  "failed_sources": []
+}
